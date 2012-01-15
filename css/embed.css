@@ -1,0 +1,180 @@
+/*
+OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+*/
+
+@charset "utf-8";
+
+html,body
+{
+	background-color: #ffffff;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma,sans-serif;
+	overflow-y: hidden;
+}
+
+/* map widget in main size when sidebar is fold in*/
+.mapFrame
+{
+	background-color: #f1eee8;
+	color: #000000;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+/* text which is shown when javascript is not activated */
+noscript p
+{
+	font-size: 15px;
+	color: #000000;
+	margin-left: 80px;
+	margin-top: 100px;
+}
+
+/* links on the bottom of each popup, also the box around them */
+#popupLinks
+{
+	border-top: 1px solid gray;
+	color: #000000;
+	font-size: 11px;
+}
+
+#popupLinks a
+{
+	text-decoration: none;
+}
+
+#popupLinks a:hover
+{
+	text-decoration: underline;
+}
+
+/* style of texts in popups */
+.header
+{
+	font-size: 16px;
+}
+
+.street-address
+{
+	font-size: 12px;
+}
+
+.adr
+{
+	margin-top: 2px;
+	font-size: 12px;
+}
+
+.contact
+{
+	margin-top: 10px;
+	font-size: 11px;
+}
+
+.contact a
+{
+	text-decoration: none;
+}
+
+.contact a:hover
+{
+	text-decoration: underline;
+}
+
+.web
+{
+	margin-top: 10px;
+	font-size: 11px;
+}
+
+.web a
+{
+	text-decoration: none;
+}
+
+.web a:hover
+{
+	text-decoration: underline;
+}
+
+.openinghours, .servicetimes
+{
+	margin-top: 10px;
+	font-size: 10px;
+}
+
+.operator
+{
+	margin-top: 10px;
+	font-size: 10px;
+}
+
+/* "opened"-label */
+.closed
+{
+	background-color: #d55858;
+	color: #ffffff;
+}
+
+.open
+{
+	background-color: #62be67;
+	color: #ffffff;
+}
+
+.maybeopen
+{
+	background-color: #f4e73c;
+	color: #000000;
+}
+
+/* loading image */
+.loading
+{
+	text-align: center;
+	width: 16px;
+	height: 16px;
+}
+
+/* names of clustered popups */
+.clusterName
+{
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.clusterName:hover
+{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* hidden frame to which josm remote plugin messages are echoed */
+#josmFrame
+{
+	display: none;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* better positioning of attribution */
+.olControlAttribution
+{
+	bottom: 3px !important;
+}
+
+/* modify style of attribution */
+.olControlAttribution
+{
+	font-size: 11px !important;
+}
