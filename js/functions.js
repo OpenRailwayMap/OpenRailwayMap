@@ -1,8 +1,8 @@
 /*
-OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+OpenRailwayMap Copyright (C) 2010 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
@@ -76,7 +76,7 @@ function createMap()
 	});
 
 	// styles for object layer
-	var objectsStyle = new OpenLayers.Style(
+	var milestonesStyle = new OpenLayers.Style(
 	{
 		pointRadius: "${radius}",
 		strokeColor: "#000000",
@@ -93,7 +93,7 @@ function createMap()
 				}
 		}
 	});
-	var objectsStyleSelected = new OpenLayers.Style(
+	var milestonesStyleSelected = new OpenLayers.Style(
 	{
 		pointRadius: "${radius}",
 		strokeColor: "#0860d5",
@@ -110,19 +110,19 @@ function createMap()
 				}
 		}
 	});
-	var objectsStyleMap = new OpenLayers.StyleMap(
+	var milestonesStyleMap = new OpenLayers.StyleMap(
 	{
 		'default': objectsStyle,
 		'select': objectsStyleSelected
 	});
-	// adding objects overlay
-	objectsLayer = new OpenLayers.Layer.Vector(translations['object'],
+	// adding milestones overlay
+	objectsLayer = new OpenLayers.Layer.Vector(translations['milestones'],
 	{
 		projection: wgs84,
 		maxResolution: 10.0,
 		visibility: true,
 		transitionEffect: 'resize',
-		styleMap: objectsStyleMap,
+		styleMap: milestonesStyleMap,
 		strategies:
 		[
 			new OpenLayers.Strategy.BBOX({ratio: 2.5}),
@@ -130,7 +130,7 @@ function createMap()
 		],
 		protocol: new OpenLayers.Protocol.HTTP(
 		{
-			url: root+'api/list.php',
+			url: root+'api/milestones.php',
 			format: new OpenLayers.Format.OLM()
 		})
 	});
