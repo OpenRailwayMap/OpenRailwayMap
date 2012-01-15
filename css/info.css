@@ -1,0 +1,162 @@
+/*
+OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+*/
+
+@charset "utf-8";
+
+html, body
+{
+	font-family: Arial;
+}
+
+#background
+{
+	background-color: #696969;
+}
+
+/* main container over background */
+#container
+{
+	border: 1px solid black;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: white;
+}
+
+/* header frame */
+#titleframe
+{
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-image: url(leiste.png);
+	overflow: visible;
+}
+
+/* header/title */
+#title
+{
+	color: white;
+	font-size: 24pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#title a:link
+{
+	color: white;
+	font-size: 28pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#title a:visited
+{
+	color: white;
+	font-size: 28pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#title a:active
+{
+	color: white;
+	font-size: 28pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#title a:hover
+{
+	color: white;
+	font-size: 28pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#title a:focus
+{
+	color: white;
+	font-size: 28pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* frame of sub-title below header frame */
+#overlineframe
+{
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	background-color: white;
+	overflow: visible;
+}
+
+/* sub-title below header frame */
+#overline
+{
+	color: black;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+/* box of main content */
+#contentframe
+{
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	background-color: white;
+	overflow: visible;
+}
+
+/* main text */
+#text
+{
+	color: black;
+	font-size: 12pt;
+}
+
+/* footer */
+#infoframe
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 1px;
+	margin-bottom: 10px;
+	overflow: visible;
+}
+
+/* footer text */
+#info
+{
+	color: black;
+	font-size: 10pt;
+}
+
+/* important texts */
+#important
+{
+	color: red;
+	font-size: 12pt;
+}
