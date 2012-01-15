@@ -1,8 +1,8 @@
 /*
-OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+OpenRailwayMap Copyright (C) 2010 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See olm.openstreetmap.de/info for details.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 Russian translation by NothisIm, see https://github.com/NothisIm
 */
@@ -32,7 +32,7 @@ var translations =
 	"finish" : "Завершить",
 	"markerLoading" : "Загрузка точек...",
 	"hillshading" : "Карта высот",
-	"object" : "POI-информация",
+	"milestones" : "-null-",
 	"marker" : "Метка",
 	"searchresults" : "Результаты поиска",
 	"routing" : "Маршрут",
