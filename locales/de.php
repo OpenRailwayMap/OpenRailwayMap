@@ -139,7 +139,7 @@
 			"sh" => "Schulferien",
 			"+" => "Ende offen",
 			"and" => "und",
-			"247" => "Mo-Fr 00:00-24:00",
+			"247" => "Mo-So 00:00-24:00",
 			"open" => "Momentan geöffnet",
 			"closed" => "Momentan geschlossen",
 			"maybeopen" => "In den Ferien und an Feiertagen geöffnet",

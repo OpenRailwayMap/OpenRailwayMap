@@ -108,10 +108,8 @@
 
 		if ($name == "CREATE")
 			$action = 0;
-		else if ($name == "MODIFY")
-			$action = 1;
 		else if ($name == "DELETE")
-			$action = 2;
+			$action = 1;
 
 		if ($name == "TAG")
 		{
@@ -144,29 +142,26 @@
 	{
 		global $action, $tags, $id, $type, $lat, $lon, $connection;
 
-		if ($name == "TAG")
-		{
-			if ($tags == "")
-				$tags = '"'.addslashes($attr['K']).'"=>"'.addslashes($attr['V']).'"';
-			else
-				$tags .= ',"'.addslashes($attr['K']).'"=>"'.addslashes($attr['V']).'"';
-		}
-		else if ($name == "NODE")
+		if ($name == "NODE")
 		{
 			if ($action == 0)
-				$result = pg_query($connection, "INSERT INTO ".$type." (id, tags, geom) VALUES ('".$id."', '".str_replace("\"", "\\\"", $tags)."', GeometryFromText('POINT ( ".$lon." ".$lat." )', 4326 ))");
-			else if ($action == 2)
-				$result = pg_query($connection, "DELETE FROM ".$type." WHERE (id = '".$id."')");
-			else if ($action == 1)
 			{
-				$result = pg_query($connection, "DELETE FROM ".$type." WHERE (id = '".$id."')");
-				$result = pg_query($connection, "INSERT INTO ".$type." (id, tags, geom) VALUES ('".$id."', '".str_replace("\"", "\\\"", $tags)."', GeometryFromText('POINT ( ".$lon." ".$lat." )', 4326 ))");
+				$exists = pg_query($connection, "SELECT id FROM ".$type." WHERE id = ".$id);
+				if (!$exists)
+					$result = pg_query($connection, "INSERT INTO ".$type." (id, tags, geom) VALUES ('".$id."', '".str_replace("\"", "\\\"", $tags)."', GeometryFromText('POINT ( ".$lon." ".$lat." )', 4326 ))");
+				else
+				{
+					$result = pg_query($connection, "DELETE FROM ".$type." WHERE (id = '".$id."')");
+					$result = pg_query($connection, "INSERT INTO ".$type." (id, tags, geom) VALUES ('".$id."', '".str_replace("\"", "\\\"", $tags)."', GeometryFromText('POINT ( ".$lon." ".$lat." )', 4326 ))");
+				}
 			}
+			else if ($action == 1)
+				$result = pg_query($connection, "DELETE FROM ".$type." WHERE (id = '".$id."')");
 			$tags = '';
 		}
 	}
 
-	updateOsmFile("olm.osc", "olm");
-	updateOsmFile("nextobjects.osc", "nextobjects");
+	updateOsmFile("olm.o5c", "olm");
+	updateOsmFile("nextobjects.o5c", "nextobjects");
 	echo "Finished.\n";
 ?>

@@ -9,7 +9,18 @@
 # run this script not automatically! you have to change paths and modify it to your own environment!
 
 # install necessary software
-yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis
+yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip
+
+pecl install geoip
+
+# add extension=geoip.so to php.ini
+
+cd /usr/share/GeoIP
+wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
+gunzip GeoIP.dat.gz
+wget -N -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+gunzip GeoLiteCity.dat.gz
+mv GeoLiteCity.dat GeoIPCity.dat
 
 wget -O - http://m.m.i24.cc/osmupdate.c | cc -x c - -o osmupdate
 wget -O - http://m.m.i24.cc/osmfilter.c |cc -x c - -o osmfilter

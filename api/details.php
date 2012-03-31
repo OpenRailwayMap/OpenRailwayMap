@@ -16,6 +16,7 @@
 	$type = $_GET['type'];
 	// offset of user's timezone to UTC
 	$offset = offset($_GET['offset']);
+	$callback = $_GET['callback'];
 
 	date_default_timezone_set('UTC');
 
@@ -39,6 +40,7 @@
 	function getDetails($db, $id, $type, $langs, $offset)
 	{
 		global $format;
+		global $callback;
 
 		// request
 		$request = "SELECT
@@ -62,7 +64,8 @@
 				tags->'contact:email' AS \"email2\",
 				tags->'addr:email' AS \"email3\",
 				tags->'opening_hours' AS \"openinghours\",
-				tags->'service_times' AS \"servicetimes\"
+				tags->'service_times' AS \"servicetimes\",
+				tags->'image' AS \"image\"
 			FROM ".$type."s WHERE (id = ".$id.");";
 
 		$wikipediarequest = "SELECT
@@ -103,9 +106,10 @@
 		{
 			if ($format == "text")
 				echo textDetailsOut($response[0], $nameresponse, $wikipediaresponse, $langs, $offset);
+			else if ($format == "json")
+				echo jsonDetailsOut($response[0], $nameresponse, $wikipediaresponse, $langs, $offset, $id, $type, $callback);
 			else
 				echo xmlDetailsOut($response[0], $nameresponse, $wikipediaresponse, $langs, $offset, $id, $type);
-
 			return true;
 		}
 		else
@@ -151,6 +155,21 @@
 			$servicetimes = getOpeninghoursDetail($response['servicetimes']);
 
 			// printing popup details
+
+			// image, only images from wikimedia are supported
+			if (substr($response['image'], 0, 29) == "http://commons.wikimedia.org/" || substr($response['image'], 0, 28) == "http://upload.wikimedia.org/")
+			{
+				$url = getImageUrl($response['image']);
+				$attribution = explode("/", $url);
+				$output .= "<img id=\"image\" title=\"".$translations['captions']['fullscreen']."\" src=\"".getWikipediaThumbnailUrl($url)."\" /></a>\n";
+			}
+			elseif (getWikipediaImage($wikipedia[1]))
+			{
+				$image = getWikipediaImage($wikipedia[1]);
+
+				$output .= "<img id=\"image\" title=\"".$translations['captions']['fullscreen']."\" src=\"".getWikipediaThumbnailUrl($image)."\" /></a>\n";
+			}
+
 			if ($name)
 			{
 				$output .= "<div class=\"container hcard vcard\"><div class=\"header\">\n";
@@ -362,9 +381,143 @@
 				$output .= "\">".$response['servicetimes']."</servicetimes>\n";
 			}
 
+			// image, only images from wikimedia are supported
+			if (substr($response['image'], 14, 14) == "wikimedia.org/")
+			{
+				$url = getImageUrl($response['image']);
+				$output .= "<image>";
+ 					$output .= $url;
+				$output .= "</image>\n";
+			}
+			elseif (getWikipediaImage($wikipedia[1]))
+			{
+				$image = getWikipediaImage($wikipedia[1]);
+
+				$output .= "<image>";
+					$output .= $image;
+				$output .= "</image>\n";
+			}
+
 			$output .= "</details>";
 
 			return $output;
+		}
+		else
+			return false;
+	}
+
+
+	// output of details data in json format
+	function jsonDetailsOut($response, $nameresponse, $wikipediaresponse, $langs = "en", $offset = 0, $id, $type, $callback)
+	{
+		if ($response)
+		{
+			$name = getNameDetail($langs, $nameresponse);
+
+			$phone = getPhoneFaxDetail(array($response['phone1'], $response['phone2'], $response['phone3']));
+			$phone = $phone[1];
+
+			$fax = getPhoneFaxDetail(array($response['fax1'], $response['fax2'], $response['fax3']));
+			$fax = $fax[1];
+
+			$mobilephone = getPhoneFaxDetail(array($element['mobilephone1'], $element['mobilephone2']));
+			$mobilephone = $mobilephone[1];
+
+			$website = getWebsiteDetail(array($response['website1'], $response['website2'], $response['website3'], $response['website4']));
+
+			$email = getMailDetail(array($response['email1'], $response['email2'], $response['email3']));
+
+			// get wikipedia link and make translation
+			if ($wikipediaresponse)
+				$wikipedia = getWikipediaDetail($langs, $wikipediaresponse);
+
+			$openinghours = getOpeninghoursDetail($response['openinghours']);
+			$servicetimes = getOpeninghoursDetail($response['servicetimes']);
+
+			$data = array(
+				'id' => (int)$id,
+				'type' => $type,
+			);
+
+			// name
+			if ($name)
+			{
+				if ($name[0])
+					$data['name'] = array('lang' => $name[1], 'name' => $name[0]);
+				else
+					$data['name'] = $name[0];
+			}
+
+			// address information
+			if ($response['street'])
+				$data['street'] = $response['street'];
+			if ($response['housenumber'])
+				$data['housenumber'] = $response['housenumber'];
+			if ($response['country'])
+				$data['country'] = strtoupper($response['country']);
+			if ($response['postcode'])
+				$data['postcode'] = $response['postcode'];
+			if ($response['city'])
+				$data['city'] = $response['city'];
+
+			// contact information
+			if ($phone)
+				$data['phone'] = $phone;
+			if ($fax)
+				$data['fax'] = $fax;
+			if ($mobilephone)
+				$data['mobilephone'] = $mobilephone;
+			if ($email)
+				$data['email'] = $email;
+
+			// website and wikipedia links
+			if ($website[0])
+				$data['website'] = $website[0];
+			if ($wikipedia[1])
+				$data['wikipedia'] = $wikipedia[1];
+
+			// operator
+			if ($response['operator'])
+				$data['operator'] = $response['operator'];
+
+			// opening hours
+			if ($openinghours)
+			{
+				if (isPoiOpen($response['openinghours'], $offset))
+					$state .= "open";
+				else if (isInHoliday($response['openinghours'], $offset))
+					$state .= "maybeopen";
+				else
+					$state .= "closed";
+
+				$data['openinghours'] = array('state' => $state, 'openinghours' => $response['openinghours']);
+			}
+
+			// service times
+			if ($servicetimes)
+			{
+				if (isPoiOpen($response['servicetimes'], $offset))
+					$state .= "open";
+				else if (isInHoliday($response['servicetimes'], $offset))
+					$state .= "maybeopen";
+				else
+					$state .= "closed";
+
+				$data['servicetimes'] = array('state' => $state, 'servicetimes' => $response['servicetimes']);
+			}
+
+			// image, only images from wikimedia are supported
+			if (substr($response['image'], 14, 14) == "wikimedia.org/")
+				$data['image'] = getImageUrl($response['image']);
+			else if (getWikipediaImage($wikipedia[1]))
+				$data['image'] = getWikipediaImage($wikipedia[1]);
+
+			$jsonData = json_encode($data);
+			// JSONP request?
+			if (isset($callback))
+				return $callback.'('.$jsonData.')';
+			else
+				return $jsonData;
 		}
 
 		else

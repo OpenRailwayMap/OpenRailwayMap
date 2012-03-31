@@ -44,26 +44,34 @@ echo "Creating centroids, removing elements"
 echo ""
 osmconvert temp-olm.o5m --all-to-nodes --max-objects=50000000 --out-o5m >temp.o5m
 rm temp-olm.o5m
-osmfilter temp.o5m --drop-relations --drop-ways --keep-nodes="wikipedia= wikipedia:*= contact:phone= website= url= phone= fax= email= addr:email= image= url:official= contact:website= addr:phone= phone:mobile= contact:mobile= addr:fax= contact:email= contact:fax= image:panorama= opening_hours=" --fake-lonlat --out-osm >olm.osm
+osmfilter temp.o5m --drop-relations --drop-ways --keep-nodes="wikipedia= wikipedia:*= contact:phone= website= url= phone= fax= email= addr:email= image= url:official= contact:website= addr:phone= phone:mobile= contact:mobile= addr:fax= contact:email= contact:fax= image:panorama= opening_hours=" --fake-lonlat --fake-author --out-osm >temp.osm
 rm temp.o5m
+osmosis-0.40.1/bin/osmosis --rx file="temp.osm" enableDateParsing="no" --s --wx file="olm.osm"
+rm temp.osm
+osmconvert olm.osm --drop-author --out-o5m >olm.o5m
+rm olm.osm
 
 osmconvert temp-nextobjects.o5m --all-to-nodes --max-objects=50000000 --out-o5m >temp.o5m
 rm temp-nextobjects.o5m
-osmfilter temp.o5m --drop-relations --drop-ways --keep-nodes="amenity=bus_station highway=bus_stop railway=station railway=halt railway=tram_stop amenity=parking" --fake-lonlat --out-osm >nextobjects.osm
+osmfilter temp.o5m --drop-relations --drop-ways --keep-nodes="amenity=bus_station highway=bus_stop railway=station railway=halt railway=tram_stop amenity=parking" --fake-lonlat --fake-author --out-osm >temp.osm
 rm temp.o5m
+osmosis-0.40.1/bin/osmosis --rx file="temp.osm" enableDateParsing="no" --s --wx file="nextobjects.osm"
+rm temp.osm
+osmconvert nextobjects.osm --drop-author --out-o5m >nextobjects.o5m
+rm nextobjects.osm
 echo ""
 
 
 # generate diffs, ~ 2 min
 echo "Generate diffs"
 echo ""
-osmconvert old-olm.osm olm.osm --diff >olm.osc
-rm old-olm.osm
-mv olm.osm old-olm.osm
+osmconvert old-olm.o5m olm.o5m --diff-contents >olm.o5c
+rm old-olm.o5m
+mv olm.o5m old-olm.o5m
 
-osmconvert old-nextobjects.osm nextobjects.osm --diff >nextobjects.osc
-rm old-nextobjects.osm
-mv nextobjects.osm old-nextobjects.osm
+osmconvert old-nextobjects.o5m nextobjects.o5m --diff-contents >nextobjects.o5c
+rm old-nextobjects.o5m
+mv nextobjects.o5m old-nextobjects.o5m
 echo ""
 
 
@@ -71,8 +79,8 @@ echo ""
 echo "Updating of database"
 echo ""
 php update.php
-rm olm.osc
-rm nextobjects.osc
+rm olm.o5c
+rm nextobjects.o5c
 rm timestamp
 mv timestamp_tmp timestamp
 echo ""

@@ -10,19 +10,20 @@
 	require_once("functions.php");
 
 	$format = $_GET['format'];
-
+	$callback = $_GET['callback'];
 
 	// request location for api
-	$position = getPositionByIp($_SERVER['REMOTE_ADDR']);
+	$position = geoip_record_by_name($_SERVER['REMOTE_ADDR']);
 
 	if ($position)
 	{
 		if ($format == "xml")
 			echo xmlPositionOutput($position);
+		else if ($format == "json")
+			echo jsonPositionOutput($position, $callback);
 		else
 			echo textPositionOutput($position);
 	}
-
 	else
 		echo "NULL";
 
@@ -33,11 +34,10 @@
 		if ($position)
 		{
 			$output = xmlStart("geolocation");
-			$output .= "<position source=\"http://www.hostip.info/\">";
+			$output .= "<position source=\"GeoIP-Database\">";
 
-			$latlon = explode(",", $position);
-			$output .= "<lat>".$latlon[0]."</lat>";
-			$output .= "<lon>".$latlon[1]."</lon>";
+			$output .= "<lat>".$position['latitude']."</lat>";
+			$output .= "<lon>".$position['longitude']."</lon>";
 
 			$output .= "</position>";
 			$output .= "</geolocation>";
@@ -56,12 +56,31 @@
 		if ($position)
 		{
 			header("Content-Type: text/plain; charset=UTF-8");
-			$output =  $position;
-
-			return $output;
+			return $position['latitude'].",".$position['longitude'];
 		}
-
 		else
 			return false;
+	}
+
+
+	// output of position in JSON format, given: position in format lat,lon, JSONP callback function name
+	function jsonPositionOutput($position, $callback)
+	{
+		if ($position)
+		{
+			$jsonData = json_encode(
+				array(
+					'lat' => $position['latitude'],
+					'lon' => $position['longitude'],
+					'source' => 'GeoIP-Database'
+				)
+			);
+			// JSONP request?
+			if (isset($callback))
+				return $callback.'('.$jsonData.')';
+			else
+				return $jsonData;
+		}
+		return false;
 	}
 ?>

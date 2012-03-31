@@ -11,18 +11,30 @@
 	// including translation file
 	require_once("../".includeLocale($_GET['lang']));
 
-	$lang = $_GET['lang'];
+	$callback = $_GET['callback'];
+	$format = $_GET['format'];
 
 
-	header("Content-Type: application/x-javascript; charset=UTF-8");
-
-	echo "var tags = {};";
-
-	foreach ($translations['tags'] as $key => $value)
+	if ($format == "json")
 	{
-		echo "tags['".$key."'] =\n{\n";
-		foreach ($value as $osmkey => $osmvalue)
-			echo "'".$osmkey."' : '".$osmvalue."',\n";
-		echo "};\n";
+		header("Content-Type: text/plain; charset=UTF-8");
+		$jsonData = json_encode($translations['tags']);
+		// JSONP request?
+		if (isset($callback))
+			echo $callback.'('.$jsonData.')';
+		else
+			echo $jsonData;
+	}
+	else
+	{
+		header("Content-Type: application/x-javascript; charset=UTF-8");
+		echo "var tags = {};";
+		foreach ($translations['tags'] as $key => $value)
+		{
+			echo "tags['".$key."'] =\n{\n";
+			foreach ($value as $osmkey => $osmvalue)
+				echo "'".$osmkey."' : '".$osmvalue."',\n";
+			echo "};\n";
+		}
 	}
 ?>

@@ -14,7 +14,7 @@
 		<title><?=$appname?></title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="content-language" content="<? echo $lang; ?>" />
-		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, olm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte" />
+		<meta name="keywords" content="openstreetmap, openlinkmap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, olm" />
 		<meta name="title" content="<?=$appname?>" />
 		<meta name="author" content="rurseekatze, Alexander Matheisen" />
 		<meta name="publisher" content="rurseekatze, Alexander Matheisen" />
@@ -27,7 +27,7 @@
 		<link rel="icon" href="img/favicon.ico" type="image/vnd.microsoft.icon" />
 		<meta http-equiv="content-script-type" content="text/javascript" />
 		<meta http-equiv="content-style-type" content="text/css" />
-		<link rel="stylesheet" type="text/css" href="css/map.css" />
+		<link rel="stylesheet" type="text/css" href="css/small.css" />
 		<script type="text/javascript" src="js/OpenLayers.js"></script>
 		<?php
 			// params
@@ -72,84 +72,14 @@
 		<script type="text/javascript" src="locales/<? echo $lang; ?>.js"></script>
 		<script type="text/javascript" src="api/langfile.php?lang=<? echo $lang; ?>"></script>
 		<script type="text/javascript" src="js/OpenStreetMap.js"></script>
-		<script type="text/javascript" src="js/search.js"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>
-		<script type="text/javascript" src="js/timestamp.js"></script>
 		<script type="text/javascript" src="js/format.js"></script>
 		<script type="text/javascript" src="js/fullscreen.js"></script>
 		<script type="text/javascript" src="js/panorama.js"></script>
-		<script type="text/javascript" src="js/functions.js"></script>
-		<!-- Piwik -->
-		<script type="text/javascript">
-			var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.openlinkmap.org/piwik/" : "http://www.openlinkmap.org/piwik/");
-			document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-		</script>
-		<script type="text/javascript">
-			try
-			{
-				var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
-				piwikTracker.trackPageView();
-				piwikTracker.enableLinkTracking();
-			}
-			catch( err )
-			{}
-		</script>
-		<noscript>
-			<p><img src="http://www.openlinkmap.org/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p>
-		</noscript>
-		<!-- End Piwik Tracking Code -->
+		<script type="text/javascript" src="js/small.js"></script>
 	</head>
 	<body onload="createMap();">
 		<div id="fullscreen" class="fullscreenOut"></div>
-		<div id="moreInfo" class="moreInfoFalse"></div>
-		<div id="sideBar" class="sideBar" onmouseover="hoverSidebar();" onmouseout="unhoverSidebar();">
-			<b id="header"><a href="index.php"><?=$appname?></a></b>
-			<form id="langSelection">
-				<select id="langSelector" name="language" size="1" onChange="changeLanguage(this.form.language.options[this.form.language.selectedIndex].value);">
-					<?php
-						$languages = array(
-							"de" => "Deutsch",
-							"en" => "English",
-							"fr" => "Français",
-							"it" => "Italiano",
-							"ru" => "Русский"
-						);
-						foreach ($languages as $short => $name)
-						{
-							echo "<option value=\"".$short."\"";
-							if ($short == $lang)
-								echo " selected";
-							echo ">".$name."</option>\n";
-						}
-					?>
-				</select>
-			</form>
-			<br />
-			<p id="osm">Maps and data from <a href="http://www.openstreetmap.org/">OpenStreetMap</a>, released under the terms of <a href="http://creativecommons.org/licenses/by-sa/2.0/" title="CC-BY-SA 2.0">CC-BY-SA 2.0 License</a>.</p>
-			<a href="http://joker.com/" id="poweredby"><img src="img/ad.png" /></a>
-			<p id="ad" onclick="clickAd();">Improve the data! Correct wrong website links with the new website checker from Keepright!</p>
-			<p id="info"></p>
-			<div id="linkBar">
-				<a class="links" id="spamButton" onclick="reportSpam();">Report bug in map</a>&nbsp;•
-				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenLinkMap" target="_blank">More Info</a>&nbsp;•
-				<a class="links" id="contactButton" href="#">Contact</a>
-				<script language="javascript">
-					var usr = "info";
-					var dom = "openlinkmap";
-					var tld = "org";
-					gEBI("contactButton").href="mailto:"+usr+"@"+dom+"."+tld;
-				</script>
-			</div>
-			<input type="text" id="searchBox" size="20" />
-			<img id="searchButton" src="img/search.png" onclick="Search.request();" title="Search" />
-			<img id="clearButton" src="img/clear.png" onclick="Search.clear();" />
-			<br />
-			<input type="checkbox" id="searchOption"><label for="searchOption" id="searchOptionCaption">Search only in the current map view</label><br /><br />
-			<div id="searchBar" class="infoBarOut"></div>
-			<div id="detailsBar" class="infoBarOut"></div>
-			<iframe id="josmFrame" src="about:blank"></iframe>
-		</div>
-		<div class="hideSidebarButton" id="hideSidebarButton" onclick="hideSideBar();" title="Hide"><b id="hideText">«</b></div>
 		<img class="locateButton" id="locateButton" src="img/locate.png" />
 		<div id="mapFrame" class="mapFrame">
 			<noscript>

@@ -383,15 +383,21 @@
 		if (!$url)
 			return false;
 
-		$url = str_replace("wikipedia/commons", "wikipedia/commons/thumb", $url);
-		$filename = explode("/", $url);
-
-		return $url."/280px-".$filename[count($filename)-1];
+		if (substr($url, 0, 29) == "http://commons.wikimedia.org/")
+			return $url."?width=280px";
+		else if ((substr($url, 0, 38) == "http://upload.wikimedia.org/wikipedia/") && (substr($url, 38, 7) != "commons"))
+			return $url;
+		else
+		{
+			$url = str_replace("wikipedia/commons", "wikipedia/commons/thumb", $url);
+			$filename = explode("/", $url);
+			return $url."/280px-".$filename[count($filename)-1];
+		}
 	}
 
 
 	// request all objects with given tags for a given bbox and echo them
-	function getObjectsForBbox($connection, $bbox, $object)
+	function getObjectsForBbox($connection, $bbox)
 	{
 		// if no bbox was given
 		if (!$bbox)
@@ -414,20 +420,16 @@
 		foreach ($types as $type)
 		{
 			$response = requestDetails("SELECT ST_X(geom), ST_Y(geom), id
-											FROM ".$object."s_".$type."s
+											FROM ".$type."s
 											WHERE geom && ST_SetSRID(ST_MakeBox2D(ST_Point(".$bbox[0].",".$bbox[1]."), ST_Point(".$bbox[2].",".$bbox[3].")), 4326);", $connection);
-
 			// putting out the results
 			if ($response)
 			{
+				$list = array();
 				foreach ($response as $element)
-				{
-					$list .= $element['st_x']."|".$element['st_y']."|".$element['id']."|".$type."<br/>";
-				}
+					array_push($list, array($element['st_x'], $element['st_y'], $element['id'], $type));
 			}
-
 		}
-
 		return $list;
 	}
 
@@ -804,7 +806,7 @@
 				{
 					if ($caption['keys'] == "name")
 					{
-						$namelang = false;
+						$namelang = "name";
 						$name = $caption['values'];
 						break;
 					}
@@ -1094,5 +1096,17 @@
 			return true;
 
 		return false;
+	}
+
+
+	// returns image url if only url to image website is given
+	function getImageUrl($url)
+	{
+		if (substr($url, 0, 39) == "http://commons.wikimedia.org/wiki/File:")
+			return "http://commons.wikimedia.org/wiki/special:filepath/".substr($url, 39);
+		else if (substr($url, 0, 40) == "http://commons.wikimedia.org/wiki/Image:")
+			return "http://commons.wikimedia.org/wiki/special:filepath/".substr($url, 40);
+		else
+			return $url;
 	}
 ?>

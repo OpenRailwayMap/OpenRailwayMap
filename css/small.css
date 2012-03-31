@@ -1,0 +1,435 @@
+/*
+OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+*/
+
+@charset "utf-8";
+
+html,body
+{
+	background-color: #ffffff;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma,sans-serif;
+	overflow-y: hidden;
+}
+
+/* map widget in main size when sidebar is fold in*/
+.mapFrame
+{
+	background-color: #f1eee8;
+	color: #000000;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+/* text which is shown when javascript is not activated */
+noscript p
+{
+	font-size: 15px;
+	color: #000000;
+	margin-left: 80px;
+	margin-top: 100px;
+}
+
+/* links on the bottom of each popup, also the box around them */
+#popupLinks
+{
+	border-top: 1px solid gray;
+	color: black;
+	font-size: 11px;
+}
+
+#popupLinks a
+{
+	text-decoration: none;
+}
+
+#popupLinks a:hover
+{
+	text-decoration: underline;
+}
+
+/* style of texts in popups */
+.container
+{
+	min-height: 60px;
+}
+
+.header
+{
+	font-size: 16px;
+}
+
+.street-address
+{
+	font-size: 12px;
+}
+
+.adr
+{
+	margin-top: 2px;
+	font-size: 12px;
+}
+
+.contact
+{
+	margin-top: 10px;
+	font-size: 11px;
+}
+
+.contact a
+{
+	text-decoration: none;
+}
+
+.contact a:hover
+{
+	text-decoration: underline;
+}
+
+.web
+{
+	margin-top: 10px;
+	font-size: 11px;
+}
+
+.web a
+{
+	text-decoration: none;
+}
+
+.web a:hover
+{
+	text-decoration: underline;
+}
+
+.openinghours, .servicetimes
+{
+	margin-top: 10px;
+	font-size: 10px;
+}
+
+.operator
+{
+	margin-top: 10px;
+	font-size: 10px;
+}
+
+/* "opened"-label */
+.closed
+{
+	background-color: #d55858;
+	color: white;
+}
+
+.open
+{
+	background-color: #62be67;
+	color: white;
+}
+
+.maybeopen
+{
+	background-color: #f4e73c;
+	color: black;
+}
+
+#image
+{
+	max-height: 60px;
+	border: 1px solid black;
+	background-image: url(../img/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	float: right;
+	margin-left: 10px;
+}
+
+#image:hover
+{
+	cursor: pointer;
+	-o-box-shadow: 0px 0px 7px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 7px #aaaaaa;
+	-moz-box-shadow: 0px 0px 7px #aaaaaa;
+	box-shadow: 0px 0px 7px #aaaaaa;
+}
+
+/* loading image */
+.loading
+{
+	text-align: center;
+	width: 16px;
+	height: 16px;
+}
+
+/* names of clustered popups */
+.clusterName
+{
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.clusterName:hover
+{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* hidden frame to which josm remote plugin messages are echoed */
+#josmFrame
+{
+	display: none;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* info like "zoom in to show markers" in footer */
+#status
+{
+	color: #ff5e5e;
+	font-size: 12px;
+	margin-left: 5px;
+	background-color: white;
+}
+
+#moreImage
+{
+	max-width: 240px;
+	border: 1px solid black;
+	background-image: url(../img/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#moreImage:hover
+{
+	cursor: pointer;
+	-o-box-shadow: 0px 0px 7px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 7px #aaaaaa;
+	-moz-box-shadow: 0px 0px 7px #aaaaaa;
+	box-shadow: 0px 0px 7px #aaaaaa;
+}
+
+#morePanorama
+{
+	max-width: 240px;
+	border: 1px solid black;
+	background-image: url(../img/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#morePanorama:hover
+{
+	cursor: pointer;
+	-o-box-shadow: 0px 0px 7px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 7px #aaaaaa;
+	-moz-box-shadow: 0px 0px 7px #aaaaaa;
+	box-shadow: 0px 0px 7px #aaaaaa;
+}
+
+/* star in ext details */
+.star
+{
+	max-width: 12px;
+	max-height: 12px;
+}
+
+.fullscreen, .panorama
+{
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 67%, rgba(0, 0, 0, 0.7) 100%);
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 67%, rgba(0, 0, 0, 0.7) 100%);
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 67%, rgba(0, 0, 0, 0.7) 100%);
+	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.7) 67%, rgba(0, 0, 0, 0.7) 100%);
+	text-align: center;
+	z-index: 10000;
+}
+
+.panorama
+{
+	background-image:url(../img/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.olMap:not(.mapFrame)
+{
+	z-index: 10000 !important;
+}
+
+.fullscreenOut
+{
+	height: 0px;
+	width: 0px;
+}
+
+
+#fullscreenImg
+{
+	max-width: 100%;
+	max-height: 100%;
+	min-width: auto;
+	min-height: auto;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	-o-box-shadow: 0px 0px 7px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 7px #aaaaaa;
+	-moz-box-shadow: 0px 0px 7px #aaaaaa;
+	box-shadow: 0px 0px 7px #aaaaaa;
+	border: 1px solid black;
+	z-index: 1000;
+	margin: auto;
+	background-image:url(../img/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#fullscreenImg:hover
+{
+	cursor: pointer;
+}
+
+#fullscreenImg
+{
+	max-width: 100%;
+	max-height: 100%;
+	min-width: auto;
+	min-height: auto;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	-o-box-shadow: 0px 0px 7px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 7px #aaaaaa;
+	-moz-box-shadow: 0px 0px 7px #aaaaaa;
+	box-shadow: 0px 0px 7px #aaaaaa;
+	border: 1px solid black;
+	z-index: 1000;
+	margin: auto;
+	background-image:url(../img/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* single box of extended details */
+.moreInfoBox
+{
+	color: black;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 7px;
+	background-color: #d6d6d6;
+	background: -moz-linear-gradient(top, #e9e9e9 0, #fdfdfc 67%, #e9e9e9 100%);
+	background: -webkit-linear-gradient(top, #e9e9e9 0, #fdfdfc 67%, #e9e9e9 100%);
+	background: -o-linear-gradient(top, #e9e9e9 0, #fdfdfc 67%, #e9e9e9 100%);
+	background: -ms-linear-gradient(top, #e9e9e9 0, #fdfdfc 67%, #e9e9e9 100%);
+	font-size: 12px;
+	-webkit-transition: background-color;
+	-webkit-transition-timing-function: ease-in-out;
+	-webkit-transition-duration: 200ms;
+	-moz-transition: background-color;
+	-moz-transition-timing-function: ease-in-out;
+	-moz-transition-duration: 200ms;
+	-o-transition: background-color;
+	-o-transition-timing-function: ease-in-out;
+	-o-transition-duration: 200ms;
+	border-bottom: 1px solid #aaaaaa;
+}
+
+.moreInfoBox:hover
+{
+	color: black;
+	background-color: white;
+	background: -moz-linear-gradient(top, #fdfdfc 0, white 67%, #f7f6f6 100%);
+	background: -webkit-linear-gradient(top, #fdfdfc 0, white 67%, #f7f6f6 100%);
+	background: -o-linear-gradient(top, #fdfdfc 0, white 67%, #f7f6f6 100%);
+	background: -ms-linear-gradient(top, #fdfdfc 0, white 67%, #f7f6f6 100%);
+	-o-box-shadow: 0px 0px 7px 3px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 7px 3px #aaaaaa;
+	-moz-box-shadow: 0px 0px 7px 3px #aaaaaa;
+	box-shadow: 0px 0px 7px 3px #aaaaaa;
+}
+
+.moreInfoBox a
+{
+	text-decoration: none;
+}
+
+.moreInfoBox a:hover
+{
+	text-decoration: underline;
+}
+
+/* embed-box */
+.moreInfoBox input
+{
+	font-size: 14px;
+	height: 18px;
+	vertical-align: middle;
+	background-color: white;
+	border: 1px solid black;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	width: 240px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.moreInfoBox input:hover
+{
+	-o-box-shadow: 0px 0px 7px 3px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 7px 3px #aaaaaa;
+	-moz-box-shadow: 0px 0px 7px 3px #aaaaaa;
+	box-shadow: 0px 0px 7px 3px #aaaaaa;
+}
+
+/* frame of extended details */
+#moreInfoFrame
+{
+	color: black;
+	background-color: white;
+}
+
+#moreInfoFrame:hover
+{
+	background-color: #6baced;
+}
+
+#moreInfoFrame b
+{
+	font-size: 14px;
+}
+
+.locateButton
+{
+	position: absolute;
+	left: 17px;
+	top: 320px;
+	z-index: 1000;
+}
+
+#locateButton:hover
+{
+	cursor: pointer;
+}

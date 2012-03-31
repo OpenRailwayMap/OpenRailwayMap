@@ -9,5 +9,20 @@
 
 	require_once("functions.php");
 
-	echo getUserLang();
+	$format = $_GET['format'];
+	$callback = $_GET['callback'];
+
+	header("Content-Type: text/plain; charset=UTF-8");
+	if ($format == "json")
+	{
+
+		$jsonData = json_encode(array('lang' => getUserLang()));
+		// JSONP request?
+		if (isset($callback))
+			echo $callback.'('.$jsonData.')';
+		else
+			echo $jsonData;
+	}
+	else
+		echo getUserLang();
 ?>

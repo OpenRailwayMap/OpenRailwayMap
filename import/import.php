@@ -116,8 +116,7 @@
 			else
 				$tags .= ',"'.addslashes($attr['K']).'"=>"'.addslashes($attr['V']).'"';
 		}
-
-		if ($name == "NODE")
+		else if ($name == "NODE")
 		{
 			$id = (int)$attr['ID'];
 			$lat = $attr['LAT'];
@@ -141,7 +140,14 @@
 	{
 		global $tags, $id, $type, $lat, $lon, $connection;
 
-		if ($name == "NODE")
+		if ($name == "TAG")
+		{
+			if ($tags == "")
+				$tags = '"'.addslashes($attr['K']).'"=>"'.addslashes($attr['V']).'"';
+			else
+				$tags .= ',"'.addslashes($attr['K']).'"=>"'.addslashes($attr['V']).'"';
+		}
+		else if ($name == "NODE")
 		{
 			$result = pg_query($connection, "INSERT INTO ".$type." (id, tags, geom) VALUES ('".$id."', '".str_replace("\"", "\\\"", $tags)."', GeometryFromText('POINT ( ".$lon." ".$lat." )', 4326 ))");
 			if (!$result)
