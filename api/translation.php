@@ -14,48 +14,77 @@
 	$lang = $_GET['lang'];
 	$string = $_GET['string'];
 	$format = $_GET['format'];
+	$callback = $_GET['callback'];
 
 
 	if ($string)
 	{
-		// xml start
+		$parts = explode(",", $string);
+
 		if ($format == "xml")
 		{
 			echo xmlStart("translations");
-
 			// echo provided languages
 			echo "<langs>";
 			echo $langs[0];
 			for ($i=1; $i<count($langs); $i++)
 				echo ",".$langs[$i];
 			echo "</langs>\n";
+			// echo current translation language
+			echo "<lang>".$_GET['lang']."</lang>";
+			// echo translated strings
+			foreach ($parts as $part)
+			{
+				$part = explode(".", $part);
+				$translation = translateKeyValue($part[0], $part[1]);
+				if ($translation)
+					echo "<translation key=\"".$part[0]."\" value=\"".$part[1]."\">".$translation."</translation>\n";
+			}
+			echo "</translations>";
+		}
+		else if ($format == "json")
+		{
+			$list = array();
+			foreach ($parts as $part)
+			{
+				$part = explode(".", $part);
+				$translation = translateKeyValue($part[0], $part[1]);
+				if ($translation)
+					array_push($list, array(
+							'key' => $part[0],
+							'value' => $part[1],
+							'translation' => $translation
+						)
+					);
+			}
+			$langlist = $langs[0];
+			for ($i=1; $i<count($langs); $i++)
+				$langlist .= ",".$langs[$i];
+			$jsonData = json_encode(
+				array(
+					'langs' => $langs,
+					'lang' => $_GET['lang'],
+					'translations' => $list
+				)
+			);
+			// JSONP request?
+			if (isset($callback))
+				echo $callback.'('.$jsonData.')';
+			else
+				echo $jsonData;
 		}
 		else
-			header("Content-Type: text/plain; charset=UTF-8");
-
-		$parts = explode(",", $string);
-
-		foreach ($parts as $part)
 		{
-			$translation = getTranslationString($part);
-			if ($translation)
-				if ($format == "xml")
-					echo xmlTranslationLine($translation, $lang, $part);
-				else
+			header("Content-Type: text/plain; charset=UTF-8");
+			foreach ($parts as $part)
+			{
+				$part = explode(".", $part);
+				$translation = translateKeyValue($part[0], $part[1]);
+				if ($translation)
 					echo $translation."\n";
+			}
 		}
-
-		// xml end
-		if ($format == "xml")
-			echo "</translations>";
 	}
 	else
 		echo "NULL";
-
-
-	// return one line to be output of translation api in xml format
-	function xmlTranslationLine($translation, $lang, $request)
-	{
-		return "<translation lang=\"".$_GET['lang']."\" request=\"".$request."\">".$translation."</translation>\n";
-	}
 ?>

@@ -51,13 +51,17 @@ echo "Creating centroids, removing elements"
 echo ""
 osmconvert temp-olm.o5m --all-to-nodes --max-objects=50000000 --out-o5m >temp.o5m
 rm temp-olm.o5m
-osmfilter temp.o5m --drop-relations --drop-ways --keep-nodes="wikipedia= wikipedia:*= contact:phone= website= url= phone= fax= email= addr:email= image= url:official= contact:website= addr:phone= phone:mobile= contact:mobile= addr:fax= contact:email= contact:fax= image:panorama= opening_hours=" --fake-lonlat --out-osm >old-olm.osm
+osmfilter temp.o5m --drop-relations --drop-ways --keep-nodes="wikipedia= wikipedia:*= contact:phone= website= url= phone= fax= email= addr:email= image= url:official= contact:website= addr:phone= phone:mobile= contact:mobile= addr:fax= contact:email= contact:fax= image:panorama= opening_hours=" --fake-lonlat --fake-author --out-osm >temp.osm
 rm temp.o5m
+osmosis-0.40.1/bin/osmosis --rx file="temp.osm" enableDateParsing="no" --s --wx file="old-olm.osm"
+rm temp.osm
 
 osmconvert temp-nextobjects.o5m --all-to-nodes --max-objects=50000000 --out-o5m >temp.o5m
 rm temp-nextobjects.o5m
-osmfilter temp.o5m --drop-relations --drop-ways --keep-nodes="amenity=bus_station highway=bus_stop railway=station railway=halt railway=tram_stop amenity=parking" --fake-lonlat --out-osm >old-nextobjects.osm
+osmfilter temp.o5m --drop-relations --drop-ways --keep-nodes="amenity=bus_station highway=bus_stop railway=station railway=halt railway=tram_stop amenity=parking" --fake-lonlat --fake-author --out-osm >temp.osm
 rm temp.o5m
+osmosis-0.40.1/bin/osmosis --rx file="temp.osm" enableDateParsing="no" --s --wx file="old-nextobjects.osm"
+rm temp.osm
 echo ""
 
 
@@ -65,4 +69,8 @@ echo ""
 echo "Importing in database"
 echo ""
 php import.php
+osmconvert old-olm.osm --drop-author --out-o5m >old-olm.o5m
+rm old-olm.osm
+osmconvert old-nextobjects.osm --drop-author --out-o5m >old-nextobjects.o5m
+rm old-nextobjects.osm
 echo ""

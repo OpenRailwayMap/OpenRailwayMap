@@ -1,8 +1,8 @@
 /*
-OpenRailwayMap Copyright (C) 2010 Alexander Matheisen
+OpenLinkMap Copyright (C) 2010 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
 */
 
 // translations of labels
@@ -30,7 +30,7 @@ var translations =
 	"finish" : "Prêt",
 	"markerLoading" : "Points sont chargés...",
 	"hillshading" : "Terrain",
-	"milestones" : "-null-",
+	"object" : "Détails",
 	"marker" : "Marqueurs",
 	"searchresults" : "Résultats de la recherche",
 	"routing" : "Route",

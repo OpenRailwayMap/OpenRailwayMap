@@ -136,6 +136,20 @@ noscript p
 	color: #000000;
 }
 
+
+#image
+{
+	max-height: 60px;
+	border: 1px solid black;
+	background-image: url(../img/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+
 /* loading image */
 .loading
 {

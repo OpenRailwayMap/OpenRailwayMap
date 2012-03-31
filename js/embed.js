@@ -9,7 +9,7 @@ See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
 // main function, creates map and layers, controls other functions
 function createMap()
 {
-	root = "http://beta.openlinkmap.org/";
+	root = "http://www.openlinkmap.org/";
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
 
 
@@ -40,7 +40,13 @@ function createMap()
 	map.addControl(new OpenLayers.Control.Attribution());
 	map.addControl(new OpenLayers.Control.PanZoomBar());
 	map.addControl(new OpenLayers.Control.ScaleLine({geodesic:true, maxWidth:200, bottomOutUnits:"", bottomInUnits:""}));
-	map.addControl(new OpenLayers.Control.Navigation({dragPanOptions: {enableKinetic: true}}));
+	map.addControl(new OpenLayers.Control.Navigation(
+	{
+		dragPanOptions:
+		{
+			enableKinetic: true
+		}
+	}));
 
 	// adding map layers
 	var mapnikMap = new OpenLayers.Layer.OSM.Mapnik("Mapnik",

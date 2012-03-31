@@ -1,8 +1,8 @@
 /*
-OpenRailwayMap Copyright (C) 2010 Alexander Matheisen
+OpenLinkMap Copyright (C) 2010 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
 */
 
 
@@ -58,10 +58,6 @@ function createMap()
 	{
 		transitionEffect: 'resize'
 	});
-	var osmarenderMap = new OpenLayers.Layer.OSM.Osmarender("Osmarender",
-	{
-		transitionEffect: 'resize'
-	});
 
 	// adding hillshading map
 	var hillMap = new OpenLayers.Layer.XYZ(translations['hillshading'], "http://toolserver.org/~cmarqu/hill/${z}/${x}/${y}.png",
@@ -76,7 +72,7 @@ function createMap()
 	});
 
 	// styles for object layer
-	var milestonesStyle = new OpenLayers.Style(
+	var objectsStyle = new OpenLayers.Style(
 	{
 		pointRadius: "${radius}",
 		strokeColor: "#000000",
@@ -93,7 +89,7 @@ function createMap()
 				}
 		}
 	});
-	var milestonesStyleSelected = new OpenLayers.Style(
+	var objectsStyleSelected = new OpenLayers.Style(
 	{
 		pointRadius: "${radius}",
 		strokeColor: "#0860d5",
@@ -110,19 +106,19 @@ function createMap()
 				}
 		}
 	});
-	var milestonesStyleMap = new OpenLayers.StyleMap(
+	var objectsStyleMap = new OpenLayers.StyleMap(
 	{
 		'default': objectsStyle,
 		'select': objectsStyleSelected
 	});
-	// adding milestones overlay
-	objectsLayer = new OpenLayers.Layer.Vector(translations['milestones'],
+	// adding objects overlay
+	objectsLayer = new OpenLayers.Layer.Vector(translations['object'],
 	{
 		projection: wgs84,
 		maxResolution: 10.0,
 		visibility: true,
 		transitionEffect: 'resize',
-		styleMap: milestonesStyleMap,
+		styleMap: objectsStyleMap,
 		strategies:
 		[
 			new OpenLayers.Strategy.BBOX({ratio: 2.5}),
@@ -130,7 +126,7 @@ function createMap()
 		],
 		protocol: new OpenLayers.Protocol.HTTP(
 		{
-			url: root+'api/milestones.php',
+			url: root+'api/list.php',
 			format: new OpenLayers.Format.OLM()
 		})
 	});
@@ -159,7 +155,7 @@ function createMap()
 	});
 
 	// adding layers to map
-	map.addLayers([mapnikMap, osmarenderMap, hillMap, markerLayer, objectsLayer]);
+	map.addLayers([mapnikMap, hillMap, markerLayer, objectsLayer]);
 
 	// adding control features (clicking on markers) to overlays
 	eventHandlerClick = new OpenLayers.Control.SelectFeature(objectsLayer,
@@ -172,12 +168,6 @@ function createMap()
 	map.addControl(eventHandlerClick);
 	eventHandlerClick.activate();
 
-	// register moving of map
-	map.events.register('zoomend', map, mapZoomed);
-	// register events of loading marker
-	objectsLayer.events.register('loadstart', map, loadStart);
-	objectsLayer.events.register('loadend', map, loadEnd);
-
 	// loading timestamp
 	var timestamp = new Timestamp("info");
 
@@ -189,6 +179,7 @@ function createMap()
 
 	// adding fullscreen feature
 	fullscreen = new Fullscreen("fullscreen", "moreImage");
+	popupFullscreen = new Fullscreen("fullscreen", "image");
 
 	// adding panorama feature
 	//panorama = new Panorama("fullscreen", "morePanorama");
@@ -251,17 +242,6 @@ function getMapLatLon(lat, lon)
 }
 
 
-// event released when map was moved
-function mapZoomed(event)
-{
-	// show message if marker are shown up to this zoom
-	if (map.getZoom() < 14)
-		setMessageBarInfo(translations['showMarker'], "messageBar", 'messageBarTrue');
-	else
-		setMessageBarInfo("", "messageBar", 'messageBarFalse');
-}
-
-
 // translates strings and captions on the page to user's language
 function translateStrings()
 {
@@ -273,30 +253,6 @@ function translateStrings()
 	gEBI("osm").innerHTML = translations['title'];
 	gEBI("searchOptionCaption").innerHTML = translations['searchoption'];
 	gEBI("ad").innerHTML = translations['ad'];
-}
-
-
-// called when started to load marker
-function loadStart(event)
-{
-	setMessageBarInfo(translations['markerLoading'], "messageBar", "messageBarTrue");
-}
-
-
-// called when marker are loaded
-function loadEnd(event)
-{
-	setMessageBarInfo("", "messageBar", "messageBarFalse");
-}
-
-
-// displays a mesage in the message bar
-function setMessageBarInfo(html, element, className)
-{
-	var messagebar = gEBI(element);
-
-	messagebar.innerHTML = html;
-	messagebar.className = className;
 }
 
 
@@ -390,6 +346,7 @@ function showPopup(feature)
 					item.popup.setContentHTML(editPopupContent(content, item.popup.position.lat, item.popup.position.lon, item.attributes['type'], item.attributes['id']));
 					map.removePopup(item.popup);
 					map.addPopup(item.popup);
+					popupFullscreen.init();
 				}
 				else
 					map.removePopup(item.popup);
@@ -520,6 +477,7 @@ function createPopup(id, type, lat, lon)
 				popup.setContentHTML(editPopupContent(content, popup.lonlat.lat, popup.lonlat.lon, type, id));
 				map.removePopup(popup);
 				map.addPopup(popup);
+				popupFullscreen.init();
 			}
 			else
 				map.removePopup(popup);
@@ -544,8 +502,9 @@ function editPopupContent(content, lat, lon, type, id)
 	var lon = position.lon;
 
 	// add some links to the bottom of a popup
+	content = '<table><tr><td>'+content+'</td></tr><tr><td>';
 	content +=
-		'</div><br /><small id="popupLinks">'+
+		'<br /><small id="popupLinks">'+
 		'<b><a id="moreInfoLink" href="javascript:showMoreInfo('+id+',\''+type+'\', '+lat+', '+lon+')">'+translations['more']+' >></a></b>'+
 		'&nbsp;&nbsp;<a id="permalink" href="'+root+'?'+queryLatLonZoom(lat, lon, map.getZoom())+'&id='+id+'&type='+type;
 	// save language in permalink
@@ -555,7 +514,7 @@ function editPopupContent(content, lat, lon, type, id)
 		'&nbsp;&nbsp;<a href="http://www.openstreetmap.org/edit?'+queryLatLonZoom(lat, lon, map.getZoom())+'&'+type+'='+id+'&editor=potlatch2" target="_blank">Potlatch</a>'+
 		'&nbsp;&nbsp;<a href="http://localhost:8111/load_and_zoom?left='+l+'&right='+r+'&top='+t+'&bottom='+b+'&select='+type+id+'" target="josm" onclick="return josm(this.href)">JOSM</a>'+
 		'&nbsp;&nbsp;<a href="http://www.openstreetmap.org/browse/'+type+'/'+id+'" target="_blank">'+translations['details']+'</a>'+
-		'&nbsp;&nbsp;<a href="javascript:getEmbedLink('+id+',\''+type+'\')">'+translations['embed']+'</a></small>';
+		'&nbsp;&nbsp;<a href="javascript:getEmbedLink('+id+',\''+type+'\')">'+translations['embed']+'</a></small></td></tr></table>';
 	return content;
 }
 
@@ -638,9 +597,15 @@ function getWikipediaImageUrl(url)
 	if (!url)
 		return false;
 
-	var url = url.replace("wikipedia/commons/thumb", "wikipedia/commons");
-
-	return url.substr(0, url.lastIndexOf("/"));
+	if (url.substr(0, 29) == "http://commons.wikimedia.org/")
+		return url.substr(0, url.lastIndexOf("?"));
+	else if ((url.substr(0, 38) == "http://upload.wikimedia.org/wikipedia/") && (url.substr(38, 7) != "commons"))
+		return url;
+	else
+	{
+		var url = url.replace("wikipedia/commons/thumb", "wikipedia/commons");
+		return url.substr(0, url.lastIndexOf("/"));
+	}
 }
 
 

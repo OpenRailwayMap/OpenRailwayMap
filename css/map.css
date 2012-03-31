@@ -113,6 +113,11 @@ noscript p
 }
 
 /* style of texts in popups */
+.container
+{
+	min-height: 80px;
+}
+
 .header
 {
 	font-size: 16px;
@@ -190,6 +195,28 @@ noscript p
 {
 	background-color: #f4e73c;
 	color: black;
+}
+
+#image
+{
+	max-height: 60px;
+	min-height: 32px;
+	min-width: 32px;
+	border: 1px solid black;
+	background-image: url(../img/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	float: right;
+	margin-left: 10px;
+}
+
+#image:hover
+{
+	cursor: pointer;
+	-o-box-shadow: 0px 0px 7px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 7px #aaaaaa;
+	-moz-box-shadow: 0px 0px 7px #aaaaaa;
+	box-shadow: 0px 0px 7px #aaaaaa;
 }
 
 /* loading image */

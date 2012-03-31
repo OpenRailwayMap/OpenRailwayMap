@@ -15,6 +15,7 @@
 	$type = $_GET['type'];
 	$format = $_GET['format'];
 	$lang = $_GET['lang'];
+	$callback = $_GET['callback'];
 
 
 	// prohibition of sql injections
@@ -53,6 +54,8 @@
 
 		if ($format == "xml")
 			echo xmlNameOut($name[0], $name[1], $id, $type);
+		else if ($format == "json")
+			echo jsonNameOut($name[0], $name[1], $id, $type, $callback);
 		else
 			echo textNameOut($name[0]);
 	}
@@ -65,51 +68,55 @@
 	{
 		global $translations;
 
+		// setting header
+		header("Content-Type: text/html; charset=UTF-8");
+		$output = "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n";
+
 		if ($name)
-		{
-			// setting header
-			header("Content-Type: text/html; charset=UTF-8");
-			$output = "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n";
-			$output .= "<strong class=\"clusterName\">".$name."</strong><br />\n";
-
-			return $output;
-		}
+			return $output."<strong class=\"clusterName\">".$name."</strong><br />\n";
 		else
-		{
-			// setting header
-			header("Content-Type: text/html; charset=UTF-8");
-			$output = "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n";
-			$output .= "<strong class=\"clusterName\">- ".$translations['captions']['unnamed']." -</strong><br />\n";
-
-			return $output;
-		}
+			return $output."<strong class=\"clusterName\">- ".$translations['captions']['unnamed']." -</strong><br />\n";
 	}
 
 
 	// output of name data in xml format
 	function xmlNameOut($name, $lang, $id, $type)
 	{
+		$output = xmlStart("names");
+		$output .= "<name id=\"".$id."\" type=\"".$type."\"";
+		if ($lang)
+			$output .= " lang=\"".$lang."\"";
 		if ($name)
-		{
-			$output = xmlStart("names");
-			$output .= "<name id=\"".$id."\" type=\"".$type."\"";
-			if ($lang)
-				$output .= " lang=\"".$lang."\"";
 			$output .= ">".$name."</name>";
-			$output .=  "</names>";
-
-			return $output;
-		}
 		else
-		{
-			$output = xmlStart("names");
-			$output .= "<name id=\"".$id."\" type=\"".$type."\"";
-			if ($lang)
-				$output .= " lang=\"".$lang."\"";
 			$output .= ">NULL</name>";
-			$output .=  "</names>";
+		$output .=  "</names>";
 
-			return $output;
-		}
+		return $output;
+	}
+
+	// output of name data in json format
+	function jsonNameOut($name, $lang, $id, $type, $callback)
+	{
+		header("Content-Type: text/plain; charset=UTF-8");
+
+		if (!$name)
+			$name = "NULL";
+
+		$data = array(
+			'id' => (int)$id,
+			'type' => $type,
+			'name' => $name
+		);
+
+		if ($lang)
+			$data['lang'] = $lang;
+
+		$jsonData = json_encode($data);
+		// JSONP request?
+		if (isset($callback))
+			return $callback.'('.$jsonData.')';
+		else
+			return $jsonData;
 	}
 ?>

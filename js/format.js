@@ -13,7 +13,7 @@ See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
 * Class: OpenLayers.Format.OSMPOI
 * Read OSMPOI text format. Create a new instance with the <OpenLayers.Format.OSMPOI>
 *     constructor. This reads text which is formatted like CSV text, using
-*     spaces as the seperator by default.
+*     newlines as the seperator by default.
 *
 * Inherits from:
 *  - <OpenLayers.Format>
@@ -65,7 +65,7 @@ OpenLayers.Format.OLM = OpenLayers.Class(OpenLayers.Format,
 	*/
 	read: function(text)
 	{
-		var lines = text.split("<br/>");
+		var lines = text.split("\n");
 		var features = [];
 		// length - 1 to allow for trailing new line
 			for (var lcv = 0; lcv < (lines.length - 1); lcv++)
