@@ -156,7 +156,6 @@
 		}
 	}
 
-	importOsmFile("old-olm.osm", "olm");
-	importOsmFile("old-nextobjects.osm", "nextobjects");
+	importOsmFile("old-milestones.osm", "milestones");
 	echo "Finished.\n";
 ?>
