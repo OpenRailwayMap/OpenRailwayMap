@@ -161,7 +161,6 @@
 		}
 	}
 
-	updateOsmFile("olm.o5c", "olm");
-	updateOsmFile("nextobjects.o5c", "nextobjects");
+	updateOsmFile("milestones.o5c", "milestones");
 	echo "Finished.\n";
 ?>
