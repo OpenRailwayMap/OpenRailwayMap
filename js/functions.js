@@ -1,8 +1,8 @@
 /*
-OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+OpenRailwayMap Copyright (C) 2010 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
@@ -71,102 +71,48 @@ function createMap()
 		isBaseLayer: false
 	});
 
-	// styles for object layer
-	var objectsStyle = new OpenLayers.Style(
+	// styles for milestones layer
+	var milestonesStyle = new OpenLayers.Style(
 	{
-		pointRadius: "${radius}",
-		strokeColor: "#000000",
-		strokeWidth: 2,
-		fillColor: "#000000",
-		fillOpacity: 0.2,
-		cursor: "pointer"
+		label: "${caption}",
+		labelAlign: "cc",
+		fontColor: "#333333",
+		fontFamily: "Arial",
+		fontSize: 14
 		},
 		{
 			context: {
-				radius: function(feature)
+				caption: function(feature)
 				{
-					return Math.min(feature.attributes.count, 7) + 4;
+					return feature.attributes.caption;
 				}
 		}
 	});
-	var objectsStyleSelected = new OpenLayers.Style(
+	var milestonesStyleMap = new OpenLayers.StyleMap(
 	{
-		pointRadius: "${radius}",
-		strokeColor: "#0860d5",
-		strokeWidth: 4,
-		fillColor: "#0860d5",
-		fillOpacity: 0.3,
-		cursor: "pointer"
-		},
-		{
-			context: {
-				radius: function(feature)
-				{
-					return Math.min(feature.attributes.count, 7) + 5;
-				}
-		}
+		'default': milestonesStyle
 	});
-	var objectsStyleMap = new OpenLayers.StyleMap(
-	{
-		'default': objectsStyle,
-		'select': objectsStyleSelected
-	});
-	// adding objects overlay
-	objectsLayer = new OpenLayers.Layer.Vector(translations['object'],
+	// adding milestones overlay
+	milestonesLayer = new OpenLayers.Layer.Vector("Milestones",
 	{
 		projection: wgs84,
 		maxResolution: 10.0,
 		visibility: true,
 		transitionEffect: 'resize',
-		styleMap: objectsStyleMap,
+		styleMap: milestonesStyleMap,
 		strategies:
 		[
-			new OpenLayers.Strategy.BBOX({ratio: 2.5}),
-			new OpenLayers.Strategy.Cluster()
+			new OpenLayers.Strategy.BBOX({ratio: 2.5})
 		],
 		protocol: new OpenLayers.Protocol.HTTP(
 		{
-			url: root+'api/list.php',
+			url: root+'api/milestones.php',
 			format: new OpenLayers.Format.OLM()
 		})
 	});
 
-	// styles for marker layer
-	var markerStyle = new OpenLayers.Style(
-	{
-		pointRadius: 50,
-		strokeColor: "#f99c30",
-		strokeWidth: 2,
-		fillColor: "#f99c30",
-		fillOpacity: 0.4
-	});
-	var markerStyleMap = new OpenLayers.StyleMap(
-	{
-		'default': markerStyle
-	});
-	// adding marker overlay
-	markerLayer = new OpenLayers.Layer.Vector(translations['marker'],
-	{
-		projection: wgs84,
-		maxResolution: 10.0,
-		visibility: true,
-		transitionEffect: 'resize',
-		styleMap: markerStyleMap
-	});
-
 	// adding layers to map
-	map.addLayers([mapnikMap, hillMap, markerLayer, objectsLayer]);
-
-	// adding control features (clicking on markers) to overlays
-	eventHandlerClick = new OpenLayers.Control.SelectFeature(objectsLayer,
-	{
-		multiple: true,
-		toggle: true,
-		onSelect: showPopup,
-		onUnselect: hidePopup
-	});
-	map.addControl(eventHandlerClick);
-	eventHandlerClick.activate();
+	map.addLayers([mapnikMap, hillMap, milestonesLayer]);
 
 	// loading timestamp
 	var timestamp = new Timestamp("info");

@@ -1,9 +1,9 @@
 <?php
 	/*
-	OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+	OpenRailwayMap Copyright (C) 2010 Alexander Matheisen
 	This program comes with ABSOLUTELY NO WARRANTY.
 	This is free software, and you are welcome to redistribute it under certain conditions.
-	See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+	See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	*/
 
 
@@ -19,11 +19,11 @@
 	if (!$coordinates)
 		exit;
 
-	$connection = connectToDatabase("olm");
+	$connection = connectToDatabase("railmap");
 	if (!$connection)
 		exit;
 
-	$list = getObjectsForBbox($connection, $coordinates);
+	$list = getNodesForBbox($connection, $coordinates, "milestones");
 
 	if ($list)
 	{
@@ -42,7 +42,7 @@
 		}
 		else
 			foreach ($list as $line)
-				echo $line[0]."|".$line[1]."|".$line[2]."|".$line[3]."\n";
+				echo $line[0]."|".$line[1]."|".$line[2]."\n";
 	}
 	else
 		echo "NULL";
