@@ -1,9 +1,9 @@
 <?php
 	/*
-	OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+	OpenRailwayMap Copyright (C) 2010 Alexander Matheisen
 	This program comes with ABSOLUTELY NO WARRANTY.
 	This is free software, and you are welcome to redistribute it under certain conditions.
-	See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+	See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	*/
 
 
@@ -396,8 +396,8 @@
 	}
 
 
-	// request all objects with given tags for a given bbox and echo them
-	function getObjectsForBbox($connection, $bbox)
+	// request all milestones for a given bbox and return them
+	function getMilestonesForBbox($connection, $bbox, $table)
 	{
 		// if no bbox was given
 		if (!$bbox)
@@ -413,23 +413,18 @@
 			return false;
 		}
 
-		// requests
-		$types = array("node", "way", "relation");
-
 		// executing requests
-		foreach ($types as $type)
+		$response = requestDetails("SELECT ST_X(geom), ST_Y(geom), tags->'railway:position' AS position
+										FROM ".$table."s
+										WHERE geom && ST_SetSRID(ST_MakeBox2D(ST_Point(".$bbox[0].",".$bbox[1]."), ST_Point(".$bbox[2].",".$bbox[3].")), 4326);", $connection);
+		// putting out the results
+		if ($response)
 		{
-			$response = requestDetails("SELECT ST_X(geom), ST_Y(geom), id
-											FROM ".$type."s
-											WHERE geom && ST_SetSRID(ST_MakeBox2D(ST_Point(".$bbox[0].",".$bbox[1]."), ST_Point(".$bbox[2].",".$bbox[3].")), 4326);", $connection);
-			// putting out the results
-			if ($response)
-			{
-				$list = array();
-				foreach ($response as $element)
-					array_push($list, array($element['st_x'], $element['st_y'], $element['id'], $type));
-			}
+			$list = array();
+			foreach ($response as $element)
+				array_push($list, array($element['st_x'], $element['st_y'], $element['position']));
 		}
+
 		return $list;
 	}
 

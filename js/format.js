@@ -1,8 +1,8 @@
 /*
-OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+OpenRailwayMap Copyright (C) 2010 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 /*
@@ -82,8 +82,7 @@ OpenLayers.Format.OLM = OpenLayers.Class(OpenLayers.Format,
 					{
 						geometry.x = parseFloat(vals[0]);
 						geometry.y = parseFloat(vals[1]);
-						attributes['id'] = vals[2];
-						attributes['type'] = vals[3];
+						attributes['caption'] = vals[2];
 					var feature = new OpenLayers.Feature.Vector(geometry, attributes, style);
 					features.push(feature);
 					}
