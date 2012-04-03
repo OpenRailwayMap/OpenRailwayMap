@@ -9,7 +9,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 // main function, creates map and layers, controls other functions
 function createMap()
 {
-	root = "http://www.openlinkmap.org/orm";
+	root = "http://www.openlinkmap.org/orm/";
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
 	// counter of clusterpopup's ids
 	cluster = 0;
@@ -71,14 +71,13 @@ function createMap()
 		isBaseLayer: false
 	});
 
-	// styles for milestones layer
+	// style for milestones layer
 	var milestonesStyle = new OpenLayers.Style(
 	{
-		label: "${caption}",
-		labelAlign: "cc",
-		fontColor: "#333333",
-		fontFamily: "Arial",
-		fontSize: 14
+			label: "${caption}",
+			fontColor: "#000000",
+			fontFamily: "Arial",
+			fontSize: 14
 		},
 		{
 			context: {
@@ -88,10 +87,6 @@ function createMap()
 				}
 		}
 	});
-	var milestonesStyleMap = new OpenLayers.StyleMap(
-	{
-		'default': milestonesStyle
-	});
 	// adding milestones overlay
 	milestonesLayer = new OpenLayers.Layer.Vector("Milestones",
 	{
@@ -99,7 +94,7 @@ function createMap()
 		maxResolution: 10.0,
 		visibility: true,
 		transitionEffect: 'resize',
-		styleMap: milestonesStyleMap,
+		style: milestonesStyle,
 		strategies:
 		[
 			new OpenLayers.Strategy.BBOX({ratio: 2.5})

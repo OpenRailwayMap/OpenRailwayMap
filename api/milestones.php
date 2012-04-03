@@ -19,11 +19,14 @@
 	if (!$coordinates)
 		exit;
 
-	$connection = connectToDatabase("railmap");
+	$connection = connectToDatabase($db);
 	if (!$connection)
 		exit;
 
-	$list = getNodesForBbox($connection, $coordinates, "milestones");
+	$request = "SELECT ST_X(ST_Transform(way, 4326)), ST_Y(ST_Transform(way, 4326)), tags->'position' AS caption
+	FROM ".$db."_point
+	WHERE way && ST_SetSRID(ST_MakeBox2D(ST_Transform(ST_SetSRID(ST_Point(".$coordinates[0].",".$coordinates[1]."), 4326), 900913), ST_Transform(ST_SetSRID(ST_Point(".$coordinates[2].",".$coordinates[3]."),4326), 900913)), 900913) AND tags->'railway' = 'milestone';";
+	$list = getNodesForBbox($connection, $request);
 
 	if ($list)
 	{
