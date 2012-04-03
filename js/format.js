@@ -83,8 +83,8 @@ OpenLayers.Format.OLM = OpenLayers.Class(OpenLayers.Format,
 						geometry.x = parseFloat(vals[0]);
 						geometry.y = parseFloat(vals[1]);
 						attributes['caption'] = vals[2];
-					var feature = new OpenLayers.Feature.Vector(geometry, attributes, style);
-					features.push(feature);
+						var feature = new OpenLayers.Feature.Vector(geometry, attributes, style);
+						features.push(feature);
 					}
 				}
 			}

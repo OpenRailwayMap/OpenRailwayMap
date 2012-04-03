@@ -46,6 +46,8 @@ psql -d railmap -f /usr/share/pgsql/contrib/hstore.sql
 # access
 echo "ALTER TABLE geometry_columns OWNER TO olm; ALTER TABLE spatial_ref_sys OWNER TO olm;"  | psql -d railmap
 echo "ALTER TABLE geography_columns OWNER TO olm;"  | psql -d railmap
+echo "GRANT SELECT ON geometry_columns TO apache; GRANT SELECT ON spatial_ref_sys TO apache;"  | psql -d railmap
+echo "GRANT SELECT ON geography_columns TO apache;"  | psql -d railmap
 echo "CREATE ROLE apache;" | psql -d railmap
 echo "GRANT SELECT ON railmap_point TO apache;" | psql -d railmap
 echo "GRANT SELECT ON railmap_line TO apache;" | psql -d railmap

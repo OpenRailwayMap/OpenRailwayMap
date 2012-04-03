@@ -12,7 +12,7 @@
 	// available translations
 	$langs = array("de", "en", "fr", "it", "ru");
 	// name of database
-	$db = "olm";
+	$db = "railmap";
 	// name of application
 	$appname = "OpenRailwayMap";
 
@@ -397,15 +397,8 @@
 
 
 	// request all milestones for a given bbox and return them
-	function getMilestonesForBbox($connection, $bbox, $table)
+	function getNodesForBbox($connection, $request)
 	{
-		// if no bbox was given
-		if (!$bbox)
-		{
-			reportError("Some parameters are missing.");
-			return false;
-		}
-
 		// if there is no connecting to server
 		if (!$connection)
 		{
@@ -414,15 +407,13 @@
 		}
 
 		// executing requests
-		$response = requestDetails("SELECT ST_X(geom), ST_Y(geom), tags->'railway:position' AS position
-										FROM ".$table."s
-										WHERE geom && ST_SetSRID(ST_MakeBox2D(ST_Point(".$bbox[0].",".$bbox[1]."), ST_Point(".$bbox[2].",".$bbox[3].")), 4326);", $connection);
+		$response = requestDetails($request, $connection);
 		// putting out the results
 		if ($response)
 		{
 			$list = array();
 			foreach ($response as $element)
-				array_push($list, array($element['st_x'], $element['st_y'], $element['position']));
+				array_push($list, array($element['st_x'], $element['st_y'], $element['caption']));
 		}
 
 		return $list;
