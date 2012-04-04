@@ -127,7 +127,6 @@
 			<br />
 			<p id="osm">Maps and data from <a href="http://www.openstreetmap.org/">OpenStreetMap</a>, released under the terms of <a href="http://creativecommons.org/licenses/by-sa/2.0/" title="CC-BY-SA 2.0">CC-BY-SA 2.0 License</a>.</p>
 			<a href="http://joker.com/" id="poweredby"><img src="img/ad.png" /></a>
-			<p id="ad" onclick="clickAd();">Improve the data! Correct wrong website links with the new website checker from Keepright!</p>
 			<p id="info"></p>
 			<div id="linkBar">
 				<a class="links" id="spamButton" onclick="reportSpam();">Report bug in map</a>&nbsp;•
