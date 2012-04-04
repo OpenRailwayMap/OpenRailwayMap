@@ -73,20 +73,27 @@ function createMap()
 
 	// style for milestones layer
 	var milestonesStyle = new OpenLayers.Style(
-	{
+		{
 			label: "${caption}",
 			fontColor: "#000000",
-			fontFamily: "Arial",
-			fontSize: 14
+			fontFamily: "Arial Black",
+			fontSize: 13
 		},
 		{
 			context: {
 				caption: function(feature)
 				{
-					return feature.attributes.caption;
+					return feature.attributes['caption'];
 				}
+			}
 		}
-	});
+	);
+	var milestonesStyleMap = new OpenLayers.StyleMap(
+		{
+			'default': milestonesStyle
+		}
+	);
+
 	// adding milestones overlay
 	milestonesLayer = new OpenLayers.Layer.Vector("Milestones",
 	{
@@ -94,7 +101,7 @@ function createMap()
 		maxResolution: 10.0,
 		visibility: true,
 		transitionEffect: 'resize',
-		style: milestonesStyle,
+		styleMap: milestonesStyleMap,
 		strategies:
 		[
 			new OpenLayers.Strategy.BBOX({ratio: 2.5})

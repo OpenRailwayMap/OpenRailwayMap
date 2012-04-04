@@ -76,14 +76,13 @@ OpenLayers.Format.OLM = OpenLayers.Class(OpenLayers.Format,
 					var vals = currLine.split('|');
 					var geometry = new OpenLayers.Geometry.Point(0,0);
 					var attributes = {};
-					var style = this.defaultStyle ? OpenLayers.Util.applyDefaults({}, this.defaultStyle) : null;
 					var icon, iconSize, iconOffset, overflow;
 					if (vals[0] && vals[1] && vals[2])
 					{
 						geometry.x = parseFloat(vals[0]);
 						geometry.y = parseFloat(vals[1]);
-						attributes['caption'] = vals[2];
-						var feature = new OpenLayers.Feature.Vector(geometry, attributes, style);
+						attributes['caption'] = vals[2].toString();
+						var feature = new OpenLayers.Feature.Vector(geometry, attributes);
 						features.push(feature);
 					}
 				}

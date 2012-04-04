@@ -23,7 +23,7 @@
 	if (!$connection)
 		exit;
 
-	$request = "SELECT ST_X(ST_Transform(way, 4326)), ST_Y(ST_Transform(way, 4326)), tags->'position' AS caption
+	$request = "SELECT ST_X(ST_Transform(way, 4326)), ST_Y(ST_Transform(way, 4326)), tags->'railway:position' AS caption
 	FROM ".$db."_point
 	WHERE way && ST_SetSRID(ST_MakeBox2D(ST_Transform(ST_SetSRID(ST_Point(".$coordinates[0].",".$coordinates[1]."), 4326), 900913), ST_Transform(ST_SetSRID(ST_Point(".$coordinates[2].",".$coordinates[3]."),4326), 900913)), 900913) AND tags->'railway' = 'milestone';";
 	$list = getNodesForBbox($connection, $request);
@@ -45,7 +45,7 @@
 		}
 		else
 			foreach ($list as $line)
-				echo $line[0]."|".$line[1]."|".$line[2]."\n";
+				echo $line[0]."|".$line[1]."|".str_replace(".", ",", $line[2])."\n";
 	}
 	else
 		echo "NULL";
