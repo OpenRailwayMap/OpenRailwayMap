@@ -152,17 +152,6 @@ function reportSpam()
 }
 
 
-// handler to advertisment element, now a link to keepright
-function clickAd()
-{
-	// get current coordinates
-	var position = map.getCenter().transform(map.getProjectionObject(), wgs84);
-
-	// open osb and jump to current position
-	var bugWindow = window.open("http://keepright.ipax.at/report_map.php?zoom="+map.getZoom()+"&lat="+position.lat+"&lon="+position.lon+"&layers=B00T&show_ign=0&show_tmpign=0&ch=0%2C411%2C412%2C413").focus();
-}
-
-
 // returns the current map bbox
 function getBounds()
 {
@@ -200,7 +189,6 @@ function translateStrings()
 	gEBI('contactButton').innerHTML = translations['contact'];
 	gEBI("osm").innerHTML = translations['title'];
 	gEBI("searchOptionCaption").innerHTML = translations['searchoption'];
-	gEBI("ad").innerHTML = translations['ad'];
 }
 
 
