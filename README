@@ -37,8 +37,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Repository contains also data from other sources:
 
-* The icon ist taken from the Oxygen-Iconset, available under LGPLv3: http://www.oxygen-icons.org/
+* The icon is taken from the Oxygen-Iconset, available under LGPLv3: http://www.oxygen-icons.org/
 * osmfilter, osmconvert, osmupdate from Markus Weber, available under GPLv3: http://wiki.openstreetmap.org/wiki/Osmfilter
 * OpenLayers, available under 2-clause BSD License (FreeBSD): http://openlayers.org/
+* Mapnik, available under LGPLv2.1: http://mapnik.org/
 
 ATTENTION: The included binaries can only be used on i386 Linux systems. If you use other systems, you have to compile the programs for your environment.
