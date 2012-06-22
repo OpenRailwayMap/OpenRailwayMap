@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# OpenRailwayMap Copyright (C) 2010 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
@@ -13,21 +13,21 @@ PATH="$PATH:/home/www/sites/194.245.35.149/site/import/bin"
 
 
 # download planet file, ~ 8 hours
-#echo "Downloading planet file"
-#echo ""
-#wget http://planet.openstreetmap.org/pbf-experimental/planet-latest.osm.pbf
-#mv planet-latest.osm.pbf old.pbf
-#echo ""
+# echo "Downloading planet file"
+# echo ""
+# wget http://planet.openstreetmap.org/pbf-experimental/planet-latest.osm.pbf
+# mv planet-latest.osm.pbf old.pbf
+# echo ""
 
 
 # update planet file
-#echo "Updating planet file"
-#echo ""
-#date -u +%s > timestamp
-#osmupdate old.pbf new.pbf --max-merge=2 --hourly --drop-author -v
-#rm old.pbf
-#mv new.pbf old.pbf
-#echo ""
+# echo "Updating planet file"
+# echo ""
+# date -u +%s > timestamp
+# osmupdate old.pbf new.pbf --max-merge=2 --hourly --drop-author -v
+# rm old.pbf
+# mv new.pbf old.pbf
+# echo ""
 
 
 # convert planet file, ~ 25 min
@@ -40,7 +40,7 @@ echo ""
 # pre-filter planet file, ~ 20 min
 echo "Filtering planet file"
 echo ""
-osmfilter temp.o5m --keep="railway=" --out-osm >old-railways.osm
+osmfilter temp.o5m --keep="railway= route=train route_master=train route=railway route=light_rail line=rail line=light_rail" --out-osm >old-railways.osm
 rm temp.o5m
 echo ""
 

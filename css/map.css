@@ -448,11 +448,10 @@ noscript p
 /* box for search result at the left side */
 .sideBar
 {
-	background-color: #e5e5e5;
-	background: -moz-linear-gradient(top, white 0, #d6d6d6 67%, #bdbdbd 100%);
-	background: -webkit-linear-gradient(top, white 0, #d6d6d6 67%, #bdbdbd 100%);
-	background: -o-linear-gradient(top, white 0, #d6d6d6 67%, #bdbdbd 100%);
-	background: -ms-linear-gradient(top, white 0, #d6d6d6 67%, #bdbdbd 100%);
+	background-color: black;
+	background-image: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	background-position: bottom right;
 	color: white;
 	position: absolute;
 	left: 0px;
@@ -979,10 +978,10 @@ noscript p
 	font-size: 21px;
 	height: 27px;
 	width: 20px;
-	background-color: #e5e5e5;
+	background-color: black;
 	color: black;
 	z-index: 1000;
-	border-left: 2px solid #e5e5e5;
+	border-left: 2px solid black;
 	border-right: 1px solid black;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
@@ -1000,10 +999,10 @@ noscript p
 	font-size: 21px;
 	height: 27px;
 	width: 20px;
-	background-color: #e5e5e5;
+	background-color: black;
 	color: black;
 	z-index: 1000;
-	border-left: 2px solid #e5e5e5;
+	border-left: 2px solid black;
 	border-right: 1px solid black;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;

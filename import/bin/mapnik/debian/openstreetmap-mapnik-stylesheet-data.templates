@@ -1,0 +1,6 @@
+Template: openstreetmap-mapnik-stylesheet-data/dloadcoastlines
+Type: boolean
+Default: true
+Description: Do you want to download coastlines?
+ This script downloads the necessary coastline and boundary data.
+ WARNING: The data is about 400 - 500Mb in size

@@ -1,0 +1,26 @@
+
+Comparison between zoom levels and the scale denominator numbers needed for
+the Mapnik Map file.
+
+zoom level=1 scale_denom=279541132.014
+zoom level=2 scale_denom=139770566.007
+zoom level=3 scale_denom=69885283.0036
+zoom level=4 scale_denom=34942641.5018
+zoom level=5 scale_denom=17471320.7509
+zoom level=6 scale_denom=8735660.37545
+zoom level=7 scale_denom=4367830.18772
+zoom level=8 scale_denom=2183915.09386
+zoom level=9 scale_denom=1091957.54693
+zoom level=10 scale_denom=545978.773466
+zoom level=11 scale_denom=272989.386733
+zoom level=12 scale_denom=136494.693366
+zoom level=13 scale_denom=68247.3466832
+zoom level=14 scale_denom=34123.6733416
+zoom level=15 scale_denom=17061.8366708
+zoom level=16 scale_denom=8530.9183354
+zoom level=17 scale_denom=4265.4591677
+zoom level=18 scale_denom=2132.72958385
+
+scale_denominator = map_width_in_metres/ (map_width_in_pixels * 
+standardized_pixel_size/*0.28mm*/) 
+

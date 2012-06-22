@@ -1,0 +1,29 @@
+Simple live tile generator for style development sandboxes
+
+(c) 2012 Sven Geggus <sven-osm@geggus.net>
+
+livetiles.wsgi will render live mapnik tiles on request which is
+handy for maintenance of mapnik styles and completely unsuitable for
+a production tileserver.
+
+In addition to rendering tiles livetiles.wsgi can also generate
+slippymaps.
+
+To enable livetiles.wsgi in apache mod_wsgi just use something like
+this in your apache configuration:
+
+WSGIScriptAlias /livetiles /path/to/livetiles.wsgi
+
+Also copy livetiles.conf.sample to livetiles.conf and adjust the
+sandbox_dir option
+
+The sandbox should just contain a couple of directories with
+different mapnik styles or symbolic links to mapnik style
+directories.
+
+a sample tile URL will then look like this:
+http://<yourserver>/livetiles//<name-of-styledir>/<z>/<x>/<y>.png
+
+A sample URL to a livetiles slippymap will look like this:
+http://<yourserver>/livetiles/ (multi style map)
+http://<yourserver>/livetiles/<name-of-styledir>/ (single style map)

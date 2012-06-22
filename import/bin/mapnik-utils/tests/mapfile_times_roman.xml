@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://spatialreference.org/ref/epsg/2163/ -->
+<Map bgcolor="#8cb6d3" minimum_version="0.6.1">
+    <Style name="states_outlines">
+        <Rule>
+            <LineSymbolizer>
+                <CssParameter name="stroke-width">0.3</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="states_shp_labels">
+        <Rule>
+            <TextSymbolizer name="STATE_ABBR" face_name="Times New Roman Regular" size="12" fill="#000000"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="states_shp_styles">
+        <Rule>
+            <Filter>([PERSONS]&lt;2000000)</Filter>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">#6CAE4C</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>        
+        <Rule>
+            <Filter>(([PERSONS]&gt;2000000) and ([PERSONS]&lt;4000000))</Filter>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">#3B7AB3</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([PERSONS]&gt;4000000)</Filter>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">#88000F</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+    </Style>
+    <Layer name="states" status="1">
+        <StyleName>states_shp_styles</StyleName>
+        <StyleName>states_outlines</StyleName>
+        <StyleName>states_shp_labels</StyleName>
+        <Datasource>
+            <Parameter name="base">data</Parameter>
+            <Parameter name="file">us_states_wgs84.shp</Parameter>
+            <Parameter name="type">shape</Parameter>
+        </Datasource>
+    </Layer>
+</Map>

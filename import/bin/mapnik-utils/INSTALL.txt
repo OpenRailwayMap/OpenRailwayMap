@@ -1,0 +1,20 @@
+Thanks for downloading nik2img.
+
+To install it, run the following command inside this directory:
+
+    $ sudo python setup.py install
+
+If you have the Python `easy_install` utility available, you can
+also type the following to download and install in one step::
+
+    $ sudo easy_install nik2img
+    $ sudo easy_install --upgrade nik2img # to force upgrading
+
+Or if you are using `pip`::
+
+    $ pip install nik2img
+
+Test Installation::
+    $ nik2img.py # should be able to tab complete...
+    $ which nik2img.py # should show install location
+    $ nik2img.py -h # should display usage

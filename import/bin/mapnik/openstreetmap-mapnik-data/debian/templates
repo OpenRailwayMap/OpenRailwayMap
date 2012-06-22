@@ -1,0 +1,14 @@
+Template: openstreetmap-mapnik-data/initdb
+Type: boolean
+Default: true
+Description: Create and initialize the mysql-table?
+ Do you want to run 
+       geoinfo.pl --create-db --create-defaults
+ to initialize your database and add defaults into it.
+
+Template: openstreetmap-mapnik-data/grant_user
+Type: string
+Default: *
+Description: Create Role for user and grant DB Rights
+ This user is created in the postgres database.
+ this enables him to read the Database

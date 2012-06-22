@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+db_input medium openstreetmap-mapnik-data/initdb || true
+db_input medium openstreetmap-mapnik-data/grant_user || true
+db_go || true
+
+db_get openstreetmap-mapnik-data/initdb || true
+INIT_DB=$RET
+db_get openstreetmap-mapnik-data/grant_user || true
+GRANT_USER=$RET
+
+cat <<EOF > /etc/default/openstreetmap-mapnik-data
+# Default settings for openstreetmap-mapnik-data
+INIT_DB="$INIT_DB"
+GRANT_USER="$GRANT_USER"
+EOF
+

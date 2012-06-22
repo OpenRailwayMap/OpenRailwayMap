@@ -77,13 +77,13 @@ function createMap()
 			label: "${caption}",
 			fontColor: "#000000",
 			fontFamily: "Arial Black",
-			fontSize: 13
+			fontSize: 12
 		},
 		{
 			context: {
 				caption: function(feature)
 				{
-					return feature.attributes['caption'];
+					return feature.cluster[0].attributes['caption'];
 				}
 			}
 		}
@@ -95,16 +95,25 @@ function createMap()
 	);
 
 	// adding milestones overlay
-	milestonesLayer = new OpenLayers.Layer.Vector("Milestones",
+	milestonesLayer = new OpenLayers.Layer.Vector("#Milestones#",
 	{
 		projection: wgs84,
-		maxResolution: 10.0,
+		maxResolution: 100.0,
 		visibility: true,
 		transitionEffect: 'resize',
 		styleMap: milestonesStyleMap,
 		strategies:
 		[
-			new OpenLayers.Strategy.BBOX({ratio: 2.5})
+			new OpenLayers.Strategy.BBOX({ratio: 2.5}),
+			new OpenLayers.Strategy.Cluster(),
+			new OpenLayers.Strategy.Filter({
+				filter: new OpenLayers.Filter.Function({
+					evaluate: function(attributes)
+					{
+						return attributes['caption'] === '4,0';
+					}
+				 })
+			})
 		],
 		protocol: new OpenLayers.Protocol.HTTP(
 		{
@@ -112,6 +121,25 @@ function createMap()
 			format: new OpenLayers.Format.OLM()
 		})
 	});
+
+
+	/*
+	 type: OpenLayers.Filter.Comparison.BETWEEN,
+	 property: "when",
+	 lowerBoundary: startDate,
+	 upperBoundary: new Date(startDate.getTime() + (parseInt(spanEl.value, 10) * 1000))
+	 if ($zoom == 13*)
+	 // jeden vollen kilometer
+	 $condition = " AND (trunc(cast(tags->'railway:position' AS float)) = cast(tags->'railway:position' AS float))";
+	 else if ($zoom == 12)
+		 // jeden zweiten kilometer
+		 $condition = " AND (trunc(cast(tags->'railway:position' AS float)) = cast(tags->'railway:position' AS float)) AND (mod(cast(cast(tags->'railway:position' AS float) AS integer), 2) = 0)";
+	 else if ($zoom < 12)
+		 // jeden zehnten kilometer
+		 $condition = " AND (trunc(cast(tags->'railway:position' AS float)) = cast(tags->'railway:position' AS float)) AND (mod(cast(cast(tags->'railway:position' AS float) AS integer), 10) = 0)";
+	 else
+		 $condition = "";
+	*/
 
 	// adding layers to map
 	map.addLayers([mapnikMap, hillMap, milestonesLayer]);

@@ -1,0 +1,261 @@
+nik2img changelog
+=================
+
+
+Version 0.7.0,  Nov 29th, 2010:
+-------------------------------
+ 
+ * Packged from r1090
+ 
+ * Added support for rendering remote Cascadenik MML files, eg:
+    
+    $ nik2img.py https://github.com/mapnik/Cascadenik/raw/master/doc/example1.mml t.png --mapnik-version 1
+
+ * Added support for Cascadenik 1.x
+
+ * Exposed the ability to set the mapnik.Map aspect_fix_mode which controls bbox/dimension resizing
+ 
+ * Recusively register fonts when passed the --fonts argument
+ 
+ * Fixed double opening of image in default graphical viewer on linux
+ 
+ * Fixed bug in verbose output when reporting visible layers
+ 
+ * Added support for passing scale-factor to Mapnik2, to be able to scale up or down fonts, line widths, etc
+
+
+Version 0.6.0, May 25th, 2010:
+------------------------------
+
+ * Packaged from r971
+ 
+ * Fixed up pipe behavior. Now '-' passed for the mapfile argument will trigger reading from stdin.
+   The same character passed for the image argument will trigger printing the image to stdout.
+   
+
+Version 0.5.7, May 7th, 2010:
+-----------------------------
+
+ * Packaged from r963
+ 
+ * More reliable support for GeoTiff output through gdal_translate call
+
+
+Version 0.5.6, May 7th, 2010:
+-----------------------------
+
+ * Packaged from r959
+ 
+ * Added --zip flag to allow compressing output
+
+
+Version 0.5.5, May 7th, 2010:
+-----------------------------
+
+ * Packaged from r956
+ 
+ * Added GeoTiff output support
+
+
+Version 0.5.4, May 4th, 2010:
+-----------------------------
+
+ * Packaged from r953
+ 
+ * Fixed fallback
+
+
+Version 0.5.3, May 2nd, 2010:
+-----------------------------
+
+ * Packaged from r950
+ 
+ * Made Mapnik2 default version, falling back to old mapnik.
+
+
+Version 0.5.2, April 30, 2010:
+------------------------------
+
+ * Packaged from r936
+ 
+ * 0.5.1 needed a bit more love.
+ 
+ 
+Version 0.5.1, April 30, 2010:
+------------------------------
+
+ * Packaged from r933
+ 
+ * 0.5.0 was a lemon.
+   
+   
+Version 0.5.0, April 30, 2010:
+------------------------------
+
+ * Packaged from r926
+ 
+ * Refactored core to add switchable support for Mapnik2 (using singleton type thingy)
+  * new command line option --mapnik-version {1|2} that allows you to toggle
+    between old mapnik (up to 0.7.x) and mapnik2 (>= 0.8.0)
+   
+
+Version 0.4.1, February 2nd 2009:
+---------------------------------
+
+ * Packaged from r902
+ 
+ * Better support for Cascadenik
+ 
+ * Added support for features of Mapnik 0.7.0 and 0.8.0-dev (current trunk)
+
+
+Version 0.4.0, October 10th 2009:
+---------------------------------
+
+ * Packaged from r848
+
+ * Made the output image argument mandatory unless the new '--pipe' flag is used, avoiding printing of image into terminal unless the user actually wants that behavior.
+
+ * Tests can now be run without needing to install nik2img
+
+
+Version 0.3.2, August 13 2009:
+------------------------------
+
+ * Packaged from r796
+
+ * Added a --bbox-factor option to allow for a multiplication or division factor to be passed to the final extent
+
+ * Reworked the verbose output, working towards honing timing reports to relevant pieces of Mapnik functionality
+
+
+Version 0.3.1, June 17, 2009:
+-----------------------------
+
+ * Increased verbose output
+
+ * Improved fetching of proj4 codes from http://spatialreference.org
+
+ * Fixed bug in error reporting when srs was not found via http://spatialreference.org
+
+
+Version 0.3.0, May 10, 2009:
+----------------------------
+
+ * Switched to optparse module for handling command line options.
+
+ * Optparse now allows short and long argument names.
+
+ * Mapfile and Image options are now aruguments and do not require -m -o flags.
+
+ * Added ability to accept piped input as xml stream.
+
+ * Moved core functionality to the 'mapnik_utils' module which contains a set of classes.
+
+ * SRS codes not found in Proj.4 lookup will now be searched on spatialreference.org as fallback.
+
+ * Added support for loading map from python script with a variable called 'm'.
+
+ * Removed several cumbersome/unneeded/unfinished features (multiple renders,find/replace in xml,quiet mode).
+
+
+Version 0.2.4, April 7, 2009:
+-----------------------------
+
+ * Fix build problem with easy_install zipped egg
+
+
+Version 0.2.3, April 2, 2009:
+-----------------------------
+
+ * * * Note: last release in 2.x series - next release will be large refactor  * * *
+
+ * Dropped usage of setuptools, as it proved a hassle for python 26 updgrades.
+
+ * Restored backwards compatibility with mapnik 0.5.x series by using Boost Python Metaclasses
+
+ * Fixed bug in zoom levels code (thanks aub)
+
+ * Now accessing the scale_denominator as a property off the mapnik.Map object (http://trac.mapnik.org/changeset/794/)
+
+ * Added support for the Mapnik ProjTransform class (http://trac.mapnik.org/ticket/117)
+
+ * Added workaround for binary printing on win32 (thanks crschmidt for the solution and aled for reporting)
+
+ * Added alpha support for loading map definitions from a python script given a mapnik.Map variable called 'm'
+
+ * Added a 10 second socket timeout when fetching projections from spatialreference.org
+
+ * Made warnings only print to STDOUT if verbose = True
+
+ * Added more debugging of rules and styles
+
+ * Now looks for projection strings in the full mapnik proj_init syntax (ie '+init=epsg:<code>')
+
+ * Default image opening now off for linux (unless --app is used), still attempted by default on osx and win32.
+
+
+Version 0.2.2, 30 November 2008:
+--------------------------------
+
+ * Packaged from revision 400 in Subversion.
+
+ * Added tests that produce map graphics output
+
+ * Fixed variable scope problem when checking for Cairo support
+
+ * Fixed several bugs related to writing output files within nested folders
+
+ * Switched default format back to png (rather than png256)
+
+
+Version 0.2.1, 9 November 2008:
+--------------------------------
+
+ * Fixed bug in rendering when specific layers are requested with the -l flag
+
+ * Added ability to specify the application with which to open the output graphic using the --app flag
+
+
+Version 0.2.0, 5 November 2008:
+--------------------------------
+
+ * Packaged from revision 283 in Subversion.
+
+ * Cairo file formats support added (svg,pdf,ps)
+
+ * Program mainline is now a class that can be initialized as a module import allowing non-command-line usage
+
+ * Fixed up buggy zoom levels code.
+
+ * Fixed countless bugs in projection handling, format output, and error handling.
+
+ * Improved layer intersection checking by reprojecting extents were needed/possible
+
+ * Added a variety of more detailed verbose output for layers, datasources, and projection issues.
+
+ * Added zoom_to_layer, zoom_to (long,lat,level), and zoom_to_radius functionality to pinpoint center of rendered map.
+
+ * Added basic function docstrings
+
+ * Made piping the image to STDOUT default like shp2img.
+
+ * Added ability to stream() image result programmatically.
+
+ * Added beta support for worldfile output to georeference image output (1-2 pixel shift is present and a bug).
+
+ * Added ability to save the processed map to xml.
+
+ * Added ability to load alternative fonts.
+
+ * Added ability to directly read Cascadenik mml (Mapnik Markup Language).
+
+ * Added cProfile output option which will print script timing profile.
+
+
+Version 0.1.0, 25 September 2008:
+---------------------------------
+
+ * Initial version.
+ 
+ * Packaged from revision 181 in Subversion.

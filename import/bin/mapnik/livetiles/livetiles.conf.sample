@@ -1,0 +1,9 @@
+[global]
+# name of mapnik style
+stylename=osm.xml
+
+# directory containing available mapnik styles
+sandbox_dir=/path/to/mapnik/style/sandboxes
+
+# full path to map_template.html
+map_template=/path/to/map_template.html

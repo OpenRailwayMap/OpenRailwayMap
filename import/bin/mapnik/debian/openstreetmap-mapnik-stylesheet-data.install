@@ -1,0 +1,7 @@
+osm.xml /etc/mapnik-osm-data/
+inc/* /etc/mapnik-osm-data/inc/
+symbols/* /etc/mapnik-osm-data/symbols/
+get-coastlines.sh /usr/bin/
+debian/config_files/fontset-settings.xml.inc /etc/mapnik-osm-data/inc/
+debian/config_files/settings.xml.inc /etc/mapnik-osm-data/inc/
+debian/config_files/datasource-settings.xml.inc /etc/mapnik-osm-data/inc/
