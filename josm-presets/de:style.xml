@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+OpenRailwayMap JOSM Style File
+German edition: german language and german tagging
+
+OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+-->
+
+<rules xmlns="http://josm.openstreetmap.de/mappaint-style-1.0" name="OpenRailwayMap" icon="signals.png" author="Alexander Matheisen (rurseekatze)" version="06.2012" link="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" description="Map style for displaying railway details" de.description="Kartenstil zum Darstellen von Eisenbahn-Details">
+		<rule>
+			<condition k="railway" v="signal"/>
+			<icon annotate="true" src="signals.png" priority="20000"/>
+		</rule>
+		<rule>
+			<condition k="usage" v="main"/>
+			<line width="8" colour="#00ff00"/>
+		</rule>
+</rules>
+
+
+2. every rule needs a condition
+-k for the key (required)
+-v for the value as a string
+-b for the values yes / no (boolean, will also understand true, 1 and false, 0 respectively)
+Both -v and -b are optional (but recommended). If both are ommitted, the rule will apply to all
+tags with the given key - don't forget to set a priority if other rules could also apply.
+3. line attributes
+- width absolute width in pixel in every zoom level
+- realwidth relative width which will be scaled in meters, integer
+- colour
+- priority
+- dashed x - dashed line, length of dashes / spaces in x pixels
+- dashed x,y - dashed line, x length of dashes / spaces in y pixels
+- dashedcolour second (background) colour of a dashed line
+4. linemod attributes
+- all line attributes
+- mode ('over' or 'under')
+- width can be specified relative to modified way:
+	+x - <x> pixels are added to way size
+		-x - <x> pixels are subtracted from way size
+			x% - the size is <x> percent of modified way
+			If the size is <= 1 the minimum size of 1 is used.
+			5. area attributes
+			- colour
+			- priority
+			- closed (true or false - when true the area style is ignored for unclosed ways)
+			6. icon attributes
+			- icon (path to icon)
+			- relative to the icon path
+			- URL's are also supported to allow remote icons (are cached locally)
+			- priority
+			- annonate (true or false)
+			7. scale_min / scale_max
+			- zoom scale for display (currently unused)
+
+			Using both area and line attributes for the same key/value pair does work. For areas
+			first the best matching area rule is searched and the best matching line rule is
+			connected with it. They need not have the same key/value pair.
+
+			The colours can consist of the two components - name and hex code (e.g. water#0000ff).
+			If both are given, the color name is introduced in preferences with that value. If only
+			code is given (e.g. #0000ff), it is used directly. If only name is given, either user
+			modified preferences or previous value is used. The 6 hex digit color code can also
+			be appended by a hex value of the alpha channel (thus having 8 hex digits instead of 6).
+
+			Linemod's are drawn over or under the line they are associated with and modify the
+			appearance. There can be multiple linemod's for one way (contrary to line styles,
+			where only one applies). When drawn over a way either a very small width must be choosen
+			or an alpha value must be used for the colour field (otherwise the original way is
+			not visible). When the mod is under the way, then it must be wide enough to be visible
+			on the sides of the way or the waystyles itself must use alpha channel (which may
+			look strange).
+
+
+				<rule>
+					<condition k="bridge" b="yes"/>
+					<linemod mode="over" width="+4" colour="bridge#00008080" dashed="false"/>
+					<icon annotate="true" src="vehicle/viaduct.png"/>
+				</rule>
+				<rule>
+					<condition k="bridge" b="no"/>
+					<line width="2" realwidth="5" dashed="true" colour="deprecated#ff0000" priority="-50000"/>
+					<icon annotate="true" src="misc/deprecated.png"/>
+				</rule>
+				<rule>
+					<condition k="highway" v="path"/>
+					<condition k="bicycle" v="official"/>
+					<condition k="foot" v="official"/>
+					<line width="1" realwidth="2" colour="bicycle#b100ff" dashedcolour="foot#00ff00" dashed="14,14" priority="200"/>
+				</rule>
+				<rule>
+					<condition k="highway" v="services"/>
+					<area colour="services#c0c0c0"/>
+					<icon annotate="true" src="vehicle/services.png"/>
+				</rule>
