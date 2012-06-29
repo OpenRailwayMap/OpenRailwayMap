@@ -1,5 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-OpenRailwayMap JOSM Preset File
+OpenRailwayMap JOSM Presets File
 German edition: german language and german tagging
 
 OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
@@ -9,7 +11,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
-	<group name="OpenRailwayMap" icon="railmap.png">
+	<group name="OpenRailwayMap" icon="signals.png">
 		<item name="Gleis" icon="rail.png" type="way">
 			<key key="railway" value="rail" />
 			<text key="ref" text="Track ref" de.text="Streckennummer" default="" delete_if_empty="true" />
