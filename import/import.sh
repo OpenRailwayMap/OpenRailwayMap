@@ -40,7 +40,7 @@ echo ""
 # pre-filter planet file, ~ 20 min
 echo "Filtering planet file"
 echo ""
-osmfilter temp.o5m --keep="railway= route=train route_master=train route=railway route=light_rail line=rail line=light_rail" --out-osm >old-railways.osm
+osmfilter temp.o5m --keep="railway= route=railway route=train route=light_rail route=tram route=subway line=rail line=light_rail line=tram line=subway route_master=train route_master=light_rail route_master=tram route_master=subway" --out-osm >old-railways.osm
 rm temp.o5m
 echo ""
 
