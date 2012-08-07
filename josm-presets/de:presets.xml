@@ -61,8 +61,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="railway:signal:speed_limit_distant:speed" text="Maxspeed" de.text="Geschindigkeit (km/h), bei LED-Matrix leer" default="" delete_if_empty="true" />
 				</item>
 				<!-- TODO überprüfen rest ks -->
-				<item name="Ks-Mehrabschnitssignal" icon="ks-combined.png" type="node">
-					<label text="Ks-Mehrabschnitssignal" />
+				<item name="Ks-Mehrabschnittssignal" icon="ks-combined.png" type="node">
+					<label text="Ks-Mehrabschnittssignal" />
 					<key key="railway" value="signal" />
 					<text key="ref" text="Signal ref" de.text="Signalnummer" default="" delete_if_empty="true" />
 					<key key="railway:signal:combined" value="ks" />
@@ -124,6 +124,58 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:whistle" value="bü5" />
 				<key key="railway:signal:whistle:form" value="sign" />
 			</item>
+			<item name="Geschwindigkeitsbeschränkung" icon="maxspeed.png" type="node">
+				<label text="Geschwindigkeitsbeschränkung" />
+				<key key="railway" value="signal" />
+				<text key="ref" text="Signal ref" de.text="Signalnummer" default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:speed_limit" text="Type of signal"
+					de.text="Signaltyp" values="yes,zs3,dr:lf1/2,lf2,lf3,db:lf7,db:zs10"
+					display_values="unbekannt,Zs 3,Lf 1/2 (DR),Lf 2,Lf 3,Lf 7 (DB),Zs 10 (DB)"
+					default="" />
+				<combo key="railway:signal:speed_limit:form" text="Signal form"
+					de.text="Anzeigeart" values="light,sign"
+					display_values="Lichtsignal,Tafel" default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:speed_limit:speed" default=""
+				  text="Speed (km/h, leave blank for light signals)"
+					de.text="Geschwindigkeit (km/h, leer lassen für Lichtsignale)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Aufhebung (Zs 10, Lf 3)"
+					/>
+				<combo key="railway:signal:speed_limit:height" text="Signal height"
+					de.text="Signalbauform" values="normal,dwarf" default=""
+					display_values="Mastbauform,Zwergsignal" delete_if_empty="true" />
+				<combo key="railway:signal:speed_limit:deactivated" text="Out of order"
+					de.text="Außer Betrieb" values="yes,no" default=""
+					display_values="ja,nein" delete_if_empty="true" />
+			</item>
+			<item name="Geschwindigkeitsbeschränkungs-Ankündigung"
+				icon="maxspeed.png" type="node">
+				<label text="Geschwindigkeitsbeschränkungs-Ankündigung" />
+				<key key="railway" value="signal" />
+				<text key="ref" text="Signal ref" de.text="Signalnummer" default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:speed_limit_distant" text="Type of signal"
+					de.text="Signaltyp" values="yes,zs3v,lf1,lf4,db:lf6"
+					display_values="unbekannt,Zs 3v,Lf 1,Lf 4,Lf 6 (DB)"
+					default="" />
+				<combo key="railway:signal:speed_limit_distant:form" text="Signal form"
+					de.text="Anzeigeart" values="light,sign"
+					display_values="Lichtsignal,Tafel" default=""
+					delete_if_empty="true" />
+				<text key="railway:signal:speed_limit_distant:speed" default=""
+				  text="Speed (km/h, leave blank for light signals)"
+					de.text="Geschwindigkeit (km/h, leer lassen für Lichtsignale)"
+					delete_if_empty="true" />
+				<combo key="railway:signal:speed_limit_distant:height" text="Signal height"
+					de.text="Signalbauform" values="normal,dwarf" default=""
+					display_values="Mastbauform,Zwergsignal" delete_if_empty="true" />
+				<combo key="railway:signal:speed_limit_distant:deactivated"
+					text="Out of order" de.text="Außer Betrieb" values="yes,no"
+					default="" display_values="ja,nein" delete_if_empty="true" />
+			</item>
 		</group>
 		<item name="Bahnübergang" icon="crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
@@ -139,6 +191,38 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="crossing:chicane" text="Chicane" de.text="Umlaufgitter" default="off" delete_if_empty="true" />
 			<check key="supervised" text="Supervised" de.text="Überwacht (durch Fdl oder Bahnwärter)" default="off" delete_if_empty="true" />
 			<check key="crossing:on_demand" text="On demand" de.text="Anrufschranke" default="off" delete_if_empty="true" />
+		</item>
+		<item name="Kilo-/Hektometerbezeichnung" icon="milestone.png" type="node">
+			<label text="Kilo-/hektometer indications are nodes on the track which
+					they belong to. On lines with more than one track, every track gets a
+					node with the tags."
+				de.text="Kilo-/Hektometerbezeichnung werden als Punkt auf dem
+					dazugehörigen Gleis eingetragen. Bei mehrgleisigen Strecken bekommt
+					jedes Gleis einen Punkt mit den Tags."
+					/>
+			<key key="railway" value="milestone" />
+			<text key="railway:position" default=""
+				text="Distance indication (km)"
+				de.text="Entfernungsangabe (km)"
+				/>
+			<text key="railway:position:exact" default="" delete_if_empty="true"
+				text="Exact distance indication (km)"
+				de.text="Exakte Entfernungsangabe (km)"
+				/>
+			<combo key="railway:milestone:emergency_brake_override"
+				default="" delete_if_empty="true"
+				text="Emergency brake override"
+				de.text="Notfallbremsüberbrückung"
+				values="yes,no"
+				display_values="ja,nein"
+				/>
+			<combo key="railway:milestone:catenary_mast"
+				default="" delete_if_empty="true"
+				text="On catenary mast"
+				de.text="Am Oberleitungsmast"
+				values="yes,no"
+				display_values="ja,nein"
+				/>
 		</item>
 		<item name="Weiche" icon="switch.png" type="node">
 			<label text="Weiche" />
