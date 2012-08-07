@@ -13,65 +13,77 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
 	<group name="OpenRailwayMap" icon="signals.png">
 		<group name="Gleise" icon="rail.png">
-			<!--  preserved narrow_gauge light_rail subway tram miniature proposed construction disused abandoned razed Bahnhofsgleis Überleitgleis anschlussgleis-->
+			<!-- TODO preserved narrow_gauge light_rail subway tram miniature proposed construction disused abandoned razed Bahnhofsgleis Überleitgleis anschlussgleis-->
 			<item name="Streckengleis / Hauptgleis" icon="rail.png" type="way">
 				<label text="Streckengleis / Hauptgleis" />
 				<key key="railway" value="rail" />
 				<text key="ref" text="Line ref" de.text="Streckennummer (VzG-Nummer, z.B. '2379')" default="" delete_if_empty="true" />
 				<text key="name" text="Track ref" de.text="Gleisnummer (im Bahnhof)" default="" delete_if_empty="true" />
 				<text key="name" text="Railway name" de.text="Streckenname" default="" delete_if_empty="true" />
+				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" values="main,branch,highspeed,industrial,military,tourism,test" display_values="Hauptstrecke,Nebenstrecke,Hochgeschwindigkeitsstrecke,Industriebahn,Militärbahn,Museumsbahn,Teststrecke" default="" delete_if_empty="true" />
-				<combo key="electrified" text="Electrification" de.text="Elektrifizierung" values="yes,no,contact_line,rail" display_values="Ja,Nein,Oberleitung,Stromschiene" default="" delete_if_empty="true" />
 				<combo key="railway:traffic_mode" text="Traffic mode" de.text="Verkehrsart" values="mixed,passenger,freight" display_values="Gemischt,Personenverkehr,Güterverkehr" default="" delete_if_empty="true" />
 				<check key="highspeed" text="Highspeed traffic" de.text="Hochgeschwindigkeitsstrecke (~ >200km/h)" default="off" delete_if_empty="true" />
+				<space />
 				<check key="lit" text="Lit" de.text="Beleuchtung" default="off" delete_if_empty="true" />
 				<check key="railway:pzb" text="PZB" de.text="PZB" default="off" delete_if_empty="true" />
 				<check key="railway:lzb" text="LZB" de.text="LZB" default="off" delete_if_empty="true" />
 				<combo key="railway:etcs" text="ETCS" de.text="ETCS" values="yes,no,0,1,2,3" display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3" default="" delete_if_empty="true" />
+				<space />
+				<combo key="electrified" text="Electrification" de.text="Elektrifizierung" values="yes,no,contact_line,rail" display_values="Ja,Nein,Oberleitung,Stromschiene" default="" delete_if_empty="true" />
 				<text key="voltage" text="Voltage (Standard: 15000)" de.text="Spannung (Standard: 15000)" default="" delete_if_empty="true" />
 				<text key="frequency" text="Frequency (Standard: 16.7)" de.text="Frequenz (Standard: 16.7)" default="" delete_if_empty="true" />
 				<text key="gauge" text="Gauge" de.text="Spurweite" default="1435" delete_if_empty="true" />
 				<check key="railway:ballastless" text="Ballastless" de.text="Feste Fahrbahn" default="off" delete_if_empty="true" />
-				<!-- rack maxspeed railway:radio operator embankment cutting railway:bidirectional start_date end_date incline-->
+				<!-- TODO rack maxspeed railway:radio operator embankment cutting railway:bidirectional start_date end_date incline-->
 			</item>
 		</group>
 		<group name="Signale" icon="signals.png">
-			<item name="Ks-Mehrabschnitssignal" icon="ks.png" type="node">
-				<label text="Ks-Mehrabschnitssignal" />
-				<key key="railway" value="signal" />
-				<text key="ref" text="Signal ref" de.text="Signalnummer" default="" delete_if_empty="true" />
-				<key key="railway:signal:combined" value="ks" />
-				<key key="railway:signal:combined:form" value="light" />
-				<combo key="railway:signal:combined:height" text="Signal height" de.text="Signalbauform" values="normal,dwarf" display_values="Mastbauform,Zwergsignal" default="" delete_if_empty="true" />
-				<key key="railway:signal:combined:states" value="hp0;ks1;ks2" />
-				<combo key="railway:signal:combined:function" text="Signal function" de.text="Signalaufgabe" values="in,out,block,between" display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal" default="" delete_if_empty="true" />
-				<multiselect key="railway:signal:combined:substitute_signal" text="Substitue signal (Multiselection)" de.text="Ersatzsignal (Mehrfachauswahl)" delimiter=";" values="zs1;zs7;zs12" display_values="Ersatzsignal;Vorsichtsignal;M-Tafel" default="" delete_if_empty="true" />
-				<check key="railway:signal_bridge" text="Signal bridge" de.text="Signalbrücke" default="off" delete_if_empty="true" />
-			</item>
-			<item name="Ks-Vorsignal" icon="ks-distant.png" type="node">
-				<label text="Ks-Vorsignal" />
-				<key key="railway" value="signal" />
-				<text key="ref" text="Signal ref" de.text="Signalnummer" default="" delete_if_empty="true" />
-				<key key="railway:signal:distant" value="ks" />
-				<key key="railway:signal:distant:form" value="light" />
-				<combo key="railway:signal:distant:height" text="Signal height" de.text="Signalbauform" values="normal,dwarf" display_values="Mastbauform,Zwergsignal" default="" delete_if_empty="true" />
-				<key key="railway:signal:distant:states" value="ks1;ks2" />
-				<check key="railway:signal:distant:shortened" text="Shortened distance" de.text="Verkürzter Bremsweg" default="off" delete_if_empty="true" />
-				<check key="railway:signal:distant:repeated" text="Repeated Signal" de.text="Vorsignalwiederholer" default="off" delete_if_empty="true" />
-				<check key="railway:signal:distant:marker_light" text="MStandardweiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weichearker light" de.text="Kennlicht" default="off" delete_if_empty="true" />
-				<combo key="railway:signal:position" text="Signal position" de.text="Signalstandort" values="left,right,bridge" display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke" default="" delete_if_empty="true" />
-				<combo key="railway:signal:direction" text="Direction" de.text="Anzeigerichtung" values="forward,backward" display_values="In Wegrichtung,Entgegen Wegrichtung" default="" delete_if_empty="true" />
-			</item>
-			<item name="Ks-Hauptsignal" icon="ks-main.png" type="node">
-				<label text="Ks-Hauptsignal" />
-				<key key="railway" value="signal" />
-				<text key="ref" text="Signal ref" de.text="Signalnummer" default="" delete_if_empty="true" />
-				<key key="railway:signal:main" value="ks" />
-				<key key="railway:signal:main:form" value="light" />
-				<combo key="railway:signal:main:height" text="Signal height" de.text="Signalbauform" values="normal,dwarf" display_values="Mastbauform,Zwergsignal" default="" delete_if_empty="true" />
-				<key key="railway:signal:main:states" value="hp0;ks1" />
-				<check key="railway:signal_bridge" text="Signal bridge" de.text="Signalbrücke" default="off" delete_if_empty="true" />
-			</item>
+			<group name="Ks-System" icon="ks.png">
+				<item name="Ks-Vorsignal" icon="ks-distant.png" type="node">
+					<label text="Ks-Vorsignal" />
+					<key key="railway" value="signal" />
+					<text key="ref" text="Signal ref" de.text="Signalnummer" default="" delete_if_empty="true" />
+					<check key="railway:signal:distant:deactivated" text="Deactivated" de.text="Außer Betrieb" default="off" delete_if_empty="true" />
+					<combo key="railway:signal:position" text="Signal position" de.text="Signalstandort" values="left,right,bridge" display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke" default="" delete_if_empty="true" />
+					<combo key="railway:signal:direction" text="Direction" de.text="Anzeigerichtung" values="forward,backward" display_values="In Wegrichtung,Entgegen Wegrichtung" default="" delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:distant" value="ks" />
+					<key key="railway:signal:distant:form" value="light" />
+					<key key="railway:signal:distant:states" value="ks1;ks2" />
+					<check key="railway:signal:distant:shortened" text="Shortened distance" de.text="Verkürzter Bremsweg" default="off" delete_if_empty="true" />
+					<check key="railway:signal:distant:repeated" text="Repeated Signal" de.text="Vorsignalwiederholer" default="off" delete_if_empty="true" />
+					<check key="railway:signal:distant:marker_light" text="Marker light" de.text="Kennlicht" default="off" delete_if_empty="true" />
+					<space />
+					<label text="Geschwindigkeitsankündigung" />
+					<combo key="railway:signal:speed_limit_distant" text="Speed limit distant" de.text="Geschwindigkeitsankündiger" values="zs3v" display_values="Zs 3v" default="" delete_if_empty="true" />
+					<combo key="railway:signal:speed_limit_distant:form" text="Display" de.text="Anzeige" values="light,sign" display_values="LED-Matrix,Schild" default="" delete_if_empty="true" />
+					<text key="railway:signal:speed_limit_distant:speed" text="Maxspeed" de.text="Geschindigkeit (km/h), bei LED-Matrix leer" default="" delete_if_empty="true" />
+				</item>
+				<!-- TODO überprüfen rest ks -->
+				<item name="Ks-Mehrabschnitssignal" icon="ks-combined.png" type="node">
+					<label text="Ks-Mehrabschnitssignal" />
+					<key key="railway" value="signal" />
+					<text key="ref" text="Signal ref" de.text="Signalnummer" default="" delete_if_empty="true" />
+					<key key="railway:signal:combined" value="ks" />
+					<key key="railway:signal:combined:form" value="light" />
+					<combo key="railway:signal:combined:height" text="Signal height" de.text="Signalbauform" values="normal,dwarf" display_values="Mastbauform,Zwergsignal" default="" delete_if_empty="true" />
+					<key key="railway:signal:combined:states" value="hp0;ks1;ks2" />
+					<combo key="railway:signal:combined:function" text="Signal function" de.text="Signalaufgabe" values="in,out,block,between" display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal" default="" delete_if_empty="true" />
+					<multiselect key="railway:signal:combined:substitute_signal" text="Substitue signal (Multiselection)" de.text="Ersatzsignal (Mehrfachauswahl)" delimiter=";" values="zs1;zs7;zs12" display_values="Ersatzsignal;Vorsichtsignal;M-Tafel" default="" delete_if_empty="true" />
+					<check key="railway:signal_bridge" text="Signal bridge" de.text="Signalbrücke" default="off" delete_if_empty="true" />
+				</item>
+				<item name="Ks-Hauptsignal" icon="ks-main.png" type="node">
+					<label text="Ks-Hauptsignal" />
+					<key key="railway" value="signal" />
+					<text key="ref" text="Signal ref" de.text="Signalnummer" default="" delete_if_empty="true" />
+					<key key="railway:signal:main" value="ks" />
+					<key key="railway:signal:main:form" value="light" />
+					<combo key="railway:signal:main:height" text="Signal height" de.text="Signalbauform" values="normal,dwarf" display_values="Mastbauform,Zwergsignal" default="" delete_if_empty="true" />
+					<key key="railway:signal:main:states" value="hp0;ks1" />
+					<check key="railway:signal_bridge" text="Signal bridge" de.text="Signalbrücke" default="off" delete_if_empty="true" />
+				</item>
+			</group>
 			<item name="Hp-Hauptsignal" icon="hp.png" type="node">
 				<label text="Hp-Hauptsignal" />
 				<key key="railway" value="signal" />
@@ -99,7 +111,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<item name="Pfeiftafel" icon="de:whistle.png" type="node">
 				<label text="Pfeiftafel" />
 				<key key="railway" value="signal" />
-				<!-- auswahlfeld -->
+				<!-- TODO auswahlfeld -->
 				<text key="railway:signal:whistle" text="Exact type (e.g. 'bü4')" de.text="Signaltyp (z.B. 'bü4')" default="yes" delete_if_empty="true" />
 				<key key="railway:signal:whistle:form" value="sign" />
 				<check key="railway:signal:whistle:twice" text="Whistle twice?" de.text="Doppelte Pfeiftafel?" default="off" delete_if_empty="true" />
@@ -113,8 +125,20 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:whistle:form" value="sign" />
 			</item>
 		</group>
-		<item name="Kilometerstein" icon="milestone.png" type="node">
-			<label text="Kilometerstein" />
+		<item name="Bahnübergang" icon="crossing.png" type="node,closedway">
+			<label text="Bahnübergang" />
+			<key key="railway" value="level_crossing" />
+			<text key="railway:ref" text="Name (no position)" de.text="Name (keine Kilometerangabe oder kreuzende Straße)" default="" delete_if_empty="true" />
+			<text key="railway:position" text="Position (rounded, e.g. '12.3')" de.text="Kilometerangabe (gerundet, z.B. '12.3')" default="" delete_if_empty="true" />
+			<text key="railway:position:exact" text="Position (exact, e.g. '12.345')" de.text="Kilometerangabe (genau, z.B: '12.345')" default="" delete_if_empty="true" />
+			<space />
+			<combo key="crossing:barrier" text="Barriers" de.text="Schranken" values="half,double_half,full,yes,no" display_values="Halbschranke,Doppelte Halbschranke,Vollschranke,Beschrankt,Unbeschrankt" default="" delete_if_empty="true" />
+			<check key="crossing:light" text="Lights" de.text="Warnlicht" default="off" delete_if_empty="true" />
+			<check key="crossing:bell" text="Bell" de.text="Akustischer Warnton" default="off" delete_if_empty="true" />
+			<space />
+			<check key="crossing:chicane" text="Chicane" de.text="Umlaufgitter" default="off" delete_if_empty="true" />
+			<check key="supervised" text="Supervised" de.text="Überwacht (durch Fdl oder Bahnwärter)" default="off" delete_if_empty="true" />
+			<check key="crossing:on_demand" text="On demand" de.text="Anrufschranke" default="off" delete_if_empty="true" />
 		</item>
 		<item name="Weiche" icon="switch.png" type="node">
 			<label text="Weiche" />
@@ -123,6 +147,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:local_operated" text="Local operated" de.text="Ortsgestellt" default="off" delete_if_empty="true" />
 			<combo key="railway:switch" text="Switch type" de.text="Weichentyp" values="default,three_way,single_slip,double_slip,resetting,wye" display_values="Standardweiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche" default="" delete_if_empty="true" />
 			<combo key="railway:turnout_side" text="Turnout side (only default and resetting switches)" de.text="Seite der Abzweigung (nur bei Standard- und Rückfallweichen)" values="left,right" display_values="Links,Rechts" default="" delete_if_empty="true" />
+		</item>
+		<item name="Stromsystemwechsel" icon="systemswitch.png" type="node">
+			<key key="railway" value="isolated_track_section" />
+		</item>
+		<item name="Eigentumswechsel" icon="ownerchange.png" type="node">
+			<key key="railway" value="owner_change" />
+		</item>
+		<!-- ab hier TODO -->
+		<item name="Kilometerstein" icon="milestone.png" type="node">
+			<label text="Kilometerstein" />
 		</item>
 		<item name="Bahnhof/Haltepunkt" icon="station.png" type="node">
 			<label text="Bahnhof/Haltepunkt" />
@@ -153,23 +187,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:manual" text="Manual" de.text="Handgestellt" default="off" delete_if_empty="true" />
 			<combo key="railway:switch" text="Switch type" de.text="Weichentyp" values="default,three_way,single_slip,double_slip,backfall,wye" display_values="Standardweiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche" default="" delete_if_empty="true" />
 		</item>
-		<item name="Bahnübergang" icon="crossing.png" type="node">
-			<label text="Bahnübergang" />
-			<combo key="railway" text="Type" de.text="Typ" values="level_crossing,crossing" display_values="Bahnübergang,Fußübergang" default="" delete_if_empty="true" />
-			<text key="name" text="Name (no position)" de.text="Name (keine Kilometerangabe)" default="" delete_if_empty="true" />
-			<text key="railway:position" text="Position (rounded, e.g. '12.3')" de.text="Kilometerangabe (gerundet, z.B. '12.3')" default="" delete_if_empty="true" />
-			<text key="railway:position" text="Position (exact, e.g. '12.345')" de.text="Kilometerangabe (genau, z.B: '12.345')" default="" delete_if_empty="true" />
-			<check key="crossing:light" text="Lights" de.text="Warnlicht" default="off" delete_if_empty="true" />
-			<check key="crossing:on_demand" text="On demand" de.text="Anrufschranke" default="off" delete_if_empty="true" />
-			<check key="crossing:bell" text="Bell" de.text="Akustischer Warnton" default="off" delete_if_empty="true" />
-			<check key="crossing:chicane" text="Chicane" de.text="Umlaufgitter" default="off" delete_if_empty="true" />
-			<combo key="crossing:barrier" text="Barriers" de.text="Schranken" values="half,double_half,full,yes,no" display_values="Halbschranke,Doppelte Halbschranke,Vollschranke,Beschrankt,Unbeschrankt" default="" delete_if_empty="true" />
-		</item>
 		<item name="Fernsprecher" icon="phone.png" type="node">
 			<key key="railway" value="phone" />
-		</item>
-		<item name="Stromsystemwechsel" icon="systemswitch.png" type="node">
-			<key key="railway" value="isolated_track_section" />
 		</item>
 		<item name="Zugfunk" icon="radio.png" type="node">
 			<label text="Zugfunk" />
@@ -207,6 +226,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="tourism" value="museum" />
 			<text key="name" text="Name" de.text="Name" default="" delete_if_empty="true" />
 		</item>
-		<!-- brücke tunnel gleisfreimelder ; ab bahnübergang-->
+		<group name="Historische Daten" icon="historic.png">
+		</group>
+		<!-- TODO brücke tunnel gleisfreimelder ; ab signale-->
 	</group>
 </presets>
