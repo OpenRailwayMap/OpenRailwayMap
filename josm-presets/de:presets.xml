@@ -19,12 +19,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway"
 					value="rail" />
 				<text key="ref"
-					text="Line ref"
+					text="Line ref (VzG number, e.g. '2379')"
 					de.text="Streckennummer (VzG-Nummer, z.B. '2379')"
 					default=""
 					delete_if_empty="true" />
 				<text key="name"
-					text="Track ref"
+					text="Track ref (inside station)"
 					de.text="Gleisnummer (im Bahnhof)"
 					default=""
 					delete_if_empty="true" />
@@ -37,7 +37,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="usage"
 					text="Usage"
 					de.text="Nutzung"
-					values="main,branch,highspeed,industrial,military,tourism,test" display_values="Hauptstrecke,Nebenstrecke,Hochgeschwindigkeitsstrecke,Industriebahn,Militärbahn,Museumsbahn,Teststrecke" default=""
+					values="main,branch,highspeed,industrial,military,tourism,test"
+					display_values="Hauptstrecke,Nebenstrecke,Hochgeschwindigkeitsstrecke,Industriebahn,Militärbahn,Museumsbahn,Teststrecke"
+					default=""
 					delete_if_empty="true" />
 				<combo key="railway:traffic_mode"
 					text="Traffic mode"
@@ -170,12 +172,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Display"
 						de.text="Anzeige"
 						values="light,sign"
-						display_values="LED-Matrix,Schild"
+						display_values="LED-Matrix,Tafel"
 						default=""
 						delete_if_empty="true" />
 					<text key="railway:signal:speed_limit_distant:speed"
-						text="Maxspeed"
-						de.text="Geschindigkeit (km/h), bei LED-Matrix leer"
+						text="Speed (km/h, leave empty for LED matrix)"
+						de.text="Geschwindigkeit (km/h, bei LED-Matrix leer)"
 						default=""
 						delete_if_empty="true" />
 				</item>
@@ -230,7 +232,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<multiselect key="railway:signal:combined:substitute_signal"
-						text="Substitue signal (Multiselection)"
+						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="zs1;zs7;zs12"
@@ -328,7 +330,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<multiselect key="railway:signal:main:states"
-					text="Signal states (Multiselection)"
+					text="Signal states (multi-selection)"
 					de.text="Signalzustände (Mehrfachauswahl)"
 					delimiter=";"
 					values="hp0;hp1;hpvr2"
@@ -343,7 +345,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<multiselect key="railway:signal:main:substitute_signal"
-					text="Substitue signal (Multiselection)"
+					text="Substitute signal (multi-selection)"
 					de.text="Ersatzsignal (Mehrfachauswahl)"
 					delimiter=";"
 					values="zs1;zs7;zs12"
@@ -396,7 +398,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<multiselect key="railway:signal:advance:states"
-					text="Signal states (Multiselection)"
+					text="Signal states (multi-selection)"
 					de.text="Signalzustände (Mehrfachauswahl)"
 					delimiter=";"
 					values="vr0;vr1;vr2"
@@ -418,7 +420,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="Pfeiftafel" />
 				<key key="railway"
 					value="signal" />
-				<!-- TODO auswahlfeld -->
 				<check key="railway:signal:whistle:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
@@ -439,6 +440,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<space />
+				<!-- TODO auswahlfeld -->
 				<text key="railway:signal:whistle"
 					text="Exact type (e.g. 'bü4')"
 					de.text="Signaltyp (z.B. 'bü4')"
