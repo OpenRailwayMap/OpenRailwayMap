@@ -108,7 +108,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<group name="Signale" icon="signals.png">
-			<item name="Ks-Vorsignal" icon="ks-distant.png" type="node">
+			<item name="Ks-Vorsignal" icon="de:ks-distant.png" type="node">
 				<label text="Ks-Vorsignal" />
 				<key key="railway"
 					value="signal" />
@@ -164,7 +164,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 			</item>
-			<item name="Ks-Mehrabschnittssignal" icon="ks-combined.png" type="node">
+			<item name="Ks-Mehrabschnittssignal" icon="de:ks-combined.png" type="node">
 				<label text="Ks-Mehrabschnittssignal" />
 				<key key="railway"
 					value="signal" />
@@ -245,7 +245,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 				<!-- TODO sh1 dr:zs8 db:zs6 zs13 zp8 zp9 -->
 			</item>
-			<item name="Ks-Hauptsignal" icon="ks-main.png" type="node">
+			<item name="Ks-Hauptsignal" icon="de:ks-main.png" type="node">
 				<label text="Ks-Hauptsignal" />
 				<key key="railway"
 					value="signal" />
@@ -314,7 +314,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 				<!-- TODO sh1 zs13 dr:zs6 dr:zs8 db:zs6 zp8 zp9 -->
 			</item>
-			<item name="Hp-Form-Hauptsignal" icon="hp-semaphore.png" type="node">
+			<item name="Hp-Form-Hauptsignal" icon="de:hp-semaphore.png" type="node">
 				<label text="Hp-Form-Hauptsignal" />
 				<key key="railway"
 					value="signal" />
@@ -383,7 +383,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 				<!-- TODO zs8 zs13 dr:zs6 db/dr:zs8 db:zs6/dr:zs7 dr:zs6/zs106-->
 			</item>
-			<item name="Hp-Licht-Hauptsignal" icon="hp-light.png" type="node">
+			<item name="Hp-Licht-Hauptsignal" icon="de:hp-light.png" type="node">
 				<label text="Hp-Licht-Hauptsignal" />
 				<key key="railway"
 					value="signal" />
@@ -458,7 +458,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 				<!-- TODO sh1 zs8 zs13 dr:zs6 db/dr:zs8 db:zs6/dr:zs7 zp8 zp9 dr:zs6/zs106-->
 			</item>
-			<item name="Vr-Form-Vorsignal" icon="vr-semaphore.png" type="node">
+			<item name="Vr-Form-Vorsignal" icon="de:vr-semaphore.png" type="node">
 				<label text="Vr-Form-Vorsignal" />
 				<key key="railway"
 					value="signal" />
@@ -529,7 +529,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 			</item>
-			<item name="Vr-Licht-Vorsignal" icon="vr-light.png" type="node">
+			<item name="Vr-Licht-Vorsignal" icon="de:vr-light.png" type="node">
 				<label text="Vr-Form-Vorsignal" />
 				<key key="railway"
 					value="signal" />
@@ -594,7 +594,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<!-- TODO prüfen ab hier -->
-			<item name="Schutzhaltsignal" icon="sh.png" type="node">
+			<item name="Schutzhaltsignal" icon="de:sh.png" type="node">
 				<label text="Schutzhaltsignal" />
 				<key key="railway"
 					value="signal" />
@@ -657,7 +657,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Schutzhalt-Vorsignal" icon="sh-distant.png" type="node">
+			<item name="Schutzhalt-Vorsignal" icon="de:sh-distant.png" type="node">
 				<label text="Schutzhalt-Vorsignal (Haltvorscheibe, DR)" />
 				<key key="railway"
 					value="signal" />
@@ -771,7 +771,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:whistle:form"
 					value="sign" />
 			</item>
-			<item name="Geschwindigkeitsanzeiger" icon="maxspeed.png" type="node">
+			<item name="Geschwindigkeitsanzeiger" icon="de:maxspeed.png" type="node">
 				<label text="Geschwindigkeitsanzeiger" />
 				<key key="railway"
 					value="signal" />
@@ -828,7 +828,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<item name="Geschwindigkeitsvoranzeiger" icon="maxspeed-distant.png" type="node">
+			<item name="Geschwindigkeitsvoranzeiger" icon="de:maxspeed-distant.png" type="node">
 				<label text="Geschwindigkeitsvoranzeiger" />
 				<key key="railway"
 					value="signal" />
@@ -885,7 +885,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<!-- TODO ende zu prüfen -->
-		<item name="Bahnübergang" icon="crossing.png" type="node,closedway">
+		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
 			<key key="railway"
 				value="level_crossing" />
@@ -1092,7 +1092,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Fernsprecher" icon="phone.png" type="node">
+		<item name="Fernsprecher" icon="de:phone.png" type="node">
 			<key key="railway"
 				value="phone" />
 		</item>
