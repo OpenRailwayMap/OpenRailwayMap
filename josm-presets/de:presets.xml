@@ -841,6 +841,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
+			<!-- TODO ende zu prüfen -->
 			<item name="Geschwindigkeitsvoranzeiger" icon="de:maxspeed-distant.png" type="node">
 				<label text="Geschwindigkeitsvoranzeiger" />
 				<space />
@@ -874,8 +875,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:speed_limit_distant"
 					text="Type of signal"
 					de.text="Signaltyp"
-					values="yes,zs3v,lf1,lf4,db:lf6"
-					display_values="unbekannt,Zs 3v,Lf 1,Lf 4,Lf 6 (DB)"
+					values="yes,zs3v,lf1,db:lf4,dr:lf4,lf6"
+					display_values="unbekannt,Zs 3v,Lf 1,Lf 4 (ex-DB),Lf 4 (ex-DR),Lf 6"
 					default="" />
 				<combo key="railway:signal:speed_limit_distant:form"
 					text="Signal form"
@@ -898,7 +899,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 		</group>
-		<!-- TODO ende zu prüfen -->
 		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
 			<space />
