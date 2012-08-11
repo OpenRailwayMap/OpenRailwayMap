@@ -16,6 +16,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<!-- TODO preserved narrow_gauge light_rail subway tram miniature proposed construction disused abandoned razed Bahnhofsgleis Überleitgleis anschlussgleis-->
 			<item name="Streckengleis / Hauptgleis" icon="rail.png" type="way">
 				<label text="Streckengleis / Hauptgleis" />
+				<space />
 				<key key="railway"
 					value="rail" />
 				<text key="ref"
@@ -110,6 +111,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		<group name="Signale" icon="signals.png">
 			<item name="Ks-Vorsignal" icon="de:ks-distant.png" type="node">
 				<label text="Ks-Vorsignal" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -166,6 +168,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Ks-Mehrabschnittssignal" icon="de:ks-combined.png" type="node">
 				<label text="Ks-Mehrabschnittssignal" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -247,6 +250,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Ks-Hauptsignal" icon="de:ks-main.png" type="node">
 				<label text="Ks-Hauptsignal" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -316,6 +320,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Hp-Form-Hauptsignal" icon="de:hp-semaphore.png" type="node">
 				<label text="Hp-Form-Hauptsignal" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -385,6 +390,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Hp-Licht-Hauptsignal" icon="de:hp-light.png" type="node">
 				<label text="Hp-Licht-Hauptsignal" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -460,6 +466,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Vr-Form-Vorsignal" icon="de:vr-semaphore.png" type="node">
 				<label text="Vr-Form-Vorsignal" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -531,6 +538,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Vr-Licht-Vorsignal" icon="de:vr-light.png" type="node">
 				<label text="Vr-Form-Vorsignal" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -596,6 +604,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<!-- TODO prüfen ab hier -->
 			<item name="Schutzhaltsignal" icon="de:sh.png" type="node">
 				<label text="Schutzhaltsignal" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -659,6 +668,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Schutzhalt-Vorsignal" icon="de:sh-distant.png" type="node">
 				<label text="Schutzhalt-Vorsignal (Haltvorscheibe, DR)" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -701,6 +711,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<!-- TODO trapeztafel -->
 			<item name="Pfeiftafel" icon="de:whistle.png" type="node">
 				<label text="Pfeiftafel" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<check key="railway:signal:whistle:deactivated"
@@ -744,6 +755,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Läutetafel" icon="de:ring.png" type="node">
 				<label text="Läutetafel" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<check key="railway:signal:ring:deactivated"
@@ -773,6 +785,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Geschwindigkeitsanzeiger" icon="de:maxspeed.png" type="node">
 				<label text="Geschwindigkeitsanzeiger" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -830,6 +843,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Geschwindigkeitsvoranzeiger" icon="de:maxspeed-distant.png" type="node">
 				<label text="Geschwindigkeitsvoranzeiger" />
+				<space />
 				<key key="railway"
 					value="signal" />
 				<text key="ref"
@@ -887,6 +901,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		<!-- TODO ende zu prüfen -->
 		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
+			<space />
 			<key key="railway"
 				value="level_crossing" />
 			<text key="railway:ref"
@@ -968,6 +983,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<item name="Weiche" icon="switch.png" type="node">
 			<label text="Weiche" />
+			<space />
 			<key key="railway"
 				value="switch" />
 			<text key="ref"
@@ -1005,6 +1021,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		<!-- ab hier TODO -->
 		<item name="Bahnhof/Haltepunkt" icon="station.png" type="node">
 			<label text="Bahnhof/Haltepunkt" />
+			<space />
 			<combo key="railway"
 				text="Type"
 				de.text="Typ"
@@ -1034,6 +1051,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<item name="Rangierbahnhof" icon="yard.png" type="node,closedway">
 			<label text="Rangierbahnhof" />
+			<space />
 			<key key="railway"
 				value="yard" />
 			<text key="name"
@@ -1048,6 +1066,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="Stellwerk" />
+			<space />
 			<key key="railway"
 				value="signal_box" />
 			<text key="name"
@@ -1063,6 +1082,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<item name="Abzweig" icon="junction.png" type="node">
 			<label text="Abzweig" />
+			<space />
 			<key key="railway"
 				value="junction" />
 			<text key="name"
@@ -1098,6 +1118,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<item name="Zugfunk" icon="radio.png" type="node">
 			<label text="Zugfunk" />
+			<space />
 			<key key="railway"
 				value="radio" />
 			<key key="man_made"
@@ -1114,6 +1135,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<item name="Wasserturm" icon="watertower.png" type="node,closedway">
 			<label text="Wasserturm" />
+			<space />
 			<key key="railway"
 				value="water_tower" />
 			<key key="man_made"
@@ -1145,6 +1167,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<item name="Eisenbahnmuseum" icon="museum.png" type="node,closedway">
 			<label text="Eisenbahnmuseum" />
+			<space />
 			<key key="railway"
 				value="museum" />
 			<key key="tourism"
