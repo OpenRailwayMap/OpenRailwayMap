@@ -17,7 +17,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</rule>
 		<rule>
 			<condition k="usage" v="main"/>
-			<line width="8" colour="#00ff00"/>
+			<line width="6" realwidth="2" colour="#ff0000"/>
+		</rule>
+		<rule>
+			<condition k="usage" v="branch"/>
+			<line width="5" realwidth="2" colour="#ffa500"/>
+		</rule>
+		<rule>
+			<condition k="usage" v="tourism"/>
+			<line width="4" realwidth="2" colour="#afeeee"/>
 		</rule>
 </rules>
 
