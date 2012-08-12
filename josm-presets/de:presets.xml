@@ -24,7 +24,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Streckennummer (VzG-Nummer, z.B. '2379')"
 					default=""
 					delete_if_empty="true" />
-				<text key="name"
+				<text key="railway:track_ref"
 					text="Track ref (inside station)"
 					de.text="Gleisnummer (im Bahnhof)"
 					default=""
@@ -77,6 +77,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
 					default=""
 					delete_if_empty="true" />
+				<combo key="railway:bidirectional"
+					text="Direction of use (depends on direction of OSM way"
+					de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)"
+					values="regular,signals,possible"
+					display_values="Gleiswechselbetrieb,Signalisierter Falschfahrbetrieb,Falschfahrt möglich"
+					default=""
+					delete_if_empty="true" />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -105,7 +112,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Feste Fahrbahn"
 					default="off"
 					delete_if_empty="true" />
-				<!-- TODO rack maxspeed railway:radio operator embankment cutting railway:bidirectional start_date end_date incline-->
+				<space />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Jahr der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<!-- TODO rack maxspeed railway:radio operator embankment cutting incline-->
 			</item>
 		</group>
 		<group name="Signale" icon="signals.png">
