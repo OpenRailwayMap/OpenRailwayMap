@@ -1016,7 +1016,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Name"
 				default=""
 				delete_if_empty="true" />
-			<text key="railway:short"
+			<text key="railway:ref"
 				text="Short name"
 				de.text="Abkürzung"
 				default=""
@@ -1040,7 +1040,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Name" de.text="Name"
 				default=""
 				delete_if_empty="true" />
-			<text key="railway:short"
+			<text key="railway:ref"
 				text="Short name"
 				de.text="Abkürzung"
 				default=""
@@ -1055,7 +1055,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Name"
 				default=""
 				delete_if_empty="true" />
-			<text key="railway:short"
+			<text key="railway:ref"
 				text="Short name"
 				de.text="Abkürzung"
 				default=""
@@ -1070,7 +1070,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Name"
 				default=""
 				delete_if_empty="true" />
-			<text key="railway:short"
+			<text key="railway:ref"
 				text="Short name"
 				de.text="Abkürzung"
 				default=""
