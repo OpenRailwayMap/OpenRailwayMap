@@ -1066,7 +1066,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default="off"
 				delete_if_empty="true" />
 		</item>
-		<item name="Weiche" icon="switch.png" type="node">
+		<item name="Weiche" icon="de:switch.png" type="node">
 			<label text="Weiche" />
 			<space />
 			<key key="railway"
