@@ -549,7 +549,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 			</item>
-			<item name="Vr-Licht-Vorsignal" icon="de:vr-sign.png" type="node">
+			<item name="Vr-Licht-Vorsignal" icon="de:vr-light.png" type="node">
 				<label text="Vr-Form-Vorsignal" />
 				<space />
 				<key key="railway"
