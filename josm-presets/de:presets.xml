@@ -118,7 +118,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Jahr der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
-				<!-- TODO rack maxspeed railway:radio operator embankment cutting incline-->
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+				<!-- TODO rack maxspeed railway:radio operator incline-->
 			</item>
 		</group>
 		<group name="Signale" icon="signals.png">
