@@ -459,6 +459,28 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
+			</separator>
+			<item name="Prellbock" icon="bufferstop.png" type="node">
+				<key key="railway"
+					value="buffer_stop" />
+				<key key="railway:signal:position"
+					value="in_track" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:minor"
+					text="Exact type of signal"
+					de.text="Signaltyp"
+					values="sh0,sh2"
+					display_values="Sh 0-Tafel,Sh 2-Tafel"
+					default="" />
+				<key key="railway:signal:minor:form"
+					value="sign" />
+			</item>
 		</group>
 		<group name="Signale" icon="signals.png">
 			<item name="Ks-Vorsignal" icon="de:ks-distant.png" type="node">
@@ -1624,10 +1646,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		<item name="Gleiswaage" icon="scale.png" type="node,closedway">
 			<key key="railway"
 				value="track_scale" />
-		</item>
-		<item name="Prellbock" icon="bufferstop.png" type="node">
-			<key key="railway"
-				value="buffer_stop" />
 		</item>
 		<item name="Eisenbahnmuseum" icon="museum.png" type="node,closedway">
 			<label text="Eisenbahnmuseum" />
