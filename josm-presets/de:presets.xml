@@ -162,7 +162,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<separator/>
+			<separator />
 			<item name="Stillgelegtes Gleis" icon="disused.png" type="way">
 				<label text="Ein Gleis, das zwar noch vorhanden ist und jederzeit wieder genutzt werden könnte, im Moment aber nicht mehr in Betrieb ist." />
 				<space />
@@ -459,7 +459,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			</separator>
+			<separator />
 			<item name="Prellbock" icon="bufferstop.png" type="node">
 				<key key="railway"
 					value="buffer_stop" />
