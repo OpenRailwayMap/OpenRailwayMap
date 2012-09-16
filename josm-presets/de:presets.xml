@@ -13,7 +13,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
 	<group name="OpenRailwayMap DE" icon="signals.png">
 		<group name="Gleise" icon="rail.png">
-			<!-- TODO preserved narrow_gauge light_rail subway tram miniature proposed construction abandoned Bahnhofsgleis Überleitgleis anschlussgleis abstellgleis -->
+			<!-- TODO preserved narrow_gauge light_rail subway tram miniature proposed construction abandoned yard spur siding crossover Nebengleis Überleitgleis anschlussgleis abstellgleis -->
 			<item name="Streckengleis / Hauptgleis" icon="rail.png" type="way">
 				<label text="Streckengleise (ohne Überleitgleise) und durchgehende Hauptgleise in einem Bahnhof. Jedes Gleis wird einzeln erfasst." />
 				<space />
@@ -89,6 +89,132 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)"
 					values="regular,signals,possible"
 					display_values="Gleiswechselbetrieb,Signalisierter Falschfahrbetrieb,Falschfahrt möglich"
+					default=""
+					delete_if_empty="true" />
+				<combo key="maxspeed" default=""
+					text="Maxspeed"
+					de.text="Höchstgeschwindigkeit"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<text key="voltage"
+					text="Voltage (Standard: 15000)"
+					de.text="Spannung (Standard: 15000)"
+					default=""
+					delete_if_empty="true" />
+				<text key="frequency"
+					text="Frequency (Standard: 16.7)"
+					de.text="Frequenz (Standard: 16.7)"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
+					default="1435"
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z.B. '3%')"
+					default="1435"
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Jahr der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG')"
+					de.text="Betreiber (z.B. 'DB Netz AG')"
+					default="1435"
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Nebengleis / Bahnhofsgleis" icon="siding.png" type="way">
+				<label text="Nebengleise in einem Bahnhof und alle sonstigen nicht-Streckengleise, außer Abstellgleisen, Anschlussgleisen, Überleitgleisen und Rangiergleisen in Rangierbahnhöfen. Jedes Gleis wird einzeln erfasst." />
+				<space />
+				<key key="railway"
+					value="rail" />
+				<key key="service"
+					value="siding" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<check key="highspeed"
+					text="Highspeed traffic"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200km/h)"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="PZB"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="LZB"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="maxspeed" default=""
@@ -1075,7 +1201,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<label text="Signal Gsp 2 siehe 'Gleissperre'" />
 			</item>
-			<!-- TODO hinzufügen: sh1 tafel -->
 			<item name="Schutzhalttafel" icon="de:sh2.png" type="node">
 				<label text="Schutzhalttafel" />
 				<space />
