@@ -1422,7 +1422,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:speed_limit"
 					text="Type of signal"
 					de.text="Signaltyp"
-					values="yes,zs3,dr:lf1/2,lf2,lf3,dr:lf5,db:lf5,dlf7,db:zs10"
+					values="yes,zs3,dr:lf1/2,lf2,lf3,dr:lf5,db:lf5,lf7,db:zs10"
 					display_values="unbekannt,Zs 3 ('Geschwindigkeitsanzeiger'),Lf 1/2 (ex-DR, 'Langsamfahrbeginnscheibe'),Lf 2 ('Anfangsscheibe'),Lf 3 ('Endscheibe'),Lf 5 (DB, 'Anfangstafel'),Lf 5 (ex-DR, 'Eckentafel'),Lf 7 ('Geschwindigkeitssignal') ,Zs 10 (DB)"
 					default="" />
 				<combo key="railway:signal:speed_limit:form"
