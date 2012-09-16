@@ -10,6 +10,38 @@ This is free software, and you are welcome to redistribute it under certain cond
 See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 
+<!-- TODO
+gleissperren mit signalposition in_track
+
+englische übersetzungen labels
+erklärungen durch labels
+
+wikipedia tags
+
+voltage und frequency auswahlfeld
+schutzhaltvorsignal prüfen
+grenzzeichen hinzufügen
+erfassung von bahnsteiggleiskanten
+frühhaltanzeiger zs13
+gleissperre gsp2
+auf wikiseite db netz ag als standard bei operator angeben
+datumangabe bei start und end date
+
+englische übersetzung taggingseite
+
+josm preset files übersichtstabelle ergänzen
+josm styles
+hinweis zum einbinden von josm presets
+
+beispielgrafiken: bü-fläche, betriebsstellenrelationen
+beispielbahnhof, beispielstrecke
+besseres beispielbild fernsprecher
+beispiele korrigieren
+weitere beispiele ergänzen
+
+streckenrelationen, z.b. angertalbahn
+-->
+
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
 	<group name="OpenRailwayMap DE" icon="signals.png">
 		<group name="Gleise" icon="rail.png">
