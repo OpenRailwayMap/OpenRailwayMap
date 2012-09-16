@@ -1159,8 +1159,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					values="left,right,bridge,in_track"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Gleismitte/am Prellbock"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:signal:direction"
@@ -1215,8 +1215,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					values="left,right,bridge,in_track"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Gleismitte/am Prellbock"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:signal:direction"
