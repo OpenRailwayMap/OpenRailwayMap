@@ -27,6 +27,7 @@ frühhaltanzeiger zs13
 gleissperre gsp2
 auf wikiseite db netz ag als standard bei operator angeben
 datumangabe bei start und end date
+hinweis sv signale hamburger system
 
 englische übersetzung taggingseite
 
@@ -929,8 +930,8 @@ streckenrelationen, z.b. angertalbahn
 					default=""
 					delete_if_empty="true" />
 				<multiselect key="railway:signal:combined:states"
-					text="Signal states (multi-selection)"
-					de.text="Signalzustände (Mehrfachauswahl)"
+					text="Signal states, Hamburg names (multi-selection)"
+					de.text="Signalzustände, Hamburger Kürzel (Mehrfachauswahl)"
 					delimiter=";"
 					values="hp0;sv1;sv2;sv3;sv4;sv5;sv6;sv0"
 					display_values="Hp 0;Sv 1;Sv 2;Sv 3;Sv 4;Sv 5;Sv 6;Sv 0"
@@ -1671,7 +1672,7 @@ streckenrelationen, z.b. angertalbahn
 				<key key="railway:signal:whistle:form"
 					value="sign" />
 			</item>
-			<!-- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk, sv signale, ab rangierhaltsignalen -->
+			<!-- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
 		</group>
 		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
