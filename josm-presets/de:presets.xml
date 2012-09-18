@@ -808,8 +808,10 @@ streckenrelationen, z.b. angertalbahn
 				<label text="- Geschwindigkeitsanzeiger Zs 3" />
 				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
 				<label text="- Schutzhaltsignal Sh 1" />
+				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+				<label text="- Falschfahrt-Auftragssignal / Linksfahrtersatzsignal Zs 8" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO dr:zs8 db:zs6 zs13 zp8 zp9 -->
+				<!-- TODO db:zs6/dr:zs7 zp8 zp9 -->
 			</item>
 			<item name="Ks-Hauptsignal" icon="de:ks-main.png" type="node">
 				<label text="Ks-Hauptsignal" />
@@ -879,8 +881,92 @@ streckenrelationen, z.b. angertalbahn
 				<label text="- Richtungsanzeiger Zs 2" />
 				<label text="- Geschwindigkeitsanzeiger Zs 3" />
 				<label text="- Schutzhaltsignal Sh 1" />
+				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+				<label text="- Falschfahrt-Auftragssignal / Linksfahrtersatzsignal Zs 8" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO zs13 dr:zs6 dr:zs8 db:zs6 zp8 zp9 -->
+				<!-- TODO db:zs6/dr:zs7 zp8 zp9 -->
+			</item>
+			<separator />
+			<item name="Sv-Signal" icon="de:sv.png" type="node">
+				<label text="Sv-Signal" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<text key="ref"
+					text="Signal ref"
+					de.text="Signalnummer"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:combined:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:combined"
+					value="sv" />
+				<key key="railway:signal:combined:form"
+					value="light" />
+				<combo key="railway:signal:combined:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					display_values="Mastbauform,Zwergsignal"
+					default=""
+					delete_if_empty="true" />
+				<multiselect key="railway:signal:combined:states"
+					text="Signal states (multi-selection)"
+					de.text="Signalzustände (Mehrfachauswahl)"
+					delimiter=";"
+					values="hp0;sv1;sv2;sv3;sv4;sv5;sv6;sv0"
+					display_values="Hp 0;Sv 1;Sv 2;Sv 3;Sv 4;Sv 5;Sv 6;Sv 0"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:combined:function"
+					text="Signal function"
+					de.text="Signalaufgabe"
+					values="entry,exit,block,between"
+					display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
+					default=""
+					delete_if_empty="true" />
+				<multiselect key="railway:signal:combined:substitute_signal"
+					text="Substitute signal (multi-selection)"
+					de.text="Ersatzsignal (Mehrfachauswahl)"
+					delimiter=";"
+					values="dr:zs1;db:zs7;db:zs12"
+					display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:combined:marker_light"
+					text="Marker light"
+					de.text="Kennlicht"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+				<label text="- Richtungsanzeiger Zs 2" />
+				<label text="- Richtungsvoranzeiger Zs 2v" />
+				<label text="- Geschwindigkeitsanzeiger Zs 3" />
+				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
+				<label text="- Schutzhaltsignal Sh 1" />
+				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+				<label text="- Falschfahrt-Auftragssignal / Linksfahrtersatzsignal Zs 8" />
+				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				<!-- TODO db:zs6/dr:zs7 zp8 zp9 -->
 			</item>
 			<separator />
 			<item name="Hp-Form-Hauptsignal" icon="de:hp-semaphore.png" type="node">
@@ -950,8 +1036,10 @@ streckenrelationen, z.b. angertalbahn
 				<space />
 				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
 				<label text="- Geschwindigkeitsanzeiger Zs 3" />
+				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+				<label text="- Falschfahrt-Auftragssignal / Linksfahrtersatzsignal Zs 8" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO zs8 zs13 dr:zs6 db/dr:zs8 db:zs6/dr:zs7 dr:zs6/zs106-->
+				<!-- TODO db:zs6/dr:zs7 zp8 pz9 -->
 			</item>
 			<item name="Hp-Licht-Hauptsignal" icon="de:hp-light.png" type="node">
 				<label text="Hp-Licht-Hauptsignal" />
@@ -1027,8 +1115,10 @@ streckenrelationen, z.b. angertalbahn
 				<label text="- Richtungsanzeiger Zs 2" />
 				<label text="- Geschwindigkeitsanzeiger Zs 3" />
 				<label text="- Schutzhaltsignal Sh 1" />
+				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+				<label text="- Falschfahrt-Auftragssignal / Linksfahrtersatzsignal Zs 8" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO zs8 zs13 dr:zs6 db/dr:zs8 db:zs6/dr:zs7 zp8 zp9 dr:zs6/zs106-->
+				<!-- TODO db:zs6/dr:zs7 zp8 zp9 -->
 			</item>
 			<item name="Trapeztafel" icon="de:ne1.png" type="node">
 				<label text="Trapeztafel" />
@@ -1581,7 +1671,7 @@ streckenrelationen, z.b. angertalbahn
 				<key key="railway:signal:whistle:form"
 					value="sign" />
 			</item>
-			<!-- Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk, sv signale, ab rangierhaltsignalen -->
+			<!-- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk, sv signale, ab rangierhaltsignalen -->
 		</group>
 		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
