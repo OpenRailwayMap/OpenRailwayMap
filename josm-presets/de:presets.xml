@@ -15,6 +15,7 @@ gleissperren mit signalposition in_track
 
 englische übersetzungen labels
 erklärungen durch labels
+hinweise erfassung in labels
 
 wikipedia tags
 
@@ -638,6 +639,35 @@ streckenrelationen, z.b. angertalbahn
 					default="" />
 				<key key="railway:signal:minor:form"
 					value="sign" />
+			</item>
+			<item name="Weiche" icon="de:switch.png" type="node">
+				<label text="Weiche" />
+				<space />
+				<key key="railway"
+					value="switch" />
+				<text key="ref"
+					text="Switch ref"
+					de.text="Weichennummer"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:local_operated"
+					text="Local operated"
+					de.text="Ortsgestellt"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:switch"
+					text="Switch type"
+					de.text="Weichentyp"
+					values="default,three_way,single_slip,double_slip,resetting,wye" display_values="Standardweiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:turnout_side"
+					text="Turnout side (only default and resetting switches)"
+					de.text="Seite der Abzweigung (nur bei Standard- und Rückfallweichen)"
+					values="left,right"
+					display_values="Links,Rechts"
+					default=""
+					delete_if_empty="true" />
 			</item>
 		</group>
 		<group name="Signale" icon="signals.png">
@@ -1591,7 +1621,7 @@ streckenrelationen, z.b. angertalbahn
 				default="off"
 				delete_if_empty="true" />
 		</item>
-		<item name="Kilo-/Hektometerbezeichnung" icon="milestone.png" type="node">
+		<item name="Kilo-/Hektometertafel" icon="milestone.png" type="node">
 			<label text="Kilo-/hektometer indications are nodes on the track"
 				de.text="Kilo-/Hektometerbezeichnung werden als Punkt auf dem" />
 			<label text="which they belong to. On lines with more than one track,"
@@ -1619,44 +1649,61 @@ streckenrelationen, z.b. angertalbahn
 				default="off"
 				delete_if_empty="true" />
 		</item>
-		<item name="Weiche" icon="de:switch.png" type="node">
-			<label text="Weiche" />
-			<space />
+		<item name="Bahnsteig" icon="platform.png" type="way,closedway">
+			<label text="Bahnsteig" />
 			<key key="railway"
-				value="switch" />
-			<text key="ref"
-				text="Switch ref"
-				de.text="Weichennummer"
+				value="platform" />
+			<text key="name"
+				text="Caption"
+				de.text="Beschriftung"
 				default=""
 				delete_if_empty="true" />
-			<check key="railway:local_operated"
-				text="Local operated"
-				de.text="Ortsgestellt"
+			<text key="ref"
+				text="Platform number(s)"
+				de.text="Bahnsteignummer(n)"
+				default=""
+				delete_if_empty="true" />
+			<check key="lit"
+				text="Lit"
+				de.text="Beleuchtung"
 				default="off"
 				delete_if_empty="true" />
-			<combo key="railway:switch"
-				text="Switch type"
-				de.text="Weichentyp"
-				values="default,three_way,single_slip,double_slip,resetting,wye" display_values="Standardweiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche"
+			<combo key="surface"
+				text="Surface"
+				de.text="Oberfläche"
+				values="asphalt,paving_stones,concrete,cobblestone,compacted,paved,unpaved"
+				display_values="Asphalt,Pflastersteine,Beton,Kopfsteinpflaster,Verdichtet,Befestigt,Unbefestigt"
 				default=""
 				delete_if_empty="true" />
-			<combo key="railway:turnout_side"
-				text="Turnout side (only default and resetting switches)"
-				de.text="Seite der Abzweigung (nur bei Standard- und Rückfallweichen)"
-				values="left,right"
-				display_values="Links,Rechts"
+			<key key="public_transport"
+				value="platform" />
+			<combo key="wheelchair"
+				text="Wheelchair"
+				de.text="Rollstuhlgerecht"
+				values="yes,no,limited"
+				display_values="Ja,Nein,Eingeschränkt"
+				default=""
+				delete_if_empty="true" />
+			<combo key="tactile_paving"
+				text="Tactile Paving"
+				de.text="Ertastbarer Untergrund"
+				values="yes,no,incorrect"
+				display_values="Ja,Nein,Vorhanden aber nicht sinnvoll verwendet"
 				default=""
 				delete_if_empty="true" />
 		</item>
 		<item name="Stromsystemwechsel" icon="systemswitch.png" type="node">
+			<label text="Stromsystemwechsel" />
 			<key key="railway"
 				value="isolated_track_section" />
 		</item>
 		<item name="Eigentumswechsel" icon="ownerchange.png" type="node">
+			<label text="Eigentumswechsel der Infrastruktur" />
 			<key key="railway"
 				value="owner_change" />
 		</item>
 		<item name="Fernsprecher" icon="de:phone.png" type="node">
+			<label text="Fernsprecher" />
 			<key key="railway"
 				value="phone" />
 		</item>
@@ -1784,22 +1831,27 @@ streckenrelationen, z.b. angertalbahn
 				value="water_tower" />
 		</item>
 		<item name="Tankstelle" icon="fuel.png" type="node,closedway">
+			<label text="Loktankstelle" />
 			<key key="railway"
 				value="fuel" />
 		</item>
 		<item name="Bahngelände" icon="landuse.png" type="closedway">
+			<label text="Bahngelände" />
 			<key key="landuse"
 				value="railway" />
 		</item>
 		<item name="Drehscheibe" icon="turntable.png" type="node,closedway">
+			<label text="Drehscheibe" />
 			<key key="railway"
 				value="turntable" />
 		</item>
 		<item name="Schiebebühne" icon="traverser.png" type="node,closedway">
+			<label text="Schiebebühne" />
 			<key key="railway"
 				value="traverser" />
 		</item>
 		<item name="Gleiswaage" icon="scale.png" type="node,closedway">
+			<label text="Gleiswaage" />
 			<key key="railway"
 				value="track_scale" />
 		</item>
@@ -1818,6 +1870,6 @@ streckenrelationen, z.b. angertalbahn
 		</item>
 		<!--<group name="Historische Daten" icon="historic.png">
 		</group>-->
-		<!-- TODO brücke tunnel gleisfreimelder stellwerke betriebsstellen eisenbahnlinien; ab bahnsteig-->
+		<!-- TODO brücke tunnel gleisfreimelder stellwerke betriebsstellen eisenbahnlinien; ab u-bahn-zugang-->
 	</group>
 </presets>
