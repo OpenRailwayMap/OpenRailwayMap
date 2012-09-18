@@ -771,12 +771,12 @@ streckenrelationen, z.b. angertalbahn
 					delete_if_empty="true" />
 				<key key="railway:signal:combined:states"
 					value="hp0;ks1;ks2" />
-					<check key="railway:signal:combined:shortened"
+				<check key="railway:signal:combined:shortened"
 					text="Shortened distance"
 					de.text="Verkürzter Bremsweg"
 					default="off"
 					delete_if_empty="true" />
-					<check key="railway:signal:combined:repeated"
+				<check key="railway:signal:combined:repeated"
 					text="Repeated Signal"
 					de.text="Vorsignalwiederholer"
 					default="off"
@@ -807,8 +807,9 @@ streckenrelationen, z.b. angertalbahn
 				<label text="- Richtungsvoranzeiger Zs 2v" />
 				<label text="- Geschwindigkeitsanzeiger Zs 3" />
 				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
+				<label text="- Schutzhaltsignal Sh 1" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO sh1 dr:zs8 db:zs6 zs13 zp8 zp9 -->
+				<!-- TODO dr:zs8 db:zs6 zs13 zp8 zp9 -->
 			</item>
 			<item name="Ks-Hauptsignal" icon="de:ks-main.png" type="node">
 				<label text="Ks-Hauptsignal" />
@@ -877,9 +878,11 @@ streckenrelationen, z.b. angertalbahn
 				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
 				<label text="- Richtungsanzeiger Zs 2" />
 				<label text="- Geschwindigkeitsanzeiger Zs 3" />
+				<label text="- Schutzhaltsignal Sh 1" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO sh1 zs13 dr:zs6 dr:zs8 db:zs6 zp8 zp9 -->
+				<!-- TODO zs13 dr:zs6 dr:zs8 db:zs6 zp8 zp9 -->
 			</item>
+			<separator />
 			<item name="Hp-Form-Hauptsignal" icon="de:hp-semaphore.png" type="node">
 				<label text="Hp-Form-Hauptsignal" />
 				<space />
@@ -1023,9 +1026,58 @@ streckenrelationen, z.b. angertalbahn
 				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
 				<label text="- Richtungsanzeiger Zs 2" />
 				<label text="- Geschwindigkeitsanzeiger Zs 3" />
+				<label text="- Schutzhaltsignal Sh 1" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO sh1 zs8 zs13 dr:zs6 db/dr:zs8 db:zs6/dr:zs7 zp8 zp9 dr:zs6/zs106-->
+				<!-- TODO zs8 zs13 dr:zs6 db/dr:zs8 db:zs6/dr:zs7 zp8 zp9 dr:zs6/zs106-->
 			</item>
+			<item name="Trapeztafel" icon="de:ne1.png" type="node">
+				<label text="Trapeztafel" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:main:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:main"
+					value="ne1" />
+				<key key="railway:signal:main:form"
+					value="sign" />
+				<combo key="railway:signal:main:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					display_values="Normalhöhe,Zwergsignal"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:main:function"
+					value="entry" />
+			</item>
+			<item name="Sh 1-Licht" icon="de:sh1.png" type="node">
+				<label text="Sh 1-Licht an anderen Signalen wie Ks-Signalen oder Hp-Ausfahrsignalen." />
+				<space />
+				<key key="railway:signal:minor"
+					value="sh1" />
+				<key key="railway:signal:minor:form"
+					value="light" />
+			</item>
+			<separator />
 			<item name="Vr-Form-Vorsignal" icon="de:vr-semaphore.png" type="node">
 				<label text="Vr-Form-Vorsignal" />
 				<space />
@@ -1203,6 +1255,7 @@ streckenrelationen, z.b. angertalbahn
 					default="off"
 					delete_if_empty="true" />
 			</item>
+			<separator />
 			<item name="Schutzhaltsignal" icon="de:sh.png" type="node">
 				<label text="Schutzhaltsignal" />
 				<space />
@@ -1338,119 +1391,7 @@ streckenrelationen, z.b. angertalbahn
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Trapeztafel" icon="de:ne1.png" type="node">
-				<label text="Trapeztafel" />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:main:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:main"
-					value="ne1" />
-				<key key="railway:signal:main:form"
-					value="sign" />
-				<combo key="railway:signal:main:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Normalhöhe,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:main:function"
-					value="entry" />
-			</item>
-			<item name="Pfeiftafel" icon="de:whistle.png" type="node">
-				<label text="Pfeiftafel" />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:whistle:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:whistle"
-					text="Exact type"
-					de.text="Signaltyp"
-					values="db:bü4,dr:pf1,dr:pf2"
-					display_values="Bü 4 (ex-DB),Pf 1 (einfache Pfeiftafel ex-DR),Pf 2 (doppelte Pfeiftafel ex-DR)"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:whistle:form"
-					value="sign" />
-				<check key="railway:signal:whistle:twice"
-					text="Whistle twice?"
-					de.text="Doppelte Pfeiftafel?"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:whistle:only_transit"
-					text="Whistle only when train does not stop before crossing?"
-					de.text="Zwei senkrechte Striche?"
-					default="off"
-					delete_if_empty="true" />
-			</item>
-			<item name="Läutetafel" icon="de:ring.png" type="node">
-				<label text="Läutetafel" />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:ring:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:whistle"
-					value="bü5" />
-				<key key="railway:signal:whistle:form"
-					value="sign" />
-			</item>
+			<separator />
 			<item name="Geschwindigkeitsanzeiger" icon="de:maxspeed.png" type="node">
 				<label text="Geschwindigkeitsanzeiger" />
 				<space />
@@ -1565,7 +1506,82 @@ streckenrelationen, z.b. angertalbahn
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<!-- Signale ab Hauptsignal-Nachahmer/Fahrtanzeiger -->
+			<separator />
+			<item name="Pfeiftafel" icon="de:whistle.png" type="node">
+				<label text="Pfeiftafel" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:whistle:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:signal:whistle"
+					text="Exact type"
+					de.text="Signaltyp"
+					values="db:bü4,dr:pf1,dr:pf2"
+					display_values="Bü 4 (ex-DB),Pf 1 (einfache Pfeiftafel ex-DR),Pf 2 (doppelte Pfeiftafel ex-DR)"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:whistle:form"
+					value="sign" />
+				<check key="railway:signal:whistle:twice"
+					text="Whistle twice?"
+					de.text="Doppelte Pfeiftafel?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:signal:whistle:only_transit"
+					text="Whistle only when train does not stop before crossing?"
+					de.text="Zwei senkrechte Striche?"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Läutetafel" icon="de:ring.png" type="node">
+				<label text="Läutetafel" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:ring:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:whistle"
+					value="bü5" />
+				<key key="railway:signal:whistle:form"
+					value="sign" />
+			</item>
+			<!-- Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk, sv signale, ab rangierhaltsignalen -->
 		</group>
 		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
