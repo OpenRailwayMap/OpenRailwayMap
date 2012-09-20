@@ -1857,6 +1857,21 @@ streckenrelationen, z.b. angertalbahn
 				default="off"
 				delete_if_empty="true" />
 		</item>
+		<item name="Wasserturm" icon="watertower.png" type="node,closedway">
+			<label text="Wasserturm" />
+			<space />
+			<key key="railway"
+				value="water_tower" />
+			<key key="man_made"
+				value="water_tower" />
+			<key key="building"
+				value="yes" />
+		</item>
+		<item name="Tankstelle" icon="fuel.png" type="node,closedway">
+			<label text="Loktankstelle" />
+			<key key="railway"
+				value="fuel" />
+		</item>
 		<!-- ab hier TODO -->
 		<item name="Bahnhof/Haltepunkt" icon="station.png" type="node">
 			<label text="Bahnhof/Haltepunkt" />
@@ -1951,19 +1966,6 @@ streckenrelationen, z.b. angertalbahn
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Wasserturm" icon="watertower.png" type="node,closedway">
-			<label text="Wasserturm" />
-			<space />
-			<key key="railway"
-				value="water_tower" />
-			<key key="man_made"
-				value="water_tower" />
-		</item>
-		<item name="Tankstelle" icon="fuel.png" type="node,closedway">
-			<label text="Loktankstelle" />
-			<key key="railway"
-				value="fuel" />
-		</item>
 		<item name="Bahngelände" icon="landuse.png" type="closedway">
 			<label text="Bahngelände" />
 			<key key="landuse"
@@ -1999,6 +2001,6 @@ streckenrelationen, z.b. angertalbahn
 		</item>
 		<!--<group name="Historische Daten" icon="historic.png">
 		</group>-->
-		<!-- TODO brücke tunnel gleisfreimelder stellwerke betriebsstellen eisenbahnlinien; ab u-bahn-zugang-->
+		<!-- TODO brücke tunnel gleisfreimelder stellwerke betriebsstellen eisenbahnlinien; ab wasserkran -->
 	</group>
 </presets>
