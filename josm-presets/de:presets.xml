@@ -1835,6 +1835,28 @@ streckenrelationen, z.b. angertalbahn
 			<key key="barrier"
 				value="gate" />
 		</item>
+		<item name="U-Bahn-Zugang" icon="landuse.png" type="node">
+			<label text="U-Bahn-Zugang" />
+			<key key="railway"
+				value="subway_entrance" />
+			<text key="name"
+				text="Name"
+				de.text="Name"
+				default=""
+				delete_if_empty="true" />
+			<combo key="wheelchair"
+				text="Wheelchair"
+				de.text="Rollstuhlgerecht"
+				values="yes,no,limited"
+				display_values="Ja,Nein,Eingeschränkt"
+				default=""
+				delete_if_empty="true" />
+			<check key="bicycle"
+				text="Accessbile with bicycles"
+				de.text="Passierbar mit Fahrrädern"
+				default="off"
+				delete_if_empty="true" />
+		</item>
 		<!-- ab hier TODO -->
 		<item name="Bahnhof/Haltepunkt" icon="station.png" type="node">
 			<label text="Bahnhof/Haltepunkt" />
