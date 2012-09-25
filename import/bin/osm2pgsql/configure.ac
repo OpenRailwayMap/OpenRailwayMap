@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT(osm2pgsql, 0.80.0)
+AC_INIT(osm2pgsql, 0.81.0)
 
 dnl Required autoconf version
 AC_PREREQ(2.61)
@@ -19,16 +19,33 @@ AC_CONFIG_MACRO_DIR([m4])
 dnl Generate configuration header file
 AC_CONFIG_HEADER(config.h)
 
+AC_GNU_SOURCE
 AC_HEADER_SYS_WAIT
+AC_FUNC_MMAP
 
 dnl Find C compiler
 AC_PROG_CC_C99
 
 dnl Find C++ compiler
 AC_PROG_CXX
+AC_CHECK_PROG(HAVE_CXX, $CXX, yes, no)
+if test "$HAVE_CXX" = "no" 
+then
+  AC_MSG_ERROR([Could not find a c++ compiler]);
+fi
 
 dnl Make sure we have libtool installed
 AM_PROG_LIBTOOL
+
+AC_CHECK_FUNC(lseek64,[AC_DEFINE(HAVE_LSEEK64, [1], [lseek64 is present])],[AX_COMPILE_CHECK_SIZEOF(off_t)])
+AC_CHECK_FUNCS([posix_fallocate posix_fadvise sync_file_range])
+
+
+dnl legacy 32bit ID mode
+AC_ARG_ENABLE([64bit-ids],
+    AS_HELP_STRING([--disable-64bit-ids], [Disable 64bit IDs for OSM IDs]), 
+    [], [ AC_DEFINE(OSMID64, [1], [Enable 64bit OSM IDs])])
+
 
 dnl Check for libxml2 library
 AX_LIB_XML2
@@ -53,9 +70,9 @@ fi
 
 dnl Check for Geos library
 AX_LIB_GEOS
-if test "$HAVE_GEOS" = "no" 
+if test "x$GEOS_VERSION" = "x" 
 then
-  AC_MSG_ERROR([required library not found]);
+  AC_MSG_ERROR([geos library not found]);
 fi
 
 dnl Check for Proj library
@@ -82,16 +99,16 @@ AM_CONDITIONAL([READER_PBF], [test "$BUILD_READER_PBF" = "yes"])
 
 dnl Check for PostgresSQL client library
 AX_LIB_POSTGRESQL
-if test -f $POSTGRESQL_PGXS
+if test "x$POSTGRESQL_VERSION" = "x"
 then
-  GAZETTEER_SUBDIR=gazetteer
+    AC_MSG_ERROR([postgresql client library not found])
 fi
-AC_SUBST([GAZETTEER_SUBDIR])
+
 
 dnl Check for pthread library
 AX_PTHREAD(,[AC_MSG_ERROR([no])])
 
 
 dnl Generate Makefile
-AC_OUTPUT(Makefile legacy/Makefile gazetteer/Makefile)
+AC_OUTPUT(Makefile legacy/Makefile)
 

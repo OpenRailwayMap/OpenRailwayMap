@@ -3,12 +3,6 @@ svn:wc:ra_dav:version-url
 V 58
 /!svn/ver/26439/applications/utils/export/osm2pgsql/legacy
 END
-build_geometry.h
-K 25
-svn:wc:ra_dav:version-url
-V 75
-/!svn/ver/26439/applications/utils/export/osm2pgsql/legacy/build_geometry.h
-END
 osm2pgsql.c
 K 25
 svn:wc:ra_dav:version-url
@@ -26,4 +20,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 77
 /!svn/ver/26439/applications/utils/export/osm2pgsql/legacy/build_geometry.cpp
+END
+build_geometry.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/26439/applications/utils/export/osm2pgsql/legacy/build_geometry.h
 END

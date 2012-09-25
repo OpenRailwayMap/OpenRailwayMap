@@ -30,6 +30,7 @@
 #include "middle.h"
 #include "pgsql.h"
 #include "expire-tiles.h"
+#include "wildcmp.h"
 
 #define SRID (project_getprojinfo()->srs)
 
@@ -187,6 +188,11 @@ void read_style_file( const char *filename )
             exit_nicely();
         }
     }
+    if ((temp.flags!=FLAG_DELETE) && ((strchr(temp.name,'?') >0) || (strchr(temp.name,'*') >0))) {
+        fprintf( stderr, "wildcard '%s' in non-delete style emtry\n",temp.name);
+        exit_nicely();
+    }
+    
     temp.count = 0;
 //    printf("%s %s %d %d\n", temp.name, temp.type, temp.polygon, offset );
     
@@ -782,7 +788,7 @@ unsigned int pgsql_filter_tags(enum OsmType type, struct keyval *tags, int *poly
 
         for (i=0; i < exportListCount[type]; i++)
         {
-            if( strcmp( exportList[type][i].name, item->key ) == 0 )
+            if (wildMatch( exportList[type][i].name, item->key ))
             {
                 if( exportList[type][i].flags & FLAG_DELETE )
                 {
@@ -809,6 +815,23 @@ unsigned int pgsql_filter_tags(enum OsmType type, struct keyval *tags, int *poly
                 /* ... but if hstore_match_only is set then don't take this 
                    as a reason for keeping the object */
                 if (!Options->hstore_match_only) filter = 0;
+            } else if (Options->n_hstore_columns) {
+                /* does this column match any of the hstore column prefixes? */
+                int j;
+                for (j = 0; j < Options->n_hstore_columns; j++) {
+                    char *pos = strstr(item->key, Options->hstore_columns[j]);
+                    if (pos == item->key) {
+                        pushItem(&temp, item);
+                        /* ... but if hstore_match_only is set then don't take this 
+                           as a reason for keeping the object */
+                        if (!Options->hstore_match_only) filter = 0;
+                        break; 
+                    }
+                }
+                /* if not, skip the tag */
+                if (j == Options->n_hstore_columns) {
+                    freeItem(item);
+                }
             } else {
                 freeItem(item);
             }
@@ -1604,8 +1627,9 @@ static int pgsql_add_way(osmid_t id, osmid_t *nds, int nd_count, struct keyval *
 static int pgsql_process_relation(osmid_t id, struct member *members, int member_count, struct keyval *tags, int exists)
 {
   // (osmid_t id, struct keyval *rel_tags, struct osmNode **xnodes, struct keyval **xtags, int *xcount)
-  int i, count;
-  osmid_t *xid = malloc( (member_count+1) * sizeof(osmid_t) );
+    int i, j, count, count2;
+  osmid_t *xid2 = malloc( (member_count+1) * sizeof(osmid_t) );
+  osmid_t *xid;
   const char **xrole = malloc( (member_count+1) * sizeof(const char *) );
   int *xcount = malloc( (member_count+1) * sizeof(int) );
   struct keyval *xtags  = malloc( (member_count+1) * sizeof(struct keyval) );
@@ -1618,30 +1642,37 @@ static int pgsql_process_relation(osmid_t id, struct member *members, int member
   count = 0;
   for( i=0; i<member_count; i++ )
   {
+  
     /* Need to handle more than just ways... */
     if( members[i].type != OSMTYPE_WAY )
         continue;
-
-    initList(&(xtags[count]));
-    if( Options->mid->ways_get( members[i].id, &(xtags[count]), &(xnodes[count]), &(xcount[count]) ) )
-      continue;
-    xid[count] = members[i].id;
-    xrole[count] = members[i].role;
+    xid2[count] = members[i].id;
     count++;
   }
-  xnodes[count] = NULL;
-  xcount[count] = 0;
-  xid[count] = 0;
-  xrole[count] = NULL;
+
+  count2 = Options->mid->ways_get_list(xid2, count, &xid, xtags, xnodes, xcount);
+
+  for (i = 0; i < count2; i++) {
+      for (j = i; j < member_count; j++) {
+          if (members[j].id == xid[i]) break;
+      }
+      xrole[i] = members[j].role;
+  }
+  xnodes[count2] = NULL;
+  xcount[count2] = 0;
+  xid[count2] = 0;
+  xrole[count2] = NULL;
+
   // At some point we might want to consider storing the retreived data in the members, rather than as seperate arrays
   pgsql_out_relation(id, tags, xnodes, xtags, xcount, xid, xrole);
 
-  for( i=0; i<count; i++ )
+  for( i=0; i<count2; i++ )
   {
     resetList( &(xtags[i]) );
     free( xnodes[i] );
   }
 
+  free(xid2);
   free(xid);
   free(xrole);
   free(xcount);

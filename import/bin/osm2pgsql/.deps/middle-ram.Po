@@ -4,11 +4,11 @@ middle-ram.o: middle-ram.c /usr/include/stdio.h /usr/include/features.h \
  /usr/include/i386-linux-gnu/bits/wordsize.h \
  /usr/include/i386-linux-gnu/gnu/stubs.h \
  /usr/include/i386-linux-gnu/gnu/stubs-32.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h \
  /usr/include/i386-linux-gnu/bits/types.h \
  /usr/include/i386-linux-gnu/bits/typesizes.h /usr/include/libio.h \
  /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h \
  /usr/include/i386-linux-gnu/bits/stdio.h \
@@ -26,6 +26,7 @@ middle-ram.o: middle-ram.c /usr/include/stdio.h /usr/include/features.h \
  /usr/include/i386-linux-gnu/bits/select.h \
  /usr/include/i386-linux-gnu/bits/sigset.h \
  /usr/include/i386-linux-gnu/bits/time.h \
+ /usr/include/i386-linux-gnu/bits/select2.h \
  /usr/include/i386-linux-gnu/sys/sysmacros.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
  /usr/include/i386-linux-gnu/bits/stdlib.h /usr/include/string.h \
@@ -34,10 +35,9 @@ middle-ram.o: middle-ram.c /usr/include/stdio.h /usr/include/features.h \
  /usr/include/i386-linux-gnu/bits/string3.h /usr/include/assert.h \
  /usr/include/postgresql/libpq-fe.h \
  /usr/include/postgresql/postgres_ext.h osmtypes.h \
- /usr/include/inttypes.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h /usr/include/stdint.h \
- /usr/include/i386-linux-gnu/bits/wchar.h keyvals.h middle.h middle-ram.h \
- node-ram-cache.h output-pgsql.h output.h
+ /usr/include/inttypes.h /usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h \
+ /usr/include/stdint.h /usr/include/i386-linux-gnu/bits/wchar.h config.h \
+ keyvals.h middle.h middle-ram.h node-ram-cache.h output-pgsql.h output.h
 
 /usr/include/stdio.h:
 
@@ -53,7 +53,7 @@ middle-ram.o: middle-ram.c /usr/include/stdio.h /usr/include/features.h \
 
 /usr/include/i386-linux-gnu/gnu/stubs-32.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h:
 
 /usr/include/i386-linux-gnu/bits/types.h:
 
@@ -65,7 +65,7 @@ middle-ram.o: middle-ram.c /usr/include/stdio.h /usr/include/features.h \
 
 /usr/include/wchar.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h:
 
 /usr/include/i386-linux-gnu/bits/stdio_lim.h:
 
@@ -111,6 +111,8 @@ middle-ram.o: middle-ram.c /usr/include/stdio.h /usr/include/features.h \
 
 /usr/include/i386-linux-gnu/bits/time.h:
 
+/usr/include/i386-linux-gnu/bits/select2.h:
+
 /usr/include/i386-linux-gnu/sys/sysmacros.h:
 
 /usr/include/i386-linux-gnu/bits/pthreadtypes.h:
@@ -139,11 +141,13 @@ osmtypes.h:
 
 /usr/include/inttypes.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h:
 
 /usr/include/stdint.h:
 
 /usr/include/i386-linux-gnu/bits/wchar.h:
+
+config.h:
 
 keyvals.h:
 

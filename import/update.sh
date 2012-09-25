@@ -49,7 +49,7 @@ echo ""
 # load data into database, ~ ?? min
 echo "Updating database"
 echo ""
-osm2pgsql --database railmap --append --prefix railmap --slim --style railmap.style --hstore --cache 512 changes.osc
+osm2pgsql/osm2pgsql --database railmap --append --prefix railmap --slim --style railmap.style --hstore --cache 512 changes.osc
 rm changes.osc
 rm timestamp
 mv timestamp_tmp timestamp

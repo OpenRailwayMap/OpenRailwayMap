@@ -1,7 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/!svn/ver/26439/applications/utils/export/osm2pgsql/m4
+/!svn/ver/28646/applications/utils/export/osm2pgsql/m4
+END
+ax_lib_zlib.m4
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/26439/applications/utils/export/osm2pgsql/m4/ax_lib_zlib.m4
+END
+ax_pthread.m4
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/26439/applications/utils/export/osm2pgsql/m4/ax_pthread.m4
 END
 ax_lib_protobuf_c.m4
 K 25
@@ -49,17 +61,11 @@ ax_lib_geos.m4
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/!svn/ver/26439/applications/utils/export/osm2pgsql/m4/ax_lib_geos.m4
+/!svn/ver/28437/applications/utils/export/osm2pgsql/m4/ax_lib_geos.m4
 END
-ax_lib_zlib.m4
+ax_compile_check_sizeof.m4
 K 25
 svn:wc:ra_dav:version-url
-V 69
-/!svn/ver/26439/applications/utils/export/osm2pgsql/m4/ax_lib_zlib.m4
-END
-ax_pthread.m4
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/!svn/ver/26439/applications/utils/export/osm2pgsql/m4/ax_pthread.m4
+V 81
+/!svn/ver/28646/applications/utils/export/osm2pgsql/m4/ax_compile_check_sizeof.m4
 END

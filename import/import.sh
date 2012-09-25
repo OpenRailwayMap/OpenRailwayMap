@@ -15,7 +15,7 @@ PATH="$PATH:/home/www/sites/194.245.35.149/site/import/bin"
 # download planet file, ~ 8 hours
 # echo "Downloading planet file"
 # echo ""
-# wget http://planet.openstreetmap.org/pbf-experimental/planet-latest.osm.pbf
+# wget http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
 # mv planet-latest.osm.pbf old.pbf
 # echo ""
 
@@ -48,7 +48,7 @@ echo ""
 # load data into database, ~ 10 min
 echo "Loading data into database"
 echo ""
-osm2pgsql --create --database railmap --username olm --prefix railmap --slim --style railmap.style --hstore --cache 512 old-railways.osm
+osm2pgsql/osm2pgsql --create --database railmap --username olm --prefix railmap --slim --style railmap.style --hstore --cache 512 old-railways.osm
 osmconvert old-railways.osm --out-o5m >old-railways.o5m
 rm old-railways.osm
 echo ""

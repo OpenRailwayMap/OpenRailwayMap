@@ -3,12 +3,6 @@ svn:wc:ra_dav:version-url
 V 77
 /!svn/ver/26439/applications/utils/export/osm2pgsql/geos-fallback/geos/noding
 END
-SegmentString.h
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/!svn/ver/26439/applications/utils/export/osm2pgsql/geos-fallback/geos/noding/SegmentString.h
-END
 SegmentNodeList.h
 K 25
 svn:wc:ra_dav:version-url
@@ -20,4 +14,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 91
 /!svn/ver/26439/applications/utils/export/osm2pgsql/geos-fallback/geos/noding/SegmentNode.h
+END
+SegmentString.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/26439/applications/utils/export/osm2pgsql/geos-fallback/geos/noding/SegmentString.h
 END

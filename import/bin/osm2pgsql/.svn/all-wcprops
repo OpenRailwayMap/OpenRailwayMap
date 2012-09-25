@@ -1,223 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 51
-/!svn/ver/28180/applications/utils/export/osm2pgsql
-END
-parse-xml2.h
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/!svn/ver/26439/applications/utils/export/osm2pgsql/parse-xml2.h
-END
-default.style
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/!svn/ver/26594/applications/utils/export/osm2pgsql/default.style
-END
-reprojection.c
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/!svn/ver/26439/applications/utils/export/osm2pgsql/reprojection.c
-END
-install-postgis-osm-db.sh
-K 25
-svn:wc:ra_dav:version-url
-V 77
-/!svn/ver/27277/applications/utils/export/osm2pgsql/install-postgis-osm-db.sh
-END
-node-ram-cache.c
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/!svn/ver/27030/applications/utils/export/osm2pgsql/node-ram-cache.c
-END
-sprompt.c
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/!svn/ver/26439/applications/utils/export/osm2pgsql/sprompt.c
-END
-AUTHORS
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/!svn/ver/26439/applications/utils/export/osm2pgsql/AUTHORS
-END
-output.h
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/!svn/ver/28156/applications/utils/export/osm2pgsql/output.h
-END
-output-null.c
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/!svn/ver/26439/applications/utils/export/osm2pgsql/output-null.c
-END
-reprojection.h
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/!svn/ver/26439/applications/utils/export/osm2pgsql/reprojection.h
-END
-node-ram-cache.h
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/!svn/ver/27004/applications/utils/export/osm2pgsql/node-ram-cache.h
-END
-sprompt.h
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/!svn/ver/26439/applications/utils/export/osm2pgsql/sprompt.h
-END
-build_geometry.cpp
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/!svn/ver/26710/applications/utils/export/osm2pgsql/build_geometry.cpp
-END
-middle-ram.c
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/!svn/ver/27004/applications/utils/export/osm2pgsql/middle-ram.c
-END
-output-null.h
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/!svn/ver/26439/applications/utils/export/osm2pgsql/output-null.h
-END
-UTF8sanitizer.c
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/26439/applications/utils/export/osm2pgsql/UTF8sanitizer.c
-END
-middle-ram.h
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/!svn/ver/26439/applications/utils/export/osm2pgsql/middle-ram.h
-END
-middle-pgsql.c
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/!svn/ver/27899/applications/utils/export/osm2pgsql/middle-pgsql.c
-END
-configure.ac
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/!svn/ver/26893/applications/utils/export/osm2pgsql/configure.ac
-END
-900913.sql
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/!svn/ver/26439/applications/utils/export/osm2pgsql/900913.sql
-END
-osm2pgsql-svn.sh
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/!svn/ver/26439/applications/utils/export/osm2pgsql/osm2pgsql-svn.sh
-END
-INSTALL
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/!svn/ver/26439/applications/utils/export/osm2pgsql/INSTALL
-END
-COPYING
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/!svn/ver/26439/applications/utils/export/osm2pgsql/COPYING
-END
-osm2pgsql.c
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/!svn/ver/28156/applications/utils/export/osm2pgsql/osm2pgsql.c
-END
-middle-pgsql.h
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/!svn/ver/26439/applications/utils/export/osm2pgsql/middle-pgsql.h
-END
-osmtypes.h
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/!svn/ver/26709/applications/utils/export/osm2pgsql/osmtypes.h
-END
-autogen.sh
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/!svn/ver/26439/applications/utils/export/osm2pgsql/autogen.sh
-END
-NEWS
-K 25
-svn:wc:ra_dav:version-url
-V 56
-/!svn/ver/26439/applications/utils/export/osm2pgsql/NEWS
-END
-install-postgis-osm-user.sh
-K 25
-svn:wc:ra_dav:version-url
-V 79
-/!svn/ver/26892/applications/utils/export/osm2pgsql/install-postgis-osm-user.sh
-END
-input.c
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/!svn/ver/26439/applications/utils/export/osm2pgsql/input.c
-END
-middle.h
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/!svn/ver/26893/applications/utils/export/osm2pgsql/middle.h
-END
-rb.c
-K 25
-svn:wc:ra_dav:version-url
-V 56
-/!svn/ver/26439/applications/utils/export/osm2pgsql/rb.c
-END
-input.h
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/!svn/ver/26439/applications/utils/export/osm2pgsql/input.h
-END
-osm2pgsql.spec.in
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/!svn/ver/26439/applications/utils/export/osm2pgsql/osm2pgsql.spec.in
-END
-mapnik-osm-updater.sh
-K 25
-svn:wc:ra_dav:version-url
-V 73
-/!svn/ver/26439/applications/utils/export/osm2pgsql/mapnik-osm-updater.sh
-END
-ChangeLog
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/!svn/ver/26439/applications/utils/export/osm2pgsql/ChangeLog
+/!svn/ver/28747/applications/utils/export/osm2pgsql
 END
 rb.h
 K 25
@@ -249,12 +33,6 @@ svn:wc:ra_dav:version-url
 V 61
 /!svn/ver/26439/applications/utils/export/osm2pgsql/keyvals.c
 END
-parse-pbf.c
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/!svn/ver/26979/applications/utils/export/osm2pgsql/parse-pbf.c
-END
 expire-tiles.h
 K 25
 svn:wc:ra_dav:version-url
@@ -265,7 +43,7 @@ build_geometry.h
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/!svn/ver/26439/applications/utils/export/osm2pgsql/build_geometry.h
+/!svn/ver/28719/applications/utils/export/osm2pgsql/build_geometry.h
 END
 parse-primitive.c
 K 25
@@ -285,23 +63,17 @@ svn:wc:ra_dav:version-url
 V 61
 /!svn/ver/26439/applications/utils/export/osm2pgsql/keyvals.h
 END
-parse-pbf.h
+output-pgsql.c
 K 25
 svn:wc:ra_dav:version-url
-V 63
-/!svn/ver/26439/applications/utils/export/osm2pgsql/parse-pbf.h
+V 66
+/!svn/ver/28747/applications/utils/export/osm2pgsql/output-pgsql.c
 END
 TODO
 K 25
 svn:wc:ra_dav:version-url
 V 56
-/!svn/ver/26439/applications/utils/export/osm2pgsql/TODO
-END
-output-pgsql.c
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/!svn/ver/28156/applications/utils/export/osm2pgsql/output-pgsql.c
+/!svn/ver/28434/applications/utils/export/osm2pgsql/TODO
 END
 parse-primitive.h
 K 25
@@ -309,35 +81,173 @@ svn:wc:ra_dav:version-url
 V 69
 /!svn/ver/26439/applications/utils/export/osm2pgsql/parse-primitive.h
 END
-pgsql.c
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/!svn/ver/26439/applications/utils/export/osm2pgsql/pgsql.c
-END
 text-tree.h
 K 25
 svn:wc:ra_dav:version-url
 V 63
 /!svn/ver/26439/applications/utils/export/osm2pgsql/text-tree.h
 END
-Makefile.am
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/!svn/ver/26894/applications/utils/export/osm2pgsql/Makefile.am
-END
 output-gazetteer.c
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/!svn/ver/28180/applications/utils/export/osm2pgsql/output-gazetteer.c
+/!svn/ver/28746/applications/utils/export/osm2pgsql/output-gazetteer.c
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/28646/applications/utils/export/osm2pgsql/Makefile.am
 END
 output-pgsql.h
 K 25
 svn:wc:ra_dav:version-url
 V 66
 /!svn/ver/26439/applications/utils/export/osm2pgsql/output-pgsql.h
+END
+output-gazetteer.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/26439/applications/utils/export/osm2pgsql/output-gazetteer.h
+END
+wildcmp.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/28379/applications/utils/export/osm2pgsql/wildcmp.c
+END
+install-postgis-osm-db.sh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/27277/applications/utils/export/osm2pgsql/install-postgis-osm-db.sh
+END
+node-ram-cache.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/28527/applications/utils/export/osm2pgsql/node-ram-cache.c
+END
+AUTHORS
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/26439/applications/utils/export/osm2pgsql/AUTHORS
+END
+wildcmp.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/28379/applications/utils/export/osm2pgsql/wildcmp.h
+END
+node-ram-cache.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/28513/applications/utils/export/osm2pgsql/node-ram-cache.h
+END
+binarysearcharray.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/28700/applications/utils/export/osm2pgsql/binarysearcharray.c
+END
+binarysearcharray.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/28514/applications/utils/export/osm2pgsql/binarysearcharray.h
+END
+configure.ac
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/28712/applications/utils/export/osm2pgsql/configure.ac
+END
+osm2pgsql-svn.sh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/26439/applications/utils/export/osm2pgsql/osm2pgsql-svn.sh
+END
+osm2pgsql.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/28719/applications/utils/export/osm2pgsql/osm2pgsql.c
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/26439/applications/utils/export/osm2pgsql/COPYING
+END
+NEWS
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/26439/applications/utils/export/osm2pgsql/NEWS
+END
+install-postgis-osm-user.sh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/26892/applications/utils/export/osm2pgsql/install-postgis-osm-user.sh
+END
+middle.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/28747/applications/utils/export/osm2pgsql/middle.h
+END
+mapnik-osm-updater.sh
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/26439/applications/utils/export/osm2pgsql/mapnik-osm-updater.sh
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/26439/applications/utils/export/osm2pgsql/ChangeLog
+END
+parse-pbf.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/26979/applications/utils/export/osm2pgsql/parse-pbf.c
+END
+parse-pbf.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/26439/applications/utils/export/osm2pgsql/parse-pbf.h
+END
+node-persistent-cache.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/28702/applications/utils/export/osm2pgsql/node-persistent-cache.c
+END
+node-persistent-cache-reader.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/28701/applications/utils/export/osm2pgsql/node-persistent-cache-reader.c
+END
+pgsql.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/26439/applications/utils/export/osm2pgsql/pgsql.c
+END
+node-persistent-cache.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/28701/applications/utils/export/osm2pgsql/node-persistent-cache.h
 END
 parse-xml2.c
 K 25
@@ -351,9 +261,141 @@ svn:wc:ra_dav:version-url
 V 59
 /!svn/ver/26439/applications/utils/export/osm2pgsql/pgsql.h
 END
-output-gazetteer.h
+parse-xml2.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/26439/applications/utils/export/osm2pgsql/parse-xml2.h
+END
+default.style
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/26594/applications/utils/export/osm2pgsql/default.style
+END
+reprojection.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/26439/applications/utils/export/osm2pgsql/reprojection.c
+END
+sprompt.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/26439/applications/utils/export/osm2pgsql/sprompt.c
+END
+output.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/28719/applications/utils/export/osm2pgsql/output.h
+END
+reprojection.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/26439/applications/utils/export/osm2pgsql/reprojection.h
+END
+output-null.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/26439/applications/utils/export/osm2pgsql/output-null.c
+END
+sprompt.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/26439/applications/utils/export/osm2pgsql/sprompt.h
+END
+build_geometry.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/!svn/ver/26439/applications/utils/export/osm2pgsql/output-gazetteer.h
+/!svn/ver/28719/applications/utils/export/osm2pgsql/build_geometry.cpp
+END
+middle-ram.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/28747/applications/utils/export/osm2pgsql/middle-ram.c
+END
+output-null.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/26439/applications/utils/export/osm2pgsql/output-null.h
+END
+UTF8sanitizer.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/26439/applications/utils/export/osm2pgsql/UTF8sanitizer.c
+END
+middle-ram.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/26439/applications/utils/export/osm2pgsql/middle-ram.h
+END
+900913.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/26439/applications/utils/export/osm2pgsql/900913.sql
+END
+middle-pgsql.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/28747/applications/utils/export/osm2pgsql/middle-pgsql.c
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/26439/applications/utils/export/osm2pgsql/INSTALL
+END
+middle-pgsql.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/26439/applications/utils/export/osm2pgsql/middle-pgsql.h
+END
+osmtypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/28436/applications/utils/export/osm2pgsql/osmtypes.h
+END
+autogen.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/26439/applications/utils/export/osm2pgsql/autogen.sh
+END
+input.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/26439/applications/utils/export/osm2pgsql/input.c
+END
+rb.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/26439/applications/utils/export/osm2pgsql/rb.c
+END
+osm2pgsql.spec.in
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/26439/applications/utils/export/osm2pgsql/osm2pgsql.spec.in
+END
+input.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/26439/applications/utils/export/osm2pgsql/input.h
 END

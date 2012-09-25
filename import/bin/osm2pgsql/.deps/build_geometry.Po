@@ -11,11 +11,11 @@ build_geometry.o: build_geometry.cpp /usr/include/c++/4.6/iostream \
  /usr/include/c++/4.6/iosfwd /usr/include/c++/4.6/bits/stringfwd.h \
  /usr/include/c++/4.6/bits/postypes.h /usr/include/c++/4.6/cwchar \
  /usr/include/wchar.h /usr/include/stdio.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
  /usr/include/i386-linux-gnu/bits/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h \
- /usr/include/xlocale.h /usr/include/i386-linux-gnu/bits/wchar2.h \
- /usr/include/c++/4.6/exception /usr/include/c++/4.6/bits/char_traits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h /usr/include/xlocale.h \
+ /usr/include/i386-linux-gnu/bits/wchar2.h /usr/include/c++/4.6/exception \
+ /usr/include/c++/4.6/bits/char_traits.h \
  /usr/include/c++/4.6/bits/stl_algobase.h \
  /usr/include/c++/4.6/bits/functexcept.h \
  /usr/include/c++/4.6/bits/exception_defines.h \
@@ -42,6 +42,7 @@ build_geometry.o: build_geometry.cpp /usr/include/c++/4.6/iostream \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/time.h \
  /usr/include/i386-linux-gnu/bits/sched.h \
  /usr/include/i386-linux-gnu/bits/time.h \
+ /usr/include/i386-linux-gnu/bits/timex.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h /usr/include/unistd.h \
  /usr/include/i386-linux-gnu/bits/posix_opt.h \
@@ -81,6 +82,7 @@ build_geometry.o: build_geometry.cpp /usr/include/c++/4.6/iostream \
  /usr/include/i386-linux-gnu/sys/select.h \
  /usr/include/i386-linux-gnu/bits/select.h \
  /usr/include/i386-linux-gnu/bits/sigset.h \
+ /usr/include/i386-linux-gnu/bits/select2.h \
  /usr/include/i386-linux-gnu/sys/sysmacros.h /usr/include/alloca.h \
  /usr/include/i386-linux-gnu/bits/stdlib.h /usr/include/geos/version.h \
  /usr/include/geos/geom/prep/PreparedGeometryFactory.h \
@@ -89,7 +91,7 @@ build_geometry.o: build_geometry.cpp /usr/include/c++/4.6/iostream \
  /usr/include/geos/geom/prep/BasicPreparedGeometry.h \
  /usr/include/geos/geom/Coordinate.h /usr/include/geos/export.h \
  /usr/include/geos/platform.h /usr/include/inttypes.h \
- /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h /usr/include/stdint.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h /usr/include/stdint.h \
  /usr/include/c++/4.6/cmath /usr/include/math.h \
  /usr/include/i386-linux-gnu/bits/huge_val.h \
  /usr/include/i386-linux-gnu/bits/huge_valf.h \
@@ -136,7 +138,7 @@ build_geometry.o: build_geometry.cpp /usr/include/c++/4.6/iostream \
  /usr/include/geos/planargraph/NodeMap.h /usr/include/c++/4.6/map \
  /usr/include/c++/4.6/bits/stl_map.h \
  /usr/include/c++/4.6/bits/stl_multimap.h build_geometry.h osmtypes.h \
- keyvals.h
+ config.h keyvals.h
 
 /usr/include/c++/4.6/iostream:
 
@@ -174,11 +176,11 @@ build_geometry.o: build_geometry.cpp /usr/include/c++/4.6/iostream \
 
 /usr/include/stdio.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h:
 
 /usr/include/i386-linux-gnu/bits/wchar.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h:
 
 /usr/include/xlocale.h:
 
@@ -255,6 +257,8 @@ build_geometry.o: build_geometry.cpp /usr/include/c++/4.6/iostream \
 /usr/include/i386-linux-gnu/bits/sched.h:
 
 /usr/include/i386-linux-gnu/bits/time.h:
+
+/usr/include/i386-linux-gnu/bits/timex.h:
 
 /usr/include/i386-linux-gnu/bits/pthreadtypes.h:
 
@@ -354,6 +358,8 @@ build_geometry.o: build_geometry.cpp /usr/include/c++/4.6/iostream \
 
 /usr/include/i386-linux-gnu/bits/sigset.h:
 
+/usr/include/i386-linux-gnu/bits/select2.h:
+
 /usr/include/i386-linux-gnu/sys/sysmacros.h:
 
 /usr/include/alloca.h:
@@ -378,7 +384,7 @@ build_geometry.o: build_geometry.cpp /usr/include/c++/4.6/iostream \
 
 /usr/include/inttypes.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h:
+/usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h:
 
 /usr/include/stdint.h:
 
@@ -509,5 +515,7 @@ geos-fallback/geos/noding/SegmentNode.h:
 build_geometry.h:
 
 osmtypes.h:
+
+config.h:
 
 keyvals.h:
