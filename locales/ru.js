@@ -14,7 +14,7 @@ var translations =
 	"details" : "Подробнее",
 	"search" : "Поиск",
 	"spam" : "Сообщить об ошибке на карте",
-	"title" : "Карта и данные взяты с <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> по лицензии <a href=\"http://creativecommons.org/licenses/by-sa/2.0/deed.en\" title=\"CC-BY-SA 2.0\">CC-BY-SA 2.0 License</a>.<br />Карта высот: <a href=\"http://nasa.gov/\">NASA SRTM</a>.",
+	"title" : "Карта и данные <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Карта высот: <a href=\"http://nasa.gov/\">NASA SRTM</a>.",
 	"info" : "О сайте",
 	"contact" : "Связаться с нами",
 	"loading" : "Загрузка...",

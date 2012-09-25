@@ -12,7 +12,7 @@ var translations =
 	"details" : "Details",
 	"search" : "Suchen",
 	"spam" : "Kartenfehler melden",
-	"title" : "Datensatz und Karten stammen von <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> und stehen unter der <a href=\"http://creativecommons.org/licenses/by-sa/2.0/deed.de\" title=\"CC-BY-SA 2.0\">CC-BY-SA 2.0 Lizenz</a>.<br />Höhenprofil: <a href=\"http://nasa.gov/\">NASA SRTM</a>.",
+	"title" : "Datensatz und Karten <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Höhenprofil: <a href=\"http://nasa.gov/\">NASA SRTM</a>.",
 	"info" : "Mehr Infos",
 	"contact" : "Kontakt",
 	"loading" : "Laden...",

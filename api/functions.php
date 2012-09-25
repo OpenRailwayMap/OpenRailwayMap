@@ -178,18 +178,15 @@
 		global $mail;
 		global $appname;
 
-		// get ip and user agent string
-		$header = $_SERVER['HTTP_USER_AGENT'];
-		$ip = $_SERVER['REMOTE_ADDR'];
-
 		// generating message
-		$message = "An error happened in ".$appname.".at ".date("d.m.Y-H:i", time());
-		$message .= "\n\n".$error;
-		$message .= "\n\nUser: http://www.utrace.de/?query=".$ip;
-		$message .= "\nWith header: ".$header;
+		$message = "An error happened in ".$appname.":";
+		$message .= "\n\nTime..... ".date("d.m.Y-H:i", time());
+		$message .= "\nIP....... http://www.utrace.de/?query=".$_SERVER['REMOTE_ADDR'];
+		$message .= "\nHeader... ".$_SERVER['HTTP_USER_AGENT'];
+		$message .= "\nError.... ".$error;
 
 		// sending error report by mail to given mail address
-		$sended = mail($mail, "Error Report ".$appname, $message);
+		$sended = mail($mail, "Error Report ".$appname, $message, "From: ".$appname." <info@openlinkmap.org>");
 
 		// check if mail was being send
 		if(!$sended)
@@ -229,7 +226,7 @@
 		if (!$offset)
 			return 0;
 
-		if (strlen($offset) > 3)
+		if (strlen($offset) > 4)
 		{
 			reportError("Given offset is too long: ".$offset);
 			return 0;
@@ -314,13 +311,16 @@
 		if ($content)
 		{
 			// delete everything before main article
-			$content = explode("<!-- bodycontent -->", $content);
+			$content = explode("<h1 id=\"firstHeading\">", $content);
 
 			// delete everything after first paragraph
-			$content = explode("<span class=\"mw-headline\"", $content[1]);
+			$content = explode("<h2> <span class=\"mw-headline\"", $content[1]);
+
+			// delete headline
+			$content = explode("</h1>", $content[0]);
 
 			// remove tables and other not needed elements
-			$content = preg_replace("/<table\b[^>]*>.*<\/table>/s", "", $content[0]);
+			$content = preg_replace("/<table\b[^>]*>.*<\/table>/s", "", $content[1]);
 			$content = preg_replace("/<span\b[^>]*>.*<\/span>/s", "", $content);
 			$content = preg_replace("/<sup\b[^>]*>.*<\/sup>/s", "", $content);
 			$content = preg_replace("/<div.class=.thumbcaption\b[^>]*>.*<\/div>/s", "", $content);
@@ -349,13 +349,13 @@
 		if ($content)
 		{
 			// delete everything before main article
-			$content = explode("<!-- bodycontent -->", $content);
+			$content = explode("<h1 id=\"firstHeading\">", $content);
 
 			// delete everything after first paragraph
-			$content = explode("<span class=\"mw-headline\"", $content[1]);
+			$content = explode("<h2> <span class=\"mw-headline\"", $content[1]);
 
 			// remove wikipedia images
-			$content = str_replace("<img alt=\"\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Disambig-dark.svg/25px-Disambig-dark.svg.png\" width=\"25\" height=\"19\" />", "", $content[0]);
+			$content = str_replace("<img alt=\"\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Disambig-dark.svg/25px-Disambig-dark.svg.png\" width=\"25\" height=\"19\">", "", $content[0]);
 
 			// get image url
 			$pattern = "/<img.+src=\"(\S+)\"\s\w+=.+>/i";
@@ -368,11 +368,10 @@
 				$pos = strripos($matches[1], "/");
 				$image = substr($matches[1], 0, $pos);
 			}
-
 			$image = str_replace("thumb/", "", $image);
+
 			return str_replace("//", "http://", $image);
 		}
-
 		return false;
 	}
 
@@ -380,19 +379,37 @@
 	// gets the url of an image's thumbnail
 	function getWikipediaThumbnailUrl($url)
 	{
+		// size of thumbnails
+		$thumbsize = 280;
+
 		if (!$url)
 			return false;
 
-		if (substr($url, 0, 29) == "http://commons.wikimedia.org/")
-			return $url."?width=280px";
-		else if ((substr($url, 0, 38) == "http://upload.wikimedia.org/wikipedia/") && (substr($url, 38, 7) != "commons"))
-			return $url;
-		else
+		// check if thumbnail size is bigger than original size
+		if (strpos($url, "special:filepath") === false)
+			$imagesize = getimagesize($url);
+		if ($response && ($imagesize[0] > $thumbsize) || substr($url, -3, 3))
 		{
-			$url = str_replace("wikipedia/commons", "wikipedia/commons/thumb", $url);
-			$filename = explode("/", $url);
-			return $url."/280px-".$filename[count($filename)-1];
+			// don't use archive images
+			$url = str_replace("archive/", "", $url);
+			$url = preg_replace("/20.+%21/", "", $url);
+			// get thumbnail
+			if (substr($url, 0, 29) == "http://commons.wikimedia.org/")
+				return $url."?width=".$thumbsize."px";
+			else if ((substr($url, 0, 38) == "http://upload.wikimedia.org/wikipedia/") && (substr($url, 38, 7) != "commons"))
+				return $url;
+			else
+			{
+				$url = str_replace("wikipedia/commons", "wikipedia/commons/thumb", $url);
+				$filename = explode("/", $url);
+				$url = $url."/".$thumbsize."px-".$filename[count($filename)-1];
+
+				// svg thumbs need a .png at the end
+				if (substr($filename[count($filename)-1], -3, 3 ) == "svg")
+					$url = $url.".png";
+			}
 		}
+		return $url;
 	}
 
 
