@@ -12,7 +12,7 @@ var translations =
 	"details" : "Details",
 	"search" : "Search",
 	"spam" : "Report map errors",
-	"title" : "Maps and data are from <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> and licensed under <a href=\"http://creativecommons.org/licenses/by-sa/2.0/deed.en\" title=\"CC-BY-SA 2.0\">CC-BY-SA 2.0 License</a>.<br />Hillshading: <a href=\"http://nasa.gov/\">NASA SRTM</a>.",
+	"title" : "Maps and data <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Hillshading: <a href=\"http://nasa.gov/\">NASA SRTM</a>.",
 	"info" : "More Info",
 	"contact" : "Contact",
 	"loading" : "Loading...",

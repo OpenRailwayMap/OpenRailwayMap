@@ -23,6 +23,8 @@ html,body
 	font-size: 19px;
 	color: black;
 	padding-left: 5px;
+	position: relative;
+	top: 2px;
 }
 
 #header a
@@ -203,11 +205,16 @@ noscript p
 	min-height: 32px;
 	min-width: 32px;
 	border: 1px solid black;
+	float: right;
+	margin-left: 10px;
+	background-color: white;
+}
+
+#loadingImage
+{
 	background-image: url(../img/loading.gif);
 	background-repeat: no-repeat;
 	background-position: center;
-	float: right;
-	margin-left: 10px;
 }
 
 #image:hover
@@ -731,9 +738,7 @@ noscript p
 {
 	max-width: 240px;
 	border: 1px solid black;
-	background-image: url(../img/loading.gif);
-	background-repeat: no-repeat;
-	background-position: center;
+	background-color: white;
 }
 
 #moreImage:hover
@@ -787,7 +792,7 @@ noscript p
 
 .panorama
 {
-	background-image:url(../img/loading.gif);
+	background-image: url(../img/loading.gif);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -822,9 +827,7 @@ noscript p
 	border: 1px solid black;
 	z-index: 1000;
 	margin: auto;
-	background-image:url(../img/loading.gif);
-	background-repeat: no-repeat;
-	background-position: center;
+	background-color: white;
 }
 
 #fullscreenImg:hover
@@ -1107,11 +1110,46 @@ noscript p
 #langSelector
 {
 	position: absolute;
-	left: 215px;
-	top: 2px;
+	left: 205px;
+	top: 5px;
 }
 
 #langSelection
 {
 	margin-bottom: -20px;
+}
+
+/* donate button */
+#donate
+{
+	margin-left: 75px;
+	margin-bottom: 5px;
+	width: 140px;
+	height: 40px;
+	background-image: url(../donate/donate.png);
+	background-repeat: no-repeat;
+	padding: 2px 5px 2px 5px;
+	text-align: center;
+	position: absolute;
+	right: 0px;
+}
+
+#donate a
+{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.FlattrButton
+{
+	position: absolute;
+	right: 5px;
+	margin-top: -25px;
+}
+
+#PaypalButton
+{
+	margin-left: 5px;
 }

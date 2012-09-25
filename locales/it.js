@@ -14,7 +14,7 @@ var translations =
 	"details" : "Dettagli",
 	"search" : "Avanti",
 	"spam" : "Segnala errori",
-	"title" : "Mappa e dati da <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> e sotto <a href=\"http://creativecommons.org/licenses/by-sa/2.0/deed.it\" title=\"CC-BY-SA 2.0\">Licenza CC-BY-SA 2.0</a>.<br />Ombreggiatura rilievi: <a href=\"http://nasa.gov/\">NASA SRTM</a>.",
+	"title" : "Mappa e dati da <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Ombreggiatura rilievi: <a href=\"http://nasa.gov/\">NASA SRTM</a>.",
 	"info" : "Informazioni",
 	"contact" : "Contatti",
 	"loading" : "Caricamento...",

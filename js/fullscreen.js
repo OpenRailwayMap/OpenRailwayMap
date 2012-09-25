@@ -13,7 +13,7 @@ function Fullscreen(frame, image)
 	{
 		var self = this;
 		this.frame.className = "fullscreen";
-		this.frame.innerHTML = "<img id='fullscreenImg' src='"+this.url+"' />";
+		this.frame.innerHTML = "<div id='loadingImage'><img id='fullscreenImg' src='"+this.url+"' /></div>";
 
 		var fullscreenimg = gEBI("fullscreenImg");
 		fullscreenimg.onclick = function()

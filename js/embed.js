@@ -32,7 +32,7 @@ function createMap()
 		displayProjection: wgs84,
 		maxExtent: new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
 		numZoomLevels: 19,
-		maxResolution: 156543.0339,
+		maxResolution: 156543.03390625,
 		units: 'meters'
 	});
 
