@@ -9,7 +9,8 @@
 # run this script not automatically! you have to change paths and modify it to your own environment!
 
 # install necessary software
-yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip libxml2 libxml2-devel bzip2 bzip2-devel proj proj-devel protobuf protobuf-devel protobuf-python protobuf-compiler python-psycopg2 protobuf-c protobuf-c-devel postgresql-devel unzip php php-pgsql autoconf automake subversion libtool cairo cairo-devel pycairo pycairo-devel python-pycha libtiff libtiff-devel libgeotiff libgeotiff-devel python-devel libjpeg libjpeg-devel libpng libpng-devel python-imaging python-imaging-devel gdal-python gcc gcc-c++ cpp python-nose binutils freetype freetype-devel python-sqlite2 sqlite sqlite-devel boost-thread boost-regex boost-python boost-iostreams boost-filesystem boost-program-options boost-serialization boost-devel libxslt libxslt-devel libicu libicu-devel libtool-ltdl libtool-ltdl-devel libsigc++20 libsigc++20-devel libpixman libpixman-devel pixman pixman-devel libstdc++ libstdc++-devel cairomm cairomm-devel glib glib-devel gdal gdal-devel gdal-python libcurl libcurl-devel gnutls gnutls-devel python-gnutls python-pycurl
+yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip libxml2 libxml2-devel bzip2 bzip2-devel proj proj-devel protobuf protobuf-devel protobuf-python protobuf-compiler python-psycopg2 protobuf-c protobuf-c-devel postgresql-devel unzip php php-pgsql autoconf automake subversion libtool cairo cairo-devel pycairo pycairo-devel python-pycha libtiff libtiff-devel libgeotiff libgeotiff-devel python-devel libjpeg libjpeg-devel libpng libpng-devel python-imaging python-imaging-devel gdal-python gcc gcc-c++ cpp python-nose binutils freetype freetype-devel python-sqlite2 sqlite sqlite-devel boost-thread boost-regex boost-python boost-iostreams boost-filesystem boost-program-options boost-serialization boost-devel libxslt libxslt-devel libicu libicu-devel libtool-ltdl libtool-ltdl-devel libsigc++20 libsigc++20-devel libpixman libpixman-devel pixman pixman-devel libstdc++ libstdc++-devel cairomm cairomm-devel glib glib-
+devel gdal gdal-devel gdal-python libcurl libcurl-devel gnutls gnutls-devel python-gnutls python-pycurl
 
 # GeoIP database
 # add extension=geoip.so to php.ini
@@ -55,7 +56,7 @@ wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -o osmconvert
 svn co http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/
 cd osm2pgsql
 ./autogen.sh
-./configure
+./configure --enable-64bit-ids
 sed -i 's/-g -O2/-O2 -march=native -fomit-frame-pointer/' Makefile
 make
 cd ..
