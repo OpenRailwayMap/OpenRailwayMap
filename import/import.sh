@@ -12,7 +12,7 @@ cd /home/www/sites/194.245.35.149/site/import
 PATH="$PATH:/home/www/sites/194.245.35.149/site/import/bin"
 
 
-# download planet file, ~ 8 hours
+# download planet file
 # echo "Downloading planet file"
 # echo ""
 # wget http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
@@ -30,14 +30,14 @@ PATH="$PATH:/home/www/sites/194.245.35.149/site/import/bin"
 # echo ""
 
 
-# convert planet file, ~ 25 min
+# convert planet file
 echo "Converting planet file"
 echo ""
-osmconvert old.pbf --out-o5m >temp.o5m
+osmconvert old.pbf --drop-author --out-o5m >temp.o5m
 echo ""
 
 
-# pre-filter planet file, ~ 20 min
+# pre-filter planet file
 echo "Filtering planet file"
 echo ""
 osmfilter temp.o5m --keep="railway= route=railway route=train route=light_rail route=tram route=subway line=rail line=light_rail line=tram line=subway route_master=train route_master=light_rail route_master=tram route_master=subway" --out-osm >old-railways.osm
@@ -45,7 +45,7 @@ rm temp.o5m
 echo ""
 
 
-# load data into database, ~ 10 min
+# load data into database
 echo "Loading data into database"
 echo ""
 osm2pgsql/osm2pgsql --create --database railmap --username olm --prefix railmap --slim --style railmap.style --hstore --cache 512 old-railways.osm
