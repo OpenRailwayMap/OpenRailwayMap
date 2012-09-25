@@ -26,23 +26,6 @@
 # OsmType  Tag          DataType     Flags
 node,way   area         text         # hard coded support for area=1/yes => polygon is in osm2pgsql
 node,way       poi          text
-node,way   name     text         polygon
-node,way   wikipedia     text         polygon
-node,way   phone     text         polygon
-node,way   addr:phone     text         polygon
-node,way   contact:phone     text         polygon
-node,way   phone:mobile     text         polygon
-node,way   contact:mobile     text         polygon
-node,way   fax     text         polygon
-node,way   addr:fax     text         polygon
-node,way   contact:fax     text         polygon
-node,way   email     text         polygon
-node,way   addr:email     text         polygon
-node,way   contact:email     text         polygon
-node,way   website     text         polygon
-node,way   contact:website     text         polygon
-node,way   url     text         polygon
-node,way   url:official     text         polygon
 node,way   z_order      int4         linear # This is calculated during import
 way        way_area     real                # This is calculated during import
 
