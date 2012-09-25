@@ -166,7 +166,7 @@
 				</select>
 			</form>
 			<br />
-			<p id="osm">Maps and data from <a href="http://www.openstreetmap.org/">OpenStreetMap</a>, released under the terms of <a href="http://creativecommons.org/licenses/by-sa/2.0/" title="CC-BY-SA 2.0">CC-BY-SA 2.0 License</a>.</p>
+			<p id="osm">Maps and data <a href="http://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>.<br />Hillshading: <a href="http://nasa.gov/">NASA SRTM</a>.</p>
 			<a href="http://joker.com/" id="poweredby"><img src="img/ad.png" /></a>
 			<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="PaypalButton">
 				<input type="hidden" name="cmd" value="_s-xclick">
@@ -174,9 +174,9 @@
 				<input type="image" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
 				<img alt="" border="0" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/scr/pixel.gif" width="1" height="1">
 			</form>
-			<a class="FlattrButton" id="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.openlinkmap.org/"></a>
+			<a class="FlattrButton" id="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://railmap.openlinkmap.org/"></a>
 			<noscript>
-				<a href="http://flattr.com/thing/832440/OpenLinkMap" target="_blank">
+				<a href="http://flattr.com/thing/905245/OpenRailwayMap" target="_blank">
 					<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
 				</a>
 			</noscript>
