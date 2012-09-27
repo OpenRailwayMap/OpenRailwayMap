@@ -42,7 +42,7 @@ echo ""
 # generate diffs
 echo "Generate diffs"
 echo ""
-osmconvert old-railways.o5m new-railways.o5m --diff-contents >changes.osc
+osmconvert old-railways.o5m new-railways.o5m --diff-contents --fake-lonlat >changes.osc
 rm old-railways.o5m
 mv new-railways.o5m old-railways.o5m
 echo ""
