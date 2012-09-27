@@ -51,7 +51,7 @@ echo ""
 # load data into database
 echo "Updating database"
 echo ""
-osm2pgsql/osm2pgsql --database railmap --append --prefix railmap --slim --style railmap.style --hstore --cache 512 changes.osc
+osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 changes.osc
 rm changes.osc
 echo ""
 echo "Finished."
