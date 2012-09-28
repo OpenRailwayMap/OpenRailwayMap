@@ -11,8 +11,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 
 <!-- TODO
-gleissperren mit signalposition in_track
-
 englische übersetzungen labels
 erklärungen durch labels
 hinweise erfassung in labels
@@ -24,7 +22,7 @@ schutzhaltvorsignal prüfen
 grenzzeichen hinzufügen
 erfassung von bahnsteiggleiskanten
 frühhaltanzeiger zs13
-gleissperre gsp2
+gleissperre gsp2 mit signalposition in_track
 auf wikiseite db netz ag als standard bei operator angeben
 datumangabe bei start und end date
 hinweis sv signale hamburger system
@@ -47,7 +45,6 @@ bahnsteig überdacht
 
 wikiseite rangierbahnhof und betriebsbahnhof operator
 image ele bei abzweig wikiseite
-building bei tankstelle wikiseite
 
 image urls
 -->
@@ -2270,7 +2267,28 @@ image urls
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<!-- TODO brücke tunnel gleisfreimelder eisenbahnlinien gleissperre verladerampe kran rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle bahnhofsgebäude firma mit gleisanschluss -->
+		<item name="Bahnhofsgebäude" icon="train-station.png" type="closedway">
+			<label text="Bahnhofsgebäude" />
+			<space />
+			<key key="building"
+				value="train_station" />
+			<text key="start_date"
+				text="Year of opening"
+				de.text="Jahr der Eröffnung"
+				default=""
+				delete_if_empty="true" />
+			<text key="image"
+				text="Image URL"
+				de.text="URL eines Bildes"
+				default=""
+				delete_if_empty="true" />
+			<text key="ele"
+				text="Height about sea level (m)"
+				de.text="Höhe über Meeresspiegel (m)"
+				default=""
+				delete_if_empty="true" />
+		</item>
+		<!-- TODO brücke tunnel gleisfreimelder eisenbahnlinien gleissperre verladerampe kran rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
 		<!-- TODO <group name="Historische Daten" icon="historic.png">
 		</group>-->
 	</group>
