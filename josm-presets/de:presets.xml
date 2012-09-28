@@ -1684,7 +1684,6 @@ image urls
 			</item>
 			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
 		</group>
-		<!-- TODO Stellwerke -->
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="Stellwerk" />
 			<space />
@@ -1729,7 +1728,7 @@ image urls
 				default="off"
 				delete_if_empty="true" />
 		</item>
-		<!-- TODO ende -->
+		<!-- TODO stellwerksrelation -->
 		<group name="Betriebsstellen" icon="facilities.png">
 			<item name="Bahnhof" icon="station.png" type="node,closedway">
 				<label text="Bahnhof" />
