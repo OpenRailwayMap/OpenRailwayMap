@@ -1,5 +1,5 @@
 /*
-OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
 See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
@@ -489,11 +489,10 @@ noscript p
 
 .sideBarOut
 {
-	background-color: #e5e5e5;
-	background: -moz-linear-gradient(top, white 0, #d6d6d6 67%, #bdbdbd 100%);
-	background: -webkit-linear-gradient(top, white 0, #d6d6d6 67%, #bdbdbd 100%);
-	background: -o-linear-gradient(top, white 0, #d6d6d6 67%, #bdbdbd 100%);
-	background: -ms-linear-gradient(top, white 0, #d6d6d6 67%, #bdbdbd 100%);
+	background-color: black;
+	background-image: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	background-position: bottom right;
 	color: white;
 	position: absolute;
 	left: 0px;
