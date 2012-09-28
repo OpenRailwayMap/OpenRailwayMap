@@ -44,9 +44,7 @@ streckenrelationen, z.b. angertalbahn
 bahnsteig überdacht
 
 wikiseite rangierbahnhof und betriebsbahnhof operator
-image ele bei abzweig wikiseite
-
-image urls
+wikiseite halteposition network ergänzen
 -->
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
@@ -1972,7 +1970,7 @@ image urls
 					de.text="Abkürzung (DS100)"
 					default=""
 					delete_if_empty="true" />
-				<!-- TODO uic_ref uic_name rail train light_rail subway tram operator -->
+				<!-- TODO uic_ref uic_name rail train light_rail subway tram operator network -->
 				<text key="ele"
 					text="Height about sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
