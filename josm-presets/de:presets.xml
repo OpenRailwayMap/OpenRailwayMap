@@ -26,6 +26,7 @@ gleissperre gsp2 mit signalposition in_track
 auf wikiseite db netz ag als standard bei operator angeben
 datumangabe bei start und end date
 hinweis sv signale hamburger system
+railway:ref:bahngesellschaft
 
 englische übersetzung taggingseite
 
@@ -45,6 +46,8 @@ bahnsteig überdacht
 
 wikiseite rangierbahnhof und betriebsbahnhof operator
 wikiseite halteposition network ergänzen
+
+optional einbauen
 -->
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
@@ -1693,8 +1696,8 @@ wikiseite halteposition network ergänzen
 				default=""
 				delete_if_empty="true" />
 			<combo key="railway:signal_box"
-				text="Station category"
-				de.text="Bahnhofskategorie"
+				text="Signal box type"
+				de.text="Stellwerkstechnik"
 				values="mechanical,electric,track_diagram,electronic"
 				display_values="Mechanisches Stellwerk,Elektrisches/Elektromechanisches Stellwerk,Gleisbildstellwerk,ESTW"
 				default=""
@@ -1729,7 +1732,7 @@ wikiseite halteposition network ergänzen
 				<key key="railway"
 					value="station" />
 				<key key="public_transport"
-					value="station" />
+				value="station" />				<!-- TODO optional -->
 				<text key="name" text="Name"
 					de.text="Name"
 					default=""
@@ -1957,7 +1960,7 @@ wikiseite halteposition network ergänzen
 				<label text="Halteposition" />
 				<space />
 				<key key="public_transport"
-					value="stop_position" />
+					value="stop_position" />		<!-- TODO optional -->
 				<key key="railway"
 					value="stop" />
 				<text key="name"
@@ -1978,7 +1981,59 @@ wikiseite halteposition network ergänzen
 					delete_if_empty="true" />
 				<!-- TODO railway:position railway:position:exact -->
 			</item>
-			<!-- TODO: betriebsstellenrelation -->
+			<item name="Betriebsstelle" icon="facility.png" type="relation">
+				<label text="Betriebsstelle" />
+				<space />
+				<key key="railway"
+					value="facility" />
+					<!-- TODO
+					type	 public_transport Nur notwendig bei Betriebsstellen, die für den öffentlichen Nahverkehr genutzt werden.
+					public_transport	 stop_area	 Nur notwendig bei Betriebsstellen, die für den öffentlichen Nahverkehr genutzt werden.
+					name	 	 Name	 Der Name der Betriebsstelle, z.B. Köln-West oder Abzw Weißenberg. Namen in anderen Sprachen können mit dem Tag name:*=* angegeben werden.
+					railway:ref
+					operator
+					uic_ref
+					uic_name
+					rail	 yes/no
+					train	 yes/no
+					light_rail	 yes/no
+					subway	 yes/no
+					tram	 yes/no
+					-->
+				<roles>
+					<role key=""
+						text="Railway facility's node/area"
+						de.text="Punkt/Fläche der Betriebsstelle"
+						requisite="required"
+						type="node,closedway"
+						count="1" />
+					<role key="stop"
+						text="Stop positions"
+						de.text="Haltepositionen"
+						requisite="required"
+						type="node" />
+					<role key="platform"
+						text="Platforms"
+						de.text="Bahnsteige"
+						requisite="optional"
+						type="way,closedway" />
+					<role key="subway_entrance"
+						text="Subway entrances"
+						de.text="U-Bahn-Eingänge"
+						requisite="optional"
+						type="node" />
+					<role key="building"
+						text="Station building"
+						de.text="Bahnhofsgebäude"
+						requisite="optional"
+						type="closedway" />
+					<role key="landuse"
+						text="Subway entrances"
+						de.text="U-Bahn-Eingänge"
+						requisite="optional"
+						type="closedway" />
+				</roles>
+			</item>
 		</group>
 		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
