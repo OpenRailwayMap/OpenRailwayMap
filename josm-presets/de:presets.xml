@@ -49,8 +49,6 @@ wikiseite rangierbahnhof und betriebsbahnhof operator
 image ele bei abzweig wikiseite
 building bei tankstelle wikiseite
 
-überall bei railway:ref DS100 ergänzen
-
 image urls
 -->
 
@@ -1742,7 +1740,7 @@ image urls
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:ref"
-					text="Short name"
+					text="Short name (DS100)"
 					de.text="Abkürzung (DS100)"
 					default=""
 					delete_if_empty="true" />
@@ -1801,7 +1799,7 @@ image urls
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:ref"
-					text="Short name"
+					text="Short name (DS100)"
 					de.text="Abkürzung (DS100)"
 					default=""
 					delete_if_empty="true" />
@@ -1861,7 +1859,7 @@ image urls
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:ref"
-					text="Short name"
+					text="Short name (DS100)"
 					de.text="Abkürzung (DS100)"
 					default=""
 					delete_if_empty="true" />
@@ -1898,7 +1896,7 @@ image urls
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:ref"
-					text="Short name"
+					text="Short name (DS100)"
 					de.text="Abkürzung (DS100)"
 					default=""
 					delete_if_empty="true" />
@@ -1936,8 +1934,8 @@ image urls
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:ref"
-					text="Short name"
-					de.text="Abkürzung"
+					text="Short name (DS100)"
+					de.text="Abkürzung (DS100)"
 					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
@@ -1973,8 +1971,8 @@ image urls
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:ref"
-					text="Short name"
-					de.text="Abkürzung"
+					text="Short name (DS100)"
+					de.text="Abkürzung (DS100)"
 					default=""
 					delete_if_empty="true" />
 				<!-- TODO uic_ref uic_name rail train light_rail subway tram operator -->
