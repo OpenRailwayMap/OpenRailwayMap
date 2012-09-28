@@ -71,58 +71,6 @@ function createMap()
 		isBaseLayer: false
 	});
 
-	// style for milestones layer
-	var milestonesStyle = new OpenLayers.Style(
-		{
-			label: "${caption}",
-			fontColor: "#000000",
-			fontFamily: "Arial Black",
-			fontSize: 12
-		},
-		{
-			context: {
-				caption: function(feature)
-				{
-					return feature.cluster[0].attributes['caption'];
-				}
-			}
-		}
-	);
-	var milestonesStyleMap = new OpenLayers.StyleMap(
-		{
-			'default': milestonesStyle
-		}
-	);
-
-	// adding milestones overlay
-	milestonesLayer = new OpenLayers.Layer.Vector("#Milestones#",
-	{
-		projection: wgs84,
-		maxResolution: 100.0,
-		visibility: true,
-		transitionEffect: 'resize',
-		styleMap: milestonesStyleMap,
-		strategies:
-		[
-			new OpenLayers.Strategy.BBOX({ratio: 2.5}),
-			new OpenLayers.Strategy.Cluster(),
-			new OpenLayers.Strategy.Filter({
-				filter: new OpenLayers.Filter.Function({
-					evaluate: function(attributes)
-					{
-						return attributes['caption'] === '4,0';
-					}
-				 })
-			})
-		],
-		protocol: new OpenLayers.Protocol.HTTP(
-		{
-			url: root+'api/milestones.php',
-			format: new OpenLayers.Format.OLM()
-		})
-	});
-
-
 	/*
 	 type: OpenLayers.Filter.Comparison.BETWEEN,
 	 property: "when",
@@ -142,7 +90,7 @@ function createMap()
 	*/
 
 	// adding layers to map
-	map.addLayers([mapnikMap, hillMap, milestonesLayer]);
+	map.addLayers([mapnikMap, hillMap]);
 
 	// loading timestamp
 	var timestamp = new Timestamp("info");
