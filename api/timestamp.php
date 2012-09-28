@@ -23,7 +23,7 @@
 
 
 	// getting timestamp
-	$timestamp = implode(" ", @file("../import/timestamp"));
+	$timestamp = implode(" ", @file("../../import/timestamp"));
 
 	if ($timestamp)
 	{
