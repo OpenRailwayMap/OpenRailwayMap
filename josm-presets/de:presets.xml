@@ -45,6 +45,8 @@ streckenrelationen, z.b. angertalbahn
 
 bahnsteig überdacht
 
+wikiseite rangierbahnhof und betriebsbahnhof operator
+
 image urls
 -->
 
@@ -175,7 +177,7 @@ image urls
 				<text key="incline"
 					text="Incline (e.g.. '3%')"
 					de.text="Steigung (z.B. '3%')"
-					default="1435"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
@@ -186,7 +188,7 @@ image urls
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z.B. 'DB Netz AG')"
-					default="1435"
+					default="DB Netz AG"
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -301,7 +303,7 @@ image urls
 				<text key="incline"
 					text="Incline (e.g.. '3%')"
 					de.text="Steigung (z.B. '3%')"
-					default="1435"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
@@ -312,7 +314,7 @@ image urls
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z.B. 'DB Netz AG')"
-					default="1435"
+					default="DB Netz AG"
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -445,7 +447,7 @@ image urls
 				<text key="incline"
 					text="Incline (e.g.. '3%')"
 					de.text="Steigung (z.B. '3%')"
-					default="1435"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
@@ -461,7 +463,7 @@ image urls
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z.B. 'DB Netz AG')"
-					default="1435"
+					default="DB Netz AG"
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -593,7 +595,7 @@ image urls
 				<text key="incline"
 					text="Incline (e.g.. '3%')"
 					de.text="Steigung (z.B. '3%')"
-					default="1435"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
@@ -609,7 +611,7 @@ image urls
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z.B. 'DB Netz AG')"
-					default="1435"
+					default="DB Netz AG"
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -1678,6 +1680,233 @@ image urls
 			</item>
 			<!-- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
 		</group>
+		<group name="Betriebsstellen" icon="facilities.png">
+			<item name="Bahnhof" icon="station.png" type="node,closedway">
+				<label text="Bahnhof" />
+				<space />
+				<key key="railway"
+					value="station" />
+				<key key="public_transport"
+					value="station" />
+				<text key="name" text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name"
+					de.text="Abkürzung (DS100)"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<check key="on_demand"
+					text="On demand"
+					de.text="Bedarfshalt"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:station_category"
+					text="Station category"
+					de.text="Bahnhofskategorie"
+					values="1,2,3,4,5,6,7"
+					display_values="1,2,3,4,5,6,7"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG')"
+					de.text="Betreiber (z.B. 'DB Netz AG')"
+					default="DB Netz AG"
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Jahr der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<text key="end_date"
+					text="Year of opening"
+					de.text="Jahr der Stilllegung"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height about sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+				<key key="landuse"
+					value="railway" />
+			</item>
+			<item name="Haltepunkt/Haltestelle" icon="halt.png" type="node,closedway">
+				<label text="Haltepunkt/Haltestelle" />
+				<space />
+				<key key="railway"
+					value="halt" />
+				<text key="name" text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name"
+					de.text="Abkürzung (DS100)"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<check key="on_demand"
+					text="On demand"
+					de.text="Bedarfshalt"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:station_category"
+					text="Station category"
+					de.text="Bahnhofskategorie"
+					values="1,2,3,4,5,6,7"
+					display_values="1,2,3,4,5,6,7"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG')"
+					de.text="Betreiber (z.B. 'DB Netz AG')"
+					default="DB Netz AG"
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Jahr der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<text key="end_date"
+					text="Year of opening"
+					de.text="Jahr der Stilllegung"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height about sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+				<key key="landuse"
+					value="railway" />
+			</item>
+			<item name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node,closedway">
+				<label text="Güterbahnhof/Rangierbahnhof" />
+				<space />
+				<key key="railway"
+					value="yard" />
+				<text key="name" text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name"
+					de.text="Abkürzung (DS100)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG')"
+					de.text="Betreiber (z.B. 'DB Netz AG')"
+					default="DB Netz AG"
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Jahr der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<text key="end_date"
+					text="Year of opening"
+					de.text="Jahr der Stilllegung"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height about sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+				<key key="landuse"
+					value="railway" />
+			</item>
+			<!-- TODO ab hier -->
+			<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
+				<label text="Stellwerk" />
+				<space />
+				<key key="railway"
+					value="signal_box" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name"
+					de.text="Abkürzung"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Abzweig" icon="junction.png" type="node">
+				<label text="Abzweig" />
+				<space />
+				<key key="railway"
+					value="junction" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name"
+					de.text="Abkürzung"
+					default=""
+					delete_if_empty="true" />
+				<text key="ref"
+					text="Switch ref"
+					de.text="Weichennummer"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:manual"
+					text="Manual"
+					de.text="Handgestellt"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:switch"
+					text="Switch type"
+					de.text="Weichentyp"
+					values="default,three_way,single_slip,double_slip,backfall,wye" display_values="Standardweiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<!-- TODO ende -->
+			<!-- TODO: tram_stop -->
+			<separator />
+			<!-- TODO: betriebsstellenrelation, haltepositionen -->
+		</group>
 		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
 			<space />
@@ -1881,100 +2110,6 @@ image urls
 			<key key="railway"
 				value="fuel" />
 		</item>
-		<!-- ab hier TODO -->
-		<item name="Bahnhof/Haltepunkt" icon="station.png" type="node">
-			<label text="Bahnhof/Haltepunkt" />
-			<space />
-			<combo key="railway"
-				text="Type"
-				de.text="Typ"
-				values="station,halt"
-				display_values="Bahnhof,Haltepunkt"
-				default=""
-				delete_if_empty="true" />
-			<text key="name" text="Name"
-				de.text="Name"
-				default=""
-				delete_if_empty="true" />
-			<text key="railway:ref"
-				text="Short name"
-				de.text="Abkürzung"
-				default=""
-				delete_if_empty="true" />
-			<text key="uic_ref"
-				text="UIC-ID"
-				de.text="UIC-Nummer"
-				default=""
-				delete_if_empty="true" />
-			<check key="on_demand"
-				text="On demand"
-				de.text="Bedarfshalt"
-				default="off"
-				delete_if_empty="true" />
-		</item>
-		<item name="Rangierbahnhof" icon="yard.png" type="node,closedway">
-			<label text="Rangierbahnhof" />
-			<space />
-			<key key="railway"
-				value="yard" />
-			<text key="name"
-				text="Name" de.text="Name"
-				default=""
-				delete_if_empty="true" />
-			<text key="railway:ref"
-				text="Short name"
-				de.text="Abkürzung"
-				default=""
-				delete_if_empty="true" />
-		</item>
-		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
-			<label text="Stellwerk" />
-			<space />
-			<key key="railway"
-				value="signal_box" />
-			<text key="name"
-				text="Name"
-				de.text="Name"
-				default=""
-				delete_if_empty="true" />
-			<text key="railway:ref"
-				text="Short name"
-				de.text="Abkürzung"
-				default=""
-				delete_if_empty="true" />
-		</item>
-		<item name="Abzweig" icon="junction.png" type="node">
-			<label text="Abzweig" />
-			<space />
-			<key key="railway"
-				value="junction" />
-			<text key="name"
-				text="Name"
-				de.text="Name"
-				default=""
-				delete_if_empty="true" />
-			<text key="railway:ref"
-				text="Short name"
-				de.text="Abkürzung"
-				default=""
-				delete_if_empty="true" />
-			<text key="ref"
-				text="Switch ref"
-				de.text="Weichennummer"
-				default=""
-				delete_if_empty="true" />
-			<check key="railway:manual"
-				text="Manual"
-				de.text="Handgestellt"
-				default="off"
-				delete_if_empty="true" />
-			<combo key="railway:switch"
-				text="Switch type"
-				de.text="Weichentyp"
-				values="default,three_way,single_slip,double_slip,backfall,wye" display_values="Standardweiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche"
-				default=""
-				delete_if_empty="true" />
-		</item>
 		<item name="Bahngelände" icon="landuse.png" type="closedway">
 			<label text="Bahngelände" />
 			<key key="landuse"
@@ -2010,6 +2145,6 @@ image urls
 		</item>
 		<!--<group name="Historische Daten" icon="historic.png">
 		</group>-->
-		<!-- TODO brücke tunnel gleisfreimelder stellwerke betriebsstellen eisenbahnlinien; ab wasserkran -->
+		<!-- TODO brücke tunnel gleisfreimelder eisenbahnlinien; ab wasserkran -->
 	</group>
 </presets>
