@@ -132,8 +132,8 @@ image urls
 					default=""
 					delete_if_empty="true" />
 				<combo key="maxspeed" default=""
-					text="Maxspeed"
-					de.text="Höchstgeschwindigkeit"
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
@@ -258,8 +258,8 @@ image urls
 					default=""
 					delete_if_empty="true" />
 				<combo key="maxspeed" default=""
-					text="Maxspeed"
-					de.text="Höchstgeschwindigkeit"
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
@@ -402,8 +402,8 @@ image urls
 					default=""
 					delete_if_empty="true" />
 				<combo key="maxspeed" default=""
-					text="Maxspeed"
-					de.text="Höchstgeschwindigkeit"
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
@@ -550,8 +550,8 @@ image urls
 					default=""
 					delete_if_empty="true" />
 				<combo key="maxspeed" default=""
-					text="Maxspeed"
-					de.text="Höchstgeschwindigkeit"
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
