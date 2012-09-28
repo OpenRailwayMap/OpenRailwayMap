@@ -46,6 +46,10 @@ streckenrelationen, z.b. angertalbahn
 bahnsteig überdacht
 
 wikiseite rangierbahnhof und betriebsbahnhof operator
+image ele bei abzweig wikiseite
+building bei tankstelle wikiseite
+
+überall bei railway:ref DS100 ergänzen
 
 image urls
 -->
@@ -1678,8 +1682,54 @@ image urls
 				<key key="railway:signal:whistle:form"
 					value="sign" />
 			</item>
-			<!-- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
+			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
 		</group>
+		<!-- TODO Stellwerke -->
+		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
+			<label text="Stellwerk" />
+			<space />
+			<key key="railway"
+				value="signal_box" />
+			<text key="name"
+				text="Name"
+				de.text="Name"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:ref"
+				text="Short name"
+				de.text="Abkürzung"
+				default=""
+				delete_if_empty="true" />
+			<combo key="railway:signal_box"
+				text="Station category"
+				de.text="Bahnhofskategorie"
+				values="mechanical,electric,track_diagram,electronic"
+				display_values="Mechanisches Stellwerk,Elektrisches/Elektromechanisches Stellwerk,Gleisbildstellwerk,ESTW"
+				default=""
+				delete_if_empty="true" />
+			<text key="start_date"
+				text="Year of opening"
+				de.text="Jahr der Inbetriebnahme"
+				default=""
+				delete_if_empty="true" />
+			<!-- TODO: railway:position railway:position:exact -->
+			<text key="image"
+				text="Image URL"
+				de.text="URL eines Bildes"
+				default=""
+				delete_if_empty="true" />
+			<check key="railway:local_operated"
+				text="Local operated"
+				de.text="Ortsbedient"
+				default="off"
+				delete_if_empty="true" />
+			<check key="building"
+				text="Building"
+				de.text="Gebäude"
+				default="off"
+				delete_if_empty="true" />
+		</item>
+		<!-- TODO ende -->
 		<group name="Betriebsstellen" icon="facilities.png">
 			<item name="Bahnhof" icon="station.png" type="node,closedway">
 				<label text="Bahnhof" />
@@ -1729,11 +1779,6 @@ image urls
 					de.text="Jahr der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
-				<text key="end_date"
-					text="Year of opening"
-					de.text="Jahr der Stilllegung"
-					default=""
-					delete_if_empty="true" />
 				<text key="image"
 					text="Image URL"
 					de.text="URL eines Bildes"
@@ -1766,6 +1811,7 @@ image urls
 					de.text="UIC-Bahnhofsnummer"
 					default=""
 					delete_if_empty="true" />
+				<!-- TODO uic_name -->
 				<check key="on_demand"
 					text="On demand"
 					de.text="Bedarfshalt"
@@ -1791,11 +1837,6 @@ image urls
 				<text key="start_date"
 					text="Year of opening"
 					de.text="Jahr der Inbetriebnahme"
-					default=""
-					delete_if_empty="true" />
-				<text key="end_date"
-					text="Year of opening"
-					de.text="Jahr der Stilllegung"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -1835,9 +1876,41 @@ image urls
 					de.text="Jahr der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
-				<text key="end_date"
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height about sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+				<key key="landuse"
+					value="railway" />
+			</item>
+			<item name="Betriebsbahnhof" icon="service-station.png" type="node,closedway">
+				<label text="Betriebsbahnhof" />
+				<space />
+				<key key="railway"
+					value="service_station" />
+				<text key="name" text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name"
+					de.text="Abkürzung (DS100)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG')"
+					de.text="Betreiber (z.B. 'DB Netz AG')"
+					default="DB Netz AG"
+					delete_if_empty="true" />
+				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Stilllegung"
+					de.text="Jahr der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -1853,25 +1926,8 @@ image urls
 				<key key="landuse"
 					value="railway" />
 			</item>
-			<!-- TODO ab hier -->
-			<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
-				<label text="Stellwerk" />
-				<space />
-				<key key="railway"
-					value="signal_box" />
-				<text key="name"
-					text="Name"
-					de.text="Name"
-					default=""
-					delete_if_empty="true" />
-				<text key="railway:ref"
-					text="Short name"
-					de.text="Abkürzung"
-					default=""
-					delete_if_empty="true" />
-			</item>
 			<item name="Abzweig" icon="junction.png" type="node">
-				<label text="Abzweig" />
+				<label text="Abzweig, Ausweichanschlusstelle oder Ausweichanschlusstelle" />
 				<space />
 				<key key="railway"
 					value="junction" />
@@ -1885,27 +1941,52 @@ image urls
 					de.text="Abkürzung"
 					default=""
 					delete_if_empty="true" />
-				<text key="ref"
-					text="Switch ref"
-					de.text="Weichennummer"
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Jahr der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
-				<check key="railway:manual"
-					text="Manual"
-					de.text="Handgestellt"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:switch"
-					text="Switch type"
-					de.text="Weichentyp"
-					values="default,three_way,single_slip,double_slip,backfall,wye" display_values="Standardweiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche"
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
 					default=""
 					delete_if_empty="true" />
+				<text key="ele"
+					text="Height about sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+				<key key="landuse"
+					value="railway" />
 			</item>
-			<!-- TODO ende -->
-			<!-- TODO: tram_stop -->
+			<!-- TODO: tram_stop überleitstelle sonstige betriebsstellen -->
 			<separator />
-			<!-- TODO: betriebsstellenrelation, haltepositionen -->
+			<item name="Halteposition" icon="stop.png" type="node">
+				<label text="Halteposition" />
+				<space />
+				<key key="public_transport"
+					value="stop_position" />
+				<key key="railway"
+					value="stop" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name"
+					de.text="Abkürzung"
+					default=""
+					delete_if_empty="true" />
+				<!-- TODO uic_ref uic_name rail train light_rail subway tram operator -->
+				<text key="ele"
+					text="Height about sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+				<!-- TODO railway:position railway:position:exact -->
+			</item>
+			<!-- TODO: betriebsstellenrelation -->
 		</group>
 		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
@@ -2012,7 +2093,7 @@ image urls
 				text="Lit"
 				de.text="Beleuchtung"
 				default="off"
-					delete_if_empty="true" />
+				delete_if_empty="true" />
 			<combo key="surface"
 				text="Surface"
 				de.text="Oberfläche"
@@ -2095,30 +2176,72 @@ image urls
 				default="off"
 				delete_if_empty="true" />
 		</item>
-		<item name="Wasserturm" icon="watertower.png" type="node,closedway">
-			<label text="Wasserturm" />
-			<space />
-			<key key="railway"
-				value="water_tower" />
-			<key key="man_made"
-				value="water_tower" />
-			<key key="building"
-				value="yes" />
-		</item>
-		<item name="Tankstelle" icon="fuel.png" type="node,closedway">
-			<label text="Loktankstelle" />
-			<key key="railway"
-				value="fuel" />
-		</item>
+		<group name="Versorgung" icon="supply.png">
+			<item name="Tankstelle" icon="fuel.png" type="node,closedway">
+				<label text="Loktankstelle" />
+				<key key="railway"
+					value="fuel" />
+				<check key="building"
+					text="Building"
+					de.text="Gebäude"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Wasserkran" icon="water-crane.png" type="node">
+				<label text="Wasserkran" />
+				<key key="railway"
+					value="water_crane" />
+			</item>
+			<item name="Wasserturm" icon="watertower.png" type="node,closedway">
+				<label text="Wasserturm" />
+				<space />
+				<key key="railway"
+					value="water_tower" />
+				<key key="man_made"
+					value="water_tower" />
+				<key key="building"
+					value="yes" />
+			</item>
+			<item name="Bekohlungsanlage" icon="coaling.png" type="node,closedway">
+				<label text="Bekohlungsanlage" />
+				<key key="railway"
+					value="coaling_facility" />
+			</item>
+		</group>
 		<item name="Bahngelände" icon="landuse.png" type="closedway">
 			<label text="Bahngelände" />
 			<key key="landuse"
 				value="railway" />
 		</item>
+		<item name="Waschanlage" icon="wash.png" type="node,closedway">
+			<label text="Waschanlage" />
+			<key key="railway"
+				value="wash" />
+			<check key="building"
+				text="Building"
+				de.text="Gebäude"
+				default="off"
+				delete_if_empty="true" />
+		</item>
 		<item name="Drehscheibe" icon="turntable.png" type="node,closedway">
 			<label text="Drehscheibe" />
 			<key key="railway"
 				value="turntable" />
+		</item>
+		<item name="Lademaßlehre" icon="loading-gauge.png" type="node">
+			<label text="Lademaßlehre" />
+			<key key="railway"
+				value="loading_gauge" />
+		</item>
+		<item name="Ablaufberg" icon="hump-yard.png" type="node">
+			<label text="Ablaufberg" />
+			<key key="railway"
+				value="hump_yard" />
+		</item>
+		<item name="Gleisbremse" icon="rail-brake.png" type="node">
+			<label text="Gleisbremse" />
+			<key key="railway"
+				value="rail_brake" />
 		</item>
 		<item name="Schiebebühne" icon="traverser.png" type="node,closedway">
 			<label text="Schiebebühne" />
@@ -2129,6 +2252,13 @@ image urls
 			<label text="Gleiswaage" />
 			<key key="railway"
 				value="track_scale" />
+		</item>
+		<item name="Lokschuppen" icon="engine-shed.png" type="closedway">
+			<label text="Lokschuppen" />
+			<key key="railway"
+				value="engine_shed" />
+			<key key="building"
+				value="yes" />
 		</item>
 		<item name="Eisenbahnmuseum" icon="museum.png" type="node,closedway">
 			<label text="Eisenbahnmuseum" />
@@ -2143,8 +2273,8 @@ image urls
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<!--<group name="Historische Daten" icon="historic.png">
+		<!-- TODO brücke tunnel gleisfreimelder eisenbahnlinien gleissperre verladerampe kran rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle bahnhofsgebäude firma mit gleisanschluss -->
+		<!-- TODO <group name="Historische Daten" icon="historic.png">
 		</group>-->
-		<!-- TODO brücke tunnel gleisfreimelder eisenbahnlinien; ab wasserkran -->
 	</group>
 </presets>
