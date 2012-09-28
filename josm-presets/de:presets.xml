@@ -42,6 +42,10 @@ beispiele korrigieren
 weitere beispiele ergänzen
 
 streckenrelationen, z.b. angertalbahn
+
+bahnsteig überdacht
+
+image urls
 -->
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
@@ -1770,11 +1774,16 @@ streckenrelationen, z.b. angertalbahn
 				de.text="Bahnsteignummer(n)"
 				default=""
 				delete_if_empty="true" />
+			<check key="area"
+				text="Area"
+				de.text="Fläche"
+				default="off"
+				delete_if_empty="true" />
 			<check key="lit"
 				text="Lit"
 				de.text="Beleuchtung"
 				default="off"
-				delete_if_empty="true" />
+					delete_if_empty="true" />
 			<combo key="surface"
 				text="Surface"
 				de.text="Oberfläche"
