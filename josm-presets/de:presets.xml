@@ -24,7 +24,6 @@ grenzzeichen hinzufügen
 erfassung von bahnsteiggleiskanten
 frühhaltanzeiger zs13
 gleissperre gsp2 mit signalposition in_track
-auf wikiseite db netz ag als standard bei operator angeben
 datumangabe bei start und end date
 hinweis sv signale hamburger system
 
@@ -1877,9 +1876,9 @@ optional einbauen
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z.B. 'DB Netz AG')"
-					default="DB Netz AG"
+					text="Operator (e.g. 'DB Station&Service AG')"
+					de.text="Betreiber (z.B. 'DB Station&Service AG')"
+					default="DB Station&Service AG"
 					delete_if_empty="true" />
 				<text key="network"
 					text="Network"
@@ -1937,9 +1936,9 @@ optional einbauen
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z.B. 'DB Netz AG')"
-					default="DB Netz AG"
+					text="Operator (e.g. 'DB Station&Service AG')"
+					de.text="Betreiber (z.B. 'DB Station&Service AG')"
+					default="DB Station&Service AG"
 					delete_if_empty="true" />
 				<text key="network"
 					text="Network"
