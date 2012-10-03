@@ -1876,9 +1876,9 @@ optional einbauen
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
-					text="Operator (e.g. 'DB Station&Service AG')"
-					de.text="Betreiber (z.B. 'DB Station&Service AG')"
-					default="DB Station&Service AG"
+					text="Operator (e.g. 'DB Station&amp;Service AG')"
+					de.text="Betreiber (z.B. 'DB Station&amp;Service AG')"
+					default="DB Station&amp;Service AG"
 					delete_if_empty="true" />
 				<text key="network"
 					text="Network"
@@ -1936,9 +1936,9 @@ optional einbauen
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
-					text="Operator (e.g. 'DB Station&Service AG')"
-					de.text="Betreiber (z.B. 'DB Station&Service AG')"
-					default="DB Station&Service AG"
+					text="Operator (e.g. 'DB Station&amp;Service AG')"
+					de.text="Betreiber (z.B. 'DB Station&amp;Service AG')"
+					default="DB Station&amp;Service AG"
 					delete_if_empty="true" />
 				<text key="network"
 					text="Network"
