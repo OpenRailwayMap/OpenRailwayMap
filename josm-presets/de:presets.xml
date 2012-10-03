@@ -2280,6 +2280,11 @@ optional einbauen
 				display_values="Ja,Nein,Vorhanden aber nicht sinnvoll verwendet"
 				default=""
 				delete_if_empty="true" />
+			<text key="height"
+				text="Platform height (m)"
+				de.text="Bahnsteighöhe (m)"
+				default=""
+				delete_if_empty="true" />
 		</item>
 		<item name="Stromsystemwechsel" icon="systemswitch.png" type="node">
 			<label text="Stromsystemwechsel" />
