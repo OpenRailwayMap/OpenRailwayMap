@@ -20,7 +20,6 @@ voltage und frequency auswahlfeld
 railway:ref:bahngesellschaft
 bahnsteig überdacht
 
-grenzzeichen hinzufügen
 erfassung von bahnsteiggleiskanten
 frühhaltanzeiger zs13
 gleissperre gsp2 mit signalposition in_track
@@ -1792,6 +1791,21 @@ optional einbauen
 					value="bü5" />
 				<key key="railway:signal:whistle:form"
 					value="sign" />
+			</item>
+			<item name="Grenzzeichen" icon="de:fouling-point.png" type="node">
+				<label text="Grenzzeichen" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:fouling_point"
+					value="ra12" />
 			</item>
 			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
 		</group>
