@@ -1829,6 +1829,29 @@ optional einbauen
 				<key key="railway:signal:whistle:form"
 					value="sign" />
 			</item>
+			<separator />
+			<item name="Zugfunk-Kanalhinweis" icon="de:radio.png" type="node">
+				<label text="Zugfunk-Kanalhinweis" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:radio"
+					value="yes" />
+				<key key="railway:signal:radio:form"
+					value="sign" />
+				<text key="railway:signal:radio:frequency"
+					text="Frequency/Channel"
+					de.text="Kanal"
+					default=""
+					delete_if_empty="true" />
+			</item>
 			<item name="Grenzzeichen" icon="de:fouling-point.png" type="node">
 				<label text="Grenzzeichen" />
 				<space />
@@ -1844,7 +1867,7 @@ optional einbauen
 				<key key="railway:signal:fouling_point"
 					value="ra12" />
 			</item>
-			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
+			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
 		</group>
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="Stellwerk" />
