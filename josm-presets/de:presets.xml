@@ -1755,6 +1755,63 @@ optional einbauen
 					delete_if_empty="true" />
 			</item>
 			<separator />
+			<item name="Bü-Überwachungssignal" icon="de:crossing-signal.png" type="node">
+				<label text="Bü-Überwachungssignal" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:whistle:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:crossing:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:signal:crossing"
+					text="Exact type"
+					de.text="Signaltyp"
+					values="bü,so16"
+					display_values="Bü (ex-DB),So 16 (ex-DR)"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:whistle:form"
+					value="light" />
+				<combo key="railway:signal:crossing:states"
+					text="Exact type"
+					de.text="Signaltyp"
+					values="bü0;bü1,so16a;so16b"
+					display_values="Bü 0/1 (ex-DB),So 16a/b (ex-DR)"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:crossing:repeated"
+					text="Repeated"
+					de.text="Signalwiederholer (weiße Scheibe)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:signal:crossing:shortened"
+					text="Shortened distance"
+					de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
+					default="off"
+					delete_if_empty="true" />
+			</item>
 			<item name="Pfeiftafel" icon="de:whistle.png" type="node">
 				<label text="Pfeiftafel" />
 				<space />
