@@ -1280,6 +1280,43 @@ optional einbauen
 				<key key="railway:signal:main:function"
 					value="entry" />
 			</item>
+			<item name="Fahrtanzeiger" icon="de:main-repeated.png" type="node">
+				<label text="Fahrtanzeiger" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<text key="ref"
+					text="Signal ref"
+					de.text="Signalnummer"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:main:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:main_repeated"
+					value="yes" />
+				<key key="railway:signal:main:form"
+					value="light" />
+				<key key="railway:signal:main_repeated:states"
+					value="hp0;hp1" />
+			</item>
 			<item name="Sh 1-Licht" icon="de:sh1.png" type="node">
 				<label text="Sh 1-Licht an anderen Signalen wie Ks-Signalen oder Hp-Ausfahrsignalen." />
 				<space />
