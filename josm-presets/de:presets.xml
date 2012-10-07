@@ -2236,13 +2236,13 @@ optional einbauen
 				default=""
 				delete_if_empty="true" />
 			<text key="railway:position"
-				text="Position (rounded, e.g. '12.3')"
-				de.text="Kilometerangabe (gerundet, z.B. '12.3')"
+				text="Position (rounded, e.g. '12.3'; km)"
+				de.text="Kilometerangabe (gerundet, z.B. '12.3'; km)"
 				default=""
 				delete_if_empty="true" />
 			<text key="railway:position:exact"
-				text="Position (exact, e.g. '12.345')"
-				de.text="Kilometerangabe (genau, z.B: '12.345')"
+				text="Position (exact, e.g. '12.345'; km)"
+				de.text="Kilometerangabe (genau, z.B: '12.345'; km)"
 				default=""
 				delete_if_empty="true" />
 			<space />
@@ -2288,14 +2288,15 @@ optional einbauen
 				de.text="bekommt jedes Gleis einen Punkt mit den Tags." />
 			<key key="railway" value="milestone" />
 			<text key="railway:position"
+				text="Distance indication (rounded, e.g. '12.3'; km)"
+				de.text="Entfernungsangabe (gerundet, z.B. '12.3'; km)"
 				default=""
-				text="Distance indication (km)"
-				de.text="Entfernungsangabe (km)" />
+				delete_if_empty="true" />
 			<text key="railway:position:exact"
+				text="Exact distance indication (exact, e.g. '12.345'; km)"
+				de.text="Exakte Entfernungsangabe (genau, z.B: '12.345'; km)"
 				default=""
-				delete_if_empty="true"
-				text="Exact distance indication (km)"
-				de.text="Exakte Entfernungsangabe (km)" />
+				delete_if_empty="true" />
 			<check key="railway:milestone:emergency_brake_override"
 				text="Emergency brake override"
 				de.text="Notfallbremsüberbrückung"
