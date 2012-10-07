@@ -1290,7 +1290,7 @@ optional einbauen
 					de.text="Signalnummer"
 					default=""
 					delete_if_empty="true" />
-				<check key="railway:signal:main:deactivated"
+				<check key="railway:signal:main_repeated:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
 					default="off"
@@ -1312,7 +1312,7 @@ optional einbauen
 				<space />
 				<key key="railway:signal:main_repeated"
 					value="yes" />
-				<key key="railway:signal:main:form"
+				<key key="railway:signal:main_repeated:form"
 					value="light" />
 				<key key="railway:signal:main_repeated:states"
 					value="hp0;hp1" />
@@ -1640,6 +1640,47 @@ optional einbauen
 					delete_if_empty="true" />
 			</item>
 			<separator />
+			<item name="Richtungsanzeiger" icon="de:direction.png" type="node">
+				<label text="Richtungsanzeiger" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:route:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:route"
+					value="zs2" />
+				<text key="railway:signal:route:states"
+					text="Signal states (separated by ";")"
+					de.text="Mögliche Anzeigewerte (getrennt durch ";")"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:route:form"
+					text="Type"
+					de.text="Typ"
+					values="sign,light"
+					display_values="Tafel,Leuchtanzeige"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<separator />
 			<item name="Geschwindigkeitsanzeiger" icon="de:maxspeed.png" type="node">
 				<label text="Geschwindigkeitsanzeiger" />
 				<space />
@@ -1760,7 +1801,7 @@ optional einbauen
 				<space />
 				<key key="railway"
 					value="signal" />
-				<check key="railway:signal:whistle:deactivated"
+				<check key="railway:signal:crossing:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
 					default="off"
@@ -1778,11 +1819,6 @@ optional einbauen
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:crossing:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
 					delete_if_empty="true" />
 				<space />
 				<combo key="railway:signal:crossing"
