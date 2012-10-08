@@ -2014,7 +2014,7 @@ optional einbauen
 				<key key="railway"
 					value="station" />
 				<key key="public_transport"
-				value="station" />				<!-- TODO optional -->
+					value="station" />				<!-- TODO optional -->
 				<text key="name" text="Name"
 					de.text="Name"
 					default=""
@@ -2067,8 +2067,6 @@ optional einbauen
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
-				<key key="landuse"
-					value="railway" />
 			</item>
 			<item name="Haltepunkt/Haltestelle" icon="halt.png" type="node,closedway">
 				<label text="Haltepunkt/Haltestelle" />
@@ -2127,8 +2125,6 @@ optional einbauen
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
-				<key key="landuse"
-					value="railway" />
 			</item>
 			<item name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node,closedway">
 				<label text="Güterbahnhof/Rangierbahnhof" />
@@ -2164,8 +2160,6 @@ optional einbauen
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
-				<key key="landuse"
-					value="railway" />
 			</item>
 			<item name="Betriebsbahnhof" icon="service-station.png" type="node,closedway">
 				<label text="Betriebsbahnhof" />
@@ -2201,8 +2195,6 @@ optional einbauen
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
-				<key key="landuse"
-					value="railway" />
 			</item>
 			<item name="Abzweig" icon="junction.png" type="node">
 				<label text="Abzweig, Ausweichanschlusstelle oder Ausweichanschlusstelle" />
@@ -2234,8 +2226,6 @@ optional einbauen
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
-				<key key="landuse"
-					value="railway" />
 			</item>
 			<!-- TODO: tram_stop überleitstelle sonstige betriebsstellen -->
 			<separator />
@@ -2311,8 +2301,8 @@ optional einbauen
 						requisite="optional"
 						type="closedway" />
 					<role key="landuse"
-						text="Subway entrances"
-						de.text="U-Bahn-Eingänge"
+						text="Area"
+						de.text="Fläche"
 						requisite="optional"
 						type="closedway" />
 				</roles>
