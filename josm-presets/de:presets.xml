@@ -2008,7 +2008,7 @@ optional einbauen
 		</item>
 		<!-- TODO stellwerksrelation -->
 		<group name="Betriebsstellen" icon="facilities.png">
-			<item name="Bahnhof" icon="station.png" type="node,closedway">
+			<item name="Bahnhof" icon="station.png" type="node">
 				<label text="Bahnhof" />
 				<space />
 				<key key="railway"
@@ -2068,7 +2068,7 @@ optional einbauen
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Haltepunkt/Haltestelle" icon="halt.png" type="node,closedway">
+			<item name="Haltepunkt/Haltestelle" icon="halt.png" type="node">
 				<label text="Haltepunkt/Haltestelle" />
 				<space />
 				<key key="railway"
@@ -2126,7 +2126,7 @@ optional einbauen
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node,closedway">
+			<item name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node">
 				<label text="Güterbahnhof/Rangierbahnhof" />
 				<space />
 				<key key="railway"
@@ -2161,7 +2161,7 @@ optional einbauen
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Betriebsbahnhof" icon="service-station.png" type="node,closedway">
+			<item name="Betriebsbahnhof" icon="service-station.png" type="node">
 				<label text="Betriebsbahnhof" />
 				<space />
 				<key key="railway"
