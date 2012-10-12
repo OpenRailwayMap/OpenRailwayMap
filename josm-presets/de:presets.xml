@@ -2574,10 +2574,15 @@ optional einbauen
 			<key key="railway"
 				value="traverser" />
 		</item>
-		<item name="Gleiswaage" icon="scale.png" type="node,closedway">
+		<item name="Gleiswaage" icon="scale.png" type="node">
 			<label text="Gleiswaage" />
 			<key key="railway"
 				value="track_scale" />
+		</item>
+		<item name="Lokgrube" icon="pit.png" type="node">
+			<label text="Lokgrube" />
+			<key key="railway"
+				value="pit" />
 		</item>
 		<item name="Lokschuppen" icon="engine-shed.png" type="closedway">
 			<label text="Lokschuppen" />
