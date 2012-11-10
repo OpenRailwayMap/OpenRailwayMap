@@ -20,7 +20,6 @@ voltage und frequency auswahlfeld
 railway:ref:bahngesellschaft
 bahnsteig überdacht
 
-grenzzeichen hinzufügen
 erfassung von bahnsteiggleiskanten
 frühhaltanzeiger zs13
 gleissperre gsp2 mit signalposition in_track
@@ -1281,6 +1280,43 @@ optional einbauen
 				<key key="railway:signal:main:function"
 					value="entry" />
 			</item>
+			<item name="Fahrtanzeiger" icon="de:main-repeated.png" type="node">
+				<label text="Fahrtanzeiger" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<text key="ref"
+					text="Signal ref"
+					de.text="Signalnummer"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:main_repeated:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:main_repeated"
+					value="yes" />
+				<key key="railway:signal:main_repeated:form"
+					value="light" />
+				<key key="railway:signal:main_repeated:states"
+					value="hp0;hp1" />
+			</item>
 			<item name="Sh 1-Licht" icon="de:sh1.png" type="node">
 				<label text="Sh 1-Licht an anderen Signalen wie Ks-Signalen oder Hp-Ausfahrsignalen." />
 				<space />
@@ -1604,6 +1640,47 @@ optional einbauen
 					delete_if_empty="true" />
 			</item>
 			<separator />
+			<item name="Richtungsanzeiger" icon="de:direction.png" type="node">
+				<label text="Richtungsanzeiger" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:route:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:route"
+					value="zs2" />
+				<text key="railway:signal:route:states"
+					text="Signal states (separated by ";")"
+					de.text="Mögliche Anzeigewerte (getrennt durch ";")"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:route:form"
+					text="Type"
+					de.text="Typ"
+					values="sign,light"
+					display_values="Tafel,Leuchtanzeige"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<separator />
 			<item name="Geschwindigkeitsanzeiger" icon="de:maxspeed.png" type="node">
 				<label text="Geschwindigkeitsanzeiger" />
 				<space />
@@ -1719,6 +1796,58 @@ optional einbauen
 					delete_if_empty="true" />
 			</item>
 			<separator />
+			<item name="Bü-Überwachungssignal" icon="de:crossing-signal.png" type="node">
+				<label text="Bü-Überwachungssignal" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:crossing:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:signal:crossing"
+					text="Exact type"
+					de.text="Signaltyp"
+					values="bü,so16"
+					display_values="Bü (ex-DB),So 16 (ex-DR)"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:whistle:form"
+					value="light" />
+				<combo key="railway:signal:crossing:states"
+					text="Exact type"
+					de.text="Signaltyp"
+					values="bü0;bü1,so16a;so16b"
+					display_values="Bü 0/1 (ex-DB),So 16a/b (ex-DR)"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:crossing:repeated"
+					text="Repeated"
+					de.text="Signalwiederholer (weiße Scheibe)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:signal:crossing:shortened"
+					text="Shortened distance"
+					de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
+					default="off"
+					delete_if_empty="true" />
+			</item>
 			<item name="Pfeiftafel" icon="de:whistle.png" type="node">
 				<label text="Pfeiftafel" />
 				<space />
@@ -1793,7 +1922,45 @@ optional einbauen
 				<key key="railway:signal:whistle:form"
 					value="sign" />
 			</item>
-			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, Hauptsignal-Nachahmer/Fahrtanzeiger, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
+			<separator />
+			<item name="Zugfunk-Kanalhinweis" icon="de:radio.png" type="node">
+				<label text="Zugfunk-Kanalhinweis" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:radio"
+					value="yes" />
+				<key key="railway:signal:radio:form"
+					value="sign" />
+				<text key="railway:signal:radio:frequency"
+					text="Frequency/Channel"
+					de.text="Kanal"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Grenzzeichen" icon="de:fouling-point.png" type="node">
+				<label text="Grenzzeichen" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:fouling_point"
+					value="ra12" />
+			</item>
+			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
 		</group>
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="Stellwerk" />
@@ -1841,13 +2008,13 @@ optional einbauen
 		</item>
 		<!-- TODO stellwerksrelation -->
 		<group name="Betriebsstellen" icon="facilities.png">
-			<item name="Bahnhof" icon="station.png" type="node,closedway">
+			<item name="Bahnhof" icon="station.png" type="node">
 				<label text="Bahnhof" />
 				<space />
 				<key key="railway"
 					value="station" />
 				<key key="public_transport"
-				value="station" />				<!-- TODO optional -->
+					value="station" />				<!-- TODO optional -->
 				<text key="name" text="Name"
 					de.text="Name"
 					default=""
@@ -1900,10 +2067,8 @@ optional einbauen
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
-				<key key="landuse"
-					value="railway" />
 			</item>
-			<item name="Haltepunkt/Haltestelle" icon="halt.png" type="node,closedway">
+			<item name="Haltepunkt/Haltestelle" icon="halt.png" type="node">
 				<label text="Haltepunkt/Haltestelle" />
 				<space />
 				<key key="railway"
@@ -1960,10 +2125,8 @@ optional einbauen
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
-				<key key="landuse"
-					value="railway" />
 			</item>
-			<item name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node,closedway">
+			<item name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node">
 				<label text="Güterbahnhof/Rangierbahnhof" />
 				<space />
 				<key key="railway"
@@ -1997,10 +2160,8 @@ optional einbauen
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
-				<key key="landuse"
-					value="railway" />
 			</item>
-			<item name="Betriebsbahnhof" icon="service-station.png" type="node,closedway">
+			<item name="Betriebsbahnhof" icon="service-station.png" type="node">
 				<label text="Betriebsbahnhof" />
 				<space />
 				<key key="railway"
@@ -2034,8 +2195,6 @@ optional einbauen
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
-				<key key="landuse"
-					value="railway" />
 			</item>
 			<item name="Abzweig" icon="junction.png" type="node">
 				<label text="Abzweig, Ausweichanschlusstelle oder Ausweichanschlusstelle" />
@@ -2067,8 +2226,6 @@ optional einbauen
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
-				<key key="landuse"
-					value="railway" />
 			</item>
 			<!-- TODO: tram_stop überleitstelle sonstige betriebsstellen -->
 			<separator />
@@ -2162,13 +2319,13 @@ optional einbauen
 				default=""
 				delete_if_empty="true" />
 			<text key="railway:position"
-				text="Position (rounded, e.g. '12.3')"
-				de.text="Kilometerangabe (gerundet, z.B. '12.3')"
+				text="Position (rounded, e.g. '12.3'; km)"
+				de.text="Kilometerangabe (gerundet, z.B. '12.3'; km)"
 				default=""
 				delete_if_empty="true" />
 			<text key="railway:position:exact"
-				text="Position (exact, e.g. '12.345')"
-				de.text="Kilometerangabe (genau, z.B: '12.345')"
+				text="Position (exact, e.g. '12.345'; km)"
+				de.text="Kilometerangabe (genau, z.B: '12.345'; km)"
 				default=""
 				delete_if_empty="true" />
 			<space />
@@ -2214,14 +2371,15 @@ optional einbauen
 				de.text="bekommt jedes Gleis einen Punkt mit den Tags." />
 			<key key="railway" value="milestone" />
 			<text key="railway:position"
+				text="Distance indication (rounded, e.g. '12.3'; km)"
+				de.text="Entfernungsangabe (gerundet, z.B. '12.3'; km)"
 				default=""
-				text="Distance indication (km)"
-				de.text="Entfernungsangabe (km)" />
+				delete_if_empty="true" />
 			<text key="railway:position:exact"
+				text="Exact distance indication (exact, e.g. '12.345'; km)"
+				de.text="Exakte Entfernungsangabe (genau, z.B: '12.345'; km)"
 				default=""
-				delete_if_empty="true"
-				text="Exact distance indication (km)"
-				de.text="Exakte Entfernungsangabe (km)" />
+				delete_if_empty="true" />
 			<check key="railway:milestone:emergency_brake_override"
 				text="Emergency brake override"
 				de.text="Notfallbremsüberbrückung"
@@ -2416,10 +2574,15 @@ optional einbauen
 			<key key="railway"
 				value="traverser" />
 		</item>
-		<item name="Gleiswaage" icon="scale.png" type="node,closedway">
+		<item name="Gleiswaage" icon="scale.png" type="node">
 			<label text="Gleiswaage" />
 			<key key="railway"
 				value="track_scale" />
+		</item>
+		<item name="Lokgrube" icon="pit.png" type="node">
+			<label text="Lokgrube" />
+			<key key="railway"
+				value="pit" />
 		</item>
 		<item name="Lokschuppen" icon="engine-shed.png" type="closedway">
 			<label text="Lokschuppen" />
