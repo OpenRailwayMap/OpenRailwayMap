@@ -2144,8 +2144,8 @@ optional einbauen
 						requisite="optional"
 						type="closedway" />
 					<role key="landuse"
-						text="Subway entrances"
-						de.text="U-Bahn-Eingänge"
+						text="Area"
+						de.text="Fläche"
 						requisite="optional"
 						type="closedway" />
 				</roles>
