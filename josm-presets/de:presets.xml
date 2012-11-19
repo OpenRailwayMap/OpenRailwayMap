@@ -41,6 +41,8 @@ weitere beispiele ergänzen
 streckenrelationen, z.b. angertalbahn
 
 optional einbauen
+
+betriebseinrichtungen gruppieren
 -->
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
@@ -2625,7 +2627,12 @@ optional einbauen
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<!-- TODO brücke tunnel gleisfreimelder eisenbahnlinien gleissperre verladerampe kran rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
+		<item name="Kran" icon="crane.png" type="node">
+			<label text="Kran" />
+			<key key="man_made"
+				value="crane" />
+		</item>
+		<!-- TODO brücke tunnel gleisfreimelder eisenbahnlinien gleissperre verladerampe rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
 		<!-- TODO <group name="Historische Daten" icon="historic.png">
 		</group>-->
 	</group>
