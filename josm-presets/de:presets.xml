@@ -1668,8 +1668,8 @@ optional einbauen
 				<key key="railway:signal:route"
 					value="zs2" />
 				<text key="railway:signal:route:states"
-					text="Signal states (separated by ";")"
-					de.text="Mögliche Anzeigewerte (getrennt durch ";")"
+					text="Signal states (separated by ';')"
+					de.text="Mögliche Anzeigewerte (getrennt durch ';')"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:signal:route:form"
