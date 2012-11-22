@@ -2075,6 +2075,8 @@ betriebseinrichtungen gruppieren
 				<space />
 				<key key="railway"
 					value="halt" />
+				<key key="public_transport"
+					value="station" />				<!-- TODO optional -->
 				<text key="name" text="Name"
 					de.text="Name"
 					default=""
@@ -2536,6 +2538,55 @@ betriebseinrichtungen gruppieren
 					value="coaling_facility" />
 			</item>
 		</group>
+		<group name="Güterverladung" icon="supply.png">
+			<item name="Gleiswaage" icon="scale.png" type="node">
+				<label text="Gleiswaage" />
+				<key key="railway"
+					value="track_scale" />
+			</item>
+			<item name="Kran" icon="crane.png" type="node">
+				<label text="Kran" />
+				<key key="man_made"
+					value="crane" />
+			</item>
+			<item name="Lademaßlehre" icon="loading-gauge.png" type="node">
+				<label text="Lademaßlehre" />
+				<key key="railway"
+					value="loading_gauge" />
+			</item>
+			<item name="Verladerampe/Ladestraße" icon="loading-ramp.png" type="node,way,closedway">
+				<label text="Verladerampe/Ladestraße" />
+				<key key="railway"
+					value="loading_ramp" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="surface"
+					text="Surface"
+					de.text="Oberfläche"
+					values="asphalt,paving_stones,concrete,cobblestone,compacted,paved,unpaved"
+					display_values="Asphalt,Pflastersteine,Beton,Kopfsteinpflaster,Verdichtet,Befestigt,Unbefestigt"
+					default=""
+					delete_if_empty="true" />
+				<text key="height"
+					text="Ramp height (m) - 0 for loading streets"
+					de.text="Rampenhöhe (m) - bei Ladestraße 0 eintragen"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG')"
+					de.text="Betreiber (z.B. 'DB Netz AG')"
+					default="DB Netz AG"
+					delete_if_empty="true" />
+			</item>
+		</group>
 		<item name="Bahngelände" icon="landuse.png" type="closedway">
 			<label text="Bahngelände" />
 			<key key="landuse"
@@ -2556,11 +2607,6 @@ betriebseinrichtungen gruppieren
 			<key key="railway"
 				value="turntable" />
 		</item>
-		<item name="Lademaßlehre" icon="loading-gauge.png" type="node">
-			<label text="Lademaßlehre" />
-			<key key="railway"
-				value="loading_gauge" />
-		</item>
 		<item name="Ablaufberg" icon="hump-yard.png" type="node">
 			<label text="Ablaufberg" />
 			<key key="railway"
@@ -2575,11 +2621,6 @@ betriebseinrichtungen gruppieren
 			<label text="Schiebebühne" />
 			<key key="railway"
 				value="traverser" />
-		</item>
-		<item name="Gleiswaage" icon="scale.png" type="node">
-			<label text="Gleiswaage" />
-			<key key="railway"
-				value="track_scale" />
 		</item>
 		<item name="Lokgrube" icon="pit.png" type="node">
 			<label text="Lokgrube" />
@@ -2627,12 +2668,7 @@ betriebseinrichtungen gruppieren
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Kran" icon="crane.png" type="node">
-			<label text="Kran" />
-			<key key="man_made"
-				value="crane" />
-		</item>
-		<!-- TODO brücke tunnel gleisfreimelder eisenbahnlinien gleissperre verladerampe rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
+		<!-- TODO brücke tunnel gleisfreimelder eisenbahnlinien gleissperre rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
 		<!-- TODO <group name="Historische Daten" icon="historic.png">
 		</group>-->
 	</group>
