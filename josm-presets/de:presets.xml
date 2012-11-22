@@ -1494,7 +1494,7 @@ betriebseinrichtungen gruppieren
 					text="Type"
 					de.text="Typ"
 					values="db:ne2,dr:so3,dr:so3b"
-					display_values="Ne 2 (DB),So 3 (DR), So 3b (DR, mit schwarzem Punkt)"
+					display_values="Ne 2 ex-DB,So 3 ex-DR, So 3b ex-DR (mit schwarzem Punkt)"
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:distant:form"
@@ -1717,7 +1717,7 @@ betriebseinrichtungen gruppieren
 					text="Type of signal"
 					de.text="Signaltyp"
 					values="yes,zs3,dr:lf1/2,lf2,lf3,dr:lf5,db:lf5,lf7,db:zs10"
-					display_values="unbekannt,Zs 3 ('Geschwindigkeitsanzeiger'),Lf 1/2 (ex-DR, 'Langsamfahrbeginnscheibe'),Lf 2 ('Anfangsscheibe'),Lf 3 ('Endscheibe'),Lf 5 (DB, 'Anfangstafel'),Lf 5 (ex-DR, 'Eckentafel'),Lf 7 ('Geschwindigkeitssignal') ,Zs 10 (DB)"
+					display_values="unbekannt,Zs 3 'Geschwindigkeitsanzeiger',Lf 1/2 ex-DR 'Langsamfahrbeginnscheibe',Lf 2 'Anfangsscheibe',Lf 3 'Endscheibe',Lf 5 ex-DB 'Anfangstafel',Lf 5 ex-DR 'Eckentafel',Lf 7 'Geschwindigkeitssignal',Zs 10 ex-DB"
 					default="" />
 				<combo key="railway:signal:speed_limit:form"
 					text="Signal form"
@@ -1774,7 +1774,7 @@ betriebseinrichtungen gruppieren
 					text="Type of signal"
 					de.text="Signaltyp"
 					values="yes,zs3v,lf1,db:lf4,dr:lf4,lf6"
-					display_values="unbekannt,Zs 3v,Lf 1 ('Langsamfahrscheibe'),Lf 4 (ex-DB, 'Geschwindigkeitstafel'),Lf 4 (ex-DR, 'Geschwindigkeitstafel'),Lf 6 ('Geschwindigkeits-Ankündesignal')"
+					display_values="unbekannt,Zs 3v,Lf 1 'Langsamfahrscheibe',Lf 4 ex-DB 'Geschwindigkeitstafel',Lf 4 ex-DR 'Geschwindigkeitstafel',Lf 6 'Geschwindigkeits-Ankündesignal'"
 					default="" />
 				<combo key="railway:signal:speed_limit_distant:form"
 					text="Signal form"
@@ -2437,7 +2437,7 @@ betriebseinrichtungen gruppieren
 				text="Tactile Paving"
 				de.text="Ertastbarer Untergrund"
 				values="yes,no,incorrect"
-				display_values="Ja,Nein,Vorhanden aber nicht sinnvoll verwendet"
+				display_values="Ja,Nein,Falsch"
 				default=""
 				delete_if_empty="true" />
 			<text key="height"
