@@ -2015,8 +2015,13 @@ betriebseinrichtungen gruppieren
 				<space />
 				<key key="railway"
 					value="station" />
-				<key key="public_transport"
-					value="station" />				<!-- TODO optional -->
+				<combo key="public_transport"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="stop_position,"
+					display_values="ja,nein"
+					default=""
+					delete_if_empty="true" />
 				<text key="name" text="Name"
 					de.text="Name"
 					default=""
@@ -2031,7 +2036,11 @@ betriebseinrichtungen gruppieren
 					de.text="UIC-Bahnhofsnummer"
 					default=""
 					delete_if_empty="true" />
-				<!-- TODO uic_name -->
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
 				<check key="on_demand"
 					text="On demand"
 					de.text="Bedarfshalt"
@@ -2075,8 +2084,13 @@ betriebseinrichtungen gruppieren
 				<space />
 				<key key="railway"
 					value="halt" />
-				<key key="public_transport"
-					value="station" />				<!-- TODO optional -->
+				<combo key="public_transport"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="stop_position,"
+					display_values="ja,nein"
+					default=""
+					delete_if_empty="true" />
 				<text key="name" text="Name"
 					de.text="Name"
 					default=""
@@ -2091,7 +2105,11 @@ betriebseinrichtungen gruppieren
 					de.text="UIC-Bahnhofsnummer"
 					default=""
 					delete_if_empty="true" />
-				<!-- TODO uic_name -->
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
 				<check key="on_demand"
 					text="On demand"
 					de.text="Bedarfshalt"
@@ -2236,8 +2254,13 @@ betriebseinrichtungen gruppieren
 			<item name="Halteposition" icon="stop.png" type="node">
 				<label text="Halteposition" />
 				<space />
-				<key key="public_transport"
-					value="stop_position" />		<!-- TODO optional -->
+				<combo key="public_transport"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="stop_position,"
+					display_values="ja,nein"
+					default=""
+					delete_if_empty="true" />
 				<key key="railway"
 					value="stop" />
 				<text key="name"
@@ -2250,7 +2273,17 @@ betriebseinrichtungen gruppieren
 					de.text="Abkürzung (DS100)"
 					default=""
 					delete_if_empty="true" />
-				<!-- TODO uic_ref uic_name rail train light_rail subway tram operator network -->
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<!-- TODO rail train light_rail subway tram operator network -->
 				<text key="ele"
 					text="Height about sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
