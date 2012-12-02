@@ -2018,7 +2018,7 @@ betriebseinrichtungen gruppieren
 				<combo key="public_transport"
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
-					values="stop_position,"
+					values="stop_position, "
 					display_values="ja,nein"
 					default=""
 					delete_if_empty="true" />
@@ -2087,7 +2087,7 @@ betriebseinrichtungen gruppieren
 				<combo key="public_transport"
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
-					values="stop_position,"
+					values="stop_position, "
 					display_values="ja,nein"
 					default=""
 					delete_if_empty="true" />
@@ -2257,7 +2257,7 @@ betriebseinrichtungen gruppieren
 				<combo key="public_transport"
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
-					values="stop_position,"
+					values="stop_position, "
 					display_values="ja,nein"
 					default=""
 					delete_if_empty="true" />
