@@ -742,6 +742,39 @@ betriebseinrichtungen gruppieren
 					delete_if_empty="true" />
 			</item>
 			<separator />
+			<item name="Brücke" icon="bridge.png" type="way">
+				<key key="bridge"
+					value="yes" />
+				<key key="layer"
+					value="1" />
+				<text key="bridge:name"
+					text="Bridge name"
+					de.text="Name der Brücke"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Tunnel" icon="tunnel.png" type="way">
+				<key key="tunnel"
+					value="yes" />
+				<key key="layer"
+					value="-1" />
+				<text key="tunnel:name"
+					text="Tunnel name"
+					de.text="Name des Tunnels"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<separator />
 			<item name="Prellbock" icon="bufferstop.png" type="node">
 				<key key="railway"
 					value="buffer_stop" />
@@ -2755,7 +2788,7 @@ betriebseinrichtungen gruppieren
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<!-- TODO brücke tunnel gleisfreimelder eisenbahnlinien gleissperre rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
+		<!-- TODO gleisfreimelder eisenbahnlinien gleissperre rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
 		<!-- TODO <group name="Historische Daten" icon="historic.png">
 		</group>-->
 	</group>
