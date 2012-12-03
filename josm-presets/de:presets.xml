@@ -2292,36 +2292,72 @@ betriebseinrichtungen gruppieren
 					de.text="UIC-Bahnhofsname"
 					default=""
 					delete_if_empty="true" />
-				<!-- TODO rail train light_rail subway tram operator network -->
+				<!-- TODO rail train light_rail subway tram -->
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG' or 'DB Station&amp;Service AG')"
+					de.text="Betreiber (z.B. 'DB Netz AG' oder 'DB Station&amp;Service AG')"
+					default="DB Netz AG"
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
 				<text key="ele"
 					text="Height about sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:position"
-				text="Distance indication (rounded, e.g. '12.3'; km)"
-				de.text="Entfernungsangabe (gerundet, z.B. '12.3'; km)"
-				default=""
-				delete_if_empty="true" />
-			<text key="railway:position:exact"
-				text="Exact distance indication (exact, e.g. '12.345'; km)"
-				de.text="Exakte Entfernungsangabe (genau, z.B: '12.345'; km)"
-				default=""
-				delete_if_empty="true" />
+					text="Distance indication (rounded, e.g. '12.3'; km)"
+					de.text="Entfernungsangabe (gerundet, z.B. '12.3'; km)"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:position:exact"
+					text="Exact distance indication (exact, e.g. '12.345'; km)"
+					de.text="Exakte Entfernungsangabe (genau, z.B: '12.345'; km)"
+					default=""
+					delete_if_empty="true" />
 			</item>
 			<item name="Betriebsstelle" icon="facility.png" type="relation">
 				<label text="Betriebsstelle" />
 				<space />
 				<key key="railway"
 					value="facility" />
+				<combo key="type"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="public_transport, "
+					display_values="ja,nein"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DS100)"
+					de.text="Abkürzung (DS100)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG' or 'DB Station&amp;Service AG')"
+					de.text="Betreiber (z.B. 'DB Netz AG' oder 'DB Station&amp;Service AG')"
+					default="DB Netz AG"
+					delete_if_empty="true" />
 					<!-- TODO
-					type	 public_transport Nur notwendig bei Betriebsstellen, die für den öffentlichen Nahverkehr genutzt werden.
 					public_transport	 stop_area	 Nur notwendig bei Betriebsstellen, die für den öffentlichen Nahverkehr genutzt werden.
-					name	 	 Name	 Der Name der Betriebsstelle, z.B. Köln-West oder Abzw Weißenberg. Namen in anderen Sprachen können mit dem Tag name:*=* angegeben werden.
-					railway:ref
-					operator
-					uic_ref
-					uic_name
 					rail	 yes/no
 					train	 yes/no
 					light_rail	 yes/no
