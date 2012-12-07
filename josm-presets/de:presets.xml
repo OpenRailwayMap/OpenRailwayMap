@@ -25,18 +25,6 @@ frühhaltanzeiger zs13
 datumangabe bei start und end date
 hinweis sv signale hamburger system
 
-englische übersetzung taggingseite
-
-josm preset files übersichtstabelle ergänzen
-josm styles
-hinweis zum einbinden von josm presets
-
-beispielgrafiken: bü-fläche, betriebsstellenrelationen
-beispielbahnhof, beispielstrecke
-besseres beispielbild fernsprecher
-beispiele korrigieren
-weitere beispiele ergänzen
-
 streckenrelationen, z.b. angertalbahn
 
 optional einbauen
@@ -49,7 +37,7 @@ betriebseinrichtungen gruppieren
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
 	<group name="OpenRailwayMap DE" icon="signals.png">
 		<group name="Gleise" icon="rail.png">
-			<!-- TODO preserved narrow_gauge light_rail subway tram miniature proposed construction abandoned yard spur Überleitgleis anschlussgleis abstellgleis -->
+			<!-- TODO preserved narrow_gauge light_rail subway tram miniature proposed construction abandoned yard spur anschlussgleis abstellgleis -->
 			<item name="Streckengleis / Hauptgleis" icon="rail.png" type="way">
 				<label text="Streckengleise (ohne Überleitgleise) und durchgehende Hauptgleise in einem Bahnhof. Jedes Gleis wird einzeln erfasst." />
 				<space />
