@@ -2349,7 +2349,7 @@ betriebseinrichtungen gruppieren
 					delete_if_empty="true" />
 				<check key="light_rail"
 					text="Light rail traffic?"
-					de.text="Stadtbahn- oder S-Bahn-Verkehr?"
+					de.text="Stadtbahn- oder Schnellbahn-Verkehr?"
 					default="off"
 					delete_if_empty="true" />
 				<check key="subway"
@@ -2432,7 +2432,7 @@ betriebseinrichtungen gruppieren
 					delete_if_empty="true" />
 				<check key="light_rail"
 					text="Light rail traffic?"
-					de.text="Stadtbahn- oder S-Bahn-Verkehr?"
+					de.text="Stadtbahn- oder Schnellbahn-Verkehr?"
 					default="off"
 					delete_if_empty="true" />
 				<check key="subway"
