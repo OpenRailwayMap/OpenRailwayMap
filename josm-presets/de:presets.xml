@@ -685,6 +685,19 @@ betriebseinrichtungen gruppieren
 				<key key="railway:signal:minor:height"
 					value="dwarf" />
 			</item>
+			<item name="Gleisfreimeldeanlage" icon="vacancy-detection.png" type="node">
+				<label text="Gleisfreimeldeanlage" />
+				<space />
+				<key key="railway"
+					value="vacancy_detection" />
+				<combo key="railway:vacancy_detection"
+					text="Type"
+					de.text="Typ"
+					values="insulated_rail_joint,axle_counter"
+					display_values="Isolierstoß,Achszähler"
+					default=""
+					delete_if_empty="true" />
+			</item>
 		</group>
 		<group name="Signale" icon="signals.png">
 			<item name="Ks-Vorsignal" icon="de:ks-distant.png" type="node">
@@ -2667,7 +2680,7 @@ betriebseinrichtungen gruppieren
 			<key key="railway"
 				value="rail_brake" />
 		</item>
-		<item name="Umspuranlage" icon="gaugeconversion.png" type="node">
+		<item name="Umspuranlage" icon="gauge-conversion.png" type="node">
 			<label text="Umspuranlage" />
 			<key key="railway"
 				value="gauge_conversion" />
@@ -2689,7 +2702,7 @@ betriebseinrichtungen gruppieren
 			<key key="barrier"
 				value="gate" />
 		</item>
-		<!-- TODO gleisfreimelder eisenbahnlinien rollwagenverladung container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
+		<!-- TODO eisenbahnlinien rollwagenverladung container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
 		<!-- TODO ergänzen -->
 		<group name="Historische Daten" icon="historic.png">
 			<item name="Stillgelegtes Gleis" icon="disused.png" type="way">
