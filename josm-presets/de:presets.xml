@@ -16,7 +16,7 @@ erklärungen durch labels
 hinweise erfassung in labels
 
 wikipedia tags
-voltage und frequency auswahlfeld
+voltage auswahlfeld
 railway:ref:bahngesellschaft
 bahnsteig überdacht
 
@@ -136,9 +136,11 @@ betriebseinrichtungen gruppieren
 					de.text="Spannung (Standard: 15000)"
 					default=""
 					delete_if_empty="true" />
-				<text key="frequency"
-					text="Frequency (Standard: 16.7)"
-					de.text="Frequenz (Standard: 16.7)"
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16,67,50,60,25"
+					display_values="16,7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -262,9 +264,11 @@ betriebseinrichtungen gruppieren
 					de.text="Spannung (Standard: 15000)"
 					default=""
 					delete_if_empty="true" />
-				<text key="frequency"
-					text="Frequency (Standard: 16.7)"
-					de.text="Frequenz (Standard: 16.7)"
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16,67,50,60,25"
+					display_values="16,7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -383,9 +387,11 @@ betriebseinrichtungen gruppieren
 					de.text="Spannung (Standard: 15000)"
 					default=""
 					delete_if_empty="true" />
-				<text key="frequency"
-					text="Frequency (Standard: 16.7)"
-					de.text="Frequenz (Standard: 16.7)"
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16,67,50,60,25"
+					display_values="16,7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -527,9 +533,11 @@ betriebseinrichtungen gruppieren
 					de.text="Spannung (Standard: 15000)"
 					default=""
 					delete_if_empty="true" />
-				<text key="frequency"
-					text="Frequency (Standard: 16.7)"
-					de.text="Frequenz (Standard: 16.7)"
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16,67,50,60,25"
+					display_values="16,7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -675,9 +683,11 @@ betriebseinrichtungen gruppieren
 					de.text="Spannung (Standard: 15000)"
 					default=""
 					delete_if_empty="true" />
-				<text key="frequency"
-					text="Frequency (Standard: 16.7)"
-					de.text="Frequenz (Standard: 16.7)"
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16,67,50,60,25"
+					display_values="16,7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -812,9 +822,11 @@ betriebseinrichtungen gruppieren
 					de.text="Spannung (Standard: 15000)"
 					default=""
 					delete_if_empty="true" />
-				<text key="frequency"
-					text="Frequency (Standard: 16.7)"
-					de.text="Frequenz (Standard: 16.7)"
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="0,16.7,16,67,50,60,25"
+					display_values="Gleichspannung,16,7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
