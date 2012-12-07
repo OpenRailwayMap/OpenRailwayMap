@@ -1209,8 +1209,6 @@ betriebseinrichtungen gruppieren
 					value="yes" />
 				<key key="railway:signal:main_repeated:form"
 					value="light" />
-				<key key="railway:signal:main_repeated:states"
-					value="hp0;hp1" />
 			</item>
 			<item name="Sh 1-Licht" icon="de:sh1.png" type="node">
 				<label text="Sh 1-Licht an anderen Signalen wie Ks-Signalen oder Hp-Ausfahrsignalen." />
