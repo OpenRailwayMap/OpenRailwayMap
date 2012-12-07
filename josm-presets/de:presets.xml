@@ -22,7 +22,6 @@ bahnsteig überdacht
 
 erfassung von bahnsteiggleiskanten
 frühhaltanzeiger zs13
-gleissperre gsp2 mit signalposition in_track
 datumangabe bei start und end date
 hinweis sv signale hamburger system
 
@@ -826,6 +825,34 @@ betriebseinrichtungen gruppieren
 					display_values="Links,Rechts"
 					default=""
 					delete_if_empty="true" />
+			</item>
+			<item name="Gleissperre" icon="de:derailer.png" type="node">
+				<label text="Gleissperre" />
+				<space />
+				<key key="railway"
+					value="derailer" />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:distant:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:minor"
+					value="sh" />
+				<key key="railway:signal:minor:states"
+					value="sh0;gsp2" />
+				<key key="railway:signal:minor:form"
+					value="semaphore" />
+				<key key="railway:signal:minor:height"
+					value="dwarf" />
 			</item>
 		</group>
 		<group name="Signale" icon="signals.png">
@@ -2824,7 +2851,7 @@ betriebseinrichtungen gruppieren
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<!-- TODO gleisfreimelder eisenbahnlinien gleissperre rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
+		<!-- TODO gleisfreimelder eisenbahnlinien rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
 		<!-- TODO <group name="Historische Daten" icon="historic.png">
 		</group>-->
 	</group>
