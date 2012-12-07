@@ -2327,7 +2327,26 @@ betriebseinrichtungen gruppieren
 					de.text="UIC-Bahnhofsname"
 					default=""
 					delete_if_empty="true" />
-				<!-- TODO rail train light_rail subway tram -->
+				<check key="train"
+					text="Railway traffic?"
+					de.text="Eisenbahnverkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="light_rail"
+					text="Light rail traffic?"
+					de.text="Stadtbahn- oder S-Bahn-Verkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="subway"
+					text="Subway traffic?"
+					de.text="U-Bahn-Verkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="tram"
+					text="Tram traffic?"
+					de.text="Straßenbahnverkehr?"
+					default="off"
+					delete_if_empty="true" />
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG' or 'DB Station&amp;Service AG')"
 					de.text="Betreiber (z.B. 'DB Netz AG' oder 'DB Station&amp;Service AG')"
@@ -2391,13 +2410,28 @@ betriebseinrichtungen gruppieren
 					de.text="Betreiber (z.B. 'DB Netz AG' oder 'DB Station&amp;Service AG')"
 					default="DB Netz AG"
 					delete_if_empty="true" />
+				<check key="train"
+					text="Railway traffic?"
+					de.text="Eisenbahnverkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="light_rail"
+					text="Light rail traffic?"
+					de.text="Stadtbahn- oder S-Bahn-Verkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="subway"
+					text="Subway traffic?"
+					de.text="U-Bahn-Verkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="tram"
+					text="Tram traffic?"
+					de.text="Straßenbahnverkehr?"
+					default="off"
+					delete_if_empty="true" />
 					<!-- TODO
 					public_transport	 stop_area	 Nur notwendig bei Betriebsstellen, die für den öffentlichen Nahverkehr genutzt werden.
-					rail	 yes/no
-					train	 yes/no
-					light_rail	 yes/no
-					subway	 yes/no
-					tram	 yes/no
 					-->
 				<roles>
 					<role key=""
