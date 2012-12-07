@@ -2539,6 +2539,13 @@ betriebseinrichtungen gruppieren
 					display_values="ja,nein"
 					default=""
 					delete_if_empty="true" />
+				<combo key="public_transport"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="stop_area, "
+					display_values="ja,nein"
+					default=""
+					delete_if_empty="true" />
 				<text key="name"
 					text="Name"
 					de.text="Name"
@@ -2584,9 +2591,6 @@ betriebseinrichtungen gruppieren
 					de.text="Straßenbahnverkehr?"
 					default="off"
 					delete_if_empty="true" />
-					<!-- TODO
-					public_transport	 stop_area	 Nur notwendig bei Betriebsstellen, die für den öffentlichen Nahverkehr genutzt werden.
-					-->
 				<roles>
 					<role key=""
 						text="Railway facility node/area"
@@ -2758,6 +2762,54 @@ betriebseinrichtungen gruppieren
 				default=""
 				delete_if_empty="true" />
 		</item>
+		<item name="U-Bahn-Zugang" icon="landuse.png" type="node">
+			<label text="U-Bahn-Zugang" />
+			<key key="railway"
+				value="subway_entrance" />
+			<text key="name"
+				text="Name"
+				de.text="Name"
+				default=""
+				delete_if_empty="true" />
+			<combo key="wheelchair"
+				text="Wheelchair"
+				de.text="Rollstuhlgerecht"
+				values="yes,no,limited"
+				display_values="Ja,Nein,Eingeschränkt"
+				default=""
+				delete_if_empty="true" />
+			<check key="bicycle"
+				text="Accessbile with bicycles"
+				de.text="Passierbar mit Fahrrädern"
+				default="off"
+				delete_if_empty="true" />
+		</item>
+		<item name="Bahnhofsgebäude" icon="train-station.png" type="closedway">
+			<label text="Bahnhofsgebäude" />
+			<space />
+			<key key="building"
+				value="train_station" />
+			<text key="start_date"
+				text="Year of opening"
+				de.text="Jahr der Eröffnung"
+				default=""
+				delete_if_empty="true" />
+			<text key="image"
+				text="Image URL"
+				de.text="URL eines Bildes"
+				default=""
+				delete_if_empty="true" />
+			<text key="ele"
+				text="Height about sea level (m)"
+				de.text="Höhe über Meeresspiegel (m)"
+				default=""
+				delete_if_empty="true" />
+		</item>
+		<item name="Bahngelände" icon="landuse.png" type="closedway">
+			<label text="Bahngelände" />
+			<key key="landuse"
+				value="railway" />
+		</item>
 		<item name="Stromsystemwechsel" icon="systemswitch.png" type="node">
 			<label text="Stromsystemwechsel" />
 			<key key="railway"
@@ -2790,32 +2842,6 @@ betriebseinrichtungen gruppieren
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Tor" icon="gate.png" type="node">
-			<key key="barrier"
-				value="gate" />
-		</item>
-		<item name="U-Bahn-Zugang" icon="landuse.png" type="node">
-			<label text="U-Bahn-Zugang" />
-			<key key="railway"
-				value="subway_entrance" />
-			<text key="name"
-				text="Name"
-				de.text="Name"
-				default=""
-				delete_if_empty="true" />
-			<combo key="wheelchair"
-				text="Wheelchair"
-				de.text="Rollstuhlgerecht"
-				values="yes,no,limited"
-				display_values="Ja,Nein,Eingeschränkt"
-				default=""
-				delete_if_empty="true" />
-			<check key="bicycle"
-				text="Accessbile with bicycles"
-				de.text="Passierbar mit Fahrrädern"
-				default="off"
-				delete_if_empty="true" />
-		</item>
 		<group name="Versorgung" icon="supply.png">
 			<item name="Tankstelle" icon="fuel.png" type="node,closedway">
 				<label text="Loktankstelle" />
@@ -2846,6 +2872,28 @@ betriebseinrichtungen gruppieren
 				<label text="Bekohlungsanlage" />
 				<key key="railway"
 					value="coaling_facility" />
+			</item>
+			<item name="Waschanlage" icon="wash.png" type="node,closedway">
+				<label text="Waschanlage" />
+				<key key="railway"
+					value="wash" />
+				<check key="building"
+					text="Building"
+					de.text="Gebäude"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Lokgrube" icon="pit.png" type="node">
+				<label text="Lokgrube" />
+				<key key="railway"
+					value="pit" />
+			</item>
+			<item name="Lokschuppen" icon="engine-shed.png" type="closedway">
+				<label text="Lokschuppen" />
+				<key key="railway"
+					value="engine_shed" />
+				<key key="building"
+					value="yes" />
 			</item>
 		</group>
 		<group name="Güterverladung" icon="supply.png">
@@ -2897,25 +2945,15 @@ betriebseinrichtungen gruppieren
 					delete_if_empty="true" />
 			</item>
 		</group>
-		<item name="Bahngelände" icon="landuse.png" type="closedway">
-			<label text="Bahngelände" />
-			<key key="landuse"
-				value="railway" />
-		</item>
-		<item name="Waschanlage" icon="wash.png" type="node,closedway">
-			<label text="Waschanlage" />
-			<key key="railway"
-				value="wash" />
-			<check key="building"
-				text="Building"
-				de.text="Gebäude"
-				default="off"
-				delete_if_empty="true" />
-		</item>
 		<item name="Drehscheibe" icon="turntable.png" type="node,closedway">
 			<label text="Drehscheibe" />
 			<key key="railway"
 				value="turntable" />
+		</item>
+		<item name="Schiebebühne" icon="traverser.png" type="node,closedway">
+			<label text="Schiebebühne" />
+			<key key="railway"
+				value="traverser" />
 		</item>
 		<item name="Ablaufberg" icon="hump-yard.png" type="node">
 			<label text="Ablaufberg" />
@@ -2926,23 +2964,6 @@ betriebseinrichtungen gruppieren
 			<label text="Gleisbremse" />
 			<key key="railway"
 				value="rail_brake" />
-		</item>
-		<item name="Schiebebühne" icon="traverser.png" type="node,closedway">
-			<label text="Schiebebühne" />
-			<key key="railway"
-				value="traverser" />
-		</item>
-		<item name="Lokgrube" icon="pit.png" type="node">
-			<label text="Lokgrube" />
-			<key key="railway"
-				value="pit" />
-		</item>
-		<item name="Lokschuppen" icon="engine-shed.png" type="closedway">
-			<label text="Lokschuppen" />
-			<key key="railway"
-				value="engine_shed" />
-			<key key="building"
-				value="yes" />
 		</item>
 		<item name="Eisenbahnmuseum" icon="museum.png" type="node,closedway">
 			<label text="Eisenbahnmuseum" />
@@ -2957,26 +2978,9 @@ betriebseinrichtungen gruppieren
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Bahnhofsgebäude" icon="train-station.png" type="closedway">
-			<label text="Bahnhofsgebäude" />
-			<space />
-			<key key="building"
-				value="train_station" />
-			<text key="start_date"
-				text="Year of opening"
-				de.text="Jahr der Eröffnung"
-				default=""
-				delete_if_empty="true" />
-			<text key="image"
-				text="Image URL"
-				de.text="URL eines Bildes"
-				default=""
-				delete_if_empty="true" />
-			<text key="ele"
-				text="Height about sea level (m)"
-				de.text="Höhe über Meeresspiegel (m)"
-				default=""
-				delete_if_empty="true" />
+		<item name="Tor" icon="gate.png" type="node">
+			<key key="barrier"
+				value="gate" />
 		</item>
 		<!-- TODO gleisfreimelder eisenbahnlinien rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
 		<!-- TODO <group name="Historische Daten" icon="historic.png">
