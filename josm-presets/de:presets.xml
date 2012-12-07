@@ -2667,6 +2667,11 @@ betriebseinrichtungen gruppieren
 			<key key="railway"
 				value="rail_brake" />
 		</item>
+		<item name="Umspuranlage" icon="gaugeconversion.png" type="node">
+			<label text="Umspuranlage" />
+			<key key="railway"
+				value="gauge_conversion" />
+		</item>
 		<item name="Eisenbahnmuseum" icon="museum.png" type="node,closedway">
 			<label text="Eisenbahnmuseum" />
 			<space />
@@ -2684,7 +2689,7 @@ betriebseinrichtungen gruppieren
 			<key key="barrier"
 				value="gate" />
 		</item>
-		<!-- TODO gleisfreimelder eisenbahnlinien rollwagenverladung umspuranlage container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
+		<!-- TODO gleisfreimelder eisenbahnlinien rollwagenverladung container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
 		<!-- TODO ergänzen -->
 		<group name="Historische Daten" icon="historic.png">
 			<item name="Stillgelegtes Gleis" icon="disused.png" type="way">
