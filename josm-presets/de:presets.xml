@@ -25,17 +25,13 @@ hinweis sv signale hamburger system
 
 streckenrelationen, z.b. angertalbahn
 
-optional einbauen
-
 bridge und tunnel relation
-
-betriebseinrichtungen gruppieren
 -->
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
 	<group name="OpenRailwayMap DE" icon="signals.png">
 		<group name="Gleise" icon="rail.png">
-			<!-- TODO preserved narrow_gauge light_rail subway miniature proposed construction yard spur anschlussgleis abstellgleis abandoned -->
+			<!-- TODO preserved narrow_gauge light_rail miniature proposed construction yard spur anschlussgleis abstellgleis abandoned -->
 			<item name="Streckengleis / Hauptgleis" icon="rail.png" type="way">
 				<label text="Streckengleise (ohne Überleitgleise) und durchgehende Hauptgleise in einem Bahnhof. Jedes Gleis wird einzeln erfasst." />
 				<space />
@@ -445,7 +441,7 @@ betriebseinrichtungen gruppieren
 			</item>
 			<separator />
 			<item name="Straßenbahngleis" icon="tram.png" type="way">
-				<label text="Ebenerdig oder teilweise unterirdig verlegte Straßenbahngleise oder straßenbahnähnlich verlegte Stadtbahnstrecken. Jedes Gleis wird einzeln erfasst." />
+				<label text="Ebenerdig oder teilweise unterirdisch verlegte Straßenbahngleise oder straßenbahnähnlich verlegte Stadtbahnstrecken. Jedes Gleis wird einzeln erfasst." />
 				<space />
 				<key key="railway"
 					value="tram" />
@@ -570,6 +566,116 @@ betriebseinrichtungen gruppieren
 					text="Cutting"
 					de.text="Einschnitt"
 					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="U-Bahngleis" icon="subway.png" type="way">
+				<label text="Unterirdisch verlegte Stadt- und Schnellbahnen, teilweise auch oberirdischer Verlauf möglich. Jedes Gleis wird einzeln erfasst. Zusätzlich noch im Menü 'Tunnel' auswählen!" />
+				<space />
+				<key key="railway"
+					value="subway" />
+				<text key="ref"
+					text="Line ref"
+					de.text="Streckennummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="service"
+					text="Track service"
+					de.text="Gleisfunktion"
+					values="siding,crossover, "
+					display_values="Ausweich-/Abstellgleis,Überleitgleis,Haupt-/Streckengleis"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="LZB"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:bidirectional"
+					text="Direction of use (depends on direction of OSM way"
+					de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)"
+					values="regular,signals,possible"
+					display_values="Gleiswechselbetrieb,Signalisierter Falschfahrbetrieb,Falschfahrt möglich"
+					default=""
+					delete_if_empty="true" />
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="0,16.7,16,67,50,60,25"
+					display_values="Gleichspannung,16,7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
+					default="1435"
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z.B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Jahr der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'Rheinbahn')"
+					de.text="Betreiber (z.B. 'Rheinbahn')"
+					default=""
 					delete_if_empty="true" />
 			</item>
 			<separator />
