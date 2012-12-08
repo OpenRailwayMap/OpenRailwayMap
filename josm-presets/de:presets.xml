@@ -17,7 +17,6 @@ hinweise erfassung in labels
 
 wikipedia tags
 railway:ref:bahngesellschaft
-bahnsteig überdacht
 
 erfassung von bahnsteiggleiskanten
 frühhaltanzeiger zs13
@@ -2751,6 +2750,11 @@ betriebseinrichtungen gruppieren
 			<check key="lit"
 				text="Lit"
 				de.text="Beleuchtung"
+				default="off"
+				delete_if_empty="true" />
+			<check key="covered"
+				text="Covered"
+				de.text="Überdacht?"
 				default="off"
 				delete_if_empty="true" />
 			<combo key="surface"
