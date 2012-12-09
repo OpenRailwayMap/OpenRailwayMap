@@ -1072,8 +1072,6 @@ bridge und tunnel relation
 				<space />
 				<key key="railway"
 					value="derailer" />
-				<key key="railway"
-					value="signal" />
 				<check key="railway:signal:distant:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
