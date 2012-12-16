@@ -134,7 +134,7 @@ bridge und tunnel relation
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,0,16,67,50,60,25"
-					display_values="16,7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -264,7 +264,7 @@ bridge und tunnel relation
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,0,16,67,50,60,25"
-					display_values="16,7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -389,7 +389,7 @@ bridge und tunnel relation
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,0,16,67,50,60,25"
-					display_values="16,7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -525,7 +525,7 @@ bridge und tunnel relation
 					text="Frequency"
 					de.text="Frequenz"
 					values="0,16.7,16,67,50,60,25"
-					display_values="Gleichspannung,16,7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -646,7 +646,7 @@ bridge und tunnel relation
 					text="Frequency"
 					de.text="Frequenz"
 					values="0,16.7,16,67,50,60,25"
-					display_values="Gleichspannung,16,7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -776,7 +776,7 @@ bridge und tunnel relation
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,0,16,67,50,60,25"
-					display_values="16,7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -928,7 +928,7 @@ bridge und tunnel relation
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,0,16,67,50,60,25"
-					display_values="16,7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
