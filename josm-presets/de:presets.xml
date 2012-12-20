@@ -1998,11 +1998,6 @@ bridge und tunnel relation
 				<space />
 				<key key="railway"
 					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalnummer"
-					default=""
-					delete_if_empty="true" />
 				<check key="railway:signal:speed_limit:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
@@ -2055,11 +2050,6 @@ bridge und tunnel relation
 				<space />
 				<key key="railway"
 					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalnummer"
-					default=""
-					delete_if_empty="true" />
 				<check key="railway:signal:speed_limit_distant:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
