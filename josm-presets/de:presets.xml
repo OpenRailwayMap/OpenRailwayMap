@@ -3054,6 +3054,11 @@ bridge und tunnel relation
 					de.text="Rampenhöhe (m) - bei Ladestraße 0 eintragen"
 					default=""
 					delete_if_empty="true" />
+				<check key="area"
+					text="Area"
+					de.text="Fläche"
+					default="off"
+					delete_if_empty="true" />
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z.B. 'DB Netz AG')"
