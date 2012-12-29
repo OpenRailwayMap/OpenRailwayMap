@@ -2988,6 +2988,11 @@ bridge und tunnel relation
 				<label text="Bekohlungsanlage" />
 				<key key="railway"
 					value="coaling_facility" />
+				<check key="area"
+					text="Area"
+					de.text="Fläche"
+					default="off"
+					delete_if_empty="true" />
 			</item>
 			<item name="Waschanlage" icon="wash.png" type="node,closedway">
 				<label text="Waschanlage" />
