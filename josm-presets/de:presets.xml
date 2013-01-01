@@ -15,7 +15,6 @@ englische übersetzungen labels
 erklärungen durch labels
 hinweise erfassung in labels
 
-wikipedia tags
 railway:ref:bahngesellschaft
 
 erfassung von bahnsteiggleiskanten
@@ -999,6 +998,11 @@ bridge und tunnel relation
 					de.text="URL eines Bildes"
 					default=""
 					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
 			</item>
 			<item name="Tunnel" icon="tunnel.png" type="way">
 				<key key="tunnel"
@@ -1013,6 +1017,11 @@ bridge und tunnel relation
 				<text key="image"
 					text="Image URL"
 					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
 					default=""
 					delete_if_empty="true" />
 			</item>
@@ -2413,6 +2422,11 @@ bridge und tunnel relation
 					de.text="URL eines Bildes"
 					default=""
 					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
 				<text key="ele"
 					text="Height about sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
@@ -2480,6 +2494,11 @@ bridge und tunnel relation
 				<text key="image"
 					text="Image URL"
 					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
@@ -2574,6 +2593,11 @@ bridge und tunnel relation
 					de.text="URL eines Bildes"
 					default=""
 					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
 				<text key="ele"
 					text="Height about sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
@@ -2609,6 +2633,11 @@ bridge und tunnel relation
 					de.text="URL eines Bildes"
 					default=""
 					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
 				<text key="ele"
 					text="Height about sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
@@ -2638,6 +2667,11 @@ bridge und tunnel relation
 				<text key="image"
 					text="Image URL"
 					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
@@ -2671,6 +2705,11 @@ bridge und tunnel relation
 					de.text="URL eines Bildes"
 					default=""
 					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
 				<text key="ele"
 					text="Height about sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
@@ -2700,6 +2739,11 @@ bridge und tunnel relation
 				<text key="image"
 					text="Image URL"
 					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
@@ -2918,7 +2962,11 @@ bridge und tunnel relation
 				de.text="Betreiber (z.B. 'DB Netz AG')"
 				default="DB Netz AG"
 				delete_if_empty="true" />
-			<!-- TODO: wikipedia -->
+			<text key="wikipedia"
+				text="Wikipedia article in the format (Language):(Article)"
+				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+				default=""
+				delete_if_empty="true" />
 			<roles>
 				<role key=""
 					text="Tracks"
@@ -2954,7 +3002,11 @@ bridge und tunnel relation
 				de.text="Streckenende"
 				default=""
 				delete_if_empty="true" />
-			<!-- TODO: wikipedia -->
+			<text key="wikipedia"
+				text="Wikipedia article in the format (Language):(Article)"
+				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+				default=""
+				delete_if_empty="true" />
 			<roles>
 				<role key=""
 					text="Tracks"
@@ -3311,6 +3363,11 @@ bridge und tunnel relation
 					de.text="Name"
 					default=""
 					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
 			</item>
 		</group>
 		<item name="Drehscheibe" icon="turntable.png" type="node,closedway">
@@ -3348,6 +3405,11 @@ bridge und tunnel relation
 			<text key="name"
 				text="Name"
 				de.text="Name"
+				default=""
+				delete_if_empty="true" />
+			<text key="wikipedia"
+				text="Wikipedia article in the format (Language):(Article)"
+				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
 				default=""
 				delete_if_empty="true" />
 		</item>
