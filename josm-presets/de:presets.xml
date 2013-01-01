@@ -2488,6 +2488,63 @@ bridge und tunnel relation
 					default=""
 					delete_if_empty="true" />
 			</item>
+			<item name="Straßenbahnhaltestelle" icon="tramstop.png" type="node">
+				<label text="Straßenbahnhaltestelle" />
+				<space />
+				<key key="railway"
+					value="tram_stop" />
+				<combo key="public_transport"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="stop_position, "
+					display_values="ja,nein"
+					default=""
+					delete_if_empty="true" />
+				<text key="name" text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DS100)"
+					de.text="Abkürzung (DS100)"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<check key="on_demand"
+					text="On demand"
+					de.text="Bedarfshalt"
+					default="off"
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'Rheinbahn')"
+					de.text="Betreiber (z.B. 'Rheinbahn')"
+					default=""
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Jahr der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height about sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
 			<item name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node">
 				<label text="Güterbahnhof/Rangierbahnhof" />
 				<space />
@@ -2589,7 +2646,7 @@ bridge und tunnel relation
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<!-- TODO: tram_stop überleitstelle sonstige betriebsstellen -->
+			<!-- TODO: überleitstelle sonstige betriebsstellen -->
 			<separator />
 			<item name="Halteposition" icon="stop.png" type="node">
 				<label text="Halteposition" />
