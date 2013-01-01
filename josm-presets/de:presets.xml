@@ -3101,6 +3101,21 @@ bridge und tunnel relation
 					default="DB Netz AG"
 					delete_if_empty="true" />
 			</item>
+			<item name="Container-Umschlagbahnhof" icon="containerterminal.png" type="node,closedway">
+				<label text="Container-Umschlagbahnhof" />
+				<space />
+				<key key="man_made"
+					value="container_terminal" />
+				<key key="railway"
+					value="container_terminal" />
+				<key key="landuse"
+					value="industrial" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+			</item>
 		</group>
 		<item name="Drehscheibe" icon="turntable.png" type="node,closedway">
 			<label text="Drehscheibe" />
@@ -3144,6 +3159,6 @@ bridge und tunnel relation
 			<key key="barrier"
 				value="gate" />
 		</item>
-		<!-- TODO eisenbahnlinien rollwagenverladung container-umschlagbahnhof autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
+		<!-- TODO eisenbahnlinien rollwagenverladung autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
 	</group>
 </presets>
