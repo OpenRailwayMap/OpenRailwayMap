@@ -2098,6 +2098,37 @@ bridge und tunnel relation
 					delete_if_empty="true" />
 			</item>
 			<separator />
+			<item name="Rangierhalttafel" icon="de:ra10.png" type="node">
+				<label text="Rangierhalttafel" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:whistle:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:shunting"
+					value="ra10" />
+				<key key="railway:signal:shunting:form"
+					value="sign" />
+			</item>
+			<separator />
 			<item name="Bü-Überwachungssignal" icon="de:crossing-signal.png" type="node">
 				<label text="Bü-Überwachungssignal" />
 				<space />
@@ -2262,7 +2293,7 @@ bridge und tunnel relation
 				<key key="railway:signal:fouling_point"
 					value="ra12" />
 			</item>
-			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, ab rangierhaltsignalen -->
+			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, rangierhaltsignal ra11, ab Bahnübergangssignal -->
 		</group>
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="Stellwerk" />
