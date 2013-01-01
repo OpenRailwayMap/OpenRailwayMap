@@ -2886,6 +2886,84 @@ bridge und tunnel relation
 				</roles>
 			</item>
 		</group>
+		<item name="VzG-Strecke" icon="tracks.png" type="relation">
+			<label text="VzG-Strecke" />
+			<space />
+			<key key="type"
+				value="route" />
+			<key key="route"
+				value="tracks" />
+			<text key="name"
+				text="Name of track (e.g. '1234 Eifelquerbahn Gerolstein - Kaisersesch')"
+				de.text="Streckenname (z.B. '1234 Eifelquerbahn Gerolstein - Kaisersesch')"
+				default=""
+				delete_if_empty="true" />
+			<text key="ref"
+				text="Line ref (VzG number, e.g. '2379')"
+				de.text="Streckennummer (VzG-Nummer, z.B. '2379')"
+				default=""
+				delete_if_empty="true" />
+			<text key="from"
+				text="Initial station"
+				de.text="Streckenanfang"
+				default=""
+				delete_if_empty="true" />
+			<text key="to"
+				text="Terminal station"
+				de.text="Streckenende"
+				default=""
+				delete_if_empty="true" />
+			<text key="operator"
+				text="Operator (e.g. 'DB Netz AG')"
+				de.text="Betreiber (z.B. 'DB Netz AG')"
+				default="DB Netz AG"
+				delete_if_empty="true" />
+			<!-- TODO: wikipedia -->
+			<roles>
+				<role key=""
+					text="Tracks"
+					de.text="Streckengleise"
+					requisite="required"
+					type="way" />
+			</roles>
+		</item>
+		<item name="Kursbuchstrecke" icon="route.png" type="relation">
+			<label text="Kursbuchstrecke" />
+			<space />
+			<key key="type"
+				value="route" />
+			<key key="route"
+				value="railway" />
+			<text key="name"
+				text="Name of route (e.g. 'KBS 123 Voreifelbahn')"
+				de.text="Name der Kursbuchstrecke (z.B. 'KBS 123 Voreifelbahn')"
+				default=""
+				delete_if_empty="true" />
+			<text key="ref"
+				text="Line ref (VzG number, e.g. '2379')"
+				de.text="Streckennummer (VzG-Nummer, z.B. '2379')"
+				default=""
+				delete_if_empty="true" />
+			<text key="from"
+				text="Initial station"
+				de.text="Streckenanfang"
+				default=""
+				delete_if_empty="true" />
+			<text key="to"
+				text="Terminal station"
+				de.text="Streckenende"
+				default=""
+				delete_if_empty="true" />
+			<!-- TODO: wikipedia -->
+			<roles>
+				<role key=""
+					text="Tracks"
+					de.text="Streckengleise"
+					requisite="required"
+					type="way" />
+			</roles>
+		</item>
+		<!-- TODO: Verkehrslinien -->
 		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
 			<space />
@@ -3277,6 +3355,6 @@ bridge und tunnel relation
 			<key key="barrier"
 				value="gate" />
 		</item>
-		<!-- TODO eisenbahnlinien rollwagenverladung autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
+		<!-- TODO rollwagenverladung autozug-verladung rollende landstraße eisenbahnfähre eisenbahnfährverladestelle firma mit gleisanschluss -->
 	</group>
 </presets>
