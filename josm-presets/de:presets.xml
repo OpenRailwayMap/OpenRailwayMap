@@ -2646,7 +2646,38 @@ bridge und tunnel relation
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<!-- TODO: überleitstelle sonstige betriebsstellen -->
+			<item name="Überleitstelle" icon="crossover.png" type="node">
+				<label text="Überleitstelle" />
+				<space />
+				<key key="railway"
+					value="crossover" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DS100)"
+					de.text="Abkürzung (DS100)"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Jahr der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height about sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<!-- TODO: sonstige betriebsstellen -->
 			<separator />
 			<item name="Halteposition" icon="stop.png" type="node">
 				<label text="Halteposition" />
