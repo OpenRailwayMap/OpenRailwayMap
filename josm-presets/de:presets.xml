@@ -2580,41 +2580,6 @@ bridge und tunnel relation
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Betriebsbahnhof" icon="service-station.png" type="node">
-				<label text="Betriebsbahnhof" />
-				<space />
-				<key key="railway"
-					value="service_station" />
-				<text key="name" text="Name"
-					de.text="Name"
-					default=""
-					delete_if_empty="true" />
-				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (DS100)"
-					default=""
-					delete_if_empty="true" />
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z.B. 'DB Netz AG')"
-					default="DB Netz AG"
-					delete_if_empty="true" />
-				<text key="start_date"
-					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
-					default=""
-					delete_if_empty="true" />
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					default=""
-					delete_if_empty="true" />
-				<text key="ele"
-					text="Height about sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					default=""
-					delete_if_empty="true" />
-			</item>
 			<item name="Abzweig" icon="junction.png" type="node">
 				<label text="Abzweig, Ausweichanschlusstelle oder Ausweichanschlusstelle" />
 				<space />
