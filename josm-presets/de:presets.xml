@@ -2677,7 +2677,37 @@ bridge und tunnel relation
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<!-- TODO: sonstige betriebsstellen -->
+			<item name="Bahnhofsteil, Blockstelle, Deckungsstelle" icon="site.png" type="node">
+				<label text="Bahnhofsteil, Blockstelle, Deckungsstelle" />
+				<space />
+				<key key="railway"
+					value="site" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DS100)"
+					de.text="Abkürzung (DS100)"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Jahr der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height about sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
 			<separator />
 			<item name="Halteposition" icon="stop.png" type="node">
 				<label text="Halteposition" />
