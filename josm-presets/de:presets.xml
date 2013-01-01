@@ -2293,7 +2293,7 @@ bridge und tunnel relation
 				<key key="railway:signal:fouling_point"
 					value="ra12" />
 			</item>
-			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, rangierhaltsignal ra11, ab Bahnübergangssignal -->
+			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, rangierhaltsignal ra11, Bahnübergang-Ankündigungsssignal, Bahnübergangstafel, Bahnübergang-Ankündigungstafel, Fahrleitungssignal, Abdrücksignal, Richtungsanzeiger, Richtungsanzeiger-Ankündigung, Gegengleissignal, Haltetafel, Haltepunkttafel, Zugpersonal-Signale, Überwachungssignal Rückfallweiche, Ankündigung Überwachungssignal Rückfallweiche, Schneepflugtafel, Stumpfgleis- und Frühhaltanzeiger, Bremsprobesignal -->
 		</group>
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="Stellwerk" />
