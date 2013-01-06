@@ -1081,7 +1081,7 @@ bridge und tunnel relation
 				<space />
 				<key key="railway"
 					value="derailer" />
-				<check key="railway:signal:distant:deactivated"
+				<check key="railway:signal:minor:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
 					default="off"
@@ -1657,7 +1657,7 @@ bridge und tunnel relation
 					de.text="Signalnummer"
 					default=""
 					delete_if_empty="true" />
-				<check key="railway:signal:advance:deactivated"
+				<check key="railway:signal:distant:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
 					default="off"
@@ -1729,7 +1729,7 @@ bridge und tunnel relation
 					de.text="Signalnummer"
 					default=""
 					delete_if_empty="true" />
-				<check key="railway:signal:advance:deactivated"
+				<check key="railway:signal:distant:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
 					default="off"
@@ -1789,7 +1789,7 @@ bridge und tunnel relation
 				<space />
 				<key key="railway"
 					value="signal" />
-				<check key="railway:signal:advance:deactivated"
+				<check key="railway:signal:distant:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
 					default="off"
@@ -2112,7 +2112,7 @@ bridge und tunnel relation
 				<space />
 				<key key="railway"
 					value="signal" />
-				<check key="railway:signal:whistle:deactivated"
+				<check key="railway:signal:shunting:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
 					default="off"
@@ -2259,10 +2259,63 @@ bridge und tunnel relation
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
 					delete_if_empty="true" />
-				<key key="railway:signal:whistle"
+				<key key="railway:signal:ring"
 					value="bü5" />
-				<key key="railway:signal:whistle:form"
+				<key key="railway:signal:ring:form"
 					value="sign" />
+			</item>
+			<separator />
+			<item name="Fahrleitungssignal" icon="de:electricity.png" type="node">
+				<label text="Fahrleitungssignal" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:electricity:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge,overhead"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:signal:electricity"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="power_off_advance,power_off,power_on,pantograph_down_advance,pantograph_down,pantograph_up,end_of_catenary"
+					display_values="el1v,el1,el2,el3,el4,el5,el6"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:electricity:type"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="power_off_advance,power_off,power_on,pantograph_down_advance,pantograph_down,pantograph_up,end_of_catenary"
+					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:electricity:form"
+					value="sign" />
+				<text key="railway:signal:electricity:voltage"
+					text="Voltage (if mentioned)"
+					de.text="Spannung (falls angezeigt)"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:signal:electricity:frequency"
+					text="Frequency (if mentioned)"
+					de.text="Frequenz (falls angezeigt)"
+					default=""
+					delete_if_empty="true" />
 			</item>
 			<separator />
 			<item name="Zugfunk-Kanalhinweis" icon="de:radio.png" type="node">
@@ -2302,7 +2355,7 @@ bridge und tunnel relation
 				<key key="railway:signal:fouling_point"
 					value="ra12" />
 			</item>
-			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, rangierhaltsignal ra11, Bahnübergang-Ankündigungsssignal, Bahnübergangstafel, Bahnübergang-Ankündigungstafel, Fahrleitungssignal, Abdrücksignal, Richtungsanzeiger, Richtungsanzeiger-Ankündigung, Gegengleissignal, Haltetafel, Haltepunkttafel, Zugpersonal-Signale, Überwachungssignal Rückfallweiche, Ankündigung Überwachungssignal Rückfallweiche, Schneepflugtafel, Stumpfgleis- und Frühhaltanzeiger, Bremsprobesignal ab Bahnübergangssignal -->
+			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, rangierhaltsignal ra11, Bahnübergang-Ankündigungsssignal, Bahnübergangstafel, Bahnübergang-Ankündigungstafel, Abdrücksignal, Richtungsanzeiger, Richtungsanzeiger-Ankündigung, Gegengleissignal, Haltetafel, Haltepunkttafel, Zugpersonal-Signale, Überwachungssignal Rückfallweiche, Ankündigung Überwachungssignal Rückfallweiche, Schneepflugtafel, Stumpfgleis- und Frühhaltanzeiger, Bremsprobesignal ab Bahnübergangssignal -->
 		</group>
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="Stellwerk" />
