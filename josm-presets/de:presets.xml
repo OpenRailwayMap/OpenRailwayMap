@@ -2041,6 +2041,46 @@ bridge und tunnel relation
 					default=""
 					delete_if_empty="true" />
 			</item>
+			<item name="Gleiswechselanzeiger / Falschfahrt-Auftragssignal" icon="de:wrong-road.png" type="node">
+				<label text="Gleiswechselanzeiger / Falschfahrt-Auftragssignal" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:wrong_road:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:signal:wrong_road"
+					text="Type"
+					de.text="Typ"
+					values="db:zs6,dr:zs7,db:zs8,dr:zs8"
+					display_values="Zs 6 ex-DB 'Gleiswechselanzeiger',Zs 7 ex-DR 'Gleiswechselanzeiger',Zs 8 ex-DB 'Falschfahrt-Auftragssignal',Zs 8 ex-DR 'Falschfahrt-Auftragssignal'"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:wrong_road:form"
+					text="Type"
+					de.text="Typ"
+					values="sign,light"
+					display_values="Tafel,Leuchtanzeige"
+					default=""
+					delete_if_empty="true" />
+			</item>
 			<separator />
 			<item name="Geschwindigkeitsanzeiger" icon="de:maxspeed.png" type="node">
 				<label text="Geschwindigkeitsanzeiger" />
@@ -2395,7 +2435,7 @@ bridge und tunnel relation
 				<key key="railway:signal:fouling_point"
 					value="ra12" />
 			</item>
-			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, rangierhaltsignal ra11, Bahnübergang-Ankündigungsssignal, Bahnübergangstafel, Bahnübergang-Ankündigungstafel, Abdrücksignal Gegengleissignal, Haltetafel, Haltepunkttafel, Zugpersonal-Signale, Überwachungssignal Rückfallweiche, Ankündigung Überwachungssignal Rückfallweiche, Schneepflugtafel, Stumpfgleis- und Frühhaltanzeiger, Bremsprobesignal ab Bahnübergangssignal -->
+			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, rangierhaltsignal ra11, Bahnübergang-Ankündigungsssignal, Bahnübergangstafel, Bahnübergang-Ankündigungstafel, Abdrücksignal, Haltetafel, Haltepunkttafel, Zugpersonal-Signale, Überwachungssignal Rückfallweiche, Ankündigung Überwachungssignal Rückfallweiche, Schneepflugtafel, Stumpfgleis- und Frühhaltanzeiger, Bremsprobesignal ab Bahnübergangssignal -->
 		</group>
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="Stellwerk" />
