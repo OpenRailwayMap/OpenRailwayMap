@@ -2066,16 +2066,15 @@ bridge und tunnel relation
 					default=""
 					delete_if_empty="true" />
 				<space />
-				<combo key="railway:signal:wrong_road"
-					text="Type"
-					de.text="Typ"
-					values="db:zs6,dr:zs7,db:zs8,dr:zs8"
-					display_values="Zs 6 ex-DB 'Gleiswechselanzeiger',Zs 7 ex-DR 'Gleiswechselanzeiger',Zs 8 ex-DB 'Falschfahrt-Auftragssignal',Zs 8 ex-DR 'Falschfahrt-Auftragssignal'"
-					default=""
-					delete_if_empty="true" />
+				<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" default="" delete_if_empty="true">
+                    <list_entry value="db:zs6" display_value="Zs 6 DB" short_description="Gleiswechselanzeiger Zs 6 (ex-DB)" />
+                    <list_entry value="dr:zs7" display_value="Zs 7 DR" short_description="Gleiswechselanzeiger Zs 7 (ex-DR)" />
+					<list_entry value="db:zs8" display_value="Zs 8 DB" short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DB)" />
+					<list_entry value="dr:zs8" display_value="Zs 8 DR" short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DR)" />
+                </combo>
 				<combo key="railway:signal:wrong_road:form"
-					text="Type"
-					de.text="Typ"
+					text="Signal form"
+					de.text="Anzeigeart"
 					values="sign,light"
 					display_values="Tafel,Leuchtanzeige"
 					default=""
