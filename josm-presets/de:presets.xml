@@ -815,7 +815,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<item name="Abgebautes Gleis" icon="abandoned.png" type="way">
-				<label text="Eine Strecke, dessen Gleis entfert wurde. Der Streckenverlauf ist weiterhin sichtbar." />
+				<label text="Ein Gleis, das entfernt wurde. Das Gleisbett ist weiterhin vorhanden und der Streckenverlauf ist weiterhin sichtbar." />
 				<space />
 				<key key="railway"
 					value="razed" />
