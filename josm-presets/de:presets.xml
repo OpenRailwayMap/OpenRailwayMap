@@ -34,14 +34,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Streckenname"
 					default=""
 					delete_if_empty="true" />
-				<space />
-				<combo key="usage"
-					text="Usage"
-					de.text="Nutzung"
-					values="main,branch,industrial,military,tourism,test"
-					display_values="Hauptstrecke,Nebenstrecke,Industriebahn,Militärbahn,Tourismusbahn,Teststrecke"
-					default=""
-					delete_if_empty="true" />
+				<space />	
+				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
+					<list_entry value="main" display_value="Hauptstrecke" short_description="Eine Hauptstrecke, meist doppelgleisig, elektrifiziert, befahren von Zügen mit höheren Geschwindigkeiten und einer hohen Zugdichte." />
+					<list_entry value="branch" display_value="Nebenstrecke" short_description="Eine Neben- oder Zweigstrecke, oft nur eingleisig oder nicht elektrifiziert, befahren von langsameren Zügen und mit einer geringeren Zugdichte." />
+					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z.B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
+				</combo>
 				<combo key="railway:traffic_mode"
 					text="Traffic mode"
 					de.text="Verkehrsart"
