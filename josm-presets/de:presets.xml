@@ -1772,8 +1772,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="- Schutzhaltsignal Sh 1" />
 				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
 				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+				<label text="- Abfahrtssignal Zp 8/Zp 9" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO zp8 zp9 -->
 			</item>
 			<item name="Ks-Hauptsignal" icon="de:ks-main.png" type="node">
 				<label text="Ks-Hauptsignal" />
@@ -1845,8 +1845,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="- Schutzhaltsignal Sh 1" />
 				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
 				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+				<label text="- Abfahrtssignal Zp 8/Zp 9" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO zp8 zp9 -->
 			</item>
 			<separator />
 			<item name="Sv-Signal" icon="de:sv.png" type="node">
@@ -1927,8 +1927,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="- Schutzhaltsignal Sh 1" />
 				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
 				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+				<label text="- Abfahrtssignal Zp 8/Zp 9" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO zp8 zp9 -->
 			</item>
 			<separator />
 			<item name="Hp-Form-Hauptsignal" icon="de:hp-semaphore.png" type="node">
@@ -2000,8 +2000,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="- Geschwindigkeitsanzeiger Zs 3" />
 				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
 				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+				<label text="- Abfahrtssignal Zp 8/Zp 9" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO zp8 pz9 -->
 			</item>
 			<item name="Hp-Licht-Hauptsignal" icon="de:hp-light.png" type="node">
 				<label text="Hp-Licht-Hauptsignal" />
@@ -2079,8 +2079,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="- Schutzhaltsignal Sh 1" />
 				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
 				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+				<label text="- Abfahrtssignal Zp 8/Zp 9" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-				<!-- TODO zp8 zp9 -->
 			</item>
 			<item name="Trapeztafel" icon="de:ne1.png" type="node">
 				<label text="Trapeztafel" />
