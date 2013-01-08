@@ -1,0 +1,53 @@
+/*
+OpenRailwayMap JOSM Style File
+German edition: german language and german tagging
+
+OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+*/
+
+meta 
+{
+	title: "OpenRailwayMap DE";
+	version: "0"; 
+	description: "German style for OpenRailwayMap tagging schema";
+	author: "rurseekatze";
+	link: "http://wiki.openstreetmap.org/wiki/OpenRailwayMap";
+	watch-modified: true;
+}
+
+canvas
+{
+    background-color: #8a8a8a;
+    default-points: true;
+    default-lines: true;
+}
+
+node|z1-20
+{
+	symbol-shape: square;
+	symbol-fill-opacity: 0;
+	symbol-size: 0;
+	text: eval("");
+	z-index: -1000;
+}
+
+way[usage=main]
+{
+	z-index: 1000;
+    color: #ff0000;
+    width: 5;
+    linecap: square;
+}
+
+way[service=siding]
+{
+	z-index: 900;
+    color: #000000;
+    width: 2;
+    linecap: square;
+	text: "railway:track_ref";
+	text-position: line;
+}
