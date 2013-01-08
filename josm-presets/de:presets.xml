@@ -2888,15 +2888,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="railway:signal:electricity"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="power_off_advance,power_off,power_on,pantograph_down_advance,pantograph_down,pantograph_up,end_of_catenary"
-					display_values="el1v,el1,el2,el3,el4,el5,el6"
+					text="Exact type"
+					de.text="Signaltyp"
+					values="el1v,el1,el2,el3,el4,el5,el6"
+					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:signal:electricity:type"
-					text="Direction"
-					de.text="Anzeigerichtung"
+					text="Meaning"
+					de.text="Bedeutung"
 					values="power_off_advance,power_off,power_on,pantograph_down_advance,pantograph_down,pantograph_up,end_of_catenary"
 					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
 					default=""
@@ -2937,6 +2937,37 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
+			<item name="Abfahrtssignal" icon="de:departure.png" type="node">
+				<label text="Abfahrtssignal" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:departure:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:departure" text="Exact type" de.text="Signaltyp" default="" delete_if_empty="true">
+					<list_entry value="dr:zp8" display_value="Zp 8" short_description="Türen schließen Zp 8 (ex-DR)" />
+					<list_entry value="zp9" display_value="Zp 9" short_description="Abfahrtssignal Zp 9" />
+				</combo>
+				<key key="railway:signal:departure:form"
+					value="light" />
+			</item>
 			<item name="Grenzzeichen" icon="de:fouling-point.png" type="node">
 				<label text="Grenzzeichen" />
 				<space />
@@ -2952,7 +2983,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:fouling_point"
 					value="ra12" />
 			</item>
-			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, rangierhaltsignal ra11, Bahnübergang-Ankündigungsssignal, Bahnübergangstafel, Bahnübergang-Ankündigungstafel, Abdrücksignal, Haltetafel, Haltepunkttafel, Zugpersonal-Signale, Überwachungssignal Rückfallweiche, Ankündigung Überwachungssignal Rückfallweiche, Schneepflugtafel, Stumpfgleis- und Frühhaltanzeiger, Bremsprobesignal ab Bahnübergangssignal -->
+			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, kreuztafeln, hl-vorsignale, haltvorscheibe, hl, sk signale, rangierhaltsignal ra11, Bahnübergang-Ankündigungsssignal, Bahnübergangstafel, Bahnübergang-Ankündigungstafel, Abdrücksignal, Haltetafel, Haltepunkttafel, Überwachungssignal Rückfallweiche, Ankündigung Überwachungssignal Rückfallweiche, Schneepflugtafel, Stumpfgleis- und Frühhaltanzeiger, Bremsprobesignal ab Bahnübergangssignal -->
 		</group>
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="Stellwerk" />
