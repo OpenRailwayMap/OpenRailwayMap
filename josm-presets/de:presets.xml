@@ -3102,7 +3102,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:fouling_point"
 					value="ra12" />
 			</item>
-			<!-- TODO: Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106, db/dr:zs8, hl-vorsignale, haltvorscheibe, hl, sk signale, Bahnübergang-Ankündigungsssignal, Bahnübergangstafel, Bahnübergang-Ankündigungstafel, Abdrücksignal, Haltepunkttafel, Überwachungssignal Rückfallweiche, Ankündigung Überwachungssignal Rückfallweiche, Schneepflugtafel, Stumpfgleis- und Frühhaltanzeiger, Bremsprobesignal -->
 		</group>
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="Stellwerk" />
@@ -3157,7 +3156,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default="off"
 				delete_if_empty="true" />
 		</item>
-		<!-- TODO stellwerksrelation -->
 		<group name="Betriebsstellen" icon="facilities.png">
 			<item name="Bahnhof" icon="station.png" type="node">
 				<label text="Bahnhof" />
@@ -3815,7 +3813,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					type="way" />
 			</roles>
 		</item>
-		<!-- TODO: Verkehrslinien -->
 		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
 			<label text="Bahnübergang" />
 			<space />
