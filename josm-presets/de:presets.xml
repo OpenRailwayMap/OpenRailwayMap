@@ -4101,6 +4101,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway"
 				value="gauge_conversion" />
 		</item>
+		<item name="Rollwagenverladung" icon="carrier-truck-pit.png" type="node">
+			<label text="Rollwagenverladung" />
+			<key key="railway"
+				value="carrier_truck_pit" />
+		</item>
 		<item name="Eisenbahnmuseum" icon="museum.png" type="node,closedway">
 			<label text="Eisenbahnmuseum" />
 			<space />
@@ -4135,6 +4140,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="barrier"
 				value="gate" />
 		</item>
-		<!-- TODO rollwagenverladung autozug-verladung rollende landstraße eisenbahnfähre -->
+		<!-- TODO autozug-verladung rollende landstraße eisenbahnfähre -->
 	</group>
 </presets>
