@@ -4050,6 +4050,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					default=""
 					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
 				<text key="operator"
 					text="Operator"
 					de.text="Betreiber"
