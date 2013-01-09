@@ -3985,7 +3985,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="yes" />
 			</item>
 		</group>
-		<group name="Güterverladung" icon="supply.png">
+		<group name="Verladeeinrichtungen" icon="loading.png">
 			<item name="Gleiswaage" icon="scale.png" type="node">
 				<label text="Gleiswaage" />
 				<key key="railway"
@@ -4038,6 +4038,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="DB Netz AG"
 					delete_if_empty="true" />
 			</item>
+			<separator />
 			<item name="Eisenbahnfährverladestelle" icon="ferry-terminal.png" type="node">
 				<label text="Eisenbahnfährverladestelle" />
 				<key key="amenity"
@@ -4055,6 +4056,43 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
+			<item name="Eisenbahnfährverlauf" icon="ferry-way.png" type="way">
+				<label text="Eisenbahnfährverlauf" />
+				<key key="route"
+					value="ferry" />
+				<key key="railway"
+					value="ferry" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator"
+					de.text="Betreiber"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Eisenbahnfährlinie" icon="ferry-line.png" type="relation">
+				<label text="Eisenbahnfährlinie" />
+				<key key="type"
+					value="route" />
+				<key key="route"
+					value="ferry" />
+				<key key="railway"
+					value="ferry" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator"
+					de.text="Betreiber"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<separator />
 			<item name="Container-Umschlagbahnhof" icon="containerterminal.png" type="node,closedway">
 				<label text="Container-Umschlagbahnhof" />
 				<space />
@@ -4072,6 +4110,83 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="wikipedia"
 					text="Wikipedia article in the format (Language):(Article)"
 					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Rollwagenverladung" icon="carrier-truck-pit.png" type="node">
+				<label text="Rollwagenverladung" />
+				<key key="railway"
+					value="carrier_truck_pit" />
+			</item>
+			<item name="Rollende Landstraße" icon="rolling-highway.png" type="node">
+				<label text="Rollende Landstraße" />
+				<space />
+				<key key="railway"
+					value="rolling_highway" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator"
+					de.text="Betreiber"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Autozug-Verladung" icon="carshuttle.png" type="node">
+				<label text="Autozug-Verladung" />
+				<space />
+				<key key="railway"
+					value="car_shuttle" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator"
+					de.text="Betreiber"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
 					default=""
 					delete_if_empty="true" />
 			</item>
@@ -4100,11 +4215,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Umspuranlage" />
 			<key key="railway"
 				value="gauge_conversion" />
-		</item>
-		<item name="Rollwagenverladung" icon="carrier-truck-pit.png" type="node">
-			<label text="Rollwagenverladung" />
-			<key key="railway"
-				value="carrier_truck_pit" />
 		</item>
 		<item name="Eisenbahnmuseum" icon="museum.png" type="node,closedway">
 			<label text="Eisenbahnmuseum" />
@@ -4140,6 +4250,5 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="barrier"
 				value="gate" />
 		</item>
-		<!-- TODO autozug-verladung rollende landstraße eisenbahnfähre -->
 	</group>
 </presets>
