@@ -51,3 +51,13 @@ way[service=siding]
 	text: "railway:track_ref";
 	text-position: line;
 }
+
+way[service=siding]
+{
+	z-index: 900;
+    color: #000000;
+    width: 2;
+    linecap: square;
+	text: "railway:track_ref";
+	text-position: line;
+}
