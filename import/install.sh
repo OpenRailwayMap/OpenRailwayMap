@@ -24,6 +24,11 @@ mv GeoLiteCity.dat GeoIPCity.dat
 
 cd /home/www/sites/194.245.35.149/site/import/bin
 
+mkdir osmosis
+cd osmosis
+wget -O - http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz | tar xz
+cd ..
+
 # set up the database
 su postgres
 createuser olm
