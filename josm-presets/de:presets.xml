@@ -3165,7 +3165,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="public_transport"
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
-					values="stop_position, "
+					values="station, "
 					display_values="ja,nein"
 					default=""
 					delete_if_empty="true" />
@@ -3239,7 +3239,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="public_transport"
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
-					values="stop_position, "
+					values="station, "
 					display_values="ja,nein"
 					default=""
 					delete_if_empty="true" />
@@ -3313,7 +3313,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="public_transport"
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
-					values="stop_position, "
+					values="station, "
 					display_values="ja,nein"
 					default=""
 					delete_if_empty="true" />
