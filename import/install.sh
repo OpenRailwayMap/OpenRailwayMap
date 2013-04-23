@@ -66,29 +66,4 @@ sed -i 's/-g -O2/-O2 -march=native -fomit-frame-pointer/' Makefile
 make
 cd ..
 
-# mapnik
-svn co http://svn.mapnik.org/tags/release-0.7.1/ mapnik_src
-cd mapnik_src
-python scons/scons.py
-sudo python scons/scons.py install
-ldconfig
-
-# mapnik tools
-svn export http://svn.openstreetmap.org/applications/rendering/mapnik
-svn export http://mapnik-utils.googlecode.com/svn/tags/nik2img/0.7.0/ mapnik-utils
-cd mapnik-utils
-sudo python setup.py install
-cd ..
-
-# coastlines
-cd mapnik
-./get-coastlines.sh
-rm *.tar.bz2 *.tgz *.zip
-cd ..
-
-# create mapnik xml stylefile
-#cd mapnik
-#./generate_xml.py --host localhost --user olm --dbname railmap --symbols ./symbols/ --world_boundaries ./world_boundaries/ --port '' --password ''
-#cp osm.xml railmap.xml
-
 # ab http://wiki.openstreetmap.org/wiki/Openptmap/Installation#Create_the_Map

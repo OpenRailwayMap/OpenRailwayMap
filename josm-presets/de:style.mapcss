@@ -37,30 +37,263 @@ node|z1-20
 	z-index: -1000;
 }
 
+way[service=siding]
+{
+	z-index: 900;
+    color: #000000;
+    width: 2;
+    linecap: square;
+	text: "railway:track_ref";
+	text-position: line;
+}
+
+way[electrified=contact_line][usage=branch]
+{
+	z-index: 900;
+    casing-color: #AA9D00;
+    color: #DACA00;
+    width: 3;
+	casing-width: 3;
+    linecap: square;
+}
+
+way[electrified=contact_line][usage=main]
+{
+	z-index: 1000;
+    casing-color: #9D5200;
+    color: #DC7503;
+    width: 3;
+	casing-width: 3;
+    linecap: square;
+}
+
+way[electrified=contact_line][usage=main][highspeed=yes]
+{
+	z-index: 2000;
+    casing-color: #B30000;
+    color: #FF0000;
+    width: 3;
+	casing-width: 3;
+    linecap: square;
+}
+
+way[electrified=contact_line][usage=industrial]
+{
+	z-index: 950;
+    casing-color: #5C381F;
+    color: #87491D;
+    width: 2;
+	casing-width: 3;
+    linecap: square;
+}
+
+way[electrified=contact_line][service=siding]
+{
+	z-index: 935;
+    casing-color: #5C381F;
+    color: black;
+    width: 2;
+	casing-width: 3;
+    linecap: square;
+}
+
+way[electrified=contact_line][service=yard]
+{
+	z-index: 935;
+    color: #585858;
+    width: 2;
+    linecap: round;
+}
+
+way[electrified=no][usage=branch]
+{
+	z-index: 950;
+    color: #DACA00;
+    width: 3;
+    linecap: round;
+}
+
+way[electrified=no][usage=main]
+{
+	z-index: 1050;
+    color: #DC7503;
+    width: 3;
+    linecap: round;
+}
+
+way[electrified=no][usage=main][highspeed=yes]
+{
+	z-index: 2050;
+    color: #ff0000;
+    width: 3;
+    linecap: round;
+}
+
+way[electrified=no][usage=industrial]
+{
+	z-index: 970;
+    color: #87491D;
+    width: 2;
+    linecap: round;
+}
+
+way[electrified=no][service=siding]
+{
+	z-index: 960;
+    color: black;
+    width: 2;
+    linecap: round;
+}
+
+way[electrified=no][service=yard]
+{
+	z-index: 960;
+    color: #585858;
+    width: 2;
+    linecap: round;
+}
+
+way[usage=branch]
+{
+	z-index: 900;
+    color: #DACA00;
+    width: 3;
+    linecap: round;
+}
+
 way[usage=main]
 {
 	z-index: 1000;
+    color: #DC7503;
+    width: 3;
+    linecap: round;
+}
+
+way[usage=main][highspeed=yes]
+{
+	z-index: 2000;
     color: #ff0000;
-    width: 5;
-    linecap: square;
+    width: 3;
+    linecap: round;
+}
+
+way[usage=industrial]
+{
+	z-index: 900;
+    color: #87491D;
+    width: 2;
+    linecap: round;
 }
 
 way[service=siding]
 {
 	z-index: 900;
-    color: #000000;
+    color: black;
     width: 2;
-    linecap: square;
-	text: "railway:track_ref";
-	text-position: line;
+    linecap: round;
 }
 
-way[service=siding]
+way[service=yard]
 {
 	z-index: 900;
-    color: #000000;
+    color: #585858;
     width: 2;
-    linecap: square;
-	text: "railway:track_ref";
-	text-position: line;
+    linecap: round;
+}
+
+way[highway]
+{
+	z-index: 10;
+    color: #B1B1B1;
+    width: 3;
+    linecap: round;
+}
+
+area[landuse=forest]
+{
+	z-index: 0;
+    fill-color: #2F8F28;
+	color: gray;
+}
+
+area[natural=scrub]
+{
+	z-index: 0;
+    fill-color: #2F8F28;
+	color: gray;
+}
+
+area[landuse=farmland]
+{
+	z-index: 0;
+    fill-color: #B29B55;
+	color: gray;
+}
+
+area[landuse=meadow]
+{
+	z-index: 0;
+    fill-color: #7AC53C;
+	color: gray;
+}
+
+area[waterway=riverbank]
+{
+	z-index: 0;
+    fill-color: blue;
+	opacity: 0.5;
+}
+
+way[waterway]
+{
+	z-index: 1;
+    color: blue;
+    width: 3;
+    linecap: round;
+}
+
+area[building]
+{
+	z-index: 30;
+    fill-color: #B26E6E;
+}
+
+node[railway=switch]
+{
+	z-index: 5000;
+	symbol-shape: circle;
+	symbol-size: 8;
+	symbol-stroke-color: black;
+	symbol-fill-color: black;
+	text: "ref";
+	text-position: auto;
+}
+
+node[railway=milestone]
+{
+	z-index: 6000;
+	text: "railway:position";
+	text-position: auto;
+	tex-color: blue;
+}
+
+node[railway=stop]
+{
+	z-index: 8000;
+	symbol-shape: circle;
+	symbol-size: 8;
+	symbol-stroke-color: blue;
+	symbol-fill-color: blue;
+}
+
+node[railway=station]
+{
+	z-index: 10000;
+	symbol-shape: circle;
+	symbol-size: 8;
+	symbol-stroke-color: blue;
+	symbol-fill-color: blue;
+	text: "name";
+	text-position: auto;
+	text-size: 20;
 }
