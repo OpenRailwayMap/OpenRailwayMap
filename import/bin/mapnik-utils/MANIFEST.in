@@ -1,4 +1,0 @@
-include *.txt
-include nik2img.py
-include setup.py
-recursive-include mapnik_utils  *.py
