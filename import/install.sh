@@ -10,7 +10,7 @@
 
 # install necessary software
 yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip libxml2 libxml2-devel bzip2 bzip2-devel proj proj-devel protobuf protobuf-devel protobuf-python protobuf-compiler python-psycopg2 protobuf-c protobuf-c-devel postgresql-devel unzip php php-pgsql autoconf automake subversion libtool cairo cairo-devel pycairo pycairo-devel python-pycha libtiff libtiff-devel libgeotiff libgeotiff-devel python-devel libjpeg libjpeg-devel libpng libpng-devel python-imaging python-imaging-devel gdal-python gcc gcc-c++ cpp python-nose binutils freetype freetype-devel python-sqlite2 sqlite sqlite-devel boost-thread boost-regex boost-python boost-iostreams boost-filesystem boost-program-options boost-serialization boost-devel libxslt libxslt-devel libicu libicu-devel libtool-ltdl libtool-ltdl-devel libsigc++20 libsigc++20-devel libpixman libpixman-devel pixman pixman-devel libstdc++ libstdc++-devel cairomm cairomm-devel glib glib-
-devel gdal gdal-devel gdal-python libcurl libcurl-devel gnutls gnutls-devel python-gnutls python-pycurl
+devel gdal gdal-devel gdal-python libcurl libcurl-devel gnutls gnutls-devel python-gnutls python-pycurl python-lxml python-psyco pycairo
 
 # GeoIP database
 # add extension=geoip.so to php.ini
@@ -22,7 +22,7 @@ wget -N -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
 gunzip GeoLiteCity.dat.gz
 mv GeoLiteCity.dat GeoIPCity.dat
 
-cd /home/www/sites/194.245.35.149/site/import/bin
+cd /home/www/sites/194.245.35.149/site/olm/import/bin
 
 mkdir osmosis
 cd osmosis
@@ -52,6 +52,42 @@ echo "GRANT SELECT ON railmap_point TO w3_user1;" | psql -d railmap
 echo "GRANT SELECT ON railmap_line TO w3_user1;" | psql -d railmap
 echo "GRANT SELECT ON railmap_polygon TO w3_user1;" | psql -d railmap
 
+# add hstore2json function for postgresql versions before 9.3
+# from https://gist.github.com/kenaniah/1315484
+echo "CREATE OR REPLACE FUNCTION public.hstore2json (
+  hs public.hstore
+)
+RETURNS text AS
+$body$
+DECLARE
+  rv text;
+  r record;
+BEGIN
+  rv:='';
+  for r in (select key, val from each(hs) as h(key, val)) loop
+    if rv<>'' then
+      rv:=rv||',';
+    end if;
+    rv:=rv || '"'  || r.key || '":';
+    
+    --Perform escaping
+    r.val := REPLACE(r.val, E'\\', E'\\\\');
+    r.val := REPLACE(r.val, '"', E'\\"');
+    r.val := REPLACE(r.val, E'\n', E'\\n');
+    r.val := REPLACE(r.val, E'\r', E'\\r');
+    
+    rv:=rv || CASE WHEN r.val IS NULL THEN 'null' ELSE '"'  || r.val || '"' END;
+  end loop;
+  return '{'||rv||'}';
+END;
+$body$
+LANGUAGE 'plpgsql'
+IMMUTABLE
+CALLED ON NULL INPUT
+SECURITY INVOKER
+COST 100;" | psql -d railmap
+echo "ALTER FUNCTION hstore2json(hs public.hstore) OWNER TO apache;"  | psql -d railmap
+
 # osmconvert, etc.
 wget -O - http://m.m.i24.cc/osmupdate.c | cc -x c - -o osmupdate
 wget -O - http://m.m.i24.cc/osmfilter.c |cc -x c - -o osmfilter
@@ -66,4 +102,9 @@ sed -i 's/-g -O2/-O2 -march=native -fomit-frame-pointer/' Makefile
 make
 cd ..
 
-# ab http://wiki.openstreetmap.org/wiki/Openptmap/Installation#Create_the_Map
+# add this to your httpd.conf:
+#<Directory "/home/www/sites/194.245.35.149/site/orm/tiles">
+#    RewriteEngine on
+#    RewriteCond /home/www/sites/194.245.35.149/site/orm/%{REQUEST_URI} !-f
+#    RewriteRule ^([0-9]+)/([0-9]+)/([0-9]+)\.js ../kothic/src/json_getter.py?z=$1&x=$2&y=$3
+#</Directory>

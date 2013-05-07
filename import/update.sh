@@ -8,8 +8,8 @@
 # some commands are marked as comments because on the server they are merged with OpenLinkMap
 
 # working directory, please change
-cd /home/www/sites/194.245.35.149/site/import
-PATH="$PATH:/home/www/sites/194.245.35.149/site/import/bin"
+cd /home/www/sites/194.245.35.149/site/olm/import
+PATH="$PATH:/home/www/sites/194.245.35.149/site/olm/import/bin"
 PATH="$PATH:/home/www/sites/194.245.35.149/site/orm/import/bin/osm2pgsql"
 export JAVACMD_OPTIONS=-Xmx2800M
 

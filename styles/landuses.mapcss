@@ -1,0 +1,37 @@
+canvas{fill-color:#a0bc92}
+
+way[landuse] {fill-color:  red; }
+way[landuse=garages] {fill-color:  yellow; }
+way[amenity=parking] {fill-color:  #cccc00; }
+way[landuse=military] {fill-color:  pink; }
+way[landuse=retail] {fill-color:  blue; }
+
+way[landuse=reservoir] {fill-color:  lightblue; }
+way[natural=water] {fill-color:  lightblue; }
+way[waterway=riverbank] {fill-color:  lightblue; }
+
+way[landuse=cemetery] {fill-color: black; }
+
+
+way[landuse=industrial] {fill-color:  gray; }
+way[landuse=residential] {fill-color:  white; }
+
+
+way[landuse=allotments] {fill-color:  #ccffcc; }
+way[landuse=field] {fill-color:  #ccffcc; }
+way[landuse=farmland] {fill-color:  #ccffcc; }
+way[landuse=farm] {fill-color:  #ccffcc; }
+            
+way[landuse=construction] {fill-color: #987654; }
+way[landuse=greenfield] {fill-color: #987654; }
+way[landuse=brownfield] {fill-color: #987654; }
+
+way[landuse=quarry] {fill-color: lightgray; }
+
+way[landuse=grass] {fill-color:  lightgreen}
+way[landuse=meadow] {fill-color:  lightgreen}
+
+way[landuse=forest] {fill-color:  green}
+way[natural=wood] {fill-color: green}
+
+/*way[building] {fill-color:  silver; }*/

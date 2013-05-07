@@ -25,9 +25,10 @@
 
 # OsmType  Tag          DataType     Flags
 node,way   area         text         # hard coded support for area=1/yes => polygon is in osm2pgsql
-node,way       poi          text
+node       poi          text
 node,way   z_order      int4         linear # This is calculated during import
 way        way_area     real                # This is calculated during import
+node,way   railway      text         polygon # every closed way is a polygon
 
 # The following entries can be used with the --extra-attributes option
 # to include the username, userid, version & timstamp in the DB
