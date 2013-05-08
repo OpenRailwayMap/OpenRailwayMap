@@ -9,8 +9,7 @@
 # run this script not automatically! you have to change paths and modify it to your own environment!
 
 # install necessary software
-yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip libxml2 libxml2-devel bzip2 bzip2-devel proj proj-devel protobuf protobuf-devel protobuf-python protobuf-compiler python-psycopg2 protobuf-c protobuf-c-devel postgresql-devel unzip php php-pgsql autoconf automake subversion libtool cairo cairo-devel pycairo pycairo-devel python-pycha libtiff libtiff-devel libgeotiff libgeotiff-devel python-devel libjpeg libjpeg-devel libpng libpng-devel python-imaging python-imaging-devel gdal-python gcc gcc-c++ cpp python-nose binutils freetype freetype-devel python-sqlite2 sqlite sqlite-devel boost-thread boost-regex boost-python boost-iostreams boost-filesystem boost-program-options boost-serialization boost-devel libxslt libxslt-devel libicu libicu-devel libtool-ltdl libtool-ltdl-devel libsigc++20 libsigc++20-devel libpixman libpixman-devel pixman pixman-devel libstdc++ libstdc++-devel cairomm cairomm-devel glib glib-
-devel gdal gdal-devel gdal-python libcurl libcurl-devel gnutls gnutls-devel python-gnutls python-pycurl python-lxml python-psyco pycairo
+yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip php-php-gettext php php-pgsql unzip postgresql-devel
 
 # GeoIP database
 # add extension=geoip.so to php.ini
