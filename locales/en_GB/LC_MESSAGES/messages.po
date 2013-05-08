@@ -1,0 +1,535 @@
+# OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2013-03-09 14:07+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED KINGDOM\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Fullscreen"
+msgstr "Fullscreen"
+
+msgid "Homepage"
+msgstr "Homepage"
+
+msgid "Wikipedia"
+msgstr "Wikipedia"
+
+msgid "Realtime departures"
+msgstr "Realtime departures"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "With shelter"
+msgstr "With shelter"
+
+msgid "Without shelter"
+msgstr "Without shelter"
+
+msgid "With bench"
+msgstr "With bench"
+
+msgid "Without bench"
+msgstr "Without bench"
+
+msgid "With wastebasket"
+msgstr "With wastebasket"
+
+msgid "Without wastebasket"
+msgstr "Without wastebasket"
+
+msgid "Tactile paving"
+msgstr "Tactile paving"
+
+msgid "No tactile paving"
+msgstr "No tactile paving"
+
+msgid "Incorrect tactile paving"
+msgstr "Incorrect tactile paving"
+
+msgid "Accessible for wheelchairs"
+msgstr "Accessible for wheelchairs"
+
+msgid "Not accessible for wheelchairs"
+msgstr "Not accessible for wheelchairs"
+
+msgid "Limited accessible for wheelchairs"
+msgstr "Limited accessible for wheelchairs"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "Mobile phone"
+msgstr "Mobile phone"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Opening hours"
+msgstr "Opening hours"
+
+msgid "Open 24/7"
+msgstr "Open 24/7"
+
+msgid "Now open"
+msgstr "Now open"
+
+msgid "Open on holiday"
+msgstr "Open on holiday"
+
+msgid "Now closed"
+msgstr "Now closed"
+
+msgid "Service hours"
+msgstr "Service hours"
+
+msgid "Without name"
+msgstr "Without name"
+
+msgid "Busstops"
+msgstr "Busstops"
+
+msgid "Stations"
+msgstr "Stations"
+
+msgid "Tramhalts"
+msgstr "Tramhalts"
+
+msgid "Parkings"
+msgstr "Parkings"
+
+msgid "Accessibility"
+msgstr "Accessibility"
+
+msgid "Unnamed"
+msgstr "Unnamed"
+
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d second"
+msgstr[1] "%d seconds"
+
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minute"
+msgstr[1] "%d minutes"
+
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d hour"
+msgstr[1] "%d hours"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d day"
+msgstr[1] "%d days"
+
+#, php-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d week"
+msgstr[1] "%d weeks"
+
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d month"
+msgstr[1] "%d months"
+
+#, php-format
+msgid "more than %s ago"
+msgstr "more than %s ago"
+
+#, php-format
+msgid "%s ago"
+msgstr "%s ago"
+
+msgid "Mo"
+msgstr "Mo"
+
+msgid "Tu"
+msgstr "Tu"
+
+msgid "We"
+msgstr "We"
+
+msgid "Th"
+msgstr "Th"
+
+msgid "Fr"
+msgstr "Fr"
+
+msgid "Sa"
+msgstr "Sa"
+
+msgid "Su"
+msgstr "Su"
+
+msgid "closed"
+msgstr "closed"
+
+msgid "Public holiday"
+msgstr "Public holiday"
+
+msgid "School holiday"
+msgstr "School holiday"
+
+msgid "open ending"
+msgstr "open ending"
+
+msgid "and"
+msgstr "and"
+
+msgid "24/7"
+msgstr "24/7"
+
+msgid "Back"
+msgstr "Back"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "More Info"
+msgstr "More Info"
+
+msgid "Loading..."
+msgstr "Loading..."
+
+msgid "Nothing found."
+msgstr "Nothing found."
+
+msgid "No more results."
+msgstr "No more results."
+
+msgid "Last update:"
+msgstr "Last update:"
+
+msgid "Zoom in to show marker"
+msgstr "Zoom in to show marker"
+
+msgid "Empty input."
+msgstr "Empty input."
+
+msgid "More Details"
+msgstr "More Details"
+
+msgid "More results..."
+msgstr "More results..."
+
+msgid "Less"
+msgstr "Less"
+
+msgid "Hide"
+msgstr "Hide"
+
+msgid "Show"
+msgstr "Show"
+
+msgid "Permalink"
+msgstr "Permalink"
+
+msgid "Finish"
+msgstr "Finish"
+
+msgid "Loading points..."
+msgstr "Loading points..."
+
+msgid "Hillshading"
+msgstr "Hillshading"
+
+msgid "POI-Details"
+msgstr "POI-Details"
+
+msgid "Marker"
+msgstr "Marker"
+
+msgid "Public transport"
+msgstr "Public transport"
+
+msgid "Search results"
+msgstr "Search results"
+
+msgid "Route"
+msgstr "Route"
+
+msgid "Search only in the current map view"
+msgstr "Search only in the current map view"
+
+msgid "Click to close"
+msgstr "Click to close"
+
+msgid "Show in OpenLinkMap..."
+msgstr "Show in OpenLinkMap..."
+
+msgid "HTML-Code"
+msgstr "HTML-Code"
+
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
+msgstr "Copy this HTML code snippet into your website to show a small map with a marker."
+
+msgid "Maps and data <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Hillshading: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+msgstr "Maps and data <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Hillshading: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+
+msgid "Address"
+msgstr "Address"
+
+msgid "Gastronomy"
+msgstr "Gastronomy"
+
+msgid "Cuisine"
+msgstr "Cuisine"
+
+msgid "Stars"
+msgstr "Stars"
+
+msgid "Smoking"
+msgstr "Smoking"
+
+msgid "allowed"
+msgstr "allowed"
+
+msgid "prohibited"
+msgstr "prohibited"
+
+msgid "dedicated"
+msgstr "dedicated"
+
+msgid "separated smoking area"
+msgstr "separated smoking area"
+
+msgid "Isolated area"
+msgstr "Isolated area"
+
+msgid "Beer"
+msgstr "Beer"
+
+msgid "with microbrewery"
+msgstr "with microbrewery"
+
+msgid "Beergarden"
+msgstr "Beergarden"
+
+msgid "Fuel"
+msgstr "Fuel"
+
+msgid "Diesel"
+msgstr "Diesel"
+
+msgid "High quality synthetic Diesel"
+msgstr "High quality synthetic Diesel"
+
+msgid "HGV Diesel"
+msgstr "HGV Diesel"
+
+msgid "Biodiesel"
+msgstr "Biodiesel"
+
+msgid "Octane 91"
+msgstr "Octane 91"
+
+msgid "Octane 95"
+msgstr "Octane 95"
+
+msgid "Octane 98"
+msgstr "Octane 98"
+
+msgid "Octane 100"
+msgstr "Octane 100"
+
+msgid "Octane 98, leaded"
+msgstr "Octane 98, leaded"
+
+msgid "Mixture 1:25"
+msgstr "Mixture 1:25"
+
+msgid "Mixture 1:50"
+msgstr "Mixture 1:50"
+
+msgid "Alcohol"
+msgstr "Alcohol"
+
+msgid "Ethanol"
+msgstr "Ethanol"
+
+msgid "Methanol"
+msgstr "Methanol"
+
+msgid "Vegetable oil"
+msgstr "Vegetable oil"
+
+msgid "Ethanol-Mixture E10 (10% Ethanol)"
+msgstr "Ethanol-Mixture E10 (10% Ethanol)"
+
+msgid "Ethanol-Mixture E85 (85% Ethanol)"
+msgstr "Ethanol-Mixture E85 (85% Ethanol)"
+
+msgid "Biogas"
+msgstr "Biogas"
+
+msgid "LPG"
+msgstr "LPG"
+
+msgid "CNG"
+msgstr "CNG"
+
+msgid "Liquid hydrogen"
+msgstr "Liquid hydrogen"
+
+msgid "Electricity"
+msgstr "Electricity"
+
+msgid "AdBlue"
+msgstr "AdBlue"
+
+msgid "Car wash"
+msgstr "Car wash"
+
+msgid "Car repair"
+msgstr "Car repair"
+
+msgid "Shop"
+msgstr "Shop"
+
+msgid "Other"
+msgstr "Other"
+
+msgid "Capacity"
+msgstr "Capacity"
+
+msgid "Reference"
+msgstr "Reference"
+
+msgid "Internet terminal"
+msgstr "Internet terminal"
+
+msgid "WLAN hotspot"
+msgstr "WLAN hotspot"
+
+msgid "Wired internet access"
+msgstr "Wired internet access"
+
+msgid "Internet access via service"
+msgstr "Internet access via service"
+
+msgid "With costs"
+msgstr "With costs"
+
+msgid "For free"
+msgstr "For free"
+
+msgid "Partly with costs"
+msgstr "Partly with costs"
+
+msgid "Toll"
+msgstr "Toll"
+
+msgid "Disused"
+msgstr "Disused"
+
+msgid "Geographic"
+msgstr "Geographic"
+
+msgid "Height about sea level"
+msgstr "Height about sea level"
+
+msgid "Population"
+msgstr "Population"
+
+msgid "IATA"
+msgstr "IATA"
+
+msgid "ICAO"
+msgstr "ICAO"
+
+msgid "Wheelchair"
+msgstr "Wheelchair"
+
+msgid "Toilets accessible"
+msgstr "Toilets accessible"
+
+msgid "Toilets not accessible"
+msgstr "Toilets not accessible"
+
+msgid "Toilets limited accessible"
+msgstr "Toilets limited accessible"
+
+msgid "All rooms accessible"
+msgstr "All rooms accessible"
+
+msgid "Rooms not accessible"
+msgstr "Rooms not accessible"
+
+msgid "Most rooms accessible"
+msgstr "Most rooms accessible"
+
+msgid "Building accessible"
+msgstr "Building accessible"
+
+msgid "Building not accessible"
+msgstr "Building not accessible"
+
+msgid "Building limited accessible"
+msgstr "Building limited accessible"
+
+msgid "Places for wheelchairs"
+msgstr "Places for wheelchairs"
+
+msgid "No places for wheelchairs"
+msgstr "No places for wheelchairs"
+
+msgid "Limited places for wheelchairs"
+msgstr "Limited places for wheelchairs"
+
+msgid "Full article..."
+msgstr "Full article..."
+
+msgid "Image"
+msgstr "Image"
+
+msgid "More images"
+msgstr "More images"
+
+msgid "License, author, original page..."
+msgstr "License, author, original page..."
+
+msgid "Improve the data! Correct wrong website links with the new website checker from Keepright!"
+msgstr "Improve the data! Correct wrong website links with the new website checker from Keepright!"
+
+msgid "Report bug in map"
+msgstr "Report bug in map"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "Javascript is not activated"
+msgstr "Javascript is not activated"
+
+msgid "Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings."
+msgstr "Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings."
+

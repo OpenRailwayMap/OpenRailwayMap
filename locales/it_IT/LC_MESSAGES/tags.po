@@ -1,0 +1,1729 @@
+# OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+#
+# Translators:
+# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013.
+# David <davide.pri@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenLinkMap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2013-04-04 12:17+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"Language-Team: Italian (http://www.transifex.com/projects/p/openlinkmap/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: UNITED KINGDOM\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "aerialway=cable_car"
+msgstr "Funivia"
+
+msgid "aerialway=chair_lift"
+msgstr "Seggiovia"
+
+msgid "aerialway=drag_lift"
+msgstr "Ski-lift"
+
+msgid "aerialway=goods"
+msgstr "Teleferica per merci"
+
+msgid "aerialway=gondola"
+msgstr "Cabinovia"
+
+msgid "aerialway=mixed_lift"
+msgstr "Impianto misto"
+
+msgid "aerialway=pylon"
+msgstr "Pilone"
+
+msgid "aerialway=station"
+msgstr "Stazione funivia"
+
+msgid "aeroway=aerodrome"
+msgstr "Aeroporto"
+
+msgid "aeroway=apron"
+msgstr "Area di parcheggio"
+
+msgid "aeroway=gate"
+msgstr "Gate"
+
+msgid "aeroway=helipad"
+msgstr "Eliporto"
+
+msgid "aeroway=runway"
+msgstr "Pista di decollo/atterraggio"
+
+msgid "aeroway=taxiway"
+msgstr "Pista di rullaggio"
+
+msgid "aeroway=terminal"
+msgstr "Terminal aeroportuale"
+
+msgid "aeroway=windsock"
+msgstr "Manica a vento"
+
+msgid "amenity=airport"
+msgstr "Aeroporto"
+
+msgid "amenity=architect_office"
+msgstr "Studio di architettura"
+
+msgid "amenity=arts_centre"
+msgstr "Centro d'arte"
+
+msgid "amenity=atm"
+msgstr "Bancomat"
+
+msgid "amenity=auditorium"
+msgstr "Auditorium"
+
+msgid "amenity=baby_hatch"
+msgstr "Culla per la vita"
+
+msgid "amenity=bank"
+msgstr "Banca"
+
+msgid "amenity=bar"
+msgstr "Bar"
+
+msgid "amenity=bbq"
+msgstr "Barbeque"
+
+msgid "amenity=bench"
+msgstr "Panchina"
+
+msgid "amenity=bicycle_parking"
+msgstr "Parcheggio biciclette"
+
+msgid "amenity=bicycle_rental"
+msgstr "Noleggio biciclette"
+
+msgid "amenity=biergarten"
+msgstr "Biergarten"
+
+msgid "amenity=brothel"
+msgstr "Bordello"
+
+msgid "amenity=bureau_de_change"
+msgstr "Ufficio di cambio"
+
+msgid "amenity=bus_station"
+msgstr "Stazione autobus"
+
+msgid "amenity=cafe"
+msgstr "Caffè"
+
+msgid "amenity=car_rental"
+msgstr "Autonoleggio"
+
+msgid "amenity=car_sharing"
+msgstr "Carsharing"
+
+msgid "amenity=car_wash"
+msgstr "Autolavaggio"
+
+msgid "amenity=casino"
+msgstr "Casinò"
+
+msgid "amenity=cinema"
+msgstr "Cinema"
+
+msgid "amenity=clinic"
+msgstr "Clinica"
+
+msgid "amenity=clock"
+msgstr "Orologio"
+
+msgid "amenity=club"
+msgstr "Club"
+
+msgid "amenity=college"
+msgstr "College"
+
+msgid "amenity=community_centre"
+msgstr "Centro civico"
+
+msgid "amenity=courthouse"
+msgstr "Tribunale"
+
+msgid "amenity=crematorium"
+msgstr "Crematorio"
+
+msgid "amenity=dentist"
+msgstr "Dentista"
+
+msgid "amenity=doctors"
+msgstr "Dottore"
+
+msgid "amenity=dormitory"
+msgstr "Dormitorio"
+
+msgid "amenity=drinking_water"
+msgstr "Fontanella"
+
+msgid "amenity=driving_school"
+msgstr "Scuola guida"
+
+msgid "amenity=embassy"
+msgstr "Ambasciata"
+
+msgid "amenity=emergency_phone"
+msgstr "Telefono d'emergenza"
+
+msgid "amenity=fast_food"
+msgstr "Fast food"
+
+msgid "amenity=ferry_terminal"
+msgstr "Terminal traghetti"
+
+msgid "amenity=fire_hydrant"
+msgstr "Idrante"
+
+msgid "amenity=fire_station"
+msgstr "Vigili del fuoco"
+
+msgid "amenity=food_court"
+msgstr "Food court"
+
+msgid "amenity=fountain"
+msgstr "Fontana"
+
+msgid "amenity=fuel"
+msgstr "Benzinaio"
+
+msgid "amenity=grave_yard"
+msgstr "Piccolo cimitero"
+
+msgid "amenity=gym"
+msgstr "Palestra"
+
+msgid "amenity=hall"
+msgstr "Sala"
+
+msgid "amenity=health_centre"
+msgstr "Centro salute"
+
+msgid "amenity=hospital"
+msgstr "Ospedale"
+
+msgid "amenity=hunting_stand"
+msgstr "Capanno di caccia"
+
+msgid "amenity=ice_cream"
+msgstr "Gelato"
+
+msgid "amenity=kindergarten"
+msgstr "Asilo"
+
+msgid "amenity=library"
+msgstr "Biblioteca"
+
+msgid "amenity=market"
+msgstr "Mercato"
+
+msgid "amenity=marketplace"
+msgstr "Mercato"
+
+msgid "amenity=mountain_rescue"
+msgstr "Soccorso alpino"
+
+msgid "amenity=nightclub"
+msgstr "Night club"
+
+msgid "amenity=nursery"
+msgstr "Asilo"
+
+msgid "amenity=nursing_home"
+msgstr "Asilo"
+
+msgid "amenity=office"
+msgstr "Ufficio"
+
+msgid "amenity=parking"
+msgstr "Parcheggio"
+
+msgid "amenity=pharmacy"
+msgstr "Farmacia"
+
+msgid "amenity=place_of_worship"
+msgstr "Luogo di culto"
+
+msgid "amenity=police"
+msgstr "Polizia"
+
+msgid "amenity=post_box"
+msgstr "Cassetta postale"
+
+msgid "amenity=post_office"
+msgstr "Ufficio postale"
+
+msgid "amenity=preschool"
+msgstr "Asilo"
+
+msgid "amenity=prison"
+msgstr "Prigione"
+
+msgid "amenity=pub"
+msgstr "Pub"
+
+msgid "amenity=public_building"
+msgstr "Edificio pubblico"
+
+msgid "amenity=recycling"
+msgstr "Reciclaggio"
+
+msgid "amenity=restaurant"
+msgstr "Ristorante"
+
+msgid "amenity=retirement_home"
+msgstr "Residenza per anziani"
+
+msgid "amenity=sauna"
+msgstr "Sauna"
+
+msgid "amenity=school"
+msgstr "Scuola"
+
+msgid "amenity=shelter"
+msgstr "Riparo"
+
+msgid "amenity=social_centre"
+msgstr "Centro sociale"
+
+msgid "amenity=social_club"
+msgstr "Centro sociale"
+
+msgid "amenity=stripclub"
+msgstr "Stripclub"
+
+msgid "amenity=studio"
+msgstr "Studio di registrazione"
+
+msgid "amenity=taxi"
+msgstr "Taxi"
+
+msgid "amenity=telephone"
+msgstr "Telefono"
+
+msgid "amenity=theatre"
+msgstr "Teatro"
+
+msgid "amenity=toilets"
+msgstr "Gabinetti"
+
+msgid "amenity=townhall"
+msgstr "Municipio"
+
+msgid "amenity=university"
+msgstr "Università"
+
+msgid "amenity=vending_machine"
+msgstr "Distributore automatico"
+
+msgid "amenity=veterinary"
+msgstr "Veterinario"
+
+msgid "amenity=village_hall"
+msgstr "Municipio"
+
+msgid "amenity=youth_centre"
+msgstr "Centro giovanile"
+
+msgid "amenity=waste_basket"
+msgstr "Cestino rifiuti"
+
+msgid "amenity=wifi"
+msgstr "Accesso WiFi"
+
+msgid "amenity=zoo"
+msgstr "Zoo"
+
+msgid "boundary=administrative"
+msgstr "Confine"
+
+msgid "boundary=national_park"
+msgstr "Parco nazionale"
+
+msgid "boundary=protected_area"
+msgstr "Area protetta"
+
+msgid "building=apartments"
+msgstr "Appartamento"
+
+msgid "building=blocks"
+msgstr "Casamento"
+
+msgid "building=bunker"
+msgstr "Bunker"
+
+msgid "building=chapel"
+msgstr "Cappella"
+
+msgid "building=church"
+msgstr "Chiesa"
+
+msgid "building=city_hall"
+msgstr "Municipio"
+
+msgid "building=commercial"
+msgstr "Edificio commerciale"
+
+msgid "building=dormitory"
+msgstr "Dormitorio"
+
+msgid "building=entrance"
+msgstr "Entrata"
+
+msgid "building=faculty"
+msgstr "Facoltà"
+
+msgid "building=farm"
+msgstr "Fattoria"
+
+msgid "building=flats"
+msgstr "Appartamento"
+
+msgid "building=garage"
+msgstr "Garage"
+
+msgid "building=garages"
+msgstr "Garage"
+
+msgid "building=hall"
+msgstr "Sala"
+
+msgid "building=hospital"
+msgstr "Ospedale"
+
+msgid "building=hotel"
+msgstr "Hotel"
+
+msgid "building=house"
+msgstr "Casa"
+
+msgid "building=industrial"
+msgstr "Edificio industriale"
+
+msgid "building=office"
+msgstr "Ufficio"
+
+msgid "building=public"
+msgstr "Edificio pubblico"
+
+msgid "building=residential"
+msgstr "Edificio residenziale"
+
+msgid "building=retail"
+msgstr "Negozio"
+
+msgid "building=school"
+msgstr "Scuola"
+
+msgid "building=shop"
+msgstr "Negozio"
+
+msgid "building=stadium"
+msgstr "Stadio"
+
+msgid "building=store"
+msgstr "Negozio"
+
+msgid "building=terrace"
+msgstr "Casa a schiera"
+
+msgid "building=tower"
+msgstr "Torre"
+
+msgid "building=train_station"
+msgstr "Stazione"
+
+msgid "building=university"
+msgstr "Universitario"
+
+msgid "building=yes"
+msgstr "Edificio"
+
+msgid "craft=beekeeper"
+msgstr "Apicoltore"
+
+msgid "craft=blacksmith"
+msgstr "Fabbro"
+
+msgid "craft=boatbuilder"
+msgstr "Maestro d'ascia"
+
+msgid "craft=carpenter"
+msgstr "Carpentiere"
+
+msgid "craft=carpet_layer"
+msgstr "Installatore di moquette"
+
+msgid "craft=clockmaker"
+msgstr "Orologiaio"
+
+msgid "craft=confectionery"
+msgstr "Pasticceria"
+
+msgid "craft=electrician"
+msgstr "Elettricista"
+
+msgid "craft=gardener"
+msgstr "Giardiniere"
+
+msgid "craft=glaziery"
+msgstr "Vetraio"
+
+msgid "craft=hvac"
+msgstr "Riscaldamento/Condizionamento"
+
+msgid "craft=jeweller"
+msgstr "Gioielliere"
+
+msgid "craft=metal_construction"
+msgstr "Carpenteria metallica"
+
+msgid "craft=optician"
+msgstr "Ottico"
+
+msgid "craft=painter"
+msgstr "Pittore"
+
+msgid "craft=photographer"
+msgstr "Fotografo"
+
+msgid "craft=plasterer"
+msgstr "Intonacatore"
+
+msgid "craft=plumber"
+msgstr "Idraulico"
+
+msgid "craft=pottery"
+msgstr "Ceramiche"
+
+msgid "craft=roofer"
+msgstr "Riparazione tetti"
+
+msgid "craft=scaffolder"
+msgstr "Impalcature"
+
+msgid "craft=sculptor"
+msgstr "Scultore"
+
+msgid "craft=shoemaker"
+msgstr "Calzolaio"
+
+msgid "craft=stonemason"
+msgstr "Scalpellino"
+
+msgid "craft=sweep"
+msgstr "Spazzacamino"
+
+msgid "craft=tailor"
+msgstr "Sarto"
+
+msgid "craft=tiler"
+msgstr "Piastrellista"
+
+msgid "cuisine=american"
+msgstr "Americana"
+
+msgid "cuisine=asian"
+msgstr "Asiatica"
+
+msgid "cuisine=austrian"
+msgstr "Austriaca"
+
+msgid "cuisine=bavarian"
+msgstr "Bavarese"
+
+msgid "cuisine=beef_bowl"
+msgstr "Gyūdon"
+
+msgid "cuisine=burger"
+msgstr "Burger"
+
+msgid "cuisine=chicken"
+msgstr "Pollo"
+
+msgid "cuisine=chinese"
+msgstr "Cinese"
+
+msgid "cuisine=coffee_shop"
+msgstr "Caffè"
+
+msgid "cuisine=crepe"
+msgstr "Crêpe"
+
+msgid "cuisine=curry"
+msgstr "Curry"
+
+msgid "cuisine=donut"
+msgstr "Ciambelle"
+
+msgid "cuisine=fish"
+msgstr "Pesce"
+
+msgid "cuisine=fish_and_chips"
+msgstr "Fish & Chips"
+
+msgid "cuisine=french"
+msgstr "Francese"
+
+msgid "cuisine=german"
+msgstr "Tedesca"
+
+msgid "cuisine=greek"
+msgstr "Greca"
+
+msgid "cuisine=icecream"
+msgstr "Gelato"
+
+msgid "cuisine=indian"
+msgstr "Indiana"
+
+msgid "cuisine=italian"
+msgstr "Italiana"
+
+msgid "cuisine=international"
+msgstr "Internazionale"
+
+msgid "cuisine=japanese"
+msgstr "Giapponese"
+
+msgid "cuisine=kebab"
+msgstr "Kebab"
+
+msgid "cuisine=mexican"
+msgstr "Messicana"
+
+msgid "cuisine=pizza"
+msgstr "Pizza"
+
+msgid "cuisine=ramen"
+msgstr "Ramen"
+
+msgid "cuisine=regional"
+msgstr "Regionale"
+
+msgid "cuisine=sandwich"
+msgstr "Tramezzini"
+
+msgid "cuisine=seafood"
+msgstr "Pescheria"
+
+msgid "cuisine=soba"
+msgstr "Soba"
+
+msgid "cuisine=spanish"
+msgstr "Spagnola"
+
+msgid "cuisine=sri_lankan"
+msgstr "Sri Lanka"
+
+msgid "cuisine=steak_house"
+msgstr "Bistecche"
+
+msgid "cuisine=sushi"
+msgstr "Sushi"
+
+msgid "cuisine=thai"
+msgstr "Thai"
+
+msgid "cuisine=turkish"
+msgstr "Turca"
+
+msgid "cuisine=vietnamese"
+msgstr "Vietnamita"
+
+msgid "emergency=ambulance_station"
+msgstr "Parcheggio ambulanze"
+
+msgid "emergency=fire_hydrant"
+msgstr "Idrante"
+
+msgid "emergency=phone"
+msgstr "Telefono d'emergenza"
+
+msgid "highway=bridleway"
+msgstr "Percorso per equitazione"
+
+msgid "highway=bus_guideway"
+msgstr "Autobus su binari"
+
+msgid "highway=bus_stop"
+msgstr "Fermata autobus"
+
+msgid "highway=construction"
+msgstr "Strada in costruzione"
+
+msgid "highway=cycleway"
+msgstr "Pista ciclabile"
+
+msgid "highway=distance_marker"
+msgstr "Indicatore di distanza"
+
+msgid "highway=emergency_access_point"
+msgstr "Punto d'accesso di emergenza"
+
+msgid "highway=footway"
+msgstr "Percorso pedonale"
+
+msgid "highway=ford"
+msgstr "Guado"
+
+msgid "highway=living_street"
+msgstr "Living street"
+
+msgid "highway=motorway"
+msgstr "Autostrada"
+
+msgid "highway=motorway_junction"
+msgstr "Raccordo autostradale"
+
+msgid "highway=motorway_link"
+msgstr "Svincolo autostradale"
+
+msgid "highway=path"
+msgstr "Sentiero"
+
+msgid "highway=pedestrian"
+msgstr "Strada pedonale"
+
+msgid "highway=platform"
+msgstr "Marciapiede"
+
+msgid "highway=primary"
+msgstr "Strada primary"
+
+msgid "highway=primary_link"
+msgstr "Svincolo strada primary"
+
+msgid "highway=proposed"
+msgstr "Strada proposta"
+
+msgid "highway=raceway"
+msgstr "Circuito"
+
+msgid "highway=residential"
+msgstr "Strada residenziale"
+
+msgid "highway=road"
+msgstr "Strada"
+
+msgid "highway=secondary"
+msgstr "Strada secondary"
+
+msgid "highway=secondary_link"
+msgstr "Svincolo strada secondary"
+
+msgid "highway=service"
+msgstr "Strade di accesso"
+
+msgid "highway=services"
+msgstr "Stazione di servizio"
+
+msgid "highway=speed_camera"
+msgstr "Controllo velocità"
+
+msgid "highway=steps"
+msgstr "Scalini"
+
+msgid "highway=tertiary"
+msgstr "Strada tertiary"
+
+msgid "highway=track"
+msgstr "Carreggiabile agricolo/forestale"
+
+msgid "highway=trunk"
+msgstr "Superstrada"
+
+msgid "highway=trunk_link"
+msgstr "Svincolo superstrada"
+
+msgid "highway=unclassified"
+msgstr "Strada unclassified"
+
+msgid "historic=archaeological_site"
+msgstr "Sito archeologico"
+
+msgid "historic=battlefield"
+msgstr "Campo di battaglia"
+
+msgid "historic=boundary_stone"
+msgstr "Pietra di confine"
+
+msgid "historic=building"
+msgstr "Edificio storico"
+
+msgid "historic=castle"
+msgstr "Castello"
+
+msgid "historic=church"
+msgstr "Chiesa storica"
+
+msgid "historic=fort"
+msgstr "Forte"
+
+msgid "historic=house"
+msgstr "Edificio storico"
+
+msgid "historic=icon"
+msgstr "Icona"
+
+msgid "historic=manor"
+msgstr "Casa signorile"
+
+msgid "historic=memorial"
+msgstr "Memoriale"
+
+msgid "historic=mine"
+msgstr "Miniera"
+
+msgid "historic=monument"
+msgstr "Monumento"
+
+msgid "historic=museum"
+msgstr "Museo"
+
+msgid "historic=ruins"
+msgstr "Rovine"
+
+msgid "historic=tower"
+msgstr "Torre"
+
+msgid "historic=wayside_cross"
+msgstr "Croce votiva"
+
+msgid "historic=wayside_shrine"
+msgstr "Edicola votiva"
+
+msgid "historic=wreck"
+msgstr "Naufragio"
+
+msgid "landuse=allotments"
+msgstr "Orti pubblici"
+
+msgid "landuse=basin"
+msgstr "Bacino"
+
+msgid "landuse=brownfield"
+msgstr "Area soggetta ad interventi di ridestinazione d'uso"
+
+msgid "landuse=cemetery"
+msgstr "Cimitero"
+
+msgid "landuse=commercial"
+msgstr "Area a prevalenza di uffici"
+
+msgid "landuse=construction"
+msgstr "Area in costruzione"
+
+msgid "landuse=farm"
+msgstr "Area ad uso prevalentemente agricolo"
+
+msgid "landuse=farmland"
+msgstr "Area ad uso prevalentemente agricolo"
+
+msgid "landuse=farmyard"
+msgstr "Zona di terra con fabbricati agricoli"
+
+msgid "landuse=forest"
+msgstr "Bosco gestito"
+
+msgid "landuse=garages"
+msgstr "Box per auto"
+
+msgid "landuse=grass"
+msgstr "Prato"
+
+msgid "landuse=greenfield"
+msgstr "Area destinata a costruzioni"
+
+msgid "landuse=greenhouse_horticulture"
+msgstr "Coltivazioni in serra"
+
+msgid "landuse=industrial"
+msgstr "Zona industriale"
+
+msgid "landuse=landfill"
+msgstr "Discarica"
+
+msgid "landuse=meadow"
+msgstr "Vegetazione erbacea"
+
+msgid "landuse=military"
+msgstr "Zona militare"
+
+msgid "landuse=mine"
+msgstr "Miniera"
+
+msgid "landuse=mountain"
+msgstr "Montagna"
+
+msgid "landuse=nature_reserve"
+msgstr "Riserva naturale"
+
+msgid "landuse=orchard"
+msgstr "Frutteto"
+
+msgid "landuse=piste"
+msgstr "Pista"
+
+msgid "landuse=pond"
+msgstr "Stagno"
+
+msgid "landuse=quarry"
+msgstr "Cava"
+
+msgid "landuse=railway"
+msgstr "Area ferroviaria"
+
+msgid "landuse=reservoir"
+msgstr "Riserva d'acqua"
+
+msgid "landuse=residential"
+msgstr "Area residenziale"
+
+msgid "landuse=retail"
+msgstr "Area a prevalenza di negozi"
+
+msgid "landuse=salt_pond"
+msgstr "Salina"
+
+msgid "landuse=village_green"
+msgstr "Area ad uso comune"
+
+msgid "landuse=vineyard"
+msgstr "Vigneto"
+
+msgid "leisure=beach_resort"
+msgstr "Stabilimento balneare"
+
+msgid "leisure=bird_hide"
+msgstr " Nascondiglio per osservare gli uccelli"
+
+msgid "leisure=common"
+msgstr "Area comune"
+
+msgid "leisure=dog_park"
+msgstr "Area cani"
+
+msgid "leisure=fishing"
+msgstr "Riserva di pesca"
+
+msgid "leisure=garden"
+msgstr "Giardino botanico"
+
+msgid "leisure=golf_course"
+msgstr "Campo da golf"
+
+msgid "leisure=hot_spring"
+msgstr "Sorgente termale"
+
+msgid "leisure=ice_rink"
+msgstr "Pista di pattinaggio"
+
+msgid "leisure=marina"
+msgstr "Marina"
+
+msgid "leisure=maze"
+msgstr "Labirinto"
+
+msgid "leisure=miniature_golf"
+msgstr "Minigolf"
+
+msgid "leisure=nature_reserve"
+msgstr "Riserva naturale"
+
+msgid "leisure=park"
+msgstr "Parco"
+
+msgid "leisure=playground"
+msgstr "Area giochi"
+
+msgid "leisure=pitch"
+msgstr "Campo sportivo"
+
+msgid "leisure=recreation_ground"
+msgstr "Area giochi"
+
+msgid "leisure=sauna"
+msgstr "Sauna"
+
+msgid "leisure=slipway"
+msgstr "Scivolo per imbarcazioni"
+
+msgid "leisure=sports_centre"
+msgstr "Centro sportivo"
+
+msgid "leisure=stadium"
+msgstr "Stadio"
+
+msgid "leisure=swimming_pool"
+msgstr "Piscina"
+
+msgid "leisure=track"
+msgstr "Pista"
+
+msgid "leisure=video_arcade"
+msgstr "Videogioco arcade"
+
+msgid "leisure=water_park"
+msgstr "Parco aquatico"
+
+msgid "man_made=adit"
+msgstr "Ingresso galleria mineraria"
+
+msgid "man_made=beacon"
+msgstr "Aiuto alla navigazione"
+
+msgid "man_made=chimney"
+msgstr "Ciminiera"
+
+msgid "man_made=communications_transponder"
+msgstr "Ripetitore"
+
+msgid "man_made=crane"
+msgstr "Gru"
+
+msgid "man_made=cutline"
+msgstr "Linea di taglio"
+
+msgid "man_made=lighthouse"
+msgstr "Faro"
+
+msgid "man_made=measurement_station"
+msgstr "Stazione di misura"
+
+msgid "man_made=mineshaft"
+msgstr "Tunnel verticale"
+
+msgid "man_made=petroleum_well"
+msgstr "Pozzo petrolifero"
+
+msgid "man_made=pier"
+msgstr "Molo"
+
+msgid "man_made=pipeline"
+msgstr "Conduttura"
+
+msgid "man_made=reservoir_covered"
+msgstr "Bacino coperto"
+
+msgid "man_made=silo"
+msgstr "Silo"
+
+msgid "man_made=storage_tank"
+msgstr "Serbatoio di stoccaggio tank"
+
+msgid "man_made=surface_mine"
+msgstr "Miniera a cielo aperto"
+
+msgid "man_made=surveillance"
+msgstr "Sorveglianza"
+
+msgid "man_made=survey_point"
+msgstr "Punto geodetico"
+
+msgid "man_made=tower"
+msgstr "Torre"
+
+msgid "man_made=wastewater_plant"
+msgstr "Depuratore"
+
+msgid "man_made=watermill"
+msgstr "Mulino ad acqua"
+
+msgid "man_made=water_tower"
+msgstr "Torre Idrica"
+
+msgid "man_made=water_well"
+msgstr "Pozzo"
+
+msgid "man_made=water_works"
+msgstr "Impianto idrico"
+
+msgid "man_made=windmill"
+msgstr "Mulino a vento"
+
+msgid "man_made=works"
+msgstr "Fabbrica"
+
+msgid "military=airfield"
+msgstr "Aeroporto militare"
+
+msgid "military=barracks"
+msgstr "Caserma"
+
+msgid "military=bunker"
+msgstr "Bunker"
+
+msgid "military=danger_area"
+msgstr "Military danger area"
+
+msgid "military=naval_basis"
+msgstr "Base navale"
+
+msgid "military=range"
+msgstr "Poligono militare"
+
+msgid "natural=bay"
+msgstr "Baia"
+
+msgid "natural=beach"
+msgstr "Spiaggia"
+
+msgid "natural=cape"
+msgstr "Capo"
+
+msgid "natural=cave_entrance"
+msgstr "Ingresso grotta"
+
+msgid "natural=channel"
+msgstr "Canale naturale"
+
+msgid "natural=cliff"
+msgstr "Parete rocciosa"
+
+msgid "natural=coastline"
+msgstr "Costa"
+
+msgid "natural=crater"
+msgstr "Cratere"
+
+msgid "natural=fell"
+msgstr "Prato alpino"
+
+msgid "natural=fjord"
+msgstr "Fiordo"
+
+msgid "natural=geyser"
+msgstr "Geyser"
+
+msgid "natural=glacier"
+msgstr "Ghiacciaio"
+
+msgid "natural=heath"
+msgstr "Brughiera"
+
+msgid "natural=hill"
+msgstr "Collina"
+
+msgid "natural=island"
+msgstr "Isola"
+
+msgid "natural=land"
+msgstr "Terreno"
+
+msgid "natural=marsh"
+msgstr "Palude"
+
+msgid "natural=massif"
+msgstr "Massiccio"
+
+msgid "natural=moor"
+msgstr "Ormeggio"
+
+msgid "natural=mud"
+msgstr "Zona fangosa"
+
+msgid "natural=peak"
+msgstr "Cima"
+
+msgid "natural=reef"
+msgstr "Barriera corallina"
+
+msgid "natural=ridge"
+msgstr "Cresta"
+
+msgid "natural=river"
+msgstr "Fiume"
+
+msgid "natural=rock"
+msgstr "Roccia"
+
+msgid "natural=sand"
+msgstr "Sabbia"
+
+msgid "natural=scree"
+msgstr "Ghiaione"
+
+msgid "natural=scrub"
+msgstr "Area incolta"
+
+msgid "natural=shoal"
+msgstr "Secca"
+
+msgid "natural=spring"
+msgstr "Sorgente"
+
+msgid "natural=stone"
+msgstr "Masso erratico"
+
+msgid "natural=tree"
+msgstr "Albero"
+
+msgid "natural=valley"
+msgstr "Valle"
+
+msgid "natural=volcano"
+msgstr "Vulcano"
+
+msgid "natural=water"
+msgstr "Acqua"
+
+msgid "natural=wetland"
+msgstr "Zona umida"
+
+msgid "natural=wood"
+msgstr "Bosco non gestito"
+
+msgid "office=accountant"
+msgstr "Contabile"
+
+msgid "office=architect"
+msgstr "Architetto"
+
+msgid "office=company"
+msgstr "Azienda"
+
+msgid "office=employment_agency"
+msgstr "Agenzia per l'impiego"
+
+msgid "office=estate_agent"
+msgstr "Agenzia immobiliare"
+
+msgid "office=government"
+msgstr "Governo"
+
+msgid "office=insurance"
+msgstr "Agenzia di assicurazioni"
+
+msgid "office=it"
+msgstr "Azienda informatica"
+
+msgid "office=lawyer"
+msgstr "Avvocato"
+
+msgid "office=newspaper"
+msgstr "Giornale"
+
+msgid "office=ngo"
+msgstr "Organizzazione non governativa"
+
+msgid "office=quango"
+msgstr "Autorità amministrativa indipendente"
+
+msgid "office=research"
+msgstr "Azienda di ricerca"
+
+msgid "office=telecommunication"
+msgstr "Azienda di telecommunicazioni"
+
+msgid "office=travel_agent"
+msgstr "Agenzia di viaggi"
+
+msgid "place=airport"
+msgstr "Aeroporto"
+
+msgid "place=city"
+msgstr "Città"
+
+msgid "place=country"
+msgstr "Stato"
+
+msgid "place=county"
+msgstr "Contea"
+
+msgid "place=farm"
+msgstr "Fattoria"
+
+msgid "place=hamlet"
+msgstr "Nucleo di case"
+
+msgid "place=house"
+msgstr "Casa"
+
+msgid "place=island"
+msgstr "Isola"
+
+msgid "place=islet"
+msgstr "Isoletta"
+
+msgid "place=locality"
+msgstr "Località non abitata"
+
+msgid "place=postcode"
+msgstr "Codice postale"
+
+msgid "place=region"
+msgstr "Regione"
+
+msgid "place=sea"
+msgstr "Mare"
+
+msgid "place=state"
+msgstr "Stato"
+
+msgid "place=suburb"
+msgstr "Quartiere"
+
+msgid "place=town"
+msgstr "Cittadina"
+
+msgid "place=village"
+msgstr "Insediamento urbano"
+
+msgid "power=cable_distribution_cabinet"
+msgstr "Cabina elettrica"
+
+msgid "power=generator"
+msgstr "Centrale elettrica"
+
+msgid "power=line"
+msgstr "Linea elettrica"
+
+msgid "power=minor_line"
+msgstr "Linea elettrica secondaria"
+
+msgid "power=pole"
+msgstr "Palo della luce"
+
+msgid "power=station"
+msgstr "Stazione di trasformazione"
+
+msgid "power=sub_station"
+msgstr "Sottostazione di trasformazione"
+
+msgid "power=tower"
+msgstr "Traliccio"
+
+msgid "railway=abandoned"
+msgstr "Ferrovia abbandonata"
+
+msgid "railway=buffer_stop"
+msgstr "Respingente"
+
+msgid "railway=construction"
+msgstr "Ferrovia in costruzione"
+
+msgid "railway=crossing"
+msgstr "Attraversamento"
+
+msgid "railway=disused"
+msgstr "Ferrovia in disuso"
+
+msgid "railway=disused_station"
+msgstr "Stazione in disuso"
+
+msgid "railway=funicular"
+msgstr "Funicolare"
+
+msgid "railway=halt"
+msgstr "Stazione non presidiata"
+
+msgid "railway=historic_station"
+msgstr "Stazione storica"
+
+msgid "railway=junction"
+msgstr "Raccordo ferroviario"
+
+msgid "railway=level_crossing"
+msgstr "Passaggio a livello"
+
+msgid "railway=light_rail"
+msgstr "Metropolitana leggera"
+
+msgid "railway=monorail"
+msgstr "Monorotaia"
+
+msgid "railway=narrow_gauge"
+msgstr "Ferrovia a scartamento ridotto"
+
+msgid "railway=platform"
+msgstr "Marciapiede"
+
+msgid "railway=preserved"
+msgstr "Ferrovia storica"
+
+msgid "railway=rail"
+msgstr "Ferrovia"
+
+msgid "railway=station"
+msgstr "Stazione"
+
+msgid "railway=subway"
+msgstr "Metropolitana"
+
+msgid "railway=subway_entrance"
+msgstr "Entrata metropolitana"
+
+msgid "railway=switch"
+msgstr "Scambio ferroviario"
+
+msgid "railway=tram"
+msgstr "Tram"
+
+msgid "railway=tram_stop"
+msgstr "Fermata del tram"
+
+msgid "railway=turntable"
+msgstr "Piattaforma girevole ferroviaria"
+
+msgid "railway=yard"
+msgstr "Area di manovra"
+
+msgid "shop=alcohol"
+msgstr "Liquori"
+
+msgid "shop=anime"
+msgstr "Anime"
+
+msgid "shop=art"
+msgstr "Galleria d'arte privata"
+
+msgid "shop=bakery"
+msgstr "Panetteria"
+
+msgid "shop=beauty"
+msgstr "Centro estetico"
+
+msgid "shop=bed"
+msgstr "Materassi"
+
+msgid "shop=beverages"
+msgstr "Bevande"
+
+msgid "shop=bicycle"
+msgstr "Biciclette"
+
+msgid "shop=books"
+msgstr "Libreria"
+
+msgid "shop=boutique"
+msgstr "Boutique"
+
+msgid "shop=butcher"
+msgstr "Macelleria"
+
+msgid "shop=car"
+msgstr "Concessionaria"
+
+msgid "shop=car_dealer"
+msgstr "Concessionaria"
+
+msgid "shop=car_parts"
+msgstr "Autoricambi"
+
+msgid "shop=car_repair"
+msgstr "Autofficina"
+
+msgid "shop=carpet"
+msgstr "Tappeti"
+
+msgid "shop=chemist"
+msgstr "Igiene personale e della casa"
+
+msgid "shop=clothes"
+msgstr "Abbigliamento"
+
+msgid "shop=computer"
+msgstr "Computer"
+
+msgid "shop=confectionery"
+msgstr "Pasticceria"
+
+msgid "shop=convenience"
+msgstr "Minimarket"
+
+msgid "shop=copyshop"
+msgstr "Copisteria"
+
+msgid "shop=cosmetics"
+msgstr "Profumeria"
+
+msgid "shop=curtain"
+msgstr "Tende"
+
+msgid "shop=deli"
+msgstr "Specialità gastronomiche"
+
+msgid "shop=department_store"
+msgstr "Grande magazzino"
+
+msgid "shop=discount"
+msgstr "Discount"
+
+msgid "shop=doityourself"
+msgstr "Fai da te"
+
+msgid "shop=drugstore"
+msgstr "Igiene personale e della casa"
+
+msgid "shop=dry_cleaning"
+msgstr "Lavasecco"
+
+msgid "shop=electronics"
+msgstr "Elettronica di consumo"
+
+msgid "shop=erotic"
+msgstr "Sexy shop"
+
+msgid "shop=estate_agent"
+msgstr "Agenzia immobiliare"
+
+msgid "shop=fabric"
+msgstr "Merceria"
+
+msgid "shop=farm"
+msgstr "Vendita diretta"
+
+msgid "shop=fashion"
+msgstr "Moda"
+
+msgid "shop=fish"
+msgstr "Pescheria"
+
+msgid "shop=florist"
+msgstr "Fioraio"
+
+msgid "shop=food"
+msgstr "Cibo"
+
+msgid "shop=funeral_directors"
+msgstr "Impresa di pompe funebri"
+
+msgid "shop=furniture"
+msgstr "Arredamento"
+
+msgid "shop=gallery"
+msgstr "Galleria d'arte"
+
+msgid "shop=garden_centre"
+msgstr "Giardinaggio"
+
+msgid "shop=general"
+msgstr "Emporio"
+
+msgid "shop=gift"
+msgstr "Articoli da regalo"
+
+msgid "shop=glaziery"
+msgstr "Vetraio"
+
+msgid "shop=greengrocer"
+msgstr "Fruttivendolo"
+
+msgid "shop=grocery"
+msgstr "Fruttivendolo"
+
+msgid "shop=hairdresser"
+msgstr "Parrucchiere"
+
+msgid "shop=hardware"
+msgstr "Ferramenta"
+
+msgid "shop=hifi"
+msgstr "Hifi"
+
+msgid "shop=hunting"
+msgstr "Armeria"
+
+msgid "shop=insurance"
+msgstr "Agenzia di assicurazioni"
+
+msgid "shop=jewelry"
+msgstr "Gioielleria"
+
+msgid "shop=kiosk"
+msgstr "Chiosco"
+
+msgid "shop=laundry"
+msgstr "Lavanderia"
+
+msgid "shop=mall"
+msgstr "Centro commerciale"
+
+msgid "shop=market"
+msgstr "Mercato"
+
+msgid "shop=mobile_phone"
+msgstr "Cellulari"
+
+msgid "shop=motorcycle"
+msgstr "Motociclette"
+
+msgid "shop=music"
+msgstr "Musica"
+
+msgid "shop=musical_instrument"
+msgstr "Strumenti musicali"
+
+msgid "shop=newsagent"
+msgstr "Giornalaio"
+
+msgid "shop=optician"
+msgstr "Ottico"
+
+msgid "shop=organic"
+msgstr "Prodotti biologici"
+
+msgid "shop=outdoor"
+msgstr "Attrezzature da campeggio"
+
+msgid "shop=pet"
+msgstr "Animali"
+
+msgid "shop=photo"
+msgstr "Fotografo"
+
+msgid "shop=seafood"
+msgstr "Pescheria"
+
+msgid "shop=shoes"
+msgstr "Calzature"
+
+msgid "shop=shopping_centre"
+msgstr "Centro commerciale"
+
+msgid "shop=sports"
+msgstr "Attrezzature sportive"
+
+msgid "shop=stationery"
+msgstr "Cartoleria"
+
+msgid "shop=supermarket"
+msgstr "Supermercato"
+
+msgid "shop=tobacco"
+msgstr "Tabaccaio"
+
+msgid "shop=toys"
+msgstr "Giocattoli"
+
+msgid "shop=trade"
+msgstr "Materiali da costruzione"
+
+msgid "shop=travel_agency"
+msgstr "Agenzia di viaggi"
+
+msgid "shop=variety_store"
+msgstr "Articoli a basso costo"
+
+msgid "shop=video"
+msgstr "Videoteca"
+
+msgid "shop=wine"
+msgstr "Vino"
+
+msgid "tourism=alpine_hut"
+msgstr "Rifugio alpino"
+
+msgid "tourism=artwork"
+msgstr "Opera d'arte"
+
+msgid "tourism=attraction"
+msgstr "Attrazione"
+
+msgid "tourism=bed_and_breakfast"
+msgstr "Bed and breakfast"
+
+msgid "tourism=camp_site"
+msgstr "Campeggio"
+
+msgid "tourism=caravan_site"
+msgstr "Area caravan e camper"
+
+msgid "tourism=chalet"
+msgstr "Chalet"
+
+msgid "tourism=guest_house"
+msgstr "Casa per ospiti"
+
+msgid "tourism=hostel"
+msgstr "Ostello"
+
+msgid "tourism=hotel"
+msgstr "Hotel"
+
+msgid "tourism=information"
+msgstr "Informazioni turistiche"
+
+msgid "tourism=motel"
+msgstr "Motel"
+
+msgid "tourism=museum"
+msgstr "Museo"
+
+msgid "tourism=picnic_site"
+msgstr "Area pic nic"
+
+msgid "tourism=theme_park"
+msgstr "Parco a tema"
+
+msgid "tourism=viewpoint"
+msgstr "Belvedere"
+
+msgid "tourism=zoo"
+msgstr "Zoo"
+
+msgid "waterway=boatyard"
+msgstr "Cantiere navale"
+
+msgid "waterway=canal"
+msgstr "Canale artificiale"
+
+msgid "waterway=dam"
+msgstr "Diga"
+
+msgid "waterway=ditch"
+msgstr "Fosso"
+
+msgid "waterway=dock"
+msgstr "Darsena"
+
+msgid "waterway=drain"
+msgstr "Canale di scolo"
+
+msgid "waterway=lock_gate"
+msgstr "Chiusa"
+
+msgid "waterway=mineral_spring"
+msgstr "Sorgente minerale"
+
+msgid "waterway=mooring"
+msgstr "Ormeggio"
+
+msgid "waterway=rapids"
+msgstr "Rapide"
+
+msgid "waterway=river"
+msgstr "Fiume"
+
+msgid "waterway=riverbank"
+msgstr "Fiume"
+
+msgid "waterway=stream"
+msgstr "Torrente"
+
+msgid "waterway=turning_point"
+msgstr "Inversione di marcia"
+
+msgid "waterway=wadi"
+msgstr "Wadi"
+
+msgid "waterway=waterfall"
+msgstr "Cascata"
+
+msgid "waterway=weir"
+msgstr "Sbarramento"
+

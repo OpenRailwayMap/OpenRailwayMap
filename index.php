@@ -1,12 +1,12 @@
 <?php
 	require_once("api/functions.php");
 
-	if (isset($_GET['lang']) && in_array($_GET['lang'], $langs))
+	if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $langs))
 		$lang = $_GET['lang'];
 	else
 		$lang = getUserLang();
 
-	require_once("locales/".$lang.".php");
+	includeLocale($lang);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<? echo $lang; ?>" lang="<? echo $lang; ?>">
@@ -28,7 +28,11 @@
 		<meta http-equiv="content-script-type" content="text/javascript" />
 		<meta http-equiv="content-style-type" content="text/css" />
 		<link rel="stylesheet" type="text/css" href="css/map.css" />
-		<script type="text/javascript" src="js/OpenLayers.js"></script>
+		<link rel="stylesheet" href="css/leaflet.css" />
+		<!--[if lte IE 8]>
+			<link rel="stylesheet" href="css/leaflet.ie.css" />
+		<![endif]-->
+		<script type="text/javascript" src="js/leaflet-0.5.1.js"></script>
 		<?php
 			// params
 			echo "<script type=\"text/javascript\">\n";
@@ -100,15 +104,10 @@
 					break;
 			}
 		?>
-		<script type="text/javascript" src="locales/<? echo $lang; ?>.js"></script>
-		<script type="text/javascript" src="api/langfile.php?lang=<? echo $lang; ?>"></script>
-		<script type="text/javascript" src="js/OpenStreetMap.js"></script>
+		<script type="text/javascript" src="api/jstranslations.php?lang=<? echo $lang; ?>"></script>
 		<script type="text/javascript" src="js/search.js"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>
 		<script type="text/javascript" src="js/timestamp.js"></script>
-		<script type="text/javascript" src="js/format.js"></script>
-		<script type="text/javascript" src="js/fullscreen.js"></script>
-		<script type="text/javascript" src="js/panorama.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
 		<!-- Piwik
 		<script type="text/javascript">
@@ -153,6 +152,8 @@
 							"en" => "English",
 							"fr" => "Français",
 							"it" => "Italiano",
+							"ja" => "日本語",
+							"nl" => "Nederlands",
 							"ru" => "Русский"
 						);
 						foreach ($languages as $short => $name)
@@ -166,7 +167,6 @@
 				</select>
 			</form>
 			<br />
-			<p id="osm">Maps and data <a href="http://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>.<br />Hillshading: <a href="http://nasa.gov/">NASA SRTM</a>.</p>
 			<a href="http://joker.com/" id="poweredby"><img src="img/ad.png" /></a>
 			<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="PaypalButton">
 				<input type="hidden" name="cmd" value="_s-xclick">

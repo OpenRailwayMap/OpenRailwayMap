@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+
+<!--
+	OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+	This program comes with ABSOLUTELY NO WARRANTY.
+	This is free software, and you are welcome to redistribute it under certain conditions.
+	See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+
+	See http://wiki.openstreetmap.org/wiki/Osmosis/TagTransform for the format specifications.
+
+	Supported operators:
+	* AT: ÖBB
+	* BE: De Lijn
+	* DE: Deutsche Bahn, Verkehrsverbund Stuttgart, Stadtwerke Neuss, Stadtbus Eschwege, Nordhessischer Verkehrsverbund, Braunschweiger Verkehrs AG
+	* ES: Titsa
+	* IT: ATAC, AMT Genova
+-->
+
+<translations>
+	<translation>
+		<name>De Lijn</name>
+		<description>Timetables for public transport stops operated by "De Lijn" in Flanders, Belgium.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+		 		<tag k="public_transport" v="platform"/>
+				<tag k="public_transport" v="stop_position"/>
+			</match>
+			<tag k="operator" v="(.*;|^)De Lijn(;.*|$)"/>
+		</match>
+		<find>
+			<tag k="ref" v="([0-9]*)" match_id="stop_ref"/>
+		</find>
+		<output>
+			<copy-all/>
+			<tag from_match="stop_ref" k="departures" v="http://mijnlijn.be/{0}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>AMT Genova</name>
+		<description>Timetables for public transport stops operated by "Amt" in Genoa, Italy.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="highway" v="platform"/>
+				<tag k="public_transport" v="platform"/>
+				<tag k="public_transport" v="stop_position"/>
+				<tag k="amenity" v="bus_station"/>
+			</match>
+			<tag k="operator" v="(.*;|^)AMT(;.*|$)"/>
+			<tag k="ref" v="([0-9]*)" match_id="ref"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag from_match="ref" k="departures" v="http://www.amt.genova.it/mobile/passaggi2.asp?zona=&amp;CodiceFermata={0}&amp;func=fermata&amp;submit=Conferma"/>
+		</output>
+	</translation>
+	<translation>
+		<name>ATAC</name>
+		<description>Timetables for public transport stops operated by "ATAC" in Rome, Italy.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="highway" v="platform"/>
+				<tag k="public_transport" v="platform"/>
+				<tag k="public_transport" v="stop_position"/>
+			</match>
+			<tag k="operator" v="(.*;|^)ATAC(;.*|$)"/>
+			<tag k="ref" v="([0-9]*)" match_id="stop_ref"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag from_match="stop_ref" k="departures" v="http://muovi.roma.it/paline/palina/{0}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>ÖBB</name>
+		<description>Timetables for train stations operated by the Austrian Federal Railways "Österreichische Bundesbahnen (ÖBB)".</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="railway" v="station"/>
+		 		<tag k="railway" v="halt"/>
+				<tag k="public_transport" v="stop_position"/>
+				<tag k="railway" v="stop"/>
+			</match>
+			<match mode="or">
+				<tag k="operator" v="(.*;|^)ÖBB(;.*|$)"/>
+				<tag k="uic_ref" v="81[0-9]*"/>
+			</match>
+		</match>
+		<find>
+			<tag k="uic_ref" v="([0-9]*)" match_id="uic_ref"/>
+		</find>
+		<output>
+			<copy-all/>
+			<tag from_match="uic_ref" k="departures" v="http://fahrplan.oebb.at/bin/stboard.exe/dn?L=vs_liveticker&amp;boardType=dep&amp;tickerID=dep&amp;start=yes&amp;eqstops=true&amp;showJourneys=20&amp;input={0}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>Deutsche Bahn</name>
+		<description>Timetables for train stations operated by the German Railway "Deutsche Bahn (DB)".</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="railway" v="station"/>
+		 		<tag k="railway" v="halt"/>
+				<tag k="public_transport" v="stop_position"/>
+				<tag k="railway" v="stop"/>
+			</match>
+			<match mode="or">
+				<tag k="operator" v="(.*;|^)DB(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)DB AG(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)DB Netz AG(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)DB Station &amp; Service AG(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)DB Regio AG(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)DB Regio(;.*|$)"/>
+				<tag k="uic_ref" v="80[0-9]*"/>
+			</match>
+		</match>
+		<find>
+			<tag k="uic_ref" v="([0-9]*)" match_id="uic_ref"/>
+		</find>
+		<output>
+			<copy-all/>
+			<tag from_match="uic_ref" k="departures" v="http://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?country=DEU&amp;rt=1&amp;use_realtime_filter=1&amp;productsFilter=1111111111000000&amp;boardType=Abfahrt&amp;start=Suchen&amp;input={0}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>Verkehrs- und Tarifverbund Stuttgart 1</name>
+		<description>Timetables for public transport stops operated by the "Verkehrs- und Tarifverbund Stuttgart VVS" in Stuttgart, Germany.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="public_transport" v="platform"/>
+				<tag k="public_transport" v="stop_position"/>
+				<tag k="railway" v="halt"/>
+				<tag k="railway" v="tram_stop"/>
+				<tag k="railway" v="station"/>
+			</match>
+			<tag k="ref:vvs" v="([0-9]*)" match_id="ref_vvs"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag from_match="ref_vvs" k="departures" v="http://www2.vvs.de/vvsDM/XSLT_DM_REQUEST?dmMacro=mini&amp;name_dm={0}&amp;itdLPxx_limit=20"/>
+		</output>
+	</translation>
+	<translation>
+		<name>Verkehrs- und Tarifverbund Stuttgart 2</name>
+		<description>Timetables for public transport stops operated by the "Verkehrs- und Tarifverbund Stuttgart VVS" in Stuttgart, Germany.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="public_transport" v="platform"/>
+				<tag k="public_transport" v="stop_position"/>
+				<tag k="railway" v="halt"/>
+				<tag k="railway" v="tram_stop"/>
+				<tag k="railway" v="station"/>
+			</match>
+			<match mode="or">
+				<tag k="operator" v="(.*;|^)SSB(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Stuttgarter Strassenbahnen(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Stuttgarter Straßenbahnen(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)SVE(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)LVL(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Schlienz(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Bader(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Böltz(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Dannenmann(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Däuble(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Eberhardt(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Eisemann(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)END(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Fischle(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Flattich(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Ganter(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Hassler(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Haussmann &amp; Bauer(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Jäger(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Kappus(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Klingel(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Knauss(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Kniesel(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Ludwigsburger Verkehrslinien(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Melchinger(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Omnibusverkehr Ernst Maier(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Ernst Maier(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)OVK(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Omnibus Verkehr Kirchheim(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)OVR(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Pflieger(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Pflüger(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Römer(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Schefenacker(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Seitter(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Seiz(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Spillmann(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Stadtwerke Herrenberg(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Stadtwerke Remseck(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Stäbler(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Städtischer Verkehrsbetrieb Esslingen(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)VBN(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Verkehrsbetriebe Nagoldtal(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)WEG(;.*|$)"/>
+				<tag k="operator" v="(.*;|^)Wöhr(;.*|$)"/>
+				<tag k="network" v="(.*;|^)VVS(;.*|$)"/>
+			</match>
+		</match>
+		<find>
+			<tag k="uic_name" v="(.*)" match_id="uic_name"/>
+		</find>
+		<output>
+			<copy-all/>
+			<tag from_match="uic_name" k="departures" v="http://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?country=DEU&amp;rt=1&amp;use_realtime_filter=1&amp;productsFilter=1111111111000000&amp;boardType=Abfahrt&amp;start=Suchen&amp;input={0}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>Transportes Interurbanos de Tenerife (TITSA)</name>
+		<description>Timetables for public transport stops operated by "Titsa" in Tenerife, Canary islands, Spain.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="public_transport" v="platform"/>
+				<tag k="public_transport" v="stop_position"/>
+			</match>
+			<tag k="operator" v="(?i)(.*;|^)TITSA(;.*|$)"/>
+		</match>
+		<find>
+			<tag k="ref" v="([0-9]*)" match_id="stop_ref"/>
+		</find>
+		<output>
+			<copy-all/>
+			<tag from_match="stop_ref" k="departures" v="http://www.titsa.com/correspondencias.php?idc={0}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>Stadtwerke Neuss</name>
+		<description>Timetables for public transport stops operated by "Stadtwerke Neuss" in Neuss, Germany.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="public_transport" v="platform"/>
+				<tag k="public_transport" v="stop_position"/>
+				<tag k="railway" v="halt"/>
+				<tag k="railway" v="station"/>
+			</match>
+			<match mode="or">
+				<tag k="operator" v="(?i)(.*;|^)SWN(;.*|$)"/>
+				<tag k="operator" v="(?i)(.*;|^)Stadtwerke Neuss(;.*|$)"/>
+			</match>
+			<tag k="name" v="(.*)" match_id="name"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag from_match="name" k="departures" v="http://efa.vrr.de/vrr/XSLT_DM_REQUEST?language=de&amp;place_dm=Neuss&amp;name_dm={0}&amp;type_dm=stop&amp;sessionID=0&amp;itdLPxx_transpCompany=swn&amp;itdTripDateTimeDepArr=dep"/>
+		</output>
+	</translation>
+	<translation>
+		<name>Braunschweiger Verkehrs AG</name>
+		<description>Timetables for public transport stops operated by "Braunschweiger Verkehrs AG" in Braunschweig, Germany.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="public_transport" v="platform"/>
+				<tag k="public_transport" v="stop_area"/>
+				<tag k="public_transport" v="stop_position"/>
+				<tag k="railway" v="halt"/>
+				<tag k="railway" v="station"/>
+			</match>
+			<match mode="or">
+				<tag k="operator" v="(?i)(.*;|^)Braunschweiger Verkehrs AG(;.*|$)"/>
+			</match>
+			<tag k="network" v="VRB"/>
+			<tag k="name" v="(.*)" match_id="name"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag from_match="name" k="departures" v="http://www.efa.de/gvh/XSLT_TRIP_REQUEST2?type_origin=stop&amp;type_destination=stop&amp;place_origin=braunschweig&amp;name_origin={0}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>Stadtbus Eschwege 1</name>
+		<description>Timetables for public transport stops operated by "Stadtbus Eschwege" in Eschwege, Germany.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="public_transport" v="stop_position"/>
+			</match>
+			<tag k="operator" v="(?i)(.*;|^)Stadtbus Eschwege(;.*|$)"/>
+			<tag k="uic_name" v="(.*)" match_id="uic_name"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag from_match="uic_name" k="departures" v="http://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?country=DEU&amp;rt=1&amp;use_realtime_filter=1&amp;productsFilter=1111111111000000&amp;boardType=Abfahrt&amp;start=Suchen&amp;input={0}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>Stadtbus Eschwege 2</name>
+		<description>Timetables for public transport stops operated by "Stadtbus Eschwege" in Eschwege, Germany.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="public_transport" v="stop_position"/>
+			</match>
+			<tag k="operator" v="(?i)(.*;|^)Stadtbus Eschwege(;.*|$)"/>
+			<tag k="ibnr_ref" v="([0-9]*)" match_id="ibnr_ref"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag from_match="ibnr_ref" k="departures" v="http://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?country=DEU&amp;rt=1&amp;use_realtime_filter=1&amp;productsFilter=1111111111000000&amp;boardType=Abfahrt&amp;start=Suchen&amp;input={0}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>Nordhessischer Verkehrsverbund 1</name>
+		<description>Timetables for public transport stops operated by "Nordhessischer Verkehrsverbund NVV" in Hessen, Germany.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="public_transport" v="stop_position"/>
+			</match>
+			<tag k="network" v="(?i)(.*;|^)NVV(;.*|$)"/>
+			<tag k="uic_name" v="(.*)" match_id="uic_name"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag from_match="uic_name" k="departures" v="http://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?country=DEU&amp;rt=1&amp;use_realtime_filter=1&amp;productsFilter=1111111111000000&amp;boardType=Abfahrt&amp;start=Suchen&amp;input={0}"/>
+		</output>
+	</translation>
+	<translation>
+		<name>Nordhessischer Verkehrsverbund 2</name>
+		<description>Timetables for public transport stops operated by "Nordhessischer Verkehrsverbund NVV" in Hessen, Germany.</description>
+		<match mode="and">
+			<match mode="or">
+				<tag k="highway" v="bus_stop"/>
+				<tag k="public_transport" v="stop_position"/>
+			</match>
+			<tag k="network" v="(?i)(.*;|^)NVV(;.*|$)"/>
+			<tag k="ibnr_ref" v="([0-9]*)" match_id="ibnr_ref"/>
+		</match>
+		<output>
+			<copy-all/>
+			<tag from_match="ibnr_ref" k="departures" v="http://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?country=DEU&amp;rt=1&amp;use_realtime_filter=1&amp;productsFilter=1111111111000000&amp;boardType=Abfahrt&amp;start=Suchen&amp;input={0}"/>
+		</output>
+	</translation>
+</translations>

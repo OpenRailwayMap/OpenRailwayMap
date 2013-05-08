@@ -1,0 +1,541 @@
+# OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2013-03-09 09:46+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Fullscreen"
+msgstr "На весь экран"
+
+msgid "Homepage"
+msgstr "Домашняя страница"
+
+msgid "Wikipedia"
+msgstr "Wikipedia"
+
+msgid "Realtime departures"
+msgstr ""
+
+msgid "Operator"
+msgstr "Оператор"
+
+msgid "With shelter"
+msgstr ""
+
+msgid "Without shelter"
+msgstr ""
+
+msgid "With bench"
+msgstr ""
+
+msgid "Without bench"
+msgstr ""
+
+msgid "With wastebasket"
+msgstr ""
+
+msgid "Without wastebasket"
+msgstr ""
+
+msgid "Tactile paving"
+msgstr ""
+
+msgid "No tactile paving"
+msgstr ""
+
+msgid "Incorrect tactile paving"
+msgstr ""
+
+msgid "Accessible for wheelchairs"
+msgstr "Доступно для инвалидных колясок"
+
+msgid "Not accessible for wheelchairs"
+msgstr "Недоступно для инвалидных колясок"
+
+msgid "Limited accessible for wheelchairs"
+msgstr "Ограниченный доступ для инвалидных колясок"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Fax"
+msgstr "Факс"
+
+msgid "Mobile phone"
+msgstr "Мобильный телефон"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Opening hours"
+msgstr "Режим работы"
+
+msgid "Open 24/7"
+msgstr "Открыто 24/7"
+
+msgid "Now open"
+msgstr "сейчас открыто"
+
+msgid "Open on holiday"
+msgstr "Открыто по праздникам"
+
+msgid "Now closed"
+msgstr "сейчас закрыто"
+
+msgid "Service hours"
+msgstr ""
+
+msgid "Without name"
+msgstr "Без имени"
+
+msgid "Busstops"
+msgstr "Остановки"
+
+msgid "Stations"
+msgstr "Станции"
+
+msgid "Tramhalts"
+msgstr "Трамвайные остановки"
+
+msgid "Parkings"
+msgstr "Стоянки"
+
+msgid "Accessibility"
+msgstr ""
+
+msgid "Unnamed"
+msgstr "Без имени"
+
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d Секунда"
+msgstr[1] "%d Секунды"
+msgstr[2] "%d Секунд"
+
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d Минута"
+msgstr[1] "%d Минуты"
+msgstr[2] "%d Минут"
+
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d Час"
+msgstr[1] "%d Часа"
+msgstr[2] "%d Часов"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d День"
+msgstr[1] "%d Дня"
+msgstr[2] "%d Дней"
+
+#, php-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d Неделя"
+msgstr[1] "%d Недели"
+msgstr[2] "%d Недель"
+
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d Месяц"
+msgstr[1] "%d Месяца"
+msgstr[2] "%d Месяцев"
+
+#, php-format
+msgid "more than %s ago"
+msgstr "более %s назад"
+
+#, php-format
+msgid "%s ago"
+msgstr "%s назад"
+
+msgid "Mo"
+msgstr "Пн"
+
+msgid "Tu"
+msgstr "Вт"
+
+msgid "We"
+msgstr "Ср"
+
+msgid "Th"
+msgstr "Чт"
+
+msgid "Fr"
+msgstr "Пт"
+
+msgid "Sa"
+msgstr "Сб"
+
+msgid "Su"
+msgstr "Вс"
+
+msgid "closed"
+msgstr "закрыто"
+
+msgid "Public holiday"
+msgstr "Государственный выходной"
+
+msgid "School holiday"
+msgstr "Школьные каникулы"
+
+msgid "open ending"
+msgstr "до последнего посетителя"
+
+msgid "and"
+msgstr "и"
+
+msgid "24/7"
+msgstr "24/7"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Details"
+msgstr "Подробнее"
+
+msgid "Contact"
+msgstr "Связаться с нами"
+
+msgid "More Info"
+msgstr "О сайте"
+
+msgid "Loading..."
+msgstr "Загрузка..."
+
+msgid "Nothing found."
+msgstr "Ничего не найдено."
+
+msgid "No more results."
+msgstr "Больше нет результатов."
+
+msgid "Last update:"
+msgstr "Последнее обновление:"
+
+msgid "Zoom in to show marker"
+msgstr "Увеличьте масштаб для отображения меток"
+
+msgid "Empty input."
+msgstr "Пустой ввод."
+
+msgid "More Details"
+msgstr "Узнать больше"
+
+msgid "More results..."
+msgstr "Ещё результаты..."
+
+msgid "Less"
+msgstr "Меньше"
+
+msgid "Hide"
+msgstr "Спрятать"
+
+msgid "Show"
+msgstr "Показать"
+
+msgid "Permalink"
+msgstr "Постоянная ссылка"
+
+msgid "Finish"
+msgstr "Завершить"
+
+msgid "Loading points..."
+msgstr "Загрузка..."
+
+msgid "Hillshading"
+msgstr "Карта высот"
+
+msgid "POI-Details"
+msgstr "POI-информация"
+
+msgid "Marker"
+msgstr "Метка"
+
+msgid "Public transport"
+msgstr ""
+
+msgid "Search results"
+msgstr "Результаты поиска"
+
+msgid "Route"
+msgstr "Маршрут"
+
+msgid "Search only in the current map view"
+msgstr "Искать только на видимом участке карты"
+
+msgid "Click to close"
+msgstr "Нажмите для закрытия"
+
+msgid "Show in OpenLinkMap..."
+msgstr "Показать в OpenLinkMap..."
+
+msgid "HTML-Code"
+msgstr "HTML-код"
+
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
+msgstr ""
+
+msgid "Maps and data <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Hillshading: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+msgstr "Карта и данные <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Карта высот: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+
+msgid "Address"
+msgstr "Адрес"
+
+msgid "Gastronomy"
+msgstr "Гастрономия"
+
+msgid "Cuisine"
+msgstr "Кухня"
+
+msgid "Stars"
+msgstr "Звезды"
+
+msgid "Smoking"
+msgstr "Курение"
+
+msgid "allowed"
+msgstr "разрешено"
+
+msgid "prohibited"
+msgstr "запрещено"
+
+msgid "dedicated"
+msgstr "Место для курения"
+
+msgid "separated smoking area"
+msgstr ""
+
+msgid "Isolated area"
+msgstr ""
+
+msgid "Beer"
+msgstr "Пиво"
+
+msgid "with microbrewery"
+msgstr "с пивоварней"
+
+msgid "Beergarden"
+msgstr "Пивной сад"
+
+msgid "Fuel"
+msgstr "Топливо"
+
+msgid "Diesel"
+msgstr "Дизельное топливо"
+
+msgid "High quality synthetic Diesel"
+msgstr "Дизель, высококачественный синтетический"
+
+msgid "HGV Diesel"
+msgstr ""
+
+msgid "Biodiesel"
+msgstr ""
+
+msgid "Octane 91"
+msgstr ""
+
+msgid "Octane 95"
+msgstr ""
+
+msgid "Octane 98"
+msgstr ""
+
+msgid "Octane 100"
+msgstr ""
+
+msgid "Octane 98, leaded"
+msgstr ""
+
+msgid "Mixture 1:25"
+msgstr "Смесь 1:25"
+
+msgid "Mixture 1:50"
+msgstr "Смесь 1:50"
+
+msgid "Alcohol"
+msgstr "Спирт"
+
+msgid "Ethanol"
+msgstr "Этанол"
+
+msgid "Methanol"
+msgstr "Метанол"
+
+msgid "Vegetable oil"
+msgstr "Рапсовое масло"
+
+msgid "Ethanol-Mixture E10 (10% Ethanol)"
+msgstr "Этаноловая смесь E10 (10% этанола)"
+
+msgid "Ethanol-Mixture E85 (85% Ethanol)"
+msgstr "Этаноловая смесь E85 (85% этанола)"
+
+msgid "Biogas"
+msgstr "Биогаз"
+
+msgid "LPG"
+msgstr "LPG"
+
+msgid "CNG"
+msgstr "CNG"
+
+msgid "Liquid hydrogen"
+msgstr "водоро́д"
+
+msgid "Electricity"
+msgstr "Электричество"
+
+msgid "AdBlue"
+msgstr "AdBlue"
+
+msgid "Car wash"
+msgstr "Автомойка"
+
+msgid "Car repair"
+msgstr "Авторемонт"
+
+msgid "Shop"
+msgstr "Магазин"
+
+msgid "Other"
+msgstr "Другое"
+
+msgid "Capacity"
+msgstr "Вместимость"
+
+msgid "Reference"
+msgstr "Обозначение"
+
+msgid "Internet terminal"
+msgstr "Интернет терминал"
+
+msgid "WLAN hotspot"
+msgstr "Точка WLAN"
+
+msgid "Wired internet access"
+msgstr "Проводной интернет"
+
+msgid "Internet access via service"
+msgstr "Интернет-кафе"
+
+msgid "With costs"
+msgstr "Платно"
+
+msgid "For free"
+msgstr "Бесплатно"
+
+msgid "Partly with costs"
+msgstr "Частичная оплата"
+
+msgid "Toll"
+msgstr "Таможенный сбор"
+
+msgid "Disused"
+msgstr "Неиспользуемый"
+
+msgid "Geographic"
+msgstr ""
+
+msgid "Height about sea level"
+msgstr "Высота над уровнем моря"
+
+msgid "Population"
+msgstr "Население"
+
+msgid "IATA"
+msgstr "IATA"
+
+msgid "ICAO"
+msgstr "ICAO"
+
+msgid "Wheelchair"
+msgstr ""
+
+msgid "Toilets accessible"
+msgstr "Туалеты с доступом для инвалидных колясок"
+
+msgid "Toilets not accessible"
+msgstr "Туалеты без доступа для инвалидных колясок"
+
+msgid "Toilets limited accessible"
+msgstr "Туалеты с ограниченным доступом для инвалидных колясок"
+
+msgid "All rooms accessible"
+msgstr "Все комнаты доступны для инвалидных колясок"
+
+msgid "Rooms not accessible"
+msgstr "Комнаты недоступны для инвалидных колясок"
+
+msgid "Most rooms accessible"
+msgstr "Комнаты ограниченно доступны для инвалидных колясок"
+
+msgid "Building accessible"
+msgstr "Здание с доступом для инвалидных колясок"
+
+msgid "Building not accessible"
+msgstr "Здание без доступа для инвалидных колясок"
+
+msgid "Building limited accessible"
+msgstr "Здание с ограниченным доступом для инвалидных колясок"
+
+msgid "Places for wheelchairs"
+msgstr "Место для инвалидных колясок"
+
+msgid "No places for wheelchairs"
+msgstr "Нет мест для инвалидных колясок"
+
+msgid "Limited places for wheelchairs"
+msgstr "Место для инвалидных колясок ограничено"
+
+msgid "Full article..."
+msgstr "Полная статья..."
+
+msgid "Image"
+msgstr "Изображение"
+
+msgid "More images"
+msgstr "Больше изображений"
+
+msgid "License, author, original page..."
+msgstr "Лицензия, автор, оригинальная страница..."
+
+msgid "Improve the data! Correct wrong website links with the new website checker from Keepright!"
+msgstr "Совершенствуйте данные! Исправьте неправильные ссылки на веб-сайты с помощью нового валидатора веб-сайтов от Keepright!"
+
+msgid "Report bug in map"
+msgstr "Сообщить об ошибке на карте"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Javascript is not activated"
+msgstr "JavaScript не активирован"
+
+msgid "Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings."
+msgstr "Для отображения карты и запуска сайта необходим JavaScript. Пожалуйста, включите JavaScript в настройках вашего браузера."
+
