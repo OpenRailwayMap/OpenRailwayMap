@@ -101,9 +101,8 @@ sed -i 's/-g -O2/-O2 -march=native -fomit-frame-pointer/' Makefile
 make
 cd ..
 
-# add this to your httpd.conf:
-#<Directory "/home/www/sites/194.245.35.149/site/orm/tiles">
-#    RewriteEngine on
-#    RewriteCond /home/www/sites/194.245.35.149/site/orm/%{REQUEST_URI} !-f
-#    RewriteRule ^([0-9]+)/([0-9]+)/([0-9]+)\.js ../kothic/src/json_getter.py?z=$1&x=$2&y=$3
-#</Directory>
+# add such a mod_rewrite redirection to your apache configuration for having cache
+#Options +Indexes +FollowSymLinks
+#RewriteEngine on
+#RewriteCond /home/www/sites/194.245.35.149/site/orm/%{REQUEST_URI} !-f
+#RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js$ /renderer/vtiler.php?z=$1&x=$2&y=$3
