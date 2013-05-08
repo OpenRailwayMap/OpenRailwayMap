@@ -174,9 +174,9 @@
 				<input type="image" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
 				<img alt="" border="0" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/scr/pixel.gif" width="1" height="1">
 			</form>
-			<a class="FlattrButton" id="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://railmap.openlinkmap.org/"></a>
+			<a class="FlattrButton" id="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.openrailwaymap.org/"></a>
 			<noscript>
-				<a href="http://flattr.com/thing/905245/OpenRailwayMap" target="_blank">
+				<a href="http://flattr.com/thing/1327262/OpenRailwayMap" target="_blank">
 					<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
 				</a>
 			</noscript>
