@@ -1,0 +1,537 @@
+# OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+#
+# Translators:
+# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013.
+# David <davide.pri@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenLinkMap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2013-04-14 21:57+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"Language-Team: Italian (http://www.transifex.com/projects/p/openlinkmap/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: UNITED KINGDOM\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Fullscreen"
+msgstr "Schermo intero"
+
+msgid "Homepage"
+msgstr "Homepage"
+
+msgid "Wikipedia"
+msgstr "Wikipedia"
+
+msgid "Realtime departures"
+msgstr "Partenze"
+
+msgid "Operator"
+msgstr "Operatore"
+
+msgid "With shelter"
+msgstr "Con pensilina"
+
+msgid "Without shelter"
+msgstr "Senza pensilina"
+
+msgid "With bench"
+msgstr "Con panchina"
+
+msgid "Without bench"
+msgstr "Senza panchina"
+
+msgid "With wastebasket"
+msgstr "Con cestino"
+
+msgid "Without wastebasket"
+msgstr "Senza cestino"
+
+msgid "Tactile paving"
+msgstr "Con pavimentazione tattile"
+
+msgid "No tactile paving"
+msgstr "Senza pavimentazione tattile"
+
+msgid "Incorrect tactile paving"
+msgstr "Pavimentazione tattile non corretta"
+
+msgid "Accessible for wheelchairs"
+msgstr "Accessibile per sedie a rotelle"
+
+msgid "Not accessible for wheelchairs"
+msgstr "Non accessibile per sedie a rotelle"
+
+msgid "Limited accessible for wheelchairs"
+msgstr "Accesso limitato per sedie a rotelle"
+
+msgid "Phone"
+msgstr "Telefono"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "Mobile phone"
+msgstr "Cellulare"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Opening hours"
+msgstr "Orario di apertura"
+
+msgid "Open 24/7"
+msgstr "Aperto tutto il giorno"
+
+msgid "Now open"
+msgstr "aperto"
+
+msgid "Open on holiday"
+msgstr "Aperto nei festivi"
+
+msgid "Now closed"
+msgstr "chiuso"
+
+msgid "Service hours"
+msgstr "Orario di servizio"
+
+msgid "Without name"
+msgstr "senza nome"
+
+msgid "Busstops"
+msgstr "Fermate degli autobus"
+
+msgid "Stations"
+msgstr "Stazioni"
+
+msgid "Tramhalts"
+msgstr "Fermate del tram"
+
+msgid "Parkings"
+msgstr "Parcheggi"
+
+msgid "Accessibility"
+msgstr "Accessibilità"
+
+msgid "Unnamed"
+msgstr "senza nome"
+
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d secondo"
+msgstr[1] "%d secondi"
+
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minuto"
+msgstr[1] "%d minuti"
+
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d ora"
+msgstr[1] "%d ore"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d giorno"
+msgstr[1] "%d giorni"
+
+#, php-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d settiman"
+msgstr[1] "%d settimane"
+
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d mese"
+msgstr[1] "%d mesi"
+
+#, php-format
+msgid "more than %s ago"
+msgstr "più di %s fa"
+
+#, php-format
+msgid "%s ago"
+msgstr "%s fa"
+
+msgid "Mo"
+msgstr "Lu"
+
+msgid "Tu"
+msgstr "Ma"
+
+msgid "We"
+msgstr "Me"
+
+msgid "Th"
+msgstr "Gi"
+
+msgid "Fr"
+msgstr "Ve"
+
+msgid "Sa"
+msgstr "Sa"
+
+msgid "Su"
+msgstr "Do"
+
+msgid "closed"
+msgstr "chiuso"
+
+msgid "Public holiday"
+msgstr "Festa nazionale"
+
+msgid "School holiday"
+msgstr "Vacanze scolastiche"
+
+msgid "open ending"
+msgstr "ad oltranza"
+
+msgid "and"
+msgstr "e"
+
+msgid "24/7"
+msgstr "24/7"
+
+msgid "Back"
+msgstr "Indietro"
+
+msgid "Details"
+msgstr "Dettagli"
+
+msgid "Contact"
+msgstr "Contatto"
+
+msgid "More Info"
+msgstr "Informazioni"
+
+msgid "Loading..."
+msgstr "Caricamento..."
+
+msgid "Nothing found."
+msgstr "Nessun risultato."
+
+msgid "No more results."
+msgstr "Nessun altro risultato."
+
+msgid "Last update:"
+msgstr "Ultimo aggiornamento:"
+
+msgid "Zoom in to show marker"
+msgstr "Ingrandire per vedere i marcatori"
+
+msgid "Empty input."
+msgstr "Inserimento vuoto."
+
+msgid "More Details"
+msgstr "Altri dettagli"
+
+msgid "More results..."
+msgstr "Altri risultati..."
+
+msgid "Less"
+msgstr "Meno"
+
+msgid "Hide"
+msgstr "Nascondi"
+
+msgid "Show"
+msgstr "Mostra"
+
+msgid "Permalink"
+msgstr "Permalink"
+
+msgid "Finish"
+msgstr "Finito"
+
+msgid "Loading points..."
+msgstr "Caricamento punti..."
+
+msgid "Hillshading"
+msgstr "Ombreggiatura rilievi"
+
+msgid "POI-Details"
+msgstr "Dettagli POI"
+
+msgid "Marker"
+msgstr "Marcatori"
+
+msgid "Public transport"
+msgstr "Trasporto pubblico"
+
+msgid "Search results"
+msgstr "Risultati della ricerca"
+
+msgid "Route"
+msgstr "Route"
+
+msgid "Search only in the current map view"
+msgstr "Cercare solo nella mappa visualizzata"
+
+msgid "Click to close"
+msgstr "Fare clic per chiudere"
+
+msgid "Show in OpenLinkMap..."
+msgstr "Visualizza in OpenLinkMap..."
+
+msgid "HTML-Code"
+msgstr "Codice HTML"
+
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
+msgstr "Copia questo codice HTML sul tuo sito web per mostrare una piccola mappa con un pennarello."
+
+msgid "Maps and data <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Hillshading: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+msgstr "Mappa e dati da <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Ombreggiatura rilievi: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+
+msgid "Address"
+msgstr "Indirizzo"
+
+msgid "Gastronomy"
+msgstr "Gastronomia"
+
+msgid "Cuisine"
+msgstr "Cucina"
+
+msgid "Stars"
+msgstr "Stelle"
+
+msgid "Smoking"
+msgstr "Fumo"
+
+msgid "allowed"
+msgstr "permesso"
+
+msgid "prohibited"
+msgstr "vietato"
+
+msgid "dedicated"
+msgstr "dedicato"
+
+msgid "separated smoking area"
+msgstr "Area fumatori separata"
+
+msgid "Isolated area"
+msgstr "Area fumatori isolata"
+
+msgid "Beer"
+msgstr "Birra"
+
+msgid "with microbrewery"
+msgstr "con microbirrificio"
+
+msgid "Beergarden"
+msgstr "Birreria all'aperto"
+
+msgid "Fuel"
+msgstr "Carburante"
+
+msgid "Diesel"
+msgstr "Diesel"
+
+msgid "High quality synthetic Diesel"
+msgstr "Diesel, alta qualità sintetico"
+
+msgid "HGV Diesel"
+msgstr "Diesel per autotreni"
+
+msgid "Biodiesel"
+msgstr "Biodiesel"
+
+msgid "Octane 91"
+msgstr "91 ottani"
+
+msgid "Octane 95"
+msgstr "95 ottani"
+
+msgid "Octane 98"
+msgstr "98 ottani"
+
+msgid "Octane 100"
+msgstr "100 ottani"
+
+msgid "Octane 98, leaded"
+msgstr "98 ottani, con piombo"
+
+msgid "Mixture 1:25"
+msgstr "Miscela 1:25"
+
+msgid "Mixture 1:50"
+msgstr "Miscela 1:50"
+
+msgid "Alcohol"
+msgstr "Alcool"
+
+msgid "Ethanol"
+msgstr "Etanolo"
+
+msgid "Methanol"
+msgstr "Metanolo"
+
+msgid "Vegetable oil"
+msgstr "Olio vegetale"
+
+msgid "Ethanol-Mixture E10 (10% Ethanol)"
+msgstr "Miscela etanolo E10 (10% etanolo)"
+
+msgid "Ethanol-Mixture E85 (85% Ethanol)"
+msgstr "Miscela etanolo E85 (85% etanolo)"
+
+msgid "Biogas"
+msgstr "Biogas"
+
+msgid "LPG"
+msgstr "GPL"
+
+msgid "CNG"
+msgstr "Metano"
+
+msgid "Liquid hydrogen"
+msgstr "Idrogeno"
+
+msgid "Electricity"
+msgstr "Elettricità"
+
+msgid "AdBlue"
+msgstr "AdBlue"
+
+msgid "Car wash"
+msgstr "Autolavaggio"
+
+msgid "Car repair"
+msgstr "Riparazione auto"
+
+msgid "Shop"
+msgstr "Chiosco"
+
+msgid "Other"
+msgstr "Altro"
+
+msgid "Capacity"
+msgstr "Capacità"
+
+msgid "Reference"
+msgstr "Riferimento"
+
+msgid "Internet terminal"
+msgstr "Terminale Internet"
+
+msgid "WLAN hotspot"
+msgstr "Hotspot WLAN"
+
+msgid "Wired internet access"
+msgstr "Accesso a Internet via cavo"
+
+msgid "Internet access via service"
+msgstr "Accesso a Internet via service"
+
+msgid "With costs"
+msgstr "A pagamento"
+
+msgid "For free"
+msgstr "Gratuito"
+
+msgid "Partly with costs"
+msgstr "In parte a pagamento"
+
+msgid "Toll"
+msgstr "Pedaggio"
+
+msgid "Disused"
+msgstr "In disuso"
+
+msgid "Geographic"
+msgstr "Geografia"
+
+msgid "Height about sea level"
+msgstr "Altezza sul livello del mare"
+
+msgid "Population"
+msgstr "Popolazione"
+
+msgid "IATA"
+msgstr "IATA"
+
+msgid "ICAO"
+msgstr "ICAO"
+
+msgid "Wheelchair"
+msgstr "Sedie a rotelle"
+
+msgid "Toilets accessible"
+msgstr "Gabinetti accessibili"
+
+msgid "Toilets not accessible"
+msgstr "Gabinetti non accessibili"
+
+msgid "Toilets limited accessible"
+msgstr "Gabinetti limitatamente accessibili"
+
+msgid "All rooms accessible"
+msgstr "Tutte le stanze accessibili"
+
+msgid "Rooms not accessible"
+msgstr "Stanze non accessibili"
+
+msgid "Most rooms accessible"
+msgstr "Maggior parte delle stanze accessibili"
+
+msgid "Building accessible"
+msgstr "Edificio accessibile"
+
+msgid "Building not accessible"
+msgstr "Edificio non accessibile"
+
+msgid "Building limited accessible"
+msgstr "Edificio limitatamente accessibile"
+
+msgid "Places for wheelchairs"
+msgstr "Con posti per sedie a rotelle"
+
+msgid "No places for wheelchairs"
+msgstr "Senza posti per sedie a rotelle"
+
+msgid "Limited places for wheelchairs"
+msgstr "Limitati posti per sedie a rotelle"
+
+msgid "Full article..."
+msgstr "Articolo completo..."
+
+msgid "Image"
+msgstr "Immagine"
+
+msgid "More images"
+msgstr "Altre immagini"
+
+msgid "License, author, original page..."
+msgstr "Licenza, autore, pagina originale..."
+
+msgid "Improve the data! Correct wrong website links with the new website checker from Keepright!"
+msgstr "Migliora i dati! Correggi i collegamenti sbagliati ad i siti web con il nuovo controllo di Keepright!"
+
+msgid "Report bug in map"
+msgstr "Segnala errori"
+
+msgid "Search"
+msgstr "Avanti"
+
+msgid "Javascript is not activated"
+msgstr "JavaScript non è abilitato"
+
+msgid "Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings."
+msgstr "JavaScript è richiesto per mostrare la mappa ed eseguire questo sito web. Si prega di abilitare Javascript nelle impostazioni del browser."
+

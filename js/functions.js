@@ -1,18 +1,16 @@
 /*
-OpenRailwayMap Copyright (C) 2010 Alexander Matheisen
+OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
 */
 
 
 // main function, creates map and layers, controls other functions
 function createMap()
 {
-	root = "http://www.openlinkmap.org/orm/";
+	root = "http://www.openrailwaymap.org/";
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
-	// counter of clusterpopup's ids
-	cluster = 0;
 
 	if (params['offset'] != null)
 		offset = params['offset'];
@@ -23,90 +21,51 @@ function createMap()
 		offset = -(now.getTimezoneOffset() / 60);
 	}
 
-	// translate strings
-	translateStrings();
-
-	// projections
-	wgs84 = new OpenLayers.Projection("EPSG:4326");
-	google = new OpenLayers.Projection("EPSG:900913");
-
-	// set language of openlayers
-	OpenLayers.Lang.setCode(params['lang']);
-
-	// creating a map
-	map = new OpenLayers.Map('mapFrame',
+	// creating the map
+	map = L.map('mapFrame',
 	{
-		controls: [],
-		projection: google,
-		displayProjection: wgs84,
-		maxExtent: new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
-		numZoomLevels: 19,
-		maxResolution: 156543.03390625,
-		units: 'meters'
+		center: new L.LatLng(39.73, -104.99),
+		zoom: 10
 	});
+
+	// add some background layers
+	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	{
+		attribution: "Map data &copy; OpenStreetMap contributors",
+		maxZoom: 18
+	}).addTo(map);
+
+	var hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',
+	{
+		attribution: "Hillshading by <a href='http://nasa.gov/'>NASA SRTM</a>",
+		maxZoom: 17
+	}).addTo(map);
+	// TODO: add s/w basemap layer
 
 	// adding some controls
-	map.addControl(new OpenLayers.Control.PanZoomBar());
-	map.addControl(new OpenLayers.Control.ScaleLine({geodesic:true, maxWidth:200, bottomOutUnits:"", bottomInUnits:""}));
-	map.addControl(new OpenLayers.Control.MousePosition());
-	map.addControl(new OpenLayers.Control.LayerSwitcher());
-	map.addControl(new OpenLayers.Control.Permalink());
-	map.addControl(new OpenLayers.Control.Navigation({dragPanOptions: {enableKinetic: true}}));
-
-	// adding map layers
-	var mapnikMap = new OpenLayers.Layer.OSM.Mapnik("Mapnik",
+	var baseLayers =
 	{
-		transitionEffect: 'resize'
-	});
-
-	// adding hillshading map
-	var hillMap = new OpenLayers.Layer.XYZ(translations['hillshading'], "http://toolserver.org/~cmarqu/hill/${z}/${x}/${y}.png",
+		"Mapnik": mapnik
+	};
+	var overlays =
 	{
-		sphericalMercator: true,
-		opacity: 1,
-		visibility: false,
-		numZoomLevels: 17,
-		transparent: true,
-		noOpaq: true,
-		isBaseLayer: false
-	});
-
-	/*
-	 type: OpenLayers.Filter.Comparison.BETWEEN,
-	 property: "when",
-	 lowerBoundary: startDate,
-	 upperBoundary: new Date(startDate.getTime() + (parseInt(spanEl.value, 10) * 1000))
-	 if ($zoom == 13*)
-	 // jeden vollen kilometer
-	 $condition = " AND (trunc(cast(tags->'railway:position' AS float)) = cast(tags->'railway:position' AS float))";
-	 else if ($zoom == 12)
-		 // jeden zweiten kilometer
-		 $condition = " AND (trunc(cast(tags->'railway:position' AS float)) = cast(tags->'railway:position' AS float)) AND (mod(cast(cast(tags->'railway:position' AS float) AS integer), 2) = 0)";
-	 else if ($zoom < 12)
-		 // jeden zehnten kilometer
-		 $condition = " AND (trunc(cast(tags->'railway:position' AS float)) = cast(tags->'railway:position' AS float)) AND (mod(cast(cast(tags->'railway:position' AS float) AS integer), 10) = 0)";
-	 else
-		 $condition = "";
-	*/
-
-	// adding layers to map
-	map.addLayers([mapnikMap, hillMap]);
+		"Hillshading": hillshading
+	};
+	//map.addControl(new OpenLayers.Control.PanZoomBar());
+	//map.addControl(new OpenLayers.Control.MousePosition());
+	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
+	// TODO: plugin missing
+	//var permalink = new L.Control.Permalink({text: 'Permalink'}).addTo(map);
+	var layerSwitch = new L.Control.Layers(baseLayers, overlays).addTo(map);
 
 	// loading timestamp
 	var timestamp = new Timestamp("info");
 
 	// setting start position
-	startposition = new Startposition(map, "locateButton");
+	//startposition = new Startposition(map, "locateButton");
 
 	// creating search
-	search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchOption");
-
-	// adding fullscreen feature
-	fullscreen = new Fullscreen("fullscreen", "moreImage");
-	popupFullscreen = new Fullscreen("fullscreen", "image");
-
-	// adding panorama feature
-	//panorama = new Panorama("fullscreen", "morePanorama");
+	//search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
 }
 
 
@@ -121,17 +80,10 @@ function gEBI(id)
 function reportSpam()
 {
 	// get current coordinates
-	var position = map.getCenter().transform(map.getProjectionObject(), wgs84);
+	var position = map.getCenter();
 
 	// open osb and jump to current position
-	var bugWindow = window.open("http://openstreetbugs.schokokeks.org/?zoom="+map.getZoom()+"&lat="+position.lat+"&lon="+position.lon).focus();
-}
-
-
-// returns the current map bbox
-function getBounds()
-{
-	return map.getExtent().transform(map.getProjectionObject(), wgs84).toArray();
+	var bugWindow = window.open("http://openstreetbugs.schokokeks.org/?zoom="+map.getZoom()+"&lat="+position.lat+"&lon="+position.lng).focus();
 }
 
 
@@ -148,26 +100,15 @@ function josm(url)
 }
 
 
-// returns a new openlayers position, transformed from 4326/WGS84 to map's projection
-function getMapLatLon(lat, lon)
+// TODO: check ab hier
+// returns the current map bbox
+function getBounds()
 {
-	return new OpenLayers.LonLat(lon, lat).transform(wgs84, map.getProjectionObject());
+	return map.getExtent().transform(map.getProjectionObject(), wgs84).toArray();
 }
 
 
-// translates strings and captions on the page to user's language
-function translateStrings()
-{
-	gEBI('hideSidebarButton').title = translations['hide'];
-	gEBI('searchButton').title = translations['search'];
-	gEBI("spamButton").innerHTML = translations['spam'];
-	gEBI('infoButton').innerHTML = translations['info'];
-	gEBI('contactButton').innerHTML = translations['contact'];
-	gEBI("osm").innerHTML = translations['title'];
-	gEBI("searchOptionCaption").innerHTML = translations['searchoption'];
-}
-
-
+// TODO: attribution's CSS is destroyed
 // workaround because of webkit's hover-silbing-selector-bug
 function hoverSidebar()
 {
@@ -196,7 +137,6 @@ function unhoverSidebar()
 // updates map's center
 function updateMap()
 {
-	map.updateSize();
 	map.setCenter(map.getCenter(), map.getZoom());
 }
 
@@ -234,203 +174,6 @@ function hideSideBar()
 }
 
 
-// add a popup to map and set content
-function showPopup(feature)
-{
-	// first remove all features of nearest objects
-	markerLayer.removeAllFeatures();
-	var item = feature.cluster[0];
-
-	// create popup
-	item.popup = new OpenLayers.Popup.FramedCloud("popup", new OpenLayers.LonLat(item.geometry.x, item.geometry.y), null, loading, {size: new OpenLayers.Size(6,6),offset: new OpenLayers.Pixel(-3,-3)}, true, function(){eventHandlerClick.unselectAll(item);});
-	map.addPopup(item.popup);
-
-	if (feature.cluster.length == 1)
-	{
-		// load popup contents
-		var handler = function(request)
-			{
-				var content = request.responseText;
-
-				if (content != "NULL")
-				{
-					item.popup.position = new OpenLayers.LonLat(item.geometry.x, item.geometry.y);
-					item.popup.setContentHTML(editPopupContent(content, item.popup.position.lat, item.popup.position.lon, item.attributes['type'], item.attributes['id']));
-					map.removePopup(item.popup);
-					map.addPopup(item.popup);
-					popupFullscreen.init();
-				}
-				else
-					map.removePopup(item.popup);
-			}
-		requestApi("details", "id="+item.attributes['id']+"&type="+item.attributes['type']+"&format=text&offset="+offset+"&lang="+params['lang'], handler);
-	}
-	else
-	{
-		cluster++;
-		item.popup.contentHTML = "<div id='clusterList"+cluster+"'>"+getNames(feature.cluster)+"</div>";
-
-		// update popup
-		map.removePopup(item.popup);
-		map.addPopup(item.popup);
-
-		// destroy cluster popup before creating selected popup
-		gEBI("clusterList"+cluster).onclick =
-			function()
-			{
-				map.removePopup(item.popup);
-			}
-	}
-}
-
-
-// removes given popup from map
-function hidePopup(feature, popup)
-{
-	// first remove all features of nearest objects
-	markerLayer.removeAllFeatures();
-	map.removePopup(feature.cluster[0].popup);
-}
-
-
-// loads names list for popup of some clustered markers
-function getNames(cluster)
-{
-	var content = "";
-	for (var i=0; i<cluster.length; ++i)
-	{
-		var request = requestApi("name", "type="+cluster[i].attributes['type']+"&id="+cluster[i].attributes['id']);
-		var response = request.responseText;
-
-		if (response != "NULL")
-		{
-			var position = new OpenLayers.LonLat(cluster[i].geometry.x, cluster[i].geometry.y).transform(map.getProjectionObject(), wgs84);
-			content += "<a href=\"javascript:zoomOnObject("+position.lat+","+position.lon+","+cluster[i].attributes['id']+",'"+cluster[i].attributes['type']+"');\">"+response+"</a>";
-		}
-	}
-	return content;
-}
-
-
-// create popup and zoom on it
-function zoomOnObject(lat, lon, id, type)
-{
-	var position = getMapLatLon(lat, lon);
-	createPopup(id, type, lat, lon);
-	map.zoomTo(18);
-	map.panTo(position);
-}
-
-
-// opens window "more info"
-function showMoreInfo(id, type, lat, lon)
-{
-	var detailsbar = gEBI('detailsBar');
-
-	// show loading status
-	detailsbar.innerHTML = "<div class='loadingMoreInfo'>"+loading+"</div>";
-	// make frame visible
-	detailsbar.className = "infoBar";
-	showSideBar();
-	search.bar.className = "infoBarOut";
-	search.bar.innerHTML = "";
-
-	// load contents
-	var handler = function(request)
-		{
-			var content = request.responseText;
-			if (content != "NULL")
-			{
-				detailsbar.innerHTML = content;
-				detailsbar.innerHTML += "<div class='loadingMoreInfo'>"+loading+"</div>";
-				fullscreen.init();
-				//panorama.init();
-			}
-			else
-			{
-				detailsbar.innerHTML = "";
-				detailsbar.className = "infoBarOut";
-				gEBI('sideBar').className = "sideBarOut";
-			}
-		}
-	requestApi("extdetails", "id="+id+"&type="+type+"&format=text&offset="+offset+"&lang="+params['lang']+"&lat="+lat+"&lon="+lon, handler);
-
-	// requesting next objects
-	if (detailsbar.lastChild.className == 'loadingMoreInfo')
-	{
-		var handler = function(request)
-			{
-				detailsbar.removeChild(gEBI('detailsBar').lastChild);
-				var content = request.responseText;
-
-				if (content != "NULL")
-					detailsbar.innerHTML += content;
-			}
-		requestApi("nextobject", 'id='+id+'&type='+type+'&format=text&lat='+lon+'&lon='+lat+"&offset="+offset+"&lang="+params['lang'], handler);
-	}
-}
-
-
-// creates a popup at a given position
-function createPopup(id, type, lat, lon)
-{
-	// create popup
-	var popup = new OpenLayers.Popup.FramedCloud("popup", getMapLatLon(lat, lon), null, loading, {size: new OpenLayers.Size(6,6),offset: new OpenLayers.Pixel(-3,-3)}, true, function(){map.removePopup(popup);});
-	map.addPopup(popup);
-
-	// request details for popup
-	var handler = function(request)
-		{
-			var content = request.responseText;
-
-			if (content != "NULL")
-			{
-				// set popup content
-				popup.setContentHTML(editPopupContent(content, popup.lonlat.lat, popup.lonlat.lon, type, id));
-				map.removePopup(popup);
-				map.addPopup(popup);
-				popupFullscreen.init();
-			}
-			else
-				map.removePopup(popup);
-		}
-	requestApi("details", "id="+id+"&type="+type+"&format=text&offset="+offset+"&lang="+params['lang'], handler);
-}
-
-
-// doing some edits on the popup content like adding links
-function editPopupContent(content, lat, lon, type, id)
-{
-	// get bbox of shown map
-	var bounds = map.getExtent().transform(map.getProjectionObject(), wgs84).toArray();
-	var l = bounds[0];
-	var b = bounds[1];
-	var r = bounds[2];
-	var t = bounds[3];
-
-	// getting latlon in wgs84
-	var position = new OpenLayers.LonLat(lon, lat).transform(map.getProjectionObject(), wgs84);
-	var lat = position.lat;
-	var lon = position.lon;
-
-	// add some links to the bottom of a popup
-	content = '<table><tr><td>'+content+'</td></tr><tr><td>';
-	content +=
-		'<br /><small id="popupLinks">'+
-		'<b><a id="moreInfoLink" href="javascript:showMoreInfo('+id+',\''+type+'\', '+lat+', '+lon+')">'+translations['more']+' >></a></b>'+
-		'&nbsp;&nbsp;<a id="permalink" href="'+root+'?'+queryLatLonZoom(lat, lon, map.getZoom())+'&id='+id+'&type='+type;
-	// save language in permalink
-	if (params['lang'] != "")
-		content += '&lang='+params['lang'];
-	content += '">'+translations['permalink']+'</a>'+
-		'&nbsp;&nbsp;<a href="http://www.openstreetmap.org/edit?'+queryLatLonZoom(lat, lon, map.getZoom())+'&'+type+'='+id+'&editor=potlatch2" target="_blank">Potlatch</a>'+
-		'&nbsp;&nbsp;<a href="http://localhost:8111/load_and_zoom?left='+l+'&right='+r+'&top='+t+'&bottom='+b+'&select='+type+id+'" target="josm" onclick="return josm(this.href)">JOSM</a>'+
-		'&nbsp;&nbsp;<a href="http://www.openstreetmap.org/browse/'+type+'/'+id+'" target="_blank">'+translations['details']+'</a>'+
-		'&nbsp;&nbsp;<a href="javascript:getEmbedLink('+id+',\''+type+'\')">'+translations['embed']+'</a></small></td></tr></table>';
-	return content;
-}
-
-
 // display html code to embed with iframe
 function getEmbedLink(id, type)
 {
@@ -442,40 +185,6 @@ function getEmbedLink(id, type)
 	var embed = gEBI('embed');
 	embed.focus();
 	embed.select();
-}
-
-
-// jumps to a given position and marks this point
-function showPoint(lon, lat, poilat, poilon)
-{
-	// first remove all features that only a point is visible
-	markerLayer.removeAllFeatures();
-	// get position
-	var panPosition = getMapLatLon(lon, lat);
-
-	// create point
-	var point = new OpenLayers.Geometry.Point(panPosition.lon, panPosition.lat);
-	var style = this.defaultStyle ? OpenLayers.Util.applyDefaults({}, this.defaultStyle) : null;
-	var pointFeature = new OpenLayers.Feature.Vector(point, null, style);
-	markerLayer.addFeatures([pointFeature]);
-
-	// switch coordinates
-	if (lat < poilat)
-	{
-		tmp = lat;
-		lat = poilat;
-		poilat = tmp;
-	}
-	if (lon < poilon)
-	{
-		tmp = lon;
-		lon = poilon;
-		poilon = tmp;
-	}
-	// show map with these positions
-	var bounds = new OpenLayers.Bounds(poilat, poilon, lat, lon).transform(wgs84, map.getProjectionObject());
-	map.zoomToExtent(bounds, true);
-	map.zoomOut();
 }
 
 
@@ -503,29 +212,11 @@ function queryLatLonZoom(lat, lon, zoom)
 }
 
 
-// gets the url of an wikipedia image by it's thumbnail url
-function getWikipediaImageUrl(url)
-{
-	if (!url)
-		return false;
-
-	if (url.substr(0, 29) == "http://commons.wikimedia.org/")
-		return url.substr(0, url.lastIndexOf("?"));
-	else if ((url.substr(0, 38) == "http://upload.wikimedia.org/wikipedia/") && (url.substr(38, 7) != "commons"))
-		return url;
-	else
-	{
-		var url = url.replace("wikipedia/commons/thumb", "wikipedia/commons");
-		return url.substr(0, url.lastIndexOf("/"));
-	}
-}
-
-
 // reloads the page in a different language
 function changeLanguage(lang)
 {
 	var url = root+'?lang='+lang;
-	var position = map.getCenter().transform(map.getProjectionObject(), wgs84);
+	var position = map.getCenter();
 
 	if (params['id'] != null)
 		url += '&id='+params['id'];
@@ -544,7 +235,7 @@ function changeLanguage(lang)
 	if (params['lon'] != null)
 		url += '&lon='+params['lon'];
 	else
-		url += '&lon='+position.lon;
+		url += '&lon='+position.lng;
 
 	if (params['zoom'] != null)
 		url += '&zoom='+params['zoom'];

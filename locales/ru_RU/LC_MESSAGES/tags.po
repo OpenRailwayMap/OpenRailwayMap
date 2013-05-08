@@ -1,0 +1,1727 @@
+# OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2013-03-09 22:04+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "aerialway=cable_car"
+msgstr "Канатная дорога"
+
+msgid "aerialway=chair_lift"
+msgstr "Кресельный подъемник"
+
+msgid "aerialway=drag_lift"
+msgstr "Бугель"
+
+msgid "aerialway=goods"
+msgstr "Грузовой подъемник"
+
+msgid "aerialway=gondola"
+msgstr "Канатная дорога с кабинками"
+
+msgid "aerialway=mixed_lift"
+msgstr "Канатная дорога смешанного типа"
+
+msgid "aerialway=pylon"
+msgstr "Столб"
+
+msgid "aerialway=station"
+msgstr "Станция канатной дороги"
+
+msgid "aeroway=aerodrome"
+msgstr "Аэропорт"
+
+msgid "aeroway=apron"
+msgstr "Перрон"
+
+msgid "aeroway=gate"
+msgstr "Выход"
+
+msgid "aeroway=helipad"
+msgstr "Вертолетная площадка"
+
+msgid "aeroway=runway"
+msgstr "Взлетно-посадочная полоса"
+
+msgid "aeroway=taxiway"
+msgstr "Рулежная дорожка"
+
+msgid "aeroway=terminal"
+msgstr "Аэровокзал"
+
+msgid "aeroway=windsock"
+msgstr "Ветроуказатель"
+
+msgid "amenity=airport"
+msgstr "Аэропорт"
+
+msgid "amenity=architect_office"
+msgstr "Архитектурная мастерская"
+
+msgid "amenity=arts_centre"
+msgstr "Арт-центр"
+
+msgid "amenity=atm"
+msgstr "Банкомат"
+
+msgid "amenity=auditorium"
+msgstr "Конференц-зал"
+
+msgid "amenity=baby_hatch"
+msgstr ""
+
+msgid "amenity=bank"
+msgstr "Банк"
+
+msgid "amenity=bar"
+msgstr "Бар"
+
+msgid "amenity=bbq"
+msgstr "Мангал"
+
+msgid "amenity=bench"
+msgstr "Скамейка"
+
+msgid "amenity=bicycle_parking"
+msgstr "Велопарковка"
+
+msgid "amenity=bicycle_rental"
+msgstr "Велопрокат"
+
+msgid "amenity=biergarten"
+msgstr "Пивная с садом"
+
+msgid "amenity=brothel"
+msgstr "Бордель"
+
+msgid "amenity=bureau_de_change"
+msgstr "Обмен валют"
+
+msgid "amenity=bus_station"
+msgstr "Автобусная станция"
+
+msgid "amenity=cafe"
+msgstr "Кафе"
+
+msgid "amenity=car_rental"
+msgstr "Прокат машин"
+
+msgid "amenity=car_sharing"
+msgstr "Каршаринг"
+
+msgid "amenity=car_wash"
+msgstr "Автомойка"
+
+msgid "amenity=casino"
+msgstr "Казино"
+
+msgid "amenity=cinema"
+msgstr "Кинотеатр"
+
+msgid "amenity=clinic"
+msgstr "Поликлиника"
+
+msgid "amenity=clock"
+msgstr "Часы"
+
+msgid "amenity=club"
+msgstr "Клуб"
+
+msgid "amenity=college"
+msgstr "Колледж"
+
+msgid "amenity=community_centre"
+msgstr "Общественный центр"
+
+msgid "amenity=courthouse"
+msgstr "Суд"
+
+msgid "amenity=crematorium"
+msgstr "Крематорий"
+
+msgid "amenity=dentist"
+msgstr "Стоматолог"
+
+msgid "amenity=doctors"
+msgstr "Врач"
+
+msgid "amenity=dormitory"
+msgstr "Общежитие"
+
+msgid "amenity=drinking_water"
+msgstr "Питьевая вода"
+
+msgid "amenity=driving_school"
+msgstr "Автошкола"
+
+msgid "amenity=embassy"
+msgstr "Посольство"
+
+msgid "amenity=emergency_phone"
+msgstr "Аварийный телефон"
+
+msgid "amenity=fast_food"
+msgstr "Фаст-фуд"
+
+msgid "amenity=ferry_terminal"
+msgstr "Паромный причал"
+
+msgid "amenity=fire_hydrant"
+msgstr "Гидрант"
+
+msgid "amenity=fire_station"
+msgstr "Пожарная станция"
+
+msgid "amenity=food_court"
+msgstr "Ресторанный дворик"
+
+msgid "amenity=fountain"
+msgstr "Фонтан"
+
+msgid "amenity=fuel"
+msgstr "Автозаправка"
+
+msgid "amenity=grave_yard"
+msgstr "Кладбище"
+
+msgid "amenity=gym"
+msgstr "Спортзал"
+
+msgid "amenity=hall"
+msgstr ""
+
+msgid "amenity=health_centre"
+msgstr "Центр здоровья"
+
+msgid "amenity=hospital"
+msgstr "Госпиталь"
+
+msgid "amenity=hunting_stand"
+msgstr "Охотничий домик"
+
+msgid "amenity=ice_cream"
+msgstr "Мороженое"
+
+msgid "amenity=kindergarten"
+msgstr "Детский сад"
+
+msgid "amenity=library"
+msgstr "Библиотека"
+
+msgid "amenity=market"
+msgstr "Рынок"
+
+msgid "amenity=marketplace"
+msgstr "Базарная площадь"
+
+msgid "amenity=mountain_rescue"
+msgstr "Горные спасатели"
+
+msgid "amenity=nightclub"
+msgstr "Ночной клуб"
+
+msgid "amenity=nursery"
+msgstr "Ясли"
+
+msgid "amenity=nursing_home"
+msgstr "Дом по уходу за немощными"
+
+msgid "amenity=office"
+msgstr "Офис"
+
+msgid "amenity=parking"
+msgstr "Стоянка"
+
+msgid "amenity=pharmacy"
+msgstr "Аптека"
+
+msgid "amenity=place_of_worship"
+msgstr "Культовое сооружение"
+
+msgid "amenity=police"
+msgstr "Полиция/Милиция"
+
+msgid "amenity=post_box"
+msgstr "Почтовый ящик"
+
+msgid "amenity=post_office"
+msgstr "Почтамт"
+
+msgid "amenity=preschool"
+msgstr "Дошкольное учреждение"
+
+msgid "amenity=prison"
+msgstr "Тюрьма"
+
+msgid "amenity=pub"
+msgstr "Паб"
+
+msgid "amenity=public_building"
+msgstr "Общественное здание"
+
+msgid "amenity=recycling"
+msgstr "Пункт повторной переработки"
+
+msgid "amenity=restaurant"
+msgstr "Ресторан"
+
+msgid "amenity=retirement_home"
+msgstr "Дом престарелых"
+
+msgid "amenity=sauna"
+msgstr "Сауна"
+
+msgid "amenity=school"
+msgstr "Школа"
+
+msgid "amenity=shelter"
+msgstr "Укрытие"
+
+msgid "amenity=social_centre"
+msgstr "Социальный центр"
+
+msgid "amenity=social_club"
+msgstr "Социальный клуб"
+
+msgid "amenity=stripclub"
+msgstr "Стрипклуб"
+
+msgid "amenity=studio"
+msgstr "Студия радиовещания"
+
+msgid "amenity=taxi"
+msgstr "Такси"
+
+msgid "amenity=telephone"
+msgstr "Телефон"
+
+msgid "amenity=theatre"
+msgstr "Театр"
+
+msgid "amenity=toilets"
+msgstr "Туалет"
+
+msgid "amenity=townhall"
+msgstr "Здание муниципалитета"
+
+msgid "amenity=university"
+msgstr "Университет"
+
+msgid "amenity=vending_machine"
+msgstr "Торговый автомат"
+
+msgid "amenity=veterinary"
+msgstr "Ветеринар"
+
+msgid "amenity=village_hall"
+msgstr "Сельский совет"
+
+msgid "amenity=youth_centre"
+msgstr "Центр молодежи"
+
+msgid "amenity=waste_basket"
+msgstr "Мусорная корзина"
+
+msgid "amenity=wifi"
+msgstr "Wi-Fi доступ"
+
+msgid "amenity=zoo"
+msgstr "Зоопарк"
+
+msgid "boundary=administrative"
+msgstr "Граница"
+
+msgid "boundary=national_park"
+msgstr "Национальный парк"
+
+msgid "boundary=protected_area"
+msgstr "Заповедная зона"
+
+msgid "building=apartments"
+msgstr "Многоквартирный дом"
+
+msgid "building=blocks"
+msgstr ""
+
+msgid "building=bunker"
+msgstr "Бункер"
+
+msgid "building=chapel"
+msgstr "Часовня"
+
+msgid "building=church"
+msgstr "Церковь"
+
+msgid "building=city_hall"
+msgstr "Ратуша"
+
+msgid "building=commercial"
+msgstr "Торговый дом"
+
+msgid "building=dormitory"
+msgstr "Общежитие"
+
+msgid "building=entrance"
+msgstr "Вход"
+
+msgid "building=faculty"
+msgstr ""
+
+msgid "building=farm"
+msgstr "Ферма"
+
+msgid "building=flats"
+msgstr "Квартиры"
+
+msgid "building=garage"
+msgstr "Гараж"
+
+msgid "building=garages"
+msgstr "Гаражи"
+
+msgid "building=hall"
+msgstr ""
+
+msgid "building=hospital"
+msgstr "Госпиталь"
+
+msgid "building=hotel"
+msgstr "Гостиница"
+
+msgid "building=house"
+msgstr "Дом"
+
+msgid "building=industrial"
+msgstr "Промышленное здание"
+
+msgid "building=office"
+msgstr "Офисное здание"
+
+msgid "building=public"
+msgstr "Общественное здание"
+
+msgid "building=residential"
+msgstr "Жилое здание"
+
+msgid "building=retail"
+msgstr "Помещение рынка"
+
+msgid "building=school"
+msgstr "Школьное здание"
+
+msgid "building=shop"
+msgstr "Магазин"
+
+msgid "building=stadium"
+msgstr "Стадион"
+
+msgid "building=store"
+msgstr "Склад"
+
+msgid "building=terrace"
+msgstr "Терраса"
+
+msgid "building=tower"
+msgstr "Башня"
+
+msgid "building=train_station"
+msgstr "Железно-дорожная станция"
+
+msgid "building=university"
+msgstr "Здание университета"
+
+msgid "building=yes"
+msgstr "Здание"
+
+msgid "craft=beekeeper"
+msgstr "Пчеловодство"
+
+msgid "craft=blacksmith"
+msgstr "Кузница"
+
+msgid "craft=boatbuilder"
+msgstr "Проектирование и постройка лодок"
+
+msgid "craft=carpenter"
+msgstr "Столярная мастерская"
+
+msgid "craft=carpet_layer"
+msgstr "Укладка ковров"
+
+msgid "craft=clockmaker"
+msgstr "Часовая мастерская"
+
+msgid "craft=confectionery"
+msgstr "Кондитерская"
+
+msgid "craft=electrician"
+msgstr "Электрик"
+
+msgid "craft=gardener"
+msgstr "Садовник"
+
+msgid "craft=glaziery"
+msgstr "Стеклорезная мастерская"
+
+msgid "craft=hvac"
+msgstr "Установка кондиционеров и вентиляционных систем"
+
+msgid "craft=jeweller"
+msgstr "Ювелир"
+
+msgid "craft=metal_construction"
+msgstr "Кованые изделия"
+
+msgid "craft=optician"
+msgstr "Оптика"
+
+msgid "craft=painter"
+msgstr "Маляр"
+
+msgid "craft=photographer"
+msgstr "Фотоателье"
+
+msgid "craft=plasterer"
+msgstr "Гипсовая мастерская"
+
+msgid "craft=plumber"
+msgstr "Сантехник"
+
+msgid "craft=pottery"
+msgstr "Гончарная мастерская"
+
+msgid "craft=roofer"
+msgstr "Кровельная мастерская"
+
+msgid "craft=scaffolder"
+msgstr "Такелажник"
+
+msgid "craft=sculptor"
+msgstr "Скульптор"
+
+msgid "craft=shoemaker"
+msgstr "Ремонт обуви"
+
+msgid "craft=stonemason"
+msgstr "Камнетес"
+
+msgid "craft=sweep"
+msgstr "Трубочист"
+
+msgid "craft=tailor"
+msgstr "Ателье"
+
+msgid "craft=tiler"
+msgstr "Плиточные работы"
+
+msgid "cuisine=american"
+msgstr "Американская"
+
+msgid "cuisine=asian"
+msgstr "Восточная"
+
+msgid "cuisine=austrian"
+msgstr "Австрийская"
+
+msgid "cuisine=bavarian"
+msgstr "Баварская"
+
+msgid "cuisine=beef_bowl"
+msgstr ""
+
+msgid "cuisine=burger"
+msgstr "Бургеры"
+
+msgid "cuisine=chicken"
+msgstr "Курица"
+
+msgid "cuisine=chinese"
+msgstr "Китайская"
+
+msgid "cuisine=coffee_shop"
+msgstr "Кофе"
+
+msgid "cuisine=crepe"
+msgstr "Блины"
+
+msgid "cuisine=curry"
+msgstr ""
+
+msgid "cuisine=donut"
+msgstr "Пончики"
+
+msgid "cuisine=fish"
+msgstr "Рыба"
+
+msgid "cuisine=fish_and_chips"
+msgstr "Рыба и фри"
+
+msgid "cuisine=french"
+msgstr "Французская"
+
+msgid "cuisine=german"
+msgstr "Немецкая"
+
+msgid "cuisine=greek"
+msgstr "Греческая"
+
+msgid "cuisine=icecream"
+msgstr "Мороженое"
+
+msgid "cuisine=indian"
+msgstr "Индийская"
+
+msgid "cuisine=italian"
+msgstr "Итальянская"
+
+msgid "cuisine=international"
+msgstr "Интерациональная"
+
+msgid "cuisine=japanese"
+msgstr "Японская"
+
+msgid "cuisine=kebab"
+msgstr "Шаурма"
+
+msgid "cuisine=mexican"
+msgstr "Мексиканская"
+
+msgid "cuisine=pizza"
+msgstr "Пицца"
+
+msgid "cuisine=ramen"
+msgstr ""
+
+msgid "cuisine=regional"
+msgstr "Региональная"
+
+msgid "cuisine=sandwich"
+msgstr "Бутербродная"
+
+msgid "cuisine=seafood"
+msgstr "Морепродукты"
+
+msgid "cuisine=soba"
+msgstr ""
+
+msgid "cuisine=spanish"
+msgstr "Испанская"
+
+msgid "cuisine=sri_lankan"
+msgstr "Шри-ланкская"
+
+msgid "cuisine=steak_house"
+msgstr "Стэйк"
+
+msgid "cuisine=sushi"
+msgstr "Суши"
+
+msgid "cuisine=thai"
+msgstr "Тайландская"
+
+msgid "cuisine=turkish"
+msgstr "Турецкая"
+
+msgid "cuisine=vietnamese"
+msgstr "Вьетнамская"
+
+msgid "emergency=ambulance_station"
+msgstr "Пункт первой помощи"
+
+msgid "emergency=fire_hydrant"
+msgstr "Гидрант"
+
+msgid "emergency=phone"
+msgstr "Аварийный телефон"
+
+msgid "highway=bridleway"
+msgstr "Дорога для всадников"
+
+msgid "highway=bus_guideway"
+msgstr ""
+
+msgid "highway=bus_stop"
+msgstr "Остановка"
+
+msgid "highway=construction"
+msgstr "Ремонт дороги"
+
+msgid "highway=cycleway"
+msgstr "Велодорожка"
+
+msgid "highway=distance_marker"
+msgstr "Знак расстояния"
+
+msgid "highway=emergency_access_point"
+msgstr "Точка экстренной помощи"
+
+msgid "highway=footway"
+msgstr "Пешеходная дорожка"
+
+msgid "highway=ford"
+msgstr "Брод"
+
+msgid "highway=living_street"
+msgstr "Жилая зона"
+
+msgid "highway=motorway"
+msgstr "Автомагистраль"
+
+msgid "highway=motorway_junction"
+msgstr "Ответвление от автомагистрали"
+
+msgid "highway=motorway_link"
+msgstr "Развязка автомагистралей"
+
+msgid "highway=path"
+msgstr "Тропинка"
+
+msgid "highway=pedestrian"
+msgstr "Пешеходная улица"
+
+msgid "highway=platform"
+msgstr "Платформа"
+
+msgid "highway=primary"
+msgstr "Дорога межрегионального значения"
+
+msgid "highway=primary_link"
+msgstr "Ответвление от дороги межрегионального значения"
+
+msgid "highway=proposed"
+msgstr "Планируемая дорога"
+
+msgid "highway=raceway"
+msgstr "Гоночная трасса"
+
+msgid "highway=residential"
+msgstr "Жилая улица"
+
+msgid "highway=road"
+msgstr "Дорога"
+
+msgid "highway=secondary"
+msgstr "Дорога областного значения"
+
+msgid "highway=secondary_link"
+msgstr "Ответвление от дороги областного значения"
+
+msgid "highway=service"
+msgstr "Служебный проезд"
+
+msgid "highway=services"
+msgstr "Придорожный сервис"
+
+msgid "highway=speed_camera"
+msgstr "Камера замера скорости"
+
+msgid "highway=steps"
+msgstr "Ступеньки"
+
+msgid "highway=tertiary"
+msgstr "Дорога районного значения"
+
+msgid "highway=track"
+msgstr "Грунтовая дорога"
+
+msgid "highway=trunk"
+msgstr "Трасса"
+
+msgid "highway=trunk_link"
+msgstr "Ответвление от трассы"
+
+msgid "highway=unclassified"
+msgstr "Дорога без классификации"
+
+msgid "historic=archaeological_site"
+msgstr "Место археологических раскопок"
+
+msgid "historic=battlefield"
+msgstr "Место исторической битвы"
+
+msgid "historic=boundary_stone"
+msgstr "Пограничный камень"
+
+msgid "historic=building"
+msgstr "Историческое здание"
+
+msgid "historic=castle"
+msgstr "Замок"
+
+msgid "historic=church"
+msgstr "Историческая церковь"
+
+msgid "historic=fort"
+msgstr "Крепость"
+
+msgid "historic=house"
+msgstr "Исторический дом"
+
+msgid "historic=icon"
+msgstr "Икона"
+
+msgid "historic=manor"
+msgstr "Поместье"
+
+msgid "historic=memorial"
+msgstr "Мемориал"
+
+msgid "historic=mine"
+msgstr "hИсторическая шахта"
+
+msgid "historic=monument"
+msgstr "Памятник"
+
+msgid "historic=museum"
+msgstr "Музей"
+
+msgid "historic=ruins"
+msgstr "Руины"
+
+msgid "historic=tower"
+msgstr "Башня"
+
+msgid "historic=wayside_cross"
+msgstr "Придорожный крест"
+
+msgid "historic=wayside_shrine"
+msgstr "Придорожная часовня"
+
+msgid "historic=wreck"
+msgstr "Затонувшее судно"
+
+msgid "landuse=allotments"
+msgstr "Земельные участки"
+
+msgid "landuse=basin"
+msgstr "Искусственный водоем"
+
+msgid "landuse=brownfield"
+msgstr "Земля под застройку на месте снесенных домов"
+
+msgid "landuse=cemetery"
+msgstr "Кладбище"
+
+msgid "landuse=commercial"
+msgstr "Бизнес район"
+
+msgid "landuse=construction"
+msgstr "Стройка"
+
+msgid "landuse=farm"
+msgstr "Поле"
+
+msgid "landuse=farmland"
+msgstr "Ферма"
+
+msgid "landuse=farmyard"
+msgstr "Скотный двор"
+
+msgid "landuse=forest"
+msgstr "Лес"
+
+msgid "landuse=garages"
+msgstr "Гаражи"
+
+msgid "landuse=grass"
+msgstr "Газон"
+
+msgid "landuse=greenfield"
+msgstr "Земля под застройку"
+
+msgid "landuse=greenhouse_horticulture"
+msgstr "Теплицы"
+
+msgid "landuse=industrial"
+msgstr "Промышленный район"
+
+msgid "landuse=landfill"
+msgstr "Свалка"
+
+msgid "landuse=meadow"
+msgstr "Луг"
+
+msgid "landuse=military"
+msgstr "Военная территория"
+
+msgid "landuse=mine"
+msgstr "Шахта"
+
+msgid "landuse=mountain"
+msgstr "Горы"
+
+msgid "landuse=nature_reserve"
+msgstr "Заповедник"
+
+msgid "landuse=orchard"
+msgstr "Сад"
+
+msgid "landuse=piste"
+msgstr "Лыжня"
+
+msgid "landuse=pond"
+msgstr "Пруд"
+
+msgid "landuse=quarry"
+msgstr "Карьер"
+
+msgid "landuse=railway"
+msgstr "Железнодорожная зона"
+
+msgid "landuse=reservoir"
+msgstr "Водохранилище"
+
+msgid "landuse=residential"
+msgstr "Жилая зона"
+
+msgid "landuse=retail"
+msgstr "Рынок"
+
+msgid "landuse=salt_pond"
+msgstr "Бассейн для выпаривания соли"
+
+msgid "landuse=village_green"
+msgstr "Парк в центре деревни"
+
+msgid "landuse=vineyard"
+msgstr "Виноградник"
+
+msgid "leisure=beach_resort"
+msgstr "Пляж"
+
+msgid "leisure=bird_hide"
+msgstr "Укрытие для наблюдения за животными"
+
+msgid "leisure=common"
+msgstr "Общественное место"
+
+msgid "leisure=dog_park"
+msgstr "Парк для выгула собак"
+
+msgid "leisure=fishing"
+msgstr "Место для рыбалки"
+
+msgid "leisure=garden"
+msgstr "Сад"
+
+msgid "leisure=golf_course"
+msgstr "Поле для гольфа"
+
+msgid "leisure=hot_spring"
+msgstr "Горячий источник"
+
+msgid "leisure=ice_rink"
+msgstr "Ледовая площадка"
+
+msgid "leisure=marina"
+msgstr "Док"
+
+msgid "leisure=maze"
+msgstr "Лабиринт"
+
+msgid "leisure=miniature_golf"
+msgstr "Мини-гольф"
+
+msgid "leisure=nature_reserve"
+msgstr "Заповедник"
+
+msgid "leisure=park"
+msgstr "Парк"
+
+msgid "leisure=playground"
+msgstr "Детская площадка"
+
+msgid "leisure=pitch"
+msgstr "Спортивная площадка"
+
+msgid "leisure=recreation_ground"
+msgstr "Место для отдыха"
+
+msgid "leisure=sauna"
+msgstr "Сауна"
+
+msgid "leisure=slipway"
+msgstr "Слип"
+
+msgid "leisure=sports_centre"
+msgstr "Спортивный центр"
+
+msgid "leisure=stadium"
+msgstr "Стадион"
+
+msgid "leisure=swimming_pool"
+msgstr "Плавательный бассейн"
+
+msgid "leisure=track"
+msgstr "Беговая дорожка"
+
+msgid "leisure=video_arcade"
+msgstr ""
+
+msgid "leisure=water_park"
+msgstr "Аквапарк"
+
+msgid "man_made=adit"
+msgstr "Штольня"
+
+msgid "man_made=beacon"
+msgstr "Бакен"
+
+msgid "man_made=chimney"
+msgstr "Труба"
+
+msgid "man_made=communications_transponder"
+msgstr "Ретранслятор"
+
+msgid "man_made=crane"
+msgstr "Подъемный кран"
+
+msgid "man_made=cutline"
+msgstr "Просека"
+
+msgid "man_made=lighthouse"
+msgstr "Маяк"
+
+msgid "man_made=measurement_station"
+msgstr "Станция взвешивания"
+
+msgid "man_made=mineshaft"
+msgstr "Ствол шахты"
+
+msgid "man_made=petroleum_well"
+msgstr "Буровая"
+
+msgid "man_made=pier"
+msgstr "Пирс"
+
+msgid "man_made=pipeline"
+msgstr "Трубопровод"
+
+msgid "man_made=reservoir_covered"
+msgstr "Крытый резервуар"
+
+msgid "man_made=silo"
+msgstr "Силосная башня"
+
+msgid "man_made=storage_tank"
+msgstr "Бак-хранилище"
+
+msgid "man_made=surface_mine"
+msgstr "Карьер"
+
+msgid "man_made=surveillance"
+msgstr "Камеры наблюдения"
+
+msgid "man_made=survey_point"
+msgstr "Геодезический пункт"
+
+msgid "man_made=tower"
+msgstr "Башня"
+
+msgid "man_made=wastewater_plant"
+msgstr "Водоочистительные сооружения"
+
+msgid "man_made=watermill"
+msgstr "Водяная мельница"
+
+msgid "man_made=water_tower"
+msgstr "Водонапорная башня"
+
+msgid "man_made=water_well"
+msgstr "Колодец"
+
+msgid "man_made=water_works"
+msgstr "Водозаборник"
+
+msgid "man_made=windmill"
+msgstr "Ветряная мельница"
+
+msgid "man_made=works"
+msgstr "Промышленные строения"
+
+msgid "military=airfield"
+msgstr "Военный аэродром"
+
+msgid "military=barracks"
+msgstr "Казармы"
+
+msgid "military=bunker"
+msgstr "Убежище"
+
+msgid "military=danger_area"
+msgstr "Полигон"
+
+msgid "military=naval_basis"
+msgstr "Военно-морская база"
+
+msgid "military=range"
+msgstr "Стрельбище"
+
+msgid "natural=bay"
+msgstr "Бухта"
+
+msgid "natural=beach"
+msgstr "Пляж"
+
+msgid "natural=cape"
+msgstr "Мыс"
+
+msgid "natural=cave_entrance"
+msgstr "Пещера"
+
+msgid "natural=channel"
+msgstr "Канал"
+
+msgid "natural=cliff"
+msgstr "Обрыв"
+
+msgid "natural=coastline"
+msgstr "Берег"
+
+msgid "natural=crater"
+msgstr "Кратер"
+
+msgid "natural=fell"
+msgstr "Пустырь"
+
+msgid "natural=fjord"
+msgstr "Фьорд"
+
+msgid "natural=geyser"
+msgstr "Гейзер"
+
+msgid "natural=glacier"
+msgstr "Ледник"
+
+msgid "natural=heath"
+msgstr "Пустошь"
+
+msgid "natural=hill"
+msgstr "Холм"
+
+msgid "natural=island"
+msgstr "Остров"
+
+msgid "natural=land"
+msgstr "Суша"
+
+msgid "natural=marsh"
+msgstr "Болото"
+
+msgid "natural=massif"
+msgstr "Массив"
+
+msgid "natural=moor"
+msgstr "Торфяник"
+
+msgid "natural=mud"
+msgstr "Ил"
+
+msgid "natural=peak"
+msgstr "Вершина"
+
+msgid "natural=reef"
+msgstr "Риф"
+
+msgid "natural=ridge"
+msgstr "Горный хребет"
+
+msgid "natural=river"
+msgstr "Река"
+
+msgid "natural=rock"
+msgstr "Скала"
+
+msgid "natural=sand"
+msgstr "Песок"
+
+msgid "natural=scree"
+msgstr "Каменистая осыпь"
+
+msgid "natural=scrub"
+msgstr "Заросли кустарника"
+
+msgid "natural=shoal"
+msgstr "Отмель"
+
+msgid "natural=spring"
+msgstr "Ручей"
+
+msgid "natural=stone"
+msgstr "Камень"
+
+msgid "natural=tree"
+msgstr "Дерево"
+
+msgid "natural=valley"
+msgstr "Долина"
+
+msgid "natural=volcano"
+msgstr "Вулкан"
+
+msgid "natural=water"
+msgstr "Вода"
+
+msgid "natural=wetland"
+msgstr "Болото"
+
+msgid "natural=wood"
+msgstr "Лес"
+
+msgid "office=accountant"
+msgstr "Бухгалтерия"
+
+msgid "office=architect"
+msgstr "Архитектор"
+
+msgid "office=company"
+msgstr "Частная компания"
+
+msgid "office=employment_agency"
+msgstr "Центр занятости"
+
+msgid "office=estate_agent"
+msgstr "Агентство недвижимости"
+
+msgid "office=government"
+msgstr "Правительство"
+
+msgid "office=insurance"
+msgstr "Страховая компания"
+
+msgid "office=it"
+msgstr "IT-компания"
+
+msgid "office=lawyer"
+msgstr "Нотариальная контора"
+
+msgid "office=newspaper"
+msgstr "Газетное издательство"
+
+msgid "office=ngo"
+msgstr "Неправительственная организация"
+
+msgid "office=quango"
+msgstr "Неправительственная организация"
+
+msgid "office=research"
+msgstr "Исследовательская компания"
+
+msgid "office=telecommunication"
+msgstr "Телекоммуникационная компания"
+
+msgid "office=travel_agent"
+msgstr "Турагентство"
+
+msgid "place=airport"
+msgstr "Аэропорт"
+
+msgid "place=city"
+msgstr "Город"
+
+msgid "place=country"
+msgstr "Страна"
+
+msgid "place=county"
+msgstr "Округ"
+
+msgid "place=farm"
+msgstr "Поле"
+
+msgid "place=hamlet"
+msgstr "Хутор"
+
+msgid "place=house"
+msgstr "Дом"
+
+msgid "place=island"
+msgstr "Остров"
+
+msgid "place=islet"
+msgstr "Маленький остров"
+
+msgid "place=locality"
+msgstr "Местность"
+
+msgid "place=postcode"
+msgstr "Почтовый индекс"
+
+msgid "place=region"
+msgstr "Регион"
+
+msgid "place=sea"
+msgstr "Море"
+
+msgid "place=state"
+msgstr "Штат"
+
+msgid "place=suburb"
+msgstr "Пригород"
+
+msgid "place=town"
+msgstr "Городок"
+
+msgid "place=village"
+msgstr "Деревня"
+
+msgid "power=cable_distribution_cabinet"
+msgstr "Распределительный щит"
+
+msgid "power=generator"
+msgstr "Электростанция"
+
+msgid "power=line"
+msgstr "Линия высокого напряжения"
+
+msgid "power=minor_line"
+msgstr "Линия низкого напряжения"
+
+msgid "power=pole"
+msgstr "Столб"
+
+msgid "power=station"
+msgstr "Электроподстанция"
+
+msgid "power=sub_station"
+msgstr "Траснформаторная будка"
+
+msgid "power=tower"
+msgstr "Опора ЛЭП"
+
+msgid "railway=abandoned"
+msgstr "Демонтированный путь"
+
+msgid "railway=buffer_stop"
+msgstr "Буферный упор"
+
+msgid "railway=construction"
+msgstr "Укладка пути"
+
+msgid "railway=crossing"
+msgstr "Переход"
+
+msgid "railway=disused"
+msgstr "Заброшенный путь"
+
+msgid "railway=disused_station"
+msgstr "Заброшенная станция"
+
+msgid "railway=funicular"
+msgstr "Фуникулер"
+
+msgid "railway=halt"
+msgstr "Полустанок"
+
+msgid "railway=historic_station"
+msgstr "Историческая станция"
+
+msgid "railway=junction"
+msgstr "Железнодорожный узел"
+
+msgid "railway=level_crossing"
+msgstr "Переезд"
+
+msgid "railway=light_rail"
+msgstr "Легкореечный путь"
+
+msgid "railway=monorail"
+msgstr "Монорельс"
+
+msgid "railway=narrow_gauge"
+msgstr "Узкоколейка"
+
+msgid "railway=platform"
+msgstr "Платформа"
+
+msgid "railway=preserved"
+msgstr "Историческая железная дорога"
+
+msgid "railway=rail"
+msgstr "Железная дорога"
+
+msgid "railway=station"
+msgstr "Станция"
+
+msgid "railway=subway"
+msgstr "Метро"
+
+msgid "railway=subway_entrance"
+msgstr "Вход в метро"
+
+msgid "railway=switch"
+msgstr "Стрелка"
+
+msgid "railway=tram"
+msgstr "Трамвай"
+
+msgid "railway=tram_stop"
+msgstr "Трамвайная остановка"
+
+msgid "railway=turntable"
+msgstr "Поворотная платформа"
+
+msgid "railway=yard"
+msgstr "Депо"
+
+msgid "shop=alcohol"
+msgstr "Магазин алкогольных напитков"
+
+msgid "shop=anime"
+msgstr ""
+
+msgid "shop=art"
+msgstr "Частная галерея искусств"
+
+msgid "shop=bakery"
+msgstr "Булочная"
+
+msgid "shop=beauty"
+msgstr "Салон красоты"
+
+msgid "shop=bed"
+msgstr "Магазин кроватей и матрасов"
+
+msgid "shop=beverages"
+msgstr "Магазин напитков"
+
+msgid "shop=bicycle"
+msgstr "Веломагазин"
+
+msgid "shop=books"
+msgstr "Книжный магазин"
+
+msgid "shop=boutique"
+msgstr "Бутик"
+
+msgid "shop=butcher"
+msgstr "Мясные изделия"
+
+msgid "shop=car"
+msgstr "Автосалон"
+
+msgid "shop=car_dealer"
+msgstr "Автосалон"
+
+msgid "shop=car_parts"
+msgstr "Автозапчасти"
+
+msgid "shop=car_repair"
+msgstr "Автосервис"
+
+msgid "shop=carpet"
+msgstr "Магазин ковров"
+
+msgid "shop=chemist"
+msgstr "Бытовая химия"
+
+msgid "shop=clothes"
+msgstr "Магазин одежды"
+
+msgid "shop=computer"
+msgstr "Компьютерный магазин"
+
+msgid "shop=confectionery"
+msgstr "Кондитерская"
+
+msgid "shop=convenience"
+msgstr "Магазин"
+
+msgid "shop=copyshop"
+msgstr "Ксерокопирование и печать"
+
+msgid "shop=cosmetics"
+msgstr "Косметический магазин"
+
+msgid "shop=curtain"
+msgstr "Магазин штор"
+
+msgid "shop=deli"
+msgstr "Деликатесы"
+
+msgid "shop=department_store"
+msgstr "Универмаг"
+
+msgid "shop=discount"
+msgstr "Магазин уцененных товаров"
+
+msgid "shop=doityourself"
+msgstr "Сделай сам"
+
+msgid "shop=drugstore"
+msgstr "Аптека"
+
+msgid "shop=dry_cleaning"
+msgstr "Химчистка"
+
+msgid "shop=electronics"
+msgstr "Бытовая электроника"
+
+msgid "shop=erotic"
+msgstr "Секс-шоп"
+
+msgid "shop=estate_agent"
+msgstr "Агентство недвижимости"
+
+msgid "shop=fabric"
+msgstr "Ткани"
+
+msgid "shop=farm"
+msgstr "Магазин на ферме"
+
+msgid "shop=fashion"
+msgstr "Модная одежда"
+
+msgid "shop=fish"
+msgstr "Рыбный магазин"
+
+msgid "shop=florist"
+msgstr "Цветочный магазин"
+
+msgid "shop=food"
+msgstr "Продуктовый магазин"
+
+msgid "shop=funeral_directors"
+msgstr "Ритуальные услуги"
+
+msgid "shop=furniture"
+msgstr "Мебельный магазин"
+
+msgid "shop=gallery"
+msgstr "Галерея"
+
+msgid "shop=garden_centre"
+msgstr "Садоводческий магазин"
+
+msgid "shop=general"
+msgstr "Магазин"
+
+msgid "shop=gift"
+msgstr "Магазин подарков и сувениров"
+
+msgid "shop=glaziery"
+msgstr "Стекольный магазин"
+
+msgid "shop=greengrocer"
+msgstr "Овощной магазин"
+
+msgid "shop=grocery"
+msgstr "Бакалейный магазин"
+
+msgid "shop=hairdresser"
+msgstr "Парикмахерская"
+
+msgid "shop=hardware"
+msgstr "Хозяйственный магазин"
+
+msgid "shop=hifi"
+msgstr "Магазин аудио/видео"
+
+msgid "shop=hunting"
+msgstr "Охотничий магазин"
+
+msgid "shop=insurance"
+msgstr "Страховая компания"
+
+msgid "shop=jewelry"
+msgstr "Ювелирный магазин"
+
+msgid "shop=kiosk"
+msgstr "Киоск"
+
+msgid "shop=laundry"
+msgstr "Прачечная"
+
+msgid "shop=mall"
+msgstr "Торговый центр"
+
+msgid "shop=market"
+msgstr "Рынок"
+
+msgid "shop=mobile_phone"
+msgstr "Магазин мобильных телефонов"
+
+msgid "shop=motorcycle"
+msgstr "Мотоциклы"
+
+msgid "shop=music"
+msgstr "Музыкальный магазин"
+
+msgid "shop=musical_instrument"
+msgstr "Музыкальные инструменты"
+
+msgid "shop=newsagent"
+msgstr "Газетный киоск"
+
+msgid "shop=optician"
+msgstr "Оптика"
+
+msgid "shop=organic"
+msgstr "Натуральные продукты"
+
+msgid "shop=outdoor"
+msgstr "Товары для активного отдыха"
+
+msgid "shop=pet"
+msgstr "Зоомагазин"
+
+msgid "shop=photo"
+msgstr "Фотоателье"
+
+msgid "shop=seafood"
+msgstr "Морепродукты"
+
+msgid "shop=shoes"
+msgstr "Обувной магазин"
+
+msgid "shop=shopping_centre"
+msgstr "Торговый центр"
+
+msgid "shop=sports"
+msgstr "Спорттовары"
+
+msgid "shop=stationery"
+msgstr "Канцтовары"
+
+msgid "shop=supermarket"
+msgstr "Супермаркет"
+
+msgid "shop=tobacco"
+msgstr "Табачные изделия"
+
+msgid "shop=toys"
+msgstr "Магазин игрушек"
+
+msgid "shop=trade"
+msgstr "Строительный магазин"
+
+msgid "shop=travel_agency"
+msgstr "Турагенство"
+
+msgid "shop=variety_store"
+msgstr "Магазин недорогих товаров"
+
+msgid "shop=video"
+msgstr "Продажа и прокат видео"
+
+msgid "shop=wine"
+msgstr "Винный магазин"
+
+msgid "tourism=alpine_hut"
+msgstr "Домик для альпинистов"
+
+msgid "tourism=artwork"
+msgstr "Произведение искусства"
+
+msgid "tourism=attraction"
+msgstr "Место интереса"
+
+msgid "tourism=bed_and_breakfast"
+msgstr "Ночлег и завтрак"
+
+msgid "tourism=camp_site"
+msgstr "Кемпинг"
+
+msgid "tourism=caravan_site"
+msgstr "Стоянка для каравана"
+
+msgid "tourism=chalet"
+msgstr "Съемный дом"
+
+msgid "tourism=guest_house"
+msgstr "Гостевой дом"
+
+msgid "tourism=hostel"
+msgstr "Хостел"
+
+msgid "tourism=hotel"
+msgstr "Гостиница"
+
+msgid "tourism=information"
+msgstr "Туристическая информация"
+
+msgid "tourism=motel"
+msgstr "Мотель"
+
+msgid "tourism=museum"
+msgstr "Музей"
+
+msgid "tourism=picnic_site"
+msgstr "Место для отдыха на природе"
+
+msgid "tourism=theme_park"
+msgstr "Парк аттракционов"
+
+msgid "tourism=viewpoint"
+msgstr "Смотровая площадка"
+
+msgid "tourism=zoo"
+msgstr "Зоопарк"
+
+msgid "waterway=boatyard"
+msgstr "Шлюпочная мастерская"
+
+msgid "waterway=canal"
+msgstr "Канал"
+
+msgid "waterway=dam"
+msgstr "Дамба"
+
+msgid "waterway=ditch"
+msgstr "Канава"
+
+msgid "waterway=dock"
+msgstr "Док"
+
+msgid "waterway=drain"
+msgstr "Дренажный канал"
+
+msgid "waterway=lock_gate"
+msgstr "Шлюз"
+
+msgid "waterway=mineral_spring"
+msgstr "Минеральный источник"
+
+msgid "waterway=mooring"
+msgstr "Место для установки якоря"
+
+msgid "waterway=rapids"
+msgstr "Пороги"
+
+msgid "waterway=river"
+msgstr "Река"
+
+msgid "waterway=riverbank"
+msgstr "Русло реки"
+
+msgid "waterway=stream"
+msgstr "Ручей"
+
+msgid "waterway=turning_point"
+msgstr "Место разворота судов"
+
+msgid "waterway=wadi"
+msgstr "Сухое русло реки"
+
+msgid "waterway=waterfall"
+msgstr "Водопад"
+
+msgid "waterway=weir"
+msgstr "Плотина"
+

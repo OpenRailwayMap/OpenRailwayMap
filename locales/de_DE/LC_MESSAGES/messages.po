@@ -1,0 +1,535 @@
+# OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2013-03-08 16:53+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Fullscreen"
+msgstr "Vollbild"
+
+msgid "Homepage"
+msgstr "Webseite"
+
+msgid "Wikipedia"
+msgstr "Wikipedia"
+
+msgid "Realtime departures"
+msgstr "Echtzeit-Abfahrtsmonitor"
+
+msgid "Operator"
+msgstr "Betreiber"
+
+msgid "With shelter"
+msgstr "Mit Wartehäuschen"
+
+msgid "Without shelter"
+msgstr "Ohne Wartehäuschen"
+
+msgid "With bench"
+msgstr "Mit Sitzbank"
+
+msgid "Without bench"
+msgstr "Ohne Sitzbank"
+
+msgid "With wastebasket"
+msgstr "Mit Mülleimer"
+
+msgid "Without wastebasket"
+msgstr "Ohne Mülleimer"
+
+msgid "Tactile paving"
+msgstr "Ertastbarer Untergrund"
+
+msgid "No tactile paving"
+msgstr "Kein ertastbarer Untergrund"
+
+msgid "Incorrect tactile paving"
+msgstr "Falscher ertastbarer Untergrund"
+
+msgid "Accessible for wheelchairs"
+msgstr "Rollstuhlgerecht"
+
+msgid "Not accessible for wheelchairs"
+msgstr "Nicht rollstuhlgerecht"
+
+msgid "Limited accessible for wheelchairs"
+msgstr "Eingeschränkt rollstuhlgerecht"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "Mobile phone"
+msgstr "Mobiltelefon"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Opening hours"
+msgstr "Öffnungszeiten"
+
+msgid "Open 24/7"
+msgstr "Rund um die Uhr geöffnet"
+
+msgid "Now open"
+msgstr "Momentan geöffnet"
+
+msgid "Open on holiday"
+msgstr "In den Ferien und an Feiertagen geöffnet"
+
+msgid "Now closed"
+msgstr "Momentan geschlossen"
+
+msgid "Service hours"
+msgstr "Betriebszeiten"
+
+msgid "Without name"
+msgstr "Namenlos"
+
+msgid "Busstops"
+msgstr "Bushaltestellen"
+
+msgid "Stations"
+msgstr "Bahnhöfe / Stationen"
+
+msgid "Tramhalts"
+msgstr "Straßenbahn-Haltestellen"
+
+msgid "Parkings"
+msgstr "Parkplätze"
+
+msgid "Accessibility"
+msgstr "Erreichbarkeit"
+
+msgid "Unnamed"
+msgstr "Ohne Namen"
+
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d Sekunde"
+msgstr[1] "%d Sekunden"
+
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d Minute"
+msgstr[1] "%d Minuten"
+
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d Stunde"
+msgstr[1] "%d Stunden"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d Tag"
+msgstr[1] "%d Tage"
+
+#, php-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d Woche"
+msgstr[1] "%d Wochen"
+
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d Monat"
+msgstr[1] "%d Monate"
+
+#, php-format
+msgid "more than %s ago"
+msgstr "mehr als %s her"
+
+#, php-format
+msgid "%s ago"
+msgstr "%s her"
+
+msgid "Mo"
+msgstr "Mo"
+
+msgid "Tu"
+msgstr "Di"
+
+msgid "We"
+msgstr "Mi"
+
+msgid "Th"
+msgstr "Do"
+
+msgid "Fr"
+msgstr "Fr"
+
+msgid "Sa"
+msgstr "Sa"
+
+msgid "Su"
+msgstr "So"
+
+msgid "closed"
+msgstr "geschlossen"
+
+msgid "Public holiday"
+msgstr "Feiertag"
+
+msgid "School holiday"
+msgstr "Schulferien"
+
+msgid "open ending"
+msgstr "Ende offen"
+
+msgid "and"
+msgstr "und"
+
+msgid "24/7"
+msgstr "Mo-So rund um die Uhr geöffnet"
+
+msgid "Back"
+msgstr "Zurück"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "More Info"
+msgstr "Mehr Infos"
+
+msgid "Loading..."
+msgstr "Laden..."
+
+msgid "Nothing found."
+msgstr "Nichts gefunden."
+
+msgid "No more results."
+msgstr "Keine weiteren Ergebnisse."
+
+msgid "Last update:"
+msgstr "Letzte Aktualisierung:"
+
+msgid "Zoom in to show marker"
+msgstr "Hineinzoomen, um Marker anzuzeigen"
+
+msgid "Empty input."
+msgstr "Leere Eingabe."
+
+msgid "More Details"
+msgstr "Mehr Infos"
+
+msgid "More results..."
+msgstr "Weitere Treffer..."
+
+msgid "Less"
+msgstr "Weniger"
+
+msgid "Hide"
+msgstr "Ausblenden"
+
+msgid "Show"
+msgstr "Einblenden"
+
+msgid "Permalink"
+msgstr "Permanentlink"
+
+msgid "Finish"
+msgstr "Fertig"
+
+msgid "Loading points..."
+msgstr "Punkte laden..."
+
+msgid "Hillshading"
+msgstr "Höhenprofil"
+
+msgid "POI-Details"
+msgstr "POI-Details"
+
+msgid "Marker"
+msgstr "Markierungen"
+
+msgid "Public transport"
+msgstr "Erreichbarkeit"
+
+msgid "Search results"
+msgstr "Suchergebnisse"
+
+msgid "Route"
+msgstr "Route"
+
+msgid "Search only in the current map view"
+msgstr "Nur im aktuellen Kartenausschnitt suchen"
+
+msgid "Click to close"
+msgstr "Klicken zum Schließen"
+
+msgid "Show in OpenLinkMap..."
+msgstr "In OpenLinkMap zeigen..."
+
+msgid "HTML-Code"
+msgstr "HTML-Code"
+
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
+msgstr "Kopieren Sie diesen HTML-Code und binden sie ihn ein in eine eigene Webseite ein, um eine kleine Karte mit einer Markierung anzuzeigen."
+
+msgid "Maps and data <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Hillshading: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+msgstr "Datensatz und Karten <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Höhenprofil: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+
+msgid "Address"
+msgstr "Adresse"
+
+msgid "Gastronomy"
+msgstr "Gastronomie und Hotel"
+
+msgid "Cuisine"
+msgstr "Küche"
+
+msgid "Stars"
+msgstr "Sterne"
+
+msgid "Smoking"
+msgstr "Rauchen"
+
+msgid "allowed"
+msgstr "erlaubt"
+
+msgid "prohibited"
+msgstr "verboten"
+
+msgid "dedicated"
+msgstr "erwünscht"
+
+msgid "separated smoking area"
+msgstr "Raucherbereich"
+
+msgid "Isolated area"
+msgstr "Raucherräume"
+
+msgid "Beer"
+msgstr "Biersorten"
+
+msgid "with microbrewery"
+msgstr "mit Hausbrauerei"
+
+msgid "Beergarden"
+msgstr "Biergarten"
+
+msgid "Fuel"
+msgstr "Tankstelle"
+
+msgid "Diesel"
+msgstr "Diesel"
+
+msgid "High quality synthetic Diesel"
+msgstr "Diesel, teilsynthetisch"
+
+msgid "HGV Diesel"
+msgstr "LKW-Diesel"
+
+msgid "Biodiesel"
+msgstr "Biodiesel"
+
+msgid "Octane 91"
+msgstr "Normalbenzin"
+
+msgid "Octane 95"
+msgstr "Super"
+
+msgid "Octane 98"
+msgstr "Super+"
+
+msgid "Octane 100"
+msgstr "Hochleistungs-Kraftstoff"
+
+msgid "Octane 98, leaded"
+msgstr "Super verbleit"
+
+msgid "Mixture 1:25"
+msgstr "Zweitakt 1:25"
+
+msgid "Mixture 1:50"
+msgstr "Zweitakt 1:50"
+
+msgid "Alcohol"
+msgstr "Alkohol"
+
+msgid "Ethanol"
+msgstr "Ethanol"
+
+msgid "Methanol"
+msgstr "Methanol"
+
+msgid "Vegetable oil"
+msgstr "Pflanzenöl"
+
+msgid "Ethanol-Mixture E10 (10% Ethanol)"
+msgstr "Ethanol-Kraftstoff E10 (10% Ethanol)"
+
+msgid "Ethanol-Mixture E85 (85% Ethanol)"
+msgstr "Ethanol-Kraftstoff E85 (85% Ethanol)"
+
+msgid "Biogas"
+msgstr "Biogas"
+
+msgid "LPG"
+msgstr "Autogas"
+
+msgid "CNG"
+msgstr "Erdgas"
+
+msgid "Liquid hydrogen"
+msgstr "Flüssiger Wasserstoff"
+
+msgid "Electricity"
+msgstr "Stromtankstelle"
+
+msgid "AdBlue"
+msgstr "AdBlue"
+
+msgid "Car wash"
+msgstr "Waschanlage"
+
+msgid "Car repair"
+msgstr "Autoreparatur"
+
+msgid "Shop"
+msgstr "Verkaufsraum"
+
+msgid "Other"
+msgstr "Anderes"
+
+msgid "Capacity"
+msgstr "Kapazität"
+
+msgid "Reference"
+msgstr "Nummer"
+
+msgid "Internet terminal"
+msgstr "Internetterminal vorhanden"
+
+msgid "WLAN hotspot"
+msgstr "WLAN-Hotspot"
+
+msgid "Wired internet access"
+msgstr "drahtgebundener Internetzugang"
+
+msgid "Internet access via service"
+msgstr "Internetzugang über das Personal"
+
+msgid "With costs"
+msgstr "kostenpflichtig"
+
+msgid "For free"
+msgstr "kostenlos"
+
+msgid "Partly with costs"
+msgstr "zeitweise kostenpflichtig"
+
+msgid "Toll"
+msgstr "mautpflichtig"
+
+msgid "Disused"
+msgstr "ungenutzt"
+
+msgid "Geographic"
+msgstr "Geographie"
+
+msgid "Height about sea level"
+msgstr "Höhe über Meeresspiegel"
+
+msgid "Population"
+msgstr "Einwohnerzahl"
+
+msgid "IATA"
+msgstr "IATA"
+
+msgid "ICAO"
+msgstr "ICAO"
+
+msgid "Wheelchair"
+msgstr "Barrierefreiheit"
+
+msgid "Toilets accessible"
+msgstr "Rollstuhlgerechte Toiletten"
+
+msgid "Toilets not accessible"
+msgstr "Toiletten nicht rollstuhlgerecht"
+
+msgid "Toilets limited accessible"
+msgstr "Toiletten eingeschränkt rollstuhlgerecht"
+
+msgid "All rooms accessible"
+msgstr "Rollstuhlgerechte Räume"
+
+msgid "Rooms not accessible"
+msgstr "Nicht rollstuhlgerechte Räume"
+
+msgid "Most rooms accessible"
+msgstr "Mehrzahl der Räume rollstuhlgerecht"
+
+msgid "Building accessible"
+msgstr "Rollstuhlgerechter Zugang"
+
+msgid "Building not accessible"
+msgstr "Nicht rollstuhlgerechter Zugang"
+
+msgid "Building limited accessible"
+msgstr "Eingeschränkt rollstuhlgerechter Zugang"
+
+msgid "Places for wheelchairs"
+msgstr "Rollstuhlgerechte Sitzplätze"
+
+msgid "No places for wheelchairs"
+msgstr "Nicht rollstuhlgerechte Sitzpätze"
+
+msgid "Limited places for wheelchairs"
+msgstr "Eingeschränkt rollstuhlgerechte Sitzplätze"
+
+msgid "Full article..."
+msgstr "Kompletter Artikel..."
+
+msgid "Image"
+msgstr "Bild"
+
+msgid "More images"
+msgstr "Weitere Bilder"
+
+msgid "License, author, original page..."
+msgstr "Lizenz, Autor, Originalseite..."
+
+msgid "Improve the data! Correct wrong website links with the new website checker from Keepright!"
+msgstr "Verbessere die Daten! Korrigiere veraltete und fehlerhafte Links mit dem neuen Website Checker von Keepright!"
+
+msgid "Report bug in map"
+msgstr "Kartenfehler melden"
+
+msgid "Search"
+msgstr "Suchen"
+
+msgid "Javascript is not activated"
+msgstr "Javascript ist nicht eingeschaltet"
+
+msgid "Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings."
+msgstr "Javascript wird benötigt, um die Karte und diese Webseite anzuzeigen. Bitte schalten Sie Javascript in Ihren Browsereinstellungen ein."
+

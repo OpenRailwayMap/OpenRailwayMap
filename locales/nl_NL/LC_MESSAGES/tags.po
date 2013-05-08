@@ -1,0 +1,1729 @@
+# OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+#
+# Translators:
+# Jo <winfixit@gmail.com>, 2013.
+#  <pander@users.sourceforge.net>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenLinkMap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2013-03-21 19:02+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/openlinkmap/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: UNITED KINGDOM\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "aerialway=cable_car"
+msgstr "Kabelbaan"
+
+msgid "aerialway=chair_lift"
+msgstr "Stoeltjeslift"
+
+msgid "aerialway=drag_lift"
+msgstr "Sleeplift"
+
+msgid "aerialway=goods"
+msgstr "Goederenlift"
+
+msgid "aerialway=gondola"
+msgstr "Kabelbaan"
+
+msgid "aerialway=mixed_lift"
+msgstr "Gemengde lift"
+
+msgid "aerialway=pylon"
+msgstr "Pyloon"
+
+msgid "aerialway=station"
+msgstr "Liftstation"
+
+msgid "aeroway=aerodrome"
+msgstr "Luchthaven"
+
+msgid "aeroway=apron"
+msgstr "Platform (vliegveld)"
+
+msgid "aeroway=gate"
+msgstr "Terminal"
+
+msgid "aeroway=helipad"
+msgstr "Landplaats voor helikopter"
+
+msgid "aeroway=runway"
+msgstr "Landingsbaan"
+
+msgid "aeroway=taxiway"
+msgstr "Taxibaan"
+
+msgid "aeroway=terminal"
+msgstr "Luchthaventerminal"
+
+msgid "aeroway=windsock"
+msgstr "Windhoos"
+
+msgid "amenity=airport"
+msgstr "Luchthaven"
+
+msgid "amenity=architect_office"
+msgstr "Architectenbureau"
+
+msgid "amenity=arts_centre"
+msgstr "Kunstencentrum"
+
+msgid "amenity=atm"
+msgstr "Geldautomaat"
+
+msgid "amenity=auditorium"
+msgstr "Auditorium"
+
+msgid "amenity=baby_hatch"
+msgstr "Babyschuif"
+
+msgid "amenity=bank"
+msgstr "Bank"
+
+msgid "amenity=bar"
+msgstr "Bar"
+
+msgid "amenity=bbq"
+msgstr "Publieke barbecue"
+
+msgid "amenity=bench"
+msgstr "Zitbank"
+
+msgid "amenity=bicycle_parking"
+msgstr "Fietsenstalling"
+
+msgid "amenity=bicycle_rental"
+msgstr "Fietsverhuur"
+
+msgid "amenity=biergarten"
+msgstr "Buitenterras"
+
+msgid "amenity=brothel"
+msgstr "Bordeel"
+
+msgid "amenity=bureau_de_change"
+msgstr "Wisselbureau"
+
+msgid "amenity=bus_station"
+msgstr "Busstation"
+
+msgid "amenity=cafe"
+msgstr "Café"
+
+msgid "amenity=car_rental"
+msgstr "Autoverhuur"
+
+msgid "amenity=car_sharing"
+msgstr "Autodelen"
+
+msgid "amenity=car_wash"
+msgstr "Car wash"
+
+msgid "amenity=casino"
+msgstr "Casino"
+
+msgid "amenity=cinema"
+msgstr "Bioscoop"
+
+msgid "amenity=clinic"
+msgstr "Hospitaal"
+
+msgid "amenity=clock"
+msgstr "Klok"
+
+msgid "amenity=club"
+msgstr "Club"
+
+msgid "amenity=college"
+msgstr "School"
+
+msgid "amenity=community_centre"
+msgstr "Gemeenschapscentrum"
+
+msgid "amenity=courthouse"
+msgstr "Gerechtsgebouw"
+
+msgid "amenity=crematorium"
+msgstr "Crematorium"
+
+msgid "amenity=dentist"
+msgstr "Tandarts"
+
+msgid "amenity=doctors"
+msgstr "Arts"
+
+msgid "amenity=dormitory"
+msgstr "Slaapzaal"
+
+msgid "amenity=drinking_water"
+msgstr "Drinkbaar water"
+
+msgid "amenity=driving_school"
+msgstr "Autorijschool"
+
+msgid "amenity=embassy"
+msgstr "Ambassade"
+
+msgid "amenity=emergency_phone"
+msgstr "Noodtelefoon/praatpaal"
+
+msgid "amenity=fast_food"
+msgstr "Fastfoodrestaurant"
+
+msgid "amenity=ferry_terminal"
+msgstr "Ferryterminal"
+
+msgid "amenity=fire_hydrant"
+msgstr "Brandkraan"
+
+msgid "amenity=fire_station"
+msgstr "Brandweerkazerne"
+
+msgid "amenity=food_court"
+msgstr "Eetstalletjes"
+
+msgid "amenity=fountain"
+msgstr "Fontein"
+
+msgid "amenity=fuel"
+msgstr "Tankstation"
+
+msgid "amenity=grave_yard"
+msgstr "Kerkhof"
+
+msgid "amenity=gym"
+msgstr "Fitnesscentrum"
+
+msgid "amenity=hall"
+msgstr "Zaal"
+
+msgid "amenity=health_centre"
+msgstr "Health centre"
+
+msgid "amenity=hospital"
+msgstr "Ziekenhuis"
+
+msgid "amenity=hunting_stand"
+msgstr "Jachthut"
+
+msgid "amenity=ice_cream"
+msgstr "Roomijs"
+
+msgid "amenity=kindergarten"
+msgstr "Kleuterschool"
+
+msgid "amenity=library"
+msgstr "Bibliotheek"
+
+msgid "amenity=market"
+msgstr "Markt"
+
+msgid "amenity=marketplace"
+msgstr "Marktplaats"
+
+msgid "amenity=mountain_rescue"
+msgstr "Bergreddingswerkers"
+
+msgid "amenity=nightclub"
+msgstr "Nachtclub"
+
+msgid "amenity=nursery"
+msgstr "Verpleeghuis"
+
+msgid "amenity=nursing_home"
+msgstr "Verpleeghuis"
+
+msgid "amenity=office"
+msgstr "Kantoor"
+
+msgid "amenity=parking"
+msgstr "Parking"
+
+msgid "amenity=pharmacy"
+msgstr "Apotheek"
+
+msgid "amenity=place_of_worship"
+msgstr "Gebedsplaats"
+
+msgid "amenity=police"
+msgstr "Politie"
+
+msgid "amenity=post_box"
+msgstr "Postbus"
+
+msgid "amenity=post_office"
+msgstr "Postkantoor"
+
+msgid "amenity=preschool"
+msgstr "Kleuterschool"
+
+msgid "amenity=prison"
+msgstr "Gevangenis"
+
+msgid "amenity=pub"
+msgstr "Café"
+
+msgid "amenity=public_building"
+msgstr "Openbaar gebouw"
+
+msgid "amenity=recycling"
+msgstr "Recyclage"
+
+msgid "amenity=restaurant"
+msgstr "Restaurant"
+
+msgid "amenity=retirement_home"
+msgstr "Bejaardentehusi"
+
+msgid "amenity=sauna"
+msgstr "Sauna"
+
+msgid "amenity=school"
+msgstr "School"
+
+msgid "amenity=shelter"
+msgstr "Schuilhokje"
+
+msgid "amenity=social_centre"
+msgstr "Sociaal centrum"
+
+msgid "amenity=social_club"
+msgstr "Sociëteit"
+
+msgid "amenity=stripclub"
+msgstr "Stripclub"
+
+msgid "amenity=studio"
+msgstr "Opnamestudio"
+
+msgid "amenity=taxi"
+msgstr "Taxi"
+
+msgid "amenity=telephone"
+msgstr "Telefoon"
+
+msgid "amenity=theatre"
+msgstr "Theater"
+
+msgid "amenity=toilets"
+msgstr "Toiletten"
+
+msgid "amenity=townhall"
+msgstr "Stadhuis"
+
+msgid "amenity=university"
+msgstr "Universiteit"
+
+msgid "amenity=vending_machine"
+msgstr "Automaat"
+
+msgid "amenity=veterinary"
+msgstr "Dierenarts"
+
+msgid "amenity=village_hall"
+msgstr "Gemeentehuis"
+
+msgid "amenity=youth_centre"
+msgstr "Jeugdhuis"
+
+msgid "amenity=waste_basket"
+msgstr "Vuilbakje"
+
+msgid "amenity=wifi"
+msgstr "WIFI-toegang"
+
+msgid "amenity=zoo"
+msgstr "Dierentuin"
+
+msgid "boundary=administrative"
+msgstr "Grens"
+
+msgid "boundary=national_park"
+msgstr "Nationaal park"
+
+msgid "boundary=protected_area"
+msgstr "Beschermd gebied"
+
+msgid "building=apartments"
+msgstr "Appartementsgebouw"
+
+msgid "building=blocks"
+msgstr "Gebouwenrij"
+
+msgid "building=bunker"
+msgstr "Bunker"
+
+msgid "building=chapel"
+msgstr "Kapel"
+
+msgid "building=church"
+msgstr "Kerk"
+
+msgid "building=city_hall"
+msgstr "Stadhuis"
+
+msgid "building=commercial"
+msgstr "Commercieel gebouw"
+
+msgid "building=dormitory"
+msgstr "Slaapzaal"
+
+msgid "building=entrance"
+msgstr "Ingang"
+
+msgid "building=faculty"
+msgstr "Faculteitsgebouw"
+
+msgid "building=farm"
+msgstr "Boerderijgebouw"
+
+msgid "building=flats"
+msgstr "Appartementen"
+
+msgid "building=garage"
+msgstr "Garage"
+
+msgid "building=garages"
+msgstr "Garages"
+
+msgid "building=hall"
+msgstr "Zaal"
+
+msgid "building=hospital"
+msgstr "Hospitaal"
+
+msgid "building=hotel"
+msgstr "Hotel"
+
+msgid "building=house"
+msgstr "Huis"
+
+msgid "building=industrial"
+msgstr "Industrieel gebouw"
+
+msgid "building=office"
+msgstr "Kantoor"
+
+msgid "building=public"
+msgstr "Publiek gebouw"
+
+msgid "building=residential"
+msgstr "Residentieel gebouw"
+
+msgid "building=retail"
+msgstr "Winkelpand"
+
+msgid "building=school"
+msgstr "Schoolgebouw"
+
+msgid "building=shop"
+msgstr "Winkel"
+
+msgid "building=stadium"
+msgstr "Stadion"
+
+msgid "building=store"
+msgstr "Winkel"
+
+msgid "building=terrace"
+msgstr "Terras"
+
+msgid "building=tower"
+msgstr "Toren"
+
+msgid "building=train_station"
+msgstr "Station"
+
+msgid "building=university"
+msgstr "Universiteitsgebouw"
+
+msgid "building=yes"
+msgstr "Gebouw"
+
+msgid "craft=beekeeper"
+msgstr "Imker"
+
+msgid "craft=blacksmith"
+msgstr "Smid"
+
+msgid "craft=boatbuilder"
+msgstr "Botenbouwer"
+
+msgid "craft=carpenter"
+msgstr "Schrijnwerker"
+
+msgid "craft=carpet_layer"
+msgstr "Tapijtlegger"
+
+msgid "craft=clockmaker"
+msgstr "Klokkenmaker"
+
+msgid "craft=confectionery"
+msgstr "Snoepwinkel"
+
+msgid "craft=electrician"
+msgstr "Elektrieker"
+
+msgid "craft=gardener"
+msgstr "Tuinman"
+
+msgid "craft=glaziery"
+msgstr "Glasblazer"
+
+msgid "craft=hvac"
+msgstr "Verwarming, ventilatie, Airco"
+
+msgid "craft=jeweller"
+msgstr "Juwelier"
+
+msgid "craft=metal_construction"
+msgstr "Metaalconstructies"
+
+msgid "craft=optician"
+msgstr "Optieker"
+
+msgid "craft=painter"
+msgstr "Schilder"
+
+msgid "craft=photographer"
+msgstr "Fotograaf"
+
+msgid "craft=plasterer"
+msgstr "Stukadoor"
+
+msgid "craft=plumber"
+msgstr "Loodgieter"
+
+msgid "craft=pottery"
+msgstr "Pottenbakker"
+
+msgid "craft=roofer"
+msgstr "Dakwerker"
+
+msgid "craft=scaffolder"
+msgstr "Stellingbouwer"
+
+msgid "craft=sculptor"
+msgstr "Beeldhouwer"
+
+msgid "craft=shoemaker"
+msgstr "Schoenmaker"
+
+msgid "craft=stonemason"
+msgstr "Metser"
+
+msgid "craft=sweep"
+msgstr "Schoorsteenveger"
+
+msgid "craft=tailor"
+msgstr "Klerenmaker"
+
+msgid "craft=tiler"
+msgstr "Vloerder"
+
+msgid "cuisine=american"
+msgstr "Amerikaans"
+
+msgid "cuisine=asian"
+msgstr "Aziatisch"
+
+msgid "cuisine=austrian"
+msgstr "Oostenrijks"
+
+msgid "cuisine=bavarian"
+msgstr "Beiers"
+
+msgid "cuisine=beef_bowl"
+msgstr "cuisine=beef_bowl"
+
+msgid "cuisine=burger"
+msgstr "Hamburger"
+
+msgid "cuisine=chicken"
+msgstr "Kip"
+
+msgid "cuisine=chinese"
+msgstr "Chinees"
+
+msgid "cuisine=coffee_shop"
+msgstr "Koffie"
+
+msgid "cuisine=crepe"
+msgstr "Pannenkoek"
+
+msgid "cuisine=curry"
+msgstr "Curry"
+
+msgid "cuisine=donut"
+msgstr "Donuts"
+
+msgid "cuisine=fish"
+msgstr "Vis"
+
+msgid "cuisine=fish_and_chips"
+msgstr "Frieten"
+
+msgid "cuisine=french"
+msgstr "Frans"
+
+msgid "cuisine=german"
+msgstr "Duits"
+
+msgid "cuisine=greek"
+msgstr "Grieks"
+
+msgid "cuisine=icecream"
+msgstr "Roomijs"
+
+msgid "cuisine=indian"
+msgstr "Indisch"
+
+msgid "cuisine=italian"
+msgstr "Italiaans"
+
+msgid "cuisine=international"
+msgstr "Internationaal"
+
+msgid "cuisine=japanese"
+msgstr "Japans"
+
+msgid "cuisine=kebab"
+msgstr "Kebap"
+
+msgid "cuisine=mexican"
+msgstr "Mexicaans"
+
+msgid "cuisine=pizza"
+msgstr "Pizza"
+
+msgid "cuisine=ramen"
+msgstr "cuisine=ramen"
+
+msgid "cuisine=regional"
+msgstr "Plaatselijke keuken"
+
+msgid "cuisine=sandwich"
+msgstr "Sandwich"
+
+msgid "cuisine=seafood"
+msgstr "Zeevruchten"
+
+msgid "cuisine=soba"
+msgstr "cuisine=soba"
+
+msgid "cuisine=spanish"
+msgstr "Spaans"
+
+msgid "cuisine=sri_lankan"
+msgstr "Sri-Lankees"
+
+msgid "cuisine=steak_house"
+msgstr "Steak"
+
+msgid "cuisine=sushi"
+msgstr "Sushi"
+
+msgid "cuisine=thai"
+msgstr "Thais"
+
+msgid "cuisine=turkish"
+msgstr "Turks"
+
+msgid "cuisine=vietnamese"
+msgstr "Vietnamees"
+
+msgid "emergency=ambulance_station"
+msgstr "Ziekenwagenstelplaats"
+
+msgid "emergency=fire_hydrant"
+msgstr "Brandweerkraan"
+
+msgid "emergency=phone"
+msgstr "Noodtelefoon/Praatpaal"
+
+msgid "highway=bridleway"
+msgstr "Ruiterpad"
+
+msgid "highway=bus_guideway"
+msgstr "Busgeleidingssysteem"
+
+msgid "highway=bus_stop"
+msgstr "Bushalte"
+
+msgid "highway=construction"
+msgstr "Wegenwerken"
+
+msgid "highway=cycleway"
+msgstr "Fietspad"
+
+msgid "highway=distance_marker"
+msgstr "Afstandsindicator"
+
+msgid "highway=emergency_access_point"
+msgstr "Noodtoegangspunt"
+
+msgid "highway=footway"
+msgstr "Voetweg"
+
+msgid "highway=ford"
+msgstr "Doorwaadplaats"
+
+msgid "highway=living_street"
+msgstr "Woonerf"
+
+msgid "highway=motorway"
+msgstr "Autosnelweg"
+
+msgid "highway=motorway_junction"
+msgstr "Verkeerswisselaar"
+
+msgid "highway=motorway_link"
+msgstr "Op-/Afrit autosnelweg"
+
+msgid "highway=path"
+msgstr "Pad"
+
+msgid "highway=pedestrian"
+msgstr "Winkelwandelstraat"
+
+msgid "highway=platform"
+msgstr "Perron"
+
+msgid "highway=primary"
+msgstr "Hoofdweg"
+
+msgid "highway=primary_link"
+msgstr "Aansluiting hoofdweg"
+
+msgid "highway=proposed"
+msgstr "Voorgestelde straat"
+
+msgid "highway=raceway"
+msgstr "Raceweg"
+
+msgid "highway=residential"
+msgstr "Stedelijke straat"
+
+msgid "highway=road"
+msgstr "Weg voorlopig zonder type"
+
+msgid "highway=secondary"
+msgstr "Secundaire weg"
+
+msgid "highway=secondary_link"
+msgstr "Aansluiting op secundaire weg"
+
+msgid "highway=service"
+msgstr "Dienstweg"
+
+msgid "highway=services"
+msgstr "Diensten"
+
+msgid "highway=speed_camera"
+msgstr "Snelheidscamera"
+
+msgid "highway=steps"
+msgstr "Trappen"
+
+msgid "highway=tertiary"
+msgstr "Afgelegen weg"
+
+msgid "highway=track"
+msgstr "Zandweg"
+
+msgid "highway=trunk"
+msgstr "Expressweg"
+
+msgid "highway=trunk_link"
+msgstr "Op-/afrit expressweg"
+
+msgid "highway=unclassified"
+msgstr "Straat buiten de stad"
+
+msgid "historic=archaeological_site"
+msgstr "Archeologische site"
+
+msgid "historic=battlefield"
+msgstr "Historisch slagveld"
+
+msgid "historic=boundary_stone"
+msgstr "Grenssteen"
+
+msgid "historic=building"
+msgstr "Historisch gebouw"
+
+msgid "historic=castle"
+msgstr "Kasteel"
+
+msgid "historic=church"
+msgstr "Historische kerk"
+
+msgid "historic=fort"
+msgstr "Vesting/Fort"
+
+msgid "historic=house"
+msgstr "Historisch gebouw"
+
+msgid "historic=icon"
+msgstr "Icoon"
+
+msgid "historic=manor"
+msgstr "Landgoed"
+
+msgid "historic=memorial"
+msgstr "Gedenksteen"
+
+msgid "historic=mine"
+msgstr "Oude mijn"
+
+msgid "historic=monument"
+msgstr "Monument"
+
+msgid "historic=museum"
+msgstr "Museum"
+
+msgid "historic=ruins"
+msgstr "Ruïnes"
+
+msgid "historic=tower"
+msgstr "Toren"
+
+msgid "historic=wayside_cross"
+msgstr "Kruisbeeld langs de weg"
+
+msgid "historic=wayside_shrine"
+msgstr "Kapel langs de weg"
+
+msgid "historic=wreck"
+msgstr "Wrak"
+
+msgid "landuse=allotments"
+msgstr "Verkavelingen"
+
+msgid "landuse=basin"
+msgstr "Waterbekken"
+
+msgid "landuse=brownfield"
+msgstr "Afgebroken voor wederopbouw"
+
+msgid "landuse=cemetery"
+msgstr "Begraafplaats"
+
+msgid "landuse=commercial"
+msgstr "Commercieel gebied"
+
+msgid "landuse=construction"
+msgstr "Constructiezone"
+
+msgid "landuse=farm"
+msgstr "Boerderij"
+
+msgid "landuse=farmland"
+msgstr "Akkers"
+
+msgid "landuse=farmyard"
+msgstr "Boerderijlanderijen"
+
+msgid "landuse=forest"
+msgstr "Bos"
+
+msgid "landuse=garages"
+msgstr "Garages"
+
+msgid "landuse=grass"
+msgstr "Gras"
+
+msgid "landuse=greenfield"
+msgstr "Voor de eerste keer te bebouwen"
+
+msgid "landuse=greenhouse_horticulture"
+msgstr "Serres fruitteelt"
+
+msgid "landuse=industrial"
+msgstr "Industrieterrein"
+
+msgid "landuse=landfill"
+msgstr "Vuilnisbelt"
+
+msgid "landuse=meadow"
+msgstr "Weide"
+
+msgid "landuse=military"
+msgstr "Militair gebied"
+
+msgid "landuse=mine"
+msgstr "Mijn"
+
+msgid "landuse=mountain"
+msgstr "Berg"
+
+msgid "landuse=nature_reserve"
+msgstr "Natuurreservaat"
+
+msgid "landuse=orchard"
+msgstr "Boomgaard"
+
+msgid "landuse=piste"
+msgstr "Piste"
+
+msgid "landuse=pond"
+msgstr "Vijver"
+
+msgid "landuse=quarry"
+msgstr "Groeve"
+
+msgid "landuse=railway"
+msgstr "Spoorweggebied"
+
+msgid "landuse=reservoir"
+msgstr "Reservoir"
+
+msgid "landuse=residential"
+msgstr "Residentiële zone"
+
+msgid "landuse=retail"
+msgstr "Commerciële zone"
+
+msgid "landuse=salt_pond"
+msgstr "Zoutpannen"
+
+msgid "landuse=village_green"
+msgstr "Stadsgroen"
+
+msgid "landuse=vineyard"
+msgstr "Wijngaard"
+
+msgid "leisure=beach_resort"
+msgstr "Strandzone"
+
+msgid "leisure=bird_hide"
+msgstr "Vogelbeschermingsgebied"
+
+msgid "leisure=common"
+msgstr "Gemeenschappelijk gebied"
+
+msgid "leisure=dog_park"
+msgstr "Hondenloopzone"
+
+msgid "leisure=fishing"
+msgstr "Hengelzone"
+
+msgid "leisure=garden"
+msgstr "Tuin"
+
+msgid "leisure=golf_course"
+msgstr "Golfbaan"
+
+msgid "leisure=hot_spring"
+msgstr "Warmwaterbronnen, thermae"
+
+msgid "leisure=ice_rink"
+msgstr "IJsschaatsbaan"
+
+msgid "leisure=marina"
+msgstr "Jachthaven"
+
+msgid "leisure=maze"
+msgstr "Labyrint"
+
+msgid "leisure=miniature_golf"
+msgstr "Minigolf"
+
+msgid "leisure=nature_reserve"
+msgstr "Natuurreservaat"
+
+msgid "leisure=park"
+msgstr "Park"
+
+msgid "leisure=playground"
+msgstr "Speeltuin"
+
+msgid "leisure=pitch"
+msgstr "Speelveld"
+
+msgid "leisure=recreation_ground"
+msgstr "Recreatiegebied"
+
+msgid "leisure=sauna"
+msgstr "Sauna"
+
+msgid "leisure=slipway"
+msgstr "Scheepshelling"
+
+msgid "leisure=sports_centre"
+msgstr "Sportcentrum"
+
+msgid "leisure=stadium"
+msgstr "Stadion"
+
+msgid "leisure=swimming_pool"
+msgstr "Zwembad"
+
+msgid "leisure=track"
+msgstr "Looppiste"
+
+msgid "leisure=video_arcade"
+msgstr "Lunapark"
+
+msgid "leisure=water_park"
+msgstr "Waterpark"
+
+msgid "man_made=adit"
+msgstr "Horizontale mijningang"
+
+msgid "man_made=beacon"
+msgstr "Baken"
+
+msgid "man_made=chimney"
+msgstr "Schoorsteen"
+
+msgid "man_made=communications_transponder"
+msgstr "Communicatietransponder"
+
+msgid "man_made=crane"
+msgstr "Kraan"
+
+msgid "man_made=cutline"
+msgstr "Doorsteek"
+
+msgid "man_made=lighthouse"
+msgstr "Vuurtoren"
+
+msgid "man_made=measurement_station"
+msgstr "Meetstation"
+
+msgid "man_made=mineshaft"
+msgstr "Mijnschacht"
+
+msgid "man_made=petroleum_well"
+msgstr "Oliebron"
+
+msgid "man_made=pier"
+msgstr "Pier"
+
+msgid "man_made=pipeline"
+msgstr "Pijplijn"
+
+msgid "man_made=reservoir_covered"
+msgstr "Overdekt reservoir"
+
+msgid "man_made=silo"
+msgstr "Silo"
+
+msgid "man_made=storage_tank"
+msgstr "Opslagtank"
+
+msgid "man_made=surface_mine"
+msgstr "Oppervlaktemijn"
+
+msgid "man_made=surveillance"
+msgstr "Bewaking"
+
+msgid "man_made=survey_point"
+msgstr "Uitkijkpunt"
+
+msgid "man_made=tower"
+msgstr "Toren"
+
+msgid "man_made=wastewater_plant"
+msgstr "Waterzuivering"
+
+msgid "man_made=watermill"
+msgstr "Watermolen"
+
+msgid "man_made=water_tower"
+msgstr "Watertoren"
+
+msgid "man_made=water_well"
+msgstr "Bron"
+
+msgid "man_made=water_works"
+msgstr "Waterbehandeling"
+
+msgid "man_made=windmill"
+msgstr "Windmolen"
+
+msgid "man_made=works"
+msgstr "Wegenwerken"
+
+msgid "military=airfield"
+msgstr "Militaire luchthaven"
+
+msgid "military=barracks"
+msgstr "Barakken"
+
+msgid "military=bunker"
+msgstr "Bunker"
+
+msgid "military=danger_area"
+msgstr "Militair risicogebied"
+
+msgid "military=naval_basis"
+msgstr "Marinebasis"
+
+msgid "military=range"
+msgstr "Militair gebied"
+
+msgid "natural=bay"
+msgstr "Baai"
+
+msgid "natural=beach"
+msgstr "Strand"
+
+msgid "natural=cape"
+msgstr "Kaap"
+
+msgid "natural=cave_entrance"
+msgstr "Grotingang"
+
+msgid "natural=channel"
+msgstr "Kanaal"
+
+msgid "natural=cliff"
+msgstr "Klippen"
+
+msgid "natural=coastline"
+msgstr "Kust"
+
+msgid "natural=crater"
+msgstr "Krater"
+
+msgid "natural=fell"
+msgstr "Fjell"
+
+msgid "natural=fjord"
+msgstr "Fjord"
+
+msgid "natural=geyser"
+msgstr "Geiser"
+
+msgid "natural=glacier"
+msgstr "Gletsjer"
+
+msgid "natural=heath"
+msgstr "Heide"
+
+msgid "natural=hill"
+msgstr "Heuvel"
+
+msgid "natural=island"
+msgstr "Eiland"
+
+msgid "natural=land"
+msgstr "Land"
+
+msgid "natural=marsh"
+msgstr "Moeras"
+
+msgid "natural=massif"
+msgstr "Massief"
+
+msgid "natural=moor"
+msgstr "veen"
+
+msgid "natural=mud"
+msgstr "Slijk"
+
+msgid "natural=peak"
+msgstr "Piek"
+
+msgid "natural=reef"
+msgstr "Rif"
+
+msgid "natural=ridge"
+msgstr "Bergkam"
+
+msgid "natural=river"
+msgstr "Rivier"
+
+msgid "natural=rock"
+msgstr "Rots"
+
+msgid "natural=sand"
+msgstr "Zand"
+
+msgid "natural=scree"
+msgstr "Puinhelling"
+
+msgid "natural=scrub"
+msgstr "Kreupelhout"
+
+msgid "natural=shoal"
+msgstr "Zandbank"
+
+msgid "natural=spring"
+msgstr "Bron"
+
+msgid "natural=stone"
+msgstr "Steen"
+
+msgid "natural=tree"
+msgstr "Boom"
+
+msgid "natural=valley"
+msgstr "Vallei"
+
+msgid "natural=volcano"
+msgstr "Vulkaan"
+
+msgid "natural=water"
+msgstr "Water"
+
+msgid "natural=wetland"
+msgstr "Drasland"
+
+msgid "natural=wood"
+msgstr "Bos"
+
+msgid "office=accountant"
+msgstr "Boekhouder"
+
+msgid "office=architect"
+msgstr "Architect"
+
+msgid "office=company"
+msgstr "Bedrijf"
+
+msgid "office=employment_agency"
+msgstr "Tewerkstellingskantoor"
+
+msgid "office=estate_agent"
+msgstr "Makelaar"
+
+msgid "office=government"
+msgstr "Overheid"
+
+msgid "office=insurance"
+msgstr "Verzekeringskantoor"
+
+msgid "office=it"
+msgstr "IT-bedrijf"
+
+msgid "office=lawyer"
+msgstr "Advocaat"
+
+msgid "office=newspaper"
+msgstr "Krantenredactie"
+
+msgid "office=ngo"
+msgstr "NGO"
+
+msgid "office=quango"
+msgstr "Quango"
+
+msgid "office=research"
+msgstr "Onderzoeksbedrijf"
+
+msgid "office=telecommunication"
+msgstr "Telecombedrijf"
+
+msgid "office=travel_agent"
+msgstr "Reisbureau"
+
+msgid "place=airport"
+msgstr "Luchthaven"
+
+msgid "place=city"
+msgstr "Stad"
+
+msgid "place=country"
+msgstr "Land"
+
+msgid "place=county"
+msgstr "County"
+
+msgid "place=farm"
+msgstr "Boerderij"
+
+msgid "place=hamlet"
+msgstr "Gehucht"
+
+msgid "place=house"
+msgstr "Huis"
+
+msgid "place=island"
+msgstr "Eiland"
+
+msgid "place=islet"
+msgstr "Eilandje"
+
+msgid "place=locality"
+msgstr "Plaats"
+
+msgid "place=postcode"
+msgstr "Postcode"
+
+msgid "place=region"
+msgstr "Regio"
+
+msgid "place=sea"
+msgstr "Zee"
+
+msgid "place=state"
+msgstr "Staat"
+
+msgid "place=suburb"
+msgstr "Buitenwijk"
+
+msgid "place=town"
+msgstr "Stadje"
+
+msgid "place=village"
+msgstr "Dorp"
+
+msgid "power=cable_distribution_cabinet"
+msgstr "Kabelkast"
+
+msgid "power=generator"
+msgstr "Generator"
+
+msgid "power=line"
+msgstr "Hoogspanningslijn"
+
+msgid "power=minor_line"
+msgstr "Kleinere hoogspanningslijn"
+
+msgid "power=pole"
+msgstr "Pyloon"
+
+msgid "power=station"
+msgstr "Transformatorstation"
+
+msgid "power=sub_station"
+msgstr "Transformatoronderstation"
+
+msgid "power=tower"
+msgstr "Grote hoogspanningspyloon"
+
+msgid "railway=abandoned"
+msgstr "Verlaten spoorweg"
+
+msgid "railway=buffer_stop"
+msgstr "Bufferstop"
+
+msgid "railway=construction"
+msgstr "Spoorweg in aanleg"
+
+msgid "railway=crossing"
+msgstr "Spoorwegovergang"
+
+msgid "railway=disused"
+msgstr "Ongebruikt spoor"
+
+msgid "railway=disused_station"
+msgstr "Verlaten station"
+
+msgid "railway=funicular"
+msgstr "Kabelspoorweg"
+
+msgid "railway=halt"
+msgstr "Halte"
+
+msgid "railway=historic_station"
+msgstr "Historisch station"
+
+msgid "railway=junction"
+msgstr "Spoorwegkruising"
+
+msgid "railway=level_crossing"
+msgstr "Gelijkgrondse spoorwegovergang"
+
+msgid "railway=light_rail"
+msgstr "Sneltram"
+
+msgid "railway=monorail"
+msgstr "Monorail"
+
+msgid "railway=narrow_gauge"
+msgstr "Smalspoor"
+
+msgid "railway=platform"
+msgstr "Perron"
+
+msgid "railway=preserved"
+msgstr "Geconserveerde spoorweg"
+
+msgid "railway=rail"
+msgstr "Spoorweg"
+
+msgid "railway=station"
+msgstr "Station"
+
+msgid "railway=subway"
+msgstr "Metro"
+
+msgid "railway=subway_entrance"
+msgstr "Metro-ingang"
+
+msgid "railway=switch"
+msgstr "Wissel"
+
+msgid "railway=tram"
+msgstr "Tram"
+
+msgid "railway=tram_stop"
+msgstr "Tramhalte"
+
+msgid "railway=turntable"
+msgstr "Draaischijf"
+
+msgid "railway=yard"
+msgstr "Spoorwegterrein"
+
+msgid "shop=alcohol"
+msgstr "Slijterij"
+
+msgid "shop=anime"
+msgstr "Stripwinkel"
+
+msgid "shop=art"
+msgstr "Kunsthandel"
+
+msgid "shop=bakery"
+msgstr "Bakkerij"
+
+msgid "shop=beauty"
+msgstr "Schoonheidssalon"
+
+msgid "shop=bed"
+msgstr "Beddenwinkel"
+
+msgid "shop=beverages"
+msgstr "Drankenhandel"
+
+msgid "shop=bicycle"
+msgstr "Fietszaak"
+
+msgid "shop=books"
+msgstr "Boekenwinkel"
+
+msgid "shop=boutique"
+msgstr ""
+
+msgid "shop=butcher"
+msgstr "Slagerij"
+
+msgid "shop=car"
+msgstr "Autodealer"
+
+msgid "shop=car_dealer"
+msgstr "Autodealer"
+
+msgid "shop=car_parts"
+msgstr "Auto-onderdelen"
+
+msgid "shop=car_repair"
+msgstr "Autoherstelling"
+
+msgid "shop=carpet"
+msgstr "Tapijten"
+
+msgid "shop=chemist"
+msgstr "Chemiebenodigdheden"
+
+msgid "shop=clothes"
+msgstr "Kledingzaak"
+
+msgid "shop=computer"
+msgstr "Computerwinkel"
+
+msgid "shop=confectionery"
+msgstr "Snoepgoed"
+
+msgid "shop=convenience"
+msgstr "Minisupermarkt"
+
+msgid "shop=copyshop"
+msgstr "Copyshop"
+
+msgid "shop=cosmetics"
+msgstr "Cosmetica"
+
+msgid "shop=curtain"
+msgstr "Gordijnen"
+
+msgid "shop=deli"
+msgstr "Delicatessen"
+
+msgid "shop=department_store"
+msgstr "Warenhuis"
+
+msgid "shop=discount"
+msgstr "Lageprijsartikelenwinkel"
+
+msgid "shop=doityourself"
+msgstr "Doe-het-zelf-zaak"
+
+msgid "shop=drugstore"
+msgstr "Kruidenierswaren"
+
+msgid "shop=dry_cleaning"
+msgstr "Stomerij/Droogkuis"
+
+msgid "shop=electronics"
+msgstr "Electronicaspeciaalzaak"
+
+msgid "shop=erotic"
+msgstr "Eroticaspeciaalzaak"
+
+msgid "shop=estate_agent"
+msgstr "Makelaar"
+
+msgid "shop=fabric"
+msgstr "Stoffen"
+
+msgid "shop=farm"
+msgstr "Boerderijwinkel"
+
+msgid "shop=fashion"
+msgstr "Modespeciaalzaak"
+
+msgid "shop=fish"
+msgstr "Vishandel"
+
+msgid "shop=florist"
+msgstr "Bloemist"
+
+msgid "shop=food"
+msgstr "Voeding"
+
+msgid "shop=funeral_directors"
+msgstr "Begrafenisondernemers"
+
+msgid "shop=furniture"
+msgstr "Meubelzaak"
+
+msgid "shop=gallery"
+msgstr "Galerij"
+
+msgid "shop=garden_centre"
+msgstr "Tuincentrum"
+
+msgid "shop=general"
+msgstr "Winkel"
+
+msgid "shop=gift"
+msgstr "Cadeauwinkel"
+
+msgid "shop=glaziery"
+msgstr "Glasblazerij"
+
+msgid "shop=greengrocer"
+msgstr "Groentenboer"
+
+msgid "shop=grocery"
+msgstr "Kruidenier"
+
+msgid "shop=hairdresser"
+msgstr "Kapper"
+
+msgid "shop=hardware"
+msgstr "IJzerhandel"
+
+msgid "shop=hifi"
+msgstr "Hifi"
+
+msgid "shop=hunting"
+msgstr "Jaagtoebehoren"
+
+msgid "shop=insurance"
+msgstr "Verzekeringskantoor"
+
+msgid "shop=jewelry"
+msgstr "Juwelier"
+
+msgid "shop=kiosk"
+msgstr "Kiosk/Krantenwinkel"
+
+msgid "shop=laundry"
+msgstr "Wasserette"
+
+msgid "shop=mall"
+msgstr "Winkelcentrum"
+
+msgid "shop=market"
+msgstr "Markt"
+
+msgid "shop=mobile_phone"
+msgstr "GSM's"
+
+msgid "shop=motorcycle"
+msgstr "Motorrijwielen"
+
+msgid "shop=music"
+msgstr "Muziekwinkel"
+
+msgid "shop=musical_instrument"
+msgstr "Muziekinstrumenten"
+
+msgid "shop=newsagent"
+msgstr "Krantenwinkel"
+
+msgid "shop=optician"
+msgstr "Opticien"
+
+msgid "shop=organic"
+msgstr "Natuurvoeding"
+
+msgid "shop=outdoor"
+msgstr "Buitensportuitrusting"
+
+msgid "shop=pet"
+msgstr "Huisdieren"
+
+msgid "shop=photo"
+msgstr "Fotograaf"
+
+msgid "shop=seafood"
+msgstr "Viswinkel"
+
+msgid "shop=shoes"
+msgstr "Schoenen"
+
+msgid "shop=shopping_centre"
+msgstr "Winkelcentrum"
+
+msgid "shop=sports"
+msgstr "Sporttoebehoren"
+
+msgid "shop=stationery"
+msgstr "Kantoorartikelen"
+
+msgid "shop=supermarket"
+msgstr "Supermarkt"
+
+msgid "shop=tobacco"
+msgstr "Tabakswinkel"
+
+msgid "shop=toys"
+msgstr "Speelgoedwinkel"
+
+msgid "shop=trade"
+msgstr "Ruilwinkel"
+
+msgid "shop=travel_agency"
+msgstr "Reisagentschap"
+
+msgid "shop=variety_store"
+msgstr "Gevarieerde artikelenzaak"
+
+msgid "shop=video"
+msgstr "Video's"
+
+msgid "shop=wine"
+msgstr "Wijnhandel"
+
+msgid "tourism=alpine_hut"
+msgstr "Alpenhut"
+
+msgid "tourism=artwork"
+msgstr "Kunstwerk"
+
+msgid "tourism=attraction"
+msgstr "Attractie"
+
+msgid "tourism=bed_and_breakfast"
+msgstr "Bed and breakfast"
+
+msgid "tourism=camp_site"
+msgstr "Kampeerplaats"
+
+msgid "tourism=caravan_site"
+msgstr "Caravansite"
+
+msgid "tourism=chalet"
+msgstr "Chalet"
+
+msgid "tourism=guest_house"
+msgstr "Guest house"
+
+msgid "tourism=hostel"
+msgstr "Herberg"
+
+msgid "tourism=hotel"
+msgstr "Hotel"
+
+msgid "tourism=information"
+msgstr "Toerisme-informatie"
+
+msgid "tourism=motel"
+msgstr "Motel"
+
+msgid "tourism=museum"
+msgstr "Museum"
+
+msgid "tourism=picnic_site"
+msgstr "Picnicsite"
+
+msgid "tourism=theme_park"
+msgstr "Themapark"
+
+msgid "tourism=viewpoint"
+msgstr "Uitkijkpunt"
+
+msgid "tourism=zoo"
+msgstr "Dierentuin"
+
+msgid "waterway=boatyard"
+msgstr "Scheepswerf"
+
+msgid "waterway=canal"
+msgstr "Kanaal"
+
+msgid "waterway=dam"
+msgstr "Dam"
+
+msgid "waterway=ditch"
+msgstr "Sloot"
+
+msgid "waterway=dock"
+msgstr "Dok"
+
+msgid "waterway=drain"
+msgstr "Afvoergeul"
+
+msgid "waterway=lock_gate"
+msgstr "Sluis"
+
+msgid "waterway=mineral_spring"
+msgstr "Mineraalwaterbron"
+
+msgid "waterway=mooring"
+msgstr "Aanlegplaats"
+
+msgid "waterway=rapids"
+msgstr "Stroomversnellingen"
+
+msgid "waterway=river"
+msgstr "Rivier"
+
+msgid "waterway=riverbank"
+msgstr "Rivier"
+
+msgid "waterway=stream"
+msgstr "Stroompje"
+
+msgid "waterway=turning_point"
+msgstr "Draaikom"
+
+msgid "waterway=wadi"
+msgstr "Doorgaans droogstaande rivierbedding"
+
+msgid "waterway=waterfall"
+msgstr "Waterval"
+
+msgid "waterway=weir"
+msgstr "Stuw"
+

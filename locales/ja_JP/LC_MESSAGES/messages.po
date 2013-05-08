@@ -1,0 +1,529 @@
+# OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2013-04-02 17:06+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Poedit-Language: Japanese\n"
+"X-Poedit-Country: JAPAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Fullscreen"
+msgstr "フルスクリーン"
+
+msgid "Homepage"
+msgstr "ホームページ"
+
+msgid "Wikipedia"
+msgstr "Wikipedia"
+
+msgid "Realtime departures"
+msgstr ""
+
+msgid "Operator"
+msgstr "運営者"
+
+msgid "With shelter"
+msgstr ""
+
+msgid "Without shelter"
+msgstr ""
+
+msgid "With bench"
+msgstr ""
+
+msgid "Without bench"
+msgstr ""
+
+msgid "With wastebasket"
+msgstr ""
+
+msgid "Without wastebasket"
+msgstr ""
+
+msgid "Tactile paving"
+msgstr ""
+
+msgid "No tactile paving"
+msgstr ""
+
+msgid "Incorrect tactile paving"
+msgstr ""
+
+msgid "Accessible for wheelchairs"
+msgstr "車椅子で利用可"
+
+msgid "Not accessible for wheelchairs"
+msgstr "車椅子で利用不可"
+
+msgid "Limited accessible for wheelchairs"
+msgstr "車椅子で一部利用可"
+
+msgid "Phone"
+msgstr "電話"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "Mobile phone"
+msgstr "携帯電話"
+
+msgid "Email"
+msgstr ""
+
+msgid "Opening hours"
+msgstr "営業時間"
+
+msgid "Open 24/7"
+msgstr "24時間営業"
+
+msgid "Now open"
+msgstr "開店中"
+
+msgid "Open on holiday"
+msgstr "休日に開店"
+
+msgid "Now closed"
+msgstr "閉店中"
+
+msgid "Service hours"
+msgstr "サービス時間"
+
+msgid "Without name"
+msgstr "名前無し"
+
+msgid "Busstops"
+msgstr "バス停"
+
+msgid "Stations"
+msgstr "駅"
+
+msgid "Tramhalts"
+msgstr "電停"
+
+msgid "Parkings"
+msgstr "駐車場"
+
+msgid "Accessibility"
+msgstr "アクセシビリティ"
+
+msgid "Unnamed"
+msgstr "名前無し"
+
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d 秒"
+
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d 分"
+
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d 時"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d 日"
+
+#, php-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d 週"
+
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d 月"
+
+#, php-format
+msgid "more than %s ago"
+msgstr "以上 %s 前"
+
+#, php-format
+msgid "%s ago"
+msgstr "%s 前"
+
+msgid "Mo"
+msgstr "月"
+
+msgid "Tu"
+msgstr "火"
+
+msgid "We"
+msgstr "水"
+
+msgid "Th"
+msgstr "木"
+
+msgid "Fr"
+msgstr "金"
+
+msgid "Sa"
+msgstr "土"
+
+msgid "Su"
+msgstr "日"
+
+msgid "closed"
+msgstr "終了"
+
+msgid "Public holiday"
+msgstr "祭日"
+
+msgid "School holiday"
+msgstr "学校休日"
+
+msgid "open ending"
+msgstr ""
+
+msgid "and"
+msgstr "かつ"
+
+msgid "24/7"
+msgstr "24時間無休"
+
+msgid "Back"
+msgstr "戻る"
+
+msgid "Details"
+msgstr "詳細"
+
+msgid "Contact"
+msgstr "連絡先"
+
+msgid "More Info"
+msgstr "追加情報"
+
+msgid "Loading..."
+msgstr "ロード中..."
+
+msgid "Nothing found."
+msgstr "見つかりませんでした."
+
+msgid "No more results."
+msgstr "結果はこれで全てです."
+
+msgid "Last update:"
+msgstr "最終更新:"
+
+msgid "Zoom in to show marker"
+msgstr "ズームしてマーカーを表示"
+
+msgid "Empty input."
+msgstr "空の入力."
+
+msgid "More Details"
+msgstr "さらに詳細"
+
+msgid "More results..."
+msgstr "さらに結果を..."
+
+msgid "Less"
+msgstr "未満"
+
+msgid "Hide"
+msgstr "隠す"
+
+msgid "Show"
+msgstr "表示"
+
+msgid "Permalink"
+msgstr "パーマリンク"
+
+msgid "Finish"
+msgstr "終了"
+
+msgid "Loading points..."
+msgstr "ポイントをロード中..."
+
+msgid "Hillshading"
+msgstr "陰影処理"
+
+msgid "POI-Details"
+msgstr "POIの詳細"
+
+msgid "Marker"
+msgstr "マーカー"
+
+msgid "Public transport"
+msgstr "大規模交通"
+
+msgid "Search results"
+msgstr "検索結果"
+
+msgid "Route"
+msgstr "ルート"
+
+msgid "Search only in the current map view"
+msgstr "現在のマップビュー内のみを検索"
+
+msgid "Click to close"
+msgstr "クリックして閉じる"
+
+msgid "Show in OpenLinkMap..."
+msgstr "OpenLinkMap 内に表示..."
+
+msgid "HTML-Code"
+msgstr "HTML コード"
+
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
+msgstr "このHTMLコードをコピーして、マーカー付きの小さな地図をあなたのウェブサイトに表示."
+
+msgid "Maps and data <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Hillshading: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+msgstr "Maps and data <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />陰影処理: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+
+msgid "Address"
+msgstr "住所"
+
+msgid "Gastronomy"
+msgstr "飲食店"
+
+msgid "Cuisine"
+msgstr "料理"
+
+msgid "Stars"
+msgstr ""
+
+msgid "Smoking"
+msgstr "喫煙"
+
+msgid "allowed"
+msgstr "可"
+
+msgid "prohibited"
+msgstr "禁止"
+
+msgid "dedicated"
+msgstr "専用"
+
+msgid "separated smoking area"
+msgstr "分煙エリア"
+
+msgid "Isolated area"
+msgstr "分離喫煙エリア"
+
+msgid "Beer"
+msgstr "ビール"
+
+msgid "with microbrewery"
+msgstr "地酒"
+
+msgid "Beergarden"
+msgstr "ビアガーデン"
+
+msgid "Fuel"
+msgstr "ガソリンスタンド"
+
+msgid "Diesel"
+msgstr "軽油"
+
+msgid "High quality synthetic Diesel"
+msgstr "GTL軽油"
+
+msgid "HGV Diesel"
+msgstr "HGV軽油"
+
+msgid "Biodiesel"
+msgstr "バイオディーゼル燃料"
+
+msgid "Octane 91"
+msgstr "レギュラー"
+
+msgid "Octane 95"
+msgstr ""
+
+msgid "Octane 98"
+msgstr "ハイオク"
+
+msgid "Octane 100"
+msgstr ""
+
+msgid "Octane 98, leaded"
+msgstr "有鉛ハイオク"
+
+msgid "Mixture 1:25"
+msgstr "混合 1:25"
+
+msgid "Mixture 1:50"
+msgstr "混合 1:50"
+
+msgid "Alcohol"
+msgstr "アルコール"
+
+msgid "Ethanol"
+msgstr "エタノール"
+
+msgid "Methanol"
+msgstr "メタノール"
+
+msgid "Vegetable oil"
+msgstr "植物油"
+
+msgid "Ethanol-Mixture E10 (10% Ethanol)"
+msgstr "エタノール混合 E10 (10% エタノール)"
+
+msgid "Ethanol-Mixture E85 (85% Ethanol)"
+msgstr "エタノール混合 E85 (85% エタノール)"
+
+msgid "Biogas"
+msgstr "バイオガス"
+
+msgid "LPG"
+msgstr "LPG"
+
+msgid "CNG"
+msgstr "CNG"
+
+msgid "Liquid hydrogen"
+msgstr ""
+
+msgid "Electricity"
+msgstr "電気"
+
+msgid "AdBlue"
+msgstr "アドブルー"
+
+msgid "Car wash"
+msgstr "洗車"
+
+msgid "Car repair"
+msgstr "自動車修理"
+
+msgid "Shop"
+msgstr "キオスク"
+
+msgid "Other"
+msgstr "その他"
+
+msgid "Capacity"
+msgstr "収容数"
+
+msgid "Reference"
+msgstr "参照番号"
+
+msgid "Internet terminal"
+msgstr "インターネット端末"
+
+msgid "WLAN hotspot"
+msgstr "無線LANホットスポット"
+
+msgid "Wired internet access"
+msgstr "有線によるインターネットアクセス"
+
+msgid "Internet access via service"
+msgstr "インターネットアクセス・サービス"
+
+msgid "With costs"
+msgstr "有料"
+
+msgid "For free"
+msgstr "無料"
+
+msgid "Partly with costs"
+msgstr "一部有料"
+
+msgid "Toll"
+msgstr "料金所"
+
+msgid "Disused"
+msgstr "休止中"
+
+msgid "Geographic"
+msgstr ""
+
+msgid "Height about sea level"
+msgstr "海抜"
+
+msgid "Population"
+msgstr "人口"
+
+msgid "IATA"
+msgstr "IATA"
+
+msgid "ICAO"
+msgstr "ICAO"
+
+msgid "Wheelchair"
+msgstr "車椅子"
+
+msgid "Toilets accessible"
+msgstr "車椅子でトイレ利用可"
+
+msgid "Toilets not accessible"
+msgstr "車椅子でトイレ利用不可"
+
+msgid "Toilets limited accessible"
+msgstr "車椅子でトイレ一部利用可"
+
+msgid "All rooms accessible"
+msgstr "全ての部屋は車椅子で利用可"
+
+msgid "Rooms not accessible"
+msgstr "車椅子で利用不可の部屋"
+
+msgid "Most rooms accessible"
+msgstr "ほとんどの部屋は車椅子で利用可"
+
+msgid "Building accessible"
+msgstr "建物は車椅子で利用可"
+
+msgid "Building not accessible"
+msgstr "建物は車椅子で利用不可"
+
+msgid "Building limited accessible"
+msgstr "建物は車椅子で一部利用可"
+
+msgid "Places for wheelchairs"
+msgstr "車椅子で利用可能な場所"
+
+msgid "No places for wheelchairs"
+msgstr "車椅子で利用不可の場所"
+
+msgid "Limited places for wheelchairs"
+msgstr "車椅子で一部利用可能な場所"
+
+msgid "Full article..."
+msgstr "記事全文..."
+
+msgid "Image"
+msgstr "画像"
+
+msgid "More images"
+msgstr "もっと画像を見る"
+
+msgid "License, author, original page..."
+msgstr "ライセンス, 作者, オリジナルのページ..."
+
+msgid "Improve the data! Correct wrong website links with the new website checker from Keepright!"
+msgstr "データを改善しよう! Keepright からの新しいウェブサイトチェッカーで間違ったリンクを修正しよう!"
+
+msgid "Report bug in map"
+msgstr "マップエラーを報告"
+
+msgid "Search"
+msgstr "検索"
+
+msgid "Javascript is not activated"
+msgstr "Javascript が無効です"
+
+msgid "Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings."
+msgstr "マップ表示とこのサイトの実行にはJavascript が必要です. ブラウザ設定でJavascript を有効にしてください."
+

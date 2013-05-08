@@ -1,0 +1,1727 @@
+# OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2013-04-02 16:59+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Poedit-Language: Japanese\n"
+"X-Poedit-Country: JAPAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "aerialway=cable_car"
+msgstr "ケーブルカー"
+
+msgid "aerialway=chair_lift"
+msgstr "チェアリフト"
+
+msgid "aerialway=drag_lift"
+msgstr "シュレップリフト"
+
+msgid "aerialway=goods"
+msgstr "貨物用リフト"
+
+msgid "aerialway=gondola"
+msgstr "ゴンドラ"
+
+msgid "aerialway=mixed_lift"
+msgstr "複合リフト"
+
+msgid "aerialway=pylon"
+msgstr "柱"
+
+msgid "aerialway=station"
+msgstr "駅"
+
+msgid "aeroway=aerodrome"
+msgstr "空港"
+
+msgid "aeroway=apron"
+msgstr "駐機場"
+
+msgid "aeroway=gate"
+msgstr "ゲート"
+
+msgid "aeroway=helipad"
+msgstr "ヘリポート"
+
+msgid "aeroway=runway"
+msgstr "滑走路"
+
+msgid "aeroway=taxiway"
+msgstr "誘導路"
+
+msgid "aeroway=terminal"
+msgstr "空港ターミナルビル"
+
+msgid "aeroway=windsock"
+msgstr "吹き流し"
+
+msgid "amenity=airport"
+msgstr "空港"
+
+msgid "amenity=architect_office"
+msgstr "設計事務所"
+
+msgid "amenity=arts_centre"
+msgstr "アートセンター"
+
+msgid "amenity=atm"
+msgstr "ATM"
+
+msgid "amenity=auditorium"
+msgstr "公会堂"
+
+msgid "amenity=baby_hatch"
+msgstr "赤ちゃんポスト"
+
+msgid "amenity=bank"
+msgstr "銀行"
+
+msgid "amenity=bar"
+msgstr "バー"
+
+msgid "amenity=bbq"
+msgstr "野外バーベキュー"
+
+msgid "amenity=bench"
+msgstr "ベンチ"
+
+msgid "amenity=bicycle_parking"
+msgstr "駐輪場"
+
+msgid "amenity=bicycle_rental"
+msgstr "レンタサイクル"
+
+msgid "amenity=biergarten"
+msgstr "ビアガーデン"
+
+msgid "amenity=brothel"
+msgstr "風俗店"
+
+msgid "amenity=bureau_de_change"
+msgstr "両替商"
+
+msgid "amenity=bus_station"
+msgstr "バスターミナル"
+
+msgid "amenity=cafe"
+msgstr "カフェ"
+
+msgid "amenity=car_rental"
+msgstr "レンタカー"
+
+msgid "amenity=car_sharing"
+msgstr "カーシェア"
+
+msgid "amenity=car_wash"
+msgstr "洗車"
+
+msgid "amenity=casino"
+msgstr "カジノ"
+
+msgid "amenity=cinema"
+msgstr "映画館"
+
+msgid "amenity=clinic"
+msgstr "診療所"
+
+msgid "amenity=clock"
+msgstr "時計"
+
+msgid "amenity=club"
+msgstr "クラブ"
+
+msgid "amenity=college"
+msgstr "短大"
+
+msgid "amenity=community_centre"
+msgstr "コミュニティセンター"
+
+msgid "amenity=courthouse"
+msgstr "裁判所"
+
+msgid "amenity=crematorium"
+msgstr "火葬場"
+
+msgid "amenity=dentist"
+msgstr "歯医者"
+
+msgid "amenity=doctors"
+msgstr "診療所"
+
+msgid "amenity=dormitory"
+msgstr "寮"
+
+msgid "amenity=drinking_water"
+msgstr "水飲み場"
+
+msgid "amenity=driving_school"
+msgstr "自動車学校"
+
+msgid "amenity=embassy"
+msgstr "大使館"
+
+msgid "amenity=emergency_phone"
+msgstr "緊急電話"
+
+msgid "amenity=fast_food"
+msgstr "ファストフード"
+
+msgid "amenity=ferry_terminal"
+msgstr "フェリーターミナル"
+
+msgid "amenity=fire_hydrant"
+msgstr "消火栓"
+
+msgid "amenity=fire_station"
+msgstr "消防署"
+
+msgid "amenity=food_court"
+msgstr "フードコート"
+
+msgid "amenity=fountain"
+msgstr "噴水"
+
+msgid "amenity=fuel"
+msgstr "ガソリンスタンド"
+
+msgid "amenity=grave_yard"
+msgstr "墓地"
+
+msgid "amenity=gym"
+msgstr "ジム"
+
+msgid "amenity=hall"
+msgstr "ホール"
+
+msgid "amenity=health_centre"
+msgstr "ヘルスセンター"
+
+msgid "amenity=hospital"
+msgstr "病院"
+
+msgid "amenity=hunting_stand"
+msgstr "狩猟スタンド"
+
+msgid "amenity=ice_cream"
+msgstr "アイスクリーム屋"
+
+msgid "amenity=kindergarten"
+msgstr "幼稚園"
+
+msgid "amenity=library"
+msgstr "図書館"
+
+msgid "amenity=market"
+msgstr "市場"
+
+msgid "amenity=marketplace"
+msgstr "市場"
+
+msgid "amenity=mountain_rescue"
+msgstr "山岳救助施設"
+
+msgid "amenity=nightclub"
+msgstr "ナイトクラブ"
+
+msgid "amenity=nursery"
+msgstr "養育施設"
+
+msgid "amenity=nursing_home"
+msgstr "介護施設"
+
+msgid "amenity=office"
+msgstr "オフィス"
+
+msgid "amenity=parking"
+msgstr "駐車場"
+
+msgid "amenity=pharmacy"
+msgstr "薬局"
+
+msgid "amenity=place_of_worship"
+msgstr "礼拝所"
+
+msgid "amenity=police"
+msgstr "警察"
+
+msgid "amenity=post_box"
+msgstr "郵便ポスト"
+
+msgid "amenity=post_office"
+msgstr "郵便局"
+
+msgid "amenity=preschool"
+msgstr "幼児教育施設"
+
+msgid "amenity=prison"
+msgstr "刑務所"
+
+msgid "amenity=pub"
+msgstr "パブ"
+
+msgid "amenity=public_building"
+msgstr "公共施設"
+
+msgid "amenity=recycling"
+msgstr "リサイクル施設"
+
+msgid "amenity=restaurant"
+msgstr "レストラン"
+
+msgid "amenity=retirement_home"
+msgstr "老人ホーム"
+
+msgid "amenity=sauna"
+msgstr "サウナ"
+
+msgid "amenity=school"
+msgstr "学校"
+
+msgid "amenity=shelter"
+msgstr "シェルター"
+
+msgid "amenity=social_centre"
+msgstr "社交センター"
+
+msgid "amenity=social_club"
+msgstr "社交クラブ"
+
+msgid "amenity=stripclub"
+msgstr "ストリップクラブ"
+
+msgid "amenity=studio"
+msgstr "放送スタジオ"
+
+msgid "amenity=taxi"
+msgstr "タクシー乗り場"
+
+msgid "amenity=telephone"
+msgstr "電話"
+
+msgid "amenity=theatre"
+msgstr "劇場"
+
+msgid "amenity=toilets"
+msgstr "トイレ"
+
+msgid "amenity=townhall"
+msgstr "市役所"
+
+msgid "amenity=university"
+msgstr "大学"
+
+msgid "amenity=vending_machine"
+msgstr "自動販売機"
+
+msgid "amenity=veterinary"
+msgstr "獣医"
+
+msgid "amenity=village_hall"
+msgstr "村役場"
+
+msgid "amenity=youth_centre"
+msgstr "ユースセンター"
+
+msgid "amenity=waste_basket"
+msgstr "ゴミ箱"
+
+msgid "amenity=wifi"
+msgstr "Wifi 接続"
+
+msgid "amenity=zoo"
+msgstr "動物園"
+
+msgid "boundary=administrative"
+msgstr "境界"
+
+msgid "boundary=national_park"
+msgstr "国立公園"
+
+msgid "boundary=protected_area"
+msgstr "保護区"
+
+msgid "building=apartments"
+msgstr "アパート"
+
+msgid "building=blocks"
+msgstr "ビル区画"
+
+msgid "building=bunker"
+msgstr "トーチカ"
+
+msgid "building=chapel"
+msgstr "チャペル"
+
+msgid "building=church"
+msgstr "教会"
+
+msgid "building=city_hall"
+msgstr "市役所"
+
+msgid "building=commercial"
+msgstr "商業施設"
+
+msgid "building=dormitory"
+msgstr "寮"
+
+msgid "building=entrance"
+msgstr "玄関"
+
+msgid "building=faculty"
+msgstr "工場"
+
+msgid "building=farm"
+msgstr "農場の家屋"
+
+msgid "building=flats"
+msgstr "フラット"
+
+msgid "building=garage"
+msgstr "ガレージ"
+
+msgid "building=garages"
+msgstr "ガレージ"
+
+msgid "building=hall"
+msgstr "ホール"
+
+msgid "building=hospital"
+msgstr "病院"
+
+msgid "building=hotel"
+msgstr "ホテル"
+
+msgid "building=house"
+msgstr "民家"
+
+msgid "building=industrial"
+msgstr "工業施設"
+
+msgid "building=office"
+msgstr "オフィス"
+
+msgid "building=public"
+msgstr "公共施設"
+
+msgid "building=residential"
+msgstr "住居施設"
+
+msgid "building=retail"
+msgstr "小売施設"
+
+msgid "building=school"
+msgstr "校舎"
+
+msgid "building=shop"
+msgstr "店"
+
+msgid "building=stadium"
+msgstr "スタジアム"
+
+msgid "building=store"
+msgstr "店舗"
+
+msgid "building=terrace"
+msgstr "テラス"
+
+msgid "building=tower"
+msgstr "塔"
+
+msgid "building=train_station"
+msgstr "駅舎"
+
+msgid "building=university"
+msgstr "大学校舎"
+
+msgid "building=yes"
+msgstr "建物全般"
+
+msgid "craft=beekeeper"
+msgstr "養蜂場"
+
+msgid "craft=blacksmith"
+msgstr "鍛冶屋"
+
+msgid "craft=boatbuilder"
+msgstr "船大工"
+
+msgid "craft=carpenter"
+msgstr "大工"
+
+msgid "craft=carpet_layer"
+msgstr "カーペット職人"
+
+msgid "craft=clockmaker"
+msgstr "時計工房"
+
+msgid "craft=confectionery"
+msgstr "お菓子屋"
+
+msgid "craft=electrician"
+msgstr "電気工事屋"
+
+msgid "craft=gardener"
+msgstr "造園業"
+
+msgid "craft=glaziery"
+msgstr "ガラス工房"
+
+msgid "craft=hvac"
+msgstr "空調設備業"
+
+msgid "craft=jeweller"
+msgstr "宝飾品工房"
+
+msgid "craft=metal_construction"
+msgstr "金属加工業"
+
+msgid "craft=optician"
+msgstr "眼鏡屋"
+
+msgid "craft=painter"
+msgstr "ペンキ屋"
+
+msgid "craft=photographer"
+msgstr "写真家"
+
+msgid "craft=plasterer"
+msgstr "左官"
+
+msgid "craft=plumber"
+msgstr "配管工"
+
+msgid "craft=pottery"
+msgstr "陶芸工房"
+
+msgid "craft=roofer"
+msgstr "屋根職人"
+
+msgid "craft=scaffolder"
+msgstr "足場構築職人"
+
+msgid "craft=sculptor"
+msgstr "彫刻家"
+
+msgid "craft=shoemaker"
+msgstr "靴職人"
+
+msgid "craft=stonemason"
+msgstr "石材加工"
+
+msgid "craft=sweep"
+msgstr "煙突掃除屋"
+
+msgid "craft=tailor"
+msgstr "仕立屋"
+
+msgid "craft=tiler"
+msgstr "タイル職人"
+
+msgid "cuisine=american"
+msgstr "アメリカ料理"
+
+msgid "cuisine=asian"
+msgstr "アジア料理"
+
+msgid "cuisine=austrian"
+msgstr "オーストリア料理"
+
+msgid "cuisine=bavarian"
+msgstr "バイエルン料理"
+
+msgid "cuisine=beef_bowl"
+msgstr "牛丼"
+
+msgid "cuisine=burger"
+msgstr "ハンバーガー"
+
+msgid "cuisine=chicken"
+msgstr "チキン"
+
+msgid "cuisine=chinese"
+msgstr "中華料理"
+
+msgid "cuisine=coffee_shop"
+msgstr "コーヒー"
+
+msgid "cuisine=crepe"
+msgstr "クレープ"
+
+msgid "cuisine=curry"
+msgstr "カレー"
+
+msgid "cuisine=donut"
+msgstr "ドーナツ"
+
+msgid "cuisine=fish"
+msgstr "魚"
+
+msgid "cuisine=fish_and_chips"
+msgstr "フィッシュ & チップス"
+
+msgid "cuisine=french"
+msgstr "フランス料理"
+
+msgid "cuisine=german"
+msgstr "ドイツ料理"
+
+msgid "cuisine=greek"
+msgstr "ギリシャ料理"
+
+msgid "cuisine=icecream"
+msgstr "アイスクリーム"
+
+msgid "cuisine=indian"
+msgstr "インド料理"
+
+msgid "cuisine=italian"
+msgstr "イタリア料理"
+
+msgid "cuisine=international"
+msgstr "多国籍料理"
+
+msgid "cuisine=japanese"
+msgstr "日本料理"
+
+msgid "cuisine=kebab"
+msgstr "シシケバブ"
+
+msgid "cuisine=mexican"
+msgstr "メキシコ料理"
+
+msgid "cuisine=pizza"
+msgstr "ピザ"
+
+msgid "cuisine=ramen"
+msgstr "ラーメン"
+
+msgid "cuisine=regional"
+msgstr "郷土料理"
+
+msgid "cuisine=sandwich"
+msgstr "サンドウィッチ"
+
+msgid "cuisine=seafood"
+msgstr "海鮮料理"
+
+msgid "cuisine=soba"
+msgstr "そば"
+
+msgid "cuisine=spanish"
+msgstr "スペイン料理"
+
+msgid "cuisine=sri_lankan"
+msgstr "スリランカ料理"
+
+msgid "cuisine=steak_house"
+msgstr "ステーキ"
+
+msgid "cuisine=sushi"
+msgstr "すし"
+
+msgid "cuisine=thai"
+msgstr "タイ料理"
+
+msgid "cuisine=turkish"
+msgstr "トルコ料理"
+
+msgid "cuisine=vietnamese"
+msgstr "ベトナム料理"
+
+msgid "emergency=ambulance_station"
+msgstr "救急ステーション"
+
+msgid "emergency=fire_hydrant"
+msgstr "消火栓"
+
+msgid "emergency=phone"
+msgstr "非常用電話"
+
+msgid "highway=bridleway"
+msgstr "馬用の小道"
+
+msgid "highway=bus_guideway"
+msgstr "ガイドウェイバス専用路"
+
+msgid "highway=bus_stop"
+msgstr "バス停"
+
+msgid "highway=construction"
+msgstr "建設中道路"
+
+msgid "highway=cycleway"
+msgstr "自転車専用道"
+
+msgid "highway=distance_marker"
+msgstr "距離標識"
+
+msgid "highway=emergency_access_point"
+msgstr "非常時位置番号"
+
+msgid "highway=footway"
+msgstr "遊歩道"
+
+msgid "highway=ford"
+msgstr "渡り場"
+
+msgid "highway=living_street"
+msgstr "生活道路"
+
+msgid "highway=motorway"
+msgstr "自動車専用道路"
+
+msgid "highway=motorway_junction"
+msgstr "自動車専用道路IC"
+
+msgid "highway=motorway_link"
+msgstr "自動車専用道路連絡路"
+
+msgid "highway=path"
+msgstr "小道"
+
+msgid "highway=pedestrian"
+msgstr "歩行者専用道路"
+
+msgid "highway=platform"
+msgstr "プラットホーム"
+
+msgid "highway=primary"
+msgstr "主要地方道"
+
+msgid "highway=primary_link"
+msgstr "主要地方道連絡路"
+
+msgid "highway=proposed"
+msgstr "提案中の道路"
+
+msgid "highway=raceway"
+msgstr "レース用コース"
+
+msgid "highway=residential"
+msgstr "居住区域内道路"
+
+msgid "highway=road"
+msgstr "種別が不明な道路"
+
+msgid "highway=secondary"
+msgstr "一般地方道"
+
+msgid "highway=secondary_link"
+msgstr "一般地方道連絡路"
+
+msgid "highway=service"
+msgstr "敷地内道路"
+
+msgid "highway=services"
+msgstr "サービスエリア"
+
+msgid "highway=speed_camera"
+msgstr "スピードカメラ"
+
+msgid "highway=steps"
+msgstr "階段"
+
+msgid "highway=tertiary"
+msgstr "一般道(2車線以上)"
+
+msgid "highway=track"
+msgstr "トラック"
+
+msgid "highway=trunk"
+msgstr "国道"
+
+msgid "highway=trunk_link"
+msgstr "国道連絡路"
+
+msgid "highway=unclassified"
+msgstr "一般道(2車線未満)"
+
+msgid "historic=archaeological_site"
+msgstr "史跡"
+
+msgid "historic=battlefield"
+msgstr "古戦場"
+
+msgid "historic=boundary_stone"
+msgstr "境界標石"
+
+msgid "historic=building"
+msgstr "歴史的な建物"
+
+msgid "historic=castle"
+msgstr "城"
+
+msgid "historic=church"
+msgstr "歴史的な教会"
+
+msgid "historic=fort"
+msgstr "砦"
+
+msgid "historic=house"
+msgstr "歴史的な家"
+
+msgid "historic=icon"
+msgstr "イコン"
+
+msgid "historic=manor"
+msgstr "領地"
+
+msgid "historic=memorial"
+msgstr "記念碑"
+
+msgid "historic=mine"
+msgstr "鉱山跡"
+
+msgid "historic=monument"
+msgstr "記念物"
+
+msgid "historic=museum"
+msgstr "博物館"
+
+msgid "historic=ruins"
+msgstr "遺跡"
+
+msgid "historic=tower"
+msgstr "塔"
+
+msgid "historic=wayside_cross"
+msgstr "歴史的十字架"
+
+msgid "historic=wayside_shrine"
+msgstr "歴史的礼拝所"
+
+msgid "historic=wreck"
+msgstr "難破船"
+
+msgid "landuse=allotments"
+msgstr "市民菜園"
+
+msgid "landuse=basin"
+msgstr "調整池"
+
+msgid "landuse=brownfield"
+msgstr "更地"
+
+msgid "landuse=cemetery"
+msgstr "霊園"
+
+msgid "landuse=commercial"
+msgstr "ビジネス街"
+
+msgid "landuse=construction"
+msgstr "建設現場"
+
+msgid "landuse=farm"
+msgstr "農地"
+
+msgid "landuse=farmland"
+msgstr "農地"
+
+msgid "landuse=farmyard"
+msgstr "農家"
+
+msgid "landuse=forest"
+msgstr "人工林"
+
+msgid "landuse=garages"
+msgstr "ガレージ"
+
+msgid "landuse=grass"
+msgstr "芝生"
+
+msgid "landuse=greenfield"
+msgstr "建設予定地"
+
+msgid "landuse=greenhouse_horticulture"
+msgstr "温室"
+
+msgid "landuse=industrial"
+msgstr "工業地"
+
+msgid "landuse=landfill"
+msgstr "ゴミ埋立地"
+
+msgid "landuse=meadow"
+msgstr "草原"
+
+msgid "landuse=military"
+msgstr "軍用地"
+
+msgid "landuse=mine"
+msgstr "鉱山"
+
+msgid "landuse=mountain"
+msgstr "山"
+
+msgid "landuse=nature_reserve"
+msgstr "自然保護区"
+
+msgid "landuse=orchard"
+msgstr "果樹園"
+
+msgid "landuse=piste"
+msgstr "スキーコース"
+
+msgid "landuse=pond"
+msgstr "池"
+
+msgid "landuse=quarry"
+msgstr "露天掘鉱山"
+
+msgid "landuse=railway"
+msgstr "鉄道用地"
+
+msgid "landuse=reservoir"
+msgstr "貯水池"
+
+msgid "landuse=residential"
+msgstr "住宅地"
+
+msgid "landuse=retail"
+msgstr "商業地"
+
+msgid "landuse=salt_pond"
+msgstr "塩田"
+
+msgid "landuse=village_green"
+msgstr "里山"
+
+msgid "landuse=vineyard"
+msgstr "ブドウ畑"
+
+msgid "leisure=beach_resort"
+msgstr "浜辺"
+
+msgid "leisure=bird_hide"
+msgstr "鳥観測所"
+
+msgid "leisure=common"
+msgstr "共有地"
+
+msgid "leisure=dog_park"
+msgstr "ドッグラン"
+
+msgid "leisure=fishing"
+msgstr "釣り場"
+
+msgid "leisure=garden"
+msgstr "庭園"
+
+msgid "leisure=golf_course"
+msgstr "ゴルフコース"
+
+msgid "leisure=hot_spring"
+msgstr "温泉"
+
+msgid "leisure=ice_rink"
+msgstr "アイスリンク"
+
+msgid "leisure=marina"
+msgstr "マリーナ"
+
+msgid "leisure=maze"
+msgstr "迷路"
+
+msgid "leisure=miniature_golf"
+msgstr "パターゴルフ"
+
+msgid "leisure=nature_reserve"
+msgstr "自然保護区"
+
+msgid "leisure=park"
+msgstr "公園"
+
+msgid "leisure=playground"
+msgstr "遊び場"
+
+msgid "leisure=pitch"
+msgstr "運動場"
+
+msgid "leisure=recreation_ground"
+msgstr "リクレーション広場"
+
+msgid "leisure=sauna"
+msgstr "サウナ"
+
+msgid "leisure=slipway"
+msgstr "スリップウェイ"
+
+msgid "leisure=sports_centre"
+msgstr "スポーツセンター"
+
+msgid "leisure=stadium"
+msgstr "スタジアム"
+
+msgid "leisure=swimming_pool"
+msgstr "プール"
+
+msgid "leisure=track"
+msgstr "競争トラック"
+
+msgid "leisure=video_arcade"
+msgstr "ゲームセンター"
+
+msgid "leisure=water_park"
+msgstr "ウォーターパーク"
+
+msgid "man_made=adit"
+msgstr "地下坑道入口"
+
+msgid "man_made=beacon"
+msgstr "ビーコン"
+
+msgid "man_made=chimney"
+msgstr "煙突"
+
+msgid "man_made=communications_transponder"
+msgstr "通信中継器"
+
+msgid "man_made=crane"
+msgstr "クレーン"
+
+msgid "man_made=cutline"
+msgstr "森林の切れ目"
+
+msgid "man_made=lighthouse"
+msgstr "灯台"
+
+msgid "man_made=measurement_station"
+msgstr "測量所"
+
+msgid "man_made=mineshaft"
+msgstr "立坑"
+
+msgid "man_made=petroleum_well"
+msgstr "油井"
+
+msgid "man_made=pier"
+msgstr "桟橋"
+
+msgid "man_made=pipeline"
+msgstr "パイプライン"
+
+msgid "man_made=reservoir_covered"
+msgstr "覆いのある貯水池"
+
+msgid "man_made=silo"
+msgstr "サイロ"
+
+msgid "man_made=storage_tank"
+msgstr "貯蔵タンク"
+
+msgid "man_made=surface_mine"
+msgstr "露天掘鉱床"
+
+msgid "man_made=surveillance"
+msgstr "監視区域"
+
+msgid "man_made=survey_point"
+msgstr "観測所"
+
+msgid "man_made=tower"
+msgstr "塔"
+
+msgid "man_made=wastewater_plant"
+msgstr "下水処理場"
+
+msgid "man_made=watermill"
+msgstr "水車"
+
+msgid "man_made=water_tower"
+msgstr "貯水塔"
+
+msgid "man_made=water_well"
+msgstr "井戸"
+
+msgid "man_made=water_works"
+msgstr "浄水場"
+
+msgid "man_made=windmill"
+msgstr "風車"
+
+msgid "man_made=works"
+msgstr "工場"
+
+msgid "military=airfield"
+msgstr "軍用機離着陸場"
+
+msgid "military=barracks"
+msgstr "バラック"
+
+msgid "military=bunker"
+msgstr "トーチカ"
+
+msgid "military=danger_area"
+msgstr "危険地帯"
+
+msgid "military=naval_basis"
+msgstr "海軍基地"
+
+msgid "military=range"
+msgstr "訓練場"
+
+msgid "natural=bay"
+msgstr "湾"
+
+msgid "natural=beach"
+msgstr "砂浜"
+
+msgid "natural=cape"
+msgstr "岬"
+
+msgid "natural=cave_entrance"
+msgstr "洞穴入口"
+
+msgid "natural=channel"
+msgstr "水路"
+
+msgid "natural=cliff"
+msgstr "崖"
+
+msgid "natural=coastline"
+msgstr "海岸線"
+
+msgid "natural=crater"
+msgstr "クレーター"
+
+msgid "natural=fell"
+msgstr "荒野"
+
+msgid "natural=fjord"
+msgstr "フィヨルド"
+
+msgid "natural=geyser"
+msgstr "間欠泉"
+
+msgid "natural=glacier"
+msgstr "氷河"
+
+msgid "natural=heath"
+msgstr "低木地"
+
+msgid "natural=hill"
+msgstr "丘"
+
+msgid "natural=island"
+msgstr "島"
+
+msgid "natural=land"
+msgstr "陸地"
+
+msgid "natural=marsh"
+msgstr "沼地"
+
+msgid "natural=massif"
+msgstr "山塊"
+
+msgid "natural=moor"
+msgstr "荒地"
+
+msgid "natural=mud"
+msgstr "泥地"
+
+msgid "natural=peak"
+msgstr "山頂"
+
+msgid "natural=reef"
+msgstr ""
+
+msgid "natural=ridge"
+msgstr ""
+
+msgid "natural=river"
+msgstr "川"
+
+msgid "natural=rock"
+msgstr "岩"
+
+msgid "natural=sand"
+msgstr "砂地"
+
+msgid "natural=scree"
+msgstr "がれ"
+
+msgid "natural=scrub"
+msgstr "未耕作地"
+
+msgid "natural=shoal"
+msgstr "砂州"
+
+msgid "natural=spring"
+msgstr "泉"
+
+msgid "natural=stone"
+msgstr "石"
+
+msgid "natural=tree"
+msgstr "木"
+
+msgid "natural=valley"
+msgstr "谷"
+
+msgid "natural=volcano"
+msgstr "火山"
+
+msgid "natural=water"
+msgstr "水域"
+
+msgid "natural=wetland"
+msgstr "湿地"
+
+msgid "natural=wood"
+msgstr "森"
+
+msgid "office=accountant"
+msgstr "会計事務所"
+
+msgid "office=architect"
+msgstr "建築設計事務所"
+
+msgid "office=company"
+msgstr "会社"
+
+msgid "office=employment_agency"
+msgstr "職業紹介"
+
+msgid "office=estate_agent"
+msgstr "不動産屋"
+
+msgid "office=government"
+msgstr "政府・自治体"
+
+msgid "office=insurance"
+msgstr "保険代理店"
+
+msgid "office=it"
+msgstr "IT企業"
+
+msgid "office=lawyer"
+msgstr "法律事務所"
+
+msgid "office=newspaper"
+msgstr "新聞社"
+
+msgid "office=ngo"
+msgstr "非政府組織"
+
+msgid "office=quango"
+msgstr "政府系法人"
+
+msgid "office=research"
+msgstr "研究所"
+
+msgid "office=telecommunication"
+msgstr "通信会社"
+
+msgid "office=travel_agent"
+msgstr "旅行代理店"
+
+msgid "place=airport"
+msgstr "空港"
+
+msgid "place=city"
+msgstr "市"
+
+msgid "place=country"
+msgstr "国"
+
+msgid "place=county"
+msgstr "郡"
+
+msgid "place=farm"
+msgstr "農園"
+
+msgid "place=hamlet"
+msgstr "大字・町"
+
+msgid "place=house"
+msgstr ""
+
+msgid "place=island"
+msgstr "島"
+
+msgid "place=islet"
+msgstr "小島"
+
+msgid "place=locality"
+msgstr "地名"
+
+msgid "place=postcode"
+msgstr "郵便番号"
+
+msgid "place=region"
+msgstr "都道府県"
+
+msgid "place=sea"
+msgstr "海"
+
+msgid "place=state"
+msgstr "道州"
+
+msgid "place=suburb"
+msgstr "地区"
+
+msgid "place=town"
+msgstr "町"
+
+msgid "place=village"
+msgstr "村"
+
+msgid "power=cable_distribution_cabinet"
+msgstr "配電盤"
+
+msgid "power=generator"
+msgstr "発電所"
+
+msgid "power=line"
+msgstr "送電線"
+
+msgid "power=minor_line"
+msgstr "電線"
+
+msgid "power=pole"
+msgstr "電柱"
+
+msgid "power=station"
+msgstr "変電所"
+
+msgid "power=sub_station"
+msgstr "小規模変電所"
+
+msgid "power=tower"
+msgstr "送電塔"
+
+msgid "railway=abandoned"
+msgstr "廃線"
+
+msgid "railway=buffer_stop"
+msgstr "車止め"
+
+msgid "railway=construction"
+msgstr "工事中の軌道"
+
+msgid "railway=crossing"
+msgstr "踏切(警報機なし)"
+
+msgid "railway=disused"
+msgstr "休止線"
+
+msgid "railway=disused_station"
+msgstr "休止駅"
+
+msgid "railway=funicular"
+msgstr "ケーブルカー"
+
+msgid "railway=halt"
+msgstr "小さな駅"
+
+msgid "railway=historic_station"
+msgstr "歴史的な駅"
+
+msgid "railway=junction"
+msgstr "ジャンクション"
+
+msgid "railway=level_crossing"
+msgstr "踏切(警報機あり)"
+
+msgid "railway=light_rail"
+msgstr "ライトレール"
+
+msgid "railway=monorail"
+msgstr "モノレールl"
+
+msgid "railway=narrow_gauge"
+msgstr "ナローゲージの鉄道"
+
+msgid "railway=platform"
+msgstr "プラットホーム"
+
+msgid "railway=preserved"
+msgstr "保存鉄道"
+
+msgid "railway=rail"
+msgstr "鉄道"
+
+msgid "railway=station"
+msgstr "駅"
+
+msgid "railway=subway"
+msgstr "地下鉄"
+
+msgid "railway=subway_entrance"
+msgstr "地下鉄入口"
+
+msgid "railway=switch"
+msgstr ""
+
+msgid "railway=tram"
+msgstr "路面電車"
+
+msgid "railway=tram_stop"
+msgstr "電停"
+
+msgid "railway=turntable"
+msgstr "ターンテーブル"
+
+msgid "railway=yard"
+msgstr "鉄道敷地"
+
+msgid "shop=alcohol"
+msgstr "酒屋"
+
+msgid "shop=anime"
+msgstr "アニメショップ"
+
+msgid "shop=art"
+msgstr "アートショップ"
+
+msgid "shop=bakery"
+msgstr "パン屋"
+
+msgid "shop=beauty"
+msgstr "ビューティーショップ"
+
+msgid "shop=bed"
+msgstr "寝具店"
+
+msgid "shop=beverages"
+msgstr "飲料店"
+
+msgid "shop=bicycle"
+msgstr "自転車屋"
+
+msgid "shop=books"
+msgstr "本屋"
+
+msgid "shop=boutique"
+msgstr "ブティック"
+
+msgid "shop=butcher"
+msgstr "肉屋"
+
+msgid "shop=car"
+msgstr "自動車販売店"
+
+msgid "shop=car_dealer"
+msgstr "自動車販売店"
+
+msgid "shop=car_parts"
+msgstr "自動車部品店"
+
+msgid "shop=car_repair"
+msgstr "自動車修理屋"
+
+msgid "shop=carpet"
+msgstr "カーペット店"
+
+msgid "shop=chemist"
+msgstr "化粧品店"
+
+msgid "shop=clothes"
+msgstr "服屋"
+
+msgid "shop=computer"
+msgstr "パソコン店"
+
+msgid "shop=confectionery"
+msgstr "お菓子屋"
+
+msgid "shop=convenience"
+msgstr "コンビニ"
+
+msgid "shop=copyshop"
+msgstr "コピーショップ"
+
+msgid "shop=cosmetics"
+msgstr "化粧品"
+
+msgid "shop=curtain"
+msgstr "カーテン店"
+
+msgid "shop=deli"
+msgstr "惣菜店"
+
+msgid "shop=department_store"
+msgstr "デパート"
+
+msgid "shop=discount"
+msgstr "ディスカウントショップ"
+
+msgid "shop=doityourself"
+msgstr "DIY店"
+
+msgid "shop=drugstore"
+msgstr "ドラッグストア"
+
+msgid "shop=dry_cleaning"
+msgstr "クリーニング"
+
+msgid "shop=electronics"
+msgstr "電器店"
+
+msgid "shop=erotic"
+msgstr "ポルノショップ"
+
+msgid "shop=estate_agent"
+msgstr "不動産屋"
+
+msgid "shop=fabric"
+msgstr "織物店"
+
+msgid "shop=farm"
+msgstr "野菜直売所"
+
+msgid "shop=fashion"
+msgstr "ファッション"
+
+msgid "shop=fish"
+msgstr "魚屋"
+
+msgid "shop=florist"
+msgstr "花屋"
+
+msgid "shop=food"
+msgstr "食料品店"
+
+msgid "shop=funeral_directors"
+msgstr "葬儀店"
+
+msgid "shop=furniture"
+msgstr "家具店"
+
+msgid "shop=gallery"
+msgstr "ギャラリーショップ"
+
+msgid "shop=garden_centre"
+msgstr "園芸店"
+
+msgid "shop=general"
+msgstr "よろず屋"
+
+msgid "shop=gift"
+msgstr "土産物店"
+
+msgid "shop=glaziery"
+msgstr "工芸ガラス屋"
+
+msgid "shop=greengrocer"
+msgstr "八百屋"
+
+msgid "shop=grocery"
+msgstr "グローサリー"
+
+msgid "shop=hairdresser"
+msgstr "理髪店"
+
+msgid "shop=hardware"
+msgstr "金物屋"
+
+msgid "shop=hifi"
+msgstr "オーディオ店"
+
+msgid "shop=hunting"
+msgstr "狩猟用品店"
+
+msgid "shop=insurance"
+msgstr "保険代理店"
+
+msgid "shop=jewelry"
+msgstr "宝石店"
+
+msgid "shop=kiosk"
+msgstr "キオスク"
+
+msgid "shop=laundry"
+msgstr "コインランドリー"
+
+msgid "shop=mall"
+msgstr "ショッピングモール"
+
+msgid "shop=market"
+msgstr "市場"
+
+msgid "shop=mobile_phone"
+msgstr "ケータイショップ"
+
+msgid "shop=motorcycle"
+msgstr "バイク店"
+
+msgid "shop=music"
+msgstr "音楽店"
+
+msgid "shop=musical_instrument"
+msgstr "楽器店"
+
+msgid "shop=newsagent"
+msgstr "新聞販売店"
+
+msgid "shop=optician"
+msgstr "メガネ屋"
+
+msgid "shop=organic"
+msgstr "有機食品"
+
+msgid "shop=outdoor"
+msgstr "アウトドア用品"
+
+msgid "shop=pet"
+msgstr "ペットショップ"
+
+msgid "shop=photo"
+msgstr "写真館"
+
+msgid "shop=seafood"
+msgstr "魚屋"
+
+msgid "shop=shoes"
+msgstr "靴屋"
+
+msgid "shop=shopping_centre"
+msgstr "ショッピングセンター"
+
+msgid "shop=sports"
+msgstr "スポーツ用品店"
+
+msgid "shop=stationery"
+msgstr "文房具店"
+
+msgid "shop=supermarket"
+msgstr "スーパーマーケット"
+
+msgid "shop=tobacco"
+msgstr "タバコ屋"
+
+msgid "shop=toys"
+msgstr "おもちゃ屋"
+
+msgid "shop=trade"
+msgstr ""
+
+msgid "shop=travel_agency"
+msgstr "旅行代理店"
+
+msgid "shop=variety_store"
+msgstr "100円ショップ"
+
+msgid "shop=video"
+msgstr "ビデオ店"
+
+msgid "shop=wine"
+msgstr "ワインショップ"
+
+msgid "tourism=alpine_hut"
+msgstr "山小屋"
+
+msgid "tourism=artwork"
+msgstr "芸術作品"
+
+msgid "tourism=attraction"
+msgstr "アトラクション"
+
+msgid "tourism=bed_and_breakfast"
+msgstr ""
+
+msgid "tourism=camp_site"
+msgstr "キャンプ場"
+
+msgid "tourism=caravan_site"
+msgstr "オートキャンプ場"
+
+msgid "tourism=chalet"
+msgstr "バンガロー"
+
+msgid "tourism=guest_house"
+msgstr "ゲストハウス・旅館"
+
+msgid "tourism=hostel"
+msgstr "ユースホステル"
+
+msgid "tourism=hotel"
+msgstr "ホテル"
+
+msgid "tourism=information"
+msgstr "旅行案内"
+
+msgid "tourism=motel"
+msgstr "モーテル"
+
+msgid "tourism=museum"
+msgstr "博物館"
+
+msgid "tourism=picnic_site"
+msgstr "ピクニック場"
+
+msgid "tourism=theme_park"
+msgstr "テーマパーク"
+
+msgid "tourism=viewpoint"
+msgstr "展望台"
+
+msgid "tourism=zoo"
+msgstr "動物園"
+
+msgid "waterway=boatyard"
+msgstr "ボートヤード"
+
+msgid "waterway=canal"
+msgstr "運河"
+
+msgid "waterway=dam"
+msgstr "ダム"
+
+msgid "waterway=ditch"
+msgstr "溝"
+
+msgid "waterway=dock"
+msgstr "ドック"
+
+msgid "waterway=drain"
+msgstr "排水溝"
+
+msgid "waterway=lock_gate"
+msgstr "閘門"
+
+msgid "waterway=mineral_spring"
+msgstr "鉱泉"
+
+msgid "waterway=mooring"
+msgstr "係留所"
+
+msgid "waterway=rapids"
+msgstr "急流"
+
+msgid "waterway=river"
+msgstr "川"
+
+msgid "waterway=riverbank"
+msgstr "川岸"
+
+msgid "waterway=stream"
+msgstr "小川"
+
+msgid "waterway=turning_point"
+msgstr "ボート転回所"
+
+msgid "waterway=wadi"
+msgstr "かれ谷"
+
+msgid "waterway=waterfall"
+msgstr "滝"
+
+msgid "waterway=weir"
+msgstr "堰"
+

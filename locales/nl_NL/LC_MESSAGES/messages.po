@@ -1,0 +1,536 @@
+# OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+#
+# Translators:
+# Jo <winfixit@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenLinkMap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2013-03-21 19:02+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/openlinkmap/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: UNITED KINGDOM\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Fullscreen"
+msgstr "Volledig scherm"
+
+msgid "Homepage"
+msgstr "Thuispagina"
+
+msgid "Wikipedia"
+msgstr "Wikipedia"
+
+msgid "Realtime departures"
+msgstr "Realtime vertrektijden"
+
+msgid "Operator"
+msgstr "Uitbater"
+
+msgid "With shelter"
+msgstr "Met bushokje"
+
+msgid "Without shelter"
+msgstr "Zonder bushokje"
+
+msgid "With bench"
+msgstr "Met zitbank"
+
+msgid "Without bench"
+msgstr "Zonder zitbank"
+
+msgid "With wastebasket"
+msgstr "Met vuilbakje"
+
+msgid "Without wastebasket"
+msgstr "Zonder vuilbakje"
+
+msgid "Tactile paving"
+msgstr "Met noppentegels"
+
+msgid "No tactile paving"
+msgstr "Geen noppentegels"
+
+msgid "Incorrect tactile paving"
+msgstr "Foutief geplaatste noppentegels"
+
+msgid "Accessible for wheelchairs"
+msgstr "Toegankelijk voor rolstoelgebruikers"
+
+msgid "Not accessible for wheelchairs"
+msgstr "Niet toegankelijk voor rolstoelgebruikers"
+
+msgid "Limited accessible for wheelchairs"
+msgstr "Beperkt toegankelijk voor rolstoelgebruikers"
+
+msgid "Phone"
+msgstr "Telefoon"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "Mobile phone"
+msgstr "GSM"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Opening hours"
+msgstr "Openingsuren"
+
+msgid "Open 24/7"
+msgstr "24/7 open"
+
+msgid "Now open"
+msgstr "Nu geopend"
+
+msgid "Open on holiday"
+msgstr "Open op feestdagen"
+
+msgid "Now closed"
+msgstr "Op dit moment gesloten"
+
+msgid "Service hours"
+msgstr "Diensttijden"
+
+msgid "Without name"
+msgstr "Naamloos"
+
+msgid "Busstops"
+msgstr "Bushaltes"
+
+msgid "Stations"
+msgstr "Stations"
+
+msgid "Tramhalts"
+msgstr "Tramhaltes"
+
+msgid "Parkings"
+msgstr "Parkings"
+
+msgid "Accessibility"
+msgstr "Toegankelijkheid"
+
+msgid "Unnamed"
+msgstr "Onbenoemd"
+
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d seconde"
+msgstr[1] "%d seconden"
+
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minuut"
+msgstr[1] "%d minuten"
+
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d uur"
+msgstr[1] "%d uur"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d dag"
+msgstr[1] "%d dagen"
+
+#, php-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d week"
+msgstr[1] "%d weken"
+
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d maand"
+msgstr[1] "%d maanden"
+
+#, php-format
+msgid "more than %s ago"
+msgstr "meer dan %s geleden"
+
+#, php-format
+msgid "%s ago"
+msgstr " %s geleden"
+
+msgid "Mo"
+msgstr "Ma"
+
+msgid "Tu"
+msgstr "Di"
+
+msgid "We"
+msgstr "Wo"
+
+msgid "Th"
+msgstr "Do"
+
+msgid "Fr"
+msgstr "Vr"
+
+msgid "Sa"
+msgstr "Za"
+
+msgid "Su"
+msgstr "Zo"
+
+msgid "closed"
+msgstr "gesloten"
+
+msgid "Public holiday"
+msgstr "Feestdag"
+
+msgid "School holiday"
+msgstr "Schoolverlof"
+
+msgid "open ending"
+msgstr "open einde"
+
+msgid "and"
+msgstr "en"
+
+msgid "24/7"
+msgstr "24/7"
+
+msgid "Back"
+msgstr "Terug"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "More Info"
+msgstr "Meer Informatie"
+
+msgid "Loading..."
+msgstr "Ophalen van data..."
+
+msgid "Nothing found."
+msgstr "Niets gevonden"
+
+msgid "No more results."
+msgstr "Geen verder resultaat beschikbaar"
+
+msgid "Last update:"
+msgstr "Laatste wijziging"
+
+msgid "Zoom in to show marker"
+msgstr "Zoom in om cursor te zien"
+
+msgid "Empty input."
+msgstr "Lege invoer"
+
+msgid "More Details"
+msgstr "Meer details"
+
+msgid "More results..."
+msgstr "Meer resultaten..."
+
+msgid "Less"
+msgstr "Minder"
+
+msgid "Hide"
+msgstr "Verbergen"
+
+msgid "Show"
+msgstr "Tonen"
+
+msgid "Permalink"
+msgstr "Permalink"
+
+msgid "Finish"
+msgstr "Beëindigen"
+
+msgid "Loading points..."
+msgstr "Punten ophalen..."
+
+msgid "Hillshading"
+msgstr "Reliëf"
+
+msgid "POI-Details"
+msgstr "Details voor POI's"
+
+msgid "Marker"
+msgstr "Markeerkruis"
+
+msgid "Public transport"
+msgstr "Openbaar vervoer"
+
+msgid "Search results"
+msgstr "Zoekresultaten"
+
+msgid "Route"
+msgstr "Route"
+
+msgid "Search only in the current map view"
+msgstr "Enkel in huidige kaartweergave zoeken"
+
+msgid "Click to close"
+msgstr "Klik om te sluiten"
+
+msgid "Show in OpenLinkMap..."
+msgstr "Tonen in OpenLinkMap..."
+
+msgid "HTML-Code"
+msgstr "HTML-Code"
+
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
+msgstr "Kopieer deze HTML-code naar uw web site om een dynamische kaart, met daarop een merkpunt weer te geven."
+
+msgid "Maps and data <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMap contributors</a>.<br />Hillshading: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+msgstr "Op deze kaarten en de onderliggende kaartgegevens hebben de <a href=\"http://www.openstreetmap.org/copyright\">© OpenStreetMapvrijwilligers</a> het auteursrecht.<br />Reliëf: <a href=\"http://nasa.gov/\">NASA SRTM</a>."
+
+msgid "Address"
+msgstr "Adres"
+
+msgid "Gastronomy"
+msgstr "Gastronomie"
+
+msgid "Cuisine"
+msgstr "Keuken"
+
+msgid "Stars"
+msgstr "Sterren"
+
+msgid "Smoking"
+msgstr "Roken"
+
+msgid "allowed"
+msgstr "toegelaten"
+
+msgid "prohibited"
+msgstr "verboden"
+
+msgid "dedicated"
+msgstr "enkel voor rokers"
+
+msgid "separated smoking area"
+msgstr "afzonderlijke rokersruimte"
+
+msgid "Isolated area"
+msgstr "afgezonderd"
+
+msgid "Beer"
+msgstr "Bier"
+
+msgid "with microbrewery"
+msgstr "Met huisbrouwerij"
+
+msgid "Beergarden"
+msgstr "Biertuin/terras"
+
+msgid "Fuel"
+msgstr "Brandstof"
+
+msgid "Diesel"
+msgstr "Diesel"
+
+msgid "High quality synthetic Diesel"
+msgstr "Hoogwaardige synthetische diesel"
+
+msgid "HGV Diesel"
+msgstr "HGV Diesel"
+
+msgid "Biodiesel"
+msgstr "Biodiesel"
+
+msgid "Octane 91"
+msgstr "Octane 91"
+
+msgid "Octane 95"
+msgstr "Octane 95"
+
+msgid "Octane 98"
+msgstr "Octane 98"
+
+msgid "Octane 100"
+msgstr "Octane 100"
+
+msgid "Octane 98, leaded"
+msgstr "Octane 98, loodhoudend"
+
+msgid "Mixture 1:25"
+msgstr "1:25 Mengsel"
+
+msgid "Mixture 1:50"
+msgstr "1:50 Mengsel"
+
+msgid "Alcohol"
+msgstr "Alcohol"
+
+msgid "Ethanol"
+msgstr "Ethanol"
+
+msgid "Methanol"
+msgstr "Methanol"
+
+msgid "Vegetable oil"
+msgstr "Plantaardige olie"
+
+msgid "Ethanol-Mixture E10 (10% Ethanol)"
+msgstr "Ethanol-mengsel E10 (10% Ethanol)"
+
+msgid "Ethanol-Mixture E85 (85% Ethanol)"
+msgstr "Ethanol- mengsel E85 (85% Ethanol)"
+
+msgid "Biogas"
+msgstr "Biogas"
+
+msgid "LPG"
+msgstr "LPG"
+
+msgid "CNG"
+msgstr "CNG"
+
+msgid "Liquid hydrogen"
+msgstr "Vloeibaar waterstof"
+
+msgid "Electricity"
+msgstr "Electrisch"
+
+msgid "AdBlue"
+msgstr "AdBlue"
+
+msgid "Car wash"
+msgstr "Carwash"
+
+msgid "Car repair"
+msgstr "Autoherstelling"
+
+msgid "Shop"
+msgstr "Winkel"
+
+msgid "Other"
+msgstr "Andere"
+
+msgid "Capacity"
+msgstr "Plaatsen"
+
+msgid "Reference"
+msgstr "Referentie"
+
+msgid "Internet terminal"
+msgstr "Internetterminal"
+
+msgid "WLAN hotspot"
+msgstr "WIFI hotspot"
+
+msgid "Wired internet access"
+msgstr "Internettoegang bekabeld"
+
+msgid "Internet access via service"
+msgstr "Internettoegang via service"
+
+msgid "With costs"
+msgstr "Betalend"
+
+msgid "For free"
+msgstr "Gratis"
+
+msgid "Partly with costs"
+msgstr "Deels te betalen"
+
+msgid "Toll"
+msgstr "Tolheffing"
+
+msgid "Disused"
+msgstr "Buiten gebruik"
+
+msgid "Geographic"
+msgstr "Geografsch"
+
+msgid "Height about sea level"
+msgstr "Boven zeeniveau"
+
+msgid "Population"
+msgstr "Aantal inwoners"
+
+msgid "IATA"
+msgstr "IATA"
+
+msgid "ICAO"
+msgstr "ICAO"
+
+msgid "Wheelchair"
+msgstr "Rolstoel"
+
+msgid "Toilets accessible"
+msgstr "Ttoiletten toegankelijk voor gehandicapten"
+
+msgid "Toilets not accessible"
+msgstr "Toiletten niet-toegankelijk voor rolstoelgebruikers"
+
+msgid "Toilets limited accessible"
+msgstr "Toiletten deels toegankelijk voor rolstoelgebruikers"
+
+msgid "All rooms accessible"
+msgstr "Alle ruimtes zijn bereikbaar voor rolstoelgebruikers"
+
+msgid "Rooms not accessible"
+msgstr "De ruimtes zijn niet bereikbaar voor rolstoelgebruikers"
+
+msgid "Most rooms accessible"
+msgstr "De meeste ruimtes zijn bereikbaar voor rolstoelgebruikers"
+
+msgid "Building accessible"
+msgstr "Het gebouw is bereikbaar voor rolstoelgebruikers"
+
+msgid "Building not accessible"
+msgstr "Het gebouw is niet bereikbaar voor rolstoelgebruikers"
+
+msgid "Building limited accessible"
+msgstr "Het gebouw is beperkt toegankelijk voor rolstoelgebruikers"
+
+msgid "Places for wheelchairs"
+msgstr "Plaatsen voor rolstoelen"
+
+msgid "No places for wheelchairs"
+msgstr "Geen plaatsen voor rolstoelen"
+
+msgid "Limited places for wheelchairs"
+msgstr "Beperkt aantal plaatsen voor rolstoelgebruikers"
+
+msgid "Full article..."
+msgstr "Volledig artikel..."
+
+msgid "Image"
+msgstr "Afbeelding"
+
+msgid "More images"
+msgstr "Meer afbeeldingen"
+
+msgid "License, author, original page..."
+msgstr "Licentie, auteur, bronpagina..."
+
+msgid "Improve the data! Correct wrong website links with the new website checker from Keepright!"
+msgstr "Maak de gegevens beter! Verbeter foutieve websitelinks met de nieuwe website checker van Keepright!"
+
+msgid "Report bug in map"
+msgstr "Meld fouten op de kaart"
+
+msgid "Search"
+msgstr "Zoeken"
+
+msgid "Javascript is not activated"
+msgstr "Javascript is niet actief"
+
+msgid "Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings."
+msgstr "Deze pagina heeft Javascriptondersteuning nodig. Gelieve dit in te schakelen in uw browserinstellingen."
+
