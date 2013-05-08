@@ -4,10 +4,16 @@
 	This program comes with ABSOLUTELY NO WARRANTY.
 	This is free software, and you are welcome to redistribute it under certain conditions.
 	See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
-	*/
 
-	// php-rewritten and modified version of Kothic's json_getter.py
-	// improvements: support for hstore tags, removed support for single-tag-columns, changed table/database names, improved style parsing, changed paths, removed dependencies
+
+	PHP-rewritten and modified version of Kothic's json_getter.py
+
+	Contains some PHP-rewritten and modified code from 
+	* twms, available under Do What The Fuck You Want To Public License: https://code.google.com/p/twms/
+	* Kothic, available under GNU GPL v3: https://code.google.com/p/kothic/
+
+	Improvements: support for hstore tags, removed support for single-tag-columns, changed table/database names, improved style parsing, changed paths, removed dependencies
+	*/
 
 
 	$tiledir = "/home/www/sites/194.245.35.149/site/orm/tiles/";

@@ -20,6 +20,13 @@ Wikipage:
 * http://wiki.openstreetmap.org/wiki/OpenRailwayMap
 
 
+Installation:
+* Copy all files and folders into a webserver directory
+* Run manually the install script import/install.sh - it might not run correctly on every distribution/platform and has no error exceptions
+* After successful installation, modify paths and parameters in every file and run import/import.sh
+* Add a cronjob to run import/update.sh (daily seems to be a good frequency)
+
+
 License:
 
 This program is free software: you can redistribute it and/or modify
@@ -36,12 +43,12 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-Repository contains also data from other sources:
+This project contains also code/data from other projects:
 
-* The icon is taken from the Oxygen-Iconset, available under LGPLv3: http://www.oxygen-icons.org/
-* osmfilter, osmconvert, osmupdate from Markus Weber, available under GPLv3: http://wiki.openstreetmap.org/wiki/Osmfilter
-* OpenLayers, available under 2-clause BSD License (FreeBSD): http://openlayers.org/
-* Mapnik, available under LGPLv2.1: http://mapnik.org/
+* The icon is taken from the Oxygen-Iconset, available under GNU LGPLv3: http://www.oxygen-icons.org/
+* osmfilter, osmconvert, osmupdate from Markus Weber, available under GNU GPLv3: http://wiki.openstreetmap.org/wiki/Osmfilter
 * osm2pgsql, available under GPLv2: http://wiki.openstreetmap.org/wiki/Osm2pgsql
+* some functions in renderer/vtiler.php are PHP-rewritten and modified functions from twms, available under Do What The Fuck You Want To Public License: https://code.google.com/p/twms/
+* some functions in renderer/vtiler.php are PHP-rewritten and modified functions from Kothic, available under GNU GPLv3: https://code.google.com/p/kothic/
 
 ATTENTION: The included binaries can only be used on i386 Linux systems. If you use other systems, you have to compile the programs for your environment.
