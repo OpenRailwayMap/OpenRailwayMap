@@ -109,9 +109,9 @@
 		<script type="text/javascript" src="js/startposition.js"></script>
 		<script type="text/javascript" src="js/timestamp.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
-		<!-- Piwik
+		<!-- Piwik -->
 		<script type="text/javascript">
-			var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.openlinkmap.org/piwik/" : "http://www.openlinkmap.org/piwik/");
+			var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.openlinkmap.org/" : "http://piwik.openlinkmap.org/");
 			document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
 		</script>
 		<script type="text/javascript">
@@ -125,9 +125,9 @@
 			{}
 		</script>
 		<noscript>
-			<p><img src="http://www.openlinkmap.org/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p>
+			<p><img src="http://piwik.openlinkmap.org/piwik.php?idsite=2" style="border:0" alt="" /></p>
 		</noscript>
-		End Piwik Tracking Code -->
+		<!-- End Piwik Tracking Code -->
 		<script type="text/javascript">
 		/* <![CDATA[ */
 			(function(){
@@ -182,9 +182,9 @@
 			</noscript>
 			<p id="info"></p>
 			<div id="linkBar">
-				<a class="links" id="spamButton" onclick="reportSpam();">Report bug in map</a>&nbsp;•
-				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank">More Info</a>&nbsp;•
-				<a class="links" id="contactButton" href="#">Contact</a>
+				<a class="links" id="spamButton" onclick="reportSpam();"><?=_("Report bug in map")?></a>&nbsp;•
+				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenLinkMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
+				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>
 				<script language="javascript">
 					var usr = "info";
 					var dom = "openlinkmap";
@@ -196,16 +196,16 @@
 			<img id="searchButton" src="img/search.png" onclick="Search.request();" title="Search" />
 			<img id="clearButton" src="img/clear.png" onclick="Search.clear();" />
 			<br />
-			<input type="checkbox" id="searchOption"><label for="searchOption" id="searchOptionCaption">Search only in the current map view</label><br /><br />
+			<input type="checkbox" id="searchCheckbox"><label id="searchCheckboxCaption"><?=_("Search only in the current map view")?><label><br /><br />
 			<div id="searchBar" class="infoBarOut"></div>
 			<div id="detailsBar" class="infoBarOut"></div>
 			<iframe id="josmFrame" src="about:blank"></iframe>
 		</div>
-		<div class="hideSidebarButton" id="hideSidebarButton" onclick="hideSideBar();" title="Hide"><b id="hideText">«</b></div>
+		<div class="hideSidebarButton" id="hideSidebarButton" onclick="hideSideBar();" title="<?=_('Hide')?>"><b id="hideText">«</b></div>
 		<img class="locateButton" id="locateButton" src="img/locate.png" />
 		<div id="mapFrame" class="mapFrame">
 			<noscript>
-				<p><b><?=$translations['captions']['nojavascriptheader']?></b><br /><?=$translations['captions']['nojavascripttext']?></p>
+				<p><b><?=_("Javascript is not activated")?></b><br /><?=_("Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings.")?></p>
 			</noscript>
 		</div>
 	</body>
