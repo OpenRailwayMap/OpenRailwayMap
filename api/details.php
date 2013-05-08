@@ -8,8 +8,8 @@
 
 
 	require_once("functions.php");
-	// including translation file
-	require_once("../".includeLocale($_GET['lang']));
+	// include translation file
+	includeLocale($_GET['lang']);
 
 	$format = $_GET['format'];
 	$id = $_GET['id'];
@@ -21,7 +21,7 @@
 	date_default_timezone_set('UTC');
 
 
-	// prohibition of sql injections
+	// protection of sql injections
 	if (!isValidType($type) || !isValidId($id))
 	{
 		echo "NULL";
@@ -39,16 +39,18 @@
 
 	function getDetails($db, $id, $type, $langs, $offset)
 	{
-		global $format;
-		global $callback;
+		global $format, $callback;
 
 		// request
 		$request = "SELECT
 				tags->'addr:street' AS \"street\",
 				tags->'addr:housenumber' AS \"housenumber\",
+				tags->'addr:housename' AS \"housename\",
 				tags->'addr:country' AS \"country\",
 				tags->'addr:postcode' AS \"postcode\",
 				tags->'addr:city' AS \"city\",
+				tags->'addr:suburb' AS \"suburb\",
+				tags->'addr:province' AS \"province\",
 				tags->'phone' AS \"phone1\",
 				tags->'contact:phone' AS \"phone2\",
 				tags->'addr:phone' AS \"phone3\",
@@ -120,7 +122,7 @@
 	// output of details data in plain text format
 	function textDetailsOut($response, $nameresponse, $wikipediaresponse, $langs = "en", $offset = 0)
 	{
-		global $translations;
+ 		global $db, $id, $type;
 
 		if ($response)
 		{
@@ -132,6 +134,20 @@
 			if ($nameresponse)
 				$name = getNameDetail($langs, $nameresponse);
 
+			// if no name is set, use the poi type as name instead
+			if ($name[0] == "")
+			{
+				$tags = getTags($db, $id, $type);
+				foreach ($tags as $key => $value)
+				{
+					$tag = $key."=".$value;
+					if (dgettext("tags", $tag) != "")
+						$name[0] = dgettext("tags", $tag);
+					if ($name[0] != $tag)
+						break;
+				}
+			}
+
 			$phone = getPhoneFaxDetail(array($response['phone1'], $response['phone2'], $response['phone3']));
 			$phonenumber = $phone[0];
 			$phone = $phone[1];
@@ -139,7 +155,7 @@
 			$fax = getPhoneFaxDetail(array($response['fax1'], $response['fax2'], $response['fax3']));
 			$fax = $fax[1];
 
-			$mobilephone = getPhoneFaxDetail(array($element['mobilephone1'], $element['mobilephone2']));
+			$mobilephone = getPhoneFaxDetail(array($response['mobilephone1'], $response['mobilephone2']));
 			$mobilephonenumber = $mobilephone[0];
 			$mobilephone = $mobilephone[1];
 
@@ -161,13 +177,13 @@
 			{
 				$url = getImageUrl($response['image']);
 				$attribution = explode("/", $url);
-				$output .= "<div id=\"loadingImage\"><img id=\"image\" title=\"".$translations['captions']['fullscreen']."\" src=\"".getWikipediaThumbnailUrl($url)."\" /></div></a>\n";
+				$output .= "<div id=\"loadingImage\"><img id=\"image\" title=\""._("Fullscreen")."\" src=\"".getWikipediaThumbnailUrl($url)."\" /></div></a>\n";
 			}
 			elseif (getWikipediaImage($wikipedia[1]))
 			{
 				$image = getWikipediaImage($wikipedia[1]);
 
-				$output .= "<div id=\"loadingImage\"><img id=\"image\" title=\"".$translations['captions']['fullscreen']."\" src=\"".getWikipediaThumbnailUrl($image)."\" /></div></a>\n";
+				$output .= "<div id=\"loadingImage\"><img id=\"image\" title=\""._("Fullscreen")."\" src=\"".getWikipediaThumbnailUrl($image)."\" /></div></a>\n";
 			}
 
 			if ($name)
@@ -181,14 +197,8 @@
 			if ($response['street'] || $response['housenumber'] || $response['country'] || $response['city'] || $response['postcode'])
 			{
 				$output .= "<div class=\"adr\">\n";
-				if ($response['street'] || $response['housenumber'])
-					$output .= "<div class=\"street-address\">".$response['street']." ".$response['housenumber']."</div>\n";
-				if ($response['country'])
-					$output .= "<span class=\"country-name\">".strtoupper($response['country'])."-</span>";
-				if ($response['postcode'])
-					$output .= "<span class=\"postal-code\">".$response['postcode']." </span>\n";
-				if ($response['city'])
-					$output .= "<span class=\"locality\">".$response['city']."</span>\n";
+				// country-dependend format of address
+				$output .= formatAddress($response, $response['country']);
 				$output .= "</div>\n";
 			}
 
@@ -197,13 +207,13 @@
 			{
 				$output .= "<div class=\"contact\">\n";
 				if ($phone)
-					$output .= "<div class=\"tel\"><span class=\"type\">".$translations['captions']['phone']."</span>: <a class=\"value\" href=\"callto:".$phonenumber."\">".$phone."</a></div>\n";
+					$output .= "<div class=\"tel\"><span class=\"type\">"._("Phone")."</span>: <a class=\"value\" href=\"callto:".$phonenumber."\">".$phone."</a></div>\n";
 				if ($fax)
-					$output .= "<div class=\"tel\"><span class=\"type\">".$translations['captions']['fax']."</span>: <span class=\"value\">".$fax."</span></div>\n";
+					$output .= "<div class=\"tel\"><span class=\"type\">"._("Fax")."</span>: <span class=\"value\">".$fax."</span></div>\n";
 				if ($mobilephone)
-					$output .= "<div class=\"tel\"><span class=\"type\">".$translations['captions']['mobile']."</span>: <span class=\"value\" href=\"callto:".$mobilephonenumber."\">".$mobilephone."</span></div>\n";
+					$output .= "<div class=\"tel\"><span class=\"type\">"._("Mobile phone")."</span>: <span class=\"value\" href=\"callto:".$mobilephonenumber."\">".$mobilephone."</span></div>\n";
 				if ($email)
-					$output .= "<div>".$translations['captions']['email'].": <a class=\"email\" href=\"mailto:".$email."\">".$email."</a></div>\n";
+					$output .= "<div>"._("Email").": <a class=\"email\" href=\"mailto:".$email."\">".$email."</a></div>\n";
 				$output .= "</div>\n";
 			}
 
@@ -217,42 +227,42 @@
 						$caption = substr($website[1], 0, 37)."...";
 					else
 						$caption = $website[1];
-					$output .= "<div>".$translations['captions']['homepage'].": <a class=\"url\" target=\"_blank\" href=\"".$website[0]."\">".$caption."</a></div>\n";
+					$output .= "<div>"._("Homepage").": <a class=\"url\" target=\"_blank\" href=\"".$website[0]."\">".$caption."</a></div>\n";
 				}
 				if ($wikipedia[1])
-					$output .= "<div class=\"wikipedia\">".$translations['captions']['wikipedia'].": <a target=\"_blank\" href=\"".$wikipedia[1]."\">".urldecode($wikipedia[2])."</a></div>\n";
+					$output .= "<div class=\"wikipedia\">"._("Wikipedia").": <a target=\"_blank\" href=\"".$wikipedia[1]."\">".urldecode($wikipedia[2])."</a></div>\n";
 				$output .= "</div>\n";
 			}
 
 			// operator
 			if ($response['operator'])
-				$output .= "<div class=\"operator\">".$translations['captions']['operator'].": ".$response['operator']."</div>\n";
+				$output .= "<div class=\"operator\">"._("Operator").": ".$response['operator']."</div>\n";
 
 			// opening hours
 			if ($openinghours)
 			{
-				$output .= "<div class=\"openinghours\">".$translations['captions']['opening'].":<br />".$openinghours;
+				$output .= "<div class=\"openinghours\">"._("Opening hours").":<br />".$openinghours;
 				if (isOpen247($response['openinghours']))
-					$output .= "<br /><b class=\"open\">".$translations['opening']['alwaysopen']."</b>";
+					$output .= "<br /><b class=\"open\">"._("Open 24/7")."</b>";
 				else if (isPoiOpen($response['openinghours'], $offset))
-					$output .= "<br /><b class=\"open\">".$translations['opening']['open']."</b>";
+					$output .= "<br /><b class=\"open\">"._("Now open")."</b>";
 				else if (isInHoliday($response['openinghours'], $offset))
-					$output .= "<br /><b class=\"maybeopen\">".$translations['opening']['maybeopen']."</b>";
+					$output .= "<br /><b class=\"maybeopen\">"._("Open on holiday")."</b>";
 				else
-					$output .= "<br /><b class=\"closed\">".$translations['opening']['closed']."</b>";
+					$output .= "<br /><b class=\"closed\">"._("Now closed")."</b>";
 				$output .= "</div>\n";
 			}
 
 			// service times
 			if ($servicetimes)
 			{
-				$output .= "<div class=\"servicetimes\">".$translations['captions']['service'].":<br />".$servicetimes;
+				$output .= "<div class=\"servicetimes\">"._("Service hours").":<br />".$servicetimes;
 				if (isPoiOpen($response['openinghours'], $offset))
-					$output .= "<br /><b class=\"open\">".$translations['opening']['open']."</b>";
+					$output .= "<br /><b class=\"open\">"._("Now open")."</b>";
 				else if (isInHoliday($response['servicetimes'], $offset))
-					$output .= "<br /><b class=\"maybeopen\">".$translations['opening']['maybeopen']."</b>";
+					$output .= "<br /><b class=\"maybeopen\">"._("Open on holiday")."</b>";
 				else
-					$output .= "<br /><b class=\"closed\">".$translations['opening']['closed']."</b>";
+					$output .= "<br /><b class=\"closed\">"._("Now closed")."</b>";
 				$output .= "</div>\n";
 			}
 
@@ -318,6 +328,8 @@
 					$output .= "<postcode>".$response['postcode']."</postcode>\n";
 				if ($response['city'])
 					$output .= "<city>".$response['city']."</city>\n";
+				if ($response['suburb'])
+					$output .= "<suburb>".$response['suburb']."</suburb>\n";
 				$output .= "</address>\n";
 			}
 
@@ -459,6 +471,8 @@
 				$data['postcode'] = $response['postcode'];
 			if ($response['city'])
 				$data['city'] = $response['city'];
+			if ($response['suburb'])
+				$data['suburb'] = $response['suburb'];
 
 			// contact information
 			if ($phone)

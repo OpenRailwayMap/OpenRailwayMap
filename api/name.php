@@ -8,8 +8,8 @@
 
 
 	require_once("functions.php");
-	// including translation file
-	require_once("../".includeLocale($_GET['lang']));
+	// include translation file
+	includeLocale($_GET['lang']);
 
 	$id = $_GET['id'];
 	$type = $_GET['type'];
@@ -66,8 +66,6 @@
 	// output of name data in plain text format
 	function textNameOut($name)
 	{
-		global $translations;
-
 		// setting header
 		header("Content-Type: text/html; charset=UTF-8");
 		$output = "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n";
@@ -75,7 +73,7 @@
 		if ($name)
 			return $output."<strong class=\"clusterName\">".$name."</strong><br />\n";
 		else
-			return $output."<strong class=\"clusterName\">- ".$translations['captions']['unnamed']." -</strong><br />\n";
+			return $output."<strong class=\"clusterName\">- "._("Without name")." -</strong><br />\n";
 	}
 
 
