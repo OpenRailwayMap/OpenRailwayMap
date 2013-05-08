@@ -8,8 +8,8 @@
 
 
 	require_once("functions.php");
-	// including translation file
-	require_once("../".includeLocale($_GET['lang']));
+	// include translation file
+	includeLocale($_GET['lang']);
 
 	$format = $_GET['format'];
 	$lang = $_GET['lang'];
@@ -23,7 +23,7 @@
 
 
 	// getting timestamp
-	$timestamp = implode(" ", @file("../../import/timestamp"));
+	$timestamp = implode(" ", @file("../../olm/import/timestamp"));
 
 	if ($timestamp)
 	{

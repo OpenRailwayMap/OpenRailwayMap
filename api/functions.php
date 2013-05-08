@@ -56,15 +56,20 @@
 	}
 
 
-	// includes a translation string file, either the given or the most matching language
+	// sets a language file for gettext, either in the given or the most matching language
 	function includeLocale($lang)
 	{
 		global $langs;
 
-		if ((!$lang) || (!in_array($lang, $langs)))
+		if ((!$lang) || (!array_key_exists($lang, $langs)))
 			$lang = getUserLang();
 
-		return "locales/".$lang.".php";
+		setlocale(LC_ALL, $langs[$lang]);
+		bind_textdomain_codeset("messages", "UTF-8");
+		bind_textdomain_codeset("tags", "UTF-8");
+		bindtextdomain("messages", "../locales");
+		bindtextdomain("tags", "../locales");
+		textdomain("messages");
 	}
 
 
@@ -97,10 +102,8 @@
 
 		// choose most matching language from available langs
 		foreach ($langlist as $value)
-		{
-			if (in_array($value, $langs))
+			if (array_key_exists($value, $langs))
 				return $value;
-		}
 
 		// if no matching language could be found, choose english
 		return "en";
@@ -124,51 +127,39 @@
 	// returns an human-readable string of the given difference timestamp
 	function timeAgoString($diff)
 	{
-		global $translations;
-
 		if (!$diff)
 			return false;
 
-		// translations and unit conversion factors
-		$units[0][0] = 60;
-		$units[0][1] = $translations['date']['seconds'];
-		$units[0][2] = $translations['date']['second'];
-		$units[1][0] = 60;
-		$units[1][1] = $translations['date']['minutes'];
-		$units[1][2] = $translations['date']['minute'];
-		$units[2][0] = 24;
-		$units[2][1] = $translations['date']['hours'];
-		$units[2][2] = $translations['date']['hour'];
-		$units[3][0] = 7;
-		$units[3][1] = $translations['date']['days'];
-		$units[3][2] = $translations['date']['day'];
-		$units[4][0] = 4;
-		$units[4][1] = $translations['date']['weeks'];
-		$units[4][2] = $translations['date']['week'];
-		$units[5][0] = 12;
-		$units[5][1] = $translations['date']['months'];
-		$units[5][2] = $translations['date']['month'];
+		// unit conversion factors
+		$units[0] = 60;	// seconds
+		$units[1] = 60;	// minutes
+		$units[2] = 24;	// hours
+		$units[3] = 7;	// days
+		$units[4] = 4;	// weeks
+		$units[5] = 12;	// months
 
 		// calculating difference as human readable string
 		for ($i=0; $i<count($units); $i++)
 		{
-			if ($diff >= $units[$i][0])
-			{
-				if (($diff > $units[$i][0]) && ($i > 2))
-					$more = $translations['date']['morethan']." ";
-				$diff=$diff / $units[$i][0];
-			}
+			if ($diff >= $units[$i])
+				$diff = $diff / $units[$i];
 			else
 				break;
 		}
 
 		// singular and plural forms
-		if ((int)$diff == 1)
-			$unit = $units[$i][2];
-		else
-			$unit = $units[$i][1];
+		$interval[0] = sprintf(ngettext("%d second", "%d seconds", (int)$diff), (int)$diff);
+		$interval[1] = sprintf(ngettext("%d minute", "%d minutes", (int)$diff), (int)$diff);
+		$interval[2] = sprintf(ngettext("%d hour", "%d hours", (int)$diff), (int)$diff);
+		$interval[3] = sprintf(ngettext("%d day", "%d days", (int)$diff), (int)$diff);
+		$interval[4] = sprintf(ngettext("%d week", "%d weeks", (int)$diff), (int)$diff);
+		$interval[5] = sprintf(ngettext("%d month", "%d months", (int)$diff), (int)$diff);
 
-		return $more.(int)$diff." ".$unit." ".$translations['date']['ago'];
+		// display "more than"
+		if (($diff > $units[$i]) && ($i > 2))
+			return sprintf(_("more than %s ago"), $interval[$i]);
+		else
+			return sprintf(_("%s ago"), $interval[$i]);
 	}
 
 
@@ -236,27 +227,6 @@
 	}
 
 
-	// returns translation of a caption
-	function getTranslationString($string)
-	{
-		global $translations;
-
-		if (!$string)
-			return false;
-
-		$level = explode(".", $string);
-
-		$caption = $translations[$level[0]];
-		for ($i = 1; $i < count($level); $i++)
-			$caption = $caption[$level[$i]];
-
-		if (isset($caption))
-			return $caption;
-
-		return false;
-	}
-
-
 	// parse given bbox-string and check if given bbox is valid
 	function getBbox($bbox)
 	{
@@ -310,11 +280,8 @@
 
 		if ($content)
 		{
-			// delete everything before main article
-			$content = explode("<h1 id=\"firstHeading\">", $content);
-
-			// delete everything after first paragraph
-			$content = explode("<h2> <span class=\"mw-headline\"", $content[1]);
+			// delete everything after main article
+			$content = explode("<div class=\"section\"><h2 class=\"section_heading\" id=\"section_1\">", $content);
 
 			// delete headline
 			$content = explode("</h1>", $content[0]);
@@ -348,14 +315,15 @@
 
 		if ($content)
 		{
-			// delete everything before main article
-			$content = explode("<h1 id=\"firstHeading\">", $content);
-
 			// delete everything after first paragraph
-			$content = explode("<h2> <span class=\"mw-headline\"", $content[1]);
+			$content = explode("<div class=\"section\"><h2 class=\"section_heading\" id=\"section_2\">", $content);
 
 			// remove wikipedia images
-			$content = str_replace("<img alt=\"\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Disambig-dark.svg/25px-Disambig-dark.svg.png\" width=\"25\" height=\"19\">", "", $content[0]);
+			$content = preg_replace("<img alt=\".*\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Disambig_gray.svg/25px-Disambig_gray.svg.png\" width=\"25\" height=\"19\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Disambig_gray.svg/38px-Disambig_gray.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Disambig_gray.svg/50px-Disambig_gray.svg.png 2x\">", "", $content[0]);
+			$content = preg_replace("<img alt=\".*\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Disambig-dark.svg/25px-Disambig-dark.svg.png\" width=\"25\" height=\"19\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Disambig-dark.svg/38px-Disambig-dark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Disambig-dark.svg/50px-Disambig-dark.svg.png 2x\">", "", $content);
+			$content = preg_replace("<img alt=\".*\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Homoph_colour.svg/20px-Homoph_colour.svg.png\" width=\"20\" height=\"15\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Homoph_colour.svg/30px-Homoph_colour.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/63/Homoph_colour.svg/40px-Homoph_colour.svg.png 2x\">", "", $content);
+			$content = preg_replace("<img alt=\".*\" src=\"//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png\" width=\"50\" height=\"39\" srcset=\"//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x\">", "", $content);
+			$content = preg_replace("<img alt=\".*\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disambig_colour.svg/20px-Disambig_colour.svg.png\" width=\"20\" height=\"15\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disambig_colour.svg/30px-Disambig_colour.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disambig_colour.svg/40px-Disambig_colour.svg.png 2x\">", "", $content);
 
 			// get image url
 			$pattern = "/<img.+src=\"(\S+)\"\s\w+=.+>/i";
@@ -413,9 +381,16 @@
 	}
 
 
-	// request all milestones for a given bbox and return them
-	function getNodesForBbox($connection, $request)
+	// request all objects with given tags for a given bbox and echo them
+	function getObjectsForBbox($connection, $bbox)
 	{
+		// if no bbox was given
+		if (!$bbox)
+		{
+			reportError("Some parameters are missing.");
+			return false;
+		}
+
 		// if there is no connecting to server
 		if (!$connection)
 		{
@@ -423,16 +398,61 @@
 			return false;
 		}
 
+		// requests
+		$types = array("node", "way", "relation");
+
 		// executing requests
-		$response = requestDetails($request, $connection);
-		// putting out the results
-		if ($response)
+		$list = array();
+		foreach ($types as $type)
 		{
-			$list = array();
-			foreach ($response as $element)
-				array_push($list, array($element['st_x'], $element['st_y'], $element['caption']));
+			$response = requestDetails("SELECT ST_X(geom), ST_Y(geom), id
+											FROM ".$type."s
+											WHERE geom && ST_SetSRID(ST_MakeBox2D(ST_Point(".$bbox[0].",".$bbox[1]."), ST_Point(".$bbox[2].",".$bbox[3].")), 4326);", $connection);
+			// putting out the results
+			if ($response)
+			{
+				foreach ($response as $element)
+					array_push($list, array($element['st_x'], $element['st_y'], $element['id'], $type));
+			}
+		}
+		return $list;
+	}
+
+
+	// request all public transports with given tags for a given bbox and echo them
+	function getPtForBbox($connection, $bbox)
+	{
+		// if no bbox was given
+		if (!$bbox)
+		{
+			reportError("Some parameters are missing.");
+			return false;
 		}
 
+		// if there is no connecting to server
+		if (!$connection)
+		{
+			reportError("Not connected to database.");
+			return false;
+		}
+
+		// requests
+		$types = array("node", "way");
+
+		// executing requests
+		$list = array();
+		foreach ($types as $type)
+		{
+			$response = requestDetails("SELECT ST_X(geom), ST_Y(geom), id
+											FROM ".$type."s
+											WHERE geom && ST_SetSRID(ST_MakeBox2D(ST_Point(".$bbox[0].",".$bbox[1]."), ST_Point(".$bbox[2].",".$bbox[3].")), 4326) AND (tags->'highway'='bus_stop' OR tags->'amenity'='bus_station' OR tags->'railway'='station' OR tags->'railway'='halt' OR tags->'railway'='tram_stop' OR tags->'railway'='platform' OR tags->'highway'='platform' OR tags->'public_transport'='platform') AND (tags ? 'name');", $connection);
+			// putting out the results
+			if ($response)
+			{
+				foreach ($response as $element)
+					array_push($list, array($element['st_x'], $element['st_y'], $element['id'], $type));
+			}
+		}
 		return $list;
 	}
 
@@ -474,25 +494,33 @@
 	// returns latlon of given id and type
 	function getLatLon($id, $type)
 	{
+		global $db;
+
 		if ($id && $type)
 		{
-			$connection = connectToDatabase("olm");
-
-			// if there is no connection
+			$connection = connectToDatabase($db);
 			if (!$connection)
 				exit;
-
 			$query = "SELECT
 						id, ST_X(geom), ST_Y(geom)
 						FROM ".$type."s
 						WHERE (id = ".$id.");";
 			$response = requestDetails($query, $connection);
-
 			pg_close($connection);
 
-			if ($response)
-				foreach ($response as $element)
-					return array($element['st_x'], $element['st_y']);
+			if (!$response)
+			{
+				$connection = connectToDatabase($ptdb);
+				if (!$connection)
+					exit;
+				$response = requestDetails($query, $connection);
+				pg_close($connection);
+				if (!$response)
+					return false;
+			}
+
+			foreach ($response as $element)
+				return array($element['st_x'], $element['st_y']);
 		}
 
 		return false;
@@ -546,13 +574,12 @@
 	// returns translation for given key-value-pair
 	function translateKeyValue($key, $value)
 	{
-		global $translations;
-
-		$keyvalue = $translations['tags'][$key][$value];
-		if (!$keyvalue)
+		$tag = $key."=".$value;
+		$keyvalue = dgettext("tags", $tag);
+		if ($name[0] == $keyvalue)
 			return "";
-
-		return $keyvalue;
+		else
+			return $keyvalue;
 	}
 
 
@@ -584,6 +611,35 @@
 	}
 
 
+	// returns all tags of an osm object
+	function getTags($db, $id, $type)
+	{
+		// request
+		$request = "SELECT tags FROM ".$type."s WHERE (id = ".$id.");";
+
+		// connnecting to database
+		$connection = connectToDatabase($db);
+		// if there is no connection
+		if (!$connection)
+			exit;
+		$response = requestDetails($request, $connection);
+		pg_close($connection);
+
+		if ($response)
+		{
+			$text = substr($response[0]['tags'], 1, -1);
+			$temp = explode("\", \"", $text);
+			for ($i=0; $i<count($temp); $i++)
+			{
+				$tag = explode("\"=>\"", $temp[$i]);
+				$tags[$tag[0]] = $tag[1];
+			}
+			return $tags;
+		}
+		else
+			return false;
+	}
+
 	// beginning of xml output: header, first root element
 	function xmlStart($root)
 	{
@@ -613,6 +669,7 @@
 				$rawnumber = $number;
 
 		// correct some mistakes
+		$rawnumber = str_replace(" - ", "-", $rawnumber);
 		$rawnumber = str_replace(" ", "-", $rawnumber);
 		$rawnumber = str_replace("(", "", $rawnumber);
 		$rawnumber = str_replace(")", "", $rawnumber);
@@ -636,10 +693,8 @@
 	// translate and parse the opening hours
 	function getOpeninghoursDetail($openinghours)
 	{
-		global $translations;
-
 		$original = array("Mo", "Tu", "We", "Th", "Fr", "Sa", "Su", "off", "PH", "SH", "+", ";", ",", "24/7");
-		$translation = array($translations['opening']['mo'], $translations['opening']['tu'], $translations['opening']['we'], $translations['opening']['th'], $translations['opening']['fr'], $translations['opening']['sa'], $translations['opening']['su'], $translations['opening']['off'], $translations['opening']['ph'], $translations['opening']['sh'], " ".$translations['opening']['+'], "<br />", " ".$translations['opening']['and']." ", $translations['opening']['247']);
+		$translation = array(_("Mo"), _("Tu"), _("We"), _("Th"), _("Fr"), _("Sa"), _("Su"), _("closed"), _("Public holiday"), _("School holiday"), " "._("open ending"), "<br />", " "._("and")." ", _("24/7"));
 		return str_replace($original, $translation, $openinghours);
 	}
 
@@ -671,7 +726,7 @@
 
 
 	// get objects near a given object which have are of a given type
-	function getNearObjectsForId($connection, $lat, $lon, $tags)
+	function getNearObjectsForId($connection, $lat, $lon, $tags, $maxdistance)
 	{
 		// combine tags to one request
 		$command = array();
@@ -698,16 +753,17 @@
 					FROM (
 						(SELECT tags->'name' AS name, geom AS next, id AS osmid,  ST_Distance_Sphere(GeometryFromText('POINT ( ".$lat." ".$lon." )', 4326 ), geom) AS distance
 						FROM nodes
-						WHERE (".$tagquery.") AND (NOT (tags ? 'access') OR NOT (tags->'access' = 'private')) AND geom && ST_Buffer(GeometryFromText('POINT ( ".$lat." ".$lon." )', 4326 ), 2000)
+						WHERE (".$tagquery.") AND (NOT (tags ? 'disused')) AND ((NOT (tags ? 'access')) OR (tags->'access' = 'customers') OR (tags->'access' = 'permissive') OR (tags->'access' = 'yes') OR (tags->'access' = 'public') OR (tags->'access' = 'destination')) AND geom && ST_Buffer(GeometryFromText('POINT ( ".$lat." ".$lon." )', 4326 ), 2000)
 						ORDER BY distance
 						LIMIT 10)
 						UNION
 						(SELECT tags->'name' AS name, geom AS next, id AS osmid,  ST_Distance_Sphere(GeometryFromText('POINT ( ".$lat." ".$lon." )', 4326 ), geom) AS distance
 						FROM ways
-						WHERE (".$tagquery.") AND (NOT (tags ? 'access') OR NOT (tags->'access' = 'private')) AND geom && ST_Buffer(GeometryFromText('POINT ( ".$lat." ".$lon." )', 4326 ), 2000)
+						WHERE (".$tagquery.") AND (NOT (tags ? 'disused')) AND ((NOT (tags ? 'access')) OR (tags->'access' = 'customers') OR (tags->'access' = 'permissive') OR (tags->'access' = 'yes') OR (tags->'access' = 'public') OR (tags->'access' = 'destination')) AND geom && ST_Buffer(GeometryFromText('POINT ( ".$lat." ".$lon." )', 4326 ), 2000)
 						ORDER BY distance
 						LIMIT 10)
 					) AS foo
+					WHERE foo.distance < ".$maxdistance."
 					ORDER BY foo.distance
 					LIMIT 10
 				) AS uniques
@@ -779,6 +835,35 @@
 			$article[0] = rawurlencode($article[0]);
 
 		return $article;
+	}
+
+
+	// creates an address in the format of country $country from the tags given with $tagset
+	function formatAddress($tagset, $country)
+	{
+		global $addressformats;
+
+		// select template
+		if ($country)
+			$template = $addressformats[strtolower($country)];
+		if (!$country || $country == null || $template == null)
+			$template = $addressformats['default'];
+
+		// replace placeholders
+		$template = str_replace("#street#", $tagset['street'], $template);
+		$template = str_replace("#housenumber#", $tagset['housenumber'], $template);
+		$template = str_replace("#country#", strtoupper($tagset['country']), $template);
+		$template = str_replace("#city#", $tagset['city'], $template);
+		$template = str_replace("#postcode#", $tagset['postcode'], $template);
+		$template = str_replace("#housename#", $tagset['housename'], $template);
+		$template = str_replace("#suburb#", $tagset['suburb'], $template);
+		$template = str_replace("#province#", $tagset['province'], $template);
+		// remove some format mistakes because of missing tags
+		$template = str_replace("</span>,", "</span>", $template);
+		$template = str_replace("-</span>", "</span>", $template);
+		$template = str_replace("()", "", $template);
+		// remove whitespaces
+		return trim($template);
 	}
 
 
@@ -1111,5 +1196,139 @@
 			return "http://commons.wikimedia.org/wiki/special:filepath/".substr($url, 40);
 		else
 			return $url;
+	}
+
+
+	// apply tag-transformation-file on hstore-tags-field
+	function tagTransform($filename, $tags, $osmtype)
+	{
+		$results = array();
+
+		if (file_exists($filename))
+   			$xml = simplexml_load_file($filename);
+		else
+    		reportError("Could not open file: ".$filename);
+
+		foreach ($xml->translation as $translation)
+		{
+			if ($translation->match != false)
+			{
+				$tagsmatch = tagsMatch($translation->match, $tags, $osmtype);
+				if (!$tagsmatch[0])
+					continue;
+			}
+			$regexmatches = $tagsmatch[1];
+
+			if ($translation->find != false)
+				foreach ($translation->find->children() as $find)
+					$regexmatches[(string)$find['match_id']] = tagMatch($find['k'], $find['v'], $tags);
+
+			if ($translation->output != false)
+			{
+				foreach ($translation->output->children() as $output)
+				{
+					$type = $output->getName();
+					if ($type == "copy-all")
+						$results = $tags;
+					else if ($type == "copy-unmatched")
+					{
+						$results = $tags;
+						foreach ($regexmatches as $regexmatch)
+							if ($results[$regexmatch[0][0]] == $regexmatch[1][0])
+								unset($results[$regexmatch[0][0]]);
+					}
+					else if ($type == "copy-matched")
+					{
+						$results = $regexmatches;
+						foreach ($regexmatches as $regexmatch)
+							$results[$regexmatch[0][0]] == $regexmatch[1][0];
+					}
+					else if ($type == "tag")
+					{
+						if (($regexmatches[(string)$output['from_match']]) && ((string)$output['from_match']!=""))
+						{
+							for ($i=0; $i<count($regexmatches[(string)$output['from_match']][0]); $i++)
+							{
+								$newKey = preg_replace('/\{'.$i.'\}/', $regexmatches[(string)$output['from_match']][0][$i], (string)$output['k']);
+								$newValue = preg_replace('/\{'.$i.'\}/', $regexmatches[(string)$output['from_match']][1][$i], (string)$output['v']);
+							}
+							$results[$newKey] = $newValue;
+						}
+						else
+							$results[(string)$output['k']] = (string)$output['v'];
+					}
+				}
+			}
+			return $results;
+		}
+		return $tags;
+	}
+
+
+	// returns true, if xml-element "match" matches the given tags
+	function tagsMatch($matches, $tags, $osmtype)
+	{
+		if (($osmtype != $matches['type']) && ($matches['type'] != ""))
+			return false;
+		
+		foreach ($matches->children() as $match)
+		{
+			$type = $match->getName();
+			if ($type == "tag")
+			{
+				$tagmatch = tagMatch((string)$match['k'], (string)$match['v'], $tags);
+				$regexmatches[(string)$match['match_id']] = $tagmatch;
+				if (($matches['mode'] == "or") && (gettype($tagmatch) == "array"))
+					$condition = true;
+				else if (($matches['mode'] == "and") || !$matches['mode'])
+					$condition = $condition && (gettype($tagmatch) == "array");
+			}
+			else if ($type == "notag")
+			{
+				$notagmatch = !tagMatch((string)$match['k'], (string)$match['v'], $tags);
+				$regexmatches[(string)$match['match_id']] = $notagmatch;
+				if (($matches['mode'] == "or") && (gettype($tagmatch) != "array"))
+					$condition = true;
+				else if (($matches['mode'] == "and") || !$matches['mode'])
+					$condition = $condition && (gettype($notagmatch) != "array");
+			}
+			else if ($type == "match")
+			{
+				$tagsmatch = tagsMatch($match, $tags, $osmtype);
+				if ($matches['mode'] == "or")
+				{
+					if (!$condition)
+						$condition = $tagsmatch[0];
+					else
+						$condition = $condition || $tagsmatch[0];
+				}
+				else if (($matches['mode'] == "and") || !$matches['mode'])
+				{
+					if (!$condition)
+						$condition = $tagsmatch[0];
+					else
+						$condition = $condition && $tagsmatch[0];
+				}
+				if (!$regexmatches)
+					$regexmatches = array();
+				if (gettype($tagsmatch[1]) == "array")
+					array_push($regexmatches, $tagsmatch[1]);
+
+			}
+		}
+
+		return array($condition, $regexmatches);
+	}
+
+
+	// returns regex matches, if regex expressions for key and value match at least one of the given tags, otherwise false is returned
+	function tagMatch($key, $value, $tags)
+	{
+		foreach ($tags as $k => $v)
+		{
+			if (preg_match('/'.$key.'/', $k, $keyMatch) && preg_match('/'.$value.'/', $v, $valueMatch))
+				return array($keyMatch, $valueMatch);
+		}
+		return false;
 	}
 ?>
