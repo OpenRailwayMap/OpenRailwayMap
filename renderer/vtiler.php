@@ -20,7 +20,7 @@
 	$geomcolumn = "way";
 	$database = "railmap";
 	$maxzoom = 19;
-	$stylesheets = array("../styles/style.mapcss");
+	$stylesheets = array("../styles/de:style.mapcss");
 	$tables = array("polygon"=>"railmap_polygon", "line"=>"railmap_line","point"=>"railmap_point");
 	$intscalefactor = 10000;
 
@@ -464,8 +464,9 @@
 		die("Param y invalid or missing.");
 
 	$bbox = bboxByTile($z+1, $x, $y);
-	foreach ($stylesheets as $stylesheet)
-		$style .= parseMapCSSFile($stylesheet);
+	// TODO: check parsing and remove comments
+	//foreach ($stylesheets as $stylesheet)
+		//$style .= parseMapCSSFile($stylesheet);
 	$zoom = $z+2;
 
 	$content["features"] = getVectors($bbox, $zoom, $style, "polygon");
@@ -475,12 +476,13 @@
 	$content["bbox"] = $bbox;
 
 	header("Content-Type: text/html; charset=UTF-8");
-	echo "onKothicDataResponse(".json_encode($content).",".$z.",".$x.",".$y.")";
+	$output = "onKothicDataResponse(".json_encode($content).",".$z.",".$x.",".$y.")";
+	echo $output;
 
 	if (!file_exists($tiledir.$z."/".$x))
 		mkdir($tiledir.$z."/".$x, 0755, true);
 
-	$file = fopen($path."/".$y.".js", "w");
-	fwrite($file, $content);
-	tfclose($file);
+	$file = fopen($tiledir.$z."/".$x."/".$y.".js", "w");
+	fwrite($file, $output);
+	fclose($file);
 ?>
