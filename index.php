@@ -14,7 +14,7 @@
 		<title><?=$appname?></title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="content-language" content="<? echo $lang; ?>" />
-		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, olm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte" />
+		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte" />
 		<meta name="title" content="<?=$appname?>" />
 		<meta name="author" content="rurseekatze, Alexander Matheisen" />
 		<meta name="publisher" content="rurseekatze, Alexander Matheisen" />
