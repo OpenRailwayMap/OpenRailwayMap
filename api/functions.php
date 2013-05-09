@@ -10,7 +10,7 @@
 	// email address to send error reports to
 	$mail = "AlexanderMatheisen@ish.de";
 	// available translations
-	$langs = array("de", "en", "fr", "it", "ru");
+	$langs = array("de"=>"de_DE", "en"=>"en_GB", "fr"=>"fr_FR", "it"=>"it_IT", "ru"=>"ru_RU", "ja"=>"ja_JP", "nl"=>"nl_NL");
 	// name of database
 	$db = "railmap";
 	// name of application
