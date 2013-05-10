@@ -1,32 +1,14 @@
 /*
- OpenLinkMap Copyright (C) 2010 Alexander Matheisen
+ OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
  This program comes with ABSOLUTELY NO WARRANTY.
  This is free software, and you are welcome to redistribute it under certain conditions.
- See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
  */
 
 
 // set start position by given coordinate or, if possible, by geolocation api
 function Startposition(map, locateButton)
 {
-	// called when geolocation api caused an errors
-	this.geolocationError = function(error)
-	{
-		return true;
-	}
-
-
-	// set position by geolocation api
-	this.setGeolocatedPosition = function(position)
-	{
-		// consider accuracy
-		var center = getMapLatLon(position.coords.latitude, position.coords.longitude);
-		var radius = position.coords.accuracy/2;
-		var bounds = new OpenLayers.Bounds(center.lon - radius, center.lat - radius, center.lon + radius, center.lat + radius);
-		this.map.zoomToExtent(bounds, true);
-	}
-
-
 	// set position by user's ip address
 	this.setPositionByIp = function()
 	{
@@ -38,7 +20,7 @@ function Startposition(map, locateButton)
 			if ((response.length > 0) && (response != "NULL"))
 			{
 				response = response.split(",");
-				self.map.setCenter(getMapLatLon(response[0], response[1]), 10);
+				self.map.setView(new L.LatLng(response[0], response[1]), 10);
 				self.geolocate();
 				return true;
 			}
@@ -58,23 +40,7 @@ function Startposition(map, locateButton)
 	{
 		// if geolocation is available
 		if (navigator.geolocation)
-		{
-			var self = this;
-			// call function to jump to geolocated position
-			navigator.geolocation.getCurrentPosition(
-				function(position)
-				{
-					self.setGeolocatedPosition(position);
-				},
-				function(error)
-				{
-					self.geolocationError(error);
-				},
-				{
-					enableHighAccuracy: true
-				}
-			);
-		}
+			this.map.locate({timeout: 3000, enableHighAccuracy: true, setView: true});
 	}
 
 
@@ -87,7 +53,7 @@ function Startposition(map, locateButton)
 			var lat = 51.58248;
 			var lon = 15.6501;
 			var zoom = 3;
-			this.map.setCenter(getMapLatLon(lat, lon), zoom);
+			this.map.setView(new L.LatLng(lat, lon), zoom);
 		}
 	}
 
@@ -96,27 +62,27 @@ function Startposition(map, locateButton)
 	this.locateButton = gEBI(locateButton);
 
 	// if no position set
-	if (!this.map.getCenter())
-	{
+	//if (!this.map.getCenter())
+	//{
 		if (params['lat'] && params['lon'])
 		{
 			if (!params['zoom'])
 				params['zoom'] = 17;
-			this.map.setCenter(getMapLatLon(params['lat'], params['lon']), params['zoom']);
+			this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
 		}
 		else
 			this.setPosition();
-	}
+	//}
 
 	// if position already set, create popup
-	if (params['id'] && params['type'])
-	{
-		var popupPosition = new OpenLayers.LonLat(params['lon'], params['lat']);
-		createPopup(params['id'], params['type'], params['lat'], params['lon']);
-		this.map.panTo(map.getCenter());
-		if (params['ext'])
-			showMoreInfo(params['id'], params['type'], params['lat'], params['lon']);
-	}
+	//if (params['id'] && params['type'])
+	//{
+		//var popupPosition = new OpenLayers.LonLat(params['lon'], params['lat']);
+		//createPopup(params['id'], params['type'], params['lat'], params['lon']);
+		//this.map.panTo(this.map.getCenter());
+		//if (params['ext'])
+			//showMoreInfo(params['id'], params['type'], params['lat'], params['lon']);
+	//}
 
 
 	// onclick event of locate button
@@ -127,7 +93,5 @@ function Startposition(map, locateButton)
 	};
 
 	// load markers without moving the map first
-	map.setCenter(map.getCenter());
-	// show zoom status without zooming in first
-	mapZoomed(null);
+	this.map.setView(this.map.getCenter(), this.map.getZoom());
 }

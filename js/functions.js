@@ -2,7 +2,7 @@
 OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See http://wiki.openstreetmap.org/wiki/OpenLinkMap for details.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
@@ -24,8 +24,8 @@ function createMap()
 	// creating the map
 	map = L.map('mapFrame',
 	{
-		center: new L.LatLng(39.73, -104.99),
-		zoom: 10
+		center: new L.LatLng(51.0, 6.0),
+		zoom: 3
 	});
 
 	// add some background layers
@@ -62,7 +62,7 @@ function createMap()
 	var timestamp = new Timestamp("info");
 
 	// setting start position
-	//startposition = new Startposition(map, "locateButton");
+	startposition = new Startposition(map, "locateButton");
 
 	// creating search
 	//search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
@@ -191,10 +191,19 @@ function getEmbedLink(id, type)
 // perform a synchron API request
 function requestApi(file, query, handler)
 {
-	if (typeof handler == 'undefined')
-		return OpenLayers.Request.GET({url: root+'api/'+file+'.php?'+query, async: false});
+	if (window.XMLHttpRequest)
+		var request = new window.XMLHttpRequest;
 	else
-		return OpenLayers.Request.GET({url: root+'api/'+file+'.php?'+query, async: true, success: handler});
+		var request = new ActiveXObject("MSXML2.XMLHTTP.3.0");
+
+    request.open("GET", root+'api/'+file+'.php?'+query, true);
+    request.onreadystatechange = function()
+	{
+		if (request.readyState === 4)
+			if (request.status === 200)
+				handler(request);
+	};
+	request.send(null);
 }
 
 
