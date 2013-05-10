@@ -1,27 +1,7 @@
-# This is the style file that matches the old version of osm2pgsql, which
-# did not make distinctions between tags for nodes and for ways. There are a
-# number of optimisations that can be applied here. Firstly, certain tags
-# only apply to only nodes or only ways. By fixing this we reduce the amount
-# of useless data loaded into the DB, which is a good thing. Possible
-# optimisations for the future:
-
-# 1. Generate this file directly from the mapnik XML config, so it's always
-# optimal
-
-# 2. Extend it so it can understand that highway=tertiary is for ways and
-# highway=bus_stop is for nodes
-
-# Flags field isn't used much yet, expect if it contains the text "polygon"
-# it indicates the shape is candidate for the polygon table. In the future I
-# would like to be able to add directives like "nocache" which tells
-# osm2pgsql that it is unlikely this node will be used by a way and so it
-# doesn't need to be stored (eg coastline nodes). While in essence an
-# optimisation hack, for --slim mode it doesn't matter if you're wrong, but
-# in non-slim you might break something!
-
-# Also possibly an ignore flag, for things like "note" and "source" which
-# can simply be deleted. (In slim mode this is, does not apply to non-slim
-# obviously)
+# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 # mark ways as polygon without creating a column for them
 # OsmType  Tag          DataType     Flags

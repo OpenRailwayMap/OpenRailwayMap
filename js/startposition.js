@@ -1,9 +1,9 @@
 /*
- OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
- This program comes with ABSOLUTELY NO WARRANTY.
- This is free software, and you are welcome to redistribute it under certain conditions.
- See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
- */
+OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+*/
 
 
 // set start position by given coordinate or, if possible, by geolocation api
