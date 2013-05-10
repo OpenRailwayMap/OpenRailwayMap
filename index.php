@@ -36,10 +36,13 @@
 		<meta http-equiv="content-style-type" content="text/css" />
 		<link rel="stylesheet" type="text/css" href="css/map.css" />
 		<link rel="stylesheet" href="css/leaflet.css" />
+		<link rel="stylesheet" href="css/L.Control.Zoomslider.css" />
 		<!--[if lte IE 8]>
 			<link rel="stylesheet" href="css/leaflet.ie.css" />
+			<link rel="stylesheet" href="css/L.Control.Zoomslider.ie.css" />
 		<![endif]-->
 		<script type="text/javascript" src="js/leaflet-0.5.1.js"></script>
+		<script type="text/javascript" src="js/L.Control.Zoomslider.js"></script>
 		<?php
 			// params
 			echo "<script type=\"text/javascript\">\n";
