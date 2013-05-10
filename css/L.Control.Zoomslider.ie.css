@@ -50,4 +50,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 }
 .leaflet-control-zoomslider-out {
 	*zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '-');
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b39e3a2cc437e8b05e1c570bbf44ea01e302a3cf
