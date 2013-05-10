@@ -89,7 +89,7 @@ echo "ALTER FUNCTION hstore2json(hs public.hstore) OWNER TO apache;"  | psql -d 
 
 # osmconvert, etc.
 wget -O - http://m.m.i24.cc/osmupdate.c | cc -x c - -o osmupdate
-wget -O - http://m.m.i24.cc/osmfilter.c |cc -x c - -o osmfilter
+wget -O - http://m.m.i24.cc/osmfilter.c | cc -x c - -o osmfilter
 wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -o osmconvert
 
 # osm2pgsql
@@ -101,7 +101,7 @@ sed -i 's/-g -O2/-O2 -march=native -fomit-frame-pointer/' Makefile
 make
 cd ..
 
-# add such a mod_rewrite redirection to your apache configuration for having cache
+# add this mod_rewrite rule to your apache configuration for having cache
 #Options +Indexes +FollowSymLinks
 #RewriteEngine on
 #RewriteCond /home/www/sites/194.245.35.149/site/orm/%{REQUEST_URI} !-f
