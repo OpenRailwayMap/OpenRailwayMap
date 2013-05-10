@@ -22,11 +22,7 @@ function createMap()
 	}
 
 	// creating the map
-	map = L.map('mapFrame',
-	{
-		center: new L.LatLng(51.0, 6.0),
-		zoom: 3
-	});
+	map = L.map('mapFrame');
 
 	// add some background layers
 	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -51,7 +47,6 @@ function createMap()
 	{
 		"Hillshading": hillshading
 	};
-	//map.addControl(new OpenLayers.Control.PanZoomBar());
 	//map.addControl(new OpenLayers.Control.MousePosition());
 	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
 	// TODO: plugin missing
