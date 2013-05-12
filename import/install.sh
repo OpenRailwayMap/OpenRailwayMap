@@ -46,10 +46,18 @@ echo "CREATE ROLE apache;" | psql -d railmap
 echo "GRANT SELECT ON railmap_point TO apache;" | psql -d railmap
 echo "GRANT SELECT ON railmap_line TO apache;" | psql -d railmap
 echo "GRANT SELECT ON railmap_polygon TO apache;" | psql -d railmap
+echo "GRANT SELECT ON railmap_rels TO apache;" | psql -d railmap
+echo "GRANT SELECT ON railmap_nodes TO apache;" | psql -d railmap
+echo "GRANT SELECT ON railmap_ways TO apache;" | psql -d railmap
+echo "GRANT SELECT ON railmap_roads TO apache;" | psql -d railmap
 echo "CREATE ROLE w3_user1;" | psql -d railmap
 echo "GRANT SELECT ON railmap_point TO w3_user1;" | psql -d railmap
 echo "GRANT SELECT ON railmap_line TO w3_user1;" | psql -d railmap
 echo "GRANT SELECT ON railmap_polygon TO w3_user1;" | psql -d railmap
+echo "GRANT SELECT ON railmap_rels TO w3_user1;" | psql -d railmap
+echo "GRANT SELECT ON railmap_nodes TO w3_user1;" | psql -d railmap
+echo "GRANT SELECT ON railmap_ways TO w3_user1;" | psql -d railmap
+echo "GRANT SELECT ON railmap_roads TO w3_user1;" | psql -d railmap
 
 # add hstore2json function for postgresql versions before 9.3
 # from https://gist.github.com/kenaniah/1315484
