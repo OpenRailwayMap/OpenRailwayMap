@@ -13,8 +13,12 @@
 	$langs = array("de"=>"de_DE", "en"=>"en_GB", "fr"=>"fr_FR", "it"=>"it_IT", "ru"=>"ru_RU", "ja"=>"ja_JP", "nl"=>"nl_NL");
 	// name of database
 	$db = "railmap";
+	// prefix of osm2pgsql tables
+	$prefix = "railmap";
 	// name of application
 	$appname = "OpenRailwayMap";
+	// useragent used for curl requests
+	$useragent = "openrailwaymap.org";
 
 
 	// connects do database
@@ -480,7 +484,7 @@
 		$c = curl_init();
 		curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($c, CURLOPT_URL, $url);
-		curl_setopt($c, CURLOPT_USERAGENT, "openlinkmap.org");
+		curl_setopt($c, CURLOPT_USERAGENT, $useragent);
 		$response = curl_exec($c);
 		$info = curl_getinfo($c);
 		curl_close($c);
@@ -602,8 +606,7 @@
 
 		if (!$result)
 		{
-			reportError($request);
-			reportError("No return for database request.");
+			reportError("No return for database request:".pg_last_error());
 			return false;
 		}
 
@@ -1330,5 +1333,56 @@
 				return array($keyMatch, $valueMatch);
 		}
 		return false;
+	}
+
+
+	// returns the lat/lon of a milestone $position on a line $ref
+	function getMilestonePosition($ref, $position)
+	{
+		global $db, $prefix;
+
+		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon FROM
+					(
+						SELECT ST_Transform(ST_Centroid(ST_MakeLine(".$prefix."_point.way)), 4326) AS geom
+						FROM ".$prefix."_point
+						INNER JOIN ".$prefix."_ways ON ".$prefix."_point.osm_id = ANY(".$prefix."_ways.nodes)
+						WHERE (".$prefix."_ways.tags@>string_to_array('ref,".$ref."', ',')) AND (".$prefix."_point.tags->'railway:position'='".$position."')
+					) AS foo;";
+
+		$connection = connectToDatabase($db);
+		if (!$connection)
+			return false;
+		$response = requestDetails($query, $connection);
+
+		pg_close($connection);
+
+		if ($response[0])
+			return array($response[0]['lat'], $response[0]['lon']);
+		else
+			return false;
+	}
+
+
+	// checks if given railroad line ref is in valid format
+	function isValidLine($value)
+	{
+		if (!$value)
+			return false;
+		if (preg_match('!^[^0-9a-zA-Z]+$!', $value) == 1)
+			return false;
+
+		return true;
+	}
+
+
+	// checks if given milestone position is in valid format
+	function isValidPosition($value)
+	{
+		if (!$value)
+			return false;
+		if (preg_match('!^[^\.0-9]+$!', $value) == 1)
+			return false;
+
+		return true;
 	}
 ?>
