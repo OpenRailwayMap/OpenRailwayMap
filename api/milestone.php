@@ -10,9 +10,9 @@
 	require_once("functions.php");
 
 	if (!isValidLine($_GET['line']))
-		die("Param z invalid or missing.");
+		die("Invalid format of line ref.");
 	if (!isValidPosition($_GET['position']))
-		die("Param x invalid or missing.");
+		die("Invalid format of milestone position.");
 
 	$result = getMilestonePosition($_GET['line'], $_GET['position']);
 	if (!$result)

@@ -606,7 +606,7 @@
 
 		if (!$result)
 		{
-			reportError("No return for database request:".pg_last_error());
+			reportError("No return for database request: ".pg_last_error());
 			return false;
 		}
 
@@ -1368,7 +1368,7 @@
 	{
 		if (!$value)
 			return false;
-		if (preg_match('!^[^0-9a-zA-Z]+$!', $value) == 1)
+		if (!ctype_alnum($value))
 			return false;
 
 		return true;
@@ -1380,9 +1380,9 @@
 	{
 		if (!$value)
 			return false;
-		if (preg_match('!^[^\.0-9]+$!', $value) == 1)
-			return false;
+		if ((ctype_digit(str_replace(".", "", $value))) && (substr_count($value, '.') == 1))
+			return true;
 
-		return true;
+		return false;
 	}
 ?>
