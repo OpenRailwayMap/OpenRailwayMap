@@ -23,7 +23,13 @@ function createMap()
 
 	map = L.map('mapFrame');
 
-	// mapnik background layer
+	// grayscale mapnik background layer
+	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	{
+		attribution: "Map data &copy; OpenStreetMap contributors",
+		maxZoom: 18
+	}).addTo(map);
+	// normal mapnik background layer
 	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: "Map data &copy; OpenStreetMap contributors",
@@ -31,12 +37,12 @@ function createMap()
 	}).addTo(map);
 
 	// railmap layer
-	var railmap = new L.TileLayer.Kothic({minZoom: 1});
-	MapCSS.onImagesLoad = function()
-	{
-		map.addLayer(railmap);
-	};
-	MapCSS.preloadSpriteImage("osmosnimki-maps", "http://osmosnimki.ru/leaf/icons/osmosnimki.png");
+	//var railmap = new L.TileLayer.Kothic({minZoom: 1});
+	//MapCSS.onImagesLoad = function()
+	//{
+	//	map.addLayer(railmap);
+	//};
+	//MapCSS.preloadSpriteImage("osmosnimki-maps", "http://osmosnimki.ru/leaf/icons/osmosnimki.png");
 
 	// hillshading layer
 	var hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',
@@ -44,16 +50,17 @@ function createMap()
 		attribution: "Hillshading by <a href='http://nasa.gov/'>NASA SRTM</a>",
 		maxZoom: 17
 	}).addTo(map);
-	// TODO: add s/w basemap layer
 
 	var baseLayers =
 	{
-		"Mapnik": mapnik
+		"Mapnik": mapnik,
+		"Mapnik Grayscale": mapnikGray
 	};
 	var overlays =
 	{
 		"Hillshading": hillshading
 	};
+	// TODO: better selection of default layer, disable hillshading by default
 	//map.addControl(new OpenLayers.Control.MousePosition());
 	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
 	// TODO: plugin missing
