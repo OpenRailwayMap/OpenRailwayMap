@@ -191,7 +191,7 @@
 			<p id="info"></p>
 			<div id="linkBar">
 				<a class="links" id="spamButton" onclick="reportSpam();"><?=_("Report bug in map")?></a>&nbsp;•
-				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenLinkMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
+				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
 				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>
 				<script language="javascript">
 					var usr = "info";
