@@ -44,6 +44,7 @@
 		<script type="text/javascript" src="js/leaflet-0.5.1.js"></script>
 		<script type="text/javascript" src="js/kothic.js"></script>
 		<script type="text/javascript" src="js/L.Control.Zoomslider.js"></script>
+		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
 		<?php
 			// params
 			echo "<script type=\"text/javascript\">\n";
