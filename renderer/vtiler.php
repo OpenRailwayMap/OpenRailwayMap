@@ -20,7 +20,7 @@
 	$geomcolumn = "way";
 	$database = "railmap";
 	$maxzoom = 19;
-	$stylesheets = array("../styles/de:style.mapcss");
+	$stylesheets = array("../styles/style.mapcss");
 	$tables = array("polygon"=>"railmap_polygon", "line"=>"railmap_line","point"=>"railmap_point");
 	$intscalefactor = 10000;
 
