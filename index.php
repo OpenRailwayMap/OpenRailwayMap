@@ -42,6 +42,7 @@
 			<link rel="stylesheet" href="css/L.Control.Zoomslider.ie.css" />
 		<![endif]-->
 		<script type="text/javascript" src="js/leaflet-0.5.1.js"></script>
+		<script type="text/javascript" src="js/kothic.js"></script>
 		<script type="text/javascript" src="js/L.Control.Zoomslider.js"></script>
 		<?php
 			// params
