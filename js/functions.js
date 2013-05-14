@@ -16,21 +16,29 @@ function createMap()
 		offset = params['offset'];
 	else
 	{
-		// get time offset to utc
+		// get time offset to UTC
 		var now = new Date();
 		offset = -(now.getTimezoneOffset() / 60);
 	}
 
-	// creating the map
 	map = L.map('mapFrame');
 
-	// add some background layers
+	// mapnik background layer
 	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: "Map data &copy; OpenStreetMap contributors",
 		maxZoom: 18
 	}).addTo(map);
 
+	// railmap layer
+	var railmap = new L.TileLayer.Kothic({minZoom: 1});
+	MapCSS.onImagesLoad = function()
+	{
+		map.addLayer(railmap);
+	};
+	MapCSS.preloadSpriteImage("osmosnimki-maps", "http://osmosnimki.ru/leaf/icons/osmosnimki.png");
+
+	// hillshading layer
 	var hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',
 	{
 		attribution: "Hillshading by <a href='http://nasa.gov/'>NASA SRTM</a>",
@@ -38,7 +46,6 @@ function createMap()
 	}).addTo(map);
 	// TODO: add s/w basemap layer
 
-	// adding some controls
 	var baseLayers =
 	{
 		"Mapnik": mapnik
