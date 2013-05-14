@@ -195,7 +195,7 @@
 				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>
 				<script language="javascript">
 					var usr = "info";
-					var dom = "openlinkmap";
+					var dom = "openrailwaymap";
 					var tld = "org";
 					gEBI("contactButton").href="mailto:"+usr+"@"+dom+"."+tld;
 				</script>
