@@ -55,3 +55,11 @@ osmconvert old-railways.osm --out-o5m >old-railways.o5m
 rm old-railways.osm
 echo ""
 echo "Finished."
+
+
+# run mapcss converter
+echo "Create MapCSS style"
+echo ""
+python mapcss_converter.py --mapcss style.mapcss --icons icons
+echo ""
+echo "Finished."
