@@ -45,6 +45,7 @@
 		<script type="text/javascript" src="js/kothic.js"></script>
 		<script type="text/javascript" src="js/L.Control.Zoomslider.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
+		<script type="text/javascript" src="styles/style.js"></script>
 		<?php
 			// params
 			echo "<script type=\"text/javascript\">\n";

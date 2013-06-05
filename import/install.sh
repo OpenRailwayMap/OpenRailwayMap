@@ -9,7 +9,7 @@
 # run this script not automatically! you have to change paths and modify it to your own environment!
 
 # install necessary software
-yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip php-php-gettext php php-pgsql unzip postgresql-devel
+yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip php-php-gettext php php-pgsql unzip postgresql-devel python-ply python-imaging pycairo python-cairosvg librsvg2 gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel pygtk2 pygtk2-devel
 
 # GeoIP database
 # add extension=geoip.so to php.ini
@@ -21,7 +21,7 @@ wget -N -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
 gunzip GeoLiteCity.dat.gz
 mv GeoLiteCity.dat GeoIPCity.dat
 
-cd /home/www/sites/194.245.35.149/site/olm/import/bin
+cd /home/www/sites/194.245.35.149/site/orm/import/bin
 
 mkdir osmosis
 cd osmosis

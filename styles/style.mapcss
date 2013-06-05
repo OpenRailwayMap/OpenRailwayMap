@@ -13,9 +13,9 @@ Format details:
 
 meta 
 {
-	title: "OpenRailwayMap DE";
+	title: "OpenRailwayMap";
 	version: "0"; 
-	description: "German style for OpenRailwayMap tagging schema";
+	description: "Style for a railroad network map.";
 	author: "rurseekatze";
 	link: "http://wiki.openstreetmap.org/wiki/OpenRailwayMap";
 	watch-modified: true;

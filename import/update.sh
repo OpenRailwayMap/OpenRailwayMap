@@ -53,5 +53,11 @@ echo "Updating database"
 echo ""
 osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 changes.osc
 rm changes.osc
+
+
+# run mapcss converter to update mapcss style
+echo "Update MapCSS style"
+echo ""
+python mapcss_converter.py --mapcss style.mapcss --icons icons
 echo ""
 echo "Finished."
