@@ -444,6 +444,8 @@
 			foreach ($response as $row)
 			{
 				$geojson = json_decode($row[$geomcolumn], true);
+				if ($geojson["type"] == "GeometryCollection")
+					continue;
 				if ($geom["reprpoint"] != "")
 					$geojson["reprpoint"] = json_decode($row["reprpoint"]["coordinates"], true);
 				$geojson["properties"] = json_decode($row["tags"], true);
@@ -470,13 +472,13 @@
 	$zoom = $z+2;
 
 	$content["features"] = getVectors($bbox, $zoom, $style, "polygon");
-	array_push($content["features"], getVectors($bbox, $zoom, $style, "line"));
-	array_push($content["features"], getVectors($bbox, $zoom, $style, "point"));
+	$content["features"] = array_merge($content["features"], getVectors($bbox, $zoom, $style, "line"));
+	$content["features"] = array_merge($content["features"], getVectors($bbox, $zoom, $style, "point"));
 	$content["granularity"] = $intscalefactor;
 	$content["bbox"] = $bbox;
 
-	header("Content-Type: text/html; charset=UTF-8");
-	$output = "onKothicDataResponse(".json_encode($content).",".$z.",".$x.",".$y.")";
+	header("Content-Type: application/javascript; charset=UTF-8");
+	$output = "onKothicDataResponse(".json_encode($content).",".$z.",".$x.",".$y.");";
 	echo $output;
 
 	if (!file_exists($tiledir.$z."/".$x))

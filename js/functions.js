@@ -37,12 +37,16 @@ function createMap()
 	}).addTo(map);
 
 	// railmap layer
-	//var railmap = new L.TileLayer.Kothic({minZoom: 1});
-	//MapCSS.onImagesLoad = function()
-	//{
-	//	map.addLayer(railmap);
-	//};
-	//MapCSS.preloadSpriteImage("osmosnimki-maps", "http://osmosnimki.ru/leaf/icons/osmosnimki.png");
+	var railmap = new L.TileLayer.Kothic(root+'tiles/{z}/{x}/{y}.js',
+	{
+		attribution: "Rendering: OpenRailwayMap",
+		minZoom: 12
+	});
+	MapCSS.onImagesLoad = function()
+	{
+		map.addLayer(railmap);
+	};
+	MapCSS.preloadSpriteImage("style", root+"styles/style.png");
 
 	// hillshading layer
 	var hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',
@@ -58,7 +62,8 @@ function createMap()
 	};
 	var overlays =
 	{
-		"Hillshading": hillshading
+		"Hillshading": hillshading,
+		"OpenRailwayMap": railmap
 	};
 	// TODO: better selection of default layer, disable hillshading by default
 	//map.addControl(new OpenLayers.Control.MousePosition());
