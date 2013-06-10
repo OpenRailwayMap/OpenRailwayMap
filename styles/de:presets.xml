@@ -2940,6 +2940,88 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:ring:form"
 					value="sign" />
 			</item>
+			<item name="Bü-Tafel" icon="de:crossing-info.png" type="node">
+				<label text="Bü-Tafel" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:crossing_info:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:crossing_info"
+					value="yes" />
+				<key key="railway:signal:crossing_info:form"
+					value="sign" />
+				<text key="railway:signal:crossing_info:caption"
+					text="Caption (e.g. 'Bü 123,4')"
+					de.text="Beschriftung (z.B. 'Bü 123,4')"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:crossing_info:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					default=""
+					display_values="Mastbauform,Zwergsignal"
+					delete_if_empty="true" />
+			</item>
+			<item name="Bü-Ankündigungstafel" icon="de:crossing-hint.png" type="node">
+				<label text="Bü-Ankündigungstafel" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:crossing_hint:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:crossing_hint"
+					value="yes" />
+				<key key="railway:signal:crossing_hint:form"
+					value="sign" />
+				<text key="railway:signal:crossing_hint:caption"
+					text="Caption (e.g. 'Bü 123,4')"
+					de.text="Beschriftung (z.B. 'Bü 123,4')"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:crossing_hint:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					default=""
+					display_values="Mastbauform,Zwergsignal"
+					delete_if_empty="true" />
+			</item>
 			<separator />
 			<item name="Fahrleitungssignal" icon="de:electricity.png" type="node">
 				<label text="Fahrleitungssignal" />
