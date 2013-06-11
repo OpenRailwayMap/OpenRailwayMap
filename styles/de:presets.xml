@@ -3399,7 +3399,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Haltetafel" icon="de:ne5.png" type="node">
+			<item name="Haltetafel" icon="de:stop.png" type="node">
 				<label text="Haltetafel" />
 				<space />
 				<key key="railway"
