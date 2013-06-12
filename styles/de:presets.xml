@@ -3005,7 +3005,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:minor_distant"
-					value="sh3" />
+					value="dr:sh3" />
 				<key key="railway:signal:minor_distant:form"
 					value="sign" />
 				<combo key="railway:signal:minor_distant:height"
