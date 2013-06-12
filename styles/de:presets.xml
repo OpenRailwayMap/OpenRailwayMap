@@ -145,7 +145,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -275,7 +275,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -395,7 +395,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -510,7 +510,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -635,7 +635,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -782,7 +782,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -914,7 +914,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1038,7 +1038,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1174,7 +1174,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1320,7 +1320,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1466,12 +1466,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="end_date"
 					text="Year of opening"
-					de.text="Jahr der Stilllegung"
+					de.text="Zeitpunkt der Stilllegung"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1617,12 +1617,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="end_date"
 					text="Year of opening"
-					de.text="Jahr der Stilllegung"
+					de.text="Zeitpunkt der Stilllegung"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1768,12 +1768,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="end_date"
 					text="Year of opening"
-					de.text="Jahr der Stilllegung"
+					de.text="Zeitpunkt der Stilllegung"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -3876,7 +3876,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delete_if_empty="true" />
 			<text key="start_date"
 				text="Year of opening"
-				de.text="Jahr der Inbetriebnahme"
+				de.text="Zeitpunkt der Inbetriebnahme"
 				default=""
 				delete_if_empty="true" />
 			<text key="railway:position"
@@ -3961,7 +3961,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -4035,7 +4035,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -4102,7 +4102,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
@@ -4132,7 +4132,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -4172,7 +4172,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -4208,7 +4208,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -4244,7 +4244,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -4280,7 +4280,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="start_date"
 					text="Year of opening"
-					de.text="Jahr der Inbetriebnahme"
+					de.text="Zeitpunkt der Inbetriebnahme"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -4780,7 +4780,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="train_station" />
 			<text key="start_date"
 				text="Year of opening"
-				de.text="Jahr der Eröffnung"
+				de.text="Zeitpunkt der Eröffnung"
 				default=""
 				delete_if_empty="true" />
 			<text key="image"
