@@ -3540,6 +3540,83 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
+			<item name="Überwachungssignal Rückfallweiche" icon="de:resetting-switch.png" type="node">
+				<label text="Überwachungssignal Rückfallweiche" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:resetting_switch:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:resetting_switch"
+					value="so18" />
+				<key key="railway:signal:resetting_switch:form"
+					value="light" />
+				<key key="railway:signal:resetting_switch:states"
+					value="so18;so18b" />
+				<combo key="railway:signal:resetting_switch:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					default=""
+					display_values="Mastbauform,Zwergsignal"
+					delete_if_empty="true" />
+			</item>
+			<item name="Ankündigung Überwachungssignal Rückfallweiche" icon="de:resetting-switch-distant.png" type="node">
+				<label text="Ankündigung Überwachungssignal Rückfallweiche" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:resetting_switch_distant:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:resetting_switch_distant"
+					value="so17" />
+				<key key="railway:signal:resetting_switch_distant:form"
+					value="sign" />
+				<combo key="railway:signal:resetting_switch_distant:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					default=""
+					display_values="Mastbauform,Zwergsignal"
+					delete_if_empty="true" />
+			</item>
+			<separator />
 			<item name="Fahrleitungssignal" icon="de:electricity.png" type="node">
 				<label text="Fahrleitungssignal" />
 				<space />
