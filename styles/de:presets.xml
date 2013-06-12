@@ -3088,6 +3088,50 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
+			<item name="Abdrücksignal" icon="de:humping.png" type="node">
+				<label text="Abdrücksignal" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:humping:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:humping"
+					value="ra" />
+				<combo key="railway:signal:humping:form"
+					text="Signal form"
+					de.text="Anzeigeart"
+					values="light,semaphore"
+					display_values="Lichtsignal,Formsignal"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:humping:states"
+					value="ra6;ra7;ra8;ra9" />
+				<combo key="railway:signal:humping:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					display_values="Mastbauform,Zwergsignal"
+					default=""
+					delete_if_empty="true" />
+			</item>
 			<separator />
 			<item name="Richtungsanzeiger" icon="de:route.png" type="node">
 				<label text="Richtungsanzeiger" />
