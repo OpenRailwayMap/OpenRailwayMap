@@ -3776,6 +3776,35 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
+			<item name="Haltepunkttafel" icon="de:station_distant.png" type="node">
+				<label text="Haltepunkttafel" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:station_distant:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:station_distant"
+					value="ne6" />
+				<key key="railway:signal:station_distant:form"
+					value="sign" />
+			</item>
 			<item name="Abfahrtssignal" icon="de:departure.png" type="node">
 				<label text="Abfahrtssignal" />
 				<space />
