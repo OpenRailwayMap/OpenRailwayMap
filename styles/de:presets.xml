@@ -830,13 +830,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Gemischt,Personenverkehr,Güterverkehr"
 					default=""
 					delete_if_empty="true" />
-				<combo key="service"
-					text="Track service"
-					de.text="Gleisfunktion"
-					values="yard,siding,crossover, "
-					display_values="Abstellgleis,Ausweichgleis,Überleitgleis,Haupt-/Streckengleis"
-					default=""
-					delete_if_empty="true" />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value="spur" display_value="Anschlussgleis" short_description="Meist kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
+				</combo>
 				<space />
 				<check key="lit"
 					text="Lit"
@@ -976,13 +976,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Gemischt,Güterverkehr,Personenverkehr"
 					default="passenger"
 					delete_if_empty="true" />
-				<combo key="service"
-					text="Track service"
-					de.text="Gleisfunktion"
-					values="yard,siding,crossover, "
-					display_values="Abstellgleis,Ausweichgleis,Überleitgleis,Haupt-/Streckengleis"
-					default=""
-					delete_if_empty="true" />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
+				</combo>
 				<space />
 				<check key="lit"
 					text="Lit"
@@ -1100,14 +1099,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<space />
-				<combo key="service"
-					text="Track service"
-					de.text="Gleisfunktion"
-					values="yard,siding,crossover, "
-					display_values="Abstellgleis,Ausweichgleis,Überleitgleis,Haupt-/Streckengleis"
-					default=""
-					delete_if_empty="true" />
-				<space />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
+				</combo>
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
