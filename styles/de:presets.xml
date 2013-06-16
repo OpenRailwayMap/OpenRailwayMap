@@ -121,7 +121,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -251,7 +251,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -371,7 +371,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -486,7 +486,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -611,7 +611,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -764,7 +764,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default=""
 					delete_if_empty="true" />
@@ -909,7 +909,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -1032,7 +1032,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="600,610,500,381"
+					values="610,600,500,381"
 					display_values="610mm,600mm,500mm,381mm"
 					default=""
 					delete_if_empty="true" />
@@ -1170,8 +1170,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
-					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600"
+					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm"
 					default="1435"
 					delete_if_empty="true" />
 				<check key="railway:ballastless"
@@ -1292,7 +1292,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -1316,6 +1316,131 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Operator (e.g. 'Rheinbahn')"
 					de.text="Betreiber (z.B. 'Rheinbahn')"
 					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Stadt-/Schnellbahngleis" icon="light-rail.png" type="way">
+				<label text="Stadtbahnen und straßenbahnähnliche Untergrund- oder Überlandbahnen. Unterscheiden sich meist durch ein anderes Stromsystem, eigene Signaltechnik oder einen speziellen Fuhrpark (z.B. S-Bahnen Hamburg und Berlin, Hamburger Hochbahn) und sind meist völlig vom restlichen Straßenverkehr getrennt. Jedes Gleis wird einzeln erfasst." />
+				<space />
+				<key key="railway"
+					value="light_rail" />
+				<text key="ref"
+					text="Line ref"
+					de.text="Streckennummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:traffic_mode"
+					value="passenger" />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
+				</combo>
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="PZB"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="LZB"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+				</combo>
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,signals,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,Signalanzeige,keine" />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="0,16.7,16,67,50,60,25"
+					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750"
+					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm"
+					default="1435"
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z.B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Zeitpunkt der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'Rheinbahn')"
+					de.text="Betreiber (z.B. 'Rheinbahn')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
 					delete_if_empty="true" />
 			</item>
 			<separator />
@@ -1421,7 +1546,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -1567,7 +1692,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -1713,7 +1838,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -1864,7 +1989,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
@@ -2015,7 +2140,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,600,610,500,381"
+					values="1435,1676,1672,1668,1665,1600,1524,1520,1100,1067,1050,1000,914,900,891,800,762,760,750,610,600,500,381"
 					display_values="1435mm (Normalspur),1676mm (Indische Breitspur),1672mm (Kastilische Spur),1668mm (Iberische Breitspur),1665mm (Portugiesische Spur),1600mm (Irische Spur),1524mm (Russische Breitspur),1520mm (Russische Breitspur),1100mm,1067mm (Kapspur),1050mm,1000mm (Meterspur),914mm,900mm,891mm (Schwedische Schmalspur),800mm,762mm (Bosnische Spur),760mm (Bosnische Spur),750mm,610mm,600mm,500mm,381mm"
 					default="1435"
 					delete_if_empty="true" />
