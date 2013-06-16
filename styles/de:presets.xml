@@ -677,9 +677,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<space />
-				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptstrecke" short_description="Eine Hauptstrecke, meist doppelgleisig, elektrifiziert, befahren von Zügen mit höheren Geschwindigkeiten und einer hohen Zugdichte." />
-					<list_entry value="branch" display_value="Nebenstrecke" short_description="Eine Neben- oder Zweigstrecke, oft nur eingleisig oder nicht elektrifiziert, befahren von langsameren Zügen und mit einer geringeren Zugdichte." />
+				<combo key="usage" text="Usage (leave empty if main track or line)" de.text="Nutzung (leer lassen bei Strecken- und Hauptgleisen)" default="" delete_if_empty="true">
+					<list_entry value="branch" display_value="Reguläre Strecke" short_description="Eine Schmalspurbahn, auf der Regulärer Personen- und/oder Güterverkehr stattfindet." />
 					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
 					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
 					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z.B. Museumsstrecken oder Draisinenbahnen." />
@@ -692,6 +691,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Gemischt,Personenverkehr,Güterverkehr"
 					default=""
 					delete_if_empty="true" />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value="spur" display_value="Anschlussgleis" short_description="Meist kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
+				</combo>
 				<space />
 				<check key="lit"
 					text="Lit"
