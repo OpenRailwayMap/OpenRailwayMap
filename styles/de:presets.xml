@@ -4930,6 +4930,27 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default="off"
 				delete_if_empty="true" />
 		</item>
+		<item name="Fahrkartenschalter" icon="ticketshop.png" type="node">
+			<label text="Fahrkartenschalter" />
+			<space />
+			<key key="shop"
+				value="ticket" />
+			<text key="operator"
+				text="Operator (e.g. 'Deutsche Bahn')"
+				de.text="Betreiber (z.B. 'Deutsche Bahn')"
+				default=""
+				delete_if_empty="true" />
+			<text key="name"
+				text="Name (e.g. 'Reisezentrum')"
+				de.text="Name (z.B. 'Reisezentrum')"
+				default=""
+				delete_if_empty="true" />
+			<text key="opening_hours"
+				text="Opening hours"
+				de.text="Öffnungszeiten"
+				default=""
+				delete_if_empty="true" />
+		</item>
 		<item name="U-Bahn-Zugang" icon="landuse.png" type="node">
 			<label text="U-Bahn-Zugang" />
 			<key key="railway"
