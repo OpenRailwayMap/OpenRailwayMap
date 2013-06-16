@@ -4207,6 +4207,56 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:station_distant:form"
 					value="sign" />
 			</item>
+			<item name="Schneepflugtafel" icon="de:snowplow.png" type="node">
+				<label text="Schneepflugtafel" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:snowplow:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:snowplow"
+					value="ne7" />
+				<combo key="railway:signal:snowplow"
+					text="Order"
+					de.text="Anweisung"
+					values="db:ne7,dr:so7a,dr:so7b"
+					default=""
+					display_values="Ne 7 (ex-DB),So 7a - Heben (ex-DR),So 7b - Senken (ex-DR)"
+					delete_if_empty="true" />
+				<key key="railway:signal:snowplow:form"
+					value="sign" />
+				<combo key="railway:signal:snowplow:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					default=""
+					display_values="Mastbauform,Zwergsignal"
+					delete_if_empty="true" />
+				<combo key="railway:signal:snowplow:order"
+					text="Order"
+					de.text="Anweisung"
+					values="up,down"
+					default=""
+					display_values="Heben,Senken"
+					delete_if_empty="true" />
+			</item>
 			<item name="Abfahrtssignal" icon="de:departure.png" type="node">
 				<label text="Abfahrtssignal" />
 				<space />
