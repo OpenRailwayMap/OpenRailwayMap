@@ -4741,7 +4741,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					type="way" />
 			</roles>
 		</item>
-		<item name="Bahnübergang" icon="de:crossing.png" type="node,closedway">
+		<item name="Bahnübergang" icon="de:crossing.png" type="node">
 			<label text="Bahnübergang" />
 			<space />
 			<key key="railway"
