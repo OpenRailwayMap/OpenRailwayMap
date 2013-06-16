@@ -3766,6 +3766,53 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
+			<item name="Stumpfgleis- und Frühhaltanzeiger" icon="de:short-route.png" type="node">
+				<label text="Stumpfgleis- und Frühhaltanzeiger" />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:short_route:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:signal:short_route"
+					text="Type of signal"
+					de.text="Signaltyp"
+					values="zs13,dr:zs6,dr:zs106"
+					display_values="Zs 13,Zs 6 (Lichtsignal ex-DR),Zs 106 (Tafel ex-DR)"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:short_route:form"
+					text="Signal form"
+					de.text="Anzeigeart"
+					values="light,sign"
+					display_values="Lichtsignal,Tafel"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:short_route:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					default=""
+					display_values="Mastbauform,Zwergsignal"
+					delete_if_empty="true" />
+			</item>
 			<separator />
 			<item name="Bü-Überwachungssignal" icon="de:crossing-signal.png" type="node">
 				<label text="Bü-Überwachungssignal" />
