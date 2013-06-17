@@ -3262,7 +3262,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
-					values="forward,backward"
+					values="forward,backward,both"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
 					delete_if_empty="true" />
@@ -4686,7 +4686,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
-					values="forward,backward"
+					values="forward,backward,both"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
 					delete_if_empty="true" />
