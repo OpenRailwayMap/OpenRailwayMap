@@ -5699,10 +5699,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway"
 				value="isolated_track_section" />
 		</item>
-		<item name="Eigentumswechsel" icon="ownerchange.png" type="node">
-			<label text="Eigentumswechsel der Infrastruktur" />
+		<item name="Grenzpunkt" icon="ownerchange.png" type="node">
+			<label text="Eigentumswechsel der Infrastruktur an Privatbahnanschlüssen und Landesgrenzen" />
 			<key key="railway"
 				value="owner_change" />
+			<space />
+			<label text="Manuell sind noch folgende Tags zu ergänzen:" />
+			<label text="- railway:name:(Name Betreiber 1)=(Name)" />
+			<label text="- railway:name:(Name Betreiber 2)=(Name)" />
+			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
+			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
 		</item>
 		<item name="Fernsprecher" icon="de:phone.png" type="node">
 			<label text="Fernsprecher" />
