@@ -6058,12 +6058,35 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway"
 					value="pit" />
 			</item>
-			<item name="Lokschuppen" icon="engine-shed.png" type="closedway">
+			<item name="Lokschuppen" icon="engine-shed.png" type="node,closedway">
 				<label text="Lokschuppen" />
 				<key key="railway"
 					value="engine_shed" />
-				<key key="building"
-					value="yes" />
+				<check key="building"
+					text="Building"
+					de.text="Gebäude"
+					default="off"
+					delete_if_empty="true" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Werkstatt" icon="workshop.png" type="node,closedway">
+				<label text="Werkstatt" />
+				<key key="railway"
+					value="workshop" />
+				<check key="building"
+					text="Building"
+					de.text="Gebäude"
+					default="off"
+					delete_if_empty="true" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
 			</item>
 		</group>
 		<group name="Verladeeinrichtungen" icon="loading.png">
