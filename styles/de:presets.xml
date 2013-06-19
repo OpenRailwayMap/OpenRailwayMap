@@ -51,8 +51,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
-					text="Highspeed traffic"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200km/h)"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
 				<space />
@@ -186,8 +186,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
-					text="Highspeed traffic"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200km/h)"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
 				<space />
@@ -546,8 +546,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
-					text="Highspeed traffic"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200km/h)"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
 				<space />
@@ -1481,8 +1481,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
-					text="Highspeed traffic"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200km/h)"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
 				<space />
@@ -1627,8 +1627,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
-					text="Highspeed traffic"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200km/h)"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
 				<space />
@@ -1773,8 +1773,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
-					text="Highspeed traffic"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200km/h)"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
 				<space />
@@ -1924,8 +1924,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
-					text="Highspeed traffic"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200km/h)"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
 				<space />
@@ -2075,8 +2075,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
-					text="Highspeed traffic"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200km/h)"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
 				<space />
@@ -2282,6 +2282,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Links,Rechts"
 					default=""
 					delete_if_empty="true" />
+				<text key="railway:radius"
+					text="Switch radius (m)"
+					de.text="Weichenradius (m)"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:maxspeed:straight"
+					text="Maxspeed in straight direction (km/h)"
+					de.text="Geschwindigkeit auf dem geraden Zweig (km/h)"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:maxspeed:diverging"
+					text="Maxspeed in diverging direction (km/h)"
+					de.text="Geschwindigkeit auf dem Abzweig (km/h)"
+					default=""
+					delete_if_empty="true" />
 			</item>
 			<item name="Kreuzung" icon="flat-crossing.png" type="node">
 				<label text="Kreuzung" />
@@ -2330,6 +2345,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		<group name="Signale" icon="signals.png">
 			<item name="Ks-Vorsignal" icon="de:ks-distant.png" type="node">
 				<label text="Ks-Vorsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2387,6 +2403,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Ks-Mehrabschnittssignal" icon="de:ks-combined.png" type="node">
 				<label text="Ks-Mehrabschnittssignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2472,6 +2489,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Ks-Hauptsignal" icon="de:ks-main.png" type="node">
 				<label text="Ks-Hauptsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2546,6 +2564,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Sv-Signal" icon="de:sv.png" type="node">
 				<label text="Sv-Signal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2628,6 +2647,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Hl-Kombinationssignal" icon="de:hl-combined.png" type="node">
 				<label text="Hl-Kombinationssignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2707,6 +2727,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Hl-Hauptsignal" icon="de:hl-main.png" type="node">
 				<label text="Hl-Hauptsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2786,6 +2807,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Hl-Vorsignal" icon="de:hl-distant.png" type="node">
 				<label text="Hl-Vorsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2843,6 +2865,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Sk-Kombinationssignal" icon="de:sk-combined.png" type="node">
 				<label text="Sk-Kombinationssignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2918,6 +2941,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Sk-Hauptsignal" icon="de:sk-main.png" type="node">
 				<label text="Sk-Hauptsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2991,6 +3015,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Sk-Vorsignal" icon="de:sk-distant.png" type="node">
 				<label text="Sk-Vorsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3049,6 +3074,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Hp-Form-Hauptsignal" icon="de:hp-semaphore.png" type="node">
 				<label text="Hp-Form-Hauptsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3121,6 +3147,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Hp-Licht-Hauptsignal" icon="de:hp-light.png" type="node">
 				<label text="Hp-Licht-Hauptsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3200,6 +3227,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Trapeztafel" icon="de:ne1.png" type="node">
 				<label text="Trapeztafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3239,6 +3267,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Fahrtanzeiger" icon="de:main-repeated.png" type="node">
 				<label text="Fahrtanzeiger" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3283,6 +3312,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Vr-Form-Vorsignal" icon="de:vr-semaphore.png" type="node">
 				<label text="Vr-Form-Vorsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3355,6 +3385,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Vr-Licht-Vorsignal" icon="de:vr-light.png" type="node">
 				<label text="Vr-Form-Vorsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3420,6 +3451,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Vorsignaltafel" icon="de:vr-sign.png" type="node">
 				<label text="Vorsignaltafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3460,6 +3492,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Kreuztafel" icon="de:so106.png" type="node">
 				<label text="Kreuztafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3491,6 +3524,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Schutzhaltsignal" icon="de:sh.png" type="node">
 				<label text="Schutzhaltsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3547,6 +3581,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Schutzhalttafel" icon="de:sh2.png" type="node">
 				<label text="Schutzhalttafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3584,6 +3619,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Haltvorscheibe" icon="de:sh-distant.png" type="node">
 				<label text="Haltvorscheibe" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3626,6 +3662,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Rangierhalttafel" icon="de:ra10.png" type="node">
 				<label text="Rangierhalttafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3656,6 +3693,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Rangierhaltsignal" icon="de:ra11.png" type="node">
 				<label text="Rangierhaltsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3698,6 +3736,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Abdrücksignal" icon="de:humping.png" type="node">
 				<label text="Abdrücksignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3743,6 +3782,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Richtungsanzeiger" icon="de:route.png" type="node">
 				<label text="Richtungsanzeiger" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3783,6 +3823,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Richtungsanzeiger-Ankündigung" icon="de:route-distant.png" type="node">
 				<label text="Richtungsanzeiger-Ankündigung" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3823,6 +3864,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Gleiswechselanzeiger" icon="de:zs6.png" type="node">
 				<label text="Gleiswechselanzeiger" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3860,6 +3902,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Falschfahrt-Auftragssignal / Linksfahrtersatzsignal" icon="de:zs8.png" type="node">
 				<label text="Falschfahrt-Auftragssignal / Linksfahrtersatzsignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3898,6 +3941,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Geschwindigkeitsanzeiger" icon="de:maxspeed.png" type="node">
 				<label text="Geschwindigkeitsanzeiger" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -3955,6 +3999,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Geschwindigkeitsvoranzeiger" icon="de:maxspeed-distant.png" type="node">
 				<label text="Geschwindigkeitsvoranzeiger" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4009,6 +4054,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Stumpfgleis- und Frühhaltanzeiger" icon="de:short-route.png" type="node">
 				<label text="Stumpfgleis- und Frühhaltanzeiger" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4057,6 +4103,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Bü-Überwachungssignal" icon="de:crossing-signal.png" type="node">
 				<label text="Bü-Überwachungssignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4109,6 +4156,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Bü-Überwachungssignal erwarten" icon="de:bue2.png" type="node">
 				<label text="Bü-Überwachungssignal erwarten" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4154,6 +4202,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Einschaltkontakt Bahnübergang" icon="de:bue3.png" type="node">
 				<label text="Einschaltkontakt Bahnübergang" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4199,6 +4248,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Pfeiftafel" icon="de:whistle.png" type="node">
 				<label text="Pfeiftafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4244,6 +4294,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Läutetafel" icon="de:ring.png" type="node">
 				<label text="Läutetafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4273,6 +4324,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Bü-Tafel" icon="de:crossing-info.png" type="node">
 				<label text="Bü-Tafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4319,6 +4371,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Bü-Ankündigungstafel" icon="de:crossing-hint.png" type="node">
 				<label text="Bü-Ankündigungstafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4366,6 +4419,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Überwachungssignal Rückfallweiche" icon="de:resetting-switch.png" type="node">
 				<label text="Überwachungssignal Rückfallweiche" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4405,6 +4459,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Ankündigung Überwachungssignal Rückfallweiche" icon="de:resetting-switch-distant.png" type="node">
 				<label text="Ankündigung Überwachungssignal Rückfallweiche" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4443,6 +4498,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Fahrleitungssignal" icon="de:electricity.png" type="node">
 				<label text="Fahrleitungssignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4495,6 +4551,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Zugfunk-Kanalhinweis" icon="de:radio.png" type="node">
 				<label text="Zugfunk-Kanalhinweis" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4517,6 +4574,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Haltetafel" icon="de:stop.png" type="node">
 				<label text="Haltetafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4558,6 +4616,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Haltepunkttafel" icon="de:station_distant.png" type="node">
 				<label text="Haltepunkttafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4587,6 +4646,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Schneepflugtafel" icon="de:snowplow.png" type="node">
 				<label text="Schneepflugtafel" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4637,6 +4697,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Abfahrtssignal" icon="de:departure.png" type="node">
 				<label text="Abfahrtssignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4674,6 +4735,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Bremsprobesignal" icon="de:brake-test.png" type="node">
 				<label text="Bremsprobesignal" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4705,6 +4767,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Grenzzeichen" icon="de:fouling-point.png" type="node">
 				<label text="Grenzzeichen" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -4775,6 +4838,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		<group name="Betriebsstellen" icon="facilities.png">
 			<item name="Bahnhof" icon="station.png" type="node">
 				<label text="Bahnhof" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="station" />
@@ -4849,6 +4913,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Haltepunkt/Haltestelle" icon="halt.png" type="node">
 				<label text="Haltepunkt/Haltestelle" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="halt" />
@@ -4923,6 +4988,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Straßenbahnhaltestelle" icon="tramstop.png" type="node">
 				<label text="Straßenbahnhaltestelle" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="tram_stop" />
@@ -4980,6 +5046,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node">
 				<label text="Güterbahnhof/Rangierbahnhof" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="yard" />
@@ -5020,6 +5087,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Betriebsbahnhof" icon="service-station.png" type="node">
 				<label text="Betriebsbahnhof" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="service_station" />
@@ -5058,8 +5126,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Abzweig" icon="junction.png" type="node">
+			<item name="Abzweig, Anst, Awanst" icon="junction.png" type="node">
 				<label text="Abzweig, Ausweichanschlusstelle oder Ausweichanschlusstelle" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="junction" />
@@ -5096,6 +5165,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Überleitstelle" icon="crossover.png" type="node">
 				<label text="Überleitstelle" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="crossover" />
@@ -5132,6 +5202,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Bahnhofsteil, Blockstelle, Deckungsstelle" icon="site.png" type="node">
 				<label text="Bahnhofsteil, Blockstelle, Deckungsstelle" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="site" />
@@ -5169,6 +5240,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<separator />
 			<item name="Halteposition" icon="stop.png" type="node">
 				<label text="Halteposition" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<combo key="public_transport"
 					text="Public transport?"
@@ -5245,8 +5317,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Betriebsstelle" icon="facility.png" type="relation">
-				<label text="Betriebsstelle" />
+			<item name="Bahngelände" icon="landuse.png" type="closedway">
+				<label text="Bahngelände" />
+				<key key="landuse"
+					value="railway" />
+			</item>
+			<item name="Betriebsstellenrelation" icon="facility.png" type="relation">
+				<label text="Betriebsstellenrelation" />
 				<space />
 				<key key="railway"
 					value="facility" />
@@ -5586,6 +5663,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="dazugehörigen Gleis eingetragen. Bei mehrgleisigen Strecken" />
 			<label text="every track gets a node with the tags."
 				de.text="bekommt jedes Gleis einen Punkt mit den Tags." />
+			<label text="They are only added to main tracks,"
+				de.text="Sie werden nur auf Streckengleisen erfasst," />
+			<label text="not sidings in stations."
+				de.text="nicht aber auf Nebengleisen." />
 			<key key="railway" value="milestone" />
 			<text key="railway:position"
 				text="Distance indication (rounded, e.g. '12.3'; km)"
