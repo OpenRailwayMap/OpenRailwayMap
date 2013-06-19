@@ -5421,6 +5421,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				</roles>
 			</item>
 		</group>
+		<separator />
 		<item name="VzG-Strecke" icon="tracks.png" type="relation">
 			<label text="VzG-Strecke" />
 			<space />
@@ -5602,6 +5603,103 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					member_expression="public_transport=platform" />
 			</roles>
 		</item>
+		<item name="Hauptlinie" icon="line.png" type="relation">
+			<label text="Hauptlinie" />
+			<space />
+			<key key="type"
+				value="route_master" />
+			<combo key="route_master"
+				text="Type of transportation"
+				de.text="Verkehrsmittel"
+				values="train,light_rail,tram,subway"
+				display_values="Zug,Stadt-/Schnellbahn,Straßenbahn,U-Bahn"
+				default=""
+				delete_if_empty="true" />
+			<combo key="service" text="Zuggattung" default="" delete_if_empty="true">
+				<list_entry value="high_speed" display_value="Hochgeschwindigkeitszug" short_description="ICE, Thalys, TGV, Railjet" />
+				<list_entry value="long_distance" display_value="Reisezug" short_description="Eurocity, Intercity, D-Zug" />
+				<list_entry value="regional" display_value="Regionalzug" short_description="Regionalbahn, Regionalexpress" />
+				<list_entry value="commuter" display_value="Nahverkehrszug" short_description="S-Bahn, Straßenbahn, U-Bahn, Hochbahn" />
+				<list_entry value="car" display_value="Autoreisezug" short_description="Reisezug mit Automitnahme" />
+				<list_entry value="car_shuttle" display_value="Autozug" short_description="Kurzverbindungen mit Autotransport, die einen Ersatz oder eine Abkürung zu Straßen darstellen" />
+				<list_entry value="night" display_value="Nachtzug" short_description="Reisezug mit Schlafwagen, EuroNight, CityNightLine" />
+				<list_entry value="tourism" display_value="Touristische Züge" short_description="Meist historische Züge als Touristenattraktion" />
+			</combo>
+			<text key="name"
+				text="Name of line (e.g. 'RE 7 Krefeld Rhein-Münsterland-Express')"
+				de.text="Name der Linie (z.B. 'RE 7 Krefeld Rhein-Münsterland-Express')"
+				default=""
+				delete_if_empty="true" />
+			<text key="operator"
+				text="Operator"
+				de.text="Betreiber"
+				default=""
+				delete_if_empty="true" />
+			<text key="ref"
+				text="Line or train ref (e.g. 'RE 7')"
+				de.text="Linien- bzw. Zugnummer (z.B. 'RE 7')"
+				default=""
+				delete_if_empty="true" />
+			<text key="from"
+				text="Initial station"
+				de.text="Streckenanfang"
+				default=""
+				delete_if_empty="true" />
+			<text key="to"
+				text="Terminal station"
+				de.text="Streckenende"
+				default=""
+				delete_if_empty="true" />
+			<text key="wikipedia"
+				text="Wikipedia article in the format (Language):(Article)"
+				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+				default=""
+				delete_if_empty="true" />
+			<roles>
+				<role key=""
+					text="Tracks"
+					de.text="Streckengleise"
+					requisite="required"
+					type="way" />
+				<role key="stop"
+					text="Stop position"
+					de.text="Halteposition"
+					requisite="optional"
+					type="node"
+					member_expression="public_transport=stop_position" />
+				<role key="stop_exit_only"
+					text="Stop position (exit only)"
+					de.text="Halteposition (nur Ausstieg)"
+					requisite="optional"
+					type="node"
+					member_expression="public_transport=stop_position" />
+				<role key="stop_entry_only"
+					text="Stop position (entry only)"
+					de.text="Halteposition (nur Einstieg)"
+					requisite="optional"
+					type="node"
+					member_expression="public_transport=stop_position" />
+				<role key="platform"
+					text="Platform"
+					de.text="Bahnsteig"
+					requisite="optional"
+					type="way,closedway"
+					member_expression="public_transport=platform" />
+				<role key="platform_exit_only"
+					text="Platform (exit only)"
+					de.text="Bahnsteig (nur Ausstieg)"
+					requisite="optional"
+					type="way,closedway"
+					member_expression="public_transport=platform" />
+				<role key="platform_entry_only"
+					text="Platform (entry only)"
+					de.text="Bahnsteig (nur Einstieg)"
+					requisite="optional"
+					type="way,closedway"
+					member_expression="public_transport=platform" />
+			</roles>
+		</item>
+		<separator />
 		<item name="Bahnübergang" icon="de:crossing.png" type="node">
 			<label text="Bahnübergang" />
 			<space />
