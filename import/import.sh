@@ -42,7 +42,7 @@ echo ""
 # pre-filter planet file
 echo "Filtering planet file"
 echo ""
-osmfilter temp.o5m --keep="railway= route=tracks route=railway route=train route=light_rail route=tram route=subway line=rail line=light_rail line=tram line=subway route_master=train route_master=light_rail route_master=tram route_master=subway" --out-osm >old-railways.osm
+osmfilter temp.o5m --keep="railway= route=tracks route=railway route=train route=light_rail route=tram route=subway route_master=train route_master=light_rail route_master=tram route_master=subway shop=ticket vending=public_transport_tickets" --out-osm >old-railways.osm
 rm temp.o5m
 echo ""
 
@@ -61,8 +61,6 @@ echo "Finished."
 echo "Create MapCSS style"
 echo ""
 cd /home/www/sites/194.245.35.149/site/orm/styles
-rm style.js
-rm style.png
 python mapcss_converter.py --mapcss style.mapcss --icons-path .
 echo ""
 echo "Finished."
