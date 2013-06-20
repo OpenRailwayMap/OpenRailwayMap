@@ -1147,13 +1147,13 @@
 	}
 
 
-	// checks if given id-parameter is valid
+	// checks if given osm id is valid
 	function isValidId($id)
 	{
 		if (!$id)
 			return false;
 
-		if (!ctype_digit(substr($id, 1)))
+		if (!ctype_digit($id))
 		{
 			reportError("Given id contains not-numeric characters: ".$id);
 			return false;
@@ -1384,5 +1384,38 @@
 			return true;
 
 		return false;
+	}
+
+	// returns the full name of a facility by a $ref
+	function getFullName($ref)
+	{
+		global $db, $prefix;
+
+		$query = "SELECT tags->'name' AS name
+					FROM ".$prefix."_point
+					WHERE tags->'railway:ref'='".$ref."';";
+
+		$connection = connectToDatabase($db);
+		if (!$connection)
+			return false;
+		$response = requestDetails($query, $connection);
+
+		pg_close($connection);
+
+		if ($response[0]['name'])
+			return $response[0]['name'];
+		else
+			return false;
+	}
+
+	// checks if given railroad line ref is in valid format
+	function isValidRef($ref)
+	{
+		if (!$ref)
+			return false;
+		if (!ctype_alnum($ref))
+			return false;
+
+		return true;
 	}
 ?>
