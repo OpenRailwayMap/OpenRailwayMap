@@ -59,6 +59,8 @@ rm changes.osc
 echo "Update MapCSS style"
 echo ""
 cd /home/www/sites/194.245.35.149/site/orm/styles
+rm style.js
+rm style.png
 python mapcss_converter.py --mapcss style.mapcss --icons-path .
 echo ""
 echo "Finished."
