@@ -61,6 +61,6 @@ echo "Finished."
 echo "Create MapCSS style"
 echo ""
 cd /home/www/sites/194.245.35.149/site/orm/styles
-python mapcss_converter.py --mapcss style.mapcss --icons icons
+python mapcss_converter.py --mapcss style.mapcss --icons-path .
 echo ""
 echo "Finished."

@@ -707,3 +707,32 @@ area|z1-11[railway=halt]
 	text-halo-radius: 1;
 	text-halo-color: white;
 }
+
+/***********/
+/* signals */
+/***********/
+node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semaphore]
+{
+	z-index: 10000;
+	text: "ref";
+	text-position: auto;
+	text-color: black;
+	text-halo-radius: 0.5;
+	text-halo-color: #CCCCCC;
+	icon-image: "icons/de:hp-semaphore.png";
+	icon-width: 16;
+	icon-height: 16;
+}
+
+node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light]
+{
+	z-index: 10000;
+	text: "ref";
+	text-position: auto;
+	text-color: black;
+	text-halo-radius: 0.5;
+	text-halo-color: #CCCCCC;
+	icon-image: "icons/de:hp-light.png";
+	icon-width: 16;
+	icon-height: 16;
+}
