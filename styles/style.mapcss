@@ -38,417 +38,167 @@ node|z1-20
 	z-index: -1000;
 }
 
+/***********/
+/* bridges */
+/***********/
+way[bridge=yes]::bridges
+{
+	z-index: 1;
+    casing-width: 3.5; 
+	casing-color: #797979;
+    linecap: butt;
+}
+
+/***********/
+/* tunnels */
+/***********/
+way[tunnel=yes]::tunnels
+{
+	z-index: 4000;
+    width: 6; 
+	color: white;
+	opacity: 0.6;
+    linecap: butt;
+}
+
 /********************************************/
 /* simple railways without service or usage */
 /********************************************/
-way[railway=rail][!bridge][!usage][!service], way[railway=rail][bridge=no][!usage][!service], way[railway=rail][!tunnel][!usage][!service], way[railway=rail][tunnel=no][!usage][!service]
+way[railway=rail][!usage][!service], way[railway=rail][!usage][!service], way[railway=rail][!usage][!service], way[railway=rail][!usage][!service]
 {
 	z-index: 400;
     color: black;
     width: 2.5;
-    linecap: butt;
-}
-
-way[railway=rail][bridge=yes][!usage][!service]
-{
-	z-index: 400;
-    color: black;
-    width: 2.5;
-    linecap: butt;
-    casing-color: #797979;
-	casing-width: 1.5;
-}
-
-way[railway=rail][tunnel=yes][!usage][!service]
-{
-	z-index: 400;
-    color: black;
-	opacity: 0.5;
-    width: 2.5;
-    linecap: butt;
-    casing-color: black;
-	casing-width: 1.5;
+    linecap: round;
 }
 
 /***********************************/
 /* sidings without specified usage */
 /***********************************/
-way[railway=rail][!bridge][!usage][service=siding], way[railway=rail][bridge=no][!usage][service=siding], way[railway=rail][!tunnel][!usage][service=siding], way[railway=rail][tunnel=no][!usage][service=siding]
+way[railway=rail][!usage][service=siding], way[railway=rail][!usage][service=siding], way[railway=rail][!usage][service=siding], way[railway=rail][!usage][service=siding]
 {
 	z-index: 870;
     color: black;
     width: 2;
-    linecap: butt;
+    linecap: round;
 	text: "railway:track_ref";
 	text-position: line;
 	text-color: gray;
 	text-halo-radius: 0.5;
 	text-halo-color: #CCCCCC;
-}
-
-way[railway=rail][bridge=yes][!usage][service=siding]
-{
-	z-index: 870;
-    color: black;
-    width: 2;
-    linecap: butt;
-	text: "railway:track_ref";
-	text-position: line;
-	text-color: gray;
-	text-halo-radius: 0.5;
-	text-halo-color: #CCCCCC;
-    casing-color: #797979;
-	casing-width: 1;
-}
-
-way[railway=rail][tunnel=yes][!usage][service=siding]
-{
-	z-index: 870;
-    color: black;
-	opacity: 0.5;
-    width: 2;
-    linecap: butt;
-	text: "railway:track_ref";
-	text-position: line;
-	text-color: gray;
-	text-halo-radius: 0.5;
-	text-halo-color: #CCCCCC;
-    casing-color: black;
-	casing-width: 1;
 }
 
 /***************************************/
 /* yard tracks without specified usage */
 /***************************************/
-way[railway=rail][!bridge][!usage][service=yard], way[railway=rail][bridge=no][!usage][service=yard], way[railway=rail][!tunnel][!usage][service=yard], way[railway=rail][tunnel=no][!usage][service=yard]
+way[railway=rail][!usage][service=yard], way[railway=rail][!usage][service=yard], way[railway=rail][!usage][service=yard], way[railway=rail][!usage][service=yard]
 {
 	z-index: 860;
     color: black;
     width: 1.5;
-    linecap: butt;
+    linecap: round;
 	text: "railway:track_ref";
 	text-position: line;
 	text-color: gray;
 	text-halo-radius: 0.5;
 	text-halo-color: #CCCCCC;
-}
-
-way[railway=rail][bridge=yes][!usage][service=yard]
-{
-	z-index: 860;
-    color: black;
-    width: 1.5;
-    linecap: butt;
-	text: "railway:track_ref";
-	text-position: line;
-	text-color: gray;
-	text-halo-radius: 0.5;
-	text-halo-color: #CCCCCC;
-    casing-color: #797979;
-	casing-width: 1;
-}
-
-way[railway=rail][tunnel=yes][!usage][service=yard]
-{
-	z-index: 860;
-    color: black;
-	opacity: 0.5;
-    width: 1.5;
-    linecap: butt;
-	text: "railway:track_ref";
-	text-position: line;
-	text-color: gray;
-	text-halo-radius: 0.5;
-	text-halo-color: #CCCCCC;
-    casing-color: black;
-	casing-width: 1;
 }
 
 /***************************************/
 /* spur tracks without specified usage */
 /***************************************/
-way[railway=rail][!bridge][!usage][service=spur], way[railway=rail][bridge=no][!usage][service=spur], way[railway=rail][!tunnel][!usage][service=spur], way[railway=rail][tunnel=no][!usage][service=spur]
+way[railway=rail][!usage][service=spur], way[railway=rail][!usage][service=spur], way[railway=rail][!usage][service=spur], way[railway=rail][!usage][service=spur]
 {
 	z-index: 880;
     color: #87491D;
     width: 3;
-    linecap: butt;
+    linecap: round;
 	text-position: line;
-}
-
-way[railway=rail][bridge=yes][!usage][service=spur]
-{
-	z-index: 880;
-    color: #87491D;
-    width: 3;
-    linecap: butt;
-	text-position: line;
-    casing-color: #797979;
-	casing-width: 1;
-}
-
-way[railway=rail][tunnel=yes][!usage][service=spur]
-{
-	z-index: 880;
-    color: #87491D;
-	opacity: 0.5;
-    width: 3;
-    linecap: butt;
-	text-position: line;
-    casing-color: #87491D;
-	casing-width: 1;
 }
 
 /********************************************/
 /* crossover tracks without specified usage */
 /********************************************/
-way[railway=rail][!bridge][!usage][service=crossover], way[railway=rail][bridge=no][!usage][service=crossover], way[railway=rail][!tunnel][!usage][service=crossover], way[railway=rail][tunnel=no][!usage][service=crossover]
+way[railway=rail][!usage][service=crossover], way[railway=rail][!usage][service=crossover], way[railway=rail][!usage][service=crossover], way[railway=rail][!usage][service=crossover]
 {
 	z-index: 300;
     color: black;
     width: 1;
-    linecap: butt;
-}
-
-way[railway=rail][bridge=yes][!usage][service=crossover]
-{
-	z-index: 300;
-    color: black;
-    width: 1;
-    linecap: butt;
-    casing-color: #797979;
-	casing-width: 1;
-}
-
-way[railway=rail][tunnel=yes][!usage][service=crossover]
-{
-	z-index: 300;
-    color: black;
-	opacity: 0.5;
-    width: 1;
-    linecap: butt;
-    casing-color: black;
-	casing-width: 1;
+    linecap: round;
 }
 
 /*********************************************/
 /* branch railways, service tag not rendered */
 /*********************************************/
-way[railway=rail][!bridge][usage=branch], way[railway=rail][bridge=no][usage=branch], way[railway=rail][!tunnel][usage=branch], way[railway=rail][tunnel=no][usage=branch]
+way[railway=rail][usage=branch], way[railway=rail][usage=branch], way[railway=rail][usage=branch], way[railway=rail][usage=branch]
 {
 	z-index: 1000;
     color: #DACA00;
     width: 3.5;
-    linecap: butt;
-}
-
-way[railway=rail][bridge=yes][usage=branch]
-{
-	z-index: 1000;
-    color: #DACA00;
-    width: 3.5;
-    linecap: butt;
-    casing-color: #797979;
-	casing-width: 1.5;
-}
-
-way[railway=rail][tunnel=yes][usage=branch]
-{
-	z-index: 1000;
-    color: #DACA00;
-	opacity: 0.5;
-    width: 3.5;
-    linecap: butt;
-    casing-color: #DACA00;
-	casing-width: 1.5;
+    linecap: round;
 }
 
 /*******************************************/
 /* main railways, service tag not rendered */
 /*******************************************/
-way[railway=rail][!bridge][usage=main], way[railway=rail][bridge=no][usage=main], way[railway=rail][!tunnel][usage=main], way[railway=rail][tunnel=no][usage=main]
+way[railway=rail][usage=main], way[railway=rail][usage=main], way[railway=rail][usage=main], way[railway=rail][usage=main]
 {
 	z-index: 1100;
     color: #DC7503;
     width: 3.5;
-    linecap: butt;
-}
-
-way[railway=rail][bridge=yes][usage=main]
-{
-	z-index: 1100;
-    color: #DC7503;
-    width: 3.5;
-    linecap: butt;
-    casing-color: #797979;
-	casing-width: 1.5;
-}
-
-way[railway=rail][tunnel=yes][usage=main]
-{
-	z-index: 1100;
-    color: #DC7503;
-	opacity: 0.5;
-    width: 3.5;
-    linecap: butt;
-    casing-color: #DC7503;
-	casing-width: 1.5;
+    linecap: round;
 }
 
 /*************************************************/
 /* highspeed  railways, service tag not rendered */
 /*************************************************/
-way[railway=rail][!bridge][usage=main][highspeed=yes], way[railway=rail][bridge=no][usage=main][highspeed=yes], way[railway=rail][!tunnel][usage=main][highspeed=yes], way[railway=rail][tunnel=no][usage=main][highspeed=yes]
+way[railway=rail][usage=main][highspeed=yes], way[railway=rail][usage=main][highspeed=yes], way[railway=rail][usage=main][highspeed=yes], way[railway=rail][usage=main][highspeed=yes]
 {
 	z-index: 2000;
     color: #ff0000;
     width: 3.5;
-    linecap: butt;
-}
-
-way[railway=rail][bridge=yes][usage=main][highspeed=yes]
-{
-	z-index: 2000;
-    color: #ff0000;
-    width: 3.5;
-    linecap: butt;
-    casing-color: #797979;
-	casing-width: 1.5;
-}
-
-way[railway=rail][tunnel=yes][usage=main][highspeed=yes]
-{
-	z-index: 2000;
-    color: #ff0000;
-	opacity: 0.5;
-    width: 3.5;
-    linecap: butt;
-    casing-color: #ff0000;
-	casing-width: 1.5;
+    linecap: round;
 }
 
 /********************************************/
 /* industrial  railways without service tag */
 /********************************************/
-way[railway=rail][!bridge][usage=industrial][!service], way[railway=rail][bridge=no][usage=industrial][!service], way[railway=rail][!tunnel][usage=industrial][!service], way[railway=rail][tunnel=no][usage=industrial][!service]
+way[railway=rail][usage=industrial][!service], way[railway=rail][usage=industrial][!service], way[railway=rail][usage=industrial][!service], way[railway=rail][usage=industrial][!service]
 {
 	z-index: 850;
     color: #87491D;
     width: 3;
-    linecap: butt;
-}
-
-way[railway=rail][bridge=yes][usage=industrial][!service]
-{
-	z-index: 850;
-    color: #87491D;
-    width: 3;
-    linecap: butt;
-    casing-color: #797979;
-	casing-width: 1.5;
-}
-
-way[railway=rail][tunnel=yes][usage=industrial][!service]
-{
-	z-index: 850;
-    color: #87491D;
-	opacity: 0.5;
-    width: 3;
-    linecap: butt;
-    casing-color: #87491D;
-	casing-width: 1.5;
+    linecap: round;
 }
 
 /**************************************************/
 /* industrial  railways with various service tags */
 /**************************************************/
-way[railway=rail][!bridge][usage=industrial][service=siding], way[railway=rail][!bridge][usage=industrial][service=spur], way[railway=rail][!bridge][usage=industrial][service=yard], way[railway=rail][!bridge][usage=industrial][service=crossover], way[railway=rail][bridge=no][usage=industrial][service=siding], way[railway=rail][bridge=no][usage=industrial][service=spur], way[railway=rail][bridge=no][usage=industrial][service=yard], way[railway=rail][bridge=no][usage=industrial][service=crossover], way[railway=rail][!tunnel][usage=industrial][service=siding], way[railway=rail][!tunnel][usage=industrial][service=spur], way[railway=rail][!tunnel][usage=industrial][service=yard], way[railway=rail][!tunnel][usage=industrial][service=crossover], way[railway=rail][tunnel=no][usage=industrial][service=siding], way[railway=rail][tunnel=no][usage=industrial][service=spur], way[railway=rail][tunnel=no][usage=industrial][service=yard], way[railway=rail][tunnel=no][usage=industrial][service=crossover]
+way[railway=rail][usage=industrial][service=siding], way[railway=rail][usage=industrial][service=spur], way[railway=rail][usage=industrial][service=yard], way[railway=rail][usage=industrial][service=crossover], way[railway=rail][usage=industrial][service=siding], way[railway=rail][usage=industrial][service=spur], way[railway=rail][usage=industrial][service=yard], way[railway=rail][usage=industrial][service=crossover], way[railway=rail][usage=industrial][service=siding], way[railway=rail][usage=industrial][service=spur], way[railway=rail][usage=industrial][service=yard], way[railway=rail][usage=industrial][service=crossover], way[railway=rail][usage=industrial][service=siding], way[railway=rail][usage=industrial][service=spur], way[railway=rail][usage=industrial][service=yard], way[railway=rail][usage=industrial][service=crossover]
 {
 	z-index: 850;
     color: #87491D;
     width: 2;
-    linecap: butt;
-}
-
-way[railway=rail][bridge=yes][usage=industrial][service=siding], way[railway=rail][bridge=yes][usage=industrial][service=spur], way[railway=rail][bridge=yes][usage=industrial][service=yard], way[railway=rail][bridge=yes][usage=industrial][service=crossover]
-{
-	z-index: 850;
-    color: #87491D;
-    width: 2;
-    linecap: butt;
-    casing-color: #797979;
-	casing-width: 1;
-}
-
-way[railway=rail][tunnel=yes][usage=industrial][service=siding], way[railway=rail][tunnel=yes][usage=industrial][service=spur], way[railway=rail][tunnel=yes][usage=industrial][service=yard], way[railway=rail][tunnel=yes][usage=industrial][service=crossover]
-{
-	z-index: 850;
-    color: #87491D;
-	opacity: 0.5;
-    width: 2;
-    linecap: butt;
-    casing-color: #87491D;
-	casing-width: 1;
+    linecap: round;
 }
 
 /********************/
 /* disused railways */
 /********************/
-way[railway=disused][!bridge], way[railway=disused][bridge=no], way[railway=disused][!tunnel], way[railway=disused][tunnel=no]
+way[railway=disused]
 {
 	z-index: 100;
 	color: #949494;
     width: 3;
     casing-color: #ADADAD;
 	casing-width: 0.5;
-    linecap: butt;
-}
-
-way[railway=disused][bridge=yes]
-{
-	z-index: 100;
-	color: #949494;
-    width: 3;
-    casing-color: #797979;
-	casing-width: 1;
-    linecap: butt;
-}
-
-way[railway=disused][tunnel=yes]
-{
-	z-index: 100;
-	color: #949494;
-	opacity: 0.5;
-    width: 3;
-    casing-color: #949494;
-	casing-width: 1;
-    linecap: butt;
+    linecap: round;
 }
 
 /***************/
 /* tram tracks */
 /***************/
-way[railway=tram][!bridge], way[railway=tram][bridge=no], way[railway=tram][!tunnel], way[railway=tram][tunnel=no]
-{
-	z-index: 1100;
-	color: white;
-    width: 1.5;
-    casing-color: #D40096;
-	casing-width: 1.5;
-    linecap: butt;
-}
-
-way[railway=tram][bridge=yes]
-{
-	z-index: 1100;
-	color: white;
-    width: 1.5;
-    casing-color: #797979;
-	casing-width: 1.5;
-    linecap: butt;
-}
-
-way[railway=tram][tunnel=yes]
+way[railway=tram]
 {
 	z-index: 1100;
 	color: white;
@@ -461,27 +211,7 @@ way[railway=tram][tunnel=yes]
 /*****************/
 /* subway tracks */
 /*****************/
-way[railway=subway][!bridge], way[railway=subway][bridge=no], way[railway=subway][!tunnel], way[railway=subway][tunnel=no]
-{
-	z-index: 1100;
-	color: white;
-    width: 2;
-    casing-color: #0300C3;
-	casing-width: 1.5;
-    linecap: butt;
-}
-
-way[railway=subway][bridge=yes]
-{
-	z-index: 1100;
-	color: white;
-    width: 2;
-    casing-color: #797979;
-	casing-width: 1.5;
-    linecap: butt;
-}
-
-way[railway=subway][tunnel=yes]
+way[railway=subway]
 {
 	z-index: 1100;
 	color: white;
@@ -494,27 +224,7 @@ way[railway=subway][tunnel=yes]
 /*********************/
 /* light rail tracks */
 /*********************/
-way[railway=light_rail][!bridge], way[railway=light_rail][bridge=no], way[railway=light_rail][!tunnel], way[railway=light_rail][tunnel=no]
-{
-	z-index: 1100;
-	color: white;
-    width: 2;
-    casing-color: #00BD14;
-	casing-width: 1.5;
-    linecap: butt;
-}
-
-way[railway=light_rail][bridge=yes]
-{
-	z-index: 1100;
-	color: white;
-    width: 2;
-    casing-color: #797979;
-	casing-width: 1.5;
-    linecap: butt;
-}
-
-way[railway=light_rail][tunnel=yes]
+way[railway=light_rail]
 {
 	z-index: 1100;
 	color: white;
