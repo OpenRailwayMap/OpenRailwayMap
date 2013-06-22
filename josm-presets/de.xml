@@ -2304,11 +2304,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway"
 					value="flat_crossing" />
 			</item>
-			<item name="Gleissperre" icon="de:derail.png" type="node">
+			<item name="Gleissperre" icon="de:deraill.png" type="node">
 				<label text="Gleissperre" />
 				<space />
 				<key key="railway"
 					value="derail" />
+				<check key="railway:local_operated"
+					text="Local operated"
+					de.text="Ortsbedient"
+					default="off"
+					delete_if_empty="true" />
 				<check key="railway:signal:minor:deactivated"
 					text="Out of order"
 					de.text="Außer Betrieb"
