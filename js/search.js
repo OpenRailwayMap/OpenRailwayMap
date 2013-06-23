@@ -6,7 +6,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
-function Search(map, box, bar, searchButton, clearButton, searchOption)
+function Search(map, box, bar, searchButton, clearButton)
 {
 	// clears the visible parts of a search
 	this.clear = function()
@@ -32,8 +32,6 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 	this.send = function()
 	{
 		var input = this.box.value;
-		var bounded = this.option.checked == true ? 1 : 0;
-		var bounds = getBounds();
 
 		// if nothing was entered
 		if (input.length == 0)
@@ -47,15 +45,15 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 		}
 
 		// if a new string was entered or other search type
-		if (input != this.request || bounded != this.bounded || ((bounds != this.bounds) && (!this.panned)))
+		if (input != this.request)
 		{
 			this.reset();
 		}
 
-		if ((bounded == 1) && (this.bar.innerHTML != ""))
+		if (this.bar.innerHTML != "")
 			return false;
 
-		if (input != this.request || this.excludeList != "" || bounded != this.bounded || bounds != this.bounds)
+		if (input != this.request || this.excludeList != "")
 		{
 			// show search results box
 			this.bar.className = "infoBar";
@@ -64,7 +62,6 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 			// show that search results are loaded
 			this.bar.innerHTML += "<div class=\"loadingMoreInfo\">"+loading+"</div>";
 			this.request = input;
-			this.bounded = bounded;
 			input = input.replace(/ /g, "+");
 
 			var handler = function(response)
@@ -72,7 +69,7 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 						self.showResults(response);
 					}
 
-			requestApi("proxy", "url=http://nominatim.openstreetmap.org/search/&format=xml&polygon=0&addressdetails=1&q="+input+"&accept-language="+params['lang']+"&exclude_place_ids="+this.excludeList+"&viewbox="+bounds[0]+","+bounds[3]+","+bounds[2]+","+bounds[1]+"&bounded="+this.bounded, handler);
+			requestApi("proxy", "url=http://nominatim.openstreetmap.org/search/&format=xml&polygon=0&addressdetails=1&q="+input+"&accept-language="+params['lang']+"&exclude_place_ids="+this.excludeList, handler);
 		}
 	}
 
@@ -113,7 +110,6 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 			for (var i = 0; i < placesList.length; i++)
 			{
 				var place = placesList[i];
-				var bbox = place.getAttribute('boundingbox');
 				var key = place.getAttribute('class');
 				var value = place.getAttribute('type');
 				var osmType = place.getAttribute('osm_type');
@@ -125,8 +121,7 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 				// display name
 				if (details.length > 1)
 				{
-					if (this.bounded == 0)
-						this.setExtent(lat, lon);
+					this.setExtent(lat, lon);
 					// translation of object types into user's language
 					var placeType = this.getTagTranslation(key, value);
 					var description = this.getDescription(details);
@@ -137,14 +132,13 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 						placeType = "";
 					else
 						placeType = "&nbsp;&nbsp;<i>"+placeType+"</i>";
-					var bounds = bbox.split(",");
 					if (this.even)
 						var even = "even";
 					else
 						var even = "odd";
 
 					searchclass = this;
-					this.bar.innerHTML += "<div class=\"resultEntry "+even+"\"><div onclick=\"searchclass.showResult("+bounds[2]+", "+bounds[0]+", "+bounds[3]+", "+bounds[1]+", "+lat+", "+lon+", "+id+", '"+osmType+"');\"><div class=\"resultCount\">"+this.resultCount+"</div><b>"+placeName+"</b>"+placeType+"<br /><dfn>"+description+"</dfn></div></div>";
+					this.bar.innerHTML += "<div class=\"resultEntry "+even+"\"><div onclick=\"searchclass.showResult("+lat+", "+lon+", "+id+", '"+osmType+"');\"><div class=\"resultCount\">"+this.resultCount+"</div><b>"+placeName+"</b>"+placeType+"<br /><dfn>"+description+"</dfn></div></div>";
 					this.showMarker(this.resultCount, bbox, lat, lon, id, osmType);
 					this.even = !this.even;
 					this.resultCount++;
@@ -153,17 +147,13 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 			this.excludeList = excludeList;
 
 			// set "more results" link
-			if (this.bounded == 0)
+			this.bar.innerHTML += "<div id=\"moreResults\"><center><b>"+translations['moreresults']+"</b></center></div>";
+			var self = this;
+			gEBI('moreResults').onclick = function()
 			{
-				this.bar.innerHTML += "<div id=\"moreResults\"><center><b>"+translations['moreresults']+"</b></center></div>";
-				var self = this;
-				gEBI('moreResults').onclick = function()
-				{
-					self.send();
-				}
+				self.send();
 			}
-			if (this.bounded == 0)
-				this.setBbox();
+			this.setBbox();
 		}
 		// if nothing was found
 		else
@@ -220,8 +210,6 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 					bottom = top;
 					top = tmp;
 				}
-				var bounds = new OpenLayers.Bounds(right, top, left, bottom).transform(wgs84, map.getProjectionObject());
-				map.zoomToExtent(bounds, false);
 				this.map.panTo(getMapLatLon(lat, lon));
 			}
 		setTimeout(zooming, 1500);
@@ -335,28 +323,14 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 				this.extent[3] = this.extent[1];
 				this.extent[1] = tmp;
 			}
-			var bounds = new OpenLayers.Bounds(this.extent[1], this.extent[0], this.extent[3], this.extent[2]).transform(wgs84, this.map.getProjectionObject());
-			this.map.zoomToExtent(bounds, true);
 			this.map.zoomOut();
 			this.map.zoomOut();
 		}
 	}
 
-	// sets bounded option
-	this.setBounded = function(value)
-	{
-		this.bounded = value;
-
-		if (this.bounded == 1)
-			this.option.checked = true;
-		else
-			this.option.checked = false;
-	}
-
 	this.resultClick = function(feature)
 	{
-		var bounds = feature.attributes['bbox'].split(",");
-		self.showResult(bounds[2], bounds[0], bounds[3], bounds[1], feature.attributes['lat'], feature.attributes['lon'], feature.attributes['id'], feature.attributes['type'])
+		self.showResult(feature.attributes['lat'], feature.attributes['lon'], feature.attributes['id'], feature.attributes['type'])
 	}
 
 
@@ -365,14 +339,11 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 	this.box = gEBI(box);
 	this.searchButton = gEBI(searchButton);
 	this.clearButton = gEBI(clearButton);
-	this.option = gEBI(searchOption);
 	this.bar = gEBI(bar);
 	this.request = "";
 	this.excludeList = "";
 	this.resultCount = 1;
-	this.bounded = 0;
 	this.even = false;
-	this.bounds = {};
 	this.extent = {};
 	this.panned = false;
 
@@ -387,7 +358,6 @@ function Search(map, box, bar, searchButton, clearButton, searchOption)
 		};
 
 	this.box.focus();
-	this.setBounded(params['bounded']);
 
 	// set up key event
 	this.box.onkeydown =

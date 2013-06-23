@@ -17,10 +17,10 @@ html,body
 	overflow-y: hidden;
 }
 
-/* label "OpenLinkMap" */
+/* page title */
 #header
 {
-	font-size: 19px;
+	font-size: 20px;
 	color: black;
 	padding-left: 5px;
 	position: relative;
@@ -426,6 +426,7 @@ noscript p
 	color: #3b4a8e;
 	font-size: 12px;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 .links:hover
@@ -437,9 +438,8 @@ noscript p
 /* last update */
 #info
 {
-	color: white;
-	font-size: 10px;
-	font-style: italic;
+	color: black;
+	font-size: 11px;
 	padding-left: 5px;
 }
 
@@ -455,11 +455,8 @@ noscript p
 /* box for search result at the left side */
 .sideBar
 {
-	background-color: black;
-	background-image: url("../img/background.jpg");
-	background-repeat: no-repeat;
-	background-position: bottom right;
-	color: white;
+	background-color: white;
+	color: black;
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -468,11 +465,7 @@ noscript p
 	padding: 3px;
 	overflow-x: hidden;
 	overflow-y: auto;
-	-o-box-shadow: 5px 2px 7px #aaaaaa;
-	-webkit-box-shadow: 5px 2px 7px #aaaaaa;
-    -moz-box-shadow: 5px 2px 7px #aaaaaa;
-    box-shadow: 5px 2px 7px #aaaaaa;
-    border-right: 1px solid black;
+    border-right: 1px solid white;
     z-index: 100;
 }
 
@@ -489,11 +482,8 @@ noscript p
 
 .sideBarOut
 {
-	background-color: black;
-	background-image: url("../img/background.jpg");
-	background-repeat: no-repeat;
-	background-position: bottom right;
-	color: white;
+	background-color: white;
+	color: black;
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -501,11 +491,7 @@ noscript p
 	width: 13px;
 	padding: 3px;
 	overflow: hidden;
-	-o-box-shadow: 5px 2px 7px #aaaaaa;
-	-webkit-box-shadow: 5px 2px 7px #aaaaaa;
-    -moz-box-shadow: 5px 2px 7px #aaaaaa;
-    box-shadow: 5px 2px 7px #aaaaaa;
-    border-right: 1px solid black;
+    border-right: 1px solid white;
     z-index: 1000;
 }
 
@@ -980,17 +966,13 @@ noscript p
 	font-size: 21px;
 	height: 27px;
 	width: 20px;
-	background-color: black;
+	background-color: white;
 	color: black;
 	z-index: 1000;
-	border-left: 2px solid black;
+	border-left: 2px solid white;
 	border-right: 1px solid black;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
-	-o-box-shadow: 5px 2px 7px #aaaaaa;
-	-webkit-box-shadow: 5px 2px 7px #aaaaaa;
-	-moz-box-shadow: 5px 2px 7px #aaaaaa;
-	box-shadow: 5px 2px 7px #aaaaaa;
 }
 
 .hideSidebarButtonFalse
@@ -1001,17 +983,13 @@ noscript p
 	font-size: 21px;
 	height: 27px;
 	width: 20px;
-	background-color: black;
+	background-color: white;
 	color: black;
 	z-index: 1000;
-	border-left: 2px solid black;
+	border-left: 2px solid white;
 	border-right: 1px solid black;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
-	-o-box-shadow: 5px 0px 7px #aaaaaa;
-	-webkit-box-shadow: 5px 0px 7px #aaaaaa;
-	-moz-box-shadow: 5px 0px 7px #aaaaaa;
-	box-shadow: 5px 0px 7px #aaaaaa;
 }
 
 .hideSidebarButtonFalse #mapFrame
@@ -1144,11 +1122,12 @@ noscript p
 .FlattrButton
 {
 	position: absolute;
-	right: 5px;
+	right: 20px;
 	margin-top: -25px;
 }
 
 #PaypalButton
 {
 	margin-left: 5px;
+	margin-top: 10px;
 }

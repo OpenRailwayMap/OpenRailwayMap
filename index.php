@@ -173,6 +173,7 @@
 			</form>
 			<br />
 			<a href="http://joker.com/" id="poweredby"><img src="img/ad.png" /></a>
+			<p id="info"></p>
 			<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="PaypalButton">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="ELF9KT74GH32G">
@@ -185,7 +186,6 @@
 					<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
 				</a>
 			</noscript>
-			<p id="info"></p>
 			<div id="linkBar">
 				<a class="links" id="spamButton" onclick="reportSpam();"><?=_("Report bug in map")?></a>&nbsp;•
 				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
@@ -201,7 +201,6 @@
 			<img id="searchButton" src="img/search.png" onclick="Search.request();" title="Search" />
 			<img id="clearButton" src="img/clear.png" onclick="Search.clear();" />
 			<br />
-			<input type="checkbox" id="searchCheckbox"><label id="searchCheckboxCaption"><?=_("Search only in the current map view")?><label><br /><br />
 			<div id="searchBar" class="infoBarOut"></div>
 			<div id="detailsBar" class="infoBarOut"></div>
 			<iframe id="josmFrame" src="about:blank"></iframe>
