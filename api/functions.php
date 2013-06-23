@@ -8,9 +8,9 @@
 
 
 	// email address to send error reports to
-	$mail = "AlexanderMatheisen@ish.de";
+	$mail = "info@openrailwaymap.org";
 	// available translations
-	$langs = array("de"=>"de_DE", "en"=>"en_GB", "fr"=>"fr_FR", "it"=>"it_IT", "ru"=>"ru_RU", "ja"=>"ja_JP", "nl"=>"nl_NL");
+	$langs = array("de"=>"de_DE", "en"=>"en_GB");
 	// name of database
 	$db = "railmap";
 	// prefix of osm2pgsql tables
