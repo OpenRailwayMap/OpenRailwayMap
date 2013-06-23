@@ -4738,6 +4738,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
 					delete_if_empty="true" />
+				<check key="railway:signal:catenary_mast"
+					text="On catenary mast"
+					de.text="Am Oberleitungsmast"
+					default="off"
+					delete_if_empty="true" />
 				<text key="ref"
 					text="Block number"
 					de.text="Blocknummer"
