@@ -2348,225 +2348,226 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<group name="Signale" icon="signals.png">
-			<item name="Ks-Vorsignal" icon="de:ks-distant.png" type="node">
-				<label text="Ks-Vorsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:distant"
-					value="ks" />
-				<key key="railway:signal:distant:form"
-					value="light" />
-				<key key="railway:signal:distant:states"
-					value="ks1;ks2" />
-				<check key="railway:signal:distant:shortened"
-					text="Shortened distance"
-					de.text="Verkürzter Bremsweg"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:repeated"
-					text="Repeated Signal"
-					de.text="Vorsignalwiederholer"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsvoranzeiger Zs 2v" />
-				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<item name="Ks-Mehrabschnittssignal" icon="de:ks-combined.png" type="node">
-				<label text="Ks-Mehrabschnittssignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:combined:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:combined"
-					value="ks" />
-				<key key="railway:signal:combined:form"
-					value="light" />
-				<combo key="railway:signal:combined:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:combined:states"
-					value="hp0;ks1;ks2" />
-				<check key="railway:signal:combined:shortened"
-					text="Shortened distance"
-					de.text="Verkürzter Bremsweg"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:combined:repeated"
-					text="Repeated Signal"
-					de.text="Vorsignalwiederholer"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:combined:function"
-					text="Signal function"
-					de.text="Signalaufgabe"
-					values="entry,exit,block,between"
-					display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:combined:substitute_signal"
-					text="Substitute signal (multi-selection)"
-					de.text="Ersatzsignal (Mehrfachauswahl)"
-					delimiter=";"
-					values="dr:zs1;db:zs7;db:zs12"
-					display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
-					default=""
-					delete_if_empty="true" />
-					<check key="railway:signal:combined:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsanzeiger Zs 2" />
-				<label text="- Richtungsvoranzeiger Zs 2v" />
-				<label text="- Geschwindigkeitsanzeiger Zs 3" />
-				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-				<label text="- Schutzhaltsignal Sh 1" />
-				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-				<label text="- Abfahrtssignal Zp 8/Zp 9" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<item name="Ks-Hauptsignal" icon="de:ks-main.png" type="node">
-				<label text="Ks-Hauptsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:main:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:main"
-					value="ks" />
-				<key key="railway:signal:main:form"
-					value="light" />
-				<combo key="railway:signal:main:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:main:states"
-					value="hp0;ks1" />
-				<combo key="railway:signal:main:function"
-					text="Signal function"
-					de.text="Signalaufgabe"
-					values="entry,exit,block,between"
-					display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:main:substitute_signal"
-					text="Substitute signal (multi-selection)"
-					de.text="Ersatzsignal (Mehrfachauswahl)"
-					delimiter=";"
-					values="dr:zs1;db:zs7;db:zs12"
-					display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:main:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsanzeiger Zs 2" />
-				<label text="- Geschwindigkeitsanzeiger Zs 3" />
-				<label text="- Schutzhaltsignal Sh 1" />
-				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-				<label text="- Abfahrtssignal Zp 8/Zp 9" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<separator />
+			<group name="Ks-Signale" icon="de:ks-signals.png">
+				<item name="Ks-Vorsignal" icon="de:ks-distant.png" type="node">
+					<label text="Ks-Vorsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:distant"
+						value="ks" />
+					<key key="railway:signal:distant:form"
+						value="light" />
+					<key key="railway:signal:distant:states"
+						value="ks1;ks2" />
+					<check key="railway:signal:distant:shortened"
+						text="Shortened distance"
+						de.text="Verkürzter Bremsweg"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:repeated"
+						text="Repeated Signal"
+						de.text="Vorsignalwiederholer"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Richtungsvoranzeiger Zs 2v" />
+					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+				<item name="Ks-Mehrabschnittssignal" icon="de:ks-combined.png" type="node">
+					<label text="Ks-Mehrabschnittssignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:combined:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:combined"
+						value="ks" />
+					<key key="railway:signal:combined:form"
+						value="light" />
+					<combo key="railway:signal:combined:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:combined:states"
+						value="hp0;ks1;ks2" />
+					<check key="railway:signal:combined:shortened"
+						text="Shortened distance"
+						de.text="Verkürzter Bremsweg"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:combined:repeated"
+						text="Repeated Signal"
+						de.text="Vorsignalwiederholer"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:combined:function"
+						text="Signal function"
+						de.text="Signalaufgabe"
+						values="entry,exit,block,between"
+						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:combined:substitute_signal"
+						text="Substitute signal (multi-selection)"
+						de.text="Ersatzsignal (Mehrfachauswahl)"
+						delimiter=";"
+						values="dr:zs1;db:zs7;db:zs12"
+						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
+						default=""
+						delete_if_empty="true" />
+						<check key="railway:signal:combined:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Richtungsanzeiger Zs 2" />
+					<label text="- Richtungsvoranzeiger Zs 2v" />
+					<label text="- Geschwindigkeitsanzeiger Zs 3" />
+					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
+					<label text="- Schutzhaltsignal Sh 1" />
+					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+					<label text="- Abfahrtssignal Zp 8/Zp 9" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+				<item name="Ks-Hauptsignal" icon="de:ks-main.png" type="node">
+					<label text="Ks-Hauptsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:main:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:main"
+						value="ks" />
+					<key key="railway:signal:main:form"
+						value="light" />
+					<combo key="railway:signal:main:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:main:states"
+						value="hp0;ks1" />
+					<combo key="railway:signal:main:function"
+						text="Signal function"
+						de.text="Signalaufgabe"
+						values="entry,exit,block,between"
+						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:main:substitute_signal"
+						text="Substitute signal (multi-selection)"
+						de.text="Ersatzsignal (Mehrfachauswahl)"
+						delimiter=";"
+						values="dr:zs1;db:zs7;db:zs12"
+						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:main:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Richtungsanzeiger Zs 2" />
+					<label text="- Geschwindigkeitsanzeiger Zs 3" />
+					<label text="- Schutzhaltsignal Sh 1" />
+					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+					<label text="- Abfahrtssignal Zp 8/Zp 9" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+			</group>
 			<item name="Sv-Signal" icon="de:sv.png" type="node">
 				<label text="Sv-Signal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
@@ -2649,586 +2650,737 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="- Abfahrtssignal Zp 8/Zp 9" />
 				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 			</item>
-			<separator />
-			<item name="Hl-Kombinationssignal" icon="de:hl-combined.png" type="node">
-				<label text="Hl-Kombinationssignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<group name="Hl-Signale" icon="de:hl-signals.png">
+				<item name="Hl-Kombinationssignal" icon="de:hl-combined.png" type="node">
+					<label text="Hl-Kombinationssignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:combined:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:combined"
+						value="hl" />
+					<key key="railway:signal:combined:form"
+						value="light" />
+					<combo key="railway:signal:combined:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:combined:states"
+						text="Signal states (multi-selection)"
+						de.text="Signalzustände (Mehrfachauswahl)"
+						delimiter=";"
+						values="hp0;hl1;hl2;hl3a;hl3b;hl4;hl5;hl6a;hl6b;hl7;hl8;hl9a;hl9b;hl10;hl11;hl12a;hl12b"
+						display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Hl 7;Hl 8;Hl 9a;Hl 9b;Hl 10;Hl 11;Hl 12a;Hl 12b"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:combined:function"
+						text="Signal function"
+						de.text="Signalaufgabe"
+						values="entry,exit,block,between"
+						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:combined:substitute_signal"
+						text="Substitute signal (multi-selection)"
+						de.text="Ersatzsignal (Mehrfachauswahl)"
+						delimiter=";"
+						values="dr:zs1;db:zs7;db:zs12"
+						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:combined:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Richtungsanzeiger Zs 2" />
+					<label text="- Richtungsvoranzeiger Zs 2v" />
+					<label text="- Schutzhaltsignal Sh 1/Ra 12" />
+					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+					<label text="- Abfahrtssignal Zp 8/Zp 9" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+				<item name="Hl-Hauptsignal" icon="de:hl-main.png" type="node">
+					<label text="Hl-Hauptsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:main:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:main"
+						value="hl" />
+					<key key="railway:signal:main:form"
+						value="light" />
+					<combo key="railway:signal:main:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:main:states"
+						text="Signal states (multi-selection)"
+						de.text="Signalzustände (Mehrfachauswahl)"
+						delimiter=";"
+						values="hp0;hl1;hl2;hl3a;hl3b;hl4;hl5;hl6a;hl6b"
+						display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:main:function"
+						text="Signal function"
+						de.text="Signalaufgabe"
+						values="entry,exit,block,between"
+						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:main:substitute_signal"
+						text="Substitute signal (multi-selection)"
+						de.text="Ersatzsignal (Mehrfachauswahl)"
+						delimiter=";"
+						values="dr:zs1;db:zs7;db:zs12"
+						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:main:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Richtungsanzeiger Zs 2" />
+					<label text="- Geschwindigkeitsanzeiger Zs 3" />
+					<label text="- Schutzhaltsignal Sh 1/Ra 12" />
+					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+					<label text="- Abfahrtssignal Zp 8/Zp 9" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+				<item name="Hl-Vorsignal" icon="de:hl-distant.png" type="node">
+					<label text="Hl-Vorsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:distant"
+						value="hl" />
+					<key key="railway:signal:distant:form"
+						value="light" />
+					<key key="railway:signal:distant:states"
+						value="hl1;hl4;hl7;hl10" />
+					<check key="railway:signal:distant:shortened"
+						text="Shortened distance"
+						de.text="Verkürzter Bremsweg"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:repeated"
+						text="Repeated Signal"
+						de.text="Vorsignalwiederholer"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Richtungsvoranzeiger Zs 2v" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+			</group>
+			<group name="Sk-Signale" icon="de:sk-signals.png">
+				<item name="Sk-Kombinationssignal" icon="de:sk-combined.png" type="node">
+					<label text="Sk-Kombinationssignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:combined:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:combined"
+						value="sk" />
+					<key key="railway:signal:combined:form"
+						value="light" />
+					<combo key="railway:signal:combined:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:combined:states"
+						value="hp0;sk1;sk2" />
+					<combo key="railway:signal:combined:function"
+						text="Signal function"
+						de.text="Signalaufgabe"
+						values="entry,exit,block,between"
+						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:combined:substitute_signal"
+						text="Substitute signal (multi-selection)"
+						de.text="Ersatzsignal (Mehrfachauswahl)"
+						delimiter=";"
+						values="dr:zs1;db:zs7"
+						display_values="Ersatzsignal;Vorsichtsignal"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:combined:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Geschwindigkeitsanzeiger Zs 3" />
+					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
+					<label text="- Richtungsanzeiger Zs 2" />
+					<label text="- Richtungsvoranzeiger Zs 2v" />
+					<label text="- Schutzhaltsignal Sh 1/Ra 12" />
+					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+					<label text="- Abfahrtssignal Zp 8/Zp 9" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+				<item name="Sk-Hauptsignal" icon="de:sk-main.png" type="node">
+					<label text="Sk-Hauptsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:main:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:main"
+						value="sk" />
+					<key key="railway:signal:main:form"
+						value="light" />
+					<combo key="railway:signal:main:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:main:states"
+						value="hp0;sk1" />
+					<combo key="railway:signal:main:function"
+						text="Signal function"
+						de.text="Signalaufgabe"
+						values="entry,exit,block,between"
+						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:main:substitute_signal"
+						text="Substitute signal (multi-selection)"
+						de.text="Ersatzsignal (Mehrfachauswahl)"
+						delimiter=";"
+						values="dr:zs1;db:zs7"
+						display_values="Ersatzsignal;Vorsichtsignal"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:main:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Richtungsanzeiger Zs 2" />
+					<label text="- Geschwindigkeitsanzeiger Zs 3" />
+					<label text="- Schutzhaltsignal Sh 1/Ra 12" />
+					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+					<label text="- Abfahrtssignal Zp 8/Zp 9" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+				<item name="Sk-Vorsignal" icon="de:sk-distant.png" type="node">
+					<label text="Sk-Vorsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:distant"
+						value="sk" />
+					<key key="railway:signal:distant:form"
+						value="light" />
+					<key key="railway:signal:distant:states"
+						value="sk1;sk2" />
+					<check key="railway:signal:distant:shortened"
+						text="Shortened distance"
+						de.text="Verkürzter Bremsweg"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:repeated"
+						text="Repeated Signal"
+						de.text="Vorsignalwiederholer"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Richtungsvoranzeiger Zs 2v" />
+					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+			</group>
+			<group name="H/V-Signale" icon="de:hv-signals.png">
+				<item name="Hp-Form-Hauptsignal" icon="de:hp-semaphore.png" type="node">
+					<label text="Hp-Form-Hauptsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:main:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:main"
+						value="hp" />
+					<key key="railway:signal:main:form"
+						value="semaphore" />
+					<combo key="railway:signal:main:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:main:states"
+						text="Signal states (multi-selection)"
+						de.text="Signalzustände (Mehrfachauswahl)"
+						delimiter=";"
+						values="hp0;hp1;hp2"
+						display_values="Halt;Fahrt;Langsamfahrt"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:main:function"
+						text="Signal function"
+						de.text="Signalaufgabe"
+						values="entry,exit,block,between"
+						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:main:substitute_signal"
+						text="Substitute signal (multi-selection)"
+						de.text="Ersatzsignal (Mehrfachauswahl)"
+						delimiter=";"
+						values="db:zs1;dr:zs1;db:zs7;db:zs12"
+						display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Geschwindigkeitsanzeiger Zs 3" />
+					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+					<label text="- Abfahrtssignal Zp 8/Zp 9" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+				<item name="Hp-Licht-Hauptsignal" icon="de:hp-light.png" type="node">
+					<label text="Hp-Licht-Hauptsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:main:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:main"
+						value="hp" />
+					<key key="railway:signal:main:form"
+						value="light" />
+					<combo key="railway:signal:main:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:main:states"
+						text="Signal states (multi-selection)"
+						de.text="Signalzustände (Mehrfachauswahl)"
+						delimiter=";"
+						values="hp0;hp1;hp2"
+						display_values="Halt;Fahrt;Langsamfahrt"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:main:function"
+						text="Signal function"
+						de.text="Signalaufgabe"
+						values="entry,exit,block,between"
+						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:main:substitute_signal"
+						text="Substitute signal (multi-selection)"
+						de.text="Ersatzsignal (Mehrfachauswahl)"
+						delimiter=";"
+						values="db:zs1;dr:zs1;db:zs7;db:zs12"
+						display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:main:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Richtungsanzeiger Zs 2" />
+					<label text="- Geschwindigkeitsanzeiger Zs 3" />
+					<label text="- Schutzhaltsignal Sh 1" />
+					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
+					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
+					<label text="- Abfahrtssignal Zp 8/Zp 9" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+				<separator />
+				<item name="Vr-Form-Vorsignal" icon="de:vr-semaphore.png" type="node">
+					<label text="Vr-Form-Vorsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:distant"
+						value="vr" />
+					<key key="railway:signal:distant:form"
+						value="semaphore" />
+					<combo key="railway:signal:distant:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:distant:states"
+						text="Signal states (multi-selection)"
+						de.text="Signalzustände (Mehrfachauswahl)"
+						delimiter=";"
+						values="vr0;vr1;vr2"
+						display_values="Halt erwarten;Fahrt erwarten;Langsamfahrt erwarten"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:distant:shortened"
+						text="Shortened distance"
+						de.text="Verkürzter Bremsweg"
+						values="db:ne2,dr:so3c"
+						display_values="DB (weißes Dreieck),DR (Kreis)"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:repeated"
+						text="Repeated Signal"
+						de.text="Vorsignalwiederholer"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
+					<label text="- Richtungsvoranzeiger Zs 2v" />
+					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
+					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				</item>
+				<item name="Vr-Licht-Vorsignal" icon="de:vr-light.png" type="node">
+					<label text="Vr-Form-Vorsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:distant"
+						value="vr" />
+					<key key="railway:signal:distant:form"
+						value="light" />
+					<combo key="railway:signal:distant:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<multiselect key="railway:signal:distant:states"
+						text="Signal states (multi-selection)"
+						de.text="Signalzustände (Mehrfachauswahl)"
+						delimiter=";"
+						values="vr0;vr1;vr2"
+						display_values="Halt erwarten;Fahrt erwarten;Langsamfahrt erwarten"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:shortened"
+						text="Shortened distance"
+						de.text="Verkürzter Bremsweg"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:repeated"
+						text="Repeated Signal"
+						de.text="Vorsignalwiederholer"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:distant:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+				</item>
+			</group>
+			<item name="Sh 1-Licht" icon="de:sh1.png" type="node">
+				<label text="Sh 1-Licht an anderen Signalen wie Ks-Signalen oder Hp-Ausfahrsignalen." />
 				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:combined:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:combined"
-					value="hl" />
-				<key key="railway:signal:combined:form"
+				<key key="railway:signal:minor"
+					value="sh1" />
+				<key key="railway:signal:minor:form"
 					value="light" />
-				<combo key="railway:signal:combined:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:combined:states"
-					text="Signal states (multi-selection)"
-					de.text="Signalzustände (Mehrfachauswahl)"
-					delimiter=";"
-					values="hp0;hl1;hl2;hl3a;hl3b;hl4;hl5;hl6a;hl6b;hl7;hl8;hl9a;hl9b;hl10;hl11;hl12a;hl12b"
-					display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Hl 7;Hl 8;Hl 9a;Hl 9b;Hl 10;Hl 11;Hl 12a;Hl 12b"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:combined:function"
-					text="Signal function"
-					de.text="Signalaufgabe"
-					values="entry,exit,block,between"
-					display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:combined:substitute_signal"
-					text="Substitute signal (multi-selection)"
-					de.text="Ersatzsignal (Mehrfachauswahl)"
-					delimiter=";"
-					values="dr:zs1;db:zs7;db:zs12"
-					display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:combined:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsanzeiger Zs 2" />
-				<label text="- Richtungsvoranzeiger Zs 2v" />
-				<label text="- Schutzhaltsignal Sh 1/Ra 12" />
-				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-				<label text="- Abfahrtssignal Zp 8/Zp 9" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<item name="Hl-Hauptsignal" icon="de:hl-main.png" type="node">
-				<label text="Hl-Hauptsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:main:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:main"
-					value="hl" />
-				<key key="railway:signal:main:form"
-					value="light" />
-				<combo key="railway:signal:main:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:main:states"
-					text="Signal states (multi-selection)"
-					de.text="Signalzustände (Mehrfachauswahl)"
-					delimiter=";"
-					values="hp0;hl1;hl2;hl3a;hl3b;hl4;hl5;hl6a;hl6b"
-					display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:main:function"
-					text="Signal function"
-					de.text="Signalaufgabe"
-					values="entry,exit,block,between"
-					display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:main:substitute_signal"
-					text="Substitute signal (multi-selection)"
-					de.text="Ersatzsignal (Mehrfachauswahl)"
-					delimiter=";"
-					values="dr:zs1;db:zs7;db:zs12"
-					display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:main:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsanzeiger Zs 2" />
-				<label text="- Geschwindigkeitsanzeiger Zs 3" />
-				<label text="- Schutzhaltsignal Sh 1/Ra 12" />
-				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-				<label text="- Abfahrtssignal Zp 8/Zp 9" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<item name="Hl-Vorsignal" icon="de:hl-distant.png" type="node">
-				<label text="Hl-Vorsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:distant"
-					value="hl" />
-				<key key="railway:signal:distant:form"
-					value="light" />
-				<key key="railway:signal:distant:states"
-					value="hl1;hl4;hl7;hl10" />
-				<check key="railway:signal:distant:shortened"
-					text="Shortened distance"
-					de.text="Verkürzter Bremsweg"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:repeated"
-					text="Repeated Signal"
-					de.text="Vorsignalwiederholer"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsvoranzeiger Zs 2v" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<separator />
-			<item name="Sk-Kombinationssignal" icon="de:sk-combined.png" type="node">
-				<label text="Sk-Kombinationssignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:combined:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:combined"
-					value="sk" />
-				<key key="railway:signal:combined:form"
-					value="light" />
-				<combo key="railway:signal:combined:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:combined:states"
-					value="hp0;sk1;sk2" />
-				<combo key="railway:signal:combined:function"
-					text="Signal function"
-					de.text="Signalaufgabe"
-					values="entry,exit,block,between"
-					display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:combined:substitute_signal"
-					text="Substitute signal (multi-selection)"
-					de.text="Ersatzsignal (Mehrfachauswahl)"
-					delimiter=";"
-					values="dr:zs1;db:zs7"
-					display_values="Ersatzsignal;Vorsichtsignal"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:combined:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Geschwindigkeitsanzeiger Zs 3" />
-				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-				<label text="- Richtungsanzeiger Zs 2" />
-				<label text="- Richtungsvoranzeiger Zs 2v" />
-				<label text="- Schutzhaltsignal Sh 1/Ra 12" />
-				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-				<label text="- Abfahrtssignal Zp 8/Zp 9" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<item name="Sk-Hauptsignal" icon="de:sk-main.png" type="node">
-				<label text="Sk-Hauptsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:main:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:main"
-					value="sk" />
-				<key key="railway:signal:main:form"
-					value="light" />
-				<combo key="railway:signal:main:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:main:states"
-					value="hp0;sk1" />
-				<combo key="railway:signal:main:function"
-					text="Signal function"
-					de.text="Signalaufgabe"
-					values="entry,exit,block,between"
-					display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:main:substitute_signal"
-					text="Substitute signal (multi-selection)"
-					de.text="Ersatzsignal (Mehrfachauswahl)"
-					delimiter=";"
-					values="dr:zs1;db:zs7"
-					display_values="Ersatzsignal;Vorsichtsignal"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:main:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsanzeiger Zs 2" />
-				<label text="- Geschwindigkeitsanzeiger Zs 3" />
-				<label text="- Schutzhaltsignal Sh 1/Ra 12" />
-				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-				<label text="- Abfahrtssignal Zp 8/Zp 9" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<item name="Sk-Vorsignal" icon="de:sk-distant.png" type="node">
-				<label text="Sk-Vorsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:distant"
-					value="sk" />
-				<key key="railway:signal:distant:form"
-					value="light" />
-				<key key="railway:signal:distant:states"
-					value="sk1;sk2" />
-				<check key="railway:signal:distant:shortened"
-					text="Shortened distance"
-					de.text="Verkürzter Bremsweg"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:repeated"
-					text="Repeated Signal"
-					de.text="Vorsignalwiederholer"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsvoranzeiger Zs 2v" />
-				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<separator />
-			<item name="Hp-Form-Hauptsignal" icon="de:hp-semaphore.png" type="node">
-				<label text="Hp-Form-Hauptsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:main:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:main"
-					value="hp" />
-				<key key="railway:signal:main:form"
-					value="semaphore" />
-				<combo key="railway:signal:main:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:main:states"
-					text="Signal states (multi-selection)"
-					de.text="Signalzustände (Mehrfachauswahl)"
-					delimiter=";"
-					values="hp0;hp1;hp2"
-					display_values="Halt;Fahrt;Langsamfahrt"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:main:function"
-					text="Signal function"
-					de.text="Signalaufgabe"
-					values="entry,exit,block,between"
-					display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:main:substitute_signal"
-					text="Substitute signal (multi-selection)"
-					de.text="Ersatzsignal (Mehrfachauswahl)"
-					delimiter=";"
-					values="db:zs1;dr:zs1;db:zs7;db:zs12"
-					display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Geschwindigkeitsanzeiger Zs 3" />
-				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-				<label text="- Abfahrtssignal Zp 8/Zp 9" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<item name="Hp-Licht-Hauptsignal" icon="de:hp-light.png" type="node">
-				<label text="Hp-Licht-Hauptsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:main:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:main"
-					value="hp" />
-				<key key="railway:signal:main:form"
-					value="light" />
-				<combo key="railway:signal:main:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:main:states"
-					text="Signal states (multi-selection)"
-					de.text="Signalzustände (Mehrfachauswahl)"
-					delimiter=";"
-					values="hp0;hp1;hp2"
-					display_values="Halt;Fahrt;Langsamfahrt"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:main:function"
-					text="Signal function"
-					de.text="Signalaufgabe"
-					values="entry,exit,block,between"
-					display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:main:substitute_signal"
-					text="Substitute signal (multi-selection)"
-					de.text="Ersatzsignal (Mehrfachauswahl)"
-					delimiter=";"
-					values="db:zs1;dr:zs1;db:zs7;db:zs12"
-					display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:main:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsanzeiger Zs 2" />
-				<label text="- Geschwindigkeitsanzeiger Zs 3" />
-				<label text="- Schutzhaltsignal Sh 1" />
-				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-				<label text="- Abfahrtssignal Zp 8/Zp 9" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 			</item>
 			<item name="Trapeztafel" icon="de:ne1.png" type="node">
 				<label text="Trapeztafel" />
@@ -3269,190 +3421,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<key key="railway:signal:main:function"
 					value="entry" />
-			</item>
-			<item name="Fahrtanzeiger" icon="de:main-repeated.png" type="node">
-				<label text="Fahrtanzeiger" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:main_repeated:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward,both"
-					display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:main_repeated"
-					value="yes" />
-				<key key="railway:signal:main_repeated:form"
-					value="light" />
-			</item>
-			<item name="Sh 1-Licht" icon="de:sh1.png" type="node">
-				<label text="Sh 1-Licht an anderen Signalen wie Ks-Signalen oder Hp-Ausfahrsignalen." />
-				<space />
-				<key key="railway:signal:minor"
-					value="sh1" />
-				<key key="railway:signal:minor:form"
-					value="light" />
-			</item>
-			<separator />
-			<item name="Vr-Form-Vorsignal" icon="de:vr-semaphore.png" type="node">
-				<label text="Vr-Form-Vorsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:distant"
-					value="vr" />
-				<key key="railway:signal:distant:form"
-					value="semaphore" />
-				<combo key="railway:signal:distant:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:distant:states"
-					text="Signal states (multi-selection)"
-					de.text="Signalzustände (Mehrfachauswahl)"
-					delimiter=";"
-					values="vr0;vr1;vr2"
-					display_values="Halt erwarten;Fahrt erwarten;Langsamfahrt erwarten"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:distant:shortened"
-					text="Shortened distance"
-					de.text="Verkürzter Bremsweg"
-					values="db:ne2,dr:so3c"
-					display_values="DB (weißes Dreieck),DR (Kreis)"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:repeated"
-					text="Repeated Signal"
-					de.text="Vorsignalwiederholer"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsvoranzeiger Zs 2v" />
-				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
-			</item>
-			<item name="Vr-Licht-Vorsignal" icon="de:vr-light.png" type="node">
-				<label text="Vr-Form-Vorsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:distant"
-					value="vr" />
-				<key key="railway:signal:distant:form"
-					value="light" />
-				<combo key="railway:signal:distant:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<multiselect key="railway:signal:distant:states"
-					text="Signal states (multi-selection)"
-					de.text="Signalzustände (Mehrfachauswahl)"
-					delimiter=";"
-					values="vr0;vr1;vr2"
-					display_values="Halt erwarten;Fahrt erwarten;Langsamfahrt erwarten"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:shortened"
-					text="Shortened distance"
-					de.text="Verkürzter Bremsweg"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:repeated"
-					text="Repeated Signal"
-					de.text="Vorsignalwiederholer"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:distant:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
 			</item>
 			<item name="Vorsignaltafel" icon="de:vr-sign.png" type="node">
 				<label text="Vorsignaltafel" />
@@ -3527,901 +3495,907 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="sign" />
 			</item>
 			<separator />
-			<item name="Schutzhaltsignal" icon="de:sh.png" type="node">
-				<label text="Schutzhaltsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:minor:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge,in_track"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Gleismitte/am Prellbock"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:minor"
-					value="sh" />
-				<combo key="railway:signal:minor:form"
-					text="Signal form"
-					de.text="Anzeigeart"
-					values="light,semaphore,sign"
-					display_values="Lichtsignal,Formsignal,Tafel"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:minor:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:minor:states"
-					value="sh0;sh1" />
-				<check key="railway:signal:distant:marker_light"
-					text="Marker light"
-					de.text="Kennlicht"
-					default="off"
-					delete_if_empty="true" />
-				<space />
-				<label text="Signal Gsp 2 siehe 'Gleissperre'" />
-			</item>
-			<item name="Schutzhalttafel" icon="de:sh2.png" type="node">
-				<label text="Schutzhalttafel" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:minor:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,in_track"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:minor"
-					value="sh2" />
-				<key key="railway:signal:minor:form"
-					value="sign" />
-				<key key="railway:signal:minor:height"
-					value="normal" />
-			</item>
-			<item name="Haltvorscheibe" icon="de:sh-distant.png" type="node">
-				<label text="Haltvorscheibe" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:minor_distant:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:minor_distant"
-					value="dr:sh3" />
-				<key key="railway:signal:minor_distant:form"
-					value="sign" />
-				<combo key="railway:signal:minor_distant:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-			</item>
-			<item name="Rangierhalttafel" icon="de:ra10.png" type="node">
-				<label text="Rangierhalttafel" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:shunting:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:shunting"
-					value="ra10" />
-				<key key="railway:signal:shunting:form"
-					value="sign" />
-			</item>
-			<item name="Rangierhaltsignal" icon="de:ra11.png" type="node">
-				<label text="Rangierhaltsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:shunting:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:shunting"
-					value="ra11" />
-				<combo key="railway:signal:shunting:form"
-					text="Signal form"
-					de.text="Anzeigeart"
-					values="light,sign"
-					display_values="Lichtsignal mit Sh 1,Tafel"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:shunting:states"
-					text="Signal states"
-					de.text="Signalzustände"
-					values="ra11;sh1, "
-					display_values="Ra 11 / Sh 1,-nur Tafel-"
-					default=""
-					delete_if_empty="true" />
-			</item>
-			<item name="Abdrücksignal" icon="de:humping.png" type="node">
-				<label text="Abdrücksignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:humping:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:humping"
-					value="ra" />
-				<combo key="railway:signal:humping:form"
-					text="Signal form"
-					de.text="Anzeigeart"
-					values="light,semaphore"
-					display_values="Lichtsignal,Formsignal"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:humping:states"
-					value="ra6;ra7;ra8;ra9" />
-				<combo key="railway:signal:humping:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
-					default=""
-					delete_if_empty="true" />
-			</item>
-			<separator />
-			<item name="Richtungsanzeiger" icon="de:route.png" type="node">
-				<label text="Richtungsanzeiger" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:route:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:route"
-					value="zs2" />
-				<text key="railway:signal:route:states"
-					text="Signal states (separated by ';')"
-					de.text="Mögliche Anzeigewerte (getrennt durch ';')"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:route:form"
-					text="Type"
-					de.text="Typ"
-					values="sign,light"
-					display_values="Tafel,Leuchtanzeige"
-					default=""
-					delete_if_empty="true" />
-			</item>
-			<item name="Richtungsanzeiger-Ankündigung" icon="de:route-distant.png" type="node">
-				<label text="Richtungsanzeiger-Ankündigung" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:route_distant:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<key key="railway:signal:route_distant"
-					value="zs2v" />
-				<text key="railway:signal:route_distant:states"
-					text="Signal states (separated by ';')"
-					de.text="Mögliche Anzeigewerte (getrennt durch ';')"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:route_distant:form"
-					text="Type"
-					de.text="Typ"
-					values="sign,light"
-					display_values="Tafel,Leuchtanzeige"
-					default=""
-					delete_if_empty="true" />
-			</item>
-			<item name="Gleiswechselanzeiger" icon="de:zs6.png" type="node">
-				<label text="Gleiswechselanzeiger" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:wrong_road:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" default="" delete_if_empty="true">
-                    <list_entry value="db:zs6" display_value="Zs 6 DB" short_description="Gleiswechselanzeiger Zs 6 (ex-DB)" />
-                    <list_entry value="dr:zs7" display_value="Zs 7 DR" short_description="Gleiswechselanzeiger Zs 7 (ex-DR)" />
-                </combo>
-				<combo key="railway:signal:wrong_road:form"
-					text="Signal form"
-					de.text="Anzeigeart"
-					values="sign,light"
-					display_values="Tafel,Leuchtanzeige"
-					default=""
-					delete_if_empty="true" />
-			</item>
-			<item name="Falschfahrt-Auftragssignal / Linksfahrtersatzsignal" icon="de:zs8.png" type="node">
-				<label text="Falschfahrt-Auftragssignal / Linksfahrtersatzsignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:wrong_road:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" default="" delete_if_empty="true">
-					<list_entry value="db:zs8" display_value="Zs 8 DB" short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DB)" />
-					<list_entry value="dr:zs8" display_value="Zs 8 DR" short_description="Linksfahrtersatzsignal Zs 8 (ex-DR)" />
-                </combo>
-				<combo key="railway:signal:wrong_road:form"
-					text="Signal form"
-					de.text="Anzeigeart"
-					values="sign,light"
-					display_values="Tafel,Leuchtanzeige"
-					default=""
-					delete_if_empty="true" />
-			</item>
-			<separator />
-			<item name="Geschwindigkeitsanzeiger" icon="de:maxspeed.png" type="node">
-				<label text="Geschwindigkeitsanzeiger" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:speed_limit:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:speed_limit" text="Type of signal" de.text="Signaltyp" default="" delete_if_empty="true">
-                    <list_entry value="yes" display_value="Unbekannt" short_description="Genauer Signaltyp unbekannt" />
-                    <list_entry value="zs3" display_value="Zs 3" short_description="Geschwindigkeitsanzeiger Zs 3" />
-					<list_entry value="dr:lf1/2" display_value="Lf 1/2" short_description="Langsamfahrbeginnscheibe Lf 1/2 (ex-DR)" />
-					<list_entry value="lf2" display_value="Lf 2" short_description="Anfangsscheibe Lf 2" />
-					<list_entry value="lf3" display_value="Lf 3" short_description="Endscheibe Lf 3" />
-					<list_entry value="db:lf5" display_value="Lf 5 DR" short_description="Anfangstafel Lf 5 (ex-DB)" />
-					<list_entry value="dr:lf5" display_value="Lf 5 DR" short_description="Eckentafel Lf 5 (ex-DR)" />
-					<list_entry value="lf7" display_value="Lf 7" short_description="Geschwindigkeitssignal Lf 7" />
-					<list_entry value="db:zs10" display_value="Zs 10 DB" short_description="Ende der Geschwindigkeitsbegrenzung Zs 10 (ex-DB)" />
-                </combo>
-				<combo key="railway:signal:speed_limit:form"
-					text="Signal form"
-					de.text="Anzeigeart"
-					values="light,sign"
-					display_values="Lichtsignal,Tafel"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:speed_limit:speed" default=""
-					text="Speed (km/h, in case of light signals separate the possible values with ';')"
-					de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte mit ';' trennen)"
-					delete_if_empty="true"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Aufhebung (Zs 10, Lf 3)" />
-				<combo key="railway:signal:speed_limit:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					default=""
-					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
-			</item>
-			<item name="Geschwindigkeitsvoranzeiger" icon="de:maxspeed-distant.png" type="node">
-				<label text="Geschwindigkeitsvoranzeiger" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:speed_limit_distant:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:speed_limit_distant" text="Type of signal" de.text="Signaltyp" default="" delete_if_empty="true">
-                    <list_entry value="yes" display_value="Unbekannt" short_description="Genauer Signaltyp unbekannt" />
-                    <list_entry value="zs3v" display_value="Zs 3v" short_description="Geschwindigkeitsvoranzeiger Zs 3v" />
-					<list_entry value="lf1" display_value="Lf 1" short_description="Langsamfahrscheibe Lf 1" />
-					<list_entry value="db:lf4" display_value="Lf 4 DB" short_description="Geschwindigkeitstafel Lf 4 (ex-DB)" />
-					<list_entry value="dr:lf4" display_value="Lf 4" short_description="Geschwindigkeitstafel Lf 4 (ex-DR)" />
-					<list_entry value="lf6" display_value="Lf 6" short_description="Geschwindigkeits-Ankündesignal Lf 6" />
-                </combo>
-				<combo key="railway:signal:speed_limit_distant:form"
-					text="Signal form"
-					de.text="Anzeigeart"
-					values="light,sign"
-					display_values="Lichtsignal,Tafel"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:speed_limit_distant:speed" default=""
-					text="Speed (km/h, in case of light signals separate the possible values with ';')"
-					de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte mit ';' trennen)"
-					delete_if_empty="true"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
-				<combo key="railway:signal:speed_limit_distant:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					default=""
-					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
-			</item>
-			<item name="Stumpfgleis- und Frühhaltanzeiger" icon="de:short-route.png" type="node">
-				<label text="Stumpfgleis- und Frühhaltanzeiger" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:short_route:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:short_route"
-					text="Type of signal"
-					de.text="Signaltyp"
-					values="zs13,dr:zs6,dr:zs106"
-					display_values="Zs 13,Zs 6 (Lichtsignal ex-DR),Zs 106 (Tafel ex-DR)"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:short_route:form"
-					text="Signal form"
-					de.text="Anzeigeart"
-					values="light,sign"
-					display_values="Lichtsignal,Tafel"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:short_route:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					default=""
-					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
-			</item>
-			<separator />
-			<item name="Bü-Überwachungssignal" icon="de:crossing-signal.png" type="node">
-				<label text="Bü-Überwachungssignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:crossing:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:crossing"
-					text="Exact type"
-					de.text="Signaltyp"
-					values="bü,so16"
-					display_values="Bü (ex-DB),So 16 (ex-DR)"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:crossing:states"
-					text="Signal states"
-					de.text="Signalzustände"
-					values="bü0;bü1,so16a;so16b"
-					display_values="Bü 0/1 (ex-DB),So 16a/b (ex-DR)"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:crossing:form"
-					value="light" />
-				<check key="railway:signal:crossing:repeated"
-					text="Repeated"
-					de.text="Signalwiederholer (weiße Scheibe)"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:crossing:shortened"
-					text="Shortened distance"
-					de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
-					default="off"
-					delete_if_empty="true" />
-			</item>
-			<item name="Bü-Überwachungssignal erwarten" icon="de:bue2.png" type="node">
-				<label text="Bü-Überwachungssignal erwarten" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:crossing_distant:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:crossing_distant"
-					text="Type of signal"
-					de.text="Signaltyp"
-					values="bü2,so15"
-					display_values="Bü 2 'Rautentafel' ex-DB,So 15 ex-DR"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:crossing_distant:form"
-					value="sign" />
-				<check key="railway:signal:crossing:repeated"
-					text="Repeated"
-					de.text="Signalwiederholer (weiße Scheibe)"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:crossing_distant:shortened"
-					text="Shortened distance"
-					de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
-					default="off"
-					delete_if_empty="true" />
-			</item>
-			<item name="Einschaltkontakt Bahnübergang" icon="de:bue3.png" type="node">
-				<label text="Einschaltkontakt Bahnübergang" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:crossing_distant:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:crossing_distant"
-					text="Type of signal"
-					de.text="Signaltyp"
-					values="bü3,so14"
-					display_values="Bü 3 ex-DB,So 14 ex-DR"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:crossing_distant:form"
-					value="sign" />
-				<check key="railway:signal:crossing:repeated"
-					text="Repeated"
-					de.text="Signalwiederholer (weiße Scheibe)"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:crossing_distant:shortened"
-					text="Shortened distance"
-					de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
-					default="off"
-					delete_if_empty="true" />
-			</item>
-			<item name="Pfeiftafel" icon="de:whistle.png" type="node">
-				<label text="Pfeiftafel" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:whistle:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:whistle"
-					text="Exact type"
-					de.text="Signaltyp"
-					values="db:bü4,dr:pf1,dr:pf2"
-					display_values="Bü 4 (ex-DB),Pf 1 (einfache Pfeiftafel ex-DR),Pf 2 (doppelte Pfeiftafel ex-DR)"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:whistle:form"
-					value="sign" />
-				<check key="railway:signal:whistle:twice"
-					text="Whistle twice?"
-					de.text="Doppelte Pfeiftafel?"
-					default="off"
-					delete_if_empty="true" />
-				<check key="railway:signal:whistle:only_transit"
-					text="Whistle only when train does not stop before crossing?"
-					de.text="Zwei senkrechte Striche?"
-					default="off"
-					delete_if_empty="true" />
-			</item>
-			<item name="Läutetafel" icon="de:ring.png" type="node">
-				<label text="Läutetafel" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:ring:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:ring"
-					value="bü5" />
-				<key key="railway:signal:ring:form"
-					value="sign" />
-			</item>
-			<item name="Bü-Tafel" icon="de:crossing-info.png" type="node">
-				<label text="Bü-Tafel" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:crossing_info:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:crossing_info"
-					value="yes" />
-				<key key="railway:signal:crossing_info:form"
-					value="sign" />
-				<text key="railway:signal:crossing_info:caption"
-					text="Caption (e.g. 'Bü 123,4')"
-					de.text="Beschriftung (z.B. 'Bü 123,4')"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:crossing_info:repeated"
-					text="Repeated"
-					de.text="Signalwiederholer (weiße Scheibe)"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:crossing_info:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					default=""
-					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
-			</item>
-			<item name="Bü-Ankündigungstafel" icon="de:crossing-hint.png" type="node">
-				<label text="Bü-Ankündigungstafel" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:crossing_hint:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:crossing_hint"
-					value="yes" />
-				<key key="railway:signal:crossing_hint:form"
-					value="sign" />
-				<text key="railway:signal:crossing_hint:caption"
-					text="Caption (e.g. 'Bü 123,4')"
-					de.text="Beschriftung (z.B. 'Bü 123,4')"
-					default=""
-					delete_if_empty="true" />
-				<check key="railway:signal:crossing_hint:repeated"
-					text="Repeated"
-					de.text="Signalwiederholer (weiße Scheibe)"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:crossing_hint:height"
-					text="Signal height"
-					de.text="Signalbauform"
-					values="normal,dwarf"
-					default=""
-					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
-			</item>
-			<separator />
+			<group name="Bü-Signale" icon="de:bue-signals.png">
+				<item name="Bü-Überwachungssignal" icon="de:crossing-signal.png" type="node">
+					<label text="Bü-Überwachungssignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:crossing:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<combo key="railway:signal:crossing"
+						text="Exact type"
+						de.text="Signaltyp"
+						values="bü,so16"
+						display_values="Bü (ex-DB),So 16 (ex-DR)"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:crossing:states"
+						text="Signal states"
+						de.text="Signalzustände"
+						values="bü0;bü1,so16a;so16b"
+						display_values="Bü 0/1 (ex-DB),So 16a/b (ex-DR)"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:crossing:form"
+						value="light" />
+					<check key="railway:signal:crossing:repeated"
+						text="Repeated"
+						de.text="Signalwiederholer (weiße Scheibe)"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:crossing:shortened"
+						text="Shortened distance"
+						de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
+						default="off"
+						delete_if_empty="true" />
+				</item>
+				<item name="Bü-Überwachungssignal erwarten" icon="de:bue2.png" type="node">
+					<label text="Bü-Überwachungssignal erwarten" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:crossing_distant:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<combo key="railway:signal:crossing_distant"
+						text="Type of signal"
+						de.text="Signaltyp"
+						values="bü2,so15"
+						display_values="Bü 2 'Rautentafel' ex-DB,So 15 ex-DR"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:crossing_distant:form"
+						value="sign" />
+					<check key="railway:signal:crossing:repeated"
+						text="Repeated"
+						de.text="Signalwiederholer (weiße Scheibe)"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:crossing_distant:shortened"
+						text="Shortened distance"
+						de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
+						default="off"
+						delete_if_empty="true" />
+				</item>
+				<item name="Einschaltkontakt Bahnübergang" icon="de:bue3.png" type="node">
+					<label text="Einschaltkontakt Bahnübergang" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:crossing_distant:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<combo key="railway:signal:crossing_distant"
+						text="Type of signal"
+						de.text="Signaltyp"
+						values="bü3,so14"
+						display_values="Bü 3 ex-DB,So 14 ex-DR"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:crossing_distant:form"
+						value="sign" />
+					<check key="railway:signal:crossing:repeated"
+						text="Repeated"
+						de.text="Signalwiederholer (weiße Scheibe)"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:crossing_distant:shortened"
+						text="Shortened distance"
+						de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
+						default="off"
+						delete_if_empty="true" />
+				</item>
+				<item name="Pfeiftafel" icon="de:whistle.png" type="node">
+					<label text="Pfeiftafel" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:whistle:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<combo key="railway:signal:whistle"
+						text="Exact type"
+						de.text="Signaltyp"
+						values="db:bü4,dr:pf1,dr:pf2"
+						display_values="Bü 4 (ex-DB),Pf 1 (einfache Pfeiftafel ex-DR),Pf 2 (doppelte Pfeiftafel ex-DR)"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:whistle:form"
+						value="sign" />
+					<check key="railway:signal:whistle:twice"
+						text="Whistle twice?"
+						de.text="Doppelte Pfeiftafel?"
+						default="off"
+						delete_if_empty="true" />
+					<check key="railway:signal:whistle:only_transit"
+						text="Whistle only when train does not stop before crossing?"
+						de.text="Zwei senkrechte Striche?"
+						default="off"
+						delete_if_empty="true" />
+				</item>
+				<item name="Läutetafel" icon="de:ring.png" type="node">
+					<label text="Läutetafel" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:ring:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:ring"
+						value="bü5" />
+					<key key="railway:signal:ring:form"
+						value="sign" />
+				</item>
+				<item name="Bü-Tafel" icon="de:crossing-info.png" type="node">
+					<label text="Bü-Tafel" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:crossing_info:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:crossing_info"
+						value="yes" />
+					<key key="railway:signal:crossing_info:form"
+						value="sign" />
+					<text key="railway:signal:crossing_info:caption"
+						text="Caption (e.g. 'Bü 123,4')"
+						de.text="Beschriftung (z.B. 'Bü 123,4')"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:crossing_info:repeated"
+						text="Repeated"
+						de.text="Signalwiederholer (weiße Scheibe)"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:crossing_info:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						default=""
+						display_values="Mastbauform,Zwergsignal"
+						delete_if_empty="true" />
+				</item>
+				<item name="Bü-Ankündigungstafel" icon="de:crossing-hint.png" type="node">
+					<label text="Bü-Ankündigungstafel" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:crossing_hint:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:crossing_hint"
+						value="yes" />
+					<key key="railway:signal:crossing_hint:form"
+						value="sign" />
+					<text key="railway:signal:crossing_hint:caption"
+						text="Caption (e.g. 'Bü 123,4')"
+						de.text="Beschriftung (z.B. 'Bü 123,4')"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:crossing_hint:repeated"
+						text="Repeated"
+						de.text="Signalwiederholer (weiße Scheibe)"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:crossing_hint:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						default=""
+						display_values="Mastbauform,Zwergsignal"
+						delete_if_empty="true" />
+				</item>
+			</group>
+			<group name="Sh-Signale" icon="de:sh-signals.png">
+				<item name="Schutzhaltsignal" icon="de:sh.png" type="node">
+					<label text="Schutzhaltsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:minor:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge,in_track"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Gleismitte/am Prellbock"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:minor"
+						value="sh" />
+					<combo key="railway:signal:minor:form"
+						text="Signal form"
+						de.text="Anzeigeart"
+						values="light,semaphore,sign"
+						display_values="Lichtsignal,Formsignal,Tafel"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:minor:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:minor:states"
+						value="sh0;sh1" />
+					<check key="railway:signal:distant:marker_light"
+						text="Marker light"
+						de.text="Kennlicht"
+						default="off"
+						delete_if_empty="true" />
+					<space />
+					<label text="Signal Gsp 2 siehe 'Gleissperre'" />
+				</item>
+				<item name="Schutzhalttafel" icon="de:sh2.png" type="node">
+					<label text="Schutzhalttafel" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:minor:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,in_track"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:minor"
+						value="sh2" />
+					<key key="railway:signal:minor:form"
+						value="sign" />
+					<key key="railway:signal:minor:height"
+						value="normal" />
+				</item>
+				<item name="Haltvorscheibe" icon="de:sh-distant.png" type="node">
+					<label text="Haltvorscheibe" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						default=""
+						delete_if_empty="true" />
+					<check key="railway:signal:minor_distant:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:minor_distant"
+						value="dr:sh3" />
+					<key key="railway:signal:minor_distant:form"
+						value="sign" />
+					<combo key="railway:signal:minor_distant:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+				</item>
+			</group>
+			<group name="Ra-Signale" icon="de:ra-signals.png">
+				<item name="Rangierhalttafel" icon="de:ra10.png" type="node">
+					<label text="Rangierhalttafel" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:shunting:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:shunting"
+						value="ra10" />
+					<key key="railway:signal:shunting:form"
+						value="sign" />
+				</item>
+				<item name="Rangierhaltsignal" icon="de:ra11.png" type="node">
+					<label text="Rangierhaltsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:shunting:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:shunting"
+						value="ra11" />
+					<combo key="railway:signal:shunting:form"
+						text="Signal form"
+						de.text="Anzeigeart"
+						values="light,sign"
+						display_values="Lichtsignal mit Sh 1,Tafel"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:shunting:states"
+						text="Signal states"
+						de.text="Signalzustände"
+						values="ra11;sh1, "
+						display_values="Ra 11 / Sh 1,-nur Tafel-"
+						default=""
+						delete_if_empty="true" />
+				</item>
+				<item name="Abdrücksignal" icon="de:humping.png" type="node">
+					<label text="Abdrücksignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:humping:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:humping"
+						value="ra" />
+					<combo key="railway:signal:humping:form"
+						text="Signal form"
+						de.text="Anzeigeart"
+						values="light,semaphore"
+						display_values="Lichtsignal,Formsignal"
+						default=""
+						delete_if_empty="true" />
+					<key key="railway:signal:humping:states"
+						value="ra6;ra7;ra8;ra9" />
+					<combo key="railway:signal:humping:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
+				</item>
+			</group>
+			<group name="Zs-Signale" icon="de:zs-signals.png">
+				<item name="Richtungsanzeiger" icon="de:route.png" type="node">
+					<label text="Richtungsanzeiger" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:route:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:route"
+						value="zs2" />
+					<text key="railway:signal:route:states"
+						text="Signal states (separated by ';')"
+						de.text="Mögliche Anzeigewerte (getrennt durch ';')"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:route:form"
+						text="Type"
+						de.text="Typ"
+						values="sign,light"
+						display_values="Tafel,Leuchtanzeige"
+						default=""
+						delete_if_empty="true" />
+				</item>
+				<item name="Richtungsanzeiger-Ankündigung" icon="de:route-distant.png" type="node">
+					<label text="Richtungsanzeiger-Ankündigung" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:route_distant:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<key key="railway:signal:route_distant"
+						value="zs2v" />
+					<text key="railway:signal:route_distant:states"
+						text="Signal states (separated by ';')"
+						de.text="Mögliche Anzeigewerte (getrennt durch ';')"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:route_distant:form"
+						text="Type"
+						de.text="Typ"
+						values="sign,light"
+						display_values="Tafel,Leuchtanzeige"
+						default=""
+						delete_if_empty="true" />
+				</item>
+				<item name="Gleiswechselanzeiger" icon="de:zs6.png" type="node">
+					<label text="Gleiswechselanzeiger" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:wrong_road:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" default="" delete_if_empty="true">
+		                <list_entry value="db:zs6" display_value="Zs 6 DB" short_description="Gleiswechselanzeiger Zs 6 (ex-DB)" />
+		                <list_entry value="dr:zs7" display_value="Zs 7 DR" short_description="Gleiswechselanzeiger Zs 7 (ex-DR)" />
+		            </combo>
+					<combo key="railway:signal:wrong_road:form"
+						text="Signal form"
+						de.text="Anzeigeart"
+						values="sign,light"
+						display_values="Tafel,Leuchtanzeige"
+						default=""
+						delete_if_empty="true" />
+				</item>
+				<item name="Falschfahrt-Auftragssignal / Linksfahrtersatzsignal" icon="de:zs8.png" type="node">
+					<label text="Falschfahrt-Auftragssignal / Linksfahrtersatzsignal" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:wrong_road:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" default="" delete_if_empty="true">
+						<list_entry value="db:zs8" display_value="Zs 8 DB" short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DB)" />
+						<list_entry value="dr:zs8" display_value="Zs 8 DR" short_description="Linksfahrtersatzsignal Zs 8 (ex-DR)" />
+		            </combo>
+					<combo key="railway:signal:wrong_road:form"
+						text="Signal form"
+						de.text="Anzeigeart"
+						values="sign,light"
+						display_values="Tafel,Leuchtanzeige"
+						default=""
+						delete_if_empty="true" />
+				</item>
+				<separator />
+				<item name="Geschwindigkeitsanzeiger" icon="de:maxspeed.png" type="node">
+					<label text="Geschwindigkeitsanzeiger" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:speed_limit:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<combo key="railway:signal:speed_limit" text="Type of signal" de.text="Signaltyp" default="" delete_if_empty="true">
+		                <list_entry value="yes" display_value="Unbekannt" short_description="Genauer Signaltyp unbekannt" />
+		                <list_entry value="zs3" display_value="Zs 3" short_description="Geschwindigkeitsanzeiger Zs 3" />
+						<list_entry value="dr:lf1/2" display_value="Lf 1/2" short_description="Langsamfahrbeginnscheibe Lf 1/2 (ex-DR)" />
+						<list_entry value="lf2" display_value="Lf 2" short_description="Anfangsscheibe Lf 2" />
+						<list_entry value="lf3" display_value="Lf 3" short_description="Endscheibe Lf 3" />
+						<list_entry value="db:lf5" display_value="Lf 5 DR" short_description="Anfangstafel Lf 5 (ex-DB)" />
+						<list_entry value="dr:lf5" display_value="Lf 5 DR" short_description="Eckentafel Lf 5 (ex-DR)" />
+						<list_entry value="lf7" display_value="Lf 7" short_description="Geschwindigkeitssignal Lf 7" />
+						<list_entry value="db:zs10" display_value="Zs 10 DB" short_description="Ende der Geschwindigkeitsbegrenzung Zs 10 (ex-DB)" />
+		            </combo>
+					<combo key="railway:signal:speed_limit:form"
+						text="Signal form"
+						de.text="Anzeigeart"
+						values="light,sign"
+						display_values="Lichtsignal,Tafel"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:speed_limit:speed" default=""
+						text="Speed (km/h, in case of light signals separate the possible values with ';')"
+						de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte mit ';' trennen)"
+						delete_if_empty="true"
+						values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
+						display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Aufhebung (Zs 10, Lf 3)" />
+					<combo key="railway:signal:speed_limit:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						default=""
+						display_values="Mastbauform,Zwergsignal"
+						delete_if_empty="true" />
+				</item>
+				<item name="Geschwindigkeitsvoranzeiger" icon="de:maxspeed-distant.png" type="node">
+					<label text="Geschwindigkeitsvoranzeiger" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:speed_limit_distant:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<combo key="railway:signal:speed_limit_distant" text="Type of signal" de.text="Signaltyp" default="" delete_if_empty="true">
+		                <list_entry value="yes" display_value="Unbekannt" short_description="Genauer Signaltyp unbekannt" />
+		                <list_entry value="zs3v" display_value="Zs 3v" short_description="Geschwindigkeitsvoranzeiger Zs 3v" />
+						<list_entry value="lf1" display_value="Lf 1" short_description="Langsamfahrscheibe Lf 1" />
+						<list_entry value="db:lf4" display_value="Lf 4 DB" short_description="Geschwindigkeitstafel Lf 4 (ex-DB)" />
+						<list_entry value="dr:lf4" display_value="Lf 4" short_description="Geschwindigkeitstafel Lf 4 (ex-DR)" />
+						<list_entry value="lf6" display_value="Lf 6" short_description="Geschwindigkeits-Ankündesignal Lf 6" />
+		            </combo>
+					<combo key="railway:signal:speed_limit_distant:form"
+						text="Signal form"
+						de.text="Anzeigeart"
+						values="light,sign"
+						display_values="Lichtsignal,Tafel"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:speed_limit_distant:speed" default=""
+						text="Speed (km/h, in case of light signals separate the possible values with ';')"
+						de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte mit ';' trennen)"
+						delete_if_empty="true"
+						values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
+						display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
+					<combo key="railway:signal:speed_limit_distant:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						default=""
+						display_values="Mastbauform,Zwergsignal"
+						delete_if_empty="true" />
+				</item>
+				<separator />
+				<item name="Stumpfgleis- und Frühhaltanzeiger" icon="de:short-route.png" type="node">
+					<label text="Stumpfgleis- und Frühhaltanzeiger" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:short_route:deactivated"
+						text="Out of order"
+						de.text="Außer Betrieb"
+						default="off"
+						delete_if_empty="true" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						default=""
+						delete_if_empty="true" />
+					<space />
+					<combo key="railway:signal:short_route"
+						text="Type of signal"
+						de.text="Signaltyp"
+						values="zs13,dr:zs6,dr:zs106"
+						display_values="Zs 13,Zs 6 (Lichtsignal ex-DR),Zs 106 (Tafel ex-DR)"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:short_route:form"
+						text="Signal form"
+						de.text="Anzeigeart"
+						values="light,sign"
+						display_values="Lichtsignal,Tafel"
+						default=""
+						delete_if_empty="true" />
+					<combo key="railway:signal:short_route:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						default=""
+						display_values="Mastbauform,Zwergsignal"
+						delete_if_empty="true" />
+				</item>
+			</group>
 			<item name="Überwachungssignal Rückfallweiche" icon="de:resetting-switch.png" type="node">
 				<label text="Überwachungssignal Rückfallweiche" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
@@ -4501,82 +4475,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Fahrleitungssignal" icon="de:electricity.png" type="node">
-				<label text="Fahrleitungssignal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:electricity:deactivated"
-					text="Out of order"
-					de.text="Außer Betrieb"
-					default="off"
-					delete_if_empty="true" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right,overhead"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<space />
-				<combo key="railway:signal:electricity"
-					text="Exact type"
-					de.text="Signaltyp"
-					values="el1v,el1,el2,el3,el4,el5,el6"
-					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
-					default=""
-					delete_if_empty="true" />
-				<combo key="railway:signal:electricity:type"
-					text="Meaning"
-					de.text="Bedeutung"
-					values="power_off_advance,power_off,power_on,pantograph_down_advance,pantograph_down,pantograph_up,end_of_catenary"
-					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:electricity:form"
-					value="sign" />
-				<text key="railway:signal:electricity:voltage"
-					text="Voltage (if mentioned)"
-					de.text="Spannung (falls angezeigt)"
-					default=""
-					delete_if_empty="true" />
-				<text key="railway:signal:electricity:frequency"
-					text="Frequency (if mentioned)"
-					de.text="Frequenz (falls angezeigt)"
-					default=""
-					delete_if_empty="true" />
-			</item>
-			<item name="Zugfunk-Kanalhinweis" icon="de:radio.png" type="node">
-				<label text="Zugfunk-Kanalhinweis" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
-					delete_if_empty="true" />
-				<key key="railway:signal:radio"
-					value="yes" />
-				<key key="railway:signal:radio:form"
-					value="sign" />
-				<text key="railway:signal:radio:frequency"
-					text="Frequency/Channel"
-					de.text="Kanal"
-					default=""
-					delete_if_empty="true" />
-			</item>
 			<item name="Haltetafel" icon="de:stop.png" type="node">
 				<label text="Haltetafel" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
@@ -4700,6 +4598,42 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Heben,Senken"
 					delete_if_empty="true" />
 			</item>
+			<item name="Fahrtanzeiger" icon="de:main-repeated.png" type="node">
+				<label text="Fahrtanzeiger" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<text key="ref"
+					text="Signal ref"
+					de.text="Signalbezeichnung"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:main_repeated:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward,both"
+					display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:signal:main_repeated"
+					value="yes" />
+				<key key="railway:signal:main_repeated:form"
+					value="light" />
+			</item>
 			<item name="Abfahrtssignal" icon="de:departure.png" type="node">
 				<label text="Abfahrtssignal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
@@ -4813,6 +4747,29 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="yes" />
 				<key key="railway:signal:form"
 					value="sign" />
+			</item>
+			<item name="Zugfunk-Kanalhinweis" icon="de:radio.png" type="node">
+				<label text="Zugfunk-Kanalhinweis" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:radio"
+					value="yes" />
+				<key key="railway:signal:radio:form"
+					value="sign" />
+				<text key="railway:signal:radio:frequency"
+					text="Frequency/Channel"
+					de.text="Kanal"
+					default=""
+					delete_if_empty="true" />
 			</item>
 		</group>
 		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
@@ -5787,6 +5744,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default="off"
 				delete_if_empty="true" />
 		</item>
+		<separator />
 		<item name="Kilo-/Hektometertafel" icon="milestone.png" type="node">
 			<label text="Kilo-/hektometer indications are nodes on the track"
 				de.text="Kilo-/Hektometerbezeichnung werden als Punkt auf dem" />
@@ -6002,22 +5960,66 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="landuse"
 				value="railway" />
 		</item>
+		<separator />
 		<item name="Stromsystemwechsel" icon="systemswitch.png" type="node">
 			<label text="Stromsystemwechsel" />
 			<key key="railway"
 				value="isolated_track_section" />
 		</item>
-		<item name="Grenzpunkt" icon="ownerchange.png" type="node">
-			<label text="Eigentumswechsel der Infrastruktur an Privatbahnanschlüssen und Landesgrenzen" />
-			<key key="railway"
-				value="owner_change" />
+		<item name="Fahrleitungssignal" icon="de:electricity.png" type="node">
+			<label text="Fahrleitungssignal" />
+			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<label text="Manuell sind noch folgende Tags zu ergänzen:" />
-			<label text="- railway:name:(Name Betreiber 1)=(Name)" />
-			<label text="- railway:name:(Name Betreiber 2)=(Name)" />
-			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
-			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
+			<key key="railway"
+				value="signal" />
+			<check key="railway:signal:electricity:deactivated"
+				text="Out of order"
+				de.text="Außer Betrieb"
+				default="off"
+				delete_if_empty="true" />
+			<combo key="railway:signal:position"
+				text="Signal position"
+				de.text="Signalstandort"
+				values="left,right,overhead"
+				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
+				default=""
+				delete_if_empty="true" />
+			<combo key="railway:signal:direction"
+				text="Direction"
+				de.text="Anzeigerichtung"
+				values="forward,backward"
+				display_values="In Wegrichtung,Entgegen Wegrichtung"
+				default=""
+				delete_if_empty="true" />
+			<space />
+			<combo key="railway:signal:electricity"
+				text="Exact type"
+				de.text="Signaltyp"
+				values="el1v,el1,el2,el3,el4,el5,el6"
+				display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
+				default=""
+				delete_if_empty="true" />
+			<combo key="railway:signal:electricity:type"
+				text="Meaning"
+				de.text="Bedeutung"
+				values="power_off_advance,power_off,power_on,pantograph_down_advance,pantograph_down,pantograph_up,end_of_catenary"
+				display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
+				default=""
+				delete_if_empty="true" />
+			<key key="railway:signal:electricity:form"
+				value="sign" />
+			<text key="railway:signal:electricity:voltage"
+				text="Voltage (if mentioned)"
+				de.text="Spannung (falls angezeigt)"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:signal:electricity:frequency"
+				text="Frequency (if mentioned)"
+				de.text="Frequenz (falls angezeigt)"
+				default=""
+				delete_if_empty="true" />
 		</item>
+		<separator />
 		<item name="Fernsprecher" icon="de:phone.png" type="node">
 			<label text="Fernsprecher" />
 			<key key="railway"
@@ -6039,6 +6041,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Analog,GSM-R"
 				default=""
 				delete_if_empty="true" />
+		</item>
+		<separator />
+		<item name="Grenzpunkt" icon="ownerchange.png" type="node">
+			<label text="Eigentumswechsel der Infrastruktur an Privatbahnanschlüssen und Landesgrenzen" />
+			<key key="railway"
+				value="owner_change" />
+			<space />
+			<label text="Manuell sind noch folgende Tags zu ergänzen:" />
+			<label text="- railway:name:(Name Betreiber 1)=(Name)" />
+			<label text="- railway:name:(Name Betreiber 2)=(Name)" />
+			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
+			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
 		</item>
 		<group name="Versorgung" icon="supply.png">
 			<item name="Tankstelle" icon="fuel.png" type="node,closedway">
