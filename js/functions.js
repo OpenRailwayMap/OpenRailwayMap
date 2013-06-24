@@ -7,7 +7,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 // main function, creates map and layers, controls other functions
-function createMap()
+function createMap(embed)
 {
 	root = "http://www.openrailwaymap.org/";
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
@@ -72,12 +72,19 @@ function createMap()
 	//var permalink = new L.Control.Permalink({text: 'Permalink'}).addTo(map);
 	var layerSwitch = new L.Control.Layers(baseLayers, overlays).addTo(map);
 
-	// loading timestamp
-	var timestamp = new Timestamp("info");
+	// only in not-embed mode
+	if (!embed)
+	{
+		// loading timestamp
+		var timestamp = new Timestamp("info");
+		// setting start position
+		startposition = new Startposition(map, "locateButton");
+	}
+	// set start position in embed mode
+	else
+		this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
 
-	// setting start position
-	startposition = new Startposition(map, "locateButton");
-
+	// TODO: add search
 	// creating search
 	//search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
 }
@@ -87,17 +94,6 @@ function createMap()
 function gEBI(id)
 {
 	return document.getElementById(id);
-}
-
-
-// provides link to openstreetbugs
-function reportSpam()
-{
-	// get current coordinates
-	var position = map.getCenter();
-
-	// open osb and jump to current position
-	var bugWindow = window.open("http://openstreetbugs.schokokeks.org/?zoom="+map.getZoom()+"&lat="+position.lat+"&lon="+position.lng).focus();
 }
 
 
@@ -119,32 +115,6 @@ function josm(url)
 function getBounds()
 {
 	return map.getExtent().transform(map.getProjectionObject(), wgs84).toArray();
-}
-
-
-// TODO: attribution's CSS is destroyed
-// workaround because of webkit's hover-silbing-selector-bug
-function hoverSidebar()
-{
-	if (gEBI("hideText").innerHTML != '»')
-		return false;
-
-	gEBI("mapFrame").className = "mapFrameOut";
-	startposition.locateButton.className = "locateButton";
-	gEBI("hideSidebarButton").className = "hideSidebarButton";
-}
-
-
-// workaround because of webkit's hover-silbing-selector-bug
-function unhoverSidebar()
-{
-	if (gEBI("hideText").innerHTML != '»')
-		return false;
-
-	gEBI("mapFrame").className = "mapFrame";
-	startposition.locateButton.className = "locateButtonFalse";
-	if (gEBI("sideBar").className == "sideBarOut")
-		gEBI("hideSidebarButton").className = "hideSidebarButtonFalse";
 }
 
 

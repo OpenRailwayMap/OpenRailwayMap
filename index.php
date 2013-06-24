@@ -149,7 +149,7 @@
 			})();
 		/* ]]> */</script>
 	</head>
-	<body onload="createMap();">
+	<body onload="createMap(false);">
 		<div id="fullscreen" class="fullscreenOut"></div>
 		<div id="moreInfo" class="moreInfoFalse"></div>
 		<div id="sideBar" class="sideBar" onmouseover="hoverSidebar();" onmouseout="unhoverSidebar();">
@@ -187,7 +187,6 @@
 				</a>
 			</noscript>
 			<div id="linkBar">
-				<a class="links" id="spamButton" onclick="reportSpam();"><?=_("Report bug in map")?></a>&nbsp;•
 				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
 				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>
 				<script language="javascript">
