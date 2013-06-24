@@ -20,7 +20,6 @@
 	$geomcolumn = "way";
 	$database = "railmap";
 	$maxzoom = 19;
-	$stylesheets = array("../styles/style.mapcss");
 	$tables = array("polygon"=>"railmap_polygon", "line"=>"railmap_line","point"=>"railmap_point");
 	$intscalefactor = 10000;
 
@@ -175,208 +174,8 @@
 	}
 
 
-	// parses a MapCSS v0.2 file and creates sql tag conditions
-	// TODO: support for case sensitive matching missing
-	function parseMapCSSFile($filename)
-	{
-		global $maxzoom;
-
-		// read file
-		$content = file_get_contents($filename); 
-		// remove whitespace and newlines
-		$content = trim(preg_replace("/\n+/", "", $content));
-		// remove the CSS style 
-		$content = trim(preg_replace("/\{[^{]+\}/", "|||", $content));
-		// split single selectors and store them in an array
-		$selectors = explode("|||", $content);
-
-		// in first step split grouped selectors and remove whitespaces
-		for ($i=0; $i<count($selectors); $i++)
-		{
-			$selectors[$i] = trim($selectors[$i]);
-			$split = explode(',', $selectors[$i]);
-			if (count($split) > 0)
-			{
-				$selectors[$i] = trim($split[0]);
-				for ($i=1; $i<count($split); $i++)
-					array_push($selectors, trim($split[1]));
-			}
-		}
-
-		// then build a list of tags used in each zoom level
-		foreach ($selectors as $selector)
-		{
-			$sql = "";
-			// remove link selectors >[...]
-			$temp = trim(preg_replace("/>\[.+\]/", "", $selector));
-			// parse selectors: [...]
-			preg_match("/\[([^[]+)\]/", $temp, $conditions);
-
-			for ($i=1; $i<count($conditions); $i++)
-			{
-				$tmp = substr($conditions[$i], 1, -1);
-				// conditions with just a key or value
-				if ((strpos($tmp, "=") === false) && (strpos($tmp, "<") === false) && (strpos($tmp, ">") === false))
-				{
-					// a key not exists
-					if (strpos($tmp, '!') == 0)
-					{
-						if ((strpos($tmp, '"') == 1) || (strpos($tmp, "'") == 1))
-							$sql .= "AND (NOT (tags ? '".substr($tmp, 2, -1)."')) ";
-						else
-							$sql .= "AND (NOT (tags ? '".substr($tmp, 1)."')) ";
-					}
-					// a truth value for tag
-					else if (strpos($tmp, '?') == (strlen($tmp)-1))
-					{
-						if ((strpos($tmp, '"') == 0) || (strpos($tmp, "'") == 0))
-							$sql .= "OR (tags->'".substr($tmp, 1, -2)."'='yes') OR (tags->'".substr($tmp, 1, -2)."'='true') OR (tags->'".substr($tmp, 1, -2)."'='1') ";
-						else
-							$sql .= "OR (tags->'".substr($tmp, 0, -1)."'='yes') OR (tags->'".substr($tmp, 0, -1)."'='true') OR (tags->'".substr($tmp, 0, -1)."'='1') ";
-					}
-					// a key exists
-					else
-					{
-						if ((strpos($tmp, '"') == 0) || (strpos($tmp, "'") == 0))
-							$sql .= "OR (tags ? '".substr($tmp, 1, -1)."') ";
-						else
-							$sql .= "OR (tags ? '".$tmp."') ";
-					}
-				}
-				// other conditions containing key/value-pairs, comparisions, regexes
-				else
-				{
-					// not-equal operator
-					if (strpos($tmp, '!=') !== false)
-					{
-						$kv = extractKeyValueFromCondition("!=", $tmp);
-						$sql .= "AND (NOT (tags->'".$kv[0]."'='".$kv[1]."')) ";
-					}
-					// value-contains-substring operator
-					else if (strpos($tmp, '*=') !== false)
-					{
-						$kv = extractKeyValueFromCondition("*=", $tmp);
-						$sql .= "AND (tags->'".$kv[0]."' LIKE '%".$kv[1]."%') ";
-					}
-					// value-starts-with operator
-					else if (strpos($tmp, '^=') !== false)
-					{
-						$kv = extractKeyValueFromCondition("^=", $tmp);
-						$sql .= "AND (tags->'".$kv[0]."' LIKE '%".$kv[1]."') ";
-					}
-					// value-ends-with operator
-					else if (strpos($tmp, '$=') !== false)
-					{
-						$kv = extractKeyValueFromCondition("$=", $tmp);
-						$sql .= "AND (tags->'".$kv[0]."' LIKE '".$kv[1]."%') ";
-					}
-					// ;-separated-values-contain operator
-					else if (strpos($tmp, '~=') !== false)
-					{
-						$kv = extractKeyValueFromCondition("~=", $tmp);
-						$sql .= "AND ((tags->'".$kv[0]."' = '".$kv[1]."') OR (tags->'".$kv[0]."' LIKE '%".$kv[1].";%') OR (tags->'".$kv[0]."' LIKE '%;".$kv[1]."') ";
-					}
-					// greater-equal-than operator
-					else if (strpos($tmp, '>=') !== false)
-					{
-						$kv = extractKeyValueFromCondition(">=", $tmp);
-						$sql .= "AND (CAST(tags->'".$kv[0]."' AS FLOAT) >= '".$kv[1]."') ";
-					}
-					// smaller-equal-than operator
-					else if (strpos($tmp, '<=') !== false)
-					{
-						$kv = extractKeyValueFromCondition("<=", $tmp);
-						$sql .= "AND (CAST(tags->'".$kv[0]."' AS FLOAT) <= '".$kv[1]."') ";
-					}
-					// greater-than operator
-					else if (strpos($tmp, '>') !== false)
-					{
-						$kv = extractKeyValueFromCondition(">", $tmp);
-						$sql .= "AND (CAST(tags->'".$kv[0]."' AS FLOAT) > '".$kv[1]."') ";
-					}
-					// smaller-than operator
-					else if (strpos($tmp, '<') !== false)
-					{
-						$kv = extractKeyValueFromCondition("<", $tmp);
-						$sql .= "AND (CAST(tags->'".$kv[0]."' AS FLOAT) < '".$kv[1]."') ";
-					}
-					// regex operator
-					else if (strpos($tmp, '=~') !== false)
-					{
-						$kv = extractKeyValueFromCondition("=~", $tmp);
-						$sql .= "AND (tags->'".$kv[0]."' ~ '".substr($kv[1], 1, -1)."') ";
-					}
-					// equal operator
-					else if (strpos($tmp, '=') !== false)
-					{
-						$kv = extractKeyValueFromCondition("=", $tmp);
-						$sql .= "AND (tags->'".$kv[0]."' = '".$kv[1]."') ";
-					}
-				}
-			}
-
-			// parse zoom levels and set the tag condition for this zoomlevel
-			$tagconditions = array();
-			preg_match("/\|([^[]+)\[/", $temp, $zoomlevels);
-			if (count($zoomlevels) > 1)
-			{
-				$tmp = substr($zoomlevels[1], 1, -1);
-				// only one zoom level: way|z13 {...}
-				if (strpos($tmp, "-") === false)
-				{
-					$z = substr($tmp, 1);
-					$tagconditions[$z] .= $sql;
-				}
-				// more than one zoomlevel
-				else
-				{
-					$tmp = explode("-", $tmp);
-					// format way|z-12 {...}
-					if (strlen($tmp[0]) == 1)
-						for ($j=0; $j<$tmp[1]+1; $j++)
-							$tagconditions[$j] .= $sql;
-					// format way|z16- {...} or way|z13-15 {...}
-					else
-					{
-						// format way|z13-15 {...}
-						if (strlen($tmp[1]) > 0)
-							for ($j=substr($tmp[0], 1); $j<$tmp[1]+1; $j++)
-								$tagconditions[$j] .= $sql;
-						// format way|z16- {...}
-						else
-							for ($j=substr($tmp[0], 1); $j<$maxzoom+1; $j++)
-								$tagconditions[$j] .= $sql;
-					}
-				}
-			}
-			// every zoomlevel
-			else
-				for ($j=0; $j<$maxzoom+1; $j++)
-					$tagconditions[$j] .= $sql;
-		}
-
-		return $tagconditions;
-	}
-
-
-	// splits the condition at it's separator, removes quotes if necessary and returns key/value
-	function extractKeyValueFromCondition($separator, $condition)
-	{
-		$tmp = explode($separator, $condition);
-		if ((strpos($tmp[0], '"') == 0) || (strpos($tmp[0], "'") == 0))
-			$kv[0] = substr($tmp[0], 1, -1);
-		else
-			$kv[0] = $tmp[0];
-		if ((strpos($tmp[1], '"') == 0) || (strpos($tmp[1], "'") == 0))
-			$kv[1] = substr($tmp[1], 1, -1);
-		else
-			$kv[1] = $tmp[1];
-		return $kv;
-	}
-
-
-	// requests objects for a certain zoom level and bounding box with a given style and returns the data in JSON format
-	function getVectors($bbox, $zoom, $style, $vec)
+	// requests objects for a certain zoom level and bounding box and returns the data in JSON format
+	function getVectors($bbox, $zoom, $vec)
 	{
 		global $geomcolumn, $database, $tables, $intscalefactor;
 
@@ -402,7 +201,7 @@
 											(
 												SELECT ST_Buffer(way, ".pixelSizeAtZoom($zoom, $pxtolerance).") AS ".$geomcolumn.", CAST(tags AS text) AS tags
 												FROM ".$tables[$vec]."
-												WHERE way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) AND way_area > ".pow(pixelSizeAtZoom($zoom, $pxtolerance), 2)/$pxtolerance." ".$style[$zoom]."
+												WHERE way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) AND way_area > ".pow(pixelSizeAtZoom($zoom, $pxtolerance), 2)/$pxtolerance."
 											) p
 										GROUP BY CAST(tags AS text)
 									) p
@@ -422,7 +221,7 @@
 									(
 										SELECT ST_Union(way) AS ".$geomcolumn.", CAST(tags AS text)
 										FROM ".$tables[$vec]."
-										WHERE way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) ".$style[$zoom]."
+										WHERE way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913)
 										GROUP BY CAST(tags AS text)
 									) p
 							) p";
@@ -433,7 +232,7 @@
 						SELECT ST_AsGeoJSON(ST_TransScale(way, ".-$bbox_p[0].", ".-$bbox_p[1].", ".($intscalefactor/($bbox_p[2]-$bbox_p[0])).", ".($intscalefactor/($bbox_p[3]-$bbox_p[1]))."), 0) AS ".$geomcolumn.", hstore2json(tags) AS tags
 						FROM ".$tables[$vec]."
 						WHERE
-				        way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) ".$style[$zoom]."
+				        way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913)
 						LIMIT 10000";
 		}
 
@@ -466,14 +265,12 @@
 		die("Param y invalid or missing.");
 
 	$bbox = bboxByTile($z+1, $x, $y);
-	// TODO: check parsing and remove comments
-	//foreach ($stylesheets as $stylesheet)
-		//$style .= parseMapCSSFile($stylesheet);
-	$zoom = $z+2;
 
-	$content["features"] = getVectors($bbox, $zoom, $style, "polygon");
-	$content["features"] = array_merge($content["features"], getVectors($bbox, $zoom, $style, "line"));
-	$content["features"] = array_merge($content["features"], getVectors($bbox, $zoom, $style, "point"));
+	$zoom = $z+2;
+	$content["features"] = array();
+	$content["features"] = array_merge($content["features"], (array)getVectors($bbox, $zoom, "polygon"));
+	$content["features"] = array_merge($content["features"], (array)getVectors($bbox, $zoom, "line"));
+	$content["features"] = array_merge($content["features"], (array)getVectors($bbox, $zoom, "point"));
 	$content["granularity"] = $intscalefactor;
 	$content["bbox"] = $bbox;
 
