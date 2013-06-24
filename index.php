@@ -205,7 +205,6 @@
 			<div id="detailsBar" class="infoBarOut"></div>
 			<iframe id="josmFrame" src="about:blank"></iframe>
 		</div>
-		<div class="hideSidebarButton" id="hideSidebarButton" onclick="hideSideBar();" title="<?=_('Hide')?>"><b id="hideText">«</b></div>
 		<img class="locateButton" id="locateButton" src="img/locate.png" />
 		<div id="mapFrame" class="mapFrame">
 			<noscript>
