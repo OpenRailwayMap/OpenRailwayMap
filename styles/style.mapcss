@@ -49,6 +49,18 @@ way[bridge=yes]::bridges
     linecap: butt;
 }
 
+/*******************************************/
+/* transparent casing of historic railways */
+/*******************************************/
+way[railway=disused], way[railway=abandoned], way[railway=razed]
+{
+	z-index: 10;
+    casing-color: black;
+	casing-opacity: 0.2;
+	casing-width: 1;
+    linecap: butt;
+}
+
 /***********/
 /* tunnels */
 /***********/
@@ -187,11 +199,35 @@ way[railway=rail][usage=industrial][service=siding], way[railway=rail][usage=ind
 /********************/
 way[railway=disused]
 {
-	z-index: 100;
-	color: #949494;
+	z-index: 300;
+	color: #70584D;
     width: 3;
-    casing-color: #ADADAD;
-	casing-width: 0.5;
+    linecap: round;
+}
+
+/**********************/
+/* abandoned railways */
+/**********************/
+way[railway=abandoned]
+{
+	z-index: 250;
+	dashes: 5,5;
+	color: #70584D;
+    width: 3;
+	opacity: 0.8;
+    linecap: round;
+}
+
+/******************/
+/* razed railways */
+/******************/
+way[railway=razed]
+{
+	z-index: 200;
+	dashes: 11,8;
+	color: #70584D;
+	opacity: 0.6;
+    width: 3;
     linecap: round;
 }
 
