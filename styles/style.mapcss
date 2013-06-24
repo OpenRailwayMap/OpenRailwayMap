@@ -316,8 +316,11 @@ node[railway=milestone]
 	text: "railway:position";
 	text-position: auto;
 	text-color: black;
+	font-size: 11;
+	font-family: Arial Black;
+	font-weight: bold;
 	text-halo-radius: 0.5;
-	text-halo-color: #CCCCCC;
+	text-halo-color: white;
 }
 
 /************/
@@ -332,7 +335,8 @@ node|z11-[railway=station]
 	symbol-fill-color: blue;
 	text: "name";
 	text-position: auto;
-	text-size: 30;
+	font-family: Arial Black;
+	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
 	text-halo-radius: 1;
@@ -348,7 +352,8 @@ node|z1-11[railway=station]
 	symbol-fill-color: blue;
 	text: "railway:ref";
 	text-position: auto;
-	text-size: 30;
+	font-family: Arial Black;
+	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
 	text-halo-radius: 1;
@@ -364,7 +369,8 @@ area|z11-[railway=station]
 	symbol-fill-color: blue;
 	text: "name";
 	text-position: center;
-	text-size: 30;
+	font-family: Arial Black;
+	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
 	text-halo-radius: 1;
@@ -380,7 +386,8 @@ area|z1-11[railway=station]
 	symbol-fill-color: blue;
 	text: "railway:ref";
 	text-position: center;
-	text-size: 30;
+	font-family: Arial Black;
+	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
 	text-halo-radius: 1;
@@ -399,9 +406,10 @@ node|z11-[railway=halt]
 	symbol-fill-color: blue;
 	text: "name";
 	text-position: auto;
-	text-size: 22;
+	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
+	font-family: Arial;
 	text-halo-radius: 1;
 	text-halo-color: white;
 }
@@ -415,9 +423,10 @@ node|z1-11[railway=halt]
 	symbol-fill-color: blue;
 	text: "railway:ref";
 	text-position: auto;
-	text-size: 22;
+	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
+	font-family: Arial;
 	text-halo-radius: 1;
 	text-halo-color: white;
 }
@@ -431,9 +440,10 @@ area|z11-[railway=halt]
 	symbol-fill-color: blue;
 	text: "name";
 	text-position: center;
-	text-size: 22;
+	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
+	font-family: Arial;
 	text-halo-radius: 1;
 	text-halo-color: white;
 }
@@ -447,9 +457,10 @@ area|z1-11[railway=halt]
 	symbol-fill-color: blue;
 	text: "railway:ref";
 	text-position: center;
-	text-size: 22;
+	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
+	font-family: Arial;
 	text-halo-radius: 1;
 	text-halo-color: white;
 }
