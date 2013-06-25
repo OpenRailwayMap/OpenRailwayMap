@@ -40,7 +40,7 @@ function createMap(embed)
 	var railmap = new L.TileLayer.Kothic(root+'tiles/{z}/{x}/{y}.js',
 	{
 		attribution: "Rendering: OpenRailwayMap",
-		minZoom: 12
+		minZoom: 10
 	});
 	MapCSS.onImagesLoad = function()
 	{
