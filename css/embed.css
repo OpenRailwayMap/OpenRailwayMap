@@ -17,7 +17,7 @@ html,body
 	overflow-y: hidden;
 }
 
-/* map widget in main size when sidebar is fold in*/
+/* map widget */
 .mapFrame
 {
 	background-color: #f1eee8;
@@ -39,116 +39,34 @@ noscript p
 }
 
 /* links on the bottom of each popup, also the box around them */
-#popupLinks
+.popupLinks
 {
 	border-top: 1px solid gray;
 	color: #000000;
 	font-size: 11px;
 }
 
-#popupLinks a
+.popupLinks a
 {
 	text-decoration: none;
 }
 
-#popupLinks a:hover
+.popupLinks a:hover
 {
 	text-decoration: underline;
 }
 
 /* style of texts in popups */
-.header
+.popupHeader
 {
 	font-size: 16px;
 }
 
-.street-address
-{
-	font-size: 12px;
-}
-
-.adr
-{
-	margin-top: 2px;
-	font-size: 12px;
-}
-
-.contact
-{
-	margin-top: 10px;
-	font-size: 11px;
-}
-
-.contact a
-{
-	text-decoration: none;
-}
-
-.contact a:hover
-{
-	text-decoration: underline;
-}
-
-.web
-{
-	margin-top: 10px;
-	font-size: 11px;
-}
-
-.web a
-{
-	text-decoration: none;
-}
-
-.web a:hover
-{
-	text-decoration: underline;
-}
-
-.openinghours, .servicetimes
+.popupContent
 {
 	margin-top: 10px;
 	font-size: 10px;
 }
-
-.operator
-{
-	margin-top: 10px;
-	font-size: 10px;
-}
-
-/* "opened"-label */
-.closed
-{
-	background-color: #d55858;
-	color: #ffffff;
-}
-
-.open
-{
-	background-color: #62be67;
-	color: #ffffff;
-}
-
-.maybeopen
-{
-	background-color: #f4e73c;
-	color: #000000;
-}
-
-
-#image
-{
-	max-height: 60px;
-	border: 1px solid black;
-	background-image: url(../img/loading.gif);
-	background-repeat: no-repeat;
-	background-position: center;
-	float: right;
-	margin-left: 10px;
-	margin-bottom: 10px;
-}
-
 
 /* loading image */
 .loading
@@ -156,20 +74,6 @@ noscript p
 	text-align: center;
 	width: 16px;
 	height: 16px;
-}
-
-/* names of clustered popups */
-.clusterName
-{
-	text-decoration: none;
-	font-weight: normal;
-	font-size: 12px;
-}
-
-.clusterName:hover
-{
-	text-decoration: underline;
-	cursor: pointer;
 }
 
 /* hidden frame to which josm remote plugin messages are echoed */
