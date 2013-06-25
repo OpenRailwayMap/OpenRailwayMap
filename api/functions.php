@@ -1418,4 +1418,77 @@
 
 		return true;
 	}
+
+	// returns the position of a facility by a $ref
+	// TODO: ranking
+	// TODO: clustering
+	// TODO: komplette flächen zurückgeben
+	// TODO: miminallänge string
+	function getFacilityPositionByRef($ref)
+	{
+		global $db, $prefix;
+
+		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id FROM
+					(
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, osm_id AS id
+						FROM ".$prefix."_point
+						WHERE (LOWER(tags->'railway:ref') = '".strtolower($ref)."') AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
+					) AS foo;";
+
+		$connection = connectToDatabase($db);
+		if (!$connection)
+			return false;
+		$response = requestDetails($query, $connection);
+
+		pg_close($connection);
+
+		if ($response)
+			return $response;
+		else
+			return false;
+	}
+
+	// returns the position of a facility by a $name
+	// TODO: ranking
+	// TODO: clustering
+	// TODO: komplette flächen zurückgeben
+	// TODO: miminallänge string
+	function getFacilityPositionByName($name)
+	{
+		global $db, $prefix;
+
+		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id FROM
+					(
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, osm_id AS id
+						FROM ".$prefix."_point
+						WHERE (LOWER(tags->'name') LIKE '".strtolower($name)."') AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
+						UNION
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, osm_id AS id
+						FROM ".$prefix."_point
+						WHERE (LOWER(tags->'name') LIKE '%".strtolower($name)."%') AND (NOT (tags->'name'='".strtolower($name)."')) AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
+					) AS foo;";
+
+		$connection = connectToDatabase($db);
+		if (!$connection)
+			return false;
+		$response = requestDetails($query, $connection);
+
+		pg_close($connection);
+
+		if ($response)
+			return $response;
+		else
+			return false;
+	}
+
+	// checks if given name is in valid format
+	function isValidName($name)
+	{
+		if (!$name)
+			return false;
+		if (!ctype_alnum($name))
+			return false;
+
+		return true;
+	}
 ?>

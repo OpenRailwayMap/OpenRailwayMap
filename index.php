@@ -150,7 +150,7 @@
 	<body onload="createMap(false);">
 		<div id="fullscreen" class="fullscreenOut"></div>
 		<div id="moreInfo" class="moreInfoFalse"></div>
-		<div id="sideBar" class="sideBar" onmouseover="hoverSidebar();" onmouseout="unhoverSidebar();">
+		<div id="sideBar" class="sideBar">
 			<b id="header"><a href="index.php"><?=$appname?></a></b>
 			<form id="langSelection">
 				<select id="langSelector" name="language" size="1" onChange="changeLanguage(this.form.language.options[this.form.language.selectedIndex].value);">
