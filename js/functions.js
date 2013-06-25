@@ -84,9 +84,8 @@ function createMap(embed)
 	else
 		this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
 
-	// TODO: add search
 	// creating search
-	//search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
+	search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
 }
 
 

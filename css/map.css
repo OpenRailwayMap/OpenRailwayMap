@@ -176,6 +176,29 @@ noscript p
 	cursor: pointer;
 }
 
+/* loading indicator of search engine */
+.loadingMoreInfo
+{
+	padding: 10px;
+	text-align: center;
+	font-size: 12px;
+	color: black;
+}
+
+.loadingMoreInfo img
+{
+	text-align: center;
+	width: 16px;
+	height: 16px;
+}
+
+.loadingMoreInfo:hover img
+{
+	text-align: center;
+	width: 16px;
+	height: 16px;
+}
+
 /* hidden frame to which josm remote plugin messages are echoed */
 #josmFrame
 {
