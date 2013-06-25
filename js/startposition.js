@@ -61,18 +61,16 @@ function Startposition(map, locateButton)
 	this.map = map;
 	this.locateButton = gEBI(locateButton);
 
-	// if no position set
-	//if (!this.map.getCenter())
-	//{
-		if (params['lat'] && params['lon'])
-		{
-			if (!params['zoom'])
-				params['zoom'] = 17;
-			this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
-		}
-		else
-			this.setPosition();
-	//}
+	// permalink given
+	if (params['lat'] && params['lon'])
+	{
+		if (!params['zoom'])
+			params['zoom'] = 17;
+		this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
+	}
+	// no permalink
+	else
+		this.setPosition();
 
 	// if position already set, create popup
 	//if (params['id'] && params['type'])
@@ -83,7 +81,6 @@ function Startposition(map, locateButton)
 		//if (params['ext'])
 			//showMoreInfo(params['id'], params['type'], params['lat'], params['lon']);
 	//}
-
 
 	// onclick event of locate button
 	var self = this;

@@ -56,7 +56,6 @@
 				if (!isset($type))
 					$type = isset($_GET['objecttype']) ? $_GET['objecttype'] : null;
 				echo "type : ".(isset($type) ? ("\"".$type."\"") : ("null")).",\n";
-				echo "ext : ".((isset($_GET['ext']) && ($_GET['ext'] == 1)) ? ("true") : ("false")).",\n";
 				echo "lat : ";
 					if (isset($_GET['lat']))
 						echo $_GET['lat'].",\n";
@@ -80,7 +79,6 @@
 							echo "null,\n";
 					}
 				echo "zoom : ".(isset($_GET['zoom']) ? ($_GET['zoom']) : ("null")).",\n";
-				echo "bounded : ".(((isset($_GET['bounded'])) && ($_GET['bounded'] == 1)) ? 1 : 0).",\n";
 				echo "offset : ".(isset($_GET['offset']) ? ($_GET['offset']) : ("null")).",\n";
 				echo "searchquery : \"".(isset($_GET['q']) ? ($_GET['q']) : (""))."\",\n";
 				echo "lang : \"".$_GET['lang']."\"\n";
