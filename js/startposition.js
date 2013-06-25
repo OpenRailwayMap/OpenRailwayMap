@@ -72,16 +72,6 @@ function Startposition(map, locateButton)
 	else
 		this.setPosition();
 
-	// if position already set, create popup
-	//if (params['id'] && params['type'])
-	//{
-		//var popupPosition = new OpenLayers.LonLat(params['lon'], params['lat']);
-		//createPopup(params['id'], params['type'], params['lat'], params['lon']);
-		//this.map.panTo(this.map.getCenter());
-		//if (params['ext'])
-			//showMoreInfo(params['id'], params['type'], params['lat'], params['lon']);
-	//}
-
 	// onclick event of locate button
 	var self = this;
 	this.locateButton.onclick = function()
