@@ -181,7 +181,7 @@
 		$message .= "\nError.... ".$error;
 
 		// sending error report by mail to given mail address
-		$sended = mail($mail, "Error Report ".$appname, $message, "From: ".$appname." <info@openlinkmap.org>");
+		$sended = mail($mail, "Error Report ".$appname, $message, "From: ".$appname." <".$mail.">");
 
 		// check if mail was being send
 		if(!$sended)
