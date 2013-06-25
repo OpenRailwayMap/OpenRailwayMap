@@ -110,68 +110,6 @@ function josm(url)
 }
 
 
-// TODO: check ab hier
-// returns the current map bbox
-function getBounds()
-{
-	return map.getExtent().transform(map.getProjectionObject(), wgs84).toArray();
-}
-
-
-// updates map's center
-function updateMap()
-{
-	map.setCenter(map.getCenter(), map.getZoom());
-}
-
-
-// shows the search bar when clicking on the 'hide'-button
-function showSideBar()
-{
-	// hide searchbar
-	gEBI('sideBar').className = 'sideBar';
-	var button = gEBI('hideSidebarButton');
-	button.className = 'hideSidebarButton';
-	button.onclick = new Function("hideSideBar()");
-	button.title = translations['hide'];
-	gEBI("hideText").innerHTML = '«';
-	gEBI('searchBox').focus();
-	gEBI("mapFrame").className = "mapFrameOut";
-	gEBI("locateButton").className = "locateButton";
-	updateMap();
-}
-
-
-// hides the search bar when clicking on the 'hide'-button or after clicking on a result
-function hideSideBar()
-{
-	// hide searchbar
-	gEBI('sideBar').className = 'sideBarOut';
-	var button = gEBI('hideSidebarButton');
-	button.className = 'hideSidebarButtonFalse';
-	button.onclick = new Function("showSideBar()");
-	button.title = translations['show'];
-	gEBI("hideText").innerHTML = '»';
-	gEBI("mapFrame").className = "mapFrame";
-	startposition.locateButton.className = "locateButtonFalse";
-	updateMap();
-}
-
-
-// display html code to embed with iframe
-function getEmbedLink(id, type)
-{
-	showSideBar();
-	var detailsbar = gEBI('detailsBar');
-	detailsbar.className = "infoBar";
-	detailsbar.innerHTML = '<div class="moreInfoBox"><center><dfn><b>'+translations['embed']+'</b></dfn><br /><dfn>'+translations['embeddescription']+'</dfn></center></div><div class="moreInfoBox"><input id="embed" type=text value=\'<iframe width="420" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'+root+'embed.php?id='+id+'&type='+type+'" style="border: 1px solid black"></iframe>\'</div>';
-
-	var embed = gEBI('embed');
-	embed.focus();
-	embed.select();
-}
-
-
 // perform a synchron API request
 function requestApi(file, query, handler)
 {
@@ -191,17 +129,10 @@ function requestApi(file, query, handler)
 }
 
 
-// builds a lat-lon url parameter
-function queryLatLon(lat, lon)
+// updates map's center
+function updateMap()
 {
-	return "lat="+lat+"&lon="+lon;
-}
-
-
-// builds a lat-lon url parameter with zoom
-function queryLatLonZoom(lat, lon, zoom)
-{
-	return queryLatLon(lat, lon)+"&zoom="+zoom;
+	map.setView(map.getCenter(), map.getZoom());
 }
 
 
@@ -216,9 +147,6 @@ function changeLanguage(lang)
 
 	if (params['type'] != null)
 		url += '&type='+params['type'];
-
-	if (params['ext'] == true)
-		url += '&ext=1';
 
 	if (params['lat'] != null)
 		url += '&lat='+params['lat'];
@@ -241,8 +169,19 @@ function changeLanguage(lang)
 	if (params['searchquery'] != "")
 		url += '&q='+params['searchquery'];
 
-	if (params['bounded'] == 1)
-		url += '&bounded='+params['bounded'];
-
 	window.location = url;
+}
+
+
+// builds a lat-lon url parameter
+function queryLatLon(lat, lon)
+{
+	return "lat="+lat+"&lon="+lon;
+}
+
+
+// builds a lat-lon url parameter with zoom
+function queryLatLonZoom(lat, lon, zoom)
+{
+	return queryLatLon(lat, lon)+"&zoom="+zoom;
 }
