@@ -73,6 +73,22 @@ way[tunnel=yes]::tunnels
     linecap: butt;
 }
 
+/********/
+/* refs */
+/********/
+way[railway=rail][!service], way[railway=disused][!service], way[railway=abandoned][!service], way[railway=razed][!service], way[railway=proposed][!service], way[railway=construction][!service], way[railway=preserved][!service], way[railway=narrow_gauge][!service]
+{
+	z-index: 4000;
+	text: "ref";
+	text-position: line;
+	text-color: #585858;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+}
+
 /********************************************/
 /* simple railways without service or usage */
 /********************************************/
@@ -322,7 +338,7 @@ node[railway=milestone]
 /************/
 node|z11-[railway=station]
 {
-	z-index: 10000;
+	z-index: 30000;
 	symbol-shape: circle;
 	symbol-size: 8;
 	symbol-stroke-color: blue;
@@ -339,7 +355,7 @@ node|z11-[railway=station]
 
 node|z1-11[railway=station]
 {
-	z-index: 10000;
+	z-index: 30000;
 	symbol-shape: circle;
 	symbol-size: 8;
 	symbol-stroke-color: blue;
@@ -354,46 +370,12 @@ node|z1-11[railway=station]
 	text-halo-color: white;
 }
 
-area|z11-[railway=station]
-{
-	z-index: 10000;
-	symbol-shape: circle;
-	symbol-size: 8;
-	symbol-stroke-color: blue;
-	symbol-fill-color: blue;
-	text: "name";
-	text-position: center;
-	font-family: Arial Black;
-	font-size: 12;
-	text-color: blue;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-}
-
-area|z1-11[railway=station]
-{
-	z-index: 10000;
-	symbol-shape: circle;
-	symbol-size: 8;
-	symbol-stroke-color: blue;
-	symbol-fill-color: blue;
-	text: "railway:ref";
-	text-position: center;
-	font-family: Arial Black;
-	font-size: 12;
-	text-color: blue;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-}
-
 /*********/
 /* halts */
 /*********/
 node|z11-[railway=halt]
 {
-	z-index: 10000;
+	z-index: 20000;
 	symbol-shape: circle;
 	symbol-size: 8;
 	symbol-stroke-color: blue;
@@ -410,7 +392,7 @@ node|z11-[railway=halt]
 
 node|z1-11[railway=halt]
 {
-	z-index: 10000;
+	z-index: 20000;
 	symbol-shape: circle;
 	symbol-size: 8;
 	symbol-stroke-color: blue;
@@ -425,34 +407,24 @@ node|z1-11[railway=halt]
 	text-halo-color: white;
 }
 
-area|z11-[railway=halt]
+/**************/
+/* tram stops */
+/**************/
+node|z13[railway=tram_stop]
 {
-	z-index: 10000;
-	symbol-shape: circle;
-	symbol-size: 8;
-	symbol-stroke-color: blue;
-	symbol-fill-color: blue;
-	text: "name";
-	text-position: center;
-	font-size: 12;
-	text-color: blue;
-	font-weight: bold;
-	font-family: Arial;
-	text-halo-radius: 1;
-	text-halo-color: white;
+	z-index: 6000;
+	icon-image: "icons/tramstop.png";
+	icon-width: 10;
+	icon-height: 10;
 }
 
-area|z1-11[railway=halt]
+node|z14-[railway=tram_stop]
 {
-	z-index: 10000;
-	symbol-shape: circle;
-	symbol-size: 8;
-	symbol-stroke-color: blue;
-	symbol-fill-color: blue;
-	text: "railway:ref";
-	text-position: center;
-	font-size: 12;
-	text-color: blue;
+	z-index: 6000;
+	text: "name";
+	text-position: auto;
+	font-size: 10;
+	text-color: #D877B8;
 	font-weight: bold;
 	font-family: Arial;
 	text-halo-radius: 1;
