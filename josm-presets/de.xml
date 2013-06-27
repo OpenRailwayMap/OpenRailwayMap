@@ -4753,6 +4753,34 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:form"
 					value="sign" />
 			</item>
+			<item name="LZB-Bereichskennzeichen" icon="de:lzb-start-sign.png" type="node">
+				<label text="LZB-Bereichskennzeichen" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:lzb_start:deactivated"
+					text="Out of order"
+					de.text="Außer Betrieb"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:catenary_mast"
+					text="On catenary mast"
+					de.text="Am Oberleitungsmast"
+					default="off"
+					delete_if_empty="true" />
+				<key key="railway:signal:lzb_start"
+					value="yes" />
+				<key key="railway:signal:form"
+					value="sign" />
+			</item>
 			<item name="Zugfunk-Kanalhinweis" icon="de:radio.png" type="node">
 				<label text="Zugfunk-Kanalhinweis" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
