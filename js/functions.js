@@ -36,6 +36,19 @@ function createMap(embed)
 		maxZoom: 18
 	}).addTo(map);
 
+	// grayscale MapQuest background layer
+	var mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+	{
+		attribution: "Tiles Courtesy of <a href=\"http://www.mapquest.com/\" target=\"_blank\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo.png\">",
+		maxZoom: 18
+	}).addTo(map);
+	// normal MapQuest background layer
+	var mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+	{
+		attribution: "Tiles Courtesy of <a href=\"http://www.mapquest.com/\" target=\"_blank\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo.png\">",
+		maxZoom: 18
+	}).addTo(map);
+
 	// railmap layer
 	var railmap = new L.TileLayer.Kothic(root+'tiles/{z}/{x}/{y}.js',
 	{
@@ -58,7 +71,9 @@ function createMap(embed)
 	var baseLayers =
 	{
 		"Mapnik": mapnik,
-		"Mapnik Grayscale": mapnikGray
+		"Mapnik Grayscale": mapnikGray,
+		"MapQuest": mapquest,
+		"MapQuest Grayscale": mapquestGray
 	};
 	var overlays =
 	{
