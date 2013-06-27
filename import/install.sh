@@ -120,3 +120,4 @@ cd ..
 #RewriteEngine on
 #RewriteCond /home/www/sites/194.245.35.149/site/orm/%{REQUEST_URI} !-f
 #RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js$ /renderer/vtiler.php?z=$1&x=$2&y=$3
+#RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js/dirty$ /renderer/vtiler.php?z=$1&x=$2&y=$3
