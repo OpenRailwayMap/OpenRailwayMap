@@ -12,33 +12,39 @@
 	* twms, available under Do What The Fuck You Want To Public License: https://code.google.com/p/twms/
 	* Kothic, available under GNU GPL v3: https://code.google.com/p/kothic/
 
-	Improvements: support for hstore tags, removed support for single-tag-columns, changed table/database names, improved style parsing, changed paths, removed dependencies
+	Improvements: support for hstore tags, removed support for single-tag-columns, changed table/database names, changed paths, removed dependencies
 	*/
 
 
 	$tiledir = "/home/www/sites/194.245.35.149/site/orm/tiles/";
 	$geomcolumn = "way";
 	$database = "railmap";
-	$maxzoom = 19;
+	$maxzoom = 21;
+	$minzoom = 8;
 	$tables = array("polygon"=>"railmap_polygon", "line"=>"railmap_line","point"=>"railmap_point");
 	$intscalefactor = 10000;
 
-	$z = (int)$_GET['z'];
-	$x = (int)$_GET['x'];
-	$y = (int)$_GET['y'];
+	$z = (int)($_GET['z'].$_SERVER['argv'][1]);
+	$x = (int)($_GET['x'].$_SERVER['argv'][2]);
+	$y = (int)($_GET['y'].$_SERVER['argv'][3]);
 
+	// include compiled tag-conditions-file
+	require_once("condition.php");
 
 
 	// checks if given zoom-parameter is valid
-	function isValidZoom($value)
+	function isValidZoom($value, $noMinzoom = false)
 	{
 		global $maxzoom;
+		global $minzoom;
 
 		if (!$value)
 			return false;
 		if (!is_int($value))
 			return false;
 		if ($value > $maxzoom)
+			return false;
+		if (($value < $minzoom) && ($noMinzoom == false))
 			return false;
 
 		return true;
@@ -48,9 +54,9 @@
 	// checks if given x/y-parameter is valid
 	function isValidXY($value)
 	{
-		if (!$value)
+		if (!$value && $value !== 0)
 			return false;
-		if (!is_int($value))
+		if (!is_int($value) && $value !== 0)
 			return false;
 
 		return true;
@@ -177,7 +183,7 @@
 	// requests objects for a certain zoom level and bounding box and returns the data in JSON format
 	function getVectors($bbox, $zoom, $vec)
 	{
-		global $geomcolumn, $database, $tables, $intscalefactor;
+		global $geomcolumn, $database, $tables, $intscalefactor, $condition;
 
 		$pxtolerance = 1.8;
 		$bbox_p = from4326To900913($bbox);
@@ -201,7 +207,7 @@
 											(
 												SELECT ST_Buffer(way, ".pixelSizeAtZoom($zoom, $pxtolerance).") AS ".$geomcolumn.", CAST(tags AS text) AS tags
 												FROM ".$tables[$vec]."
-												WHERE way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) AND way_area > ".pow(pixelSizeAtZoom($zoom, $pxtolerance), 2)/$pxtolerance."
+												WHERE way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) AND way_area > ".pow(pixelSizeAtZoom($zoom, $pxtolerance), 2)/$pxtolerance." ".$condition[$zoom]."
 											) p
 										GROUP BY CAST(tags AS text)
 									) p
@@ -221,7 +227,7 @@
 									(
 										SELECT ST_Union(way) AS ".$geomcolumn.", CAST(tags AS text)
 										FROM ".$tables[$vec]."
-										WHERE way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913)
+										WHERE way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) ".$condition[$zoom]."
 										GROUP BY CAST(tags AS text)
 									) p
 							) p";
@@ -232,7 +238,7 @@
 						SELECT ST_AsGeoJSON(ST_TransScale(way, ".-$bbox_p[0].", ".-$bbox_p[1].", ".($intscalefactor/($bbox_p[2]-$bbox_p[0])).", ".($intscalefactor/($bbox_p[3]-$bbox_p[1]))."), 0) AS ".$geomcolumn.", hstore2json(tags) AS tags
 						FROM ".$tables[$vec]."
 						WHERE
-				        way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913)
+				        way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) ".$condition[$zoom]."
 						LIMIT 10000";
 		}
 
@@ -256,8 +262,13 @@
 	}
 
 
+	// override minzoom if script is called on command line
+	if ($_SERVER['argv'][0] != "")
+		$overrideMinzoom = true;
+	else
+		$overrideMinzoom = false;
 
-	if (!isValidZoom($z))
+	if (!isValidZoom($z, $overrideMinzoom))
 		die("Param z invalid or missing.");
 	if (!isValidXY($x))
 		die("Param x invalid or missing.");
