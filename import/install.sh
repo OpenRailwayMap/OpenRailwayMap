@@ -39,6 +39,7 @@ psql -d railmap -f /usr/share/pgsql/contrib/hstore.sql
 psql -d railmap -f osm2pgsql/900913.sql
 
 # access
+echo "ALTER ROLE w3_user1 LOGIN;" | psql -d railmap
 echo "ALTER TABLE geometry_columns OWNER TO olm; ALTER TABLE spatial_ref_sys OWNER TO olm;"  | psql -d railmap
 echo "GRANT SELECT ON geometry_columns TO apache; GRANT SELECT ON spatial_ref_sys TO apache;"  | psql -d railmap
 echo "GRANT SELECT ON geography_columns TO apache;"  | psql -d railmap
@@ -58,6 +59,11 @@ echo "GRANT SELECT ON railmap_rels TO w3_user1;" | psql -d railmap
 echo "GRANT SELECT ON railmap_nodes TO w3_user1;" | psql -d railmap
 echo "GRANT SELECT ON railmap_ways TO w3_user1;" | psql -d railmap
 echo "GRANT SELECT ON railmap_roads TO w3_user1;" | psql -d railmap
+
+# create hstore index
+echo "CREATE INDEX railmap_point_tags ON railmap_point USING GIN (tags);" | psql -d railmap
+echo "CREATE INDEX railmap_line_tags ON railmap_line USING GIN (tags);" | psql -d railmap
+echo "CREATE INDEX railmap_polygon_tags ON railmap_polygon USING GIN (tags);" | psql -d railmap
 
 # add hstore2json function for postgresql versions before 9.3
 # from https://gist.github.com/kenaniah/1315484

@@ -54,7 +54,6 @@ osm2pgsql --create --database railmap --username olm --prefix railmap --slim --s
 osmconvert old-railways.osm --out-o5m >old-railways.o5m
 rm old-railways.osm
 echo ""
-echo "Finished."
 
 
 # run mapcss converter
@@ -62,5 +61,12 @@ echo "Create MapCSS style"
 echo ""
 cd /home/www/sites/194.245.35.149/site/orm/styles
 python mapcss_converter.py --mapcss style.mapcss --icons-path .
+echo ""
+
+# prerender lowzoom tiles
+echo "Prerendering tiles"
+echo ""
+cd /home/www/sites/194.245.35.149/site/orm/renderer
+php prerender-lowlevel.php
 echo ""
 echo "Finished."
