@@ -2298,11 +2298,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Kreuzung" icon="flat-crossing.png" type="node">
+			<item name="Kreuzung" icon="railway-crossing.png" type="node">
 				<label text="Kreuzung" />
 				<space />
 				<key key="railway"
-					value="flat_crossing" />
+					value="railway_crossing" />
 			</item>
 			<item name="Gleissperre" icon="de:deraill.png" type="node">
 				<label text="Gleissperre" />
