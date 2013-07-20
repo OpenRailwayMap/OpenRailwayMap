@@ -108,6 +108,7 @@ wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -o osmconvert
 
 # osm2pgsql
 svn co http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/
+patch -b osm2pgsql/expire-tiles.c expire-tiles.diff
 cd osm2pgsql
 ./autogen.sh
 ./configure --enable-64bit-ids
