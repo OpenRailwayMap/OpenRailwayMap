@@ -1,0 +1,79 @@
+*** expire-tiles_0_80_0.c    2011-05-21 15:13:49.000000000 +0200
+--- expire-tiles.c    2011-08-10 16:23:05.000000000 +0200
+*************** static int _mark_tile(struct tile ** tre
+*** 105,114 ****
+--- 105,146 ----
+   */
+  static int mark_tile(struct tile ** tree_head, int x, int y, int zoom) {
+  	return _mark_tile(tree_head, x, y, zoom, 0);
+  }
+  
++ #if 1
++ static void output_dirty_tile(FILE * outfile, int x, int y, int zoom, int min_zoom) {
++   // writes a tile into output file, including all subsequent tiles
++   // with higher zoom levels;
++   int x_max, y_max;
++   int tile_size;
++ 
++   tile_size= 1;
++   while (zoom <= Options->expire_tiles_zoom) {
++     if(zoom>=min_zoom) {
++       x_max = x + tile_size;
++       while (x < x_max) {
++         y_max = y + tile_size;
++         while (y < y_max) {
++ 		      if ((outcount++ % 1000) == 0) {
++ 			      fprintf(stderr, "\rWriting dirty tile list (%ik)", outcount / 1000);
++ 			      fflush(stderr);
++ 		      }
++ 		      fprintf(outfile, "%i/%i/%i\n", zoom, x, y);
++           y++;
++         }
++         y-= tile_size;
++         x++;
++       }
++       x-= tile_size;
++     }
++     zoom++;
++     x<<= 1; y<<= 1;
++     tile_size<<= 1;
++   }
++ }
++ #else
+  static void output_dirty_tile(FILE * outfile, int x, int y, int zoom, int min_zoom) {
+  	int	y_min;
+  	int	x_iter;
+  	int	y_iter;
+  	int	x_max;
+*************** static void output_dirty_tile(FILE * out
+*** 131,148 ****
+--- 163,191 ----
+  			}
+  			fprintf(outfile, "%i/%i/%i\n", out_zoom, x_iter, y_iter);
+  		}
+  	}
+  }
++ #endif
+  
+  static void _output_and_destroy_tree(FILE * outfile, struct tile * tree, int x, int y, int this_zoom, int min_zoom) {
+  	int	sub_x = x << 1;
+  	int	sub_y = y << 1;
+  	FILE *	ofile;
+  
+  	if (! tree) return;
+  
++ #if 1
++   if(this_zoom >= min_zoom) {
++     if ((outcount++ % 1000) == 0) {
++       fprintf(stderr, "\rWriting dirty tile list (%ik)", outcount / 1000);
++       fflush(stderr);
++     }
++     fprintf(outfile, "%i/%i/%i\n", this_zoom, x, y);
++   }
++ #endif
++ 
+  	ofile = outfile;
+  	if ((tree->complete[0][0]) && outfile) {
+  		output_dirty_tile(outfile, sub_x + 0, sub_y + 0, this_zoom + 1, min_zoom);
+  		ofile = NULL;
+  	}
