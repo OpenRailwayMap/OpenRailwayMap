@@ -6,7 +6,10 @@
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
-# run this script not automatically! you have to change paths and modify it to your own environment!
+# do not run this script automatically! you have to change paths and modify it to your own environment!
+
+PROJECTPATH=/home/www/sites/194.245.35.149/site/orm
+
 
 # install necessary software
 yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip php-php-gettext php php-pgsql unzip postgresql-devel python-ply python-imaging pycairo python-cairosvg librsvg2 gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel pygtk2 pygtk2-devel
@@ -21,7 +24,7 @@ wget -N -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
 gunzip GeoLiteCity.dat.gz
 mv GeoLiteCity.dat GeoIPCity.dat
 
-cd /home/www/sites/194.245.35.149/site/orm/import/bin
+cd $PROJECTPATH/import/bin
 
 mkdir osmosis
 cd osmosis
@@ -117,8 +120,8 @@ make
 cd ..
 
 # add this mod_rewrite rule to your apache configuration for having cache
-#Options +Indexes +FollowSymLinks
-#RewriteEngine on
-#RewriteCond /home/www/sites/194.245.35.149/site/orm/%{REQUEST_URI} !-f
-#RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js$ /renderer/vtiler.php?z=$1&x=$2&y=$3
-#RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js/dirty$ /renderer/vtiler.php?z=$1&x=$2&y=$3
+# Options +Indexes +FollowSymLinks
+# RewriteEngine on
+# RewriteCond /home/www/sites/194.245.35.149/site/orm/%{REQUEST_URI} !-f
+# RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js$ /renderer/vtiler.php?z=$1&x=$2&y=$3
+# RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js/dirty$ /renderer/vtiler.php?z=$1&x=$2&y=$3
