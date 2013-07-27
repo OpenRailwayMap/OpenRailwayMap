@@ -1,5 +1,5 @@
-OpenRailwayMap - A free railway network map based on OpenStreetMap.
-===================================================================
+OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world's railway infrastructure.
+=========================================================================================================
 
 OpenRailwayMap Copyright (C) 2012 Alexander Matheisen (Rurseekatze) <info@openrailwaymap.org>
 This program comes with ABSOLUTELY NO WARRANTY.
