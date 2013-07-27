@@ -46,7 +46,7 @@ way[bridge=yes]::bridges
 	z-index: 1;
     casing-width: 3.5; 
 	casing-color: #797979;
-    linecap: butt;
+    linejoin: butt;
 }
 
 /*******************************************/
@@ -58,7 +58,7 @@ way[railway=disused], way[railway=abandoned], way[railway=razed]
     casing-color: black;
 	casing-opacity: 0.2;
 	casing-width: 1;
-    linecap: butt;
+    linejoin: butt;
 }
 
 /***********/
@@ -71,6 +71,7 @@ way[tunnel=yes]::tunnels
 	color: white;
 	opacity: 0.6;
     linecap: butt;
+    linejoin: butt;
 }
 
 /********/
@@ -97,7 +98,7 @@ way[railway=rail][!usage][!service], way[railway=rail][!usage][!service], way[ra
 	z-index: 400;
     color: black;
     width: 2.5;
-    linecap: round;
+    linejoin: round;
 }
 
 /***********************************/
@@ -108,7 +109,7 @@ way[railway=rail][!usage][service=siding]
 	z-index: 870;
     color: black;
     width: 2;
-    linecap: round;
+    linejoin: round;
 	text: "railway:track_ref";
 	text-position: line;
 	text-color: gray;
@@ -124,7 +125,7 @@ way[railway=rail][!usage][service=yard]
 	z-index: 860;
     color: black;
     width: 1.5;
-    linecap: round;
+    linejoin: round;
 	text: "railway:track_ref";
 	text-position: line;
 	text-color: gray;
@@ -140,7 +141,7 @@ way[railway=rail][!usage][service=spur]
 	z-index: 880;
     color: #87491D;
     width: 3;
-    linecap: round;
+    linejoin: round;
 	text-position: line;
 }
 
@@ -152,7 +153,7 @@ way[railway=rail][!usage][service=crossover]
 	z-index: 300;
     color: black;
     width: 1;
-    linecap: round;
+    linejoin: round;
 }
 
 /*********************************************/
@@ -163,7 +164,7 @@ way[railway=rail][usage=branch][!service]
 	z-index: 1000;
     color: #DACA00;
     width: 3.5;
-    linecap: round;
+    linejoin: round;
 }
 
 /*******************************************/
@@ -174,7 +175,7 @@ way[railway=rail][usage=main][!service]
 	z-index: 1100;
     color: #FF8100;
     width: 3.5;
-    linecap: round;
+    linejoin: round;
 }
 
 /*************************************************/
@@ -185,7 +186,7 @@ way[railway=rail][usage=main][highspeed=yes][!service]
 	z-index: 2000;
     color: #FF0C00;
     width: 3.5;
-    linecap: round;
+    linejoin: round;
 }
 
 /********************************************/
@@ -196,7 +197,7 @@ way[railway=rail][usage=industrial][!service]
 	z-index: 850;
     color: #87491D;
     width: 3;
-    linecap: round;
+    linejoin: round;
 }
 
 /**************************************************/
@@ -207,7 +208,7 @@ way[railway=rail][usage=industrial][service=siding], way[railway=rail][usage=ind
 	z-index: 850;
     color: #87491D;
     width: 2;
-    linecap: round;
+    linejoin: round;
 }
 
 /********************/
@@ -218,7 +219,7 @@ way[railway=disused]
 	z-index: 300;
 	color: #70584D;
     width: 3;
-    linecap: round;
+    linejoin: round;
 }
 
 /**********************/
@@ -231,7 +232,7 @@ way[railway=abandoned]
 	color: #70584D;
     width: 3;
 	opacity: 0.8;
-    linecap: round;
+    linejoin: round;
 }
 
 /******************/
@@ -244,7 +245,7 @@ way[railway=razed]
 	color: #70584D;
 	opacity: 0.6;
     width: 3;
-    linecap: round;
+    linejoin: round;
 }
 
 /***************/
@@ -255,7 +256,7 @@ way[railway=tram]
 	z-index: 1100;
 	color: #D877B8;
     width: 2.5;
-    linecap: butt;
+    linejoin: butt;
 }
 
 /*****************/
@@ -266,7 +267,7 @@ way[railway=subway]
 	z-index: 1100;
 	color: #0300C3;
     width: 2.5;
-    linecap: butt;
+    linejoin: butt;
 }
 
 /*********************/
@@ -277,7 +278,21 @@ way[railway=light_rail]
 	z-index: 1100;
 	color: #00BD14;
     width: 2.5;
-    linecap: butt;
+    linejoin: butt;
+}
+
+/***********************/
+/* narrow gauge tracks */
+/***********************/
+way[railway=narrow_gauge]
+{
+	z-index: 1200;
+	dashes: 4,6;
+	color: black;
+    width: 2.5;
+    linejoin: butt;
+    casing-width: 1;
+    casing-color: #424242;
 }
 
 /************/
