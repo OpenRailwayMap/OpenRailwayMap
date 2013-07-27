@@ -290,7 +290,7 @@
 	echo $output;
 
 	if (!file_exists($tiledir.$z."/".$x))
-		mkdir($tiledir.$z."/".$x, 0755, true);
+		mkdir($tiledir.$z."/".$x, 0777, true);
 
 	$file = fopen($tiledir.$z."/".$x."/".$y.".js", "w");
 	fwrite($file, $output);

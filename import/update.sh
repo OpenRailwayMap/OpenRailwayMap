@@ -10,7 +10,12 @@
 PROJECTPATH=/home/www/sites/194.245.35.149/site/orm
 # directory where the planet file and other data files are stored, can be equal to PROJECTPATH
 DATAPATH=/home/www/sites/194.245.35.149/site/olm/import
-PATH="$PATH:$DATAPATH/bin"
+# path to the project directory
+TILESPATH=/home/www/sites/194.245.35.149/site/orm/tiles
+# filename of the expired tiles list
+TILELIST=/home/www/sites/194.245.35.149/site/olm/import/expired_tiles
+
+PATH="$PATH:$PROJECTPATH/import/bin"
 PATH="$PATH:$PROJECTPATH/import/bin/osm2pgsql"
 export JAVACMD_OPTIONS=-Xmx2800M
 
@@ -56,8 +61,30 @@ echo ""
 # load data into database
 echo "Updating database"
 echo ""
-osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 --expire-tiles 2-21 --expire-output expired_tiles changes.osc
+osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 --expire-tiles 2-19 --expire-output expired_tiles changes.osc
 rm changes.osc
+
+
+# rerendering tiles that changed with this map update
+echo "Rerender expired tiles"
+echo ""
+date | mail -s "start" "info@openlinkmap.org"
+cd $PROJECTPATH/renderer
+if [ -s $TILELIST ]; then
+	while read LINE; do
+		TILE="${TILESPATH}/${LINE}.js"
+		if [ -f $TILE ]; then
+			rm $TILE
+			ZOOM=${LINE:0:1}
+			if [ $ZOOM != "1" ]; then
+				PARAMS=$(echo ${LINE} | sed -e 's/\// /g')
+				php vtiler.php $PARAMS
+			fi
+		fi
+	done < $TILELIST
+	rm $TILELIST
+fi
+date | mail -s "end" "info@openlinkmap.org"
 
 
 # run mapcss converter to update mapcss style
