@@ -93,7 +93,7 @@ way[railway=rail][!service], way[railway=disused][!service], way[railway=abandon
 /********************************************/
 /* simple railways without service or usage */
 /********************************************/
-way[railway=rail][!usage][!service], way[railway=rail][!usage][!service], way[railway=rail][!usage][!service], way[railway=rail][!usage][!service]
+way[railway=rail][!usage][!service]
 {
 	z-index: 400;
     color: black;
@@ -178,9 +178,9 @@ way[railway=rail][usage=main][!service]
     linejoin: round;
 }
 
-/*************************************************/
-/* highspeed  railways, service tag not rendered */
-/*************************************************/
+/************************************************/
+/* highspeed railways, service tag not rendered */
+/************************************************/
 way[railway=rail][usage=main][highspeed=yes][!service]
 {
 	z-index: 2000;
@@ -189,9 +189,9 @@ way[railway=rail][usage=main][highspeed=yes][!service]
     linejoin: round;
 }
 
-/********************************************/
-/* industrial  railways without service tag */
-/********************************************/
+/*******************************************/
+/* industrial railways without service tag */
+/*******************************************/
 way[railway=rail][usage=industrial][!service]
 {
 	z-index: 850;
@@ -200,9 +200,9 @@ way[railway=rail][usage=industrial][!service]
     linejoin: round;
 }
 
-/**************************************************/
-/* industrial  railways with various service tags */
-/**************************************************/
+/*************************************************/
+/* industrial railways with various service tags */
+/*************************************************/
 way[railway=rail][usage=industrial][service=siding], way[railway=rail][usage=industrial][service=spur], way[railway=rail][usage=industrial][service=yard], way[railway=rail][usage=industrial][service=crossover]
 {
 	z-index: 850;
@@ -281,18 +281,155 @@ way[railway=light_rail]
     linejoin: butt;
 }
 
-/***********************/
-/* narrow gauge tracks */
-/***********************/
-way[railway=narrow_gauge]
+/************************************************/
+/* narrow gauge tracks without service or usage */
+/************************************************/
+way[railway=narrow_gauge][!usage][!service]
 {
 	z-index: 1200;
-	dashes: 4,6;
 	color: black;
-    width: 2.5;
+    width: 1.5;
     linejoin: butt;
+    casing-width: 1.5;
+    casing-color: black;
+    casing-dashes: 3,3;
+}
+
+/************************************************/
+/* narrow gauge sidings without specified usage */
+/************************************************/
+way[railway=narrow_gauge][!usage][service=siding]
+{
+	z-index: 850;
+	color: black;
+    width: 1.5;
+    linejoin: round;
     casing-width: 1;
-    casing-color: #424242;
+    casing-color: black;
+    casing-dashes: 3,3;
+	text: "railway:track_ref";
+	text-position: line;
+	text-color: gray;
+	text-halo-radius: 0.5;
+	text-halo-color: #CCCCCC;
+}
+
+/****************************************************/
+/* narrow gauge yard tracks without specified usage */
+/****************************************************/
+way[railway=rail][!usage][service=yard]
+{
+	z-index: 840;
+    color: black;
+    width: 1.5;
+    linejoin: round;
+    casing-width: 1;
+    casing-color: black;
+    casing-dashes: 3,3;
+	text: "railway:track_ref";
+	text-position: line;
+	text-color: gray;
+	text-halo-radius: 0.5;
+	text-halo-color: #CCCCCC;
+}
+
+/****************************************************/
+/* narrow gauge spur tracks without specified usage */
+/****************************************************/
+way[railway=narrow_gauge][!usage][service=spur]
+{
+	z-index: 860;
+    color: #87491D;
+    width: 1.5;
+    casing-width: 1;
+    casing-color: #87491D;
+    casing-dashes: 3,3;
+    linejoin: round;
+	text-position: line;
+}
+
+/*********************************************************/
+/* narrow gauge crossover tracks without specified usage */
+/*********************************************************/
+way[railway=narrow_gauge][!usage][service=crossover]
+{
+	z-index: 280;
+    color: black;
+    width: 1.5;
+    casing-width: 1;
+    casing-color: black;
+    casing-dashes: 3,3;
+    linejoin: round;
+}
+
+/**********************************************************/
+/* narrow gauge branch railways, service tag not rendered */
+/**********************************************************/
+way[railway=narrow_gauge][usage=branch][!service]
+{
+	z-index: 880;
+    color: #DACA00;
+    width: 1.5;
+    casing-width: 1.5;
+    casing-color: #DACA00;
+    casing-dashes: 3,3;
+    linejoin: round;
+}
+
+/********************************************************/
+/* narrow gauge main railways, service tag not rendered */
+/********************************************************/
+way[railway=narrow_gauge][usage=main][!service]
+{
+	z-index: 1080;
+    color: #FF8100;
+    width: 1.5;
+    casing-width: 1.5;
+    casing-color: #FF8100;
+    casing-dashes: 3,3;
+    linejoin: round;
+}
+
+/*************************************************************/
+/* narrow gauge highspeed railways, service tag not rendered */
+/*************************************************************/
+way[railway=narrow_gauge][usage=main][highspeed=yes][!service]
+{
+	z-index: 2980;
+    color: #FF0C00;
+    width: 1.5;
+    casing-width: 1.5;
+    casing-color: #FF0C00;
+    casing-dashes: 3,3;
+    linejoin: round;
+}
+
+/********************************************************/
+/* narrow gauge industrial railways without service tag */
+/********************************************************/
+way[railway=narrow_gauge][usage=industrial][!service]
+{
+	z-index: 830;
+    color: #87491D;
+    width: 1.5;
+    casing-width: 1.5;
+    casing-color: #87491D;
+    casing-dashes: 3,3;
+    linejoin: round;
+}
+
+/**************************************************************/
+/* narrow gauge industrial railways with various service tags */
+/**************************************************************/
+way[railway=narrow_gauge][usage=industrial][service=siding], way[railway=narrow_gauge][usage=industrial][service=spur], way[railway=narrow_gauge][usage=industrial][service=yard], way[railway=narrow_gauge][usage=industrial][service=crossover]
+{
+	z-index: 830;
+    color: #87491D;
+    width: 1.5;
+    casing-width: 1;
+    casing-color: #87491D;
+    casing-dashes: 3,3;
+    linejoin: round;
 }
 
 /************/
