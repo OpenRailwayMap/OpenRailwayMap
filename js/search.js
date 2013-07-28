@@ -87,17 +87,9 @@ function Search(map, box, bar, searchButton, clearButton)
 		}
     }
 
-	// called when clicking on a search results, jumps to point and creates popup
+	// called when clicking on a search results, jumps to point and draws something on the map
 	this.showResult = function(lat, lon, id, type)
 	{
-		// TODO delete circles
-		// create circle around position
-		var circle = L.circle([lat, lon], 1000,
-		{
-			color: 'orange',
-			fillColor: 'orange',
-			fillOpacity: 0.2
-		}).addTo(this.map);
 		// move to position
 		this.map.panTo(new L.LatLng(lat, lon));
 		this.map.setZoom(13);
