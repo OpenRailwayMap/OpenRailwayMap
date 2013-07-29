@@ -481,11 +481,11 @@
             s_default['icon-height'] = '16';
         }
 
-        if (!K.Utils.isEmpty(s_default)) {
+        if (Object.keys(s_default).length) {
             style['default'] = s_default; }
-        if (!K.Utils.isEmpty(s_bridges)) {
+        if (Object.keys(s_bridges).length) {
             style['bridges'] = s_bridges; }
-        if (!K.Utils.isEmpty(s_tunnels)) {
+        if (Object.keys(s_tunnels).length) {
             style['tunnels'] = s_tunnels; }
         return style;
     }

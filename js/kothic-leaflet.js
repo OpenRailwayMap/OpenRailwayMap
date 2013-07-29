@@ -1,27 +1,28 @@
 /*
-Copyright (c) 2011, Darafei Praliaskouski, Vladimir Agafonkin, Maksim Gurtovenko
-All rights reserved. 
+Copyright (c) 2011-2013, Darafei Praliaskouski, Vladimir Agafonkin, Maksim Gurtovenko
+All rights reserved.
 
-Redistribution and use in source and binary forms, with or without modification, are 
-permitted provided that the following conditions are met: 
+Redistribution and use in source and binary forms, with or without modification, are
+permitted provided that the following conditions are met:
 
-   1. Redistributions of source code must retain the above copyright notice, this list of 
-      conditions and the following disclaimer. 
+   1. Redistributions of source code must retain the above copyright notice, this list of
+      conditions and the following disclaimer.
 
-   2. Redistributions in binary form must reproduce the above copyright notice, this list 
+   2. Redistributions in binary form must reproduce the above copyright notice, this list
       of conditions and the following disclaimer in the documentation and/or other materials
-	  provided with the distribution. 
+	  provided with the distribution.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
-EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
-MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE 
-COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
-EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) 
-HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
-TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
 
 L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
     options: {
@@ -31,7 +32,8 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
         maxZoom: 22,
         updateWhenIdle: true,
         unloadInvisibleTiles: true,
-        attribution: 'Map data &copy; OpenStreetMap contributors, Rendering by <a href="http://www.openrailwaymap.org/">OpenRailwayMap</a>',
+        attribution: 'Map data &copy; 2013 <a href="http://osm.org/copyright">OpenStreetMap</a> contributors,' +
+                     ' Rendering by <a href="http://github.com/kothic/kothic-js">Kothic JS</a>',
         async: true,
         buffered: false,
         styles: MapCSS.availableStyles
@@ -46,11 +48,6 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
         this._debugMessages = [];
 
         window.onKothicDataResponse = L.Util.bind(this._onKothicDataResponse, this);
-
-        this.kothic = new Kothic({
-            buffered: this.options.buffered,
-            styles: this.options.styles
-        });
     },
 
     _onKothicDataResponse: function(data, zoom, x, y) {
@@ -63,21 +60,23 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
             return;
         }
 
-        function onRenderComplete(debugInfo) {
-            debugInfo.x = x;
-            debugInfo.y = y;
-            debugInfo.zoom = zoom;
-            layer._debugMessages.push(debugInfo);
+        function onRenderComplete() {
+            layer.tileDrawn(canvas);
 
             document.getElementsByTagName('head')[0].removeChild(layer._scripts[key]);
             delete layer._scripts[key];
-
-            layer.tileDrawn(canvas);
         }
 
         this._invertYAxe(data);
 
-        this.kothic.render(canvas, data, zoom + zoomOffset, onRenderComplete);
+        var styles = this.options.styles;
+
+        Kothic.render(canvas, data, zoom + zoomOffset, {
+            styles: styles,
+            locales: ['be', 'ru', 'en'],
+            onRenderComplete: onRenderComplete
+        });
+
         delete this._canvases[key];
     },
 
@@ -94,7 +93,7 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
         this._canvases[key] = canvas;
         this._scripts[key] = this._loadScript(url);
     },
-    
+
     enableStyle: function(name) {
         if (MapCSS.availableStyles.indexOf(name) >= 0 && this.options.styles.indexOf(name) < 0) {
             this.options.styles.push(name);
@@ -104,7 +103,8 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
 
     disableStyle: function(name) {
         if (this.options.styles.indexOf(name) >= 0) {
-            Kothic.utils.remove_from_array(this.options.styles, name);
+            var i = this.options.styles.indexOf(name);
+            this.options.styles.splice(i, 1);
             this.redraw();
         }
     },
@@ -118,7 +118,7 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
             this._update();
         }
     },
-    
+
     _invertYAxe: function(data) {
         var type, coordinates, tileSize = data.granularity, i, j, k, l, feature;
         for (i = 0; i < data.features.length; i++) {
@@ -148,7 +148,7 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
             } else {
                 throw "Unexpected GeoJSON type: " + type;
             }
-            
+
             if (feature.hasOwnProperty('reprpoint')) {
                 feature.reprpoint[1] = tileSize - feature.reprpoint[1];
             }

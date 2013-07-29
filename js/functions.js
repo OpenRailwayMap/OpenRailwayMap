@@ -58,6 +58,7 @@ function createMap(embed)
 	MapCSS.onImagesLoad = function()
 	{
 		map.addLayer(railmap);
+		railmap.enableStyle('style');
 	};
 	MapCSS.preloadSpriteImage("style", root+"styles/style.png");
 

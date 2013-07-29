@@ -42,10 +42,21 @@
 			<link rel="stylesheet" href="css/L.Control.Zoomslider.ie.css" />
 		<![endif]-->
 		<script type="text/javascript" src="js/leaflet-0.5.1.js"></script>
-		<script type="text/javascript" src="js/kothic.js"></script>
-		<script type="text/javascript" src="js/kothic-leaflet.js"></script>
 		<script type="text/javascript" src="js/L.Control.Zoomslider.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
+		<script type="text/javascript" src="js/kothic.js"></script>
+		<script type="text/javascript" src="js/renderer/path.js"></script>
+		<script type="text/javascript" src="js/renderer/line.js"></script>
+		<script type="text/javascript" src="js/renderer/polygon.js"></script>
+		<script type="text/javascript" src="js/renderer/shields.js"></script>
+		<script type="text/javascript" src="js/renderer/texticons.js"></script>
+		<script type="text/javascript" src="js/renderer/text.js"></script>
+		<script type="text/javascript" src="js/style/mapcss.js"></script>
+		<script type="text/javascript" src="js/style/style.js"></script>
+		<script type="text/javascript" src="js/utils/collisions.js"></script>
+		<script type="text/javascript" src="js/utils/geom.js"></script>
+		<script type="text/javascript" src="js/utils/rbush.js"></script>
+		<script type="text/javascript" src="js/kothic-leaflet.js"></script>
 		<script type="text/javascript" src="styles/style.js"></script>
 		<?php
 			// params
