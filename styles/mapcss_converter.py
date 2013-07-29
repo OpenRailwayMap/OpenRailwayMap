@@ -337,7 +337,7 @@ if __name__ == "__main__":
     mapcss_js = mapcss.as_js()
     subparts_var = ", ".join(map(lambda subpart: "s_%s = {}" % subpart, subparts))
     subparts_var = "        var %s;" % subparts_var
-    subparts_fill = "\n".join(map(lambda subpart: "        if (!K.Utils.isEmpty(s_%s)) {\n            style['%s'] = s_%s; }" % (subpart, subpart, subpart), subparts))
+    subparts_fill = "\n".join(map(lambda subpart: "        if (Object.keys(s_%s).length) {\n            style['%s'] = s_%s; }" % (subpart, subpart, subpart), subparts))
     js = """
 (function (MapCSS) {
     'use strict';
