@@ -645,3 +645,14 @@ node|z17-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light
 	icon-width: 16;
 	icon-height: 16;
 }
+
+/*****************/
+/* owner changes */
+/*****************/
+node[railway=owner_change]
+{
+	z-index: 10000;
+	icon-image: "icons/owner-change.png";
+	icon-width: 16;
+	icon-height: 16;
+}
