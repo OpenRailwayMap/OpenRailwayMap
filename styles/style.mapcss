@@ -317,7 +317,7 @@ way[railway=narrow_gauge][!usage][service=siding]
 /****************************************************/
 /* narrow gauge yard tracks without specified usage */
 /****************************************************/
-way[railway=rail][!usage][service=yard]
+way[railway=narrow_gauge][!usage][service=yard]
 {
 	z-index: 840;
     color: black;

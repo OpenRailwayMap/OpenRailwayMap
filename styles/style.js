@@ -216,7 +216,7 @@
             s_default['text-halo-color'] = '#CCCCCC';
         }
 
-        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'yard'))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'yard'))) {
             s_default['z-index'] = 840;
             s_default['color'] = 'black';
             s_default['width'] = 1.5;
