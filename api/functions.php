@@ -423,59 +423,6 @@
 	}
 
 
-	// request all public transports with given tags for a given bbox and echo them
-	function getPtForBbox($connection, $bbox)
-	{
-		// if no bbox was given
-		if (!$bbox)
-		{
-			reportError("Some parameters are missing.");
-			return false;
-		}
-
-		// if there is no connecting to server
-		if (!$connection)
-		{
-			reportError("Not connected to database.");
-			return false;
-		}
-
-		// requests
-		$types = array("node", "way");
-
-		// executing requests
-		$list = array();
-		foreach ($types as $type)
-		{
-			$response = requestDetails("SELECT ST_X(geom), ST_Y(geom), id
-											FROM ".$type."s
-											WHERE geom && ST_SetSRID(ST_MakeBox2D(ST_Point(".$bbox[0].",".$bbox[1]."), ST_Point(".$bbox[2].",".$bbox[3].")), 4326) AND (tags->'highway'='bus_stop' OR tags->'amenity'='bus_station' OR tags->'railway'='station' OR tags->'railway'='halt' OR tags->'railway'='tram_stop' OR tags->'railway'='platform' OR tags->'highway'='platform' OR tags->'public_transport'='platform') AND (tags ? 'name');", $connection);
-			// putting out the results
-			if ($response)
-			{
-				foreach ($response as $element)
-					array_push($list, array($element['st_x'], $element['st_y'], $element['id'], $type));
-			}
-		}
-		return $list;
-	}
-
-
-	// convertes integer to olm object type
-	function intToType($type)
-	{
-		switch($type)
-		{
-			case 0:
-				return "node";
-			case 1:
-				return "way";
-			default:
-				return false;
-		}
-	}
-
-
 	// requests a given url by using curl and returns the response
 	function apiRequest($url)
 	{
@@ -611,91 +558,11 @@
 	}
 
 
-	// returns all tags of an osm object
-	function getTags($db, $id, $type)
-	{
-		// request
-		$request = "SELECT tags FROM ".$type."s WHERE (id = ".$id.");";
-
-		// connnecting to database
-		$connection = connectToDatabase($db);
-		// if there is no connection
-		if (!$connection)
-			exit;
-		$response = requestDetails($request, $connection);
-		pg_close($connection);
-
-		if ($response)
-		{
-			$text = substr($response[0]['tags'], 1, -1);
-			$temp = explode("\", \"", $text);
-			for ($i=0; $i<count($temp); $i++)
-			{
-				$tag = explode("\"=>\"", $temp[$i]);
-				$tags[$tag[0]] = $tag[1];
-			}
-			return $tags;
-		}
-		else
-			return false;
-	}
-
 	// beginning of xml output: header, first root element
 	function xmlStart($root)
 	{
 		header("Content-Type: application/xml; charset=UTF-8");
 		return "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<".$root.">\n";
-	}
-
-
-	// returns the tag which has a e-mail address and correct errors in format
-	function getMailDetail($emails)
-	{
-		// select value which is set
-		foreach ($emails as $email)
-			if ($email)
-				return $email;
-
-		return false;
-	}
-
-
-	// return the tag which has a phone or fax number and correct errors in format
-	function getPhoneFaxDetail($numbers)
-	{
-		// select value which is set
-		foreach ($numbers as $number)
-			if ($number)
-				$rawnumber = $number;
-
-		// correct some mistakes
-		$rawnumber = str_replace(" - ", "-", $rawnumber);
-		$rawnumber = str_replace(" ", "-", $rawnumber);
-		$rawnumber = str_replace("(", "", $rawnumber);
-		$rawnumber = str_replace(")", "", $rawnumber);
-
-		if (substr($rawnumber, 0, 2) == "00")
-			$rawnumber = "+".substr($rawnumber, 2);
-
-		// create number to be used in e.g. callto: links
-		$linkNumber = str_replace("-", "", $rawnumber);
-		$linkNumber = str_replace("(", "", $linkNumber);
-		$linkNumber = str_replace(")", "", $linkNumber);
-
-		// return values as array
-		if ($linkNumber && $rawnumber)
-			return array($linkNumber, $rawnumber);
-
-		return false;
-	}
-
-
-	// translate and parse the opening hours
-	function getOpeninghoursDetail($openinghours)
-	{
-		$original = array("Mo", "Tu", "We", "Th", "Fr", "Sa", "Su", "off", "PH", "SH", "+", ";", ",", "24/7");
-		$translation = array(_("Mo"), _("Tu"), _("We"), _("Th"), _("Fr"), _("Sa"), _("Su"), _("closed"), _("Public holiday"), _("School holiday"), " "._("open ending"), "<br />", " "._("and")." ", _("24/7"));
-		return str_replace($original, $translation, $openinghours);
 	}
 
 
@@ -838,35 +705,6 @@
 	}
 
 
-	// creates an address in the format of country $country from the tags given with $tagset
-	function formatAddress($tagset, $country)
-	{
-		global $addressformats;
-
-		// select template
-		if ($country)
-			$template = $addressformats[strtolower($country)];
-		if (!$country || $country == null || $template == null)
-			$template = $addressformats['default'];
-
-		// replace placeholders
-		$template = str_replace("#street#", $tagset['street'], $template);
-		$template = str_replace("#housenumber#", $tagset['housenumber'], $template);
-		$template = str_replace("#country#", strtoupper($tagset['country']), $template);
-		$template = str_replace("#city#", $tagset['city'], $template);
-		$template = str_replace("#postcode#", $tagset['postcode'], $template);
-		$template = str_replace("#housename#", $tagset['housename'], $template);
-		$template = str_replace("#suburb#", $tagset['suburb'], $template);
-		$template = str_replace("#province#", $tagset['province'], $template);
-		// remove some format mistakes because of missing tags
-		$template = str_replace("</span>,", "</span>", $template);
-		$template = str_replace("-</span>", "</span>", $template);
-		$template = str_replace("()", "", $template);
-		// remove whitespaces
-		return trim($template);
-	}
-
-
 	// returns the name wich matches most the user's language
 	function getNameDetail($langs, $names)
 	{
@@ -960,173 +798,6 @@
 	}
 
 
-	// parse given openinghours and check if poi is open now
-	function isPoiOpen($openinghours, $offset)
-	{
-		// simplest case
-		if ($openinghours == "24/7" || $openinghours == "00:00-24:00" || $openinghours == "Mo-Fr 00:00-24:00")
-			return true;
-
-		// get actual timestamp of user's timezone
-		$timestamp = time()+$offset*3600;
-		$actday = (int)gmdate("w", $timestamp)-1;
-		if ($actday == -1)
-			$actday = 6;
-		$actmonth = (int)"7".gmdate("n", $timestamp);
-		$acttime = (int)gmdate("Hi", $timestamp);
-
-		// serialising
-		$openinghours = strtolower($openinghours);
-
-		// remove wrong spaces
-		$openinghours = str_replace(", ", ",", $openinghours);
-
-		// replacing words by numbers for easier processing
-		$original = array("mo", "tu", "we", "th", "fr", "sa", "su", "+");
-		$translation = array("0", "1", "2", "3", "4", "5", "6", "-23:59");
-		$openinghours = str_replace($original, $translation, $openinghours);
-
-		// example: Mo-Fr 10:00-12:00,16:00-18:00; Sa 16:00+; Su off
-		// split into each entry: Mo-Fr 10:00-12:00,16:00-18:00
-		$sets = explode(";", $openinghours);
-		foreach ($sets as $set)
-		{
-			// remove spaces
-			$set = trim($set);
-
-			// if the string contains only a time interval, e.g. 10:00-20:00
-			if (ctype_digit(str_replace("-", "", str_replace(":", "", str_replace(",", "", $set)))))
-			{
-				$timepart = $set;
-				// check if any time bound matches now
-				if (inTimes($acttime, $timepart))
-					return true;
-			}
-			else
-			{
-				// split to get each part
-				$parts = explode(" ", $set);
-
-				// check if any day bound matches today
-				if (inDays($actday, $parts[0]))
-					// then check if any time bound matches now
-					if (inTimes($acttime, $parts[1]))
-						return true;
-			}
-		}
-		return false;
-	}
-
-
-	// returns true when timeinterval matches now
-	function inTimes($now, $timepart)
-	{
-		// split at commas for single time intervals: 10:00-12:00  16:00-18:00
-		$timeintervals = explode(",", $timepart);
-
-		foreach ($timeintervals as $timeinterval)
-		{
-			// split to get hour bounds: 10:00  12:00
-			$time = explode("-", $timeinterval);
-
-			if ($time[0] == "off")
-				return false;
-
-			if ((($now >= (int)str_replace(":", "", $time[0])) && ($now <= (int)str_replace(":", "", $time[1]))) || (($now >= (int)str_replace(":", "", $time[0])) && ((int)str_replace(":", "", $time[1]) <= (int)str_replace(":", "", $time[0]))))
-				return true;
-		}
-
-		return false;
-	}
-
-
-	// returns true when dayinterval matches today
-	function inDays($now, $daypart)
-	{
-		$dayvalues = explode(",", $daypart);
-
-		foreach ($dayvalues as $dayvalue)
-		{
-			// split to get day bounds: Mo  Fr
-			$daybounds = explode("-", $dayvalue);
-
-			// if only one time bound is given
-			if (!$onlyTime && !$daybounds[1] && (($daybounds[1] != 0) || ($daybounds[1] == "")))
-				$daybounds[1] = $daybounds[0];
-
-			// if today is in this time interval or every day is given (e.g. fr-th)
-			if
-			(
-				// e.g. Mo-Fr
-				( ((int)$daybounds[0] == 0) && ($now >= (int)$daybounds[0]) && ($now <= (int)$daybounds[1]) ) ||
-				// e.g. Tu-Fr
-				( ($now >= (int)$daybounds[0]) && ($now <= (int)$daybounds[1]) && ((int)$daybounds[0] < (int)$daybounds[1]) && ((int)$daybounds[0] != 0) && ((int)$daybounds[1] != 0) ) ||
-				// e.g. Th-Tu
-				( ((int)$daybounds[0] != 0) && ((int)$daybounds[1] != 0) && ((int)$daybounds[1] < (int)$daybounds[0]) && ($actday >= (int)$daybounds[0]) && ($now <= 6) && ($actday >= 0) && ($now <= (int)$daybounds[1]) ) ||
-				// e.g. Th-Mo
-				( ((int)$daybounds[1] == 0) && ($now >= (int)$daybounds[0]) && ($now <= 6) && ((int)$daybounds[0] != (int)$daybounds[1]) ) ||
-				// e.g. Su-Th
-				( ((int)$daybounds[0] != 0) && ((int)$daybounds[1] != 0) && ((int)$daybounds[1] < (int)$daybounds[0]) && ($now <= (int)$daybounds[0]) && ($now <= (int)$daybounds[1]) && ((int)$daybounds[0] == 6)) ||
-				// e.g. We
-				( ((int)$daybounds[0] == (int)$daybounds[1]) && ($now == (int)$daybounds[0]) ) ||
-				// only time interval, e.g. 10:00-20:00
-				( $onlyTime )
-			)
-				return true;
-		}
-
-		return false;
-	}
-
-
-	// check if pois has now open if today is a day of the holidays
-	function isInHoliday($openinghours, $offset)
-	{
-		// simplest case
-		if ($openinghours == "24/7" || $openinghours == "00:00-24:00")
-			return true;
-
-		// get actual timestamp of user's timezone
-		$actual = time()+$offset*3600;
-		$acttime = (int)gmdate("Hi", $actual);
-
-		// serialising
-		$openinghours = strtolower($openinghours);
-
-		// remove wrong spaces
-		$openinghours = str_replace(", ", ",", $openinghours);
-
-		// replacing words by numbers for easier processing
-		$original = array("+");
-		$translation = array("23:59");
-		$openinghours = str_replace($original, $translation, $openinghours);
-
-		// example: Mo-Fr 10:00-12:00,16:00-18:00; Sa 16:00+; Su off
-		// split into each entry: Mo-Fr 10:00-12:00,16:00-18:00
-		$sets = explode(";", $openinghours);
-		foreach ($sets as $set)
-		{
-			// contains PH or SH
-			if ((strpos($set, "PH") !== false) || (strpos($set, "SH") !== false))
-			{
-				// split at space for time intervals: 10:00-12:00  16:00-18:00
-				$timeintervals = explode(" ", $set);
-
-				foreach ($timeintervals as $timeinterval)
-				{
-					// split to get hour bounds: 10:00  12:00
-					$time = explode("-", $timeinterval);
-
-					if ((($acttime >= (int)str_replace(":", "", $time[0])) && ($acttime <= (int)str_replace(":", "", $time[1]))) || (($acttime >= (int)str_replace(":", "", $time[0])) && ((int)str_replace(":", "", $time[1]) <= (int)str_replace(":", "", $time[0]))))
-						return true;
-				}
-			}
-		}
-
-		return false;
-	}
-
-
 	// checks if given type-parameter is valid
 	function isValidType($type)
 	{
@@ -1174,16 +845,6 @@
 			default:
 				return $type;
 		}
-	}
-
-
-	// returns true if the poi with given openinghours string is always open
-	function isOpen247($openinghours)
-	{
-		if (($openinghours == "24/7") || ($openinghours == "Mo-Su 00:00-24:00"))
-			return true;
-
-		return false;
 	}
 
 
