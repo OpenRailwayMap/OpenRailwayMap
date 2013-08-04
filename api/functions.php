@@ -605,10 +605,7 @@
 		$result = pg_query($connection, $request);
 
 		if (!$result)
-		{
-			reportError("No return for database request: ".pg_last_error());
 			return false;
-		}
 
 		return pg_fetch_all($result);
 	}
@@ -1336,30 +1333,58 @@
 	}
 
 
-	// returns the lat/lon of a milestone $position on a line $ref
+	// returns the position of a milestone $position on a line $ref; implements clustering and searches for near milestones
 	function getMilestonePosition($ref, $position)
 	{
 		global $db, $prefix;
 
-		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon FROM
-					(
-						SELECT ST_Transform(ST_Centroid(ST_MakeLine(".$prefix."_point.way)), 4326) AS geom
-						FROM ".$prefix."_point
-						INNER JOIN ".$prefix."_ways ON ".$prefix."_point.osm_id = ANY(".$prefix."_ways.nodes)
-						WHERE (".$prefix."_ways.tags@>string_to_array('ref,".$ref."', ',')) AND (".$prefix."_point.tags->'railway:position'='".$position."')
-					) AS foo;";
-
 		$connection = connectToDatabase($db);
 		if (!$connection)
 			return false;
-		$response = requestDetails($query, $connection);
+
+		for ($i=3; $i>-1; $i--)
+		{
+			$position = str_replace(",", ".", (string)number_format((float)str_replace(",", ".", $position), $i, '.', ''));
+
+			$query = "SELECT ST_X(centroids.geom) AS lat, ST_Y(centroids.geom) AS lon, centroids.position AS position, centroids.operator AS operator
+						FROM (
+							SELECT ST_Transform(ST_Centroid(ST_Collect(milestones.geom)), 4326) AS geom, milestones.position AS position, milestones.operator AS operator
+							FROM (
+								SELECT wayjoin.geom AS geom, wayjoin.position AS position, ".$prefix."_line.tags->'operator' AS operator
+								FROM (
+									SELECT ".$prefix."_ways.id AS osm_id, ".$prefix."_point.way AS geom, ".$prefix."_point.tags->'".(($i==3) ? "railway:position:exact" : "railway:position")."' AS position
+									FROM ".$prefix."_point
+									INNER JOIN ".$prefix."_ways ON ".$prefix."_point.osm_id = ANY(".$prefix."_ways.nodes)
+									WHERE 
+										(
+										CAST(
+											ROUND(
+												CAST(
+													REPLACE(
+														regexp_replace(".$prefix."_point.tags->'".(($i==3) ? "railway:position:exact" : "railway:position")."', E'\\;.+$', '')
+													, ',', '.')
+												AS NUMERIC),
+											".$i.")
+										AS VARCHAR)='".$position."')
+								) AS wayjoin
+								INNER JOIN ".$prefix."_line ON wayjoin.osm_id = ".$prefix."_line.osm_id
+								WHERE (".$prefix."_line.tags->'ref' = '".$ref."')
+							) AS milestones
+							GROUP BY ROUND(ST_X(milestones.geom)/100)*100, ROUND(ST_Y(milestones.geom)/100)*100, milestones.position, milestones.operator
+						) AS centroids
+						ORDER BY centroids.position;";
+
+			$response = requestDetails($query, $connection);
+
+			if ($response)
+			{
+				pg_close($connection);
+				return $response;
+			}
+		}
 
 		pg_close($connection);
-
-		if ($response[0])
-			return array($response[0]['lat'], $response[0]['lon']);
-		else
-			return false;
+		return false;
 	}
 
 
@@ -1380,20 +1405,23 @@
 	{
 		if (!$value)
 			return false;
-		if ((ctype_digit(str_replace(".", "", $value))) && (substr_count($value, '.') == 1))
+		if ((ctype_digit(str_replace(".", "", $value))))
+			return true;
+		if ((ctype_digit(str_replace(",", "", $value))))
 			return true;
 
 		return false;
 	}
+
 
 	// returns the full name of a facility by a $ref
 	function getFullName($ref)
 	{
 		global $db, $prefix;
 
-		$query = "SELECT tags->'name' AS name
+		$query = "SELECT DISTINCT tags->'name' AS name
 					FROM ".$prefix."_point
-					WHERE tags->'railway:ref'='".$ref."';";
+					WHERE LOWER(tags->'railway:ref')=LOWER('".$ref."');";
 
 		$connection = connectToDatabase($db);
 		if (!$connection)
@@ -1402,11 +1430,12 @@
 
 		pg_close($connection);
 
-		if ($response[0]['name'])
-			return $response[0]['name'];
+		if ($response)
+			return $response;
 		else
 			return false;
 	}
+
 
 	// checks if given railroad line ref is in valid format
 	function isValidRef($ref)
@@ -1415,24 +1444,23 @@
 			return false;
 		if (!ctype_alnum($ref))
 			return false;
+		if (strlen($ref) < 2)
+			return false;
 
 		return true;
 	}
 
+
 	// returns the position of a facility by a $ref
-	// TODO: ranking
-	// TODO: clustering
-	// TODO: komplette flächen zurückgeben
-	// TODO: miminallänge string
 	function getFacilityPositionByRef($ref)
 	{
 		global $db, $prefix;
 
-		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id FROM
+		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator FROM
 					(
-						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, osm_id AS id
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'railway:ref') = '".strtolower($ref)."') AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
+						WHERE (LOWER(tags->'railway:ref') = LOWER('".$ref."')) AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
 					) AS foo;";
 
 		$connection = connectToDatabase($db);
@@ -1448,24 +1476,21 @@
 			return false;
 	}
 
+
 	// returns the position of a facility by a $name
-	// TODO: ranking
-	// TODO: clustering
-	// TODO: komplette flächen zurückgeben
-	// TODO: miminallänge string
 	function getFacilityPositionByName($name)
 	{
 		global $db, $prefix;
 
-		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id FROM
+		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator FROM
 					(
-						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, osm_id AS id
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'name') LIKE '".strtolower($name)."') AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
+						WHERE (LOWER(tags->'name') = LOWER('".$name."')) AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
 						UNION
-						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, osm_id AS id
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'name') LIKE '%".strtolower($name)."%') AND (NOT (tags->'name'='".strtolower($name)."')) AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
+						WHERE (LOWER(tags->'name') LIKE LOWER('%".$name."%')) AND (NOT (tags->'name'=LOWER('".$name."'))) AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
 					) AS foo;";
 
 		$connection = connectToDatabase($db);
@@ -1480,6 +1505,7 @@
 		else
 			return false;
 	}
+
 
 	// checks if given name is in valid format
 	function isValidName($name)
@@ -1488,7 +1514,22 @@
 			return false;
 		if (!ctype_alnum($name))
 			return false;
+		if (strlen($name) < 3)
+			return false;
 
 		return true;
+	}
+
+
+	// produces a JSON(P) output
+	function jsonOutput($data, $callback)
+	{
+		header("Content-Type: application/json; charset=UTF-8");
+		$jsonData = json_encode($data);
+		// JSONP request?
+		if (isset($callback))
+			echo $callback.'('.$jsonData.')';
+		else
+			echo $jsonData;
 	}
 ?>

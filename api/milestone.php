@@ -9,18 +9,15 @@
 
 	require_once("functions.php");
 
+	$callback = $_GET['callback'];
 	if (!isValidLine($_GET['line']))
 		die("Invalid format of line ref.");
 	if (!isValidPosition($_GET['position']))
 		die("Invalid format of milestone position.");
 
-	$result = getMilestonePosition($_GET['line'], $_GET['position']);
+	$result = getMilestonePosition(pg_escape_string($_GET['line']), pg_escape_string($_GET['position']), pg_escape_string($_GET['operator']));
 	if (!$result)
 		echo "NULL";
 	else
-	{
-		header("Content-Type: text/html; charset=UTF-8");
-		echo "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">";
-		echo $result['0']." ".$result['1'];
-	}
+		jsonOutput($result, $callback);
 ?>

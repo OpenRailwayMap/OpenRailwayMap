@@ -33,7 +33,7 @@
 	if ($_GET['lang'])
 		$langs[0] = $_GET['lang'];
 
-	if (!getDetails($db, $id, $type, $langs, $offset))
+	if (!getDetails($db, pg_escape_string($id), pg_escape_string($type), $langs, $offset))
 		echo "NULL";
 
 
