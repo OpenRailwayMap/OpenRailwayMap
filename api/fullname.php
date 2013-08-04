@@ -9,16 +9,13 @@
 
 	require_once("functions.php");
 
+	$callback = $_GET['callback'];
 	if (!isValidRef($_GET['ref']))
 		die("Invalid format of ref.");
 
-	$result = getFullName($_GET['ref']);
+	$result = getFullName(pg_escape_string($_GET['ref']));
 	if (!$result)
 		echo "NULL";
 	else
-	{
-		header("Content-Type: text/html; charset=UTF-8");
-		echo "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">";
-		echo $result;
-	}
+		jsonOutput($result, $callback);
 ?>
