@@ -2272,7 +2272,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:switch"
 					text="Switch type"
 					de.text="Weichentyp"
-					values="default,three_way,single_slip,double_slip,resetting,wye" display_values="Standardweiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche"
+					values="default,three_way,single_slip,double_slip,resetting,wye,abt" display_values="Standardweiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche,Abtsche Weiche"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:turnout_side"
