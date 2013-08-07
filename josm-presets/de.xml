@@ -2297,6 +2297,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Geschwindigkeit auf dem Abzweig (km/h)"
 					default=""
 					delete_if_empty="true" />
+				<combo key="railway:switch:configuration"
+					text="Configuration"
+					de.text="Bauform (bei Doppelkreuzungsweichen)"
+					values="inside,outside"
+					display_values="Innenliegende Zungen (Engländer),Außenliegende Zungen (Baeseler)"
+					default=""
+					delete_if_empty="true" />
 			</item>
 			<item name="Kreuzung" icon="railway-crossing.png" type="node">
 				<label text="Kreuzung" />
