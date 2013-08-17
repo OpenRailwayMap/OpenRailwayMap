@@ -1119,7 +1119,7 @@
 
 		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator FROM
 					(
-						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, osm_id AS id
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
 						WHERE (LOWER(tags->'railway:ref') = LOWER('".$ref."')) AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
 					) AS foo;";
@@ -1145,7 +1145,7 @@
 
 		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator FROM
 					(
-						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator osm_id AS id
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
 						WHERE (LOWER(tags->'name') = LOWER('".$name."')) AND (NOT (tags ? 'public_transport') OR (tags->'public_transport'!='stop_position')) AND (NOT (tags->'railway'='stop'))
 						UNION
