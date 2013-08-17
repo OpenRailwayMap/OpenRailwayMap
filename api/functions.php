@@ -1007,13 +1007,13 @@
 		{
 			$position = str_replace(",", ".", (string)number_format((float)str_replace(",", ".", $position), $i, '.', ''));
 
-			$query = "SELECT ST_X(centroids.geom) AS lat, ST_Y(centroids.geom) AS lon, centroids.position AS position, centroids.operator AS operator
+			$query = "SELECT ST_X(centroids.geom) AS lat, ST_Y(centroids.geom) AS lon, centroids.position AS position, centroids.operator AS operator, centroids.type AS type
 						FROM (
-							SELECT ST_Transform(ST_Centroid(ST_Collect(milestones.geom)), 4326) AS geom, milestones.position AS position, milestones.operator AS operator
+							SELECT ST_Transform(ST_Centroid(ST_Collect(milestones.geom)), 4326) AS geom, milestones.position AS position, milestones.operator AS operator, milestones.type AS type
 							FROM (
-								SELECT wayjoin.geom AS geom, wayjoin.position AS position, ".$prefix."_line.tags->'operator' AS operator
+								SELECT wayjoin.geom AS geom, wayjoin.position AS position, ".$prefix."_line.tags->'operator' AS operator, wayjoin.type AS type
 								FROM (
-									SELECT ".$prefix."_ways.id AS osm_id, ".$prefix."_point.way AS geom, ".$prefix."_point.tags->'".(($i==3) ? "railway:position:exact" : "railway:position")."' AS position
+									SELECT ".$prefix."_ways.id AS osm_id, ".$prefix."_point.way AS geom, ".$prefix."_point.tags->'".(($i==3) ? "railway:position:exact" : "railway:position")."' AS position, ".$prefix."_point.tags->'railway' AS type
 									FROM ".$prefix."_point
 									INNER JOIN ".$prefix."_ways ON ".$prefix."_point.osm_id = ANY(".$prefix."_ways.nodes)
 									WHERE 
@@ -1031,7 +1031,7 @@
 								INNER JOIN ".$prefix."_line ON wayjoin.osm_id = ".$prefix."_line.osm_id
 								WHERE (".$prefix."_line.tags->'ref' = '".$ref."')
 							) AS milestones
-							GROUP BY ROUND(ST_X(milestones.geom)/100)*100, ROUND(ST_Y(milestones.geom)/100)*100, milestones.position, milestones.operator
+							GROUP BY ROUND(ST_X(milestones.geom)/100)*100, ROUND(ST_Y(milestones.geom)/100)*100, milestones.position, milestones.operator, milestones.type
 						) AS centroids
 						ORDER BY centroids.position;";
 
