@@ -453,55 +453,29 @@ noscript p
 	-o-transition: background-color;
 	-o-transition-timing-function: ease-in-out;
 	-o-transition-duration: 200ms;
+	background-color: white;
+	background: -moz-linear-gradient(top, white 0, #f0f0f0 67%, white 100%);
+	background: -webkit-linear-gradient(top, white 0, #f0f0f0 67%, white 100%);
+	background: -o-linear-gradient(top, white 0, #f0f0f0 67%, white 100%);
+	background: -ms-linear-gradient(top, white 0, #f0f0f0 67%, white 100%);
+	border-bottom: 1px solid #f0f0f0;
 }
 
 .resultEntry:hover
 {
 	color: white;
 	cursor: pointer;
-}
-
-.resultEntry b
-{
-	font-size: 14px;
-}
-
-/* color of search entries */
-
-.odd
-{
-	background-color: white;
-	background: -moz-linear-gradient(top, white 0, #f0f0f0 67%, white 100%);
-	background: -webkit-linear-gradient(top, white 0, #f0f0f0 67%, white 100%);
-	background: -o-linear-gradient(top, white 0, #f0f0f0 67%, white 100%);
-	background: -ms-linear-gradient(top, white 0, #f0f0f0 67%, white 100%);
-}
-
-.even
-{
-	background-color: #f2f1f0;
-	background: -moz-linear-gradient(top, #f2f1f0 0, #e6e6e6 67%, #f2f1f0 100%);
-	background: -webkit-linear-gradient(top, #f2f1f0 0, #e6e6e6 67%, #f2f1f0 100%);
-	background: -o-linear-gradient(top, #f2f1f0 0, #e6e6e6 67%, #f2f1f0 100%);
-	background: -ms-linear-gradient(top, #f2f1f0 0, #e6e6e6 67%, #f2f1f0 100%);
-}
-
-.odd:hover
-{
 	background-color: #6baced;
 	background: -moz-linear-gradient(top, #6baced 0, #64a1de 67%, #6baced 100%);
 	background: -webkit-linear-gradient(top, #6baced 0, #64a1de 67%, #6baced 100%);
 	background: -o-linear-gradient(top, #6baced 0, #64a1de 67%, #6baced 100%);
 	background: -ms-linear-gradient(top, #6baced 0, #64a1de 67%, #6baced 100%);
+	border-bottom: 1px solid #f0f0f0;
 }
 
-.even:hover
+.resultEntry b
 {
-	background-color: #65a3e0;
-	background: -moz-linear-gradient(top, #65a3e0 0, #5e98d1 67%, #65a3e0 100%);
-	background: -webkit-linear-gradient(top, #65a3e0 0, #5e98d1 67%, #65a3e0 100%);
-	background: -o-linear-gradient(top, #65a3e0 0, #5e98d1 67%, #65a3e0 100%);
-	background: -ms-linear-gradient(top, #65a3e0 0, #5e98d1 67%, #65a3e0 100%);
+	font-size: 14px;
 }
 
 /* links of each search result to navigation feature */

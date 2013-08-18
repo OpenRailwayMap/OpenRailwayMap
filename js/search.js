@@ -69,12 +69,35 @@ function Search(map, box, bar, searchButton, clearButton)
     		return false;
     	}
 
-		var self = this;
-		if (response.responseText != '<meta http-equiv="content-type" content="text/html; charset=UTF-8">')
+		var results = JSON.parse(response.responseText);
+		if (results.length > 0)
 		{
-    		this.bar.removeChild(this.bar.lastChild);
-			this.bar.innerHTML = response.responseText;
-			var self = this;
+			results = results[0];
+			this.bar.removeChild(this.bar.lastChild);
+			for (var i=0; i<results.length; i++)
+			{
+				var result = document.createElement("div");
+				if (results[i]['type'] == "milestone")
+				{
+					result.innerHTML = '<b>Kilometer '+results[i]['position']+', Strecke '+results[i]['ref']+'</b>';
+					if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
+						result.innerHTML += '&nbsp;'+results[i]['type'];
+					if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
+						result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
+				}
+				else
+				{
+					result.innerHTML = '<b>'+results[i]['name']+'</b>';
+					if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
+						result.innerHTML += '&nbsp;'+results[i]['type'];
+					if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
+						result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
+				}
+				result.setAttribute('class', 'resultEntry');
+				selfSearch = this;
+				result.onclick = new Function("selfSearch.showResult("+results[i]['lon']+", "+results[i]['lat']+");");
+				this.bar.appendChild(result);
+			}
 		}
 		// if no results were found
 		else
@@ -88,7 +111,7 @@ function Search(map, box, bar, searchButton, clearButton)
     }
 
 	// called when clicking on a search results, jumps to point and draws something on the map
-	this.showResult = function(lat, lon, id, type)
+	this.showResult = function(lat, lon)
 	{
 		// move to position
 		this.map.panTo(new L.LatLng(lat, lon));
