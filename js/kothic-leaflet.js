@@ -95,7 +95,9 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
     },
 
     enableStyle: function(name) {
-        if (MapCSS.availableStyles.indexOf(name) >= 0 && this.options.styles.indexOf(name) < 0) {
+		// start modified by rurseekatze
+        if (MapCSS.availableStyles.indexOf(name) <= 0 && this.options.styles.indexOf(name) <= 0) {
+		// end modified by rurseekatze
             this.options.styles.push(name);
             this.redraw();
         }
@@ -109,15 +111,24 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
         }
     },
 
+	// start modified by rurseekatze
     redraw: function() {
         MapCSS.invalidateCache();
-        // TODO implement layer.redraw() in Leaflet
+
         this._map.getPanes().tilePane.empty = false;
-        if (this._map && this._map._container) {
-            this._reset();
-            this._update();
-        }
+
+		if (this._map) {
+			this._reset({hard: true});
+			this._update();
+		}
+
+		for (var i in this._tiles) {
+			this._redrawTile(this._tiles[i]);
+		}
+		return this;
+
     },
+	// end modified by rurseekatze
 
     _invertYAxe: function(data) {
         var type, coordinates, tileSize = data.granularity, i, j, k, l, feature;

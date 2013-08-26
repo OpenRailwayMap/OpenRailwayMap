@@ -1,5 +1,6 @@
 /*
 OpenRailwayMap Style File for JOSM and KothicJS
+Standard layer
 
 OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
@@ -581,69 +582,6 @@ node|z14-[railway=tram_stop]
 	font-family: Arial;
 	text-halo-radius: 1;
 	text-halo-color: white;
-}
-
-/****************/
-/* main signals */
-/****************/
-node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semaphore][railway:signal:main:function=entry], node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semaphore][railway:signal:main:function=block]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de:hp-semaphore.png";
-	icon-width: 16;
-	icon-height: 16;
-}
-
-node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light][railway:signal:main:function=entry], node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light][railway:signal:main:function=block]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de:hp-light.png";
-	icon-width: 16;
-	icon-height: 16;
-}
-
-node|z17-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semaphore][railway:signal:main:function=exit]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de:hp-semaphore.png";
-	icon-width: 16;
-	icon-height: 16;
-}
-
-node|z17-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light][railway:signal:main:function=exit]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de:hp-light.png";
-	icon-width: 16;
-	icon-height: 16;
 }
 
 /*****************/

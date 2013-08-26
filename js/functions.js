@@ -50,7 +50,7 @@ function createMap(embed)
 	}).addTo(map);
 
 	// railmap layer
-	var railmap = new L.TileLayer.Kothic(root+'tiles/{z}/{x}/{y}.js',
+	railmap = new L.TileLayer.Kothic(root+'tiles/{z}/{x}/{y}.js',
 	{
 		attribution: "Rendering: OpenRailwayMap",
 		minZoom: 4
@@ -58,9 +58,9 @@ function createMap(embed)
 	MapCSS.onImagesLoad = function()
 	{
 		map.addLayer(railmap);
-		railmap.enableStyle('style');
 	};
-	MapCSS.preloadSpriteImage("style", root+"styles/style.png");
+	MapCSS.preloadSpriteImage("standard", root+"styles/standard.png");
+	MapCSS.preloadSpriteImage("signals", root+"styles/signals.png");
 
 	// hillshading layer
 	var hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',
@@ -102,6 +102,17 @@ function createMap(embed)
 
 	// creating search
 	search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
+}
+
+
+// changes the current map rendering style to the JS stylefile given as parameter
+function setStyle(style)
+{
+	for (var i=0; i<MapCSS.availableStyles.length; i++)
+		if (MapCSS.availableStyles[i] != style)
+			railmap.disableStyle(MapCSS.availableStyles[i]);
+
+	railmap.enableStyle(style);
 }
 
 
