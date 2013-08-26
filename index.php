@@ -57,7 +57,8 @@
 		<script type="text/javascript" src="js/utils/geom.js"></script>
 		<script type="text/javascript" src="js/utils/rbush.js"></script>
 		<script type="text/javascript" src="js/kothic-leaflet.js"></script>
-		<script type="text/javascript" src="styles/style.js"></script>
+		<script type="text/javascript" src="styles/standard.js"></script>
+		<script type="text/javascript" src="styles/signals.js"></script>
 		<?php
 			// params
 			echo "<script type=\"text/javascript\">\n";
