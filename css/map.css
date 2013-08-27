@@ -620,24 +620,29 @@ noscript p
 	box-shadow: 0px 0px 8px #aaa;
 }
 
-.locateButton
+#locateButton
 {
 	position: absolute;
-	left: 318px;
-	top: 320px;
-	z-index: 1000;
-}
-
-.locateButtonFalse
-{
-	position: absolute;
-	left: 38px;
-	top: 320px;
+	left: 314px;
+	top: 290px;
+	width: 23px;
+	height: 23px;
+	background-color: rgba(255, 255, 255, 0.8);
+	background-image: url('../img/locate.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 7px rgba(0,0,0,0.4);
 	z-index: 1000;
 }
 
 #locateButton:hover
 {
+	background-color: rgba(255, 255, 255, 1);
 	cursor: pointer;
 }
 
