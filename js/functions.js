@@ -82,7 +82,6 @@ function createMap(embed)
 		"OpenRailwayMap": railmap
 	};
 	// TODO: better selection of default layer, disable hillshading by default
-	//map.addControl(new OpenLayers.Control.MousePosition());
 	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
 	// TODO: plugin missing
 	//var permalink = new L.Control.Permalink({text: 'Permalink'}).addTo(map);
@@ -194,6 +193,18 @@ function changeLanguage(lang)
 
 	if (params['searchquery'] != "")
 		url += '&q='+params['searchquery'];
+
+	if (params['ref'] != null)
+		url += '&ref='+params['ref'];
+
+	if (params['name'] != null)
+		url += '&name='+params['name'];
+
+	if (params['position'] != null)
+		url += '&position='+params['position'];
+
+	if (params['line'] != null)
+		url += '&line='+params['line'];
 
 	window.location = url;
 }
