@@ -61,6 +61,17 @@ function Startposition(map, locateButton)
 	this.map = map;
 	this.locateButton = gEBI(locateButton);
 
+	// set position if params are set
+	var self = this;
+	var handler = function(request)
+	{
+		var response = request.responseText;
+		if ((response.length > 0) && (response != "NULL"))
+		{
+			var results = JSON.parse(response);
+			self.map.setView(new L.LatLng(results[0]['lon'], results[0]['lat']), 16);
+		}
+	};
 	// permalink given
 	if (params['lat'] && params['lon'])
 	{
@@ -68,6 +79,15 @@ function Startposition(map, locateButton)
 			params['zoom'] = 17;
 		this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
 	}
+	// milestone given
+	else if (params['position'] && params['line'])
+		requestApi("position", "position="+params['position']+"&line="+params['line'], handler);
+	// facility name given
+	else if (params['name'])
+		requestApi("position", "name="+params['name'], handler);
+	// facility ref given
+	else if (params['ref'])
+		requestApi("position", "ref="+params['ref'], handler);
 	// no permalink
 	else
 		this.setPosition();
