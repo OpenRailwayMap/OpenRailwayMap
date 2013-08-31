@@ -216,6 +216,7 @@
 			<br />
 			<div id="searchBar" class="infoBarOut"></div>
 			<div id="detailsBar" class="infoBarOut"></div>
+			<div id="styleSelectionBar"></div>
 			<iframe id="josmFrame" src="about:blank"></iframe>
 		</div>
 		<div id="locateButton"></div>
