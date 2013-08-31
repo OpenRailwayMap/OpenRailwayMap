@@ -26,33 +26,33 @@ function createMap(embed)
 	// grayscale mapnik background layer
 	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
-		attribution: "Map data &copy; OpenStreetMap contributors",
+		attribution: translations['mapnikAttribution'],
 		maxZoom: 18
 	}).addTo(map);
 	// normal mapnik background layer
 	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
-		attribution: "Map data &copy; OpenStreetMap contributors",
+		attribution: translations['mapnikAttribution'],
 		maxZoom: 18
 	}).addTo(map);
 
 	// grayscale MapQuest background layer
 	var mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 	{
-		attribution: "Tiles Courtesy of <a href=\"http://www.mapquest.com/\" target=\"_blank\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo.png\">",
+		attribution: translations['mapquestAttribution'],
 		maxZoom: 18
 	}).addTo(map);
 	// normal MapQuest background layer
 	var mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 	{
-		attribution: "Tiles Courtesy of <a href=\"http://www.mapquest.com/\" target=\"_blank\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo.png\">",
+		attribution: translations['mapquestAttribution'],
 		maxZoom: 18
 	}).addTo(map);
 
 	// railmap layer
 	railmap = new L.TileLayer.Kothic(root+'tiles/{z}/{x}/{y}.js',
 	{
-		attribution: "Rendering: OpenRailwayMap",
+		attribution: translations['railmapAttribution'],
 		minZoom: 4
 	});
 	MapCSS.onImagesLoad = function()
@@ -65,22 +65,20 @@ function createMap(embed)
 	// hillshading layer
 	var hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',
 	{
-		attribution: "Hillshading by <a href='http://nasa.gov/'>NASA SRTM</a>",
+		attribution: translations['hillshadingAttribution'],
 		maxZoom: 17
 	}).addTo(map);
 
-	var baseLayers =
-	{
-		"Mapnik": mapnik,
-		"Mapnik Grayscale": mapnikGray,
-		"MapQuest": mapquest,
-		"MapQuest Grayscale": mapquestGray
-	};
-	var overlays =
-	{
-		"Hillshading": hillshading,
-		"OpenRailwayMap": railmap
-	};
+	var baseLayers = new Object();
+	baseLayers[translations['mapnik']] = mapnik;
+	baseLayers[translations['mapnikGrayscale']] = mapnikGray;
+	baseLayers[translations['mapquest']] = mapquest;
+	baseLayers[translations['mapquestGrayscale']] = mapquestGray;
+
+	var overlays = new Object();
+	overlays[translations['hillshading']] = hillshading;
+	overlays[translations['railmap']] = railmap;
+
 	// TODO: better selection of default layer, disable hillshading by default
 	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
 	// TODO: plugin missing
@@ -94,13 +92,14 @@ function createMap(embed)
 		var timestamp = new Timestamp("info");
 		// setting start position
 		startposition = new Startposition(map, "locateButton");
+		// create search
+		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
+		// build style selection and it's event handling
+		getStyleSelection();
 	}
 	// set start position in embed mode
 	else
 		this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
-
-	// creating search
-	search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
 }
 
 
@@ -112,6 +111,18 @@ function setStyle(style)
 			railmap.disableStyle(MapCSS.availableStyles[i]);
 
 	railmap.enableStyle(style);
+}
+
+
+// TODO comment
+function getStyleSelection()
+{
+	// TODO css styling layerselection
+	// TODO selected item on startup
+	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><p>'+translations['styleSelection']+':</p><p>';
+	for (var i=0; i<MapCSS.availableStyles.length; i++)
+		gEBI('styleSelectionBar').innerHTML += '<input onchange="setStyle(this.value)" type="radio" name="style" value="'+MapCSS.availableStyles[i]+'"> '+translations['style.'+MapCSS.availableStyles[i]]+'<br />';
+	gEBI('styleSelectionBar').innerHTML += '</p></form>';
 }
 
 

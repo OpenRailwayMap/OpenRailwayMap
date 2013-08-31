@@ -79,7 +79,7 @@ function Search(map, box, bar, searchButton, clearButton)
 				var result = document.createElement("div");
 				if (results[i]['type'] == "milestone")
 				{
-					result.innerHTML = '<b>Kilometer '+results[i]['position']+', Strecke '+results[i]['ref']+'</b>';
+					result.innerHTML = '<b>'+translations['kilometer']+' '+results[i]['position']+', '+translations['track']+' '+results[i]['ref']+'</b>';
 					if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
 						result.innerHTML += '&nbsp;'+results[i]['type'];
 					if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
