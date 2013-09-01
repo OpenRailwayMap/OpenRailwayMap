@@ -96,7 +96,7 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
 
     enableStyle: function(name) {
 		// start modified by rurseekatze
-        if (MapCSS.availableStyles.indexOf(name) <= 0 && this.options.styles.indexOf(name) <= 0) {
+        if (this.options.styles.indexOf(name) == -1) {
 		// end modified by rurseekatze
             this.options.styles.push(name);
             this.redraw();
