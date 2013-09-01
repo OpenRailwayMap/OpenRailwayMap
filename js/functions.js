@@ -100,6 +100,8 @@ function createMap(embed)
 	// set start position in embed mode
 	else
 		this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
+
+	setStyle('standard');
 }
 
 
@@ -114,15 +116,16 @@ function setStyle(style)
 }
 
 
-// TODO comment
+// build a radio-button list of available map styles
 function getStyleSelection()
 {
-	// TODO css styling layerselection
-	// TODO selected item on startup
-	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><p>'+translations['styleSelection']+':</p><p>';
+	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><b>'+translations['styleSelection']+':</b><br /><p>';
 	for (var i=0; i<MapCSS.availableStyles.length; i++)
-		gEBI('styleSelectionBar').innerHTML += '<input onchange="setStyle(this.value)" type="radio" name="style" value="'+MapCSS.availableStyles[i]+'"> '+translations['style.'+MapCSS.availableStyles[i]]+'<br />';
+		gEBI('styleSelectionBar').innerHTML += '<input onchange="setStyle(this.value)" type="radio" name="style" value="'+MapCSS.availableStyles[i]+'">'+translations['style.'+MapCSS.availableStyles[i]]+'<br />';
 	gEBI('styleSelectionBar').innerHTML += '</p></form>';
+
+	// mark first selection as checked on startup
+	gEBI('styleSelectionBar').getElementsByTagName('input')[0].checked = true;
 }
 
 
