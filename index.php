@@ -173,7 +173,8 @@
 					<?php
 						$languages = array(
 							"de" => "Deutsch",
-							"en" => "English"
+							"en" => "English",
+							"cs" => "Česky"
 						);
 						foreach ($languages as $short => $name)
 						{
