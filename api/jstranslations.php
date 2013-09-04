@@ -37,5 +37,5 @@
 	echo "translations['embeddescription'] = '".addslashes(_("Copy this HTML code snippet into your website to show a small map with a marker."))."';\n";
 	echo "translations['style.standard'] = '".addslashes(_("style.standard"))."';\n";
 	echo "translations['style.signals'] = '".addslashes(_("style.signals"))."';\n";
-	echo "translations['style.maxspeeds'] = '".addslashes(_("style.maxspeeds"))."';\n";
+	echo "translations['style.maxspeed'] = '".addslashes(_("style.maxspeed"))."';\n";
 ?>

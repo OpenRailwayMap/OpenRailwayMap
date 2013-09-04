@@ -59,6 +59,7 @@
 		<script type="text/javascript" src="js/kothic-leaflet.js"></script>
 		<script type="text/javascript" src="styles/standard.js"></script>
 		<script type="text/javascript" src="styles/signals.js"></script>
+		<script type="text/javascript" src="styles/maxspeed.js"></script>
 		<?php
 			// params
 			echo "<script type=\"text/javascript\">\n";

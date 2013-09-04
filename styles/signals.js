@@ -5,6 +5,15 @@
     function restyle(style, tags, zoom, type, selector) {
         var s_default = {};
 
+        if ((selector == 'meta')) {
+            s_default['title'] = 'OpenRailwayMap signalling layer';
+            s_default['version'] = '0';
+            s_default['description'] = 'Style for a signalling layer railroad network map.';
+            s_default['author'] = 'rurseekatze';
+            s_default['link'] = 'http://wiki.openstreetmap.org/wiki/OpenRailwayMap';
+            s_default['watch-modified'] = 'true';
+        }
+
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'hp' && tags['railway:signal:main:form'] == 'semaphore' && tags['railway:signal:main:function'] == 'entry') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'hp' && tags['railway:signal:main:form'] == 'semaphore' && tags['railway:signal:main:function'] == 'block') && zoom >= 14)) {
             s_default['z-index'] = 10000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
