@@ -12,11 +12,11 @@ Format details:
 * https://wiki.openstreetmap.org/wiki/MapCSS/0.2
 */
 
-meta 
+meta
 {
-	title: "OpenRailwayMap";
+	title: "OpenRailwayMap infrastructure standard layer";
 	version: "0"; 
-	description: "Style for a railroad network map.";
+	description: "Style for a infrastructure standard layer railroad network map.";
 	author: "rurseekatze";
 	link: "http://wiki.openstreetmap.org/wiki/OpenRailwayMap";
 	watch-modified: true;

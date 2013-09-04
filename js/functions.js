@@ -58,9 +58,11 @@ function createMap(embed)
 	MapCSS.onImagesLoad = function()
 	{
 		map.addLayer(railmap);
+		setStyle('standard');
 	};
 	MapCSS.preloadSpriteImage("standard", root+"styles/standard.png");
 	MapCSS.preloadSpriteImage("signals", root+"styles/signals.png");
+	MapCSS.preloadSpriteImage("maxspeed", root+"styles/maxspeed.png");
 
 	// hillshading layer
 	var hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',
@@ -100,8 +102,6 @@ function createMap(embed)
 	// set start position in embed mode
 	else
 		this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
-
-	setStyle('standard');
 }
 
 
