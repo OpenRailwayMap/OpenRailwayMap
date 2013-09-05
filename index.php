@@ -173,9 +173,9 @@
 				<select id="langSelector" name="language" size="1" onChange="changeLanguage(this.form.language.options[this.form.language.selectedIndex].value);">
 					<?php
 						$languages = array(
+							"cs" => "Česky",
 							"de" => "Deutsch",
-							"en" => "English",
-							"cs" => "Česky"
+							"en" => "English"
 						);
 						foreach ($languages as $short => $name)
 						{
