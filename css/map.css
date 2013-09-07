@@ -391,6 +391,7 @@ noscript p
 	color: black;
 	font-size: 11px;
 	padding-left: 5px;
+	margin-top: 20px;
 }
 
 /* info like "zoom in to show markers" in footer */
@@ -614,6 +615,7 @@ noscript p
 {
 	position: relative;
 	left: 30px;
+	top: 10px;
 }
 
 #poweredby img
