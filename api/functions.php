@@ -10,7 +10,7 @@
 	// email address to send error reports to
 	$mail = "info@openrailwaymap.org";
 	// available translations
-	$langs = array("de"=>"de_DE", "en"=>"en_GB", "cs"=>"cs_CZ");
+	$langs = array("de"=>"de_DE", "en"=>"en_GB", "cs"=>"cs_CZ", "nqo"=>"nqo_GN");
 	// name of database
 	$db = "railmap";
 	// prefix of osm2pgsql tables
@@ -70,9 +70,7 @@
 
 		setlocale(LC_ALL, $langs[$lang]);
 		bind_textdomain_codeset("messages", "UTF-8");
-		bind_textdomain_codeset("tags", "UTF-8");
 		bindtextdomain("messages", "../locales");
-		bindtextdomain("tags", "../locales");
 		textdomain("messages");
 	}
 
