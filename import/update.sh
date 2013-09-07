@@ -22,6 +22,8 @@ export JAVACMD_OPTIONS=-Xmx2800M
 cd $DATAPATH
 
 
+echo "Started processing at $(date)"
+
 # update planet file
 echo "Updating planet file"
 # MAKE THE FOLLOWING COMMANDS EXECUTABLE BY REMOVING '#' IN YOUR INSTALLATION
@@ -68,7 +70,6 @@ rm changes.osc
 # rerendering tiles that changed with this map update
 echo "Rerender expired tiles"
 echo ""
-date | mail -s "start" "info@openlinkmap.org"
 cd $PROJECTPATH/renderer
 if [ -s $TILELIST ]; then
 	while read LINE; do
@@ -84,7 +85,6 @@ if [ -s $TILELIST ]; then
 	done < $TILELIST
 	rm $TILELIST
 fi
-date | mail -s "end" "info@openlinkmap.org"
 
 
 # run mapcss converter to update mapcss style
@@ -95,4 +95,5 @@ rm style.js
 rm style.png
 python mapcss_converter.py --mapcss style.mapcss --icons-path .
 echo ""
-echo "Finished."
+
+echo "Finished processing at $(date)."

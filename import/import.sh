@@ -16,6 +16,7 @@ export JAVACMD_OPTIONS=-Xmx2800M
 
 cd $DATAPATH
 
+echo "Started processing at $(date)"
 
 # download planet file if not existing
 echo "Getting planet file if necessary"
@@ -73,4 +74,5 @@ echo ""
 cd $PROJECTPATH/renderer
 php prerender-lowlevel.php
 echo ""
-echo "Finished."
+
+echo "Finished processing at $(date)."
