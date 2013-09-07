@@ -125,3 +125,60 @@ cd ..
 # RewriteCond /home/www/sites/194.245.35.149/site/orm/%{REQUEST_URI} !-f
 # RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js$ /renderer/vtiler.php?z=$1&x=$2&y=$3
 # RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js/dirty$ /renderer/vtiler.php?z=$1&x=$2&y=$3
+
+# if not existing, add a locales file for nqo_GN on your system by running these commands:
+# cd /usr/share/i18n/locales
+# cp en_GB nqo_GN
+# vi nqo_GN and replace
+##
+## title      "English locale for Britain"
+## source     "RAP"
+## address    "Sankt J<U00F8>rgens Alle 8, DK-1615 K<U00F8>benhavn V, Danmark"
+## contact    "Keld Simonsen"
+## email      "bug-glibc-locales@gnu.org"
+## tel        ""
+## fax        ""
+## language   "English"
+## territory  "Great Britain"
+## revision   "1.0"
+## date       "2000-06-28"
+## %
+## category  "en_GB:2000";LC_IDENTIFICATION
+## category  "en_GB:2000";LC_CTYPE
+## category  "en_GB:2000";LC_COLLATE
+## category  "en_GB:2000";LC_TIME
+## category  "en_GB:2000";LC_NUMERIC
+## category  "en_GB:2000";LC_MONETARY
+## category  "en_GB:2000";LC_MESSAGES
+## category  "en_GB:2000";LC_PAPER
+## category  "en_GB:2000";LC_NAME
+## category  "en_GB:2000";LC_ADDRESS
+## category  "en_GB:2000";LC_TELEPHONE
+##
+# with
+##
+## title      "N'ko locale for Guinea - dirty workaround for LC_MESSAGES"
+## source     "own"
+## address    "Germany"
+## contact    "Alexander Matheisen"
+## email      "AlexanderMatheisen@ish.de"
+## tel        ""
+## fax        ""
+## language   "N'ko"
+## territory  "Guinea"
+## revision   "0.1"
+## date       "2013-09-07"
+## %
+## category  "nqo_GN:2000";LC_IDENTIFICATION
+## category  "nqo_GN:2000";LC_CTYPE
+## category  "nqo_GN:2000";LC_COLLATE
+## category  "nqo_GN:2000";LC_TIME
+## category  "nqo_GN:2000";LC_NUMERIC
+## category  "nqo_GN:2000";LC_MONETARY
+## category  "nqo_GN:2000";LC_MESSAGES
+## category  "nqo_GN:2000";LC_PAPER
+## category  "nqo_GN:2000";LC_NAME
+## category  "nqo_GN:2000";LC_ADDRESS
+## category  "nqo_GN:2000";LC_TELEPHONE
+##
+# localedef -f UTF-8 -i nqo_GN nqo_GN
