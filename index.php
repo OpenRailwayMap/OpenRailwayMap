@@ -172,8 +172,9 @@
 						$languages = array(
 							"cs" => "Česky",
 							"de" => "Deutsch",
+							"el" => "Ελληνικά",
 							"en" => "English",
-							"nqo" => "N'ko ߒߞߏ"
+							"nqo" => "ߒߞߏ"
 						);
 						foreach ($languages as $short => $name)
 						{
