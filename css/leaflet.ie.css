@@ -1,4 +1,6 @@
 /*
+Leaflet, a JavaScript library for mobile-friendly interactive maps. http://leafletjs.com
+
 Copyright (c) 2010-2013, Vladimir Agafonkin
 Copyright (c) 2010-2011, CloudMade
 All rights reserved.
@@ -60,12 +62,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .leaflet-control-zoom,
 .leaflet-control-layers {
 	border: 3px solid #999;
-	}
-.leaflet-control-zoom a {
-	background-color: #eee;
-	}
-.leaflet-control-zoom a:hover {
-	background-color: #fff;
 	}
 .leaflet-control-layers-toggle {
 	}
