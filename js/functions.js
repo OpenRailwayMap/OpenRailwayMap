@@ -81,10 +81,7 @@ function createMap(embed)
 	overlays[translations['hillshading']] = hillshading;
 	overlays[translations['railmap']] = railmap;
 
-	// TODO: better selection of default layer, disable hillshading by default
 	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
-	// TODO: plugin missing
-	//var permalink = new L.Control.Permalink({text: 'Permalink'}).addTo(map);
 	var layerSwitch = new L.Control.Layers(baseLayers, overlays).addTo(map);
 
 	// only in not-embed mode
