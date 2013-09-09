@@ -167,7 +167,7 @@
 		<div id="sideBar" class="sideBar">
 			<b id="header"><a href="index.php"><?=$appname?></a></b>
 			<form id="langSelection">
-				<select id="langSelector" name="language" size="1" onChange="changeLanguage(this.form.language.options[this.form.language.selectedIndex].value);">
+				<select id="langSelector" size="1" onChange="changeLanguage(gEBI('langSelector').options[gEBI('langSelector').selectedIndex].value)">
 					<?php
 						$languages = array(
 							"cs" => "Česky",
@@ -203,7 +203,8 @@
 			</noscript>
 			<div id="linkBar">
 				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
-				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>
+				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>&nbsp;•
+				<a class="links" id="permalinkButton" href="#" onclick="changeLanguage(gEBI('langSelector').options[gEBI('langSelector').selectedIndex].value)"><?=_("Permalink")?></a>
 				<script language="javascript">
 					var usr = "info";
 					var dom = "openrailwaymap";
