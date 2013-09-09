@@ -638,11 +638,11 @@ noscript p
 #locateButton
 {
 	position: absolute;
-	left: 314px;
-	top: 290px;
-	width: 23px;
-	height: 23px;
-	background-color: rgba(255, 255, 255, 0.8);
+	left: 310px;
+	top: 70px;
+	width: 26px;
+	height: 26px;
+	background-color: white;
 	background-image: url('../img/locate.png');
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
