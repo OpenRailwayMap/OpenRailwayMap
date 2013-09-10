@@ -7,7 +7,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 // set start position by given coordinate or, if possible, by geolocation api
-function Startposition(map, locateButton)
+function Startposition(map)
 {
 	// set position by user's ip address
 	this.setPositionByIp = function()
@@ -59,7 +59,6 @@ function Startposition(map, locateButton)
 
 
 	this.map = map;
-	this.locateButton = gEBI(locateButton);
 
 	// set position if params are set
 	var self = this;
@@ -91,13 +90,6 @@ function Startposition(map, locateButton)
 	// no permalink
 	else
 		this.setPosition();
-
-	// onclick event of locate button
-	var self = this;
-	this.locateButton.onclick = function()
-	{
-		self.setPosition();
-	};
 
 	// load markers without moving the map first
 	this.map.setView(this.map.getCenter(), this.map.getZoom());

@@ -38,36 +38,6 @@ noscript p
 	margin-top: 100px;
 }
 
-/* links on the bottom of each popup, also the box around them */
-.popupLinks
-{
-	border-top: 1px solid gray;
-	color: #000000;
-	font-size: 11px;
-}
-
-.popupLinks a
-{
-	text-decoration: none;
-}
-
-.popupLinks a:hover
-{
-	text-decoration: underline;
-}
-
-/* style of texts in popups */
-.popupHeader
-{
-	font-size: 16px;
-}
-
-.popupContent
-{
-	margin-top: 10px;
-	font-size: 10px;
-}
-
 /* loading image */
 .loading
 {

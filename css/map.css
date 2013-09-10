@@ -61,21 +61,8 @@ html,body
 	text-decoration: underline;
 }
 
-/* map widget in main size when sidebar is fold in*/
-.mapFrame
-{
-	background-color: #f1eee8;
-	color: black;
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 300px;
-	right: 0px;
-	border-left: 1px solid black;
-}
-
-/* map frame smaller when sidebar is fold out */
-.mapFrameOut
+/* map frame */
+#mapFrame
 {
 	background-color: #f1eee8;
 	color: black;
@@ -94,36 +81,6 @@ noscript p
 	color: black;
 	margin-left: 80px;
 	margin-top: 100px;
-}
-
-/* links on the bottom of each popup, also the box around them */
-.popupLinks
-{
-	border-top: 1px solid gray;
-	color: #000000;
-	font-size: 11px;
-}
-
-.popupLinks a
-{
-	text-decoration: none;
-}
-
-.popupLinks a:hover
-{
-	text-decoration: underline;
-}
-
-/* style of texts in popups */
-.popupHeader
-{
-	font-size: 16px;
-}
-
-.popupContent
-{
-	margin-top: 10px;
-	font-size: 10px;
 }
 
 #image

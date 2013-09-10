@@ -84,21 +84,25 @@ function createMap(embed)
 	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
 	var layerSwitch = new L.Control.Layers(baseLayers, overlays).addTo(map);
 
+	// setting start position
+	startposition = new Startposition(map);
+
 	// only in not-embed mode
 	if (!embed)
 	{
 		// loading timestamp
 		var timestamp = new Timestamp("info");
-		// setting start position
-		startposition = new Startposition(map, "locateButton");
 		// create search
 		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
 		// build style selection and it's event handling
 		getStyleSelection();
+
+		// onclick event of locate button
+		gEBI(locateButton).onclick = function()
+		{
+			startposition.setPosition();
+		};
 	}
-	// set start position in embed mode
-	else
-		this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
 }
 
 
