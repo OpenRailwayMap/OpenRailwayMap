@@ -18,7 +18,7 @@ html,body
 }
 
 /* map widget */
-.mapFrame
+#mapFrame
 {
 	background-color: #f1eee8;
 	color: #000000;

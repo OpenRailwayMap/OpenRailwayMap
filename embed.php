@@ -104,7 +104,7 @@
 		<script type="text/javascript" src="js/functions.js"></script>
 	</head>
 	<body onload="createMap(true);">
-		<div id="mapFrame" class="mapFrame">
+		<div id="mapFrame">
 			<noscript>
 				<p><b><?=_("Javascript is not activated")?></b><br /><?=_("Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings.")?></p>
 			</noscript>
