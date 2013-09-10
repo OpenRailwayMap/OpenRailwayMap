@@ -222,7 +222,7 @@
 			<iframe id="josmFrame" src="about:blank"></iframe>
 		</div>
 		<div id="locateButton"></div>
-		<div id="mapFrame" class="mapFrame">
+		<div id="mapFrame">
 			<noscript>
 				<p><b><?=_("Javascript is not activated")?></b><br /><?=_("Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings.")?></p>
 			</noscript>
