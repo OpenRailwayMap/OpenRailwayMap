@@ -23,7 +23,7 @@
 
 
 	// getting timestamp
-	$timestamp = implode(" ", @file("../../olm/import/timestamp"));
+	$timestamp = implode(" ", @file($timestampFile));
 
 	if ($timestamp)
 	{

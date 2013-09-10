@@ -16,13 +16,7 @@
 	*/
 
 
-	$tiledir = "/home/www/sites/194.245.35.149/site/orm/tiles/";
-	$geomcolumn = "way";
-	$database = "railmap";
-	$maxzoom = 21;
-	$minzoom = 8;
-	$tables = array("polygon"=>"railmap_polygon", "line"=>"railmap_line","point"=>"railmap_point");
-	$intscalefactor = 10000;
+	require_once("../api/config.php");
 
 	$z = (int)($_GET['z'].$_SERVER['argv'][1]);
 	$x = (int)($_GET['x'].$_SERVER['argv'][2]);
@@ -183,12 +177,12 @@
 	// requests objects for a certain zoom level and bounding box and returns the data in JSON format
 	function getVectors($bbox, $zoom, $vec)
 	{
-		global $geomcolumn, $database, $tables, $intscalefactor, $condition;
+		global $geomcolumn, $database, $prefix, $intscalefactor, $condition;
 
 		$pxtolerance = 1.8;
 		$bbox_p = from4326To900913($bbox);
 
-		$connection = connectToDatabase($database);
+		$connection = connectToDatabase($db);
 
 		if ($vec == "polygon")
 		{
@@ -206,7 +200,7 @@
 										FROM
 											(
 												SELECT ST_Buffer(way, ".pixelSizeAtZoom($zoom, $pxtolerance).") AS ".$geomcolumn.", CAST(tags AS text) AS tags
-												FROM ".$tables[$vec]."
+												FROM ".$prefix."_polygon
 												WHERE way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) AND way_area > ".pow(pixelSizeAtZoom($zoom, $pxtolerance), 2)/$pxtolerance." ".$condition[$zoom]."
 											) p
 										GROUP BY CAST(tags AS text)
@@ -226,7 +220,7 @@
 								FROM
 									(
 										SELECT ST_Union(way) AS ".$geomcolumn.", CAST(tags AS text)
-										FROM ".$tables[$vec]."
+										FROM ".$prefix."_line
 										WHERE way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) ".$condition[$zoom]."
 										GROUP BY CAST(tags AS text)
 									) p
@@ -236,7 +230,7 @@
 		{
 			$query = "
 						SELECT ST_AsGeoJSON(ST_TransScale(way, ".-$bbox_p[0].", ".-$bbox_p[1].", ".($intscalefactor/($bbox_p[2]-$bbox_p[0])).", ".($intscalefactor/($bbox_p[3]-$bbox_p[1]))."), 0) AS ".$geomcolumn.", hstore2json(tags) AS tags
-						FROM ".$tables[$vec]."
+						FROM ".$prefix."_point
 						WHERE
 				        way && SetSRID('BOX3D(".$bbox_p[0]." ".$bbox_p[1].",".$bbox_p[2]." ".$bbox_p[3].")'::box3d, 900913) ".$condition[$zoom]."
 						LIMIT 10000";
