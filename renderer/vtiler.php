@@ -177,7 +177,7 @@
 	// requests objects for a certain zoom level and bounding box and returns the data in JSON format
 	function getVectors($bbox, $zoom, $vec)
 	{
-		global $geomcolumn, $database, $prefix, $intscalefactor, $condition;
+		global $geomcolumn, $db, $prefix, $intscalefactor, $condition;
 
 		$pxtolerance = 1.8;
 		$bbox_p = from4326To900913($bbox);
