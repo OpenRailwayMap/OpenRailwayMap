@@ -42,7 +42,21 @@ node|z1-20
 /***********/
 /* bridges */
 /***********/
-way[bridge=yes]::bridges
+way|z2-5[bridge=yes]::bridges
+{
+	z-index: 1;
+    casing-width: 1.5; 
+	casing-color: #797979;
+    linejoin: butt;
+}
+way|z6-8[bridge=yes]::bridges
+{
+	z-index: 1;
+    casing-width: 2.5; 
+	casing-color: #797979;
+    linejoin: butt;
+}
+way|z9-[bridge=yes]::bridges
 {
 	z-index: 1;
     casing-width: 3.5; 
@@ -160,7 +174,21 @@ way[railway=rail][!usage][service=crossover]
 /*********************************************/
 /* branch railways, service tag not rendered */
 /*********************************************/
-way[railway=rail][usage=branch][!service]
+way|z2-5[railway=rail][usage=branch][!service]
+{
+	z-index: 1000;
+    color: #DACA00;
+    width: 1.5;
+    linejoin: round;
+}
+way|z6-8[railway=rail][usage=branch][!service]
+{
+	z-index: 1000;
+    color: #DACA00;
+    width: 2.5;
+    linejoin: round;
+}
+way|z9-[railway=rail][usage=branch][!service]
 {
 	z-index: 1000;
     color: #DACA00;
@@ -171,7 +199,21 @@ way[railway=rail][usage=branch][!service]
 /*******************************************/
 /* main railways, service tag not rendered */
 /*******************************************/
-way[railway=rail][usage=main][!service]
+way|z2-5[railway=rail][usage=main][!service]
+{
+	z-index: 1100;
+    color: #FF8100;
+    width: 1.5;
+    linejoin: round;
+}
+way|z6-8[railway=rail][usage=main][!service]
+{
+	z-index: 1100;
+    color: #FF8100;
+    width: 2.5;
+    linejoin: round;
+}
+way|z9-[railway=rail][usage=main][!service]
 {
 	z-index: 1100;
     color: #FF8100;
@@ -182,7 +224,21 @@ way[railway=rail][usage=main][!service]
 /************************************************/
 /* highspeed railways, service tag not rendered */
 /************************************************/
-way[railway=rail][usage=main][highspeed=yes][!service]
+way|z2-5[railway=rail][usage=main][highspeed=yes][!service]
+{
+	z-index: 2000;
+    color: #FF0C00;
+    width: 1.5;
+    linejoin: round;
+}
+way|z6-8[railway=rail][usage=main][highspeed=yes][!service]
+{
+	z-index: 2000;
+    color: #FF0C00;
+    width: 2.5;
+    linejoin: round;
+}
+way|z9-[railway=rail][usage=main][highspeed=yes][!service]
 {
 	z-index: 2000;
     color: #FF0C00;
@@ -252,7 +308,14 @@ way[railway=razed]
 /***************/
 /* tram tracks */
 /***************/
-way[railway=tram]
+way|z10[railway=tram]
+{
+	z-index: 1100;
+	color: #D877B8;
+    width: 1.5;
+    linejoin: butt;
+}
+way|z11-[railway=tram]
 {
 	z-index: 1100;
 	color: #D877B8;
@@ -274,7 +337,7 @@ way[railway=subway]
 /*********************/
 /* light rail tracks */
 /*********************/
-way[railway=light_rail]
+way|z9-[railway=light_rail]
 {
 	z-index: 1100;
 	color: #00BD14;
