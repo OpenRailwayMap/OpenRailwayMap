@@ -58,7 +58,11 @@ function createMap(embed)
 	MapCSS.onImagesLoad = function()
 	{
 		map.addLayer(railmap);
-		setStyle('standard');
+
+		if (params['style'] != null)
+			setStyle(params['style']);
+		else
+			setStyle("standard");
 	};
 	MapCSS.preloadSpriteImage("standard", root+"styles/standard.png");
 	MapCSS.preloadSpriteImage("signals", root+"styles/signals.png");
@@ -114,6 +118,14 @@ function setStyle(style)
 			railmap.disableStyle(MapCSS.availableStyles[i]);
 
 	railmap.enableStyle(style);
+
+	// mark selected item as checked
+	var selectableItems = gEBI('styleSelectionBar').getElementsByTagName('input');
+	for (var i=0; i<selectableItems.length; i++)
+		if (selectableItems[i].value == style)
+			var index = i;
+
+	selectableItems[index].checked = true;
 }
 
 
@@ -124,9 +136,6 @@ function getStyleSelection()
 	for (var i=0; i<MapCSS.availableStyles.length; i++)
 		gEBI('styleSelectionBar').innerHTML += '<input onchange="setStyle(this.value)" type="radio" name="style" value="'+MapCSS.availableStyles[i]+'">'+translations['style.'+MapCSS.availableStyles[i]]+'<br />';
 	gEBI('styleSelectionBar').innerHTML += '</p></form>';
-
-	// mark first selection as checked on startup
-	gEBI('styleSelectionBar').getElementsByTagName('input')[0].checked = true;
 }
 
 
