@@ -382,19 +382,15 @@ noscript p
 {
 	padding: 10px;
 	margin-left: 5px;
-	margin-right: 15px;
+	width: 251px;
 	border: 1px solid #aaaaaa;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-o-border-radius: 3px;
-	border-radius: 3px;
 	font-size: 14px;
 }
 
 /* boxes of ext details and search results */
 .infoBar
 {
-	width: 266px;
+	width: 271px;
 	margin-bottom: 20px;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -441,7 +437,7 @@ noscript p
 	background: -webkit-linear-gradient(top, #6baced 0, #64a1de 67%, #6baced 100%);
 	background: -o-linear-gradient(top, #6baced 0, #64a1de 67%, #6baced 100%);
 	background: -ms-linear-gradient(top, #6baced 0, #64a1de 67%, #6baced 100%);
-	border-bottom: 1px solid #f0f0f0;
+	border-bottom: 1px solid #64a1de;
 }
 
 .resultEntry b
@@ -622,7 +618,7 @@ noscript p
 #langSelector
 {
 	position: absolute;
-	left: 205px;
+	left: 200px;
 	top: 5px;
 }
 
