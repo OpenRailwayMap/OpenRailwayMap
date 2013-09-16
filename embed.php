@@ -96,6 +96,7 @@
 				echo "name : ".(isset($_GET['name']) ? ("\"".$_GET['name']."\"") : ("null")).",\n";
 				echo "position : ".(isset($_GET['position']) ? ("\"".$_GET['position']."\"") : ("null")).",\n";
 				echo "line : ".(isset($_GET['line']) ? ("\"".$_GET['line']."\"") : ("null")).",\n";
+				echo "operator : ".(isset($_GET['operator']) ? ("\"".$_GET['operator']."\"") : ("null")).",\n";
 				echo "style : ".(isset($_GET['style']) ? ("\"".$_GET['style']."\"") : ("null"))."\n";
 				echo "};\n";
 			echo "</script>\n";
