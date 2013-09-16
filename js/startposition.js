@@ -80,13 +80,28 @@ function Startposition(map)
 	}
 	// milestone given
 	else if (params['position'] && params['line'])
-		requestApi("position", "position="+params['position']+"&line="+params['line'], handler);
+	{
+		if (params['operator'] != null)
+			requestApi("position", "position="+params['position']+"&line="+params['line']+"&operator="+params['operator'], handler);
+		else
+			requestApi("position", "position="+params['position']+"&line="+params['line'], handler);
+	}
 	// facility name given
 	else if (params['name'])
-		requestApi("position", "name="+params['name'], handler);
+	{
+		if (params['operator'] != null)
+			requestApi("position", "name="+params['name']+"&operator="+params['operator'], handler);
+		else
+			requestApi("position", "name="+params['name'], handler);
+	}
 	// facility ref given
 	else if (params['ref'])
-		requestApi("position", "ref="+params['ref'], handler);
+	{
+		if (params['operator'] != null)
+			requestApi("position", "ref="+params['ref']+"&operator="+params['operator'], handler);
+		else
+			requestApi("position", "ref="+params['ref'], handler);
+	}
 	// no permalink
 	else
 		this.setPosition();

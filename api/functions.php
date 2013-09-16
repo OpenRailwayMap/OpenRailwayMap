@@ -981,10 +981,15 @@
 	}
 
 
-	// returns the position of a milestone $position on a line $ref; implements clustering and searches for near milestones
-	function getMilestonePosition($ref, $position)
+	// returns the position of a milestone $position on a line $ref which is operated by $operator; implements clustering and searches for near milestones
+	function getMilestonePosition($ref, $position, $operator = false)
 	{
 		global $db, $prefix;
+
+		if ($operator)
+			$operatorClause = "AND (LOWER(".$prefix."_line.tags->'operator') LIKE LOWER('%".$operator."%'))";
+		else
+			$operatorClause = "";
 
 		$connection = connectToDatabase($db);
 		if (!$connection)
@@ -1016,7 +1021,7 @@
 										AS VARCHAR)='".$position."')
 								) AS wayjoin
 								INNER JOIN ".$prefix."_line ON wayjoin.osm_id = ".$prefix."_line.osm_id
-								WHERE (LOWER(".$prefix."_line.tags->'ref') = LOWER('".$ref."'))
+								WHERE (LOWER(".$prefix."_line.tags->'ref') = LOWER('".$ref."')) ".$operatorClause."
 							) AS milestones
 							GROUP BY ROUND(ST_X(milestones.geom)/100)*100, ROUND(ST_Y(milestones.geom)/100)*100, milestones.position, milestones.operator, milestones.type, milestones.ref
 						) AS centroids
@@ -1060,14 +1065,19 @@
 	}
 
 
-	// returns the full name of a facility by a $ref
-	function getFullName($ref)
+	// returns the full name of a facility by a $ref and operated by $operator
+	function getFullName($ref, $operator = false)
 	{
 		global $db, $prefix;
 
+		if ($operator)
+			$operatorClause = "AND (LOWER(".$prefix."_line.tags->'operator') LIKE LOWER('%".$operator."%'))";
+		else
+			$operatorClause = "";
+
 		$query = "SELECT DISTINCT tags->'name' AS name
 					FROM ".$prefix."_point
-					WHERE LOWER(tags->'railway:ref')=LOWER('".$ref."');";
+					WHERE (LOWER(tags->'railway:ref') = LOWER('".$ref."'))  ".$operatorClause.";";
 
 		$connection = connectToDatabase($db);
 		if (!$connection)
@@ -1095,16 +1105,21 @@
 	}
 
 
-	// returns the position of a facility by a $ref
-	function getFacilityPositionByRef($ref)
+	// returns the position of a facility by a $ref and operated by $operator
+	function getFacilityPositionByRef($ref, $operator = false)
 	{
 		global $db, $prefix;
+
+		if ($operator)
+			$operatorClause = "AND (LOWER(".$prefix."_line.tags->'operator') LIKE LOWER('%".$operator."%'))";
+		else
+			$operatorClause = "";
 
 		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator FROM
 					(
 						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'railway:ref') = LOWER('".$ref."')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station'))
+						WHERE (LOWER(tags->'railway:ref') = LOWER('".$ref."')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station')) ".$operatorClause."
 					) AS foo;";
 
 		$connection = connectToDatabase($db);
@@ -1121,20 +1136,25 @@
 	}
 
 
-	// returns the position of a facility by a $name
-	function getFacilityPositionByName($name)
+	// returns the position of a facility by a $name and operated by $operator
+	function getFacilityPositionByName($name, $operator = false)
 	{
 		global $db, $prefix;
+
+		if ($operator)
+			$operatorClause = "AND (LOWER(".$prefix."_line.tags->'operator') LIKE LOWER('%".$operator."%'))";
+		else
+			$operatorClause = "";
 
 		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator FROM
 					(
 						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'name') = LOWER('".$name."')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station'))
+						WHERE (LOWER(tags->'name') = LOWER('".$name."')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station')) ".$operatorClause."
 						UNION
 						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'name') LIKE LOWER('%".$name."%')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station'))
+						WHERE (LOWER(tags->'name') LIKE LOWER('%".$name."%')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station')) ".$operatorClause."
 					) AS foo;";
 
 		$connection = connectToDatabase($db);

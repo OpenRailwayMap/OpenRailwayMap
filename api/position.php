@@ -17,7 +17,7 @@
 	if ($_GET['ref'])
 	{
 		if (isValidRef($_GET['ref']))
-			$result = getFacilityPositionByRef(pg_escape_string($_GET['ref']));
+			$result = getFacilityPositionByRef(pg_escape_string($_GET['ref']), pg_escape_string($_GET['operator']));
 		else
 			die("Invalid format of ref.");
 	}
@@ -25,7 +25,7 @@
 	else if ($_GET['name'])
 	{
 		if (isValidName($_GET['name']))
-			$result = getFacilityPositionByName(pg_escape_string($_GET['name']));
+			$result = getFacilityPositionByName(pg_escape_string($_GET['name']), pg_escape_string($_GET['operator']));
 		else
 			die("Invalid format of name.");
 	}
@@ -33,7 +33,7 @@
 	else if ($_GET['line'] && $_GET['position'])
 	{
 		if (isValidLine($_GET['line']) && isValidPosition($_GET['position']))
-			$result = getMilestonePosition(pg_escape_string($_GET['line']), pg_escape_string($_GET['position']));
+			$result = getMilestonePosition(pg_escape_string($_GET['line']), pg_escape_string($_GET['position']), pg_escape_string($_GET['operator']));
 		else
 			die("Invalid format of line or position.");
 	}

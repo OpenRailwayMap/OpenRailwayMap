@@ -13,7 +13,7 @@
 	if (!isValidRef($_GET['ref']))
 		die("Invalid format of ref.");
 
-	$result = getFullName(pg_escape_string($_GET['ref']));
+	$result = getFullName(pg_escape_string($_GET['ref']), pg_escape_string($_GET['operator']));
 	if (!$result)
 		echo "NULL";
 	else
