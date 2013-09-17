@@ -64,12 +64,13 @@ function Startposition(map)
 	var self = this;
 	var handler = function(request)
 	{
-		var response = request.responseText;
-		if ((response.length > 0) && (response != "NULL"))
+		if ((request.responseText.length > 0) && (request.responseText != "NULL"))
 		{
-			var results = JSON.parse(response);
+			var results = JSON.parse(request.responseText);
 			self.map.setView(new L.LatLng(results[0]['lon'], results[0]['lat']), 16);
 		}
+		else
+			self.setPosition();
 	};
 	// permalink given
 	if (params['lat'] && params['lon'])
