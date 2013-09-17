@@ -3820,7 +3820,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				</item>
 			</group>
 			<group name="Sh-Signale" icon="de:sh-signals.png">
-				<item name="Schutzhaltsignal" icon="de:sh.png" type="node">
+				<item name="Schutzhaltsignal" icon="de:sh-light.png" type="node">
 					<label text="Schutzhaltsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />

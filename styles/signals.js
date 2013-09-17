@@ -70,6 +70,62 @@
             s_default['icon-height'] = '16';
         }
 
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'semaphore' && tags['railway:signal:minor:height'] == 'normal') && zoom >= 17) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'semaphore' && (!tags.hasOwnProperty('railway:signal:minor:height'))) && zoom >= 17)) {
+            s_default['z-index'] = 10000;
+            s_default['text'] = MapCSS.e_localize(tags, 'ref');
+            s_default['text-offset'] = 11;
+            s_default['text-size'] = '12';
+            s_default['text-color'] = 'black';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['font-weight'] = 'bold';
+            s_default['icon-image'] = 'icons/de:sh-semaphore.png';
+            s_default['icon-width'] = '16';
+            s_default['icon-height'] = '16';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'semaphore' && tags['railway:signal:minor:height'] == 'dwarf') && zoom >= 17)) {
+            s_default['z-index'] = 10000;
+            s_default['text'] = MapCSS.e_localize(tags, 'ref');
+            s_default['text-offset'] = 11;
+            s_default['text-size'] = '12';
+            s_default['text-color'] = 'black';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['font-weight'] = 'bold';
+            s_default['icon-image'] = 'icons/de:sh-semaphore-dwarf.png';
+            s_default['icon-width'] = '16';
+            s_default['icon-height'] = '16';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'light' && tags['railway:signal:minor:height'] == 'normal') && zoom >= 17) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'light' && (!tags.hasOwnProperty('railway:signal:minor:height'))) && zoom >= 17)) {
+            s_default['z-index'] = 10000;
+            s_default['text'] = MapCSS.e_localize(tags, 'ref');
+            s_default['text-offset'] = 11;
+            s_default['text-size'] = '12';
+            s_default['text-color'] = 'black';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['font-weight'] = 'bold';
+            s_default['icon-image'] = 'icons/de:sh-light.png';
+            s_default['icon-width'] = '16';
+            s_default['icon-height'] = '16';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'light' && tags['railway:signal:minor:height'] == 'dwarf') && zoom >= 17)) {
+            s_default['z-index'] = 10000;
+            s_default['text'] = MapCSS.e_localize(tags, 'ref');
+            s_default['text-offset'] = 11;
+            s_default['text-size'] = '12';
+            s_default['text-color'] = 'black';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['font-weight'] = 'bold';
+            s_default['icon-image'] = 'icons/de:sh-light-dwarf.png';
+            s_default['icon-width'] = '16';
+            s_default['icon-height'] = '16';
+        }
+
         if (Object.keys(s_default).length) {
             style['default'] = s_default; }
         return style;
@@ -85,8 +141,28 @@
             width: 16, 
             height: 16, 
             offset: 16
+        },
+        'icons/de:sh-light-dwarf.png': {
+            width: 16, 
+            height: 16, 
+            offset: 32
+        },
+        'icons/de:sh-light.png': {
+            width: 16, 
+            height: 16, 
+            offset: 48
+        },
+        'icons/de:sh-semaphore-dwarf.png': {
+            width: 16, 
+            height: 16, 
+            offset: 64
+        },
+        'icons/de:sh-semaphore.png': {
+            width: 16, 
+            height: 16, 
+            offset: 80
         }
-    }, external_images = [], presence_tags = [], value_tags = ['ref', 'railway:signal:main', 'railway:signal:main:function', 'railway:signal:main:form', 'railway'];
+    }, external_images = [], presence_tags = [], value_tags = ['ref', 'railway:signal:minor:form', 'railway:signal:main:function', 'railway', 'railway:signal:minor:height', 'railway:signal:main', 'railway:signal:minor', 'railway:signal:main:form'];
 
     MapCSS.loadStyle('signals', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('signals');
