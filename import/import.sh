@@ -62,10 +62,13 @@ echo ""
 
 
 # run mapcss converter
-echo "Create MapCSS style"
+echo "Create MapCSS styles"
 echo ""
 cd $PROJECTPATH/styles
-python mapcss_converter.py --mapcss style.mapcss --icons-path .
+for stylefile in *.mapcss
+do
+	python mapcss_converter.py --mapcss "$stylefile" --icons-path .
+done
 echo ""
 
 # prerender lowzoom tiles
