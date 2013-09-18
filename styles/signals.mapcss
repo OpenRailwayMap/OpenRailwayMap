@@ -22,10 +22,10 @@ meta
 	watch-modified: true;
 }
 
-/****************************************/
-/* DE Hp-Form-Einfahr- und Blocksignale */
-/****************************************/
-node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semaphore][railway:signal:main:function=entry], node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semaphore][railway:signal:main:function=block]
+/***************************/
+/* DE Hp-Form-Hauptsignale */
+/***************************/
+node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semaphore]
 {
 	z-index: 10000;
 	text: "ref";
@@ -40,46 +40,10 @@ node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semap
 	icon-height: 16;
 }
 
-/*****************************************/
-/* DE Hp-Licht-Einfahr- und Blocksignale */
-/*****************************************/
-node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light][railway:signal:main:function=entry], node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light][railway:signal:main:function=block]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de:hp-light.png";
-	icon-width: 16;
-	icon-height: 16;
-}
-
-/*****************************/
-/* DE Hp-Form-Ausfahrsignale */
-/*****************************/
-node|z17-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semaphore][railway:signal:main:function=exit]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de:hp-semaphore.png";
-	icon-width: 16;
-	icon-height: 16;
-}
-
-/******************************/
-/* DE Hp-Licht-Ausfahrsignale */
-/******************************/
-node|z17-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light][railway:signal:main:function=exit]
+/****************************/
+/* DE Hp-Licht-Hauptsignale */
+/****************************/
+node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light]
 {
 	z-index: 10000;
 	text: "ref";
@@ -162,6 +126,60 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=lig
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de:sh-light-dwarf.png";
+	icon-width: 16;
+	icon-height: 16;
+}
+
+/*******************/
+/* DE Ks-Vorsignal */
+/*******************/
+node|z14-[railway=signal][railway:signal:distant=ks][railway:signal:distant:form=light][railway:signal:distant:states=ks1;ks2]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de:ks-distant.png";
+	icon-width: 16;
+	icon-height: 16;
+}
+
+/*********************/
+/* DE Ks-Hauptsignal */
+/*********************/
+node|z14-[railway=signal][railway:signal:main=ks][railway:signal:main:form=light][railway:signal:main:states=hp0;ks1]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de:ks-main.png";
+	icon-width: 16;
+	icon-height: 16;
+}
+
+/******************************/
+/* DE Ks-Mehrabschnittssignal */
+/******************************/
+node|z14-[railway=signal][railway:signal:combined=ks][railway:signal:combined:form=light][railway:signal:combined:states=hp0;ks1;ks2]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de:ks-combined.png";
 	icon-width: 16;
 	icon-height: 16;
 }
