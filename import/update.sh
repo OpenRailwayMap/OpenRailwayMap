@@ -86,14 +86,4 @@ if [ -s $TILELIST ]; then
 	rm $TILELIST
 fi
 
-
-# run mapcss converter to update mapcss style
-echo "Update MapCSS style"
-echo ""
-cd $PROJECTPATH/styles
-rm style.js
-rm style.png
-python mapcss_converter.py --mapcss style.mapcss --icons-path .
-echo ""
-
 echo "Finished processing at $(date)."
