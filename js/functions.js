@@ -197,20 +197,9 @@ function changeLanguage(lang)
 	if (params['type'] != null)
 		url += '&type='+params['type'];
 
-	if (params['lat'] != null)
-		url += '&lat='+params['lat'];
-	else
-		url += '&lat='+position.lat;
-
-	if (params['lon'] != null)
-		url += '&lon='+params['lon'];
-	else
-		url += '&lon='+position.lng;
-
-	if (params['zoom'] != null)
-		url += '&zoom='+params['zoom'];
-	else
-		url += '&zoom='+map.getZoom();
+	url += '&lat='+position.lat;
+	url += '&lon='+position.lng;
+	url += '&zoom='+map.getZoom();
 
 	if (params['offset'] != null)
 		url += '&offset='+params['offset'];
