@@ -499,7 +499,7 @@ way[railway=narrow_gauge][usage=industrial][service=siding], way[railway=narrow_
 /************/
 /* switches */
 /************/
-node[railway=switch]
+node|z16-[railway=switch][railway:local_operated=no], node|z16-[railway=switch][!railway:local_operated]
 {
 	z-index: 5000;
 	symbol-shape: circle;
@@ -508,6 +508,49 @@ node[railway=switch]
 	symbol-fill-color: black;
 	text: "ref";
 	text-position: auto;
+	font-size: 11;
+	text-color: black;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+}
+
+/***************************/
+/* local operated switches */
+/***************************/
+node|z16-[railway=switch][railway:local_operated=yes]
+{
+	z-index: 5000;
+	symbol-shape: circle;
+	symbol-size: 8;
+	symbol-stroke-color: black;
+	symbol-fill-color: black;
+	text: "ref";
+	text-position: auto;
+	font-size: 11;
+	text-color: black;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: yellow;
+}
+
+/**********************/
+/* resetting switches */
+/**********************/
+node|z16-[railway=switch][railway:switch=resetting]
+{
+	z-index: 5000;
+	symbol-shape: circle;
+	symbol-size: 8;
+	symbol-stroke-color: black;
+	symbol-fill-color: black;
+	text: "ref";
+	text-position: auto;
+	font-size: 11;
+	text-color: black;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: orange;
 }
 
 /****************/
