@@ -28,13 +28,13 @@ function createMap(embed)
 	{
 		attribution: translations['mapnikAttribution'],
 		maxZoom: 18
-	}).addTo(map);
+	});
 	// normal mapnik background layer
 	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
 		maxZoom: 18
-	}).addTo(map);
+	});
 
 	// grayscale MapQuest background layer
 	var mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
@@ -47,7 +47,7 @@ function createMap(embed)
 	{
 		attribution: translations['mapquestAttribution'],
 		maxZoom: 18
-	}).addTo(map);
+	});
 
 	// railmap layer
 	railmap = new L.TileLayer.Kothic(root+'tiles/{z}/{x}/{y}.js',
@@ -73,7 +73,7 @@ function createMap(embed)
 	{
 		attribution: translations['hillshadingAttribution'],
 		maxZoom: 17
-	}).addTo(map);
+	});
 
 	var baseLayers = new Object();
 	baseLayers[translations['mapnik']] = mapnik;
