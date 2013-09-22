@@ -1,5 +1,7 @@
-OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world's railway infrastructure.
-=========================================================================================================
+OpenRailwayMap
+==============
+An OpenStreetMap-based project for creating a map of the world's railway infrastructure.
+----------------------------------------------------------------------------------------
 
 **OpenRailwayMap http://www.openrailwaymap.org/**
 
