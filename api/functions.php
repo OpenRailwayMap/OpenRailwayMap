@@ -1119,7 +1119,7 @@
 					(
 						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'railway:ref') = LOWER('".$ref."')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station')) ".$operatorClause."
+						WHERE (LOWER(tags->'railway:ref') = LOWER('".$ref."')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
 					) AS foo;";
 
 		$connection = connectToDatabase($db);
@@ -1150,11 +1150,11 @@
 					(
 						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'name') = LOWER('".$name."')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station')) ".$operatorClause."
+						WHERE (LOWER(tags->'name') = LOWER('".$name."')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
 						UNION
 						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'name') LIKE LOWER('%".$name."%')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station')) ".$operatorClause."
+						WHERE (LOWER(tags->'name') LIKE LOWER('%".$name."%')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
 					) AS foo;";
 
 		$connection = connectToDatabase($db);
