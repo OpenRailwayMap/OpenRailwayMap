@@ -35,9 +35,9 @@
 	echo "translations['searchoption'] = '".addslashes(_("Search only in the current map view"))."';\n";
 	echo "translations['embed'] = '".addslashes(_("HTML-Code"))."';\n";
 	echo "translations['embeddescription'] = '".addslashes(_("Copy this HTML code snippet into your website to show a small map with a marker."))."';\n";
-	echo "translations['style.standard'] = '".addslashes(_("style.standard"))."';\n";
-	echo "translations['style.signals'] = '".addslashes(_("style.signals"))."';\n";
-	echo "translations['style.maxspeed'] = '".addslashes(_("style.maxspeed"))."';\n";
+	echo "translations['style.standard'] = '".addslashes(_("Infrastructure"))."';\n";
+	echo "translations['style.signals'] = '".addslashes(_("Signalling"))."';\n";
+	echo "translations['style.maxspeed'] = '".addslashes(_("Maxspeeds"))."';\n";
 	echo "translations['halt'] = '".addslashes(_("Halt"))."';\n";
 	echo "translations['station'] = '".addslashes(_("Station"))."';\n";
 	echo "translations['junction'] = '".addslashes(_("Junction"))."';\n";
