@@ -28,7 +28,8 @@ if [ ! -f old.pbf ]; then
 	# update planet file
 	echo "Updating planet file"
 	echo ""
-	date -u +%s > timestamp
+	osmdate=`osmconvert old.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
+	date -u -d "$osmdate" +%s > timestamp
 	osmupdate old.pbf new.pbf --max-merge=2 --hourly --drop-author -v
 	rm old.pbf
 	mv new.pbf old.pbf

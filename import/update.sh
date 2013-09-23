@@ -28,7 +28,8 @@ echo "Started processing at $(date)"
 echo "Updating planet file"
 # MAKE THE FOLLOWING COMMANDS EXECUTABLE BY REMOVING '#' IN YOUR INSTALLATION
 #echo ""
-#date -u +%s > timestamp_tmp
+#osmdate=`osmconvert old.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
+#date -u -d "$osmdate" +%s > timestamp_tmp
 #osmupdate old.pbf new.pbf --max-merge=2 --hourly --drop-author -v
 #rm old.pbf
 #mv new.pbf old.pbf
