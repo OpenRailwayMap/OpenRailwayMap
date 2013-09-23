@@ -81,7 +81,7 @@ function Search(map, box, bar, searchButton, clearButton)
 				{
 					result.innerHTML = '<b>'+translations['kilometer']+' '+results[i]['position']+', '+translations['track']+' '+results[i]['ref']+'</b>';
 					if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
-						result.innerHTML += '&nbsp;'+results[i]['type'];
+						result.innerHTML += '&nbsp;'+translations[results[i]['type']];
 					if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
 						result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
 				}
@@ -89,7 +89,7 @@ function Search(map, box, bar, searchButton, clearButton)
 				{
 					result.innerHTML = '<b>'+results[i]['name']+'</b>';
 					if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
-						result.innerHTML += '&nbsp;'+results[i]['type'];
+						result.innerHTML += '&nbsp;'+translations[results[i]['type']];
 					if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
 						result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
 				}

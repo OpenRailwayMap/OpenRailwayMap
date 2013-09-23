@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2013-09-15 19:10+0100\n"
+"PO-Revision-Date: 2013-09-23 15:55+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -170,3 +170,36 @@ msgstr "Signale und Sicherungssysteme"
 
 msgid "style.maxspeed"
 msgstr "Höchstgeschwindigkeiten"
+
+msgid "Halt"
+msgstr "Haltepunkt"
+
+msgid "Station"
+msgstr "Bahnhof"
+
+msgid "Junction"
+msgstr "Abzweig"
+
+msgid "Yard"
+msgstr "Güterbahnhof"
+
+msgid "Crossover"
+msgstr "Überleitstelle"
+
+msgid "Site"
+msgstr "Betriebsstelle"
+
+msgid "Service station"
+msgstr "Betriebsbahnhof"
+
+msgid "Tram stop"
+msgstr "Straßenbahnhaltestelle"
+
+msgid "Milestone"
+msgstr "Kilometerstein"
+
+msgid "Level crossing"
+msgstr "Bahnübergang"
+
+msgid "Crossing"
+msgstr "Bahnübergang"
