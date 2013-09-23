@@ -38,4 +38,15 @@
 	echo "translations['style.standard'] = '".addslashes(_("style.standard"))."';\n";
 	echo "translations['style.signals'] = '".addslashes(_("style.signals"))."';\n";
 	echo "translations['style.maxspeed'] = '".addslashes(_("style.maxspeed"))."';\n";
+	echo "translations['halt'] = '".addslashes(_("Halt"))."';\n";
+	echo "translations['station'] = '".addslashes(_("Station"))."';\n";
+	echo "translations['junction'] = '".addslashes(_("Junction"))."';\n";
+	echo "translations['yard'] = '".addslashes(_("Yard"))."';\n";
+	echo "translations['crossover'] = '".addslashes(_("Crossover"))."';\n";
+	echo "translations['site'] = '".addslashes(_("Site"))."';\n";
+	echo "translations['service_station'] = '".addslashes(_("Service station"))."';\n";
+	echo "translations['tram_stop'] = '".addslashes(_("Tram stop"))."';\n";
+	echo "translations['milestone'] = '".addslashes(_("Milestone"))."';\n";
+	echo "translations['level_crossing'] = '".addslashes(_("Level crossing"))."';\n";
+	echo "translations['crossing'] = '".addslashes(_("Crossing"))."';\n";
 ?>
