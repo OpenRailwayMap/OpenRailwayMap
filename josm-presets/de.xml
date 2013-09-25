@@ -2304,6 +2304,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Innenliegende Zungen (Engländer),Außenliegende Zungen (Baeseler)"
 					default=""
 					delete_if_empty="true" />
+				<check key="railway:switch:movable_frog"
+					text="Movable frog"
+					de.text="Bewegliches Herzstück"
+					default="off"
+					delete_if_empty="true" />
 			</item>
 			<item name="Kreuzung" icon="railway-crossing.png" type="node">
 				<label text="Kreuzung" />
