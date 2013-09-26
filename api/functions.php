@@ -1065,34 +1065,6 @@
 	}
 
 
-	// returns the full name of a facility by a $ref and operated by $operator
-	function getFullName($ref, $operator = false)
-	{
-		global $db, $prefix;
-
-		if ($operator)
-			$operatorClause = "AND (LOWER(".$prefix."_line.tags->'operator') LIKE LOWER('%".$operator."%'))";
-		else
-			$operatorClause = "";
-
-		$query = "SELECT DISTINCT tags->'name' AS name
-					FROM ".$prefix."_point
-					WHERE (LOWER(tags->'railway:ref') = LOWER('".$ref."'))  ".$operatorClause.";";
-
-		$connection = connectToDatabase($db);
-		if (!$connection)
-			return false;
-		$response = requestDetails($query, $connection);
-
-		pg_close($connection);
-
-		if ($response)
-			return $response;
-		else
-			return false;
-	}
-
-
 	// checks if given railroad line ref is in valid format
 	function isValidRef($ref)
 	{
@@ -1111,7 +1083,7 @@
 		global $db, $prefix;
 
 		if ($operator)
-			$operatorClause = "AND (LOWER(".$prefix."_line.tags->'operator') LIKE LOWER('%".$operator."%'))";
+			$operatorClause = "AND (LOWER(tags->'operator') LIKE LOWER('%".$operator."%'))";
 		else
 			$operatorClause = "";
 
@@ -1142,7 +1114,7 @@
 		global $db, $prefix;
 
 		if ($operator)
-			$operatorClause = "AND (LOWER(".$prefix."_line.tags->'operator') LIKE LOWER('%".$operator."%'))";
+			$operatorClause = "AND (LOWER(tags->'operator') LIKE LOWER('%".$operator."%'))";
 		else
 			$operatorClause = "";
 
@@ -1150,11 +1122,11 @@
 					(
 						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'name') = LOWER('".$name."')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
+						WHERE (REPLACE(LOWER(tags->'name'), '-', ' ') = REPLACE(LOWER('".$name."'), '-', ' ')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
 						UNION
 						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (LOWER(tags->'name') LIKE LOWER('%".$name."%')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
+						WHERE (REPLACE(LOWER(tags->'name'), '-', ' ') LIKE REPLACE(LOWER('%".$name."%'), '-', ' ')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
 					) AS foo;";
 
 		$connection = connectToDatabase($db);
