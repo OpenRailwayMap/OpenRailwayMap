@@ -9,11 +9,9 @@
 
 	require_once("functions.php");
 
-	$query = urldecode($_GET['q']);
 	$callback = $_GET['callback'];
 
-
-	// search for short names
+	// search by ref
 	if ($_GET['ref'])
 	{
 		if (isValidRef($_GET['ref']))
@@ -21,21 +19,13 @@
 		else
 			die("Invalid format of ref.");
 	}
-	// search for full names
+	// search by full name
 	else if ($_GET['name'])
 	{
 		if (isValidName($_GET['name']))
 			$result = getFacilityPositionByName(pg_escape_string($_GET['name']), pg_escape_string($_GET['operator']));
 		else
 			die("Invalid format of name.");
-	}
-	// search for milestones
-	else if ($_GET['line'] && $_GET['position'])
-	{
-		if (isValidLine($_GET['line']) && isValidPosition($_GET['position']))
-			$result = getMilestonePosition(pg_escape_string($_GET['line']), pg_escape_string($_GET['position']), pg_escape_string($_GET['operator']));
-		else
-			die("Invalid format of line or position.");
 	}
 
 	if (!$result)

@@ -83,25 +83,25 @@ function Startposition(map)
 	else if (params['position'] && params['line'])
 	{
 		if (params['operator'] != null)
-			requestApi("position", "position="+params['position']+"&line="+params['line']+"&operator="+params['operator'], handler);
+			requestApi("milestone", "position="+params['position']+"&line="+params['line']+"&operator="+params['operator'], handler);
 		else
-			requestApi("position", "position="+params['position']+"&line="+params['line'], handler);
+			requestApi("milestone", "position="+params['position']+"&line="+params['line'], handler);
 	}
 	// facility name given
 	else if (params['name'])
 	{
 		if (params['operator'] != null)
-			requestApi("position", "name="+params['name']+"&operator="+params['operator'], handler);
+			requestApi("facilityinfo", "name="+params['name']+"&operator="+params['operator'], handler);
 		else
-			requestApi("position", "name="+params['name'], handler);
+			requestApi("facilityinfo", "name="+params['name'], handler);
 	}
 	// facility ref given
 	else if (params['ref'])
 	{
 		if (params['operator'] != null)
-			requestApi("position", "ref="+params['ref']+"&operator="+params['operator'], handler);
+			requestApi("facilityinfo", "ref="+params['ref']+"&operator="+params['operator'], handler);
 		else
-			requestApi("position", "ref="+params['ref'], handler);
+			requestApi("facilityinfo", "ref="+params['ref'], handler);
 	}
 	// no permalink
 	else
