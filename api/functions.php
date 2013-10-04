@@ -1087,9 +1087,9 @@
 		else
 			$operatorClause = "";
 
-		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator FROM
+		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.uicname AS uicname, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator FROM
 					(
-						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'uic_name' AS uicname, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
 						WHERE (LOWER(tags->'railway:ref') = LOWER('".$ref."')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
 					) AS foo;";
@@ -1118,15 +1118,11 @@
 		else
 			$operatorClause = "";
 
-		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator FROM
+		$query = "SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.uicname AS uicname, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator FROM
 					(
-						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'uic_name' AS uicname, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
 						FROM ".$prefix."_point
-						WHERE (REPLACE(LOWER(tags->'name'), '-', ' ') = REPLACE(LOWER('".$name."'), '-', ' ')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
-						UNION
-						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id
-						FROM ".$prefix."_point
-						WHERE (REPLACE(LOWER(tags->'name'), '-', ' ') LIKE REPLACE(LOWER('%".$name."%'), '-', ' ')) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
+						WHERE ( (REPLACE(LOWER(tags->'name'), '-', ' ') = REPLACE(LOWER('".$name."'), '-', ' ')) OR (REPLACE(LOWER(tags->'name'), '-', ' ') LIKE REPLACE(LOWER('%".$name."%'), '-', ' ')) OR (REPLACE(LOWER(tags->'uic_name'), '-', ' ') = REPLACE(LOWER('".$name."'), '-', ' ')) ) AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) ".$operatorClause."
 					) AS foo;";
 
 		$connection = connectToDatabase($db);
