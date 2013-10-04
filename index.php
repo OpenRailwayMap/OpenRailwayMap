@@ -221,6 +221,10 @@
 			<div id="searchBar" class="infoBarOut"></div>
 			<div id="detailsBar" class="infoBarOut"></div>
 			<div id="styleSelectionBar"></div>
+			<div id="legendBar">
+				<b><?=_("Legend")?>:</b>
+				<iframe id="legend" scrolling="no" onload="setIframeHeight(this.id)" src=""></iframe>
+			</div>
 			<iframe id="josmFrame" src="about:blank"></iframe>
 		</div>
 		<div id="locateButton"></div>

@@ -387,6 +387,26 @@ noscript p
 	font-size: 14px;
 }
 
+/* box for the legend at the left side */
+#legendBar
+{
+	padding: 10px;
+	margin-left: 5px;
+	margin-top: 10px;
+	width: 251px;
+	font-size: 14px;
+	border: 1px solid #aaaaaa;
+}
+
+/* the legend itself */
+#legend
+{
+	margin-top: 10px;
+	width: 251px;
+	border: none;
+	height: 100px;
+}
+
 /* boxes of ext details and search results */
 .infoBar
 {

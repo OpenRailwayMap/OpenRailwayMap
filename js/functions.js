@@ -23,6 +23,11 @@ function createMap(embed)
 
 	map = L.map('mapFrame');
 
+	map.on('zoomend', function(e)
+	{
+		updateLegend("legend");
+	});
+
 	// grayscale mapnik background layer
 	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
@@ -126,6 +131,14 @@ function setStyle(style)
 			var index = i;
 
 	selectableItems[index].checked = true;
+	updateLegend("legend");
+}
+
+
+// reload the legend after changing zoomlevel or stylesheet
+function updateLegend(id)
+{
+	gEBI(id).src = root+"api/legend-generator.php?zoom="+map.getZoom()+"&style="+MapCSS.availableStyles[0];
 }
 
 
@@ -234,4 +247,18 @@ function queryLatLon(lat, lon)
 function queryLatLonZoom(lat, lon, zoom)
 {
 	return queryLatLon(lat, lon)+"&zoom="+zoom;
+}
+
+
+// resize the height of an iframe with a given id to the height of the content
+function setIframeHeight(id)
+{
+	var legend = gEBI(id);
+	var doc = legend.contentDocument ? legend.contentDocument : legend.contentWindow.document;
+	legend.style.visibility = 'hidden';
+	legend.style.height = "10px";
+	var body = doc.body;
+	var html = doc.documentElement;
+	legend.style.height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)+4+"px";
+	legend.style.visibility = 'visible';
 }
