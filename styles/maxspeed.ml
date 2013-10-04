@@ -1,0 +1,251 @@
+{
+	"name": "maxspeed",
+	"mapfeatures":
+	[
+		{
+			"id": "maxspeed_5_10",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#0100CB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "1-10 km/h"
+		},
+		{
+			"id": "maxspeed_15_20",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#001ECB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "11-20 km/h"
+		},
+		{
+			"id": "maxspeed_25_30",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#003DCB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "21-30 km/h"
+		},
+		{
+			"id": "maxspeed_35_40",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#005BCB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "31-40 km/h"
+		},
+		{
+			"id": "maxspeed_45_50",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#007ACB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "41-50 km/h"
+		},
+		{
+			"id": "maxspeed_55_60",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#0098CB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "51-60 km/h"
+		},
+		{
+			"id": "maxspeed_65_70",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#00B7CB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "61-70 km/h"
+		},
+		{
+			"id": "maxspeed_75_80",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#00CBC1\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "71-80 km/h"
+		},
+		{
+			"id": "maxspeed_85_90",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#00CBA2\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "81-90 km/h"
+		},
+		{
+			"id": "maxspeed_95_100",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#00CB84\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "91-100 km/h"
+		},
+		{
+			"id": "maxspeed_105_110",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#00CB66\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "101-110 km/h"
+		},
+		{
+			"id": "maxspeed_115_120",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#00CB47\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "111-120 km/h"
+		},
+		{
+			"id": "maxspeed_125_130",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#00CB29\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "121-130 km/h"
+		},
+		{
+			"id": "maxspeed_135_140",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#00CB0A\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "131-140 km/h"
+		},
+		{
+			"id": "maxspeed_145_150",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#14CB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "141-150 km/h"
+		},
+		{
+			"id": "maxspeed_155_160",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#33CB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "151-160 km/h"
+		},
+		{
+			"id": "maxspeed_165_170",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#51CB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "161-170 km/h"
+		},
+		{
+			"id": "maxspeed_175_180",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#70CB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "171-180 km/h"
+		},
+		{
+			"id": "maxspeed_185_190",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#8ECB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "181-190 km/h"
+		},
+		{
+			"id": "maxspeed_195_200",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#ADCB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "191-200 km/h"
+		},
+		{
+			"id": "maxspeed_205_210",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CBCB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "201-210 km/h"
+		},
+		{
+			"id": "maxspeed_215_220",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CBAD00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "211-220 km/h"
+		},
+		{
+			"id": "maxspeed_225_230",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB8E00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "221-230 km/h"
+		},
+		{
+			"id": "maxspeed_235_240",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB7000\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "231-240 km/h"
+		},
+		{
+			"id": "maxspeed_245_250",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB5100\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "241-250 km/h"
+		},
+		{
+			"id": "maxspeed_255_260",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB3300\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "251-260 km/h"
+		},
+		{
+			"id": "maxspeed_265_270",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB1400\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "261-270 km/h"
+		},
+		{
+			"id": "maxspeed_275_280",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB0007\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "271-280 km/h"
+		},
+		{
+			"id": "maxspeed_285_290",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB0025\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "281-290 km/h"
+		},
+		{
+			"id": "maxspeed_295_300",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB0044\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "291-300 km/h"
+		},
+		{
+			"id": "maxspeed_305_320",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB0062\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "301-320 km/h"
+		},
+		{
+			"id": "maxspeed_325_340",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB0081\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "321-340 km/h"
+		},
+		{
+			"id": "maxspeed_345_360",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB009F\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "341-360 km/h"
+		},
+		{
+			"id": "maxspeed_365_380",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#CB00BD\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "361-380 km/h"
+		},
+		{
+			"id": "maxspeed_385_400",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#BA00CB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "381-400 km/h"
+		}
+	]
+}
