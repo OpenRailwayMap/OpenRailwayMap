@@ -26,6 +26,11 @@ function createMap(embed)
 	map.on('zoomend', function(e)
 	{
 		updateLegend("legend");
+		updatePermalink();
+	});
+	map.on('moveend', function(e)
+	{
+		updatePermalink();
 	});
 
 	// grayscale mapnik background layer
@@ -111,6 +116,9 @@ function createMap(embed)
 		{
 			startposition.setPosition();
 		};
+
+		// initialize the permalink url
+		updatePermalink();
 	}
 }
 
@@ -132,6 +140,7 @@ function setStyle(style)
 
 	selectableItems[index].checked = true;
 	updateLegend("legend");
+	updatePermalink();
 }
 
 
@@ -139,6 +148,13 @@ function setStyle(style)
 function updateLegend(id)
 {
 	gEBI(id).src = root+"api/legend-generator.php?zoom="+map.getZoom()+"&style="+MapCSS.availableStyles[0];
+}
+
+
+// renews the permalink url after zooming, changing style or dragging the map
+function updatePermalink()
+{
+	gEBI('permalinkButton').href = getPermalinkUrl();
 }
 
 
@@ -201,7 +217,15 @@ function updateMap()
 // reloads the page in a different language
 function changeLanguage(lang)
 {
-	var url = root+'?lang='+lang;
+	window.location = getPermalinkUrl(lang);
+}
+
+
+// returns a permalink storing all current settings (language, position, zoom, url params); lang parameter is not necessary
+function getPermalinkUrl(lang)
+{
+	var url = root+'?lang='+((lang) ? lang : params['lang']);
+
 	var position = map.getCenter();
 
 	if (params['id'] != null)
@@ -213,6 +237,8 @@ function changeLanguage(lang)
 	url += '&lat='+position.lat;
 	url += '&lon='+position.lng;
 	url += '&zoom='+map.getZoom();
+
+	url += '&style='+MapCSS.availableStyles[0];
 
 	if (params['offset'] != null)
 		url += '&offset='+params['offset'];
@@ -232,7 +258,7 @@ function changeLanguage(lang)
 	if (params['line'] != null)
 		url += '&line='+params['line'];
 
-	window.location = url;
+	return url;
 }
 
 
