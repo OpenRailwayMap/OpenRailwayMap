@@ -91,7 +91,7 @@
 				echo "zoom : ".(isset($_GET['zoom']) ? ($_GET['zoom']) : ("null")).",\n";
 				echo "offset : ".(isset($_GET['offset']) ? ($_GET['offset']) : ("null")).",\n";
 				echo "searchquery : \"".(isset($_GET['q']) ? ($_GET['q']) : (""))."\",\n";
-				echo "lang : \"".$_GET['lang']."\",\n";
+				echo "lang : \"".$lang."\",\n";
 				echo "ref : ".(isset($_GET['ref']) ? ("\"".$_GET['ref']."\"") : ("null")).",\n";
 				echo "name : ".(isset($_GET['name']) ? ("\"".$_GET['name']."\"") : ("null")).",\n";
 				echo "position : ".(isset($_GET['position']) ? ("\"".$_GET['position']."\"") : ("null")).",\n";
@@ -206,7 +206,7 @@
 			<div id="linkBar">
 				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
 				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>&nbsp;•
-				<a class="links" id="permalinkButton" href="#" onclick="changeLanguage(gEBI('langSelector').options[gEBI('langSelector').selectedIndex].value)"><?=_("Permalink")?></a>
+				<a class="links" id="permalinkButton" href="#"><?=_("Permalink")?></a>
 				<script language="javascript">
 					var usr = "info";
 					var dom = "openrailwaymap";
