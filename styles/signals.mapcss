@@ -183,3 +183,39 @@ node|z14-[railway=signal][railway:signal:combined=ks][railway:signal:combined:fo
 	icon-width: 16;
 	icon-height: 16;
 }
+
+/******************/
+/* DE Trapeztafel */
+/******************/
+node|z14-[railway=signal][railway:signal:main=ne1][railway:signal:main:form=sign][railway:signal:main:function=entry]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de:ne1.png";
+	icon-width: 16;
+	icon-height: 16;
+}
+
+/******************/
+/* AT Trapeztafel */
+/******************/
+node|z14-[railway=signal][railway:signal:main=AT:Trapeztafel][railway:signal:main:form=sign][railway:signal:main:function=entry]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de:ne1.png";
+	icon-width: 16;
+	icon-height: 16;
+}
