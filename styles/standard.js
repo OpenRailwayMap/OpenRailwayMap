@@ -49,7 +49,7 @@
             s_bridges['linejoin'] = 'butt';
         }
 
-        if (((type == 'way' && tags['railway'] == 'disused')) || ((type == 'way' && tags['railway'] == 'abandoned')) || ((type == 'way' && tags['railway'] == 'razed'))) {
+        if (((type == 'way' && tags['railway'] == 'disused') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'abandoned') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'razed') && zoom >= 9)) {
             s_default['z-index'] = 10;
             s_default['casing-color'] = 'black';
             s_default['casing-opacity'] = 0.2;
@@ -78,14 +78,14 @@
             s_default['text-halo-color'] = 'white';
         }
 
-        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && (!tags.hasOwnProperty('service'))))) {
+        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && (!tags.hasOwnProperty('service'))) && zoom >= 10)) {
             s_default['z-index'] = 400;
             s_default['color'] = 'black';
             s_default['width'] = 2.5;
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'siding'))) {
+        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'siding') && zoom >= 10)) {
             s_default['z-index'] = 870;
             s_default['color'] = 'black';
             s_default['width'] = 2;
@@ -97,7 +97,7 @@
             s_default['text-halo-color'] = '#CCCCCC';
         }
 
-        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'yard'))) {
+        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'yard') && zoom >= 10)) {
             s_default['z-index'] = 860;
             s_default['color'] = 'black';
             s_default['width'] = 1.5;
@@ -109,7 +109,7 @@
             s_default['text-halo-color'] = '#CCCCCC';
         }
 
-        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'spur'))) {
+        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'spur') && zoom >= 10)) {
             s_default['z-index'] = 880;
             s_default['color'] = '#87491D';
             s_default['width'] = 3;
@@ -117,7 +117,7 @@
             s_default['text-position'] = 'line';
         }
 
-        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'crossover'))) {
+        if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'crossover') && zoom >= 10)) {
             s_default['z-index'] = 300;
             s_default['color'] = 'black';
             s_default['width'] = 1;
@@ -187,28 +187,36 @@
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'industrial' && (!tags.hasOwnProperty('service'))))) {
+        if (((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'industrial' && (!tags.hasOwnProperty('service'))) && zoom >= 10)) {
             s_default['z-index'] = 850;
             s_default['color'] = '#87491D';
             s_default['width'] = 3;
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'industrial' && tags['service'] == 'siding')) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'industrial' && tags['service'] == 'spur')) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'industrial' && tags['service'] == 'yard')) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'industrial' && tags['service'] == 'crossover'))) {
+        if (((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'industrial' && tags['service'] == 'siding') && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'industrial' && tags['service'] == 'spur') && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'industrial' && tags['service'] == 'yard') && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'industrial' && tags['service'] == 'crossover') && zoom >= 10)) {
             s_default['z-index'] = 850;
             s_default['color'] = '#87491D';
             s_default['width'] = 2;
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'disused'))) {
+        if (((type == 'way' && tags['railway'] == 'construction') && zoom >= 9)) {
+            s_default['z-index'] = 400;
+            s_default['dashes'] = [6, 6];
+            s_default['color'] = 'black';
+            s_default['width'] = 3;
+            s_default['linejoin'] = 'butt';
+        }
+
+        if (((type == 'way' && tags['railway'] == 'disused') && zoom >= 9)) {
             s_default['z-index'] = 300;
             s_default['color'] = '#70584D';
             s_default['width'] = 3;
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'abandoned'))) {
+        if (((type == 'way' && tags['railway'] == 'abandoned') && zoom >= 9)) {
             s_default['z-index'] = 250;
             s_default['dashes'] = [5, 5];
             s_default['color'] = '#70584D';
@@ -217,7 +225,7 @@
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'razed'))) {
+        if (((type == 'way' && tags['railway'] == 'razed') && zoom >= 9)) {
             s_default['z-index'] = 200;
             s_default['dashes'] = [11, 8];
             s_default['color'] = '#70584D';
@@ -240,21 +248,21 @@
             s_default['linejoin'] = 'butt';
         }
 
-        if (((type == 'way' && tags['railway'] == 'subway'))) {
+        if (((type == 'way' && tags['railway'] == 'subway') && zoom >= 10)) {
             s_default['z-index'] = 1100;
             s_default['color'] = '#0300C3';
             s_default['width'] = 2.5;
             s_default['linejoin'] = 'butt';
         }
 
-        if (((type == 'way' && tags['railway'] == 'light_rail') && zoom >= 9)) {
+        if (((type == 'way' && tags['railway'] == 'light_rail') && zoom >= 10)) {
             s_default['z-index'] = 1100;
             s_default['color'] = '#00BD14';
             s_default['width'] = 2.5;
             s_default['linejoin'] = 'butt';
         }
 
-        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && (!tags.hasOwnProperty('service'))))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && (!tags.hasOwnProperty('service'))) && zoom >= 9)) {
             s_default['z-index'] = 1200;
             s_default['color'] = 'black';
             s_default['width'] = 1.5;
@@ -264,7 +272,7 @@
             s_default['casing-dashes'] = [3, 3];
         }
 
-        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'siding'))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'siding') && zoom >= 9)) {
             s_default['z-index'] = 850;
             s_default['color'] = 'black';
             s_default['width'] = 1.5;
@@ -279,7 +287,7 @@
             s_default['text-halo-color'] = '#CCCCCC';
         }
 
-        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'yard'))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'yard') && zoom >= 9)) {
             s_default['z-index'] = 840;
             s_default['color'] = 'black';
             s_default['width'] = 1.5;
@@ -294,7 +302,7 @@
             s_default['text-halo-color'] = '#CCCCCC';
         }
 
-        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'spur'))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'spur') && zoom >= 9)) {
             s_default['z-index'] = 860;
             s_default['color'] = '#87491D';
             s_default['width'] = 1.5;
@@ -305,7 +313,7 @@
             s_default['text-position'] = 'line';
         }
 
-        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'crossover'))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('usage')) && tags['service'] == 'crossover') && zoom >= 9)) {
             s_default['z-index'] = 280;
             s_default['color'] = 'black';
             s_default['width'] = 1.5;
@@ -315,7 +323,7 @@
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'branch' && (!tags.hasOwnProperty('service'))))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'branch' && (!tags.hasOwnProperty('service'))) && zoom >= 9)) {
             s_default['z-index'] = 880;
             s_default['color'] = '#DACA00';
             s_default['width'] = 1.5;
@@ -325,7 +333,7 @@
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'main' && (!tags.hasOwnProperty('service'))))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'main' && (!tags.hasOwnProperty('service'))) && zoom >= 9)) {
             s_default['z-index'] = 1080;
             s_default['color'] = '#FF8100';
             s_default['width'] = 1.5;
@@ -335,7 +343,7 @@
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'main' && (tags['highspeed'] == '1' || tags['highspeed'] == 'true' || tags['highspeed'] == 'yes') && (!tags.hasOwnProperty('service'))))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'main' && (tags['highspeed'] == '1' || tags['highspeed'] == 'true' || tags['highspeed'] == 'yes') && (!tags.hasOwnProperty('service'))) && zoom >= 9)) {
             s_default['z-index'] = 2980;
             s_default['color'] = '#FF0C00';
             s_default['width'] = 1.5;
@@ -345,7 +353,7 @@
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'industrial' && (!tags.hasOwnProperty('service'))))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'industrial' && (!tags.hasOwnProperty('service'))) && zoom >= 9)) {
             s_default['z-index'] = 830;
             s_default['color'] = '#87491D';
             s_default['width'] = 1.5;
@@ -355,7 +363,7 @@
             s_default['linejoin'] = 'round';
         }
 
-        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'industrial' && tags['service'] == 'siding')) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'industrial' && tags['service'] == 'spur')) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'industrial' && tags['service'] == 'yard')) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'industrial' && tags['service'] == 'crossover'))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'industrial' && tags['service'] == 'siding') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'industrial' && tags['service'] == 'spur') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'industrial' && tags['service'] == 'yard') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['usage'] == 'industrial' && tags['service'] == 'crossover') && zoom >= 9)) {
             s_default['z-index'] = 830;
             s_default['color'] = '#87491D';
             s_default['width'] = 1.5;
@@ -410,7 +418,7 @@
             s_default['text-halo-color'] = 'orange';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal_box'))) {
+        if (((type == 'node' && tags['railway'] == 'signal_box') && zoom >= 11)) {
             s_default['z-index'] = 7000;
             s_default['text'] = MapCSS.e_localize(tags, 'name');
             s_default['text-position'] = 'auto';
@@ -419,7 +427,7 @@
             s_default['text-halo-color'] = '#008206';
         }
 
-        if (((selector == 'area' && tags['railway'] == 'signal_box'))) {
+        if (((selector == 'area' && tags['railway'] == 'signal_box') && zoom >= 11)) {
             s_default['z-index'] = 7000;
             s_default['text'] = MapCSS.e_localize(tags, 'name');
             s_default['text-position'] = 'center';
@@ -428,7 +436,7 @@
             s_default['text-halo-color'] = '#008206';
         }
 
-        if (((type == 'node' && tags['railway'] == 'milestone'))) {
+        if (((type == 'node' && tags['railway'] == 'milestone') && zoom >= 11)) {
             s_default['z-index'] = 6000;
             s_default['text'] = MapCSS.e_localize(tags, 'railway:position');
             s_default['text-position'] = 'auto';
@@ -523,7 +531,7 @@
             s_default['text-halo-color'] = 'white';
         }
 
-        if (((type == 'node' && tags['railway'] == 'owner_change'))) {
+        if (((type == 'node' && tags['railway'] == 'owner_change') && zoom >= 11)) {
             s_default['z-index'] = 10000;
             s_default['icon-image'] = 'icons/owner-change.png';
             s_default['icon-width'] = '16';

@@ -150,6 +150,13 @@
 			"caption": "Industrial service track"
 		},
 		{
+			"id": "construction_9-19",
+			"minzoom": 9,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"6,6\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "Track under construction"
+		},
+		{
 			"id": "disused_9-19",
 			"minzoom": 9,
 			"maxzoom": 19,
