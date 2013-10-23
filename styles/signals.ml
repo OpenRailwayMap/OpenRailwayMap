@@ -64,6 +64,13 @@
 			"maxzoom": 19,
 			"icon": "icons/de:ks-combined.png",
 			"caption": "Ks-Mehrabschnittssignal"
+		},
+		{
+			"id": "main_sign_de-at",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de:ne1.png",
+			"caption": "Trapeztafel"
 		}
 	]
 }
