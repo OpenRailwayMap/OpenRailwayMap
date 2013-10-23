@@ -150,11 +150,25 @@
 			"caption": "Industrial service track"
 		},
 		{
+			"id": "preserved_9-19",
+			"minzoom": 9,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#70584D\" stroke-width=\"2\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#70584D\" stroke-width=\"6\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,10\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "Preserved track"
+		},
+		{
 			"id": "construction_9-19",
 			"minzoom": 9,
 			"maxzoom": 19,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"6,6\" d=\"M5 8 l32 0\" /></g>",
+			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"9,9\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Track under construction"
+		},
+		{
+			"id": "proposed_9-19",
+			"minzoom": 9,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-dasharray=\"2,8\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "Proposed track"
 		},
 		{
 			"id": "disused_9-19",

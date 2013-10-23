@@ -201,9 +201,27 @@
             s_default['linejoin'] = 'round';
         }
 
+        if (((type == 'way' && tags['railway'] == 'preserved') && zoom >= 9)) {
+            s_default['z-index'] = 400;
+            s_default['color'] = '#70584D';
+            s_default['width'] = 2;
+            s_default['linejoin'] = 'butt';
+            s_default['casing-width'] = 2;
+            s_default['casing-color'] = '#70584D';
+            s_default['casing-dashes'] = [3, 10];
+        }
+
         if (((type == 'way' && tags['railway'] == 'construction') && zoom >= 9)) {
             s_default['z-index'] = 400;
-            s_default['dashes'] = [6, 6];
+            s_default['dashes'] = [9, 9];
+            s_default['color'] = 'black';
+            s_default['width'] = 3;
+            s_default['linejoin'] = 'butt';
+        }
+
+        if (((type == 'way' && tags['railway'] == 'proposed') && zoom >= 9)) {
+            s_default['z-index'] = 350;
+            s_default['dashes'] = [2, 8];
             s_default['color'] = 'black';
             s_default['width'] = 3;
             s_default['linejoin'] = 'butt';
