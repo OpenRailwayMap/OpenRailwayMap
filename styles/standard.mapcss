@@ -268,13 +268,39 @@ way|z10-[railway=rail][usage=industrial][service=siding], way|z10-[railway=rail]
     linejoin: round;
 }
 
+/**********************/
+/* preserved railways */
+/**********************/
+way|z9-[railway=preserved]
+{
+	z-index: 400;
+	color: #70584D;
+    width: 2;
+    linejoin: butt;
+    casing-width: 2;
+    casing-color: #70584D;
+    casing-dashes: 3,10;
+}
+
 /*******************************/
 /* railways under construction */
 /*******************************/
 way|z9-[railway=construction]
 {
 	z-index: 400;
-	dashes: 6,6;
+	dashes: 9,9;
+	color: black;
+    width: 3;
+    linejoin: butt;
+}
+
+/*********************/
+/* proposed railways */
+/*********************/
+way|z9-[railway=proposed]
+{
+	z-index: 350;
+	dashes: 2,8;
 	color: black;
     width: 3;
     linejoin: butt;
