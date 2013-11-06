@@ -3733,6 +3733,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="bü5" />
 					<key key="railway:signal:ring:form"
 						value="sign" />
+					<check key="railway:signal:ring:only_transit"
+						text="Whistle only when train does not stop before crossing?"
+						de.text="Zwei senkrechte Striche?"
+						default="off"
+						delete_if_empty="true" />
 				</item>
 				<item name="Bü-Tafel" icon="de:crossing-info.png" type="node">
 					<label text="Bü-Tafel" />
