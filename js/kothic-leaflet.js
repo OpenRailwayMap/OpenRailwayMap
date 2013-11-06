@@ -125,7 +125,6 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
 			this._redrawTile(this._tiles[i]);
 		}
 		return this;
-
     },
 	// end modified by rurseekatze
 
