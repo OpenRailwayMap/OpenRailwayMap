@@ -23,11 +23,6 @@ function createMap(embed)
 
 	map = L.map('mapFrame');
 
-	map.on('zoomend', function(e)
-	{
-		updateLegend("legend");
-		updatePermalink();
-	});
 	map.on('moveend', function(e)
 	{
 		updatePermalink();
@@ -37,13 +32,13 @@ function createMap(embed)
 	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
-		maxZoom: 18
+		maxZoom: 19
 	});
 	// normal mapnik background layer
 	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
-		maxZoom: 18
+		maxZoom: 19
 	});
 
 	// grayscale MapQuest background layer
@@ -68,6 +63,13 @@ function createMap(embed)
 	MapCSS.onImagesLoad = function()
 	{
 		map.addLayer(railmap);
+
+	map.on('zoomend', function(e)
+	{
+		updateLegend("legend");
+		updatePermalink();
+		railmap.redraw();
+	});
 
 		if (params['style'] != null)
 			setStyle(params['style']);
