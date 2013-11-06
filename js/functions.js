@@ -60,16 +60,17 @@ function createMap(embed)
 		attribution: translations['railmapAttribution'],
 		minZoom: 4
 	});
+
 	MapCSS.onImagesLoad = function()
 	{
 		map.addLayer(railmap);
 
-	map.on('zoomend', function(e)
-	{
-		updateLegend("legend");
-		updatePermalink();
-		railmap.redraw();
-	});
+		map.on('zoomend', function(e)
+		{
+			updateLegend("legend");
+			updatePermalink();
+			railmap.redraw();
+		});
 
 		if (params['style'] != null)
 			setStyle(params['style']);
@@ -100,9 +101,6 @@ function createMap(embed)
 	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
 	var layerSwitch = new L.Control.Layers(baseLayers, overlays).addTo(map);
 
-	// setting start position
-	startposition = new Startposition(map);
-
 	// only in not-embed mode
 	if (!embed)
 	{
@@ -112,15 +110,20 @@ function createMap(embed)
 		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
 		// build style selection and it's event handling
 		getStyleSelection();
-
+		// setting start position
+		startposition = new Startposition(map);
 		// onclick event of locate button
 		gEBI(locateButton).onclick = function()
 		{
 			startposition.setPosition();
 		};
-
 		// initialize the permalink url
 		updatePermalink();
+	}
+	else
+	{
+		// setting start position
+		startposition = new Startposition(map);
 	}
 }
 
