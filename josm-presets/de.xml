@@ -2729,8 +2729,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="dr:zs1;db:zs7;db:zs12"
-						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
+						values="dr:zs1;db:zs12"
+						display_values="Ersatzsignal;M-Tafel"
 						default=""
 						delete_if_empty="true" />
 					<check key="railway:signal:combined:marker_light"
@@ -2809,8 +2809,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="dr:zs1;db:zs7;db:zs12"
-						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
+						values="dr:zs1;db:zs12"
+						display_values="Ersatzsignal;M-Tafel"
 						default=""
 						delete_if_empty="true" />
 					<check key="railway:signal:main:marker_light"
@@ -2865,11 +2865,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="light" />
 					<key key="railway:signal:distant:states"
 						value="hl1;hl4;hl7;hl10" />
-					<check key="railway:signal:distant:shortened"
-						text="Shortened distance"
-						de.text="Verkürzter Bremsweg"
-						default="off"
-						delete_if_empty="true" />
 					<check key="railway:signal:distant:repeated"
 						text="Repeated Signal"
 						de.text="Vorsignalwiederholer"
