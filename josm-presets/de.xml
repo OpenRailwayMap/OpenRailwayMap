@@ -2333,7 +2333,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:signal:minor:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<key key="railway:signal:minor"
@@ -2379,7 +2379,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -2437,7 +2437,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:combined:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -2523,7 +2523,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -2598,7 +2598,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:signal:combined:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -2655,6 +2655,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Kennlicht"
 					default="off"
 					delete_if_empty="true" />
+				<check key="railway:signal:distant:shortened"
+					text="Shortened distance"
+					de.text="Verkürzter Bremsweg (Weißer Bremspfeil)"
+					default="off"
+					delete_if_empty="true" />
 				<space />
 				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
 				<label text="- Richtungsanzeiger Zs 2" />
@@ -2681,7 +2686,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:combined:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -2761,7 +2766,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -2841,7 +2846,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -2895,7 +2900,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:combined:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -2971,7 +2976,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3045,7 +3050,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3105,7 +3110,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3178,7 +3183,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3259,7 +3264,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3332,7 +3337,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3402,7 +3407,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:main:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -3442,7 +3447,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:distant:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -3483,7 +3488,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:distant:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -3516,7 +3521,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:crossing:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3569,7 +3574,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:crossing_distant:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3615,7 +3620,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:crossing_distant:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3661,7 +3666,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:whistle:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3707,7 +3712,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:ring:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3742,7 +3747,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:crossing_info:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3789,7 +3794,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:crossing_hint:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3843,7 +3848,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:minor:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3900,7 +3905,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:minor:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3938,7 +3943,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<check key="railway:signal:minor_distant:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -3978,7 +3983,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:shunting:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -4009,7 +4014,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:shunting:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -4052,7 +4057,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:humping:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -4099,7 +4104,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:route:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -4140,7 +4145,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:route_distant:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -4181,7 +4186,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:wrong_road:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -4219,7 +4224,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:wrong_road:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -4258,7 +4263,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:speed_limit:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -4316,7 +4321,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:speed_limit_distant:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -4372,7 +4377,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="signal" />
 					<check key="railway:signal:short_route:deactivated"
 						text="Out of order"
-						de.text="Außer Betrieb"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
 					<combo key="railway:signal:position"
@@ -4421,7 +4426,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:resetting_switch:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -4440,7 +4445,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:resetting_switch"
-					value="so18" />
+					value="ne13" />
 				<key key="railway:signal:resetting_switch:form"
 					value="light" />
 				<key key="railway:signal:resetting_switch:states"
@@ -4461,7 +4466,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:resetting_switch_distant:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -4480,7 +4485,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:resetting_switch_distant"
-					value="so17" />
+					value="ne12" />
 				<key key="railway:signal:resetting_switch_distant:form"
 					value="sign" />
 				<combo key="railway:signal:resetting_switch_distant:height"
@@ -4500,7 +4505,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:stop:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -4542,7 +4547,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:station_distant:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -4572,7 +4577,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:snowplow:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -4621,7 +4626,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:signal:main_repeated:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -4652,7 +4657,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:departure:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -4690,7 +4695,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:brake_test:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -4738,7 +4743,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:lzb:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -4771,7 +4776,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="signal" />
 				<check key="railway:signal:lzb_start:deactivated"
 					text="Out of order"
-					de.text="Außer Betrieb"
+					de.text="Ungültigkeitskreuz"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:signal:position"
@@ -6017,7 +6022,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="signal" />
 			<check key="railway:signal:electricity:deactivated"
 				text="Out of order"
-				de.text="Außer Betrieb"
+				de.text="Ungültigkeitskreuz"
 				default="off"
 				delete_if_empty="true" />
 			<combo key="railway:signal:position"
