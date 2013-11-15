@@ -97,12 +97,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
 					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
 				</combo>
+				<space />
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
 					de.text="Höchstgeschwindigkeit (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
 					text="Maxspeed of tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
@@ -239,6 +241,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -359,6 +362,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -474,6 +478,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -600,12 +605,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
+				<space />
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
 					de.text="Höchstgeschwindigkeit (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
 					text="Maxspeed of tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
@@ -765,6 +772,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -898,6 +906,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -1021,6 +1030,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -1159,6 +1169,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -1281,6 +1292,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -1395,6 +1407,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -1536,12 +1549,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
 					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
 				</combo>
+				<space />
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
 					de.text="Höchstgeschwindigkeit (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
 					text="Maxspeed of tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
@@ -1695,12 +1710,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
 					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
 				</combo>
+				<space />
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
 					de.text="Höchstgeschwindigkeit (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
 					text="Maxspeed of tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
@@ -1853,6 +1870,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -2004,6 +2022,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -2155,6 +2174,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
