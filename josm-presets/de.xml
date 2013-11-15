@@ -55,6 +55,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
+				<check key="railway:tilting"
+					text="Used by tilting trains"
+					de.text="Neigetechnik-Ausrüstung"
+					default="off"
+					delete_if_empty="true" />
 				<space />
 				<check key="lit"
 					text="Lit"
@@ -106,7 +111,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
 				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
-					text="Maxspeed of tilting trains (km/h)"
+					text="Maxspeed of Used by tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
@@ -568,6 +573,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
+				<check key="railway:tilting"
+					text="Used by tilting trains"
+					de.text="Neigetechnik-Ausrüstung"
+					default="off"
+					delete_if_empty="true" />
 				<space />
 				<check key="lit"
 					text="Lit"
@@ -614,7 +624,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
 				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
-					text="Maxspeed of tilting trains (km/h)"
+					text="Maxspeed of Used by tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
@@ -1512,6 +1522,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
+				<check key="railway:tilting"
+					text="Used by tilting trains"
+					de.text="Neigetechnik-Ausrüstung"
+					default="off"
+					delete_if_empty="true" />
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
@@ -1558,7 +1573,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
 				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
-					text="Maxspeed of tilting trains (km/h)"
+					text="Maxspeed of Used by tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
@@ -1673,6 +1688,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
 					default="off"
 					delete_if_empty="true" />
+				<check key="railway:tilting"
+					text="Used by tilting trains"
+					de.text="Neigetechnik-Ausrüstung"
+					default="off"
+					delete_if_empty="true" />
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
@@ -1719,7 +1739,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Signalanzeige,keine" />
 				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
-					text="Maxspeed of tilting trains (km/h)"
+					text="Maxspeed of Used by tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,signals,none"
