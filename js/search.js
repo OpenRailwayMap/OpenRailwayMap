@@ -40,6 +40,7 @@ function Search(map, box, bar, searchButton, clearButton)
 			return false;
 		}
 
+console.log(input+" "+this.request);
 		// if a new string was entered or other search type
 		if (input != this.request)
 		{
@@ -73,7 +74,7 @@ function Search(map, box, bar, searchButton, clearButton)
 		if (results.length > 0)
 		{
 			results = results[0];
-			this.bar.removeChild(this.bar.lastChild);
+			this.bar.className = 'infoBar';
 			for (var i=0; i<results.length; i++)
 			{
 				var result = document.createElement("div");
@@ -96,6 +97,8 @@ function Search(map, box, bar, searchButton, clearButton)
 				result.setAttribute('class', 'resultEntry');
 				selfSearch = this;
 				result.onclick = new Function("selfSearch.showResult("+results[i]['lon']+", "+results[i]['lat']+");");
+				if (i == 0)
+					this.bar.innerHTML = "";
 				this.bar.appendChild(result);
 			}
 		}
@@ -105,7 +108,17 @@ function Search(map, box, bar, searchButton, clearButton)
 			var bar = this.bar.id;
 
 			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+translations['nothing']+"</b></center></div>";
-			setTimeout("gEBI('"+bar+"').innerHTML = ''; gEBI('"+bar+"').className = 'infoBarOut';", 3500);
+
+			var clear = function()
+			{
+				// avoid deleting search results when a new search was performed before timeout was released
+				if (this.bar.getElementsByClassName("resultEntry").length == 0)
+				{
+					this.bar.innerHTML = '';
+					this.bar.className = 'infoBarOut';
+				}
+			}
+			setTimeout(clear, 3500);
 			this.bar.className = "infoBar";
 		}
     }
@@ -149,7 +162,7 @@ function Search(map, box, bar, searchButton, clearButton)
 				var keyCode = event.which;
 			else if (event.keyCode)
 				var keyCode = event.keyCode;
-			if(event && keyCode == 13)
+			if (event && keyCode == 13)
 				self.send();
 		};
 
