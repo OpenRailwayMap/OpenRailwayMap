@@ -40,7 +40,6 @@ function Search(map, box, bar, searchButton, clearButton)
 			return false;
 		}
 
-console.log(input+" "+this.request);
 		// if a new string was entered or other search type
 		if (input != this.request)
 		{
@@ -109,7 +108,7 @@ console.log(input+" "+this.request);
 
 			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+translations['nothing']+"</b></center></div>";
 
-			var clear = function()
+			var removeErrorMessage = function()
 			{
 				// avoid deleting search results when a new search was performed before timeout was released
 				if (this.bar.getElementsByClassName("resultEntry").length == 0)
@@ -118,7 +117,7 @@ console.log(input+" "+this.request);
 					this.bar.className = 'infoBarOut';
 				}
 			}
-			setTimeout(clear, 3500);
+			setTimeout(removeErrorMessage, 3500);
 			this.bar.className = "infoBar";
 		}
     }
