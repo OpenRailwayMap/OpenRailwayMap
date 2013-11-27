@@ -55,7 +55,7 @@ var Kothic = {
             ws = width / granularity, hs = height / granularity,
             collisionBuffer = new Kothic.CollisionBuffer(height, width);
 
-        console.time('styles');
+        //console.time('styles');
 
         // setup layer styles
         var layers = Kothic.style.populateLayers(data.features, zoom, styles),
@@ -64,10 +64,10 @@ var Kothic = {
         // render the map
         Kothic.style.setStyles(ctx, Kothic.style.defaultCanvasStyles);
 
-        console.timeEnd('styles');
+        //console.timeEnd('styles');
 
         Kothic.getFrame(function () {
-            console.time('geometry');
+            //console.time('geometry');
 
             Kothic._renderBackground(ctx, width, height, zoom, styles);
             Kothic._renderGeometryFeatures(layerIds, layers, ctx, ws, hs, granularity);
@@ -76,12 +76,12 @@ var Kothic = {
                 options.onRenderComplete();
             }
 
-            console.timeEnd('geometry');
+            //console.timeEnd('geometry');
 
             Kothic.getFrame(function () {
-                console.time('text/icons');
+                //console.time('text/icons');
                 Kothic._renderTextAndIcons(layerIds, layers, ctx, ws, hs, collisionBuffer);
-                console.timeEnd('text/icons');
+                //console.timeEnd('text/icons');
 
                 //Kothic._renderCollisions(ctx, collisionBuffer.buffer.data);
             });
@@ -186,8 +186,10 @@ var Kothic = {
         layerIds = ['_bg'].concat(layerIds);
 
         for (i = 0; i < layerIds.length; i++) {
-            queue = layersToRender[layerIds[i]];
-
+			// begin modified by rurseekatze
+            //queue = layersToRender[layerIds[i]];
+            queue = layersToRender[layerIds[i]] = layersToRender[layerIds[i]] || {};
+			// end modified by rurseekatze
             if (queue.polygons) {
                 for (j = 0, len = queue.polygons.length; j < len; j++) {
                     Kothic.polygon.render(ctx, queue.polygons[j], queue.polygons[j + 1], ws, hs, granularity);

@@ -41,6 +41,22 @@
 		<![endif]-->
 		<script type="text/javascript" src="js/leaflet-0.6.2.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
+		<script type="text/javascript" src="js/kothic.js"></script>
+		<script type="text/javascript" src="js/renderer/path.js"></script>
+		<script type="text/javascript" src="js/renderer/line.js"></script>
+		<script type="text/javascript" src="js/renderer/polygon.js"></script>
+		<script type="text/javascript" src="js/renderer/shields.js"></script>
+		<script type="text/javascript" src="js/renderer/texticons.js"></script>
+		<script type="text/javascript" src="js/renderer/text.js"></script>
+		<script type="text/javascript" src="js/style/mapcss.js"></script>
+		<script type="text/javascript" src="js/style/style.js"></script>
+		<script type="text/javascript" src="js/utils/collisions.js"></script>
+		<script type="text/javascript" src="js/utils/geom.js"></script>
+		<script type="text/javascript" src="js/utils/rbush.js"></script>
+		<script type="text/javascript" src="js/kothic-leaflet.js"></script>
+		<script type="text/javascript" src="styles/standard.js"></script>
+		<script type="text/javascript" src="styles/signals.js"></script>
+		<script type="text/javascript" src="styles/maxspeed.js"></script>
 		<?php
 			// params
 			echo "<script type=\"text/javascript\">\n";
@@ -121,7 +137,7 @@
 		<script type="text/javascript" src="js/startposition.js"></script>
 		<script type="text/javascript" src="js/timestamp.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
-		<script type="text/javascript" src="js/bitmap-map.js"></script>
+		<script type="text/javascript" src="js/canvas-map.js"></script>
 		<!-- Piwik -->
 		<script type="text/javascript">
 			var _paq = _paq || [];
