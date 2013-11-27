@@ -12,7 +12,7 @@ PROJECTPATH=/home/www/sites/194.245.35.149/site/orm
 
 
 # install necessary software
-yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip php-php-gettext php php-pgsql unzip postgresql-devel python-ply python-imaging pycairo python-cairosvg librsvg2 gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel pygtk2 pygtk2-devel
+yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip php-php-gettext php php-pgsql unzip postgresql-devel python-ply python-imaging pycairo python-cairosvg librsvg2 gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel pygtk2 pygtk2-devel cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel npm nodejs
 
 # GeoIP database
 # add extension=geoip.so to php.ini
@@ -119,12 +119,40 @@ sed -i 's/-g -O2/-O2 -march=native -fomit-frame-pointer/' Makefile
 make
 cd ..
 
-# add this mod_rewrite rule to your apache configuration for having cache
-# Options +Indexes +FollowSymLinks
+cd $PROJECTPATH/renderer
+npm install canvas@1.0.4
+npm install rbush
+npm install mkdirp
+npm install sendmail
+
+# add this rule to your apache configuration for having cache with mod_rewrite
+# <VirtualHost 194.245.35.149:80>
+# DocumentRoot /home/www/sites/194.245.35.149/site/orm
+# ServerName www.openrailwaymap.org
+# AddType text/html .qhtm
+# AddType text/html .php
+# AddHandler qhtm .qhtm
+# AddHandler php5-script .php
+# Options +FollowSymLinks
 # RewriteEngine on
 # RewriteCond /home/www/sites/194.245.35.149/site/orm/%{REQUEST_URI} !-f
 # RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js$ /renderer/vtiler.php?z=$1&x=$2&y=$3
 # RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js/dirty$ /renderer/vtiler.php?z=$1&x=$2&y=$3
+# </VirtualHost>
+
+# add this virtual host to your apache configuration for proxying request to nodejs server
+# <VirtualHost 194.245.35.149:80>
+# DocumentRoot /home/www/sites/194.245.35.149/site/orm
+# ServerName tiles.openrailwaymap.org
+# Options +FollowSymLinks
+# ProxyRequests off
+# <Proxy *>
+# Order deny,allow
+# Allow from all
+# </Proxy>
+# ProxyPass / http://localhost:9000/
+# ProxyPassReverse / http://localhost:9000/
+# </VirtualHost>
 
 # if not existing, add a locales file for nqo_GN on your system by running these commands:
 # cd /usr/share/i18n/locales

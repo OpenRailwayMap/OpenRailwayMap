@@ -10,8 +10,10 @@
 PROJECTPATH=/home/www/sites/194.245.35.149/site/orm
 # directory where the planet file and other data files are stored, can be equal to PROJECTPATH
 DATAPATH=/home/www/sites/194.245.35.149/site/olm/import
-# path to the project directory
+# path to the directory of the vector tiles
 TILESPATH=/home/www/sites/194.245.35.149/site/orm/tiles
+# path to the directory of the bitmap tiles
+BITMAPTILESPATH=/home/www/sites/194.245.35.149/site/orm/bitmap-tiles
 # filename of the expired tiles list
 TILELIST=/home/www/sites/194.245.35.149/site/olm/import/expired_tiles
 
@@ -77,6 +79,9 @@ if [ -s $TILELIST ]; then
 		TILE="${TILESPATH}/${LINE}.js"
 		if [ -f $TILE ]; then
 			rm $TILE
+			rm "${BITMAPTILESPATH}/standard/${LINE}.png"
+			rm "${BITMAPTILESPATH}/maxspeed/${LINE}.png"
+			rm "${BITMAPTILESPATH}/signals/${LINE}.png"
 			ZOOM=${LINE:0:1}
 			if [ $ZOOM != "1" ]; then
 				PARAMS=$(echo ${LINE} | sed -e 's/\// /g')
