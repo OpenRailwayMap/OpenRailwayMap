@@ -123,7 +123,6 @@ cd $PROJECTPATH/renderer
 npm install canvas@1.0.4
 npm install rbush
 npm install mkdirp
-npm install sendmail
 
 # add this rule to your apache configuration for having cache with mod_rewrite
 # <VirtualHost 194.245.35.149:80>
