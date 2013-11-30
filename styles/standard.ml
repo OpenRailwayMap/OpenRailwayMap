@@ -70,7 +70,7 @@
 			"minzoom": 10,
 			"maxzoom": 19,
 			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Crossover"
+			"caption": "Crossover track"
 		},
 		{
 			"id": "branch_2-5",
