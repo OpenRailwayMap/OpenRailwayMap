@@ -57,7 +57,7 @@
 		if ((!$lang) || (!array_key_exists($lang, $langs)))
 			$lang = getUserLang();
 
-		setlocale(LC_ALL, $langs[$lang]);
+		setlocale(LC_ALL, $langs[$lang][0]);
 		bind_textdomain_codeset("messages", "UTF-8");
 		bindtextdomain("messages", "../locales");
 		textdomain("messages");
