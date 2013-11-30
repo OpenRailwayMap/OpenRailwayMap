@@ -249,7 +249,7 @@ else
 							MapCSS.availableStyles.length = 0;
 							MapCSS.availableStyles.push(styleName);
 
-							Kothic.render(canvas, features, zoom+zoomOffset, {
+							Kothic.render(canvas, features, parseInt(zoom)+zoomOffset, {
 								styles: MapCSS.availableStyles,
 								onRenderComplete: function()
 								{
@@ -311,6 +311,7 @@ else
 						{
 							if (debug)
 								console.log("z"+zoom+"x"+x+"y"+y+" Vectortile dirty, needs to be refreshed...");
+
 							execute("php vtiler.php "+zoom+" "+x+" "+y, function(response)
 							{
 								fs.readFile(filepath, function (err, data)
@@ -371,8 +372,9 @@ else
 	// helper function to execute commands
 	function execute(command, callback)
 	{
-		exec(command, {maxBuffer: 4000*1024}, function(error, stdout, stderr)
+		exec(command, {maxBuffer: 4000*1024, timeout: 30000}, function(error, stdout, stderr)
 		{
+	console.log(stdout);
 			if (stderr != "")
 				console.log(stderr);
 			callback(stdout);
