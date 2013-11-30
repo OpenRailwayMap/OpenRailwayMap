@@ -146,11 +146,7 @@
 		$interval[4] = sprintf(ngettext("%d week", "%d weeks", (int)$diff), (int)$diff);
 		$interval[5] = sprintf(ngettext("%d month", "%d months", (int)$diff), (int)$diff);
 
-		// display "more than"
-		if (($diff > $units[$i]) && ($i > 2))
-			return sprintf(_("more than %s ago"), $interval[$i]);
-		else
-			return sprintf(_("%s ago"), $interval[$i]);
+		return sprintf(_("more than %s ago"), $interval[$i]);
 	}
 
 
