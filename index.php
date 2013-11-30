@@ -156,19 +156,12 @@
 			<form id="langSelection">
 				<select id="langSelector" size="1" onChange="changeLanguage(gEBI('langSelector').options[gEBI('langSelector').selectedIndex].value)">
 					<?php
-						$languages = array(
-							"cs" => "Česky",
-							"de" => "Deutsch",
-							"el" => "Ελληνικά",
-							"en" => "English",
-							"nqo" => "ߒߞߏ"
-						);
-						foreach ($languages as $short => $name)
+						foreach ($langs as $short => $name)
 						{
 							echo "<option value=\"".$short."\"";
 							if ($short == $lang)
 								echo " selected";
-							echo ">".$name."</option>\n";
+							echo ">".$name[1]."</option>\n";
 						}
 					?>
 				</select>
