@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2013-09-23 18:42+0100\n"
+"PO-Revision-Date: 2013-11-30 00:17+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -203,3 +203,255 @@ msgstr "Bahnübergang"
 
 msgid "Crossing"
 msgstr "Bahnübergang"
+
+msgid "Legend"
+msgstr "Legende"
+
+msgid "Bridge"
+msgstr "Brücke"
+
+msgid "Tunnel"
+msgstr "Tunnel"
+
+msgid "Line ref"
+msgstr "Streckennummer"
+
+msgid "Railroad line"
+msgstr "Gleis"
+
+msgid "Siding"
+msgstr "Nebengleis"
+
+msgid "Yard track"
+msgstr "Abstellgleis"
+
+msgid "Spur"
+msgstr "Anschlussgleis"
+
+msgid "Crossover track"
+msgstr "Überleitgleis"
+
+msgid "Branch line"
+msgstr "Nebenstrecke"
+
+msgid "Main line"
+msgstr "Hauptstrecke"
+
+msgid "Highspeed line"
+msgstr "Schnellfahrstrecke"
+
+msgid "Industrial line"
+msgstr "Industrie-, Werks- oder Hafenbahn"
+
+msgid "Industrial service track"
+msgstr "Industrie-, Werks- oder Hafenbahn Nebengleis"
+
+msgid "Preserved track"
+msgstr "Museumsbahn"
+
+msgid "Preserved service track"
+msgstr "Museumsbahn Nebengleis"
+
+msgid "Track under construction"
+msgstr "Gleis im Bau"
+
+msgid "Proposed track"
+msgstr "Geplantes Gleis"
+
+msgid "Disused track"
+msgstr "Stillgelegtes Gleis"
+
+msgid "Abandoned track"
+msgstr "Abgebautes Gleis"
+
+msgid "Razed track"
+msgstr "Überbautes Gleis"
+
+msgid "Tram"
+msgstr "Straßenbahn"
+
+msgid "Subway"
+msgstr "U-Bahn"
+
+msgid "Light rail"
+msgstr "Stadtbahn"
+
+msgid "Narrow gauge track"
+msgstr "Schmalspurbahn"
+
+msgid "Narrow gauge siding"
+msgstr "Nebengleis Schmalspurbahn"
+
+msgid "Narrow gauge yard"
+msgstr "Abstellgleis Schmalspurbahn"
+
+msgid "Narrow gauge spur"
+msgstr "Anschlussgleis Schmalspurbahn"
+
+msgid "Narrow gauge crossover"
+msgstr "Überleitgleis Schmalspurbahn"
+
+msgid "Narrow gauge branch line"
+msgstr "Schmalspur-Nebenstrecke"
+
+msgid "Narrow gauge main line"
+msgstr "Schmalspur-Hauptstrecke"
+
+msgid "Narrow gauge highspeed line"
+msgstr "Schmalspur-Schnellfahrstrecke"
+
+msgid "Narrow gauge industrial line"
+msgstr "Schmalspur-Werksbahn"
+
+msgid "Narrow gauge industrial service"
+msgstr "Schmalspur-Werksbahn Nebengleis"
+
+msgid "Switch (remote-controlled)"
+msgstr "Weiche, ferngestellt"
+
+msgid "Switch (local operated)"
+msgstr "Weiche, ortsgestellt"
+
+msgid "Resetting switch"
+msgstr "Rückfallweiche"
+
+msgid "Signal box"
+msgstr "Stellwerk"
+
+msgid "Owner change"
+msgstr "Grenzpunkt"
+
+msgid "Railway crossing"
+msgstr "Gleiskreuzung"
+
+msgid "Buffer stop"
+msgstr "Prellbock"
+
+msgid "Isolated track section"
+msgstr "Stromsystemwechsel"
+
+msgid "Platform"
+msgstr "Bahnsteig"
+
+msgid "Vending machine"
+msgstr "Fahrkartenautomat"
+
+msgid "Ticket shop"
+msgstr "Fahrkartenschalter"
+
+msgid "Subway entrance"
+msgstr "U-Bahn Eingang"
+
+msgid "Phone"
+msgstr "Fernsprecher"
+
+msgid "Water tower"
+msgstr "Wasserturm"
+
+msgid "Fuel"
+msgstr "Tankstelle"
+
+msgid "Water crane"
+msgstr "Wasserkran"
+
+msgid "Coaling facility"
+msgstr "Bekohlungsanlage"
+
+msgid "Wash"
+msgstr "Waschanlage"
+
+msgid "Pit"
+msgstr "Lokgrube"
+
+msgid "Loading gauge"
+msgstr "Lademaßlehre"
+
+msgid "Hump yard"
+msgstr "Ablaufberg"
+
+msgid "Rail brake"
+msgstr "Gleisbremse"
+
+msgid "Engine shed"
+msgstr "Lokschuppen"
+
+msgid "Workshop"
+msgstr "Werkstatt"
+
+msgid "Radio tower"
+msgstr "Zugfunk"
+
+msgid "Turntable"
+msgstr "Drehscheibe"
+
+msgid "Traverser"
+msgstr "Schiebebühne"
+
+msgid "Loading ramp"
+msgstr "Verladerampe/Ladestraße"
+
+msgid "Crane"
+msgstr "Kran"
+
+msgid "Track scale"
+msgstr "Gleiswaage"
+
+msgid "Carrier truck pit"
+msgstr "Rollwagenverladung"
+
+msgid "Gauge conversion"
+msgstr "Umspuranlage"
+
+msgid "Gate"
+msgstr "Tor"
+
+msgid "Museum"
+msgstr "Eisenbahnmuseum"
+
+msgid "Container terminal"
+msgstr "Container-Umschlagbahnhof"
+
+msgid "Station building"
+msgstr "Bahnhofsgebäude"
+
+msgid "Factory connected to railroad line"
+msgstr "Firma mit Gleisanschluss"
+
+msgid "Rack"
+msgstr "Zahnstange"
+
+msgid "Embankment"
+msgstr "Damm"
+
+msgid "Cutting"
+msgstr "Einschnitt"
+
+msgid "Miniature railway"
+msgstr "Parkeisenbahn"
+
+msgid "Funicular"
+msgstr "Standseilbahn"
+
+msgid "Military line"
+msgstr "Militärische Strecke"
+
+msgid "Military service track"
+msgstr "Militärisches Nebengleis"
+
+msgid "Ferry terminal"
+msgstr "Eisenbahnfährverladestelle"
+
+msgid "Ferry"
+msgstr "Eisenbahnfähre"
+
+msgid "Test line"
+msgstr "Teststrecke"
+
+msgid "Test service track"
+msgstr "Teststrecke Nebengleis"
+
+msgid "Car shuttle"
+msgstr "Autozug-Verladeterminal"
+
+msgid "Rolling highway"
+msgstr "Verladeterminal Rollende Landstraße"
