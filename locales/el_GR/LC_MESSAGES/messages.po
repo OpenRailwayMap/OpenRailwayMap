@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2013-11-30 00:13+0100\n"
+"PO-Revision-Date: 2013-12-04 22:23+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/openrailwaymap/"
 "language/el/)\n"
@@ -208,25 +208,25 @@ msgid "Crossing"
 msgstr "Διάβαση"
 
 msgid "Legend"
-msgstr ""
+msgstr "Υπόμνημα"
 
 msgid "Bridge"
-msgstr ""
+msgstr "Γέφυρα"
 
 msgid "Tunnel"
-msgstr ""
+msgstr "Σήραγγα"
 
 msgid "Line ref"
 msgstr ""
 
 msgid "Railroad line"
-msgstr ""
+msgstr "Γραμμή τραίνου"
 
 msgid "Siding"
 msgstr ""
 
 msgid "Yard track"
-msgstr ""
+msgstr "Γραμμή σταθμού διαλογής"
 
 msgid "Spur"
 msgstr ""
@@ -238,10 +238,10 @@ msgid "Branch line"
 msgstr ""
 
 msgid "Main line"
-msgstr ""
+msgstr "Κύρια γραμμή"
 
 msgid "Highspeed line"
-msgstr ""
+msgstr "Γραμμή υψηλής ταχύτητας"
 
 msgid "Industrial line"
 msgstr ""
@@ -256,16 +256,16 @@ msgid "Preserved service track"
 msgstr ""
 
 msgid "Track under construction"
-msgstr ""
+msgstr "Γραμμή υπό κατασκευή"
 
 msgid "Proposed track"
-msgstr ""
+msgstr "Προτεινόμενη γραμμή"
 
 msgid "Disused track"
-msgstr ""
+msgstr "Αχρησιμοποίητη γραμμή"
 
 msgid "Abandoned track"
-msgstr ""
+msgstr "Εγκαταλελειμμένη γραμμή"
 
 msgid "Razed track"
 msgstr ""
@@ -274,7 +274,7 @@ msgid "Tram"
 msgstr ""
 
 msgid "Subway"
-msgstr ""
+msgstr "Μετρό"
 
 msgid "Light rail"
 msgstr ""
@@ -334,19 +334,19 @@ msgid "Isolated track section"
 msgstr ""
 
 msgid "Platform"
-msgstr ""
+msgstr "Αποβάθρα"
 
 msgid "Vending machine"
-msgstr ""
+msgstr "Αυτόματο μηχάνημα πώλησης"
 
 msgid "Ticket shop"
-msgstr ""
+msgstr "Θυρίδα έκδοσης εισιτηρίων"
 
 msgid "Subway entrance"
-msgstr ""
+msgstr "Είσοδος μετρό"
 
 msgid "Phone"
-msgstr ""
+msgstr "Τηλέφωνο"
 
 msgid "Water tower"
 msgstr ""
@@ -394,7 +394,7 @@ msgid "Loading ramp"
 msgstr ""
 
 msgid "Crane"
-msgstr ""
+msgstr "Γερανός"
 
 msgid "Track scale"
 msgstr ""
@@ -406,10 +406,10 @@ msgid "Gauge conversion"
 msgstr ""
 
 msgid "Gate"
-msgstr ""
+msgstr "Πύλη"
 
 msgid "Museum"
-msgstr ""
+msgstr "Μουσείο"
 
 msgid "Container terminal"
 msgstr ""
@@ -424,7 +424,7 @@ msgid "Rack"
 msgstr ""
 
 msgid "Embankment"
-msgstr ""
+msgstr "Ανάχωμα"
 
 msgid "Cutting"
 msgstr ""
@@ -436,7 +436,7 @@ msgid "Funicular"
 msgstr ""
 
 msgid "Military line"
-msgstr ""
+msgstr "Στρατιωτική γραμμή"
 
 msgid "Military service track"
 msgstr ""
@@ -457,4 +457,10 @@ msgid "Car shuttle"
 msgstr ""
 
 msgid "Rolling highway"
+msgstr ""
+
+msgid "Nothing to see in this zoom level. Please zoom in."
+msgstr ""
+
+msgid "Legend not available for this style."
 msgstr ""
