@@ -3819,8 +3819,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Bü-Tafel" icon="de:crossing-info.png" type="node">
-					<label text="Bü-Tafel" />
+				<item name="Bü-Kennzeichentafel" icon="de:crossing-info.png" type="node">
+					<label text="Bü-Kennzeichentafel" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
@@ -3845,7 +3845,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:crossing_info"
-						value="yes" />
+						value="DE:bü-kennzeichentafel" />
 					<key key="railway:signal:crossing_info:form"
 						value="sign" />
 					<text key="railway:signal:crossing_info:caption"
@@ -3866,8 +3866,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Mastbauform,Zwergsignal"
 						delete_if_empty="true" />
 				</item>
-				<item name="Bü-Ankündigungstafel" icon="de:crossing-hint.png" type="node">
-					<label text="Bü-Ankündigungstafel" />
+				<item name="Bü-Ankündetafel" icon="de:crossing-hint.png" type="node">
+					<label text="Bü-Ankündetafel" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
@@ -3892,7 +3892,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:crossing_hint"
-						value="yes" />
+						value="DE:bü-ankündetafel" />
 					<key key="railway:signal:crossing_hint:form"
 						value="sign" />
 					<text key="railway:signal:crossing_hint:caption"
@@ -4112,8 +4112,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<space />
-					<key key="railway:signal:shunting"
-						value="ra11" />
+					<combo key="railway:signal:shunting"
+						text="Type of signal"
+						de.text="Signaltyp"
+						values="ra11,ra11b"
+						display_values="Ra 11 (gelb),Ra 11b (weiß)"
+						default=""
+						delete_if_empty="true" />
 					<combo key="railway:signal:shunting:form"
 						text="Signal form"
 						de.text="Anzeigeart"
@@ -4725,7 +4730,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:main_repeated"
-					value="yes" />
+					value="DE:fahrtanzeiger" />
 				<key key="railway:signal:main_repeated:form"
 					value="light" />
 			</item>
@@ -4844,7 +4849,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:lzb"
-					value="yes" />
+					value="DE:lzb_blockkennzeichen" />
 				<key key="railway:signal:form"
 					value="sign" />
 			</item>
@@ -4872,8 +4877,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 				<key key="railway:signal:lzb_start"
-					value="yes" />
-				<key key="railway:signal:form"
+					value="DE:lzb-bereichskennzeichen" />
+				<key key="railway:signal:lzb_start:form"
 					value="sign" />
 			</item>
 			<item name="Zugfunk-Kanalhinweis" icon="de:radio.png" type="node">
@@ -4890,7 +4895,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:radio"
-					value="DE:Zugfunk-Kanalhinweis" />
+					value="DE:zugfunk-kanalhinweis" />
 				<key key="railway:signal:radio:form"
 					value="sign" />
 				<text key="railway:signal:radio:frequency"
