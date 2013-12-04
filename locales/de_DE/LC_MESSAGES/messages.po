@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2013-11-30 00:17+0100\n"
+"PO-Revision-Date: 2013-12-04 22:26+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -455,3 +455,9 @@ msgstr "Autozug-Verladeterminal"
 
 msgid "Rolling highway"
 msgstr "Verladeterminal Rollende Landstraße"
+
+msgid "Nothing to see in this zoom level. Please zoom in."
+msgstr "In dieser Zoomstufe wird nichts angezeigt. Bitte weiter hereinzoomen."
+
+msgid "Legend not available for this style."
+msgstr "Die Legende für dieses Kartenthema konnte nicht geladen werden."
