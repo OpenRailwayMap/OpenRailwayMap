@@ -31,6 +31,8 @@
 #include "pgsql.h"
 #include "expire-tiles.h"
 #include "wildcmp.h"
+#include "node-ram-cache.h"
+#include "tagtransform.h"
 
 #define SRID (project_getprojinfo()->srs)
 
@@ -45,9 +47,11 @@ enum table_id {
 
 static const struct output_options *Options;
 
+/* enable output of a generated way_area tag to either hstore or its own column */
+static int enable_way_area=1;
+
 /* Tables to output */
 static struct s_table {
-    //enum table_id table;
     char *name;
     const char *type;
     PGconn *sql_conn;
@@ -58,16 +62,12 @@ static struct s_table {
 } tables [] = {
     { .name = "%s_point",   .type = "POINT"     },
     { .name = "%s_line",    .type = "LINESTRING"},
-    { .name = "%s_polygon", .type = "GEOMETRY"  }, // Actually POLGYON & MULTIPOLYGON but no way to limit to just these two
+    { .name = "%s_polygon", .type = "GEOMETRY"  }, /* Actually POLGYON & MULTIPOLYGON but no way to limit to just these two */
     { .name = "%s_roads",   .type = "LINESTRING"}
 };
 #define NUM_TABLES ((signed)(sizeof(tables) / sizeof(tables[0])))
 
-#define FLAG_POLYGON 1    /* For polygon table */
-#define FLAG_LINEAR  2    /* For lines table */
-#define FLAG_NOCACHE 4    /* Optimisation: don't bother remembering this one */
-#define FLAG_DELETE  8    /* These tags should be simply deleted on sight */
-#define FLAG_PHSTORE 17   /* polygons without own column but listed in hstore this implies FLAG_POLYGON */
+
 static struct flagsname {
     char *name;
     int flag;
@@ -80,44 +80,10 @@ static struct flagsname {
 };
 #define NUM_FLAGS ((signed)(sizeof(tagflags) / sizeof(tagflags[0])))
 
-/* Table columns, representing key= tags */
-struct taginfo {
-    char *name;
-    char *type;
-    int flags;
-    int count;
-};
 
-static struct taginfo *exportList[4]; /* Indexed by enum table_id */
-static int exportListCount[4];
 
-/* Data to generate z-order column and road table
- * The name of the roads table is misleading, this table
- * is used for any feature to be shown at low zoom.
- * This includes railways and administrative boundaries too
- */
-static struct {
-    int offset;
-    const char *highway;
-    int roads;
-} layers[] = {
-    { 3, "minor",         0 },
-    { 3, "road",          0 },
-    { 3, "unclassified",  0 },
-    { 3, "residential",   0 },
-    { 4, "tertiary_link", 0 },
-    { 4, "tertiary",      0 },
-   // 5 = railway
-    { 6, "secondary_link",1 },
-    { 6, "secondary",     1 },
-    { 7, "primary_link",  1 },
-    { 7, "primary",       1 },
-    { 8, "trunk_link",    1 },
-    { 8, "trunk",         1 },
-    { 9, "motorway_link", 1 },
-    { 9, "motorway",      1 }
-};
-static const unsigned int nLayers = (sizeof(layers)/sizeof(*layers));
+struct taginfo *exportList[4]; /* Indexed by enum table_id */
+int exportListCount[4];
 
 static int pgsql_delete_way_from_output(osmid_t osm_id);
 static int pgsql_delete_relation_from_output(osmid_t osm_id);
@@ -128,6 +94,16 @@ void read_style_file( const char *filename )
   FILE *in;
   int lineno = 0;
   int num_read = 0;
+  char osmtype[24];
+  char tag[64];
+  char datatype[24];
+  char flags[128];
+  int i;
+  char *str;
+  int fields;
+  struct taginfo temp;
+  char buffer[1024];
+  int flag = 0;
 
   exportList[OSMTYPE_NODE] = malloc( sizeof(struct taginfo) * MAX_STYLES );
   exportList[OSMTYPE_WAY]  = malloc( sizeof(struct taginfo) * MAX_STYLES );
@@ -139,23 +115,15 @@ void read_style_file( const char *filename )
     exit_nicely();
   }
   
-  char buffer[1024];
   while( fgets( buffer, sizeof(buffer), in) != NULL )
   {
     lineno++;
     
-    char osmtype[24];
-    char tag[64];
-    char datatype[24];
-    char flags[128];
-    int i;
-    char *str;
-
     str = strchr( buffer, '#' );
     if( str )
       *str = '\0';
       
-    int fields = sscanf( buffer, "%23s %63s %23s %127s", osmtype, tag, datatype, flags );
+    fields = sscanf( buffer, "%23s %63s %23s %127s", osmtype, tag, datatype, flags );
     if( fields <= 0 )  /* Blank line */
       continue;
     if( fields < 3 )
@@ -163,7 +131,6 @@ void read_style_file( const char *filename )
       fprintf( stderr, "Error reading style file line %d (fields=%d)\n", lineno, fields );
       exit_nicely();
     }
-    struct taginfo temp;
     temp.name = strdup(tag);
     temp.type = strdup(datatype);
     
@@ -181,22 +148,18 @@ void read_style_file( const char *filename )
       if( i == NUM_FLAGS )
         fprintf( stderr, "Unknown flag '%s' line %d, ignored\n", str, lineno );
     }
-    if (temp.flags==FLAG_PHSTORE) {
-        if (HSTORE_NONE==(Options->enable_hstore)) {
-            fprintf( stderr, "Error reading style file line %d (fields=%d)\n", lineno, fields );
-            fprintf( stderr, "flag 'phstore' is invalid in non-hstore mode\n");
-            exit_nicely();
-        }
-    }
-    if ((temp.flags!=FLAG_DELETE) && ((strchr(temp.name,'?') >0) || (strchr(temp.name,'*') >0))) {
-        fprintf( stderr, "wildcard '%s' in non-delete style emtry\n",temp.name);
+    if ((temp.flags!=FLAG_DELETE) && ((strchr(temp.name,'?') != NULL) || (strchr(temp.name,'*') != NULL))) {
+        fprintf( stderr, "wildcard '%s' in non-delete style entry\n",temp.name);
         exit_nicely();
     }
     
+    if ((0==strcmp(temp.name,"way_area")) && (temp.flags==FLAG_DELETE)) {
+        enable_way_area=0;
+    }
+
     temp.count = 0;
-//    printf("%s %s %d %d\n", temp.name, temp.type, temp.polygon, offset );
+    /*    printf("%s %s %d %d\n", temp.name, temp.type, temp.polygon, offset ); */
     
-    int flag = 0;
     if( strstr( osmtype, "node" ) )
     {
       memcpy( &exportList[ OSMTYPE_NODE ][ exportListCount[ OSMTYPE_NODE ] ], &temp, sizeof(temp) );
@@ -229,9 +192,9 @@ void read_style_file( const char *filename )
 
 static void free_style_refs(const char *name, const char *type)
 {
-    // Find and remove any other references to these pointers
-    // This would be way easier if we kept a single list of styles
-    // Currently this scales with n^2 number of styles
+    /* Find and remove any other references to these pointers
+       This would be way easier if we kept a single list of styles
+       Currently this scales with n^2 number of styles */
     int i,j;
 
     for (i=0; i<NUM_TABLES; i++) {
@@ -308,109 +271,6 @@ void copy_to_table(enum table_id table, const char *sql)
     tables[table].buflen = buflen;
 }
 
-static int add_z_order(struct keyval *tags, int *roads)
-{
-    const char *layer   = getItem(tags, "layer");
-    const char *highway = getItem(tags, "highway");
-    const char *bridge  = getItem(tags, "bridge");
-    const char *tunnel  = getItem(tags, "tunnel");
-    const char *railway = getItem(tags, "railway");
-    const char *boundary= getItem(tags, "boundary");
-
-    int z_order = 0;
-    int l;
-    unsigned int i;
-    char z[13];
-
-    l = layer ? strtol(layer, NULL, 10) : 0;
-    z_order = 10 * l;
-    *roads = 0;
-
-    if (highway) {
-        for (i=0; i<nLayers; i++) {
-            if (!strcmp(layers[i].highway, highway)) {
-                z_order += layers[i].offset;
-                *roads   = layers[i].roads;
-                break;
-            }
-        }
-    }
-
-    if (railway && strlen(railway)) {
-        z_order += 5;
-        *roads = 1;
-    }
-    // Administrative boundaries are rendered at low zooms so we prefer to use the roads table
-    if (boundary && !strcmp(boundary, "administrative"))
-        *roads = 1;
-
-    if (bridge && (!strcmp(bridge, "true") || !strcmp(bridge, "yes") || !strcmp(bridge, "1")))
-        z_order += 10;
-
-    if (tunnel && (!strcmp(tunnel, "true") || !strcmp(tunnel, "yes") || !strcmp(tunnel, "1")))
-        z_order -= 10;
-
-    snprintf(z, sizeof(z), "%d", z_order);
-    addItem(tags, "z_order", z, 0);
-
-    return 0;
-}
-
-#if 0
-static void fix_motorway_shields(struct keyval *tags)
-{
-    const char *highway = getItem(tags, "highway");
-    const char *name    = getItem(tags, "name");
-    const char *ref     = getItem(tags, "ref");
-
-    /* The current mapnik style uses ref= for motorway shields but some roads just have name= */
-    if (!highway || strcmp(highway, "motorway"))
-        return;
-
-    if (name && !ref)
-        addItem(tags, "ref", name, 0);
-}
-#endif
-
-/* Append all alternate name:xx on to the name tag with space sepatators.
- * name= always comes first, the alternates are in no particular order
- * Note: A new line may be better but this does not work with Mapnik
- *
- *    <tag k="name" v="Ben Nevis" />
- *    <tag k="name:gd" v="Ben Nibheis" />
- * becomes:
- *    <tag k="name" v="Ben Nevis Ben Nibheis" />
- */
-void compress_tag_name(struct keyval *tags)
-{
-    const char *name = getItem(tags, "name");
-    struct keyval *name_ext = getMatches(tags, "name:");
-    struct keyval *p;
-    char out[2048];
-
-    if (!name_ext)
-        return;
-
-    out[0] = '\0';
-    if (name) {
-        strncat(out, name, sizeof(out)-1);
-        strncat(out, " ", sizeof(out)-1);
-    }
-    while((p = popItem(name_ext)) != NULL) {
-        /* Exclude name:source = "dicataphone" and duplicates */
-        if (strcmp(p->key, "name:source") && !strstr(out, p->value)) {
-            strncat(out, p->value, sizeof(out)-1);
-            strncat(out, " ", sizeof(out)-1);
-        }
-        freeItem(p);
-    }
-    free(name_ext);
-
-    // Remove trailing space
-    out[strlen(out)-1] = '\0';
-    //fprintf(stderr, "*** New name: %s\n", out);
-    updateItem(tags, "name", out);
-}
 
 
 
@@ -490,23 +350,23 @@ static void write_hstore(enum table_id table, struct keyval *tags)
 {
     static char *sql;
     static size_t sqllen=0;
-    
-    // sql buffer
+    size_t hlen;
+    /* a clone of the tags pointer */
+    struct keyval *xtags = tags;
+        
+    /* sql buffer */
     if (sqllen==0) {
       sqllen=2048;
       sql=malloc(sqllen);
     }
     
-    // a clone of the tags pointer
-    struct keyval *xtags = tags;
-    
-    // while this tags has a follow-up..
+    /* while this tags has a follow-up.. */
     while (xtags->next->key != NULL)
     {
 
       /* hard exclude z_order tag and keys which have their own column */
       if ((xtags->next->has_column) || (strcmp("z_order",xtags->next->key)==0)) {
-          // update the tag-pointer to point to the next tag
+          /* update the tag-pointer to point to the next tag */
           xtags = xtags->next;
           continue;
       }
@@ -521,108 +381,112 @@ static void write_hstore(enum table_id table, struct keyval *tags)
         The maximum lenght of a single hstore element is thus
         calcuated as follows:
       */
-      size_t hlen=2 * (strlen(xtags->next->key) + strlen(xtags->next->value)) + 7;
+      hlen=2 * (strlen(xtags->next->key) + strlen(xtags->next->value)) + 7;
       
-      // if the sql buffer is too small
+      /* if the sql buffer is too small */
       if (hlen > sqllen) {
         sqllen = hlen;
         sql = realloc(sql, sqllen);
       }
         
-      // pack the tag with its value into the hstore
+      /* pack the tag with its value into the hstore */
       keyval2hstore(sql, xtags->next);
       copy_to_table(table, sql);
 
-      // update the tag-pointer to point to the next tag
+      /* update the tag-pointer to point to the next tag */
       xtags = xtags->next;
         
-      // if the tag has a follow up, add a comma to the end
+      /* if the tag has a follow up, add a comma to the end */
       if (xtags->next->key != NULL)
           copy_to_table(table, ",");
     }
     
-    // finish the hstore column by placing a TAB into the data stream
+    /* finish the hstore column by placing a TAB into the data stream */
     copy_to_table(table, "\t");
     
-    // the main hstore-column has now been written
+    /* the main hstore-column has now been written */
 }
 
-// write an hstore column to the database
+/* write an hstore column to the database */
 static void write_hstore_columns(enum table_id table, struct keyval *tags)
 {
     static char *sql;
     static size_t sqllen=0;
+    char *shortkey;
+    /* the index of the current hstore column */
+    int i_hstore_column;
+    int found;
+    struct keyval *xtags;
+    char *pos;
+    size_t hlen;
     
-    // sql buffer
+    /* sql buffer */
     if (sqllen==0) {
       sqllen=2048;
       sql=malloc(sqllen);
     }
     
-    // the index of the current hstore column
-    int i_hstore_column;
-    
-    // iterate over all configured hstore colums in the options
+    /* iterate over all configured hstore colums in the options */
     for(i_hstore_column = 0; i_hstore_column < Options->n_hstore_columns; i_hstore_column++)
     {
-        // did this node have a tag that matched the current hstore column
-        int found = 0;
+        /* did this node have a tag that matched the current hstore column */
+        found = 0;
         
-        // a clone of the tags pointer
-        struct keyval *xtags = tags;
+        /* a clone of the tags pointer */
+        xtags = tags;
         
-        // while this tags has a follow-up..
+        /* while this tags has a follow-up.. */
         while (xtags->next->key != NULL) {
             
-            // check if the tag's key starts with the name of the hstore column
-            char *pos = strstr(xtags->next->key, Options->hstore_columns[i_hstore_column]);
+            /* check if the tag's key starts with the name of the hstore column */
+            pos = strstr(xtags->next->key, Options->hstore_columns[i_hstore_column]);
             
-            // and if it does..
+            /* and if it does.. */
             if(pos == xtags->next->key)
             {
-                // remember we found one
+                /* remember we found one */
                 found=1;
                 
-                // generate the short key name
-                char *shortkey = xtags->next->key + strlen(Options->hstore_columns[i_hstore_column]);
+                /* generate the short key name */
+                shortkey = xtags->next->key + strlen(Options->hstore_columns[i_hstore_column]);
                 
-                // calculate the size needed for this hstore entry
-                size_t hlen=2*(strlen(shortkey)+strlen(xtags->next->value))+7;
+                /* calculate the size needed for this hstore entry */
+                hlen=2*(strlen(shortkey)+strlen(xtags->next->value))+7;
                 
-                // if the sql buffer is too small
+                /* if the sql buffer is too small */
                 if (hlen > sqllen) {
-                    // resize it
+                    /* resize it */
                     sqllen=hlen;
                     sql=realloc(sql,sqllen);
                 }
                 
-                // and pack the shortkey with its value into the hstore
+                /* and pack the shortkey with its value into the hstore */
                 keyval2hstore_manual(sql, shortkey, xtags->next->value);
                 copy_to_table(table, sql);
                 
-                // update the tag-pointer to point to the next tag
+                /* update the tag-pointer to point to the next tag */
                 xtags=xtags->next;
                 
-                // if the tag has a follow up, add a comma to the end
+                /* if the tag has a follow up, add a comma to the end */
                 if (xtags->next->key != NULL)
                     copy_to_table(table, ",");
             }
             else
             {
-                // update the tag-pointer to point to the next tag
+                /* update the tag-pointer to point to the next tag */
                 xtags=xtags->next;
             }
         }
         
-        // if no matching tag has been found, write a NULL
+        /* if no matching tag has been found, write a NULL */
         if(!found)
             copy_to_table(table, "\\N");
         
-        // finish the hstore column by placing a TAB into the data stream
+        /* finish the hstore column by placing a TAB into the data stream */
         copy_to_table(table, "\t");
     }
     
-    // all hstore-columns have now been written
+    /* all hstore-columns have now been written */
 }
 
 
@@ -642,11 +506,13 @@ Workaround - output SRID=4326;<WKB>
 static int pgsql_out_node(osmid_t id, struct keyval *tags, double node_lat, double node_lon)
 {
 
+    int filter = tagtransform_filter_node_tags(tags);
     static char *sql;
     static size_t sqllen=0;
-    char *v;
     int i;
     struct keyval *tag;
+
+    if (filter) return 1;
 
     if (sqllen==0) {
       sqllen=2048;
@@ -676,13 +542,20 @@ static int pgsql_out_node(osmid_t id, struct keyval *tags, double node_lat, doub
         copy_to_table(t_point, "\t");
     }
     
-    // hstore columns
+    /* hstore columns */
     write_hstore_columns(t_point, tags);
     
-    // check if a regular hstore is requested
+    /* check if a regular hstore is requested */
     if (Options->enable_hstore)
         write_hstore(t_point, tags);
     
+#ifdef FIXED_POINT
+    // guarantee that we use the same values as in the node cache
+    scale = Options->scale;
+    node_lon = FIX_TO_DOUBLE(DOUBLE_TO_FIX(node_lon));
+    node_lat = FIX_TO_DOUBLE(DOUBLE_TO_FIX(node_lat));
+#endif
+
     sprintf(sql, "SRID=%d;POINT(%.15g %.15g)", SRID, node_lon, node_lat);
     copy_to_table(t_point, sql);
     copy_to_table(t_point, "\n");
@@ -697,7 +570,6 @@ static void write_wkts(osmid_t id, struct keyval *tags, const char *wkt, enum ta
   
     static char *sql;
     static size_t sqllen=0;
-    char *v;
     int j;
     struct keyval *tag;
 
@@ -728,10 +600,10 @@ static void write_wkts(osmid_t id, struct keyval *tags, const char *wkt, enum ta
             copy_to_table(table, "\t");
     }
     
-    // hstore columns
+    /* hstore columns */
     write_hstore_columns(table, tags);
     
-    // check if a regular hstore is requested
+    /* check if a regular hstore is requested */
     if (Options->enable_hstore)
         write_hstore(table, tags);
     
@@ -741,7 +613,7 @@ static void write_wkts(osmid_t id, struct keyval *tags, const char *wkt, enum ta
     copy_to_table(table, "\n");
 }
 
-static int tag_indicates_polygon(enum OsmType type, const char *key)
+/*static int tag_indicates_polygon(enum OsmType type, const char *key)
 {
     int i;
 
@@ -754,113 +626,9 @@ static int tag_indicates_polygon(enum OsmType type, const char *key)
     }
 
     return 0;
-}
+}*/
 
-/* Go through the given tags and determine the union of flags. Also remove
- * any tags from the list that we don't know about */
-unsigned int pgsql_filter_tags(enum OsmType type, struct keyval *tags, int *polygon)
-{
-    int i, filter = 1;
-    int flags = 0;
-    int add_area_tag = 0;
 
-    const char *area;
-    struct keyval *item;
-    struct keyval temp;
-    initList(&temp);
-
-    /* We used to only go far enough to determine if it's a polygon or not, but now we go through and filter stuff we don't need */
-    while( (item = popItem(tags)) != NULL )
-    {
-        /* Allow named islands to appear as polygons */
-        if (!strcmp("natural",item->key) && !strcmp("coastline",item->value))
-        {               
-            add_area_tag = 1; 
-        }
-
-        /* Discard natural=coastline tags (we render these from a shapefile instead) */
-        if (!Options->keep_coastlines && !strcmp("natural",item->key) && !strcmp("coastline",item->value))
-        {               
-            freeItem( item );
-            item = NULL;
-            continue;
-        }
-
-        for (i=0; i < exportListCount[type]; i++)
-        {
-            if (wildMatch( exportList[type][i].name, item->key ))
-            {
-                if( exportList[type][i].flags & FLAG_DELETE )
-                {
-                    freeItem( item );
-                    item = NULL;
-                    break;
-                }
-
-                filter = 0;
-                flags |= exportList[type][i].flags;
-
-                pushItem( &temp, item );
-                item = NULL;
-                break;
-            }
-        }
-
-        /** if tag not found in list of exports: */
-        if (i == exportListCount[type])
-        {
-            if (Options->enable_hstore) {
-                /* with hstore, copy all tags... */
-                pushItem(&temp, item);
-                /* ... but if hstore_match_only is set then don't take this 
-                   as a reason for keeping the object */
-                if (!Options->hstore_match_only) filter = 0;
-            } else if (Options->n_hstore_columns) {
-                /* does this column match any of the hstore column prefixes? */
-                int j;
-                for (j = 0; j < Options->n_hstore_columns; j++) {
-                    char *pos = strstr(item->key, Options->hstore_columns[j]);
-                    if (pos == item->key) {
-                        pushItem(&temp, item);
-                        /* ... but if hstore_match_only is set then don't take this 
-                           as a reason for keeping the object */
-                        if (!Options->hstore_match_only) filter = 0;
-                        break; 
-                    }
-                }
-                /* if not, skip the tag */
-                if (j == Options->n_hstore_columns) {
-                    freeItem(item);
-                }
-            } else {
-                freeItem(item);
-            }
-            item = NULL;
-        }
-    }
-
-    /* Move from temp list back to original list */
-    while( (item = popItem(&temp)) != NULL )
-        pushItem( tags, item );
-
-    *polygon = flags & FLAG_POLYGON;
-
-    /* Special case allowing area= to override anything else */
-    if ((area = getItem(tags, "area"))) {
-        if (!strcmp(area, "yes") || !strcmp(area, "true") ||!strcmp(area, "1"))
-            *polygon = 1;
-        else if (!strcmp(area, "no") || !strcmp(area, "false") || !strcmp(area, "0"))
-            *polygon = 0;
-    } else {
-        /* If we need to force this as a polygon, append an area tag */
-        if (add_area_tag) {
-            addItem(tags, "area", "yes", 0);
-            *polygon = 1;
-        }
-    }
-
-    return filter;
-}
 
 /*
 COPY planet_osm (osm_id, name, place, landuse, leisure, "natural", man_made, waterway, highway, railway, amenity, tourism, learning, bu
@@ -875,6 +643,7 @@ static int pgsql_out_way(osmid_t id, struct keyval *tags, struct osmNode *nodes,
     int polygon = 0, roads = 0;
     int i, wkt_size;
     double split_at;
+    double area;
 
     /* If the flag says this object may exist already, delete it first */
     if(exists) {
@@ -882,10 +651,9 @@ static int pgsql_out_way(osmid_t id, struct keyval *tags, struct osmNode *nodes,
         Options->mid->way_changed(id);
     }
 
-    if (pgsql_filter_tags(OSMTYPE_WAY, tags, &polygon) || add_z_order(tags, &roads))
+    if (tagtransform_filter_way_tags(tags, &polygon, &roads))
         return 0;
-
-    // Split long ways after around 1 degree or 100km
+    /* Split long ways after around 1 degree or 100km */
     if (Options->projection == PROJ_LATLONG)
         split_at = 1;
     else
@@ -901,10 +669,10 @@ static int pgsql_out_way(osmid_t id, struct keyval *tags, struct osmNode *nodes,
             /* FIXME: there should be a better way to detect polygons */
             if (!strncmp(wkt, "POLYGON", strlen("POLYGON")) || !strncmp(wkt, "MULTIPOLYGON", strlen("MULTIPOLYGON"))) {
                 expire_tiles_from_nodes_poly(nodes, count, id);
-                double area = get_area(i);
-                if (area > 0.0) {
+                area = get_area(i);
+                if ((area > 0.0) && enable_way_area) {
                     char tmp[32];
-                    snprintf(tmp, sizeof(tmp), "%f", area);
+                    snprintf(tmp, sizeof(tmp), "%g", area);
                     addItem(tags, "way_area", tmp, 0);
                 }
                 write_wkts(id, tags, wkt, t_poly);
@@ -922,196 +690,28 @@ static int pgsql_out_way(osmid_t id, struct keyval *tags, struct osmNode *nodes,
     return 0;
 }
 
-static int pgsql_out_relation(osmid_t id, struct keyval *rel_tags, struct osmNode **xnodes, struct keyval *xtags, int *xcount, osmid_t *xid, const char **xrole)
+static int pgsql_out_relation(osmid_t id, struct keyval *rel_tags, int member_count, struct osmNode **xnodes, struct keyval *xtags, int *xcount, osmid_t *xid, const char **xrole)
 {
     int i, wkt_size;
-    int polygon = 0, roads = 0;
+    int roads = 0;
     int make_polygon = 0;
     int make_boundary = 0;
-    struct keyval tags, *p, poly_tags;
-    char *type;
+    int * members_superseeded;
     double split_at;
 
-#if 0
-    fprintf(stderr, "Got relation with counts:");
-    for (i=0; xcount[i]; i++)
-        fprintf(stderr, " %d", xcount[i]);
-    fprintf(stderr, "\n");
-#endif
-    /* Get the type, if there's no type we don't care */
-    type = getItem(rel_tags, "type");
-    if( !type )
-        return 0;
+    members_superseeded = calloc(sizeof(int), member_count);
 
-    initList(&tags);
-    initList(&poly_tags);
-
-    /* Clone tags from relation */
-    p = rel_tags->next;
-    while (p != rel_tags) {
-        // For routes, we convert name to route_name
-        if ((strcmp(type, "route") == 0) && (strcmp(p->key, "name") ==0))
-            addItem(&tags, "route_name", p->value, 1);
-        else if (strcmp(p->key, "type")) // drop type=
-            addItem(&tags, p->key, p->value, 1);
-        p = p->next;
-    }
-
-    if( strcmp(type, "route") == 0 )
-    {
-        const char *state = getItem(rel_tags, "state");
-        const char *netw = getItem(rel_tags, "network");
-        int networknr = -1;
-
-        if (state == NULL) {
-            state = "";
-        }
-
-        if (netw != NULL) {
-            if (strcmp(netw, "lcn") == 0) {
-                networknr = 10;
-                if (strcmp(state, "alternate") == 0) {
-                    addItem(&tags, "lcn", "alternate", 1);
-                } else if (strcmp(state, "connection") == 0) {
-                    addItem(&tags, "lcn", "connection", 1);
-                } else {
-                    addItem(&tags, "lcn", "yes", 1);
-                }
-            } else if (strcmp(netw, "rcn") == 0) {
-                networknr = 11;
-                if (strcmp(state, "alternate") == 0) {
-                    addItem(&tags, "rcn", "alternate", 1);
-                } else if (strcmp(state, "connection") == 0) {
-                    addItem(&tags, "rcn", "connection", 1);
-                } else {
-                    addItem(&tags, "rcn", "yes", 1);
-                }
-            } else if (strcmp(netw, "ncn") == 0) {
-                networknr = 12;
-                if (strcmp(state, "alternate") == 0) {
-                    addItem(&tags, "ncn", "alternate", 1);
-                } else if (strcmp(state, "connection") == 0) {
-                    addItem(&tags, "ncn", "connection", 1);
-                } else {
-                    addItem(&tags, "ncn", "yes", 1);
-                }
-
-
-            } else if (strcmp(netw, "lwn") == 0) {
-                networknr = 20;
-                if (strcmp(state, "alternate") == 0) {
-                    addItem(&tags, "lwn", "alternate", 1);
-                } else if (strcmp(state, "connection") == 0) {
-                    addItem(&tags, "lwn", "connection", 1);
-                } else {
-                    addItem(&tags, "lwn", "yes", 1);
-                }
-            } else if (strcmp(netw, "rwn") == 0) {
-                networknr = 21;
-                if (strcmp(state, "alternate") == 0) {
-                    addItem(&tags, "rwn", "alternate", 1);
-                } else if (strcmp(state, "connection") == 0) {
-                    addItem(&tags, "rwn", "connection", 1);
-                } else {
-                    addItem(&tags, "rwn", "yes", 1);
-                }
-            } else if (strcmp(netw, "nwn") == 0) {
-                networknr = 22;
-                if (strcmp(state, "alternate") == 0) {
-                    addItem(&tags, "nwn", "alternate", 1);
-                } else if (strcmp(state, "connection") == 0) {
-                    addItem(&tags, "nwn", "connection", 1);
-                } else {
-                    addItem(&tags, "nwn", "yes", 1);
-                }
-            }
-        }
-
-        if (getItem(rel_tags, "preferred_color") != NULL) {
-            const char *a = getItem(rel_tags, "preferred_color");
-            if (strcmp(a, "0") == 0 || strcmp(a, "1") == 0 || strcmp(a, "2") == 0 || strcmp(a, "3") == 0 || strcmp(a, "4") == 0) {
-                addItem(&tags, "route_pref_color", a, 1);
-            } else {
-                addItem(&tags, "route_pref_color", "0", 1);
-            }
-        } else {
-            addItem(&tags, "route_pref_color", "0", 1);
-        }
-
-        if (getItem(rel_tags, "ref") != NULL) {
-            if (networknr == 10) {
-                addItem(&tags, "lcn_ref", getItem(rel_tags, "ref"), 1);
-            } else if (networknr == 11) {
-                addItem(&tags, "rcn_ref", getItem(rel_tags, "ref"), 1);
-            } else if (networknr == 12) {
-                addItem(&tags, "ncn_ref", getItem(rel_tags, "ref"), 1);
-            } else if (networknr == 20) {
-                addItem(&tags, "lwn_ref", getItem(rel_tags, "ref"), 1);
-            } else if (networknr == 21) {
-                addItem(&tags, "rwn_ref", getItem(rel_tags, "ref"), 1);
-            } else if (networknr == 22) {
-                addItem(&tags, "nwn_ref", getItem(rel_tags, "ref"), 1);
-            }
-        }
-    }
-    else if( strcmp( type, "boundary" ) == 0 )
-    {
-        // Boundaries will get converted into multiple geometries:
-        // - Linear features will end up in the line and roads tables (useful for admin boundaries)
-        // - Polygon features also go into the polygon table (useful for national_forests)
-        // The edges of the polygon also get treated as linear fetaures allowing these to be rendered seperately.
-        make_boundary = 1;
-    }
-    else if( strcmp( type, "multipolygon" ) == 0 && getItem(&tags, "boundary") )
-    {
-        // Treat type=multipolygon exactly like type=boundary if it has a boundary tag.
-        make_boundary = 1;
-    }
-    else if( strcmp( type, "multipolygon" ) == 0 )
-    {
-        make_polygon = 1;
-
-        /* Copy the tags from the outer way(s) if the relation is untagged */
-        /* or if there is just a name tag, people seem to like naming relations */
-        if (!listHasData(&tags) || ((countList(&tags)==1) && getItem(&tags, "name"))) {
-            for (i=0; xcount[i]; i++) {
-                if (xrole[i] && !strcmp(xrole[i], "inner"))
-                    continue;
-
-                p = xtags[i].next;
-                while (p != &(xtags[i])) {
-                    addItem(&tags, p->key, p->value, 1);
-                    p = p->next;
-                }
-            }
-        }
-
-        // Collect a list of polygon-like tags, these are used later to
-        // identify if an inner rings looks like it should be rendered seperately
-        p = tags.next;
-        while (p != &tags) {
-            if (tag_indicates_polygon(OSMTYPE_WAY, p->key)) {
-                addItem(&poly_tags, p->key, p->value, 1);
-                //fprintf(stderr, "found a polygon tag: %s=%s\n", p->key, p->value);
-            }
-            p = p->next;
-        }
-    }
-    else
-    {
-        /* Unknown type, just exit */
-        resetList(&tags);
-        resetList(&poly_tags);
+    if (member_count == 0) {
+        free(members_superseeded);
         return 0;
     }
 
-    if (pgsql_filter_tags(OSMTYPE_WAY, &tags, &polygon) || add_z_order(&tags, &roads)) {
-        resetList(&tags);
-        resetList(&poly_tags);
+    if (tagtransform_filter_rel_member_tags(rel_tags, member_count, xtags, xrole, members_superseeded, &make_boundary, &make_polygon, &roads)) {
+        free(members_superseeded);
         return 0;
     }
-
-    // Split long linear ways after around 1 degree or 100km (polygons not effected)
+    
+    /* Split long linear ways after around 1 degree or 100km (polygons not effected) */
     if (Options->projection == PROJ_LATLONG)
         split_at = 1;
     else
@@ -1120,13 +720,11 @@ static int pgsql_out_relation(osmid_t id, struct keyval *rel_tags, struct osmNod
     wkt_size = build_geometry(id, xnodes, xcount, make_polygon, Options->enable_multi, split_at);
 
     if (!wkt_size) {
-        resetList(&tags);
-        resetList(&poly_tags);
+        free(members_superseeded);
         return 0;
     }
 
-    for (i=0;i<wkt_size;i++)
-    {
+    for (i=0;i<wkt_size;i++) {
         char *wkt = get_wkt(i);
 
         if (wkt && strlen(wkt)) {
@@ -1134,16 +732,16 @@ static int pgsql_out_relation(osmid_t id, struct keyval *rel_tags, struct osmNod
             /* FIXME: there should be a better way to detect polygons */
             if (!strncmp(wkt, "POLYGON", strlen("POLYGON")) || !strncmp(wkt, "MULTIPOLYGON", strlen("MULTIPOLYGON"))) {
                 double area = get_area(i);
-                if (area > 0.0) {
+                if ((area > 0.0) && enable_way_area) {
                     char tmp[32];
-                    snprintf(tmp, sizeof(tmp), "%f", area);
-                    addItem(&tags, "way_area", tmp, 0);
+                    snprintf(tmp, sizeof(tmp), "%g", area);
+                    addItem(rel_tags, "way_area", tmp, 0);
                 }
-                write_wkts(-id, &tags, wkt, t_poly);
+                write_wkts(-id, rel_tags, wkt, t_poly);
             } else {
-                write_wkts(-id, &tags, wkt, t_line);
+                write_wkts(-id, rel_tags, wkt, t_line);
                 if (roads)
-                    write_wkts(-id, &tags, wkt, t_roads);
+                    write_wkts(-id, rel_tags, wkt, t_roads);
             }
         }
         free(wkt);
@@ -1151,33 +749,23 @@ static int pgsql_out_relation(osmid_t id, struct keyval *rel_tags, struct osmNod
 
     clear_wkts();
 
-    // If we are creating a multipolygon then we
-    // mark each member so that we can skip them during iterate_ways
-    // but only if the polygon-tags look the same as the outer ring
+    /* Tagtransform will have marked those member ways of the relation that
+     * have fully been dealt with as part of the multi-polygon entry.
+     * Set them in the database as done and delete their entry to not
+     * have duplicates */
     if (make_polygon) {
         for (i=0; xcount[i]; i++) {
-            int match = 0;
-            struct keyval *p = poly_tags.next;
-            while (p != &poly_tags) {
-                const char *v = getItem(&xtags[i], p->key);
-                //fprintf(stderr, "compare polygon tag: %s=%s vs %s\n", p->key, p->value, v ? v : "null");
-                if (!v || strcmp(v, p->value)) {
-                    match = 0;
-                    break;
-                }
-                match = 1;
-                p = p->next;
-            }
-            if (match) {
-                //fprintf(stderr, "match for %d\n", xid[i]);
+            if (members_superseeded[i]) {
                 Options->mid->ways_done(xid[i]);
                 pgsql_delete_way_from_output(xid[i]);
             }
         }
     }
 
-    // If we are making a boundary then also try adding any relations which form complete rings
-    // The linear variants will have already been processed above
+    free(members_superseeded);
+
+    /* If we are making a boundary then also try adding any relations which form complete rings
+       The linear variants will have already been processed above */
     if (make_boundary) {
         wkt_size = build_geometry(id, xnodes, xcount, 1, Options->enable_multi, split_at);
         for (i=0;i<wkt_size;i++)
@@ -1189,12 +777,12 @@ static int pgsql_out_relation(osmid_t id, struct keyval *rel_tags, struct osmNod
                 /* FIXME: there should be a better way to detect polygons */
                 if (!strncmp(wkt, "POLYGON", strlen("POLYGON")) || !strncmp(wkt, "MULTIPOLYGON", strlen("MULTIPOLYGON"))) {
                     double area = get_area(i);
-                    if (area > 0.0) {
+                    if ((area > 0.0) && enable_way_area) {
                         char tmp[32];
-                        snprintf(tmp, sizeof(tmp), "%f", area);
-                        addItem(&tags, "way_area", tmp, 0);
+                        snprintf(tmp, sizeof(tmp), "%g", area);
+                        addItem(rel_tags, "way_area", tmp, 0);
                     }
-                    write_wkts(-id, &tags, wkt, t_poly);
+                    write_wkts(-id, rel_tags, wkt, t_poly);
                 }
             }
             free(wkt);
@@ -1202,8 +790,6 @@ static int pgsql_out_relation(osmid_t id, struct keyval *rel_tags, struct osmNod
         clear_wkts();
     }
 
-    resetList(&tags);
-    resetList(&poly_tags);
     return 0;
 }
 
@@ -1216,7 +802,7 @@ static int pgsql_out_connect(const struct output_options *options, int startTran
         /* Check to see that the backend connection was successfully made */
         if (PQstatus(sql_conn) != CONNECTION_OK) {
             fprintf(stderr, "Connection to database failed: %s\n", PQerrorMessage(sql_conn));
-            exit_nicely();
+            return 1;
         }
         tables[i].sql_conn = sql_conn;
         pgsql_exec(sql_conn, PGRES_COMMAND_OK, "SET synchronous_commit TO off;");
@@ -1233,6 +819,11 @@ static int pgsql_out_start(const struct output_options *options)
     PGresult   *res;
     int i,j;
     unsigned int sql_len;
+    int their_srid;
+    int i_hstore_column;
+    enum OsmType type;
+    int numTags;
+    struct taginfo *exportTags;
 
     Options = options;
 
@@ -1274,7 +865,7 @@ static int pgsql_out_start(const struct output_options *options)
                 fprintf(stderr, "Problem reading geometry information for table %s - does it exist?\n", tables[i].name);
                 exit_nicely();
             }
-            int their_srid = atoi(PQgetvalue(res, 0, 0));
+            their_srid = atoi(PQgetvalue(res, 0, 0));
             PQclear(res);
             if (their_srid != SRID)
             {
@@ -1288,9 +879,9 @@ static int pgsql_out_start(const struct output_options *options)
 
         pgsql_exec(sql_conn, PGRES_COMMAND_OK, "BEGIN");
 
-        enum OsmType type = (i == t_point)?OSMTYPE_NODE:OSMTYPE_WAY;
-        int numTags = exportListCount[type];
-        struct taginfo *exportTags = exportList[type];
+        type = (i == t_point)?OSMTYPE_NODE:OSMTYPE_WAY;
+        numTags = exportListCount[type];
+        exportTags = exportList[type];
         if (!options->append) {
             sprintf(sql, "CREATE TABLE %s ( osm_id " POSTGRES_OSMID_TYPE, tables[i].name );
             for (j=0; j < numTags; j++) {
@@ -1306,7 +897,6 @@ static int pgsql_out_start(const struct output_options *options)
                 }
                 strcat(sql, tmp);
             }
-            int i_hstore_column;
             for(i_hstore_column = 0; i_hstore_column < Options->n_hstore_columns; i_hstore_column++)
             {
                 strcat(sql, ",\"");
@@ -1364,8 +954,6 @@ static int pgsql_out_start(const struct output_options *options)
             PQclear(res);
 
             /* change the type of the geometry column if needed - this can only change to a more permisive type */
-            //            pgsql_exec(sql_conn, PGRES_COMMAND_OK, "UPDATE geometry_columns SET type = '%s' where type != '%s' and f_table_name = '%s' and f_geometry_column = 'way'",
-            //           tables[i].type, tables[i].type, tables[i].name);
         }
         pgsql_exec(sql_conn, PGRES_COMMAND_OK, "PREPARE get_wkt (" POSTGRES_OSMID_TYPE ") AS SELECT ST_AsText(way) FROM %s WHERE osm_id = $1;\n", tables[i].name);
         
@@ -1386,7 +974,6 @@ static int pgsql_out_start(const struct output_options *options)
             strcat(sql, tmp);
         }
 
-        int i_hstore_column;
         for(i_hstore_column = 0; i_hstore_column < Options->n_hstore_columns; i_hstore_column++)
         {
             strcat(sql, ",\"");
@@ -1403,6 +990,10 @@ static int pgsql_out_start(const struct output_options *options)
     }
     free(sql);
 
+    if (tagtransform_init(options)) {
+        fprintf(stderr, "Error: Failed to initialise tag processing.\n");
+        exit_nicely();
+    }
     expire_tiles_init(options);
 
     options->mid->start(options);
@@ -1413,11 +1004,13 @@ static int pgsql_out_start(const struct output_options *options)
 static void pgsql_pause_copy(struct s_table *table)
 {
     PGresult   *res;
+    int stop;
+    
     if( !table->copyMode )
         return;
         
     /* Terminate any pending COPY */
-    int stop = PQputCopyEnd(table->sql_conn, NULL);
+    stop = PQputCopyEnd(table->sql_conn, NULL);
     if (stop != 1) {
        fprintf(stderr, "COPY_END for %s failed: %s\n", table->name, PQerrorMessage(table->sql_conn));
        exit_nicely();
@@ -1437,7 +1030,7 @@ static void pgsql_out_close(int stopTransaction) {
     int i;
     for (i=0; i<NUM_TABLES; i++) {
         pgsql_pause_copy(&tables[i]);
-        // Commit transaction
+        /* Commit transaction */
         if (stopTransaction)
             pgsql_exec(tables[i].sql_conn, PGRES_COMMAND_OK, "COMMIT");
         PQfinish(tables[i].sql_conn);
@@ -1449,7 +1042,7 @@ static void pgsql_out_commit(void) {
     int i;
     for (i=0; i<NUM_TABLES; i++) {
         pgsql_pause_copy(&tables[i]);
-        // Commit transaction
+        /* Commit transaction */
         fprintf(stderr, "Committing transaction for %s\n", tables[i].name);
         pgsql_exec(tables[i].sql_conn, PGRES_COMMAND_OK, "COMMIT");
     }
@@ -1457,6 +1050,7 @@ static void pgsql_out_commit(void) {
 
 static void *pgsql_out_stop_one(void *arg)
 {
+    int i_column;
     struct s_table *table = arg;
     PGconn *sql_conn = table->sql_conn;
 
@@ -1467,9 +1061,6 @@ static void *pgsql_out_stop_one(void *arg)
     }
 
     pgsql_pause_copy(table);
-    // Commit transaction
-    //fprintf(stderr, "Committing transaction for %s\n", table->name);
-    //pgsql_exec(sql_conn, PGRES_COMMAND_OK, "COMMIT");
     if (!Options->append)
     {
         time_t start, end;
@@ -1487,19 +1078,67 @@ static void *pgsql_out_stop_one(void *arg)
         pgsql_exec(sql_conn, PGRES_COMMAND_OK, "DROP TABLE %s;\n", table->name);
         pgsql_exec(sql_conn, PGRES_COMMAND_OK, "ALTER TABLE %s_tmp RENAME TO %s;\n", table->name, table->name);
         fprintf(stderr, "Copying %s to cluster by geometry finished\n", table->name);
+        fprintf(stderr, "Creating geometry index on  %s\n", table->name);
         if (Options->tblsmain_index) {
-            pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_index ON %s USING GIST (way) TABLESPACE %s;\n", table->name, table->name, Options->tblsmain_index);
+            /* Use fillfactor 100 for un-updatable imports */
+            if (Options->slim && !Options->droptemp) {
+                pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_index ON %s USING GIST (way) TABLESPACE %s;\n", table->name, table->name, Options->tblsmain_index);
+            } else {
+                pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_index ON %s USING GIST (way) WITH (FILLFACTOR=100) TABLESPACE %s;\n", table->name, table->name, Options->tblsmain_index);
+            }
         } else {
-            pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_index ON %s USING GIST (way);\n", table->name, table->name);
+            if (Options->slim && !Options->droptemp) {
+                pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_index ON %s USING GIST (way);\n", table->name, table->name);
+            } else {
+                pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_index ON %s USING GIST (way) WITH (FILLFACTOR=100);\n", table->name, table->name);
+            }
         }
 
         /* slim mode needs this to be able to apply diffs */
         if (Options->slim && !Options->droptemp)
         {
+            fprintf(stderr, "Creating osm_id index on  %s\n", table->name);
             if (Options->tblsmain_index) {
                 pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_pkey ON %s USING BTREE (osm_id) TABLESPACE %s;\n", table->name, table->name, Options->tblsmain_index);
             } else {
                 pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_pkey ON %s USING BTREE (osm_id);\n", table->name, table->name);
+            }
+        }
+        /* Create hstore index if selected */
+        if (Options->enable_hstore_index) {
+            fprintf(stderr, "Creating hstore indexes on  %s\n", table->name);
+            if (Options->tblsmain_index) {
+                if (HSTORE_NONE != (Options->enable_hstore)) {
+                    if (Options->slim && !Options->droptemp) {
+                        pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_tags_index ON %s USING GIN (tags) TABLESPACE %s;\n", table->name, table->name, Options->tblsmain_index);
+                    } else {
+                        pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_tags_index ON %s USING GIN (tags) WITH (FILLFACTOR=100) TABLESPACE %s;\n", table->name, table->name, Options->tblsmain_index);
+                    }
+                }
+                for(i_column = 0; i_column < Options->n_hstore_columns; i_column++) {
+                    if (Options->slim && !Options->droptemp) {
+                        pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_hstore_%i_index ON %s USING GIN (\"%s\") TABLESPACE %s;\n",
+                               table->name, i_column,table->name, Options->hstore_columns[i_column], Options->tblsmain_index);
+                    } else {
+                        pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_hstore_%i_index ON %s USING GIN (\"%s\") WITH (FILLFACTOR=100) TABLESPACE %s;\n",
+                               table->name, i_column,table->name, Options->hstore_columns[i_column], Options->tblsmain_index);
+                    }
+                }
+            } else {
+                if (HSTORE_NONE != (Options->enable_hstore)) {
+                    if (Options->slim && !Options->droptemp) {
+                        pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_tags_index ON %s USING GIN (tags);\n", table->name, table->name);
+                    } else {
+                        pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_tags_index ON %s USING GIN (tags) WITH (FILLFACTOR=100);\n", table->name, table->name);
+                    }
+                }
+                for(i_column = 0; i_column < Options->n_hstore_columns; i_column++) {
+                    if (Options->slim && !Options->droptemp) {
+                        pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_hstore_%i_index ON %s USING GIN (\"%s\");\n", table->name, i_column,table->name, Options->hstore_columns[i_column]);
+                    } else {
+                        pgsql_exec(sql_conn, PGRES_COMMAND_OK, "CREATE INDEX %s_hstore_%i_index ON %s USING GIN (\"%s\") WITH (FILLFACTOR=100);\n", table->name, i_column,table->name, Options->hstore_columns[i_column]);
+                    }
+                }
             }
         }
         fprintf(stderr, "Creating indexes on  %s finished\n", table->name);
@@ -1551,6 +1190,8 @@ static void pgsql_out_stop()
      */    
     Options->mid->iterate_relations( pgsql_process_relation );
 
+    tagtransform_shutdown();
+
 #ifdef HAVE_PTHREAD
     if (Options->parallel_indexing) {
       for (i=0; i<NUM_TABLES; i++) {
@@ -1592,24 +1233,23 @@ static void pgsql_out_stop()
 
 static int pgsql_add_node(osmid_t id, double lat, double lon, struct keyval *tags)
 {
-  int polygon;
-  int filter = pgsql_filter_tags(OSMTYPE_NODE, tags, &polygon);
-  
   Options->mid->nodes_set(id, lat, lon, tags);
-  if( !filter )
-      pgsql_out_node(id, tags, lat, lon);
+  pgsql_out_node(id, tags, lat, lon);
+
   return 0;
 }
 
 static int pgsql_add_way(osmid_t id, osmid_t *nds, int nd_count, struct keyval *tags)
 {
   int polygon = 0;
+  int roads = 0;
 
-  // Check whether the way is: (1) Exportable, (2) Maybe a polygon
-  int filter = pgsql_filter_tags(OSMTYPE_WAY, tags, &polygon);
 
-  // If this isn't a polygon then it can not be part of a multipolygon
-  // Hence only polygons are "pending"
+  /* Check whether the way is: (1) Exportable, (2) Maybe a polygon */
+  int filter = tagtransform_filter_way_tags(tags, &polygon, &roads);
+
+  /* If this isn't a polygon then it can not be part of a multipolygon
+     Hence only polygons are "pending" */
   Options->mid->ways_set(id, nds, nd_count, tags, (!filter && polygon) ? 1 : 0);
 
   if( !polygon && !filter )
@@ -1626,7 +1266,6 @@ static int pgsql_add_way(osmid_t id, osmid_t *nds, int nd_count, struct keyval *
 /* This is the workhorse of pgsql_add_relation, split out because it is used as the callback for iterate relations */
 static int pgsql_process_relation(osmid_t id, struct member *members, int member_count, struct keyval *tags, int exists)
 {
-  // (osmid_t id, struct keyval *rel_tags, struct osmNode **xnodes, struct keyval **xtags, int *xcount)
     int i, j, count, count2;
   osmid_t *xid2 = malloc( (member_count+1) * sizeof(osmid_t) );
   osmid_t *xid;
@@ -1638,6 +1277,15 @@ static int pgsql_process_relation(osmid_t id, struct member *members, int member
   /* If the flag says this object may exist already, delete it first */
   if(exists)
       pgsql_delete_relation_from_output(id);
+
+  if (tagtransform_filter_rel_tags(tags)) {
+      free(xid2);
+      free(xrole);
+      free(xcount);
+      free(xtags);
+      free(xnodes);
+      return 1;
+  }
 
   count = 0;
   for( i=0; i<member_count; i++ )
@@ -1663,8 +1311,8 @@ static int pgsql_process_relation(osmid_t id, struct member *members, int member
   xid[count2] = 0;
   xrole[count2] = NULL;
 
-  // At some point we might want to consider storing the retreived data in the members, rather than as seperate arrays
-  pgsql_out_relation(id, tags, xnodes, xtags, xcount, xid, xrole);
+  /* At some point we might want to consider storing the retrieved data in the members, rather than as separate arrays */
+  pgsql_out_relation(id, tags, count2, xnodes, xtags, xcount, xid, xrole);
 
   for( i=0; i<count2; i++ )
   {
@@ -1685,14 +1333,18 @@ static int pgsql_add_relation(osmid_t id, struct member *members, int member_cou
 {
   const char *type = getItem(tags, "type");
 
-  // Must have a type field or we ignore it
+  /* Must have a type field or we ignore it */
   if (!type)
       return 0;
 
-  /* In slim mode we remember these*/
+  /* In slim mode we remember these */
   if(Options->mid->relations_set)
     Options->mid->relations_set(id, members, member_count, tags);
-  // (osmid_t id, struct keyval *rel_tags, struct osmNode **xnodes, struct keyval **xtags, int *xcount)
+    
+  /* Only a limited subset of type= is supported, ignore other */
+  if ( (strcmp(type, "route") != 0) && (strcmp(type, "multipolygon") != 0) && (strcmp(type, "boundary") != 0))
+    return 0;
+
 
   return pgsql_process_relation(id, members, member_count, tags, 0);
 }

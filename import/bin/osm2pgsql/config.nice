@@ -1,7 +1,0 @@
-#! /bin/sh
-#
-# Created by configure
-
-'./configure' \
-'--enable-64bit-ids' \
-"$@"

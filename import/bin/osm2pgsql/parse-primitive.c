@@ -53,19 +53,19 @@ char *extractAttribute(char **token, int tokens, char *attname)
     char buffer[256];
     int cl;
     int i;
+    char *in;
+    char *out;
     sprintf(buffer, "%s=\"", attname);
     cl = strlen(buffer);
     for (i=0; i<tokens; i++)
     {
         if (!strncmp(token[i], buffer, cl))
         {
-            char *quote = index(token[i] + cl, '"');
+            char *quote = strchr(token[i] + cl, '"');
             if (quote == NULL) quote = token[i] + strlen(token[i]) + 1;
             *quote = 0;
             if (strchr(token[i]+cl, '&') == 0) return (token[i] + cl);
 
-            char *in;
-            char *out;
             for (in=token[i]+cl, out=token[i]+cl; *in; in++)
             {
                 if (*in == '&')
@@ -106,10 +106,12 @@ char *extractAttribute(char **token, int tokens, char *attname)
 /* Parses the action="foo" tags in JOSM change files. Obvisouly not useful from osmChange files */
 static actions_t ParseAction(char **token, int tokens, struct osmdata_t *osmdata)
 {
+    actions_t new_action;
+    char *action;
     if( osmdata->filetype == FILETYPE_OSMCHANGE || osmdata->filetype == FILETYPE_PLANETDIFF )
         return osmdata->action;
-    actions_t new_action = ACTION_NONE;
-    char *action = extractAttribute(token, tokens, "action");
+    new_action = ACTION_NONE;
+    action = extractAttribute(token, tokens, "action");
     if( action == NULL )
         new_action = ACTION_CREATE;
     else if( strcmp((char *)action, "modify") == 0 )
@@ -129,6 +131,8 @@ static void StartElement(char *name, char *line, struct osmdata_t *osmdata)
     char *xid, *xlat, *xlon, *xk, *xv, *xrole, *xtype;
     char *token[255];
     int tokens = 0;
+    int quote = 0;
+    char *i;
 
     if (osmdata->filetype == FILETYPE_NONE)
     {
@@ -158,8 +162,6 @@ static void StartElement(char *name, char *line, struct osmdata_t *osmdata)
 
     tokens=1;
     token[0] = line;
-    int quote = 0;
-    char *i;
     for (i=line; *i; i++)
     {
         if (quote)
@@ -290,7 +292,7 @@ static void StartElement(char *name, char *line, struct osmdata_t *osmdata)
             realloc_members(osmdata);
     } else if (!strcmp(name, "add") ||
                !strcmp(name, "create")) {
-        osmdata->action = ACTION_MODIFY; // Turns all creates into modifies, makes it resiliant against inconsistant snapshots.
+        osmdata->action = ACTION_MODIFY; /* Turns all creates into modifies, makes it resiliant against inconsistant snapshots. */
     } else if (!strcmp(name, "modify")) {
         osmdata->action = ACTION_MODIFY;
     } else if (!strcmp(name, "delete")) {
@@ -305,7 +307,7 @@ static void StartElement(char *name, char *line, struct osmdata_t *osmdata)
         fprintf(stderr, "%s: Unknown element name: %s\n", __FUNCTION__, name);
     }
 
-    // Collect extra attribute information and add as tags
+    /* Collect extra attribute information and add as tags */
     if (osmdata->extra_attributes && (!strcmp(name, "node") ||
 				      !strcmp(name, "way") ||
 				      !strcmp(name, "relation")))
@@ -415,11 +417,11 @@ static void EndElement(const char *name, struct osmdata_t *osmdata)
 }
 
 static void process(char *line, struct osmdata_t *osmdata) {
-    char *lt = index(line, '<');
+    char *lt = strchr(line, '<');
     if (lt)
     {
-        char *spc = index(lt+1, ' ');
-        char *gt = index(lt+1, '>');
+        char *spc = strchr(lt+1, ' ');
+        char *gt = strchr(lt+1, '>');
         char *nx = spc;
         if (*(lt+1) == '/')
         {
@@ -440,7 +442,7 @@ static void process(char *line, struct osmdata_t *osmdata) {
                 }
             }
             *nx++ = 0;
-            //printf ("nx=%d, lt+1=#%s#\n", nx-lt,lt+1);
+            /* printf ("nx=%d, lt+1=#%s#\n", nx-lt,lt+1); */
             StartElement(lt+1, nx, osmdata);
             if (slash) EndElement(lt+1, osmdata);
         }
@@ -452,14 +454,16 @@ int streamFilePrimitive(char *filename, int sanitize UNUSED, struct osmdata_t *o
     char buffer[65536];
     int bufsz = 0;
     int offset = 0;
+    char *nl;
 
     i = inputOpen(filename);
 
     if (i != NULL) {
         while(1)
         {
-            bufsz = bufsz + readFile(i, buffer + bufsz, sizeof(buffer) - bufsz);
-            char *nl = index(buffer, '\n');
+            bufsz = bufsz + readFile(i, buffer + bufsz, sizeof(buffer) - bufsz - 1);
+            buffer[bufsz] = 0;
+            nl = strchr(buffer, '\n');
             if (nl == 0) break;
             *nl=0;
             while (nl && nl < buffer + bufsz)
@@ -467,9 +471,7 @@ int streamFilePrimitive(char *filename, int sanitize UNUSED, struct osmdata_t *o
                 *nl = 0;
                 process(buffer + offset, osmdata);
                 offset = nl - buffer + 1;
-                //printf("\nsearch line at %d, buffer sz is %d = ",offset, bufsz);
-                nl = index(buffer + offset, '\n');
-                //printf("%d\n", nl ? nl-buffer : -1);
+                nl = strchr(buffer + offset, '\n');
             }
             memcpy(buffer, buffer + offset, bufsz - offset);
             bufsz = bufsz - offset;
@@ -479,5 +481,6 @@ int streamFilePrimitive(char *filename, int sanitize UNUSED, struct osmdata_t *o
         fprintf(stderr, "Unable to open %s\n", filename);
         return 1;
     }
+    inputClose(i);
     return 0;
 }

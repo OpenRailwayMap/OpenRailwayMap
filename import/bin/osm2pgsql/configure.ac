@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT(osm2pgsql, 0.81.0)
+AC_INIT(osm2pgsql, 0.85.0)
 
 dnl Required autoconf version
 AC_PREREQ(2.61)
@@ -24,7 +24,7 @@ AC_HEADER_SYS_WAIT
 AC_FUNC_MMAP
 
 dnl Find C compiler
-AC_PROG_CC_C99
+dnl AC_PROG_CC_C99
 
 dnl Find C++ compiler
 AC_PROG_CXX
@@ -34,17 +34,27 @@ then
   AC_MSG_ERROR([Could not find a c++ compiler]);
 fi
 
+dnl AX_CFLAGS_WARN_ALL
+dnl AX_CXXFLAGS_WARN_ALL
+
 dnl Make sure we have libtool installed
 AM_PROG_LIBTOOL
 
+LFS_CFLAGS=`getconf LFS_CFLAGS`
+AC_SUBST(LFS_CFLAGS)
+
 AC_CHECK_FUNC(lseek64,[AC_DEFINE(HAVE_LSEEK64, [1], [lseek64 is present])],[AX_COMPILE_CHECK_SIZEOF(off_t)])
-AC_CHECK_FUNCS([posix_fallocate posix_fadvise sync_file_range])
+AC_CHECK_FUNCS([posix_fallocate posix_fadvise sync_file_range fork])
 
 
 dnl legacy 32bit ID mode
 AC_ARG_ENABLE([64bit-ids],
     AS_HELP_STRING([--disable-64bit-ids], [Disable 64bit IDs for OSM IDs]), 
-    [], [ AC_DEFINE(OSMID64, [1], [Enable 64bit OSM IDs])])
+    [ if test "$enableval" = "yes"
+      then
+        AC_DEFINE(OSMID64, [1], [Enable 64bit OSM IDs])
+      fi
+    ], [ AC_DEFINE(OSMID64, [1], [Enable 64bit OSM IDs])])
 
 
 dnl Check for libxml2 library
@@ -89,7 +99,7 @@ dnl Decide whether to include PBF import support
 BUILD_READER_PBF=no
 if test "$HAVE_PROTOBUF_C" = "yes"
 then
-  if test "$PROTOC_C" != "false" -o -f $srcdir/fileformat.pb-c.c
+  if test "$PROTOC_C" != "false"
   then
     BUILD_READER_PBF=yes
     AC_DEFINE([BUILD_READER_PBF], [1], [Requirements for building the PBF reader are met])
@@ -108,7 +118,35 @@ fi
 dnl Check for pthread library
 AX_PTHREAD(,[AC_MSG_ERROR([no])])
 
+AX_PROG_LUA([5.0],[],[
+    AX_LUA_HEADERS([
+        AX_LUA_LIBS([
+            AC_DEFINE([HAVE_LUA], [1], [Requirements for lua are met])
+            HAVE_LUA=yes
+        ],[AC_MSG_WARN([cannot find Lua libs])])
+    ],[AC_MSG_WARN([cannot find Lua includes])])
+],[AC_MSG_WARN([cannot find Lua interpreter])])
 
 dnl Generate Makefile
-AC_OUTPUT(Makefile legacy/Makefile)
+AC_OUTPUT(Makefile)
+
+if test "$BUILD_READER_PBF" != "yes"
+then
+    AC_MSG_WARN([
+protobuf libraries not found. You will NOT be able to import PBF files.
+
+To enable PBF support, the protobuf library and compiler are required. 
+Look for packages named: libprotobuf-c0-dev protobuf-c-compiler
+])
+fi
+
+if test "$HAVE_LUA" != "yes"
+then
+    AC_MSG_WARN([
+lua libraries not found. You will NOT be able to use lua scripts for tag transform.
+
+To enable lua support, the lua interpreter and libraries are required. 
+Look for packages named: lua5.2 liblua5.2-dev
+])
+fi
 

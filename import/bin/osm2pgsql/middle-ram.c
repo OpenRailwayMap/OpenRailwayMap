@@ -25,8 +25,6 @@
 /* Scale is chosen such that 40,000 * SCALE < 2^32          */
 #define FIXED_POINT
 
-static int scale = 100;
-
 struct ramWay {
     struct keyval *tags;
     osmid_t *ndids;
@@ -60,24 +58,23 @@ struct ramRel {
 static struct ramWay     *ways[NUM_BLOCKS];
 static struct ramRel     *rels[NUM_BLOCKS];
 
-static int node_blocks;
 static int way_blocks;
 
 static int way_out_count;
 static int rel_out_count;
 
-static inline osmid_t id2block(osmid_t id)
+static osmid_t id2block(osmid_t id)
 {
-    // + NUM_BLOCKS/2 allows for negative IDs
+    /* + NUM_BLOCKS/2 allows for negative IDs */
     return (id >> BLOCK_SHIFT) + NUM_BLOCKS/2;
 }
 
-static inline osmid_t id2offset(osmid_t id)
+static  osmid_t id2offset(osmid_t id)
 {
     return id & (PER_BLOCK-1);
 }
 
-static inline int block2id(int block, int offset)
+static int block2id(int block, int offset)
 {
     return ((block - NUM_BLOCKS/2) << BLOCK_SHIFT) + offset;
 }
@@ -97,7 +94,6 @@ static int ram_ways_set(osmid_t id, osmid_t *nds, int nd_count, struct keyval *t
             exit_nicely();
         }
         way_blocks++;
-        //fprintf(stderr, "\tways(%zuMb)\n", way_blocks * sizeof(struct ramWay) * PER_BLOCK / 1000000);
     }
 
     if (ways[block][offset].ndids) {
@@ -131,6 +127,7 @@ static int ram_ways_set(osmid_t id, osmid_t *nds, int nd_count, struct keyval *t
 static int ram_relations_set(osmid_t id, struct member *members, int member_count, struct keyval *tags)
 {
     struct keyval *p;
+    struct member *ptr;
     int block  = id2block(id);
     int offset = id2offset(id);
     if (!rels[block]) {
@@ -158,7 +155,7 @@ static int ram_relations_set(osmid_t id, struct member *members, int member_coun
     if (!rels[block][offset].members)
       free( rels[block][offset].members );
 
-    struct member *ptr = malloc(sizeof(struct member) * member_count);
+    ptr = malloc(sizeof(struct member) * member_count);
     if (ptr) {
         memcpy( ptr, members, sizeof(struct member) * member_count );
         rels[block][offset].member_count = member_count;
@@ -282,15 +279,17 @@ static int ram_ways_get(osmid_t id, struct keyval *tags_ptr, struct osmNode **no
             *count_ptr = ndCount;
             return 0;
         }
+        free(nodes);
     }
     return 1;
 }
 
 static int ram_ways_get_list(osmid_t *ids, int way_count, osmid_t **way_ids, struct keyval *tag_ptr, struct osmNode **node_ptr, int *count_ptr) {
     int count = 0;
+    int i;
     *way_ids = malloc( sizeof(osmid_t) * (way_count + 1));
     initList(&(tag_ptr[count]));
-    for (int i = 0; i < way_count; i++) {
+    for (i = 0; i < way_count; i++) {
         
         if (ram_ways_get(ids[i], &(tag_ptr[count]), &(node_ptr[count]), &(count_ptr[count])) == 0) {
             (*way_ids)[count] = ids[i];
@@ -301,7 +300,7 @@ static int ram_ways_get_list(osmid_t *ids, int way_count, osmid_t **way_ids, str
     return count;
 }
 
-// Marks the way so that iterate ways skips it
+/* Marks the way so that iterate ways skips it */
 static int ram_ways_done(osmid_t id)
 {
     int block = id2block(id), offset = id2offset(id);
@@ -325,9 +324,9 @@ static void ram_end(void)
 
 static int ram_start(const struct output_options *options)
 {
-    // latlong has a range of +-180, mercator +-20000
-    // The fixed poing scaling needs adjusting accordingly to
-    // be stored accurately in an int
+    /* latlong has a range of +-180, mercator +-20000
+       The fixed poing scaling needs adjusting accordingly to
+       be stored accurately in an int */
     scale = options->scale;
 
     init_node_ram_cache( options->alloc_chunkwise, options->cache, scale);

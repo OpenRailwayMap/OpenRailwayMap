@@ -15,6 +15,7 @@
 #include <assert.h>
 #include <math.h>
 #include <time.h>
+#include <errno.h>
 
 #ifdef HAVE_PTHREAD
 #include <pthread.h>
@@ -43,8 +44,6 @@
 #include "node-persistent-cache.h"
 #include "pgsql.h"
 
-static int scale = 100;
-
 struct progress_info {
   time_t start;
   time_t end;
@@ -57,7 +56,6 @@ enum table_id {
 } ;
 
 struct table_desc {
-    //enum table_id table;
     const char *name;
     const char *start;
     const char *create;
@@ -76,7 +74,7 @@ struct table_desc {
 
 static struct table_desc tables [] = {
     { 
-        //table = t_node,
+        /*table = t_node,*/
          .name = "%p_nodes",
         .start = "BEGIN;\n",
 #ifdef FIXED_POINT
@@ -87,19 +85,14 @@ static struct table_desc tables [] = {
       .prepare = "PREPARE insert_node (" POSTGRES_OSMID_TYPE ", double precision, double precision, text[]) AS INSERT INTO %p_nodes VALUES ($1,$2,$3,$4);\n"
 #endif
                "PREPARE get_node (" POSTGRES_OSMID_TYPE ") AS SELECT lat,lon,tags FROM %p_nodes WHERE id = $1 LIMIT 1;\n"
+               "PREPARE get_node_list(" POSTGRES_OSMID_TYPE "[]) AS SELECT id, lat, lon FROM %p_nodes WHERE id = ANY($1::" POSTGRES_OSMID_TYPE "[])",
                "PREPARE delete_node (" POSTGRES_OSMID_TYPE ") AS DELETE FROM %p_nodes WHERE id = $1;\n",
-.prepare_intarray = // This is to fetch lots of nodes simultaneously, in order including duplicates. The commented out version doesn't do duplicates
-                  // It's not optimal as it does a Nested Loop / Index Scan which is suboptimal for large arrays
-                  //"PREPARE get_node_list(int[]) AS SELECT id, lat, lon FROM %p_nodes WHERE id = ANY($1::int4[]) ORDER BY $1::int4[] # id\n",
-		 //"PREPARE get_node_list(" POSTGRES_OSMID_TYPE "[]) AS select y.id, y.lat, y.lon from (select i, ($1)[i] as l_id from (select generate_series(1,array_length($1, 1)) as i) x) z, "
-		 //                                    "(select * from %p_nodes where id = ANY($1)) y where l_id=id order by i;\n",
-		 "PREPARE get_node_list(" POSTGRES_OSMID_TYPE "[]) AS SELECT id, lat, lon FROM %p_nodes WHERE id = ANY($1::" POSTGRES_OSMID_TYPE "[])",
          .copy = "COPY %p_nodes FROM STDIN;\n",
       .analyze = "ANALYZE %p_nodes;\n",
          .stop = "COMMIT;\n"
     },
     { 
-        //table = t_way,
+        /*table = t_way,*/
          .name = "%p_ways",
         .start = "BEGIN;\n",
        .create = "CREATE %m TABLE %p_ways (id " POSTGRES_OSMID_TYPE " PRIMARY KEY {USING INDEX TABLESPACE %i}, nodes " POSTGRES_OSMID_TYPE "[] not null, tags text[], pending boolean not null) {TABLESPACE %t};\n",
@@ -111,13 +104,14 @@ static struct table_desc tables [] = {
                "PREPARE way_done(" POSTGRES_OSMID_TYPE ") AS UPDATE %p_ways SET pending = false WHERE id = $1;\n"
                "PREPARE pending_ways AS SELECT id FROM %p_ways WHERE pending;\n"
                "PREPARE delete_way(" POSTGRES_OSMID_TYPE ") AS DELETE FROM %p_ways WHERE id = $1;\n",
-.prepare_intarray = "PREPARE node_changed_mark(" POSTGRES_OSMID_TYPE ") AS UPDATE %p_ways SET pending = true WHERE nodes && ARRAY[$1] AND NOT pending;\n",
+.prepare_intarray = "PREPARE node_changed_mark(" POSTGRES_OSMID_TYPE ") AS UPDATE %p_ways SET pending = true WHERE nodes && ARRAY[$1] AND NOT pending;\n"
+               "PREPARE rel_delete_mark(" POSTGRES_OSMID_TYPE ") AS UPDATE %p_ways SET pending = true WHERE id IN (SELECT unnest(parts[way_off+1:rel_off]) FROM %p_rels WHERE id = $1) AND NOT pending;\n",
          .copy = "COPY %p_ways FROM STDIN;\n",
       .analyze = "ANALYZE %p_ways;\n",
          .stop =  "COMMIT;\n"
     },
     { 
-        //table = t_rel,
+        /*table = t_rel,*/
          .name = "%p_rels",
         .start = "BEGIN;\n",
        .create = "CREATE %m TABLE %p_rels(id " POSTGRES_OSMID_TYPE " PRIMARY KEY {USING INDEX TABLESPACE %i}, way_off int2, rel_off int2, parts " POSTGRES_OSMID_TYPE "[], members text[], tags text[], pending boolean not null) {TABLESPACE %t};\n",
@@ -139,7 +133,6 @@ static struct table_desc tables [] = {
 };
 
 static const int num_tables = sizeof(tables)/sizeof(tables[0]);
-static int warn_node_order;
 static struct table_desc *node_table = &tables[t_node];
 static struct table_desc *way_table  = &tables[t_way];
 static struct table_desc *rel_table  = &tables[t_rel];
@@ -147,6 +140,13 @@ static struct table_desc *rel_table  = &tables[t_rel];
 static int Append;
 
 const struct output_options *out_options;
+
+#define HELPER_STATE_UNINITIALIZED -1
+#define HELPER_STATE_FORKED -2
+#define HELPER_STATE_RUNNING 0
+#define HELPER_STATE_FINISHED 1
+#define HELPER_STATE_CONNECTED 2
+#define HELPER_STATE_FAILED 3
 
 static int pgsql_connect(const struct output_options *options) {
     int i;
@@ -158,7 +158,7 @@ static int pgsql_connect(const struct output_options *options) {
         /* Check to see that the backend connection was successfully made */
         if (PQstatus(sql_conn) != CONNECTION_OK) {
             fprintf(stderr, "Connection to database failed: %s\n", PQerrorMessage(sql_conn));
-            exit_nicely();
+            return 1;
         }
         tables[i].sql_conn = sql_conn;
 
@@ -228,7 +228,7 @@ _restart:
 }
 
 /* Special escape routine for escaping strings in array constants: double quote, backslash,newline, tab*/
-static inline char *escape_tag( char *ptr, const char *in, int escape )
+static char *escape_tag( char *ptr, const char *in, int escape )
 {
   while( *in )
   {
@@ -362,7 +362,6 @@ static void pgsql_parse_tags( const char *string, struct keyval *tags )
   if( *string == '\0' )
     return;
     
-//  fprintf( stderr, "Parsing: %s\n", string );
   if( *string++ != '{' )
     return;
   while( *string != '}' )
@@ -373,7 +372,6 @@ static void pgsql_parse_tags( const char *string, struct keyval *tags )
     string = decode_upto( string, val );
     /* String points to the comma or closing '}' */
     addItem( tags, key, val, 0 );
-//    fprintf( stderr, "Extracted item: %s=%s\n", key, val );
     if( *string == ',' )
       string++;
   }
@@ -405,16 +403,19 @@ static void pgsql_parse_nodes(const char *src, osmid_t *nds, int nd_count )
 
 static int pgsql_endCopy( struct table_desc *table)
 {
+    PGresult *res;
+    PGconn *sql_conn;
+    int stop;
     /* Terminate any pending COPY */
-     if (table->copyMode) {
-        PGconn *sql_conn = table->sql_conn;
-        int stop = PQputCopyEnd(sql_conn, NULL);
+    if (table->copyMode) {
+        sql_conn = table->sql_conn;
+        stop = PQputCopyEnd(sql_conn, NULL);
         if (stop != 1) {
             fprintf(stderr, "COPY_END for %s failed: %s\n", table->copy, PQerrorMessage(sql_conn));
             exit_nicely();
         }
 
-        PGresult *res = PQgetResult(sql_conn);
+        res = PQgetResult(sql_conn);
         if (PQresultStatus(res) != PGRES_COMMAND_OK) {
             fprintf(stderr, "COPY_END for %s failed: %s\n", table->copy, PQerrorMessage(sql_conn));
             PQclear(res);
@@ -467,6 +468,8 @@ static int middle_nodes_set(osmid_t id, double lat, double lon, struct keyval *t
     return (out_options->flat_node_cache_enabled) ? persistent_cache_nodes_set(id, lat, lon) : pgsql_nodes_set(id, lat, lon, tags);
 }
 
+
+#if 0
 static int pgsql_nodes_get(struct osmNode *out, osmid_t id)
 {
     PGresult   *res;
@@ -497,26 +500,27 @@ static int pgsql_nodes_get(struct osmNode *out, osmid_t id)
     PQclear(res);
     return 0;
 }
+#endif
 
+/* Currently not used 
 static int middle_nodes_get(struct osmNode *out, osmid_t id)
 {
-    /* Check cache first */
+    / * Check cache first * /
     if( ram_cache_nodes_get( out, id ) == 0 )
         return 0;
 
     return (out_options->flat_node_cache_enabled) ? persistent_cache_nodes_get(out, id) : pgsql_nodes_get(out, id);
-}
+}*/
+
 
 /* This should be made more efficient by using an IN(ARRAY[]) construct */
 static int pgsql_nodes_get_list(struct osmNode *nodes, osmid_t *ndids, int nd_count)
 {
     char tmp[16];
     char *tmp2; 
-    int count, count2, countDB, countPG, i,j;
-    osmid_t id;
+    int count,  countDB, countPG, i,j;
     osmid_t *ndidspg;
     struct osmNode *nodespg;
-    struct osmNode *nodes2;
     char const *paramValues[1]; 
 
     PGresult *res;
@@ -528,7 +532,7 @@ static int pgsql_nodes_get_list(struct osmNode *nodes, osmid_t *ndids, int nd_co
     if (tmp2 == NULL) return 0; /*failed to allocate memory, return */
 
     /* create a list of ids in tmp2 to query the database  */
-    snprintf(tmp2, sizeof(tmp2), "{");
+    sprintf(tmp2, "{");
     for( i=0; i<nd_count; i++ ) {
         /* Check cache first */ 
         if( ram_cache_nodes_get( &nodes[i], ndids[i]) == 0 ) {
@@ -540,7 +544,7 @@ static int pgsql_nodes_get_list(struct osmNode *nodes, osmid_t *ndids, int nd_co
         nodes[i].lat = NAN;
         nodes[i].lon = NAN;
         snprintf(tmp, sizeof(tmp), "%" PRIdOSMID ",", ndids[i]);
-        strcat(tmp2,tmp);
+        strncat(tmp2, tmp, sizeof(char)*(nd_count*16 - 2));
     }
     tmp2[strlen(tmp2) - 1] = '}'; /* replace last , with } to complete list of ids*/
  
@@ -688,7 +692,9 @@ static int pgsql_ways_get(osmid_t id, struct keyval *tags, struct osmNode **node
     char tmp[16];
     char const *paramValues[1];
     PGconn *sql_conn = way_table->sql_conn;
-
+    int num_nodes;
+    osmid_t *list;
+    
     /* Make sure we're out of copy mode */
     pgsql_endCopy( way_table );
 
@@ -704,8 +710,8 @@ static int pgsql_ways_get(osmid_t id, struct keyval *tags, struct osmNode **node
 
     pgsql_parse_tags( PQgetvalue(res, 0, 1), tags );
 
-    int num_nodes = strtol(PQgetvalue(res, 0, 2), NULL, 10);
-    osmid_t *list = alloca(sizeof(osmid_t)*num_nodes );
+    num_nodes = strtol(PQgetvalue(res, 0, 2), NULL, 10);
+    list = alloca(sizeof(osmid_t)*num_nodes );
     *nodes_ptr = malloc(sizeof(struct osmNode) * num_nodes);
     pgsql_parse_nodes( PQgetvalue(res, 0, 0), list, num_nodes);
     
@@ -721,9 +727,10 @@ static int pgsql_ways_get_list(osmid_t *ids, int way_count, osmid_t **way_ids, s
     char tmp[16];
     char *tmp2; 
     int count, countPG, i, j;
-    osmid_t id;
     osmid_t *wayidspg;
-    char const *paramValues[1]; 
+    char const *paramValues[1];
+    int num_nodes;
+    osmid_t *list;
 
     PGresult *res;
     PGconn *sql_conn = way_table->sql_conn;
@@ -735,10 +742,10 @@ static int pgsql_ways_get_list(osmid_t *ids, int way_count, osmid_t **way_ids, s
     if (tmp2 == NULL) return 0; /*failed to allocate memory, return */
 
     /* create a list of ids in tmp2 to query the database  */
-    snprintf(tmp2, sizeof(tmp2), "{");
+    sprintf(tmp2, "{");
     for( i=0; i<way_count; i++ ) {
         snprintf(tmp, sizeof(tmp), "%" PRIdOSMID ",", ids[i]);
-        strcat(tmp2,tmp);
+        strncat(tmp2,tmp, sizeof(char)*(way_count*16 - 2));
     }
     tmp2[strlen(tmp2) - 1] = '}'; /* replace last , with } to complete list of ids*/
   
@@ -767,8 +774,8 @@ static int pgsql_ways_get_list(osmid_t *ids, int way_count, osmid_t **way_ids, s
                 (*way_ids)[count] = ids[i];
                 pgsql_parse_tags( PQgetvalue(res, j, 2), &(tags[count]) );
 
-                int num_nodes = strtol(PQgetvalue(res, j, 3), NULL, 10);
-                osmid_t *list = alloca(sizeof(osmid_t)*num_nodes );
+                num_nodes = strtol(PQgetvalue(res, j, 3), NULL, 10);
+                list = alloca(sizeof(osmid_t)*num_nodes );
                 nodes_ptr[count] = malloc(sizeof(struct osmNode) * num_nodes);
                 pgsql_parse_nodes( PQgetvalue(res, j, 1), list, num_nodes);
                 
@@ -832,8 +839,13 @@ static void pgsql_iterate_ways(int (*callback)(osmid_t id, struct keyval *tags, 
     time(&start);
 #if HAVE_MMAP
     struct progress_info *info = 0;
-    if(noProcs > 1)
+    if(noProcs > 1) {
         info = mmap(0, sizeof(struct progress_info)*noProcs, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANONYMOUS, -1, 0);
+        info[0].finished = HELPER_STATE_CONNECTED;
+        for (i = 1; i < noProcs; i++) {
+            info[i].finished = HELPER_STATE_UNINITIALIZED; /* Register that the process was not yet initialised; */
+        }
+    }
 #endif
     fprintf(stderr, "\nGoing over pending ways...\n");
 
@@ -852,24 +864,41 @@ static void pgsql_iterate_ways(int (*callback)(osmid_t id, struct keyval *tags, 
      * each of which independently goes through an equal subset of the pending ways array
      */
     fprintf(stderr, "\nUsing %i helper-processes\n", noProcs);
+#ifdef HAVE_FORK
     for (p = 1; p < noProcs; p++) {
         pid=fork();
-        if (pid==0) break;
-        if (pid==-1) {
-            fprintf(stderr,"WARNING: Failed to fork helper processes. Falling back to only using %i \n", p);
-            noProcs = p;
+        if (pid==0) {
+#if HAVE_MMAP
+            info[p].finished = HELPER_STATE_FORKED;
+#endif            
             break;
         }
+        if (pid==-1) {
+#if HAVE_MMAP
+            info[p].finished = HELPER_STATE_FAILED;
+            fprintf(stderr,"WARNING: Failed to fork helper process %i: %s. Trying to recover.\n", p, strerror(errno));
+#else
+            fprintf(stderr,"ERROR: Failed to fork helper process %i: %s. Can't recover!\n", p, strerror(errno));
+            exit_nicely();
+#endif            
+        }
     }
+#endif
     if ((pid == 0) && (noProcs > 1)) {
         /* After forking, need to reconnect to the postgresql db */
-        out_options->out->connect(out_options, 1);
-        pgsql_connect(out_options);
+        if ((pgsql_connect(out_options) != 0) || (out_options->out->connect(out_options, 1) != 0)) {
+#if HAVE_MMAP
+            info[p].finished = HELPER_STATE_FAILED;
+#else
+            fprintf(stderr,"\n\n!!!FATAL: Helper process failed, but can't compensate. Your DB will be broken and corrupt!!!!\n\n");
+#endif
+            exit_nicely();
+        };
     } else {
         p = 0;
     }
 
-    if (out_options->flat_node_cache_enabled) init_node_persistent_cache(out_options,1); //at this point we always want to be in append mode, to not delete and recreate the node cache file
+    if (out_options->flat_node_cache_enabled) init_node_persistent_cache(out_options,1); /* at this point we always want to be in append mode, to not delete and recreate the node cache file */
 
     /* Only start an extended transaction on the ways table,
      * which should cover the bulk of the update statements.
@@ -887,7 +916,59 @@ static void pgsql_iterate_ways(int (*callback)(osmid_t id, struct keyval *tags, 
         tables[t_way].transactionMode = 1;
     }
 
-    //fprintf(stderr, "\nIterating ways\n");
+#if HAVE_MMAP
+    if (noProcs > 1) {
+        info[p].finished = HELPER_STATE_CONNECTED;
+        /* Syncronize all processes to make sure they have all run through the initialisation steps */
+        int all_processes_initialised = 0;
+        while (all_processes_initialised == 0) {
+            all_processes_initialised = 1;
+            for (i = 0; i < noProcs; i++) {
+                if (info[i].finished < 0) {
+                    all_processes_initialised = 0;
+                    sleep(1);
+                }
+            }
+        }
+        
+        /* As we process the pending ways in steps of noProcs,
+           we need to make sure that all processes correctly forked
+           and have connected to the db. Otherwise we need to readjust
+           the step size of going through the pending ways array */
+        int noProcsTmp = noProcs;
+        int pTmp = p;
+        for (i = 0; i < noProcs; i++) {
+            if (info[i].finished == HELPER_STATE_FAILED) {
+                noProcsTmp--;
+                if (i < p) pTmp--;
+            }
+        }
+        info[p].finished = HELPER_STATE_RUNNING;
+        p = pTmp; /* reset the process number to account for failed processes */
+        
+        /* As we have potentially changed the process number assignment,
+           we need to synchronize on all processes having performed the reassignment
+           as otherwise multiple process might have the same number and overwrite
+           the info fields incorrectly.
+        */
+        all_processes_initialised = 0;
+        while (all_processes_initialised == 0) { 
+            all_processes_initialised = 1; 
+            for (i = 0; i < noProcs; i++) { 
+                if (info[i].finished == HELPER_STATE_CONNECTED) { 
+                    /* Process is connected, but hasn't performed the re-assignment of p. */
+                    all_processes_initialised = 0; 
+                    sleep(1); 
+                    break; 
+                } 
+            }
+        }
+        noProcs = noProcsTmp;
+    }
+#endif
+
+    /* some spaces at end, so that processings outputs get cleaned if already existing */
+    fprintf(stderr, "\rHelper process %i out of %i initialised          \n", p, noProcs);
     /* Use a stride length of the number of worker processes,
        starting with an offset for each worker process p */
     for (i = p; i < PQntuples(res_ways); i+= noProcs) {
@@ -908,7 +989,7 @@ static void pgsql_iterate_ways(int (*callback)(osmid_t id, struct keyval *tags, 
                 f.start = start;
                 f.end = end;
                 f.count = count;
-                f.finished = 0;
+                f.finished = HELPER_STATE_RUNNING;
                 info[p] = f;
                 for(n = 0; n < noProcs; ++n)
                 {
@@ -1000,6 +1081,7 @@ static int pgsql_rels_set(osmid_t id, struct member *members, int member_count, 
     char *buffer;
     int i;
     struct keyval member_list;
+    char buf[64];
     
     osmid_t node_parts[member_count],
             way_parts[member_count],
@@ -1019,7 +1101,6 @@ static int pgsql_rels_set(osmid_t id, struct member *members, int member_count, 
         case OSMTYPE_RELATION: rel_parts[rel_count++] = members[i].id; tag = 'r'; break;
         default: fprintf( stderr, "Internal error: Unknown member type %d\n", members[i].type ); exit_nicely();
       }
-      char buf[64];
       sprintf( buf, "%c%" PRIdOSMID, tag, members[i].id );
       addItem( &member_list, buf, members[i].role, 0 );
     }
@@ -1066,7 +1147,12 @@ static int pgsql_rels_get(osmid_t id, struct member **members, int *member_count
     char const *paramValues[1];
     PGconn *sql_conn = rel_table->sql_conn;
     struct keyval member_temp;
-
+    char tag;
+    int num_members;
+    struct member *list;
+    int i=0;
+    struct keyval *item;
+    
     /* Make sure we're out of copy mode */
     pgsql_endCopy( rel_table );
 
@@ -1085,11 +1171,9 @@ static int pgsql_rels_get(osmid_t id, struct member **members, int *member_count
     initList(&member_temp);
     pgsql_parse_tags( PQgetvalue(res, 0, 0), &member_temp );
 
-    int num_members = strtol(PQgetvalue(res, 0, 2), NULL, 10);
-    struct member *list = malloc( sizeof(struct member)*num_members );
+    num_members = strtol(PQgetvalue(res, 0, 2), NULL, 10);
+    list = malloc( sizeof(struct member)*num_members );
     
-    int i=0;
-    struct keyval *item;
     while( (item = popItem(&member_temp)) )
     {
         if( i >= num_members )
@@ -1097,7 +1181,7 @@ static int pgsql_rels_get(osmid_t id, struct member **members, int *member_count
             fprintf(stderr, "Unexpected member_count reading relation %" PRIdOSMID "\n", id);
             exit_nicely();
         }
-        char tag = item->key[0];
+        tag = item->key[0];
         list[i].type = (tag == 'n')?OSMTYPE_NODE:(tag == 'w')?OSMTYPE_WAY:(tag == 'r')?OSMTYPE_RELATION:-1;
         list[i].id = strtoosmid(item->key+1, NULL, 10 );
         list[i].role = strdup( item->value );
@@ -1132,10 +1216,12 @@ static int pgsql_rels_delete(osmid_t osm_id)
     char const *paramValues[1];
     char buffer[64];
     /* Make sure we're out of copy mode */
+    pgsql_endCopy( way_table );
     pgsql_endCopy( rel_table );
     
     sprintf( buffer, "%" PRIdOSMID, osm_id );
     paramValues[0] = buffer;
+    pgsql_execPrepared(way_table->sql_conn, "rel_delete_mark", 1, paramValues, PGRES_COMMAND_OK );
     pgsql_execPrepared(rel_table->sql_conn, "delete_rel", 1, paramValues, PGRES_COMMAND_OK );
     return 0;
 }
@@ -1153,8 +1239,13 @@ static void pgsql_iterate_relations(int (*callback)(osmid_t id, struct member *m
     time(&start);
 #if HAVE_MMAP
     struct progress_info *info = 0;
-    if(noProcs > 1)
+    if(noProcs > 1) {
         info = mmap(0, sizeof(struct progress_info)*noProcs, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANONYMOUS, -1, 0);
+        info[0].finished = HELPER_STATE_CONNECTED; 
+        for (i = 1; i < noProcs; i++) { 
+            info[i].finished = HELPER_STATE_UNINITIALIZED; /* Register that the process was not yet initialised; */
+        }
+    }
 #endif
     fprintf(stderr, "\nGoing over pending relations...\n");
 
@@ -1168,25 +1259,91 @@ static void pgsql_iterate_relations(int (*callback)(osmid_t id, struct member *m
     fprintf(stderr, "\t%i relations are pending\n", PQntuples(res_rels)); 
 
     fprintf(stderr, "\nUsing %i helper-processes\n", noProcs);
+    pid = 0;
+#ifdef HAVE_FORK
     for (p = 1; p < noProcs; p++) {
         pid=fork();
-        if (pid==0) break;
-        if (pid==-1) {
-            fprintf(stderr,"WARNING: Failed to fork helper processes. Falling back to only using %i \n", p);
-            noProcs = p;
+        if (pid==0) {
+#if HAVE_MMAP 
+            info[p].finished = HELPER_STATE_FORKED; 
+#endif
             break;
         }
+        if (pid==-1) {
+#if HAVE_MMAP 
+            info[p].finished = HELPER_STATE_FAILED; 
+            fprintf(stderr,"WARNING: Failed to fork helper processes %i. Trying to recover.\n", p); 
+#else 
+            fprintf(stderr,"ERROR: Failed to fork helper processes. Can't recover! \n"); 
+            exit_nicely(); 
+#endif 
+        }
     }
+#endif
     if ((pid == 0) && (noProcs > 1)) {
-        out_options->out->connect(out_options, 0);
-        pgsql_connect(out_options);
+        if ((out_options->out->connect(out_options, 0) != 0) || (pgsql_connect(out_options) != 0)) {
+#if HAVE_MMAP
+            info[p].finished = HELPER_STATE_FAILED;
+#endif
+            exit_nicely();
+        };
     } else {
         p = 0;
     }
 
-    if (out_options->flat_node_cache_enabled) init_node_persistent_cache(out_options, 1); //at this point we always want to be in append mode, to not delete and recreate the node cache file
+    if (out_options->flat_node_cache_enabled) init_node_persistent_cache(out_options, 1); /* at this point we always want to be in append mode, to not delete and recreate the node cache file */
 
-    //fprintf(stderr, "\nIterating ways\n");
+#if HAVE_MMAP 
+    if (noProcs > 1) { 
+        info[p].finished = HELPER_STATE_CONNECTED; 
+        /* Syncronize all processes to make sure they have all run through the initialisation steps */ 
+        int all_processes_initialised = 0; 
+        while (all_processes_initialised == 0) { 
+            all_processes_initialised = 1; 
+            for (i = 0; i < noProcs; i++) { 
+                if (info[i].finished < 0) { 
+                    all_processes_initialised = 0; 
+                    sleep(1); 
+                } 
+            } 
+        } 
+         
+        /* As we process the pending ways in steps of noProcs, 
+           we need to make sure that all processes correctly forked 
+           and have connected to the db. Otherwise we need to readjust 
+           the step size of going through the pending ways array */ 
+        int noProcsTmp = noProcs; 
+        int pTmp = p; 
+        for (i = 0; i < noProcs; i++) { 
+            if (info[i].finished == HELPER_STATE_FAILED) { 
+                noProcsTmp--; 
+                if (i < p) pTmp--; 
+            } 
+        } 
+        info[p].finished = HELPER_STATE_RUNNING; 
+        p = pTmp; /* reset the process number to account for failed processes */
+         
+        /* As we have potentially changed the process number assignment,
+           we need to synchronize on all processes having performed the reassignment 
+           as otherwise multiple process might have the same number and overwrite 
+           the info fields incorrectly. 
+        */ 
+        all_processes_initialised = 0; 
+        while (all_processes_initialised == 0) {  
+            all_processes_initialised = 1;  
+            for (i = 0; i < noProcs; i++) {  
+                if (info[i].finished == HELPER_STATE_CONNECTED) {  
+                    /* Process is connected, but hasn't performed the re-assignment of p. */
+                    all_processes_initialised = 0;  
+                    sleep(1);  
+                    break;  
+                }  
+            } 
+        } 
+        noProcs = noProcsTmp; 
+    } 
+#endif
+
     for (i = p; i < PQntuples(res_rels); i+= noProcs) {
         osmid_t id = strtoosmid(PQgetvalue(res_rels, i, 0), NULL, 10);
         struct keyval tags;
@@ -1205,7 +1362,7 @@ static void pgsql_iterate_relations(int (*callback)(osmid_t id, struct member *m
                 f.start = start;
                 f.end = end;
                 f.count = count;
-                f.finished = 0;
+                f.finished = HELPER_STATE_RUNNING;
                 info[p] = f;
                 for(n = 0; n < noProcs; ++n)
                 {
@@ -1303,7 +1460,7 @@ static void pgsql_end(void)
     for (i=0; i<num_tables; i++) {
         PGconn *sql_conn = tables[i].sql_conn;
  
-        // Commit transaction
+        /* Commit transaction */
         if (tables[i].stop && tables[i].transactionMode) {
             pgsql_exec(sql_conn, PGRES_COMMAND_OK, "%s", tables[i].stop);
             tables[i].transactionMode = 0;
@@ -1334,14 +1491,17 @@ static void pgsql_end(void)
  *
  * This is used for constructing SQL queries with proper tablespace settings.
  */
-static inline void set_prefix_and_tbls(const struct output_options *options, const char **string)
+static void set_prefix_and_tbls(const struct output_options *options, const char **string)
 {
     char buffer[1024];
-    if (*string == NULL) return;
-    const char *source = *string;
-    char *dest = buffer;
+    const char *source;
+    char *dest;
     char *openbrace = NULL;
     int copied = 0;
+
+    if (*string == NULL) return;
+    source = *string;
+    dest = buffer;
 
     while (*source) {
         if (*source == '{') {
@@ -1528,7 +1688,7 @@ static int pgsql_start(const struct output_options *options)
             pgsql_exec(sql_conn, PGRES_COMMAND_OK, "%s", tables[i].prepare);
         }
 
-        if (tables[i].prepare_intarray) {
+        if (Append && tables[i].prepare_intarray) {
             pgsql_exec(sql_conn, PGRES_COMMAND_OK, "%s", tables[i].prepare_intarray);
         }
 
@@ -1562,26 +1722,24 @@ static void *pgsql_stop_one(void *arg)
 
     fprintf(stderr, "Stopping table: %s\n", table->name);
     pgsql_endCopy(table);
-    //if (table->stop) 
-    //    pgsql_exec(sql_conn, PGRES_COMMAND_OK, "%s", table->stop);
     time(&start);
     if (!out_options->droptemp)
     {
         if (build_indexes && table->array_indexes) {
             char *buffer = (char *) malloc(strlen(table->array_indexes) + 99);
-            // we need to insert before the TABLESPACE setting, if any
+            /* we need to insert before the TABLESPACE setting, if any */
             char *insertpos = strstr(table->array_indexes, "TABLESPACE");
             if (!insertpos) insertpos = strchr(table->array_indexes, ';');
 
-            // automatically insert FASTUPDATE=OFF when creating,
-            // indexes for PostgreSQL 8.4 and higher
-            // see http://lists.openstreetmap.org/pipermail/dev/2011-January/021704.html
+            /* automatically insert FASTUPDATE=OFF when creating,
+               indexes for PostgreSQL 8.4 and higher
+               see http://lists.openstreetmap.org/pipermail/dev/2011-January/021704.html */
             if (insertpos && PQserverVersion(sql_conn) >= 80400) {
                 char old = *insertpos;
                 fprintf(stderr, "Building index on table: %s (fastupdate=off)\n", table->name);
-                *insertpos = 0; // temporary null byte for following strcpy operation
+                *insertpos = 0; /* temporary null byte for following strcpy operation */
                 strcpy(buffer, table->array_indexes);
-                *insertpos = old; // restore old content
+                *insertpos = old; /* restore old content */
                 strcat(buffer, " WITH (FASTUPDATE=OFF)");
                 strcat(buffer, insertpos);
             } else {

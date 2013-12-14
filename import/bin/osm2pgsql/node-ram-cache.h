@@ -16,7 +16,8 @@
 /* Store +-20,000km Mercator co-ordinates as fixed point 32bit number with maximum precision */
 /* Scale is chosen such that 40,000 * SCALE < 2^32          */
 #define FIXED_POINT
-#define DOUBLE_TO_FIX(x) ((int)((x) * scale))
+static int scale = 100;
+#define DOUBLE_TO_FIX(x) ((int)((x) * scale + 0.4))
 #define FIX_TO_DOUBLE(x) (((double)x) / scale)
 
 #define UNUSED  __attribute__ ((unused))

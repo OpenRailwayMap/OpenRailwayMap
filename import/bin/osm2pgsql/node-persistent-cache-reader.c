@@ -24,7 +24,7 @@ void exit_nicely()
 }
 
 void test_get_node_list(int itterations, int max_size, int process_number) {
-    int i, node_cnt, node_cnt_total;
+    int i, j, node_cnt, node_cnt_total;
     struct osmNode *nodes;
     struct timeval start, stop;
     struct timeval start_overall, stop_overall;
@@ -39,7 +39,7 @@ void test_get_node_list(int itterations, int max_size, int process_number) {
         printf("Process %i: Getting %i nodes....\n", process_number, node_cnt);
         nodes = malloc(sizeof(struct osmNode) * node_cnt);
         osmids = malloc(sizeof(osmid_t) * node_cnt);
-        for (int j = 0; j < node_cnt; j++) {
+        for (j = 0; j < node_cnt; j++) {
             osmids[j] = random() % (1 << 31);
         }
         gettimeofday(&start, NULL);
@@ -47,6 +47,8 @@ void test_get_node_list(int itterations, int max_size, int process_number) {
         gettimeofday(&stop, NULL);
         double duration = ((stop.tv_sec - start.tv_sec)*1000000.0 + (stop.tv_usec - start.tv_usec))/1000000.0;
         printf("Process %i: Got nodes in %f at a rate of %f/s\n", process_number, duration, node_cnt / duration);
+        free(nodes);
+        free(osmids);
     }
     gettimeofday(&stop_overall, NULL);
     double duration = ((stop_overall.tv_sec - start_overall.tv_sec)*1000000.0 + (stop_overall.tv_usec - start_overall.tv_usec))/1000000.0;
@@ -58,7 +60,7 @@ int main(int argc, char *argv[]) {
 	struct output_options options;
 	struct osmNode node;
 	struct osmNode *nodes;
-	struct timeval start, stop;
+	struct timeval start;
 	osmid_t *osmids;
 	int node_cnt;
 	options.append = 1;
@@ -81,15 +83,16 @@ int main(int argc, char *argv[]) {
 			printf("lat: %f / lon: %f\n", nodes[i].lat, nodes[i].lon);
 		}
 	} else if (argc == 2) {
-        char state[128];
+        char * state = malloc(sizeof(char)* 128);
         gettimeofday(&start, NULL);
-        initstate(start.tv_usec, &state, 8);
-        setstate(&state);
+        initstate(start.tv_usec, state, 8);
+        setstate(state);
 
 	    printf("Testing mode\n");
 	    init_node_persistent_cache(&options, 1);
 	    test_get_node_list(10, 200, 0);
 	    shutdown_node_persistent_cache();
+#ifdef HAVE_FORK
 	    printf("Testing using multiple processes\n");
 	    int noProcs = 4;
 	    int pid;
@@ -104,8 +107,8 @@ int main(int argc, char *argv[]) {
 	        }
 	    }
 	    gettimeofday(&start, NULL);
-	    initstate(start.tv_usec, &state, 8);
-	    setstate(&state);
+	    initstate(start.tv_usec, state, 8);
+	    setstate(state);
 	    init_node_persistent_cache(&options, 1);
 	    test_get_node_list(10,200,p);
 
@@ -114,13 +117,11 @@ int main(int argc, char *argv[]) {
 	        fprintf(stderr,"Exiting process %i\n", p);
 	        exit(0);
 	    } else {
-	        //fprintf(stderr,"Counting %i\n", p);
-	        //for (long k = 0; k < (1l << 60); k++) if (k == (1l<<50)) printf(stderr,"SHouldn't be here");
-	        //fprintf(stderr,"Counted\n", p);
-
 	        for (p = 0; p < noProcs; p++) wait(NULL);
 	    }
+        free(state);
 	    fprintf(stderr, "\nAll child processes exited\n");
+#endif
 	} else {
 	    init_node_persistent_cache(&options, 1);
 		if (strstr(argv[2],",") == NULL) {
@@ -150,4 +151,5 @@ int main(int argc, char *argv[]) {
 
 
 	shutdown_node_persistent_cache();
+    return 0;
 }

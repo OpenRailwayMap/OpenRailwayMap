@@ -46,10 +46,12 @@
 /* Parses the action="foo" tags in JOSM change files. Obvisouly not useful from osmChange files */
 static actions_t ParseAction( xmlTextReaderPtr reader, struct osmdata_t *osmdata )
 {
+    actions_t new_action;
+    xmlChar *action;
     if( osmdata->filetype == FILETYPE_OSMCHANGE || osmdata->filetype == FILETYPE_PLANETDIFF )
         return osmdata->action;
-    actions_t new_action = ACTION_NONE;
-    xmlChar *action = xmlTextReaderGetAttribute( reader, BAD_CAST "action" );
+    new_action = ACTION_NONE;
+    action = xmlTextReaderGetAttribute( reader, BAD_CAST "action" );
     if( action == NULL )
         new_action = ACTION_CREATE;
     else if( strcmp((char *)action, "modify") == 0 )
@@ -212,7 +214,7 @@ static void StartElement(xmlTextReaderPtr reader, const xmlChar *name, struct os
         xmlFree(xtype);
     } else if (xmlStrEqual(name, BAD_CAST "add") ||
                xmlStrEqual(name, BAD_CAST "create")) {
-        osmdata->action = ACTION_MODIFY; // Turns all creates into modifies, makes it resiliant against inconsistant snapshots.
+        osmdata->action = ACTION_MODIFY; /* Turns all creates into modifies, makes it resiliant against inconsistant snapshots. */
     } else if (xmlStrEqual(name, BAD_CAST "modify")) {
         osmdata->action = ACTION_MODIFY;
     } else if (xmlStrEqual(name, BAD_CAST "delete")) {
@@ -227,7 +229,7 @@ static void StartElement(xmlTextReaderPtr reader, const xmlChar *name, struct os
         fprintf(stderr, "%s: Unknown element name: %s\n", __FUNCTION__, name);
     }
 
-    // Collect extra attribute information and add as tags
+    /* Collect extra attribute information and add as tags */
     if (osmdata->extra_attributes && (xmlStrEqual(name, BAD_CAST "node") ||
 				      xmlStrEqual(name, BAD_CAST "way") ||
 				      xmlStrEqual(name, BAD_CAST "relation")))
