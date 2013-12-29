@@ -110,11 +110,11 @@ wget -O - http://m.m.i24.cc/osmfilter.c | cc -x c - -o osmfilter
 wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -o osmconvert
 
 # osm2pgsql
-svn co http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/
+git clone https://github.com/openstreetmap/osm2pgsql.git
 patch -b osm2pgsql/expire-tiles.c expire-tiles.diff
 cd osm2pgsql
 ./autogen.sh
-./configure --enable-64bit-ids
+./configure
 sed -i 's/-g -O2/-O2 -march=native -fomit-frame-pointer/' Makefile
 make
 cd ..
@@ -123,41 +123,19 @@ cd $PROJECTPATH/renderer
 npm install canvas@1.0.4
 npm install rbush
 npm install mkdirp
+npm install pg
+npm install byline
+npm install graceful-fs
+npm install http-proxy
 
-# add this rule to your apache configuration for having cache with mod_rewrite
-# <VirtualHost 194.245.35.149:80>
-# DocumentRoot /home/www/sites/194.245.35.149/site/orm
-# ServerName www.openrailwaymap.org
-# AddType text/html .qhtm
-# AddType text/html .php
-# AddHandler qhtm .qhtm
-# AddHandler php5-script .php
-# Options +FollowSymLinks
-# RewriteEngine on
-# RewriteCond /home/www/sites/194.245.35.149/site/orm/%{REQUEST_URI} !-f
-# RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js$ /renderer/vtiler.php?z=$1&x=$2&y=$3
-# RewriteRule /tiles/([0-9]+)/([0-9]+)/([0-9]+)\.js/dirty$ /renderer/vtiler.php?z=$1&x=$2&y=$3
-# </VirtualHost>
-
-# add this virtual host to your apache configuration for proxying request to nodejs server
-# <VirtualHost 194.245.35.149:80>
-# DocumentRoot /home/www/sites/194.245.35.149/site/orm
-# ServerName tiles.openrailwaymap.org
-# Options +FollowSymLinks
-# ProxyRequests off
-# <Proxy *>
-# Order deny,allow
-# Allow from all
-# </Proxy>
-# ProxyPass / http://localhost:9000/
-# ProxyPassReverse / http://localhost:9000/
-# </VirtualHost>
+# modify your apache config, so that apache listens on 127.0.0.1:8080
+# a nodejs proxy script will redirect each request either to apache or the nodejs tileserver
 
 # if not existing, add a locales file for nqo_GN on your system by running these commands:
 # cd /usr/share/i18n/locales
 # cp en_GB nqo_GN
 # vi nqo_GN and replace
-##
+#
 ## title      "English locale for Britain"
 ## source     "RAP"
 ## address    "Sankt J<U00F8>rgens Alle 8, DK-1615 K<U00F8>benhavn V, Danmark"
@@ -181,9 +159,9 @@ npm install mkdirp
 ## category  "en_GB:2000";LC_NAME
 ## category  "en_GB:2000";LC_ADDRESS
 ## category  "en_GB:2000";LC_TELEPHONE
-##
+#
 # with
-##
+#
 ## title      "N'ko locale for Guinea - dirty workaround for LC_MESSAGES"
 ## source     "own"
 ## address    "Germany"
@@ -209,3 +187,13 @@ npm install mkdirp
 ## category  "nqo_GN:2000";LC_TELEPHONE
 ##
 # localedef -f UTF-8 -i nqo_GN nqo_GN
+
+
+# run tileserver and rendering daemon as background processes or in a screen session
+cd $PROJECTPATH/renderer
+node tileserver.js
+node renderd.js
+
+# finally run the nodejs proxy in a screen session or as background process
+cd $PROJECTPATH
+node proxy.js

@@ -13,7 +13,7 @@ function createMap(embed)
 	root = "http://www.openrailwaymap.org/";
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
 	// path to the bitmap tile directory
-	tiledir = "http://tiles.openrailwaymap.org/";
+	tiledir = "http://{s}.tiles.openrailwaymap.org/";
 	// available map rendering styles
 	availableStyles = new Array("standard", "maxspeed", "signals");
 
