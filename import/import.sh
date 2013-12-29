@@ -75,8 +75,7 @@ echo ""
 # prerender lowzoom tiles
 echo "Prerendering tiles"
 echo ""
-cd $PROJECTPATH/renderer
-php prerender-lowlevel.php
+curl "http://localhost:9001/init/"
 echo ""
 
 echo "Finished processing at $(date)."

@@ -73,22 +73,8 @@ rm changes.osc
 # rerendering tiles that changed with this map update
 echo "Rerender expired tiles"
 echo ""
-cd $PROJECTPATH/renderer
 if [ -s $TILELIST ]; then
-	while read LINE; do
-		TILE="${TILESPATH}/${LINE}.js"
-		if [ -f $TILE ]; then
-			rm $TILE
-			rm "${BITMAPTILESPATH}/standard/${LINE}.png"
-			rm "${BITMAPTILESPATH}/maxspeed/${LINE}.png"
-			rm "${BITMAPTILESPATH}/signals/${LINE}.png"
-			ZOOM=${LINE:0:1}
-			if [ $ZOOM != "1" ]; then
-				PARAMS=$(echo ${LINE} | sed -e 's/\// /g')
-				php vtiler.php $PARAMS
-			fi
-		fi
-	done < $TILELIST
+	curl "http://localhost:9001/loadlist/"
 	rm $TILELIST
 fi
 
