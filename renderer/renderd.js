@@ -19,7 +19,6 @@ for (var i=0; i<styles.length; i++)
 // rendering queue
 var queue = [];
 
-
 // handle exceptions
 process.on('uncaughtException', function(err)
 {

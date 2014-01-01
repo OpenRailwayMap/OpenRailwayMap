@@ -65,8 +65,7 @@ function createMap(embed)
 		attribution: translations['railmapAttribution'],
 		minZoom: 4,
 		maxZoom: 22,
-		tileSize: 256*4,
-		zoomOffset: -2
+		tileSize: 256
 	}).addTo(map);
 
 	map.on('zoomend', function(e)

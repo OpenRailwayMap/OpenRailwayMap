@@ -41,8 +41,8 @@ condition[10] = "AND ((tags->'railway'='rail') OR (tags->'railway'='disused') OR
 
 // show only error messages (false) or verbose output (true)
 var debug = false;
-// size of tiles
-var tileSize = 256*4;
+// size of tiles in pixels
+var tileSize = 256;
 // relative or absolute path to the vector tile directory
 var vtiledir = "../tiles";
 // relative or absolute path to the bitmap tile directory
@@ -52,7 +52,7 @@ var expiredtilesdir = "../../olm/import";
 // relative or absolute path to the directory of the required scripts
 var scriptdir = "../js/";
 // zoom offset
-var zoomOffset = 2;
+var zoomOffset = 0;
 // minimal and maximal zoom level
 var minZoom = 2;
 var maxZoom = 22;
@@ -504,7 +504,7 @@ function addTileToQueue(z, x, y)
 // render all tiles on initial run
 function initQueue()
 {
-	var z = zoomOffset;
+	var z = minZoom;
 	var x = 0;
 	var y = -1;
 	var tilecount = Math.pow(2, z);
