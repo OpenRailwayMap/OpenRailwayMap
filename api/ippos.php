@@ -13,7 +13,7 @@
 	$callback = $_GET['callback'];
 
 	// request location for api
-	$position = geoip_record_by_name($_SERVER['REMOTE_ADDR']);
+	$position = geoip_record_by_name(getUserIP());
 
 	if ($position)
 	{
