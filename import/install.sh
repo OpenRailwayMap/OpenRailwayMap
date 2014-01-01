@@ -130,6 +130,7 @@ npm install http-proxy
 
 # modify your apache config, so that apache listens on 127.0.0.1:8080
 # a nodejs proxy script will redirect each request either to apache or the nodejs tileserver
+# Note: Keep in mind that now 127.0.0.1 will appear as the user IP address - so you may have to change the configuration of geolocation or user statistics
 
 # if not existing, add a locales file for nqo_GN on your system by running these commands:
 # cd /usr/share/i18n/locales
