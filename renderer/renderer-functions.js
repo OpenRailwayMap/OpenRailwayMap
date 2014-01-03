@@ -8,7 +8,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 var cluster = require('cluster');
 var os = require('os');
-var Canvas = require('canvas');
 var rbush = require('rbush');
 var assert = require('assert');
 var http = require("http");
@@ -16,11 +15,15 @@ var url = require("url");
 var mkdirp = require('mkdirp');
 var pg = require('pg');
 var byline = require('byline');
-var events = require('events');
+var log4js = require('log4js');
 
 
-eventEmitter = new events.EventEmitter();
+var Canvas = require('canvas');
 Image = Canvas.Image;
+
+
+var events = require('events');
+eventEmitter = new events.EventEmitter();
 
 
 // tag conditions for faster database queries, smaller tiles and faster rendering
@@ -39,8 +42,6 @@ condition[9] = "AND ((tags->'usage'='main') OR (tags->'usage'='branch') OR (tags
 condition[10] = "AND ((tags->'railway'='rail') OR (tags->'railway'='disused') OR (tags->'railway'='abandoned') OR (tags->'railway'='proposed') OR (tags->'railway'='construction') OR (tags->'railway'='light_rail') OR (tags->'railway'='tram') OR (tags->'railway'='subway') OR (tags->'railway'='narrow_gauge') OR (tags->'railway'='station') OR (tags->'railway'='halt'))";
 
 
-// show only error messages (false) or verbose output (true)
-var debug = false;
 // size of tiles in pixels
 var tileSize = 256;
 // relative or absolute path to the vector tile directory
@@ -75,6 +76,7 @@ var maxprerender = 12;
 
 
 // include necessary libraries
+logger.trace('Including KothicJS...');
 eval(fs.readFileSync(scriptdir+'kothic.js')+'');
 eval(fs.readFileSync(scriptdir+'renderer/path.js')+'');
 eval(fs.readFileSync(scriptdir+'renderer/line.js')+'');
@@ -89,6 +91,7 @@ eval(fs.readFileSync(scriptdir+'style/style.js')+'');
 eval(fs.readFileSync(scriptdir+'utils/collisions.js')+'');
 eval(fs.readFileSync(scriptdir+'utils/geom.js')+'');
 eval(fs.readFileSync(scriptdir+'utils/collisions.js')+'');
+logger.trace('KothicJS loaded.');
 
 
 // workaround to emulate browser properties
@@ -115,19 +118,7 @@ document.createElement = function()
 // renders a certain tile and calls the callback with the ready-rendered canvas when finished
 function renderTile(zoom, x, y, styleName, features, callback)
 {
-	// catch tiles without data
-	if (!features.features || features.features.length == 0)
-	{
-		return process.nextTick(function()
-		{
-			callback(true, null);
-		});
-	}
-	if (debug)
-	{
-		console.log("z"+zoom+"x"+x+"y"+y+" Vectortile was openend successfully.");
-		console.log("z"+zoom+"x"+x+"y"+y+" Rendering data...");
-	}
+	logger.debug('z'+zoom+'x'+x+'y'+y+' Rendering data...');
 
 	// start bitmap rendering
 	var canvas = new Canvas(tileSize, tileSize);
@@ -143,6 +134,7 @@ function renderTile(zoom, x, y, styleName, features, callback)
 		styles: MapCSS.availableStyles,
 		onRenderComplete: function()
 		{
+			logger.debug('z'+zoom+'x'+x+'y'+y+' Finished rendering bitmap tile.');
 			return process.nextTick(function()
 			{
 				callback(false, canvas);
@@ -167,34 +159,50 @@ function getVectorData(x, y, z, callback)
 	content.features = new Array();
 	var client = new pg.Client(connection);
 
+	logger.debug('z'+z+'x'+x+'y'+y+' Connecting to database '+connection+'...');
 	client.connect(function(err)
 	{
 		if (err)
 		{
+			logger.error('z'+z+'x'+x+'y'+y+' Connection to database '+connection+' failed. Returning.');
 			return process.nextTick(function()
 			{
 				callback(err, null);
 			});
 		}
+		else
+			logger.debug('z'+z+'x'+x+'y'+y+' Connected to database.');
 
 		// request polygons
 		var query = getDatabaseQuery("polygon", bbox_p, zoom);
+		logger.trace('z'+z+'x'+x+'y'+y+' Requesting polygons...');
 		client.query(query, function(err, polygons)
 		{
 			var features = getJSONFeatures(polygons.rows);
 			// request lines
 			var query = getDatabaseQuery("line", bbox_p, zoom);
+			logger.trace('z'+z+'x'+x+'y'+y+' Requesting lines...');
 			client.query(query, function(err, lines)
 			{
 				features = features.concat(getJSONFeatures(lines.rows));
 				// request points
 				var query = getDatabaseQuery("point", bbox_p, zoom);
+				logger.trace('z'+z+'x'+x+'y'+y+' Requesting points...');
 				client.query(query, function(err, points)
 				{
-					content.features = features.concat(getJSONFeatures(points.rows));					
+					logger.trace('z'+z+'x'+x+'y'+y+' All database queries finished, generating JSON data object.');
+					content.features = features.concat(getJSONFeatures(points.rows));
+					// catch tiles without data
+					if (!content.features)
+					{
+						content.features = new Array();
+						logger.debug('z'+z+'x'+x+'y'+y+' Vector tile contains no data.');
+					}
+			
 					content.granularity = intscalefactor;
 					content.bbox = bbox;
 					client.end();
+					logger.debug('z'+z+'x'+x+'y'+y+' Generated vector data.');
 					return process.nextTick(function()
 					{
 						callback(err, content);
@@ -228,28 +236,31 @@ function getJSONFeatures(rows)
 function saveVectorTile(data, x, y, z, callback)
 {
 	var filepath = vtiledir+'/'+z+'/'+x;
-	if (debug)
-		console.log("z"+z+"x"+x+"y"+y+" Saving vector tile at path: "+filepath+'/'+y+'.json');
-
+	logger.debug('z'+z+'x'+x+'y'+y+' Creating path '+filepath+'...');
 	mkdirp(filepath, function(err)
 	{
 		if (err)
 		{
+			logger.error('z'+z+'x'+x+'y'+y+' Cannot create path: '+filepath+'. Returning.');
 			return process.nextTick(function()
 			{
 				callback(err);
 			});
 		}
 
+		logger.debug('z'+z+'x'+x+'y'+y+' Created path. Saving vector tile at path: '+filepath+'/'+y+'.json');
 		fs.writeFile(filepath+'/'+y+'.json', data, {mode: 0777}, function(err)
 		{
 			if (err)
 			{
+				logger.error('z'+z+'x'+x+'y'+y+' Cannot save vector tile at path: '+filepath+'/'+y+'.json');
 				return process.nextTick(function()
 				{
 					callback(err);
 				});
 			}
+
+			logger.debug('z'+z+'x'+x+'y'+y+' Saved vector tile at path: '+filepath+'/'+y+'.json');
 			return process.nextTick(function()
 			{
 				callback(false);
@@ -412,10 +423,13 @@ function from4326To900913(line)
 // returns the content of a vector tile as a string
 function readVectorTile(x, y, z, callback)
 {
-	fs.readFile(vtiledir+'/'+z+'/'+x+'/'+y+'.json', function(err, data)
+	var path = vtiledir+'/'+z+'/'+x+'/'+y+'.json';
+	logger.debug('z'+z+'x'+x+'y'+y+' Reading vector tile at path: '+path);
+	fs.readFile(path, function(err, data)
 	{
 		if (!err && data)
 		{
+			logger.debug('z'+z+'x'+x+'y'+y+' Loaded data from vector tile: '+path);
 			return process.nextTick(function()
 			{
 				callback(err, JSON.parse(data));
@@ -423,6 +437,7 @@ function readVectorTile(x, y, z, callback)
 		}
 		else
 		{
+			logger.debug('z'+z+'x'+x+'y'+y+' Cannot read vector tile: '+path);
 			return process.nextTick(function()
 			{
 				callback(err, null);
@@ -512,7 +527,7 @@ function initQueue()
 	// removes a tile from the queue if rendered and renders the next tile
 	var initTileFinished = function renderNextTileInit()
 	{
-		console.log("Checking system load...");
+		logger.debug('Checking system load... ');
 		if (os.loadavg()[0] <= cpus+1)
 		{
 			if (y < tilecount-1)
@@ -533,17 +548,17 @@ function initQueue()
 				}
 				else
 				{
-					console.log("All tiles rendered. Finished.");
+					logger.info('All tiles rendered. Finished.');
 					return;
 				}
 			}
-			
+			logger.debug('Rendering next tile...');
 			var tile = new Array(z, x, y);
 			renderQueueElement(tile);
 		}
 		else
 		{
-			console.log("System load too high, will retry after 5 seconds...");
+			logger.info('System load too high, will retry after 5 seconds...');
 			setTimeout(function()
 			{
 				eventEmitter.emit('tileFinished');
@@ -564,15 +579,16 @@ function renderQueue()
 	{
 		if (queue.length != 0)
 		{
-			console.log("Checking system load...");
+			logger.debug('Checking system load...');
 			if (os.loadavg()[0] <= cpus+1)
 			{
+				logger.debug('Rendering next tile in the queue...');
 				var tile = queue.shift();
 				renderQueueElement(tile);
 			}
 			else
 			{
-				console.log("System load too high, will retry after 5 seconds...");
+				logger.info('System load too high, will retry after 5 seconds...');
 				setTimeout(function()
 				{
 					eventEmitter.emit('tileFinished');
@@ -580,7 +596,7 @@ function renderQueue()
 			}
 		}
 		else
-			console.log("All tiles rerendered. Queue empty.");
+			logger.info('All tiles rerendered. Queue empty.');
 	}
 	eventEmitter.on('tileFinished', tileFinished);
 
@@ -595,52 +611,55 @@ function renderQueueElement(tile)
 	var x = tile[1];
 	var y = tile[2];
 
-	console.log("z"+zoom+"x"+x+"y"+y+" Rendering tile.");
-
+	logger.info('z'+zoom+'x'+x+'y'+y+' Rendering tile from the queue.');
+	logger.debug('z'+zoom+'x'+x+'y'+y+' Getting vector data...');
 	getVectorData(x, y, zoom, function(err, data)
 	{
 		if (err)
 		{
-			console.log("z"+zoom+"x"+x+"y"+y+" Vectortile could not be created. Aborting.");
+			logger.info('z'+zoom+'x'+x+'y'+y+' Vectortile could not be created. Aborting.');
 			eventEmitter.emit('tileFinished');
 			return;
 		}
 
+		logger.debug('z'+zoom+'x'+x+'y'+y+' Vector data loaded, saving vector tile...');
 		saveVectorTile(JSON.stringify(data), x, y, zoom, function(err)
 		{
 			if (err)
 			{
-				console.log("z"+zoom+"x"+x+"y"+y+" Vector tile could not be saved.");
+				logger.warn('z'+zoom+'x'+x+'y'+y+' Vector tile could not be saved. Returning.');
 				eventEmitter.emit('tileFinished');
 				return;
 			}
+
 			// render standard layer only
+			logger.debug('z'+zoom+'x'+x+'y'+y+' Vector tile saved, rendering bitmap tile...');
 			var selectedStyle = 0;
 			MapCSS.onImagesLoad = function()
 			{
+				logger.trace('z'+zoom+'x'+x+'y'+y+' MapCSS style loaded.');
 				var filepath = tiledir+'/'+styles[selectedStyle]+'/'+zoom+'/'+x;
 				renderTile(zoom, x, y, styles[selectedStyle], data, function(err, image)
 				{
 					if (err)
 					{
+						logger.warn('z'+zoom+'x'+x+'y'+y+' Bitmap tile could not be rendered. Returning.');
 						eventEmitter.emit('tileFinished');
 						return;
 					}
 
-					if (debug)
-					{
-						console.log("z"+zoom+"x"+x+"y"+y+" Rendering successful.");
-						console.log("z"+zoom+"x"+x+"y"+y+" Saving bitmap tile at path: "+filepath+'/'+y+'.png');
-					}
-
+					logger.debug('z'+zoom+'x'+x+'y'+y+' Bitmap tile successfully rendered.');
+					logger.debug('z'+zoom+'x'+x+'y'+y+' Creating path '+filepath+'...');
 					mkdirp(filepath, function(err)
 					{
 						if (err)
 						{
+							logger.error('z'+zoom+'x'+x+'y'+y+' Cannot create path '+filepath+'. Returning.');
 							eventEmitter.emit('tileFinished');
 							return;
 						}
 
+						logger.error('z'+zoom+'x'+x+'y'+y+' Saving bitmap tile at path: '+filepath+'/'+y+'.png');
 						var out = fs.createWriteStream(filepath+'/'+y+'.png', {mode: 0777});
 						var stream = image.createPNGStream();
 
@@ -653,13 +672,10 @@ function renderQueueElement(tile)
 						// PNG data stream ended
 						stream.on('end', function()
 						{
-							if (debug)
-							{
-								console.log("z"+zoom+"x"+x+"y"+y+" Bitmap tile was stored.");
-								console.log("z"+zoom+"x"+x+"y"+y+" Finished.");
-							}
+							logger.debug('z'+zoom+'x'+x+'y'+y+' Bitmap tile was saved.');
+
 							// remove tile from queue and render next tile if every style was rendered
-							console.log("z"+zoom+"x"+x+"y"+y+" Getting the next tile in the queue...");
+							logger.debug('z'+zoom+'x'+x+'y'+y+' Finished. Getting the next tile from the queue...');
 							eventEmitter.emit('tileFinished');
 						});
 					});
@@ -675,12 +691,12 @@ function renderQueueElement(tile)
 // load an osm2pgsql list of expired tiles to the queue
 function addExpiredTilesToQueue(filename, callback)
 {
+	logger.debug('Checking if list of expired tiles exists...');
 	fs.exists(expiredtilesdir+'/'+filename, function(exists)
 	{
 		if (exists)
 		{
-			console.log("Reading list of expired tiles...");
-
+			logger.info('Reading list of expired tiles...');
 			var stream = byline(fs.createReadStream(expiredtilesdir+'/'+filename));
 			stream.on('data', function(line)
 			{
@@ -692,12 +708,13 @@ function addExpiredTilesToQueue(filename, callback)
 					for (var s=0; s<styles.length; s++)
 					{
 						var filepath = tiledir+'/'+styles[s]+'/'+tile[0]+'/'+tile[1];
+						logger.debug('Removing bitmap tile '+filepath+'/'+tile[2]+'.png ...');
 						fs.unlink(filepath+'/'+tile[2]+'.png', function(err)
 						{
-							if (err && debug)
-								console.log("Could not delete bitmap tile: "+filepath+'/'+tile[2]+'.png');
-							else if (debug)
-								console.log("Successfully deleted bitmap tile: "+filepath+'/'+tile[2]+'.png');
+							if (err)
+								logger.error('Could not remove bitmap tile: '+filepath+'/'+tile[2]+'.png');
+							else
+								logger.debug('Successfully removed bitmap tile: '+filepath+'/'+tile[2]+'.png');
 						});
 					}
 				}
@@ -707,7 +724,7 @@ function addExpiredTilesToQueue(filename, callback)
 			});
 			stream.on('end', function(line)
 			{
-				console.log("Expired tiles successfully loaded into the queue.");
+				logger.info('Expired tiles successfully added to the queue.');
 				return process.nextTick(function()
 				{
 					callback(false);
@@ -715,7 +732,7 @@ function addExpiredTilesToQueue(filename, callback)
 			});
 			stream.on('error', function(line)
 			{
-				console.log("Cannot read list of expired tiles. Aborting.");
+				logger.error('Cannot read list of expired tiles. Aborting.');
 				return process.nextTick(function()
 				{
 					callback(true);
@@ -723,6 +740,6 @@ function addExpiredTilesToQueue(filename, callback)
 			});
 		}
 		else
-			console.log("Cannot open expired-tiles-file. Aborting.");
+			logger.error('Cannot find expired-tiles-file. Aborting.');
 	});
 }
