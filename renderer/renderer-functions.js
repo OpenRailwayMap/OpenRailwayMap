@@ -15,7 +15,6 @@ var url = require("url");
 var mkdirp = require('mkdirp');
 var pg = require('pg');
 var byline = require('byline');
-var log4js = require('log4js');
 
 
 var Canvas = require('canvas');
