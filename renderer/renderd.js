@@ -7,6 +7,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 // configuring logging
+var log4js = require('log4js');
 log4js.configure(
 {
 	appenders:

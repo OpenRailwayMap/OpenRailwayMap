@@ -9,6 +9,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 function createMap(embed)
 {
 	root = "http://www.openrailwaymap.org/";
+	tiledir = "http://tiles.openrailwaymap.org/vector/";
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
 
 	if (params['offset'] != null)
@@ -54,7 +55,7 @@ function createMap(embed)
 	});
 
 	// railmap layer
-	railmap = new L.TileLayer.Kothic(root+'tiles/{z}/{x}/{y}.js',
+	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.js',
 	{
 		attribution: translations['railmapAttribution'],
 		minZoom: 4
@@ -135,6 +136,7 @@ function setStyle(style)
 			railmap.disableStyle(MapCSS.availableStyles[i]);
 
 	railmap.enableStyle(style);
+	railmap.redraw();
 
 	// mark selected item as checked
 	var selectableItems = gEBI('styleSelectionBar').getElementsByTagName('input');

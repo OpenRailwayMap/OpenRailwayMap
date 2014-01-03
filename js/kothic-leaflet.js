@@ -26,8 +26,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
     options: {
-        tileSize: 256 * 4,
-        zoomOffset: 2,
+        tileSize: 256,
+        zoomOffset: 0,
         minZoom: 2,
         maxZoom: 22,
         updateWhenIdle: true,
@@ -98,7 +98,6 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
         if (this.options.styles.indexOf(name) == -1) {
 		// end modified by rurseekatze
             this.options.styles.push(name);
-            this.redraw();
         }
     },
 
@@ -106,7 +105,6 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
         if (this.options.styles.indexOf(name) >= 0) {
             var i = this.options.styles.indexOf(name);
             this.options.styles.splice(i, 1);
-            this.redraw();
         }
     },
 
