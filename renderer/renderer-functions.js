@@ -15,6 +15,11 @@ var url = require("url");
 var mkdirp = require('mkdirp');
 var pg = require('pg');
 var byline = require('byline');
+var toobusy = require('toobusy');
+
+
+// maximum count of concurrent http connections
+http.globalAgent.maxSockets = 100;
 
 
 var Canvas = require('canvas');
@@ -219,12 +224,30 @@ function getJSONFeatures(rows)
 	var features = new Array();
 	for (var i=0; i<rows.length; i++)
 	{
-		var geojson = JSON.parse(rows[i][geomcolumn]);
+		// catch JSON parsing errors
+		try
+		{
+			var geojson = JSON.parse(rows[i][geomcolumn]);
+		}
+		catch (err)
+		{
+			break;
+		}
+
 		if (geojson.type == "GeometryCollection")
 			continue;
-		if (geojson.reprpoint)
-			geojson.reprpoint = JSON.parse(rows[i].reprpoint.coordinates);
-		geojson.properties = JSON.parse(rows[i].tags);
+
+		try
+		{
+			if (geojson.reprpoint)
+				geojson.reprpoint = JSON.parse(rows[i].reprpoint.coordinates);
+			geojson.properties = JSON.parse(rows[i].tags);
+		}
+		catch (err)
+		{
+			continue;
+		}
+
 		features.push(geojson);
 	}
 	return features;
@@ -431,7 +454,16 @@ function readVectorTile(x, y, z, callback)
 			logger.debug('z'+z+'x'+x+'y'+y+' Loaded data from vector tile: '+path);
 			return process.nextTick(function()
 			{
-				callback(err, JSON.parse(data));
+				// catch JSON parsing errors
+				try
+				{
+					var jsondata = JSON.parse(data);
+					callback(err, jsondata);
+				}
+				catch (err)
+				{
+					callback(true, null);
+				}
 			});
 		}
 		else

@@ -128,6 +128,7 @@ npm install byline
 npm install graceful-fs
 npm install http-proxy
 npm install log4js
+npm install toobusy
 
 # modify your apache config, so that apache listens on 127.0.0.1:8080
 # a nodejs proxy script will redirect each request either to apache or the nodejs tileserver
