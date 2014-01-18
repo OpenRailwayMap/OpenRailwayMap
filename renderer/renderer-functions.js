@@ -14,8 +14,9 @@ var http = require("http");
 var url = require("url");
 var mkdirp = require('mkdirp');
 var pg = require('pg');
-var byline = require('byline');
 var toobusy = require('toobusy');
+var byline = require('byline');
+var touch = require("touch");
 
 
 // maximum count of concurrent http connections
@@ -60,7 +61,7 @@ var scriptdir = "../js/";
 var zoomOffset = 0;
 // minimal and maximal zoom level
 var minZoom = 2;
-var maxZoom = 22;
+var maxZoom = 19;
 // list of existing rendering styles
 var styles = new Array("standard", "maxspeed", "signals");
 // scale fector used for vector tiling
@@ -75,8 +76,10 @@ var db = "railmap";
 var cpus = os.cpus().length;
 // pixel tolerance used for getting vector data
 var pxtolerance = 1.8;
-// highest zoomlevel in which tiles are prerendered; tiles in higher zoomlevels will just be removed from cache if expired
-var maxprerender = 12;
+// highest zoomlevel in which tiles are prerendered in initial rendering
+var maxPrerender = 8;
+// highest zoomlevel in which tiles are cached; tiles in higher zoomlevels will just be removed from cache if expired
+var maxCached = 15;
 
 
 // include necessary libraries
@@ -127,7 +130,6 @@ function renderTile(zoom, x, y, styleName, features, callback)
 	// start bitmap rendering
 	var canvas = new Canvas(tileSize, tileSize);
 	canvas.style = new Object();
-	invertYAxe(features);
 
 	MapCSS.invalidateCache();
 	MapCSS.availableStyles.length = 0;
@@ -156,11 +158,9 @@ function getVectorData(x, y, z, callback)
 	z = parseInt(z);
 	var bbox = bboxByTile(z+1, x, y);
 	var bbox_p = from4326To900913(bbox);
-	var zoom = z+2;
+	var zoom = z+zoomOffset;
 
 	var connection = "postgres://postgres@localhost/railmap";
-	var content = new Object();
-	content.features = new Array();
 	var client = new pg.Client(connection);
 
 	logger.debug('z'+z+'x'+x+'y'+y+' Connecting to database '+connection+'...');
@@ -194,8 +194,12 @@ function getVectorData(x, y, z, callback)
 				logger.trace('z'+z+'x'+x+'y'+y+' Requesting points...');
 				client.query(query, function(err, points)
 				{
+					var content = new Object();
+					content.features = new Array();
+
 					logger.trace('z'+z+'x'+x+'y'+y+' All database queries finished, generating JSON data object.');
 					content.features = features.concat(getJSONFeatures(points.rows));
+
 					// catch tiles without data
 					if (!content.features)
 					{
@@ -206,6 +210,7 @@ function getVectorData(x, y, z, callback)
 					content.granularity = intscalefactor;
 					content.bbox = bbox;
 					client.end();
+					invertYAxe(content);
 					logger.debug('z'+z+'x'+x+'y'+y+' Generated vector data.');
 					return process.nextTick(function()
 					{
@@ -543,62 +548,105 @@ function coordsByTile(z, x, y)
 // add a tile to the queue
 function addTileToQueue(z, x, y)
 {
-	queue.push(new Array(z, x, y));
+	var tile = new Array(z, x, y);
+
+	if (!queueElementExists(queue, tile))
+		queue.push(tile);
 }
 
 
-// render all tiles on initial run
-function initQueue()
+// waits sec seconds before continuing to render the tiles from the queue
+function wait(sec)
 {
-	var z = minZoom;
-	var x = 0;
-	var y = -1;
-	var tilecount = Math.pow(2, z);
-
-	// removes a tile from the queue if rendered and renders the next tile
-	var initTileFinished = function renderNextTileInit()
+	setTimeout(function()
 	{
-		logger.debug('Checking system load... ');
-		if (os.loadavg()[0] <= cpus+1)
-		{
-			if (y < tilecount-1)
-				y++;
-			else
-			{
-				if (x < tilecount-1)
-				{
-					x++;
-					y = 0;
-				}
-				else if (z < maxprerender)
-				{
-					z++;
-					tilecount = Math.pow(2, z);
-					x = 0;
-					y = 0;
-				}
-				else
-				{
-					logger.info('All tiles rendered. Finished.');
-					return;
-				}
-			}
-			logger.debug('Rendering next tile...');
-			var tile = new Array(z, x, y);
-			renderQueueElement(tile);
-		}
-		else
-		{
-			logger.info('System load too high, will retry after 5 seconds...');
-			setTimeout(function()
-			{
-				eventEmitter.emit('tileFinished');
-			}, 5000);
-		}
-	}
-	eventEmitter.on('tileFinished', initTileFinished);
+		eventEmitter.emit('tileFinished');
+	}, sec*1000);
+}
 
-	eventEmitter.emit('tileFinished');
+
+// returns the subtiles of a certain tile
+function subTiles(zoom, x, y)
+{
+	x = x*2;
+	y = y*2;
+	zoom++;
+
+	return new Array(
+		new Array(zoom, x, y),
+		new Array(zoom, x+1, y),
+		new Array(zoom, x, y+1),
+		new Array(zoom, x+1, y+1)
+	);
+}
+
+
+// returns a list of all subtiles of a certain tile
+function childTiles(zoom, x, y)
+{
+	var tiles = new Array();
+	var tilesize = 1;
+
+	for (var z=zoom+1; z<=maxZoom; z++)
+	{
+		x = x*2;
+		y = y*2;
+		tilesize = tilesize*2;
+
+		for (var i=x; i<(x+tilesize); i++)
+		{
+			for (var j=y; j<(y+tilesize); j++)
+				tiles.push(new Array(z, i, j));
+			j -= tilesize;
+		}
+
+		i -= tilesize;
+	}
+
+	return tiles;
+}
+
+
+// returns a list of all tiles in lower zoomlevels that contain a certain tile
+function parentTiles(zoom, x, y)
+{
+	var tiles = new Array();
+
+	while (zoom > 0)
+	{
+		zoom--;
+		x = parseInt(x/2);
+		y = parseInt(y/2);
+		tiles.push(new Array(zoom, x, y));
+	}
+
+	return tiles;
+}
+
+
+// returns true if element is already in the list queue, otherwise false is returned
+function queueElementExists(queue, element)
+{
+	for (var queueIndex=0; queueIndex<queue.length; queueIndex++)
+		if ((queue[queueIndex][0] == element[0]) && (queue[queueIndex][1] == element[1]) && (queue[queueIndex][2] == element[2]))
+			return true;
+
+	return false;
+}
+
+
+// returns true if the tile was marked as expired, otherwise false is returned
+function isTileExpired(zoom, x, y)
+{
+	var stats = fs.statSync(vtiledir+'/'+zoom+'/'+x+'/'+y+'.json');
+	return (stats.mtime.getFullYear() == "1970") ? true : false;
+}
+
+
+// marks a tile as expired
+function markTileExpired(zoom, x, y)
+{
+	touch.sync(vtiledir+'/'+zoom+'/'+x+'/'+y+'.json', {time: new Date(10)})
 }
 
 
@@ -608,7 +656,7 @@ function renderQueue()
 	// removes a tile from the queue if rendered and renders the next tile
 	var tileFinished = function renderNextTile()
 	{
-		if (queue.length != 0)
+		if (queue.length > 0)
 		{
 			logger.debug('Checking system load...');
 			if (os.loadavg()[0] <= cpus+1)
@@ -620,14 +668,14 @@ function renderQueue()
 			else
 			{
 				logger.info('System load too high, will retry after 5 seconds...');
-				setTimeout(function()
-				{
-					eventEmitter.emit('tileFinished');
-				}, 5000);
+				wait(5);
 			}
 		}
 		else
+		{
 			logger.info('All tiles rerendered. Queue empty.');
+			wait(30);
+		}
 	}
 	eventEmitter.on('tileFinished', tileFinished);
 
@@ -663,64 +711,93 @@ function renderQueueElement(tile)
 				return;
 			}
 
-			// render standard layer only
 			logger.debug('z'+zoom+'x'+x+'y'+y+' Vector tile saved, rendering bitmap tile...');
-			var selectedStyle = 0;
-			MapCSS.onImagesLoad = function()
-			{
-				logger.trace('z'+zoom+'x'+x+'y'+y+' MapCSS style loaded.');
-				var filepath = tiledir+'/'+styles[selectedStyle]+'/'+zoom+'/'+x;
-				renderTile(zoom, x, y, styles[selectedStyle], data, function(err, image)
-				{
-					if (err)
-					{
-						logger.warn('z'+zoom+'x'+x+'y'+y+' Bitmap tile could not be rendered. Returning.');
-						eventEmitter.emit('tileFinished');
-						return;
-					}
-
-					logger.debug('z'+zoom+'x'+x+'y'+y+' Bitmap tile successfully rendered.');
-					logger.debug('z'+zoom+'x'+x+'y'+y+' Creating path '+filepath+'...');
-					mkdirp(filepath, function(err)
-					{
-						if (err)
-						{
-							logger.error('z'+zoom+'x'+x+'y'+y+' Cannot create path '+filepath+'. Returning.');
-							eventEmitter.emit('tileFinished');
-							return;
-						}
-
-						logger.error('z'+zoom+'x'+x+'y'+y+' Saving bitmap tile at path: '+filepath+'/'+y+'.png');
-						var out = fs.createWriteStream(filepath+'/'+y+'.png', {mode: 0777});
-						var stream = image.createPNGStream();
-
-						// write PNG data stream
-						stream.on('data', function(data)
-						{
-							out.write(data);
-						});
-
-						// PNG data stream ended
-						stream.on('end', function()
-						{
-							logger.debug('z'+zoom+'x'+x+'y'+y+' Bitmap tile was saved.');
-
-							// remove tile from queue and render next tile if every style was rendered
-							logger.debug('z'+zoom+'x'+x+'y'+y+' Finished. Getting the next tile from the queue...');
-							eventEmitter.emit('tileFinished');
-						});
-					});
-				});
-			}
-			// load map icons
-			MapCSS.preloadSpriteImage(styles[selectedStyle], "../styles/"+styles[selectedStyle]+".png");
+			refreshExpiredTile(zoom, x, y, data);
+			// remove tile from queue and render next tile if every style was rendered
+			logger.debug('z'+zoom+'x'+x+'y'+y+' Finished. Getting the next tile from the queue...');
+			eventEmitter.emit('tileFinished');
 		});
 	});
 }
 
 
-// load an osm2pgsql list of expired tiles to the queue
-function addExpiredTilesToQueue(filename, callback)
+// rerenders all style versions of a tile
+function refreshExpiredTile(zoom, x, y, data, selectedStyle)
+{
+	var selectedStyle = selectedStyle || 0;
+
+	if (selectedStyle >= styles.length)
+		return;
+
+	logger.trace('z'+zoom+'x'+x+'y'+y+' MapCSS style loaded.');
+	var filepath = tiledir+'/'+styles[selectedStyle]+'/'+zoom+'/'+x;
+	renderTile(zoom, x, y, styles[selectedStyle], data, function(err, image)
+	{
+		if (err)
+		{
+			logger.warn('z'+zoom+'x'+x+'y'+y+' Bitmap tile could not be rendered. Returning.');
+			refreshExpiredTile(zoom, x, y, data, selectedStyle+1);
+			return;
+		}
+
+		logger.debug('z'+zoom+'x'+x+'y'+y+' Bitmap tile successfully rendered.');
+		logger.debug('z'+zoom+'x'+x+'y'+y+' Creating path '+filepath+'...');
+		mkdirp(filepath, function(err)
+		{
+			if (err)
+			{
+				logger.error('z'+zoom+'x'+x+'y'+y+' Cannot create path '+filepath+'. Returning.');
+				refreshExpiredTile(zoom, x, y, data, selectedStyle+1);
+				return;
+			}
+
+			logger.debug('z'+zoom+'x'+x+'y'+y+' Saving bitmap tile at path: '+filepath+'/'+y+'.png');
+			var out = fs.createWriteStream(filepath+'/'+y+'.png', {mode: 0777});
+			var stream = image.createPNGStream();
+
+			// write PNG data stream
+			stream.on('data', function(data)
+			{
+				out.write(data);
+			});
+
+			// PNG data stream ended
+			stream.on('end', function()
+			{
+				out.end();
+				logger.debug('z'+zoom+'x'+x+'y'+y+' Bitmap tile was saved.');
+				refreshExpiredTile(zoom, x, y, data, selectedStyle+1);
+				return;
+			});
+		});
+	});
+}
+
+
+// removes all rendering styles of a bitmap tile from the cache
+function removeBitmapTile(zoom, x, y, selectedStyle)
+{
+	var selectedStyle = selectedStyle || 0;
+
+	if (selectedStyle > styles.length)
+		return;
+
+	var filepath = tiledir+'/'+styles[s]+'/'+tile[0]+'/'+tile[1];
+	logger.debug('Removing bitmap tile '+filepath+'/'+tile[2]+'.png ...');
+	fs.unlink(filepath+'/'+tile[2]+'.png', function(err)
+	{
+		if (err)
+			logger.error('Could not remove bitmap tile: '+filepath+'/'+tile[2]+'.png');
+		else
+			logger.debug('Successfully removed bitmap tile: '+filepath+'/'+tile[2]+'.png');
+
+		removeBitmapTile(zoom, x, y, selectedStyle);
+	});
+}
+
+
+// load an osm2pgsql list of expired tiles and marks all tiles as expired
+function expireTileList(filename, callback)
 {
 	logger.debug('Checking if list of expired tiles exists...');
 	fs.exists(expiredtilesdir+'/'+filename, function(exists)
@@ -729,38 +806,34 @@ function addExpiredTilesToQueue(filename, callback)
 		{
 			logger.info('Reading list of expired tiles...');
 			var stream = byline(fs.createReadStream(expiredtilesdir+'/'+filename));
+
 			stream.on('data', function(line)
 			{
 				var tile = line.toString().split("/");
 
-				// remove cached tiles
-				if (tile[0] > maxprerender)
-				{
-					for (var s=0; s<styles.length; s++)
-					{
-						var filepath = tiledir+'/'+styles[s]+'/'+tile[0]+'/'+tile[1];
-						logger.debug('Removing bitmap tile '+filepath+'/'+tile[2]+'.png ...');
-						fs.unlink(filepath+'/'+tile[2]+'.png', function(err)
-						{
-							if (err)
-								logger.error('Could not remove bitmap tile: '+filepath+'/'+tile[2]+'.png');
-							else
-								logger.debug('Successfully removed bitmap tile: '+filepath+'/'+tile[2]+'.png');
-						});
-					}
-				}
-				// prerender lowzoom tiles only
-				else
-					addTileToQueue(tile[0], tile[1], tile[2]);
+				expireTile(tile[0], tile[1], tile[2]);
+
+				// mark child tiles
+				var tileset = childTiles(tile[0], tile[1], tile[2]);
+				for (var tilesetIndex=0; tilesetIndex<tileset.length; tilesetIndex++)
+					if (tileset[tilesetIndex][0] <= maxZoom)
+						expireTile(tileset[tilesetIndex][0], tileset[tilesetIndex][1], tileset[tilesetIndex][2]);
+
+				// mark parent tiles
+				var parentTileset = parentTiles(tile[0], tile[1], tile[2]);
+				for (var parentIndex=0; parentIndex<parentTileset.length; parentIndex++)
+					expireTile(parentTileset[parentIndex][0], parentTileset[parentIndex][1], parentTileset[parentIndex][2]);
 			});
+
 			stream.on('end', function(line)
 			{
-				logger.info('Expired tiles successfully added to the queue.');
+				logger.info('Expired tiles successfully marked.');
 				return process.nextTick(function()
 				{
 					callback(false);
 				});
 			});
+
 			stream.on('error', function(line)
 			{
 				logger.error('Cannot read list of expired tiles. Aborting.');
@@ -773,4 +846,82 @@ function addExpiredTilesToQueue(filename, callback)
 		else
 			logger.error('Cannot find expired-tiles-file. Aborting.');
 	});
+}
+
+
+// marks a tile and all it's subtiles and parent tiles as expired or deletes them if necessary
+function expireTile(zoom, x, y)
+{
+	if (zoom <= maxCached)
+		markTileExpired(zoom, x, y);
+	// remove all tiles higher than maxcached
+	else
+	{
+		var filepath = vtiledir+'/'+zoom+'/'+x+'/'+y+'.json';
+		logger.debug('Removing vector tile '+filepath+' ...');
+		fs.unlink(filepath, function(err)
+		{
+			if (err)
+				logger.error('Could not remove vector tile: '+filepath);
+			else
+				logger.debug('Successfully removed vector tile: '+filepath);
+
+			removeBitmapTile(zoom, x, y);
+		});
+	}
+}
+
+
+// render all tiles on initial run
+function initQueue()
+{
+	var z = minZoom;
+	var x = 0;
+	var y = -1;
+	var tilecount = Math.pow(2, z);
+
+	// removes a tile from the queue if rendered and renders the next tile
+	var initTileFinished = function renderNextTileInit()
+	{
+		logger.debug('Checking system load... ');
+		if (os.loadavg()[0] <= cpus+1)
+		{
+			if (y < tilecount-1)
+				y++;
+			else
+			{
+				if (x < tilecount-1)
+				{
+					x++;
+					y = 0;
+				}
+				else if (z < maxPrerender)
+				{
+					z++;
+					tilecount = Math.pow(2, z);
+					x = 0;
+					y = 0;
+				}
+				else
+				{
+					logger.info('All tiles rendered. Finished.');
+					return;
+				}
+			}
+			logger.debug('Rendering next tile...');
+			var tile = new Array(z, x, y);
+			renderQueueElement(tile);
+		}
+		else
+		{
+			logger.info('System load too high, will retry after 5 seconds...');
+			setTimeout(function()
+			{
+				eventEmitter.emit('tileFinished');
+			}, 5000);
+		}
+	}
+	eventEmitter.on('tileFinished', initTileFinished);
+
+	eventEmitter.emit('tileFinished');
 }

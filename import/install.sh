@@ -111,7 +111,6 @@ wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -o osmconvert
 
 # osm2pgsql
 git clone https://github.com/openstreetmap/osm2pgsql.git
-patch -b osm2pgsql/expire-tiles.c expire-tiles.diff
 cd osm2pgsql
 ./autogen.sh
 ./configure
@@ -129,6 +128,7 @@ npm install graceful-fs
 npm install http-proxy
 npm install log4js
 npm install toobusy
+npm install touch
 
 # modify your apache config, so that apache listens on 127.0.0.1:8080
 # a nodejs proxy script will redirect each request either to apache or the nodejs tileserver
@@ -195,7 +195,6 @@ npm install toobusy
 # run tileserver and rendering daemon as background processes or in a screen session
 cd $PROJECTPATH/renderer
 node tileserver.js
-node renderd.js
 
 # finally run the nodejs proxy in a screen session or as background process
 cd $PROJECTPATH
