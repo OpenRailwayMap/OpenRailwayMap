@@ -14,7 +14,7 @@ log4js.configure(
 	[
 		{
 			"type": "logLevelFilter",
-			"level": "DEBUG",
+			"level": "ERROR",
 			"appender":
 			{
 				"type": "file",
@@ -56,6 +56,11 @@ if (cluster.isMaster)
 // start tile server instance
 else
 {
+	// rendering queue for expired tiles
+	var queue = [];
+	// continuosly render the queue in the background
+	renderQueue();
+
 	// include rendering styles
 	for (var i=0; i<styles.length; i++)
 		eval(fs.readFileSync('../styles/'+styles[i]+'.js')+'');
@@ -83,6 +88,50 @@ else
 		{
 			var pathname = url.parse(request.url).pathname;
 			logger.info('Request for '+pathname+' received.');
+
+			// request the current status
+			if (pathname == "/status")
+			{
+				logger.debug('Returning current rendering status.');
+				var listlength = queue.length || 0;
+				response.writeHead(200, {'Content-Type': 'text/plain'});
+				if (listlength == 0)
+					response.end("All tiles were refreshed.\n");
+				else
+					response.end("Tiles to render: "+listlength+"\n");
+				return;
+			}
+			// load list of expired tiles and mark tiles as expired
+			else if (pathname == "/loadlist")
+			{
+				expireTileList("expired_tiles", function(err)
+				{
+					if (err)
+					{
+						response.writeHead(500, {'Content-Type': 'text/plain'});
+						response.end("Tiles to render: "+listlength+"\n");
+					}
+					else
+					{
+						response.writeHead(200, {'Content-Type': 'text/plain'});
+						response.end("Tiles to render: "+listlength+"\n");
+					}
+					return;
+				});
+			}
+			// render all tiles on initial run
+			else if (command == "/init")
+			{
+				logger.debug('Executing command init. Rendering all tiles on initial run.');
+				var listlength = 0;
+				for (var z = 0; z <= maxprerender; z++)
+					listlength += Math.pow(Math.pow(2, z), 2);
+
+				response.writeHead(200, {'Content-Type': 'text/plain'});
+				response.end("Will create "+parseInt(listlength/1000)+"k tiles as background daemon.\n");
+				logger.debug('Initial rendering of all tiles in the background.');
+				initQueue();
+			}
 
 			var params = pathname.split("/");
 			if (params.length < 5 || params.length > 6)
@@ -157,7 +206,7 @@ else
 							{
 								logger.warn('z'+zoom+'x'+x+'y'+y+' Vectortile could not be created. Aborting.');
 								response.writeHead(500, {'Content-Type': 'application/javascript'});
-		                                                    response.end();
+								response.end();
 								return;
 							}
 							logger.debug('z'+zoom+'x'+x+'y'+y+' Vector tile created successfully, saving vector tile...');
@@ -176,6 +225,13 @@ else
 					}
 					else
 					{
+						// check if tile is expired and add it to the queue if necessary
+						if (isTileExpired(zoom, x, y))
+						{
+							addTileToQueue(zoom, x, y);
+							logger.debug('z'+zoom+'x'+x+'y'+y+' Tile expired, added it to the queue...');
+						}
+
 						logger.debug('z'+zoom+'x'+x+'y'+y+' Returning vector tile...');
 						response.writeHead(200, {'Content-Type': 'application/javascript'});
 						response.end(getVectorDataString(JSON.stringify(data), x, y, zoom));
@@ -192,6 +248,13 @@ else
 					// if tile is already rendered, return the cached image
 					if (exists && typeof command == "undefined")
 					{
+						// check if tile is expired and add it to the queue if necessary
+						if (isTileExpired(zoom, x, y))
+						{
+							addTileToQueue(zoom, x, y);
+							logger.debug('z'+zoom+'x'+x+'y'+y+' Tile expired, added it to the queue...');
+						}
+
 						logger.debug('z'+zoom+'x'+x+'y'+y+' Bitmap tile already rendered, returning cached data...');
 						fs.readFile(tiledir+'/'+styleName+'/'+zoom+'/'+x+'/'+y+'.png', function(err, data)
 						{
@@ -325,6 +388,13 @@ else
 								}
 								else
 								{
+									// check if tile is expired and add it to the queue if necessary
+									if (isTileExpired(zoom, x, y))
+									{
+										addTileToQueue(zoom, x, y);
+										logger.debug('z'+zoom+'x'+x+'y'+y+' Tile expired, added it to the queue...');
+									}
+
 									logger.debug('z'+zoom+'x'+x+'y'+y+' Rendering bitmap tile with style '+styleName);
 									renderTile(zoom, x, y, styleName, data, onRenderEnd);
 								}

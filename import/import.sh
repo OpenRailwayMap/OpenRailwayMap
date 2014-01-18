@@ -75,7 +75,7 @@ echo ""
 # prerender lowzoom tiles
 echo "Prerendering tiles"
 echo ""
-curl "http://localhost:9001/init/"
+curl "http://localhost:9000/init"
 echo ""
 
 echo "Finished processing at $(date)."

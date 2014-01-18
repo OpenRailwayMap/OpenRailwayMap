@@ -66,7 +66,7 @@ echo ""
 # load data into database
 echo "Updating database"
 echo ""
-osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 --expire-tiles 2-19 --expire-output expired_tiles changes.osc
+osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 --expire-tiles 0-15 --expire-output expired_tiles changes.osc
 rm changes.osc
 
 
@@ -74,7 +74,7 @@ rm changes.osc
 echo "Rerender expired tiles"
 echo ""
 if [ -s $TILELIST ]; then
-	curl "http://localhost:9001/loadlist/"
+	curl "http://localhost:9000/loadlist"
 	rm $TILELIST
 fi
 
