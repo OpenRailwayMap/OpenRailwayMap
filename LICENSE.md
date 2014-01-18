@@ -56,17 +56,6 @@ osmupdate
 * Author: Markus Weber
 * available under GNU GPLv3
 
-osm2pgsql
----------
-* http://wiki.openstreetmap.org/wiki/Osm2pgsql
-* Authors: https://raw.github.com/openstreetmap/osm2pgsql/master/AUTHORS
-* available under GNU GPLv2
-
-renderer/vtiler.php consists of PHP-rewritten and modified code from Kothic
----------------------------------------------------------------------------
-* https://github.com/kothic/kothic
-* available under GNU GPLv3
-
 Leaflet
 -------
 * http://leafletjs.com
