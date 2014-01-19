@@ -67,7 +67,8 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
             delete layer._scripts[key];
         }
 
-        this._invertYAxe(data);
+		// modified by rurseekatze
+		// this._invertYAxe(data);
 
         var styles = this.options.styles;
 
