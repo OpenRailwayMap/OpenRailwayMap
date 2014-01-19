@@ -612,7 +612,7 @@ function parentTiles(zoom, x, y)
 {
 	var tiles = new Array();
 
-	while (zoom > 0)
+	while (zoom > minZoom)
 	{
 		zoom--;
 		x = parseInt(x/2);
@@ -638,15 +638,24 @@ function queueElementExists(queue, element)
 // returns true if the tile was marked as expired, otherwise false is returned
 function isTileExpired(zoom, x, y)
 {
-	var stats = fs.statSync(vtiledir+'/'+zoom+'/'+x+'/'+y+'.json');
-	return (stats.mtime.getFullYear() == "1970") ? true : false;
+	var filepath = vtiledir+'/'+zoom+'/'+x+'/'+y+'.json';
+
+	if (fs.existsSync(filepath))
+	{
+		var stats = fs.statSync(vtiledir+'/'+zoom+'/'+x+'/'+y+'.json');
+		return (stats.mtime.getFullYear() == "1970") ? true : false;
+	}
+	return false;
 }
 
 
 // marks a tile as expired
 function markTileExpired(zoom, x, y)
 {
-	touch.sync(vtiledir+'/'+zoom+'/'+x+'/'+y+'.json', {time: new Date(10)})
+	var filepath = vtiledir+'/'+zoom+'/'+x+'/'+y+'.json';
+
+	if (fs.existsSync(filepath))
+		touch.sync(filepath, {time: new Date(10)})
 }
 
 
