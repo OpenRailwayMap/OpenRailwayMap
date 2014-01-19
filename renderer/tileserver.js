@@ -124,7 +124,7 @@ else
 			{
 				logger.debug('Executing command init. Rendering all tiles on initial run.');
 				var listlength = 0;
-				for (var z = 0; z <= maxprerender; z++)
+				for (var z = minZoom; z <= maxPrerender; z++)
 					listlength += Math.pow(Math.pow(2, z), 2);
 
 				response.writeHead(200, {'Content-Type': 'text/plain'});
