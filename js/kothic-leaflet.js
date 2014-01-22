@@ -29,7 +29,7 @@ L.TileLayer.Kothic = L.TileLayer.Canvas.extend({
         tileSize: 256,
         zoomOffset: 0,
         minZoom: 2,
-        maxZoom: 22,
+        maxZoom: 19,
         updateWhenIdle: true,
         unloadInvisibleTiles: true,
         attribution: 'Map data &copy; 2013 <a href="http://osm.org/copyright">OpenStreetMap</a> contributors,' +
