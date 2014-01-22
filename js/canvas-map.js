@@ -55,7 +55,7 @@ function createMap(embed)
 	});
 
 	// railmap layer
-	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.json',
+	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.js',
 	{
 		attribution: translations['railmapAttribution'],
 		minZoom: 2,
