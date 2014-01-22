@@ -63,8 +63,8 @@ function createMap(embed)
 	railmap = new L.TileLayer(tiledir+'standard/{z}/{x}/{y}.png',
 	{
 		attribution: translations['railmapAttribution'],
-		minZoom: 4,
-		maxZoom: 22,
+		minZoom: 2,
+		maxZoom: 19,
 		tileSize: 256
 	}).addTo(map);
 

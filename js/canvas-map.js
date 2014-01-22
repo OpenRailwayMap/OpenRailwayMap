@@ -55,10 +55,11 @@ function createMap(embed)
 	});
 
 	// railmap layer
-	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.js',
+	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.json',
 	{
 		attribution: translations['railmapAttribution'],
-		minZoom: 4
+		minZoom: 2,
+		maxZoom: 19
 	});
 
 	MapCSS.onImagesLoad = function()

@@ -66,7 +66,7 @@ echo ""
 # load data into database
 echo "Updating database"
 echo ""
-osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 --expire-tiles 0-15 --expire-output expired_tiles changes.osc
+osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 --expire-tiles 2-15 --expire-output expired_tiles changes.osc
 rm changes.osc
 
 
