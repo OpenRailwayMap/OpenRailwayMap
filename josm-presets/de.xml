@@ -4765,8 +4765,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal states (multi-selection)"
 					de.text="Signalzustände (Mehrfachauswahl)"
 					delimiter=";"
-					values="dr:zp8;zp9"
-					display_values="Türen schließen Zp 8 (ex-DR);Abfahrtssignal Zp 9"
+					values="zp10;zp9"
+					display_values="Türen schließen Zp 10;Abfahrtssignal Zp 9"
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:departure:form"
