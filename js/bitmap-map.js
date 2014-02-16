@@ -9,7 +9,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 // main function, creates map and layers, controls other functions
 function createMap(embed)
 {
-	alert("OpenRailwayMap is currently under construction, so you may expect very low performance and some bugs.");
 	root = "http://www.openrailwaymap.org/";
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
 	// path to the bitmap tile directory
