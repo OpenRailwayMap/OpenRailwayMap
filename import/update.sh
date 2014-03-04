@@ -66,7 +66,8 @@ echo ""
 # load data into database
 echo "Updating database"
 echo ""
-osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 --expire-tiles 2-15 --expire-output expired_tiles changes.osc
+rm $TILELIST
+osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 --expire-tiles 15 --expire-output expired_tiles changes.osc
 rm changes.osc
 
 
@@ -74,8 +75,20 @@ rm changes.osc
 echo "Rerender expired tiles"
 echo ""
 if [ -s $TILELIST ]; then
-	curl "http://localhost:9000/loadlist"
-	rm $TILELIST
+	node $PROJECTPATH/renderer/expire-tiles.js $TILELIST
+	cd $TILESPATH
+	find 0 -exec touch -t 197001010000 {} \;
+	find 1 -exec touch -t 197001010000 {} \;
+	find 2 -exec touch -t 197001010000 {} \;
+	find 3 -exec touch -t 197001010000 {} \;
+	find 4 -exec touch -t 197001010000 {} \;
+	find 5 -exec touch -t 197001010000 {} \;
+	find 6 -exec touch -t 197001010000 {} \;
+	find 7 -exec touch -t 197001010000 {} \;
+	find 17 -exec touch -t 197001010000 {} \;
+	find 18 -exec touch -t 197001010000 {} \;
+	find 19 -exec touch -t 197001010000 {} \;
+	find 20 -exec touch -t 197001010000 {} \;
 fi
 
 echo "Finished processing at $(date)."
