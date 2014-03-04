@@ -41,287 +41,10 @@ node|z1-20
 
 way[maxspeed=5], way[maxspeed=10]
 {
-	z-index: 50;
+	z-index: 1;
 	color: #0100CB;
     width: 3.5;
     linejoin: round;
-}
-
-way[maxspeed=15], way[maxspeed=20]
-{
-	z-index: 150;
-	color: #001ECB;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=25], way[maxspeed=30]
-{
-	z-index: 250;
-	color: #003DCB;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=35], way[maxspeed=40]
-{
-	z-index: 350;
-	color: #005BCB;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=45], way[maxspeed=50]
-{
-	z-index: 450;
-	color: #007ACB;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=55], way[maxspeed=60]
-{
-	z-index: 550;
-	color: #0098CB;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=65], way[maxspeed=70]
-{
-	z-index: 650;
-	color: #00B7CB;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=75], way[maxspeed=80]
-{
-	z-index: 750;
-	color: #00CBC1;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=85], way[maxspeed=90]
-{
-	z-index: 850;
-	color: #00CBA2;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=95], way[maxspeed=100]
-{
-	z-index: 950;
-	color: #00CB84;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=105], way[maxspeed=110]
-{
-	z-index: 1100;
-	color: #00CB66;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=115], way[maxspeed=120]
-{
-	z-index: 1200;
-	color: #00CB47;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=125], way[maxspeed=130]
-{
-	z-index: 1300;
-	color: #00CB29;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=135], way[maxspeed=140]
-{
-	z-index: 1400;
-	color: #00CB0A;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=145], way[maxspeed=150]
-{
-	z-index: 1500;
-	color: #14CB00;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=155], way[maxspeed=160]
-{
-	z-index: 1600;
-	color: #33CB00;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=165], way[maxspeed=170]
-{
-	z-index: 1700;
-	color: #51CB00;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=175], way[maxspeed=180]
-{
-	z-index: 1800;
-	color: #70CB00;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=185], way[maxspeed=190]
-{
-	z-index: 1900;
-	color: #8ECB00;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=195], way[maxspeed=200]
-{
-	z-index: 2000;
-	color: #ADCB00;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=205], way[maxspeed=210]
-{
-	z-index: 2100;
-	color: #CBCB00;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=215], way[maxspeed=220]
-{
-	z-index: 2200;
-	color: #CBAD00;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=225], way[maxspeed=230]
-{
-	z-index: 2300;
-	color: #CB8E00;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=235], way[maxspeed=240]
-{
-	z-index: 2300;
-	color: #CB7000;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=245], way[maxspeed=250]
-{
-	z-index: 2300;
-	color: #CB5100;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=255], way[maxspeed=260]
-{
-	z-index: 2300;
-	color: #CB3300;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=265], way[maxspeed=270]
-{
-	z-index: 2300;
-	color: #CB1400;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=275], way[maxspeed=280]
-{
-	z-index: 2300;
-	color: #CB0007;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=285], way[maxspeed=290]
-{
-	z-index: 2300;
-	color: #CB0025;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=295], way[maxspeed=300]
-{
-	z-index: 2300;
-	color: #CB0044;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=305], way[maxspeed=310], way[maxspeed=315], way[maxspeed=320]
-{
-	z-index: 2300;
-	color: #CB0062;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=325], way[maxspeed=330], way[maxspeed=335], way[maxspeed=340]
-{
-	z-index: 2300;
-	color: #CB0081;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=345], way[maxspeed=350], way[maxspeed=355], way[maxspeed=360]
-{
-	z-index: 2300;
-	color: #CB009F;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=365], way[maxspeed=370], way[maxspeed=375], way[maxspeed=380]
-{
-	z-index: 2300;
-	color: #CB00BD;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed=385], way[maxspeed=390], way[maxspeed=395], way[maxspeed=400]
-{
-	z-index: 2300;
-	color: #BA00CB;
-    width: 3.5;
-    linejoin: round;
-}
-
-way[maxspeed]
-{
-	z-index: 5000;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -330,4 +53,583 @@ way[maxspeed]
 	font-weight: bold;
 	text-halo-radius: 1;
 	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=15], way[maxspeed=20]
+{
+	z-index: 2;
+	color: #001ECB;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=25], way[maxspeed=30]
+{
+	z-index: 3;
+	color: #003DCB;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=35], way[maxspeed=40]
+{
+	z-index: 4;
+	color: #005BCB;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=45], way[maxspeed=50]
+{
+	z-index: 5;
+	color: #007ACB;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=55], way[maxspeed=60]
+{
+	z-index: 6;
+	color: #0098CB;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=65], way[maxspeed=70]
+{
+	z-index: 7;
+	color: #00B7CB;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=75], way[maxspeed=80]
+{
+	z-index: 8;
+	color: #00CBC1;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=85], way[maxspeed=90]
+{
+	z-index: 9;
+	color: #00CBA2;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=95], way[maxspeed=100]
+{
+	z-index: 10;
+	color: #00CB84;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=105], way[maxspeed=110]
+{
+	z-index: 11;
+	color: #00CB66;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=115], way[maxspeed=120]
+{
+	z-index: 12;
+	color: #00CB47;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=125], way[maxspeed=130]
+{
+	z-index: 13;
+	color: #00CB29;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=135], way[maxspeed=140]
+{
+	z-index: 14;
+	color: #00CB0A;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=145], way[maxspeed=150]
+{
+	z-index: 15;
+	color: #14CB00;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=155], way[maxspeed=160]
+{
+	z-index: 16;
+	color: #33CB00;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=165], way[maxspeed=170]
+{
+	z-index: 17;
+	color: #51CB00;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=175], way[maxspeed=180]
+{
+	z-index: 18;
+	color: #70CB00;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=185], way[maxspeed=190]
+{
+	z-index: 19;
+	color: #8ECB00;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=195], way[maxspeed=200]
+{
+	z-index: 20;
+	color: #ADCB00;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=205], way[maxspeed=210]
+{
+	z-index: 21;
+	color: #CBCB00;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=215], way[maxspeed=220]
+{
+	z-index: 22;
+	color: #CBAD00;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=225], way[maxspeed=230]
+{
+	z-index: 23;
+	color: #CB8E00;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=235], way[maxspeed=240]
+{
+	z-index: 24;
+	color: #CB7000;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=245], way[maxspeed=250]
+{
+	z-index: 25;
+	color: #CB5100;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=255], way[maxspeed=260]
+{
+	z-index: 26;
+	color: #CB3300;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=265], way[maxspeed=270]
+{
+	z-index: 27;
+	color: #CB1400;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=275], way[maxspeed=280]
+{
+	z-index: 28;
+	color: #CB0007;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=285], way[maxspeed=290]
+{
+	z-index: 29;
+	color: #CB0025;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=295], way[maxspeed=300]
+{
+	z-index: 30;
+	color: #CB0044;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=305], way[maxspeed=310], way[maxspeed=315], way[maxspeed=320]
+{
+	z-index: 31;
+	color: #CB0062;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=325], way[maxspeed=330], way[maxspeed=335], way[maxspeed=340]
+{
+	z-index: 32;
+	color: #CB0081;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=345], way[maxspeed=350], way[maxspeed=355], way[maxspeed=360]
+{
+	z-index: 33;
+	color: #CB009F;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=365], way[maxspeed=370], way[maxspeed=375], way[maxspeed=380]
+{
+	z-index: 34;
+	color: #CB00BD;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
+}
+
+way[maxspeed=385], way[maxspeed=390], way[maxspeed=395], way[maxspeed=400]
+{
+	z-index: 35;
+	color: #BA00CB;
+    width: 3.5;
+    linejoin: round;
+	text: "maxspeed";
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	-x-ignore-layer: true;
 }
