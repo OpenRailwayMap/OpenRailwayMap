@@ -20,14 +20,6 @@
             s_default['default-lines'] = 'true';
         }
 
-        if ((type == 'node' && zoom >= 1 && zoom <= 20)) {
-            s_default['symbol-shape'] = 'square';
-            s_default['symbol-fill-opacity'] = '0';
-            s_default['symbol-size'] = '0';
-            s_default['text'] = MapCSS.e_localize(tags, "");
-            s_default['z-index'] = -1000;
-        }
-
         if (((type == 'way' && (tags['bridge'] == '1' || tags['bridge'] == 'true' || tags['bridge'] == 'yes')) && zoom >= 2 && zoom <= 5)) {
             s_bridges['z-index'] = 1;
             s_bridges['casing-width'] = 1.5;
@@ -576,7 +568,7 @@
             height: 10, 
             offset: 16
         }
-    }, external_images = [], presence_tags = [], value_tags = ['ref', 'railway:local_operated', 'railway:position', "", 'railway', 'railway:track_ref', 'usage', 'highspeed', 'name', 'tunnel', 'railway:switch', 'service', 'railway:ref', 'bridge'];
+    }, external_images = [], presence_tags = [], value_tags = ['ref', 'railway:local_operated', 'railway:position', 'railway', 'railway:track_ref', 'usage', 'highspeed', 'name', 'tunnel', 'railway:switch', 'service', 'railway:ref', 'bridge'];
 
     MapCSS.loadStyle('standard', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('standard');
