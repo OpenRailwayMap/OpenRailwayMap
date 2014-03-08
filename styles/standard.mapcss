@@ -79,13 +79,13 @@ way[tunnel=yes]::tunnels
     linejoin: butt;
 }
 
-/********/
-/* refs */
-/********/
+/******************/
+/* refs and names */
+/******************/
 way[railway=rail][!service], way[railway=disused][!service], way[railway=abandoned][!service], way[railway=razed][!service], way[railway=proposed][!service], way[railway=construction][!service], way[railway=preserved][!service], way[railway=narrow_gauge][!service]
 {
 	z-index: 4000;
-	text: "ref";
+	text: eval(concat(tag("ref"), " ", tag("name")));
 	text-position: line;
 	text-color: #585858;
 	font-size: 11;

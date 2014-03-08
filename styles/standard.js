@@ -60,7 +60,7 @@
 
         if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'disused' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'abandoned' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'razed' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'proposed' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'construction' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'preserved' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('service'))))) {
             s_default['z-index'] = 4000;
-            s_default['text'] = MapCSS.e_localize(tags, 'ref');
+            s_default['text'] = MapCSS.e_localize(tags, MapCSS.e_concat(MapCSS.e_tag(tags, "ref"), " ", MapCSS.e_tag(tags, "name")));
             s_default['text-position'] = 'line';
             s_default['text-color'] = '#585858';
             s_default['font-size'] = '11';
@@ -568,7 +568,7 @@
             height: 10, 
             offset: 16
         }
-    }, external_images = [], presence_tags = [], value_tags = ['ref', 'railway:local_operated', 'railway:position', 'railway', 'railway:track_ref', 'usage', 'highspeed', 'name', 'tunnel', 'railway:switch', 'service', 'railway:ref', 'bridge'];
+    }, external_images = [], presence_tags = [], value_tags = ['ref', 'railway:local_operated', 'railway:position', 'railway', 'railway:track_ref', 'usage', MapCSS.e_concat("ref", " ", "name"), 'highspeed', 'name', 'tunnel', 'railway:switch', 'service', 'railway:ref', 'bridge'];
 
     MapCSS.loadStyle('standard', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('standard');
