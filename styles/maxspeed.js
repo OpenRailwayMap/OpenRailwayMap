@@ -20,14 +20,6 @@
             s_default['default-lines'] = 'true';
         }
 
-        if ((type == 'node' && zoom >= 1 && zoom <= 20)) {
-            s_default['symbol-shape'] = 'square';
-            s_default['symbol-fill-opacity'] = '0';
-            s_default['symbol-size'] = '0';
-            s_default['text'] = MapCSS.e_localize(tags, "");
-            s_default['z-index'] = -1000;
-        }
-
         if (((type == 'way' && tags['maxspeed'] == '5')) || ((type == 'way' && tags['maxspeed'] == '10'))) {
             s_default['z-index'] = 1;
             s_default['color'] = '#0100CB';
@@ -594,7 +586,7 @@
     }
     
     var sprite_images = {
-    }, external_images = [], presence_tags = [], value_tags = ['maxspeed', ""];
+    }, external_images = [], presence_tags = [], value_tags = ['maxspeed'];
 
     MapCSS.loadStyle('maxspeed', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('maxspeed');

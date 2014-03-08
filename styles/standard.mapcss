@@ -29,16 +29,6 @@ canvas
     default-lines: true;
 }
 
-/* needed for JOSM */
-node|z1-20
-{
-	symbol-shape: square;
-	symbol-fill-opacity: 0;
-	symbol-size: 0;
-	text: eval("");
-	z-index: -1000;
-}
-
 /***********/
 /* bridges */
 /***********/
