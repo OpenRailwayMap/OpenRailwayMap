@@ -61,13 +61,10 @@
 			// params
 			echo "<script type=\"text/javascript\">\n";
 				echo "var params={\n";
-				echo "id : ".(isset($_GET['id']) ? ($_GET['id']) : ("null")).",\n";
-				$type = isset($_GET['type']) ? $_GET['type'] : null;
-				if (!isset($type))
-					$type = isset($_GET['objecttype']) ? $_GET['objecttype'] : null;
-				echo "type : ".(isset($type) ? ("\"".$type."\"") : ("null")).",\n";
+				echo "id : ".(isValidId($_GET['id']) ? ($_GET['id']) : ("null")).",\n";
+				echo "type : ".(isValidType($_GET['type']) ? ("'".$_GET['type']."'") : ("null")).",\n";
 				echo "lat : ";
-					if (isset($_GET['lat']))
+					if (isValidCoordinate($_GET['lat']))
 						echo $_GET['lat'].",\n";
 					else
 					{
@@ -78,7 +75,7 @@
 							echo "null,\n";
 					}
 				echo "lon : ";
-					if (isset($_GET['lon']))
+					if (isValidCoordinate($_GET['lon']))
 						echo $_GET['lon'].",\n";
 					else
 					{
@@ -88,16 +85,16 @@
 						else
 							echo "null,\n";
 					}
-				echo "zoom : ".(isset($_GET['zoom']) ? ($_GET['zoom']) : ("null")).",\n";
-				echo "offset : ".(isset($_GET['offset']) ? ($_GET['offset']) : ("null")).",\n";
-				echo "searchquery : \"".(isset($_GET['q']) ? ($_GET['q']) : (""))."\",\n";
-				echo "lang : \"".$lang."\",\n";
-				echo "ref : ".(isset($_GET['ref']) ? ("\"".$_GET['ref']."\"") : ("null")).",\n";
-				echo "name : ".(isset($_GET['name']) ? ("\"".$_GET['name']."\"") : ("null")).",\n";
-				echo "position : ".(isset($_GET['position']) ? ("\"".$_GET['position']."\"") : ("null")).",\n";
-				echo "line : ".(isset($_GET['line']) ? ("\"".$_GET['line']."\"") : ("null")).",\n";
-				echo "operator : ".(isset($_GET['operator']) ? ("\"".$_GET['operator']."\"") : ("null")).",\n";
-				echo "style : ".(isset($_GET['style']) ? ("\"".$_GET['style']."\"") : ("null"))."\n";
+				echo "zoom : ".(isValidZoom($_GET['zoom']) ? ($_GET['zoom']) : ("null")).",\n";
+				echo "offset : ".(isValidOffset($_GET['offset']) ? ($_GET['offset']) : ("0")).",\n";
+				echo "searchquery : ".(isset($_GET['q']) ? (json_encode($_GET['q'])) : ("''")).",\n";
+				echo "lang : '".$lang."',\n";
+				echo "ref : ".(isset($_GET['ref']) ? (json_encode($_GET['ref'])) : ("null")).",\n";
+				echo "name : ".(isset($_GET['name']) ? (json_encode($_GET['name'])) : ("null")).",\n";
+				echo "position : ".(isValidPosition($_GET['position']) ? ("'".$_GET['position']."'") : ("null")).",\n";
+				echo "line : ".(isset($_GET['line']) ? (json_encode($_GET['line'])) : ("null")).",\n";
+				echo "operator : ".(isset($_GET['operator']) ? (json_encode($_GET['operator'])) : ("null")).",\n";
+				echo "style : ".(isset($_GET['style']) ? ("'".$_GET['style']."'") : ("null"))."\n";
 				echo "};\n";
 			echo "</script>\n";
 		?>
