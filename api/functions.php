@@ -437,7 +437,7 @@
 	{
 		global $db;
 
-		if ($id && $type)
+		if (isValidId($id) && isValidType($type))
 		{
 			$connection = connectToDatabase($db);
 			if (!$connection)
@@ -791,7 +791,7 @@
 	// checks if given type-parameter is valid
 	function isValidType($type)
 	{
-		if (!$type)
+		if (!$type || !isset($type))
 			return false;
 
 		// check if given object type is invalid
@@ -808,12 +808,60 @@
 	// checks if given osm id is valid
 	function isValidId($id)
 	{
-		if (!$id)
+		if (!$id || !isset($id))
 			return false;
 
 		if (!ctype_digit($id))
 		{
 			reportError("Given id contains not-numeric characters: ".$id);
+			return false;
+		}
+
+		return true;
+	}
+
+
+	// checks if given coordinate is valid
+	function isValidCoordinate($coord)
+	{
+		if (!$coord || !isset($coord))
+			return false;
+
+		if (!is_numeric($coord))
+		{
+			reportError("Given coordinate contains not-numeric characters: ".$coord);
+			return false;
+		}
+
+		return true;
+	}
+
+
+	// checks if given zoom level is valid
+	function isValidZoom($zoom)
+	{
+		if (!$zoom || !isset($zoom))
+			return false;
+
+		if (!ctype_digit($zoom))
+		{
+			reportError("Given zoom level is not valid: ".$zoom);
+			return false;
+		}
+
+		return true;
+	}
+
+
+	// checks if given timezone offset is valid
+	function isValidOffset($offset)
+	{
+		if (!$offset || !isset($offset))
+			return false;
+
+		if (!is_numeric($offset))
+		{
+			reportError("Given timezone offset is not valid: ".$offset);
 			return false;
 		}
 
@@ -1057,14 +1105,15 @@
 	// checks if given milestone position is in valid format
 	function isValidPosition($value)
 	{
-		if (!$value)
+		if (!$value || !isset($value))
 			return false;
-		if ((ctype_digit(str_replace(".", "", $value))))
-			return true;
-		if ((ctype_digit(str_replace(",", "", $value))))
-			return true;
+		// max. 9999.999 -> max. 8 characters
+		if (strlen($value) > 8)
+			return false;
+		if (!is_numeric($value))
+			return false;
 
-		return false;
+		return true;
 	}
 
 

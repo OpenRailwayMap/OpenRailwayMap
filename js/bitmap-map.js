@@ -105,7 +105,7 @@ function createMap(embed)
 		// build style selection and it's event handling
 		getStyleSelection();
 		// set rendering style
-		if (params['style'] != null)
+		if (params['style'] != null && styleValid(params['style']))
 			setStyle(params['style']);
 		else
 			setStyle("standard");
@@ -154,4 +154,15 @@ function getStyleSelection()
 	for (var i=0; i<availableStyles.length; i++)
 		gEBI('styleSelectionBar').innerHTML += '<input onchange="setStyle(this.value)" type="radio" name="style" value="'+availableStyles[i]+'">'+translations['style.'+availableStyles[i]]+'<br />';
 	gEBI('styleSelectionBar').innerHTML += '</p></form>';
+}
+
+
+// returns true if the given stylename is a valid and available style; otherwise false is returned
+function styleValid(style)
+{
+	for (var i=0; i<availableStyles.length; i++)
+		if (availableStyles[i] == style)
+			return true;
+
+	return false;
 }
