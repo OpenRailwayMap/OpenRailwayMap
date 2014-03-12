@@ -33,7 +33,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '15')) || ((type == 'way' && tags['maxspeed'] == '20'))) {
@@ -49,7 +49,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '25')) || ((type == 'way' && tags['maxspeed'] == '30'))) {
@@ -65,7 +65,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '35')) || ((type == 'way' && tags['maxspeed'] == '40'))) {
@@ -81,7 +81,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '45')) || ((type == 'way' && tags['maxspeed'] == '50'))) {
@@ -97,7 +97,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '55')) || ((type == 'way' && tags['maxspeed'] == '60'))) {
@@ -113,7 +113,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '65')) || ((type == 'way' && tags['maxspeed'] == '70'))) {
@@ -129,7 +129,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '75')) || ((type == 'way' && tags['maxspeed'] == '80'))) {
@@ -145,7 +145,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '85')) || ((type == 'way' && tags['maxspeed'] == '90'))) {
@@ -161,7 +161,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '95')) || ((type == 'way' && tags['maxspeed'] == '100'))) {
@@ -177,7 +177,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '105')) || ((type == 'way' && tags['maxspeed'] == '110'))) {
@@ -193,7 +193,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '115')) || ((type == 'way' && tags['maxspeed'] == '120'))) {
@@ -209,7 +209,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '125')) || ((type == 'way' && tags['maxspeed'] == '130'))) {
@@ -225,7 +225,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '135')) || ((type == 'way' && tags['maxspeed'] == '140'))) {
@@ -241,7 +241,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '145')) || ((type == 'way' && tags['maxspeed'] == '150'))) {
@@ -257,7 +257,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '155')) || ((type == 'way' && tags['maxspeed'] == '160'))) {
@@ -273,7 +273,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '165')) || ((type == 'way' && tags['maxspeed'] == '170'))) {
@@ -289,7 +289,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '175')) || ((type == 'way' && tags['maxspeed'] == '180'))) {
@@ -305,7 +305,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '185')) || ((type == 'way' && tags['maxspeed'] == '190'))) {
@@ -321,7 +321,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '195')) || ((type == 'way' && tags['maxspeed'] == '200'))) {
@@ -337,7 +337,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '205')) || ((type == 'way' && tags['maxspeed'] == '210'))) {
@@ -353,7 +353,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '215')) || ((type == 'way' && tags['maxspeed'] == '220'))) {
@@ -369,7 +369,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '225')) || ((type == 'way' && tags['maxspeed'] == '230'))) {
@@ -385,7 +385,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '235')) || ((type == 'way' && tags['maxspeed'] == '240'))) {
@@ -401,7 +401,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '245')) || ((type == 'way' && tags['maxspeed'] == '250'))) {
@@ -417,7 +417,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '255')) || ((type == 'way' && tags['maxspeed'] == '260'))) {
@@ -433,7 +433,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '265')) || ((type == 'way' && tags['maxspeed'] == '270'))) {
@@ -449,7 +449,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '275')) || ((type == 'way' && tags['maxspeed'] == '280'))) {
@@ -465,7 +465,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '285')) || ((type == 'way' && tags['maxspeed'] == '290'))) {
@@ -481,7 +481,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '295')) || ((type == 'way' && tags['maxspeed'] == '300'))) {
@@ -497,7 +497,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '305')) || ((type == 'way' && tags['maxspeed'] == '310')) || ((type == 'way' && tags['maxspeed'] == '315')) || ((type == 'way' && tags['maxspeed'] == '320'))) {
@@ -513,7 +513,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '325')) || ((type == 'way' && tags['maxspeed'] == '330')) || ((type == 'way' && tags['maxspeed'] == '335')) || ((type == 'way' && tags['maxspeed'] == '340'))) {
@@ -529,7 +529,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '345')) || ((type == 'way' && tags['maxspeed'] == '350')) || ((type == 'way' && tags['maxspeed'] == '355')) || ((type == 'way' && tags['maxspeed'] == '360'))) {
@@ -545,7 +545,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '365')) || ((type == 'way' && tags['maxspeed'] == '370')) || ((type == 'way' && tags['maxspeed'] == '375')) || ((type == 'way' && tags['maxspeed'] == '380'))) {
@@ -561,7 +561,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (((type == 'way' && tags['maxspeed'] == '385')) || ((type == 'way' && tags['maxspeed'] == '390')) || ((type == 'way' && tags['maxspeed'] == '395')) || ((type == 'way' && tags['maxspeed'] == '400'))) {
@@ -577,7 +577,7 @@
             s_default['font-weight'] = 'bold';
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
-            s_default['-x-ignore-layer'] = 'true';
+            s_default['kothicjs-ignore-layer'] = 'true';
         }
 
         if (Object.keys(s_default).length) {
