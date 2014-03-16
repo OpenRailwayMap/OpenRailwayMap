@@ -70,7 +70,7 @@
 							echo "null,\n";
 					}
 				echo "zoom : ".(isValidZoom($_GET['zoom']) ? ($_GET['zoom']) : ("null")).",\n";
-				echo "offset : ".(isValidOffset($_GET['offset']) ? ($_GET['offset']) : ("0")).",\n";
+				echo "offset : ".(isValidOffset($_GET['offset']) ? ($_GET['offset']) : ("null")).",\n";
 				echo "searchquery : ".(isset($_GET['q']) ? (json_encode($_GET['q'])) : ("''")).",\n";
 				echo "lang : '".$lang."',\n";
 				echo "ref : ".(isset($_GET['ref']) ? (json_encode($_GET['ref'])) : ("null")).",\n";
