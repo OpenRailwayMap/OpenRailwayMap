@@ -27,7 +27,7 @@ meta
 /***************************/
 node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semaphore]
 {
-	z-index: 10000;
+	z-index: 9000;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -38,6 +38,8 @@ node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semap
 	icon-image: "icons/de:hp-semaphore.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
 
 /****************************/
@@ -56,6 +58,8 @@ node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light
 	icon-image: "icons/de:hp-light.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
 
 /*********************/
@@ -63,7 +67,7 @@ node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light
 /*********************/
 node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=semaphore][railway:signal:minor:height=normal], node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=semaphore][!railway:signal:minor:height]
 {
-	z-index: 10000;
+	z-index: 4000;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -74,6 +78,8 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=sem
 	icon-image: "icons/de:sh-semaphore.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
 
 /***************************/
@@ -81,7 +87,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=sem
 /***************************/
 node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=semaphore][railway:signal:minor:height=dwarf]
 {
-	z-index: 10000;
+	z-index: 2000;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -92,6 +98,8 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=sem
 	icon-image: "icons/de:sh-semaphore-dwarf.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
 
 /**********************/
@@ -99,7 +107,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=sem
 /**********************/
 node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=light][railway:signal:minor:height=normal], node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=light][!railway:signal:minor:height]
 {
-	z-index: 10000;
+	z-index: 5000;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -110,6 +118,8 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=lig
 	icon-image: "icons/de:sh-light.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
 
 /****************************/
@@ -117,7 +127,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=lig
 /****************************/
 node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=light][railway:signal:minor:height=dwarf]
 {
-	z-index: 10000;
+	z-index: 3000;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -128,6 +138,8 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=lig
 	icon-image: "icons/de:sh-light-dwarf.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
 
 /*******************/
@@ -135,7 +147,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=lig
 /*******************/
 node|z14-[railway=signal][railway:signal:distant=ks][railway:signal:distant:form=light][railway:signal:distant:states=ks1;ks2]
 {
-	z-index: 10000;
+	z-index: 8000;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -146,6 +158,8 @@ node|z14-[railway=signal][railway:signal:distant=ks][railway:signal:distant:form
 	icon-image: "icons/de:ks-distant.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
 
 /*********************/
@@ -153,7 +167,7 @@ node|z14-[railway=signal][railway:signal:distant=ks][railway:signal:distant:form
 /*********************/
 node|z14-[railway=signal][railway:signal:main=ks][railway:signal:main:form=light][railway:signal:main:states=hp0;ks1]
 {
-	z-index: 10000;
+	z-index: 10100;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -164,6 +178,8 @@ node|z14-[railway=signal][railway:signal:main=ks][railway:signal:main:form=light
 	icon-image: "icons/de:ks-main.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
 
 /******************************/
@@ -171,7 +187,7 @@ node|z14-[railway=signal][railway:signal:main=ks][railway:signal:main:form=light
 /******************************/
 node|z14-[railway=signal][railway:signal:combined=ks][railway:signal:combined:form=light][railway:signal:combined:states=hp0;ks1;ks2]
 {
-	z-index: 10000;
+	z-index: 10200;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -182,6 +198,8 @@ node|z14-[railway=signal][railway:signal:combined=ks][railway:signal:combined:fo
 	icon-image: "icons/de:ks-combined.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
 
 /******************/
@@ -189,7 +207,7 @@ node|z14-[railway=signal][railway:signal:combined=ks][railway:signal:combined:fo
 /******************/
 node|z14-[railway=signal][railway:signal:main=ne1][railway:signal:main:form=sign][railway:signal:main:function=entry]
 {
-	z-index: 10000;
+	z-index: 1000;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -200,6 +218,8 @@ node|z14-[railway=signal][railway:signal:main=ne1][railway:signal:main:form=sign
 	icon-image: "icons/de:ne1.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
 
 /******************/
@@ -207,7 +227,7 @@ node|z14-[railway=signal][railway:signal:main=ne1][railway:signal:main:form=sign
 /******************/
 node|z14-[railway=signal][railway:signal:main=AT:Trapeztafel][railway:signal:main:form=sign][railway:signal:main:function=entry]
 {
-	z-index: 10000;
+	z-index: 1000;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -218,4 +238,6 @@ node|z14-[railway=signal][railway:signal:main=AT:Trapeztafel][railway:signal:mai
 	icon-image: "icons/de:ne1.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
 }
