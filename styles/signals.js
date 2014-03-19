@@ -15,7 +15,7 @@
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'hp' && tags['railway:signal:main:form'] == 'semaphore') && zoom >= 14)) {
-            s_default['z-index'] = 10000;
+            s_default['z-index'] = 9000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
             s_default['text-size'] = '12';
@@ -26,6 +26,8 @@
             s_default['icon-image'] = 'icons/de:hp-semaphore.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'hp' && tags['railway:signal:main:form'] == 'light') && zoom >= 14)) {
@@ -40,10 +42,12 @@
             s_default['icon-image'] = 'icons/de:hp-light.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'semaphore' && tags['railway:signal:minor:height'] == 'normal') && zoom >= 17) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'semaphore' && (!tags.hasOwnProperty('railway:signal:minor:height'))) && zoom >= 17)) {
-            s_default['z-index'] = 10000;
+            s_default['z-index'] = 4000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
             s_default['text-size'] = '12';
@@ -54,10 +58,12 @@
             s_default['icon-image'] = 'icons/de:sh-semaphore.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'semaphore' && tags['railway:signal:minor:height'] == 'dwarf') && zoom >= 17)) {
-            s_default['z-index'] = 10000;
+            s_default['z-index'] = 2000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
             s_default['text-size'] = '12';
@@ -68,10 +74,12 @@
             s_default['icon-image'] = 'icons/de:sh-semaphore-dwarf.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'light' && tags['railway:signal:minor:height'] == 'normal') && zoom >= 17) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'light' && (!tags.hasOwnProperty('railway:signal:minor:height'))) && zoom >= 17)) {
-            s_default['z-index'] = 10000;
+            s_default['z-index'] = 5000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
             s_default['text-size'] = '12';
@@ -82,10 +90,12 @@
             s_default['icon-image'] = 'icons/de:sh-light.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor'] == 'sh' && tags['railway:signal:minor:form'] == 'light' && tags['railway:signal:minor:height'] == 'dwarf') && zoom >= 17)) {
-            s_default['z-index'] = 10000;
+            s_default['z-index'] = 3000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
             s_default['text-size'] = '12';
@@ -96,10 +106,12 @@
             s_default['icon-image'] = 'icons/de:sh-light-dwarf.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:distant'] == 'ks' && tags['railway:signal:distant:form'] == 'light' && tags['railway:signal:distant:states'] == 'ks1;ks2') && zoom >= 14)) {
-            s_default['z-index'] = 10000;
+            s_default['z-index'] = 8000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
             s_default['text-size'] = '12';
@@ -110,10 +122,12 @@
             s_default['icon-image'] = 'icons/de:ks-distant.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'ks' && tags['railway:signal:main:form'] == 'light' && tags['railway:signal:main:states'] == 'hp0;ks1') && zoom >= 14)) {
-            s_default['z-index'] = 10000;
+            s_default['z-index'] = 10100;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
             s_default['text-size'] = '12';
@@ -124,10 +138,12 @@
             s_default['icon-image'] = 'icons/de:ks-main.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:combined'] == 'ks' && tags['railway:signal:combined:form'] == 'light' && tags['railway:signal:combined:states'] == 'hp0;ks1;ks2') && zoom >= 14)) {
-            s_default['z-index'] = 10000;
+            s_default['z-index'] = 10200;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
             s_default['text-size'] = '12';
@@ -138,10 +154,12 @@
             s_default['icon-image'] = 'icons/de:ks-combined.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'ne1' && tags['railway:signal:main:form'] == 'sign' && tags['railway:signal:main:function'] == 'entry') && zoom >= 14)) {
-            s_default['z-index'] = 10000;
+            s_default['z-index'] = 1000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
             s_default['text-size'] = '12';
@@ -152,10 +170,12 @@
             s_default['icon-image'] = 'icons/de:ne1.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'AT:Trapeztafel' && tags['railway:signal:main:form'] == 'sign' && tags['railway:signal:main:function'] == 'entry') && zoom >= 14)) {
-            s_default['z-index'] = 10000;
+            s_default['z-index'] = 1000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
             s_default['text-size'] = '12';
@@ -166,6 +186,8 @@
             s_default['icon-image'] = 'icons/de:ne1.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
         }
 
         if (Object.keys(s_default).length) {
