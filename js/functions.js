@@ -76,9 +76,9 @@ function changeLanguage(lang)
 // returns a permalink storing all current settings (language, position, zoom, url params); style parameter is necessary, lang parameter is not necessary
 function getPermalinkUrl(style, lang)
 {
-	var url = root+'?lang='+((lang) ? lang : params['lang']);
+	var url = root+(window.location.pathname.substr(1));
 
-	var position = map.getCenter();
+	url += '?lang='+((lang) ? lang : params['lang']);
 
 	if (params['id'] != null)
 		url += '&id='+params['id'];
@@ -86,6 +86,7 @@ function getPermalinkUrl(style, lang)
 	if (params['type'] != null)
 		url += '&type='+params['type'];
 
+	var position = map.getCenter();
 	url += '&lat='+position.lat;
 	url += '&lon='+position.lng;
 	url += '&zoom='+map.getZoom();
