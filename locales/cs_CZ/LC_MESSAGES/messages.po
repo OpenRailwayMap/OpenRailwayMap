@@ -5,12 +5,13 @@
 #
 # Translators:
 # fri <pavelfric@seznam.cz>, 2013
+# fri <pavelfric@seznam.cz>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2013-12-04 22:19+0100\n"
+"PO-Revision-Date: 2014-04-04 23:13+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: Czech (http://www.transifex.com/projects/p/openrailwaymap/"
 "language/cs/)\n"
@@ -44,8 +45,8 @@ msgstr "Nahrává se..."
 msgid "Nothing found."
 msgstr "Nic nebylo nalezeno."
 
-msgid "Last update:"
-msgstr "Poslední aktualizace:"
+msgid "Last update"
+msgstr ""
 
 msgid "Empty input."
 msgstr "Prázdný vstup."
@@ -468,4 +469,22 @@ msgid "Nothing to see in this zoom level. Please zoom in."
 msgstr ""
 
 msgid "Legend not available for this style."
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Desktop version"
+msgstr ""
+
+msgid "Style"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Mapnik no-labels"
+msgstr ""
+
+msgid "Mapnik no-labels Grayscale"
 msgstr ""
