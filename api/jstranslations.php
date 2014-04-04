@@ -14,7 +14,7 @@
 	echo "translations = new Array();\n";
 	echo "translations['loading'] = '".addslashes(_("Loading..."))."';\n";
 	echo "translations['nothing'] = '".addslashes(_("Nothing found."))."';\n";
-	echo "translations['update'] = '".addslashes(_("Last update:"))."';\n";
+	echo "translations['update'] = '".addslashes(_("Last update"))."';\n";
 	echo "translations['empty'] = '".addslashes(_("Empty input."))."';\n";
 	echo "translations['kilometer'] = '".addslashes(_("Kilometer"))."';\n";
 	echo "translations['track'] = '".addslashes(_("Track"))."';\n";
@@ -29,6 +29,9 @@
 	echo "translations['mapquest'] = '".addslashes(_("MapQuest"))."';\n";
 	echo "translations['mapquestGrayscale'] = '".addslashes(_("MapQuest Grayscale"))."';\n";
 	echo "translations['mapquestAttribution'] = '".addslashes(_("Tiles Courtesy of <a href=\"http://www.mapquest.com/\" target=\"_blank\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo.png\">"))."';\n";
+	echo "translations['captionless'] = '".addslashes(_("Mapnik no-labels"))."';\n";
+	echo "translations['captionlessGrayscale'] = '".addslashes(_("Mapnik no-labels Grayscale"))."';\n";
+	echo "translations['captionlessAttribution'] = '".addslashes(_("Map data &copy; OpenStreetMap contributors"))."';\n";
 	echo "translations['styleSelection'] = '".addslashes(_("Select a map style"))."';\n";
 	echo "translations['publictransport'] = '".addslashes(_("Public transport"))."';\n";
 	echo "translations['searchresults'] = '".addslashes(_("Search results"))."';\n";
