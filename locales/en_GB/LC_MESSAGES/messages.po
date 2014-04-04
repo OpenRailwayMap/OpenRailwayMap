@@ -2,23 +2,24 @@
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
-# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013.
 #
+# Translators:
+# rurseekatze <AlexanderMatheisen@ish.de>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: 1\n"
+"Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2013-12-04 22:21+0100\n"
+"PO-Revision-Date: 2014-04-04 23:10+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: \n"
-"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
 msgstr "More Info"
@@ -42,8 +43,8 @@ msgstr "Loading..."
 msgid "Nothing found."
 msgstr "Nothing found."
 
-msgid "Last update:"
-msgstr "Last update:"
+msgid "Last update"
+msgstr "Last update"
 
 msgid "Empty input."
 msgstr "Empty input."
@@ -461,3 +462,21 @@ msgstr "Nothing to see in this zoom level. Please zoom in."
 
 msgid "Legend not available for this style."
 msgstr "Legend not available for this style."
+
+msgid "Language"
+msgstr "Language"
+
+msgid "Desktop version"
+msgstr "Desktop version"
+
+msgid "Style"
+msgstr "Style"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "Mapnik no-labels"
+msgstr "Mapnik no-labels"
+
+msgid "Mapnik no-labels Grayscale"
+msgstr "Mapnik no-labels Grayscale"

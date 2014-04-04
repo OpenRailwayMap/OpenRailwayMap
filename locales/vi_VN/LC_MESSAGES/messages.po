@@ -5,12 +5,13 @@
 #
 # Translators:
 # 1ec5 <mxn@1ec5.org>, 2013
+# 1ec5 <mxn@1ec5.org>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2013-12-04 22:23+0100\n"
+"PO-Revision-Date: 2014-04-04 23:13+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/projects/p/"
 "openrailwaymap/language/vi/)\n"
@@ -44,8 +45,8 @@ msgstr "Đang tải…"
 msgid "Nothing found."
 msgstr "Không tìm thấy kết quả."
 
-msgid "Last update:"
-msgstr "Cập nhật lần cuối:"
+msgid "Last update"
+msgstr ""
 
 msgid "Empty input."
 msgstr "Xin vui lòng nhập truy vấn."
@@ -453,7 +454,25 @@ msgid "Rolling highway"
 msgstr ""
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr ""
+msgstr "Mức thu phóng này không có gì để nhìn. Xin vui lòng phóng to."
 
 msgid "Legend not available for this style."
+msgstr "Kiểu bản đồ này không có bảng chú giải."
+
+msgid "Language"
+msgstr ""
+
+msgid "Desktop version"
+msgstr ""
+
+msgid "Style"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Mapnik no-labels"
+msgstr ""
+
+msgid "Mapnik no-labels Grayscale"
 msgstr ""

@@ -4,13 +4,14 @@
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
+# Lasso KANTE <kantemou@gmail.com>, 2013-2014
 # Lasso KANTE <kantemou@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2013-12-04 22:19+0100\n"
+"PO-Revision-Date: 2014-04-04 23:15+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: N'ko (http://www.transifex.com/projects/p/openrailwaymap/"
 "language/nqo/)\n"
@@ -44,8 +45,8 @@ msgstr "ߟߊ߬ߦߟߍ߬ߟߌ..."
 msgid "Nothing found."
 msgstr "ߝߋ߲߫ ߡߊ߫ ߛߐ߬ߘߐ߲߬."
 
-msgid "Last update:"
-msgstr "ߟߏ߲ߘߐߦߊߟߌ߫ ߞߎߘߊ:"
+msgid "Last update"
+msgstr ""
 
 msgid "Empty input."
 msgstr "ߘߏ߲߬ߠߌ߬ ߘߐߞߏߟߏ߲"
@@ -170,112 +171,112 @@ msgid "Maxspeeds"
 msgstr "ߓߏ߬ߙߌ߬ߓߊ߫"
 
 msgid "Halt"
-msgstr ""
+msgstr "ߟߐ߬ߟߌ߬ߘߊ"
 
 msgid "Station"
-msgstr ""
+msgstr "ߡߊ߬ߞߍ߬ߦߌߟߊ"
 
 msgid "Junction"
-msgstr ""
+msgstr "ߕߍߘߏ߲ߠߌ"
 
 msgid "Yard"
-msgstr ""
+msgstr "ߣߊߞߐ"
 
 msgid "Crossover"
-msgstr ""
+msgstr "ߊ߬ ߘߐߕߍ߰"
 
 msgid "Site"
-msgstr ""
+msgstr "ߞߍߦߙߐ"
 
 msgid "Service station"
-msgstr ""
+msgstr "ߓߊ߯ߙߊ߫ ߦߙߐ"
 
 msgid "Tram stop"
-msgstr ""
+msgstr "ߖߌ߰ߖߊ߮ ߟߐ߬ ߦߌߟߊ"
 
 msgid "Milestone"
-msgstr ""
+msgstr "ߦߌߟߊ߫ ߖߊߕߋߟߊ߲"
 
 msgid "Level crossing"
-msgstr ""
+msgstr "ߞߊߓߋ߫ ߘߐߕߍ߮"
 
 msgid "Crossing"
-msgstr ""
+msgstr "ߘߐ߬ߕߍ߰ߟߌ"
 
 msgid "Legend"
-msgstr ""
+msgstr "ߝߍ߬ߛߓߍ"
 
 msgid "Bridge"
-msgstr ""
+msgstr "ߛߍ߲"
 
 msgid "Tunnel"
-msgstr ""
+msgstr "ߝߙߏߞߙߏ"
 
 msgid "Line ref"
-msgstr ""
+msgstr "ߛߌ߬ߕߊ߬ߙߌ "
 
 msgid "Railroad line"
-msgstr ""
+msgstr "ߣߍ߰ߛߌߟߊ ߛߌ߬ߕߊ߬ߙߌ"
 
 msgid "Siding"
-msgstr ""
+msgstr "ߞߙߍ߬ߝߍ߬ ߛߌߟߊ"
 
 msgid "Yard track"
-msgstr ""
+msgstr "ߛߋ߲߬ߡߊ߬ ߛߌߟߊ"
 
 msgid "Spur"
 msgstr ""
 
 msgid "Crossover track"
-msgstr ""
+msgstr "ߛߌߟߊߘߐߕߍ߮"
 
 msgid "Branch line"
-msgstr ""
+msgstr "ߛߌߟߊ ߓߏߟߏ߲"
 
 msgid "Main line"
-msgstr ""
+msgstr "ߝߏ߲߬ߘߏߓߊ"
 
 msgid "Highspeed line"
-msgstr ""
+msgstr "ߥߦߏ߬ߓߊ߫ ߛߌ߬ߕߊ߬ߙߌ"
 
 msgid "Industrial line"
-msgstr ""
+msgstr "ߘߍ߲߰ߦߊ߬ߟߌ ߛߌ߬ߕߊ߬ߙߌ"
 
 msgid "Industrial service track"
-msgstr ""
+msgstr "ߘߍ߲߬ߦߊ߬ߟߌ ߓߊ߯ߙߘߊ ߛߌߕߊߙߌ"
 
 msgid "Preserved track"
-msgstr ""
+msgstr "ߛߌߟߊ߫ ߟߊߕߏߣߍ߲"
 
 msgid "Preserved service track"
-msgstr ""
+msgstr "ߓߊ߯ߙߘߊ ߛߌߟߊ߫ ߟߊߕߏߣߍ߲"
 
 msgid "Track under construction"
-msgstr ""
+msgstr "ߟߐ߬ߟߌ߬ߞߊ߲߬ ߛߌߕߊߙߌ"
 
 msgid "Proposed track"
-msgstr ""
+msgstr "ߛߌ߬ߕߊ߬ߙߌ߫ ߖߊ߬ߕߋ߬ߘߐߛߌ߰ߣߍ߲"
 
 msgid "Disused track"
-msgstr ""
+msgstr "ߛߌ߬ߕߊ߬ߙߌ߬ ߡߊߞߕߌߣߍ߲"
 
 msgid "Abandoned track"
-msgstr ""
+msgstr "ߛߌ߬ߕߊ߬ߙߌ߬ ߟߊߓߌ߬ߟߊ߬ߣߍ߲"
 
 msgid "Razed track"
-msgstr ""
+msgstr "ߛߌ߬ߕߊ߬ߙߌ߫ ߜߊ߬ߣߊ߲߬ߣߍ߲"
 
 msgid "Tram"
-msgstr ""
+msgstr "ߛߏߘߐߞߎߟߎ߲"
 
 msgid "Subway"
-msgstr ""
+msgstr "ߘߎ߰ߞߘߐ߬ߞߎߟߎ߲"
 
 msgid "Light rail"
 msgstr ""
 
 msgid "Narrow gauge track"
-msgstr ""
+msgstr "ߛߌߟߊ߫ ߘߐߜߙߐ߬ߣߍ߲߬"
 
 msgid "Narrow gauge siding"
 msgstr ""
@@ -329,7 +330,7 @@ msgid "Isolated track section"
 msgstr ""
 
 msgid "Platform"
-msgstr ""
+msgstr "ߝߘߏ߬ߓߊ߬ߘߊ"
 
 msgid "Vending machine"
 msgstr ""
@@ -341,13 +342,13 @@ msgid "Subway entrance"
 msgstr ""
 
 msgid "Phone"
-msgstr ""
+msgstr "ߜߋߟߋ߲ߜߋߟߋ߲"
 
 msgid "Water tower"
-msgstr ""
+msgstr "ߖߌ߫ ߓߏ߲ߘߏ߲"
 
 msgid "Fuel"
-msgstr ""
+msgstr "ߡߍ߬ߡߍ߬ߕߊ"
 
 msgid "Water crane"
 msgstr ""
@@ -356,10 +357,10 @@ msgid "Coaling facility"
 msgstr ""
 
 msgid "Wash"
-msgstr ""
+msgstr "ߞߏ߬ߟߌ"
 
 msgid "Pit"
-msgstr ""
+msgstr "ߘߏ߲߬ߞߊ߬"
 
 msgid "Loading gauge"
 msgstr ""
@@ -383,28 +384,28 @@ msgid "Turntable"
 msgstr ""
 
 msgid "Traverser"
-msgstr ""
+msgstr "ߘߐ߬ߛߊ߲߬ߠߊ"
 
 msgid "Loading ramp"
-msgstr ""
+msgstr "ߡߊ߬ߖߍ߲ߞߍ ߟߊ߬ߦߟߍ߬ߟߌ"
 
 msgid "Crane"
-msgstr ""
+msgstr "ߥߏ߲ߛߏ߲"
 
 msgid "Track scale"
-msgstr ""
+msgstr "ߛߌߟߊ ߛߊ߲߬ߞߊߟߊ߲"
 
 msgid "Carrier truck pit"
 msgstr ""
 
 msgid "Gauge conversion"
-msgstr ""
+msgstr "ߘߟߊߝߊ ߝߊ߬ߟߋ߲߬ߠߌ߲"
 
 msgid "Gate"
 msgstr ""
 
 msgid "Museum"
-msgstr ""
+msgstr "ߗߍ߬ߓߏ߲"
 
 msgid "Container terminal"
 msgstr ""
@@ -455,7 +456,25 @@ msgid "Rolling highway"
 msgstr ""
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr ""
+msgstr "ߝߋ߲߫ ߛߌ߫ ߡߊ߫ ߦߋ߫ ߦߙߐ ߣߌ߲߬ ߘߐ߫ ߝߟߐ߫߸ ߊ߬ ߡߊߞߊ߬ ߌߞߐ߫ ߖߊ߰ߣߌ߲߬."
 
 msgid "Legend not available for this style."
+msgstr "ߝߍ߬ߛߓߍ߬ ߡߊߛߐ߬ߘߐ߲߬ ߞߙߊߞߏ ߣߌ߲߬ ߢߍ߫."
+
+msgid "Language"
+msgstr ""
+
+msgid "Desktop version"
+msgstr ""
+
+msgid "Style"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Mapnik no-labels"
+msgstr ""
+
+msgid "Mapnik no-labels Grayscale"
 msgstr ""

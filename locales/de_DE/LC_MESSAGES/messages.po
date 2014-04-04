@@ -2,23 +2,25 @@
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
-# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013.
 #
+# Translators:
+# rurseekatze <AlexanderMatheisen@ish.de>, 2013-2014
 msgid ""
 msgstr ""
-"Project-Id-Version: 1\n"
+"Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2013-12-04 22:26+0100\n"
+"PO-Revision-Date: 2014-04-04 23:12+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: \n"
-"Language: de_DE\n"
+"Language-Team: German (http://www.transifex.com/projects/p/openrailwaymap/"
+"language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
 msgstr "Mehr Infos"
@@ -42,8 +44,8 @@ msgstr "Laden..."
 msgid "Nothing found."
 msgstr "Nichts gefunden."
 
-msgid "Last update:"
-msgstr "Letzte Aktualisierung:"
+msgid "Last update"
+msgstr "Letzte Aktualisierung"
 
 msgid "Empty input."
 msgstr "Leere Eingabe."
@@ -461,3 +463,21 @@ msgstr "In dieser Zoomstufe wird nichts angezeigt. Bitte weiter hereinzoomen."
 
 msgid "Legend not available for this style."
 msgstr "Die Legende für dieses Kartenthema konnte nicht geladen werden."
+
+msgid "Language"
+msgstr "Sprache"
+
+msgid "Desktop version"
+msgstr "Desktopversion"
+
+msgid "Style"
+msgstr "Kartenthema"
+
+msgid "Search"
+msgstr "Suche"
+
+msgid "Mapnik no-labels"
+msgstr "Mapnik ohne Beschriftungen"
+
+msgid "Mapnik no-labels Grayscale"
+msgstr "Mapnik ohne Beschriftungen Graustufen"

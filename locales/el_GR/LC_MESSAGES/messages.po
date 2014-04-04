@@ -4,13 +4,13 @@
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
-# Γιάννης Ανθυμίδης <yannanth@gmail.com>, 2013
+# Γιάννης Ανθυμίδης <yannanth@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2013-12-04 22:23+0100\n"
+"PO-Revision-Date: 2014-04-04 23:15+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/openrailwaymap/"
 "language/el/)\n"
@@ -45,8 +45,8 @@ msgstr "Φόρτωση..."
 msgid "Nothing found."
 msgstr "Δεν βρέθηκε."
 
-msgid "Last update:"
-msgstr "Τελευταία ενημέρωση:"
+msgid "Last update"
+msgstr ""
 
 msgid "Empty input."
 msgstr "Κενή καταχώρηση."
@@ -244,16 +244,16 @@ msgid "Highspeed line"
 msgstr "Γραμμή υψηλής ταχύτητας"
 
 msgid "Industrial line"
-msgstr ""
+msgstr "Βιομηχανική γραμμή"
 
 msgid "Industrial service track"
-msgstr ""
+msgstr "Βιομηχανική γραμμή εξυπηρέτησης"
 
 msgid "Preserved track"
-msgstr ""
+msgstr "Διατηρημένη γραμμή"
 
 msgid "Preserved service track"
-msgstr ""
+msgstr "Διατηρημένη γραμμή εξυπηρέτησης"
 
 msgid "Track under construction"
 msgstr "Γραμμή υπό κατασκευή"
@@ -268,16 +268,16 @@ msgid "Abandoned track"
 msgstr "Εγκαταλελειμμένη γραμμή"
 
 msgid "Razed track"
-msgstr ""
+msgstr "Κατεστραμμένη γραμμή"
 
 msgid "Tram"
-msgstr ""
+msgstr "Τροχιόδρομος"
 
 msgid "Subway"
 msgstr "Μετρό"
 
 msgid "Light rail"
-msgstr ""
+msgstr "Προαστιακός"
 
 msgid "Narrow gauge track"
 msgstr ""
@@ -349,10 +349,10 @@ msgid "Phone"
 msgstr "Τηλέφωνο"
 
 msgid "Water tower"
-msgstr ""
+msgstr "Υδραγωγείο"
 
 msgid "Fuel"
-msgstr ""
+msgstr "Καύσιμα"
 
 msgid "Water crane"
 msgstr ""
@@ -415,10 +415,10 @@ msgid "Container terminal"
 msgstr ""
 
 msgid "Station building"
-msgstr ""
+msgstr "Κτήριο σταθμού"
 
 msgid "Factory connected to railroad line"
-msgstr ""
+msgstr "Εργοστάσιο συνδεδεμένο με γραμμή τραίνου"
 
 msgid "Rack"
 msgstr ""
@@ -430,7 +430,7 @@ msgid "Cutting"
 msgstr ""
 
 msgid "Miniature railway"
-msgstr ""
+msgstr "Τρενάκι"
 
 msgid "Funicular"
 msgstr ""
@@ -439,19 +439,19 @@ msgid "Military line"
 msgstr "Στρατιωτική γραμμή"
 
 msgid "Military service track"
-msgstr ""
+msgstr "Στρατιωτική γραμμή εξυπηρέτησης"
 
 msgid "Ferry terminal"
-msgstr ""
+msgstr "Πορθμείο σιδηροδρόμων"
 
 msgid "Ferry"
-msgstr ""
+msgstr "Πορθμείο"
 
 msgid "Test line"
-msgstr ""
+msgstr "Δοκιμαστική γραμμή"
 
 msgid "Test service track"
-msgstr ""
+msgstr "Δοκιμαστική γραμμή εξυπηρέτησης"
 
 msgid "Car shuttle"
 msgstr ""
@@ -461,6 +461,26 @@ msgstr ""
 
 msgid "Nothing to see in this zoom level. Please zoom in."
 msgstr ""
+"Δεν εμφανίζεται τίποτα αξιόλογο σε αυτό το επίπεδο μεγέθυνσης. Παρακαλώ "
+"μεγεθυνθείτε."
 
 msgid "Legend not available for this style."
+msgstr "Δεν είναι διαθέσιμο το υπόμνημα για αυτό το στυλ."
+
+msgid "Language"
+msgstr ""
+
+msgid "Desktop version"
+msgstr ""
+
+msgid "Style"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Mapnik no-labels"
+msgstr ""
+
+msgid "Mapnik no-labels Grayscale"
 msgstr ""
