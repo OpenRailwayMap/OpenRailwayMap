@@ -14,10 +14,14 @@
 	// available translations
 	$langs = array(
 		"cs" => array("cs_CZ", "Česky"),
+		"da" => array("da_DK", "Dansk"),
 		"de" => array("de_DE", "Deutsch"),
 		"el" => array("el_GR", "Ελληνικά"),
 		"en" => array("en_GB", "English"),
+		"es" => array("es_ES", "Español"),
 		"nqo" => array("nqo_GN", "ߒߞߏ"),
+		"pl" => array("pl_PL", "Polski"),
+		"ru" => array("ru_RU", "Русский"),
 		"sl" => array("sl_SI", "Slovenščina"),
 		"vi" => array("vi_VN", "Tiếng Việt")
 	);
