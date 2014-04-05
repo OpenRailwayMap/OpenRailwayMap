@@ -9,7 +9,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 // reload the legend after changing zoomlevel or stylesheet
 function updateLegend(id, style)
 {
-	gEBI(id).src = root+"api/legend-generator.php?zoom="+map.getZoom()+"&style="+style;
+	gEBI(id).src = root+"api/legend-generator.php?zoom="+map.getZoom()+"&style="+style+"&lang="+params['lang'];
 }
 
 
