@@ -41,22 +41,6 @@
 		<![endif]-->
 		<script type="text/javascript" src="js/leaflet-0.6.2.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
-		<script type="text/javascript" src="js/kothic.js"></script>
-		<script type="text/javascript" src="js/renderer/path.js"></script>
-		<script type="text/javascript" src="js/renderer/line.js"></script>
-		<script type="text/javascript" src="js/renderer/polygon.js"></script>
-		<script type="text/javascript" src="js/renderer/shields.js"></script>
-		<script type="text/javascript" src="js/renderer/texticons.js"></script>
-		<script type="text/javascript" src="js/renderer/text.js"></script>
-		<script type="text/javascript" src="js/style/mapcss.js"></script>
-		<script type="text/javascript" src="js/style/style.js"></script>
-		<script type="text/javascript" src="js/utils/collisions.js"></script>
-		<script type="text/javascript" src="js/utils/geom.js"></script>
-		<script type="text/javascript" src="js/utils/rbush.js"></script>
-		<script type="text/javascript" src="js/kothic-leaflet.js"></script>
-		<script type="text/javascript" src="styles/standard.js"></script>
-		<script type="text/javascript" src="styles/signals.js"></script>
-		<script type="text/javascript" src="styles/maxspeed.js"></script>
 		<?php
 			// params
 			echo "<script type=\"text/javascript\">\n";
@@ -91,10 +75,10 @@
 				echo "lang : '".$lang."',\n";
 				echo "ref : ".(isset($_GET['ref']) ? (json_encode($_GET['ref'])) : ("null")).",\n";
 				echo "name : ".(isset($_GET['name']) ? (json_encode($_GET['name'])) : ("null")).",\n";
-				echo "position : ".(isValidPosition($_GET['position']) ? ("'".$_GET['position']."'") : ("null")).",\n";
+				echo "position : ".(isValidPosition($_GET['position']) ? (json_encode($_GET['position'])) : ("null")).",\n";
 				echo "line : ".(isset($_GET['line']) ? (json_encode($_GET['line'])) : ("null")).",\n";
 				echo "operator : ".(isset($_GET['operator']) ? (json_encode($_GET['operator'])) : ("null")).",\n";
-				echo "style : ".(isset($_GET['style']) ? ("'".$_GET['style']."'") : ("null"))."\n";
+				echo "style : ".(isset($_GET['style']) ? (json_encode($_GET['style'])) : ("null"))."\n";
 				echo "};\n";
 			echo "</script>\n";
 		?>
