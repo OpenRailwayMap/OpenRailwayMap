@@ -27,21 +27,36 @@ function createMap(embed)
 
 	map = L.map('mapFrame');
 
-	map.on('moveend', function(e)
+	if (!embed)
 	{
-		updatePermalink(railmap.selectedStyle);
-	});
+		map.on('moveend', function(e)
+		{
+			updatePermalink(railmap.selectedStyle);
+		});
+	}
 
 	// grayscale mapnik background layer
-	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	var mapnikGray = new L.TileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
 		maxZoom: 19
-	});
+	}).addTo(map);
 	// normal mapnik background layer
 	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
+		maxZoom: 19
+	});
+
+	var captionlessGray = new L.TileLayer.Grayscale('http://{s}.www.toolserver.org/tiles/osm-no-labels/{z}/{x}/{y}.png',
+	{
+		attribution: translations['captionlessAttribution'],
+		maxZoom: 19
+	});
+	// captionless mapnik background layer
+	var captionless = new L.TileLayer('http://{s}.www.toolserver.org/tiles/osm-no-labels/{z}/{x}/{y}.png',
+	{
+		attribution: translations['captionlessAttribution'],
 		maxZoom: 19
 	});
 
@@ -50,7 +65,7 @@ function createMap(embed)
 	{
 		attribution: translations['mapquestAttribution'],
 		maxZoom: 18
-	}).addTo(map);
+	});
 	// normal MapQuest background layer
 	var mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 	{
@@ -67,11 +82,14 @@ function createMap(embed)
 		tileSize: 256
 	}).addTo(map);
 
-	map.on('zoomend', function(e)
+	if (!embed)
 	{
-		updateLegend("legend", railmap.selectedStyle);
-		updatePermalink(railmap.selectedStyle);
-	});
+		map.on('zoomend', function(e)
+		{
+			updateLegend("legend", railmap.selectedStyle);
+			updatePermalink(railmap.selectedStyle);
+		});
+	}
 
 	// hillshading layer
 	var hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',
@@ -85,6 +103,8 @@ function createMap(embed)
 	baseLayers[translations['mapnikGrayscale']] = mapnikGray;
 	baseLayers[translations['mapquest']] = mapquest;
 	baseLayers[translations['mapquestGrayscale']] = mapquestGray;
+	baseLayers[translations['captionless']] = captionless;
+	baseLayers[translations['captionlessGrayscale']] = captionlessGray;
 
 	var overlays = new Object();
 	overlays[translations['hillshading']] = hillshading;
@@ -101,7 +121,7 @@ function createMap(embed)
 		// loading timestamp
 		var timestamp = new Timestamp("info");
 		// create search
-		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", "searchCheckbox");
+		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
 		// build style selection and it's event handling
 		getStyleSelection();
 		// set rendering style
@@ -110,7 +130,7 @@ function createMap(embed)
 		else
 			setStyle("standard");
 		// onclick event of locate button
-		gEBI(locateButton).onclick = function()
+		gEBI("locateButton").onclick = function()
 		{
 			startposition.setPosition();
 		};
