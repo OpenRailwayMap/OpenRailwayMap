@@ -21,13 +21,14 @@ function Startposition(map)
 			{
 				response = response.split(",");
 				self.map.setView(new L.LatLng(response[0], response[1]), 10);
-				self.geolocate();
-				return true;
 			}
 			else
 			{
-				self.geolocate();
-				return false;
+				// position to zoom on if no permalink is given and geolocation isn't supported
+				var lat = 51.58248;
+				var lon = 15.6501;
+				var zoom = 3;
+				this.map.setView(new L.LatLng(lat, lon), zoom);
 			}
 		}
 
@@ -35,7 +36,7 @@ function Startposition(map)
 	}
 
 
-	// main locating function
+	// set position by geolocation api
 	this.geolocate = function()
 	{
 		// if geolocation is available
@@ -47,14 +48,14 @@ function Startposition(map)
 	// locating by ip or fixed latlon
 	this.setPosition = function()
 	{
-		if (!this.setPositionByIp())
-		{
-			// position to zoom on if no permalink is given and geolocation isn't supported
-			var lat = 51.58248;
-			var lon = 15.6501;
-			var zoom = 3;
-			this.map.setView(new L.LatLng(lat, lon), zoom);
-		}
+				// position to zoom on if no permalink is given and geolocation isn't supported
+				var lat = 51.58248;
+				var lon = 15.6501;
+				var zoom = 3;
+				this.map.setView(new L.LatLng(lat, lon), zoom);
+
+		this.setPositionByIp();
+		this.geolocate();
 	}
 
 
@@ -106,7 +107,4 @@ function Startposition(map)
 	// no permalink
 	else
 		this.setPosition();
-
-	// load markers without moving the map first
-	this.map.setView(this.map.getCenter(), this.map.getZoom());
 }
