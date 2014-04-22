@@ -30,17 +30,20 @@
 		<meta name="date" content="2010-01-01" />
 		<meta name="page-topic" content="<?=$appname?>" />
 		<meta name="robots" content="index,follow" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon" />
 		<link rel="icon" href="img/favicon.ico" type="image/vnd.microsoft.icon" />
 		<meta http-equiv="content-script-type" content="text/javascript" />
 		<meta http-equiv="content-style-type" content="text/css" />
-		<link rel="stylesheet" type="text/css" href="css/map.css" />
+		<link rel="stylesheet" type="text/css" href="css/mobile.css" />
 		<link rel="stylesheet" href="css/leaflet.css" />
 		<!--[if lte IE 8]>
 			<link rel="stylesheet" href="css/leaflet.ie.css" />
 		<![endif]-->
 		<script type="text/javascript" src="js/leaflet-0.6.2.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
+		<script>L_DISABLE_3D = true;</script>
+
 		<?php
 			// params
 			echo "<script type=\"text/javascript\">\n";
@@ -118,12 +121,9 @@
 		<script type="text/javascript" src="js/search.js"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>
 		<script type="text/javascript" src="js/timestamp.js"></script>
+		<script type="text/javascript" src="js/mobilemenu.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
-		<script type="text/javascript" src="js/bitmap-map.js"></script>
-		<!-- redirect to mobile version if necessary -->
-		<script type="text/javascript">
-			mobileRedirection();
-		</script>
+		<script type="text/javascript" src="js/mobile.js"></script>
 		<!-- Piwik -->
 		<script type="text/javascript">
 			var _paq = _paq || [];
@@ -139,74 +139,73 @@
 			})();
 		</script>
 		<!-- End Piwik Code -->
-		<script type="text/javascript">
-		/* <![CDATA[ */
-			(function(){
-				var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-				s.type = 'text/javascript';
-				s.async = true;
-				s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-				t.parentNode.insertBefore(s, t);
-			})();
-		/* ]]> */</script>
 	</head>
 	<body onload="createMap(false);">
-		<div id="moreInfo" class="moreInfoFalse"></div>
-		<div id="sideBar" class="sideBar">
-			<b id="header"><a href="index.php"><?=$appname?></a></b>
-			<form id="langSelection">
-				<select id="langSelector" size="1" onChange="changeLanguage(gEBI('langSelector').options[gEBI('langSelector').selectedIndex].value)">
-					<?php
-						foreach ($langs as $short => $name)
-						{
-							echo "<option value=\"".$short."\"";
-							if ($short == $lang)
-								echo " selected";
-							echo ">".$name[1]."</option>\n";
-						}
-					?>
-				</select>
-			</form>
-			<br />
-			<a href="http://joker.com/" id="poweredby"><img src="img/ad.png" /></a>
-			<p id="info"></p>
-			<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="PaypalButton">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="9KCKT39N7AGL8">
-				<input type="image" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
-				<img alt="" border="0" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/scr/pixel.gif" width="1" height="1">
-			</form>
-			<a class="FlattrButton" id="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.openrailwaymap.org/"></a>
-			<noscript>
-				<a href="http://flattr.com/thing/1327262/OpenRailwayMap" target="_blank">
-					<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-				</a>
-			</noscript>
-			<div id="linkBar">
-				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
-				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>&nbsp;•
-				<a class="links" id="permalinkButton" href=""><?=_("Permalink")?></a>
+		<div id="header">
+			<b>OpenRailwayMap</b>
+			<div id="menuButton"></div>
+		</div>
+		<div id="menu" class="menuOut">
+			<div class="box">
+				<div class="headEntry"><?=_("Style")?></div>
+				<div id="styleSelectionBar"></div>
+			</div>
+			<div class="box">
+				<div class="headEntry"><?=_("Search")?></div>
+				<div class="headEntry">
+					<div>
+						<input type="text" id="searchBox" size="21" placeholder="<?=_('Search')?>" />
+					</div>
+					<div id="clearButton" onclick="Search.clear();">
+						<b>&#10060;</b>
+					</div>
+					<div id="searchButton" onclick="Search.request();">
+						<b>&#8629;</b>
+					</div>
+				</div>
+				<div id="searchBar" class="infoBarOut"></div>
+			</div>
+			<div class="box">
+				<div class="headEntry"><?=_("Legend")?></div>
+				<div id="legendBar">
+					<iframe id="legend" scrolling="no" onload="setIframeHeight(this.id)" src=""></iframe>
+				</div>
+			</div>
+			<div class="box">
+				<div class="headEntry"><?=_("Last update")?></div>
+				<p id="info"></p>
+			</div>
+			<div class="box">
+				<div class="headEntry"><?=_("Language")?></div>
+				<?php
+					foreach ($langs as $short => $name)
+					{
+						if ($short == $lang)
+							echo '<div class="resultEntry">'.$name[1].'<small>&#10003;</small></div>';
+						else
+							echo '<div class="resultEntry" onclick="changeLanguage(\''.$short.'\')">'.$name[1].'</div>';
+					}
+				?>
+			</div>
+			<hr class="separator" />
+			<div class="box">
+				<a style="display:block" class="resultEntry" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap"><?=_("More Info")?></a>
+				<a style="display:block" class="resultEntry" id="contactButton" href="#"><?=_("Contact")?></a>
+				<a style="display:block" class="resultEntry" id="permalinkButton" href=""><?=_("Permalink")?></a>
+				<a style="display:block" class="resultEntry" id="desktopButton" href=""><?=_("Desktop version")?></a>
 				<script language="javascript">
 					var usr = "info";
 					var dom = "openrailwaymap";
 					var tld = "org";
-					gEBI("contactButton").href="mailto:"+usr+"@"+dom+"."+tld;
+					gEBI("contactButton").href = "mailto:"+usr+"@"+dom+"."+tld;
 				</script>
 			</div>
-			<input type="text" id="searchBox" size="20" />
-			<img id="searchButton" src="img/search.png" onclick="Search.request();" title="Search" />
-			<img id="clearButton" src="img/clear.png" onclick="Search.clear();" />
-			<br />
-			<div id="searchBar" class="infoBarOut"></div>
-			<div id="detailsBar" class="infoBarOut"></div>
-			<div id="styleSelectionBar"></div>
-			<div id="legendBar">
-				<b><?=_("Legend")?>:</b>
-				<iframe id="legend" scrolling="no" onload="setIframeHeight(this.id)" src=""></iframe>
-			</div>
-			<iframe id="josmFrame" src="about:blank"></iframe>
 		</div>
 		<div id="locateButton"></div>
+		<script language="javascript">
+			if (isMobileDevice())
+				gEBI("locateButton").className = "leaflet-touch";
+		</script>
 		<div id="mapFrame">
 			<noscript>
 				<p><b><?=_("Javascript is not activated")?></b><br /><?=_("Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings.")?></p>
