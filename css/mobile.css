@@ -1,0 +1,414 @@
+/*
+OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+*/
+
+@charset "utf-8";
+
+html,body
+{
+	background-color: white;
+	color: black;
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma,sans-serif;
+}
+
+
+/* page title */
+#header
+{
+	padding-left: 10px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	border-bottom: 1px solid gray;
+	height: 40px;
+	box-shadow: 5px 2px 7px #aaaaaa;
+	-o-box-shadow: 5px 2px 7px #aaaaaa;
+	-moz-box-shadow: 5px 2px 7px #aaaaaa;
+	-webkit-box-shadow: 5px 2px 7px #aaaaaa;
+	z-index: 100000;
+	background: rgb(255,255,255);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(229,229,229,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0);
+}
+
+#header b
+{
+	font-size: 20px;
+	color: black;
+	padding-left: 10px;
+	position: absolute;
+	top: 7px;
+}
+
+#menuButton
+{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	background-color: white;
+	background-image: url('../img/menu.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 40px 30px;
+	width: 40px;
+	height: 30px;
+}
+
+#menuButton:hover
+{
+	cursor: pointer;
+}
+
+#menuButton:active
+{
+	cursor: pointer;
+	-o-box-shadow: inset 0 0 10px gray;
+	-webkit-box-shadow: inset 0 0 10px gray;
+    -moz-box-shadow: inset 0 0 10px gray;
+    box-shadow: inset 0 0 10px gray;
+	-webkit-touch-callout: none;
+	-webkit-user-drag: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: -moz-none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* map frame */
+#mapFrame
+{
+	background-color: #f1eee8;
+	color: black;
+	position: absolute;
+	top: 41px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+/* hidden menu */
+.menuOut
+{
+	visibility: hidden;
+	width: 0px;
+	height: 0px;
+	transition-property: opacity;
+	transition-duration: 5s;
+	transition-timing-function: linear;
+	transition-delay: 2s;
+	overflow-y: hidden;
+	display: none;
+}
+
+/* visible menu */
+.menu
+{
+	visibility: visible;
+	background-color: rgba(228, 231, 233, .9);
+	color: black;
+	position: absolute;
+	top: 41px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	z-index: 10000;
+	transition-property: opacity;
+	transition-duration: 5s;
+	transition-timing-function: linear;
+	transition-delay: 2s;
+	padding-top: -20px;
+	display: block;
+}
+
+/* text which is shown when javascript is not activated */
+noscript p
+{
+	font-size: 15px;
+	color: black;
+	margin-left: 80px;
+	margin-top: 100px;
+}
+
+/* locate-me button in desktop mode */
+#locateButton
+{
+	position: absolute;
+	left: 9px;
+	top: 110px;
+	width: 26px;
+	height: 26px;
+	background-color: white;
+	background-image: url('../img/locate.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 23px 23px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 7px rgba(0,0,0,0.4);
+	z-index: 1000;
+}
+
+#locateButton:hover
+{
+	background-color: #f4f4f4;
+	cursor: pointer;
+}
+
+/* locate-me button on touch devices */
+#locateButton.leaflet-touch
+{
+	position: absolute;
+	left: 10px;
+	top: 130px;
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	background-image: url('../img/locate.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 23px 23px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	border: 4px solid rgba(0,0,0,0.4);
+	box-shadow: none;
+	z-index: 1000;
+}
+
+/* menu boxes */
+.box
+{
+	background-color: rgba(255, 255, 255, 1);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #aaa;
+	margin: 10px;
+}
+
+.box p, .box iframe
+{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* the legend itself */
+#legend
+{
+	margin-top: 10px;
+	width: 251px;
+	border: none;
+	height: 100px;
+}
+
+.links
+{
+	color: #3b4a8e;
+	font-size: 12px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.links:hover
+{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* search results */
+.resultEntry
+{
+	color: black;
+	padding-left: 15px;
+	padding-right: 10px;
+	padding-top: 6px;
+	padding-bottom: 10px;
+	font-size: 15px;
+	-webkit-transition: background-color border;
+	-webkit-transition-timing-function: ease-in-out;
+	-webkit-transition-duration: 200ms;
+	-moz-transition: background-color border;
+	-moz-transition-timing-function: ease-in-out;
+	-moz-transition-duration: 200ms;
+	-o-transition: background-color border;
+	-o-transition-timing-function: ease-in-out;
+	-o-transition-duration: 200ms;
+	background-color: white;
+	border-bottom: 1px solid #f0f0f0;
+	-webkit-touch-callout: none;
+	-webkit-user-drag: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: -moz-none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.resultEntry:hover
+{
+	cursor: pointer;
+}
+
+.resultEntry:active
+{
+	color: white;
+	cursor: pointer;
+	background-color: #6baced;
+	border-bottom: 1px solid #6baced;
+	border-radius: 0px;
+}
+
+/* 'checked' symbol */
+.resultEntry small
+{
+	font-size: 22px;
+	position: absolute;
+	right: 30px;
+}
+
+/* error message in search results */
+#errorResults
+{
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 7px;
+	background-color: #E95050;
+	font-size: 12px;
+}
+
+/* box headings */
+.headEntry
+{
+	color: black;
+	padding-left: 15px;
+	padding-right: 10px;
+	padding-top: 6px;
+	padding-bottom: 10px;
+	font-size: 18px;
+	border-bottom: 1px solid #ededed;
+	-webkit-touch-callout: none;
+	-webkit-user-drag: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: -moz-none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	text-decoration: none;
+	background: #ededed;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+/* search box */
+#searchBox
+{
+	font-size: 18px;
+	height: 24px;
+	vertical-align: middle;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white;
+	border: 1px solid black;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 15px;
+	width: 235px;
+	padding-right: 30px;
+	padding-left: 30px;
+	outline: none;
+}
+
+#searchBox:focus
+{
+	-o-box-shadow: 0px 0px 6px 1px #5898f1;
+	-webkit-box-shadow: 0px 0px 6px 1px #5898f1;
+    -moz-box-shadow: 0px 0px 6px 1px #5898f1;
+    box-shadow: 0px 0px 6px 1px #5898f1;
+}
+
+/* search button, integrated into searchbox */
+#searchButton
+{
+	position: relative;
+	top: -40px;
+	left: 13px;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+}
+
+/* clear button, integrated into searchbox */
+#clearButton
+{
+	position: relative;
+	top: -24px;
+	left: 275px;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+}
+
+/* loading indicator of search engine */
+.loadingMoreInfo
+{
+	padding: 10px;
+	text-align: center;
+	font-size: 12px;
+	color: black;
+}
+
+.loadingMoreInfo img
+{
+	text-align: center;
+	width: 16px;
+	height: 16px;
+}
+
+.loadingMoreInfo:hover img
+{
+	text-align: center;
+	width: 16px;
+	height: 16px;
+}
+
+/* last update */
+#info
+{
+	font-size: 12px;
+}
+
+/* separator line */
+.separator
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 50px;
+}

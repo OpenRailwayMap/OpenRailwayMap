@@ -6,7 +6,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
-function Search(map, box, bar, searchButton, clearButton)
+function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 {
 	// clears the visible parts of a search
 	this.clear = function()
@@ -108,13 +108,14 @@ function Search(map, box, bar, searchButton, clearButton)
 
 			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+translations['nothing']+"</b></center></div>";
 
+			var self = this;
 			var removeErrorMessage = function()
 			{
 				// avoid deleting search results when a new search was performed before timeout was released
-				if (this.bar.getElementsByClassName("resultEntry").length == 0)
+				if (self.bar.getElementsByClassName("resultEntry").length == 0)
 				{
-					this.bar.innerHTML = '';
-					this.bar.className = 'infoBarOut';
+					self.bar.innerHTML = '';
+					self.bar.className = 'infoBarOut';
 				}
 			}
 			setTimeout(removeErrorMessage, 3500);
@@ -128,6 +129,9 @@ function Search(map, box, bar, searchButton, clearButton)
 		// move to position
 		this.map.panTo(new L.LatLng(lat, lon));
 		this.map.setZoom(13);
+		// hide menu in mobile mode
+		if (this.mobilemenu != null)
+			this.mobilemenu.hide();
 	}
 
 
@@ -138,6 +142,7 @@ function Search(map, box, bar, searchButton, clearButton)
 	this.clearButton = gEBI(clearButton);
 	this.bar = gEBI(bar);
 	this.request = "";
+	this.mobilemenu = mobilemenu || null;
 
 	var self = this;
 	this.searchButton.onclick = function()
