@@ -619,6 +619,7 @@ noscript p
 	background-image: url('../img/locate.png');
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
+	background-size: 23px 23px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-o-border-radius: 4px;
