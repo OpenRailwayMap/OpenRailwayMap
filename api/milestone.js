@@ -20,11 +20,11 @@ Milestone = function(params)
 	var ref = escapeString(params.ref);
 	var position = parseFloat(escapeString(params.position).replace(",", ".")).toFixed(3).toString();
 
-	return "SELECT bla.geometry AS geometry, bla.position AS position, bla.operator AS operator, bla.type AS type, bla.ref AS ref \
+	return "SELECT ST_X(bla.geometry) AS lat, ST_Y(bla.geometry) AS lon, bla.position AS position, bla.operator AS operator, bla.type AS type, bla.ref AS ref \
 				FROM ( \
 					SELECT foo.geometry AS geometry, foo.position AS position, foo.operator AS operator, foo.type AS type, foo.ref AS ref, ABS(CAST(foo.position AS FLOAT)-"+position.replace(",", ".")+") AS distance \
 					FROM ( \
-						SELECT ST_AsGeoJSON(centroids.geom) AS geometry, centroids.position AS position, centroids.operator AS operator, centroids.type AS type, centroids.ref AS ref \
+						SELECT centroids.geom AS geometry, centroids.position AS position, centroids.operator AS operator, centroids.type AS type, centroids.ref AS ref \
 						FROM ( \
 							SELECT ST_Transform(ST_Centroid(ST_Collect(milestones.geom)), 4326) AS geom, milestones.position AS position, milestones.operator AS operator, milestones.type AS type, milestones.ref AS ref \
 							FROM ( \
