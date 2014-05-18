@@ -49,14 +49,41 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			// show that search results are loaded
 			this.bar.innerHTML += "<div class=\"loadingMoreInfo\">"+loading+"</div>";
 			this.request = input;
-			input = input.replace(/ /g, "+");
 
-			var handler = function(response)
+			this.sendRequest("facility", "uicref="+input, function(response)
+			{
+				self.showResults(response);
+				self.sendRequest("facility", "name="+input, function(response)
+				{
+					self.showResults(response);
+					self.sendRequest("facility", "ref="+input, function(response)
 					{
 						self.showResults(response);
-					}
 
-			requestApi("search", "format=html&q="+input+"&lang="+params['lang'], handler);
+						var words = input.split(" ");
+						for (var i=0; i<words.length; i++)
+						{
+							if (words[i].indexOf(",") > 0 || words[i].indexOf(".") > 0)
+							{
+								var pos = words[i];
+								words.splice(i, 1);
+								break;
+							}
+						}
+						var ref = words.join(" ");
+
+						if (pos)
+						{
+							self.sendRequest("milestone", "position="+pos+"&ref="+ref, function(response)
+							{
+								self.finishResults(response);
+							});
+						}
+						else
+							self.finishResults(response);
+					});
+				});
+			});
 		}
 	}
 
@@ -64,45 +91,50 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	this.showResults = function(response)
     {
     	if (!response)
-    	{
-    		this.clear();
     		return false;
-    	}
 
 		var results = JSON.parse(response.responseText);
 		if (results.length > 0)
 		{
-			results = results[0];
+			this.bar.removeChild(this.bar.lastChild);
 			this.bar.className = 'infoBar';
 			for (var i=0; i<results.length; i++)
 			{
 				var result = document.createElement("div");
 				if (results[i]['type'] == "milestone")
-				{
 					result.innerHTML = '<b>'+translations['kilometer']+' '+results[i]['position']+', '+translations['track']+' '+results[i]['ref']+'</b>';
-					if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
-						result.innerHTML += '&nbsp;'+translations[results[i]['type']];
-					if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
-						result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
-				}
+				else if (results[i]['type'] == "level_crossing")
+					result.innerHTML = '<b>'+translations['level_crossing']+' '+results[i]['position']+', '+translations['track']+' '+results[i]['ref']+'</b>';
 				else
-				{
 					result.innerHTML = '<b>'+results[i]['name']+'</b>';
-					if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
-						result.innerHTML += '&nbsp;'+translations[results[i]['type']];
-					if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
-						result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
-				}
-				result.setAttribute('class', 'resultEntry');
+
+				if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
+					result.innerHTML += '&nbsp;'+translations[results[i]['type']];
+				if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
+					result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
+
 				selfSearch = this;
+				result.setAttribute('class', 'resultEntry');
 				result.onclick = new Function("selfSearch.showResult("+results[i]['lon']+", "+results[i]['lat']+");");
-				if (i == 0)
-					this.bar.innerHTML = "";
+
 				this.bar.appendChild(result);
 			}
+
+			var loadingIndicator = document.createElement("div");
+			loadingIndicator.setAttribute('class', 'loadingMoreInfo');
+			loadingIndicator.innerHTML = loading;
+			this.bar.appendChild(loadingIndicator);
 		}
+    }
+
+	// shows the returned search results
+	this.finishResults = function(response)
+    {
+		this.showResults(response);
+		this.bar.removeChild(this.bar.lastChild);
+
 		// if no results were found
-		else
+		if (this.bar.innerHTML.length == 0)
 		{
 			var bar = this.bar.id;
 
@@ -127,11 +159,34 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	this.showResult = function(lat, lon)
 	{
 		// move to position
-		this.map.panTo(new L.LatLng(lat, lon));
-		this.map.setZoom(13);
+		//this.map.setZoom(13);
+		//this.map.panTo(new L.LatLng(lat, lon));
+		this.map.setView(new L.LatLng(lat, lon), 14);
 		// hide menu in mobile mode
 		if (this.mobilemenu != null)
 			this.mobilemenu.hide();
+	}
+
+	// perform a synchron API request
+	this.sendRequest = function(requestType, query, handler)
+	{
+		if (window.XMLHttpRequest)
+			var request = new window.XMLHttpRequest;
+		else
+			var request = new ActiveXObject("MSXML2.XMLHTTP.3.0");
+
+		request.open("GET", 'http://api.openrailwaymap.org/'+requestType+'?'+query.replace(/ /g, "+"), true);
+		request.onreadystatechange = function()
+		{
+			if (request.readyState === 4)
+			{
+				if (request.status === 200)
+					handler(request);
+				else
+					handler(false);
+			}
+		};
+		request.send(null);
 	}
 
 
