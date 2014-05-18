@@ -66,6 +66,14 @@ var cpus = os.cpus().length;
 // maximum count of concurrent http connections
 http.globalAgent.maxSockets = configuration.maxsockets;
 
+// response headers
+var headers = {};
+headers["Access-Control-Allow-Origin"] = "*";
+headers["Access-Control-Allow-Methods"] = "GET";
+headers["Access-Control-Allow-Credentials"] = false;
+headers["Access-Control-Max-Age"] = '86400';
+headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept";
+
 // escape input parameters to avoid sql injections
 escapeString = function(str)
 {
@@ -123,7 +131,8 @@ else
 		if (toobusy())
 		{
 			logger.info('Server too busy. Aborting.');
-			response.writeHead(503, {'Content-Type': 'text/plain'});
+			headers["Content-Type"] = "text/plain";
+			response.writeHead(503, headers);
 			response.end();
 			return;
 		}
@@ -141,23 +150,30 @@ else
 				if (err)
 				{
 					logger.warn('An error occurred during '+requestType+' request: "'+err+'" Aborting.');
-					response.writeHead(500, {'Content-Type': 'plain/text'});
+					headers["Content-Type"] = "text/plain";
+					response.writeHead(500, headers);
 					response.end();
 					return;
 				}
 
 				logger.trace('Returning response...');
-				response.writeHead(200, {'Content-Type': 'application/javascript'});
+
+				// parse GeoJSON database response to object
+				if (data.rows[0] && data.rows[0].geometry)
+					for (i=0; i<data.rows.length; i++)
+						data.rows[i].geometry = JSON.parse(data.rows[i].geometry);
+
+				if (data.rows.length == 0)
+					data.rows = {};
+				
+				headers["Content-Type"] = "application/javascript";
+				response.writeHead(200, headers);
+
 				if (params.callback)
 					response.end(params.callback+'('+JSON.stringify(data.rows)+')');
 				else
-				{
-					if (data.rows[0].geometry)
-						for (i=0; i<data.rows.length; i++)
-							data.rows[i].geometry = JSON.parse(data.rows[i].geometry);
-
 					response.end(JSON.stringify(data.rows));
-				}
+
 				logger.trace('Finished request.');
 
 				client.end();
@@ -172,7 +188,8 @@ else
 				if (err)
 				{
 					logger.error('Connection to database '+connection+' failed. Returning.');
-					response.writeHead(500, {'Content-Type': 'text/plain'});
+					headers["Content-Type"] = "text/plain";
+					response.writeHead(500, headers);
 					response.end();
 					return;
 				}
@@ -185,7 +202,8 @@ else
 					if (!sqlquery)
 					{
 						client.end();
-						response.writeHead(403, {'Content-Type': 'text/plain'});
+						headers["Content-Type"] = "text/plain";
+						response.writeHead(403, headers);
 						response.end("Invalid parameters");
 						logger.error("Invalid parameters: "+JSON.stringify(params));
 						return;
@@ -196,7 +214,8 @@ else
 				else
 				{
 					client.end();
-					response.writeHead(403, {'Content-Type': 'text/plain'});
+					headers["Content-Type"] = "text/plain";
+					response.writeHead(403, headers);
 					response.end("Invalid request: "+requestType);
 					if (requestType != "favicon.ico")
 						logger.error("Invalid request: "+requestType);
