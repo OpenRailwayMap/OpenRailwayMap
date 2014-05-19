@@ -203,8 +203,8 @@ else
 					{
 						client.end();
 						headers["Content-Type"] = "text/plain";
-						response.writeHead(403, headers);
-						response.end("Invalid parameters");
+						response.writeHead(200, headers);
+						response.end("[]");
 						logger.error("Invalid parameters: "+JSON.stringify(params));
 						return;
 					}		
@@ -215,8 +215,8 @@ else
 				{
 					client.end();
 					headers["Content-Type"] = "text/plain";
-					response.writeHead(403, headers);
-					response.end("Invalid request: "+requestType);
+					response.writeHead(200, headers);
+					response.end("[]");
 					if (requestType != "favicon.ico")
 						logger.error("Invalid request: "+requestType);
 					return;
