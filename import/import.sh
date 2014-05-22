@@ -12,7 +12,7 @@ PROJECTPATH=/home/www/sites/194.245.35.149/site/orm
 DATAPATH=/home/www/sites/194.245.35.149/site/olm/import
 PATH="$PATH:$DATAPATH/bin"
 PATH="$PATH:$PROJECTPATH/import/bin/osm2pgsql"
-export JAVACMD_OPTIONS=-Xmx2800M
+export JAVACMD_OPTIONS=-Xmx4800M
 
 cd $DATAPATH
 
@@ -25,16 +25,17 @@ if [ ! -f old.pbf ]; then
 	echo "Planet file not existing, now downloading it"
 	wget http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
 	mv planet-latest.osm.pbf old.pbf
-	# update planet file
-	echo "Updating planet file"
-	echo ""
-	osmdate=`osmconvert old.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
-	date -u -d "$osmdate" +%s > timestamp
-	osmupdate old.pbf new.pbf --max-merge=2 --hourly --drop-author -v
-	rm old.pbf
-	mv new.pbf old.pbf
-	echo ""
 fi
+echo ""
+
+# update planet file
+echo "Updating planet file"
+echo ""
+osmdate=`osmconvert old.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
+date -u -d "$osmdate" +%s > timestamp
+osmupdate old.pbf new.pbf --max-merge=5 --hourly --drop-author -v
+rm old.pbf
+mv new.pbf old.pbf
 echo ""
 
 
@@ -56,7 +57,7 @@ echo ""
 # load data into database
 echo "Loading data into database"
 echo ""
-osm2pgsql --create --database railmap --username olm --prefix railmap --slim --style railmap.style --hstore --cache 512 old-railways.osm
+osm2pgsql --create --database railmap --username olm --prefix railmap --slim --style railmap.style --hstore --hstore-add-index --number-processes 3 --cache 2048 old-railways.osm
 osmconvert old-railways.osm --out-o5m >old-railways.o5m
 rm old-railways.osm
 echo ""

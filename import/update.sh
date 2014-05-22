@@ -19,7 +19,7 @@ TILELIST=/home/www/sites/194.245.35.149/site/olm/import/expired_tiles
 
 PATH="$PATH:$PROJECTPATH/import/bin"
 PATH="$PATH:$PROJECTPATH/import/bin/osm2pgsql"
-export JAVACMD_OPTIONS=-Xmx2800M
+export JAVACMD_OPTIONS=-Xmx4800M
 
 cd $DATAPATH
 
@@ -32,7 +32,7 @@ echo "Updating planet file"
 #echo ""
 #osmdate=`osmconvert old.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
 #date -u -d "$osmdate" +%s > timestamp_tmp
-#osmupdate old.pbf new.pbf --max-merge=2 --hourly --drop-author -v
+#osmupdate old.pbf new.pbf --max-merge=5 --hourly --drop-author -v
 #rm old.pbf
 #mv new.pbf old.pbf
 # END
@@ -67,7 +67,7 @@ echo ""
 echo "Updating database"
 echo ""
 rm $TILELIST
-osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --hstore --cache 512 --expire-tiles 15 --expire-output expired_tiles changes.osc
+osm2pgsql --database railmap --username olm --append --prefix railmap --slim --style railmap.style --number-processes 2 --hstore --hstore-add-index --cache 1024 --expire-tiles 15 --expire-output expired_tiles changes.osc
 rm changes.osc
 
 
