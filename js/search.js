@@ -15,7 +15,15 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		this.reset();
 		this.bar.className = "infoBarOut";
 		this.box.focus();
+		this.removeMarker();
     }
+
+	// clears the visible parts of a search
+	this.removeMarker = function()
+	{
+		if (typeof resultMarker != null)
+			this.map.removeLayer(resultMarker);
+	}
 
 	// resets all parameters for a new search
     this.reset = function()
@@ -158,13 +166,19 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	// called when clicking on a search results, jumps to point and draws something on the map
 	this.showResult = function(lat, lon)
 	{
-		// move to position
-		//this.map.setZoom(13);
-		//this.map.panTo(new L.LatLng(lat, lon));
 		this.map.setView(new L.LatLng(lat, lon), 14);
 		// hide menu in mobile mode
 		if (this.mobilemenu != null)
 			this.mobilemenu.hide();
+
+		this.marker.setLatLng([lat, lon]);
+		this.marker.setOpacity(1);
+
+		var self = this;
+		this.map.on('movestart', function(e)
+		{
+			self.marker.setOpacity(0);
+		});
 	}
 
 	// perform a synchron API request
@@ -198,6 +212,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	this.bar = gEBI(bar);
 	this.request = "";
 	this.mobilemenu = mobilemenu || null;
+	this.marker = L.marker([0, 0], {opacity: 0, clickable: false}).addTo(this.map);
 
 	var self = this;
 	this.searchButton.onclick = function()
