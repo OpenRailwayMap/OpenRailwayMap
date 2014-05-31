@@ -15,15 +15,8 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		this.reset();
 		this.bar.className = "infoBarOut";
 		this.box.focus();
-		this.removeMarker();
+		this.marker.setOpacity(0);
     }
-
-	// clears the visible parts of a search
-	this.removeMarker = function()
-	{
-		if (typeof resultMarker != null)
-			this.map.removeLayer(resultMarker);
-	}
 
 	// resets all parameters for a new search
     this.reset = function()
@@ -173,12 +166,6 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 
 		this.marker.setLatLng([lat, lon]);
 		this.marker.setOpacity(1);
-
-		var self = this;
-		this.map.on('movestart', function(e)
-		{
-			self.marker.setOpacity(0);
-		});
 	}
 
 	// perform a synchron API request
