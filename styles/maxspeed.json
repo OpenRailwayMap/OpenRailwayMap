@@ -246,6 +246,34 @@
 			"maxzoom": 19,
 			"symbol": "<g fill=\"none\" stroke=\"#BA00CB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "381-400 km/h"
+		},
+		{
+			"id": "speed_limit_de_lf6",
+			"minzoom": 16,
+			"maxzoom": 19,
+			"icon": "icons/de:zs3v-50-sign-down-16px.png",
+			"caption": "Zs 3v Geschwindigkeitsvoranzeiger"
+		},
+		{
+			"id": "speed_limit_de_zs3",
+			"minzoom": 16,
+			"maxzoom": 19,
+			"icon": "icons/de:zs3-60-sign-up-16px.png",
+			"caption": "Zs 3 Geschwindigkeitsanzeiger"
+		},
+		{
+			"id": "speed_limit_distant_de_lf6",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de:lf6-60-sign-down-16px.png",
+			"caption": "Lf 6 Geschwindigkeits-Ankündigungssignal"
+		},
+		{
+			"id": "speed_limit_distant_de_lf7",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de:lf7-70-sign-16px.png",
+			"caption": "Lf 7 Geschwindigkeitssignal"
 		}
 	]
 }

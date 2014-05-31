@@ -580,13 +580,78 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '60') && zoom >= 16)) {
+            s_default['z-index'] = 100;
+            s_default['icon-image'] = 'icons/de:zs3-60-sign-up-44px.png';
+            s_default['icon-width'] = '22';
+            s_default['icon-height'] = '19';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '50') && zoom >= 16)) {
+            s_default['z-index'] = 200;
+            s_default['icon-image'] = 'icons/de:zs3v-50-sign-down-44px.png';
+            s_default['icon-width'] = '22';
+            s_default['icon-height'] = '19';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '70') && zoom >= 14)) {
+            s_default['z-index'] = 300;
+            s_default['icon-image'] = 'icons/de:lf7-70-sign-32px.png';
+            s_default['icon-width'] = '13';
+            s_default['icon-height'] = '16';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '30') && zoom >= 14)) {
+            s_default['z-index'] = 400;
+            s_default['icon-image'] = 'icons/de:lf6-30-sign-down-32px.png';
+            s_default['icon-width'] = '16';
+            s_default['icon-height'] = '14';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '60') && zoom >= 14)) {
+            s_default['z-index'] = 500;
+            s_default['icon-image'] = 'icons/de:lf6-60-sign-down-44px.png';
+            s_default['icon-width'] = '22';
+            s_default['icon-height'] = '19';
+            s_default['allow-overlap'] = 'true';
+        }
+
         if (Object.keys(s_default).length) {
             style['default'] = s_default; }
         return style;
     }
     
     var sprite_images = {
-    }, external_images = [], presence_tags = [], value_tags = ['maxspeed'];
+        'icons/de:lf6-30-sign-down-32px.png': {
+            width: 32, 
+            height: 27, 
+            offset: 0
+        },
+        'icons/de:lf6-60-sign-down-44px.png': {
+            width: 44, 
+            height: 38, 
+            offset: 27
+        },
+        'icons/de:lf7-70-sign-32px.png': {
+            width: 25, 
+            height: 32, 
+            offset: 65
+        },
+        'icons/de:zs3-60-sign-up-44px.png': {
+            width: 44, 
+            height: 38, 
+            offset: 97
+        },
+        'icons/de:zs3v-50-sign-down-44px.png': {
+            width: 44, 
+            height: 38, 
+            offset: 135
+        }
+    }, external_images = [], presence_tags = [], value_tags = ['railway:signal:speed_limit', 'railway', 'maxspeed', 'railway:signal:speed_limit:speed', 'railway:signal:speed_limit_distant:speed', 'railway:signal:speed_limit:form', 'railway:signal:speed_limit_distant:form', 'railway:signal:speed_limit_distant'];
 
     MapCSS.loadStyle('maxspeed', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('maxspeed');

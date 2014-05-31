@@ -623,3 +623,48 @@ way[maxspeed>380][maxspeed<=400]
 	text-halo-color: white;
 	kothicjs-ignore-layer: true;
 }
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=60]
+{
+	z-index: 100;
+	icon-image: "icons/de:zs3-60-sign-up-44px.png";
+	icon-width: 22;
+	icon-height: 19;
+    allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit_distant=zs3v][railway:signal:speed_limit_distant:form=sign][railway:signal:speed_limit_distant:speed=50]
+{
+	z-index: 200;
+	icon-image: "icons/de:zs3v-50-sign-down-44px.png";
+	icon-width: 22;
+	icon-height: 19;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=70]
+{
+	z-index: 300;
+	icon-image: "icons/de:lf7-70-sign-32px.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit_distant=lf6][railway:signal:speed_limit_distant:form=sign][railway:signal:speed_limit_distant:speed=30]
+{
+	z-index: 400;
+	icon-image: "icons/de:lf6-30-sign-down-32px.png";
+	icon-width: 16;
+	icon-height: 14;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit_distant=lf6][railway:signal:speed_limit_distant:form=sign][railway:signal:speed_limit_distant:speed=60]
+{
+	z-index: 500;
+	icon-image: "icons/de:lf6-60-sign-down-44px.png";
+	icon-width: 22;
+	icon-height: 19;
+    allow-overlap: true;
+}
