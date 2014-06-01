@@ -251,28 +251,28 @@
 			"id": "speed_limit_de_lf6",
 			"minzoom": 16,
 			"maxzoom": 19,
-			"icon": "icons/de:zs3v-50-sign-down-16px.png",
+			"icon": "icons/de:zs3v-50-sign-down-22px.png",
 			"caption": "Zs 3v Geschwindigkeitsvoranzeiger"
 		},
 		{
 			"id": "speed_limit_de_zs3",
 			"minzoom": 16,
 			"maxzoom": 19,
-			"icon": "icons/de:zs3-60-sign-up-16px.png",
+			"icon": "icons/de:zs3-60-sign-up-22px.png",
 			"caption": "Zs 3 Geschwindigkeitsanzeiger"
 		},
 		{
 			"id": "speed_limit_distant_de_lf6",
 			"minzoom": 14,
 			"maxzoom": 19,
-			"icon": "icons/de:lf6-60-sign-down-16px.png",
+			"icon": "icons/de:lf6-60-sign-down-22px.png",
 			"caption": "Lf 6 Geschwindigkeitsankündesignal"
 		},
 		{
 			"id": "speed_limit_distant_de_lf7",
 			"minzoom": 14,
 			"maxzoom": 19,
-			"icon": "icons/de:lf7-70-sign-16px.png",
+			"icon": "icons/de:lf7-70-sign-22px.png",
 			"caption": "Lf 7 Geschwindigkeitssignal"
 		}
 	]
