@@ -59,8 +59,6 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 					self.showResults(response);
 					self.sendRequest("facility", "ref="+input, function(response)
 					{
-						self.showResults(response);
-
 						var words = input.split(" ");
 						for (var i=0; i<words.length; i++)
 						{
@@ -128,7 +126,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		}
     }
 
-	// shows the returned search results
+	// finishes adding more results to the result list
 	this.finishResults = function(response)
     {
 		this.showResults(response);
