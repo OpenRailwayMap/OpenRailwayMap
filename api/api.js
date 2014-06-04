@@ -74,35 +74,6 @@ headers["Access-Control-Allow-Credentials"] = false;
 headers["Access-Control-Max-Age"] = '86400';
 headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept";
 
-// escape input parameters to avoid sql injections
-escapeString = function(str)
-{
-	if (str == null)
-		return null;
-
-    return str.replace("%", "").replace("*", "").replace(/[\0\x08\x09\x1a\n\r"'\\\%]/g, function (char) {
-        switch (char) {
-            case "\0":
-                return "\\0";
-            case "\x08":
-                return "\\b";
-            case "\x09":
-                return "\\t";
-            case "\x1a":
-                return "\\z";
-            case "\n":
-                return "\\n";
-            case "\r":
-                return "\\r";
-            case "\"":
-            case "'":
-            case "\\":
-            case "%":
-                return "\\"+char;
-        }
-    });
-};
-
 
 // fork workers
 if (cluster.isMaster)
@@ -140,6 +111,32 @@ else
 		{
 			var query = url.parse(request.url, true);
 			var params = query.query;
+
+			// escape input parameters to avoid sql injections
+			for (var key in params)
+			{
+				params[key] = params[key].replace("%", "").replace("*", "").replace(/[\0\x08\x09\x1a\n\r"'\\\%]/g, function (char) {
+					switch (char) {
+						case "\0":
+						    return "\\0";
+						case "\x08":
+						    return "\\b";
+						case "\x09":
+						    return "\\t";
+						case "\x1a":
+						    return "\\z";
+						case "\n":
+						    return "\\n";
+						case "\r":
+						    return "\\r";
+						case "\"":
+						case "'":
+						case "\\":
+						case "%":
+						    return "\\"+char;
+					}
+				});
+			}
 			
 			var requestType = query.pathname.substr(1);
 
