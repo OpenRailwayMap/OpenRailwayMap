@@ -51,7 +51,7 @@ Milestone = function(params)
 						ORDER BY centroids.position \
 					) AS foo \
 					ORDER BY distance \
-					LIMIT 10 \
+					LIMIT 3 \
 				) AS bla;";
 };
 
