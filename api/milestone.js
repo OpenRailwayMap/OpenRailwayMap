@@ -16,9 +16,8 @@ Milestone = function(params)
 
 	var prefix = configuration.prefix;
 	
-	var operator = (params.operator != null && params.operator.length > 0) ? "AND (LOWER("+prefix+"_line.tags->'operator') LIKE LOWER('%"+escapeString(params.operator)+"%'))" : "";
-	var ref = escapeString(params.ref);
-	var position = parseFloat(escapeString(params.position).replace(",", ".")).toFixed(3).toString();
+	var operator = (params.operator != null && params.operator.length > 0) ? "AND (LOWER("+prefix+"_line.tags->'operator') LIKE LOWER('%"+params.operator+"%'))" : "";
+	var position = parseFloat(params.position.replace(",", ".")).toFixed(3).toString();
 
 	return "SELECT ST_X(bla.geometry) AS lat, ST_Y(bla.geometry) AS lon, bla.position AS position, bla.operator AS operator, bla.type AS type, bla.ref AS ref \
 				FROM ( \
@@ -30,7 +29,7 @@ Milestone = function(params)
 							FROM ( \
 								SELECT wayjoin.geom AS geom, wayjoin.position AS position, "+prefix+"_line.tags->'operator' AS operator, wayjoin.type AS type, wayjoin.ref AS ref \
 								FROM ( \
-									SELECT "+prefix+"_ways.id AS osm_id, "+prefix+"_point.way AS geom, COALESCE("+prefix+"_point.tags->'railway:position:exact', "+prefix+"_point.tags->'railway:position') AS position, "+prefix+"_point.tags->'railway' AS type, '"+ref+"'::VARCHAR AS ref \
+									SELECT "+prefix+"_ways.id AS osm_id, "+prefix+"_point.way AS geom, COALESCE("+prefix+"_point.tags->'railway:position:exact', "+prefix+"_point.tags->'railway:position') AS position, "+prefix+"_point.tags->'railway' AS type, '"+params.ref+"'::VARCHAR AS ref \
 									FROM "+prefix+"_point \
 									INNER JOIN "+prefix+"_ways ON "+prefix+"_point.osm_id = ANY("+prefix+"_ways.nodes) \
 									WHERE \
@@ -45,7 +44,7 @@ Milestone = function(params)
 									) \
 								) AS wayjoin \
 								INNER JOIN "+prefix+"_line ON wayjoin.osm_id = "+prefix+"_line.osm_id \
-								WHERE (LOWER("+prefix+"_line.tags->'ref') = LOWER('"+ref+"')) "+operator+" \
+								WHERE (LOWER("+prefix+"_line.tags->'ref') = LOWER('"+params.ref+"')) "+operator+" \
 							) AS milestones \
 							GROUP BY ROUND(ST_X(milestones.geom)/100)*100, ROUND(ST_Y(milestones.geom)/100)*100, milestones.position, milestones.operator, milestones.type, milestones.ref \
 						) AS centroids \
