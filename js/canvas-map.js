@@ -58,7 +58,7 @@ function createMap(embed)
 	{
 		attribution: translations['mapquestAttribution'],
 		maxZoom: 18
-	}).addTo(map);
+	});
 	// normal MapQuest background layer
 	var mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 	{
