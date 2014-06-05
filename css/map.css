@@ -297,11 +297,12 @@ noscript p
 	background-color: white;
 	vertical-align: middle;
 	position: relative;
-	top: -24px;
-	left: 9px;
+	top: -9px;
+	left: 12px;
 	cursor: pointer;
 	width: 16px;
 	height: 16px;
+	margin-bottom: -10px;
 }
 
 /* clear button, integrated into searchbox*/
@@ -310,11 +311,12 @@ noscript p
 	background-color: white;
 	vertical-align: middle;
 	position: relative;
-	top: -24px;
-	left: 232px;
+	top: -23px;
+	left: 250px;
 	cursor: pointer;
 	width: 16px;
 	height: 16px;
+	margin-bottom: -30px;
 }
 
 /* links of contact, more info, ... */
