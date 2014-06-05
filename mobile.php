@@ -190,6 +190,7 @@
 			<hr class="separator" />
 			<div class="box">
 				<a style="display:block" class="resultEntry" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap"><?=_("More Info")?></a>
+				<a style="display:block" class="resultEntry" id="infoButton" href="http://blog.openrailwaymap.org/"><?=_("Blog")?></a>
 				<a style="display:block" class="resultEntry" id="contactButton" href="#"><?=_("Contact")?></a>
 				<a style="display:block" class="resultEntry" id="permalinkButton" href=""><?=_("Permalink")?></a>
 				<a style="display:block" class="resultEntry" id="desktopButton" href=""><?=_("Desktop version")?></a>

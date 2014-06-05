@@ -184,6 +184,7 @@
 			</noscript>
 			<div id="linkBar">
 				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
+				<a class="links" id="infoButton" href="http://blog.openrailwaymap.org/" target="_blank"><?=_("Blog")?></a>&nbsp;•
 				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>&nbsp;•
 				<a class="links" id="permalinkButton" href=""><?=_("Permalink")?></a>
 				<script language="javascript">
