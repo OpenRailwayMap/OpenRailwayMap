@@ -194,8 +194,12 @@
 				</script>
 			</div>
 			<input type="text" id="searchBox" size="20" />
-			<img id="searchButton" src="img/search.png" onclick="Search.request();" title="Search" />
-			<img id="clearButton" src="img/clear.png" onclick="Search.clear();" />
+			<div id="clearButton" onclick="Search.clear();">
+				<b>&#10060;</b>
+			</div>
+			<div id="searchButton" onclick="Search.request();">
+				<b>&#8629;</b>
+			</div>
 			<br />
 			<div id="searchBar" class="infoBarOut"></div>
 			<div id="detailsBar" class="infoBarOut"></div>
