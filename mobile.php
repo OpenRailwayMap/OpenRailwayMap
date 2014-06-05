@@ -18,17 +18,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<? echo $lang; ?>" lang="<? echo $lang; ?>">
 	<head>
-		<title><?=$appname?></title>
+		<title>OpenRailwayMap</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="content-language" content="<? echo $lang; ?>" />
 		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte" />
-		<meta name="title" content="<?=$appname?>" />
+		<meta name="title" content="OpenRailwayMap" />
 		<meta name="author" content="rurseekatze, Alexander Matheisen" />
 		<meta name="publisher" content="rurseekatze, Alexander Matheisen" />
 		<meta name="copyright" content="GNU General Public License v3" />
 		<meta name="revisit-after" content="after 90 days" />
 		<meta name="date" content="2010-01-01" />
-		<meta name="page-topic" content="<?=$appname?>" />
+		<meta name="page-topic" content="OpenRailwayMap" />
 		<meta name="robots" content="index,follow" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon" />
