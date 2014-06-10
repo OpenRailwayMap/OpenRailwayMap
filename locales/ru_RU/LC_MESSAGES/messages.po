@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-04-04 23:14+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
+"PO-Revision-Date: 2014-06-10 20:36+0400\n"
+"Last-Translator: freeExec <freeExec@mail.ru>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/"
 "openrailwaymap/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -20,34 +20,36 @@ msgstr ""
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
-msgstr ""
+msgstr "Ещё"
 
 msgid "Contact"
-msgstr ""
+msgstr "Контакты"
 
 msgid "Javascript is not activated"
-msgstr ""
+msgstr "Javascript не активирован"
 
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
 msgstr ""
+"Javascript необходим для показа карты и работы веб-сайта. Пожалуйста "
+"включите Javascript в настройках вашего браузера."
 
 msgid "Loading..."
-msgstr ""
+msgstr "Загрузка..."
 
 msgid "Nothing found."
 msgstr "Ничего не найдено."
 
 msgid "Last update"
-msgstr ""
+msgstr "Последнее обновление"
 
 msgid "Empty input."
-msgstr ""
+msgstr "Пустой запрос."
 
 msgid "Kilometer"
 msgstr "Километр"
@@ -74,10 +76,10 @@ msgid "Mapnik"
 msgstr ""
 
 msgid "Mapnik Grayscale"
-msgstr ""
+msgstr "Mapnik чёрно-белый"
 
 msgid "Map data &copy; OpenStreetMap contributors"
-msgstr ""
+msgstr "Данные карты &copy; участники OpenStreetMap"
 
 msgid "MapQuest"
 msgstr ""
@@ -101,7 +103,7 @@ msgid "Search results"
 msgstr "Результаты поиска"
 
 msgid "Search only in the current map view"
-msgstr ""
+msgstr "Поиск только в текущем виде карты"
 
 msgid "HTML-Code"
 msgstr ""
@@ -112,7 +114,7 @@ msgid ""
 msgstr ""
 
 msgid "Fullscreen"
-msgstr ""
+msgstr "Полный экран"
 
 #, php-format
 msgid "%d second"
@@ -131,9 +133,9 @@ msgstr[2] ""
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d час"
+msgstr[1] "%d часа"
+msgstr[2] "%d часов"
 
 #, php-format
 msgid "%d day"
@@ -158,20 +160,20 @@ msgstr[2] ""
 
 #, php-format
 msgid "more than %s ago"
-msgstr ""
+msgstr "дольше чем %s назад"
 
 #, php-format
 msgid "%s ago"
-msgstr ""
+msgstr "% назад"
 
 msgid "Infrastructure"
-msgstr ""
+msgstr "Инфраструктура"
 
 msgid "Signalling"
-msgstr ""
+msgstr "Сигнализация"
 
 msgid "Maxspeeds"
-msgstr ""
+msgstr "Скоростной режим"
 
 msgid "Halt"
 msgstr "Остановка"
@@ -198,16 +200,16 @@ msgid "Tram stop"
 msgstr "Трамвайная остановка"
 
 msgid "Milestone"
-msgstr ""
+msgstr "Километровый столб"
 
 msgid "Level crossing"
-msgstr ""
+msgstr "Переезд"
 
 msgid "Crossing"
-msgstr ""
+msgstr "Переход"
 
 msgid "Legend"
-msgstr ""
+msgstr "Легенда"
 
 msgid "Bridge"
 msgstr "Мост"
@@ -216,58 +218,58 @@ msgid "Tunnel"
 msgstr "Туннель"
 
 msgid "Line ref"
-msgstr ""
+msgstr "Номер линии"
 
 msgid "Railroad line"
-msgstr ""
+msgstr "Жележнодорожная линия"
 
 msgid "Siding"
-msgstr ""
+msgstr "Боковой путь"
 
 msgid "Yard track"
 msgstr ""
 
 msgid "Spur"
-msgstr ""
+msgstr "Ответвление"
 
 msgid "Crossover track"
 msgstr ""
 
 msgid "Branch line"
-msgstr ""
+msgstr "Второстепенная линия"
 
 msgid "Main line"
-msgstr ""
+msgstr "Основная линия"
 
 msgid "Highspeed line"
-msgstr ""
+msgstr "Высокоскоростная линия"
 
 msgid "Industrial line"
-msgstr ""
+msgstr "Промышленная линия"
 
 msgid "Industrial service track"
-msgstr ""
+msgstr "Промышленный служебный путь"
 
 msgid "Preserved track"
-msgstr ""
+msgstr "Исторический путь"
 
 msgid "Preserved service track"
-msgstr ""
+msgstr "Исторический служебный путь"
 
 msgid "Track under construction"
-msgstr ""
+msgstr "Строящийся путь"
 
 msgid "Proposed track"
-msgstr ""
+msgstr "Планируемый путь"
 
 msgid "Disused track"
-msgstr ""
+msgstr "Неиспользуемый путь"
 
 msgid "Abandoned track"
 msgstr "Заброшенный путь"
 
 msgid "Razed track"
-msgstr ""
+msgstr "Застроенный путь"
 
 msgid "Tram"
 msgstr "Трамвай"
@@ -276,58 +278,58 @@ msgid "Subway"
 msgstr "Метро"
 
 msgid "Light rail"
-msgstr ""
+msgstr "Легкорельсовый путь"
 
 msgid "Narrow gauge track"
-msgstr ""
+msgstr "Узкоколейный путь"
 
 msgid "Narrow gauge siding"
-msgstr ""
+msgstr "Узкоколейный боковой"
 
 msgid "Narrow gauge yard"
 msgstr ""
 
 msgid "Narrow gauge spur"
-msgstr ""
+msgstr "Узкоколейное ответвление"
 
 msgid "Narrow gauge crossover"
 msgstr ""
 
 msgid "Narrow gauge branch line"
-msgstr ""
+msgstr "Узкоколейная второстепенная линия"
 
 msgid "Narrow gauge main line"
-msgstr ""
+msgstr "Узкоколейная главная линия"
 
 msgid "Narrow gauge highspeed line"
-msgstr ""
+msgstr "Узкоколейная высокоскоростная линия"
 
 msgid "Narrow gauge industrial line"
-msgstr ""
+msgstr "Узкоколейная промышленная линия"
 
 msgid "Narrow gauge industrial service"
-msgstr ""
+msgstr "Узкоколейная промышленно-служебная"
 
 msgid "Switch (remote-controlled)"
-msgstr ""
+msgstr "Стрелка (автоматическая)"
 
 msgid "Switch (local operated)"
-msgstr ""
+msgstr "Стрелка (ручная)"
 
 msgid "Resetting switch"
-msgstr ""
+msgstr "Отжимная стрелка"
 
 msgid "Signal box"
-msgstr ""
+msgstr "Пост централизации"
 
 msgid "Owner change"
-msgstr ""
+msgstr "Граница раздела"
 
 msgid "Railway crossing"
-msgstr ""
+msgstr "Железнодорожный переезд"
 
 msgid "Buffer stop"
-msgstr ""
+msgstr "Тупиковый упор"
 
 msgid "Isolated track section"
 msgstr ""
@@ -336,10 +338,10 @@ msgid "Platform"
 msgstr "Платформа"
 
 msgid "Vending machine"
-msgstr ""
+msgstr "Автомат по продаже"
 
 msgid "Ticket shop"
-msgstr ""
+msgstr "Подажа билетов"
 
 msgid "Subway entrance"
 msgstr "Вход в метро"
@@ -348,13 +350,13 @@ msgid "Phone"
 msgstr "Телефон"
 
 msgid "Water tower"
-msgstr ""
+msgstr "Водонапорная башня"
 
 msgid "Fuel"
 msgstr "Топливо"
 
 msgid "Water crane"
-msgstr ""
+msgstr "Водяной кран"
 
 msgid "Coaling facility"
 msgstr ""
@@ -417,28 +419,28 @@ msgid "Station building"
 msgstr "Станционное здание"
 
 msgid "Factory connected to railroad line"
-msgstr ""
+msgstr "Завод соединён по железной дороге"
 
 msgid "Rack"
 msgstr ""
 
 msgid "Embankment"
-msgstr ""
+msgstr "Насыпь"
 
 msgid "Cutting"
-msgstr ""
+msgstr "Выемка"
 
 msgid "Miniature railway"
-msgstr ""
+msgstr "Миниатюрная железная дорога"
 
 msgid "Funicular"
 msgstr "Фуникулёр"
 
 msgid "Military line"
-msgstr ""
+msgstr "Военная линия"
 
 msgid "Military service track"
-msgstr ""
+msgstr "Военный служебный путь"
 
 msgid "Ferry terminal"
 msgstr "Паромный терминал"
@@ -447,10 +449,10 @@ msgid "Ferry"
 msgstr "Паром"
 
 msgid "Test line"
-msgstr ""
+msgstr "Испытательная линия"
 
 msgid "Test service track"
-msgstr ""
+msgstr "Испытательный служебный путь"
 
 msgid "Car shuttle"
 msgstr ""
@@ -459,25 +461,25 @@ msgid "Rolling highway"
 msgstr ""
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr ""
+msgstr "Ничего не видно на этом масштабе. Пожалуйста увеличте масштаб."
 
 msgid "Legend not available for this style."
-msgstr ""
+msgstr "Легенда не доступна для этого стиля."
 
 msgid "Language"
-msgstr ""
+msgstr "Язык"
 
 msgid "Desktop version"
-msgstr ""
+msgstr "Desktop версия"
 
 msgid "Style"
-msgstr ""
+msgstr "Стиль"
 
 msgid "Search"
-msgstr ""
+msgstr "Поиск"
 
 msgid "Mapnik no-labels"
-msgstr ""
+msgstr "Mapnik без надписей"
 
 msgid "Mapnik no-labels Grayscale"
-msgstr ""
+msgstr "Mapnik без надписей черно-белый"
