@@ -54,10 +54,10 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			this.sendRequest("facility", "uicref="+input, function(response)
 			{
 				self.showResults(response);
-				self.sendRequest("facility", "name="+input, function(response)
+				self.sendRequest("facility", "ref="+input, function(response)
 				{
 					self.showResults(response);
-					self.sendRequest("facility", "ref="+input, function(response)
+					self.sendRequest("facility", "name="+input, function(response)
 					{
 						var words = input.split(" ");
 						for (var i=0; i<words.length; i++)
