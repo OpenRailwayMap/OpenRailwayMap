@@ -174,7 +174,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'AT:Trapeztafel' && tags['railway:signal:main:form'] == 'sign' && tags['railway:signal:main:function'] == 'entry') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'AT:trapeztafel' && tags['railway:signal:main:form'] == 'sign' && tags['railway:signal:main:function'] == 'entry') && zoom >= 14)) {
             s_default['z-index'] = 1000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
             s_default['text-offset'] = 11;
