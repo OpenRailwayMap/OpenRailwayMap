@@ -2,9 +2,9 @@
 
 <!--
 OpenRailwayMap JOSM Presets File
-German edition: german language and german tagging
+Edition for German railways (in German)
 
-OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+OpenRailwayMap Copyright (C) 2012-2014 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
 See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
@@ -36,8 +36,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />	
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptstrecke" short_description="Eine Hauptstrecke, meist doppelgleisig, elektrifiziert, befahren von Zügen mit höheren Geschwindigkeiten und einer hohen Zugdichte." />
-					<list_entry value="branch" display_value="Nebenstrecke" short_description="Eine Neben- oder Zweigstrecke, oft nur eingleisig oder nicht elektrifiziert, befahren von langsameren Zügen und mit einer geringeren Zugdichte." />
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, in der Regel zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
 					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
 					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
 					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
@@ -73,7 +73,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="Linienzugbeeinflussung (LZB)"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:gnt"
@@ -100,7 +100,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
 					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<space />
 				<combo key="maxspeed" default=""
@@ -121,7 +121,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Electrification"
 					de.text="Elektrifizierung"
 					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					display_values="Ja,Nein,Ja (mit Oberleitung),Ja (mit Stromschiene)"
 					default=""
 					delete_if_empty="true" />
 				<combo key="voltage"
@@ -164,8 +164,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -223,7 +223,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="Linienzugbeeinflussung (LZB)"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:etcs"
@@ -295,8 +295,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -344,7 +344,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:etcs"
@@ -454,13 +454,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:pzb"
-					text="Punktförmige Zugbeeinflussung"
-					de.text="PZB"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="Linienzugbeeinflussung (LZB)"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:etcs"
@@ -532,8 +532,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -677,8 +677,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -735,7 +735,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
-					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+				  <list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" /><!-- FIXME: Abgrenzung zwischen (nicht durchgehenden) Hauptgleisen und (planmäßig nicht von Zügen befahrenen) Nebengleisen herausstellen -->
 					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
 					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
 					<list_entry value="spur" display_value="Anschlussgleis" short_description="Meist kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen" />
@@ -749,12 +749,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="LZB"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:etcs"
@@ -774,7 +774,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
 					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -831,8 +831,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -895,7 +895,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:radio"
@@ -908,7 +908,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
 					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -965,8 +965,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1089,8 +1089,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1153,12 +1153,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="LZB"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:etcs"
@@ -1171,7 +1171,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
 					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -1210,7 +1210,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="1435"
 					delete_if_empty="true" />
 				<check key="railway:ballastless"
-					text="Ballastless"
+					text="Ballastless (slab track)"
 					de.text="Feste Fahrbahn"
 					default="off"
 					delete_if_empty="true" />
@@ -1221,8 +1221,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1276,12 +1276,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="LZB"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:etcs"
@@ -1294,7 +1294,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
 					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -1344,8 +1344,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1391,12 +1391,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="LZB"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:etcs"
@@ -1409,7 +1409,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
 					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -1459,8 +1459,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1503,8 +1503,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptstrecke" short_description="Eine Hauptstrecke, meist doppelgleisig, elektrifiziert, befahren von Zügen mit höheren Geschwindigkeiten und einer hohen Zugdichte." />
-					<list_entry value="branch" display_value="Nebenstrecke" short_description="Eine Neben- oder Zweigstrecke, oft nur eingleisig oder nicht elektrifiziert, befahren von langsameren Zügen und mit einer geringeren Zugdichte." />
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
 					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
 					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
 					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
@@ -1530,12 +1530,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="LZB"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:gnt"
@@ -1560,9 +1560,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der Regelfahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<space />
 				<combo key="maxspeed" default=""
@@ -1626,8 +1626,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1669,8 +1669,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptstrecke" short_description="Eine Hauptstrecke, meist doppelgleisig, elektrifiziert, befahren von Zügen mit höheren Geschwindigkeiten und einer hohen Zugdichte." />
-					<list_entry value="branch" display_value="Nebenstrecke" short_description="Eine Neben- oder Zweigstrecke, oft nur eingleisig oder nicht elektrifiziert, befahren von langsameren Zügen und mit einer geringeren Zugdichte." />
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
 					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
 					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
 					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
@@ -1696,12 +1696,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="LZB"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:gnt"
@@ -1728,7 +1728,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
 					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<space />
 				<combo key="maxspeed" default=""
@@ -1792,8 +1792,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1835,8 +1835,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptstrecke" short_description="Eine Hauptstrecke, meist doppelgleisig, elektrifiziert, befahren von Zügen mit höheren Geschwindigkeiten und einer hohen Zugdichte." />
-					<list_entry value="branch" display_value="Nebenstrecke" short_description="Eine Neben- oder Zweigstrecke, oft nur eingleisig oder nicht elektrifiziert, befahren von langsameren Zügen und mit einer geringeren Zugdichte." />
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
 					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
 					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
 					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
@@ -1857,12 +1857,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="LZB"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:etcs"
@@ -1882,7 +1882,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
 					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -1939,13 +1939,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="end_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Stilllegung"
+					text="Closed at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Stilllegung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -1987,8 +1987,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptstrecke" short_description="Eine Hauptstrecke, meist doppelgleisig, elektrifiziert, befahren von Zügen mit höheren Geschwindigkeiten und einer hohen Zugdichte." />
-					<list_entry value="branch" display_value="Nebenstrecke" short_description="Eine Neben- oder Zweigstrecke, oft nur eingleisig oder nicht elektrifiziert, befahren von langsameren Zügen und mit einer geringeren Zugdichte." />
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
 					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
 					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
 					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
@@ -2009,12 +2009,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="LZB"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:etcs"
@@ -2034,7 +2034,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
 					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -2091,13 +2091,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="end_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Stilllegung"
+					text="Closed at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Stilllegung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -2139,8 +2139,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptstrecke" short_description="Eine Hauptstrecke, meist doppelgleisig, elektrifiziert, befahren von Zügen mit höheren Geschwindigkeiten und einer hohen Zugdichte." />
-					<list_entry value="branch" display_value="Nebenstrecke" short_description="Eine Neben- oder Zweigstrecke, oft nur eingleisig oder nicht elektrifiziert, befahren von langsameren Zügen und mit einer geringeren Zugdichte." />
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
 					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
 					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
 					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
@@ -2161,12 +2161,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
 					text="LZB"
-					de.text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:etcs"
@@ -2186,7 +2186,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" text="Direction of use (depends on direction of OSM way" de.text="Betriebsrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
 					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises, aber es ist gegen einen schriftlichen Befehl und die Sperrung des Gleises möglich." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -2243,13 +2243,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="end_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Stilllegung"
+					text="Closed at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Stilllegung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -2352,7 +2352,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:switch"
 					text="Switch type"
 					de.text="Weichentyp"
-					values="default,three_way,single_slip,double_slip,resetting,wye,abt" display_values="Einfache  Weiche,Dreiwegweiche,Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche,Abtsche Weiche"
+					values="default,three_way,single_slip,double_slip,resetting,wye,abt"
+					display_values="Einfache  Weiche,Dreiwegweiche,einfache Kreuzungsweiche,Doppelkreuzungsweiche,Rückfallweiche,Y-Weiche,Abtsche Weiche"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:turnout_side"
@@ -4815,8 +4816,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:fouling_point"
 					value="ra12" />
 			</item>
-			<item name="LZB-Blockkennzeichen" icon="de:lzb-sign.png" type="node">
-				<label text="LZB-Blockkennzeichen" />
+			<item name="Blockkennzeichen" icon="de:lzb-sign.png" type="node">
+				<label text="Blockkennzeichen (ETCS/LZB)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
@@ -4833,25 +4834,25 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
 					delete_if_empty="true" />
-				+<combo key="railway:signal:direction"
-+					text="Direction"
-+					de.text="Anzeigerichtung"
-+					values="forward,backward"
-+					display_values="In Wegrichtung,Entgegen Wegrichtung"
-+					default=""
-+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
 				<check key="railway:signal:catenary_mast"
 					text="On catenary mast"
 					de.text="Am Oberleitungsmast"
 					default="off"
 					delete_if_empty="true" />
 				<text key="ref"
-					text="Block number"
-					de.text="Blocknummer"
+					text="Block reference"
+					de.text="Blockbezeichner"
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:lzb"
-					value="DE:lzb_blockkennzeichen" />
+					value="DE:lzb_blockkennzeichen" /> <!-- FIXME: Noch, allgemein, zum Blockkennzeichen erheben, damit auch ETCS abgedeckt wird? -->
 				<key key="railway:signal:form"
 					value="sign" />
 			</item>
@@ -4925,8 +4926,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 			<text key="start_date"
-				text="Year of opening"
-				de.text="Zeitpunkt der Inbetriebnahme"
+				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+				de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 				default=""
 				delete_if_empty="true" />
 			<text key="railway:position"
@@ -4936,7 +4937,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delete_if_empty="true" />
 			<text key="railway:position:exact"
 				text="Exact distance indication (exact, e.g. '12.345'; km)"
-				de.text="Metergenauer Wert (genau, z.B: '12.345'; km)"
+				de.text="Metergenauer Wert (genau, z. B: '12.345'; km)"
 				default=""
 				delete_if_empty="true" />
 			<text key="image"
@@ -4952,6 +4953,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="building"
 				text="Building"
 				de.text="Gebäude"
+				default="off"
+				delete_if_empty="true" />
+			<check key="disused"
+				text="out of service"
+				de.text="Außer Betrieb"
 				default="off"
 				delete_if_empty="true" />
 		</item>
@@ -4975,7 +4981,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="railway:ref"
 					text="Short name (DS100)"
-					de.text="Abkürzung (DS100)"
+					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					default=""
 					delete_if_empty="true" />
 				<text key="uic_ref"
@@ -5011,8 +5017,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -5026,7 +5032,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
-					text="Height about sea level (m)"
+					text="Height above sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
@@ -5086,8 +5092,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -5101,7 +5107,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
-					text="Height about sea level (m)"
+					text="Height above sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
@@ -5125,7 +5131,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="railway:ref"
 					text="Short name (DS100)"
-					de.text="Abkürzung (DS100)"
+					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					default=""
 					delete_if_empty="true" />
 				<text key="uic_ref"
@@ -5154,12 +5160,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
-					text="Height about sea level (m)"
+					text="Height above sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
@@ -5176,7 +5182,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="railway:ref"
 					text="Short name (DS100)"
-					de.text="Abkürzung (DS100)"
+					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -5185,8 +5191,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="DB Netz AG"
 					delete_if_empty="true" />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -5200,7 +5206,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
-					text="Height about sea level (m)"
+					text="Height above sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
@@ -5217,7 +5223,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="railway:ref"
 					text="Short name (DS100)"
-					de.text="Abkürzung (DS100)"
+					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -5226,8 +5232,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="DB Netz AG"
 					delete_if_empty="true" />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -5241,7 +5247,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
-					text="Height about sea level (m)"
+					text="Height above sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
@@ -5258,13 +5264,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (DS100)"
+					text="Short name (according to DS100, such as 'NAN')"
+					de.text="Abkürzung (nach DS100, z. B. 'NAN')"
 					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -5278,7 +5284,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
-					text="Height about sea level (m)"
+					text="Height above sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
@@ -5296,12 +5302,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="railway:ref"
 					text="Short name (DS100)"
-					de.text="Abkürzung (DS100)"
+					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -5315,7 +5321,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
-					text="Height about sea level (m)"
+					text="Height above sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
@@ -5333,12 +5339,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="railway:ref"
 					text="Short name (DS100)"
-					de.text="Abkürzung (DS100)"
+					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 					default=""
 					delete_if_empty="true" />
 				<text key="image"
@@ -5352,7 +5358,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
-					text="Height about sea level (m)"
+					text="Height above sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
@@ -5378,7 +5384,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="railway:ref"
 					text="Short name (DS100)"
-					de.text="Abkürzung (DS100)"
+					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					default=""
 					delete_if_empty="true" />
 				<text key="uic_ref"
@@ -5422,7 +5428,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="ele"
-					text="Height about sea level (m)"
+					text="Height above sea level (m)"
 					de.text="Höhe über Meeresspiegel (m)"
 					default=""
 					delete_if_empty="true" />
@@ -5478,7 +5484,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<text key="railway:ref"
 					text="Short name (DS100)"
-					de.text="Abkürzung (DS100)"
+					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					default=""
 					delete_if_empty="true" />
 				<text key="operator"
@@ -5551,7 +5557,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="tracks" />
 			<text key="name"
 				text="Name of track (e.g. '1234 Eifelquerbahn Gerolstein - Kaisersesch')"
-				de.text="Streckenname (z. B. '1234 Eifelquerbahn Gerolstein - Kaisersesch')"
+				de.text="Streckenname (z. B. '1234 Eifelquerbahn Gerolstein – Kaisersesch')"
 				default=""
 				delete_if_empty="true" />
 			<text key="ref"
@@ -5565,7 +5571,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 			<text key="to"
-				text="Terminal station"
+				text="Terminus station"
 				de.text="Streckenende"
 				default=""
 				delete_if_empty="true" />
@@ -5610,7 +5616,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 			<text key="to"
-				text="Terminal station"
+				text="Terminus station"
 				de.text="Streckenende"
 				default=""
 				delete_if_empty="true" />
@@ -5640,10 +5646,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 			<combo key="service" text="Zuggattung" default="" delete_if_empty="true">
-				<list_entry value="high_speed" display_value="Hochgeschwindigkeitszug" short_description="ICE, Thalys, TGV, Railjet" />
-				<list_entry value="long_distance" display_value="Reisezug" short_description="Eurocity, Intercity, D-Zug" />
-				<list_entry value="regional" display_value="Regionalzug" short_description="Regionalbahn, Regionalexpress" />
-				<list_entry value="commuter" display_value="Nahverkehrszug" short_description="S-Bahn, Straßenbahn, U-Bahn, Hochbahn" />
+				<list_entry value="high_speed" display_value="Hochgeschwindigkeitszug" short_description="ICE, Thalys, TGV, Railjet..." />
+				<list_entry value="long_distance" display_value="Reisezug" short_description="Eurocity, Intercity, D-Zug..." />
+				<list_entry value="regional" display_value="Regionalzug" short_description="Regionalbahn, Regionalexpress..." />
+				<list_entry value="commuter" display_value="Nahverkehrszug" short_description="S-Bahn, Straßenbahn, Stadtbahn, U-Bahn, Hochbahn..." />
 				<list_entry value="car" display_value="Autoreisezug" short_description="Reisezug mit Automitnahme" />
 				<list_entry value="car_shuttle" display_value="Autozug" short_description="Kurzverbindungen mit Autotransport, die einen Ersatz oder eine Abkürung zu Straßen darstellen" />
 				<list_entry value="night" display_value="Nachtzug" short_description="Reisezug mit Schlafwagen, EuroNight, CityNightLine" />
@@ -5670,7 +5676,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 			<text key="to"
-				text="Terminal station"
+				text="Terminus station"
 				de.text="Streckenende"
 				default=""
 				delete_if_empty="true" />
@@ -5766,7 +5772,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 			<text key="to"
-				text="Terminal station"
+				text="Terminus station"
 				de.text="Streckenende"
 				default=""
 				delete_if_empty="true" />
@@ -5899,7 +5905,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delete_if_empty="true" />
 			<check key="railway:milestone:emergency_brake_override"
 				text="Emergency brake override"
-				de.text="Notfallbremsüberbrückung (NBÜ)"
+				de.text="Notbremsüberbrückung (NBÜ)"
 				default="off"
 				delete_if_empty="true" />
 			<combo key="railway:milestone:emergency_brake_override:direction"
@@ -5936,12 +5942,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delete_if_empty="true" />
 			<check key="lit"
 				text="Lit"
-				de.text="Beleuchtung"
+				de.text="Beleuchtet"
 				default="off"
 				delete_if_empty="true" />
 			<check key="covered"
 				text="Covered"
-				de.text="Überdacht?"
+				de.text="Überdacht"
 				default="off"
 				delete_if_empty="true" />
 			<combo key="surface"
@@ -5964,7 +5970,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Tactile Paving"
 				de.text="Ertastbarer Untergrund"
 				values="yes,no,incorrect"
-				display_values="Ja,Nein,Falsch"
+				display_values="Ja,Nein,Ja (aber nicht sinnvoll)"
 				default=""
 				delete_if_empty="true" />
 			<text key="height"
@@ -6007,12 +6013,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delete_if_empty="true" />
 			<check key="payment:debit_cards"
 				text="Debit cards"
-				de.text="EC/Maestro-Karte"
+				de.text="EC/Maestro-Karten"
 				default="off"
 				delete_if_empty="true" />
 			<check key="payment:credit_cards"
 				text="Credit cards"
-				de.text="Kreditkarte"
+				de.text="Kreditkarten"
 				default="off"
 				delete_if_empty="true" />
 			<check key="payment:account_cards"
@@ -6059,7 +6065,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 			<check key="bicycle"
-				text="Accessbile with bicycles"
+				text="Accessible with bicycles"
 				de.text="Passierbar mit Fahrrädern"
 				default="off"
 				delete_if_empty="true" />
@@ -6070,8 +6076,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="building"
 				value="train_station" />
 			<text key="start_date"
-				text="Year of opening"
-				de.text="Zeitpunkt der Eröffnung"
+				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+				de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 				default=""
 				delete_if_empty="true" />
 			<text key="image"
@@ -6080,7 +6086,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 			<text key="ele"
-				text="Height about sea level (m)"
+				text="Height above sea level (m)"
 				de.text="Höhe über Meeresspiegel (m)"
 				default=""
 				delete_if_empty="true" />
