@@ -19,10 +19,15 @@
 		"el" => array("el_GR", "Ελληνικά"),
 		"en" => array("en_GB", "English"),
 		"es" => array("es_ES", "Español"),
+		"fr" => array("fr_FR", "Français"),
+		"nl" => array("nl_NL", "Nederlands"),
 		"nqo" => array("nqo_GN", "ߒߞߏ"),
 		"pl" => array("pl_PL", "Polski"),
+		"pt" => array("pt_PT", "Português"),
 		"ru" => array("ru_RU", "Русский"),
 		"sl" => array("sl_SI", "Slovenščina"),
+		"sv" => array("sv_SE", "Svenska"),
+		"uk" => array("uk_UA", "Українська"),
 		"vi" => array("vi_VN", "Tiếng Việt")
 	);
 	// name of database

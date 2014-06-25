@@ -5,13 +5,16 @@
 #
 # Translators:
 # gwinder <gr3ss0r@gmail.com>, 2014
+# Nikolay Parukhin <parukhin@gmail.com>, 2014
+# Sergey <gr3ss0r@gmail.com>, 2014
+# XAN_ <xan.ukraine@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-10 20:36+0400\n"
-"Last-Translator: freeExec <freeExec@mail.ru>\n"
+"PO-Revision-Date: 2014-06-25 21:23+0100\n"
+"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/"
 "openrailwaymap/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +23,7 @@ msgstr ""
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
@@ -55,25 +58,25 @@ msgid "Kilometer"
 msgstr "Километр"
 
 msgid "Track"
-msgstr ""
+msgstr "Путь"
 
 msgid "Permalink"
-msgstr ""
+msgstr "Постоянная ссылка"
 
 msgid "Hillshading"
-msgstr ""
+msgstr "Рельеф"
 
 msgid "Hillshading by <a href='http://nasa.gov/'>NASA SRTM</a>"
-msgstr ""
+msgstr "Данные рельефа – <a href='http://nasa.gov/'>NASA SRTM</a>"
 
 msgid "OpenRailwayMap"
-msgstr ""
+msgstr "OpenRailwayMap"
 
 msgid "Rendering: OpenRailwayMap"
-msgstr ""
+msgstr "Рендеринг: OpenRailwayMap"
 
 msgid "Mapnik"
-msgstr ""
+msgstr "Mapnik"
 
 msgid "Mapnik Grayscale"
 msgstr "Mapnik чёрно-белый"
@@ -82,16 +85,19 @@ msgid "Map data &copy; OpenStreetMap contributors"
 msgstr "Данные карты &copy; участники OpenStreetMap"
 
 msgid "MapQuest"
-msgstr ""
+msgstr "MapQuest"
 
 msgid "MapQuest Grayscale"
-msgstr ""
+msgstr "MapQuest черно-белый"
 
 msgid ""
 "Tiles Courtesy of <a href=\"http://www.mapquest.com/\" target=\"_blank"
 "\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo."
 "png\">"
 msgstr ""
+"Тайлы предоставлены <a href=\"http://www.mapquest.com/\" target=\"_blank"
+"\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo."
+"png\">"
 
 msgid "Select a map style"
 msgstr "Выбор стиля карты"
@@ -106,12 +112,14 @@ msgid "Search only in the current map view"
 msgstr "Поиск только в текущем виде карты"
 
 msgid "HTML-Code"
-msgstr ""
+msgstr "HTML код"
 
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
 msgstr ""
+"Скопируйте данный фрагмент HTML кода на свою страницу, что бы отобразить "
+"маленькую карту с отметкой."
 
 msgid "Fullscreen"
 msgstr "Полный экран"
@@ -119,16 +127,16 @@ msgstr "Полный экран"
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d секунда"
+msgstr[1] "%d секунды"
+msgstr[2] "%d секунд"
 
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d минута"
+msgstr[1] "%d минуты"
+msgstr[2] "%d минут"
 
 #, php-format
 msgid "%d hour"
@@ -140,23 +148,23 @@ msgstr[2] "%d часов"
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d день"
+msgstr[1] "%d дня"
+msgstr[2] "%d дней"
 
 #, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d неделя"
+msgstr[1] "%d недели"
+msgstr[2] "%d недель"
 
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d месяц"
+msgstr[1] "%d месяца"
+msgstr[2] "%d месяцев"
 
 #, php-format
 msgid "more than %s ago"
@@ -164,7 +172,7 @@ msgstr "дольше чем %s назад"
 
 #, php-format
 msgid "%s ago"
-msgstr "% назад"
+msgstr "%s назад"
 
 msgid "Infrastructure"
 msgstr "Инфраструктура"
@@ -185,10 +193,10 @@ msgid "Junction"
 msgstr ""
 
 msgid "Yard"
-msgstr ""
+msgstr "Сортировочная станция"
 
 msgid "Crossover"
-msgstr ""
+msgstr "Перекрестный съезд"
 
 msgid "Site"
 msgstr ""
@@ -206,7 +214,7 @@ msgid "Level crossing"
 msgstr "Переезд"
 
 msgid "Crossing"
-msgstr "Переход"
+msgstr "Пешеходный переход"
 
 msgid "Legend"
 msgstr "Легенда"
@@ -227,10 +235,10 @@ msgid "Siding"
 msgstr "Боковой путь"
 
 msgid "Yard track"
-msgstr ""
+msgstr "Сортировочный путь"
 
 msgid "Spur"
-msgstr "Ответвление"
+msgstr "Подъездной путь"
 
 msgid "Crossover track"
 msgstr ""
@@ -242,7 +250,7 @@ msgid "Main line"
 msgstr "Основная линия"
 
 msgid "Highspeed line"
-msgstr "Высокоскоростная линия"
+msgstr "Высокоскоростная магистраль"
 
 msgid "Industrial line"
 msgstr "Промышленная линия"
@@ -260,7 +268,7 @@ msgid "Track under construction"
 msgstr "Строящийся путь"
 
 msgid "Proposed track"
-msgstr "Планируемый путь"
+msgstr "Проектируемый путь"
 
 msgid "Disused track"
 msgstr "Неиспользуемый путь"
@@ -278,19 +286,19 @@ msgid "Subway"
 msgstr "Метро"
 
 msgid "Light rail"
-msgstr "Легкорельсовый путь"
+msgstr "Легкорельсовый транспорт"
 
 msgid "Narrow gauge track"
 msgstr "Узкоколейный путь"
 
 msgid "Narrow gauge siding"
-msgstr "Узкоколейный боковой"
+msgstr "Боковой узкоколейный путь"
 
 msgid "Narrow gauge yard"
-msgstr ""
+msgstr "Сортироввчный узкоколейный путь"
 
 msgid "Narrow gauge spur"
-msgstr "Узкоколейное ответвление"
+msgstr "Подъездной узкоколейный путь"
 
 msgid "Narrow gauge crossover"
 msgstr ""
@@ -338,10 +346,10 @@ msgid "Platform"
 msgstr "Платформа"
 
 msgid "Vending machine"
-msgstr "Автомат по продаже"
+msgstr "Торговый автомат"
 
 msgid "Ticket shop"
-msgstr "Подажа билетов"
+msgstr "Касса"
 
 msgid "Subway entrance"
 msgstr "Вход в метро"
@@ -479,7 +487,10 @@ msgid "Search"
 msgstr "Поиск"
 
 msgid "Mapnik no-labels"
-msgstr "Mapnik без надписей"
+msgstr "Mapnik без подписей"
 
 msgid "Mapnik no-labels Grayscale"
-msgstr "Mapnik без надписей черно-белый"
+msgstr "Mapnik без подписей черно-белый"
+
+msgid "Blog"
+msgstr ""
