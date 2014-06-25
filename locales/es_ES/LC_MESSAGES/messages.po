@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-04-04 23:17+0100\n"
+"PO-Revision-Date: 2014-06-25 21:23+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/openrailwaymap/"
 "language/es/)\n"
@@ -45,7 +45,7 @@ msgid "Nothing found."
 msgstr "No se encontró nada."
 
 msgid "Last update"
-msgstr ""
+msgstr "última actualización"
 
 msgid "Empty input."
 msgstr "entrada vacía"
@@ -54,7 +54,7 @@ msgid "Kilometer"
 msgstr "kilómetro"
 
 msgid "Track"
-msgstr ""
+msgstr "vía"
 
 msgid "Permalink"
 msgstr "enlace permanente"
@@ -223,31 +223,31 @@ msgid "Yard track"
 msgstr "riel en playa de maniobras"
 
 msgid "Spur"
-msgstr ""
+msgstr "tramo de acceso"
 
 msgid "Crossover track"
 msgstr "vía banalizada"
 
 msgid "Branch line"
-msgstr ""
+msgstr "línea secundaria"
 
 msgid "Main line"
-msgstr "vía principal"
+msgstr "línea principal"
 
 msgid "Highspeed line"
 msgstr "vía de alta velocidad"
 
 msgid "Industrial line"
-msgstr "vía industrial"
+msgstr "línea industrial"
 
 msgid "Industrial service track"
-msgstr ""
+msgstr "vía lateral de una línea industrial"
 
 msgid "Preserved track"
 msgstr "vía de ferrocarril histórico"
 
 msgid "Preserved service track"
-msgstr ""
+msgstr "vía lateral de un ferrocarril histórico"
 
 msgid "Track under construction"
 msgstr "vía en construcción"
@@ -283,16 +283,16 @@ msgid "Narrow gauge yard"
 msgstr "playa de maniobras de trocha angosta"
 
 msgid "Narrow gauge spur"
-msgstr ""
+msgstr "tramo de acceso de trocha angosta"
 
 msgid "Narrow gauge crossover"
 msgstr "puesto de banalización de trocha angosta"
 
 msgid "Narrow gauge branch line"
-msgstr ""
+msgstr "línea secundaria de trocha angosta"
 
 msgid "Narrow gauge main line"
-msgstr "vía principal de trocha angosta"
+msgstr "línea principal de trocha angosta"
 
 msgid "Narrow gauge highspeed line"
 msgstr "vía de trocha angosta y alta velocidad"
@@ -301,7 +301,7 @@ msgid "Narrow gauge industrial line"
 msgstr "vía industrial de trocha angosta"
 
 msgid "Narrow gauge industrial service"
-msgstr ""
+msgstr "vía lateral de una línea industrial de trocha angosta"
 
 msgid "Switch (remote-controlled)"
 msgstr "desvío (controlado a distancia)"
@@ -355,7 +355,7 @@ msgid "Coaling facility"
 msgstr ""
 
 msgid "Wash"
-msgstr ""
+msgstr "lavadero automático"
 
 msgid "Pit"
 msgstr ""
@@ -376,7 +376,7 @@ msgid "Workshop"
 msgstr "taller"
 
 msgid "Radio tower"
-msgstr ""
+msgstr "torre de radio"
 
 msgid "Turntable"
 msgstr "mesa giratoria"
@@ -424,7 +424,7 @@ msgid "Cutting"
 msgstr ""
 
 msgid "Miniature railway"
-msgstr ""
+msgstr "tren en miniatura"
 
 msgid "Funicular"
 msgstr "funicular"
@@ -433,19 +433,19 @@ msgid "Military line"
 msgstr "vía militar"
 
 msgid "Military service track"
-msgstr ""
+msgstr "vía lateral de una línea militar"
 
 msgid "Ferry terminal"
-msgstr "terminal de ferri"
+msgstr "terminal de ferry"
 
 msgid "Ferry"
 msgstr "ferry"
 
 msgid "Test line"
-msgstr "vía de prueba"
+msgstr "línea de prueba"
 
 msgid "Test service track"
-msgstr ""
+msgstr "vía lateral de una línea de prueba"
 
 msgid "Car shuttle"
 msgstr "autotrén"
@@ -460,19 +460,22 @@ msgid "Legend not available for this style."
 msgstr "leyenda no disponible para este estilo"
 
 msgid "Language"
-msgstr ""
+msgstr "idioma"
 
 msgid "Desktop version"
 msgstr ""
 
 msgid "Style"
-msgstr ""
+msgstr "estilo"
 
 msgid "Search"
-msgstr ""
+msgstr "búsqueda"
 
 msgid "Mapnik no-labels"
-msgstr ""
+msgstr "Mapnik sin etiquetas"
 
 msgid "Mapnik no-labels Grayscale"
+msgstr "Mapnik sin etiquetas escala de grises"
+
+msgid "Blog"
 msgstr ""
