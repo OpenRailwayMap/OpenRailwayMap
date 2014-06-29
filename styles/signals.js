@@ -23,7 +23,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:hp-semaphore.png';
+            s_default['icon-image'] = 'icons/de-hp-semaphore.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -39,7 +39,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:hp-light.png';
+            s_default['icon-image'] = 'icons/de-hp-light.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -55,7 +55,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:sh-semaphore.png';
+            s_default['icon-image'] = 'icons/de-sh-semaphore.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -71,7 +71,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:sh-semaphore-dwarf.png';
+            s_default['icon-image'] = 'icons/de-sh-semaphore-dwarf.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -87,7 +87,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:sh-light.png';
+            s_default['icon-image'] = 'icons/de-sh-light.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -103,7 +103,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:sh-light-dwarf.png';
+            s_default['icon-image'] = 'icons/de-sh-light-dwarf.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -119,7 +119,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:ks-distant.png';
+            s_default['icon-image'] = 'icons/de-ks-distant.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -135,7 +135,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:ks-main.png';
+            s_default['icon-image'] = 'icons/de-ks-main.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -151,7 +151,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:ks-combined.png';
+            s_default['icon-image'] = 'icons/de-ks-combined.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -167,7 +167,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:ne1.png';
+            s_default['icon-image'] = 'icons/de-ne1.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -183,7 +183,7 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de:ne1.png';
+            s_default['icon-image'] = 'icons/de-ne1.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -196,52 +196,52 @@
     }
     
     var sprite_images = {
-        'icons/de:hp-light.png': {
+        'icons/de-hp-light.png': {
             width: 16, 
             height: 16, 
             offset: 0
         },
-        'icons/de:hp-semaphore.png': {
+        'icons/de-hp-semaphore.png': {
             width: 16, 
             height: 16, 
             offset: 16
         },
-        'icons/de:ks-combined.png': {
+        'icons/de-ks-combined.png': {
             width: 16, 
             height: 16, 
             offset: 32
         },
-        'icons/de:ks-distant.png': {
+        'icons/de-ks-distant.png': {
             width: 16, 
             height: 16, 
             offset: 48
         },
-        'icons/de:ks-main.png': {
+        'icons/de-ks-main.png': {
             width: 16, 
             height: 16, 
             offset: 64
         },
-        'icons/de:ne1.png': {
+        'icons/de-ne1.png': {
             width: 16, 
             height: 16, 
             offset: 80
         },
-        'icons/de:sh-light-dwarf.png': {
+        'icons/de-sh-light-dwarf.png': {
             width: 16, 
             height: 16, 
             offset: 96
         },
-        'icons/de:sh-light.png': {
+        'icons/de-sh-light.png': {
             width: 16, 
             height: 16, 
             offset: 112
         },
-        'icons/de:sh-semaphore-dwarf.png': {
+        'icons/de-sh-semaphore-dwarf.png': {
             width: 16, 
             height: 16, 
             offset: 128
         },
-        'icons/de:sh-semaphore.png': {
+        'icons/de-sh-semaphore.png': {
             width: 16, 
             height: 16, 
             offset: 144
