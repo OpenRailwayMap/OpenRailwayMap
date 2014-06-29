@@ -225,7 +225,7 @@ node|z14-[railway=signal][railway:signal:main=ne1][railway:signal:main:form=sign
 /******************/
 /* AT Trapeztafel */
 /******************/
-node|z14-[railway=signal][railway:signal:main=AT:Trapeztafel][railway:signal:main:form=sign][railway:signal:main:function=entry]
+node|z14-[railway=signal][railway:signal:main=AT:trapeztafel][railway:signal:main:form=sign][railway:signal:main:function=entry]
 {
 	z-index: 1000;
 	text: "ref";

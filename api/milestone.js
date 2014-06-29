@@ -23,7 +23,7 @@ Milestone = function(params)
 
 	return "SELECT ST_X(bla.geometry) AS lat, ST_Y(bla.geometry) AS lon, bla.position AS position, bla.operator AS operator, bla.type AS type, bla.ref AS ref \
 				FROM ( \
-					SELECT foo.geometry AS geometry, foo.position AS position, foo.operator AS operator, foo.type AS type, foo.ref AS ref, ABS(CAST(foo.position AS FLOAT)-"+position.replace(",", ".")+") AS distance \
+					SELECT foo.geometry AS geometry, foo.position AS position, foo.operator AS operator, foo.type AS type, foo.ref AS ref, ABS(CAST(REPLACE(regexp_replace(foo.position, E'\;.+$', ''), ',', '.') AS FLOAT)-"+position.replace(",", ".")+") AS distance \
 					FROM ( \
 						SELECT centroids.geom AS geometry, centroids.position AS position, centroids.operator AS operator, centroids.type AS type, centroids.ref AS ref \
 						FROM ( \

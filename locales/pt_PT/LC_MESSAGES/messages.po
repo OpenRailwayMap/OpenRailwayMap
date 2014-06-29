@@ -4,361 +4,351 @@
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
-# fri <pavelfric@seznam.cz>, 2013-2014
+# ViriatoLusitano <marcosoliveira.2405@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:23+0100\n"
+"PO-Revision-Date: 2014-06-25 21:21+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Czech (http://www.transifex.com/projects/p/openrailwaymap/"
-"language/cs/)\n"
+"Language-Team: Portuguese (http://www.transifex.com/projects/p/"
+"openrailwaymap/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
-msgstr "Více informací"
+msgstr "Mais Informações"
 
 msgid "Contact"
-msgstr "Spojení"
+msgstr "Contacto"
 
 msgid "Javascript is not activated"
-msgstr "Javascript není zapnut"
+msgstr "Javascript não está activado"
 
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
 msgstr ""
-"Javascript je potřeba pro ukázání mapy a běh této stránky. Zapněte, prosím, "
-"Javascript v nastavení vašeho prohlížeče."
+"É necessário activar o Javascript para poder visualizar o mapa. Por favor "
+"active-o nas definições do seu navegador de Internet."
 
 msgid "Loading..."
-msgstr "Nahrává se..."
+msgstr "Aguarde..."
 
 msgid "Nothing found."
-msgstr "Nic nebylo nalezeno."
+msgstr "Nada encontrado."
 
 msgid "Last update"
-msgstr ""
+msgstr "Última atualização"
 
 msgid "Empty input."
-msgstr "Prázdný vstup."
+msgstr "Introduza algo."
 
 msgid "Kilometer"
-msgstr "Kilometr"
+msgstr "Quilometro"
 
 msgid "Track"
-msgstr "Trať"
+msgstr ""
 
 msgid "Permalink"
-msgstr "Trvalý odkaz"
+msgstr "Ligação Permanente"
 
 msgid "Hillshading"
-msgstr "Stínování svahů"
+msgstr "Topografia"
 
 msgid "Hillshading by <a href='http://nasa.gov/'>NASA SRTM</a>"
-msgstr "Stínování svahů od <a href='http://nasa.gov/'>NASA SRTM</a>"
+msgstr "Dados topográficos por  <a href='http://nasa.gov/'>NASA SRTM</a>"
 
 msgid "OpenRailwayMap"
 msgstr "OpenRailwayMap"
 
 msgid "Rendering: OpenRailwayMap"
-msgstr "Zpracování: OpenRailwayMap"
+msgstr ""
 
 msgid "Mapnik"
 msgstr "Mapnik"
 
 msgid "Mapnik Grayscale"
-msgstr "Odstíny šedi Mapnik"
+msgstr "Mapnik (Preto e Branco)"
 
 msgid "Map data &copy; OpenStreetMap contributors"
-msgstr "Mapová data &copy; přispěvatelé OpenStreetMap"
+msgstr "&copy; Colaboradores do OpenStreetMap"
 
 msgid "MapQuest"
 msgstr "MapQuest"
 
 msgid "MapQuest Grayscale"
-msgstr "Odstíny šedi MapQuest"
+msgstr "MapQuest (Preto e Branco)"
 
 msgid ""
 "Tiles Courtesy of <a href=\"http://www.mapquest.com/\" target=\"_blank"
 "\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo."
 "png\">"
 msgstr ""
-"Mapa na pozadí <a href=\"http://www.mapquest.com/\" target=\"_blank"
-"\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo."
-"png\">"
 
 msgid "Select a map style"
-msgstr "Vybrat styl mapy"
+msgstr "Escolhe um tipo de mapa"
 
 msgid "Public transport"
-msgstr "Veřejná doprava"
+msgstr "Transporte público"
 
 msgid "Search results"
-msgstr "Výsledky hledání"
+msgstr "Resultados da pesquisa"
 
 msgid "Search only in the current map view"
-msgstr "Hledat pouze v nynějším pohledu na mapu"
+msgstr "Pesquisar dentro da área actualmente vizualizada"
 
 msgid "HTML-Code"
-msgstr "Kód HTML"
+msgstr "Código HTML"
 
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
 msgstr ""
-"Zkopírujte tento úryvek kódu HTML a připojte jej ke svým stránkám, aby se "
-"zobrazovala malá mapa se značením."
+"Copie este código HTML para o seu site para mostrar um pequeno mapa com um "
+"pontador. "
 
 msgid "Fullscreen"
-msgstr "Celá obrazovka"
+msgstr "Ecrã Inteiro"
 
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekunda"
-msgstr[1] "%d sekundy"
-msgstr[2] "%d sekund"
+msgstr[0] "%d segundo"
+msgstr[1] "%d segundos"
 
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d minuta"
-msgstr[1] "%d minuty"
-msgstr[2] "%d minut"
+msgstr[0] "%d minuto"
+msgstr[1] "%d minutos"
 
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d hodina"
-msgstr[1] "%d hodiny"
-msgstr[2] "%d hodin"
+msgstr[0] "%d hora"
+msgstr[1] "%d horas"
 
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] "%d den"
-msgstr[1] "%d dny"
-msgstr[2] "%d dnů"
+msgstr[0] "%d dia"
+msgstr[1] "%d dias"
 
 #, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] "%d týden"
-msgstr[1] "%d týdny"
-msgstr[2] "%d týdnů"
+msgstr[0] "%d semana"
+msgstr[1] "%d semanas"
 
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] "%d měsíc"
-msgstr[1] "%d měsíce"
-msgstr[2] "%d měsíců"
+msgstr[0] "%d mês "
+msgstr[1] "%d meses"
 
 #, php-format
 msgid "more than %s ago"
-msgstr "před více než %s"
+msgstr "mais de %s atrás"
 
 #, php-format
 msgid "%s ago"
-msgstr "před %s"
+msgstr "%s atrás"
 
 msgid "Infrastructure"
-msgstr "Infrastruktura"
+msgstr "Infraestrutura"
 
 msgid "Signalling"
-msgstr "Signalizace"
+msgstr "Sinalética"
 
 msgid "Maxspeeds"
-msgstr "Traťové rychlosti"
+msgstr "Velocidades Máximas"
 
 msgid "Halt"
-msgstr ""
+msgstr "Apeadeiro"
 
 msgid "Station"
-msgstr "Stanice"
+msgstr "Estação ferroviária"
 
 msgid "Junction"
-msgstr ""
+msgstr "Entroncamento"
 
 msgid "Yard"
-msgstr ""
+msgstr "Pátio de manobras"
 
 msgid "Crossover"
-msgstr "Místo křížení tratí"
+msgstr ""
 
 msgid "Site"
 msgstr ""
 
 msgid "Service station"
-msgstr "Servisní stanice"
+msgstr "Estação de serviço"
 
 msgid "Tram stop"
-msgstr "Zastávka tramvaje"
+msgstr "Paragem de elétrico"
 
 msgid "Milestone"
-msgstr "Milník"
+msgstr "Ponto Quilométrico"
 
 msgid "Level crossing"
-msgstr "Úrovňový železniční přejezd"
+msgstr "Passagem de Nível"
 
 msgid "Crossing"
-msgstr "Źelezniční přejezd"
+msgstr "Cruzamento de ferrovias"
 
 msgid "Legend"
-msgstr "Vysvětlivky"
+msgstr "Legenda"
 
 msgid "Bridge"
-msgstr "Most"
+msgstr "Ponte"
 
 msgid "Tunnel"
-msgstr "Tunel"
+msgstr "Túnel"
 
 msgid "Line ref"
-msgstr "Číslo tratě"
+msgstr "Referência da linha"
 
 msgid "Railroad line"
-msgstr "Kolejová trať"
+msgstr "Caminho de Ferro"
 
 msgid "Siding"
-msgstr "Vedlejší kolej"
+msgstr "Linha de ultrapassagem"
 
 msgid "Yard track"
-msgstr "Slepá/Odstavná kolej"
+msgstr "Linhade manobras"
 
 msgid "Spur"
-msgstr "Přípojná kolej/Vlečka"
+msgstr "Linha auxiliar"
 
 msgid "Crossover track"
-msgstr "Křížení železničních tratí"
+msgstr "Linha de serviço"
 
 msgid "Branch line"
-msgstr "Vedlejší/Přípojná trať"
+msgstr "Ramal ferroviário"
 
 msgid "Main line"
-msgstr "Hlavní železniční trať/tah"
+msgstr "Ferrovia principal"
 
 msgid "Highspeed line"
-msgstr "Vysokorychlostní trať"
+msgstr "Linha de alta velocidade"
 
 msgid "Industrial line"
-msgstr "Průmyslová, tovární nebo přístavní dráha"
+msgstr "Linha industrial"
 
 msgid "Industrial service track"
-msgstr "Průmyslová, tovární nebo přístavní obslužná vedlejší kolej"
+msgstr "Linha de serviço industrial"
 
 msgid "Preserved track"
-msgstr "Zachovaná vedlejší kolej"
+msgstr "Linha turística"
 
 msgid "Preserved service track"
-msgstr "Zachovaná obslužná vedlejší kolej"
+msgstr "Linha turística de serviço"
 
 msgid "Track under construction"
-msgstr "Trať ve výstavbě"
+msgstr "Linha sob construção"
 
 msgid "Proposed track"
-msgstr "Připravovaná trať"
+msgstr "Linha propósta"
 
 msgid "Disused track"
-msgstr "Již nepoužívaná trať"
+msgstr "Linha não usada"
 
 msgid "Abandoned track"
-msgstr "Opuštěná trať"
+msgstr "Linha abandonada"
 
 msgid "Razed track"
-msgstr "Trať srovnaná se zemí"
+msgstr "Linha demolida"
 
 msgid "Tram"
-msgstr "Tramvaj"
+msgstr "Elétrico"
 
 msgid "Subway"
-msgstr "Podzemní dráha"
+msgstr "Metropolitano"
 
 msgid "Light rail"
-msgstr "Městská tramvajová doprava"
+msgstr "Veículo leve sobre trilhos"
 
 msgid "Narrow gauge track"
-msgstr "Úzkokolejná/Úzkorozchodná železniční trať"
+msgstr "Linha de via estreita"
 
 msgid "Narrow gauge siding"
-msgstr "Vedlejší úzkokolejná/úzkorozchodná železniční trať"
+msgstr "Linha de ultrapassagem de via estreita"
 
 msgid "Narrow gauge yard"
-msgstr "Slepá/Odstavná kolej úzkokolejné/úzkorozchodné železniční tratě"
+msgstr "Linha de manobras de via estreita"
 
 msgid "Narrow gauge spur"
-msgstr "Přípojná kolej/Vlečka úzkokolejné/úzkorozchodné železniční tratě"
+msgstr "Linha auxiliar de via estreita"
 
 msgid "Narrow gauge crossover"
-msgstr "Křížení úzkokolejné/úzkorozchodné železniční tratě"
+msgstr "Linha de serviço de via estreita"
 
 msgid "Narrow gauge branch line"
-msgstr "Vedlejší kolej úzkokolejné/úzkorozchodné železniční tratě"
+msgstr "Ramal de via estreita"
 
 msgid "Narrow gauge main line"
-msgstr "Hlavní kolej úzkokolejné/úzkorozchodné železniční tratě"
+msgstr "Linha principal de via estreita"
 
 msgid "Narrow gauge highspeed line"
-msgstr "Vysokorychlostní trať úzkokolejné/úzkorozchodné železniční tratě"
+msgstr "Linha de alta velocidade de via estreita"
 
 msgid "Narrow gauge industrial line"
-msgstr "Tovární trať úzkokolejné/úzkorozchodné železniční tratě"
+msgstr "Linha industrial de via estreita"
 
 msgid "Narrow gauge industrial service"
-msgstr ""
-"Vedlejší kolej tovární tratě úzkokolejné/úzkorozchodné železniční tratě"
+msgstr "Linha industrial de serviço de via estreita"
 
 msgid "Switch (remote-controlled)"
-msgstr "Výhybka (řízená vzdáleně)"
+msgstr ""
 
 msgid "Switch (local operated)"
-msgstr "Výhybka (řízená místně)"
+msgstr ""
 
 msgid "Resetting switch"
-msgstr "Znovunastavení výhybky"
+msgstr ""
 
 msgid "Signal box"
-msgstr "Stavědlo"
+msgstr "Caixa de Sinal"
 
 msgid "Owner change"
-msgstr "Hraniční bod"
+msgstr "Mudança de operador"
 
 msgid "Railway crossing"
-msgstr "Křížení tratí"
+msgstr ""
 
 msgid "Buffer stop"
-msgstr ""
+msgstr "Para-choque de via"
 
 msgid "Isolated track section"
-msgstr ""
+msgstr "Secção ferroviária isolada"
 
 msgid "Platform"
-msgstr ""
+msgstr "Plataforma"
 
 msgid "Vending machine"
-msgstr ""
+msgstr "Máquina de Vendas"
 
 msgid "Ticket shop"
-msgstr ""
+msgstr "Bilheteria"
 
 msgid "Subway entrance"
-msgstr ""
+msgstr "Entrada de Metro"
 
 msgid "Phone"
-msgstr ""
+msgstr "Telefóne"
 
 msgid "Water tower"
-msgstr ""
+msgstr "Torre de Água"
 
 msgid "Fuel"
-msgstr "Čerpací stanice"
+msgstr "Combustível"
 
 msgid "Water crane"
 msgstr ""
@@ -373,7 +363,7 @@ msgid "Pit"
 msgstr ""
 
 msgid "Loading gauge"
-msgstr ""
+msgstr "Contornos de Referência"
 
 msgid "Hump yard"
 msgstr ""
@@ -388,7 +378,7 @@ msgid "Workshop"
 msgstr ""
 
 msgid "Radio tower"
-msgstr ""
+msgstr "Torre de Rádio"
 
 msgid "Turntable"
 msgstr ""
@@ -397,10 +387,10 @@ msgid "Traverser"
 msgstr ""
 
 msgid "Loading ramp"
-msgstr ""
+msgstr "Rampa de carga"
 
 msgid "Crane"
-msgstr ""
+msgstr "Grua"
 
 msgid "Track scale"
 msgstr ""
@@ -409,49 +399,49 @@ msgid "Carrier truck pit"
 msgstr ""
 
 msgid "Gauge conversion"
-msgstr ""
+msgstr "Conversão de bitola"
 
 msgid "Gate"
-msgstr ""
+msgstr "Portão"
 
 msgid "Museum"
-msgstr ""
+msgstr "Museu ferroviário"
 
 msgid "Container terminal"
-msgstr ""
+msgstr "Terminal de contentores"
 
 msgid "Station building"
-msgstr ""
+msgstr "Edifício da estação"
 
 msgid "Factory connected to railroad line"
-msgstr ""
+msgstr "Fábrica conectada à rede ferroviária"
 
 msgid "Rack"
 msgstr ""
 
 msgid "Embankment"
-msgstr ""
+msgstr "Aterro elevado"
 
 msgid "Cutting"
-msgstr ""
+msgstr "Depressão escavada"
 
 msgid "Miniature railway"
-msgstr ""
+msgstr "Linha para comboios em miniatura"
 
 msgid "Funicular"
-msgstr ""
+msgstr "Funicular"
 
 msgid "Military line"
-msgstr ""
+msgstr "Linha militar"
 
 msgid "Military service track"
-msgstr ""
+msgstr "Linha militar de serviço"
 
 msgid "Ferry terminal"
-msgstr ""
+msgstr "Terminal de ferry"
 
 msgid "Ferry"
-msgstr ""
+msgstr "Ferry"
 
 msgid "Test line"
 msgstr ""
@@ -466,28 +456,28 @@ msgid "Rolling highway"
 msgstr ""
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr ""
+msgstr "Não existe nada para ver neste nível de zoom. Por favor aproxime-se."
 
 msgid "Legend not available for this style."
-msgstr ""
+msgstr "Legenda indisputável para este estilo."
 
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 msgid "Desktop version"
-msgstr ""
+msgstr "Versão para computadores de mesa"
 
 msgid "Style"
-msgstr ""
+msgstr "Estilo"
 
 msgid "Search"
-msgstr ""
+msgstr "Pesquisa"
 
 msgid "Mapnik no-labels"
-msgstr ""
+msgstr "Mapnik simplificado"
 
 msgid "Mapnik no-labels Grayscale"
-msgstr ""
+msgstr "Mapnik simplificado (Preto e Branco)"
 
 msgid "Blog"
 msgstr ""
