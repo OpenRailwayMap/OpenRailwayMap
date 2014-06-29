@@ -35,7 +35,7 @@ node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semap
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:hp-semaphore.png";
+	icon-image: "icons/de-hp-semaphore.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -55,7 +55,7 @@ node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:hp-light.png";
+	icon-image: "icons/de-hp-light.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -75,7 +75,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=sem
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:sh-semaphore.png";
+	icon-image: "icons/de-sh-semaphore.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -95,7 +95,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=sem
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:sh-semaphore-dwarf.png";
+	icon-image: "icons/de-sh-semaphore-dwarf.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -115,7 +115,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=lig
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:sh-light.png";
+	icon-image: "icons/de-sh-light.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -135,7 +135,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=lig
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:sh-light-dwarf.png";
+	icon-image: "icons/de-sh-light-dwarf.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -155,7 +155,7 @@ node|z14-[railway=signal][railway:signal:distant=ks][railway:signal:distant:form
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:ks-distant.png";
+	icon-image: "icons/de-ks-distant.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -175,7 +175,7 @@ node|z14-[railway=signal][railway:signal:main=ks][railway:signal:main:form=light
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:ks-main.png";
+	icon-image: "icons/de-ks-main.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -195,7 +195,7 @@ node|z14-[railway=signal][railway:signal:combined=ks][railway:signal:combined:fo
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:ks-combined.png";
+	icon-image: "icons/de-ks-combined.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -215,7 +215,7 @@ node|z14-[railway=signal][railway:signal:main=ne1][railway:signal:main:form=sign
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:ne1.png";
+	icon-image: "icons/de-ne1.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -235,7 +235,7 @@ node|z14-[railway=signal][railway:signal:main=AT:Trapeztafel][railway:signal:mai
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de:ne1.png";
+	icon-image: "icons/de-ne1.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
