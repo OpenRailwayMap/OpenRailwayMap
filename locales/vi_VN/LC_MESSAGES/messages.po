@@ -5,13 +5,13 @@
 #
 # Translators:
 # 1ec5 <mxn@1ec5.org>, 2013
-# 1ec5 <mxn@1ec5.org>, 2013
+# Minh Nguyễn <minh@nguyen.cincinnati.oh.us>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-04-04 23:13+0100\n"
+"PO-Revision-Date: 2014-06-25 21:27+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/projects/p/"
 "openrailwaymap/language/vi/)\n"
@@ -46,7 +46,7 @@ msgid "Nothing found."
 msgstr "Không tìm thấy kết quả."
 
 msgid "Last update"
-msgstr ""
+msgstr "Cập nhật lần cuối"
 
 msgid "Empty input."
 msgstr "Xin vui lòng nhập truy vấn."
@@ -241,7 +241,7 @@ msgid "Industrial line"
 msgstr "Đường công nghiệp"
 
 msgid "Industrial service track"
-msgstr ""
+msgstr "Đường phụ công nghiệp"
 
 msgid "Preserved track"
 msgstr "Đường được bảo tồn"
@@ -262,7 +262,7 @@ msgid "Abandoned track"
 msgstr "Đường bỏ hoang"
 
 msgid "Razed track"
-msgstr ""
+msgstr "Đường san bằng"
 
 msgid "Tram"
 msgstr "Tài điện"
@@ -292,28 +292,28 @@ msgid "Narrow gauge branch line"
 msgstr "Nhánh khổ hẹp"
 
 msgid "Narrow gauge main line"
-msgstr ""
+msgstr "Đường chính khổ hẹp"
 
 msgid "Narrow gauge highspeed line"
-msgstr ""
+msgstr "Đường cao tốc khổ hẹp"
 
 msgid "Narrow gauge industrial line"
-msgstr ""
+msgstr "Đường công nghiệp khổ hẹp"
 
 msgid "Narrow gauge industrial service"
-msgstr ""
+msgstr "Đường phụ công nghiệp khổ hẹp"
 
 msgid "Switch (remote-controlled)"
-msgstr ""
+msgstr "Ghi (điều khiển từ xa)"
 
 msgid "Switch (local operated)"
-msgstr ""
+msgstr "Ghi (điều khiển tại chỗ)"
 
 msgid "Resetting switch"
-msgstr ""
+msgstr "Ghi đặt lại"
 
 msgid "Signal box"
-msgstr ""
+msgstr "Tủ báo hiệu"
 
 msgid "Owner change"
 msgstr "Thay đổi chủ"
@@ -349,10 +349,10 @@ msgid "Fuel"
 msgstr "Cây xăng"
 
 msgid "Water crane"
-msgstr ""
+msgstr "Vòi lấy nước"
 
 msgid "Coaling facility"
-msgstr ""
+msgstr "Trạm lấy than"
 
 msgid "Wash"
 msgstr ""
@@ -367,7 +367,7 @@ msgid "Hump yard"
 msgstr ""
 
 msgid "Rail brake"
-msgstr ""
+msgstr "Phanh trên ray"
 
 msgid "Engine shed"
 msgstr ""
@@ -385,10 +385,10 @@ msgid "Traverser"
 msgstr ""
 
 msgid "Loading ramp"
-msgstr ""
+msgstr "Dốc tải"
 
 msgid "Crane"
-msgstr ""
+msgstr "Vòi"
 
 msgid "Track scale"
 msgstr ""
@@ -406,16 +406,16 @@ msgid "Museum"
 msgstr "Viện bảo tàng"
 
 msgid "Container terminal"
-msgstr ""
+msgstr "Cảng chuyển thùng"
 
 msgid "Station building"
 msgstr "Nhà ga"
 
 msgid "Factory connected to railroad line"
-msgstr ""
+msgstr "Nhà máy nối với đường sắt"
 
 msgid "Rack"
-msgstr ""
+msgstr "Giá"
 
 msgid "Embankment"
 msgstr "Đường đắp cao"
@@ -460,19 +460,22 @@ msgid "Legend not available for this style."
 msgstr "Kiểu bản đồ này không có bảng chú giải."
 
 msgid "Language"
-msgstr ""
+msgstr "Ngôn ngữ"
 
 msgid "Desktop version"
-msgstr ""
+msgstr "Phiên bản để bàn"
 
 msgid "Style"
-msgstr ""
+msgstr "Kiểu"
 
 msgid "Search"
-msgstr ""
+msgstr "Tìm kiếm"
 
 msgid "Mapnik no-labels"
-msgstr ""
+msgstr "Mapnik không nhãn"
 
 msgid "Mapnik no-labels Grayscale"
+msgstr "Mapnik không nhãn thang độ xám"
+
+msgid "Blog"
 msgstr ""

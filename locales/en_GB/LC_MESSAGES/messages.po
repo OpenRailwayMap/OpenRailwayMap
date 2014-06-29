@@ -4,15 +4,16 @@
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
-# rurseekatze <AlexanderMatheisen@ish.de>, 2013
+# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-04-04 23:10+0100\n"
+"PO-Revision-Date: 2014-06-25 21:23+0100\n"
 "Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: \n"
+"Language-Team: English (http://www.transifex.com/projects/p/openrailwaymap/"
+"language/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -480,3 +481,6 @@ msgstr "Mapnik no-labels"
 
 msgid "Mapnik no-labels Grayscale"
 msgstr "Mapnik no-labels Grayscale"
+
+msgid "Blog"
+msgstr "Blog"
