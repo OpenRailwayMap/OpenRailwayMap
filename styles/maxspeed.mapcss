@@ -642,6 +642,48 @@ node|z16-[railway=signal][railway:signal:speed_limit_distant=zs3v][railway:signa
     allow-overlap: true;
 }
 
+
+/* German line speed signals (lf7): */
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=10]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-10-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+/* lf7 "2" (20 km/h) still missing */
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=30]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-30-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=40]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-40-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+/* lf7 "5" (50 km/h) still missing */
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=60]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-60-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
 node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=70]
 {
 	z-index: 300;
@@ -650,6 +692,117 @@ node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_l
 	icon-height: 16;
     allow-overlap: true;
 }
+
+/* lf7 "8" (80 km/h) still missing */
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=90]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-90-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=100]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-100-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=110]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-110-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=120]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-120-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=130]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-130-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=140]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-140-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=150]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-150-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=160]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-160-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=170]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-170-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=180]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-180-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=190]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-190-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
+node|z14-[railway=signal][railway:signal:speed_limit=lf7][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=200]
+{
+	z-index: 300;
+	icon-image: "icons/de-lf7-200-sign-32.png";
+	icon-width: 13;
+	icon-height: 16;
+    allow-overlap: true;
+}
+
 
 node|z14-[railway=signal][railway:signal:speed_limit_distant=lf6][railway:signal:speed_limit_distant:form=sign][railway:signal:speed_limit_distant:speed=30]
 {
