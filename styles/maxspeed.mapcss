@@ -624,6 +624,42 @@ way[maxspeed>380][maxspeed<=400]
 	kothicjs-ignore-layer: true;
 }
 
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=20]
+{
+	z-index: 100;
+	icon-image: "icons/de-zs3-20-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+    allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=30]
+{
+	z-index: 100;
+	icon-image: "icons/de-zs3-30-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+    allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=40]
+{
+	z-index: 100;
+	icon-image: "icons/de-zs3-40-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+    allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=50]
+{
+	z-index: 100;
+	icon-image: "icons/de-zs3-50-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+    allow-overlap: true;
+}
+
 node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=60]
 {
 	z-index: 100;
