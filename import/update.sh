@@ -75,7 +75,8 @@ rm changes.osc
 echo "Rerender expired tiles"
 echo ""
 if [ -s $TILELIST ]; then
-	node $PROJECTPATH/renderer/expire-tiles.js $TILELIST
+	cd $PROJECTPATH/renderer
+	node expire-tiles.js $TILELIST
 	cd $TILESPATH
 	find 0 -exec touch -t 197001010000 {} \;
 	find 1 -exec touch -t 197001010000 {} \;
