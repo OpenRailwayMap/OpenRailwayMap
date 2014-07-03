@@ -4176,7 +4176,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 			</group>
-			<group name="Zusatzsignale (Zs)" icon="de:lf7-70-sign-16px.png"> <!-- Das Icon ist ein vorübergehender Platzhalter bis ein finales Zs-Icon zur Verfügung steht -->
+			<group name="Zusatzsignale (Zs)" icon="de:lf7-70-sign-16.png"> <!-- Das Icon ist ein vorübergehender Platzhalter bis ein finales Zs-Icon zur Verfügung steht -->
 				<item name="Richtungsanzeiger" icon="de-zs2.png" type="node">
 					<label text="Richtungsanzeiger" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
@@ -4336,7 +4336,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 				<separator />
-				<item name="Geschwindigkeitsanzeiger" icon="de-lf7-70-sign-16px.png" type="node">
+				<item name="Geschwindigkeitsanzeiger" icon="de-lf7-70-sign-16.png" type="node">
 					<label text="Geschwindigkeitsanzeiger" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -4394,7 +4394,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Mastbauform,Zwergsignal"
 						delete_if_empty="true" />
 				</item>
-				<item name="Geschwindigkeitsvoranzeiger" icon="de-lf6-60-sign-down-16px.png" type="node">
+				<item name="Geschwindigkeitsvoranzeiger" icon="de-lf6-60-sign-down-16.png" type="node">
 					<label text="Geschwindigkeitsvoranzeiger" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
