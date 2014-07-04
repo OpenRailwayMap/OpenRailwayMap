@@ -89,7 +89,6 @@ if [ -s $TILELIST ]; then
 	find 17 -exec touch -t 197001010000 {} \;
 	find 18 -exec touch -t 197001010000 {} \;
 	find 19 -exec touch -t 197001010000 {} \;
-	find 20 -exec touch -t 197001010000 {} \;
 fi
 
 echo "Finished processing at $(date)."
