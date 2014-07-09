@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="Zs3_60_Tafel.svg">
+   sodipodi:docname="Zs3_20_Tafel.svg">
   <defs
      id="defs4">
     <inkscape:path-effect
@@ -43,14 +43,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="47.096833"
-     inkscape:cy="70.955834"
+     inkscape:zoom="4"
+     inkscape:cx="63.40969"
+     inkscape:cy="80.594507"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1309"
-     inkscape:window-height="744"
+     inkscape:window-width="1863"
+     inkscape:window-height="1056"
      inkscape:window-x="57"
      inkscape:window-y="24"
      inkscape:window-maximized="1" />
@@ -62,7 +62,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -79,9 +79,10 @@
        sodipodi:nodetypes="cccc" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none"
-       d="m 78.935028,960.89977 13.101813,0 c 0,-12.01901 17.856729,-9.89045 12.146469,0 -7.330659,12.69706 -23.142384,40.37773 -29.78615,52.50963 l 0,12.1465 38.04303,0 0,-12.1465 -24.668262,0 c 1.000225,-1.6541 17.616822,-31.66809 29.649672,-52.50963 8.60434,-21.41699 -38.486572,-30.03235 -38.486572,0 z"
+       d="m 97.375,63.8125 c -9.419652,0.508683 -18.4375,6.267097 -18.4375,19.40625 l 13.09375,0 c 0,-12.01901 17.86651,-9.89045 12.15625,0 -7.330659,12.69706 -23.137484,40.3681 -29.78125,52.5 l 0,12.15625 c 14.413206,0 29.56337,0 43.71875,0 l 0,-11.5625 0.0312,-0.59375 -30.375,0 c 1.000225,-1.6541 17.59215,-31.65846 29.625,-52.5 C 122.24619,71.171693 109.48598,63.158478 97.375,63.8125 z"
+       transform="translate(0,877.68218)"
        id="rect4082"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccsccccccc" />
+       sodipodi:nodetypes="sccscccccccs" />
   </g>
 </svg>
