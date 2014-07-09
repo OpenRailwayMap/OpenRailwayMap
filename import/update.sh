@@ -19,7 +19,6 @@ TILELIST=/home/www/sites/194.245.35.149/site/olm/import/expired_tiles
 
 PATH="$PATH:$PROJECTPATH/import/bin"
 PATH="$PATH:$PROJECTPATH/import/bin/osm2pgsql"
-export JAVACMD_OPTIONS=-Xmx4800M
 
 cd $DATAPATH
 

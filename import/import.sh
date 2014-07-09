@@ -12,7 +12,6 @@ PROJECTPATH=/home/www/sites/194.245.35.149/site/orm
 DATAPATH=/home/www/sites/194.245.35.149/site/olm/import
 PATH="$PATH:$DATAPATH/bin"
 PATH="$PATH:$PROJECTPATH/import/bin/osm2pgsql"
-export JAVACMD_OPTIONS=-Xmx4800M
 
 cd $DATAPATH
 
