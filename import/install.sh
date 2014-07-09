@@ -6,13 +6,14 @@
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
-# do not run this script automatically! you have to change paths and modify it to your own environment!
+# ATTENTION: DO NOT RUN THIS SCRIPT! You have to change paths and modify parameters to your own environment!
+# This install script is written for CentOS. It may be necessary to change it for using on other linux distributions.
 
 PROJECTPATH=/home/www/sites/194.245.35.149/site/orm
 
 
 # install necessary software
-yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip php-php-gettext php php-pgsql unzip postgresql-devel python-ply python-imaging pycairo python-cairosvg librsvg2 gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel pygtk2 pygtk2-devel cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel npm nodejs
+yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgis geoip GeoIP geoip-devel GeoIP-devel php-pecl-geoip php-php-gettext php php-pgsql unzip postgresql-devel python-ply python-imaging pycairo python-cairosvg librsvg2 gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel pygtk2 pygtk2-devel cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel npm nodejs wget
 
 # GeoIP database
 # add extension=geoip.so to php.ini
@@ -26,9 +27,13 @@ mv GeoLiteCity.dat GeoIPCity.dat
 
 cd $PROJECTPATH/import/bin
 
-mkdir osmosis
-cd osmosis
-wget -O - http://bretth.dev.openstreetmap.org/osmosis-build/osmosis-latest.tgz | tar xz
+# osm2pgsql
+git clone https://github.com/openstreetmap/osm2pgsql.git
+cd osm2pgsql
+./autogen.sh
+./configure
+sed -i 's/-g -O2/-O2 -march=native -fomit-frame-pointer/' Makefile
+make
 cd ..
 
 # set up the database
@@ -108,15 +113,6 @@ echo "ALTER FUNCTION hstore2json(hs public.hstore) OWNER TO apache;"  | psql -d 
 wget -O - http://m.m.i24.cc/osmupdate.c | cc -x c - -o osmupdate
 wget -O - http://m.m.i24.cc/osmfilter.c | cc -x c - -o osmfilter
 wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -o osmconvert
-
-# osm2pgsql
-git clone https://github.com/openstreetmap/osm2pgsql.git
-cd osm2pgsql
-./autogen.sh
-./configure
-sed -i 's/-g -O2/-O2 -march=native -fomit-frame-pointer/' Makefile
-make
-cd ..
 
 cd $PROJECTPATH/renderer
 npm install canvas@1.0.4
