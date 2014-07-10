@@ -4086,6 +4086,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="ra10" />
 					<key key="railway:signal:shunting:form"
 						value="sign" />
+					<combo key="railway:signal:shunting:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						default=""
+						delete_if_empty="true" />
 				</item>
 				<item name="Rangierhaltsignal" icon="de-ra11.png" type="node">
 					<label text="Rangierhaltsignal" />
