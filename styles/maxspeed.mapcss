@@ -627,7 +627,7 @@ way[maxspeed>380][maxspeed<=400]
 /* German speed signals (Zs 3) */
 node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=20]
 {
-	z-index: 100;
+	z-index: 105;
 	icon-image: "icons/de-zs3-20-sign-up-44.png";
 	icon-width: 22;
 	icon-height: 19;
@@ -636,7 +636,7 @@ node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_l
 
 node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=30]
 {
-	z-index: 105;
+	z-index: 110;
 	icon-image: "icons/de-zs3-30-sign-up-44.png";
 	icon-width: 22;
 	icon-height: 19;
@@ -645,7 +645,7 @@ node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_l
 
 node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=40]
 {
-	z-index: 110;
+	z-index: 115;
 	icon-image: "icons/de-zs3-40-sign-up-44.png";
 	icon-width: 22;
 	icon-height: 19;
@@ -654,7 +654,7 @@ node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_l
 
 node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=50]
 {
-	z-index: 115;
+	z-index: 120;
 	icon-image: "icons/de-zs3-50-sign-up-44.png";
 	icon-width: 22;
 	icon-height: 19;
@@ -663,8 +663,98 @@ node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_l
 
 node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=60]
 {
-	z-index: 120;
+	z-index: 125;
 	icon-image: "icons/de-zs3-60-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=70]
+{
+	z-index: 130;
+	icon-image: "icons/de-zs3-70-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=80]
+{
+	z-index: 135;
+	icon-image: "icons/de-zs3-80-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=90]
+{
+	z-index: 140;
+	icon-image: "icons/de-zs3-90-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=100]
+{
+	z-index: 145;
+	icon-image: "icons/de-zs3-100-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=110]
+{
+	z-index: 150;
+	icon-image: "icons/de-zs3-110-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=120]
+{
+	z-index: 155;
+	icon-image: "icons/de-zs3-120-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=130]
+{
+	z-index: 160;
+	icon-image: "icons/de-zs3-130-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=140]
+{
+	z-index: 165;
+	icon-image: "icons/de-zs3-140-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=150]
+{
+	z-index: 170;
+	icon-image: "icons/de-zs3-150-sign-up-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_limit:form=sign][railway:signal:speed_limit:speed=160]
+{
+	z-index: 175;
+	icon-image: "icons/de-zs3-160-sign-up-44.png";
 	icon-width: 22;
 	icon-height: 19;
 	allow-overlap: true;
@@ -673,7 +763,7 @@ node|z16-[railway=signal][railway:signal:speed_limit=zs3][railway:signal:speed_l
 /* German speed signals (Zs 3v) */
 node|z16-[railway=signal][railway:signal:speed_limit_distant=zs3v][railway:signal:speed_limit_distant:form=sign][railway:signal:speed_limit_distant:speed=20]
 {
-	z-index: 200;
+	z-index: 205;
 	icon-image: "icons/de-zs3v-20-sign-down-44.png";
 	icon-width: 22;
 	icon-height: 19;
@@ -682,7 +772,7 @@ node|z16-[railway=signal][railway:signal:speed_limit_distant=zs3v][railway:signa
 
 node|z16-[railway=signal][railway:signal:speed_limit_distant=zs3v][railway:signal:speed_limit_distant:form=sign][railway:signal:speed_limit_distant:speed=30]
 {
-	z-index: 205;
+	z-index: 210;
 	icon-image: "icons/de-zs3v-30-sign-down-44.png";
 	icon-width: 22;
 	icon-height: 19;
@@ -691,7 +781,7 @@ node|z16-[railway=signal][railway:signal:speed_limit_distant=zs3v][railway:signa
 
 node|z16-[railway=signal][railway:signal:speed_limit_distant=zs3v][railway:signal:speed_limit_distant:form=sign][railway:signal:speed_limit_distant:speed=40]
 {
-	z-index: 210;
+	z-index: 215;
 	icon-image: "icons/de-zs3v-40-sign-down-44.png";
 	icon-width: 22;
 	icon-height: 19;
@@ -700,8 +790,17 @@ node|z16-[railway=signal][railway:signal:speed_limit_distant=zs3v][railway:signa
 
 node|z16-[railway=signal][railway:signal:speed_limit_distant=zs3v][railway:signal:speed_limit_distant:form=sign][railway:signal:speed_limit_distant:speed=50]
 {
-	z-index: 215;
+	z-index: 220;
 	icon-image: "icons/de-zs3v-50-sign-down-44.png";
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][railway:signal:speed_limit_distant=zs3v][railway:signal:speed_limit_distant:form=sign][railway:signal:speed_limit_distant:speed=60]
+{
+	z-index: 225;
+	icon-image: "icons/de-zs3v-60-sign-down-44.png";
 	icon-width: 22;
 	icon-height: 19;
 	allow-overlap: true;
