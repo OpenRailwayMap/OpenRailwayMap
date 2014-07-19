@@ -25,7 +25,7 @@ meta
 /***************************/
 /* DE Hp-Form-Hauptsignale */
 /***************************/
-node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semaphore]
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]
 {
 	z-index: 9000;
 	text: "ref";
@@ -42,10 +42,30 @@ node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=semap
     allow-overlap: true;
 }
 
+/***************************/
+/* DE Vr-Form-Vorsignale */
+/***************************/
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-vr-semaphore.png";
+	icon-width: 16;
+	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
 /****************************/
 /* DE Hp-Licht-Hauptsignale */
 /****************************/
-node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light]
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]
 {
 	z-index: 10000;
 	text: "ref";
@@ -62,10 +82,50 @@ node|z14-[railway=signal][railway:signal:main=hp][railway:signal:main:form=light
     allow-overlap: true;
 }
 
+/***************************/
+/* DE Vr-Licht-Vorsignale */
+/***************************/
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-vr-light.png";
+	icon-width: 16;
+	icon-height: 17;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
+/***************************/
+/* DE distant signal replacement by sign Ne2 */
+/***************************/
+node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-ne2.png";
+	icon-width: 10;
+	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
 /*********************/
 /* DE Sh-Formsignale */
 /*********************/
-node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=semaphore][railway:signal:minor:height=normal], node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=semaphore][!railway:signal:minor:height]
+node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=normal], node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=semaphore][!railway:signal:minor:height]
 {
 	z-index: 4000;
 	text: "ref";
@@ -85,7 +145,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=sem
 /***************************/
 /* DE Sh-Zwerg-Formsignale */
 /***************************/
-node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=semaphore][railway:signal:minor:height=dwarf]
+node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=dwarf]
 {
 	z-index: 2000;
 	text: "ref";
@@ -105,7 +165,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=sem
 /**********************/
 /* DE Sh-Lichtsignale */
 /**********************/
-node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=light][railway:signal:minor:height=normal], node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=light][!railway:signal:minor:height]
+node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal], node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light][!"railway:signal:minor:height"]
 {
 	z-index: 5000;
 	text: "ref";
@@ -125,7 +185,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=lig
 /****************************/
 /* DE Sh-Zwerg-Lichtsignale */
 /****************************/
-node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=light][railway:signal:minor:height=dwarf]
+node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light]["railway:signal:minor:height"=dwarf]
 {
 	z-index: 3000;
 	text: "ref";
@@ -145,7 +205,7 @@ node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=lig
 /*******************/
 /* DE Ks-Vorsignal */
 /*******************/
-node|z14-[railway=signal][railway:signal:distant=ks][railway:signal:distant:form=light][railway:signal:distant:states=ks1;ks2]
+node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]
 {
 	z-index: 8000;
 	text: "ref";
@@ -165,7 +225,7 @@ node|z14-[railway=signal][railway:signal:distant=ks][railway:signal:distant:form
 /*********************/
 /* DE Ks-Hauptsignal */
 /*********************/
-node|z14-[railway=signal][railway:signal:main=ks][railway:signal:main:form=light][railway:signal:main:states=hp0;ks1]
+node|z14-[railway=signal]["railway:signal:main"=ks]["railway:signal:main:form"=light]["railway:signal:main:states"="hp0;ks1"]
 {
 	z-index: 10100;
 	text: "ref";
@@ -185,7 +245,7 @@ node|z14-[railway=signal][railway:signal:main=ks][railway:signal:main:form=light
 /******************************/
 /* DE Ks-Mehrabschnittssignal */
 /******************************/
-node|z14-[railway=signal][railway:signal:combined=ks][railway:signal:combined:form=light][railway:signal:combined:states=hp0;ks1;ks2]
+node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"]
 {
 	z-index: 10200;
 	text: "ref";
@@ -203,9 +263,29 @@ node|z14-[railway=signal][railway:signal:combined=ks][railway:signal:combined:fo
 }
 
 /******************/
+/* DE Haltetafel (Ne5) */
+/******************/
+node|z14-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=sign]
+{
+	z-index: 1000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-ne5.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
+/******************/
 /* DE Trapeztafel */
 /******************/
-node|z14-[railway=signal][railway:signal:main=ne1][railway:signal:main:form=sign][railway:signal:main:function=entry]
+node|z14-[railway=signal]["railway:signal:main"=ne1]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
 {
 	z-index: 1000;
 	text: "ref";
@@ -225,7 +305,7 @@ node|z14-[railway=signal][railway:signal:main=ne1][railway:signal:main:form=sign
 /******************/
 /* AT Trapeztafel */
 /******************/
-node|z14-[railway=signal][railway:signal:main=AT:trapeztafel][railway:signal:main:form=sign][railway:signal:main:function=entry]
+node|z14-[railway=signal]["railway:signal:main"="AT:trapeztafel"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
 {
 	z-index: 1000;
 	text: "ref";
