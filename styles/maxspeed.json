@@ -274,6 +274,20 @@
 			"maxzoom": 19,
 			"icon": "icons/de-lf7-70-sign-22.png",
 			"caption": "Lf 7 Geschwindigkeitssignal"
+		},
+		{
+			"id": "speed_limit_de_zs10_sign",
+			"minzoom": 16,
+			"maxzoom": 19,
+			"icon": "icons/de-zs10-sign-22.png",
+			"caption": "Zs 10 Endesignal (Tafel)"
+		},
+		{
+			"id": "speed_limit_de_zs10_light",
+			"minzoom": 16,
+			"maxzoom": 19,
+			"icon": "icons/de-zs10-light-22.png",
+			"caption": "Zs 10 Endesignal (Lichtsignal)"
 		}
 	]
 }
