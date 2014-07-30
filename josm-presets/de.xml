@@ -4590,7 +4590,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Haltetafel" icon="de-ne5.png" type="node">
+			<item name="Haltetafel" icon="de-ne5-ds301-32.png" type="node">
 				<label text="Haltetafel" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
