@@ -218,7 +218,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:pzb"
 					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (LZB)"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
 					default="off"
 					delete_if_empty="true" />
 				<check key="railway:lzb"
