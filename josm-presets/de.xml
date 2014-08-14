@@ -4011,8 +4011,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<key key="railway:signal:minor:height"
 						value="normal" />
 				</item>
-				<item name="Haltvorscheibe" icon="de-sh3.png" type="node">
-					<label text="Haltvorscheibe" />
+				<item name="Wärtervorscheibe" icon="de-sh3.png" type="node">
+					<label text="Wärtervorscheibe" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
