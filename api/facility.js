@@ -19,26 +19,32 @@ Facilityinfo = function(params)
 	var uicref = params.uicref;
 	
 	if (params.uicref != null)
-		var searchcondition = "LOWER(tags->'uic_ref') = LOWER('"+params.uicref+"')";
+		var searchcondition = "LOWER(tags->'uic_ref') = LOWER('"+params.uicref+"') AND";
 	else if (params.ref != null)
-		var searchcondition = "LOWER(tags->'railway:ref') = LOWER('"+params.ref+"')";
+		var searchcondition = "LOWER(tags->'railway:ref') = LOWER('"+params.ref+"') AND";
 	else if (params.name != null)
 	{
-		if (params.name.length < 4)
-			var searchcondition = "(REPLACE(LOWER(tags->'name'), '-', ' ') = REPLACE(LOWER('"+params.name+"'), '-', ' ')) OR (REPLACE(LOWER(tags->'uic_name'), '-', ' ') = REPLACE(LOWER('"+params.name+"'), '-', ' '))";
-		else
-			var searchcondition = "(REPLACE(LOWER(tags->'name'), '-', ' ') LIKE REPLACE(LOWER('%"+params.name+"%'), '-', ' ')) OR (REPLACE(LOWER(tags->'uic_name'), '-', ' ') LIKE REPLACE(LOWER('%"+params.name+"%'), '-', ' '))";
+		var searchcondition = "";
+
+		var words = params.name.split(" ");
+		for (var i=0; i<words.length; i++)
+		{
+			searchcondition += " (\
+										(POSITION(LOWER('"+words[i].trim()+"') IN LOWER(tags->'name')) != 0)\
+										OR (POSITION(LOWER('"+words[i].trim()+"') IN LOWER(tags->'uic_name')) != 0)\
+									) AND";
+		}
 	}
 
-	return query = "\
-					SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.uicname AS uicname, foo.uicref AS uicref, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator \
+	return "\
+					SELECT ST_X(foo.geom) AS lat, ST_Y(foo.geom) AS lon, foo.name AS name, foo.uicname AS uicname, foo.uicref AS uicref, foo.ref AS ref, foo.id AS id, foo.type AS type, foo.operator AS operator, foo.stationcategory AS stationcategory \
 					FROM \
 					( \
-						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'uic_name' AS uicname, tags->'uic_ref' AS uicref, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, osm_id AS id \
+						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'uic_name' AS uicname, tags->'uic_ref' AS uicref, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, tags->'railway:station_category' AS stationcategory, osm_id AS id \
 						FROM "+prefix+"_point \
-						WHERE ("+searchcondition+") AND ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) "+operator+" \
+						WHERE "+searchcondition+" ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) "+operator+" \
 					) AS foo \
-					ORDER BY CHAR_LENGTH(foo.name), foo.name;";
+					ORDER BY foo.stationcategory, NOT(LOWER(foo.name) = LOWER('"+params.name+"')), NOT(LOWER(foo.name) LIKE LOWER('"+params.name+" %')), NOT(LOWER(foo.name) LIKE LOWER('"+params.name+"-%')), NOT(LOWER(foo.name) LIKE LOWER('"+params.name+"%')), CHAR_LENGTH(foo.name), foo.name;";
 };
 
 module.exports = Facilityinfo;
