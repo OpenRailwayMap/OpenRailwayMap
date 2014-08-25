@@ -84,7 +84,7 @@ way[tunnel=yes]::tunnels
 /******************/
 way[railway=rail][!service], way[railway=disused][!service], way[railway=abandoned][!service], way[railway=razed][!service], way[railway=proposed][!service], way[railway=construction][!service], way[railway=preserved][!service], way[railway=narrow_gauge][!service]
 {
-	z-index: 4000;
+	z-index: 10000;
 	text: eval(concat(tag("ref"), " ", tag("name")));
 	text-position: line;
 	text-color: #585858;
@@ -609,7 +609,7 @@ area|z11-[railway=signal_box]
 /**************/
 node|z11-[railway=milestone]
 {
-	z-index: 6000;
+	z-index: 600;
 	text: "railway:position";
 	text-position: auto;
 	text-color: black;
@@ -626,35 +626,56 @@ node|z11-[railway=milestone]
 node|z11-[railway=station]
 {
 	z-index: 30000;
-	symbol-shape: circle;
-	symbol-size: 8;
-	symbol-stroke-color: blue;
-	symbol-fill-color: blue;
 	text: "name";
 	text-position: auto;
 	font-family: Arial Black;
 	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
-	text-halo-radius: 1;
+	text-halo-radius: 1.5;
 	text-halo-color: white;
 }
 
 node|z1-11[railway=station]
 {
 	z-index: 30000;
-	symbol-shape: circle;
-	symbol-size: 8;
-	symbol-stroke-color: blue;
-	symbol-fill-color: blue;
 	text: "railway:ref";
 	text-position: auto;
 	font-family: Arial Black;
 	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
-	text-halo-radius: 1;
+	text-halo-radius: 1.5;
 	text-halo-color: white;
+}
+
+/*********/
+/* yards */
+/*********/
+node|z11-[railway=yard]
+{
+	z-index: 25000;
+	text: "name";
+	text-position: auto;
+	font-size: 12;
+	text-color: #87491D;
+	font-weight: bold;
+	font-family: Arial;
+	text-halo-radius: 1.5;
+	text-halo-color: #F1F1F1;
+}
+
+node|z1-11[railway=yard]
+{
+	z-index: 25000;
+	text: "railway:ref";
+	text-position: auto;
+	font-size: 12;
+	text-color: #87491D;
+	font-weight: bold;
+	font-family: Arial;
+	text-halo-radius: 1.5;
+	text-halo-color: #F1F1F1;
 }
 
 /*********/
@@ -663,35 +684,85 @@ node|z1-11[railway=station]
 node|z11-[railway=halt]
 {
 	z-index: 20000;
-	symbol-shape: circle;
-	symbol-size: 8;
-	symbol-stroke-color: blue;
-	symbol-fill-color: blue;
 	text: "name";
 	text-position: auto;
 	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
 	font-family: Arial;
-	text-halo-radius: 1;
+	text-halo-radius: 1.5;
 	text-halo-color: white;
 }
 
 node|z1-11[railway=halt]
 {
 	z-index: 20000;
-	symbol-shape: circle;
-	symbol-size: 8;
-	symbol-stroke-color: blue;
-	symbol-fill-color: blue;
 	text: "railway:ref";
 	text-position: auto;
 	font-size: 12;
 	text-color: blue;
 	font-weight: bold;
 	font-family: Arial;
-	text-halo-radius: 1;
+	text-halo-radius: 1.5;
 	text-halo-color: white;
+}
+
+/**********************************************/
+/* junctions, crossovers and service stations */
+/**********************************************/
+node|z11-[railway=junction], node|z11-[railway=service_station], node|z11-[railway=crossover]
+{
+	z-index: 15000;
+	text: "name";
+	text-position: auto;
+	font-size: 12;
+	text-color: #616161;
+	font-weight: bold;
+	font-family: Arial;
+	text-halo-radius: 1.5;
+	text-halo-color: #F1F1F1;
+}
+
+node|z1-11[railway=junction], node|z1-11[railway=service_station], node|z1-11[railway=crossover]
+{
+	z-index: 15000;
+	text: "railway:ref";
+	text-position: auto;
+	font-size: 12;
+	text-color: #616161;
+	font-weight: bold;
+	font-family: Arial;
+	text-halo-radius: 1.5;
+	text-halo-color: #F1F1F1;
+}
+
+/*********/
+/* sites */
+/*********/
+node|z11-[railway=site]
+{
+	z-index: 10000;
+	text: "name";
+	text-position: auto;
+	font-size: 12;
+	text-color: #616161;
+	font-weight: bold;
+	font-family: Arial;
+	text-halo-radius: 1.5;
+	text-halo-color: #F1F1F1;
+}
+
+node|z1-11[railway=site]
+{
+	z-index: 10000;
+	text: "railway:ref";
+	text-position: auto;
+	font-size: 12;
+	text-color: #616161;
+	font-weight: bold;
+	font-family: Arial;
+	text-halo-radius: 1.5;
+	text-halo-color: #F1F1F1;
 }
 
 /**************/
