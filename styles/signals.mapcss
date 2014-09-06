@@ -83,9 +83,10 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 }
 
 /***************************/
-/* DE Vr-Licht-Vorsignale */
+/* DE distant light signals type Vr which are no repeaters (or not tagged as such)*/
 /***************************/
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]
 {
 	z-index: 9000;
 	text: "ref";
@@ -101,6 +102,28 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 	text-allow-overlap: true;
     allow-overlap: true;
 }
+
+
+/***************************/
+/* DE distant light signals type Vr which are repeaters */
+/***************************/
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-vr-light-repeater.png";
+	icon-width: 16;
+	icon-height: 17;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
 
 /***************************/
 /* DE distant signal replacement by sign Ne2 */
