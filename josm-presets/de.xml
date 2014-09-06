@@ -5927,6 +5927,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Metergenauer Wert (z. B. '12.345')"
 				default=""
 				delete_if_empty="true" />
+			<check key="railway:milestone:catenary_mast"
+				text="On catenary mast"
+				de.text="Am Oberleitungsmast"
+				default="off"
+				delete_if_empty="true" />
 			<check key="railway:milestone:emergency_brake_override"
 				text="Emergency brake override"
 				de.text="Notbremsüberbrückung (NBÜ)"
@@ -5938,11 +5943,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="forward,backward,both"
 				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
 				default=""
-				delete_if_empty="true" />
-			<check key="railway:milestone:catenary_mast"
-				text="On catenary mast"
-				de.text="Am Oberleitungsmast"
-				default="off"
 				delete_if_empty="true" />
 		</item>
 		<item name="Bahnsteig" icon="platform.png" type="way,closedway">
