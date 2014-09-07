@@ -278,26 +278,6 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
     allow-overlap: true;
 }
 
-/****************************/
-/* DE main signal type Hp other */
-/****************************/
-/*node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp-light.png";
-	icon-width: 16;
-	icon-height: 16;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}*/
-
 /***************************/
 /* DE distant light signals type Vr which 
    - are no repeaters (or not tagged as such)
