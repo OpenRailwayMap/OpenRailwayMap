@@ -22,26 +22,6 @@ meta
 	watch-modified: true;
 }
 
-/****************************/
-/* DE main semaphore signal type Hp which  */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp-semaphore.png";
-	icon-width: 19;
-	icon-height: 41;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
 
 /****************************/
 /* DE main semaphore signal type Hp which 
@@ -261,9 +241,11 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=s
 
 
 /***************************/
-/* DE Vr-Form-Vorsignale */
+/* DE distant semaphore signals type Vr which 
+   - do not share post with a main signal
+   - can show Vr2 */
 /***************************/
-/*node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore]
+node|z14-[railway=signal]["railway:signal:distant"="vr"]["railway:signal:distant:form"="semaphore"][!"railway:signal:main"]["railway:signal:distant:states"=~/.*vr2.*/]
 {
 	z-index: 9000;
 	text: "ref";
@@ -273,12 +255,38 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=s
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-vr-semaphore.png";
-	icon-width: 16;
-	icon-height: 16;
+	icon-image: "icons/de-vr2-semaphore2.png";
+	icon-width: 10;
+	icon-height: 23;
 	text-allow-overlap: true;
     allow-overlap: true;
-}*/
+}
+
+
+/***************************/
+/* DE distant semaphore signals type Vr which 
+   - do not share post with a main signal
+   - cannot show Vr2 or do not have railway:signal:distant:states tag
+   - can show Vr1 */
+/***************************/
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"=~/^((?!vr2).)*$/],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"][!"railway:signal:distant:states"]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-vr0-semaphore1.png";
+	icon-width: 9;
+	icon-height: 19;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
 
 /****************************/
 /* DE main light signal type Hp which 
