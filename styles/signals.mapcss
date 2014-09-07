@@ -79,8 +79,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de-hp2-light.png";
-	icon-width: 7;
-	icon-height: 16;
+	icon-width: 11;
+	icon-height: 25;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
@@ -107,8 +107,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de-hp0-light.png";
-	icon-width: 7;
-	icon-height: 16;
+	icon-width: 11;
+	icon-height: 26;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
@@ -129,8 +129,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de-hp1-light.png";
-	icon-width: 7;
-	icon-height: 16;
+	icon-width: 11;
+	icon-height: 26;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
@@ -152,8 +152,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de-hp1-light+vr2-light.png";
-	icon-width: 9;
-	icon-height: 27;
+	icon-width: 15;
+	icon-height: 44;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
@@ -176,8 +176,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de-hp1-light+vr1-light.png";
-	icon-width: 9;
-	icon-height: 27;
+	icon-width: 15;
+	icon-height: 44;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
@@ -200,8 +200,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de-hp2-light+vr2-light.png";
-	icon-width: 9;
-	icon-height: 27;
+	icon-width: 15;
+	icon-height: 44;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
@@ -225,8 +225,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de-hp2-light+vr0-light.png";
-	icon-width: 9;
-	icon-height: 27;
+	icon-width: 15;
+	icon-height: 44;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
@@ -250,8 +250,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de-hp0-light+vr-light-off.png";
-	icon-width: 9;
-	icon-height: 27;
+	icon-width: 15;
+	icon-height: 44;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
@@ -272,8 +272,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de-hp0-light+vr-light-off.png";
-	icon-width: 9;
-	icon-height: 27;
+	icon-width: 15;
+	icon-height: 44;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
