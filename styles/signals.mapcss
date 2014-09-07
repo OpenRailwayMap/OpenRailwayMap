@@ -63,10 +63,10 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 }
 
 /****************************/
-/* DE main signal type Hp which 
+/* DE main light signal type Hp which 
   - are an entry, exit or between signal 
   - can show Hp2 
-  - do not share node with Vr signal */
+  - do not share node with Vr light signal */
 /****************************/
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:distant"]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/]
 {
@@ -86,13 +86,13 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 }
 
 /****************************/
-/* DE main signal type Hp which 
+/* DE main light signal type Hp which 
   - are an entry, exit or between signal
   - cannot show Hp2 (or railway:signal:main:states is not set)
-  - do not share node with Vr signal 
-  DE main signal type Hp which
+  - do not share node with Vr light signal 
+  DE main light signal type Hp which
   - do not hav railway:signal:main:function tag
-  - do not share node with Vr signal */
+  - do not share node with Vr light signal */
 /****************************/
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:distant"]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/^((?!hp2).)*$/],
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:distant"]["railway:signal:main:function"=~/entry|exit|between/][!"railway:signal:main:states"],
@@ -114,9 +114,9 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 }
 
 /****************************/
-/* DE main signal type Hp which 
+/* DE main light signal type Hp which 
    - are a block signal 
-   - do not share node with Vr signal */
+   - do not share node with Vr light signal */
 /****************************/
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:distant"]["railway:signal:main:function"=block]
 {
@@ -136,9 +136,9 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 }
 
 /****************************/
-/* DE main signal type Hp which 
+/* DE main light signal type Hp which 
    - are a block signal 
-   - share node with distant signal type Vr
+   - share node with distant light signal type Vr
    - Vr signal can show Vr2 */
 /****************************/
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=block]["railway:signal:distant:states"=~/.*vr2.*/]
@@ -159,9 +159,9 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 }
 
 /****************************/
-/* DE main signal type Hp which 
+/* DE main light signal type Hp which 
    - are a block signal 
-   - share node with distant signal type Vr
+   - share node with distant light signal type Vr
    - Vr signal cannot show Vr2 or Vr signal states are not tagged */
 /****************************/
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=block]["railway:signal:distant:states"=~/^((?!vr2).)*$/],
@@ -183,10 +183,10 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 }
 
 /****************************/
-/* DE main signal type Hp which 
+/* DE main light signal type Hp which 
    - are an entry, exit or between signal 
    - can show Hp2
-   - share node with distant signal type Vr
+   - share node with distant light signal type Vr
    - Vr signal can show Vr2 */
 /****************************/
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/]["railway:signal:distant:states"=~/.*vr2.*/]
@@ -207,10 +207,10 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 }
 
 /****************************/
-/* DE main signal type Hp which 
+/* DE main light signal type Hp which 
    - are an entry, exit or between signal 
    - can show Hp2
-   - share node with distant signal type Vr
+   - share node with distant light signal type Vr
    - Vr signal cannot show Vr2 or railway:signal:distant:states is not tagged */
 /****************************/
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/]["railway:signal:distant:states"=~/^((?!vr2).)*$/],
@@ -232,10 +232,10 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 }
 
 /****************************/
-/* DE main signal type Hp which 
+/* DE main light signal type Hp which 
    - are an entry, exit or between signal 
    - cannot show Hp2 or railway:signal:main:states is not tagged
-   - share node with distant signal type Vr
+   - share node with distant light signal type Vr
    Rendering does not differ between the ability to show Vr2 or not or the absence of railway:signal:distant:states tag */
 /****************************/
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/^((?!hp2).)*$/],
@@ -257,9 +257,9 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 }
 
 /****************************/
-/* DE main signal type Hp which 
+/* DE main light signal type Hp which 
    - are do not have a railway:signal:main:function tag 
-   - share node with distant signal type Vr */
+   - share node with distant light signal type Vr */
 /****************************/
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr][!"railway:signal:main:function"]
 {
