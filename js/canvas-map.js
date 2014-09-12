@@ -29,7 +29,7 @@ function createMap(embed)
 	});
 
 	// grayscale mapnik background layer
-	var mapnikGray = new L.TileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png',
+	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
 		maxZoom: 19
