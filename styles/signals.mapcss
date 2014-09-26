@@ -22,230 +22,10 @@ meta
 	watch-modified: true;
 }
 
-
-/****************************/
-/* DE main semaphore signal type Hp which 
-  - are an entry, exit or between signal 
-  - can show Hp2 
-  - do not share node with Vr semaphore signal */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:distant"]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp2-semaphore2.png";
-	icon-width: 19;
-	icon-height: 41;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main semaphore signal type Hp which 
-  - are an entry, exit or between signal
-  - cannot show Hp2 (or railway:signal:main:states is not set)
-  - do not share node with Vr semaphore signal 
-  DE main semaphore signal type Hp which
-  - do not hav railway:signal:main:function tag
-  - do not share node with Vr semaphore signal */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:distant"]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/^((?!hp2).)*$/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:distant"]["railway:signal:main:function"=~/entry|exit|between/][!"railway:signal:main:states"],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:distant"][!"railway:signal:main:function"]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp0-semaphore1.png";
-	icon-width: 23;
-	icon-height: 24;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main semaphore signal type Hp which 
-   - are a block signal 
-   - do not share node with Vr semaphore signal */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:distant"]["railway:signal:main:function"=block]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp1-semaphore1.png";
-	icon-width: 19;
-	icon-height: 33;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main semaphore signal type Hp which 
-   - are a block signal 
-   - share node with distant semaphore signal type Vr
-   - Vr signal can show Vr2 */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:distant"=vr]["railway:signal:main:function"=block]["railway:signal:distant:states"=~/.*vr2.*/]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp1-semaphore1+vr2-semaphore2.png";
-	icon-width: 21;
-	icon-height: 45;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main semaphore signal type Hp which 
-   - are a block signal 
-   - share node with distant semaphore signal type Vr
-   - Vr signal cannot show Vr2 or Vr signal states are not tagged */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:distant"=vr]["railway:signal:main:function"=block]["railway:signal:distant:states"=~/^((?!vr2).)*$/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:distant"=vr]["railway:signal:main:function"=block][!"railway:signal:distant:states"]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp1-semaphore1+vr1-semaphore1.png";
-	icon-width: 19;
-	icon-height: 36;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main semaphore signal type Hp which 
-   - are an entry, exit or between signal 
-   - can show Hp2
-   - share node with distant semaphore signal type Vr
-   - Vr signal can show Vr2 */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/]["railway:signal:distant:states"=~/.*vr2.*/]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp2-semaphore2+vr2-semaphore2.png";
-	icon-width: 21;
-	icon-height: 63;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main semaphore signal type Hp which 
-   - are an entry, exit or between signal 
-   - can show Hp2
-   - share node with distant semaphore signal type Vr
-   - Vr signal cannot show Vr2 or railway:signal:distant:states is not tagged */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/]["railway:signal:distant:states"=~/^((?!vr2).)*$/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/][!"railway:signal:distant:states"]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp2-semaphore2+vr0-semaphore1.png";
-	icon-width: 20;
-	icon-height: 59;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main semaphore signal type Hp which 
-   - are an entry, exit or between signal 
-   - cannot show Hp2 or railway:signal:main:states is not tagged
-   - share node with distant semaphore signal type Vr
-   Rendering does not differ between the ability to show Vr2 or not or the absence of railway:signal:distant:states tag */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/^((?!hp2).)*$/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/][!"railway:signal:main:states"]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp0-semaphore2+vr0-semaphore2.png";
-	icon-width: 24;
-	icon-height: 51;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main semaphore signal type Hp which 
-   - are do not have a railway:signal:main:function tag 
-   - share node with distant semaphore signal type Vr */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:distant"=vr][!"railway:signal:main:function"]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp0-semaphore2+vr0-semaphore2.png";
-	icon-width: 24;
-	icon-height: 51;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-
 /***************************/
-/* DE distant semaphore signals type Vr which 
-   - do not share post with a main signal
-   - can show Vr2 */
+/* DE Hp-Form-Hauptsignale */
 /***************************/
-node|z14-[railway=signal]["railway:signal:distant"="vr"]["railway:signal:distant:form"="semaphore"][!"railway:signal:main"]["railway:signal:distant:states"=~/.*vr2.*/]
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]
 {
 	z-index: 9000;
 	text: "ref";
@@ -255,22 +35,17 @@ node|z14-[railway=signal]["railway:signal:distant"="vr"]["railway:signal:distant
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-vr2-semaphore2.png";
-	icon-width: 10;
-	icon-height: 23;
+	icon-image: "icons/de-hp-semaphore.png";
+	icon-width: 16;
+	icon-height: 16;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
 
-
 /***************************/
-/* DE distant semaphore signals type Vr which 
-   - do not share post with a main signal
-   - cannot show Vr2 or do not have railway:signal:distant:states tag
-   - can show Vr1 */
+/* DE Vr-Form-Vorsignale */
 /***************************/
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"=~/^((?!vr2).)*$/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"][!"railway:signal:distant:states"]
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore]
 {
 	z-index: 9000;
 	text: "ref";
@@ -280,21 +55,17 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-vr0-semaphore1.png";
-	icon-width: 9;
-	icon-height: 19;
+	icon-image: "icons/de-vr-semaphore.png";
+	icon-width: 16;
+	icon-height: 16;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
 
-
 /****************************/
-/* DE main light signal type Hp which 
-  - are an entry, exit or between signal 
-  - can show Hp2 
-  - do not share node with Vr light signal */
+/* DE Hp-Licht-Hauptsignale */
 /****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:distant"]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/]
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]
 {
 	z-index: 10000;
 	text: "ref";
@@ -304,213 +75,17 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-hp2-light.png";
-	icon-width: 11;
-	icon-height: 25;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main light signal type Hp which 
-  - are an entry, exit or between signal
-  - cannot show Hp2 (or railway:signal:main:states is not set)
-  - do not share node with Vr light signal 
-  DE main light signal type Hp which
-  - do not hav railway:signal:main:function tag
-  - do not share node with Vr light signal */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:distant"]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/^((?!hp2).)*$/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:distant"]["railway:signal:main:function"=~/entry|exit|between/][!"railway:signal:main:states"],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:distant"][!"railway:signal:main:function"]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp0-light.png";
-	icon-width: 11;
-	icon-height: 26;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main light signal type Hp which 
-   - are a block signal 
-   - do not share node with Vr light signal */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:distant"]["railway:signal:main:function"=block]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp1-light.png";
-	icon-width: 11;
-	icon-height: 26;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main light signal type Hp which 
-   - are a block signal 
-   - share node with distant light signal type Vr
-   - Vr signal can show Vr2 */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=block]["railway:signal:distant:states"=~/.*vr2.*/]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp1-light+vr2-light.png";
-	icon-width: 15;
-	icon-height: 44;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main light signal type Hp which 
-   - are a block signal 
-   - share node with distant light signal type Vr
-   - Vr signal cannot show Vr2 or Vr signal states are not tagged */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=block]["railway:signal:distant:states"=~/^((?!vr2).)*$/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=block][!"railway:signal:distant:states"]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp1-light+vr1-light.png";
-	icon-width: 15;
-	icon-height: 44;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main light signal type Hp which 
-   - are an entry, exit or between signal 
-   - can show Hp2
-   - share node with distant light signal type Vr
-   - Vr signal can show Vr2 */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/]["railway:signal:distant:states"=~/.*vr2.*/]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp2-light+vr2-light.png";
-	icon-width: 15;
-	icon-height: 44;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main light signal type Hp which 
-   - are an entry, exit or between signal 
-   - can show Hp2
-   - share node with distant light signal type Vr
-   - Vr signal cannot show Vr2 or railway:signal:distant:states is not tagged */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/]["railway:signal:distant:states"=~/^((?!vr2).)*$/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/.*hp2.*/][!"railway:signal:distant:states"]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp2-light+vr0-light.png";
-	icon-width: 15;
-	icon-height: 44;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main light signal type Hp which 
-   - are an entry, exit or between signal 
-   - cannot show Hp2 or railway:signal:main:states is not tagged
-   - share node with distant light signal type Vr
-   Rendering does not differ between the ability to show Vr2 or not or the absence of railway:signal:distant:states tag */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/]["railway:signal:main:states"=~/^((?!hp2).)*$/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr]["railway:signal:main:function"=~/entry|exit|between/][!"railway:signal:main:states"=~/.*hp2.*/]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp0-light+vr-light-off.png";
-	icon-width: 15;
-	icon-height: 44;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
-/****************************/
-/* DE main light signal type Hp which 
-   - are do not have a railway:signal:main:function tag 
-   - share node with distant light signal type Vr */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:distant"=vr][!"railway:signal:main:function"]
-{
-	z-index: 10000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-hp0-light+vr-light-off.png";
-	icon-width: 15;
-	icon-height: 44;
+	icon-image: "icons/de-hp-light.png";
+	icon-width: 16;
+	icon-height: 16;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
 
 /***************************/
-/* DE distant light signals type Vr which 
-   - are no repeaters (or not tagged as such)
-   - do not share post with a main signal*/
+/* DE Vr-Licht-Vorsignale */
 /***************************/
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]
 {
 	z-index: 9000;
 	text: "ref";
@@ -526,28 +101,6 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 	text-allow-overlap: true;
     allow-overlap: true;
 }
-
-
-/***************************/
-/* DE distant light signals type Vr which are repeaters */
-/***************************/
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes]
-{
-	z-index: 9000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-vr-light-repeater.png";
-	icon-width: 16;
-	icon-height: 17;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
 
 /***************************/
 /* DE distant signal replacement by sign Ne2 */
@@ -768,4 +321,3 @@ node|z14-[railway=signal]["railway:signal:main"="AT:trapeztafel"]["railway:signa
 	text-allow-overlap: true;
     allow-overlap: true;
 }
-
