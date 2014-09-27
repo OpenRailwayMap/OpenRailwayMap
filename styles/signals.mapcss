@@ -27,7 +27,7 @@ meta
 /***************************/
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]
 {
-	z-index: 9000;
+	z-index: 10000;
 	text: "ref";
 	text-offset: 11;
 	text-size: 12;
@@ -82,24 +82,155 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
     allow-overlap: true;
 }
 
-/***************************/
-/* DE Vr-Licht-Vorsignale */
-/***************************/
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]
+/************************************************/
+/* DE distant light signals type Vr which       */
+/*  - are no repeaters (or not tagged as such)  */
+/*  - are not shortened (or not tagged as such) */
+/*  - do not share post with a main signal      */
+/*  - have no railway:signal:states=* tag       */
+/************************************************/
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"]
 {
 	z-index: 9000;
 	text: "ref";
-	text-offset: 11;
+	text-offset: 12;
 	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-vr-light.png";
+	icon-image: "icons/de-vr0-light-32.png";
 	icon-width: 16;
-	icon-height: 17;
+	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
+}
+
+/************************************************/
+/* DE distant light signals type Vr which       */
+/*  - are no repeaters (or not tagged as such)  */
+/*  - are not shortened (or not tagged as such) */
+/*  - do not share post with a main signal      */
+/*  - cannot display Vr 2                       */
+/************************************************/
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-vr1-light-32.png";
+	icon-width: 16;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/************************************************/
+/* DE distant light signals type Vr which       */
+/*  - are no repeaters (or not tagged as such)  */
+/*  - are not shortened (or not tagged as such) */
+/*  - do not share post with a main signal      */
+/*  - can display Vr 2                          */
+/************************************************/
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-vr2-light-32.png";
+	icon-width: 16;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*******************************************/
+/* DE distant light signals type Vr which  */
+/*  - are repeaters or shortened           */
+/*  - do not share post with a main signal */
+/*  - have no railway:signal:states=* tag* */
+/*******************************************/
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"][!"railway:signal:distant:states"]
+{
+	z-index: 8500;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-vr0-light-repeated-32.png";
+	icon-width: 16;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*******************************************/
+/* DE distant light signals type Vr which  */
+/*  - are repeaters or shortened           */
+/*  - do not share post with a main signal */
+/*  - cannot display Vr 2                  */
+/*******************************************/
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
+{
+	z-index: 8500;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-vr1-light-repeated-32.png";
+	icon-width: 16;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*******************************************/
+/* DE distant light signals type Vr which  */
+/*  - are repeaters or shortened           */
+/*  - do not share post with a main signal */
+/*  - can display Vr 2                     */
+/*******************************************/
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/]
+{
+	z-index: 8500;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-vr2-light-repeated-32.png";
+	icon-width: 16;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
 }
 
 /***************************/
@@ -125,7 +256,7 @@ node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:dis
 /*********************/
 /* DE Sh-Formsignale */
 /*********************/
-node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=normal], node|z17-[railway=signal][railway:signal:minor=sh][railway:signal:minor:form=semaphore][!railway:signal:minor:height]
+node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=normal], node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore][!"railway:signal:minor:height"]
 {
 	z-index: 4000;
 	text: "ref";
