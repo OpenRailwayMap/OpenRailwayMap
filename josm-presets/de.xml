@@ -3405,7 +3405,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
 					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 				</item>
-				<item name="Vr-Licht-Vorsignal" icon="de-vr-light.png" type="node">
+				<item name="Vr-Licht-Vorsignal" icon="de-vr0-light-32.png" type="node">
 					<label text="Vr-Licht-Vorsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
