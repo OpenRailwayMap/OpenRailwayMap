@@ -1,0 +1,36 @@
+meta
+{
+	title: "OpenRailwayMap";
+	version: "1.0_2014-10-06";
+	description: "Validation of railway data according to the OpenRailwayMap scheme.";
+	author: "rurseekatze";
+	link: "http://josm.openstreetmap.de/wiki/Rules/Brazilian-Specific";
+	watch-modified: true;
+}
+
+/* Track with usage AND service */
+way[railway][usage][service]
+{
+	throwError: "Track tagged with usage=* AND service=* - remove one of these tags";
+	fixRemove: "service";
+	assertMatch: "node=railway=milestone";
+	assertNoMatch: "node railway=milestone railway:position=42.0";
+}
+
+/* Station mapped as way or area */
+way[railway=station], area[railway=station]
+{
+	throwError: "Station mapped as a way, but should be mapped as a node";
+	assertMatch: "way railway=station";
+	assertMatch: "area railway=station";
+	assertNoMatch: "node railway=station";
+}
+
+/* Milestone without position */
+node[railway=milestone][!railway:position]
+{
+	throwWarning: "Milestone without position, add railway:position=*";
+	assertMatch: "node railway=milestone";
+	assertNoMatch: "node railway=milestone railway:position=42.0";
+}
+
