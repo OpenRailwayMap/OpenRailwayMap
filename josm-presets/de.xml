@@ -2351,7 +2351,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<check key="railway:switch:electric"
 					text="Electric"
-					de.text="Elektrischer Antrieb"
+					de.text="Elektrischer Weichenantrieb"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:switch:heated"
+					text="Heated"
+					de.text="Weichenheizung"
 					default="off"
 					delete_if_empty="true" />
 				<combo key="railway:switch"
