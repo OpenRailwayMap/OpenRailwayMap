@@ -1,10 +1,10 @@
 meta
 {
 	title: "OpenRailwayMap";
-	version: "1.0_2014-10-06";
-	description: "Validation of railway data according to the OpenRailwayMap scheme.";
+	version: "2014-10-06";
+	description: "Validation of railway data according to the OpenRailwayMap tagging scheme.";
 	author: "rurseekatze";
-	link: "http://josm.openstreetmap.de/wiki/Rules/Brazilian-Specific";
+	link: "https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging";
 	watch-modified: true;
 }
 
