@@ -29,6 +29,15 @@ canvas
     default-lines: true;
 }
 
+way[!maxspeed]
+{
+	z-index: 0;
+	color: gray;
+    width: 3.5;
+    linejoin: round;
+	kothicjs-ignore-layer: true;
+}
+
 way[maxspeed<=10]
 {
 	z-index: 1;

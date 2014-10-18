@@ -20,6 +20,14 @@
             s_default['default-lines'] = 'true';
         }
 
+        if (((type == 'way' && (!tags.hasOwnProperty('maxspeed'))))) {
+            s_default['z-index'] = 0;
+            s_default['color'] = 'gray';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
         if (((type == 'way' && tags['maxspeed'] <= 10))) {
             s_default['z-index'] = 1;
             s_default['color'] = '#0100CB';
