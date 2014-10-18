@@ -9,9 +9,6 @@ See https://github.com/rurseekatze/OpenRailwayMap for details.
 // returns the $position of a milestone on a line $ref which is operated by an $operator, missing milestones are interpolated
 Milestone = function(params)
 {
-	// support also comma instead of point (more common in e.g. Germany)
-	params.position = params.position.replace(",", ".");
-
 	// check validity of params
 	// position: max. 9999.999 -> max. 8 characters
 	if (params.ref == null || params.ref.length < 2 || params.position == "" || params.position == null || params.position.length > 8 || isNaN(parseFloat(params.position)) || !isFinite(params.position) || (params.position.indexOf(".") == -1 && params.position.indexOf(",") == -1))
@@ -19,7 +16,9 @@ Milestone = function(params)
 
 	var prefix = configuration.prefix;
 	var operator = (params.operator != null && params.operator.length > 0) ? "AND (LOWER("+prefix+"_line.tags->'operator') LIKE LOWER('%"+params.operator+"%'))" : "";
-	var position = parseFloat(params.position).toFixed(3).toString();
+	
+	// support also comma instead of point (more common in e.g. Germany)
+	var position = parseFloat(params.position.replace(",", ".")).toFixed(3).toString();
 
 	return "SELECT ST_X(bla.geometry) AS lat, ST_Y(bla.geometry) AS lon, bla.position AS position, bla.operator AS operator, bla.type AS type, bla.ref AS ref \
 				FROM ( \

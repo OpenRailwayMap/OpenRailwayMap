@@ -115,7 +115,7 @@ else
 			// escape input parameters to avoid sql injections
 			for (var key in params)
 			{
-				params[key] = params[key].replace("%", "").replace("*", "").replace(/[\0\x08\x09\x1a\n\r"'\\\%]/g, function (char) {
+				params[key] = params[key].trim().replace("%", "").replace("*", "").replace(/[\0\x08\x09\x1a\n\r"'\\\%]/g, function (char) {
 					switch (char) {
 						case "\0":
 						    return "\\0";

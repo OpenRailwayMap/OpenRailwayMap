@@ -328,29 +328,57 @@
 			"id": "station_1-11",
 			"minzoom": 1,
 			"maxzoom": 11,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 13px; fill: blue; font-weight: bold; stroke: white; stroke-width: 0.5;\">KANM</text>",
+			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: blue; font-weight: bold; stroke: white; stroke-width: 1.5;\">KB</text>",
 			"caption": "Station"
 		},
 		{
 			"id": "station_12-19",
 			"minzoom": 12,
 			"maxzoom": 19,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 13px; fill: blue; font-weight: bold; stroke: white; stroke-width: 0.5;\">Bonn Hbf</text>",
+			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: blue; font-weight: bold; stroke: white; stroke-width: 1.5;\">Bonn Hbf</text>",
 			"caption": "Station"
+		},
+		{
+			"id": "yard_1-11",
+			"minzoom": 1,
+			"maxzoom": 11,
+			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: #87491D; font-weight: bold; stroke: #F1F1F1; stroke-width: 1.5;\">KNG</text>",
+			"caption": "Yard"
+		},
+		{
+			"id": "yard_12-19",
+			"minzoom": 12,
+			"maxzoom": 19,
+			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: #87491D; font-weight: bold; stroke: #F1F1F1; stroke-width: 1.5;\">Neuss Gbf</text>",
+			"caption": "Yard"
 		},
 		{
 			"id": "halt_1-11",
 			"minzoom": 1,
 			"maxzoom": 11,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial; font-size: 13px; fill: blue; stroke: white; stroke-width: 0.5;\">KANM</text>",
+			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: blue; stroke: white; stroke-width: 1.5;\">KANM</text>",
 			"caption": "Halt"
 		},
 		{
-			"id": "halt_11-19",
-			"minzoom": 11,
+			"id": "halt_12-19",
+			"minzoom": 12,
 			"maxzoom": 19,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial; font-size: 12px; fill: blue; stroke: white; stroke-width: 0.5;\">Angermund</text>",
+			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: blue; stroke: white; stroke-width: 1.5;\">Angermund</text>",
 			"caption": "Halt"
+		},
+		{
+			"id": "site_1-11",
+			"minzoom": 1,
+			"maxzoom": 11,
+			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: #616161; stroke: #F1F1F1; stroke-width: 1.5;\">KWEB</text>",
+			"caption": "Junction, Crossover, Service Station, Site"
+		},
+		{
+			"id": "site_12-19",
+			"minzoom": 12,
+			"maxzoom": 19,
+			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: #616161; stroke: #F1F1F1; stroke-width: 1.5;\">Lohbruch</text>",
+			"caption": "Junction, Crossover, Service Station, Site"
 		},
 		{
 			"id": "tram_stop_13",
