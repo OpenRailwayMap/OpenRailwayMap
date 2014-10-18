@@ -59,7 +59,7 @@
         }
 
         if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'disused' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'abandoned' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'razed' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'proposed' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'construction' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'preserved' && (!tags.hasOwnProperty('service')))) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('service'))))) {
-            s_default['z-index'] = 4000;
+            s_default['z-index'] = 10000;
             s_default['text'] = MapCSS.e_localize(tags, MapCSS.e_concat(MapCSS.e_tag(tags, "ref"), " ", MapCSS.e_tag(tags, "name")));
             s_default['text-position'] = 'line';
             s_default['text-color'] = '#585858';
@@ -447,7 +447,7 @@
         }
 
         if (((type == 'node' && tags['railway'] == 'milestone') && zoom >= 11)) {
-            s_default['z-index'] = 6000;
+            s_default['z-index'] = 600;
             s_default['text'] = MapCSS.e_localize(tags, 'railway:position');
             s_default['text-position'] = 'auto';
             s_default['text-color'] = 'black';
@@ -460,66 +460,122 @@
 
         if (((type == 'node' && tags['railway'] == 'station') && zoom >= 11)) {
             s_default['z-index'] = 30000;
-            s_default['symbol-shape'] = 'circle';
-            s_default['symbol-size'] = '8';
-            s_default['symbol-stroke-color'] = 'blue';
-            s_default['symbol-fill-color'] = 'blue';
             s_default['text'] = MapCSS.e_localize(tags, 'name');
             s_default['text-position'] = 'auto';
             s_default['font-family'] = 'Arial Black';
             s_default['font-size'] = '12';
             s_default['text-color'] = 'blue';
             s_default['font-weight'] = 'bold';
-            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-radius'] = 1.5;
             s_default['text-halo-color'] = 'white';
         }
 
         if (((type == 'node' && tags['railway'] == 'station') && zoom >= 1 && zoom <= 11)) {
             s_default['z-index'] = 30000;
-            s_default['symbol-shape'] = 'circle';
-            s_default['symbol-size'] = '8';
-            s_default['symbol-stroke-color'] = 'blue';
-            s_default['symbol-fill-color'] = 'blue';
             s_default['text'] = MapCSS.e_localize(tags, 'railway:ref');
             s_default['text-position'] = 'auto';
             s_default['font-family'] = 'Arial Black';
             s_default['font-size'] = '12';
             s_default['text-color'] = 'blue';
             s_default['font-weight'] = 'bold';
-            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-radius'] = 1.5;
             s_default['text-halo-color'] = 'white';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'yard') && zoom >= 11)) {
+            s_default['z-index'] = 25000;
+            s_default['text'] = MapCSS.e_localize(tags, 'name');
+            s_default['text-position'] = 'auto';
+            s_default['font-size'] = '12';
+            s_default['text-color'] = '#87491D';
+            s_default['font-weight'] = 'bold';
+            s_default['font-family'] = 'Arial';
+            s_default['text-halo-radius'] = 1.5;
+            s_default['text-halo-color'] = '#F1F1F1';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'yard') && zoom >= 1 && zoom <= 11)) {
+            s_default['z-index'] = 25000;
+            s_default['text'] = MapCSS.e_localize(tags, 'railway:ref');
+            s_default['text-position'] = 'auto';
+            s_default['font-size'] = '12';
+            s_default['text-color'] = '#87491D';
+            s_default['font-weight'] = 'bold';
+            s_default['font-family'] = 'Arial';
+            s_default['text-halo-radius'] = 1.5;
+            s_default['text-halo-color'] = '#F1F1F1';
         }
 
         if (((type == 'node' && tags['railway'] == 'halt') && zoom >= 11)) {
             s_default['z-index'] = 20000;
-            s_default['symbol-shape'] = 'circle';
-            s_default['symbol-size'] = '8';
-            s_default['symbol-stroke-color'] = 'blue';
-            s_default['symbol-fill-color'] = 'blue';
             s_default['text'] = MapCSS.e_localize(tags, 'name');
             s_default['text-position'] = 'auto';
             s_default['font-size'] = '12';
             s_default['text-color'] = 'blue';
             s_default['font-weight'] = 'bold';
             s_default['font-family'] = 'Arial';
-            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-radius'] = 1.5;
             s_default['text-halo-color'] = 'white';
         }
 
         if (((type == 'node' && tags['railway'] == 'halt') && zoom >= 1 && zoom <= 11)) {
             s_default['z-index'] = 20000;
-            s_default['symbol-shape'] = 'circle';
-            s_default['symbol-size'] = '8';
-            s_default['symbol-stroke-color'] = 'blue';
-            s_default['symbol-fill-color'] = 'blue';
             s_default['text'] = MapCSS.e_localize(tags, 'railway:ref');
             s_default['text-position'] = 'auto';
             s_default['font-size'] = '12';
             s_default['text-color'] = 'blue';
             s_default['font-weight'] = 'bold';
             s_default['font-family'] = 'Arial';
-            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-radius'] = 1.5;
             s_default['text-halo-color'] = 'white';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'junction') && zoom >= 11) || ((type == 'node' && tags['railway'] == 'service_station') && zoom >= 11) || ((type == 'node' && tags['railway'] == 'crossover') && zoom >= 11)) {
+            s_default['z-index'] = 15000;
+            s_default['text'] = MapCSS.e_localize(tags, 'name');
+            s_default['text-position'] = 'auto';
+            s_default['font-size'] = '12';
+            s_default['text-color'] = '#616161';
+            s_default['font-weight'] = 'bold';
+            s_default['font-family'] = 'Arial';
+            s_default['text-halo-radius'] = 1.5;
+            s_default['text-halo-color'] = '#F1F1F1';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'junction') && zoom >= 1 && zoom <= 11) || ((type == 'node' && tags['railway'] == 'service_station') && zoom >= 1 && zoom <= 11) || ((type == 'node' && tags['railway'] == 'crossover') && zoom >= 1 && zoom <= 11)) {
+            s_default['z-index'] = 15000;
+            s_default['text'] = MapCSS.e_localize(tags, 'railway:ref');
+            s_default['text-position'] = 'auto';
+            s_default['font-size'] = '12';
+            s_default['text-color'] = '#616161';
+            s_default['font-weight'] = 'bold';
+            s_default['font-family'] = 'Arial';
+            s_default['text-halo-radius'] = 1.5;
+            s_default['text-halo-color'] = '#F1F1F1';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'site') && zoom >= 11)) {
+            s_default['z-index'] = 10000;
+            s_default['text'] = MapCSS.e_localize(tags, 'name');
+            s_default['text-position'] = 'auto';
+            s_default['font-size'] = '12';
+            s_default['text-color'] = '#616161';
+            s_default['font-weight'] = 'bold';
+            s_default['font-family'] = 'Arial';
+            s_default['text-halo-radius'] = 1.5;
+            s_default['text-halo-color'] = '#F1F1F1';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'site') && zoom >= 1 && zoom <= 11)) {
+            s_default['z-index'] = 10000;
+            s_default['text'] = MapCSS.e_localize(tags, 'railway:ref');
+            s_default['text-position'] = 'auto';
+            s_default['font-size'] = '12';
+            s_default['text-color'] = '#616161';
+            s_default['font-weight'] = 'bold';
+            s_default['font-family'] = 'Arial';
+            s_default['text-halo-radius'] = 1.5;
+            s_default['text-halo-color'] = '#F1F1F1';
         }
 
         if (((type == 'node' && tags['railway'] == 'tram_stop') && zoom === 13)) {

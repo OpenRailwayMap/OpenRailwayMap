@@ -1,5 +1,5 @@
 {
-	"name": "standard",
+	"name": "signals",
 	"mapfeatures":
 	[
 		{
@@ -71,6 +71,62 @@
 			"maxzoom": 19,
 			"icon": "icons/de-ne1.png",
 			"caption": "Trapeztafel"
+		},
+		{
+			"id": "stop_sign_de",
+			"minzoom": 17,
+			"maxzoom": 19,
+			"icon": "icons/de-ne5-ds301-16.png",
+			"caption": "Haltetafel"
+		},
+		{
+			"id": "distant_semaphore_de_vr",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-vr-semaphore.png",
+			"caption": "Vr-Form-Vorsignal"
+		},
+		{
+			"id": "distant_light_de_vr0",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-vr0-light-16.png",
+			"caption": "Vr Licht-Vorsignal ohne Angabe der Signalzustände"
+		},
+		{
+			"id": "distant_light_de_vr1",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-vr1-light-16.png",
+			"caption": "Vr Licht-Vorsignal ohne Vr 2"
+		},
+		{
+			"id": "distant_light_de_vr2",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-vr2-light-16.png",
+			"caption": "Vr Licht-Vorsignal mit Vr 2"
+		},
+		{
+			"id": "distant_light_de_vr0_repeated",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-vr0-light-repeated-16.png",
+			"caption": "Vr Licht-Vorsignalwiederholer ohne Angabe der Signalzustände"
+		},
+		{
+			"id": "distant_light_de_vr1_repeated",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-vr1-light-repeated-16.png",
+			"caption": "Vr Licht-Vorsignalwiederholer ohne Vr 2"
+		},
+		{
+			"id": "distant_light_de_vr2_repeated",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-vr2-light-repeated-16.png",
+			"caption": "Vr Licht-Vorsignalwiederholer mit Vr 2"
 		}
 	]
 }
