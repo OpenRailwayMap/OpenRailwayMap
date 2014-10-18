@@ -29,7 +29,14 @@ canvas
     default-lines: true;
 }
 
-way[!maxspeed]
+way|z10-[railway=tram][!maxspeed],
+way|z10-[railway=subway][!maxspeed],
+way|z10-[railway=light_rail][!maxspeed],
+way|z9-[railway=narrow_gauge][!maxspeed],
+way|z9-[railway=preserved][!maxspeed],
+way|z10-[railway=rail][!maxspeed],
+way|z2-[railway=rail][usage=main],
+way|z2-[railway=rail][usage=branch]
 {
 	z-index: 0;
 	color: gray;
@@ -38,7 +45,14 @@ way[!maxspeed]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed<=10]
+way|z10-[railway=tram][maxspeed<=10],
+way|z10-[railway=subway][maxspeed<=10],
+way|z10-[railway=light_rail][maxspeed<=10],
+way|z9-[railway=narrow_gauge][maxspeed<=10],
+way|z9-[railway=preserved][maxspeed<=10],
+way|z10-[railway=rail][maxspeed<=10],
+way|z2-[railway=rail][usage=main][maxspeed<=10],
+way|z2-[railway=rail][usage=branch][maxspeed<=10]
 {
 	z-index: 1;
 	color: #0100CB;
@@ -55,7 +69,14 @@ way[maxspeed<=10]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>10][maxspeed<=20]
+way|z10-[railway=tram][maxspeed>10][maxspeed<=20],
+way|z10-[railway=subway][maxspeed>10][maxspeed<=20],
+way|z10-[railway=light_rail][maxspeed>10][maxspeed<=20],
+way|z9-[railway=narrow_gauge][maxspeed>10][maxspeed<=20],
+way|z9-[railway=preserved][maxspeed>10][maxspeed<=20],
+way|z10-[railway=rail][maxspeed>10][maxspeed<=20],
+way|z2-[railway=rail][usage=main][maxspeed>10][maxspeed<=20],
+way|z2-[railway=rail][usage=branch][maxspeed>10][maxspeed<=20]
 {
 	z-index: 2;
 	color: #001ECB;
@@ -72,7 +93,14 @@ way[maxspeed>10][maxspeed<=20]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>20][maxspeed<=30]
+way|z10-[railway=tram][maxspeed>20][maxspeed<=30],
+way|z10-[railway=subway][maxspeed>20][maxspeed<=30],
+way|z10-[railway=light_rail][maxspeed>20][maxspeed<=30],
+way|z9-[railway=narrow_gauge][maxspeed>20][maxspeed<=30],
+way|z9-[railway=preserved][maxspeed>20][maxspeed<=30],
+way|z10-[railway=rail][maxspeed>20][maxspeed<=30],
+way|z2-[railway=rail][usage=main][maxspeed>20][maxspeed<=30],
+way|z2-[railway=rail][usage=branch][maxspeed>20][maxspeed<=30]
 {
 	z-index: 3;
 	color: #003DCB;
@@ -89,7 +117,14 @@ way[maxspeed>20][maxspeed<=30]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>30][maxspeed<=40]
+way|z10-[railway=tram][maxspeed>30][maxspeed<=40],
+way|z10-[railway=subway][maxspeed>30][maxspeed<=40],
+way|z10-[railway=light_rail][maxspeed>30][maxspeed<=40],
+way|z9-[railway=narrow_gauge][maxspeed>30][maxspeed<=40],
+way|z9-[railway=preserved][maxspeed>30][maxspeed<=40],
+way|z10-[railway=rail][maxspeed>30][maxspeed<=40],
+way|z2-[railway=rail][usage=main][maxspeed>30][maxspeed<=40],
+way|z2-[railway=rail][usage=branch][maxspeed>30][maxspeed<=40]
 {
 	z-index: 4;
 	color: #005BCB;
@@ -106,7 +141,14 @@ way[maxspeed>30][maxspeed<=40]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>40][maxspeed<=50]
+way|z10-[railway=tram][maxspeed>40][maxspeed<=50],
+way|z10-[railway=subway][maxspeed>40][maxspeed<=50],
+way|z10-[railway=light_rail][maxspeed>40][maxspeed<=50],
+way|z9-[railway=narrow_gauge][maxspeed>40][maxspeed<=50],
+way|z9-[railway=preserved][maxspeed>40][maxspeed<=50],
+way|z10-[railway=rail][maxspeed>40][maxspeed<=50],
+way|z2-[railway=rail][usage=main][maxspeed>40][maxspeed<=50],
+way|z2-[railway=rail][usage=branch][maxspeed>40][maxspeed<=50]
 {
 	z-index: 5;
 	color: #007ACB;
@@ -123,7 +165,14 @@ way[maxspeed>40][maxspeed<=50]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>50][maxspeed<=60]
+way|z10-[railway=tram][maxspeed>50][maxspeed<=60],
+way|z10-[railway=subway][maxspeed>50][maxspeed<=60],
+way|z10-[railway=light_rail][maxspeed>50][maxspeed<=60],
+way|z9-[railway=narrow_gauge][maxspeed>50][maxspeed<=60],
+way|z9-[railway=preserved][maxspeed>50][maxspeed<=60],
+way|z10-[railway=rail][maxspeed>50][maxspeed<=60],
+way|z2-[railway=rail][usage=main][maxspeed>50][maxspeed<=60],
+way|z2-[railway=rail][usage=branch][maxspeed>50][maxspeed<=60]
 {
 	z-index: 6;
 	color: #0098CB;
@@ -140,7 +189,14 @@ way[maxspeed>50][maxspeed<=60]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>60][maxspeed<=70]
+way|z10-[railway=tram][maxspeed>60][maxspeed<=70],
+way|z10-[railway=subway][maxspeed>60][maxspeed<=70],
+way|z10-[railway=light_rail][maxspeed>60][maxspeed<=70],
+way|z9-[railway=narrow_gauge][maxspeed>60][maxspeed<=70],
+way|z9-[railway=preserved][maxspeed>60][maxspeed<=70],
+way|z10-[railway=rail][maxspeed>60][maxspeed<=70],
+way|z2-[railway=rail][usage=main][maxspeed>60][maxspeed<=70],
+way|z2-[railway=rail][usage=branch][maxspeed>60][maxspeed<=70]
 {
 	z-index: 7;
 	color: #00B7CB;
@@ -157,7 +213,14 @@ way[maxspeed>60][maxspeed<=70]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>70][maxspeed<=80]
+way|z10-[railway=tram][maxspeed>70][maxspeed<=80],
+way|z10-[railway=subway][maxspeed>70][maxspeed<=80],
+way|z10-[railway=light_rail][maxspeed>70][maxspeed<=80],
+way|z9-[railway=narrow_gauge][maxspeed>70][maxspeed<=80],
+way|z9-[railway=preserved][maxspeed>70][maxspeed<=80],
+way|z10-[railway=rail][maxspeed>70][maxspeed<=80],
+way|z2-[railway=rail][usage=main][maxspeed>70][maxspeed<=80],
+way|z2-[railway=rail][usage=branch][maxspeed>70][maxspeed<=80]
 {
 	z-index: 8;
 	color: #00CBC1;
@@ -174,7 +237,14 @@ way[maxspeed>70][maxspeed<=80]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>80][maxspeed<=90]
+way|z10-[railway=tram][maxspeed>80][maxspeed<=90],
+way|z10-[railway=subway][maxspeed>80][maxspeed<=90],
+way|z10-[railway=light_rail][maxspeed>80][maxspeed<=90],
+way|z9-[railway=narrow_gauge][maxspeed>80][maxspeed<=90],
+way|z9-[railway=preserved][maxspeed>80][maxspeed<=90],
+way|z10-[railway=rail][maxspeed>80][maxspeed<=90],
+way|z2-[railway=rail][usage=main][maxspeed>80][maxspeed<=90],
+way|z2-[railway=rail][usage=branch][maxspeed>80][maxspeed<=90]
 {
 	z-index: 9;
 	color: #00CBA2;
@@ -191,7 +261,13 @@ way[maxspeed>80][maxspeed<=90]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>90][maxspeed<=100]
+way|z10-[railway=tram][maxspeed>90][maxspeed<=100],
+way|z10-[railway=subway][maxspeed>90][maxspeed<=100],
+way|z10-[railway=light_rail][maxspeed>90][maxspeed<=100],
+way|z9-[railway=narrow_gauge][maxspeed>90][maxspeed<=100],
+way|z9-[railway=preserved][maxspeed>90][maxspeed<=100],
+way|z2-[railway=rail][usage=main][maxspeed>90][maxspeed<=100],
+way|z2-[railway=rail][usage=branch][maxspeed>90][maxspeed<=100]
 {
 	z-index: 10;
 	color: #00CB84;
@@ -208,7 +284,14 @@ way[maxspeed>90][maxspeed<=100]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>100][maxspeed<=110]
+way|z10-[railway=tram][maxspeed>100][maxspeed<=110],
+way|z10-[railway=subway][maxspeed>100][maxspeed<=110],
+way|z10-[railway=light_rail][maxspeed>100][maxspeed<=110],
+way|z9-[railway=narrow_gauge][maxspeed>100][maxspeed<=110],
+way|z9-[railway=preserved][maxspeed>100][maxspeed<=110],
+way|z10-[railway=rail][maxspeed>100][maxspeed<=110],
+way|z2-[railway=rail][usage=main][maxspeed>100][maxspeed<=110],
+way|z2-[railway=rail][usage=branch][maxspeed>100][maxspeed<=110]
 {
 	z-index: 11;
 	color: #00CB66;
@@ -225,7 +308,14 @@ way[maxspeed>100][maxspeed<=110]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>110][maxspeed<=120]
+way|z10-[railway=tram][maxspeed>110][maxspeed<=120],
+way|z10-[railway=subway][maxspeed>110][maxspeed<=120],
+way|z10-[railway=light_rail][maxspeed>110][maxspeed<=120],
+way|z9-[railway=narrow_gauge][maxspeed>110][maxspeed<=120],
+way|z9-[railway=preserved][maxspeed>110][maxspeed<=120],
+way|z10-[railway=rail][maxspeed>110][maxspeed<=120],
+way|z2-[railway=rail][usage=main][maxspeed>110][maxspeed<=120],
+way|z2-[railway=rail][usage=branch][maxspeed>110][maxspeed<=120]
 {
 	z-index: 12;
 	color: #00CB47;
@@ -242,7 +332,14 @@ way[maxspeed>110][maxspeed<=120]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>120][maxspeed<=130]
+way|z10-[railway=tram][maxspeed>120][maxspeed<=130],
+way|z10-[railway=subway][maxspeed>120][maxspeed<=130],
+way|z10-[railway=light_rail][maxspeed>120][maxspeed<=130],
+way|z9-[railway=narrow_gauge][maxspeed>120][maxspeed<=130],
+way|z9-[railway=preserved][maxspeed>120][maxspeed<=130],
+way|z10-[railway=rail][maxspeed>120][maxspeed<=130],
+way|z2-[railway=rail][usage=main][maxspeed>120][maxspeed<=130],
+way|z2-[railway=rail][usage=branch][maxspeed>120][maxspeed<=130]
 {
 	z-index: 13;
 	color: #00CB29;
@@ -259,7 +356,14 @@ way[maxspeed>120][maxspeed<=130]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>130][maxspeed<=140]
+way|z10-[railway=tram][maxspeed>130][maxspeed<=140],
+way|z10-[railway=subway][maxspeed>130][maxspeed<=140],
+way|z10-[railway=light_rail][maxspeed>130][maxspeed<=140],
+way|z9-[railway=narrow_gauge][maxspeed>130][maxspeed<=140],
+way|z9-[railway=preserved][maxspeed>130][maxspeed<=140],
+way|z10-[railway=rail][maxspeed>130][maxspeed<=140],
+way|z2-[railway=rail][usage=main][maxspeed>130][maxspeed<=140],
+way|z2-[railway=rail][usage=branch][maxspeed>130][maxspeed<=140]
 {
 	z-index: 14;
 	color: #00CB0A;
@@ -276,7 +380,14 @@ way[maxspeed>130][maxspeed<=140]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>140][maxspeed<=150]
+way|z10-[railway=tram][maxspeed>140][maxspeed<=150],
+way|z10-[railway=subway][maxspeed>140][maxspeed<=150],
+way|z10-[railway=light_rail][maxspeed>140][maxspeed<=150],
+way|z9-[railway=narrow_gauge][maxspeed>140][maxspeed<=150],
+way|z9-[railway=preserved][maxspeed>140][maxspeed<=150],
+way|z10-[railway=rail][maxspeed>140][maxspeed<=150],
+way|z2-[railway=rail][usage=main][maxspeed>140][maxspeed<=150],
+way|z2-[railway=rail][usage=branch][maxspeed>140][maxspeed<=150]
 {
 	z-index: 15;
 	color: #14CB00;
@@ -293,7 +404,14 @@ way[maxspeed>140][maxspeed<=150]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>150][maxspeed<=160]
+way|z10-[railway=tram][maxspeed>150][maxspeed<=160],
+way|z10-[railway=subway][maxspeed>150][maxspeed<=160],
+way|z10-[railway=light_rail][maxspeed>150][maxspeed<=160],
+way|z9-[railway=narrow_gauge][maxspeed>150][maxspeed<=160],
+way|z9-[railway=preserved][maxspeed>150][maxspeed<=160],
+way|z10-[railway=rail][maxspeed>150][maxspeed<=160],
+way|z2-[railway=rail][usage=main][maxspeed>150][maxspeed<=160],
+way|z2-[railway=rail][usage=branch][maxspeed>150][maxspeed<=160]
 {
 	z-index: 16;
 	color: #33CB00;
@@ -310,7 +428,10 @@ way[maxspeed>150][maxspeed<=160]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>160][maxspeed<=170]
+way|z9-[railway=narrow_gauge][maxspeed>160][maxspeed<=170],
+way|z9-[railway=preserved][maxspeed>160][maxspeed<=170],
+way|z10-[railway=rail][maxspeed>160][maxspeed<=170],
+way|z2-[railway=rail][usage=main][maxspeed>160][maxspeed<=170]
 {
 	z-index: 17;
 	color: #51CB00;
@@ -327,7 +448,10 @@ way[maxspeed>160][maxspeed<=170]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>170][maxspeed<=180]
+way|z9-[railway=narrow_gauge][maxspeed>170][maxspeed<=180],
+way|z9-[railway=preserved][maxspeed>170][maxspeed<=180],
+way|z10-[railway=rail][maxspeed>170][maxspeed<=180],
+way|z2-[railway=rail][usage=main][maxspeed>170][maxspeed<=180]
 {
 	z-index: 18;
 	color: #70CB00;
@@ -344,7 +468,10 @@ way[maxspeed>170][maxspeed<=180]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>180][maxspeed<=190]
+way|z9-[railway=narrow_gauge][maxspeed>180][maxspeed<=190],
+way|z9-[railway=preserved][maxspeed>180][maxspeed<=190],
+way|z10-[railway=rail][maxspeed>180][maxspeed<=190],
+way|z2-[railway=rail][usage=main][maxspeed>180][maxspeed<=190]
 {
 	z-index: 19;
 	color: #8ECB00;
@@ -361,7 +488,10 @@ way[maxspeed>180][maxspeed<=190]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>190][maxspeed<=200]
+way|z9-[railway=narrow_gauge][maxspeed>190][maxspeed<=200],
+way|z9-[railway=preserved][maxspeed>190][maxspeed<=200],
+way|z10-[railway=rail][maxspeed>190][maxspeed<=200],
+way|z2-[railway=rail][usage=main][maxspeed>190][maxspeed<=200]
 {
 	z-index: 20;
 	color: #ADCB00;
@@ -378,7 +508,10 @@ way[maxspeed>190][maxspeed<=200]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>200][maxspeed<=210]
+way|z9-[railway=narrow_gauge][maxspeed>200][maxspeed<=210],
+way|z9-[railway=preserved][maxspeed>200][maxspeed<=210],
+way|z10-[railway=rail][maxspeed>200][maxspeed<=210],
+way|z2-[railway=rail][usage=main][maxspeed>200][maxspeed<=210]
 {
 	z-index: 21;
 	color: #CBCB00;
@@ -395,7 +528,10 @@ way[maxspeed>200][maxspeed<=210]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>210][maxspeed<=220]
+way|z9-[railway=narrow_gauge][maxspeed>210][maxspeed<=220],
+way|z9-[railway=preserved][maxspeed>210][maxspeed<=220],
+way|z10-[railway=rail][maxspeed>210][maxspeed<=220],
+way|z2-[railway=rail][usage=main][maxspeed>210][maxspeed<=220]
 {
 	z-index: 22;
 	color: #CBAD00;
@@ -412,7 +548,10 @@ way[maxspeed>210][maxspeed<=220]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>220][maxspeed<=230]
+way|z9-[railway=narrow_gauge][maxspeed>220][maxspeed<=230],
+way|z9-[railway=preserved][maxspeed>220][maxspeed<=230],
+way|z10-[railway=rail][maxspeed>220][maxspeed<=230],
+way|z2-[railway=rail][usage=main][maxspeed>220][maxspeed<=230]
 {
 	z-index: 23;
 	color: #CB8E00;
@@ -429,7 +568,10 @@ way[maxspeed>220][maxspeed<=230]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>230][maxspeed<=240]
+way|z9-[railway=narrow_gauge][maxspeed>230][maxspeed<=240],
+way|z9-[railway=preserved][maxspeed>230][maxspeed<=240],
+way|z10-[railway=rail][maxspeed>230][maxspeed<=240],
+way|z2-[railway=rail][usage=main][maxspeed>230][maxspeed<=240]
 {
 	z-index: 24;
 	color: #CB7000;
@@ -446,7 +588,10 @@ way[maxspeed>230][maxspeed<=240]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>240][maxspeed<=250]
+way|z9-[railway=narrow_gauge][maxspeed>240][maxspeed<=250],
+way|z9-[railway=preserved][maxspeed>240][maxspeed<=250],
+way|z10-[railway=rail][maxspeed>240][maxspeed<=250],
+way|z2-[railway=rail][usage=main][maxspeed>240][maxspeed<=250]
 {
 	z-index: 25;
 	color: #CB5100;
@@ -463,7 +608,10 @@ way[maxspeed>240][maxspeed<=250]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>250][maxspeed<=260]
+way|z9-[railway=narrow_gauge][maxspeed>250][maxspeed<=260],
+way|z9-[railway=preserved][maxspeed>250][maxspeed<=260],
+way|z10-[railway=rail][maxspeed>250][maxspeed<=260],
+way|z2-[railway=rail][usage=main][maxspeed>250][maxspeed<=260]
 {
 	z-index: 26;
 	color: #CB3300;
@@ -480,7 +628,10 @@ way[maxspeed>250][maxspeed<=260]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>260][maxspeed<=270]
+way|z9-[railway=narrow_gauge][maxspeed>260][maxspeed<=270],
+way|z9-[railway=preserved][maxspeed>260][maxspeed<=270],
+way|z10-[railway=rail][maxspeed>260][maxspeed<=270],
+way|z2-[railway=rail][usage=main][maxspeed>260][maxspeed<=270]
 {
 	z-index: 27;
 	color: #CB1400;
@@ -497,7 +648,10 @@ way[maxspeed>260][maxspeed<=270]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>270][maxspeed<=280]
+way|z9-[railway=narrow_gauge][maxspeed>270][maxspeed<=280],
+way|z9-[railway=preserved][maxspeed>270][maxspeed<=280],
+way|z10-[railway=rail][maxspeed>270][maxspeed<=280],
+way|z2-[railway=rail][usage=main][maxspeed>270][maxspeed<=280]
 {
 	z-index: 28;
 	color: #CB0007;
@@ -514,7 +668,10 @@ way[maxspeed>270][maxspeed<=280]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>280][maxspeed<=290]
+way|z9-[railway=narrow_gauge][maxspeed>280][maxspeed<=290],
+way|z9-[railway=preserved][maxspeed>280][maxspeed<=290],
+way|z10-[railway=rail][maxspeed>280][maxspeed<=290],
+way|z2-[railway=rail][usage=main][maxspeed>280][maxspeed<=290]
 {
 	z-index: 29;
 	color: #CB0025;
@@ -531,7 +688,10 @@ way[maxspeed>280][maxspeed<=290]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>290][maxspeed<=300]
+way|z9-[railway=narrow_gauge][maxspeed>290][maxspeed<=300],
+way|z9-[railway=preserved][maxspeed>290][maxspeed<=300],
+way|z10-[railway=rail][maxspeed>290][maxspeed<=300],
+way|z2-[railway=rail][usage=main][maxspeed>290][maxspeed<=300]
 {
 	z-index: 30;
 	color: #CB0044;
@@ -548,7 +708,10 @@ way[maxspeed>290][maxspeed<=300]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>300][maxspeed<=320]
+way|z9-[railway=narrow_gauge][maxspeed>300][maxspeed<=320],
+way|z9-[railway=preserved][maxspeed>300][maxspeed<=320],
+way|z10-[railway=rail][maxspeed>300][maxspeed<=320],
+way|z2-[railway=rail][usage=main][maxspeed>300][maxspeed<=320]
 {
 	z-index: 31;
 	color: #CB0062;
@@ -565,7 +728,10 @@ way[maxspeed>300][maxspeed<=320]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>320][maxspeed<=340]
+way|z9-[railway=narrow_gauge][maxspeed>320][maxspeed<=340],
+way|z9-[railway=preserved][maxspeed>320][maxspeed<=340],
+way|z10-[railway=rail][maxspeed>320][maxspeed<=340],
+way|z2-[railway=rail][usage=main][maxspeed>320][maxspeed<=340]
 {
 	z-index: 32;
 	color: #CB0081;
@@ -582,7 +748,10 @@ way[maxspeed>320][maxspeed<=340]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>340][maxspeed<=360]
+way|z9-[railway=narrow_gauge][maxspeed>340][maxspeed<=360],
+way|z9-[railway=preserved][maxspeed>340][maxspeed<=360],
+way|z10-[railway=rail][maxspeed>340][maxspeed<=360],
+way|z2-[railway=rail][usage=main][maxspeed>340][maxspeed<=360]
 {
 	z-index: 33;
 	color: #CB009F;
@@ -599,7 +768,10 @@ way[maxspeed>340][maxspeed<=360]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>360][maxspeed<=380]
+way|z9-[railway=narrow_gauge][maxspeed>360][maxspeed<=380],
+way|z9-[railway=preserved][maxspeed>360][maxspeed<=380],
+way|z10-[railway=rail][maxspeed>360][maxspeed<=380],
+way|z2-[railway=rail][usage=main][maxspeed>360][maxspeed<=380]
 {
 	z-index: 34;
 	color: #CB00BD;
@@ -616,7 +788,10 @@ way[maxspeed>360][maxspeed<=380]
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed>380][maxspeed<=400]
+way|z9-[railway=narrow_gauge][maxspeed>380][maxspeed<=400],
+way|z9-[railway=preserved][maxspeed>380][maxspeed<=400],
+way|z10-[railway=rail][maxspeed>380][maxspeed<=400],
+way|z2-[railway=rail][usage=main][maxspeed>380][maxspeed<=400]
 {
 	z-index: 35;
 	color: #BA00CB;

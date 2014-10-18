@@ -20,7 +20,7 @@
             s_default['default-lines'] = 'true';
         }
 
-        if (((type == 'way' && (!tags.hasOwnProperty('maxspeed'))))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && (!tags.hasOwnProperty('maxspeed'))) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && (!tags.hasOwnProperty('maxspeed'))) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && (!tags.hasOwnProperty('maxspeed'))) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('maxspeed'))) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && (!tags.hasOwnProperty('maxspeed'))) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('maxspeed'))) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main') && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch') && zoom >= 2)) {
             s_default['z-index'] = 0;
             s_default['color'] = 'gray';
             s_default['width'] = 3.5;
@@ -28,7 +28,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] <= 10))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] <= 10) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] <= 10) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] <= 10) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] <= 10) && zoom >= 2)) {
             s_default['z-index'] = 1;
             s_default['color'] = '#0100CB';
             s_default['width'] = 3.5;
@@ -44,7 +44,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 2)) {
             s_default['z-index'] = 2;
             s_default['color'] = '#001ECB';
             s_default['width'] = 3.5;
@@ -60,7 +60,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 2)) {
             s_default['z-index'] = 3;
             s_default['color'] = '#003DCB';
             s_default['width'] = 3.5;
@@ -76,7 +76,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 2)) {
             s_default['z-index'] = 4;
             s_default['color'] = '#005BCB';
             s_default['width'] = 3.5;
@@ -92,7 +92,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 2)) {
             s_default['z-index'] = 5;
             s_default['color'] = '#007ACB';
             s_default['width'] = 3.5;
@@ -108,7 +108,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 2)) {
             s_default['z-index'] = 6;
             s_default['color'] = '#0098CB';
             s_default['width'] = 3.5;
@@ -124,7 +124,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 2)) {
             s_default['z-index'] = 7;
             s_default['color'] = '#00B7CB';
             s_default['width'] = 3.5;
@@ -140,7 +140,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 2)) {
             s_default['z-index'] = 8;
             s_default['color'] = '#00CBC1';
             s_default['width'] = 3.5;
@@ -156,7 +156,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 2)) {
             s_default['z-index'] = 9;
             s_default['color'] = '#00CBA2';
             s_default['width'] = 3.5;
@@ -172,7 +172,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 2)) {
             s_default['z-index'] = 10;
             s_default['color'] = '#00CB84';
             s_default['width'] = 3.5;
@@ -188,7 +188,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 2)) {
             s_default['z-index'] = 11;
             s_default['color'] = '#00CB66';
             s_default['width'] = 3.5;
@@ -204,7 +204,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 2)) {
             s_default['z-index'] = 12;
             s_default['color'] = '#00CB47';
             s_default['width'] = 3.5;
@@ -220,7 +220,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 2)) {
             s_default['z-index'] = 13;
             s_default['color'] = '#00CB29';
             s_default['width'] = 3.5;
@@ -236,7 +236,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 2)) {
             s_default['z-index'] = 14;
             s_default['color'] = '#00CB0A';
             s_default['width'] = 3.5;
@@ -252,7 +252,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 2)) {
             s_default['z-index'] = 15;
             s_default['color'] = '#14CB00';
             s_default['width'] = 3.5;
@@ -268,7 +268,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160))) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 2)) {
             s_default['z-index'] = 16;
             s_default['color'] = '#33CB00';
             s_default['width'] = 3.5;
@@ -284,7 +284,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170) && zoom >= 2)) {
             s_default['z-index'] = 17;
             s_default['color'] = '#51CB00';
             s_default['width'] = 3.5;
@@ -300,7 +300,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180) && zoom >= 2)) {
             s_default['z-index'] = 18;
             s_default['color'] = '#70CB00';
             s_default['width'] = 3.5;
@@ -316,7 +316,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190) && zoom >= 2)) {
             s_default['z-index'] = 19;
             s_default['color'] = '#8ECB00';
             s_default['width'] = 3.5;
@@ -332,7 +332,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200) && zoom >= 2)) {
             s_default['z-index'] = 20;
             s_default['color'] = '#ADCB00';
             s_default['width'] = 3.5;
@@ -348,7 +348,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 200 && tags['maxspeed'] <= 210))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 200 && tags['maxspeed'] <= 210) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 200 && tags['maxspeed'] <= 210) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 200 && tags['maxspeed'] <= 210) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 200 && tags['maxspeed'] <= 210) && zoom >= 2)) {
             s_default['z-index'] = 21;
             s_default['color'] = '#CBCB00';
             s_default['width'] = 3.5;
@@ -364,7 +364,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 210 && tags['maxspeed'] <= 220))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 210 && tags['maxspeed'] <= 220) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 210 && tags['maxspeed'] <= 220) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 210 && tags['maxspeed'] <= 220) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 210 && tags['maxspeed'] <= 220) && zoom >= 2)) {
             s_default['z-index'] = 22;
             s_default['color'] = '#CBAD00';
             s_default['width'] = 3.5;
@@ -380,7 +380,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 220 && tags['maxspeed'] <= 230))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 220 && tags['maxspeed'] <= 230) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 220 && tags['maxspeed'] <= 230) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 220 && tags['maxspeed'] <= 230) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 220 && tags['maxspeed'] <= 230) && zoom >= 2)) {
             s_default['z-index'] = 23;
             s_default['color'] = '#CB8E00';
             s_default['width'] = 3.5;
@@ -396,7 +396,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 230 && tags['maxspeed'] <= 240))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 230 && tags['maxspeed'] <= 240) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 230 && tags['maxspeed'] <= 240) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 230 && tags['maxspeed'] <= 240) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 230 && tags['maxspeed'] <= 240) && zoom >= 2)) {
             s_default['z-index'] = 24;
             s_default['color'] = '#CB7000';
             s_default['width'] = 3.5;
@@ -412,7 +412,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 240 && tags['maxspeed'] <= 250))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 240 && tags['maxspeed'] <= 250) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 240 && tags['maxspeed'] <= 250) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 240 && tags['maxspeed'] <= 250) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 240 && tags['maxspeed'] <= 250) && zoom >= 2)) {
             s_default['z-index'] = 25;
             s_default['color'] = '#CB5100';
             s_default['width'] = 3.5;
@@ -428,7 +428,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 250 && tags['maxspeed'] <= 260))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 250 && tags['maxspeed'] <= 260) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 250 && tags['maxspeed'] <= 260) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 250 && tags['maxspeed'] <= 260) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 250 && tags['maxspeed'] <= 260) && zoom >= 2)) {
             s_default['z-index'] = 26;
             s_default['color'] = '#CB3300';
             s_default['width'] = 3.5;
@@ -444,7 +444,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 260 && tags['maxspeed'] <= 270))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 260 && tags['maxspeed'] <= 270) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 260 && tags['maxspeed'] <= 270) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 260 && tags['maxspeed'] <= 270) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 260 && tags['maxspeed'] <= 270) && zoom >= 2)) {
             s_default['z-index'] = 27;
             s_default['color'] = '#CB1400';
             s_default['width'] = 3.5;
@@ -460,7 +460,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 270 && tags['maxspeed'] <= 280))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 270 && tags['maxspeed'] <= 280) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 270 && tags['maxspeed'] <= 280) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 270 && tags['maxspeed'] <= 280) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 270 && tags['maxspeed'] <= 280) && zoom >= 2)) {
             s_default['z-index'] = 28;
             s_default['color'] = '#CB0007';
             s_default['width'] = 3.5;
@@ -476,7 +476,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 280 && tags['maxspeed'] <= 290))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 280 && tags['maxspeed'] <= 290) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 280 && tags['maxspeed'] <= 290) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 280 && tags['maxspeed'] <= 290) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 280 && tags['maxspeed'] <= 290) && zoom >= 2)) {
             s_default['z-index'] = 29;
             s_default['color'] = '#CB0025';
             s_default['width'] = 3.5;
@@ -492,7 +492,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 290 && tags['maxspeed'] <= 300))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 290 && tags['maxspeed'] <= 300) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 290 && tags['maxspeed'] <= 300) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 290 && tags['maxspeed'] <= 300) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 290 && tags['maxspeed'] <= 300) && zoom >= 2)) {
             s_default['z-index'] = 30;
             s_default['color'] = '#CB0044';
             s_default['width'] = 3.5;
@@ -508,7 +508,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 300 && tags['maxspeed'] <= 320))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 300 && tags['maxspeed'] <= 320) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 300 && tags['maxspeed'] <= 320) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 300 && tags['maxspeed'] <= 320) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 300 && tags['maxspeed'] <= 320) && zoom >= 2)) {
             s_default['z-index'] = 31;
             s_default['color'] = '#CB0062';
             s_default['width'] = 3.5;
@@ -524,7 +524,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 320 && tags['maxspeed'] <= 340))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 320 && tags['maxspeed'] <= 340) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 320 && tags['maxspeed'] <= 340) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 320 && tags['maxspeed'] <= 340) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 320 && tags['maxspeed'] <= 340) && zoom >= 2)) {
             s_default['z-index'] = 32;
             s_default['color'] = '#CB0081';
             s_default['width'] = 3.5;
@@ -540,7 +540,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 340 && tags['maxspeed'] <= 360))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 340 && tags['maxspeed'] <= 360) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 340 && tags['maxspeed'] <= 360) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 340 && tags['maxspeed'] <= 360) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 340 && tags['maxspeed'] <= 360) && zoom >= 2)) {
             s_default['z-index'] = 33;
             s_default['color'] = '#CB009F';
             s_default['width'] = 3.5;
@@ -556,7 +556,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 360 && tags['maxspeed'] <= 380))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 360 && tags['maxspeed'] <= 380) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 360 && tags['maxspeed'] <= 380) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 360 && tags['maxspeed'] <= 380) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 360 && tags['maxspeed'] <= 380) && zoom >= 2)) {
             s_default['z-index'] = 34;
             s_default['color'] = '#CB00BD';
             s_default['width'] = 3.5;
@@ -572,7 +572,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400))) {
+        if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 2)) {
             s_default['z-index'] = 35;
             s_default['color'] = '#BA00CB';
             s_default['width'] = 3.5;
@@ -1556,7 +1556,7 @@
             height: 39, 
             offset: 2688
         }
-    }, external_images = [], presence_tags = [], value_tags = ['railway:signal:speed_limit', 'railway', 'maxspeed', 'railway:signal:speed_limit:speed', 'railway:signal:speed_limit_distant:speed', 'railway:signal:speed_limit:form', 'railway:signal:speed_limit_distant:form', 'railway:signal:speed_limit_distant'];
+    }, external_images = [], presence_tags = [], value_tags = ['railway:signal:speed_limit', 'railway', 'maxspeed', 'railway:signal:speed_limit:speed', 'railway:signal:speed_limit_distant:speed', 'railway:signal:speed_limit:form', 'usage', 'railway:signal:speed_limit_distant:form', 'railway:signal:speed_limit_distant'];
 
     MapCSS.loadStyle('maxspeed', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('maxspeed');
