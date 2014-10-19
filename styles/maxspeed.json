@@ -3,6 +3,13 @@
 	"mapfeatures":
 	[
 		{
+			"id": "maxspeed_unknown",
+			"minzoom": 0,
+			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"gray\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "No information"
+		},
+		{
 			"id": "maxspeed_5_10",
 			"minzoom": 0,
 			"maxzoom": 19,
