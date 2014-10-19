@@ -426,6 +426,47 @@ node|z14-[railway=signal]["railway:signal:main"=ne1]["railway:signal:main:form"=
     allow-overlap: true;
 }
 
+/*****************************/
+/* DE Pfeiftafel Bü4 (DS 301)*/
+/*****************************/
+node|z14-[railway=signal]["railway:signal:whistle"="db:bü4"]
+{
+	z-index: 500;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-bue4-ds-16.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
+/*****************************/
+/* DE Pfeiftafel Pf1 (DV 301)*/
+/*****************************/
+node|z14-[railway=signal]["railway:signal:whistle"="dr:pf1"]
+{
+	z-index: 500;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-pf1-dv-16.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
+
 /******************/
 /* AT Trapeztafel */
 /******************/
