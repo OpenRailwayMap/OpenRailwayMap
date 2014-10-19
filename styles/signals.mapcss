@@ -517,7 +517,7 @@ node|z14-[railway=signal]["railway:signal:whistle"="db:pf1"]["railway:signal:rin
 
 /*********************/
 /* DE ring sign Bü 5 */
-/************************/
+/*********************/
 node|z15-[railway=signal]["railway:signal:ring"="bü5"]
 {
 	z-index: 500;
