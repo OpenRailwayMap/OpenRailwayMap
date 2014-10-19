@@ -458,13 +458,6 @@ node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=
 node|z14-[railway=signal]["railway:signal:main"=ne1]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
 {
 	z-index: 1000;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
 	icon-image: "icons/de-ne1.png";
 	icon-width: 16;
 	icon-height: 16;
@@ -472,88 +465,55 @@ node|z14-[railway=signal]["railway:signal:main"=ne1]["railway:signal:main:form"=
     allow-overlap: true;
 }
 
-/*****************************/
-/* DE Pfeiftafel Bü4 (DS 301)*/
-/*****************************/
+/*********************************/
+/* DE whistle sign Bü 4 (DS 301) */
+/*********************************/
 node|z14-[railway=signal]["railway:signal:whistle"="db:bü4"]
 {
 	z-index: 500;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-bue4-ds-16.png";
+	icon-image: "icons/de-bue4-ds-32.png";
 	icon-width: 11;
 	icon-height: 16;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
 
-/***************************************************************/
-/* DE Pfeiftafel Bü4 (DS 301) for trains not stopping at a halt*/
-/***************************************************************/
+/*******************************************************************/
+/* DE whistle sign Bü 4 (DS 301) for trains not stopping at a halt */
+/*******************************************************************/
 node|z14-[railway=signal]["railway:signal:whistle"="db:bü4"]["railway:signal:ring:only_transit"=yes]
 {
 	z-index: 500;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-bue4-ds-only-transit-21.png";
+	icon-image: "icons/de-bue4-ds-only-transit-43.png";
 	icon-width: 12;
 	icon-height: 21;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
 
-/*****************************/
-/* DE Pfeiftafel Pf1 (DV 301)*/
-/*****************************/
+/********************************/
+/* DE whistle sign Pf1 (DV 301) */
+/********************************/
 node|z14-[railway=signal]["railway:signal:whistle"="dr:pf1"]
 {
 	z-index: 500;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-pf1-dv-16.png";
+	icon-image: "icons/de-pf1-dv-32.png";
 	icon-width: 11;
 	icon-height: 16;
-	text-allow-overlap: true;
     allow-overlap: true;
 }
 
-
-/***************************************************************/
-/* DE Pfeiftafel Pf1 (DV 301) for trains not stopping at a halt*/
-/***************************************************************/
+/*******************************************************************/
+/* DE whistle sign Pf 1 (DV 301) for trains not stopping at a halt */
+/*******************************************************************/
 node|z14-[railway=signal]["railway:signal:whistle"="db:pf1"]["railway:signal:ring:only_transit"=yes]
 {
 	z-index: 500;
-	text: "ref";
-	text-offset: 11;
-	text-size: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de-pf1-dv-only-transit-21.png";
+	icon-image: "icons/de-pf1-dv-only-transit-43.png";
 	icon-width: 12;
 	icon-height: 21;
-	text-allow-overlap: true;
     allow-overlap: true;
 }
-
-
 
 /******************/
 /* AT Trapeztafel */
