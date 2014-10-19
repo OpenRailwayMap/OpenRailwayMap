@@ -515,6 +515,32 @@ node|z14-[railway=signal]["railway:signal:whistle"="db:pf1"]["railway:signal:rin
     allow-overlap: true;
 }
 
+/*********************/
+/* DE ring sign Bü 5 */
+/************************/
+node|z15-[railway=signal]["railway:signal:ring"="bü5"]
+{
+	z-index: 500;
+	icon-image: "icons/de-bue5-ds-32.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
+/*******************************************************/
+/* DE ring sign Bü 5 for trains not stopping at a halt */
+/*******************************************************/
+node|z15-[railway=signal]["railway:signal:ring"="bü5"]["railway:signal:ring:only_transit"=yes]
+{
+	z-index: 500;
+	icon-image: "icons/de-bue5-only-transit-43.png";
+	icon-width: 12;
+	icon-height: 21;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
 /******************/
 /* AT Trapeztafel */
 /******************/
