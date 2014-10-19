@@ -144,31 +144,45 @@
 		},
 		{
 			"id": "whistle_sign_de_bue4",
-			"minzoom": 14,
-			"maxzoom": 19,
+			"minzoom": 11,
+			"maxzoom": 16,
 			"icon": "icons/de-bue4-ds-16.png",
 			"caption": "Bü 4 Pfeiftafel"
 		},
 		{
 			"id": "whistle_sign_de_bue4_transit",
-			"minzoom": 14,
-			"maxzoom": 19,
+			"minzoom": 12,
+			"maxzoom": 21,
 			"icon": "icons/de-bue4-ds-only-transit-21.png",
 			"caption": "Bü 4 Pfeiftafel für durchfahrende Züge"
 		},
 		{
 			"id": "whistle_sign_de_pf1",
-			"minzoom": 14,
-			"maxzoom": 19,
+			"minzoom": 11,
+			"maxzoom": 16,
 			"icon": "icons/de-pf1-dv-16.png",
 			"caption": "ex-Pf 1 Pfeiftafel"
 		},
 		{
 			"id": "whistle_sign_de_pf1_transit",
-			"minzoom": 14,
-			"maxzoom": 19,
+			"minzoom": 12,
+			"maxzoom": 21,
 			"icon": "icons/de-pf1-dv-only-transit-21.png",
 			"caption": "ex-Pf 1 Pfeiftafel für durchfahrende Züge"
+		},
+		{
+			"id": "whistle_sign_de_bue5",
+			"minzoom": 11,
+			"maxzoom": 16,
+			"icon": "icons/de-bue5-16.png",
+			"caption": "Bü 5 Läutetafel"
+		},
+		{
+			"id": "whistle_sign_de_bue5_transit",
+			"minzoom": 12,
+			"maxzoom": 21,
+			"icon": "icons/de-bue5-only-transit-21.png",
+			"caption": "Bü 5 Läutetafel für durchfahrende Züge"
 		}
 	]
 }
