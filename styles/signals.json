@@ -7,42 +7,42 @@
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-hp-semaphore.png",
-			"caption": "Hp Form-Hauptsignal"
+			"caption": "Hp-Formhauptsignal"
 		},
 		{
 			"id": "main_light_de_hp",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-hp-light.png",
-			"caption": "Hp Licht-Hauptsignal"
+			"caption": "Hp-Lichthauptsignal"
 		},
 		{
 			"id": "minor_semaphore_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-sh-semaphore.png",
-			"caption": "Sh Form-Sperrsignal"
+			"caption": "Sh-Formsperrsignal"
 		},
 		{
 			"id": "minor_semaphore_dwarf_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-sh-semaphore-dwarf.png",
-			"caption": "Sh Zwerg-Form-Sperrsignal"
+			"caption": "Sh-Zwerg-Formsperrsignal"
 		},
 		{
 			"id": "minor_light_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-sh-light.png",
-			"caption": "Sh Licht-Sperrsignal"
+			"caption": "Sh-Lichtsperrsignal"
 		},
 		{
 			"id": "minor_light_dwarf_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-sh-light-dwarf.png",
-			"caption": "Sh Zwerg-Licht-Sperrsignal"
+			"caption": "Sh-Zwerg-Lichtsperrsignal"
 		},
 		{
 			"id": "distant_light_de_ks",
@@ -80,53 +80,95 @@
 			"caption": "Haltetafel"
 		},
 		{
-			"id": "distant_semaphore_de_vr",
+			"id": "distant_semaphore_de_vr0",
 			"minzoom": 14,
 			"maxzoom": 19,
-			"icon": "icons/de-vr-semaphore.png",
-			"caption": "Vr-Form-Vorsignal"
+			"icon": "icons/de-vr0-semaphore-26.png",
+			"caption": "Vr-Formvorsignal ohne Angabe der Signalzustände"
+		},
+		{
+			"id": "distant_semaphore_de_vr1",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-vr1-semaphore-19.png",
+			"caption": "Vr-Formvorsignal ohne Vr 2"
+		},
+		{
+			"id": "distant_semaphore_de_vr2",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-vr2-semaphore-27.png",
+			"caption": "Vr-Formvorsignal mit Vr 2"
 		},
 		{
 			"id": "distant_light_de_vr0",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr0-light-16.png",
-			"caption": "Vr Licht-Vorsignal ohne Angabe der Signalzustände"
+			"caption": "Vr-Lichtvorsignal ohne Angabe der Signalzustände"
 		},
 		{
 			"id": "distant_light_de_vr1",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr1-light-16.png",
-			"caption": "Vr Licht-Vorsignal ohne Vr 2"
+			"caption": "Vr-Lichtvorsignal ohne Vr 2"
 		},
 		{
 			"id": "distant_light_de_vr2",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr2-light-16.png",
-			"caption": "Vr Licht-Vorsignal mit Vr 2"
+			"caption": "Vr-Lichtvorsignal mit Vr 2"
 		},
 		{
 			"id": "distant_light_de_vr0_repeated",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr0-light-repeated-16.png",
-			"caption": "Vr Licht-Vorsignalwiederholer ohne Angabe der Signalzustände"
+			"caption": "Vr-Lichtvorsignalwiederholer ohne Angabe der Signalzustände"
 		},
 		{
 			"id": "distant_light_de_vr1_repeated",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr1-light-repeated-16.png",
-			"caption": "Vr Licht-Vorsignalwiederholer ohne Vr 2"
+			"caption": "Vr-Lichtvorsignalwiederholer ohne Vr 2"
 		},
 		{
 			"id": "distant_light_de_vr2_repeated",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr2-light-repeated-16.png",
-			"caption": "Vr Licht-Vorsignalwiederholer mit Vr 2"
+			"caption": "Vr-Lichtvorsignalwiederholer mit Vr 2"
+		},
+		{
+			"id": "whistle_sign_de_bue4",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-bue4-ds-16.png",
+			"caption": "Bü 4 Pfeiftafel"
+		},
+		{
+			"id": "whistle_sign_de_bue4_transit",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-bue4-ds-only-transit-21.png",
+			"caption": "Bü 4 Pfeiftafel für durchfahrende Züge"
+		},
+		{
+			"id": "whistle_sign_de_pf1",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-pf1-dv-16.png",
+			"caption": "ex-Pf 1 Pfeiftafel"
+		},
+		{
+			"id": "whistle_sign_de_pf1_transit",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-pf1-dv-only-transit-21.png",
+			"caption": "ex-Pf 1 Pfeiftafel für durchfahrende Züge"
 		}
 	]
 }
