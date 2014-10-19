@@ -30,22 +30,6 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:distant'] == 'vr' && tags['railway:signal:distant:form'] == 'semaphore') && zoom >= 14)) {
-            s_default['z-index'] = 9000;
-            s_default['text'] = MapCSS.e_localize(tags, 'ref');
-            s_default['text-offset'] = 11;
-            s_default['text-size'] = '12';
-            s_default['text-color'] = 'black';
-            s_default['text-halo-radius'] = 1;
-            s_default['text-halo-color'] = 'white';
-            s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de-vr-semaphore.png';
-            s_default['icon-width'] = '16';
-            s_default['icon-height'] = '16';
-            s_default['text-allow-overlap'] = 'true';
-            s_default['allow-overlap'] = 'true';
-        }
-
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'hp' && tags['railway:signal:main:form'] == 'light') && zoom >= 14)) {
             s_default['z-index'] = 10000;
             s_default['text'] = MapCSS.e_localize(tags, 'ref');
@@ -58,6 +42,54 @@
             s_default['icon-image'] = 'icons/de-hp-light.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:distant'] == 'vr' && tags['railway:signal:distant:form'] == 'semaphore' && (!tags.hasOwnProperty('railway:signal:main')) && (!tags.hasOwnProperty('railway:signal:distant:states'))) && zoom >= 14)) {
+            s_default['z-index'] = 9000;
+            s_default['text'] = MapCSS.e_localize(tags, 'ref');
+            s_default['text-offset'] = 12;
+            s_default['text-size'] = '12';
+            s_default['text-color'] = 'black';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['font-weight'] = 'bold';
+            s_default['icon-image'] = 'icons/de-vr0-semaphore-52.png';
+            s_default['icon-width'] = '12';
+            s_default['icon-height'] = '26';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:distant'] == 'vr' && tags['railway:signal:distant:form'] == 'semaphore' && (!tags.hasOwnProperty('railway:signal:main')) && (tags.hasOwnProperty('railway:signal:distant:states')) && !(/.*vr2.*/.test(tags['railway:signal:distant:states']))) && zoom >= 14)) {
+            s_default['z-index'] = 9000;
+            s_default['text'] = MapCSS.e_localize(tags, 'ref');
+            s_default['text-offset'] = 12;
+            s_default['text-size'] = '12';
+            s_default['text-color'] = 'black';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['font-weight'] = 'bold';
+            s_default['icon-image'] = 'icons/de-vr1-semaphore-38.png';
+            s_default['icon-width'] = '12';
+            s_default['icon-height'] = '19';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:distant'] == 'vr' && tags['railway:signal:distant:form'] == 'semaphore' && (!tags.hasOwnProperty('railway:signal:main')) && (tags.hasOwnProperty('railway:signal:distant:states')) && /.*vr2.*/.test(tags['railway:signal:distant:states'])) && zoom >= 14)) {
+            s_default['z-index'] = 9000;
+            s_default['text'] = MapCSS.e_localize(tags, 'ref');
+            s_default['text-offset'] = 12;
+            s_default['text-size'] = '12';
+            s_default['text-color'] = 'black';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['font-weight'] = 'bold';
+            s_default['icon-image'] = 'icons/de-vr2-semaphore-53.png';
+            s_default['icon-width'] = '12';
+            s_default['icon-height'] = '26';
             s_default['text-allow-overlap'] = 'true';
             s_default['allow-overlap'] = 'true';
         }
@@ -393,42 +425,47 @@
             height: 16, 
             offset: 192
         },
-        'icons/de-vr-semaphore.png': {
-            width: 16, 
-            height: 16, 
-            offset: 208
-        },
         'icons/de-vr0-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 224
+            offset: 208
         },
         'icons/de-vr0-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 256
+            offset: 240
+        },
+        'icons/de-vr0-semaphore-52.png': {
+            width: 24, 
+            height: 53, 
+            offset: 272
         },
         'icons/de-vr1-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 288
+            offset: 325
         },
         'icons/de-vr1-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 320
+            offset: 357
         },
         'icons/de-vr2-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 352
+            offset: 389
         },
         'icons/de-vr2-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 384
+            offset: 421
+        },
+        'icons/de-vr2-semaphore-53.png': {
+            width: 24, 
+            height: 53, 
+            offset: 453
         }
-    }, external_images = [], presence_tags = [], value_tags = ['ref', 'railway:signal:stop:form', 'railway:signal:combined:states', 'railway:signal:minor:form', 'railway:signal:main:function', 'railway:signal:stop', 'railway', 'railway:signal:minor:height', 'railway:signal:main', 'railway:signal:minor', 'railway:signal:main:form', 'railway:signal:distant:repeated', 'railway:signal:main:states', 'railway:signal:distant', 'railway:signal:combined', 'railway:signal:distant:states', 'railway:signal:combined:form', 'railway:signal:distant:form', 'railway:signal:distant:shortened'];
+    }, external_images = ['icons/de-vr1-semaphore-38.png'], presence_tags = [], value_tags = ['ref', 'railway:signal:stop:form', 'railway:signal:combined:states', 'railway:signal:minor:form', 'railway:signal:main:function', 'railway:signal:stop', 'railway', 'railway:signal:minor:height', 'railway:signal:main', 'railway:signal:minor', 'railway:signal:main:form', 'railway:signal:distant:repeated', 'railway:signal:main:states', 'railway:signal:distant', 'railway:signal:combined', 'railway:signal:distant:states', 'railway:signal:combined:form', 'railway:signal:distant:form', 'railway:signal:distant:shortened'];
 
     MapCSS.loadStyle('signals', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('signals');
