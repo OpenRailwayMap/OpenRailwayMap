@@ -12,7 +12,15 @@
    height="114.8891"
    id="svg2">
   <defs
-     id="defs4" />
+     id="defs4">
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter2986">
+      <feGaussianBlur
+         id="feGaussianBlur2988"
+         stdDeviation="3" />
+    </filter>
+  </defs>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -37,6 +45,7 @@
      id="layer3" />
   <path
      d="m 140.97352,34.286277 a 9.9679403,9.9679403 0 1 1 -19.93588,0 9.9679403,9.9679403 0 1 1 19.93588,0 z"
+     transform="matrix(1.9,0,0,1.9,-128.1282,-30.857649)"
      id="path3849"
-     style="fill:#a10625;fill-opacity:1;stroke:none" />
+     style="fill:#ff0000;fill-opacity:1;stroke:none;filter:url(#filter2986)" />
 </svg>
