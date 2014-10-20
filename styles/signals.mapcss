@@ -541,6 +541,18 @@ node|z15-[railway=signal]["railway:signal:ring"="bü5"]["railway:signal:ring:onl
     allow-overlap: true;
 }
 
+/********************************/
+/* DE station distant sign Ne 6 */
+/********************************/
+node|z14-[railway=signal]["railway:signal:station_distant"="ne6"]["railway:signal:station_distant:form"=sign]
+{
+	z-index: 550;
+	icon-image: "icons/de-ne6-48.png";
+	icon-width: 24;
+	icon-height: 5;
+    allow-overlap: true;
+}
+
 /******************/
 /* AT Trapeztafel */
 /******************/

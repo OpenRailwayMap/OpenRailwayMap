@@ -183,6 +183,13 @@
 			"maxzoom": 21,
 			"icon": "icons/de-bue5-only-transit-21.png",
 			"caption": "Bü 5 Läutetafel für durchfahrende Züge"
+		},
+		{
+			"id": "station_distant_sign_de_ne6",
+			"minzoom": 14,
+			"maxzoom": 21,
+			"icon": "icons/de-ne6-24.png",
+			"caption": "Ne 6 Haltepunkttafel"
 		}
 	]
 }

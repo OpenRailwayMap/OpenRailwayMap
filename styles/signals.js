@@ -329,13 +329,6 @@
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'ne1' && tags['railway:signal:main:form'] == 'sign' && tags['railway:signal:main:function'] == 'entry') && zoom >= 14)) {
             s_default['z-index'] = 1000;
-            s_default['text'] = MapCSS.e_localize(tags, 'ref');
-            s_default['text-offset'] = 11;
-            s_default['text-size'] = '12';
-            s_default['text-color'] = 'black';
-            s_default['text-halo-radius'] = 1;
-            s_default['text-halo-color'] = 'white';
-            s_default['font-weight'] = 'bold';
             s_default['icon-image'] = 'icons/de-ne1.png';
             s_default['icon-width'] = '16';
             s_default['icon-height'] = '16';
@@ -345,14 +338,7 @@
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:whistle'] == 'db:bü4') && zoom >= 14)) {
             s_default['z-index'] = 500;
-            s_default['text'] = MapCSS.e_localize(tags, 'ref');
-            s_default['text-offset'] = 11;
-            s_default['text-size'] = '12';
-            s_default['text-color'] = 'black';
-            s_default['text-halo-radius'] = 1;
-            s_default['text-halo-color'] = 'white';
-            s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de-bue4-ds-16.png';
+            s_default['icon-image'] = 'icons/de-bue4-ds-32.png';
             s_default['icon-width'] = '11';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
@@ -361,14 +347,7 @@
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:whistle'] == 'db:bü4' && tags['railway:signal:ring:only_transit'] == 'yes') && zoom >= 14)) {
             s_default['z-index'] = 500;
-            s_default['text'] = MapCSS.e_localize(tags, 'ref');
-            s_default['text-offset'] = 11;
-            s_default['text-size'] = '12';
-            s_default['text-color'] = 'black';
-            s_default['text-halo-radius'] = 1;
-            s_default['text-halo-color'] = 'white';
-            s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de-bue4-ds-only-transit-21.png';
+            s_default['icon-image'] = 'icons/de-bue4-ds-only-transit-43.png';
             s_default['icon-width'] = '12';
             s_default['icon-height'] = '21';
             s_default['text-allow-overlap'] = 'true';
@@ -377,33 +356,43 @@
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:whistle'] == 'dr:pf1') && zoom >= 14)) {
             s_default['z-index'] = 500;
-            s_default['text'] = MapCSS.e_localize(tags, 'ref');
-            s_default['text-offset'] = 11;
-            s_default['text-size'] = '12';
-            s_default['text-color'] = 'black';
-            s_default['text-halo-radius'] = 1;
-            s_default['text-halo-color'] = 'white';
-            s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de-pf1-dv-16.png';
+            s_default['icon-image'] = 'icons/de-pf1-dv-32.png';
+            s_default['icon-width'] = '11';
+            s_default['icon-height'] = '16';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:whistle'] == 'db:pf1' && tags['railway:signal:ring:only_transit'] == 'yes') && zoom >= 14)) {
+            s_default['z-index'] = 500;
+            s_default['icon-image'] = 'icons/de-pf1-dv-only-transit-43.png';
+            s_default['icon-width'] = '12';
+            s_default['icon-height'] = '21';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:ring'] == 'bü5') && zoom >= 15)) {
+            s_default['z-index'] = 500;
+            s_default['icon-image'] = 'icons/de-bue5-ds-32.png';
             s_default['icon-width'] = '11';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:whistle'] == 'db:pf1' && tags['railway:signal:ring:only_transit'] == 'yes') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:ring'] == 'bü5' && tags['railway:signal:ring:only_transit'] == 'yes') && zoom >= 15)) {
             s_default['z-index'] = 500;
-            s_default['text'] = MapCSS.e_localize(tags, 'ref');
-            s_default['text-offset'] = 11;
-            s_default['text-size'] = '12';
-            s_default['text-color'] = 'black';
-            s_default['text-halo-radius'] = 1;
-            s_default['text-halo-color'] = 'white';
-            s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de-pf1-dv-only-transit-21.png';
+            s_default['icon-image'] = 'icons/de-bue5-only-transit-43.png';
             s_default['icon-width'] = '12';
             s_default['icon-height'] = '21';
             s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:station_distant'] == 'ne6' && tags['railway:signal:station_distant:form'] == 'sign') && zoom >= 14)) {
+            s_default['z-index'] = 550;
+            s_default['icon-image'] = 'icons/de-ne6-48.png';
+            s_default['icon-width'] = '24';
+            s_default['icon-height'] = '5';
             s_default['allow-overlap'] = 'true';
         }
 
@@ -429,117 +418,127 @@
     }
     
     var sprite_images = {
-        'icons/de-bue4-ds-16.png': {
-            width: 11, 
-            height: 16, 
+        'icons/de-bue4-ds-32.png': {
+            width: 22, 
+            height: 32, 
             offset: 0
         },
-        'icons/de-bue4-ds-only-transit-21.png': {
-            width: 12, 
-            height: 21, 
-            offset: 16
+        'icons/de-bue4-ds-only-transit-43.png': {
+            width: 24, 
+            height: 43, 
+            offset: 32
+        },
+        'icons/de-bue5-only-transit-43.png': {
+            width: 24, 
+            height: 43, 
+            offset: 75
         },
         'icons/de-ks-combined.png': {
             width: 16, 
             height: 16, 
-            offset: 37
+            offset: 118
         },
         'icons/de-ks-distant.png': {
             width: 16, 
             height: 16, 
-            offset: 53
+            offset: 134
         },
         'icons/de-ks-main.png': {
             width: 16, 
             height: 16, 
-            offset: 69
+            offset: 150
         },
         'icons/de-ne1.png': {
             width: 16, 
             height: 16, 
-            offset: 85
+            offset: 166
         },
         'icons/de-ne5-ds301-32.png': {
             width: 22, 
             height: 32, 
-            offset: 101
+            offset: 182
         },
-        'icons/de-pf1-dv-16.png': {
-            width: 11, 
-            height: 16, 
-            offset: 133
+        'icons/de-ne6-48.png': {
+            width: 48, 
+            height: 10, 
+            offset: 214
         },
-        'icons/de-pf1-dv-only-transit-21.png': {
-            width: 12, 
-            height: 21, 
-            offset: 149
+        'icons/de-pf1-dv-32.png': {
+            width: 22, 
+            height: 32, 
+            offset: 224
+        },
+        'icons/de-pf1-dv-only-transit-43.png': {
+            width: 24, 
+            height: 43, 
+            offset: 256
         },
         'icons/de-sh-light-dwarf.png': {
             width: 16, 
             height: 16, 
-            offset: 170
+            offset: 299
         },
         'icons/de-sh-light.png': {
             width: 16, 
             height: 16, 
-            offset: 186
+            offset: 315
         },
         'icons/de-sh-semaphore-dwarf.png': {
             width: 16, 
             height: 16, 
-            offset: 202
+            offset: 331
         },
         'icons/de-sh-semaphore.png': {
             width: 16, 
             height: 16, 
-            offset: 218
+            offset: 347
         },
         'icons/de-vr0-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 234
+            offset: 363
         },
         'icons/de-vr0-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 266
+            offset: 395
         },
         'icons/de-vr0-semaphore-52.png': {
             width: 24, 
             height: 53, 
-            offset: 298
+            offset: 427
         },
         'icons/de-vr1-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 351
+            offset: 480
         },
         'icons/de-vr1-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 383
+            offset: 512
         },
         'icons/de-vr1-semaphore-38.png': {
             width: 24, 
             height: 38, 
-            offset: 415
+            offset: 544
         },
         'icons/de-vr2-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 453
+            offset: 582
         },
         'icons/de-vr2-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 485
+            offset: 614
         },
         'icons/de-vr2-semaphore-53.png': {
             width: 24, 
             height: 53, 
-            offset: 517
+            offset: 646
         }
-    }, external_images = ['icons/de-hp-light.png', 'icons/de-hp-semaphore.png', 'icons/de-ne2.png'], presence_tags = [], value_tags = ['ref', 'railway:signal:stop:form', 'railway:signal:combined:states', 'railway:signal:minor:form', 'railway:signal:main:function', 'railway:signal:stop', 'railway', 'railway:signal:minor:height', 'railway:signal:whistle', 'railway:signal:main', 'railway:signal:minor', 'railway:signal:main:form', 'railway:signal:distant:repeated', 'railway:signal:main:states', 'railway:signal:distant', 'railway:signal:combined', 'railway:signal:distant:states', 'railway:signal:combined:form', 'railway:signal:ring:only_transit', 'railway:signal:distant:form', 'railway:signal:distant:shortened'];
+    }, external_images = ['icons/de-bue5-ds-32.png', 'icons/de-hp-light.png', 'icons/de-hp-semaphore.png', 'icons/de-ne2.png'], presence_tags = [], value_tags = ['ref', 'railway:signal:stop:form', 'railway:signal:stop', 'railway:signal:minor', 'railway:signal:ring:only_transit', 'railway:signal:main:function', 'railway:signal:whistle', 'railway:signal:minor:form', 'railway:signal:distant', 'railway:signal:combined:form', 'railway:signal:distant:form', 'railway:signal:distant:shortened', 'railway', 'railway:signal:minor:height', 'railway:signal:main', 'railway:signal:station_distant', 'railway:signal:main:form', 'railway:signal:combined', 'railway:signal:combined:states', 'railway:signal:ring', 'railway:signal:main:states', 'railway:signal:station_distant:form', 'railway:signal:distant:states', 'railway:signal:distant:repeated'];
 
     MapCSS.loadStyle('signals', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('signals');
