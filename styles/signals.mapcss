@@ -510,6 +510,33 @@ node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=
 }
 
 /*********************************/
+/* DE crossing distant sign Bü 2 */
+/*********************************/
+node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"][!"railway:signal:crossing_distant:shortened"],
+node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:signal:crossing_distant:shortened"=no]
+{
+	z-index: 500;
+	icon-image: "icons/de-bue2-ds-56.png";
+	icon-width: 7;
+	icon-height: 28;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
+/******************************************************/
+/* DE crossing distant sign Bü 2 with reduced distance*/
+/******************************************************/
+node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:signal:crossing_distant:shortened"=yes]
+{
+	z-index: 500;
+	icon-image: "icons/de-bue2-ds-reduced-distance-56.png";
+	icon-width: 7;
+	icon-height: 28;
+	text-allow-overlap: true;
+    allow-overlap: true;
+}
+
+/*********************************/
 /* DE whistle sign Bü 4 (DS 301) */
 /*********************************/
 node|z14-[railway=signal]["railway:signal:whistle"="db:bü4"]
