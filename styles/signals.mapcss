@@ -523,9 +523,9 @@ node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:sig
     allow-overlap: true;
 }
 
-/******************************************************/
-/* DE crossing distant sign Bü 2 with reduced distance*/
-/******************************************************/
+/*******************************************************/
+/* DE crossing distant sign Bü 2 with reduced distance */
+/*******************************************************/
 node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:signal:crossing_distant:shortened"=yes]
 {
 	z-index: 500;
