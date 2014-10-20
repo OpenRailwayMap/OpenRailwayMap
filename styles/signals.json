@@ -3,11 +3,25 @@
 	"mapfeatures":
 	[
 		{
-			"id": "main_semaphore_de_hp",
+			"id": "main_semaphore_de_hp0",
 			"minzoom": 14,
 			"maxzoom": 19,
-			"icon": "icons/de-hp-semaphore.png",
-			"caption": "Hp-Formhauptsignal"
+			"icon": "icons/de-hp0-semaphore-16.png",
+			"caption": "Hp-Formhauptsignal ohne Angabe der Signalzustände"
+		},
+		{
+			"id": "main_semaphore_de_hp1",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-hp1-semaphore-19.png",
+			"caption": "Hp-Formhauptsignal ohne Hp 2"
+		},
+		{
+			"id": "main_semaphore_de_hp2",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-hp2-semaphore-20.png",
+			"caption": "Hp-Formhauptsignal mit Hp 2"
 		},
 		{
 			"id": "main_light_de_hp",

@@ -22,24 +22,67 @@ meta
 	watch-modified: true;
 }
 
-/***************************/
-/* DE Hp-Form-Hauptsignale */
-/***************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]
+/*******************************************/
+/* DE main semaphore signals type Hp which */
+/*  - have no railway:signal:states=* tag  */
+/*******************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:main:states"]
 {
 	z-index: 10000;
 	text: "ref";
-	text-offset: 11;
+	text-offset: 12;
 	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-hp-semaphore.png";
+	icon-image: "icons/de-hp0-semaphore-32.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*******************************************/
+/* DE main semaphore signals type Hp which */
+/*  - cannot display Hp 2                  */
+/*******************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hp1-semaphore-38.png";
+	icon-width: 12;
+	icon-height: 19;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*******************************************/
+/* DE main semaphore signals type Hp which */
+/*  - can display Hp 2                     */
+/*******************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hp2-semaphore-40.png";
+	icon-width: 12;
+	icon-height: 20;
+	text-allow-overlap: true;
+	allow-overlap: true;
 }
 
 /****************************/
