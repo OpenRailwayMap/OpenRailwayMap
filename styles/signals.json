@@ -204,6 +204,20 @@
 			"maxzoom": 21,
 			"icon": "icons/de-ne6-24.png",
 			"caption": "Ne 6 Haltepunkttafel"
+		},
+		{
+			"id": "crossing_distant_sign_de_bue2",
+			"minzoom": 15,
+			"maxzoom": 21,
+			"icon": "icons/de-bue2-ds-28.png",
+			"caption": "Bü 2 Rautentafel"
+		},
+		{
+			"id": "crossing_distant_sign_de_bue2_reduced_distant",
+			"minzoom": 15,
+			"maxzoom": 21,
+			"icon": "icons/de-bue2-ds-reduced-distance-28.png",
+			"caption": "Bü 2 Rautentafel in verkürztem Bremswegabstand"
 		}
 	]
 }
