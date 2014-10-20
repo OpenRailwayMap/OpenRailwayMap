@@ -62,6 +62,18 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
     allow-overlap: true;
 }
 
+/***************************/
+/* DE main entry sign Ne 1 */
+/***************************/
+node|z14-[railway=signal]["railway:signal:main"="ne1"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
+{
+	z-index: 8000;
+	icon-image: "icons/de-ne1-32.png";
+	icon-width: 16;
+	icon-height: 10;
+    allow-overlap: true;
+}
+
 /**********************************************/
 /* DE distant semaphore signals type Vr which */
 /*  - do not share post with a main signal    */
@@ -302,7 +314,8 @@ node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:dis
 /*********************/
 /* DE Sh-Formsignale */
 /*********************/
-node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=normal], node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore][!"railway:signal:minor:height"]
+node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=normal],
+node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore][!"railway:signal:minor:height"]
 {
 	z-index: 4000;
 	text: "ref";
@@ -342,7 +355,8 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 /**********************/
 /* DE Sh-Lichtsignale */
 /**********************/
-node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal], node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light][!"railway:signal:minor:height"]
+node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal],
+node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light][!"railway:signal:minor:height"]
 {
 	z-index: 5000;
 	text: "ref";
@@ -452,19 +466,6 @@ node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=
     allow-overlap: true;
 }
 
-/******************/
-/* DE Trapeztafel */
-/******************/
-node|z14-[railway=signal]["railway:signal:main"=ne1]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
-{
-	z-index: 1000;
-	icon-image: "icons/de-ne1.png";
-	icon-width: 16;
-	icon-height: 16;
-	text-allow-overlap: true;
-    allow-overlap: true;
-}
-
 /*********************************/
 /* DE whistle sign Bü 4 (DS 301) */
 /*********************************/
@@ -566,9 +567,9 @@ node|z14-[railway=signal]["railway:signal:main"="AT:trapeztafel"]["railway:signa
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-ne1.png";
+	icon-image: "icons/de-ne1-32.png";
 	icon-width: 16;
-	icon-height: 16;
+	icon-height: 10;
 	text-allow-overlap: true;
     allow-overlap: true;
 }

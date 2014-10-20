@@ -69,15 +69,15 @@
 			"id": "main_sign_de-at",
 			"minzoom": 14,
 			"maxzoom": 19,
-			"icon": "icons/de-ne1.png",
-			"caption": "Trapeztafel"
+			"icon": "icons/de-ne1-16.png",
+			"caption": "Ne 1 Trapeztafel"
 		},
 		{
 			"id": "stop_sign_de",
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-ne5-ds301-16.png",
-			"caption": "Haltetafel"
+			"caption": "Ne 5 Haltetafel"
 		},
 		{
 			"id": "distant_semaphore_de_vr0",
