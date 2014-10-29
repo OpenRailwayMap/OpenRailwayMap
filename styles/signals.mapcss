@@ -148,6 +148,115 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	allow-overlap: true;
 }
 
+
+/******************************************/
+/* DE main light signals type Hl which    */
+/*  - have no railway:signal:states=* tag */
+/******************************************/
+node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light][!"railway:signal:main:states"]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl0-32.png";
+	icon-width: 7;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/****************************************/
+/* DE main light signals type Hl which  */
+/*  - cannot display Hl 2, Hl 3a, Hl 3b */
+/****************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3a.*/]["railway:signal:main:states"!~/.*hl3b.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl1-32.png";
+	icon-width: 7;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************************/
+/* DE main light signals type Hl which */
+/*  - cannot display Hl 3b and Hl 2    */
+/***************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl3a-32.png";
+	icon-width: 7;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************************/
+/* DE main light signals type Hl which */
+/*  - can display Hl 3a, Hl 3b         */
+/*  - cannot display Hl 2              */
+/***************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl3b-48.png";
+	icon-width: 8;
+	icon-height: 24;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*********************************************/
+/* DE main light signals type Hl which       */
+/*  - can display Hl 2, Hl 3a                */
+/*  - don't have to be able to display Hl 3b */
+/*********************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/],
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl2-48.png";
+	icon-width: 8;
+	icon-height: 24;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /***************************/
 /* DE main entry sign Ne 1 */
 /***************************/
