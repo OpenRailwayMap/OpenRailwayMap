@@ -174,7 +174,7 @@ node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=l
 /* DE main light signals type Hl which  */
 /*  - cannot display Hl 2, Hl 3a, Hl 3b */
 /****************************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3a.*/]["railway:signal:main:states"!~/.*hl3b.*/]
+node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3a.*/]["railway:signal:main:states"!~/.*hl3b.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -195,7 +195,7 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 /* DE main light signals type Hl which */
 /*  - cannot display Hl 3b and Hl 2    */
 /***************************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
+node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -217,7 +217,7 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 /*  - can display Hl 3a, Hl 3b         */
 /*  - cannot display Hl 2              */
 /***************************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
+node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -239,8 +239,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 /*  - can display Hl 2, Hl 3a                */
 /*  - don't have to be able to display Hl 3b */
 /*********************************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]
+node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/],
+node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -482,6 +482,27 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 	icon-image: "icons/de-vr2-light-repeated-32.png";
 	icon-width: 16;
 	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/******************************************/
+/* DE distant light signals type Hl which */
+/******************************************/
+node|z14-[railway=signal]["railway:signal:distant"=hl]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
+node|z14-[railway=signal]["railway:signal:distant"=hl]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]
+{
+	z-index: 8500;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl1-distant-24.png";
+	icon-width: 8;
+	icon-height: 12;
 	text-allow-overlap: true;
 	allow-overlap: true;
 }
