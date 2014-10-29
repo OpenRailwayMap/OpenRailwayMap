@@ -1042,8 +1042,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:minor:form"
 					value="light" />
 			</item>
-			<item name="Trapeztafel" icon="de-ne1.png" type="node">
-				<label text="Trapeztafel" />
+			<item name="Trapeztafel (Ne 1)" icon="de-ne1.png" type="node">
+				<label text="Trapeztafel (Ne 1)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
@@ -1082,8 +1082,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:main:function"
 					value="entry" />
 			</item>
-			<item name="Vorsignaltafel" icon="de-ne2.png" type="node">
-				<label text="Vorsignaltafel" />
+			<item name="Vorsignaltafel (Ne 2)" icon="de-ne2.png" type="node">
+				<label text="Vorsignaltafel (Ne 2)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
@@ -1123,8 +1123,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Kreuztafel" icon="de-so106.png" type="node">
-				<label text="Kreuztafel" />
+			<item name="Kreuztafel (So 106)" icon="de-so106.png" type="node">
+				<label text="Kreuztafel (So 106)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
@@ -1156,8 +1156,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<separator />
 			<group name="Bahnübergangssignale" icon="de-bue-signals.png">
-				<item name="Bü-Überwachungssignal" icon="de-bue.png" type="node">
-					<label text="Bü-Überwachungssignal" />
+				<item name="Bü-Überwachungssignal (Bü 0/Bü 1)" icon="de-bue.png" type="node">
+					<label text="Bü-Überwachungssignal (Bü 0/Bü 1)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
@@ -1209,8 +1209,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Bü-Überwachungssignal erwarten" icon="de-bue2.png" type="node">
-					<label text="Bü-Überwachungssignal erwarten" />
+				<item name="Bü-Überwachungssignal erwarten (Bü 2/So 15)" icon="de-bue2.png" type="node">
+					<label text="Bü-Überwachungssignal erwarten (Bü 2/So 15)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
@@ -1255,8 +1255,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Einschaltkontakt Bahnübergang" icon="de-bue3.png" type="node">
-					<label text="Einschaltkontakt Bahnübergang" />
+				<item name="Einschaltkontakt Bahnübergang (Bü 3/So 14)" icon="de-bue3.png" type="node">
+					<label text="Einschaltkontakt Bahnübergang (Bü 3/So 14)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
@@ -1301,8 +1301,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Pfeiftafel" icon="de-bue4.png" type="node">
-					<label text="Pfeiftafel" />
+				<item name="Pfeiftafel (Bü 4/Pf 1/2)" icon="de-bue4.png" type="node">
+					<label text="Pfeiftafel (Bü 4/Pf 1/2)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
@@ -1347,8 +1347,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Läutetafel" icon="de-bue5.png" type="node">
-					<label text="Läutetafel" />
+				<item name="Läutetafel (Bü 5)" icon="de-bue5.png" type="node">
+					<label text="Läutetafel (Bü 5)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
