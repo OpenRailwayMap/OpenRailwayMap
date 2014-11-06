@@ -2316,6 +2316,46 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
+			<item name="Schachbretttafel (Ne 4)" icon="de-ne4.png" type="node">
+				<label text="Schachbretttafel (Ne 4)" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:expected_position:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:expected_position"
+					text="Side of track where the signal would be mounted usually"
+					de.text="Gleisseite, auf der man das Signal normalerweise erwarten würde"
+					values="left,right"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:expected_position:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					default=""
+					display_values="Mastbauform,Zwergsignal"
+					delete_if_empty="true" />
+			</item>
 			<item name="Haltetafel (Ne 5)" icon="de-ne5-ds301-32.png" type="node">
 				<label text="Haltetafel (Ne 5)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
@@ -2424,7 +2464,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
-				<combo key="railway:signal:snowplow:order"
+				<combo key="railway:signal:snowplow:type"
 					text="Order"
 					de.text="Anweisung"
 					values="up,down"
