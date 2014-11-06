@@ -257,6 +257,115 @@ node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=l
 	allow-overlap: true;
 }
 
+
+/******************************************/
+/* DE combined light signals type Hl which    */
+/*  - have no railway:signal:states=* tag */
+/******************************************/
+node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light][!"railway:signal:combined:states"]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl0-32.png";
+	icon-width: 7;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/****************************************/
+/* DE combined light signals type Hl which  */
+/*  - cannot display Hl 11, Hl 12a, Hl 12b */
+/****************************************/
+node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12a.*/]["railway:signal:combined:states"!~/.*hl12b.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl10-32.png";
+	icon-width: 7;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************************/
+/* DE combined light signals type Hl which */
+/*  - cannot display Hl 12b and Hl 11    */
+/***************************************/
+node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl12a-32.png";
+	icon-width: 7;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************************/
+/* DE combined light signals type Hl which */
+/*  - can display Hl 12a, Hl 12b         */
+/*  - cannot display Hl 11              */
+/***************************************/
+node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl12b-48.png";
+	icon-width: 8;
+	icon-height: 24;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*********************************************/
+/* DE combined light signals type Hl which       */
+/*  - can display Hl 11, Hl 12a                */
+/*  - don't have to be able to display Hl 12b */
+/*********************************************/
+node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/],
+node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hl11-48.png";
+	icon-width: 8;
+	icon-height: 24;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /***************************/
 /* DE main entry sign Ne 1 */
 /***************************/
