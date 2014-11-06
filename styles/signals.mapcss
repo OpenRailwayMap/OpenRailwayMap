@@ -650,8 +650,8 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-sh-semaphore.png";
-	icon-width: 16;
+	icon-image: "icons/de-sh1-semaphore-normal-32.png";
+	icon-width: 14;
 	icon-height: 16;
 	text-allow-overlap: true;
     allow-overlap: true;
@@ -670,9 +670,9 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-sh-semaphore-dwarf.png";
+	icon-image: "icons/de-sh0-semaphore-dwarf-32.png";
 	icon-width: 16;
-	icon-height: 16;
+	icon-height: 15;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
@@ -691,9 +691,9 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-sh-light.png";
+	icon-image: "icons/de-sh1-light-normal-32.png";
 	icon-width: 16;
-	icon-height: 16;
+	icon-height: 12;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
@@ -711,9 +711,9 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-sh-light-dwarf.png";
+	icon-image: "icons/de-sh0-light-dwarf-32.png";
 	icon-width: 16;
-	icon-height: 16;
+	icon-height: 10;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
