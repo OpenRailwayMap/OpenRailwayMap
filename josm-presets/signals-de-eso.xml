@@ -2316,8 +2316,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Haltetafel" icon="de-ne5-ds301-32.png" type="node">
-				<label text="Haltetafel" />
+			<item name="Haltetafel (Ne 5)" icon="de-ne5-ds301-32.png" type="node">
+				<label text="Haltetafel (Ne 5)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
