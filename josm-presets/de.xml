@@ -5132,7 +5132,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<key key="railway"
 					value="signal" />
-				<check key="railway:signal:lzb_start:deactivated"
+				<check key="railway:signal:train_protection:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
@@ -5156,9 +5156,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Am Oberleitungsmast"
 					default="off"
 					delete_if_empty="true" />
-				<key key="railway:signal:lzb_start"
-					value="DE:lzb-bereichskennzeichen" />
-				<key key="railway:signal:lzb_start:form"
+				<key key="railway:signal:train_protection"
+					value="DE-ESO:lzb-bereichskennzeichen" />
+				<combo key="railway:signal:train_protection:type"
+					text="Type"
+					de.text="Typ"
+					values="start,section"
+					display_values="LZB-Anfang,Bereichswechsel"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
 			<item name="Zugfunk-Kanalhinweis" icon="de-radio.png" type="node">
