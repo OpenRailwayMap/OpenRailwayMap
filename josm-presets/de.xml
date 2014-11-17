@@ -4843,7 +4843,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
-				<text key="railway:signal:stop:description"
+				<text key="railway:signal:stop:caption"
 					text="Description"
 					de.text="Zusatztext"
 					default=""
