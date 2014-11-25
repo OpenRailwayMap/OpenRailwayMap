@@ -34,28 +34,28 @@
 			"id": "minor_semaphore_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
-			"icon": "icons/de-sh-semaphore.png",
+			"icon": "icons/de-sh1-semaphore-normal-12.png",
 			"caption": "Sh-Formsperrsignal"
 		},
 		{
 			"id": "minor_semaphore_dwarf_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
-			"icon": "icons/de-sh-semaphore-dwarf.png",
+			"icon": "icons/de-sh0-semaphore-dwarf-12.png",
 			"caption": "Sh-Zwerg-Formsperrsignal"
 		},
 		{
 			"id": "minor_light_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
-			"icon": "icons/de-sh-light.png",
+			"icon": "icons/de-sh1-light-normal-12.png",
 			"caption": "Sh-Lichtsperrsignal"
 		},
 		{
 			"id": "minor_light_dwarf_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
-			"icon": "icons/de-sh-light-dwarf.png",
+			"icon": "icons/de-sh0-light-dwarf-12.png",
 			"caption": "Sh-Zwerg-Lichtsperrsignal"
 		},
 		{
