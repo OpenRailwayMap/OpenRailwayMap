@@ -85,24 +85,67 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=s
 	allow-overlap: true;
 }
 
-/****************************/
-/* DE Hp-Licht-Hauptsignale */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]
+/******************************************/
+/* DE main light signals type Hp which    */
+/*  - have no railway:signal:states=* tag */
+/******************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:main:states"]
 {
 	z-index: 10000;
 	text: "ref";
-	text-offset: 11;
+	text-offset: 12;
 	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-hp-light.png";
-	icon-width: 16;
+	icon-image: "icons/de-hp0-light-32.png";
+	icon-width: 9;
 	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************************/
+/* DE main light signals type Hp which */
+/*  - cannot display Hp 2              */
+/***************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hp1-light-32.png";
+	icon-width: 9;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************************/
+/* DE main light signals type Hp which */
+/*  - can display Hp 2                 */
+/***************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hp2-light-32.png";
+	icon-width: 8;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
 }
 
 /***************************/
