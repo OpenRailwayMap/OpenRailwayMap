@@ -24,11 +24,25 @@
 			"caption": "Hp-Formhauptsignal mit Hp 2"
 		},
 		{
-			"id": "main_light_de_hp",
+			"id": "main_light_de_hp0",
 			"minzoom": 14,
 			"maxzoom": 19,
-			"icon": "icons/de-hp-light.png",
-			"caption": "Hp-Lichthauptsignal"
+			"icon": "icons/de-hp0-light-16.png",
+			"caption": "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
+		},
+		{
+			"id": "main_light_de_hp1",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-hp1-light-16.png",
+			"caption": "Hp-Lichthauptsignal ohne Hp 2"
+		},
+		{
+			"id": "main_light_de_hp2",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-hp2-light-16.png",
+			"caption": "Hp-Lichthauptsignal mit Hp 2"
 		},
 		{
 			"id": "minor_semaphore_de_sh",
