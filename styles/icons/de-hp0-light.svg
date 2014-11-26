@@ -7,10 +7,34 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    width="83.337585"
    height="154.85638"
-   id="svg2984">
+   id="svg2984"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="de-hp0-light.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview24"
+     showgrid="false"
+     inkscape:zoom="1.5239927"
+     inkscape:cx="168.61206"
+     inkscape:cy="77.428192"
+     inkscape:window-x="1754"
+     inkscape:window-y="481"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2984" />
   <defs
      id="defs2986">
     <filter
@@ -18,6 +42,20 @@
        id="filter3000">
       <feGaussianBlur
          id="feGaussianBlur3002"
+         stdDeviation="3" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter3005">
+      <feGaussianBlur
+         id="feGaussianBlur3007"
+         stdDeviation="3" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter3005-2">
+      <feGaussianBlur
+         id="feGaussianBlur3007-4"
          stdDeviation="3" />
     </filter>
   </defs>
@@ -29,7 +67,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -43,16 +81,6 @@
   <g
      transform="translate(0,-857.90782)"
      id="layer1" />
-  <g
-     transform="matrix(2.28,0,0,2.28,-10.243669,-224.73838)"
-     id="layer4"
-     style="fill:#ff0000;display:inline;filter:url(#filter3000)">
-    <path
-       d="m -41.416254,164.19525 a 6.8185296,6.8185296 0 1 1 -13.637059,0 6.8185296,6.8185296 0 1 1 13.637059,0 z"
-       transform="matrix(1.4190262,0,0,1.4190262,87.386788,-110.9231)"
-       id="path4895"
-       style="fill:#ff0000;fill-opacity:1;stroke:none" />
-  </g>
   <g
      id="layer8"
      style="display:none">
@@ -115,4 +143,15 @@
   <g
      transform="translate(0,-857.90782)"
      id="layer3" />
+  <g
+     transform="matrix(0.24673667,0,0,0.24673667,-11.219165,-425.94898)"
+     id="layer3-8"
+     style="display:inline">
+    <path
+       inkscape:connector-curvature="0"
+       d="m 2705.0531,894.29816 a 34.9916,34.9916 0 1 1 -69.9832,0 34.9916,34.9916 0 1 1 69.9832,0 z"
+       transform="matrix(1.765267,0,0,1.765267,-4566.8363,348.43997)"
+       id="path3759"
+       style="fill:#ff0016;fill-opacity:1;stroke:none;filter:url(#filter3005-2)" />
+  </g>
 </svg>
