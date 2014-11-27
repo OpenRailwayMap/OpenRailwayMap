@@ -12,7 +12,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
-	<group name="OpenRailwayMap Infrastructure" de.name="OpenRailwayMap Infrastruktur" icon="signals.png">
+	<group name="OpenRailwayMap Infrastructure DE" de.name="OpenRailwayMap Infrastruktur DE" icon="signals.png">
 		<group name="Gleise" icon="rail.png">
 			<item name="Streckengleis / Hauptgleis" icon="rail.png" type="way">
 				<label text="Streckengleise (ohne Überleitgleise) und durchgehende Hauptgleise in einem Bahnhof. Jedes Gleis wird einzeln erfasst." />
