@@ -24,38 +24,52 @@
 			"caption": "Hp-Formhauptsignal mit Hp 2"
 		},
 		{
-			"id": "main_light_de_hp",
+			"id": "main_light_de_hp0",
 			"minzoom": 14,
 			"maxzoom": 19,
-			"icon": "icons/de-hp-light.png",
-			"caption": "Hp-Lichthauptsignal"
+			"icon": "icons/de-hp0-light-16.png",
+			"caption": "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
+		},
+		{
+			"id": "main_light_de_hp1",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-hp1-light-16.png",
+			"caption": "Hp-Lichthauptsignal ohne Hp 2"
+		},
+		{
+			"id": "main_light_de_hp2",
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-hp2-light-16.png",
+			"caption": "Hp-Lichthauptsignal mit Hp 2"
 		},
 		{
 			"id": "minor_semaphore_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
-			"icon": "icons/de-sh-semaphore.png",
+			"icon": "icons/de-sh1-semaphore-normal-12.png",
 			"caption": "Sh-Formsperrsignal"
 		},
 		{
 			"id": "minor_semaphore_dwarf_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
-			"icon": "icons/de-sh-semaphore-dwarf.png",
+			"icon": "icons/de-sh0-semaphore-dwarf-12.png",
 			"caption": "Sh-Zwerg-Formsperrsignal"
 		},
 		{
 			"id": "minor_light_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
-			"icon": "icons/de-sh-light.png",
+			"icon": "icons/de-sh1-light-normal-12.png",
 			"caption": "Sh-Lichtsperrsignal"
 		},
 		{
 			"id": "minor_light_dwarf_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
-			"icon": "icons/de-sh-light-dwarf.png",
+			"icon": "icons/de-sh0-light-dwarf-12.png",
 			"caption": "Sh-Zwerg-Lichtsperrsignal"
 		},
 		{
