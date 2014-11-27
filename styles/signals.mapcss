@@ -85,24 +85,67 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=s
 	allow-overlap: true;
 }
 
-/****************************/
-/* DE Hp-Licht-Hauptsignale */
-/****************************/
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]
+/******************************************/
+/* DE main light signals type Hp which    */
+/*  - have no railway:signal:states=* tag */
+/******************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:main:states"]
 {
 	z-index: 10000;
 	text: "ref";
-	text-offset: 11;
+	text-offset: 12;
 	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-hp-light.png";
-	icon-width: 16;
+	icon-image: "icons/de-hp0-light-32.png";
+	icon-width: 9;
 	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************************/
+/* DE main light signals type Hp which */
+/*  - cannot display Hp 2              */
+/***************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hp1-light-32.png";
+	icon-width: 9;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************************/
+/* DE main light signals type Hp which */
+/*  - can display Hp 2                 */
+/***************************************/
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hp2-light-32.png";
+	icon-width: 8;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
 }
 
 /***************************/
@@ -334,9 +377,9 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 	allow-overlap: true;
 }
 
-/***************************/
+/*********************************************/
 /* DE distant signal replacement by sign Ne2 */
-/***************************/
+/*********************************************/
 node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]
 {
 	z-index: 9000;
@@ -354,9 +397,9 @@ node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:dis
     allow-overlap: true;
 }
 
-/*********************/
-/* DE Sh-Formsignale */
-/*********************/
+/**************************************/
+/* DE minor semaphore signals type Sh */
+/**************************************/
 node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=normal],
 node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore][!"railway:signal:minor:height"]
 {
@@ -368,16 +411,16 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-sh1-semaphore-normal-32.png";
-	icon-width: 14;
-	icon-height: 16;
+	icon-image: "icons/de-sh1-semaphore-normal-24.png";
+	icon-width: 10;
+	icon-height: 12;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
 
-/***************************/
-/* DE Sh-Zwerg-Formsignale */
-/***************************/
+/********************************************/
+/* DE minor semaphore dwarf signals type Sh */
+/********************************************/
 node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=dwarf]
 {
 	z-index: 2000;
@@ -388,16 +431,16 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-sh0-semaphore-dwarf-32.png";
-	icon-width: 16;
-	icon-height: 15;
+	icon-image: "icons/de-sh0-semaphore-dwarf-24.png";
+	icon-width: 12;
+	icon-height: 11;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
 
-/**********************/
-/* DE Sh-Lichtsignale */
-/**********************/
+/**********************************/
+/* DE minor light signals type Sh */
+/**********************************/
 node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal],
 node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light][!"railway:signal:minor:height"]
 {
@@ -409,16 +452,16 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-sh1-light-normal-32.png";
-	icon-width: 16;
-	icon-height: 12;
+	icon-image: "icons/de-sh1-light-normal-24.png";
+	icon-width: 12;
+	icon-height: 9;
 	text-allow-overlap: true;
     allow-overlap: true;
 }
 
-/****************************/
-/* DE Sh-Zwerg-Lichtsignale */
-/****************************/
+/****************************************/
+/* DE minor light dwarf signals type Sh */
+/****************************************/
 node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light]["railway:signal:minor:height"=dwarf]
 {
 	z-index: 3000;
@@ -429,9 +472,9 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-sh0-light-dwarf-32.png";
-	icon-width: 16;
-	icon-height: 10;
+	icon-image: "icons/de-sh0-light-dwarf-24.png";
+	icon-width: 12;
+	icon-height: 8;
 	text-allow-overlap: true;
     allow-overlap: true;
 }

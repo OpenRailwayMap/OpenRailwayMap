@@ -255,9 +255,9 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de-sh-semaphore.png';
-            s_default['icon-width'] = '16';
-            s_default['icon-height'] = '16';
+            s_default['icon-image'] = 'icons/de-sh1-semaphore-normal-24.png';
+            s_default['icon-width'] = '10';
+            s_default['icon-height'] = '12';
             s_default['text-allow-overlap'] = 'true';
             s_default['allow-overlap'] = 'true';
         }
@@ -271,9 +271,9 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de-sh-semaphore-dwarf.png';
-            s_default['icon-width'] = '16';
-            s_default['icon-height'] = '16';
+            s_default['icon-image'] = 'icons/de-sh0-semaphore-dwarf-24.png';
+            s_default['icon-width'] = '12';
+            s_default['icon-height'] = '11';
             s_default['text-allow-overlap'] = 'true';
             s_default['allow-overlap'] = 'true';
         }
@@ -287,9 +287,9 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de-sh-light.png';
-            s_default['icon-width'] = '16';
-            s_default['icon-height'] = '16';
+            s_default['icon-image'] = 'icons/de-sh1-light-normal-24.png';
+            s_default['icon-width'] = '12';
+            s_default['icon-height'] = '9';
             s_default['text-allow-overlap'] = 'true';
             s_default['allow-overlap'] = 'true';
         }
@@ -303,9 +303,9 @@
             s_default['text-halo-radius'] = 1;
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
-            s_default['icon-image'] = 'icons/de-sh-light-dwarf.png';
-            s_default['icon-width'] = '16';
-            s_default['icon-height'] = '16';
+            s_default['icon-image'] = 'icons/de-sh0-light-dwarf-24.png';
+            s_default['icon-width'] = '12';
+            s_default['icon-height'] = '8';
             s_default['text-allow-overlap'] = 'true';
             s_default['allow-overlap'] = 'true';
         }
@@ -547,70 +547,70 @@
             height: 43, 
             offset: 482
         },
-        'icons/de-sh-light-dwarf.png': {
-            width: 16, 
-            height: 16, 
+        'icons/de-sh0-light-dwarf-24.png': {
+            width: 24, 
+            height: 15, 
             offset: 525
         },
-        'icons/de-sh-light.png': {
-            width: 16, 
-            height: 16, 
-            offset: 541
+        'icons/de-sh0-semaphore-dwarf-24.png': {
+            width: 24, 
+            height: 22, 
+            offset: 540
         },
-        'icons/de-sh-semaphore-dwarf.png': {
-            width: 16, 
-            height: 16, 
-            offset: 557
+        'icons/de-sh1-light-normal-24.png': {
+            width: 24, 
+            height: 18, 
+            offset: 562
         },
-        'icons/de-sh-semaphore.png': {
-            width: 16, 
-            height: 16, 
-            offset: 573
+        'icons/de-sh1-semaphore-normal-24.png': {
+            width: 21, 
+            height: 24, 
+            offset: 580
         },
         'icons/de-vr0-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 589
+            offset: 604
         },
         'icons/de-vr0-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 621
+            offset: 636
         },
         'icons/de-vr0-semaphore-52.png': {
             width: 24, 
             height: 53, 
-            offset: 653
+            offset: 668
         },
         'icons/de-vr1-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 706
+            offset: 721
         },
         'icons/de-vr1-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 738
+            offset: 753
         },
         'icons/de-vr1-semaphore-38.png': {
             width: 24, 
             height: 38, 
-            offset: 770
+            offset: 785
         },
         'icons/de-vr2-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 808
+            offset: 823
         },
         'icons/de-vr2-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 840
+            offset: 855
         },
         'icons/de-vr2-semaphore-53.png': {
             width: 24, 
             height: 53, 
-            offset: 872
+            offset: 887
         }
     }, external_images = ['icons/de-bue5-ds-32.png', 'icons/de-hp-light.png', 'icons/de-ne2.png'], presence_tags = [], value_tags = ['ref', 'railway:signal:stop:form', 'railway:signal:stop', 'railway:signal:minor', 'railway:signal:ring:only_transit', 'railway:signal:crossing_distant', 'railway:signal:main:function', 'railway:signal:whistle', 'railway:signal:minor:form', 'railway:signal:crossing_distant:shortened', 'railway:signal:distant', 'railway:signal:combined:form', 'railway:signal:distant:form', 'railway:signal:distant:shortened', 'railway', 'railway:signal:minor:height', 'railway:signal:main', 'railway:signal:station_distant', 'railway:signal:main:form', 'railway:signal:combined', 'railway:signal:combined:states', 'railway:signal:ring', 'railway:signal:main:states', 'railway:signal:station_distant:form', 'railway:signal:distant:states', 'railway:signal:distant:repeated'];
 

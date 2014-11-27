@@ -55,3 +55,57 @@ way[railway][traffic_mode]
 	assertNoMatch: "area railway=rail";
 	assertNoMatch: "way railway=rail railway:traffic_mode=passenger";
 }
+
+/* Track without workrules */
+way[railway][!workrules]
+{
+	throwOther: "Track without with workrules";
+	assertMatch: "way railway=rail";
+	assertNoMatch: "node railway=rail workrules=EBO";
+	assertNoMatch: "area railway=rail";
+	assertNoMatch: "way railway=rail workrules=EBO";
+}
+
+/* workrules=EBO is deprecated, should be changed to workrules=DE:EBO */
+way[railway][workrules=EBO]
+{
+	throwError: "workrules=EBO is deprecated, change to workrules=DE:EBO";
+	assertMatch: "way railway=rail workrules=EBO";
+	assertNoMatch: "node railway=rail";
+	assertNoMatch: "way railway=rail";
+	assertNoMatch: "area railway=rail";
+	assertNoMatch: "way railway=rail workrules=DE:EBO";
+}
+
+/* workrules=ESBO is deprecated, should be changed to workrules=DE:ESBO */
+way[railway][workrules=ESBO]
+{
+	throwError: "workrules=ESBO is deprecated, change to workrules=DE:ESBO";
+	assertMatch: "way railway=rail workrules=ESBO";
+	assertNoMatch: "node railway=rail";
+	assertNoMatch: "way railway=rail";
+	assertNoMatch: "area railway=rail";
+	assertNoMatch: "way railway=rail workrules=DE:ESBO";
+}
+
+/* workrules=BOStrab is deprecated, should be changed to workrules=DE:BOStrab */
+way[railway][workrules=BOStrab]
+{
+	throwError: "workrules=BOStrab is deprecated, change to workrules=DE:BOStrab";
+	assertMatch: "way railway=rail workrules=BOStrab";
+	assertNoMatch: "node railway=rail";
+	assertNoMatch: "way railway=rail";
+	assertNoMatch: "area railway=rail";
+	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
+}
+
+/* workrules=BOA is deprecated, should be replaced by an adequate value */
+way[railway][workrules=BOA]
+{
+	throwError: "workrules=BOA is deprecated, replace by an adequate value";
+	assertMatch: "way railway=rail workrules=BOA";
+	assertNoMatch: "node railway=rail";
+	assertNoMatch: "way railway=rail";
+	assertNoMatch: "area railway=rail";
+	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
+}
