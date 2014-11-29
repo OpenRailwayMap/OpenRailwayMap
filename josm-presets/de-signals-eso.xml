@@ -13,7 +13,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
 	<group name="OpenRailwayMap Signale DE ESO" icon="signals.png">
-			<group name="Ks-Signale" icon="de-ks-signals.png">
+			<group name="Ks-Signale" icon="de-ks-combined.png">
 				<item name="Ks-Vorsignal" icon="de-ks-distant.png" type="node">
 					<label text="Ks-Vorsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
@@ -739,8 +739,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 				</item>
 			</group>
-			<group name="H/V-Signale" icon="de-hv-signals.png">
-				<item name="Hp-Form-Hauptsignal" icon="de-hp-semaphore.png" type="node">
+			<group name="H/V-Signale" icon="de-hp0-semaphore-32.png">
+				<item name="Hp-Form-Hauptsignal" icon="de-hp0-semaphore-32.png" type="node">
 					<label text="Hp-Form-Hauptsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -813,7 +813,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="- Abfahrtssignal Zp 8/Zp 9" />
 					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 				</item>
-				<item name="Hp-Licht-Hauptsignal" icon="de-hp-light.png" type="node">
+				<item name="Hp-Licht-Hauptsignal" icon="de-hp2-light-32.png" type="node">
 					<label text="Hp-Licht-Hauptsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -894,7 +894,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
 				</item>
 				<separator />
-				<item name="Vr-Form-Vorsignal" icon="de-vr-semaphore.png" type="node">
+				<item name="Vr-Form-Vorsignal" icon="de-vr2-semaphore-32.png" type="node">
 					<label text="Vr-Form-Vorsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1042,7 +1042,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:minor:form"
 					value="light" />
 			</item>
-			<item name="Trapeztafel (Ne 1)" icon="de-ne1.png" type="node">
+			<item name="Trapeztafel (Ne 1)" icon="de-ne1-32.png" type="node">
 				<label text="Trapeztafel (Ne 1)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1082,7 +1082,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:main:function"
 					value="entry" />
 			</item>
-			<item name="Vorsignaltafel (Ne 2)" icon="de-ne2.png" type="node">
+			<item name="Vorsignaltafel (Ne 2)" icon="de-ne2-32.png" type="node">
 				<label text="Vorsignaltafel (Ne 2)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1301,7 +1301,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Pfeiftafel (Bü 4/Pf 1/2)" icon="de-bue4.png" type="node">
+				<item name="Pfeiftafel (Bü 4/Pf 1/2)" icon="de-bue4-ds-32.png" type="node">
 					<label text="Pfeiftafel (Bü 4/Pf 1/2)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1347,7 +1347,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Läutetafel (Bü 5)" icon="de-bue5.png" type="node">
+				<item name="Läutetafel (Bü 5)" icon="de-bue5-32.png" type="node">
 					<label text="Läutetafel (Bü 5)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1477,8 +1477,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 			</group>
-			<group name="Schutzsignale" icon="de-sh-signals.png">
-				<item name="Schutzhaltsignal (Sh 0/Sh 1)" icon="de-sh-light.png" type="node">
+			<group name="Schutzsignale" icon="de-sh1-semaphore-normal-32.png">
+				<item name="Schutzhaltsignal (Sh 0/Sh 1)" icon="de-sh0-semaphore-dwarf-32.png" type="node">
 					<label text="Schutzhaltsignal  (Sh 0/Sh 1)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1771,7 +1771,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="ra12" />
 				</item>
 			</group>
-			<group name="Zusatzsignale" icon="de:lf7-70-sign-16.png"> <!-- Das Icon ist ein vorübergehender Platzhalter bis ein finales Zs-Icon zur Verfügung steht -->
+			<group name="Zusatzsignale" icon="de-zs3-60-sign-up-32.png">
 				<item name="Richtungsanzeiger (Zs 2)" icon="de-zs2.png" type="node">
 					<label text="Richtungsanzeiger (Zs 2)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
@@ -1855,7 +1855,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 				<separator />
-				<item name="Geschwindigkeitsanzeiger (Zs 3)" icon="de-zs3-60-sign-up-16.png" type="node">
+				<item name="Geschwindigkeitsanzeiger (Zs 3)" icon="de-zs3-60-sign-up-32.png" type="node">
 					<label text="Geschwindigkeitsanzeiger (Zs 3)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1905,7 +1905,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Mastbauform,Zwergsignal"
 						delete_if_empty="true" />
 				</item>
-				<item name="Geschwindigkeitsvoranzeiger (Zs 3v)" icon="de-zs3v-60-sign-down-16.png" type="node">
+				<item name="Geschwindigkeitsvoranzeiger (Zs 3v)" icon="de-zs3v-60-sign-down-32.png" type="node">
 					<label text="Geschwindigkeitsvoranzeiger (Zs 3v)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1955,7 +1955,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Mastbauform,Zwergsignal"
 						delete_if_empty="true" />
 				</item>
-				<item name="Endesignal (Zs 10)" icon="de-zs10-sign-16.png" type="node">
+				<item name="Endesignal (Zs 10)" icon="de-zs10-sign-32.png" type="node">
 					<label text="Endesignal (Zs 10)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -2127,8 +2127,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 			</group>
-			<group name="Langsamfahrsignale (Lf)" icon="de:lf7-140-sign-16.png">
-				<item name="Geschwindigkeitssignal" icon="de-lf7-70-sign-16.png" type="node">
+			<group name="Langsamfahrsignale (Lf)" icon="de-lf7-70-sign-32.png">
+				<item name="Geschwindigkeitssignal" icon="de-lf7-70-sign-32.png" type="node">
 					<label text="Geschwindigkeitssignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -2183,7 +2183,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Mastbauform,Zwergsignal"
 						delete_if_empty="true" />
 				</item>
-				<item name="Geschwindigkeits-Ankündesignal" icon="de-lf6-60-sign-down-16.png" type="node">
+				<item name="Geschwindigkeits-Ankündesignal" icon="de-lf6-60-sign-down-32.png" type="node">
 					<label text="Geschwindigkeits-Ankündesignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -2316,7 +2316,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Schachbretttafel (Ne 4)" icon="de-ne4.png" type="node">
+			<item name="Schachbretttafel (Ne 4)" icon="de-ne4-normal-32.png" type="node">
 				<label text="Schachbretttafel (Ne 4)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2398,7 +2398,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Haltepunkttafel (Ne 6)" icon="de-ne6.png" type="node">
+			<item name="Haltepunkttafel (Ne 6)" icon="de-ne6-32.png" type="node">
 				<label text="Haltepunkttafel (Ne 6)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
