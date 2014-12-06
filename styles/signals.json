@@ -3,231 +3,198 @@
 	"mapfeatures":
 	[
 		{
-			"id": "main_semaphore_de_hp0",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-hp0-semaphore-16.png",
 			"caption": "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 		},
 		{
-			"id": "main_semaphore_de_hp1",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-hp1-semaphore-19.png",
 			"caption": "Hp-Formhauptsignal ohne Hp 2"
 		},
 		{
-			"id": "main_semaphore_de_hp2",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-hp2-semaphore-20.png",
 			"caption": "Hp-Formhauptsignal mit Hp 2"
 		},
 		{
-			"id": "main_light_de_hp0",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-hp0-light-16.png",
 			"caption": "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 		},
 		{
-			"id": "main_light_de_hp1",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-hp1-light-16.png",
 			"caption": "Hp-Lichthauptsignal ohne Hp 2"
 		},
 		{
-			"id": "main_light_de_hp2",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-hp2-light-16.png",
 			"caption": "Hp-Lichthauptsignal mit Hp 2"
 		},
 		{
-			"id": "minor_semaphore_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-sh1-semaphore-normal-12.png",
 			"caption": "Sh-Formsperrsignal"
 		},
 		{
-			"id": "minor_semaphore_dwarf_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-sh0-semaphore-dwarf-12.png",
 			"caption": "Sh-Zwerg-Formsperrsignal"
 		},
 		{
-			"id": "minor_light_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-sh1-light-normal-12.png",
 			"caption": "Sh-Lichtsperrsignal"
 		},
 		{
-			"id": "minor_light_dwarf_de_sh",
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-sh0-light-dwarf-12.png",
 			"caption": "Sh-Zwerg-Lichtsperrsignal"
 		},
 		{
-			"id": "distant_light_de_ks",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-ks-distant.png",
 			"caption": "Ks-Vorsignal"
 		},
 		{
-			"id": "main_light_de_ks",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-ks-main.png",
 			"caption": "Ks-Hauptsignal"
 		},
 		{
-			"id": "combined_light_de_ks",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-ks-combined.png",
 			"caption": "Ks-Mehrabschnittssignal"
 		},
 		{
-			"id": "main_sign_de-at",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-ne1-16.png",
 			"caption": "Ne 1 Trapeztafel"
 		},
 		{
-			"id": "stop_sign_de",
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-ne5-ds301-16.png",
 			"caption": "Ne 5 Haltetafel"
 		},
 		{
-			"id": "distant_semaphore_de_vr0",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr0-semaphore-26.png",
 			"caption": "Vr-Formvorsignal ohne Angabe der Signalzustände"
 		},
 		{
-			"id": "distant_semaphore_de_vr1",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr1-semaphore-19.png",
 			"caption": "Vr-Formvorsignal ohne Vr 2"
 		},
 		{
-			"id": "distant_semaphore_de_vr2",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr2-semaphore-27.png",
 			"caption": "Vr-Formvorsignal mit Vr 2"
 		},
 		{
-			"id": "distant_light_de_vr0",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr0-light-16.png",
 			"caption": "Vr-Lichtvorsignal ohne Angabe der Signalzustände"
 		},
 		{
-			"id": "distant_light_de_vr1",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr1-light-16.png",
 			"caption": "Vr-Lichtvorsignal ohne Vr 2"
 		},
 		{
-			"id": "distant_light_de_vr2",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr2-light-16.png",
 			"caption": "Vr-Lichtvorsignal mit Vr 2"
 		},
 		{
-			"id": "distant_light_de_vr0_repeated",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr0-light-repeated-16.png",
 			"caption": "Vr-Lichtvorsignalwiederholer ohne Angabe der Signalzustände"
 		},
 		{
-			"id": "distant_light_de_vr1_repeated",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr1-light-repeated-16.png",
 			"caption": "Vr-Lichtvorsignalwiederholer ohne Vr 2"
 		},
 		{
-			"id": "distant_light_de_vr2_repeated",
 			"minzoom": 14,
 			"maxzoom": 19,
 			"icon": "icons/de-vr2-light-repeated-16.png",
 			"caption": "Vr-Lichtvorsignalwiederholer mit Vr 2"
 		},
 		{
-			"id": "whistle_sign_de_bue4",
 			"minzoom": 14,
 			"maxzoom": 16,
 			"icon": "icons/de-bue4-ds-16.png",
 			"caption": "Bü 4 Pfeiftafel"
 		},
 		{
-			"id": "whistle_sign_de_bue4_transit",
 			"minzoom": 14,
 			"maxzoom": 21,
 			"icon": "icons/de-bue4-ds-only-transit-21.png",
 			"caption": "Bü 4 Pfeiftafel für durchfahrende Züge"
 		},
 		{
-			"id": "whistle_sign_de_pf1",
 			"minzoom": 14,
 			"maxzoom": 16,
 			"icon": "icons/de-pf1-dv-16.png",
 			"caption": "ex-Pf 1 Pfeiftafel"
 		},
 		{
-			"id": "whistle_sign_de_pf1_transit",
 			"minzoom": 14,
 			"maxzoom": 21,
 			"icon": "icons/de-pf1-dv-only-transit-21.png",
 			"caption": "ex-Pf 1 Pfeiftafel für durchfahrende Züge"
 		},
 		{
-			"id": "whistle_sign_de_bue5",
 			"minzoom": 15,
 			"maxzoom": 16,
 			"icon": "icons/de-bue5-16.png",
 			"caption": "Bü 5 Läutetafel"
 		},
 		{
-			"id": "whistle_sign_de_bue5_transit",
 			"minzoom": 15,
 			"maxzoom": 21,
 			"icon": "icons/de-bue5-only-transit-21.png",
 			"caption": "Bü 5 Läutetafel für durchfahrende Züge"
 		},
 		{
-			"id": "station_distant_sign_de_ne6",
 			"minzoom": 14,
 			"maxzoom": 21,
 			"icon": "icons/de-ne6-24.png",
 			"caption": "Ne 6 Haltepunkttafel"
 		},
 		{
-			"id": "crossing_distant_sign_de_bue2",
 			"minzoom": 15,
 			"maxzoom": 21,
 			"icon": "icons/de-bue2-ds-28.png",
 			"caption": "Bü 2 Rautentafel"
 		},
 		{
-			"id": "crossing_distant_sign_de_bue2_reduced_distant",
 			"minzoom": 15,
 			"maxzoom": 21,
 			"icon": "icons/de-bue2-ds-reduced-distance-28.png",
