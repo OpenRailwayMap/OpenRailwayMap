@@ -1067,6 +1067,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
 					delete_if_empty="true" />
+				<text key="railway:position:exact"
+					text="Exact position of wrong-line signals (e.g. '13.427')"
+					de.text="Standortangabe an Trapeztafeln im Gegengleis (z. B. '13.427')"
+					default=""
+					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:main"
 					value="ne1" />
