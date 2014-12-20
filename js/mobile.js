@@ -36,7 +36,7 @@ function createMap(embed)
 	}
 
 	// grayscale mapnik background layer
-	var mapnikGray = new L.TileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png',
+	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
 		maxZoom: 19
@@ -45,18 +45,6 @@ function createMap(embed)
 	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
-		maxZoom: 19
-	});
-
-	var captionlessGray = new L.TileLayer.Grayscale('http://{s}.www.toolserver.org/tiles/osm-no-labels/{z}/{x}/{y}.png',
-	{
-		attribution: translations['captionlessAttribution'],
-		maxZoom: 19
-	});
-	// captionless mapnik background layer
-	var captionless = new L.TileLayer('http://{s}.www.toolserver.org/tiles/osm-no-labels/{z}/{x}/{y}.png',
-	{
-		attribution: translations['captionlessAttribution'],
 		maxZoom: 19
 	});
 
@@ -103,8 +91,6 @@ function createMap(embed)
 	baseLayers[translations['mapnikGrayscale']] = mapnikGray;
 	baseLayers[translations['mapquest']] = mapquest;
 	baseLayers[translations['mapquestGrayscale']] = mapquestGray;
-	baseLayers[translations['captionless']] = captionless;
-	baseLayers[translations['captionlessGrayscale']] = captionlessGray;
 
 	var overlays = new Object();
 	overlays[translations['hillshading']] = hillshading;
