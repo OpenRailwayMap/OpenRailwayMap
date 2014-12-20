@@ -2504,6 +2504,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
 					default=""
 					delete_if_empty="true" />
+				<combo key="railway:signal:electricity:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					default=""
+					display_values="Mastbauform,Zwergsignal"
+					delete_if_empty="true" />
 				<combo key="railway:signal:electricity:type"
 					text="Meaning"
 					de.text="Bedeutung"
