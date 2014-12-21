@@ -67,10 +67,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Richtungsvoranzeiger Zs 2v" />
-					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
+					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
+					
 				</item>
 				<item name="Ks-Mehrabschnittssignal" icon="de-ks-combined.png" type="node">
 					<label text="Ks-Mehrabschnittssignal" />
@@ -142,16 +141,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Richtungsanzeiger Zs 2" />
-					<label text="- Richtungsvoranzeiger Zs 2v" />
-					<label text="- Geschwindigkeitsanzeiger Zs 3" />
-					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-					<label text="- Schutzhaltsignal Sh 1" />
-					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-					<label text="- Abfahrtssignal Zp 8/Zp 9" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
+					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
+					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
+					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
+					<preset_link preset_name="Sh-1-Licht" />
+					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
+					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
+					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 				<item name="Ks-Hauptsignal" icon="de-ks-main.png" type="node">
 					<label text="Ks-Hauptsignal" />
@@ -218,14 +216,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Richtungsanzeiger Zs 2" />
-					<label text="- Geschwindigkeitsanzeiger Zs 3" />
-					<label text="- Schutzhaltsignal Sh 1" />
-					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-					<label text="- Abfahrtssignal Zp 8/Zp 9" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
+					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
+					<preset_link preset_name="Sh-1-Licht" />
+					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
+					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
+					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 			</group>
 			<item name="Sv-Signal" icon="de-sv.png" type="node">
@@ -304,16 +301,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 				<space />
-				<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-				<label text="- Richtungsanzeiger Zs 2" />
-				<label text="- Richtungsvoranzeiger Zs 2v" />
-				<label text="- Geschwindigkeitsanzeiger Zs 3" />
-				<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-				<label text="- Schutzhaltsignal Sh 1" />
-				<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-				<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-				<label text="- Abfahrtssignal Zp 8/Zp 9" />
-				<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+				<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
+				<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
+				<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
+				<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
+				<preset_link preset_name="Sh-1-Licht" />
+				<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
+				<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
+				<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+				<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 			</item>
 			<group name="Hl-Signale" icon="de-hl-signals.png">
 				<item name="Hl-Kombinationssignal" icon="de-hl-combined.png" type="node">
@@ -387,14 +383,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Richtungsanzeiger Zs 2" />
-					<label text="- Richtungsvoranzeiger Zs 2v" />
-					<label text="- Schutzhaltsignal Sh 1/Ra 12" />
-					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-					<label text="- Abfahrtssignal Zp 8/Zp 9" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
+					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
+					<preset_link preset_name="Sh-1-Licht" />
+					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
+					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
+					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 				<item name="Hl-Hauptsignal" icon="de-hl-main.png" type="node">
 					<label text="Hl-Hauptsignal" />
@@ -467,14 +462,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Richtungsanzeiger Zs 2" />
-					<label text="- Geschwindigkeitsanzeiger Zs 3" />
-					<label text="- Schutzhaltsignal Sh 1/Ra 12" />
-					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-					<label text="- Abfahrtssignal Zp 8/Zp 9" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
+					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
+					<preset_link preset_name="Sh-1-Licht" />
+					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
+					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
+					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 				<item name="Hl-Vorsignal" icon="de-hl-distant.png" type="node">
 					<label text="Hl-Vorsignal" />
@@ -524,9 +518,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Richtungsvoranzeiger Zs 2v" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
 				</item>
 			</group>
 			<group name="Sk-Signale" icon="de:sk-signals.png">
@@ -595,16 +587,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Geschwindigkeitsanzeiger Zs 3" />
-					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-					<label text="- Richtungsanzeiger Zs 2" />
-					<label text="- Richtungsvoranzeiger Zs 2v" />
-					<label text="- Schutzhaltsignal Sh 1/Ra 12" />
-					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-					<label text="- Abfahrtssignal Zp 8/Zp 9" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
+					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
+					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
+					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
+					<preset_link preset_name="Sh-1-Licht" />
+					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
+					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
+					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 				<item name="Sk-Hauptsignal" icon="de-sk-main.png" type="node">
 					<label text="Sk-Hauptsignal" />
@@ -671,14 +662,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Richtungsanzeiger Zs 2" />
-					<label text="- Geschwindigkeitsanzeiger Zs 3" />
-					<label text="- Schutzhaltsignal Sh 1/Ra 12" />
-					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-					<label text="- Abfahrtssignal Zp 8/Zp 9" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
+					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
+					<preset_link preset_name="Sh-1-Licht" />
+					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
+					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
+					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 				<item name="Sk-Vorsignal" icon="de-sk-distant.png" type="node">
 					<label text="Sk-Vorsignal" />
@@ -733,10 +723,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Richtungsvoranzeiger Zs 2v" />
-					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
+					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
 				</item>
 			</group>
 			<group name="H/V-Signale" icon="de-hp0-semaphore-32.png">
@@ -806,12 +794,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Geschwindigkeitsanzeiger Zs 3" />
-					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-					<label text="- Abfahrtssignal Zp 8/Zp 9" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
+					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
+					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
+					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 				<item name="Hp-Licht-Hauptsignal" icon="de-hp2-light-32.png" type="node">
 					<label text="Hp-Licht-Hauptsignal" />
@@ -884,14 +871,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Richtungsanzeiger Zs 2" />
-					<label text="- Geschwindigkeitsanzeiger Zs 3" />
-					<label text="- Schutzhaltsignal Sh 1" />
-					<label text="- Stumpfgleis- und Frühhaltanzeiger Zs 6/Zs 13/Zs 106" />
-					<label text="- Gleiswechselanzeiger / Falschfahrt-Auftragssignal Zs 6/Zs 7/Zs 8" />
-					<label text="- Abfahrtssignal Zp 8/Zp 9" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
+					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
+					<preset_link preset_name="Sh-1-Licht" />
+					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
+					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
+					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 				<separator />
 				<item name="Vr-Form-Vorsignal" icon="de-vr2-semaphore-32.png" type="node">
@@ -962,10 +948,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 					<space />
-					<label text="Eventuell ist zusätzlich eines der folgenden Signale angebracht:" />
-					<label text="- Richtungsvoranzeiger Zs 2v" />
-					<label text="- Geschwindigkeitsvoranzeiger Zs 3v" />
-					<label text="Manuell zu ergänzen im Untermenü 'Signale'." />
+					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
+					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
 				</item>
 				<item name="Vr-Licht-Vorsignal" icon="de-vr0-light-32.png" type="node">
 					<label text="Vr-Licht-Vorsignal" />
@@ -1032,6 +1016,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Kennlicht"
 						default="off"
 						delete_if_empty="true" />
+					<space />
+					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
+					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
 				</item>
 			</group>
 			<item name="Sh-1-Licht" icon="de-sh1.png" type="node">
@@ -2516,6 +2503,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="el1v,el1,el2,el3,el4,el5,el6"
 					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
 					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:electricity:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					default=""
+					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 				<combo key="railway:signal:electricity:type"
 					text="Meaning"

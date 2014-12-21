@@ -41,18 +41,6 @@ function createMap(embed)
 		maxZoom: 19
 	});
 
-	var captionlessGray = new L.TileLayer.Grayscale('http://{s}.www.toolserver.org/tiles/osm-no-labels/{z}/{x}/{y}.png',
-	{
-		attribution: translations['captionlessAttribution'],
-		maxZoom: 19
-	});
-	// captionless mapnik background layer
-	var captionless = new L.TileLayer('http://{s}.www.toolserver.org/tiles/osm-no-labels/{z}/{x}/{y}.png',
-	{
-		attribution: translations['captionlessAttribution'],
-		maxZoom: 19
-	});
-
 	// grayscale MapQuest background layer
 	var mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 	{
@@ -106,8 +94,6 @@ function createMap(embed)
 	baseLayers[translations['mapnikGrayscale']] = mapnikGray;
 	baseLayers[translations['mapquest']] = mapquest;
 	baseLayers[translations['mapquestGrayscale']] = mapquestGray;
-	baseLayers[translations['captionless']] = captionless;
-	baseLayers[translations['captionlessGrayscale']] = captionlessGray;
 
 	var overlays = new Object();
 	overlays[translations['hillshading']] = hillshading;
