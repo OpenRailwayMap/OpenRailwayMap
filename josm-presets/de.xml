@@ -3461,8 +3461,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<combo key="crossing:barrier"
 				text="Barriers" de.text="Schranken"
 				values="half,double_half,full,gates,yes,no"
-				display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Tore (England),Beschrankt,Unbeschrankt"
-				de.display_values="half boom gate,double half boom gate,full boom gate,gates (turnable),yes,no"
+				de.display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Tore (England),Beschrankt,Unbeschrankt"
+				display_values="half boom gate,double half boom gate,full boom gate,gates (turnable),yes,no"
 				default=""
 				delete_if_empty="true" />
 			<check key="crossing:light"
@@ -3540,8 +3540,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<combo key="crossing:barrier"
 				text="Barriers" de.text="Schranken"
 				values="half,double_half,full,gates,yes,no"
-				display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Tore (England),Beschrankt,Unbeschrankt"
-				de.display_values="half boom gate,double half boom gate,full boom gate,gates (turnable),yes,no"
+				de.display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Tore (England),Beschrankt,Unbeschrankt"
+				display_values="half boom gate,double half boom gate,full boom gate,gates (turnable),yes,no"
 				default=""
 				delete_if_empty="true" />
 			<check key="crossing:light"
