@@ -2169,12 +2169,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<combo key="railway:signal:speed_limit" text="Type of signal" de.text="Signaltyp" default="" delete_if_empty="true" match="keyvalue!">
+						<list_entry value="lf7" display_value="Lf 7" short_description="Geschwindigkeitssignal Lf 7" />
 						<list_entry value="dr:lf1/2" display_value="Lf 1/2" short_description="Langsamfahrbeginnscheibe Lf 1/2 (ex-DR)" />
 						<list_entry value="lf2" display_value="Lf 2" short_description="Anfangsscheibe Lf 2" />
 						<list_entry value="lf3" display_value="Lf 3" short_description="Endscheibe Lf 3" />
 						<list_entry value="db:lf5" display_value="Lf 5 DR" short_description="Anfangstafel Lf 5 (ex-DB)" />
 						<list_entry value="dr:lf5" display_value="Lf 5 DR" short_description="Eckentafel Lf 5 (ex-DR)" />
-						<list_entry value="lf7" display_value="Lf 7" short_description="Geschwindigkeitssignal Lf 7" />
 		            </combo>
 					<combo key="railway:signal:speed_limit:form"
 						text="Signal form"
@@ -2233,10 +2233,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<combo key="railway:signal:speed_limit_distant" text="Type of signal" de.text="Signaltyp" default="" delete_if_empty="true" match="keyvalue!">
+						<list_entry value="lf6" display_value="Lf 6" short_description="Geschwindigkeits-Ankündesignal Lf 6" />
 						<list_entry value="lf1" display_value="Lf 1" short_description="Langsamfahrscheibe Lf 1" />
 						<list_entry value="db:lf4" display_value="Lf 4 DB" short_description="Geschwindigkeitstafel Lf 4 (ex-DB)" />
 						<list_entry value="dr:lf4" display_value="Lf 4" short_description="Geschwindigkeitstafel Lf 4 (ex-DR)" />
-						<list_entry value="lf6" display_value="Lf 6" short_description="Geschwindigkeits-Ankündesignal Lf 6" />
 					</combo>
 					<combo key="railway:signal:speed_limit_distant:form"
 						text="Signal form"
