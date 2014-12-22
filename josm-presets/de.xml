@@ -3004,6 +3004,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="UIC-Bahnhofsname"
 					default=""
 					delete_if_empty="true" />
+				<text key="local_ref"
+					text="track number (e.g. 5 or 5a)"
+					de.text="Gleisnummer (z.B. 5 oder 5a)"
+					default=""
+					delete_if_empty="true" />
 				<check key="train"
 					text="Railway traffic?"
 					de.text="Eisenbahnverkehr?"
