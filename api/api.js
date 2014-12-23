@@ -66,6 +66,12 @@ var cpus = os.cpus().length;
 // maximum count of concurrent http connections
 http.globalAgent.maxSockets = configuration.maxsockets;
 
+// database connection
+if (configuration.password == "")
+	var connection = "postgres://"+configuration.username+"@localhost/"+configuration.database;
+else
+	var connection = "postgres://"+configuration.username+":"+configuration.password+"@localhost/"+configuration.database;
+
 // response headers
 var headers = {};
 headers["Access-Control-Allow-Origin"] = "*";
@@ -163,7 +169,7 @@ else
 				if (data.rows.length == 0)
 					data.rows = {};
 				
-				headers["Content-Type"] = "application/javascript";
+				headers["Content-Type"] = "application/json";
 				response.writeHead(200, headers);
 
 				if (params.callback)
@@ -176,10 +182,8 @@ else
 				client.end();
 			};
 
-			var connection = "postgres://postgres@localhost/"+configuration.database;
-			var client = new pg.Client(connection);
-
 			logger.trace('Connecting to database '+connection+'...');
+			var client = new pg.Client(connection);
 			client.connect(function(err)
 			{
 				if (err)
