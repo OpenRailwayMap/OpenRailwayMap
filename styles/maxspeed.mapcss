@@ -35,8 +35,8 @@ way|z10-[railway=light_rail][!maxspeed],
 way|z9-[railway=narrow_gauge][!maxspeed],
 way|z9-[railway=preserved][!maxspeed],
 way|z10-[railway=rail][!maxspeed],
-way|z2-[railway=rail][usage=main],
-way|z2-[railway=rail][usage=branch]
+way|z2-[railway=rail][usage=main][!maxspeed],
+way|z2-[railway=rail][usage=branch][!maxspeed]
 {
 	z-index: 0;
 	color: gray;
