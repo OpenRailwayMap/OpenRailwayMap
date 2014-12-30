@@ -112,9 +112,9 @@ function createMap(embed)
 		getStyleSelection();
 		// set rendering style
 		if (params['style'] != null && styleValid(params['style']))
-			setStyle(params['style']);
+			applyStyle(params['style']);
 		else
-			setStyle("standard");
+			applyStyle("standard");
 		// onclick event of locate button
 		gEBI("locateButton").onclick = function()
 		{
@@ -125,6 +125,12 @@ function createMap(embed)
 	}
 	else
 	{
+		// set rendering style
+		if (params['style'] != null && styleValid(params['style']))
+			setStyle(params['style']);
+		else
+			setStyle("standard");
+
 		// setting start position
 		startposition = new Startposition(map);
 	}
@@ -140,6 +146,13 @@ function setStyle(style)
 	railmap._url = tiledir+style+'/{z}/{x}/{y}.png';
 	// reload all tiles after style was changed
 	railmap.redraw();
+}
+
+
+// changes the current map rendering style to the style given as parameter and updates legend, permalink and style selection
+function applyStyle(style)
+{
+	setStyle(style);
 
 	// mark selected item as checked
 	var selectableItems = gEBI('styleSelectionBar').getElementsByTagName('input');
@@ -158,7 +171,7 @@ function getStyleSelection()
 {
 	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><b>'+translations['styleSelection']+':</b><br /><p>';
 	for (var i=0; i<availableStyles.length; i++)
-		gEBI('styleSelectionBar').innerHTML += '<label><input onchange="setStyle(this.value)" type="radio" name="style" value="'+availableStyles[i]+'">'+translations['style.'+availableStyles[i]]+'</label><br />';
+		gEBI('styleSelectionBar').innerHTML += '<label><input onchange="applyStyle(this.value)" type="radio" name="style" value="'+availableStyles[i]+'">'+translations['style.'+availableStyles[i]]+'</label><br />';
 	gEBI('styleSelectionBar').innerHTML += '</p></form>';
 }
 
