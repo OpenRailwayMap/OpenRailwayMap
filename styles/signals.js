@@ -669,6 +669,14 @@
             s_default['allow-overlap'] = 'true';
         }
 
+        if (((type == 'way' && tags['railway'] == 'tram') && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway') && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail') && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail') && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main') && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch') && zoom >= 2)) {
+            s_default['z-index'] = 0;
+            s_default['color'] = 'gray';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
         if (Object.keys(s_default).length) {
             style['default'] = s_default; }
         return style;
@@ -710,177 +718,182 @@
             height: 32, 
             offset: 262
         },
+        'icons/de-hl1-distant-24.png': {
+            width: 16, 
+            height: 24, 
+            offset: 294
+        },
         'icons/de-hl10-32.png': {
             width: 15, 
             height: 32, 
-            offset: 294
+            offset: 318
         },
         'icons/de-hl11-48.png': {
             width: 16, 
             height: 48, 
-            offset: 326
+            offset: 350
         },
         'icons/de-hl12a-32.png': {
             width: 15, 
             height: 32, 
-            offset: 374
+            offset: 398
         },
         'icons/de-hl12b-48.png': {
             width: 16, 
             height: 48, 
-            offset: 406
+            offset: 430
         },
         'icons/de-hl2-48.png': {
             width: 16, 
             height: 48, 
-            offset: 454
+            offset: 478
         },
         'icons/de-hl3a-32.png': {
             width: 15, 
             height: 32, 
-            offset: 502
+            offset: 526
         },
         'icons/de-hl3b-48.png': {
             width: 16, 
             height: 48, 
-            offset: 534
+            offset: 558
         },
         'icons/de-hp0-light-32.png': {
             width: 17, 
             height: 32, 
-            offset: 582
+            offset: 606
         },
         'icons/de-hp0-semaphore-32.png': {
             width: 32, 
             height: 32, 
-            offset: 614
+            offset: 638
         },
         'icons/de-hp1-light-32.png': {
             width: 17, 
             height: 32, 
-            offset: 646
+            offset: 670
         },
         'icons/de-hp1-semaphore-38.png': {
             width: 24, 
             height: 38, 
-            offset: 678
+            offset: 702
         },
         'icons/de-hp2-light-32.png': {
             width: 17, 
             height: 32, 
-            offset: 716
+            offset: 740
         },
         'icons/de-hp2-semaphore-40.png': {
             width: 25, 
             height: 40, 
-            offset: 748
+            offset: 772
         },
         'icons/de-ks-combined.png': {
             width: 16, 
             height: 16, 
-            offset: 788
+            offset: 812
         },
         'icons/de-ks-distant.png': {
             width: 16, 
             height: 16, 
-            offset: 804
+            offset: 828
         },
         'icons/de-ks-main.png': {
             width: 16, 
             height: 16, 
-            offset: 820
+            offset: 844
         },
         'icons/de-ne1-32.png': {
             width: 32, 
             height: 20, 
-            offset: 836
+            offset: 860
         },
         'icons/de-ne5-ds301-32.png': {
             width: 22, 
             height: 32, 
-            offset: 856
+            offset: 880
         },
         'icons/de-ne6-48.png': {
             width: 48, 
             height: 10, 
-            offset: 888
+            offset: 912
         },
         'icons/de-pf1-dv-32.png': {
             width: 22, 
             height: 32, 
-            offset: 898
+            offset: 922
         },
         'icons/de-pf1-dv-only-transit-43.png': {
             width: 24, 
             height: 43, 
-            offset: 930
+            offset: 954
         },
         'icons/de-sh0-light-dwarf-24.png': {
             width: 24, 
             height: 15, 
-            offset: 973
+            offset: 997
         },
         'icons/de-sh0-semaphore-dwarf-24.png': {
             width: 24, 
             height: 22, 
-            offset: 988
+            offset: 1012
         },
         'icons/de-sh1-light-normal-24.png': {
             width: 24, 
             height: 18, 
-            offset: 1010
+            offset: 1034
         },
         'icons/de-sh1-semaphore-normal-24.png': {
             width: 21, 
             height: 24, 
-            offset: 1028
+            offset: 1052
         },
         'icons/de-vr0-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1052
+            offset: 1076
         },
         'icons/de-vr0-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1084
+            offset: 1108
         },
         'icons/de-vr0-semaphore-52.png': {
             width: 24, 
             height: 53, 
-            offset: 1116
+            offset: 1140
         },
         'icons/de-vr1-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1169
+            offset: 1193
         },
         'icons/de-vr1-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1201
+            offset: 1225
         },
         'icons/de-vr1-semaphore-38.png': {
             width: 24, 
             height: 38, 
-            offset: 1233
+            offset: 1257
         },
         'icons/de-vr2-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1271
+            offset: 1295
         },
         'icons/de-vr2-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1303
+            offset: 1327
         },
         'icons/de-vr2-semaphore-53.png': {
             width: 24, 
             height: 53, 
-            offset: 1335
+            offset: 1359
         }
-    }, external_images = ['icons/de-bue5-ds-32.png', 'icons/de-hl1-distant-24.png', 'icons/de-ne2.png'], presence_tags = [], value_tags = ['ref', 'railway:signal:stop:form', 'railway:signal:stop', 'railway:signal:minor', 'railway:signal:ring:only_transit', 'railway:signal:crossing_distant', 'railway:signal:main:function', 'railway:signal:whistle', 'railway:signal:minor:form', 'railway:signal:crossing_distant:shortened', 'railway:signal:distant', 'railway:signal:combined:form', 'railway:signal:distant:form', 'railway:signal:distant:shortened', 'railway', 'railway:signal:minor:height', 'railway:signal:main', 'railway:signal:station_distant', 'railway:signal:main:form', 'railway:signal:combined', 'railway:signal:combined:states', 'railway:signal:ring', 'railway:signal:main:states', 'railway:signal:station_distant:form', 'railway:signal:distant:states', 'railway:signal:distant:repeated'];
+    }, external_images = ['icons/de-bue5-ds-32.png', 'icons/de-ne2.png'], presence_tags = [], value_tags = ['ref', 'railway:signal:stop:form', 'railway:signal:stop', 'railway:signal:minor', 'railway:signal:ring:only_transit', 'railway:signal:crossing_distant', 'railway:signal:main:function', 'railway:signal:whistle', 'railway:signal:minor:form', 'railway:signal:crossing_distant:shortened', 'railway:signal:distant', 'railway:signal:combined:form', 'railway:signal:distant:form', 'railway:signal:distant:shortened', 'railway', 'railway:signal:minor:height', 'railway:signal:main', 'railway:signal:station_distant', 'railway:signal:main:form', 'railway:signal:combined', 'railway:signal:combined:states', 'railway:signal:ring', 'railway:signal:main:states', 'railway:signal:station_distant:form', 'railway:signal:distant:states', 'usage', 'railway:signal:distant:repeated'];
 
     MapCSS.loadStyle('signals', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('signals');
