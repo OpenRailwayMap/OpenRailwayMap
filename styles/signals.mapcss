@@ -258,10 +258,10 @@ node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=l
 }
 
 
-/******************************************/
-/* DE combined light signals type Hl which    */
-/*  - have no railway:signal:states=* tag */
-/******************************************/
+/*******************************************/
+/* DE combined light signals type Hl which */
+/*  - have no railway:signal:states=* tag  */
+/*******************************************/
 node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light][!"railway:signal:combined:states"]
 {
 	z-index: 10000;
@@ -279,10 +279,10 @@ node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined
 	allow-overlap: true;
 }
 
-/****************************************/
-/* DE combined light signals type Hl which  */
+/*******************************************/
+/* DE combined light signals type Hl which */
 /*  - cannot display Hl 11, Hl 12a, Hl 12b */
-/****************************************/
+/*******************************************/
 node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12a.*/]["railway:signal:combined:states"!~/.*hl12b.*/]
 {
 	z-index: 10000;
@@ -300,10 +300,10 @@ node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined
 	allow-overlap: true;
 }
 
-/***************************************/
+/*******************************************/
 /* DE combined light signals type Hl which */
-/*  - cannot display Hl 12b and Hl 11    */
-/***************************************/
+/*  - cannot display Hl 12b and Hl 11      */
+/*******************************************/
 node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/]
 {
 	z-index: 10000;
@@ -321,11 +321,11 @@ node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined
 	allow-overlap: true;
 }
 
-/***************************************/
+/*******************************************/
 /* DE combined light signals type Hl which */
-/*  - can display Hl 12a, Hl 12b         */
-/*  - cannot display Hl 11              */
-/***************************************/
+/*  - can display Hl 12a, Hl 12b           */
+/*  - cannot display Hl 11                 */
+/*******************************************/
 node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/]
 {
 	z-index: 10000;
@@ -343,11 +343,11 @@ node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined
 	allow-overlap: true;
 }
 
-/*********************************************/
-/* DE combined light signals type Hl which       */
-/*  - can display Hl 11, Hl 12a                */
+/**********************************************/
+/* DE combined light signals type Hl which    */
+/*  - can display Hl 11, Hl 12a               */
 /*  - don't have to be able to display Hl 12b */
-/*********************************************/
+/**********************************************/
 node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/],
 node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/]
 {
@@ -375,7 +375,7 @@ node|z14-[railway=signal]["railway:signal:main"="ne1"]["railway:signal:main:form
 	icon-image: "icons/de-ne1-32.png";
 	icon-width: 16;
 	icon-height: 10;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /**********************************************/
@@ -633,7 +633,7 @@ node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:dis
 	icon-width: 10;
 	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /**************************************/
@@ -654,7 +654,7 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	icon-width: 10;
 	icon-height: 12;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /********************************************/
@@ -674,7 +674,7 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	icon-width: 12;
 	icon-height: 11;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /**********************************/
@@ -695,7 +695,7 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	icon-width: 12;
 	icon-height: 9;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /****************************************/
@@ -715,7 +715,7 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	icon-width: 12;
 	icon-height: 8;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /*******************/
@@ -735,7 +735,7 @@ node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:f
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /*********************/
@@ -755,7 +755,7 @@ node|z14-[railway=signal]["railway:signal:main"=ks]["railway:signal:main:form"=l
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /******************************/
@@ -775,7 +775,7 @@ node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /*********************/
@@ -788,7 +788,7 @@ node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=
 	icon-width: 11;
 	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /*********************************/
@@ -802,7 +802,7 @@ node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:sig
 	icon-width: 7;
 	icon-height: 28;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /*******************************************************/
@@ -815,7 +815,7 @@ node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:sig
 	icon-width: 7;
 	icon-height: 28;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /*********************************/
@@ -828,7 +828,7 @@ node|z14-[railway=signal]["railway:signal:whistle"="db:bü4"]
 	icon-width: 11;
 	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /*******************************************************************/
@@ -841,7 +841,7 @@ node|z14-[railway=signal]["railway:signal:whistle"="db:bü4"]["railway:signal:ri
 	icon-width: 12;
 	icon-height: 21;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /********************************/
@@ -853,7 +853,7 @@ node|z14-[railway=signal]["railway:signal:whistle"="dr:pf1"]
 	icon-image: "icons/de-pf1-dv-32.png";
 	icon-width: 11;
 	icon-height: 16;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /*******************************************************************/
@@ -865,7 +865,7 @@ node|z14-[railway=signal]["railway:signal:whistle"="db:pf1"]["railway:signal:rin
 	icon-image: "icons/de-pf1-dv-only-transit-43.png";
 	icon-width: 12;
 	icon-height: 21;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /*********************/
@@ -878,7 +878,7 @@ node|z15-[railway=signal]["railway:signal:ring"="bü5"]
 	icon-width: 11;
 	icon-height: 16;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /*******************************************************/
@@ -891,7 +891,7 @@ node|z15-[railway=signal]["railway:signal:ring"="bü5"]["railway:signal:ring:onl
 	icon-width: 12;
 	icon-height: 21;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /********************************/
@@ -903,7 +903,7 @@ node|z14-[railway=signal]["railway:signal:station_distant"="ne6"]["railway:signa
 	icon-image: "icons/de-ne6-48.png";
 	icon-width: 24;
 	icon-height: 5;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 /******************/
@@ -923,7 +923,7 @@ node|z14-[railway=signal]["railway:signal:main"="AT:trapeztafel"]["railway:signa
 	icon-width: 16;
 	icon-height: 10;
 	text-allow-overlap: true;
-    allow-overlap: true;
+	allow-overlap: true;
 }
 
 way|z10-[railway=tram],
@@ -937,7 +937,7 @@ way|z2-[railway=rail][usage=branch]
 {
 	z-index: 0;
 	color: gray;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	kothicjs-ignore-layer: true;
 }
