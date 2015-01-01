@@ -24,9 +24,9 @@ meta
 
 canvas
 {
-    background-color: #8a8a8a;
-    default-points: true;
-    default-lines: true;
+	background-color: #8a8a8a;
+	default-points: true;
+	default-lines: true;
 }
 
 way|z10-[railway=tram][!maxspeed],
@@ -40,8 +40,8 @@ way|z2-[railway=rail][usage=branch][!maxspeed]
 {
 	z-index: 0;
 	color: gray;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	kothicjs-ignore-layer: true;
 }
 
@@ -56,8 +56,8 @@ way|z2-[railway=rail][usage=branch][maxspeed<=10]
 {
 	z-index: 1;
 	color: #0100CB;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -80,8 +80,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>10][maxspeed<=20]
 {
 	z-index: 2;
 	color: #001ECB;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -104,8 +104,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>20][maxspeed<=30]
 {
 	z-index: 3;
 	color: #003DCB;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -128,8 +128,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>30][maxspeed<=40]
 {
 	z-index: 4;
 	color: #005BCB;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -152,8 +152,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>40][maxspeed<=50]
 {
 	z-index: 5;
 	color: #007ACB;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -176,8 +176,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>50][maxspeed<=60]
 {
 	z-index: 6;
 	color: #0098CB;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -200,8 +200,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>60][maxspeed<=70]
 {
 	z-index: 7;
 	color: #00B7CB;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -224,8 +224,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>70][maxspeed<=80]
 {
 	z-index: 8;
 	color: #00CBC1;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -248,8 +248,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>80][maxspeed<=90]
 {
 	z-index: 9;
 	color: #00CBA2;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -271,8 +271,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>90][maxspeed<=100]
 {
 	z-index: 10;
 	color: #00CB84;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -295,8 +295,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>100][maxspeed<=110]
 {
 	z-index: 11;
 	color: #00CB66;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -319,8 +319,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>110][maxspeed<=120]
 {
 	z-index: 12;
 	color: #00CB47;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -343,8 +343,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>120][maxspeed<=130]
 {
 	z-index: 13;
 	color: #00CB29;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -367,8 +367,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>130][maxspeed<=140]
 {
 	z-index: 14;
 	color: #00CB0A;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -391,8 +391,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>140][maxspeed<=150]
 {
 	z-index: 15;
 	color: #14CB00;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -415,8 +415,8 @@ way|z2-[railway=rail][usage=branch][maxspeed>150][maxspeed<=160]
 {
 	z-index: 16;
 	color: #33CB00;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -435,8 +435,8 @@ way|z2-[railway=rail][usage=main][maxspeed>160][maxspeed<=170]
 {
 	z-index: 17;
 	color: #51CB00;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -455,8 +455,8 @@ way|z2-[railway=rail][usage=main][maxspeed>170][maxspeed<=180]
 {
 	z-index: 18;
 	color: #70CB00;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -475,8 +475,8 @@ way|z2-[railway=rail][usage=main][maxspeed>180][maxspeed<=190]
 {
 	z-index: 19;
 	color: #8ECB00;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -495,8 +495,8 @@ way|z2-[railway=rail][usage=main][maxspeed>190][maxspeed<=200]
 {
 	z-index: 20;
 	color: #ADCB00;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -515,8 +515,8 @@ way|z2-[railway=rail][usage=main][maxspeed>200][maxspeed<=210]
 {
 	z-index: 21;
 	color: #CBCB00;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -535,8 +535,8 @@ way|z2-[railway=rail][usage=main][maxspeed>210][maxspeed<=220]
 {
 	z-index: 22;
 	color: #CBAD00;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -555,8 +555,8 @@ way|z2-[railway=rail][usage=main][maxspeed>220][maxspeed<=230]
 {
 	z-index: 23;
 	color: #CB8E00;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -575,8 +575,8 @@ way|z2-[railway=rail][usage=main][maxspeed>230][maxspeed<=240]
 {
 	z-index: 24;
 	color: #CB7000;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -595,8 +595,8 @@ way|z2-[railway=rail][usage=main][maxspeed>240][maxspeed<=250]
 {
 	z-index: 25;
 	color: #CB5100;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -615,8 +615,8 @@ way|z2-[railway=rail][usage=main][maxspeed>250][maxspeed<=260]
 {
 	z-index: 26;
 	color: #CB3300;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -635,8 +635,8 @@ way|z2-[railway=rail][usage=main][maxspeed>260][maxspeed<=270]
 {
 	z-index: 27;
 	color: #CB1400;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -655,8 +655,8 @@ way|z2-[railway=rail][usage=main][maxspeed>270][maxspeed<=280]
 {
 	z-index: 28;
 	color: #CB0007;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -675,8 +675,8 @@ way|z2-[railway=rail][usage=main][maxspeed>280][maxspeed<=290]
 {
 	z-index: 29;
 	color: #CB0025;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -695,8 +695,8 @@ way|z2-[railway=rail][usage=main][maxspeed>290][maxspeed<=300]
 {
 	z-index: 30;
 	color: #CB0044;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -715,8 +715,8 @@ way|z2-[railway=rail][usage=main][maxspeed>300][maxspeed<=320]
 {
 	z-index: 31;
 	color: #CB0062;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -735,8 +735,8 @@ way|z2-[railway=rail][usage=main][maxspeed>320][maxspeed<=340]
 {
 	z-index: 32;
 	color: #CB0081;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -755,8 +755,8 @@ way|z2-[railway=rail][usage=main][maxspeed>340][maxspeed<=360]
 {
 	z-index: 33;
 	color: #CB009F;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -775,8 +775,8 @@ way|z2-[railway=rail][usage=main][maxspeed>360][maxspeed<=380]
 {
 	z-index: 34;
 	color: #CB00BD;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
@@ -795,8 +795,8 @@ way|z2-[railway=rail][usage=main][maxspeed>380][maxspeed<=400]
 {
 	z-index: 35;
 	color: #BA00CB;
-    width: 3.5;
-    linejoin: round;
+	width: 3.5;
+	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;
