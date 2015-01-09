@@ -3491,11 +3491,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Umlaufgitter"
 				default="off"
 				delete_if_empty="true" />
-			<check key="supervised"
-				text="Supervised"
-				de.text="Überwacht (durch Fahrdienstleiter oder Bahnwärter)"
-				default="off"
-				delete_if_empty="true" />
 			<combo key="crossing:supervision"
 				text="Type of supervision" de.text="Art der Überwachung"
 				values="no,camera,attendant,automatic,phohne"
@@ -3568,11 +3563,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="crossing:chicane"
 				text="Chicane"
 				de.text="Umlaufgitter"
-				default="off"
-				delete_if_empty="true" />
-			<check key="supervised"
-				text="Supervised"
-				de.text="Überwacht (durch Fahrdienstleiter oder Bahnwärter)"
 				default="off"
 				delete_if_empty="true" />
 			<combo key="crossing:supervision"
