@@ -36,11 +36,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />	
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, in der Regel zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" de.short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, in der Regel zumindest abschnittsweise mit mehr als 100 km/h befahrbar" short_description="An important line; often double tracks, electrified; usually more than 100 km/h" />
+					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" de.short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." short_description="less important line; often single-tracked; not electrified; less than 100 km/h" />
+					<list_entry value="industrial" de.display_value="Industriebahn" display_value="industrial line" de.short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." short_description="A line only used for freight trains inside industrial areas or mines." />
+					<list_entry value="military" de.display_value="Militärbahn" display_value="military line" de.short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." short_description="A line only used by military trains" />
+					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" de.short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
 					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
 				</combo>
 				<combo key="railway:traffic_mode"
@@ -139,7 +139,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -176,7 +176,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -270,7 +270,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -307,7 +307,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -391,7 +391,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -428,7 +428,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -507,7 +507,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,16,67,50,60,25,0"
+					values="16.7,16.67,50,60,25,0"
 					display_values="16,7 Hz (Standard in Deutschland)16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz,Gleichspannung"
 					default=""
 					delete_if_empty="true" />
@@ -544,7 +544,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -652,7 +652,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -689,7 +689,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -811,7 +811,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -848,7 +848,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -950,7 +950,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -987,7 +987,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -1074,7 +1074,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -1111,7 +1111,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -1631,7 +1631,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -1668,7 +1668,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -1802,7 +1802,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -1839,7 +1839,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -1954,7 +1954,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -1996,7 +1996,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -2111,7 +2111,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -2153,7 +2153,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -2200,7 +2200,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr"
+					display_values="mixed,passenger only,freight only"
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
@@ -2223,7 +2224,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="ETCS"
 					de.text="ETCS"
 					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					display_values="Yes,No,Level 0,Level 1,Level 2,Level 3"
+					de.display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:radio"
@@ -2268,7 +2270,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -2310,7 +2312,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<space />
 				<check key="embankment"
@@ -2377,7 +2379,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="forward,backward"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:signal:minor"
@@ -2423,6 +2426,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Switch type"
 					de.text="Weichentyp"
 					values="default,three_way,single_slip,double_slip,wye,abt"
+					de.values="default switch,three way switch,single slip switch,double slip switch,wye switch,abt switch"
 					display_values="Einfache  Weiche,Dreiwegweiche,einfache Kreuzungsweiche,Doppelkreuzungsweiche,Y-Weiche,Abtsche Weiche"
 					default=""
 					delete_if_empty="true" />
@@ -2430,7 +2434,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Turnout side (only default and resetting switches)"
 					de.text="Seite der Abzweigung (nur bei Standard- und Rückfallweichen)"
 					values="left,right"
-					display_values="Links,Rechts"
+					display_values="Left,Right"
+					de.display_values="Links,Rechts"
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:radius"
@@ -2510,7 +2515,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Type"
 					de.text="Typ"
 					values="insulated_rail_joint,axle_counter"
-					display_values="Isolierstoß,Achszähler"
+					display_values="insulated_rail_joint,axle_counter"
+					de.display_values="Isolierstoß,Achszähler"
 					default=""
 					delete_if_empty="true" />
 			</item>
@@ -2584,7 +2590,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
 					values="station, "
-					display_values="ja,nein"
+					de.display_values="ja,nein"
+					display_values="yes,no"
 					default=""
 					delete_if_empty="true" />
 				<text key="name" text="Name"
@@ -2616,7 +2623,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Station&amp;Service AG')"
 					de.text="Betreiber (z. B. 'DB Station&amp;Service AG')"
-					default="DB Station&amp;Service AG"
+					default=""
 					delete_if_empty="true" />
 				<text key="network"
 					text="Network"
@@ -2654,7 +2661,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
 					values="station, "
-					display_values="ja,nein"
+					de.display_values="ja,nein"
+					display_values="yes,no"
 					default=""
 					delete_if_empty="true" />
 				<text key="name" text="Name"
@@ -2686,7 +2694,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Station&amp;Service AG')"
 					de.text="Betreiber (z. B. 'DB Station&amp;Service AG')"
-					default="DB Station&amp;Service AG"
+					default=""
 					delete_if_empty="true" />
 				<text key="network"
 					text="Network"
@@ -2724,7 +2732,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
 					values="station, "
-					display_values="ja,nein"
+					de.display_values="ja,nein"
+					display_values="yes,no"
 					default=""
 					delete_if_empty="true" />
 				<text key="name" text="Name"
@@ -2785,7 +2794,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -2826,7 +2835,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -2969,7 +2978,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
 					values="stop_position, "
-					display_values="ja,nein"
+					de.display_values="ja,nein"
+					display_values="yes,no"
 					default=""
 					delete_if_empty="true" />
 				<key key="railway"
@@ -2992,6 +3002,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="uic_name"
 					text="UIC name"
 					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<text key="local_ref"
+					text="track number (e.g. 5 or 5a)"
+					de.text="Gleisnummer (z.B. 5 oder 5a)"
 					default=""
 					delete_if_empty="true" />
 				<check key="train"
@@ -3017,7 +3032,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG' or 'DB Station&amp;Service AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG' oder 'DB Station&amp;Service AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<text key="network"
 					text="Network"
@@ -3054,14 +3069,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
 					values="public_transport, "
-					display_values="ja,nein"
+					de.display_values="ja,nein"
+					display_values="yes,no"
 					default=""
 					delete_if_empty="true" />
 				<combo key="public_transport"
 					text="Public transport?"
 					de.text="Öffentlicher Verkehr?"
 					values="stop_area, "
-					display_values="ja,nein"
+					de.display_values="ja,nein"
+					display_values="yes,no"
 					default=""
 					delete_if_empty="true" />
 				<text key="name"
@@ -3087,7 +3104,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG' or 'DB Station&amp;Service AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG' oder 'DB Station&amp;Service AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 				<check key="train"
 					text="Railway traffic?"
@@ -3175,7 +3192,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<text key="operator"
 				text="Operator (e.g. 'DB Netz AG')"
 				de.text="Betreiber (z. B. 'DB Netz AG')"
-				default="DB Netz AG"
+				default=""
 				delete_if_empty="true" />
 			<text key="wikipedia"
 				text="Wikipedia article in the format (Language):(Article)"
@@ -3239,18 +3256,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Type of transportation"
 				de.text="Verkehrsmittel"
 				values="train,light_rail,tram,subway"
-				display_values="Zug,Stadt-/Schnellbahn,Straßenbahn,U-Bahn"
+				de.display_values="Zug,Stadt-/Schnellbahn,Straßenbahn,U-Bahn"
+				display_values="train,light rail,tram,Subway"
 				default=""
 				delete_if_empty="true" />
 			<combo key="service" text="Zuggattung" default="" delete_if_empty="true">
-				<list_entry value="high_speed" display_value="Hochgeschwindigkeitszug" short_description="ICE, Thalys, TGV, Railjet..." />
-				<list_entry value="long_distance" display_value="Reisezug" short_description="Eurocity, Intercity, D-Zug..." />
-				<list_entry value="regional" display_value="Regionalzug" short_description="Regionalbahn, Regionalexpress..." />
-				<list_entry value="commuter" display_value="Nahverkehrszug" short_description="S-Bahn, Straßenbahn, Stadtbahn, U-Bahn, Hochbahn..." />
-				<list_entry value="car" display_value="Autoreisezug" short_description="Reisezug mit Automitnahme" />
-				<list_entry value="car_shuttle" display_value="Autozug" short_description="Kurzverbindungen mit Autotransport, die einen Ersatz oder eine Abkürung zu Straßen darstellen" />
-				<list_entry value="night" display_value="Nachtzug" short_description="Reisezug mit Schlafwagen, EuroNight, CityNightLine" />
-				<list_entry value="tourism" display_value="Touristische Züge" short_description="Meist historische Züge als Touristenattraktion" />
+				<list_entry value="high_speed" de.display_value="Hochgeschwindigkeitszug" display_value="high speed train" short_description="ICE, Thalys, TGV, Railjet" />
+				<list_entry value="long_distance" de.display_value="Reisezug" display_value="long distance train" short_description="Eurocity, Intercity, D-Zug" />
+				<list_entry value="regional" de.display_value="Regionalzug" display_value="regional train" short_description="Regionalbahn, Regionalexpress" />
+				<list_entry value="commuter" de.display_value="Nahverkehrszug" display_value="communter train (urban areas)" short_description="S-Bahn, Straßenbahn, U-Bahn, Hochbahn" />
+				<list_entry value="car" de.display_value="Autoreisezug" display_value="long distance car train" short_description="Reisezug mit Automitnahme" />
+				<list_entry value="car_shuttle" de.display_value="Autozug" display_value="car shuttle (through tunnels)" short_description="Kurzverbindungen mit Autotransport, die einen Ersatz oder eine Abkürung zu Straßen darstellen" />
+				<list_entry value="night" de.display_value="Nachtzug" display_value="trains at night" short_description="Reisezug mit Schlafwagen, EuroNight, CityNightLine" />
+				<list_entry value="tourism" de.display_value="Touristische Züge" display_value="trains for tourists" short_description="Meist historische Züge als Touristenattraktion" />
 			</combo>
 			<text key="name"
 				text="Name of line (e.g. 'RE 7 Krefeld Rhein-Münsterland-Express')"
@@ -3335,18 +3353,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Type of transportation"
 				de.text="Verkehrsmittel"
 				values="train,light_rail,tram,subway"
-				display_values="Zug,Stadt-/Schnellbahn,Straßenbahn,U-Bahn"
+				de.display_values="Zug,Stadt-/Schnellbahn,Straßenbahn,U-Bahn"
+				display_values="train,light rail,tram,Subway"
 				default=""
 				delete_if_empty="true" />
 			<combo key="service" text="Zuggattung" default="" delete_if_empty="true">
-				<list_entry value="high_speed" display_value="Hochgeschwindigkeitszug" short_description="ICE, Thalys, TGV, Railjet" />
-				<list_entry value="long_distance" display_value="Reisezug" short_description="Eurocity, Intercity, D-Zug" />
-				<list_entry value="regional" display_value="Regionalzug" short_description="Regionalbahn, Regionalexpress" />
-				<list_entry value="commuter" display_value="Nahverkehrszug" short_description="S-Bahn, Straßenbahn, U-Bahn, Hochbahn" />
-				<list_entry value="car" display_value="Autoreisezug" short_description="Reisezug mit Automitnahme" />
-				<list_entry value="car_shuttle" display_value="Autozug" short_description="Kurzverbindungen mit Autotransport, die einen Ersatz oder eine Abkürung zu Straßen darstellen" />
-				<list_entry value="night" display_value="Nachtzug" short_description="Reisezug mit Schlafwagen, EuroNight, CityNightLine" />
-				<list_entry value="tourism" display_value="Touristische Züge" short_description="Meist historische Züge als Touristenattraktion" />
+				<list_entry value="high_speed" de.display_value="Hochgeschwindigkeitszug" display_value="high speed train" short_description="ICE, Thalys, TGV, Railjet" />
+				<list_entry value="long_distance" de.display_value="Reisezug" display_value="long distance train" short_description="Eurocity, Intercity, D-Zug" />
+				<list_entry value="regional" de.display_value="Regionalzug" display_value="regional train" short_description="Regionalbahn, Regionalexpress" />
+				<list_entry value="commuter" de.display_value="Nahverkehrszug" display_value="communter train (urban areas)" short_description="S-Bahn, Straßenbahn, U-Bahn, Hochbahn" />
+				<list_entry value="car" de.display_value="Autoreisezug" display_value="long distance car train" short_description="Reisezug mit Automitnahme" />
+				<list_entry value="car_shuttle" de.display_value="Autozug" display_value="car shuttle (through tunnels)" short_description="Kurzverbindungen mit Autotransport, die einen Ersatz oder eine Abkürung zu Straßen darstellen" />
+				<list_entry value="night" de.display_value="Nachtzug" display_value="trains at night" short_description="Reisezug mit Schlafwagen, EuroNight, CityNightLine" />
+				<list_entry value="tourism" de.display_value="Touristische Züge" display_value="trains for tourists" short_description="Meist historische Züge als Touristenattraktion" />
 			</combo>
 			<text key="name"
 				text="Name of line (e.g. 'RE 7 Krefeld Rhein-Münsterland-Express')"
@@ -3423,7 +3442,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</roles>
 		</item>
 		<separator />
-		<item name="Bahnübergang" icon="de-crossing.png" type="node">
+		<item name="Level Crossing" de.name="Bahnübergang" icon="de-crossing.png" type="node">
 			<label text="Bahnübergang" />
 			<space />
 			<key key="railway"
@@ -3446,13 +3465,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<space />
 			<combo key="crossing:barrier"
 				text="Barriers" de.text="Schranken"
-				values="half,double_half,full,yes,no"
-				display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Beschrankt,Unbeschrankt"
+				values="half,double_half,full,gates,yes,no"
+				de.display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Tore (England),Beschrankt,Unbeschrankt"
+				display_values="half boom gate,double half boom gate,full boom gate,gates (turnable),yes,no"
 				default=""
 				delete_if_empty="true" />
 			<check key="crossing:light"
 				text="Lights"
 				de.text="Warnlicht"
+				default="off"
+				delete_if_empty="true" />
+			<check key="crossing:saltire"
+				text="Saltire"
+				de.text="Andreaskreuz"
 				default="off"
 				delete_if_empty="true" />
 			<check key="crossing:bell"
@@ -3466,10 +3491,98 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Umlaufgitter"
 				default="off"
 				delete_if_empty="true" />
-			<check key="supervised"
-				text="Supervised"
-				de.text="Überwacht (durch Fahrdienstleiter oder Bahnwärter)"
+			<combo key="crossing:supervision"
+				text="Type of supervision" de.text="Art der Überwachung"
+				values="no,camera,attendant,automatic,phohne"
+				display_values="no,camera,attendant,automatic,phone"
+				de.display_values="keine Überwachung,Kamera,Schrankenwärter/Fahrdienstleiter/Posten,Gefahrenraum-Freimeldeanlage,Telefon (Anrufschranken)"
+				default=""
+				delete_if_empty="true" />
+			<combo key="crossing:activation"
+				text="Activation" de.text="Einschaltung"
+				values="automatic,remote,local"
+				display_values="automatic (contacts),remote (signal box), local (attendant/train staff)"
+				de.display_values="Einschaltkontakte, fahrdienstleitergesteuert, vor Ort (Schrankenwärter/Zugpersonal)"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:level_crossing:closure:average"
+				text="average clousure duration (minutes)"
+				de.text="durchschnittliche Schließdauer (in Minuten)"
+				default=""
+				delete_if_empty="true" />
+			<check key="crossing:on_demand"
+				text="On demand"
+				de.text="Anrufschranke"
 				default="off"
+				delete_if_empty="true" />
+		</item>
+		<item name="Little crossing for pedestrians" de.name="Reisendenübergang"  icon="de-crossing.png" type="node">
+			<label de.text="Reisendenübergang (Übergänge für Reisende/Fußgänger ohne Andreaskreuz" text="Crossing for pedestrians (less secure than common level crossings)" />
+			<space />
+			<key key="railway"
+				value="crossing" />
+			<text key="railway:ref"
+				text="Name (no position)"
+				de.text="Name (keine Kilometerangabe oder kreuzende Straße)"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:position"
+				text="Position (rounded, e.g. '12.3'; km)"
+				de.text="Hektometerwert (z. B. '12.3')"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:position:exact"
+				text="Position (exact, e.g. '12.345'; km)"
+				de.text="Metergenauer Wert (z. B. '12.345'; km)"
+				default=""
+				delete_if_empty="true" />
+			<space />
+			<combo key="crossing:barrier"
+				text="Barriers" de.text="Schranken"
+				values="half,double_half,full,gates,yes,no"
+				de.display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Tore (England),Beschrankt,Unbeschrankt"
+				display_values="half boom gate,double half boom gate,full boom gate,gates (turnable),yes,no"
+				default=""
+				delete_if_empty="true" />
+			<check key="crossing:light"
+				text="Lights"
+				de.text="Warnlicht"
+				default="off"
+				delete_if_empty="true" />
+			<check key="crossing:saltire"
+				text="Saltire"
+				de.text="Andreaskreuz"
+				default="off"
+				delete_if_empty="true" />
+			<check key="crossing:bell"
+				text="Bell"
+				de.text="Akustischer Warnton"
+				default="off"
+				delete_if_empty="true" />
+			<space />
+			<check key="crossing:chicane"
+				text="Chicane"
+				de.text="Umlaufgitter"
+				default="off"
+				delete_if_empty="true" />
+			<combo key="crossing:supervision"
+				text="Type of supervision" de.text="Art der Überwachung"
+				values="no,camera,attendant,automatic,phohne"
+				display_values="no,camera,attendant,automatic,phone"
+				de.display_values="keine Überwachung,Kamera,Schrankenwärter/Fahrdienstleiter/Posten,Gefahrenraum-Freimeldeanlage,Telefon (Anrufschranken)"
+				default=""
+				delete_if_empty="true" />
+			<combo key="crossing:activation"
+				text="Activation" de.text="Einschaltung"
+				values="automatic,remote,local"
+				display_values="automatic (contacts),remote (signal box), local (attendant/train staff)"
+				de.display_values="Einschaltkontakte, fahrdienstleitergesteuert, vor Ort (Schrankenwärter/Zugpersonal)"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:level_crossing:closure:average"
+				text="average clousure duration (minutes)"
+				de.text="durchschnittliche Schließdauer (in Minuten)"
+				default=""
 				delete_if_empty="true" />
 			<check key="crossing:on_demand"
 				text="On demand"
@@ -3866,7 +3979,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="operator"
 					text="Operator (e.g. 'DB Netz AG')"
 					de.text="Betreiber (z. B. 'DB Netz AG')"
-					default="DB Netz AG"
+					default=""
 					delete_if_empty="true" />
 			</item>
 			<separator />
