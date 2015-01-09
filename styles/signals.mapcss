@@ -941,3 +941,19 @@ way|z2-[railway=rail][usage=branch]
 	linejoin: round;
 	kothicjs-ignore-layer: true;
 }
+
+way|z10-[railway=tram],
+way|z10-[railway=subway],
+way|z10-[railway=light_rail],
+way|z9-[railway=narrow_gauge],
+way|z9-[railway=preserved],
+way|z10-[railway=rail],
+way|z2-[railway=rail][usage=main],
+way|z2-[railway=rail][usage=branch]
+{
+	z-index: 0;
+	color: gray;
+    width: 3.5;
+    linejoin: round;
+	kothicjs-ignore-layer: true;
+}
