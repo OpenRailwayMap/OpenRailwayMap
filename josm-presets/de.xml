@@ -391,7 +391,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67.50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
