@@ -778,9 +778,9 @@ node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined
 	allow-overlap: true;
 }
 
-/*********************/
-/* DE Haltetafel Ne5 */
-/*********************/
+/**********************/
+/* DE Haltetafel Ne 5 */
+/**********************/
 node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=sign]
 {
 	z-index: 1000;
@@ -791,9 +791,9 @@ node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=
 	allow-overlap: true;
 }
 
-/**************************************************/
-/* DE crossing signal Bü0/1 which cannot show Bü1 */
-/**************************************************/
+/****************************************************/
+/* DE crossing signal Bü 0/1 which cannot show Bü 1 */
+/****************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=sign],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=sign],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=sign],
@@ -807,9 +807,9 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 	allow-overlap: true;
 }
 
-/********************************************************************/
-/* DE crossing signal Bü0/1 which cannot show Bü1 and are repeaters */
-/********************************************************************/
+/**********************************************************************/
+/* DE crossing signal Bü 0/1 which cannot show Bü 1 and are repeaters */
+/**********************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=sign],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=sign],
 {
@@ -821,9 +821,9 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 	allow-overlap: true;
 }
 
-/********************************************************************/
-/* DE crossing signal Bü0/1 which cannot show Bü1 and are shortened */
-/********************************************************************/
+/**********************************************************************/
+/* DE crossing signal Bü 0/1 which cannot show Bü 1 and are shortened */
+/**********************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=sign],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=sign],
 {
@@ -835,9 +835,9 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 	allow-overlap: true;
 }
 
-/***********************************************/
-/* DE crossing signal Bü0/1 which can show Bü1 */
-/***********************************************/
+/*************************************************/
+/* DE crossing signal Bü 0/1 which can show Bü 1 */
+/*************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
@@ -851,9 +851,9 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 	allow-overlap: true;
 }
 
-/********************************************************************/
-/* DE crossing signal Bü0/1 which can show Bü1 and are repeaters */
-/********************************************************************/
+/*******************************************************************/
+/* DE crossing signal Bü 0/1 which can show Bü 1 and are repeaters */
+/*******************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=light],
 {
@@ -865,9 +865,9 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 	allow-overlap: true;
 }
 
-/********************************************************************/
-/* DE crossing signal Bü0/1 which can show Bü1 and are shortened */
-/********************************************************************/
+/*******************************************************************/
+/* DE crossing signal Bü 0/1 which can show Bü 1 and are shortened */
+/*******************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
 {
@@ -879,9 +879,9 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 	allow-overlap: true;
 }
 
-/***************************************************************************/
-/* DE crossing signal Bü0/1 (ex. So 16a/b) which can show Bü1 (ex. So 16b) */
-/***************************************************************************/
+/*****************************************************************************/
+/* DE crossing signal Bü 0/1 (ex. So 16a/b) which can show Bü 1 (ex. So 16b) */
+/*****************************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
@@ -895,9 +895,9 @@ node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:cros
 	allow-overlap: true;
 }
 
-/********************************************************************************/
-/* DE crossing signal Bü0/1 (ex. So 16a/b) which can show Bü1 and are repeaters */
-/********************************************************************************/
+/**********************************************************************************/
+/* DE crossing signal Bü 0/1 (ex. So 16a/b) which can show Bü 1 and are repeaters */
+/**********************************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=light],
 {
@@ -909,9 +909,9 @@ node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:cros
 	allow-overlap: true;
 }
 
-/********************************************************************************/
-/* DE crossing signal Bü0/1 (ex. So 16a/b) which can show Bü1 and are shortened */
-/********************************************************************************/
+/**********************************************************************************/
+/* DE crossing signal Bü 0/1 (ex. So 16a/b) which can show Bü 1 and are shortened */
+/**********************************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
 {
@@ -1058,6 +1058,9 @@ node|z14-[railway=signal]["railway:signal:main"="AT:trapeztafel"]["railway:signa
 	allow-overlap: true;
 }
 
+/******************/
+/* Railway tracks */
+/******************/
 way|z10-[railway=tram],
 way|z10-[railway=subway],
 way|z10-[railway=light_rail],
