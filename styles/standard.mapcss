@@ -78,6 +78,7 @@ way[tunnel=yes]::tunnels
 	opacity: 0.6;
 	linecap: butt;
 	linejoin: butt;
+	text: "tunnel:name";
 }
 
 /******************/
