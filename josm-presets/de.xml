@@ -2427,7 +2427,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Weichentyp"
 					values="default,three_way,single_slip,double_slip,wye,abt"
 					de.values="default switch,three way switch,single slip switch,double slip switch,wye switch,abt switch"
-					display_values="Einfache  Weiche,Dreiwegweiche,einfache Kreuzungsweiche,Doppelkreuzungsweiche,Y-Weiche,Abtsche Weiche"
+					display_values="Einfache Weiche,Dreiwegweiche,einfache Kreuzungsweiche,Doppelkreuzungsweiche,Y-Weiche,Abtsche Weiche"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:turnout_side"
@@ -2477,6 +2477,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<key key="railway"
 					value="derail" />
+				<key key="railway:derail"
+					value="wedge" />
 				<text key="ref"
 					text="Ref"
 					de.text="Bezeichnung/Nummer"
@@ -2528,7 +2530,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="signal_box" />
 			<text key="name"
 				text="Name"
-				de.text="Name (z. B. 'Neuss Ngf', 'Riesa B8' 'Holzheim ESTW-A'"
+				de.text="Name (z. B. 'Neuss Ngf', 'Riesa B8' 'Holzheim ESTW-A')"
 				default=""
 				delete_if_empty="true" />
 			<text key="railway:ref"
@@ -2581,7 +2583,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<group name="Betriebsstellen" icon="facilities.png">
 			<item name="Bahnhof" icon="station.png" type="node">
-				<label text="Bahnhof" />
+				<label text="Personenbahnhöfe und Bahnhöfe mit gemischter Nutzung" />
 				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
@@ -2741,8 +2743,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
+					text="Short name"
+					de.text="Abkürzung"
 					default=""
 					delete_if_empty="true" />
 				<text key="uic_ref"
@@ -2859,7 +2861,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<item name="Abzweig, Anst, Awanst" icon="junction.png" type="node">
-				<label text="Abzweig, Ausweichanschlusstelle oder Ausweichanschlusstelle" />
+				<label text="Abzweig, Anschlusstelle oder Ausweichanschlusstelle" />
 				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
@@ -2870,8 +2872,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:ref"
-					text="Short name (according to DS100, such as 'NAN')"
+					text="Short name (DS100, such as 'NAN')"
 					de.text="Abkürzung (nach DS100, z. B. 'NAN')"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG')"
+					de.text="Betreiber (z. B. 'DB Netz AG')"
 					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
@@ -2911,6 +2918,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					default=""
 					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG')"
+					de.text="Betreiber (z. B. 'DB Netz AG')"
+					default=""
+					delete_if_empty="true" />
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
 					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
@@ -2946,6 +2958,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="railway:ref"
 					text="Short name (DS100)"
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG')"
+					de.text="Betreiber (z. B. 'DB Netz AG')"
 					default=""
 					delete_if_empty="true" />
 				<text key="start_date"
@@ -3257,14 +3274,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Verkehrsmittel"
 				values="train,light_rail,tram,subway"
 				de.display_values="Zug,Stadt-/Schnellbahn,Straßenbahn,U-Bahn"
-				display_values="train,light rail,tram,Subway"
+				display_values="train,light rail,tram,subway"
 				default=""
 				delete_if_empty="true" />
 			<combo key="service" text="Zuggattung" default="" delete_if_empty="true">
 				<list_entry value="high_speed" de.display_value="Hochgeschwindigkeitszug" display_value="high speed train" short_description="ICE, Thalys, TGV, Railjet" />
 				<list_entry value="long_distance" de.display_value="Reisezug" display_value="long distance train" short_description="Eurocity, Intercity, D-Zug" />
 				<list_entry value="regional" de.display_value="Regionalzug" display_value="regional train" short_description="Regionalbahn, Regionalexpress" />
-				<list_entry value="commuter" de.display_value="Nahverkehrszug" display_value="communter train (urban areas)" short_description="S-Bahn, Straßenbahn, U-Bahn, Hochbahn" />
+				<list_entry value="commuter" de.display_value="Nahverkehrszug" display_value="communter train (urban areas)" short_description="Straßenbahn, Stadtbahn, U-Bahn, Hochbahn" />
 				<list_entry value="car" de.display_value="Autoreisezug" display_value="long distance car train" short_description="Reisezug mit Automitnahme" />
 				<list_entry value="car_shuttle" de.display_value="Autozug" display_value="car shuttle (through tunnels)" short_description="Kurzverbindungen mit Autotransport, die einen Ersatz oder eine Abkürung zu Straßen darstellen" />
 				<list_entry value="night" de.display_value="Nachtzug" display_value="trains at night" short_description="Reisezug mit Schlafwagen, EuroNight, CityNightLine" />
@@ -3354,7 +3371,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Verkehrsmittel"
 				values="train,light_rail,tram,subway"
 				de.display_values="Zug,Stadt-/Schnellbahn,Straßenbahn,U-Bahn"
-				display_values="train,light rail,tram,Subway"
+				display_values="train,light rail,tram,subway"
 				default=""
 				delete_if_empty="true" />
 			<combo key="service" text="Zuggattung" default="" delete_if_empty="true">
