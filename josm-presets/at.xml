@@ -1,0 +1,4134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+OpenRailwayMap JOSM Presets File
+Edition for Austrian railways (in German)
+
+OpenRailwayMap Copyright (C) 2012-2014 Alexander Matheisen
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+-->
+
+
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
+	<group name="OpenRailwayMap Infrastructure AT" de.name="OpenRailwayMap Infrastruktur AT" icon="signals.png">
+		<group name="Gleise" icon="rail.png">
+			<item name="Streckengleis / Durchgehendes Hauptgleis" icon="rail.png" type="way">
+				<label text="Streckengleise (ohne Überleitgleise) und durchgehende Hauptgleise in einem Bahnhof. Jedes Gleis wird einzeln erfasst." />
+				<space />
+				<key key="railway"
+					value="rail" />
+				<text key="ref"
+					text="Line ref (VzG number, e.g. '2379')"
+					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />	
+				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
+					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" de.short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, in der Regel zumindest abschnittsweise mit mehr als 100 km/h befahrbar" short_description="An important line; often double tracks, electrified; usually more than 100 km/h" />
+					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" de.short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." short_description="less important line; often single-tracked; not electrified; less than 100 km/h" />
+					<list_entry value="industrial" de.display_value="Industriebahn" display_value="industrial line" de.short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." short_description="A line only used for freight trains inside industrial areas or mines." />
+					<list_entry value="military" de.display_value="Militärbahn" display_value="military line" de.short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." short_description="A line only used by military trains" />
+					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" de.short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
+				</combo>
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<check key="highspeed"
+					text="High-speed line (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:tilting"
+					text="Used by tilting trains"
+					de.text="Neigetechnik-Ausrüstung"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="Linienzugbeeinflussung (LZB)"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<space />
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Ja (mit Oberleitung),Ja (mit Stromschiene)"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16.67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<key key="gauge"
+					value="1435" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Hauptgleis" icon="siding.png" type="way">
+				<label text="Nicht durchgehendes Hauptgleis in einem Bahnhof und alle sonstigen Gleise, die weder durchgehendes Hauptgleis, noch Nebengleis, Anschlussgleis, Abstellgleis oder Überleitgleis sind. Jedes Gleis wird einzeln erfasst." />
+				<space />
+				<key key="railway"
+					value="rail" />
+				<key key="service"
+					value="siding" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<check key="highspeed"
+					text="High-speed line (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="Linienzugbeeinflussung (LZB)"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16,67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<key key="gauge"
+					value="1435" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Nebengleis / Abstellgleis" icon="yard.png" type="way">
+				<label text="Abstellgleise in Rangier-, Güter- oder Betriebsbahnhöfen, auf denen Züge zusammengestellt und Wagen abgestellt werden. Jedes Gleis wird einzeln erfasst." />
+				<space />
+				<key key="railway"
+					value="rail" />
+				<key key="service"
+					value="yard" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16.67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<key key="gauge"
+					value="1435" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Year of opening"
+					de.text="Zeitpunkt der Inbetriebnahme"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Anschluss- oder Verladegleis" icon="spur.png" type="way">
+				<label text="Kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen oder Verladegleise in Industrieanlagen." />
+				<space />
+				<key key="railway"
+					value="rail" />
+				<key key="service"
+					value="spur" />
+				<space />
+				<key key="railway:traffic_mode"
+					value="freight" />
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="Linienzugbeeinflussung (LZB)"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,16.67,50,60,25,0"
+					display_values="16,7 Hz (Standard in Deutschland)16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz,Gleichspannung"
+					default=""
+					delete_if_empty="true" />
+				<key key="gauge"
+					value="1435" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Überleitgleis" icon="siding.png" type="way">
+				<label text="Überleitgleis, das den Wechsel zwischen zwei Gleisen einer Strecke ermöglicht." />
+				<space />
+				<key key="railway"
+					value="rail" />
+				<key key="service"
+					value="crossover" />
+				<space />
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<check key="highspeed"
+					text="High-speed line (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16.67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<key key="gauge"
+					value="1435" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<separator />
+			<item name="Schmalspurgleis" icon="narrowgauge.png" type="way">
+				<label text="Schmalspurgleise sind in Deutschland Gleise mit einer Spurweite unter der Normalspurweite von 1435mm. Jedes Gleis wird einzeln erfasst." />
+				<space />
+				<key key="railway"
+					value="narrow_gauge" />
+				<text key="ref"
+					text="Line ref (VzG number, e.g. '2379')"
+					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="usage" text="Usage (leave empty if main track or line)" de.text="Nutzung (leer lassen bei Strecken- und Hauptgleisen)" default="" delete_if_empty="true">
+					<list_entry value="branch" display_value="Reguläre Strecke" short_description="Eine Schmalspurbahn, auf der regulärer Personen- und/oder Güterverkehr stattfindet." />
+					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
+				</combo>
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+				  <list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" /><!-- FIXME: Abgrenzung zwischen (nicht durchgehenden) Hauptgleisen und (planmäßig nicht von Zügen befahrenen) Nebengleisen herausstellen -->
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value="spur" display_value="Anschlussgleis" short_description="Meist kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
+				</combo>
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16.67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1040,1000,900,880,800,760,750,580,500"
+					display_values="1040 mm,1000 mm (Meterspur),900 mm,880 mm,800 mm,760mm (Bosnische Spur),750 mm,580 mm,500 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Erhaltene Bahnstrecke" icon="preserved.png" type="way">
+				<label text="Ein Gleis, auf dem kein regulärer Betrieb mehr stattfindet und nun für touristische Zwecke erhalten bleibt (z. B. Draisinenstrecken)." />
+				<space />
+				<key key="railway"
+					value="preserved" />
+				<text key="ref"
+					text="Line ref (VzG number, e.g. '2379')"
+					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value="spur" display_value="Anschlussgleis" short_description="Meist kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
+				</combo>
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16.67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1040,1000,900,880,800,760,750,580,500,381,184,127"
+					display_values="1435 mm (Normalspur),1040 mm,1000 mm (Meterspur),900 mm,880 mm,800 mm,760mm (Bosnische Spur),750 mm,580 mm,500 mm,381 mm,184 mm,127 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Miniaturbahn / Parkeisenbahn" icon="miniature.png" type="way">
+				<label text="Parkeisenbahnen und vergleichbare, in der Regel touristisch genutzte, Schmalspurbahnen bis etwa 600 mm Spurweite." />
+				<space />
+				<key key="railway"
+					value="miniature" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="usage" text="Usage (leave empty if main track or line)" de.text="Nutzung (leer lassen bei Strecken- und Hauptgleisen)" default="" delete_if_empty="true">
+					<list_entry value="branch" display_value="Reguläre Strecke" short_description="Eine Schmalspurbahn, auf der regulärer Personen- und/oder Güterverkehr stattfindet." />
+					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+				</combo>
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value="spur" display_value="Anschlussgleis" short_description="Meist kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Durchgehendes Hauptgleis (Fortsetzung der freien Strecke im Bahnhof)" />
+				</combo>
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600"
+					display_values="500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16.67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="381,184,127"
+					display_values="381 mm,184 mm,127 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<separator />
+			<item name="Straßenbahngleis" icon="tram.png" type="way">
+				<label text="Ebenerdig oder teilweise unterirdisch verlegte Straßenbahngleise oder straßenbahnähnlich verlegte Stadtbahnstrecken. Jedes Gleis wird einzeln erfasst." />
+				<space />
+				<key key="railway"
+					value="tram" />
+				<text key="ref"
+					text="Line ref"
+					de.text="Streckennummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,freight, "
+					display_values="Gemischt,Güterverkehr,Personenverkehr"
+					default="passenger"
+					delete_if_empty="true" />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
+				</combo>
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600"
+					display_values="500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="0,16.7,16,67,50,60,25"
+					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1040,1000,900,760,750"
+					display_values="1435 mm (Normalspur),1040 mm,1000 mm (Meterspur),900 mm,760mm (Bosnische Spur),750 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless (slab track)"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'Wiener Linien GmbH &amp; Co KG')"
+					de.text="Betreiber (z. B. 'Wiener Linien GmbH &amp; Co KG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="U-Bahngleis" icon="subway.png" type="way">
+				<label text="Unterirdisch verlegte Stadt- und Schnellbahnen, teilweise auch oberirdischer Verlauf möglich. Jedes Gleis wird einzeln erfasst. Zusätzlich noch im Menü 'Tunnel' auswählen!" />
+				<space />
+				<key key="railway"
+					value="subway" />
+				<text key="ref"
+					text="Line ref"
+					de.text="Streckennummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
+				</combo>
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000"
+					display_values="500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="0,16.7,16,67,50,60,25"
+					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1040,1000,900,760,750"
+					display_values="1435 mm (Normalspur),1040 mm,1000 mm (Meterspur),900 mm,760mm (Bosnische Spur),750 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'Wiener Linien GmbH &amp; Co KG')"
+					de.text="Betreiber (z. B. 'Wiener Linien GmbH &amp; Co KG')"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Stadt-/Schnellbahngleis" icon="light-rail.png" type="way">
+				<label text="Stadtbahnen und straßenbahnähnliche Untergrund- oder Überlandbahnen. Unterscheiden sich meist durch ein anderes Stromsystem, eigene Signaltechnik oder einen speziellen Fuhrpark (z. B. S-Bahnen Hamburg und Berlin, Hamburger Hochbahn) und sind meist völlig vom restlichen Straßenverkehr getrennt. Jedes Gleis wird einzeln erfasst." />
+				<space />
+				<key key="railway"
+					value="light_rail" />
+				<text key="ref"
+					text="Line ref"
+					de.text="Streckennummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<key key="railway:traffic_mode"
+					value="passenger" />
+				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
+					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
+					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
+					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
+					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
+				</combo>
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV,500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="0,16.7,16,67,50,60,25"
+					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1040,1000,900,760,750"
+					display_values="1435 mm (Normalspur),1040 mm,1000 mm (Meterspur),900 mm,760mm (Bosnische Spur),750 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'Wiener Linien GmbH &amp; Co KG')"
+					de.text="Betreiber (z. B. 'Wiener Linien GmbH &amp; Co KG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<separator />
+			<item name="Geplantes Gleis" icon="proposed.png" type="way">
+				<label text="Ein Gleis, dessen Bau geplant ist." />
+				<space />
+				<key key="railway"
+					value="proposed" />
+					<text key="ref"
+					text="Line ref (VzG number, e.g. '2379')"
+					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
+					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
+				</combo>
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<check key="highspeed"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:tilting"
+					text="Used by tilting trains"
+					de.text="Neigetechnik-Ausrüstung"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<space />
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16,67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1040,1000,900,880,800,760,750,580,500,381,184,127"
+					display_values="1435 mm (Normalspur),1040 mm,1000 mm (Meterspur),900 mm,880 mm,800 mm,760mm (Bosnische Spur),750 mm,580 mm,500 mm,381 mm,184 mm,127 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Gleis im Bau" icon="construction.png" type="way">
+				<label text="Ein Gleis, dessen Bau momentan noch nicht fertiggestellt ist." />
+				<space />
+				<key key="railway"
+					value="construction" />
+					<text key="ref"
+					text="Line ref (VzG number, e.g. '2379')"
+					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
+					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
+				</combo>
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<check key="highspeed"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:tilting"
+					text="Used by tilting trains"
+					de.text="Neigetechnik-Ausrüstung"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<space />
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16.67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1040,1000,900,880,800,760,750,580,500,381,184,127"
+					display_values="1435 mm (Normalspur),1040 mm,1000 mm (Meterspur),900 mm,880 mm,800 mm,760mm (Bosnische Spur),750 mm,580 mm,500 mm,381 mm,184 mm,127 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Stillgelegtes Gleis" icon="disused.png" type="way">
+				<label text="Ein Gleis, das zwar noch vorhanden ist und jederzeit wieder genutzt werden könnte, im Moment aber nicht mehr in Betrieb ist." />
+				<space />
+				<key key="railway"
+					value="disused" />
+					<text key="ref"
+					text="Line ref (VzG number, e.g. '2379')"
+					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
+					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
+				</combo>
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<check key="highspeed"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,1800,2200,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,1800 V,2200 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16.67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1106,1040,1000,900,880,820,800,760,750,600,580,500,381,184,127"
+					display_values="1435 mm (Normalspur),1106,1040 mm,1000 mm (Meterspur),900 mm,880 mm,820 mm,800 mm,760mm (Bosnische Spur),750 mm,600 mm,580 mm,500 mm,381 mm,184 mm,127 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="end_date"
+					text="Closed at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Stilllegung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Abgebautes Gleis" icon="abandoned.png" type="way">
+				<label text="Ein Gleis, das entfernt wurde. Das Gleisbett ist weiterhin vorhanden und der Streckenverlauf ist weiterhin sichtbar." />
+				<space />
+				<key key="railway"
+					value="razed" />
+				<text key="ref"
+					text="Line ref (VzG number, e.g. '2379')"
+					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
+					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
+				</combo>
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					default=""
+					delete_if_empty="true" />
+				<check key="highspeed"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,1800,2200,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,1800 V,2200 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16.67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1106,1040,1000,900,880,820,800,760,750,600,580,500,381,184,127"
+					display_values="1435 mm (Normalspur),1106,1040 mm,1000 mm (Meterspur),900 mm,880 mm,820 mm,800 mm,760mm (Bosnische Spur),750 mm,600 mm,580 mm,500 mm,381 mm,184 mm,127 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="end_date"
+					text="Closed at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Stilllegung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Überbauter Streckenverlauf" icon="razed.png" type="way">
+				<label text="Ein ehemaliges Gleis, dessen Verlauf heute durch Überbauung o.ä. nur noch zu erahnen ist." />
+				<space />
+				<key key="railway"
+					value="razed" />
+				<text key="ref"
+					text="Line ref (VzG number, e.g. '2379')"
+					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
+					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
+					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
+				</combo>
+				<combo key="railway:traffic_mode"
+					text="Traffic mode"
+					de.text="Verkehrsart"
+					values="mixed,passenger,freight"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr"
+					display_values="mixed,passenger only,freight only"
+					default=""
+					delete_if_empty="true" />
+				<check key="highspeed"
+					text="Highspeed traffic (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
+					default="off"
+					delete_if_empty="true" />
+				<space />
+				<check key="railway:pzb"
+					text="PZB"
+					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:lzb"
+					text="LZB"
+					de.text="Linienzugbeeinflussung (LZB)"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:etcs"
+					text="ETCS"
+					de.text="ETCS"
+					values="yes,no,0,1,2,3"
+					display_values="Yes,No,Level 0,Level 1,Level 2,Level 3"
+					de.display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:radio"
+					text="Radio"
+					de.text="Zugfunk"
+					values="analogue,gsm-r"
+					display_values="Analog,GSM-R"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+				</combo>
+				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
+					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+				<combo key="maxspeed" default=""
+					text="Maxspeed (km/h)"
+					de.text="Höchstgeschwindigkeit (km/h)"
+					delete_if_empty="true"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
+				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<space />
+				<combo key="electrified"
+					text="Electrification"
+					de.text="Elektrifizierung"
+					values="yes,no,contact_line,rail"
+					display_values="Ja,Nein,Oberleitung,Stromschiene"
+					default=""
+					delete_if_empty="true" />
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,500,550,600,750,850,1000,1200,1500,1800,2200,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (Standard in Österreich),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,1800 V,2200 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					default=""
+					delete_if_empty="true" />
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16,67,50,60,25"
+					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					default=""
+					delete_if_empty="true" />
+				<combo key="gauge"
+					text="Gauge"
+					de.text="Spurweite"
+					values="1435,1106,1040,1000,900,880,820,800,760,750,600,580,500,381,184,127"
+					display_values="1435 mm (Normalspur),1106,1040 mm,1000 mm (Meterspur),900 mm,880 mm,820 mm,800 mm,760mm (Bosnische Spur),750 mm,600 mm,580 mm,500 mm,381 mm,184 mm,127 mm"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:ballastless"
+					text="Ballastless"
+					de.text="Feste Fahrbahn"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="rack"
+					text="Rack"
+					de.text="Zahnstange"
+					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
+					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
+					default=""
+					delete_if_empty="true" />
+				<text key="incline"
+					text="Incline (e.g.. '3%')"
+					de.text="Steigung (z. B. '3%')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="end_date"
+					text="Closed at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Stilllegung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<space />
+				<check key="embankment"
+					text="Embankment"
+					de.text="Damm"
+					default="off"
+					delete_if_empty="true" />
+				<check key="cutting"
+					text="Cutting"
+					de.text="Einschnitt"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<separator />
+			<item name="Brücke" icon="bridge.png" type="way">
+				<key key="bridge"
+					value="yes" />
+				<key key="layer"
+					value="1" />
+				<text key="bridge:name"
+					text="Bridge name"
+					de.text="Name der Brücke"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Tunnel" icon="tunnel.png" type="way">
+				<key key="tunnel"
+					value="yes" />
+				<key key="layer"
+					value="-1" />
+				<text key="tunnel:name"
+					text="Tunnel name"
+					de.text="Name des Tunnels"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<separator />
+			<item name="Prellbock" icon="bufferstop.png" type="node">
+				<key key="railway"
+					value="buffer_stop" />
+				<key key="railway:signal:position"
+					value="in_track" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="forward,backward"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway:signal:minor"
+					value="railway:signal:minor=AT-V2:weiterfahrt_verboten" />
+				<key key="railway:signal:minor:form"
+					value="sign" />
+			</item>
+			<item name="Weiche" icon="de-switch.png" type="node">
+				<label text="Weiche" />
+				<space />
+				<key key="railway"
+					value="switch" />
+				<text key="ref"
+					text="Switch ref"
+					de.text="Weichennummer"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:local_operated"
+					text="Local operated"
+					de.text="Ortsgestellt"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:switch:electric"
+					text="Electric"
+					de.text="Elektrischer Weichenantrieb"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:switch:heated"
+					text="Heated"
+					de.text="Weichenheizung"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:switch:resetting"
+					text="resetting switch"
+					de.text="Rückfallweiche"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:switch"
+					text="Switch type"
+					de.text="Weichentyp"
+					values="default,three_way,single_slip,double_slip,wye,abt"
+					de.values="default switch,three way switch,single slip switch,double slip switch,wye switch,abt switch"
+					display_values="Einfache Weiche,Dreiwegweiche,einfache Kreuzungsweiche,Doppelkreuzungsweiche,Y-Weiche,Abtsche Weiche"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:turnout_side"
+					text="Turnout side (only default and resetting switches)"
+					de.text="Seite der Abzweigung (nur bei Standard- und Rückfallweichen)"
+					values="left,right"
+					display_values="Left,Right"
+					de.display_values="Links,Rechts"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:radius"
+					text="Switch radius (m)"
+					de.text="Weichenradius (m)"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:maxspeed:straight"
+					text="Maxspeed in straight direction (km/h)"
+					de.text="Geschwindigkeit auf dem geraden Zweig (km/h)"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:maxspeed:diverging"
+					text="Maxspeed in diverging direction (km/h)"
+					de.text="Geschwindigkeit auf dem Abzweig (km/h)"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:switch:configuration"
+					text="Configuration"
+					de.text="Bauform (bei Doppelkreuzungsweichen)"
+					values="inside,outside"
+					display_values="Innenliegende Zungen (Engländer),Außenliegende Zungen (Baeseler)"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:switch:movable_frog"
+					text="Movable frog"
+					de.text="Bewegliches Herzstück"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Kreuzung" icon="railway-crossing.png" type="node">
+				<label text="Kreuzung" />
+				<space />
+				<key key="railway"
+					value="railway_crossing" />
+			</item>
+			<item name="Gleissperre" icon="derail.png" type="node">
+				<label text="Gleissperre" />
+				<space />
+				<key key="railway"
+					value="derail" />
+				<key key="railway:derail"
+					value="wedge" />
+				<text key="ref"
+					text="Ref"
+					de.text="Bezeichnung/Nummer"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:local_operated"
+					text="Local operated"
+					de.text="Ortsbedient"
+					default="off"
+					delete_if_empty="true" />
+				<check key="railway:signal:minor:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					default="off"
+					delete_if_empty="true" />
+				<key key="railway:signal:minor"
+					value="AT-V2:sperrsignal" />
+				<key key="railway:signal:minor:states"
+					value="AT-V2:weiterfahrt_verboten;AT-V2:weiterfahrt_erlaubt" />
+				<key key="railway:signal:minor:form"
+					value="semaphore" />
+				<key key="railway:signal:minor:height"
+					value="dwarf" />
+			</item>
+			<item name="Gleisfreimeldeanlage" icon="vacancy-detection.png" type="node">
+				<label text="Gleisfreimeldeanlage" />
+				<space />
+				<key key="railway"
+					value="vacancy_detection" />
+				<combo key="railway:vacancy_detection"
+					text="Type"
+					de.text="Typ"
+					values="insulated_rail_joint,axle_counter"
+					display_values="insulated_rail_joint,axle_counter"
+					de.display_values="Isolierstoß,Achszähler"
+					default=""
+					delete_if_empty="true" />
+			</item>
+		</group>
+		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
+			<label text="Stellwerk" />
+			<space />
+			<key key="railway"
+				value="signal_box" />
+			<text key="name"
+				text="Name"
+				de.text="Name"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:ref"
+				text="Short name"
+				de.text="Abkürzung"
+				default=""
+				delete_if_empty="true" />
+			<combo key="railway:signal_box"
+				text="Signal box type"
+				de.text="Stellwerkstechnik"
+				values="mechanical,electric,track_diagram,electronic"
+				display_values="Mechanisches Stellwerk,Elektrisches/Elektromechanisches Stellwerk,Gleisbildstellwerk,Elektronisches Stellwerk (ESTW)"
+				default=""
+				delete_if_empty="true" />
+			<text key="start_date"
+				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+				de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:position"
+				text="Distance indication (rounded, e.g. '12.3'; km)"
+				de.text="Hektometerwert (z. B. '12.3')"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:position:exact"
+				text="Exact distance indication (exact, e.g. '12.345'; km)"
+				de.text="Metergenauer Wert (genau, z. B: '12.345'; km)"
+				default=""
+				delete_if_empty="true" />
+			<text key="image"
+				text="Image URL"
+				de.text="URL eines Bildes"
+				default=""
+				delete_if_empty="true" />
+			<check key="railway:local_operated"
+				text="Local operated"
+				de.text="Ortsbedient"
+				default="off"
+				delete_if_empty="true" />
+			<check key="building"
+				text="Building"
+				de.text="Gebäude"
+				default="off"
+				delete_if_empty="true" />
+			<check key="disused"
+				text="out of service"
+				de.text="Außer Betrieb"
+				default="off"
+				delete_if_empty="true" />
+		</item>
+		<group name="Betriebsstellen" icon="facilities.png">
+			<item name="Personenbahnhöfe und Bahnhöfe mit gemischter Nutzung" icon="station.png" type="node">
+				<label text="Bahnhof" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<space />
+				<key key="railway"
+					value="station" />
+				<combo key="public_transport"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="station, "
+					de.display_values="ja,nein"
+					display_values="yes,no"
+					default=""
+					delete_if_empty="true" />
+				<text key="name" text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DB 640)"
+					de.text="Abkürzung (nach DB 640, z. B. 'Bbg')"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:station_category"
+					text="Station category"
+					de.text="Bahnhofskategorie"
+					values="1,2,3,4,5,6,7"
+					display_values="1,2,3,4,5,6,7"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height above sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Haltestelle" icon="halt.png" type="node">
+				<label text="Haltestelle" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<space />
+				<key key="railway"
+					value="halt" />
+				<combo key="public_transport"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="station, "
+					de.display_values="ja,nein"
+					display_values="yes,no"
+					default=""
+					delete_if_empty="true" />
+				<text key="name" text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DB 640)"
+					de.text="Abkürzung (DB 640, z. B. 'Bbg H1')"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:station_category"
+					text="Station category"
+					de.text="Bahnhofskategorie"
+					values="1,2,3,4,5,6,7"
+					display_values="1,2,3,4,5,6,7"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height above sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Straßenbahnhaltestelle" icon="tramstop.png" type="node">
+				<label text="Straßenbahnhaltestelle" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<space />
+				<key key="railway"
+					value="tram_stop" />
+				<combo key="public_transport"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="station, "
+					de.display_values="ja,nein"
+					display_values="yes,no"
+					default=""
+					delete_if_empty="true" />
+				<text key="name" text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name"
+					de.text="Abkürzung"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'Wiener Linien GmbH &amp; Co KG')"
+					de.text="Betreiber (z. B. 'Wiener Linien GmbH &amp; Co KG')"
+					default=""
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height above sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node">
+				<label text="Güterbahnhof/Rangierbahnhof" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<space />
+				<key key="railway"
+					value="yard" />
+				<text key="name" text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DB 640)"
+					de.text="Abkürzung (nach DB 640, z. B. 'Bbg')"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height above sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Betriebsbahnhof" icon="service-station.png" type="node">
+				<label text="Betriebsbahnhof" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<space />
+				<key key="railway"
+					value="service_station" />
+				<text key="name" text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DB 640)"
+					de.text="Abkürzung (nach DB 640, z. B. 'Bbg')"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height above sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Abzweig, Anst, Awanst" icon="junction.png" type="node">
+				<label text="Abzweig, Anschlusstelle oder Ausweichanschlusstelle" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<space />
+				<key key="railway"
+					value="junction" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DB 640, such as 'Bbg')"
+					de.text="Abkürzung (nach DB 640, z. B. 'Bbg')"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height above sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Überleitstelle" icon="crossover.png" type="node">
+				<label text="Überleitstelle" />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<space />
+				<key key="railway"
+					value="crossover" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DB 640)"
+					de.text="Abkürzung (nach DB 640, z. B. 'Bbg')"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height above sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Bahnhofsteil, Blockstelle" icon="site.png" type="node">
+				<label text="Bahnhofsteil, Blockstelle," />
+				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<space />
+				<key key="railway"
+					value="site" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DB 640)"
+					de.text="Abkürzung (nach DB 640, z. B. 'Bbg')"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height above sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<separator />
+			<item name="Halteposition" icon="stop.png" type="node">
+				<label text="Halteposition" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<combo key="public_transport"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="stop_position, "
+					de.display_values="ja,nein"
+					display_values="yes,no"
+					default=""
+					delete_if_empty="true" />
+				<key key="railway"
+					value="stop" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DB 640)"
+					de.text="Abkürzung (nach DB 640, z. B. 'Bbg')"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<text key="local_ref"
+					text="track number (e.g. 5 or 5a)"
+					de.text="Gleisnummer (z.B. 5 oder 5a)"
+					default=""
+					delete_if_empty="true" />
+				<check key="train"
+					text="Railway traffic?"
+					de.text="Eisenbahnverkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="light_rail"
+					text="Light rail traffic?"
+					de.text="Stadtbahn- oder Schnellbahn-Verkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="subway"
+					text="Subway traffic?"
+					de.text="U-Bahn-Verkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="tram"
+					text="Tram traffic?"
+					de.text="Straßenbahnverkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Personenverkehr AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Personenverkehr AG')"
+					default=""
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height above sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:position"
+					text="Distance indication (rounded, e.g. '12.3'; km)"
+					de.text="Entfernungsangabe (gerundet, z. B. '12.3'; km)"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:position:exact"
+					text="Exact distance indication (exact, e.g. '12.345'; km)"
+					de.text="Exakte Entfernungsangabe (genau, z.B: '12.345'; km)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Bahngelände" icon="landuse.png" type="closedway">
+				<label text="Bahngelände" />
+				<key key="landuse"
+					value="railway" />
+			</item>
+			<item name="Betriebsstellenrelation" icon="facility.png" type="relation">
+				<label text="Betriebsstellenrelation" />
+				<space />
+				<key key="railway"
+					value="facility" />
+				<combo key="type"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="public_transport, "
+					de.display_values="ja,nein"
+					display_values="yes,no"
+					default=""
+					delete_if_empty="true" />
+				<combo key="public_transport"
+					text="Public transport?"
+					de.text="Öffentlicher Verkehr?"
+					values="stop_area, "
+					de.display_values="ja,nein"
+					display_values="yes,no"
+					default=""
+					delete_if_empty="true" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DB 640)"
+					de.text="Abkürzung (nach DB 640, z. B. 'Bbg')"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+				<check key="train"
+					text="Railway traffic?"
+					de.text="Eisenbahnverkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="light_rail"
+					text="Light rail traffic?"
+					de.text="Stadtbahn- oder Schnellbahn-Verkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="subway"
+					text="Subway traffic?"
+					de.text="U-Bahn-Verkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<check key="tram"
+					text="Tram traffic?"
+					de.text="Straßenbahnverkehr?"
+					default="off"
+					delete_if_empty="true" />
+				<roles>
+					<role key=""
+						text="Railway facility node/area"
+						de.text="Punkt/Fläche der Betriebsstelle"
+						requisite="required"
+						type="node,closedway"
+						count="1" />
+					<role key="stop"
+						text="Stop positions"
+						de.text="Haltepositionen"
+						requisite="required"
+						type="node" />
+					<role key="platform"
+						text="Platforms"
+						de.text="Bahnsteige"
+						requisite="optional"
+						type="way,closedway" />
+					<role key="subway_entrance"
+						text="Subway entrances"
+						de.text="U-Bahn-Eingänge"
+						requisite="optional"
+						type="node" />
+					<role key="building"
+						text="Station building"
+						de.text="Bahnhofsgebäude"
+						requisite="optional"
+						type="closedway" />
+					<role key="landuse"
+						text="Area"
+						de.text="Fläche"
+						requisite="optional"
+						type="closedway" />
+				</roles>
+			</item>
+		</group>
+		<separator />
+		<item name="VzG-Strecke" icon="tracks.png" type="relation">
+			<label text="VzG-Strecke" />
+			<space />
+			<key key="type"
+				value="route" />
+			<key key="route"
+				value="tracks" />
+			<text key="name"
+				text="Name of track (e.g. '222 01 Tauernbahn Schwarzach St. Veit – Spittal-Millstättersee')"
+				de.text="Streckenname (z. B. '222 01 Tauernbahn Schwarzach St. Veit – Spittal-Millstättersee')"
+				default=""
+				delete_if_empty="true" />
+			<text key="ref"
+				text="Line ref (VzG number, e.g. '222 01')"
+				de.text="Streckennummer (VzG-Nummer, z. B. '222 01')"
+				default=""
+				delete_if_empty="true" />
+			<text key="from"
+				text="Initial station"
+				de.text="Streckenanfang"
+				default=""
+				delete_if_empty="true" />
+			<text key="to"
+				text="Terminus station"
+				de.text="Streckenende"
+				default=""
+				delete_if_empty="true" />
+			<text key="operator"
+				text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+				de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
+				default=""
+				delete_if_empty="true" />
+			<text key="wikipedia"
+				text="Wikipedia article in the format (Language):(Article)"
+				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+				default=""
+				delete_if_empty="true" />
+			<roles>
+				<role key=""
+					text="Tracks"
+					de.text="Streckengleise"
+					requisite="required"
+					type="way" />
+			</roles>
+		</item>
+		<item name="Kursbuchstrecke" icon="route.png" type="relation">
+			<label text="Kursbuchstrecke" />
+			<space />
+			<key key="type"
+				value="route" />
+			<key key="route"
+				value="railway" />
+			<text key="name"
+				text="Name of route (e.g. '220 Tauernbahn')"
+				de.text="Name der Kursbuchstrecke (z. B. '220 Tauernbahn')"
+				default=""
+				delete_if_empty="true" />
+			<text key="ref"
+				text="Line ref (KBS number, e.g. '220')"
+				de.text="Streckennummer (KBS-Nummer, z. B. '220')"
+				default=""
+				delete_if_empty="true" />
+			<text key="from"
+				text="Initial station"
+				de.text="Streckenanfang"
+				default=""
+				delete_if_empty="true" />
+			<text key="to"
+				text="Terminus station"
+				de.text="Streckenende"
+				default=""
+				delete_if_empty="true" />
+			<text key="wikipedia"
+				text="Wikipedia article in the format (Language):(Article)"
+				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+				default=""
+				delete_if_empty="true" />
+			<roles>
+				<role key=""
+					text="Tracks"
+					de.text="Streckengleise"
+					requisite="required"
+					type="way" />
+			</roles>
+		</item>
+		<item name="Linienvariante" icon="line.png" type="relation">
+			<label text="Linienvariante" />
+			<space />
+			<key key="type"
+				value="route" />
+			<combo key="route"
+				text="Type of transportation"
+				de.text="Verkehrsmittel"
+				values="train,light_rail,tram,subway"
+				de.display_values="Zug,Stadt-/Schnellbahn,Straßenbahn,U-Bahn"
+				display_values="train,light rail,tram,subway"
+				default=""
+				delete_if_empty="true" />
+			<combo key="service" text="Zuggattung" default="" delete_if_empty="true">
+				<list_entry value="high_speed" de.display_value="Hochgeschwindigkeitszug" display_value="high speed train" short_description="ICE, Thalys, TGV, Railjet" />
+				<list_entry value="long_distance" de.display_value="Reisezug" display_value="long distance train" short_description="Eurocity, Intercity, D-Zug" />
+				<list_entry value="regional" de.display_value="Regionalzug" display_value="regional train" short_description="Regionalbahn, Regionalexpress" />
+				<list_entry value="commuter" de.display_value="Nahverkehrszug" display_value="communter train (urban areas)" short_description="Straßenbahn, Stadtbahn, U-Bahn, Hochbahn" />
+				<list_entry value="car" de.display_value="Autoreisezug" display_value="long distance car train" short_description="Reisezug mit Automitnahme" />
+				<list_entry value="car_shuttle" de.display_value="Autozug" display_value="car shuttle (through tunnels)" short_description="Kurzverbindungen mit Autotransport, die einen Ersatz oder eine Abkürung zu Straßen darstellen" />
+				<list_entry value="night" de.display_value="Nachtzug" display_value="trains at night" short_description="Reisezug mit Schlafwagen, EuroNight, CityNightLine" />
+				<list_entry value="tourism" de.display_value="Touristische Züge" display_value="trains for tourists" short_description="Meist historische Züge als Touristenattraktion" />
+			</combo>
+			<text key="name"
+				text="Name of line (e.g. 'S 7 Wien Floridsdorf – Wolfsthal')"
+				de.text="Name der Linie (z. B. 'S 7 Wien Floridsdorf – Wolfsthal')"
+				default=""
+				delete_if_empty="true" />
+			<text key="operator"
+				text="Operator"
+				de.text="Betreiber"
+				default=""
+				delete_if_empty="true" />
+			<text key="ref"
+				text="Line or train ref (e.g. 'S 7')"
+				de.text="Linien- bzw. Zugnummer (z. B. 'S 7')"
+				default=""
+				delete_if_empty="true" />
+			<text key="from"
+				text="Initial station"
+				de.text="Streckenanfang"
+				default=""
+				delete_if_empty="true" />
+			<text key="to"
+				text="Terminus station"
+				de.text="Streckenende"
+				default=""
+				delete_if_empty="true" />
+			<text key="wikipedia"
+				text="Wikipedia article in the format (Language):(Article)"
+				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+				default=""
+				delete_if_empty="true" />
+			<roles>
+				<role key=""
+					text="Tracks"
+					de.text="Streckengleise"
+					requisite="required"
+					type="way" />
+				<role key="stop"
+					text="Stop position"
+					de.text="Halteposition"
+					requisite="optional"
+					type="node"
+					member_expression="public_transport=stop_position" />
+				<role key="stop_exit_only"
+					text="Stop position (exit only)"
+					de.text="Halteposition (nur Ausstieg)"
+					requisite="optional"
+					type="node"
+					member_expression="public_transport=stop_position" />
+				<role key="stop_entry_only"
+					text="Stop position (entry only)"
+					de.text="Halteposition (nur Einstieg)"
+					requisite="optional"
+					type="node"
+					member_expression="public_transport=stop_position" />
+				<role key="platform"
+					text="Platform"
+					de.text="Bahnsteig"
+					requisite="optional"
+					type="way,closedway"
+					member_expression="public_transport=platform" />
+				<role key="platform_exit_only"
+					text="Platform (exit only)"
+					de.text="Bahnsteig (nur Ausstieg)"
+					requisite="optional"
+					type="way,closedway"
+					member_expression="public_transport=platform" />
+				<role key="platform_entry_only"
+					text="Platform (entry only)"
+					de.text="Bahnsteig (nur Einstieg)"
+					requisite="optional"
+					type="way,closedway"
+					member_expression="public_transport=platform" />
+			</roles>
+		</item>
+		<item name="Hauptlinie" icon="line.png" type="relation">
+			<label text="Hauptlinie" />
+			<space />
+			<key key="type"
+				value="route_master" />
+			<combo key="route_master"
+				text="Type of transportation"
+				de.text="Verkehrsmittel"
+				values="train,light_rail,tram,subway"
+				de.display_values="Zug,Stadt-/Schnellbahn,Straßenbahn,U-Bahn"
+				display_values="train,light rail,tram,subway"
+				default=""
+				delete_if_empty="true" />
+			<combo key="service" text="Zuggattung" default="" delete_if_empty="true">
+				<list_entry value="high_speed" de.display_value="Hochgeschwindigkeitszug" display_value="high speed train" short_description="ICE, Thalys, TGV, Railjet" />
+				<list_entry value="long_distance" de.display_value="Reisezug" display_value="long distance train" short_description="Eurocity, Intercity, D-Zug" />
+				<list_entry value="regional" de.display_value="Regionalzug" display_value="regional train" short_description="Regionalbahn, Regionalexpress" />
+				<list_entry value="commuter" de.display_value="Nahverkehrszug" display_value="communter train (urban areas)" short_description="S-Bahn, Straßenbahn, U-Bahn, Hochbahn" />
+				<list_entry value="car" de.display_value="Autoreisezug" display_value="long distance car train" short_description="Reisezug mit Automitnahme" />
+				<list_entry value="car_shuttle" de.display_value="Autozug" display_value="car shuttle (through tunnels)" short_description="Kurzverbindungen mit Autotransport, die einen Ersatz oder eine Abkürung zu Straßen darstellen" />
+				<list_entry value="night" de.display_value="Nachtzug" display_value="trains at night" short_description="Reisezug mit Schlafwagen, EuroNight, CityNightLine" />
+				<list_entry value="tourism" de.display_value="Touristische Züge" display_value="trains for tourists" short_description="Meist historische Züge als Touristenattraktion" />
+			</combo>
+			<text key="name"
+				text="Name of line (e.g. 'S 7 Wien Floridsdorf – Wolfsthal')"
+				de.text="Name der Linie (z. B. 'S 7 Wien Floridsdorf – Wolfsthal')"
+				default=""
+				delete_if_empty="true" />
+			<text key="operator"
+				text="Operator"
+				de.text="Betreiber"
+				default=""
+				delete_if_empty="true" />
+			<text key="ref"
+				text="Line or train ref (e.g. 'S 7')"
+				de.text="Linien- bzw. Zugnummer (z. B. 'S 7')"
+				default=""
+				delete_if_empty="true" />
+			<text key="from"
+				text="Initial station"
+				de.text="Streckenanfang"
+				default=""
+				delete_if_empty="true" />
+			<text key="to"
+				text="Terminus station"
+				de.text="Streckenende"
+				default=""
+				delete_if_empty="true" />
+			<text key="wikipedia"
+				text="Wikipedia article in the format (Language):(Article)"
+				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+				default=""
+				delete_if_empty="true" />
+			<roles>
+				<role key=""
+					text="Tracks"
+					de.text="Streckengleise"
+					requisite="required"
+					type="way" />
+				<role key="stop"
+					text="Stop position"
+					de.text="Halteposition"
+					requisite="optional"
+					type="node"
+					member_expression="public_transport=stop_position" />
+				<role key="stop_exit_only"
+					text="Stop position (exit only)"
+					de.text="Halteposition (nur Ausstieg)"
+					requisite="optional"
+					type="node"
+					member_expression="public_transport=stop_position" />
+				<role key="stop_entry_only"
+					text="Stop position (entry only)"
+					de.text="Halteposition (nur Einstieg)"
+					requisite="optional"
+					type="node"
+					member_expression="public_transport=stop_position" />
+				<role key="platform"
+					text="Platform"
+					de.text="Bahnsteig"
+					requisite="optional"
+					type="way,closedway"
+					member_expression="public_transport=platform" />
+				<role key="platform_exit_only"
+					text="Platform (exit only)"
+					de.text="Bahnsteig (nur Ausstieg)"
+					requisite="optional"
+					type="way,closedway"
+					member_expression="public_transport=platform" />
+				<role key="platform_entry_only"
+					text="Platform (entry only)"
+					de.text="Bahnsteig (nur Einstieg)"
+					requisite="optional"
+					type="way,closedway"
+					member_expression="public_transport=platform" />
+			</roles>
+		</item>
+		<separator />
+		<item name="Level Crossing" de.name="Bahnübergang" icon="de-crossing.png" type="node">
+			<label text="Bahnübergang" />
+			<space />
+			<key key="railway"
+				value="level_crossing" />
+			<text key="railway:ref"
+				text="Name (no position)"
+				de.text="Name (keine Kilometerangabe oder kreuzende Straße)"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:position"
+				text="Position (rounded, e.g. '12.3'; km)"
+				de.text="Hektometerwert (z. B. '12.3')"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:position:exact"
+				text="Position (exact, e.g. '12.345'; km)"
+				de.text="Metergenauer Wert (z. B. '12.345'; km)"
+				default=""
+				delete_if_empty="true" />
+			<space />
+			<combo key="crossing:barrier"
+				text="Barriers" de.text="Schranken"
+				values="half,double_half,full,gates,yes,no"
+				de.display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Tore (England),Beschrankt,Unbeschrankt"
+				display_values="half boom gate,double half boom gate,full boom gate,gates (turnable),yes,no"
+				default=""
+				delete_if_empty="true" />
+			<check key="crossing:light"
+				text="Lights"
+				de.text="Warnlicht"
+				default="off"
+				delete_if_empty="true" />
+			<check key="crossing:saltire"
+				text="Saltire"
+				de.text="Andreaskreuz"
+				default="off"
+				delete_if_empty="true" />
+			<check key="crossing:bell"
+				text="Bell"
+				de.text="Akustischer Warnton"
+				default="off"
+				delete_if_empty="true" />
+			<space />
+			<check key="crossing:chicane"
+				text="Chicane"
+				de.text="Umlaufgitter"
+				default="off"
+				delete_if_empty="true" />
+			<combo key="crossing:supervision"
+				text="Type of supervision" de.text="Art der Überwachung"
+				values="no,camera,attendant,automatic,phohne"
+				display_values="no,camera,attendant,automatic,phone"
+				de.display_values="keine Überwachung,Kamera,Schrankenwärter/Fahrdienstleiter/Posten,Gefahrenraum-Freimeldeanlage,Telefon (Anrufschranken)"
+				default=""
+				delete_if_empty="true" />
+			<combo key="crossing:activation"
+				text="Activation" de.text="Einschaltung"
+				values="automatic,remote,local"
+				display_values="automatic (contacts),remote (signal box), local (attendant/train staff)"
+				de.display_values="Einschaltkontakte, fahrdienstleitergesteuert, vor Ort (Schrankenwärter/Zugpersonal)"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:level_crossing:closure:average"
+				text="average clousure duration (minutes)"
+				de.text="durchschnittliche Schließdauer (in Minuten)"
+				default=""
+				delete_if_empty="true" />
+			<check key="crossing:on_demand"
+				text="On demand"
+				de.text="Anrufschranke"
+				default="off"
+				delete_if_empty="true" />
+		</item>
+		<item name="Little crossing for pedestrians" de.name="Reisendenübergang"  icon="de-crossing.png" type="node">
+			<label de.text="Reisendenübergang (Übergänge für Reisende/Fußgänger ohne Andreaskreuz" text="Crossing for pedestrians (less secure than common level crossings)" />
+			<space />
+			<key key="railway"
+				value="crossing" />
+			<text key="railway:ref"
+				text="Name (no position)"
+				de.text="Name (keine Kilometerangabe oder kreuzende Straße)"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:position"
+				text="Position (rounded, e.g. '12.3'; km)"
+				de.text="Hektometerwert (z. B. '12.3')"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:position:exact"
+				text="Position (exact, e.g. '12.345'; km)"
+				de.text="Metergenauer Wert (z. B. '12.345'; km)"
+				default=""
+				delete_if_empty="true" />
+			<space />
+			<combo key="crossing:barrier"
+				text="Barriers" de.text="Schranken"
+				values="half,double_half,full,gates,yes,no"
+				de.display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Tore (England),Beschrankt,Unbeschrankt"
+				display_values="half boom gate,double half boom gate,full boom gate,gates (turnable),yes,no"
+				default=""
+				delete_if_empty="true" />
+			<check key="crossing:light"
+				text="Lights"
+				de.text="Warnlicht"
+				default="off"
+				delete_if_empty="true" />
+			<check key="crossing:saltire"
+				text="Saltire"
+				de.text="Andreaskreuz"
+				default="off"
+				delete_if_empty="true" />
+			<check key="crossing:bell"
+				text="Bell"
+				de.text="Akustischer Warnton"
+				default="off"
+				delete_if_empty="true" />
+			<space />
+			<check key="crossing:chicane"
+				text="Chicane"
+				de.text="Umlaufgitter"
+				default="off"
+				delete_if_empty="true" />
+			<combo key="crossing:supervision"
+				text="Type of supervision" de.text="Art der Überwachung"
+				values="no,camera,attendant,automatic,phohne"
+				display_values="no,camera,attendant,automatic,phone"
+				de.display_values="keine Überwachung,Kamera,Schrankenwärter/Fahrdienstleiter/Posten,Gefahrenraum-Freimeldeanlage,Telefon (Anrufschranken)"
+				default=""
+				delete_if_empty="true" />
+			<combo key="crossing:activation"
+				text="Activation" de.text="Einschaltung"
+				values="automatic,remote,local"
+				display_values="automatic (contacts),remote (signal box), local (attendant/train staff)"
+				de.display_values="Einschaltkontakte, fahrdienstleitergesteuert, vor Ort (Schrankenwärter/Zugpersonal)"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:level_crossing:closure:average"
+				text="average clousure duration (minutes)"
+				de.text="durchschnittliche Schließdauer (in Minuten)"
+				default=""
+				delete_if_empty="true" />
+			<check key="crossing:on_demand"
+				text="On demand"
+				de.text="Anrufschranke"
+				default="off"
+				delete_if_empty="true" />
+		</item>
+		<separator />
+		<item name="Kilo-/Hektometertafel" icon="milestone.png" type="node">
+			<label text="Kilo-/hektometer indications are nodes on the track"
+				de.text="Kilo-/Hektometerbezeichnung werden als Punkt auf dem" />
+			<label text="which they belong to. On lines with more than one track,"
+				de.text="dazugehörigen Gleis eingetragen. Bei mehrgleisigen Strecken" />
+			<label text="every track gets a node with the tags."
+				de.text="bekommt jedes Gleis einen Punkt mit den Tags." />
+			<label text="They are only added to main tracks,"
+				de.text="Sie werden nur auf Streckengleisen erfasst," />
+			<label text="not sidings in stations."
+				de.text="nicht aber auf Nebengleisen." />
+			<key key="railway" value="milestone" />
+			<text key="railway:position"
+				text="Distance indication (rounded, e.g. '12.3'; km)"
+				de.text="Hektometerwert (z. B. '12.3')"
+				default=""
+				delete_if_empty="true" />
+			<text key="railway:position:exact"
+				text="Exact distance indication (exact, e.g. '12.345'; km)"
+				de.text="Metergenauer Wert (z. B. '12.345')"
+				default=""
+				delete_if_empty="true" />
+			<check key="railway:milestone:catenary_mast"
+				text="On catenary mast"
+				de.text="Am Oberleitungsmast"
+				default="off"
+				delete_if_empty="true" />
+			<check key="railway:milestone:emergency_brake_override"
+				text="Emergency brake override"
+				de.text="Notbremsüberbrückung (NBÜ)"
+				default="off"
+				delete_if_empty="true" />
+			<combo key="railway:milestone:emergency_brake_override:direction"
+				text="Direction of emergency brake override (if existing)"
+				de.text="Richtung der Notbremsunterdrückung (falls vorhanden)"
+				values="forward,backward,both"
+				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
+				default=""
+				delete_if_empty="true" />
+		</item>
+		<item name="Bahnsteig" icon="platform.png" type="way,closedway">
+			<label text="Bahnsteig" />
+			<key key="railway"
+				value="platform" />
+			<text key="name"
+				text="Caption"
+				de.text="Beschriftung"
+				default=""
+				delete_if_empty="true" />
+			<text key="ref"
+				text="Platform number(s)"
+				de.text="Bahnsteignummer(n)"
+				default=""
+				delete_if_empty="true" />
+			<check key="area"
+				text="Area"
+				de.text="Fläche"
+				default="off"
+				delete_if_empty="true" />
+			<check key="lit"
+				text="Lit"
+				de.text="Beleuchtet"
+				default="off"
+				delete_if_empty="true" />
+			<check key="covered"
+				text="Covered"
+				de.text="Überdacht"
+				default="off"
+				delete_if_empty="true" />
+			<combo key="surface"
+				text="Surface"
+				de.text="Oberfläche"
+				values="asphalt,paving_stones,concrete,cobblestone,compacted,paved,unpaved"
+				display_values="Asphalt,Pflastersteine,Beton,Kopfsteinpflaster,Verdichtet,Befestigt,Unbefestigt"
+				default=""
+				delete_if_empty="true" />
+			<key key="public_transport"
+				value="platform" />
+			<combo key="wheelchair"
+				text="Wheelchair"
+				de.text="Rollstuhlgerecht"
+				values="yes,no,limited"
+				display_values="Ja,Nein,Eingeschränkt"
+				default=""
+				delete_if_empty="true" />
+			<combo key="tactile_paving"
+				text="Tactile Paving"
+				de.text="Ertastbarer Untergrund"
+				values="yes,no,incorrect"
+				display_values="Ja,Nein,Ja (aber nicht sinnvoll)"
+				default=""
+				delete_if_empty="true" />
+			<text key="height"
+				text="Platform height (in meters, e. g. 0.76)"
+				de.text="Bahnsteighöhe (in Metern, z. B. 0.76)"
+				default=""
+				delete_if_empty="true" />
+		</item>
+		<item name="Fahrkartenautomat" icon="ticketatm.png" type="node">
+			<label text="Fahrkartenautomat" />
+			<space />
+			<key key="amenity"
+				value="vending_machine" />
+			<key key="vending"
+				value="public_transport_tickets" />
+			<text key="operator"
+				text="Operator (e.g. 'ÖBB-Personenverkehr AG')"
+				de.text="Betreiber (z. B. 'ÖBB-Personenverkehr AG')"
+				default=""
+				delete_if_empty="true" />
+			<text key="ref"
+				text="Reference"
+				de.text="Automatenbezeichnung"
+				default=""
+				delete_if_empty="true" />
+			<check key="payment:coins"
+				text="Coins"
+				de.text="Münzen"
+				default="off"
+				delete_if_empty="true" />
+			<check key="payment:notes"
+				text="Notes"
+				de.text="Geldscheine"
+				default="off"
+				delete_if_empty="true" />
+			<check key="payment:electronic_purses"
+				text="Electronic purses and Charge cards"
+				de.text="Geld- oder Prepaidkarten"
+				default="off"
+				delete_if_empty="true" />
+			<check key="payment:debit_cards"
+				text="Debit cards"
+				de.text="EC/Maestro-Karten"
+				default="off"
+				delete_if_empty="true" />
+			<check key="payment:credit_cards"
+				text="Credit cards"
+				de.text="Kreditkarten"
+				default="off"
+				delete_if_empty="true" />
+			<check key="payment:account_cards"
+				text="Account or loyalty cards"
+				de.text="Kundenkarten"
+				default="off"
+				delete_if_empty="true" />
+		</item>
+		<item name="Fahrkartenschalter" icon="ticketshop.png" type="node">
+			<label text="Fahrkartenschalter" />
+			<space />
+			<key key="shop"
+				value="ticket" />
+			<text key="operator"
+				text="Operator (e.g. 'ÖBB Personenverkehr AG')"
+				de.text="Betreiber (z. B. 'ÖBB Personenverkehr AG')"
+				default=""
+				delete_if_empty="true" />
+			<text key="name"
+				text="Name (e.g. 'Reisezentrum')"
+				de.text="Name (z. B. 'Reisezentrum')"
+				default=""
+				delete_if_empty="true" />
+			<text key="opening_hours"
+				text="Opening hours"
+				de.text="Öffnungszeiten"
+				default=""
+				delete_if_empty="true" />
+		</item>
+		<item name="U-Bahn-Zugang" icon="landuse.png" type="node">
+			<label text="U-Bahn-Zugang" />
+			<key key="railway"
+				value="subway_entrance" />
+			<text key="name"
+				text="Name"
+				de.text="Name"
+				default=""
+				delete_if_empty="true" />
+			<combo key="wheelchair"
+				text="Wheelchair"
+				de.text="Rollstuhlgerecht"
+				values="yes,no,limited"
+				display_values="Ja,Nein,Eingeschränkt"
+				default=""
+				delete_if_empty="true" />
+			<check key="bicycle"
+				text="Accessible with bicycles"
+				de.text="Passierbar mit Fahrrädern"
+				default="off"
+				delete_if_empty="true" />
+		</item>
+		<item name="Bahnhofsgebäude" icon="train-station.png" type="closedway">
+			<label text="Bahnhofsgebäude" />
+			<space />
+			<key key="building"
+				value="train_station" />
+			<text key="start_date"
+				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+				de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+				default=""
+				delete_if_empty="true" />
+			<text key="image"
+				text="Image URL"
+				de.text="URL eines Bildes"
+				default=""
+				delete_if_empty="true" />
+			<text key="ele"
+				text="Height above sea level (m)"
+				de.text="Höhe über Meeresspiegel (m)"
+				default=""
+				delete_if_empty="true" />
+		</item>
+		<item name="Bahngelände" icon="landuse.png" type="closedway">
+			<label text="Bahngelände" />
+			<key key="landuse"
+				value="railway" />
+		</item>
+		<separator />
+		<item name="Stromsystemwechsel" icon="systemswitch.png" type="node">
+			<label text="Stromsystemwechsel" />
+			<key key="railway"
+				value="isolated_track_section" />
+		</item>
+		<separator />
+		<item name="Fernsprecher" icon="de-phone.png" type="node">
+			<label text="Fernsprecher" />
+			<key key="railway"
+				value="phone" />
+		</item>
+		<item name="Zugfunk" icon="radio.png" type="node">
+			<label text="Zugfunk" />
+			<space />
+			<key key="railway"
+				value="radio" />
+			<key key="man_made"
+				value="tower" />
+			<key key="tower:type"
+				value="communication" />
+			<combo key="railway:radio"
+				text="Technik"
+				de.text="Mode"
+				values="analogue,gsm-r"
+				display_values="Analog,GSM-R"
+				default=""
+				delete_if_empty="true" />
+		</item>
+		<separator />
+		<item name="Grenzpunkt" icon="ownerchange.png" type="node">
+			<label text="Eigentumswechsel der Infrastruktur an Privatbahnanschlüssen und Landesgrenzen" />
+			<key key="railway"
+				value="owner_change" />
+			<space />
+			<label text="Manuell sind noch folgende Tags zu ergänzen:" />
+			<label text="- railway:name:(Kürzel Betreiber 1)=(Name)" />
+			<label text="- railway:name:(Kürzel Betreiber 2)=(Name)" />
+			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
+			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
+		</item>
+		<group name="Versorgung" icon="supply.png">
+			<item name="Tankstelle" icon="fuel.png" type="node,closedway">
+				<label text="Loktankstelle" />
+				<key key="railway"
+					value="fuel" />
+				<check key="building"
+					text="Building"
+					de.text="Gebäude"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Wasserkran" icon="water-crane.png" type="node">
+				<label text="Wasserkran" />
+				<key key="railway"
+					value="water_crane" />
+			</item>
+			<item name="Wasserturm" icon="watertower.png" type="node,closedway">
+				<label text="Wasserturm" />
+				<space />
+				<key key="railway"
+					value="water_tower" />
+				<key key="man_made"
+					value="water_tower" />
+				<key key="building"
+					value="yes" />
+			</item>
+			<item name="Bekohlungsanlage" icon="coaling.png" type="node,closedway">
+				<label text="Bekohlungsanlage" />
+				<key key="railway"
+					value="coaling_facility" />
+				<check key="area"
+					text="Area"
+					de.text="Fläche"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Waschanlage" icon="wash.png" type="node,closedway">
+				<label text="Waschanlage" />
+				<key key="railway"
+					value="wash" />
+				<check key="building"
+					text="Building"
+					de.text="Gebäude"
+					default="off"
+					delete_if_empty="true" />
+			</item>
+			<item name="Lokgrube" icon="pit.png" type="node">
+				<label text="Lokgrube" />
+				<key key="railway"
+					value="pit" />
+			</item>
+			<item name="Lokschuppen" icon="engine-shed.png" type="node,closedway">
+				<label text="Lokschuppen" />
+				<key key="railway"
+					value="engine_shed" />
+				<check key="building"
+					text="Building"
+					de.text="Gebäude"
+					default="off"
+					delete_if_empty="true" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Werkstatt" icon="workshop.png" type="node,closedway">
+				<label text="Werkstatt" />
+				<key key="railway"
+					value="workshop" />
+				<check key="building"
+					text="Building"
+					de.text="Gebäude"
+					default="off"
+					delete_if_empty="true" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+			</item>
+		</group>
+		<group name="Verladeeinrichtungen" icon="loading.png">
+			<item name="Gleiswaage" icon="scale.png" type="node">
+				<label text="Gleiswaage" />
+				<key key="railway"
+					value="track_scale" />
+			</item>
+			<item name="Kran" icon="crane.png" type="node">
+				<label text="Kran" />
+				<key key="man_made"
+					value="crane" />
+			</item>
+			<item name="Lademaßlehre" icon="loading-gauge.png" type="node">
+				<label text="Lademaßlehre" />
+				<key key="railway"
+					value="loading_gauge" />
+			</item>
+			<item name="Verladerampe/Ladestraße" icon="loading-ramp.png" type="node,way,closedway">
+				<label text="Verladerampe/Ladestraße" />
+				<key key="railway"
+					value="loading_ramp" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="surface"
+					text="Surface"
+					de.text="Oberfläche"
+					values="asphalt,paving_stones,concrete,cobblestone,compacted,paved,unpaved"
+					display_values="Asphalt,Pflastersteine,Beton,Kopfsteinpflaster,Verdichtet,Befestigt,Unbefestigt"
+					default=""
+					delete_if_empty="true" />
+				<text key="height"
+					text="Ramp height (m) - 0 for loading streets"
+					de.text="Rampenhöhe (m) - bei Ladestraße 0 eintragen"
+					default=""
+					delete_if_empty="true" />
+				<check key="area"
+					text="Area"
+					de.text="Fläche"
+					default="off"
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'ÖBB Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB Infrastruktur AG')"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<separator />
+			<item name="Eisenbahnfährverladestelle" icon="ferry-terminal.png" type="node">
+				<label text="Eisenbahnfährverladestelle" />
+				<key key="amenity"
+					value="ferry_terminal" />
+				<key key="railway"
+					value="ferry_terminal" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator"
+					de.text="Betreiber"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Eisenbahnfährverlauf" icon="ferry-way.png" type="way">
+				<label text="Eisenbahnfährverlauf" />
+				<key key="route"
+					value="ferry" />
+				<key key="railway"
+					value="ferry" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator"
+					de.text="Betreiber"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Eisenbahnfährlinie" icon="ferry-line.png" type="relation">
+				<label text="Eisenbahnfährlinie" />
+				<key key="type"
+					value="route" />
+				<key key="route"
+					value="ferry" />
+				<key key="railway"
+					value="ferry" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator"
+					de.text="Betreiber"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<separator />
+			<item name="Container-Umschlagbahnhof" icon="containerterminal.png" type="node,closedway">
+				<label text="Container-Umschlagbahnhof" />
+				<space />
+				<key key="man_made"
+					value="container_terminal" />
+				<key key="railway"
+					value="container_terminal" />
+				<key key="landuse"
+					value="industrial" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Rollwagenverladung" icon="carrier-truck-pit.png" type="node">
+				<label text="Rollwagenverladung" />
+				<key key="railway"
+					value="carrier_truck_pit" />
+			</item>
+			<item name="Rollende Landstraße" icon="rolling-highway.png" type="node">
+				<label text="Rollende Landstraße" />
+				<space />
+				<key key="railway"
+					value="rolling_highway" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator"
+					de.text="Betreiber"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Autozug-Verladung" icon="carshuttle.png" type="node">
+				<label text="Autozug-Verladung" />
+				<space />
+				<key key="railway"
+					value="car_shuttle" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator"
+					de.text="Betreiber"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_ref"
+					text="UIC-ID"
+					de.text="UIC-Bahnhofsnummer"
+					default=""
+					delete_if_empty="true" />
+				<text key="uic_name"
+					text="UIC name"
+					de.text="UIC-Bahnhofsname"
+					default=""
+					delete_if_empty="true" />
+				<text key="network"
+					text="Network"
+					de.text="Verkehrsverbund"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+			</item>
+		</group>
+		<item name="Drehscheibe" icon="turntable.png" type="node,closedway">
+			<label text="Drehscheibe" />
+			<key key="railway"
+				value="turntable" />
+		</item>
+		<item name="Schiebebühne" icon="traverser.png" type="node,closedway">
+			<label text="Schiebebühne" />
+			<key key="railway"
+				value="traverser" />
+		</item>
+		<item name="Ablaufberg" icon="hump-yard.png" type="node">
+			<label text="Ablaufberg" />
+			<key key="railway"
+				value="hump_yard" />
+		</item>
+		<item name="Gleisbremse" icon="rail-brake.png" type="node">
+			<label text="Gleisbremse" />
+			<key key="railway"
+				value="rail_brake" />
+		</item>
+		<item name="Umspuranlage" icon="gauge-conversion.png" type="node">
+			<label text="Umspuranlage" />
+			<key key="railway"
+				value="gauge_conversion" />
+		</item>
+		<item name="Eisenbahnmuseum" icon="museum.png" type="node,closedway">
+			<label text="Eisenbahnmuseum" />
+			<space />
+			<key key="railway"
+				value="museum" />
+			<key key="tourism"
+				value="museum" />
+			<text key="name"
+				text="Name"
+				de.text="Name"
+				default=""
+				delete_if_empty="true" />
+			<text key="wikipedia"
+				text="Wikipedia article in the format (Language):(Article)"
+				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+				default=""
+				delete_if_empty="true" />
+		</item>
+		<item name="Firma mit Gleisanschluss" icon="industrial.png" type="closedway">
+			<label text="Firma mit Gleisanschluss" />
+			<key key="landuse"
+				value="industrial" />
+			<key key="man_made"
+				value="works" />
+			<text key="name"
+				text="Name"
+				de.text="Name"
+				default=""
+				delete_if_empty="true" />
+		</item>
+		<item name="Tor" icon="gate.png" type="node">
+			<key key="barrier"
+				value="gate" />
+		</item>
+	</group>
+</presets>
