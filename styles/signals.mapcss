@@ -751,8 +751,8 @@ node|z14-[railway=signal]["railway:signal:main"=ks]["railway:signal:main:form"=l
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-ks-main.png";
-	icon-width: 16;
+	icon-image: "icons/de-ks-main-32.png";
+	icon-width: 10;
 	icon-height: 16;
 	text-allow-overlap: true;
 	allow-overlap: true;
