@@ -53,6 +53,11 @@ way|z9-[bridge=yes]::bridges
 	casing-color: #797979;
 	linejoin: butt;
 }
+way|z12-[bridge=yes]::bridges
+{
+	z-index: 4000;
+	text: "bridge:name"
+}
 
 /*******************************************/
 /* transparent casing of historic railways */
