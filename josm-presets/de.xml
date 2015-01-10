@@ -1961,8 +1961,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1800,1524,1520,1458,1450,1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
-					display_values="1435 mm (Normalspur),1800 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1100 mm,1000 mm (Meterspur),900 mm,889 mm,880 mm,860 mm,800 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
+					values="1435,1800,1600,1524,1520,1458,1432,1450,1100,1000,925,915,900,889,880,860,800,785,775,750,660,655,630,600,575,560,550,500,410,381,320,184,144,127,89"
+					display_values="1435 mm (Normalspur),1800 mm,1600 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1440 mm,1432 mm,1100 mm,1000 mm (Meterspur),925 mm,915 mm,900 mm,889 mm,880 mm,860 mm,820 mm,800 mm,785 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,410 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
 					default="1435"
 					delete_if_empty="true" />
 				<check key="railway:ballastless"
@@ -2118,8 +2118,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1800,1524,1520,1458,1450,1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
-					display_values="1435 mm (Normalspur),1800 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1100 mm,1000 mm (Meterspur),900 mm,889 mm,880 mm,860 mm,800 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
+					values="1435,1800,1600,1524,1520,1458,1432,1450,1100,1000,925,915,900,889,880,860,800,785,775,750,660,655,630,600,575,560,550,500,410,381,320,184,144,127,89"
+					display_values="1435 mm (Normalspur),1800 mm,1600 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1440 mm,1432 mm,1100 mm,1000 mm (Meterspur),925 mm,915 mm,900 mm,889 mm,880 mm,860 mm,820 mm,800 mm,785 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,410 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
 					default="1435"
 					delete_if_empty="true" />
 				<check key="railway:ballastless"
@@ -2277,8 +2277,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="gauge"
 					text="Gauge"
 					de.text="Spurweite"
-					values="1435,1800,1524,1520,1458,1450,1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
-					display_values="1435 mm (Normalspur),1800 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1100 mm,1000 mm (Meterspur),900 mm,889 mm,880 mm,860 mm,800 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
+					values="1435,1800,1600,1524,1520,1458,1432,1450,1100,1000,925,915,900,889,880,860,800,785,775,750,660,655,630,600,575,560,550,500,410,381,320,184,144,127,89"
+					display_values="1435 mm (Normalspur),1800 mm,1600 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1440 mm,1432 mm,1100 mm,1000 mm (Meterspur),925 mm,915 mm,900 mm,889 mm,880 mm,860 mm,820 mm,800 mm,785 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,410 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
 					default="1435"
 					delete_if_empty="true" />
 				<check key="railway:ballastless"
