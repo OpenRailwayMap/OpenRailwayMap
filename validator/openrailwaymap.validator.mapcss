@@ -109,3 +109,21 @@ way[railway][workrules=BOA]
 	assertNoMatch: "area railway=rail";
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
 }
+
+/* operator is not necessary for signals */
+node[railway=signal][operator]
+{
+	throwWarning: "operator is not necessary for signals if equal to track operator";
+	assertMatch: "node railway=signal operator=DB";
+	assertNoMatch: "node railway=signal";
+	assertNoMatch: "way railway=rail operator=DB";
+}
+
+/* operator is not necessary for milestones */
+node[railway=milestone][operator]
+{
+	throwWarning: "operator is not necessary for milestones if equal to track operator";
+	assertMatch: "node railway=milestone operator=DB";
+	assertNoMatch: "node railway=milestone";
+	assertNoMatch: "way railway=rail operator=DB";
+}
