@@ -636,6 +636,18 @@ node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:dis
 	allow-overlap: true;
 }
 
+/*****************/
+/* DE signal Sh 2 */
+/*****************/
+node|z17-[railway=signal]["railway:signal:minor"=sh2]
+{
+	z-index: 4010;
+	icon-image: "icons/de-sh2-32.png";
+	icon-width: 16;
+	icon-height: 13;
+	allow-overlap: true;
+}
+
 /**************************************/
 /* DE minor semaphore signals type Sh */
 /**************************************/
