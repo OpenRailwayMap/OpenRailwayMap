@@ -110,7 +110,7 @@ way[railway][workrules=BOA]
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
 }
 
-/* operator is not necessary for signals */
+/* operator is not necessary for signals if equal to track operator */
 node[railway=signal][operator]
 {
 	throwWarning: "operator is not necessary for signals if equal to track operator";
@@ -119,11 +119,19 @@ node[railway=signal][operator]
 	assertNoMatch: "way railway=rail operator=DB";
 }
 
-/* operator is not necessary for milestones */
+/* operator is not necessary for milestones if equal to track operator */
 node[railway=milestone][operator]
 {
 	throwWarning: "operator is not necessary for milestones if equal to track operator";
 	assertMatch: "node railway=milestone operator=DB";
 	assertNoMatch: "node railway=milestone";
 	assertNoMatch: "way railway=rail operator=DB";
+}
+
+/* supervised=* is deprecated, replace it with the new crossing:supervision=* */
+node[railway=level_crossing][supervised], node[railway=crossing][supervised]
+{
+	throwWarning: "supervised=* is deprecated, replace it with the new crossing:supervision=*";
+	assertMatch: "node railway=level_crossing supervised=yes";
+	assertNoMatch: "node railway=level_crossing";
 }
