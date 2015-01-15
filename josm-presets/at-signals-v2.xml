@@ -249,7 +249,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Signal states (multi-selection)"
 				de.text="Signalzustände (Mehrfachauswahl)"
 				delimiter=";"
-				values="railway:signal:distant:states=AT-V2:vorsicht;AT-V2:hauptsignal_frei;AT-V2:hauptsignal_frei_mit_60;AT-V2:hauptsignal_frei_mit_40"
+				values="AT-V2:vorsicht;AT-V2:hauptsignal_frei;AT-V2:hauptsignal_frei_mit_60;AT-V2:hauptsignal_frei_mit_40"
 				display_values="Halt erwarten;Fahrt erwarten;Langsamfahrt erwarten"
 				default=""
 				delete_if_empty="true" />
