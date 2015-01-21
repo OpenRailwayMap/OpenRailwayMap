@@ -994,6 +994,10 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 /*****************************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light]
+node|z15-[railway=signal]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light]
 {
