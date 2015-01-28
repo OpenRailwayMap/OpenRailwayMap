@@ -3034,8 +3034,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<separator />
 			<item name="Stop Position" de.name="Halteposition" icon="stop.png" type="node">
-				<label text="Halteposition" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<label text="Stop Position" de.text="Halteposition" />
+				<label text="It is mapped as a node which is part of the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<combo key="public_transport"
 					text="Public transport?"
@@ -4009,7 +4009,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway"
 					value="loading_gauge" />
 			</item>
-			<item name="Verladerampe/Ladestraße" icon="loading-ramp.png" type="node,way,closedway">
+			<item name="Team Track" de.name="Verladerampe/Ladestraße" icon="loading-ramp.png" type="node,way,closedway">
 				<label text="Verladerampe/Ladestraße" />
 				<key key="railway"
 					value="loading_ramp" />
@@ -4111,7 +4111,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Container-Umschlagbahnhof" icon="containerterminal.png" type="node,closedway">
+			<item name="Containerterminal" de.name="Container-Umschlagbahnhof" icon="containerterminal.png" type="node,closedway">
 				<label text="Container-Umschlagbahnhof" />
 				<space />
 				<key key="man_made"
@@ -4131,13 +4131,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Rollwagenverladung" icon="carrier-truck-pit.png" type="node">
-				<label text="Rollwagenverladung" />
+			<item name="Rollbock Siding" de.name="Rollwagen-/Rollschemelverladung" icon="carrier-truck-pit.png" type="node">
+				<label text="Rollbock Siding/Transporter Trailers Siding" de.text="Rollwagenverladung" />
 				<key key="railway"
 					value="carrier_truck_pit" />
 			</item>
-			<item name="Rollende Landstraße" icon="rolling-highway.png" type="node">
-				<label text="Rollende Landstraße" />
+			<item name="Rolling Highway" de.name="Rollende Landstraße" icon="rolling-highway.png" type="node">
+				<label text="Rolling Highway" de.text="Rollende Landstraße" />
 				<space />
 				<key key="railway"
 					value="rolling_highway" />
@@ -4172,8 +4172,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Autozug-Verladung" icon="carshuttle.png" type="node">
-				<label text="Autozug-Verladung" />
+			<item name="Car Shuttle Station" de.name="Autozug-Verladung" icon="carshuttle.png" type="node">
+				<label text="Car Shuttle Station" de.text="Autozug-Verladung" />
 				<space />
 				<key key="railway"
 					value="car_shuttle" />
@@ -4214,18 +4214,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway"
 				value="turntable" />
 		</item>
-		<item name="Schiebebühne" icon="traverser.png" type="node,closedway">
-			<label text="Schiebebühne" />
+		<item name="Traverser" de.name="Schiebebühne" icon="traverser.png" type="node,closedway">
+			<label text="Traverser" de.text="Schiebebühne" />
 			<key key="railway"
 				value="traverser" />
 		</item>
-		<item name="Ablaufberg" icon="hump-yard.png" type="node">
-			<label text="Ablaufberg" />
+		<item name="Hump Yard" de.name="Ablaufberg" icon="hump-yard.png" type="node">
+			<label text="Hump Yard" de.text="Ablaufberg" />
 			<key key="railway"
 				value="hump_yard" />
 		</item>
-		<item name="Gleisbremse" icon="rail-brake.png" type="node">
-			<label text="Gleisbremse" />
+		<item name="Rail Brake" de.name="Gleisbremse" icon="rail-brake.png" type="node">
+			<label text="Rail Brake" de.text="Gleisbremse" />
 			<key key="railway"
 				value="rail_brake" />
 		</item>
@@ -4252,8 +4252,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Firma mit Gleisanschluss" icon="industrial.png" type="closedway">
-			<label text="Firma mit Gleisanschluss" />
+		<item name="Company with railway siding" de.name="Firma mit Gleisanschluss" icon="industrial.png" type="closedway">
+			<label text="Company with railway siding" de.text="Firma mit Gleisanschluss" />
 			<key key="landuse"
 				value="industrial" />
 			<key key="man_made"
