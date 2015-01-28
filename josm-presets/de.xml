@@ -3033,7 +3033,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item de.name="Stop Position" name="Halteposition" icon="stop.png" type="node">
+			<item name="Stop Position" de.name="Halteposition" icon="stop.png" type="node">
 				<label text="Halteposition" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
