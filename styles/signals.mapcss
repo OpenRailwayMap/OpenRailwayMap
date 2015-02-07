@@ -717,7 +717,7 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 {
 	z-index: 3000;
 	text: "ref";
-	text-offset: 11;
+	text-offset: 10;
 	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
@@ -730,14 +730,14 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	allow-overlap: true;
 }
 
-/*******************/
-/* DE Ks-Vorsignal */
-/*******************/
+/*****************************/
+/* DE distant signal type Ks */
+/*****************************/
 node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]
 {
 	z-index: 8000;
 	text: "ref";
-	text-offset: 11;
+	text-offset: 12;
 	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
@@ -750,14 +750,14 @@ node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:f
 	allow-overlap: true;
 }
 
-/*********************/
-/* DE Ks-Hauptsignal */
-/*********************/
+/**************************/
+/* DE main signal type Ks */
+/**************************/
 node|z14-[railway=signal]["railway:signal:main"=ks]["railway:signal:main:form"=light]["railway:signal:main:states"="hp0;ks1"]
 {
 	z-index: 10100;
 	text: "ref";
-	text-offset: 11;
+	text-offset: 12;
 	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
@@ -771,13 +771,13 @@ node|z14-[railway=signal]["railway:signal:main"=ks]["railway:signal:main:form"=l
 }
 
 /******************************/
-/* DE Ks-Mehrabschnittssignal */
+/* DE combined signal type Ks */
 /******************************/
 node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"]
 {
 	z-index: 10200;
 	text: "ref";
-	text-offset: 11;
+	text-offset: 12;
 	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
@@ -790,9 +790,9 @@ node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined
 	allow-overlap: true;
 }
 
-/**********************/
-/* DE Haltetafel Ne 5 */
-/**********************/
+/*********************/
+/* DE stop post Ne 5 */
+/*********************/
 node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=sign]
 {
 	z-index: 1000;
