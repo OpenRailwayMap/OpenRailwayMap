@@ -148,7 +148,6 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 	allow-overlap: true;
 }
 
-
 /******************************************/
 /* DE main light signals type Hl which    */
 /*  - have no railway:signal:states=* tag */
@@ -256,7 +255,6 @@ node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=l
 	text-allow-overlap: true;
 	allow-overlap: true;
 }
-
 
 /*******************************************/
 /* DE combined light signals type Hl which */
@@ -387,8 +385,6 @@ node|z14-[railway=signal]["railway:signal:combined"=sv]["railway:signal:combined
 	text-allow-overlap: true;
 	allow-overlap: true;
 }
-
-
 
 /*************************************/
 /* DE combined light signals type Sv */

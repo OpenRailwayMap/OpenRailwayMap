@@ -83,6 +83,18 @@
 		{
 			"minzoom": 14,
 			"maxzoom": 19,
+			"icon": "icons/de-sv-sv0-16.png",
+			"caption": "Sv-Signal ohne Hp 0"
+		},
+		{
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-sv-hp0-16.png",
+			"caption": "Sv-Signal mit Hp 0"
+		},
+		{
+			"minzoom": 14,
+			"maxzoom": 19,
 			"icon": "icons/de-ne1-16.png",
 			"caption": "Ne 1 Trapeztafel"
 		},
