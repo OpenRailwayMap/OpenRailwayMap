@@ -136,3 +136,27 @@ node[railway=level_crossing][supervised], node[railway=crossing][supervised]
 	assertMatch: "node railway=level_crossing supervised=yes";
 	assertNoMatch: "node railway=level_crossing";
 }
+
+/* ks and hl signals only exist as light signals */
+node[railway=signal][railway:signal:main=ks][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant=ks][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined=ks][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:main="DE-ESO:ks"][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant="DE-ESO:ks"][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined="DE-ESO:ks"][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:main=hl][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant=hl][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined=hl][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:main="DE-ESO:hl"][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant="DE-ESO:hl"][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined="DE-ESO:hl"][railway:signal:combined:form!=light]
+{
+	throwError: "{1.value} signals only exist as light signals";
+	assertMatch: "node railway=signal railway:signal:main=ks";
+	assertMatch: "node railway=signal railway:signal:main=ks railway:signal:main:form=semaphore";
+	assertMatch: "node railway=signal railway:signal:main=hl";
+	assertMatch: "node railway=signal railway:signal:main=hl railway:signal:main:form=semaphore";
+	assertNoMatch: "node railway=signal railway:signal:main=hl railway:signal:main:form=light";
+	assertNoMatch: "node railway=signal railway:signal:main=ks railway:signal:main:form=light";
+	fixAdd: "{2.key}=light";
+}
