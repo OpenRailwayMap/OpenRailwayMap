@@ -13,8 +13,9 @@ way[railway][usage][service]
 {
 	throwError: "Track tagged with usage=* AND service=* - remove one of these tags";
 	fixRemove: "service";
-	assertMatch: "node=railway=milestone";
-	assertNoMatch: "node railway=milestone railway:position=42.0";
+	assertMatch: "way railway=rail usage=main service=siding";
+	assertNoMatch: "way railway=rail usage=main";
+	assertNoMatch: "way railway=rail service=siding";
 }
 
 /* Station mapped as way or area */
