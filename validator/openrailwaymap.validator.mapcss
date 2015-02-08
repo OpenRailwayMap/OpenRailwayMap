@@ -136,3 +136,14 @@ node[railway=level_crossing][supervised], node[railway=crossing][supervised]
 	assertMatch: "node railway=level_crossing supervised=yes";
 	assertNoMatch: "node railway=level_crossing";
 }
+
+/* must have railway=signal if railway:signal:* is given */
+node[/^railway:signal:/][railway!=signal]
+{
+	throwWarning: "signal specification given but node is not tagged as signal";
+	assertMatch: "node railway:signal:direction=forward";
+	assertMatch: "node railway:signal:position=right railway=level_crossing";
+	assertNoMatch: "node railway:signal:position=right railway=signal";
+	assertNoMatch: "node railway=signal railway:signal:direction=forward";
+	fixAdd: "railway=signal";
+}
