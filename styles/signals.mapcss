@@ -703,7 +703,7 @@ node|z14-[railway=signal]["railway:signal:distant"=hl]["railway:signal:distant:f
 /*********************************************/
 /* DE distant signal replacement by sign Ne2 */
 /*********************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign]
+node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign],
 node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]
 {
 	z-index: 9000;
@@ -721,10 +721,11 @@ node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:dis
 	allow-overlap: true;
 }
 
-/*****************/
+/******************/
 /* DE signal Sh 2 */
-/*****************/
-node|z17-[railway=signal]["railway:signal:minor"=sh2]
+/******************/
+node|z17-[railway=signal]["railway:signal:minor"=sh2],
+node|z17-[railway=signal]["railway:signal:minor"="DE-ESO:sh2"]
 {
 	z-index: 4010;
 	icon-image: "icons/de-sh2-32.png";
@@ -887,7 +888,8 @@ node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined
 /*********************/
 /* DE stop post Ne 5 */
 /*********************/
-node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=sign]
+node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=sign],
+node|z17-[railway=signal]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]
 {
 	z-index: 1000;
 	icon-image: "icons/de-ne5-ds301-32.png";
@@ -903,7 +905,11 @@ node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=sign],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=sign],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=sign]
+node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=sign],
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=sign],
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=sign],
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=sign],
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=sign]
 {
 	z-index: 500;
 	icon-image: "icons/de-bue0-ds-32.png";
@@ -933,7 +939,7 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 /* DE crossing signal Bü 0/1 which cannot show Bü 1 and are shortened */
 /**********************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=sign]
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=sign],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=sign],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=sign]
 {
@@ -951,7 +957,7 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light]
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
@@ -969,7 +975,7 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 /* DE crossing signal Bü 0/1 which can show Bü 1 and are repeaters */
 /*******************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=light]
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:from"=light]
 {
@@ -985,7 +991,7 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 /* DE crossing signal Bü 0/1 which can show Bü 1 and are shortened */
 /*******************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light]
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light]
 {
@@ -1003,7 +1009,7 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light]
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
@@ -1037,7 +1043,7 @@ node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:cros
 /* DE crossing signal Bü 0/1 (ex. So 16a/b) which can show Bü 1 and are shortened */
 /**********************************************************************************/
 node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light]
+node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:from"=light],
 node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:from"=light]
 {
@@ -1053,7 +1059,7 @@ node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:cros
 /* DE crossing distant sign Bü 2 */
 /*********************************/
 node|z15-[railway=signal]["railway:signal:crossing_distant"="DE-ESO:bü2"][!"railway:signal:crossing_distant:shortened"],
-node|z15-[railway=signal]["railway:signal:crossing_distant"="DE-ESO:bü2"]["railway:signal:crossing_distant:shortened"=no]
+node|z15-[railway=signal]["railway:signal:crossing_distant"="DE-ESO:bü2"]["railway:signal:crossing_distant:shortened"=no],
 node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"][!"railway:signal:crossing_distant:shortened"],
 node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:signal:crossing_distant:shortened"=no]
 {
@@ -1136,6 +1142,7 @@ node|z14-[railway=signal]["railway:signal:whistle"="db:pf1"]["railway:signal:rin
 /*********************/
 /* DE ring sign Bü 5 */
 /*********************/
+node|z15-[railway=signal]["railway:signal:ring"="DE-ESO:bü5"],
 node|z15-[railway=signal]["railway:signal:ring"="bü5"]
 {
 	z-index: 500;
