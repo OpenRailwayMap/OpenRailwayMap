@@ -205,3 +205,55 @@ way[railway][ref=~/^track [0-9]+[a-z]*.*/]
 	assertMatch: "way railway=rail ref=\"track 4b\"";
 	assertNoMatch: "way railway=rail name=14b";
 }
+
+/* power:type=overhead is deprecated, change to electrified=contact_line */
+way[railway]["power:type"=overhead][electrified=contact_line],
+way[railway]["power:type"=overhead][electrified=yes],
+way[railway]["power:type"=overhead][!electrified]
+{
+	throwError: "power:type=overhead is deprecated, change to electrified=contact_line";
+	assertMatch: "way railway=rail power:type=overhead";
+	assertMatch: "way railway=rail power:type=overhead electrified=yes";
+	assertNoMatch: "way railway=rail power:type=overhead electrified=something";
+	fixRemove: "power:type";
+	fixAdd: "electrified=contact_line";
+}
+
+/* power:type=overhead is deprecated, change to electrified=contact_line */
+way[railway]["power:type"=overhead][electrified!=yes][electrified!=contact_line]
+{
+	throwError: "power:type=overhead is deprecated, change to electrified=contact_line";
+	assertMatch: "way railway=rail power:type=overhead";
+	assertNoMatch: "way railway=rail power:type=overhead electrified=yes";
+}
+
+/* power:type=overhead is deprecated, change to electrified=contact_line */
+way[railway]["power:type"]["power:type"!=overhead]
+{
+	throwError: "power:type is deprecated, change to proper electrified value";
+	assertMatch: "way railway=rail power:type=something";
+	assertNoMatch: "way railway=rail power:type=overhead electrified=yes";
+}
+
+/* priority on railway lines is deprecated, remove if usage or service is tagged */
+way[railway][priority][service],
+way[railway][priority][usage],
+way[railway=tram][priority],
+way[railway=subway][priority],
+way[railway="light_rail"][priority]
+{
+	throwError: "priority on railway lines is deprecated, remove if usage or service is tagged";
+	assertMatch: "way railway=rail priority=primary service=siding";
+	assertMatch: "way railway=rail priority=primary usage=main";
+	assertNoMatch: "way railway=rail priority=primary";
+	fixRemove: "priority";
+}
+
+/* priority on railway lines is deprecated, add proper usage or service tags */
+way[railway][railway!=subway][railway!=tram][railway!="light_rail"][priority][!service][!usage]
+{
+	throwError: "priority on railway lines is deprecated, add proper usage or service tags";
+	assertMatch: "way railway=rail priority=primary";
+	assertNoMatch: "way railway=rail priority=primary service=siding";
+	assertNoMatch: "way railway=rail priority=primary usage=main";
+}
