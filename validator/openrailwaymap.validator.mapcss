@@ -68,36 +68,23 @@ way[railway][!workrules]
 }
 
 /* workrules=EBO is deprecated, should be changed to workrules=DE:EBO */
-way[railway][workrules=EBO]
-{
-	throwError: "workrules=EBO is deprecated, change to workrules=DE:EBO";
-	assertMatch: "way railway=rail workrules=EBO";
-	assertNoMatch: "node railway=rail";
-	assertNoMatch: "way railway=rail";
-	assertNoMatch: "area railway=rail";
-	assertNoMatch: "way railway=rail workrules=DE:EBO";
-}
-
 /* workrules=ESBO is deprecated, should be changed to workrules=DE:ESBO */
-way[railway][workrules=ESBO]
-{
-	throwError: "workrules=ESBO is deprecated, change to workrules=DE:ESBO";
-	assertMatch: "way railway=rail workrules=ESBO";
-	assertNoMatch: "node railway=rail";
-	assertNoMatch: "way railway=rail";
-	assertNoMatch: "area railway=rail";
-	assertNoMatch: "way railway=rail workrules=DE:ESBO";
-}
-
 /* workrules=BOStrab is deprecated, should be changed to workrules=DE:BOStrab */
+way[railway][workrules=EBO],
+way[railway][workrules=ESBO],
 way[railway][workrules=BOStrab]
 {
-	throwError: "workrules=BOStrab is deprecated, change to workrules=DE:BOStrab";
+	throwError: "workrules={1.value} is deprecated, change to workrules=DE:{1.value}";
+	assertMatch: "way railway=rail workrules=EBO";
+	assertMatch: "way railway=rail workrules=ESBO";
 	assertMatch: "way railway=rail workrules=BOStrab";
 	assertNoMatch: "node railway=rail";
 	assertNoMatch: "way railway=rail";
 	assertNoMatch: "area railway=rail";
+	assertNoMatch: "way railway=rail workrules=DE:EBO";
+	assertNoMatch: "way railway=rail workrules=DE:ESBO";
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
+	fixAdd: "workrules=DE:{1.value}";
 }
 
 /* workrules=BOA is deprecated, should be replaced by an adequate value */
@@ -111,22 +98,18 @@ way[railway][workrules=BOA]
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
 }
 
-/* operator is not necessary for signals if equal to track operator */
-node[railway=signal][operator]
-{
-	throwWarning: "operator is not necessary for signals if equal to track operator";
-	assertMatch: "node railway=signal operator=DB";
-	assertNoMatch: "node railway=signal";
-	assertNoMatch: "way railway=rail operator=DB";
-}
-
-/* operator is not necessary for milestones if equal to track operator */
+/* operator is not necessary for signals and milestones if equal to track operator */
+node[railway=signal][operator],
 node[railway=milestone][operator]
 {
-	throwWarning: "operator is not necessary for milestones if equal to track operator";
+	throwWarning: "operator is not necessary for {0.value}s if equal to track operator";
+	assertMatch: "node railway=signal operator=DB";
 	assertMatch: "node railway=milestone operator=DB";
+	assertNoMatch: "node railway=signal";
+	assertNoMatch: "way railway=rail operator=DB";
 	assertNoMatch: "node railway=milestone";
 	assertNoMatch: "way railway=rail operator=DB";
+	fixRemove: "operator";
 }
 
 /* supervised=* is deprecated, replace it with the new crossing:supervision=* */
@@ -135,6 +118,7 @@ node[railway=level_crossing][supervised], node[railway=crossing][supervised]
 	throwWarning: "supervised=* is deprecated, replace it with the new crossing:supervision=*";
 	assertMatch: "node railway=level_crossing supervised=yes";
 	assertNoMatch: "node railway=level_crossing";
+	fixChangeKey: "supervised=>crossing:supervision";
 }
 
 /* must have railway=signal if railway:signal:* is given */
