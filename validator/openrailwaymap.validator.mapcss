@@ -147,3 +147,14 @@ node[/^railway:signal:/][railway!=signal]
 	assertNoMatch: "node railway=signal railway:signal:direction=forward";
 	fixAdd: "railway=signal";
 }
+
+/* track numbers inside a station should be railway:track_ref, not name */
+way[railway][name=~/^[0-9]+[a-z]*.*/]
+{
+	throwError: "track numbers inside a station should be railway:track_ref, not name";
+	assertMatch: "way railway=rail name=4";
+	assertMatch: "way railway=rail name=4a";
+	assertMatch: "way railway=light_rail name=14";
+	assertMatch: "way railway=rail name=14b";
+	fixChangeKey: "name=>railway:track_ref";
+}
