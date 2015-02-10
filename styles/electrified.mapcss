@@ -1,0 +1,304 @@
+/*
+OpenRailwayMap Style File for JOSM and KothicJS
+Electrification layer
+
+OpenRailwayMap Copyright (C) 2015 Rolf Eike Beer
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+
+Format details:
+* http://josm.openstreetmap.de/wiki/Help/Styles/MapCSSImplementation
+* https://wiki.openstreetmap.org/wiki/MapCSS/0.2
+*/
+
+meta
+{
+	title: "OpenRailwayMap Electrification layer";
+	version: "0";
+	description: "Style for a electrification layer railroad network map.";
+	author: "Dakon";
+	link: "http://wiki.openstreetmap.org/wiki/OpenRailwayMap";
+	watch-modified: true;
+}
+
+canvas
+{
+	default-points: true;
+	default-lines: true;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][voltage][frequency],
+way|z10-[railway=subway][electrified][electrified!=no][voltage][frequency],
+way|z10-[railway=light_rail][electrified][electrified!=no][voltage][frequency],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][voltage][frequency],
+way|z9-[railway=preserved][electrified][electrified!=no][voltage][frequency],
+way|z10-[railway=rail][electrified][electrified!=no][voltage][frequency],
+way|z2-[railway=rail][electrified][electrified!=no][voltage][frequency]
+{
+	text: eval(concat(tag("voltage"), " V ", tag("frequency"), " Hz"));
+	text-position: line;
+	text-color: #585858;
+	font-size: 11;
+	font-family: "Verdana Bold";
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+}
+way|z10-[railway=tram][electrified][electrified!=no][voltage][frequency=0],
+way|z10-[railway=subway][electrified][electrified!=no][voltage][frequency=0],
+way|z10-[railway=light_rail][electrified][electrified!=no][voltage][frequency=0],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][voltage][frequency=0],
+way|z9-[railway=preserved][electrified][electrified!=no][voltage][frequency=0],
+way|z10-[railway=rail][electrified][electrified!=no][voltage][frequency=0],
+way|z2-[railway=rail][electrified][electrified!=no][voltage][frequency=0]
+{
+	text: eval(concat(tag("voltage"), " V ="));
+}
+way|z10-[railway=tram][electrified][electrified!=no][voltage>=1000][frequency],
+way|z10-[railway=subway][electrified][electrified!=no][voltage>=1000][frequency],
+way|z10-[railway=light_rail][electrified][electrified!=no][voltage>=1000][frequency],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][voltage>=1000][frequency],
+way|z9-[railway=preserved][electrified][electrified!=no][voltage>=1000][frequency],
+way|z10-[railway=rail][electrified][electrified!=no][voltage>=1000][frequency],
+way|z2-[railway=rail][electrified][electrified!=no][voltage>=1000][frequency]
+{
+	text: eval(concat(tag("voltage")/1000, " kV ", tag("frequency"), " Hz"));
+}
+way|z10-[railway=tram][electrified][electrified!=no][voltage>=1000][frequency=0],
+way|z10-[railway=subway][electrified][electrified!=no][voltage>=1000][frequency=0],
+way|z10-[railway=light_rail][electrified][electrified!=no][voltage>=1000][frequency=0],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][voltage>=1000][frequency=0],
+way|z9-[railway=preserved][electrified][electrified!=no][voltage>=1000][frequency=0],
+way|z10-[railway=rail][electrified][electrified!=no][voltage>=1000][frequency=0],
+way|z2-[railway=rail][electrified][electrified!=no][voltage>=1000][frequency=0]
+{
+	text: eval(concat(tag("voltage")/1000, " kV ="));
+}
+
+way|z10-[railway=tram],
+way|z10-[railway=subway],
+way|z10-[railway=light_rail],
+way|z9-[railway=narrow_gauge],
+way|z9-[railway=preserved],
+way|z10-[railway=rail],
+way|z2-[railway=rail]
+{
+	width: 2;
+	linejoin: round;
+	kothicjs-ignore-layer: true;
+}
+
+way|z10-[railway=tram][!electrified],
+way|z10-[railway=subway][!electrified],
+way|z10-[railway=light_rail][!electrified],
+way|z9-[railway=narrow_gauge][!electrified],
+way|z9-[railway=preserved][!electrified],
+way|z10-[railway=rail][!electrified],
+way|z2-[railway=rail][!electrified],
+way|z10-[railway=tram][electrified!=no][!voltage],
+way|z10-[railway=subway][electrified!=no][!voltage],
+way|z10-[railway=light_rail][electrified!=no][!voltage],
+way|z9-[railway=narrow_gauge][electrified!=no][!voltage],
+way|z9-[railway=preserved][electrified!=no][!voltage],
+way|z2-[railway=rail][electrified!=no][!voltage]
+{
+	z-index: 0;
+	color: gray;
+}
+
+way|z10-[railway=tram][electrified=no],
+way|z10-[railway=subway][electrified=no],
+way|z10-[railway=light_rail][electrified=no],
+way|z9-[railway=narrow_gauge][electrified=no],
+way|z9-[railway=preserved][electrified=no],
+way|z2-[railway=rail][electrified=no]
+{
+	z-index: 1;
+	color: black;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=0][voltage<750],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=0][voltage<750],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=0][voltage<750],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=0][voltage<750],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=0][voltage<750],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=0][voltage<750]
+{
+	z-index: 2;
+	color: #FF79B8;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=0][voltage=750],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=0][voltage=750],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=0][voltage=750],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=0][voltage=750],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=0][voltage=750],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=0][voltage=750]
+{
+	z-index: 3;
+	color: #F930FF;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=0][voltage>750][voltage<1000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=0][voltage>750][voltage<1000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=0][voltage>750][voltage<1000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=0][voltage>750][voltage<1000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=0][voltage>750][voltage<1000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=0][voltage>750][voltage<1000]
+{
+	z-index: 4;
+	color: #D033FF;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=0][voltage=1000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=0][voltage=1000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=0][voltage=1000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=0][voltage=1000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=0][voltage=1000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=0][voltage=1000]
+{
+	z-index: 5;
+	color: #5C1CCB;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=0][voltage>1000][voltage<1500],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=0][voltage>1000][voltage<1500],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=0][voltage>1000][voltage<1500],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=0][voltage>1000][voltage<1500],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=0][voltage>1000][voltage<1500],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=0][voltage>1000][voltage<1500]
+{
+	z-index: 6;
+	color: #007ACB;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=0][voltage=1500],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=0][voltage=1500],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=0][voltage=1500],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=0][voltage=1500],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=0][voltage=1500],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=0][voltage=1500]
+{
+	z-index: 7;
+	color: #0098CB;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=0][voltage>1500][voltage<3000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=0][voltage>1500][voltage<3000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=0][voltage>1500][voltage<3000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=0][voltage>1500][voltage<3000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=0][voltage>1500][voltage<3000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=0][voltage>1500][voltage<3000]
+{
+	z-index: 8;
+	color: #00B7CB;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=0][voltage=3000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=0][voltage=3000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=0][voltage=3000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=0][voltage=3000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=0][voltage=3000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=0][voltage=3000]
+{
+	z-index: 9;
+	color: #0000FF;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=0][voltage>3000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=0][voltage>3000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=0][voltage>3000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=0][voltage>3000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=0][voltage>3000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=0][voltage>3000]
+{
+	z-index: 10;
+	color: #1969FF;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency][frequency!=0][voltage<15000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency][frequency!=0][voltage<15000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency][frequency!=0][voltage<15000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency][frequency!=0][voltage<15000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency][frequency!=0][voltage<15000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency][frequency!=0][voltage<15000]
+{
+	z-index: 11;
+	color: #97FF2F;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency][frequency!=0][voltage>=15000][voltage<25000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency][frequency!=0][voltage>=15000][voltage<25000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency][frequency!=0][voltage>=15000][voltage<25000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency][frequency!=0][voltage>=15000][voltage<25000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency][frequency!=0][voltage>=15000][voltage<25000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency][frequency!=0][voltage>=15000][voltage<25000]
+{
+	z-index: 12;
+	color: #F1F100;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency="16.67"][voltage=15000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency="16.67"][voltage=15000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency="16.67"][voltage=15000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency="16.67"][voltage=15000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency="16.67"][voltage=15000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency="16.67"][voltage=15000]
+{
+	z-index: 13;
+	color: #00FF00;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency="16.7"][voltage=15000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency="16.7"][voltage=15000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency="16.7"][voltage=15000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency="16.7"][voltage=15000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency="16.7"][voltage=15000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency="16.7"][voltage=15000]
+{
+	z-index: 14;
+	color: #00CB66;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency][frequency!=0][voltage>=25000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency][frequency!=0][voltage>=25000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency][frequency!=0][voltage>=25000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency][frequency!=0][voltage>=25000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency][frequency!=0][voltage>=25000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency][frequency!=0][voltage>=25000]
+{
+	z-index: 15;
+	color: #FF9F19;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=50][voltage=25000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=50][voltage=25000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=50][voltage=25000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=50][voltage=25000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=50][voltage=25000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=50][voltage=25000]
+{
+	z-index: 16;
+	color: #FF0000;
+}
+
+way|z10-[railway=tram][electrified][electrified!=no][frequency=60][voltage=25000],
+way|z10-[railway=subway][electrified][electrified!=no][frequency=60][voltage=25000],
+way|z10-[railway=light_rail][electrified][electrified!=no][frequency=60][voltage=25000],
+way|z9-[railway=narrow_gauge][electrified][electrified!=no][frequency=60][voltage=25000],
+way|z9-[railway=preserved][electrified][electrified!=no][frequency=60][voltage=25000],
+way|z2-[railway=rail][electrified][electrified!=no][frequency=60][voltage=25000]
+{
+	z-index: 17;
+	color: #C00000;
+}
+
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]
+{
+	z-index: 90;
+	icon-image: "icons/de/el6.png";
+	icon-width: 16;
+	icon-height: 16;
+	allow-overlap: true;
+}
