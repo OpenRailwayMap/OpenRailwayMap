@@ -2,7 +2,7 @@
 
 .PHONY: all
 
-JSFILES = maxspeed.js signals.js standard.js
+JSFILES = maxspeed.js signals.js standard.js electrified.js
 
 all: $(JSFILES)
 

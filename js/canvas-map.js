@@ -87,6 +87,7 @@ function createMap(embed)
 	MapCSS.preloadSpriteImage("standard", root+"styles/standard.png");
 	MapCSS.preloadSpriteImage("signals", root+"styles/signals.png");
 	MapCSS.preloadSpriteImage("maxspeed", root+"styles/maxspeed.png");
+	MapCSS.preloadSpriteImage("electrified", root+"styles/electrified.png");
 
 	// hillshading layer
 	var hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',

@@ -42,6 +42,7 @@
 	echo "translations['style.standard'] = '".addslashes(_("Infrastructure"))."';\n";
 	echo "translations['style.signals'] = '".addslashes(_("Signalling"))."';\n";
 	echo "translations['style.maxspeed'] = '".addslashes(_("Maxspeeds"))."';\n";
+	echo "translations['style.electrified'] = '".addslashes(_("Electrification"))."';\n";
 	echo "translations['halt'] = '".addslashes(_("Halt"))."';\n";
 	echo "translations['station'] = '".addslashes(_("Station"))."';\n";
 	echo "translations['junction'] = '".addslashes(_("Junction"))."';\n";
