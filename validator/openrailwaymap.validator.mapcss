@@ -68,36 +68,23 @@ way[railway][!workrules]
 }
 
 /* workrules=EBO is deprecated, should be changed to workrules=DE:EBO */
-way[railway][workrules=EBO]
-{
-	throwError: "workrules=EBO is deprecated, change to workrules=DE:EBO";
-	assertMatch: "way railway=rail workrules=EBO";
-	assertNoMatch: "node railway=rail";
-	assertNoMatch: "way railway=rail";
-	assertNoMatch: "area railway=rail";
-	assertNoMatch: "way railway=rail workrules=DE:EBO";
-}
-
 /* workrules=ESBO is deprecated, should be changed to workrules=DE:ESBO */
-way[railway][workrules=ESBO]
-{
-	throwError: "workrules=ESBO is deprecated, change to workrules=DE:ESBO";
-	assertMatch: "way railway=rail workrules=ESBO";
-	assertNoMatch: "node railway=rail";
-	assertNoMatch: "way railway=rail";
-	assertNoMatch: "area railway=rail";
-	assertNoMatch: "way railway=rail workrules=DE:ESBO";
-}
-
 /* workrules=BOStrab is deprecated, should be changed to workrules=DE:BOStrab */
+way[railway][workrules=EBO],
+way[railway][workrules=ESBO],
 way[railway][workrules=BOStrab]
 {
-	throwError: "workrules=BOStrab is deprecated, change to workrules=DE:BOStrab";
+	throwError: "workrules={1.value} is deprecated, change to workrules=DE:{1.value}";
+	assertMatch: "way railway=rail workrules=EBO";
+	assertMatch: "way railway=rail workrules=ESBO";
 	assertMatch: "way railway=rail workrules=BOStrab";
 	assertNoMatch: "node railway=rail";
 	assertNoMatch: "way railway=rail";
 	assertNoMatch: "area railway=rail";
+	assertNoMatch: "way railway=rail workrules=DE:EBO";
+	assertNoMatch: "way railway=rail workrules=DE:ESBO";
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
+	fixAdd: "workrules=DE:{1.value}";
 }
 
 /* workrules=BOA is deprecated, should be replaced by an adequate value */
@@ -111,22 +98,18 @@ way[railway][workrules=BOA]
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
 }
 
-/* operator is not necessary for signals if equal to track operator */
-node[railway=signal][operator]
-{
-	throwWarning: "operator is not necessary for signals if equal to track operator";
-	assertMatch: "node railway=signal operator=DB";
-	assertNoMatch: "node railway=signal";
-	assertNoMatch: "way railway=rail operator=DB";
-}
-
-/* operator is not necessary for milestones if equal to track operator */
+/* operator is not necessary for signals and milestones if equal to track operator */
+node[railway=signal][operator],
 node[railway=milestone][operator]
 {
-	throwWarning: "operator is not necessary for milestones if equal to track operator";
+	throwWarning: "operator is not necessary for {0.value}s if equal to track operator";
+	assertMatch: "node railway=signal operator=DB";
 	assertMatch: "node railway=milestone operator=DB";
+	assertNoMatch: "node railway=signal";
+	assertNoMatch: "way railway=rail operator=DB";
 	assertNoMatch: "node railway=milestone";
 	assertNoMatch: "way railway=rail operator=DB";
+	fixRemove: "operator";
 }
 
 /* supervised=* is deprecated, replace it with the new crossing:supervision=* */
@@ -135,6 +118,7 @@ node[railway=level_crossing][supervised], node[railway=crossing][supervised]
 	throwWarning: "supervised=* is deprecated, replace it with the new crossing:supervision=*";
 	assertMatch: "node railway=level_crossing supervised=yes";
 	assertNoMatch: "node railway=level_crossing";
+	fixChangeKey: "supervised=>crossing:supervision";
 }
 
 /* must have railway=signal if railway:signal:* is given */
@@ -146,4 +130,130 @@ node[/^railway:signal:/][railway!=signal]
 	assertNoMatch: "node railway:signal:position=right railway=signal";
 	assertNoMatch: "node railway=signal railway:signal:direction=forward";
 	fixAdd: "railway=signal";
+}
+
+/* ks and hl signals only exist as light signals */
+node[railway=signal][railway:signal:main=ks][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant=ks][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined=ks][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:main="DE-ESO:ks"][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant="DE-ESO:ks"][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined="DE-ESO:ks"][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:main=hl][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant=hl][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined=hl][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:main="DE-ESO:hl"][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant="DE-ESO:hl"][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined="DE-ESO:hl"][railway:signal:combined:form!=light]
+{
+	throwError: "{1.value} signals only exist as light signals";
+	assertMatch: "node railway=signal railway:signal:main=ks";
+	assertMatch: "node railway=signal railway:signal:main=ks railway:signal:main:form=semaphore";
+	assertMatch: "node railway=signal railway:signal:main=hl";
+	assertMatch: "node railway=signal railway:signal:main=hl railway:signal:main:form=semaphore";
+	assertNoMatch: "node railway=signal railway:signal:main=hl railway:signal:main:form=light";
+	assertNoMatch: "node railway=signal railway:signal:main=ks railway:signal:main:form=light";
+	fixAdd: "{2.key}=light";
+}
+
+/* hp signals only exist as semaphore or light signals */
+node[railway=signal][railway:signal:main=hp][railway:signal:main:form!=light][railway:signal:main:form!=semaphore],
+node[railway=signal][railway:signal:distant=vr][railway:signal:distant:form!=light][railway:signal:distant:form!=semaphore],
+node[railway=signal][railway:signal:main="DE-ESO:hp"][railway:signal:main:form!=light][railway:signal:main:form!=semaphore],
+node[railway=signal][railway:signal:distant="DE-ESO:vr"][railway:signal:distant:form!=light][railway:signal:distant:form!=semaphore]
+{
+	throwError: "hp signals only exist as semaphore or light signals";
+	assertMatch: "node railway=signal railway:signal:main=hp";
+	assertMatch: "node railway=signal railway:signal:main=hp railway:signal:main:form=typo";
+	assertNoMatch: "node railway=signal railway:signal:main=hp railway:signal:main:form=semaphore";
+	assertNoMatch: "node railway=signal railway:signal:main=hp railway:signal:main:form=light";
+}
+
+/* KVB combined hp signals only exist as light signals */
+node[railway=signal][railway:signal:combined=hp][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:combined="DE-KVB:hp"][railway:signal:combined:form!=light]
+{
+	throwError: "KVB hp signals only exist as light signals";
+	assertMatch: "node railway=signal railway:signal:combined=hp";
+	assertMatch: "node railway=signal railway:signal:combined=DE-KVB:hp railway:signal:combined:form=typo";
+	assertMatch: "node railway=signal railway:signal:combined=hp railway:signal:combined:form=semaphore";
+	assertNoMatch: "node railway=signal railway:signal:combined=hp railway:signal:combined:form=light";
+	assertNoMatch: "node railway=signal railway:signal:combined=DE-KVB:hp railway:signal:combined:form=light";
+}
+
+/* track numbers inside a station should be railway:track_ref, not name */
+way[railway][name=~/^[0-9]+[a-z]*.*/]
+{
+	throwError: "track numbers inside a station should be railway:track_ref, not name";
+	assertMatch: "way railway=rail name=4";
+	assertMatch: "way railway=rail name=4a";
+	assertMatch: "way railway=light_rail name=14";
+	assertMatch: "way railway=rail name=14b";
+	assertNoMatch: "way railway=rail name=\"Gleis 14b\"";
+	assertNoMatch: "way railway=rail name=\"track 4b\"";
+	fixChangeKey: "name=>railway:track_ref";
+}
+
+/* track numbers inside a station should be railway:track_ref, not name */
+way[railway][name=~/^Gleis [0-9]+[a-z]*.*/],
+way[railway][name=~/^track [0-9]+[a-z]*.*/],
+way[railway][ref=~/^Gleis [0-9]+[a-z]*.*/],
+way[railway][ref=~/^track [0-9]+[a-z]*.*/]
+{
+	throwError: "track names or ref should not include the word 'track'";
+	assertMatch: "way railway=rail name=\"Gleis 14b\"";
+	assertMatch: "way railway=rail ref=\"track 4b\"";
+	assertNoMatch: "way railway=rail name=14b";
+}
+
+/* power:type=overhead is deprecated, change to electrified=contact_line */
+way[railway]["power:type"=overhead][electrified=contact_line],
+way[railway]["power:type"=overhead][electrified=yes],
+way[railway]["power:type"=overhead][!electrified]
+{
+	throwError: "power:type=overhead is deprecated, change to electrified=contact_line";
+	assertMatch: "way railway=rail power:type=overhead";
+	assertMatch: "way railway=rail power:type=overhead electrified=yes";
+	assertNoMatch: "way railway=rail power:type=overhead electrified=something";
+	fixRemove: "power:type";
+	fixAdd: "electrified=contact_line";
+}
+
+/* power:type=overhead is deprecated, change to electrified=contact_line */
+way[railway]["power:type"=overhead][electrified!=yes][electrified!=contact_line]
+{
+	throwError: "power:type=overhead is deprecated, change to electrified=contact_line";
+	assertMatch: "way railway=rail power:type=overhead";
+	assertNoMatch: "way railway=rail power:type=overhead electrified=yes";
+}
+
+/* power:type=overhead is deprecated, change to electrified=contact_line */
+way[railway]["power:type"]["power:type"!=overhead]
+{
+	throwError: "power:type is deprecated, change to proper electrified value";
+	assertMatch: "way railway=rail power:type=something";
+	assertNoMatch: "way railway=rail power:type=overhead electrified=yes";
+}
+
+/* priority on railway lines is deprecated, remove if usage or service is tagged */
+way[railway][priority][service],
+way[railway][priority][usage],
+way[railway=tram][priority],
+way[railway=subway][priority],
+way[railway="light_rail"][priority]
+{
+	throwError: "priority on railway lines is deprecated, remove if usage or service is tagged";
+	assertMatch: "way railway=rail priority=primary service=siding";
+	assertMatch: "way railway=rail priority=primary usage=main";
+	assertNoMatch: "way railway=rail priority=primary";
+	fixRemove: "priority";
+}
+
+/* priority on railway lines is deprecated, add proper usage or service tags */
+way[railway][railway!=subway][railway!=tram][railway!="light_rail"][priority][!service][!usage]
+{
+	throwError: "priority on railway lines is deprecated, add proper usage or service tags";
+	assertMatch: "way railway=rail priority=primary";
+	assertNoMatch: "way railway=rail priority=primary service=siding";
+	assertNoMatch: "way railway=rail priority=primary usage=main";
 }
