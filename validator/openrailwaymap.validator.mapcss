@@ -121,15 +121,16 @@ node[railway=level_crossing][supervised], node[railway=crossing][supervised]
 	fixChangeKey: "supervised=>crossing:supervision";
 }
 
-/* must have railway=signal if railway:signal:* is given */
-node[/^railway:signal:/][railway!=signal]
+/* signal specification given but node is not tagged as signal or equivalent type */
+node[/^railway:signal:/][railway!=signal][railway!=buffer_stop][railway!=derail]
 {
-	throwWarning: "signal specification given but node is not tagged as signal";
+	throwWarning: "signal specification given but node is not tagged as signal or equivalent type";
 	assertMatch: "node railway:signal:direction=forward";
 	assertMatch: "node railway:signal:position=right railway=level_crossing";
 	assertNoMatch: "node railway:signal:position=right railway=signal";
 	assertNoMatch: "node railway=signal railway:signal:direction=forward";
-	fixAdd: "railway=signal";
+	assertNoMatch: "node railway=buffer_stop railway:signal:minor=sh2";
+	assertNoMatch: "node railway=derail railway:signal:minor=sh";
 }
 
 /* ks and hl signals only exist as light signals */
