@@ -588,7 +588,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'db:zs10' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 'none') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:db:zs10' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 'none') && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'db:zs10' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 'none') && zoom >= 16)) {
             s_default['z-index'] = 90;
             s_default['icon-image'] = 'icons/de-zs10-sign-44.png';
             s_default['icon-width'] = '7';
@@ -596,7 +596,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'db:zs10' && tags['railway:signal:speed_limit:form'] == 'light' && tags['railway:signal:speed_limit:speed'] == 'none') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:db:zs10' && tags['railway:signal:speed_limit:form'] == 'light' && tags['railway:signal:speed_limit:speed'] == 'none') && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'db:zs10' && tags['railway:signal:speed_limit:form'] == 'light' && tags['railway:signal:speed_limit:speed'] == 'none') && zoom >= 16)) {
             s_default['z-index'] = 95;
             s_default['icon-image'] = 'icons/de-zs10-light-44.png';
             s_default['icon-width'] = '10';
@@ -604,7 +604,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '10') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 10) && zoom >= 16)) {
             s_default['z-index'] = 100;
             s_default['icon-image'] = 'icons/de-zs3-10-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -612,7 +612,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '20') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 20) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 20) && zoom >= 16)) {
             s_default['z-index'] = 105;
             s_default['icon-image'] = 'icons/de-zs3-20-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -620,7 +620,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '30') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 30) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 30) && zoom >= 16)) {
             s_default['z-index'] = 110;
             s_default['icon-image'] = 'icons/de-zs3-30-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -628,7 +628,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '40') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 40) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 40) && zoom >= 16)) {
             s_default['z-index'] = 115;
             s_default['icon-image'] = 'icons/de-zs3-40-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -636,7 +636,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '50') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 50) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 50) && zoom >= 16)) {
             s_default['z-index'] = 120;
             s_default['icon-image'] = 'icons/de-zs3-50-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -644,7 +644,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '60') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 60) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 60) && zoom >= 16)) {
             s_default['z-index'] = 125;
             s_default['icon-image'] = 'icons/de-zs3-60-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -652,7 +652,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '70') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 70) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 70) && zoom >= 16)) {
             s_default['z-index'] = 130;
             s_default['icon-image'] = 'icons/de-zs3-70-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -660,7 +660,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '80') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 80) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 80) && zoom >= 16)) {
             s_default['z-index'] = 135;
             s_default['icon-image'] = 'icons/de-zs3-80-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -668,7 +668,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '90') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 90) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 90) && zoom >= 16)) {
             s_default['z-index'] = 140;
             s_default['icon-image'] = 'icons/de-zs3-90-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -676,7 +676,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '100') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 100) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 100) && zoom >= 16)) {
             s_default['z-index'] = 145;
             s_default['icon-image'] = 'icons/de-zs3-100-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -684,7 +684,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '110') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 110) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 110) && zoom >= 16)) {
             s_default['z-index'] = 150;
             s_default['icon-image'] = 'icons/de-zs3-110-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -692,7 +692,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '120') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 120) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 120) && zoom >= 16)) {
             s_default['z-index'] = 155;
             s_default['icon-image'] = 'icons/de-zs3-120-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -700,7 +700,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '130') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 130) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 130) && zoom >= 16)) {
             s_default['z-index'] = 160;
             s_default['icon-image'] = 'icons/de-zs3-130-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -708,7 +708,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '140') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 140) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 140) && zoom >= 16)) {
             s_default['z-index'] = 165;
             s_default['icon-image'] = 'icons/de-zs3-140-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -716,7 +716,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '150') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 150) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 150) && zoom >= 16)) {
             s_default['z-index'] = 170;
             s_default['icon-image'] = 'icons/de-zs3-150-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -724,7 +724,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '160') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 160) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'zs3' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 160) && zoom >= 16)) {
             s_default['z-index'] = 175;
             s_default['icon-image'] = 'icons/de-zs3-160-sign-up-44.png';
             s_default['icon-width'] = '22';
@@ -732,7 +732,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '10') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 10) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 10) && zoom >= 16)) {
             s_default['z-index'] = 200;
             s_default['icon-image'] = 'icons/de-zs3v-10-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -740,7 +740,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '20') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 20) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 20) && zoom >= 16)) {
             s_default['z-index'] = 205;
             s_default['icon-image'] = 'icons/de-zs3v-20-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -748,7 +748,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '30') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 30) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 30) && zoom >= 16)) {
             s_default['z-index'] = 210;
             s_default['icon-image'] = 'icons/de-zs3v-30-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -756,7 +756,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '40') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 40) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 40) && zoom >= 16)) {
             s_default['z-index'] = 215;
             s_default['icon-image'] = 'icons/de-zs3v-40-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -764,7 +764,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '50') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 50) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 50) && zoom >= 16)) {
             s_default['z-index'] = 220;
             s_default['icon-image'] = 'icons/de-zs3v-50-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -772,7 +772,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '60') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 60) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 60) && zoom >= 16)) {
             s_default['z-index'] = 225;
             s_default['icon-image'] = 'icons/de-zs3v-60-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -780,7 +780,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '70') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 70) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 70) && zoom >= 16)) {
             s_default['z-index'] = 230;
             s_default['icon-image'] = 'icons/de-zs3v-70-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -788,7 +788,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '80') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 80) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 80) && zoom >= 16)) {
             s_default['z-index'] = 235;
             s_default['icon-image'] = 'icons/de-zs3v-80-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -796,7 +796,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '90') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 90) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 90) && zoom >= 16)) {
             s_default['z-index'] = 240;
             s_default['icon-image'] = 'icons/de-zs3v-90-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -804,7 +804,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '100') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 100) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 100) && zoom >= 16)) {
             s_default['z-index'] = 245;
             s_default['icon-image'] = 'icons/de-zs3v-100-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -812,7 +812,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '110') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 110) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 110) && zoom >= 16)) {
             s_default['z-index'] = 250;
             s_default['icon-image'] = 'icons/de-zs3v-110-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -820,7 +820,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '120') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 120) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 120) && zoom >= 16)) {
             s_default['z-index'] = 255;
             s_default['icon-image'] = 'icons/de-zs3v-120-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -828,7 +828,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '130') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 130) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 130) && zoom >= 16)) {
             s_default['z-index'] = 260;
             s_default['icon-image'] = 'icons/de-zs3v-130-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -836,7 +836,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '140') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 140) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 140) && zoom >= 16)) {
             s_default['z-index'] = 265;
             s_default['icon-image'] = 'icons/de-zs3v-140-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -844,7 +844,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '150') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 150) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 150) && zoom >= 16)) {
             s_default['z-index'] = 270;
             s_default['icon-image'] = 'icons/de-zs3v-150-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -852,7 +852,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '160') && zoom >= 16)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 160) && zoom >= 16) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'zs3v' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 160) && zoom >= 16)) {
             s_default['z-index'] = 275;
             s_default['icon-image'] = 'icons/de-zs3v-160-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -860,7 +860,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '10') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 10) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 10) && zoom >= 14)) {
             s_default['z-index'] = 300;
             s_default['icon-image'] = 'icons/de-lf7-10-sign-32.png';
             s_default['icon-width'] = '13';
@@ -868,7 +868,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '20') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 20) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 20) && zoom >= 14)) {
             s_default['z-index'] = 305;
             s_default['icon-image'] = 'icons/de-lf7-20-sign-32.png';
             s_default['icon-width'] = '13';
@@ -876,7 +876,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '30') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 30) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 30) && zoom >= 14)) {
             s_default['z-index'] = 310;
             s_default['icon-image'] = 'icons/de-lf7-30-sign-32.png';
             s_default['icon-width'] = '13';
@@ -884,7 +884,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '40') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 40) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 40) && zoom >= 14)) {
             s_default['z-index'] = 315;
             s_default['icon-image'] = 'icons/de-lf7-40-sign-32.png';
             s_default['icon-width'] = '13';
@@ -892,7 +892,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '50') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 50) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 50) && zoom >= 14)) {
             s_default['z-index'] = 320;
             s_default['icon-image'] = 'icons/de-lf7-50-sign-32.png';
             s_default['icon-width'] = '13';
@@ -900,7 +900,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '60') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 60) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 60) && zoom >= 14)) {
             s_default['z-index'] = 325;
             s_default['icon-image'] = 'icons/de-lf7-60-sign-32.png';
             s_default['icon-width'] = '13';
@@ -908,7 +908,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '70') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 70) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 70) && zoom >= 14)) {
             s_default['z-index'] = 330;
             s_default['icon-image'] = 'icons/de-lf7-70-sign-32.png';
             s_default['icon-width'] = '13';
@@ -916,7 +916,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '80') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 80) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 80) && zoom >= 14)) {
             s_default['z-index'] = 335;
             s_default['icon-image'] = 'icons/de-lf7-80-sign-32.png';
             s_default['icon-width'] = '13';
@@ -924,7 +924,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '90') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 90) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 90) && zoom >= 14)) {
             s_default['z-index'] = 340;
             s_default['icon-image'] = 'icons/de-lf7-90-sign-32.png';
             s_default['icon-width'] = '13';
@@ -932,7 +932,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '100') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 100) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 100) && zoom >= 14)) {
             s_default['z-index'] = 345;
             s_default['icon-image'] = 'icons/de-lf7-100-sign-32.png';
             s_default['icon-width'] = '13';
@@ -940,7 +940,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '110') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 110) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 110) && zoom >= 14)) {
             s_default['z-index'] = 350;
             s_default['icon-image'] = 'icons/de-lf7-110-sign-32.png';
             s_default['icon-width'] = '13';
@@ -948,7 +948,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '120') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 120) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 120) && zoom >= 14)) {
             s_default['z-index'] = 355;
             s_default['icon-image'] = 'icons/de-lf7-120-sign-32.png';
             s_default['icon-width'] = '13';
@@ -956,7 +956,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '130') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 130) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 130) && zoom >= 14)) {
             s_default['z-index'] = 360;
             s_default['icon-image'] = 'icons/de-lf7-130-sign-32.png';
             s_default['icon-width'] = '13';
@@ -964,7 +964,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '140') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 140) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 140) && zoom >= 14)) {
             s_default['z-index'] = 365;
             s_default['icon-image'] = 'icons/de-lf7-140-sign-32.png';
             s_default['icon-width'] = '13';
@@ -972,7 +972,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '150') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 150) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 150) && zoom >= 14)) {
             s_default['z-index'] = 370;
             s_default['icon-image'] = 'icons/de-lf7-150-sign-32.png';
             s_default['icon-width'] = '13';
@@ -980,7 +980,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '160') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 160) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 160) && zoom >= 14)) {
             s_default['z-index'] = 375;
             s_default['icon-image'] = 'icons/de-lf7-160-sign-32.png';
             s_default['icon-width'] = '13';
@@ -988,7 +988,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '170') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 170) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 170) && zoom >= 14)) {
             s_default['z-index'] = 380;
             s_default['icon-image'] = 'icons/de-lf7-170-sign-32.png';
             s_default['icon-width'] = '13';
@@ -996,7 +996,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '180') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 180) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 180) && zoom >= 14)) {
             s_default['z-index'] = 390;
             s_default['icon-image'] = 'icons/de-lf7-180-sign-32.png';
             s_default['icon-width'] = '13';
@@ -1004,7 +1004,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '190') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 190) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 190) && zoom >= 14)) {
             s_default['z-index'] = 395;
             s_default['icon-image'] = 'icons/de-lf7-190-sign-32.png';
             s_default['icon-width'] = '13';
@@ -1012,7 +1012,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == '200') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'DE-ESO:lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 200) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit'] == 'lf7' && tags['railway:signal:speed_limit:form'] == 'sign' && tags['railway:signal:speed_limit:speed'] == 200) && zoom >= 14)) {
             s_default['z-index'] = 399;
             s_default['icon-image'] = 'icons/de-lf7-200-sign-32.png';
             s_default['icon-width'] = '13';
@@ -1020,7 +1020,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '10') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 10) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 10) && zoom >= 14)) {
             s_default['z-index'] = 400;
             s_default['icon-image'] = 'icons/de-lf6-10-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1028,7 +1028,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '20') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 20) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 20) && zoom >= 14)) {
             s_default['z-index'] = 415;
             s_default['icon-image'] = 'icons/de-lf6-20-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1036,7 +1036,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '30') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 30) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 30) && zoom >= 14)) {
             s_default['z-index'] = 410;
             s_default['icon-image'] = 'icons/de-lf6-30-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1044,7 +1044,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '40') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 40) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 40) && zoom >= 14)) {
             s_default['z-index'] = 415;
             s_default['icon-image'] = 'icons/de-lf6-40-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1052,7 +1052,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '50') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 50) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 50) && zoom >= 14)) {
             s_default['z-index'] = 420;
             s_default['icon-image'] = 'icons/de-lf6-50-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1060,7 +1060,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '60') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 60) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 60) && zoom >= 14)) {
             s_default['z-index'] = 425;
             s_default['icon-image'] = 'icons/de-lf6-60-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1068,7 +1068,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '70') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 70) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 70) && zoom >= 14)) {
             s_default['z-index'] = 430;
             s_default['icon-image'] = 'icons/de-lf6-70-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1076,7 +1076,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '80') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 80) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 80) && zoom >= 14)) {
             s_default['z-index'] = 435;
             s_default['icon-image'] = 'icons/de-lf6-80-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1084,7 +1084,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '90') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 90) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 90) && zoom >= 14)) {
             s_default['z-index'] = 440;
             s_default['icon-image'] = 'icons/de-lf6-90-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1092,7 +1092,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '100') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 100) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 100) && zoom >= 14)) {
             s_default['z-index'] = 445;
             s_default['icon-image'] = 'icons/de-lf6-100-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1100,7 +1100,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '110') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 110) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 110) && zoom >= 14)) {
             s_default['z-index'] = 450;
             s_default['icon-image'] = 'icons/de-lf6-110-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1108,7 +1108,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '120') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 120) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 120) && zoom >= 14)) {
             s_default['z-index'] = 455;
             s_default['icon-image'] = 'icons/de-lf6-120-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1116,7 +1116,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '130') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 130) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 130) && zoom >= 14)) {
             s_default['z-index'] = 460;
             s_default['icon-image'] = 'icons/de-lf6-130-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1124,7 +1124,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '140') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 140) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 140) && zoom >= 14)) {
             s_default['z-index'] = 465;
             s_default['icon-image'] = 'icons/de-lf6-140-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1132,7 +1132,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '150') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 150) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 150) && zoom >= 14)) {
             s_default['z-index'] = 470;
             s_default['icon-image'] = 'icons/de-lf6-150-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1140,7 +1140,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '160') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 160) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 160) && zoom >= 14)) {
             s_default['z-index'] = 475;
             s_default['icon-image'] = 'icons/de-lf6-160-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1148,7 +1148,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '170') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 170) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 170) && zoom >= 14)) {
             s_default['z-index'] = 480;
             s_default['icon-image'] = 'icons/de-lf6-170-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1156,7 +1156,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '180') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 180) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 180) && zoom >= 14)) {
             s_default['z-index'] = 485;
             s_default['icon-image'] = 'icons/de-lf6-180-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1164,7 +1164,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '190') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 190) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 190) && zoom >= 14)) {
             s_default['z-index'] = 495;
             s_default['icon-image'] = 'icons/de-lf6-190-sign-down-44.png';
             s_default['icon-width'] = '22';
@@ -1172,7 +1172,7 @@
             s_default['allow-overlap'] = 'true';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == '200') && zoom >= 14)) {
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'DE-ESO:lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 200) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant'] == 'lf6' && tags['railway:signal:speed_limit_distant:form'] == 'sign' && tags['railway:signal:speed_limit_distant:speed'] == 200) && zoom >= 14)) {
             s_default['z-index'] = 499;
             s_default['icon-image'] = 'icons/de-lf6-200-sign-down-44.png';
             s_default['icon-width'] = '22';

@@ -1536,7 +1536,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<space />
 					<label text="Signal Gsp 2 siehe 'Gleissperre'" />
 				</item>
-				<item name="Schutzhalttafel (Sh 2)" icon="de-sh2.png" type="node">
+				<item name="Schutzhalttafel (Sh 2)" icon="de-sh2-32.png" type="node">
 					<label text="Schutzhalttafel (Sh 2)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1958,8 +1958,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
 						default=""
 						delete_if_empty="true" />
-					<combo key="railway:signal:speed_limit:height"
-						text="Signal height"
 					<combo key="railway:signal:speed_limit_distant:height"
 						text="Signal height"
 						de.text="Signalbauform"
@@ -2198,8 +2196,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<combo key="railway:signal:speed_limit:height"
 						text="Signal height"
-					<combo key="railway:signal:speed_limit:height"
-						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						default=""
@@ -2258,8 +2254,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
 						default=""
 						delete_if_empty="true" />
-					<combo key="railway:signal:speed_limit:height"
-						text="Signal height"
 					<combo key="railway:signal:speed_limit_distant:height"
 						text="Signal height"
 						de.text="Signalbauform"
