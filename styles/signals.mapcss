@@ -822,6 +822,50 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 	allow-overlap: true;
 }
 
+/**************************************************/
+/* DE shunting signal Ra 11 without Sh 1          */
+/* AT Wartesignal ohne "Verschubverbot aufgehoben */
+/**************************************************/
+node|z17-[railway=signal]["railway:signal:shunting"=ra11]["railway:signal:shunting:form"=sign],
+node|z17-[railway=signal]["railway:signal:shunting"="DE-ESO:ra11"]["railway:signal:shunting:form"=sign],
+node|z17-[railway=signal]["railway:signal:shunting"="AT-V2:wartesignal"]["railway:signal:shunting:form"=sign]
+{
+	z-index: 2800;
+	icon-image: "icons/de-ra11-sign-32.png";
+	icon-width: 16;
+	icon-height: 11;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/**************************************/
+/* DE shunting signal Ra 11 with Sh 1 */
+/**************************************/
+node|z17-[railway=signal]["railway:signal:shunting"=ra11]["railway:signal:shunting:form"=light]["railway:signal:shunting:states"="ra11;sh1"],
+node|z17-[railway=signal]["railway:signal:shunting"="DE-ESO:ra11"]["railway:signal:shunting:form"=light]["railway:signal:shunting:states"="DE-ESO:ra11;DE-ESO:sh1"]
+{
+	z-index: 2800;
+	icon-image: "icons/de-ra11-sh1-30.png";
+	icon-width: 14;
+	icon-height: 15;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/********************************************/
+/* DE shunting signal Ra 11b (without Sh 1) */
+/********************************************/
+node|z17-[railway=signal]["railway:signal:shunting"=ra11b]["railway:signal:shunting:form"=sign]["railway:signal:shunting:form"=sign],
+node|z17-[railway=signal]["railway:signal:shunting"="DE-ESO:ra11b"]["railway:signal:shunting:form"=sign]["railway:signal:shunting:form"=sign]
+{
+	z-index: 2800;
+	icon-image: "icons/de-ra11b-32.png";
+	icon-width: 16;
+	icon-height: 11;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /*****************************/
 /* DE distant signal type Ks */
 /*****************************/
@@ -895,6 +939,22 @@ node|z17-[railway=signal]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:st
 	icon-image: "icons/de-ne5-ds301-32.png";
 	icon-width: 11;
 	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*********************************************/
+/* DE shunting stop sign Ra10                */
+/* AT shunting stop sign "Verschubhalttafel" */
+/*********************************************/
+node|z17-[railway=signal]["railway:signal:shunting"=ra10]["railway:signal:shunting:form"=sign],
+node|z17-[railway=signal]["railway:signal:shunting"="DE-ESO:ra10"]["railway:signal:shunting:form"=sign],
+node|z17-[railway=signal]["railway:signal:shunting"="AT-V2:verschubhalttafel"]["railway:signal:shunting:form"=sign]
+{
+	z-index: 1010;
+	icon-image: "icons/de-ra10-32.png";
+	icon-width: 16;
+	icon-height: 11;
 	text-allow-overlap: true;
 	allow-overlap: true;
 }
