@@ -671,8 +671,8 @@ node|z14-[railway=level_crossing]["crossing:barrier"=no]["crossing:light"!=no]["
 node|z14-[railway=level_crossing]["crossing:barrier"!=no]["crossing:barrier"]["crossing:light"!=no]["crossing:light"]
 {
 	z-index: 5530;
-	icon-image: "icons/level-crossing-with-lights-and-barrier-32.png";
-	icon-width: 16;
+	icon-image: "icons/level-crossing-with-lights-and-barrier-28.png";
+	icon-width: 14;
 	icon-height: 12;
 	allow-overlap: false; 
 }
@@ -684,8 +684,8 @@ node|z14-[railway=level_crossing][!"crossing:light"]["crossing:barrier"!=no]["cr
 node|z14-[railway=level_crossing]["crossing:light"=no]["crossing:barrier"!=no]["crossing:barrier"]
 {
 	z-index: 5520;
-	icon-image: "icons/level-crossing-with-barrier-32.png";
-	icon-width: 16;
+	icon-image: "icons/level-crossing-with-barrier-28.png";
+	icon-width: 14;
 	icon-height: 12;
 	allow-overlap: false; 
 }
