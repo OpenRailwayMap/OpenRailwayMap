@@ -809,6 +809,7 @@ way|z2-[railway=rail][usage=main][maxspeed>380][maxspeed<=400]
 }
 
 /* German speed signals (Zs 10) */
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:db:zs10"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=none],
 node|z16-[railway=signal]["railway:signal:speed_limit"="db:zs10"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=none]
 {
 	z-index: 90;
@@ -818,6 +819,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="db:zs10"]["railway:signa
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:db:zs10"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"=none],
 node|z16-[railway=signal]["railway:signal:speed_limit"="db:zs10"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"=none]
 {
 	z-index: 95;
@@ -828,6 +830,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="db:zs10"]["railway:signa
 }
 
 /* German speed signals (Zs 3) */
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=10]
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=10]
 {
 	z-index: 100;
@@ -837,6 +840,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=20],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=20]
 {
 	z-index: 105;
@@ -846,6 +850,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=30],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=30]
 {
 	z-index: 110;
@@ -855,6 +860,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=40],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=40]
 {
 	z-index: 115;
@@ -864,6 +870,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=50],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=50]
 {
 	z-index: 120;
@@ -873,6 +880,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=60],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=60]
 {
 	z-index: 125;
@@ -882,6 +890,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=70],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=70]
 {
 	z-index: 130;
@@ -891,6 +900,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=80],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=80]
 {
 	z-index: 135;
@@ -900,6 +910,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=90],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=90]
 {
 	z-index: 140;
@@ -909,6 +920,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=100],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=100]
 {
 	z-index: 145;
@@ -918,6 +930,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=110],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=110]
 {
 	z-index: 150;
@@ -927,6 +940,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=120],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=120]
 {
 	z-index: 155;
@@ -936,6 +950,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=130],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=130]
 {
 	z-index: 160;
@@ -945,6 +960,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=140],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=140]
 {
 	z-index: 165;
@@ -954,6 +970,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=150],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=150]
 {
 	z-index: 170;
@@ -963,6 +980,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=160],
 node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=160]
 {
 	z-index: 175;
@@ -973,6 +991,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="zs3"]["railway:signal:sp
 }
 
 /* German speed signals (Zs 3v) */
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=10],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=10]
 {
 	z-index: 200;
@@ -982,6 +1001,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=20],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=20]
 {
 	z-index: 205;
@@ -991,6 +1011,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=30],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=30]
 {
 	z-index: 210;
@@ -1000,6 +1021,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=40],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=40]
 {
 	z-index: 215;
@@ -1009,6 +1031,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=50],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=50]
 {
 	z-index: 220;
@@ -1018,6 +1041,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=60],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=60]
 {
 	z-index: 225;
@@ -1027,6 +1051,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=70],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=70]
 {
 	z-index: 230;
@@ -1036,6 +1061,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=80],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=80]
 {
 	z-index: 235;
@@ -1045,6 +1071,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=90],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=90]
 {
 	z-index: 240;
@@ -1054,6 +1081,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=100],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=100]
 {
 	z-index: 245;
@@ -1063,6 +1091,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=110],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=110]
 {
 	z-index: 250;
@@ -1072,6 +1101,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=120],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=120]
 {
 	z-index: 255;
@@ -1081,6 +1111,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=130],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=130]
 {
 	z-index: 260;
@@ -1090,6 +1121,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=140],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=140]
 {
 	z-index: 265;
@@ -1099,6 +1131,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=150],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=150]
 {
 	z-index: 270;
@@ -1108,6 +1141,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 	allow-overlap: true;
 }
 
+node|z16-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=160],
 node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=160]
 {
 	z-index: 275;
@@ -1118,6 +1152,7 @@ node|z16-[railway=signal]["railway:signal:speed_limit_distant"=zs3v]["railway:si
 }
 
 /* German line speed signals (Lf 7) */
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=10],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=10]
 {
 	z-index: 300;
@@ -1127,6 +1162,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=20],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=20]
 {
 	z-index: 305;
@@ -1136,6 +1172,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=30],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=30]
 {
 	z-index: 310;
@@ -1145,6 +1182,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=40],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=40]
 {
 	z-index: 315;
@@ -1154,6 +1192,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=50],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=50]
 {
 	z-index: 320;
@@ -1163,6 +1202,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=60],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=60]
 {
 	z-index: 325;
@@ -1172,6 +1212,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=70],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=70]
 {
 	z-index: 330;
@@ -1181,6 +1222,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=80],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=80]
 {
 	z-index: 335;
@@ -1190,6 +1232,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=90],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=90]
 {
 	z-index: 340;
@@ -1199,6 +1242,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=100],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=100]
 {
 	z-index: 345;
@@ -1208,6 +1252,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=110],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=110]
 {
 	z-index: 350;
@@ -1217,6 +1262,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=120],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=120]
 {
 	z-index: 355;
@@ -1226,6 +1272,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=130],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=130]
 {
 	z-index: 360;
@@ -1235,6 +1282,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=140],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=140]
 {
 	z-index: 365;
@@ -1244,6 +1292,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=150],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=150]
 {
 	z-index: 370;
@@ -1253,6 +1302,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=160],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=160]
 {
 	z-index: 375;
@@ -1262,6 +1312,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=170],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=170]
 {
 	z-index: 380;
@@ -1271,6 +1322,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=180],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=180]
 {
 	z-index: 390;
@@ -1280,6 +1332,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=190],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=190]
 {
 	z-index: 395;
@@ -1289,6 +1342,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=200],
 node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=200]
 {
 	z-index: 399;
@@ -1299,6 +1353,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit"=lf7]["railway:signal:spee
 }
 
 /* German line speed signals (Lf 6) */
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=10],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=10]
 {
 	z-index: 400;
@@ -1308,6 +1363,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=20],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=20]
 {
 	z-index: 415;
@@ -1317,6 +1373,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=30],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=30]
 {
 	z-index: 410;
@@ -1326,6 +1383,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=40],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=40]
 {
 	z-index: 415;
@@ -1335,6 +1393,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=50],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=50]
 {
 	z-index: 420;
@@ -1344,6 +1403,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=60],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=60]
 {
 	z-index: 425;
@@ -1353,6 +1413,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=70],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=70]
 {
 	z-index: 430;
@@ -1362,6 +1423,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=80],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=80]
 {
 	z-index: 435;
@@ -1371,6 +1433,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=90],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=90]
 {
 	z-index: 440;
@@ -1380,6 +1443,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=100],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=100]
 {
 	z-index: 445;
@@ -1389,6 +1453,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=110],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=110]
 {
 	z-index: 450;
@@ -1398,6 +1463,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=120],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=120]
 {
 	z-index: 455;
@@ -1407,6 +1473,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=130],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=130]
 {
 	z-index: 460;
@@ -1416,6 +1483,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=140],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=140]
 {
 	z-index: 465;
@@ -1425,6 +1493,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=150],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=150]
 {
 	z-index: 470;
@@ -1434,6 +1503,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=160],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=160]
 {
 	z-index: 475;
@@ -1443,6 +1513,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=170],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=170]
 {
 	z-index: 480;
@@ -1452,6 +1523,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=180],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=180]
 {
 	z-index: 485;
@@ -1461,6 +1533,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=190],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=190]
 {
 	z-index: 495;
@@ -1470,6 +1543,7 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:sig
 	allow-overlap: true;
 }
 
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=200],
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"=lf6]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=200]
 {
 	z-index: 499;

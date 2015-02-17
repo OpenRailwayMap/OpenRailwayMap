@@ -588,6 +588,8 @@ node|z11-[railway=signal_box]
 {
 	z-index: 7000;
 	text: "name";
+	font-size: 15;
+	font-weight: bold;
 	text-position: auto;
 	text-color: black;
 	text-halo-radius: 0.5;
@@ -598,10 +600,14 @@ area|z11-[railway=signal_box]
 {
 	z-index: 7000;
 	text: "name";
+	font-size: 15;
+	font-weight: bold;
 	text-position: center;
 	text-color: black;
 	text-halo-radius: 0.5;
 	text-halo-color: #008206;
+	fill-color: #008206;
+	color: #008206;
 }
 
 /**************/
