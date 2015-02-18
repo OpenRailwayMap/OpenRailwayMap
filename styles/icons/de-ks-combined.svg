@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -9,12 +7,12 @@
    xmlns="http://www.w3.org/2000/svg"
    version="1.1"
    width="83.337997"
-   height="161.65564"
+   height="128.49899"
    id="svg2984">
   <defs
      id="defs2986">
     <filter
-       color-interpolation-filters="sRGB"
+       style="color-interpolation-filters:sRGB"
        id="filter3011">
       <feGaussianBlur
          id="feGaussianBlur3013"
@@ -35,7 +33,8 @@
   </metadata>
   <g
      id="layer11"
-     style="display:inline">
+     style="display:inline"
+     transform="scale(1,0.79489339)">
     <rect
        width="83.337997"
        height="161.65564"
@@ -45,7 +44,7 @@
        style="fill:#000000;fill-opacity:1;stroke:none" />
   </g>
   <g
-     transform="matrix(2.25,0,0,2.25,-52.91115,-51.493665)"
+     transform="matrix(2.25,0,0,2.25,-52.91115,-61.789912)"
      id="layer1"
      style="display:inline;filter:url(#filter3011)">
     <g
@@ -55,10 +54,11 @@
          d="m -41.416254,164.19525 a 6.8185296,6.8185296 0 1 1 -13.637059,0 6.8185296,6.8185296 0 1 1 13.637059,0 z"
          transform="matrix(1.4190262,0,0,1.4190262,110.24728,681.42835)"
          id="path4900"
-         style="fill:#e60f1e;fill-opacity:1;stroke:none;display:inline" />
+         style="display:inline;fill:#e60f1e;fill-opacity:1;stroke:none" />
     </g>
   </g>
   <g
+     transform="translate(0,-33.15664)"
      id="layer2"
      style="display:none">
     <g
@@ -73,6 +73,7 @@
     </g>
   </g>
   <g
+     transform="translate(0,-33.15664)"
      id="layer4"
      style="display:none">
     <g
@@ -83,10 +84,11 @@
          d="m -41.416254,164.19525 a 6.8185296,6.8185296 0 1 1 -13.637059,0 6.8185296,6.8185296 0 1 1 13.637059,0 z"
          transform="matrix(1.4190262,0,0,1.4190262,110.24728,681.42835)"
          id="path4900-0"
-         style="fill:#fdf42b;fill-opacity:1;stroke:none;display:inline" />
+         style="display:inline;fill:#fdf42b;fill-opacity:1;stroke:none" />
     </g>
   </g>
   <g
+     transform="translate(0,-33.15664)"
      id="layer5"
      style="display:none">
     <g
@@ -101,6 +103,7 @@
     </g>
   </g>
   <g
+     transform="translate(0,-33.15664)"
      id="layer8"
      style="display:none">
     <g
@@ -125,6 +128,7 @@
     </g>
   </g>
   <g
+     transform="translate(0,-33.15664)"
      id="layer9"
      style="display:none">
     <g
@@ -159,6 +163,7 @@
     </g>
   </g>
   <g
+     transform="translate(0,-33.15664)"
      id="layer10"
      style="display:none">
     <g
