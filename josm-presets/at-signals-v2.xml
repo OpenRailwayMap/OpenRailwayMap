@@ -250,7 +250,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Signalzustände (Mehrfachauswahl)"
 				delimiter=";"
 				values="AT-V2:vorsicht;AT-V2:hauptsignal_frei;AT-V2:hauptsignal_frei_mit_60;AT-V2:hauptsignal_frei_mit_40"
-				display_values="Halt erwarten;Fahrt erwarten;Langsamfahrt erwarten"
 				default=""
 				delete_if_empty="true" />
 			<space />
@@ -1081,7 +1080,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Turn direction arrow – if the signals only valid for some turn directions at the next switch/junction. Leave this key empty if there is no arrow."
 				de.text="Richtungs – falls das Signal an der nächsten Weiche/Abzweigung nur für bestimmte Richtungen gilt. Leer lassen, falls es keinen Richtungspfeil gibt."
 				values="left,through,right"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
+				display_values="links,geradeaus,rechts"
 				default=""
 				delete_if_empty="true" />
 			<combo key="railway:signal:electricity:height"
