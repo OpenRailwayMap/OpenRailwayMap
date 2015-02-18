@@ -879,7 +879,7 @@ node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de-ks-combined-32.png";
-	icon-width: 8;
+	icon-width: 10;
 	icon-height: 16;
 	text-allow-overlap: true;
 	allow-overlap: true;
