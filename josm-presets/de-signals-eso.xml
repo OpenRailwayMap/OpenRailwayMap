@@ -2680,7 +2680,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<key key="railway"
 					value="signal" />
-				<check key="railway:signal:lzb:deactivated"
+				<check key="railway:signal:train_protection:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
@@ -2709,9 +2709,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Blockbezeichner"
 					default=""
 					delete_if_empty="true" />
-				<key key="railway:signal:lzb"
-					value="DE-ESO:lzb_blockkennzeichen" /> <!-- FIXME: Noch, allgemein, zum Blockkennzeichen erheben, damit auch ETCS abgedeckt wird? -->
-				<key key="railway:signal:form"
+				<key key="railway:signal:train_protection"
+					value="DE-ESO:blockkennzeichen" /> 
+				<key key="railway:signal:train_protection:type"
+					value="block_marker" />
+				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
 			<item name="LZB-Bereichskennzeichen" icon="de-lzb-start-sign.png" type="node">
@@ -2744,9 +2746,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Am Oberleitungsmast"
 					default="off"
 					delete_if_empty="true" />
-				<key key="railway:signal:lzb_start"
+				<key key="railway:signal:train_protection"
 					value="DE-ESO:lzb-bereichskennzeichen" />
-				<key key="railway:signal:lzb_start:form"
+				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
 			<item name="Zugfunk-Kanalhinweis" icon="de-radio.png" type="node">
