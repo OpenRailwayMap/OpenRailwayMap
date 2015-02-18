@@ -6,24 +6,24 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    id="svg2984"
-   height="161.65564"
+   height="128.49899"
    width="83.337997"
    version="1.1">
   <defs
      id="defs2986">
     <filter
        id="filter3011"
-       color-interpolation-filters="sRGB">
+       style="color-interpolation-filters:sRGB">
       <feGaussianBlur
          stdDeviation="3"
          id="feGaussianBlur3013" />
     </filter>
     <filter
-       id="filter3004"
-       style="color-interpolation-filters:sRGB">
+       style="color-interpolation-filters:sRGB"
+       id="filter3004">
       <feGaussianBlur
-         id="feGaussianBlur3006"
-         stdDeviation="3" />
+         stdDeviation="3"
+         id="feGaussianBlur3006" />
     </filter>
   </defs>
   <metadata
@@ -38,22 +38,27 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <rect
-     width="83.337997"
-     height="161.65564"
-     x="0"
-     y="0"
-     id="rect3087"
-     style="fill:#000000;fill-opacity:1;stroke:none" />
+  <g
+     transform="scale(1,0.79489339)"
+     style="display:inline"
+     id="layer11">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3087"
+       y="0"
+       x="0"
+       height="161.65564"
+       width="83.337997" />
+  </g>
   <g
      style="display:inline;filter:url(#filter3011)"
      id="layer1"
-     transform="matrix(2.25,0,0,2.25,-52.91115,-51.493665)">
+     transform="matrix(2.25,0,0,2.25,-52.91115,-57.463347)">
     <g
        id="layer3"
        transform="translate(0.5280619,-873.23078)">
       <path
-         style="fill:#e60f1e;fill-opacity:1;stroke:none;display:inline"
+         style="display:inline;fill:#e60f1e;fill-opacity:1;stroke:none"
          id="path4900"
          transform="matrix(1.4190262,0,0,1.4190262,110.24728,681.42835)"
          d="m -41.416254,164.19525 a 6.8185296,6.8185296 0 1 1 -13.637059,0 6.8185296,6.8185296 0 1 1 13.637059,0 z" />
@@ -61,7 +66,8 @@
   </g>
   <g
      style="display:none"
-     id="layer2">
+     id="layer2"
+     transform="translate(0,-33.15664)">
     <g
        style="display:inline"
        id="layer6"
@@ -75,13 +81,14 @@
   </g>
   <g
      style="display:none"
-     id="layer4">
+     id="layer4"
+     transform="translate(0,-33.15664)">
     <g
        style="fill:#fdf42b;fill-opacity:1"
        id="layer3-9"
        transform="translate(20.314107,-839.13317)">
       <path
-         style="fill:#fdf42b;fill-opacity:1;stroke:none;display:inline"
+         style="display:inline;fill:#fdf42b;fill-opacity:1;stroke:none"
          id="path4900-0"
          transform="matrix(1.4190262,0,0,1.4190262,110.24728,681.42835)"
          d="m -41.416254,164.19525 a 6.8185296,6.8185296 0 1 1 -13.637059,0 6.8185296,6.8185296 0 1 1 13.637059,0 z" />
@@ -89,7 +96,8 @@
   </g>
   <g
      style="display:none"
-     id="layer5">
+     id="layer5"
+     transform="translate(0,-33.15664)">
     <g
        style="display:inline"
        id="g3972"
@@ -103,7 +111,8 @@
   </g>
   <g
      style="display:none"
-     id="layer8">
+     id="layer8"
+     transform="translate(0,-33.15664)">
     <g
        style="display:inline"
        id="g3956"
@@ -127,7 +136,8 @@
   </g>
   <g
      style="display:none"
-     id="layer9">
+     id="layer9"
+     transform="translate(0,-33.15664)">
     <g
        style="display:inline"
        id="layer7"
@@ -161,7 +171,8 @@
   </g>
   <g
      style="display:none"
-     id="layer10">
+     id="layer10"
+     transform="translate(0,-33.15664)">
     <g
        style="display:inline"
        id="g4116"
@@ -174,13 +185,13 @@
     </g>
   </g>
   <g
-     style="fill:#ffffff;fill-opacity:1;filter:url(#filter3004)"
+     transform="matrix(0.59032831,0,0,0.59032831,-7.7042803,-525.12214)"
      id="g4289"
-     transform="matrix(0.59032831,0,0,0.59032831,-7.70428,-522.25145)">
+     style="fill:#ffffff;fill-opacity:1;filter:url(#filter3004)">
     <path
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-       id="path4291"
+       d="m -41.416254,164.19525 a 6.8185296,6.8185296 0 1 1 -13.637059,0 6.8185296,6.8185296 0 1 1 13.637059,0 z"
        transform="matrix(1.4190262,0,0,1.4190262,110.24728,681.42835)"
-       d="m -41.416254,164.19525 a 6.8185296,6.8185296 0 1 1 -13.637059,0 6.8185296,6.8185296 0 1 1 13.637059,0 z" />
+       id="path4291"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none" />
   </g>
 </svg>
