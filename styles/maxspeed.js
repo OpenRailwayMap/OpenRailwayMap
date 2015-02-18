@@ -15,7 +15,7 @@
         }
 
         if ((selector == 'canvas')) {
-            s_default['background-color'] = '#8a8a8a';
+            s_default['fill-color'] = '#8a8a8a';
             s_default['default-points'] = 'true';
             s_default['default-lines'] = 'true';
         }
