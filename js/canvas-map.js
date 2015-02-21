@@ -54,6 +54,12 @@ function createMap(embed)
 		maxZoom: 18
 	});
 
+	// blank background map
+	var blank = new L.TileLayer(root+'/img/blank.png',
+	{
+		maxZoom: 20
+	});
+
 	// railmap layer
 	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.js',
 	{
@@ -94,6 +100,7 @@ function createMap(embed)
 	baseLayers[translations['mapnikGrayscale']] = mapnikGray;
 	baseLayers[translations['mapquest']] = mapquest;
 	baseLayers[translations['mapquestGrayscale']] = mapquestGray;
+	baseLayers[translations['blank']] = blank;
 
 	var overlays = new Object();
 	overlays[translations['hillshading']] = hillshading;

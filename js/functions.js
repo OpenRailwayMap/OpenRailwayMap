@@ -50,8 +50,8 @@ function requestApi(file, query, handler)
 	else
 		var request = new ActiveXObject("MSXML2.XMLHTTP.3.0");
 
-    request.open("GET", root+'api/'+file+'.php?'+query, true);
-    request.onreadystatechange = function()
+	request.open("GET", root+'api/'+file+'.php?'+query, true);
+	request.onreadystatechange = function()
 	{
 		if (request.readyState === 4)
 			if (request.status === 200)
