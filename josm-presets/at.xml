@@ -252,7 +252,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -480,7 +480,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,16.67,50,60,25,0"
-					display_values="16,7 Hz (Standard in Deutschland)16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz,Gleichspannung"
+					display_values="16.7 Hz (Standard in Deutschland),16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz,Gleichspannung"
 					default=""
 					delete_if_empty="true" />
 				<key key="gauge"
@@ -1162,7 +1162,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="0,16.7,16,67,50,60,25"
+					values="0,16.7,16.67,50,60,25"
 					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -1290,7 +1290,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="0,16.7,16,67,50,60,25"
+					values="0,16.7,16.67,50,60,25"
 					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -1410,7 +1410,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="0,16.7,16,67,50,60,25"
+					values="0,16.7,16.67,50,60,25"
 					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -1562,7 +1562,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
@@ -2188,7 +2188,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16,67,50,60,25"
+					values="16.7,0,16.67,50,60,25"
 					display_values="16.7 Hz (Standard in Österreich),Gleichspannung,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />

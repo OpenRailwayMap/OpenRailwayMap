@@ -15,7 +15,6 @@
         }
 
         if ((selector == 'canvas')) {
-            s_default['background-color'] = '#8a8a8a';
             s_default['default-points'] = 'true';
             s_default['default-lines'] = 'true';
         }
@@ -630,7 +629,7 @@
             height: 10, 
             offset: 16
         }
-    }, external_images = [], presence_tags = [], value_tags = ['ref', 'railway:local_operated', 'railway:position', 'railway', 'railway:track_ref', 'usage', MapCSS.e_concat('ref', " ", 'name'), 'highspeed', 'name', 'tunnel', 'railway:switch', 'service', 'railway:ref', 'bridge'];
+    }, external_images = [], presence_tags = [], value_tags = ['ref', 'railway:local_operated', 'railway:position', 'railway', 'railway:track_ref', 'usage', MapCSS.e_concat('ref', ' ', 'name'), 'highspeed', 'name', 'tunnel', 'railway:switch', 'service', 'railway:ref', 'bridge'];
 
     MapCSS.loadStyle('standard', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('standard');
