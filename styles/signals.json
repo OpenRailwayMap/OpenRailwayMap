@@ -160,6 +160,18 @@
 		},
 		{
 			"minzoom": 14,
+			"maxzoom": 15,
+			"icon": "icons/de-blockkennzeichen-14.png",
+			"caption": "Blockkennzeichen"
+		},
+		{
+			"minzoom": 16,
+			"maxzoom": 19,
+			"icon": "icons/de-blockkennzeichen-20.png",
+			"caption": "Blockkennzeichen"
+		},
+		{
+			"minzoom": 14,
 			"maxzoom": 16,
 			"icon": "icons/de-bue4-ds-16.png",
 			"caption": "Bü 4 Pfeiftafel"
