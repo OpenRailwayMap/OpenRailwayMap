@@ -724,7 +724,35 @@ node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:dis
 /***************************************/
 /* DE block marker ("Blockkennzeichen) */
 /***************************************/
-node|z14-[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]
+node|z14-15[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]
+{
+	z-index: 8500;
+	icon-image: "icons/de-blockkennzeichen-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+node|z16-[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]
+{
+	z-index: 8500;
+	icon-image: "icons/de-blockkennzeichen-40.png";
+	icon-width: 20;
+	icon-height: 20;
+	allow-overlap: true;
+}
+node|z16-17[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
+{
+	z-index: 8510;
+	text: "ref";
+	text-size: 12;
+	text-offset-x: -28;
+	text-offset-y: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+}
+node|z18-[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
 {
 	z-index: 8500;
 	text: "ref";
@@ -735,9 +763,6 @@ node|z14-[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzei
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-blockkennzeichen-30.png";
-	icon-width: 30;
-	icon-height: 30;
 	text-allow-overlap: true;
 }
 
