@@ -13,14 +13,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
 	<group name="OpenRailwayMap Infrastructure DE" de.name="OpenRailwayMap Infrastruktur DE" icon="signals.png">
-		<group name="Gleise" icon="rail.png">
-			<item name="Streckengleis / Durchgehendes Hauptgleis" icon="rail.png" type="way">
-				<label text="Streckengleise (ohne Überleitgleise) und durchgehende Hauptgleise in einem Bahnhof. Jedes Gleis wird einzeln erfasst." />
+		<group name="Tracks" de.name="Gleise" icon="rail.png">
+			<item de.name="Streckengleis / Durchgehendes Hauptgleis" name="Main Track" icon="rail.png" type="way">
+				<label text="Tracks outside stations and main tracks (straight passing tracks) inside stations. Every track is mapped individually." de.text="Streckengleise (ohne Überleitgleise) und durchgehende Hauptgleise in einem Bahnhof. Jedes Gleis wird einzeln erfasst." />
 				<space />
 				<key key="railway"
 					value="rail" />
 				<text key="ref"
-					text="Line ref (VzG number, e.g. '2379')"
+					text="Line reference (VzG number, e.g. '2379')"
 					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
 					default=""
 					delete_if_empty="true" />
@@ -38,16 +38,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
 					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" de.short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, in der Regel zumindest abschnittsweise mit mehr als 100 km/h befahrbar" short_description="An important line; often double tracks, electrified; usually more than 100 km/h" />
 					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" de.short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." short_description="less important line; often single-tracked; not electrified; less than 100 km/h" />
-					<list_entry value="industrial" de.display_value="Industriebahn" display_value="industrial line" de.short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." short_description="A line only used for freight trains inside industrial areas or mines." />
-					<list_entry value="military" de.display_value="Militärbahn" display_value="military line" de.short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." short_description="A line only used by military trains" />
+					<list_entry value="industrial" de.display_value="Industriebahn" display_value="industrial/mine railway" de.short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." short_description="A line only used for freight trains inside industrial areas or mines." />
+					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" de.short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." short_description="A line only used by military trains" />
 					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" de.short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
-					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
+					<list_entry value="test" display_value="test" de.display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
 				</combo>
 				<combo key="railway:traffic_mode"
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
@@ -94,18 +94,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<space />
 				<combo key="maxspeed" default=""
@@ -114,7 +115,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
 					text="Maxspeed of Used by tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
@@ -133,14 +134,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					display_values="15 kV (default in Germany),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					values="16.7,0,16.67,50,60,25"					
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -190,8 +193,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Hauptgleis" icon="siding.png" type="way">
-				<label text="Nicht durchgehendes Hauptgleis in einem Bahnhof und alle sonstigen Gleise, die weder durchgehendes Hauptgleis, noch Nebengleis, Anschlussgleis, Abstellgleis oder Überleitgleis sind. Jedes Gleis wird einzeln erfasst." />
+			<item de.name="Hauptgleis" name="Siding Track" icon="siding.png" type="way">
+				<label text="Siding tracks inside stations which are no yard or spur tracks. Every track is mapped individually." de.text="Nicht durchgehendes Hauptgleis in einem Bahnhof und alle sonstigen Gleise, die weder durchgehendes Hauptgleis, noch Nebengleis, Anschlussgleis, Abstellgleis oder Überleitgleis sind. Jedes Gleis wird einzeln erfasst." />
 				<space />
 				<key key="railway"
 					value="rail" />
@@ -207,7 +210,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
@@ -242,7 +245,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="maxspeed" default=""
@@ -251,7 +255,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -264,14 +268,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					display_values="15 kV (default in Germany),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					values="16.7,0,16.67,50,60,25"					
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -321,8 +327,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Nebengleis / Abstellgleis" icon="yard.png" type="way">
-				<label text="Abstellgleise in Rangier-, Güter- oder Betriebsbahnhöfen, auf denen Züge zusammengestellt und Wagen abgestellt werden. Jedes Gleis wird einzeln erfasst." />
+			<item de.name="Nebengleis / Abstellgleis" name="Yard Track" icon="yard.png" type="way">
+				<label text="Yard tracs. Every track is mapped individually." de.text="Abstellgleise in Rangier-, Güter- oder Betriebsbahnhöfen, auf denen Züge zusammengestellt und Wagen abgestellt werden. Jedes Gleis wird einzeln erfasst." />
 				<space />
 				<key key="railway"
 					value="rail" />
@@ -338,7 +344,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<space />
@@ -363,7 +369,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="maxspeed" default=""
@@ -372,7 +379,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -385,14 +392,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					display_values="15 kV (default in Germany),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					values="16.7,0,16.67,50,60,25"					
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -442,8 +451,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Anschluss- oder Verladegleis" icon="spur.png" type="way">
-				<label text="Kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen oder Verladegleise in Industrieanlagen." />
+			<item de.name="Anschluss- oder Verladegleis" name="Spur Track" icon="spur.png" type="way">
+				<label text="Short tracks connecting companies to the nearby railway line" de.text="Kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen oder Verladegleise in Industrieanlagen." />
 				<space />
 				<key key="railway"
 					value="rail" />
@@ -479,7 +488,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="maxspeed" default=""
@@ -488,7 +498,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -501,14 +511,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					display_values="15 kV (default in Germany),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,16.67,50,60,25,0"
-					display_values="16.7 Hz (Standard in Deutschland),16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz,Gleichspannung"
+					display_values="16,7 Hz (default in Germany),16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz,DC"
+					de.display_values="16,7 Hz (Standard in Deutschland),16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz,Gleichspannung"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -558,8 +570,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Überleitgleis" icon="siding.png" type="way">
-				<label text="Überleitgleis, das den Wechsel zwischen zwei Gleisen einer Strecke ermöglicht." />
+			<item de.name="Überleitgleis" name="Crossover Track" icon="siding.png" type="way">
+				<label text="Crossover track which makes switching between left and right track on double-tracked railway lines possible." de.text="Überleitgleis, das den Wechsel zwischen zwei Gleisen einer Strecke ermöglicht." />
 				<space />
 				<key key="railway"
 					value="rail" />
@@ -570,7 +582,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
@@ -617,7 +629,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<space />
@@ -627,7 +640,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
 					text="Maxspeed of Used by tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
@@ -646,14 +659,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					de.display_values="15 kV (default in Germany),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in large parts of Germany),50 Hz,60 Hz,25 Hz"
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -704,8 +719,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Schmalspurgleis" icon="narrowgauge.png" type="way">
-				<label text="Schmalspurgleise sind in Deutschland Gleise mit einer Spurweite unter der Normalspurweite von 1435mm. Jedes Gleis wird einzeln erfasst." />
+			<item de.name="Schmalspurgleis" name="Narrow-gauge Track" icon="narrowgauge.png" type="way">
+				<label text="Narrow-gauge tracks are tracks with a gauge lower than 1435 mm. Every track is mapped individually." de.text="Schmalspurgleise sind in Deutschland Gleise mit einer Spurweite unter der Normalspurweite von 1435mm. Jedes Gleis wird einzeln erfasst." />
 				<space />
 				<key key="railway"
 					value="narrow_gauge" />
@@ -726,17 +741,17 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage (leave empty if main track or line)" de.text="Nutzung (leer lassen bei Strecken- und Hauptgleisen)" default="" delete_if_empty="true">
-					<list_entry value="branch" display_value="Reguläre Strecke" short_description="Eine Schmalspurbahn, auf der regulärer Personen- und/oder Güterverkehr stattfindet." />
-					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="branch" display_value="Reguläre Strecke" de.display_value="regular line" short_description="Eine Schmalspurbahn, auf der regulärer Personen- und/oder Güterverkehr stattfindet." />
+					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
 					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
 				</combo>
 				<combo key="railway:traffic_mode"
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
@@ -773,18 +788,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -792,7 +808,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -805,14 +821,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,400,600,750,1200,1500,2400,3000,6600"
-					display_values="15 kV (Standard in Deutschland),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V"
+					de.display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"					
+					display_values="15 kV (default in Germany),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in large parts of Germany),50 Hz,60 Hz,25 Hz"
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -862,8 +880,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Erhaltene Bahnstrecke" icon="preserved.png" type="way">
-				<label text="Ein Gleis, auf dem kein regulärer Betrieb mehr stattfindet und nun für touristische Zwecke erhalten bleibt (z. B. Draisinenstrecken)." />
+			<item de.name="Erhaltene Bahnstrecke" name="Preserved Track" icon="preserved.png" type="way">
+				<label text="A Track which is only used for tourism." de.text="Ein Gleis, auf dem kein regulärer Betrieb mehr stattfindet und nun für touristische Zwecke erhalten bleibt (z. B. Draisinenstrecken)." />
 				<space />
 				<key key="railway"
 					value="preserved" />
@@ -887,7 +905,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
@@ -912,18 +930,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -931,7 +950,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -945,13 +964,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Spannung"
 					values="15000,400,600,750,1200,1500,2400,3000,6600,25000"
 					display_values="15 kV (Standard in Deutschland),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
+					de.display_values="15 kV (default in Germany),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in large parts of Germany),50 Hz,60 Hz,25 Hz"
+					dedisplay_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -1001,8 +1022,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Miniaturbahn / Parkeisenbahn" icon="miniature.png" type="way">
-				<label text="Parkeisenbahnen und vergleichbare, in der Regel touristisch genutzte, Schmalspurbahnen bis etwa 600 mm Spurweite." />
+			<item de.name="Miniaturbahn / Parkeisenbahn" name="Miniature Railway" icon="miniature.png" type="way">
+				<label text="Miniature Railway which is usually used for tourists and leisure, gauge up to 600 mm." de.text="Parkeisenbahnen und vergleichbare, in der Regel touristisch genutzte, Schmalspurbahnen bis etwa 600 mm Spurweite." />
 				<space />
 				<key key="railway"
 					value="miniature" />
@@ -1018,15 +1039,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage (leave empty if main track or line)" de.text="Nutzung (leer lassen bei Strecken- und Hauptgleisen)" default="" delete_if_empty="true">
-					<list_entry value="branch" display_value="Reguläre Strecke" short_description="Eine Schmalspurbahn, auf der regulärer Personen- und/oder Güterverkehr stattfindet." />
-					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="branch" display_value="Reguläre Strecke" de.display_value="regular line" short_description="Eine Schmalspurbahn, auf der regulärer Personen- und/oder Güterverkehr stattfindet." />
+					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
 				</combo>
 				<combo key="railway:traffic_mode"
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
@@ -1046,7 +1067,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="maxspeed" default=""
@@ -1055,7 +1077,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -1075,7 +1097,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in large parts of Germany),50 Hz,60 Hz,25 Hz"
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -1126,8 +1149,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Straßenbahngleis" icon="tram.png" type="way">
-				<label text="Ebenerdig oder teilweise unterirdisch verlegte Straßenbahngleise oder straßenbahnähnlich verlegte Stadtbahnstrecken. Jedes Gleis wird einzeln erfasst." />
+			<item de.name="Straßenbahngleis" name="Tram" icon="tram.png" type="way">
+				<label text="Trams and underground trams. Every track is mapped individually." de.text="Ebenerdig oder teilweise unterirdisch verlegte Straßenbahngleise oder straßenbahnähnlich verlegte Stadtbahnstrecken. Jedes Gleis wird einzeln erfasst." />
 				<space />
 				<key key="railway"
 					value="tram" />
@@ -1151,7 +1174,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,freight, "
-					display_values="Gemischt,Güterverkehr,Personenverkehr"
+					de.display_values="Gemischt,Güterverkehr,Personenverkehr" display_values="mixed,freight,passenger"
 					default="passenger"
 					delete_if_empty="true" />
 				<combo key="service" text="Track service" de.text="Gleisfunktion" default="" delete_if_empty="true">
@@ -1184,14 +1207,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -1199,7 +1222,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -1212,14 +1235,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
-					display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"					
+					display_values="15 kV (default in Germany),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
 					values="0,16.7,16.67,50,60,25"
-					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					de.display_values="Gleichspannung,16.7 Hz, 16 2/3 Hz, 50 Hz, 60 Hz, 25 Hz"
+					display_values="DC,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -1262,8 +1287,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="U-Bahngleis" icon="subway.png" type="way">
-				<label text="Unterirdisch verlegte Stadt- und Schnellbahnen, teilweise auch oberirdischer Verlauf möglich. Jedes Gleis wird einzeln erfasst. Zusätzlich noch im Menü 'Tunnel' auswählen!" />
+			<item de.name="U-Bahngleis" name="Subway/Underground Railway" icon="subway.png" type="way">
+				<label text="Subway tracks. May run overground but separated from car traffic. Every track is mapped individually. Additionally you can choose 'Tunnel' if it is underground." de.text="Unterirdisch verlegte Stadt- und Schnellbahnen, teilweise auch oberirdischer Verlauf möglich. Jedes Gleis wird einzeln erfasst. Zusätzlich noch im Menü 'Tunnel' auswählen!" />
 				<space />
 				<key key="railway"
 					value="subway" />
@@ -1312,14 +1337,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -1327,7 +1352,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -1340,14 +1365,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
-					display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					display_values="15 kV (default in Germany),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
 					values="0,16.7,16.67,50,60,25"
-					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					de.display_values="Gleichspannung,16.7 Hz, 16 2/3 Hz, 50 Hz, 60 Hz, 25 Hz"
+					display_values="DC,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -1379,8 +1406,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Stadt-/Schnellbahngleis" icon="light-rail.png" type="way">
-				<label text="Stadtbahnen und straßenbahnähnliche Untergrund- oder Überlandbahnen. Unterscheiden sich meist durch ein anderes Stromsystem, eigene Signaltechnik oder einen speziellen Fuhrpark (z. B. S-Bahnen Hamburg und Berlin, Hamburger Hochbahn) und sind meist völlig vom restlichen Straßenverkehr getrennt. Jedes Gleis wird einzeln erfasst." />
+			<item de.name="Stadt-/Schnellbahngleis" name="Light Rail" icon="light-rail.png" type="way">
+				<label text="Light rail tracks. May run under- or overground, usually separated from car traffic. Uses usually a different voltage and frequency and differnt vehicles. Every track is mapped individually." de.text="Stadtbahnen und straßenbahnähnliche Untergrund- oder Überlandbahnen. Unterscheiden sich meist durch ein anderes Stromsystem, eigene Signaltechnik oder einen speziellen Fuhrpark (z. B. S-Bahnen Hamburg und Berlin, Hamburger Hochbahn) und sind meist völlig vom restlichen Straßenverkehr getrennt. Jedes Gleis wird einzeln erfasst." />
 				<space />
 				<key key="railway"
 					value="light_rail" />
@@ -1432,14 +1459,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -1447,7 +1474,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -1460,14 +1487,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
-					display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					display_values="15 kV (default in Germany),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
 					values="0,16.7,16.67,50,60,25"
-					display_values="Gleichspannung,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
+					de.display_values="Gleichspannung,16.7 Hz, 16 2/3 Hz, 50 Hz, 60 Hz, 25 Hz"
+					display_values="DC,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -1511,8 +1540,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Geplantes Gleis" icon="proposed.png" type="way">
-				<label text="Ein Gleis, dessen Bau geplant ist." />
+			<item de.name="Geplantes Gleis" name="Proposed Track" icon="proposed.png" type="way">
+				<label text="Proposed track which has not been built yet." de.text="Ein Gleis, dessen Bau geplant ist." />
 				<space />
 				<key key="railway"
 					value="proposed" />
@@ -1533,18 +1562,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
+					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
 					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
 				</combo>
 				<combo key="railway:traffic_mode"
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
@@ -1586,18 +1615,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<space />
 				<combo key="maxspeed" default=""
@@ -1606,7 +1636,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
 					text="Maxspeed of Used by tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
@@ -1625,14 +1655,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,400,600,750,1200,1500,2400,3000,6600,25000"
+					de.display_values="15 kV (default in Germany),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
 					display_values="15 kV (Standard in Deutschland),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					values="16.7,0,16.67,50,60,25"					
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -1682,8 +1714,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Gleis im Bau" icon="construction.png" type="way">
-				<label text="Ein Gleis, dessen Bau momentan noch nicht fertiggestellt ist." />
+			<item de.name="Gleis im Bau" name="Track under construction" icon="construction.png" type="way">
+				<label text="Track under construction but not finished." de.text="Ein Gleis, dessen Bau momentan noch nicht fertiggestellt ist." />
 				<space />
 				<key key="railway"
 					value="construction" />
@@ -1704,18 +1736,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
+					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
 					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
 				</combo>
 				<combo key="railway:traffic_mode"
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
@@ -1757,18 +1789,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<space />
 				<combo key="maxspeed" default=""
@@ -1777,7 +1810,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<combo key="maxspeed:tilting" default=""
 					text="Maxspeed of Used by tilting trains (km/h)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
@@ -1796,14 +1829,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,400,600,750,1200,1500,2400,3000,6600,25000"
+					de.display_values="15 kV (default in Germany),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
 					display_values="15 kV (Standard in Deutschland),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					values="16.7,0,16.67,50,60,25"					
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -1853,7 +1888,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Stillgelegtes Gleis" icon="disused.png" type="way">
+			<item de.name="Stillgelegtes Gleis" name="Disused Track" icon="disused.png" type="way">
 				<label text="Ein Gleis, das zwar noch vorhanden ist und jederzeit wieder genutzt werden könnte, im Moment aber nicht mehr in Betrieb ist." />
 				<space />
 				<key key="railway"
@@ -1875,18 +1910,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
+					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
 					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
 				</combo>
 				<combo key="railway:traffic_mode"
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" 
+					display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
@@ -1916,18 +1952,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -1935,7 +1972,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -1948,14 +1985,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,180,220,400,600,650,750,800,1100,1200,1500,2400,3000,5000,5500,6300,6600,8000,10000,20000,25000"
-					display_values="15 kV (Standard in Deutschland),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
+					display_values="15 kV (default in Germany),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					values="16.7,0,16.67,50,60,25"					
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -2010,8 +2049,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Abgebautes Gleis" icon="abandoned.png" type="way">
-				<label text="Ein Gleis, das entfernt wurde. Das Gleisbett ist weiterhin vorhanden und der Streckenverlauf ist weiterhin sichtbar." />
+			<item de.name="Abgebautes Gleis" name="Abandoned Track" icon="abandoned.png" type="way">
+				<label text="A tracks whose rails has been dismounted but whose train path and ballast is still visible on ground." de.text="Ein Gleis, das entfernt wurde. Das Gleisbett ist weiterhin vorhanden und der Streckenverlauf ist weiterhin sichtbar." />
 				<space />
 				<key key="railway"
 					value="razed" />
@@ -2032,18 +2071,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
+					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
 					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
 				</combo>
 				<combo key="railway:traffic_mode"
 					text="Traffic mode"
 					de.text="Verkehrsart"
 					values="mixed,passenger,freight"
-					display_values="Gemischt,Personenverkehr,Güterverkehr"
+					de.display_values="Gemischt,Personenverkehr,Güterverkehr" 
+					display_values="mixed,passenger,freight"
 					default=""
 					delete_if_empty="true" />
 				<check key="highspeed"
@@ -2073,18 +2113,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -2092,7 +2133,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -2105,14 +2146,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,180,220,400,600,650,750,800,1100,1200,1500,2400,3000,5000,5500,6300,6600,8000,10000,20000,25000"
-					display_values="15 kV (Standard in Deutschland),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
+					display_values="15 kV (default in Germany),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					values="16.7,0,16.67,50,60,25"					
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -2167,8 +2210,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Überbauter Streckenverlauf" icon="razed.png" type="way">
-				<label text="Ein ehemaliges Gleis, dessen Verlauf heute durch Überbauung o.ä. nur noch zu erahnen ist." />
+			<item de.name="Überbauter Streckenverlauf" name="Razed Track" icon="razed.png" type="way">
+				<label text="Overbuilt track which could only be seen if you know where it is." de.text="Ein ehemaliges Gleis, dessen Verlauf heute durch Überbauung o.ä. nur noch zu erahnen ist." />
 				<space />
 				<key key="railway"
 					value="razed" />
@@ -2189,11 +2232,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<combo key="usage" text="Usage" de.text="Nutzung" default="" delete_if_empty="true">
-					<list_entry value="main" display_value="Hauptbahn" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" display_value="Nebenbahn" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" display_value="Militärbahn" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" display_value="Tourismusbahn" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
+					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
+					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
+					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
+					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
+					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
 					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
 				</combo>
 				<combo key="railway:traffic_mode"
@@ -2232,18 +2275,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
-					display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+					de.display_values="Analog,GSM-R"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="forward" display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward" display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 				</combo>
 				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)" default="" delete_if_empty="true">
-					<list_entry value="regular" display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
 				</combo>
 				<combo key="maxspeed" default=""
 					text="Maxspeed (km/h)"
@@ -2251,7 +2295,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
 				<space />
 				<combo key="electrified"
 					text="Electrification"
@@ -2264,14 +2308,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Voltage"
 					de.text="Spannung"
 					values="15000,180,220,400,600,650,750,800,1100,1200,1500,2400,3000,5000,5500,6300,6600,8000,10000,20000,25000"
-					display_values="15 kV (Standard in Deutschland),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
+					display_values="15 kV (default in Germany),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
 					default=""
 					delete_if_empty="true" />
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					values="16.7,0,16.67,50,60,25"					
+					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					default=""
 					delete_if_empty="true" />
 				<combo key="gauge"
@@ -2327,7 +2373,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Brücke" icon="bridge.png" type="way">
+			<item de.name="Brücke" name="Brücke" icon="bridge.png" type="way">
 				<key key="bridge"
 					value="yes" />
 				<key key="layer"
@@ -2348,7 +2394,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Tunnel" icon="tunnel.png" type="way">
+			<item de.name="Tunnel" name="Tunnel" icon="tunnel.png" type="way">
 				<key key="tunnel"
 					value="yes" />
 				<key key="layer"
@@ -2370,7 +2416,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Prellbock" icon="bufferstop.png" type="node">
+			<item de.name="Prellbock" name="Buffer Stop" icon="bufferstop.png" type="node">
 				<key key="railway"
 					value="buffer_stop" />
 				<key key="railway:signal:position"
@@ -2392,13 +2438,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:minor:form"
 					value="sign" />
 			</item>
-			<item name="Weiche" icon="de-switch.png" type="node">
-				<label text="Weiche" />
+			<item de.name="Weiche" name="Switch" icon="de-switch.png" type="node">
+				<label text="Switch" de.text="Weiche" />
 				<space />
 				<key key="railway"
 					value="switch" />
 				<text key="ref"
-					text="Switch ref"
+					text="Switch reference"
 					de.text="Weichennummer"
 					default=""
 					delete_if_empty="true" />
@@ -2426,8 +2472,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Switch type"
 					de.text="Weichentyp"
 					values="default,three_way,single_slip,double_slip,wye,abt"
-					de.values="default switch,three way switch,single slip switch,double slip switch,wye switch,abt switch"
-					display_values="Einfache Weiche,Dreiwegweiche,einfache Kreuzungsweiche,Doppelkreuzungsweiche,Y-Weiche,Abtsche Weiche"
+					display_values="default switch,three way switch,single slip switch,double slip switch,wye switch,abt switch"
+					de.display_values="Einfache Weiche,Dreiwegweiche,einfache Kreuzungsweiche,Doppelkreuzungsweiche,Y-Weiche,Abtsche Weiche"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:turnout_side"
@@ -2466,14 +2512,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Kreuzung" icon="railway-crossing.png" type="node">
-				<label text="Kreuzung" />
+			<item name="Railway Crossing" de.name="Kreuzung" icon="railway-crossing.png" type="node">
+				<label de.text="Kreuzung" text="Two tracks crosses each other without a switch" />
 				<space />
 				<key key="railway"
 					value="railway_crossing" />
 			</item>
-			<item name="Gleissperre" icon="derail.png" type="node">
-				<label text="Gleissperre" />
+			<item name="Derailer" de.name="Gleissperre" icon="derail.png" type="node">
+				<label text="Derailer" de.text="Gleissperre" />
 				<space />
 				<key key="railway"
 					value="derail" />
@@ -2508,8 +2554,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:minor:height"
 					value="dwarf" />
 			</item>
-			<item name="Gleisfreimeldeanlage" icon="vacancy-detection.png" type="node">
-				<label text="Gleisfreimeldeanlage" />
+			<item name="Vacancy Detection" de.name="Gleisfreimeldeanlage" icon="vacancy-detection.png" type="node">
+				<label text="Track vacancy detection" de.text="Gleisfreimeldeanlage" />
 				<space />
 				<key key="railway"
 					value="vacancy_detection" />
@@ -2523,8 +2569,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 		</group>
-		<item name="Stellwerk" icon="signalbox.png" type="node,closedway">
-			<label text="Stellwerk" />
+		<item name="Signal Box" de.name="Stellwerk" icon="signalbox.png" type="node,closedway">
+			<label text="signal box" de.text="Stellwerk" />
 			<space />
 			<key key="railway"
 				value="signal_box" />
@@ -2581,10 +2627,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default="off"
 				delete_if_empty="true" />
 		</item>
-		<group name="Betriebsstellen" icon="facilities.png">
-			<item name="Bahnhof" icon="station.png" type="node">
-				<label text="Personenbahnhöfe und Bahnhöfe mit gemischter Nutzung" />
-				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+		<group name="Operating Sites" de.name="Betriebsstellen" icon="facilities.png">
+			<item name="Station" de.name="Bahnhof" icon="station.png" type="node">
+				<label text="Passenger station and stations which are used both for passengers and freight" de.text="Personenbahnhöfe und Bahnhöfe mit gemischter Nutzung" />
+				<label text="Is being mapped as a node inside the area. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="station" />
@@ -2653,9 +2699,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Haltepunkt/Haltestelle" icon="halt.png" type="node">
-				<label text="Haltepunkt/Haltestelle" />
-				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+			<item name="Halt" de.name="Haltepunkt/Haltestelle" icon="halt.png" type="node">
+				<label de.text="Haltepunkt/Haltestelle" text="a small station without switches" />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="halt" />
@@ -2724,9 +2770,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Straßenbahnhaltestelle" icon="tramstop.png" type="node">
-				<label text="Straßenbahnhaltestelle" />
-				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+			<item name="Tram Stop" de.name="Straßenbahnhaltestelle" icon="tramstop.png" type="node">
+				<label text="Tram Stop" de.text="Straßenbahnhaltestelle" />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="tram_stop" />
@@ -2778,9 +2824,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node">
+			<item name="Freight Station" de.name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node">
 				<label text="Güterbahnhof/Rangierbahnhof" />
-				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="yard" />
@@ -2819,9 +2865,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Betriebsbahnhof" icon="service-station.png" type="node">
+			<item name="Service Station" de.name="Betriebsbahnhof" icon="service-station.png" type="node">
 				<label text="Betriebsbahnhof" />
-				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="service_station" />
@@ -2860,9 +2906,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Abzweig, Anst, Awanst" icon="junction.png" type="node">
+			<item name="Juction" de.name="Abzweig, Anst, Awanst" icon="junction.png" type="node">
 				<label text="Abzweig, Anschlusstelle oder Ausweichanschlusstelle" />
-				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="junction" />
@@ -2902,9 +2948,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Überleitstelle" icon="crossover.png" type="node">
+			<item name="Crossover" de.name="Überleitstelle" icon="crossover.png" type="node">
 				<label text="Überleitstelle" />
-				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="crossover" />
@@ -2944,9 +2990,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Bahnhofsteil, Blockstelle, Deckungsstelle" icon="site.png" type="node">
+			<item name="Station Part or Blockpost" de.name="Bahnhofsteil, Blockstelle, Deckungsstelle" icon="site.png" type="node">
 				<label text="Bahnhofsteil, Blockstelle, Deckungsstelle" />
-				<label text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="site" />
@@ -2987,9 +3033,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Halteposition" icon="stop.png" type="node">
-				<label text="Halteposition" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Stop Position" de.name="Halteposition" icon="stop.png" type="node">
+				<label text="Stop Position" de.text="Halteposition" />
+				<label text="It is mapped as a node which is part of the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<combo key="public_transport"
 					text="Public transport?"
@@ -3072,12 +3118,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Bahngelände" icon="landuse.png" type="closedway">
+			<item de.name="Railway Landuse Area" name="Bahngelände" icon="landuse.png" type="closedway">
 				<label text="Bahngelände" />
 				<key key="landuse"
 					value="railway" />
 			</item>
-			<item name="Betriebsstellenrelation" icon="facility.png" type="relation">
+			<item name="Operating Site Relation" de.name="Betriebsstellenrelation" icon="facility.png" type="relation">
 				<label text="Betriebsstellenrelation" />
 				<space />
 				<key key="railway"
@@ -3608,7 +3654,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delete_if_empty="true" />
 		</item>
 		<separator />
-		<item name="Kilo-/Hektometertafel" icon="milestone.png" type="node">
+		<item name="Milestone" de.name="Kilo-/Hektometertafel" icon="milestone.png" type="node">
 			<label text="Kilo-/hektometer indications are nodes on the track"
 				de.text="Kilo-/Hektometerbezeichnung werden als Punkt auf dem" />
 			<label text="which they belong to. On lines with more than one track,"
@@ -3648,7 +3694,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Bahnsteig" icon="platform.png" type="way,closedway">
+		<item name="Platform" de.name="Bahnsteig" icon="platform.png" type="way,closedway">
 			<label text="Bahnsteig" />
 			<key key="railway"
 				value="platform" />
@@ -3706,7 +3752,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Fahrkartenautomat" icon="ticketatm.png" type="node">
+		<item name="Ticket Vending Machine" de.name="Fahrkartenautomat" icon="ticketatm.png" type="node">
 			<label text="Fahrkartenautomat" />
 			<space />
 			<key key="amenity"
@@ -3754,7 +3800,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default="off"
 				delete_if_empty="true" />
 		</item>
-		<item name="Fahrkartenschalter" icon="ticketshop.png" type="node">
+		<item name="Ticket Counter" de.name="Fahrkartenschalter" icon="ticketshop.png" type="node">
 			<label text="Fahrkartenschalter" />
 			<space />
 			<key key="shop"
@@ -3775,7 +3821,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="U-Bahn-Zugang" icon="landuse.png" type="node">
+		<item name="Subway Entrance" de.name="U-Bahn-Zugang" icon="landuse.png" type="node">
 			<label text="U-Bahn-Zugang" />
 			<key key="railway"
 				value="subway_entrance" />
@@ -3797,7 +3843,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default="off"
 				delete_if_empty="true" />
 		</item>
-		<item name="Bahnhofsgebäude" icon="train-station.png" type="closedway">
+		<item name="Station Building" de.name="Bahnhofsgebäude" icon="train-station.png" type="closedway">
 			<label text="Bahnhofsgebäude" />
 			<space />
 			<key key="building"
@@ -3818,7 +3864,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Bahngelände" icon="landuse.png" type="closedway">
+		<item name="Railway Landuse Area" de.name="Bahngelände" icon="landuse.png" type="closedway">
 			<label text="Bahngelände" />
 			<key key="landuse"
 				value="railway" />
@@ -3848,7 +3894,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Technik"
 				de.text="Mode"
 				values="analogue,gsm-r"
-				display_values="Analog,GSM-R"
+					display_values="analogue,GSM-R"
+				de.display_values="Analog,GSM-R"
 				default=""
 				delete_if_empty="true" />
 		</item>
@@ -3864,7 +3911,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
 			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
 		</item>
-		<group name="Versorgung" icon="supply.png">
+		<group name="Supply Points (Water, Coal, …)" de.name="Versorgung" icon="supply.png">
 			<item name="Tankstelle" icon="fuel.png" type="node,closedway">
 				<label text="Loktankstelle" />
 				<key key="railway"
@@ -3875,12 +3922,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Wasserkran" icon="water-crane.png" type="node">
+			<item name="Water Crane" de.name="Wasserkran" icon="water-crane.png" type="node">
 				<label text="Wasserkran" />
 				<key key="railway"
 					value="water_crane" />
 			</item>
-			<item name="Wasserturm" icon="watertower.png" type="node,closedway">
+			<item name="Water Tower" de.name="Wasserturm" icon="watertower.png" type="node,closedway">
 				<label text="Wasserturm" />
 				<space />
 				<key key="railway"
@@ -3890,7 +3937,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="building"
 					value="yes" />
 			</item>
-			<item name="Bekohlungsanlage" icon="coaling.png" type="node,closedway">
+			<item name="Coaling Facility" de.name="Bekohlungsanlage" icon="coaling.png" type="node,closedway">
 				<label text="Bekohlungsanlage" />
 				<key key="railway"
 					value="coaling_facility" />
@@ -3900,7 +3947,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Waschanlage" icon="wash.png" type="node,closedway">
+			<item name="Train Wash" de.name="Waschanlage" icon="wash.png" type="node,closedway">
 				<label text="Waschanlage" />
 				<key key="railway"
 					value="wash" />
@@ -3910,12 +3957,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Lokgrube" icon="pit.png" type="node">
+			<item name="Pit" de.name="Lokgrube" icon="pit.png" type="node">
 				<label text="Lokgrube" />
 				<key key="railway"
 					value="pit" />
 			</item>
-			<item name="Lokschuppen" icon="engine-shed.png" type="node,closedway">
+			<item name="Engine Shed" de.name="Lokschuppen" icon="engine-shed.png" type="node,closedway">
 				<label text="Lokschuppen" />
 				<key key="railway"
 					value="engine_shed" />
@@ -3930,7 +3977,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Werkstatt" icon="workshop.png" type="node,closedway">
+			<item name="Workshop" de.name="Werkstatt" icon="workshop.png" type="node,closedway">
 				<label text="Werkstatt" />
 				<key key="railway"
 					value="workshop" />
@@ -3952,7 +3999,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway"
 					value="track_scale" />
 			</item>
-			<item name="Kran" icon="crane.png" type="node">
+			<item name="Crane" de.name="Kran" icon="crane.png" type="node">
 				<label text="Kran" />
 				<key key="man_made"
 					value="crane" />
@@ -3962,7 +4009,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway"
 					value="loading_gauge" />
 			</item>
-			<item name="Verladerampe/Ladestraße" icon="loading-ramp.png" type="node,way,closedway">
+			<item name="Team Track" de.name="Verladerampe/Ladestraße" icon="loading-ramp.png" type="node,way,closedway">
 				<label text="Verladerampe/Ladestraße" />
 				<key key="railway"
 					value="loading_ramp" />
@@ -4064,7 +4111,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Container-Umschlagbahnhof" icon="containerterminal.png" type="node,closedway">
+			<item name="Containerterminal" de.name="Container-Umschlagbahnhof" icon="containerterminal.png" type="node,closedway">
 				<label text="Container-Umschlagbahnhof" />
 				<space />
 				<key key="man_made"
@@ -4084,13 +4131,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Rollwagenverladung" icon="carrier-truck-pit.png" type="node">
-				<label text="Rollwagenverladung" />
+			<item name="Rollbock Siding" de.name="Rollwagen-/Rollschemelverladung" icon="carrier-truck-pit.png" type="node">
+				<label text="Rollbock Siding/Transporter Trailers Siding" de.text="Rollwagenverladung" />
 				<key key="railway"
 					value="carrier_truck_pit" />
 			</item>
-			<item name="Rollende Landstraße" icon="rolling-highway.png" type="node">
-				<label text="Rollende Landstraße" />
+			<item name="Rolling Highway" de.name="Rollende Landstraße" icon="rolling-highway.png" type="node">
+				<label text="Rolling Highway" de.text="Rollende Landstraße" />
 				<space />
 				<key key="railway"
 					value="rolling_highway" />
@@ -4125,8 +4172,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Autozug-Verladung" icon="carshuttle.png" type="node">
-				<label text="Autozug-Verladung" />
+			<item name="Car Shuttle Station" de.name="Autozug-Verladung" icon="carshuttle.png" type="node">
+				<label text="Car Shuttle Station" de.text="Autozug-Verladung" />
 				<space />
 				<key key="railway"
 					value="car_shuttle" />
@@ -4162,33 +4209,33 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 		</group>
-		<item name="Drehscheibe" icon="turntable.png" type="node,closedway">
+		<item name="Turntable" de.name="Drehscheibe" icon="turntable.png" type="node,closedway">
 			<label text="Drehscheibe" />
 			<key key="railway"
 				value="turntable" />
 		</item>
-		<item name="Schiebebühne" icon="traverser.png" type="node,closedway">
-			<label text="Schiebebühne" />
+		<item name="Traverser" de.name="Schiebebühne" icon="traverser.png" type="node,closedway">
+			<label text="Traverser" de.text="Schiebebühne" />
 			<key key="railway"
 				value="traverser" />
 		</item>
-		<item name="Ablaufberg" icon="hump-yard.png" type="node">
-			<label text="Ablaufberg" />
+		<item name="Hump Yard" de.name="Ablaufberg" icon="hump-yard.png" type="node">
+			<label text="Hump Yard" de.text="Ablaufberg" />
 			<key key="railway"
 				value="hump_yard" />
 		</item>
-		<item name="Gleisbremse" icon="rail-brake.png" type="node">
-			<label text="Gleisbremse" />
+		<item name="Rail Brake" de.name="Gleisbremse" icon="rail-brake.png" type="node">
+			<label text="Rail Brake" de.text="Gleisbremse" />
 			<key key="railway"
 				value="rail_brake" />
 		</item>
-		<item name="Umspuranlage" icon="gauge-conversion.png" type="node">
-			<label text="Umspuranlage" />
+		<item name="Gauge Conversion" de.name="Umspuranlage" icon="gauge-conversion.png" type="node">
+			<label text="Gauge Conversion" de.text="Umspuranlage" />
 			<key key="railway"
 				value="gauge_conversion" />
 		</item>
-		<item name="Eisenbahnmuseum" icon="museum.png" type="node,closedway">
-			<label text="Eisenbahnmuseum" />
+		<item name="Railway Museum" de.name="Eisenbahnmuseum" icon="museum.png" type="node,closedway">
+			<label text="Railway Museum" de.text="Eisenbahnmuseum" />
 			<space />
 			<key key="railway"
 				value="museum" />
@@ -4205,8 +4252,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Firma mit Gleisanschluss" icon="industrial.png" type="closedway">
-			<label text="Firma mit Gleisanschluss" />
+		<item name="Company with railway siding" de.name="Firma mit Gleisanschluss" icon="industrial.png" type="closedway">
+			<label text="Company with railway siding" de.text="Firma mit Gleisanschluss" />
 			<key key="landuse"
 				value="industrial" />
 			<key key="man_made"
@@ -4217,7 +4264,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Tor" icon="gate.png" type="node">
+		<item name="Gate" de.name="Tor" icon="gate.png" type="node">
 			<key key="barrier"
 				value="gate" />
 		</item>
