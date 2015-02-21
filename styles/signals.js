@@ -668,7 +668,7 @@
             s_default['text-halo-color'] = 'white';
             s_default['font-weight'] = 'bold';
             s_default['icon-image'] = 'icons/de-ks-combined-32.png';
-            s_default['icon-width'] = '8';
+            s_default['icon-width'] = '10';
             s_default['icon-height'] = '16';
             s_default['text-allow-overlap'] = 'true';
             s_default['allow-overlap'] = 'true';
@@ -1014,7 +1014,7 @@
             offset: 936
         },
         'icons/de-ks-combined-32.png': {
-            width: 16, 
+            width: 21, 
             height: 32, 
             offset: 976
         },
