@@ -46,11 +46,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:distant"
-						value="ks" />
+						value="DE-ESO:ks" />
 					<key key="railway:signal:distant:form"
 						value="light" />
 					<key key="railway:signal:distant:states"
-						value="ks1;ks2" />
+						value="DE-ESO:ks1;DE-ESO:ks2" />
 					<check key="railway:signal:distant:shortened"
 						text="Shortened distance"
 						de.text="Verkürzter Bremsweg"
@@ -103,7 +103,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:combined"
-						value="ks" />
+						value="DE-ESO:ks" />
 					<key key="railway:signal:combined:form"
 						value="light" />
 					<combo key="railway:signal:combined:height"
@@ -114,7 +114,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:combined:states"
-						value="hp0;ks1;ks2" />
+						value="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2" />
 					<check key="railway:signal:combined:shortened"
 						text="Shortened distance"
 						de.text="Verkürzter Bremsweg"
@@ -131,7 +131,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="dr:zs1;db:zs7;db:zs12"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
 						default=""
 						delete_if_empty="true" />
@@ -183,7 +183,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:main"
-						value="ks" />
+						value="DE-ESO:ks" />
 					<key key="railway:signal:main:form"
 						value="light" />
 					<combo key="railway:signal:main:height"
@@ -194,7 +194,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:main:states"
-						value="hp0;ks1" />
+						value="DE-ESO:hp0;DE-ESO:ks1" />
 					<combo key="railway:signal:main:function"
 						text="Signal function"
 						de.text="Signalaufgabe"
@@ -206,7 +206,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="dr:zs1;db:zs7;db:zs12"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
 						default=""
 						delete_if_empty="true" />
@@ -257,7 +257,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:combined"
-					value="sv" />
+					value="DE-ESO:sv" />
 				<key key="railway:signal:combined:form"
 					value="light" />
 				<combo key="railway:signal:combined:height"
@@ -271,7 +271,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal states, Hamburg names (multi-selection)"
 					de.text="Signalzustände, Hamburger Kürzel (Mehrfachauswahl)"
 					delimiter=";"
-					values="hp0;sv1;sv2;sv3;sv4;sv5;sv6;sv0"
+					values="DE-ESO:hp0;DE-ESO:sv1;DE-ESO:sv2;DE-ESO:sv3;DE-ESO:sv4;DE-ESO:sv5;DE-ESO:sv6;DE-ESO:sv0"
 					display_values="Hp 0;Sv 1;Sv 2;Sv 3;Sv 4;Sv 5;Sv 6;Sv 0"
 					default=""
 					delete_if_empty="true" />
@@ -286,7 +286,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Substitute signal (multi-selection)"
 					de.text="Ersatzsignal (Mehrfachauswahl)"
 					delimiter=";"
-					values="dr:zs1;db:zs7;db:zs12"
+					values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 					display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
 					default=""
 					delete_if_empty="true" />
@@ -344,7 +344,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:combined"
-						value="hl" />
+						value="DE-ESO:hl" />
 					<key key="railway:signal:combined:form"
 						value="light" />
 					<combo key="railway:signal:combined:height"
@@ -358,7 +358,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal states (multi-selection)"
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
-						values="hp0;hl1;hl2;hl3a;hl3b;hl4;hl5;hl6a;hl6b;hl7;hl8;hl9a;hl9b;hl10;hl11;hl12a;hl12b"
+						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:hl4;DE-ESO:hl5;DE-ESO:hl6a;DE-ESO:hl6b;DE-ESO:hl7;DE-ESO:hl8;DE-ESO:hl9a;DE-ESO:hl9b;DE-ESO:hl10;DE-ESO:hl11;DE-ESO:hl12a;DE-ESO:hl12b"
 						display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Hl 7;Hl 8;Hl 9a;Hl 9b;Hl 10;Hl 11;Hl 12a;Hl 12b"
 						default=""
 						delete_if_empty="true" />
@@ -373,7 +373,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="dr:zs1;db:zs12"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs12"
 						display_values="Ersatzsignal;M-Tafel"
 						default=""
 						delete_if_empty="true" />
@@ -423,7 +423,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:main"
-						value="hl" />
+						value="DE-ESO:hl" />
 					<key key="railway:signal:main:form"
 						value="light" />
 					<combo key="railway:signal:main:height"
@@ -437,7 +437,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal states (multi-selection)"
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
-						values="hp0;hl1;hl2;hl3a;hl3b;hl4;hl5;hl6a;hl6b"
+						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:hl4;DE-ESO:hl5;DE-ESO:hl6a;DE-ESO:hl6b"
 						display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b"
 						default=""
 						delete_if_empty="true" />
@@ -452,7 +452,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="dr:zs1;db:zs12"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs12"
 						display_values="Ersatzsignal;M-Tafel"
 						default=""
 						delete_if_empty="true" />
@@ -502,11 +502,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:distant"
-						value="hl" />
+						value="DE-ESO:hl" />
 					<key key="railway:signal:distant:form"
 						value="light" />
 					<key key="railway:signal:distant:states"
-						value="hl1;hl4;hl7;hl10" />
+						value="DE-ESO:hl1;DE-ESO:hl4;DE-ESO:hl7;DE-ESO:hl10" />
 					<check key="railway:signal:distant:repeated"
 						text="Repeated Signal"
 						de.text="Vorsignalwiederholer"
@@ -554,7 +554,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:combined"
-						value="sk" />
+						value="DE-ESO:sk" />
 					<key key="railway:signal:combined:form"
 						value="light" />
 					<combo key="railway:signal:combined:height"
@@ -565,7 +565,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:combined:states"
-						value="hp0;sk1;sk2" />
+						value="DE-ESO:hp0;DE-ESO:sk1;DE-ESO:sk2" />
 					<combo key="railway:signal:combined:function"
 						text="Signal function"
 						de.text="Signalaufgabe"
@@ -577,7 +577,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="dr:zs1;db:zs7"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs7"
 						display_values="Ersatzsignal;Vorsichtsignal"
 						default=""
 						delete_if_empty="true" />
@@ -629,7 +629,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:main"
-						value="sk" />
+						value="DE-ESO:sk" />
 					<key key="railway:signal:main:form"
 						value="light" />
 					<combo key="railway:signal:main:height"
@@ -640,7 +640,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:main:states"
-						value="hp0;sk1" />
+						value="DE-ESO:hp0;DE-ESO:sk1" />
 					<combo key="railway:signal:main:function"
 						text="Signal function"
 						de.text="Signalaufgabe"
@@ -652,7 +652,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="dr:zs1;db:zs7"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs7"
 						display_values="Ersatzsignal;Vorsichtsignal"
 						default=""
 						delete_if_empty="true" />
@@ -702,11 +702,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:distant"
-						value="sk" />
+						value="DE-ESO:sk" />
 					<key key="railway:signal:distant:form"
 						value="light" />
 					<key key="railway:signal:distant:states"
-						value="sk1;sk2" />
+						value="DE-ESO:sk1;DE-ESO:sk2" />
 					<check key="railway:signal:distant:shortened"
 						text="Shortened distance"
 						de.text="Verkürzter Bremsweg"
@@ -760,7 +760,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:main"
-						value="hp" />
+						value="DE-ESO:hp" />
 					<key key="railway:signal:main:form"
 						value="semaphore" />
 					<combo key="railway:signal:main:height"
@@ -774,7 +774,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal states (multi-selection)"
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
-						values="hp0;hp1;hp2"
+						values="DE-ESO:hp0;DE-ESO:hp1;DE-ESO:hp2"
 						display_values="Halt;Fahrt;Langsamfahrt"
 						default=""
 						delete_if_empty="true" />
@@ -789,7 +789,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="db:zs1;dr:zs1;db:zs7;db:zs12"
+						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 						display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
 						default=""
 						delete_if_empty="true" />
@@ -832,7 +832,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:main"
-						value="hp" />
+						value="DE-ESO:hp" />
 					<key key="railway:signal:main:form"
 						value="light" />
 					<combo key="railway:signal:main:height"
@@ -846,7 +846,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal states (multi-selection)"
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
-						values="hp0;hp1;hp2"
+						values="DE-ESO:hp0;DE-ESO:hp1;DE-ESO:hp2"
 						display_values="Halt;Fahrt;Langsamfahrt"
 						default=""
 						delete_if_empty="true" />
@@ -861,7 +861,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="db:zs1;dr:zs1;db:zs7;db:zs12"
+						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 						display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
 						default=""
 						delete_if_empty="true" />
@@ -912,7 +912,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:distant"
-						value="vr" />
+						value="DE-ESO:vr" />
 					<key key="railway:signal:distant:form"
 						value="semaphore" />
 					<combo key="railway:signal:distant:height"
@@ -926,14 +926,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal states (multi-selection)"
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
-						values="vr0;vr1;vr2"
+						values="DE-ESO:vr0;DE-ESO:vr1;DE-ESO:vr2"
 						display_values="Halt erwarten;Fahrt erwarten;Langsamfahrt erwarten"
 						default=""
 						delete_if_empty="true" />
 					<combo key="railway:signal:distant:shortened"
 						text="Shortened distance"
 						de.text="Verkürzter Bremsweg"
-						values="db:ne2,dr:so3c"
+						values="DE-ESO:db:ne2,DE-ESO:dr:so3c"
 						display_values="DB (weißes Dreieck),DR (Kreis)"
 						default=""
 						delete_if_empty="true" />
@@ -983,7 +983,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:distant"
-						value="vr" />
+						value="DE-ESO:vr" />
 					<key key="railway:signal:distant:form"
 						value="light" />
 					<combo key="railway:signal:distant:height"
@@ -997,7 +997,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal states (multi-selection)"
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
-						values="vr0;vr1;vr2"
+						values="DE-ESO:vr0;DE-ESO:vr1;DE-ESO:vr2"
 						display_values="Halt erwarten;Fahrt erwarten;Langsamfahrt erwarten"
 						default=""
 						delete_if_empty="true" />
@@ -1025,7 +1025,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="Sh-1-Licht an anderen Signalen wie Ks-Signalen oder Hp-Ausfahrsignalen." />
 				<space />
 				<key key="railway:signal:minor"
-					value="sh1" />
+					value="DE-ESO:sh1" />
 				<key key="railway:signal:minor:form"
 					value="light" />
 			</item>
@@ -1061,7 +1061,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:main"
-					value="ne1" />
+					value="DE-ESO:ne1" />
 				<key key="railway:signal:main:form"
 					value="sign" />
 				<combo key="railway:signal:main:height"
@@ -1103,7 +1103,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:distant"
 					text="Type"
 					de.text="Typ"
-					values="db:ne2,dr:so3,dr:so3b"
+					values="DE-ESO:db:ne2,DE-ESO:dr:so3,DE-ESO:dr:so3b"
 					display_values="Ne 2 ex-DB,So 3 ex-DR, So 3b ex-DR (mit schwarzem Punkt)"
 					default=""
 					delete_if_empty="true"
@@ -1143,7 +1143,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:distant"
-					value="so106" />
+					value="DE-ESO:so106" />
 				<key key="railway:signal:distant:form"
 					value="sign" />
 			</item>
@@ -1178,7 +1178,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:crossing"
 						text="Exact type"
 						de.text="Signaltyp"
-						values="bü,so16"
+						values="DE-ESO:bü,DE-ESO:so16"
 						display_values="Bü (ex-DB),So 16 (ex-DR)"
 						default=""
 						delete_if_empty="true"
@@ -1186,7 +1186,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:crossing:states"
 						text="Signal states"
 						de.text="Signalzustände"
-						values="bü0;bü1,so16a;so16b"
+						values="DE-ESO:bü0;DE-ESO:bü1,DE-ESO:so16a;DE-ESO:so16b"
 						display_values="Bü 0/1 (ex-DB),So 16a/b (ex-DR)"
 						default=""
 						delete_if_empty="true" />
@@ -1232,7 +1232,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:crossing_distant"
 						text="Type of signal"
 						de.text="Signaltyp"
-						values="bü2,so15"
+						values="DE-ESO:bü2,DE-ESO:so15"
 						display_values="Bü 2 'Rautentafel' ex-DB,So 15 ex-DR"
 						default=""
 						delete_if_empty="true"
@@ -1279,7 +1279,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:crossing_distant"
 						text="Type of signal"
 						de.text="Signaltyp"
-						values="bü3,so14"
+						values="DE-ESO:bü3,DE-ESO:so14"
 						display_values="Bü 3 ex-DB,So 14 ex-DR"
 						default=""
 						delete_if_empty="true"
@@ -1326,7 +1326,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:whistle"
 						text="Exact type"
 						de.text="Signaltyp"
-						values="db:bü4,dr:pf1,dr:pf2"
+						values="DE-ESO:db:bü4,DE-ESO:dr:pf1,DE-ESO:dr:pf2"
 						display_values="Bü 4 (ex-DB),Pf 1 (einfache Pfeiftafel ex-DR),Pf 2 (doppelte Pfeiftafel ex-DR)"
 						default=""
 						delete_if_empty="true" />
@@ -1369,7 +1369,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:ring"
-						value="bü5" />
+						value="DE-ESO:bü5" />
 					<key key="railway:signal:ring:form"
 						value="sign" />
 					<check key="railway:signal:ring:only_transit"
@@ -1404,7 +1404,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:crossing_info"
-						value="DE:bü-kennzeichentafel" />
+						value="DE-ESO:bü-kennzeichentafel" />
 					<key key="railway:signal:crossing_info:form"
 						value="sign" />
 					<text key="railway:signal:crossing_info:caption"
@@ -1451,7 +1451,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:crossing_hint"
-						value="DE:bü-ankündetafel" />
+						value="DE-ESO:bü-ankündetafel" />
 					<key key="railway:signal:crossing_hint:form"
 						value="sign" />
 					<text key="railway:signal:crossing_hint:caption"
@@ -1506,7 +1506,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:minor"
-						value="sh" />
+						value="DE-ESO:sh" />
 					<combo key="railway:signal:minor:form"
 						text="Signal form"
 						de.text="Anzeigeart"
@@ -1524,7 +1524,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:minor:states"
 						text="Displayed signals"
 						de.text="Angezeigte Signalbilder"
-						values="sh0;sh1,hp0;sh1"
+						values="DE-ESO:sh0;DE-ESO:sh1,DE-ESO:hp0;DE-ESO:sh1"
 						display_values="Formsignal (Sh 0/Sh 1),Lichtsignal (Hp 0/Sh 1)"
 						default=""
 						delete_if_empty="true" />
@@ -1568,7 +1568,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:minor"
-						value="sh2" />
+						value="DE-ESO:sh2" />
 					<key key="railway:signal:minor:form"
 						value="sign" />
 					<key key="railway:signal:minor:height"
@@ -1606,7 +1606,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:minor_distant"
-						value="dr:sh3" />
+						value="DE-ESO:dr:sh3" />
 					<key key="railway:signal:minor_distant:form"
 						value="sign" />
 					<combo key="railway:signal:minor_distant:height"
@@ -1646,7 +1646,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:shunting"
-						value="ra10" />
+						value="DE-ESO:ra10" />
 					<key key="railway:signal:shunting:form"
 						value="sign" />
 					<combo key="railway:signal:shunting:height"
@@ -1686,7 +1686,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:shunting"
 						text="Type of signal"
 						de.text="Signaltyp"
-						values="ra11,ra11b"
+						values="DE-ESO:ra11,DE-ESO:ra11b"
 						display_values="Ra 11 (gelb),Ra 11b (weiß)"
 						default=""
 						delete_if_empty="true"
@@ -1701,7 +1701,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:shunting:states"
 						text="Signal states"
 						de.text="Signalzustände"
-						values="ra11;sh1, "
+						values="DE-ESO:ra11;DE-ESO:sh1, "
 						display_values="Ra 11 / Sh 1,-nur Tafel-"
 						default=""
 						delete_if_empty="true" />
@@ -1733,7 +1733,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:humping"
-						value="ra" />
+						value="DE-ESO:ra" />
 					<combo key="railway:signal:humping:form"
 						text="Signal form"
 						de.text="Anzeigeart"
@@ -1742,7 +1742,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:humping:states"
-						value="ra6;ra7;ra8;ra9" />
+						value="DE-ESO:ra6;DE-ESO:ra7;DE-ESO:ra8;DE-ESO:ra9" />
 					<combo key="railway:signal:humping:height"
 						text="Signal height"
 						de.text="Signalbauform"
@@ -1765,7 +1765,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:fouling_point"
-						value="ra12" />
+						value="DE-ESO:ra12" />
 				</item>
 			</group>
 			<group name="Zusatzsignale" icon="de-zs3-60-sign-up-32.png">
@@ -1796,7 +1796,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:route"
-						value="zs2" />
+						value="DE-ESO:zs2" />
 					<text key="railway:signal:route:states"
 						text="Signal states (separated by ';', use '?' if you don't know all possible values)"
 						de.text="Mögliche Anzeigewerte (getrennt durch ';', verwende '?', wenn du nicht alle Werte kennst)"
@@ -1837,7 +1837,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:route_distant"
-						value="zs2v" />
+						value="DE-ESO:zs2v" />
 					<text key="railway:signal:route_distant:states"
 						text="Signal states (separated by ';', use '?' if you don't know all possible values)"
 						de.text="Mögliche Anzeigewerte (getrennt durch ';', verwende '?', wenn du nicht alle Werte kennst)"
@@ -1879,7 +1879,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:speed_limit"
-						value="zs3" />
+						value="DE-ESO:zs3" />
 					<combo key="railway:signal:speed_limit:form"
 						text="Signal form"
 						de.text="Anzeigeart"
@@ -1895,10 +1895,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,unknown"
 						de.display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,unbekannt" />
 					<combo key="railway:signal:speed_limit:turn_direction"
-						text="Turn direction arrow – if the signals only valid for some turn directions at the next switch/junction. Leave this key empty if there is no arrow."
-						de.text="Richtungs – falls das Signal an der nächsten Weiche/Abzweigung nur für bestimmte Richtungen gilt. Leer lassen, falls es keinen Richtungspfeil gibt."
+						text="Turn direction arrow – leave this key empty if there is no one."
+						de.text="Richtungspfeil – leer lassen, falls es keinen gibt."
 						values="left,through,right"
-						display_values="links,geradeaus,rechts"
+						display_values="Left,Through,Right"
+						de.display_values="Links,Geradeaus,Rechts"
 						default=""
 						delete_if_empty="true" />
 					<combo key="railway:signal:speed_limit:height"
@@ -1936,7 +1937,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:speed_limit_distant"
-						value="zs3v" />
+						value="DE-ESO:zs3v" />
 					<combo key="railway:signal:speed_limit_distant:form"
 						text="Signal form"
 						de.text="Anzeigeart"
@@ -1952,10 +1953,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,unknown"
 						de.display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,unbekannt" />
 					<combo key="railway:signal:speed_limit_distant:turn_direction"
-						text="Turn direction arrow – if the signals only valid for some turn directions at the next switch/junction. Leave this key empty if there is no arrow."
-						de.text="Richtungs – falls das Signal an der nächsten Weiche/Abzweigung nur für bestimmte Richtungen gilt. Leer lassen, falls es keinen Richtungspfeil gibt."
+						text="Turn direction arrow – leave this key empty if there is no one."
+						de.text="Richtungspfeil – leer lassen, falls es keinen gibt."
 						values="left,through,right"
-						display_values="links,geradeaus,rechts"
+						display_values="Left,Through,Right"
+						de.display_values="Links,Geradeaus,Rechts"
 						default=""
 						delete_if_empty="true" />
 					<combo key="railway:signal:speed_limit_distant:height"
@@ -1993,7 +1995,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<key key="railway:signal:speed_limit"
-						value="db:zs10" />
+						value="DE-ESO:db:zs10" />
 					<combo key="railway:signal:speed_limit:form"
 						text="Signal form"
 						de.text="Anzeigeart"
@@ -2039,9 +2041,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" default="" delete_if_empty="true" match="keyvalue!">
-		                <list_entry value="db:zs6" display_value="Zs 6 DB" short_description="Gegengleisanzeiger Zs 6 (ex-DB)" />
-		                <list_entry value="dr:zs7" display_value="Zs 7 DR" short_description="Gegengleisanzeiger Zs 7 (ex-DR)" />
-		            </combo>
+		         	<list_entry value="DE-ESO:db:zs6" display_value="Zs 6 DB" short_description="Gegengleisanzeiger Zs 6 (ex-DB)" />
+		         	<list_entry value="DE-ESO:dr:zs7" display_value="Zs 7 DR" short_description="Gegengleisanzeiger Zs 7 (ex-DR)" />
+		         </combo>
 					<combo key="railway:signal:wrong_road:form"
 						text="Signal form"
 						de.text="Anzeigeart"
@@ -2077,8 +2079,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" default="" delete_if_empty="true" match="keyvalue!">
-						<list_entry value="db:zs8" display_value="Zs 8 DB" short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DB)" />
-						<list_entry value="dr:zs8" display_value="Zs 8 DR" short_description="Linksfahrtersatzsignal Zs 8 (ex-DR)" />
+						<list_entry value="DE-ESO:db:zs8" display_value="Zs 8 DB" short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DB)" />
+						<list_entry value="DE-ESO:dr:zs8" display_value="Zs 8 DR" short_description="Linksfahrtersatzsignal Zs 8 (ex-DR)" />
 		            </combo>
 					<combo key="railway:signal:wrong_road:form"
 						text="Signal form"
@@ -2118,7 +2120,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:short_route"
 						text="Type of signal"
 						de.text="Signaltyp"
-						values="zs13,dr:zs6,dr:zs106"
+						values="DE-ESO:zs13,DE-ESO:dr:zs6,DE-ESO:dr:zs106"
 						display_values="Zs 13,Zs 6 (Lichtsignal ex-DR),Zs 106 (Tafel ex-DR)"
 						default=""
 						delete_if_empty="true"
@@ -2167,13 +2169,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<combo key="railway:signal:speed_limit" text="Type of signal" de.text="Signaltyp" default="" delete_if_empty="true" match="keyvalue!">
-						<list_entry value="lf7" display_value="Lf 7" short_description="Geschwindigkeitssignal Lf 7" />
-						<list_entry value="dr:lf1/2" display_value="Lf 1/2" short_description="Langsamfahrbeginnscheibe Lf 1/2 (ex-DR)" />
-						<list_entry value="lf2" display_value="Lf 2" short_description="Anfangsscheibe Lf 2" />
-						<list_entry value="lf3" display_value="Lf 3" short_description="Endscheibe Lf 3" />
-						<list_entry value="db:lf5" display_value="Lf 5 DR" short_description="Anfangstafel Lf 5 (ex-DB)" />
-						<list_entry value="dr:lf5" display_value="Lf 5 DR" short_description="Eckentafel Lf 5 (ex-DR)" />
-		            </combo>
+						<list_entry value="DE-ESO:lf7" display_value="Lf 7" short_description="Geschwindigkeitssignal Lf 7" />
+						<list_entry value="DE-ESO:dr:lf1/2" display_value="Lf 1/2" short_description="Langsamfahrbeginnscheibe Lf 1/2 (ex-DR)" />
+						<list_entry value="DE-ESO:lf2" display_value="Lf 2" short_description="Anfangsscheibe Lf 2" />
+						<list_entry value="DE-ESO:lf3" display_value="Lf 3" short_description="Endscheibe Lf 3" />
+						<list_entry value="DE-ESO:db:lf5" display_value="Lf 5 DR" short_description="Anfangstafel Lf 5 (ex-DB)" />
+						<list_entry value="DE-ESO:dr:lf5" display_value="Lf 5 DR" short_description="Eckentafel Lf 5 (ex-DR)" />
+					</combo>
 					<combo key="railway:signal:speed_limit:form"
 						text="Signal form"
 						de.text="Anzeigeart"
@@ -2186,12 +2188,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte (Zahl oder 'off') mit ';' trennen)"
 						delete_if_empty="true"
 						values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-						display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Aufhebung (Zs 10; Lf 3)" />
+						display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,end (Zs 10, Lf 3)"
+						de.display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,Aufhebung (Zs 10; Lf 3)" />
 					<combo key="railway:signal:speed_limit:turn_direction"
-						text="Turn direction arrow – if the signals only valid for some turn directions at the next switch/junction. Leave this key empty if there is no arrow."
-						de.text="Richtungs – falls das Signal an der nächsten Weiche/Abzweigung nur für bestimmte Richtungen gilt. Leer lassen, falls es keinen Richtungspfeil gibt."
+						text="Turn direction arrow – leave this key empty if there is no one."
+						de.text="Richtungspfeil – leer lassen, falls es keinen gibt."
 						values="left,through,right"
-						display_values="links,geradeaus,rechts"
+						display_values="Left,Through,Right"
+						de.display_values="Links,Geradeaus,Rechts"
 						default=""
 						delete_if_empty="true" />
 					<combo key="railway:signal:speed_limit:height"
@@ -2229,10 +2233,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 					<space />
 					<combo key="railway:signal:speed_limit_distant" text="Type of signal" de.text="Signaltyp" default="" delete_if_empty="true" match="keyvalue!">
-						<list_entry value="lf6" display_value="Lf 6" short_description="Geschwindigkeits-Ankündesignal Lf 6" />
-						<list_entry value="lf1" display_value="Lf 1" short_description="Langsamfahrscheibe Lf 1" />
-						<list_entry value="db:lf4" display_value="Lf 4 DB" short_description="Geschwindigkeitstafel Lf 4 (ex-DB)" />
-						<list_entry value="dr:lf4" display_value="Lf 4" short_description="Geschwindigkeitstafel Lf 4 (ex-DR)" />
+						<list_entry value="DE-ESO:lf6" display_value="Lf 6" short_description="Geschwindigkeits-Ankündesignal Lf 6" />
+						<list_entry value="DE-ESO:lf1" display_value="Lf 1" short_description="Langsamfahrscheibe Lf 1" />
+						<list_entry value="DE-ESO:db:lf4" display_value="Lf 4 DB" short_description="Geschwindigkeitstafel Lf 4 (ex-DB)" />
+						<list_entry value="DE-ESO:dr:lf4" display_value="Lf 4" short_description="Geschwindigkeitstafel Lf 4 (ex-DR)" />
 					</combo>
 					<combo key="railway:signal:speed_limit_distant:form"
 						text="Signal form"
@@ -2247,11 +2251,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true"
 						values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
 						display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
+						de.display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,unbekannt" />
 					<combo key="railway:signal:speed_limit_distant:turn_direction"
-						text="Turn direction arrow – if the signals only valid for some turn directions at the next switch/junction. Leave this key empty if there is no arrow."
-						de.text="Richtungs – falls das Signal an der nächsten Weiche/Abzweigung nur für bestimmte Richtungen gilt. Leer lassen, falls es keinen Richtungspfeil gibt."
+						text="Turn direction arrow – leave this key empty if there is no one."
+						de.text="Richtungspfeil – leer lassen, falls es keinen gibt."
 						values="left,through,right"
-						display_values="links,geradeaus,rechts"
+						display_values="Left,Through,Right"
+						de.display_values="Links,Geradeaus,Rechts"
 						default=""
 						delete_if_empty="true" />
 					<combo key="railway:signal:speed_limit_distant:height"
@@ -2290,11 +2296,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:resetting_switch"
-					value="ne13" />
+					value="DE-ESO:ne13" />
 				<key key="railway:signal:resetting_switch:form"
 					value="light" />
 				<key key="railway:signal:resetting_switch:states"
-					value="so18;so18b" />
+					value="DE-ESO:so18;DE-ESO:so18b" />
 				<combo key="railway:signal:resetting_switch:height"
 					text="Signal height"
 					de.text="Signalbauform"
@@ -2330,7 +2336,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:resetting_switch_distant"
-					value="ne12" />
+					value="DE-ESO:ne12" />
 				<key key="railway:signal:resetting_switch_distant:form"
 					value="sign" />
 				<combo key="railway:signal:resetting_switch_distant:height"
@@ -2409,7 +2415,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:stop"
-					value="ne5" />
+					value="DE-ESO:ne5" />
 				<key key="railway:signal:stop:form"
 					value="sign" />
 				<combo key="railway:signal:stop:height"
@@ -2451,7 +2457,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:station_distant"
-					value="ne6" />
+					value="DE-ESO:ne6" />
 				<key key="railway:signal:station_distant:form"
 					value="sign" />
 			</item>
@@ -2481,7 +2487,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:snowplow"
-					value="ne7" />
+					value="DE-ESO:ne7" />
 				<key key="railway:signal:snowplow:form"
 					value="sign" />
 				<combo key="railway:signal:snowplow:height"
@@ -2498,6 +2504,48 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					display_values="Heben,Senken"
 					delete_if_empty="true" />
+			</item>
+			<item name="ETCS-Halt-Tafel (Ne 14, ETCS Stop Marker)" icon="de-ne14.png" type="node">
+				<label text="ETCS-Halt-Tafel (Ne14), auch bekannt als ETCS Stop Marker oder Blechrakete" />
+				<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<text key="ref"
+					text="Block reference"
+					de.text="Blockbezeichner"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:train_protection:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					default="off"
+					delete_if_empty="true" />
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge,overhead"
+					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Oberleitung"
+					default=""
+					delete_if_empty="true" />
+				<combo key="railway:signal:direction"
+					text="Direction"
+					de.text="Anzeigerichtung"
+					values="forward,backward"
+					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					default=""
+					delete_if_empty="true" />
+				<check key="railway:signal:catenary_mast"
+					text="On catenary mast"
+					de.text="Am Oberleitungsmast"
+					default="off"
+					delete_if_empty="true" />
+				<key key="railway:signal:train_protection"
+					value="DE-ESO:ne14" /> 
+				<key key="railway:signal:train_protection:type"
+					value="block_marker" />
+				<key key="railway:signal:train_protection:form"
+					value="sign" />
 			</item>
 			<item name="Fahrleitungssignal (El)" icon="de-el6.png" type="node">
 				<label text="Fahrleitungssignal (El)" />
@@ -2528,15 +2576,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:electricity"
 					text="Exact type"
 					de.text="Signaltyp"
-					values="el1v,el1,el2,el3,el4,el5,el6"
+					values="DE-ESO:el1v,DE-ESO:el1,DE-ESO:el2,DE-ESO:el3,DE-ESO:el4,DE-ESO:el5,DE-ESO:el6"
 					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:signal:electricity:turn_direction"
-					text="Turn direction arrow – if the signals only valid for some turn directions at the next switch/junction. Leave this key empty if there is no arrow."
-					de.text="Richtungs – falls das Signal an der nächsten Weiche/Abzweigung nur für bestimmte Richtungen gilt. Leer lassen, falls es keinen Richtungspfeil gibt."
+					text="Turn direction arrow – leave this key empty if there is no one."
+					de.text="Richtungspfeil – leer lassen, falls es keinen gibt."
 					values="left,through,right"
-					display_values="links,geradeaus,rechts"
+					display_values="Left,Through,Right"
+					de.display_values="Links,Geradeaus,Rechts"
 					default=""
 					delete_if_empty="true" />
 				<combo key="railway:signal:electricity:height"
@@ -2599,7 +2648,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 				<space />
 				<key key="railway:signal:main_repeated"
-					value="DE:fahrtanzeiger" />
+					value="DE-ESO:fahrtanzeiger" />
 				<key key="railway:signal:main_repeated:form"
 					value="light" />
 			</item>
@@ -2629,12 +2678,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:departure"
-					value="zp" />
+					value="DE-ESO:zp" />
 				<multiselect key="railway:signal:departure:states"
 					text="Signal states (multi-selection)"
 					de.text="Signalzustände (Mehrfachauswahl)"
 					delimiter=";"
-					values="zp10;zp9"
+					values="DE-ESO:zp10;DE-ESO:zp9"
 					display_values="Türen schließen Zp 10;Abfahrtssignal Zp 9"
 					default=""
 					delete_if_empty="true" />
@@ -2667,20 +2716,23 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:brake_test"
-					value="zp" />
+					value="DE-ESO:zp" />
 				<key key="railway:signal:brake_test:form"
 					value="light" />
 				<key key="railway:signal:brake_test:states"
-					value="db:zp6;db:zp7;db:zp8" />
+					value="DE-ESO:db:zp6;DE-ESO:db:zp7;DE-ESO:db:zp8" />
 			</item>
 			<separator />
 			<item name="Blockkennzeichen" icon="de-lzb-sign.png" type="node">
 				<label text="Blockkennzeichen (ETCS/LZB)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
+				<label text="ETCS-Halt-Tafel (Ne 14)/Blechrakete siehe …" />
+				<preset_link preset_name="ETCS-Halt-Tafel (Ne 14, ETCS Stop Marker)" />
+				<space />
 				<key key="railway"
 					value="signal" />
-				<check key="railway:signal:lzb:deactivated"
+				<check key="railway:signal:train_protection:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
@@ -2709,9 +2761,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Blockbezeichner"
 					default=""
 					delete_if_empty="true" />
-				<key key="railway:signal:lzb"
-					value="DE:lzb_blockkennzeichen" /> <!-- FIXME: Noch, allgemein, zum Blockkennzeichen erheben, damit auch ETCS abgedeckt wird? -->
-				<key key="railway:signal:form"
+				<key key="railway:signal:train_protection"
+					value="DE-ESO:blockkennzeichen" /> 
+				<key key="railway:signal:train_protection:type"
+					value="block_marker" />
+				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
 			<item name="LZB-Bereichskennzeichen" icon="de-lzb-start-sign.png" type="node">
@@ -2744,9 +2798,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Am Oberleitungsmast"
 					default="off"
 					delete_if_empty="true" />
-				<key key="railway:signal:lzb_start"
-					value="DE:lzb-bereichskennzeichen" />
-				<key key="railway:signal:lzb_start:form"
+				<key key="railway:signal:train_protection"
+					value="DE-ESO:lzb-bereichskennzeichen" />
+				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
 			<item name="Zugfunk-Kanalhinweis" icon="de-radio.png" type="node">
@@ -2763,7 +2817,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:radio"
-					value="DE:zugfunk-kanalhinweis" />
+					value="DE-ESO:zugfunk-kanalhinweis" />
 				<key key="railway:signal:radio:form"
 					value="sign" />
 				<text key="railway:signal:radio:frequency"
