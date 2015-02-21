@@ -2432,7 +2432,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:minor"
 					text="Exact type of signal"
 					de.text="Signaltyp"
-					values="sh0,sh2"
+					values="DE-ESO:sh0,DE-ESO:sh2"
 					display_values="Sh 0-Tafel,Sh 2-Tafel"
 					default="" />
 				<key key="railway:signal:minor:form"
@@ -2545,8 +2545,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:minor:states"
 					text="Signal states"
 					de.text="Signalzustände"
-					values="sh0;sh1,sh0;gsp2"
-					display_values="Sh 0 / Sh 1,Sh 0 / Gsp 2"
+					values="DE-ESO:sh0;DE-ESO:sh1,DE-ESO:sh0;DE-ESO:wn7"
+					display_values="Sh 0 / Sh 1,Sh 0 / Wn 7 (vormals Gsp 2)"
 					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:minor:form"
