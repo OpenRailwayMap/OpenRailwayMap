@@ -56,7 +56,7 @@ way|z9-[bridge=yes]::bridges
 way|z12-[bridge=yes]::bridges
 {
 	z-index: 4000;
-	text: "bridge:name"
+	text: eval(concat(tag("ref"), " ", tag("tunnel:name")));
 }
 
 /*******************************************/
@@ -83,13 +83,28 @@ way[tunnel=yes]::tunnels
 	opacity: 0.6;
 	linecap: butt;
 	linejoin: butt;
-	text: "tunnel:name";
+	text-position: line;
+	text-color: #585858;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-style: italic;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	text: eval(concat(tag("ref"), " ", tag("tunnel:name")));
 }
 
-/******************/
-/* refs and names */
-/******************/
-way[railway=rail][!service], way[railway=disused][!service], way[railway=abandoned][!service], way[railway=razed][!service], way[railway=proposed][!service], way[railway=construction][!service], way[railway=preserved][!service], way[railway=narrow_gauge][!service]
+/******************************************************************************/
+/* refs and names                                                             */
+/* We have to exclude bridge and tunnels in order to prevent a label collison */ 
+/******************************************************************************/
+way[railway=rail][!service][!bridge][!tunnel], 
+way[railway=disused][!service][!bridge][!tunnel],
+way[railway=abandoned][!service][!bridge][!tunnel] , 
+way[railway=razed][!service][!bridge][!tunnel], 
+way[railway=proposed][!service][!bridge][!tunnel], 
+way[railway=construction][!service][!bridge][!tunnel], 
+way[railway=preserved][!service][!bridge][!tunnel], 
+way[railway=narrow_gauge][!service][!bridge][!tunnel]
 {
 	z-index: 10000;
 	text: eval(concat(tag("ref"), " ", tag("name")));
