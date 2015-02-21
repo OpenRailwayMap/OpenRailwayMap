@@ -56,7 +56,7 @@ way|z9-[bridge=yes]::bridges
 way|z12-[bridge=yes]::bridges
 {
 	z-index: 4000;
-	text: eval(concat(tag("ref"), " ", tag("tunnel:name")));
+	text: eval(concat(tag("ref"), " ", tag("bridge:name")));
 }
 
 /*******************************************/
