@@ -171,7 +171,7 @@
             s_default['kothicjs-ignore-layer'] = 'true';
         }
 
-        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 2)) {
+        if (((type == 'way' && tags['railway'] == 'tram' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'subway' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'light_rail' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 2) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'branch' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 2)) {
             s_default['z-index'] = 10;
             s_default['color'] = '#00CB84';
             s_default['width'] = 3.5;
@@ -574,6 +574,566 @@
         if (((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 9) || ((type == 'way' && tags['railway'] == 'rail' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 10) || ((type == 'way' && tags['railway'] == 'rail' && tags['usage'] == 'main' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 2)) {
             s_default['z-index'] = 35;
             s_default['color'] = '#BA00CB';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] <= 10) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] <= 10) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] <= 10) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] <= 10) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] <= 10) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] <= 10) && zoom >= 10)) {
+            s_default['z-index'] = 1;
+            s_default['color'] = '#9595e9';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 10 && tags['maxspeed'] <= 20) && zoom >= 10)) {
+            s_default['z-index'] = 2;
+            s_default['color'] = '#95a1e9';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 20 && tags['maxspeed'] <= 30) && zoom >= 10)) {
+            s_default['z-index'] = 3;
+            s_default['color'] = '#95aee9';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 30 && tags['maxspeed'] <= 40) && zoom >= 10)) {
+            s_default['z-index'] = 4;
+            s_default['color'] = '#95bbe9';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 40 && tags['maxspeed'] <= 50) && zoom >= 10)) {
+            s_default['z-index'] = 5;
+            s_default['color'] = '#95c8e9';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 50 && tags['maxspeed'] <= 60) && zoom >= 10)) {
+            s_default['z-index'] = 6;
+            s_default['color'] = '#95d4e9';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 60 && tags['maxspeed'] <= 70) && zoom >= 10)) {
+            s_default['z-index'] = 7;
+            s_default['color'] = '#95e1e9';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 70 && tags['maxspeed'] <= 80) && zoom >= 10)) {
+            s_default['z-index'] = 8;
+            s_default['color'] = '#95e9e5';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 80 && tags['maxspeed'] <= 90) && zoom >= 10)) {
+            s_default['z-index'] = 9;
+            s_default['color'] = '#95e9d8';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 90 && tags['maxspeed'] <= 100) && zoom >= 10)) {
+            s_default['z-index'] = 10;
+            s_default['color'] = '#95e9cc';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 100 && tags['maxspeed'] <= 110) && zoom >= 10)) {
+            s_default['z-index'] = 11;
+            s_default['color'] = '#95e9bf';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 110 && tags['maxspeed'] <= 120) && zoom >= 10)) {
+            s_default['z-index'] = 12;
+            s_default['color'] = '#95e9b3';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 9) || ((type == 'way' && tags['disused:isused:railway'] == 'preserved' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 120 && tags['maxspeed'] <= 130) && zoom >= 10)) {
+            s_default['z-index'] = 13;
+            s_default['color'] = '#95e9a6';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 130 && tags['maxspeed'] <= 140) && zoom >= 10)) {
+            s_default['z-index'] = 14;
+            s_default['color'] = '#95e999';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 140 && tags['maxspeed'] <= 150) && zoom >= 10)) {
+            s_default['z-index'] = 15;
+            s_default['color'] = '#9de995';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'tram' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'subway' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'light_rail' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'tram' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'subway' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'light_rail' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 150 && tags['maxspeed'] <= 160) && zoom >= 10)) {
+            s_default['z-index'] = 16;
+            s_default['color'] = '#aae995';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 160 && tags['maxspeed'] <= 170) && zoom >= 10)) {
+            s_default['z-index'] = 17;
+            s_default['color'] = '#b7e995';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 170 && tags['maxspeed'] <= 180) && zoom >= 10)) {
+            s_default['z-index'] = 18;
+            s_default['color'] = '#c4e995';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 180 && tags['maxspeed'] <= 190) && zoom >= 10)) {
+            s_default['z-index'] = 19;
+            s_default['color'] = '#d0e995';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['disused:railway'] == 'narrow_gauge' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'preserved' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200) && zoom >= 9) || ((type == 'way' && tags['disused:railway'] == 'rail' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200) && zoom >= 10) || ((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 190 && tags['maxspeed'] <= 200) && zoom >= 10)) {
+            s_default['z-index'] = 20;
+            s_default['color'] = '#dde995';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 200 && tags['maxspeed'] <= 210) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 200 && tags['maxspeed'] <= 210) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 200 && tags['maxspeed'] <= 210) && zoom >= 10)) {
+            s_default['z-index'] = 21;
+            s_default['color'] = '#e9e995';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 210 && tags['maxspeed'] <= 220) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 210 && tags['maxspeed'] <= 220) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 210 && tags['maxspeed'] <= 220) && zoom >= 10)) {
+            s_default['z-index'] = 22;
+            s_default['color'] = '#e9dd95';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 220 && tags['maxspeed'] <= 230) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 220 && tags['maxspeed'] <= 230) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 220 && tags['maxspeed'] <= 230) && zoom >= 10)) {
+            s_default['z-index'] = 23;
+            s_default['color'] = '#e9d095';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 230 && tags['maxspeed'] <= 240) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 230 && tags['maxspeed'] <= 240) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 230 && tags['maxspeed'] <= 240) && zoom >= 10)) {
+            s_default['z-index'] = 24;
+            s_default['color'] = '#e9c495';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 240 && tags['maxspeed'] <= 250) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 240 && tags['maxspeed'] <= 250) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 240 && tags['maxspeed'] <= 250) && zoom >= 10)) {
+            s_default['z-index'] = 25;
+            s_default['color'] = '#e9b795';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 250 && tags['maxspeed'] <= 260) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 250 && tags['maxspeed'] <= 260) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 250 && tags['maxspeed'] <= 260) && zoom >= 10)) {
+            s_default['z-index'] = 26;
+            s_default['color'] = '#e9aa95';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 260 && tags['maxspeed'] <= 270) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 260 && tags['maxspeed'] <= 270) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 260 && tags['maxspeed'] <= 270) && zoom >= 10)) {
+            s_default['z-index'] = 27;
+            s_default['color'] = '#e99d95';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 270 && tags['maxspeed'] <= 280) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 270 && tags['maxspeed'] <= 280) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 270 && tags['maxspeed'] <= 280) && zoom >= 10)) {
+            s_default['z-index'] = 28;
+            s_default['color'] = '#e99598';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 280 && tags['maxspeed'] <= 290) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 280 && tags['maxspeed'] <= 290) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 280 && tags['maxspeed'] <= 290) && zoom >= 10)) {
+            s_default['z-index'] = 29;
+            s_default['color'] = '#e995a4';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 290 && tags['maxspeed'] <= 300) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 290 && tags['maxspeed'] <= 300) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 290 && tags['maxspeed'] <= 300) && zoom >= 10)) {
+            s_default['z-index'] = 30;
+            s_default['color'] = '#e995b1';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 300 && tags['maxspeed'] <= 320) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 300 && tags['maxspeed'] <= 320) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 300 && tags['maxspeed'] <= 320) && zoom >= 10)) {
+            s_default['z-index'] = 31;
+            s_default['color'] = '#e995be';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 320 && tags['maxspeed'] <= 340) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 320 && tags['maxspeed'] <= 340) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 320 && tags['maxspeed'] <= 340) && zoom >= 10)) {
+            s_default['z-index'] = 32;
+            s_default['color'] = '#e995cb';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 340 && tags['maxspeed'] <= 360) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 340 && tags['maxspeed'] <= 360) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 340 && tags['maxspeed'] <= 360) && zoom >= 10)) {
+            s_default['z-index'] = 33;
+            s_default['color'] = '#e995d7';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 360 && tags['maxspeed'] <= 380) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 360 && tags['maxspeed'] <= 380) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 360 && tags['maxspeed'] <= 380) && zoom >= 10)) {
+            s_default['z-index'] = 34;
+            s_default['color'] = '#e995e4';
+            s_default['width'] = 3.5;
+            s_default['linejoin'] = 'round';
+            s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
+            s_default['text-position'] = 'line';
+            s_default['text-color'] = 'black';
+            s_default['font-size'] = '11';
+            s_default['font-family'] = 'Verdana Bold';
+            s_default['font-weight'] = 'bold';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['kothicjs-ignore-layer'] = 'true';
+        }
+
+        if (((type == 'way' && tags['construction:railway'] == 'narrow_gauge' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'preserved' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 9) || ((type == 'way' && tags['construction:railway'] == 'rail' && tags['maxspeed'] > 380 && tags['maxspeed'] <= 400) && zoom >= 10)) {
+            s_default['z-index'] = 35;
+            s_default['color'] = '#e295e9';
             s_default['width'] = 3.5;
             s_default['linejoin'] = 'round';
             s_default['text'] = MapCSS.e_localize(tags, 'maxspeed');
@@ -1555,7 +2115,7 @@
             height: 39, 
             offset: 2688
         }
-    }, external_images = [], presence_tags = [], value_tags = ['railway:signal:speed_limit', 'railway', 'maxspeed', 'railway:signal:speed_limit:speed', 'railway:signal:speed_limit_distant:speed', 'railway:signal:speed_limit:form', 'usage', 'railway:signal:speed_limit_distant:form', 'railway:signal:speed_limit_distant'];
+    }, external_images = [], presence_tags = [], value_tags = ['railway:signal:speed_limit', 'disused:isused:railway', 'railway', 'maxspeed', 'railway:signal:speed_limit:speed', 'construction:railway', 'disused:railway', 'railway:signal:speed_limit_distant:speed', 'railway:signal:speed_limit:form', 'usage', 'railway:signal:speed_limit_distant:form', 'railway:signal:speed_limit_distant'];
 
     MapCSS.loadStyle('maxspeed', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('maxspeed');
