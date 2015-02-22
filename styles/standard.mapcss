@@ -31,21 +31,28 @@ canvas
 /***********/
 /* bridges */
 /***********/
-way|z2-5[bridge=yes]::bridges
+way|z2-5[railway=rail][bridge=yes]::bridges
 {
 	z-index: 1;
 	casing-width: 1.5; 
 	casing-color: #797979;
 	linejoin: butt;
 }
-way|z6-8[bridge=yes]::bridges
+way|z6-8[railway=rail][bridge=yes]::bridges
 {
 	z-index: 1;
 	casing-width: 2.5; 
 	casing-color: #797979;
 	linejoin: butt;
 }
-way|z9-[bridge=yes]::bridges
+way|z9-[railway=rail][bridge=yes]::bridges,
+way|z9-[railway=disused][bridge=yes]::bridges,
+way|z9-[railway=abandoned][bridge=yes]::bridges,
+way|z9-[railway=razed][bridge=yes]::bridges,
+way|z9-[railway=proposed][bridge=yes]::bridges,
+way|z9-[railway=construction][bridge=yes]::bridges,
+way|z9-[railway=preserved][bridge=yes]::bridges,
+way|z9-[railway=narrow_gauge][bridge=yes]::bridges
 {
 	z-index: 1;
 	casing-width: 3.5; 
