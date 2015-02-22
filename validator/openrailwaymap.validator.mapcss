@@ -57,6 +57,35 @@ way[railway][traffic_mode]
 	assertNoMatch: "way railway=rail railway:traffic_mode=passenger";
 }
 
+/* usage=freight is deprecated, should be changed to railway:traffic_mode=freight */
+/* rule with auto-fix if no railway:traffic_mode=* is not tagged or               */
+/*                          railway:traffic_mode!=(mixed|passenger)               */
+way[railway][usage=freight][!railway:traffic_mode],
+way[railway][usage=freight][railway:traffic_mode=freight]
+{
+	throwError: "usage=freight is deprecated, change to railway:traffic_mode=freight";
+	fixChangeKey: "usage=>railway:traffic_mode";
+	assertMatch: "way railway=rail usage=freight";
+	assertNoMatch: "railway=rail usage=main";
+	assertNoMatch: "railway=rail usage=branch";
+	assertNoMatch: "railway=rail usage=industrial";
+	assertNoMatch: "railway=rail railway:traffic_mode";
+}
+
+/* usage=freight is deprecated, should be changed to railway:traffic_mode=freight */
+/* rule with auto-fix if railway:traffic_mode=(passenger|mixed) */
+way[railway][usage=freight][railway:traffic_mode=~/^(passenger|mixed)$/]
+{
+	throwError: "usage=freight is deprecated, change to railway:traffic_mode=freight";
+	fixAdd: "railway:traffic_mode=mixed";
+	assertMatch: "way railway=rail usage=freight";
+	assertNoMatch: "railway=rail usage=main";
+	assertNoMatch: "railway=rail usage=branch";
+	assertNoMatch: "railway=rail usage=industrial";
+	assertNoMatch: "railway=rail railway:traffic_mode";
+	fixRemove: "usage";
+}
+
 /* Track without workrules */
 way[railway][!workrules]
 {
