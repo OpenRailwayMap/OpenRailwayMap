@@ -19,21 +19,21 @@
             s_default['default-lines'] = 'true';
         }
 
-        if (((type == 'way' && tags['bridge'] == 'yes') && zoom >= 2 && zoom <= 5)) {
+        if (((type == 'way' && tags['railway'] == 'rail' && tags['bridge'] == 'yes') && zoom >= 2 && zoom <= 5)) {
             s_bridges['z-index'] = 1;
             s_bridges['casing-width'] = 1.5;
             s_bridges['casing-color'] = '#797979';
             s_bridges['linejoin'] = 'butt';
         }
 
-        if (((type == 'way' && tags['bridge'] == 'yes') && zoom >= 6 && zoom <= 8)) {
+        if (((type == 'way' && tags['railway'] == 'rail' && tags['bridge'] == 'yes') && zoom >= 6 && zoom <= 8)) {
             s_bridges['z-index'] = 1;
             s_bridges['casing-width'] = 2.5;
             s_bridges['casing-color'] = '#797979';
             s_bridges['linejoin'] = 'butt';
         }
 
-        if (((type == 'way' && tags['bridge'] == 'yes') && zoom >= 9)) {
+        if (((type == 'way' && tags['railway'] == 'rail' && tags['bridge'] == 'yes') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'disused' && tags['bridge'] == 'yes') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'abandoned' && tags['bridge'] == 'yes') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'razed' && tags['bridge'] == 'yes') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'proposed' && tags['bridge'] == 'yes') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'construction' && tags['bridge'] == 'yes') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'preserved' && tags['bridge'] == 'yes') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && tags['bridge'] == 'yes') && zoom >= 9)) {
             s_bridges['z-index'] = 1;
             s_bridges['casing-width'] = 3.5;
             s_bridges['casing-color'] = '#797979';
@@ -49,7 +49,7 @@
             s_bridges['font-style'] = 'italic';
             s_bridges['text-halo-radius'] = 1;
             s_bridges['text-halo-color'] = 'white';
-            s_bridges['text'] = MapCSS.e_localize(tags, MapCSS.e_concat(MapCSS.e_tag(tags, "ref"), " ", MapCSS.e_tag(tags, "bridge:name")));
+            s_bridges['text'] = MapCSS.e_localize(tags, MapCSS.e_concat("ref", " ", "bridge:name"));
         }
 
         if (((type == 'way' && tags['railway'] == 'disused') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'abandoned') && zoom >= 9) || ((type == 'way' && tags['railway'] == 'razed') && zoom >= 9)) {
@@ -70,7 +70,7 @@
             s_tunnels['font-style'] = 'italic';
             s_tunnels['text-halo-radius'] = 1;
             s_tunnels['text-halo-color'] = 'white';
-            s_tunnels['text'] = MapCSS.e_localize(tags, MapCSS.e_concat(MapCSS.e_tag(tags, "ref"), " ", MapCSS.e_tag(tags, "tunnel:name")));
+            s_tunnels['text'] = MapCSS.e_localize(tags, MapCSS.e_concat("ref", " ", "tunnel:name"));
         }
 
         if (((type == 'way' && tags['tunnel'] == 'yes'))) {
@@ -84,7 +84,7 @@
 
         if (((type == 'way' && tags['railway'] == 'rail' && (!tags.hasOwnProperty('service')) && (!tags.hasOwnProperty('bridge')) && (!tags.hasOwnProperty('tunnel')))) || ((type == 'way' && tags['railway'] == 'disused' && (!tags.hasOwnProperty('service')) && (!tags.hasOwnProperty('bridge')) && (!tags.hasOwnProperty('tunnel')))) || ((type == 'way' && tags['railway'] == 'abandoned' && (!tags.hasOwnProperty('service')) && (!tags.hasOwnProperty('bridge')) && (!tags.hasOwnProperty('tunnel')))) || ((type == 'way' && tags['railway'] == 'razed' && (!tags.hasOwnProperty('service')) && (!tags.hasOwnProperty('bridge')) && (!tags.hasOwnProperty('tunnel')))) || ((type == 'way' && tags['railway'] == 'proposed' && (!tags.hasOwnProperty('service')) && (!tags.hasOwnProperty('bridge')) && (!tags.hasOwnProperty('tunnel')))) || ((type == 'way' && tags['railway'] == 'construction' && (!tags.hasOwnProperty('service')) && (!tags.hasOwnProperty('bridge')) && (!tags.hasOwnProperty('tunnel')))) || ((type == 'way' && tags['railway'] == 'preserved' && (!tags.hasOwnProperty('service')) && (!tags.hasOwnProperty('bridge')) && (!tags.hasOwnProperty('tunnel')))) || ((type == 'way' && tags['railway'] == 'narrow_gauge' && (!tags.hasOwnProperty('service')) && (!tags.hasOwnProperty('bridge')) && (!tags.hasOwnProperty('tunnel'))))) {
             s_default['z-index'] = 10000;
-            s_default['text'] = MapCSS.e_localize(tags, MapCSS.e_concat(MapCSS.e_tag(tags, "ref"), " ", MapCSS.e_tag(tags, "name")));
+            s_default['text'] = MapCSS.e_localize(tags, MapCSS.e_concat("ref", " ", "name"));
             s_default['text-position'] = 'line';
             s_default['text-color'] = '#585858';
             s_default['font-size'] = '11';
@@ -647,7 +647,7 @@
             height: 10, 
             offset: 16
         }
-    }, external_images = [], presence_tags = [], value_tags = [MapCSS.e_concat(MapCSS.e_tag(tags, "ref"), " ", MapCSS.e_tag(tags, "tunnel:name")), MapCSS.e_concat(MapCSS.e_tag(tags, "ref"), " ", MapCSS.e_tag(tags, "bridge:name")), 'railway:position', 'railway', 'railway:local_operated', 'railway:track_ref', 'ref', 'usage', MapCSS.e_concat(MapCSS.e_tag(tags, "ref"), " ", MapCSS.e_tag(tags, "name")), 'highspeed', 'name', 'tunnel', 'railway:switch', 'service', 'railway:ref', 'bridge'];
+    }, external_images = [], presence_tags = [], value_tags = [MapCSS.e_concat("ref", " ", "tunnel:name"), MapCSS.e_concat("ref", " ", "bridge:name"), 'railway:position', 'railway', 'railway:local_operated', 'railway:track_ref', 'ref', 'usage', MapCSS.e_concat("ref", " ", "name"), 'highspeed', 'name', 'tunnel', 'railway:switch', 'service', 'railway:ref', 'bridge'];
 
     MapCSS.loadStyle('standard', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('standard');
