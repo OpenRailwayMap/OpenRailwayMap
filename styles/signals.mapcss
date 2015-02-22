@@ -22,6 +22,38 @@ meta
 	watch-modified: true;
 }
 
+/******************************************************/
+/* deactivation cross for light and semaphore signals */
+/******************************************************/
+node|z14-[railway=signal]["railway:signal:main:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:distant:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:combined:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:shunting:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:main_repeated:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:minor:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:minor_distant:deactivated"=yes],
+node|z14-[railway=signal]["railway:signal:crossing:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:crossing_distant:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:humping:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:speed_limit:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:speed_limit_distant:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:route:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:route_distant:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:wrong_road:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:stop_demand:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:departure:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:resetting_switch:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:short_route:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:brake_test:deactivated"=yes]::deactivatedcross
+{
+	z-index: 11000;
+	icon-image: "icons/light-signal-deactivated-18.png";
+	icon-width: 9;
+	icon-height: 9;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /*******************************************/
 /* DE main semaphore signals type Hp which */
 /*  - have no railway:signal:states=* tag  */
