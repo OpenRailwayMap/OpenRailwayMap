@@ -65,6 +65,18 @@
 		{
 			"minzoom": 14,
 			"maxzoom": 19,
+			"icon": "icons/de-ks-distant-repeated-16.png",
+			"caption": "Ks-Vorsignalwiederholer"
+		},
+		{
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-ks-distant-shortened-16.png",
+			"caption": "Ks-Vorsignal in verkürztem Bremswegabstand"
+		},
+		{
+			"minzoom": 14,
+			"maxzoom": 19,
 			"icon": "icons/de-ks-distant-16.png",
 			"caption": "Ks-Vorsignal"
 		},
@@ -79,6 +91,12 @@
 			"maxzoom": 19,
 			"icon": "icons/de-ks-combined-16.png",
 			"caption": "Ks-Mehrabschnittssignal"
+		},
+		{
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-ks-combined-shortened-16.png",
+			"caption": "Ks-Mehrabschnittssignal in verkürztem Bremswegabstand"
 		},
 		{
 			"minzoom": 14,
