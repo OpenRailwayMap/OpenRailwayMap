@@ -258,3 +258,22 @@ way[railway][railway!=subway][railway!=tram][railway!="light_rail"][priority][!s
 	assertNoMatch: "way railway=rail priority=primary service=siding";
 	assertNoMatch: "way railway=rail priority=primary usage=main";
 }
+
+/* tracks with tracks=1 and detail=track */
+way[railway][tracks=1][detail=track]
+{
+	throwWarning: "tracks=1 not necessary if detail=track is tagged."
+	assertMatch: "way railway=rail tracks=1 detail=track";
+	assertNoMatch: "way railway=rail tracks=2 detail=track";
+	assertNoMatch: "way railway=rail tracks=1 detail!=track";
+	fixRemove: "tracks";
+}
+
+/* tracks with tracks>1 and service=* */
+way[railway][tracks!=1][tracks][service]
+{
+	throwWarning: "If tracks are tagged with service=*, they should be mapped as one way per track."
+	assertMatch: "way railway=rail tracks=2 service";
+	assertNoMatch: "way railway=rail tracks=2 usage";
+	assertNoMatch: "way railway=rail tracks=1";
+}
