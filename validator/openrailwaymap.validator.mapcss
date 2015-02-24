@@ -9,13 +9,15 @@ meta
 }
 
 /* Track with usage AND service */
-way[railway][usage][service]
+way[railway][usage][usage!=industrial][usage!=military][service]
 {
 	throwError: "Track tagged with usage=* AND service=* - remove one of these tags";
 	fixRemove: "service";
 	assertMatch: "way railway=rail usage=main service=siding";
 	assertNoMatch: "way railway=rail usage=main";
 	assertNoMatch: "way railway=rail service=siding";
+	assertNoMatch: "way railway=rail usage=industrial service=yard";
+	assertNoMatch: "way railway=rail usage=military service=yard";
 }
 
 /* Station mapped as way or area */
