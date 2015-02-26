@@ -3900,7 +3900,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delete_if_empty="true" />
 		</item>
 		<separator />
-		<item name="Grenzpunkt" icon="ownerchange.png" type="node">
+		<item name="Grenzpunkt" icon="owner-change.png" type="node">
 			<label text="Eigentumswechsel der Infrastruktur an Privatbahnanschlüssen und Landesgrenzen" />
 			<key key="railway"
 				value="owner_change" />
