@@ -139,10 +139,10 @@ way|z10-[railway=light_rail][tunnel=yes]::tunnels
 	linejoin: butt;
 }
 
-/******************************************************************************/
-/* text of tracks outside bridges and tunnels                                 */
-/* default track label contains ref and name                                  */
-/******************************************************************************/
+/**********************************************/
+/* text of tracks outside bridges and tunnels */
+/* default track label contains ref and name  */
+/**********************************************/
 way|z2-[railway=rail][!service][!bridge][!tunnel],
 way|z9-[railway=disused][!service][!bridge][!tunnel],
 way|z9-[railway=abandoned][!service][!bridge][!tunnel],
@@ -180,6 +180,33 @@ way|z11-[railway=razed][!bridge][!tunnel]["razed:ref"]
 	text: eval(join(" ", tag("razed:ref"), tag("razed:name")));
 }
 
+/*****************************************/
+/* track ref's on tracks inside stations */
+/*****************************************/
+way|z17-[railway=rail][!bridge]["railway:track_ref"],
+way|z17-[railway=disused][!bridge]["railway:track_ref"],
+way|z17-[railway=abandoned][!bridge]["railway:track_ref"],
+way|z17-[railway=razed][!bridge]["railway:track_ref"],
+way|z17-[railway=proposed][!bridge]["railway:track_ref"],
+way|z17-[railway=construction][!bridge]["railway:track_ref"],
+way|z17-[railway=preserved][!bridge]["railway:track_ref"],
+way|z17-[railway=light_rail][!bridge]["railway:track_ref"],
+way|z17-[railway=narrow_gauge][!bridge]["railway:track_ref"],
+way|z17-[railway=tram][!bridge]["railway:track_ref"],
+way|z17-[railway=subway][!bridge]["railway:track_ref"]
+{
+	text: "railway:track_ref";
+	text-position: line;
+	text-color: white;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 4;
+	text-halo-color: blue;
+	shield-color: blue;
+	shield-shape: rectangular;
+}
+
 /***************************************************************************************/
 /* simple railways without service or usage, and those which have no special rendering */
 /***************************************************************************************/
@@ -203,11 +230,6 @@ way|z10-[railway=rail][!usage][service=siding]
 	color: black;
 	width: 2;
 	linejoin: round;
-	text: "railway:track_ref";
-	text-position: line;
-	text-color: gray;
-	text-halo-radius: 0.5;
-	text-halo-color: #CCCCCC;
 }
 
 /***************************************/
@@ -219,11 +241,6 @@ way|z10-[railway=rail][!usage][service=yard]
 	color: black;
 	width: 1.5;
 	linejoin: round;
-	text: "railway:track_ref";
-	text-position: line;
-	text-color: gray;
-	text-halo-radius: 0.5;
-	text-halo-color: #CCCCCC;
 }
 
 /***************************************/
@@ -471,11 +488,6 @@ way|z10-[railway=narrow_gauge][!usage][service=siding]
 	casing-width: 1;
 	casing-color: black;
 	casing-dashes: 3,3;
-	text: "railway:track_ref";
-	text-position: line;
-	text-color: gray;
-	text-halo-radius: 0.5;
-	text-halo-color: #CCCCCC;
 }
 
 /****************************************************/
@@ -490,11 +502,6 @@ way|z10-[railway=narrow_gauge][!usage][service=yard]
 	casing-width: 1;
 	casing-color: black;
 	casing-dashes: 3,3;
-	text: "railway:track_ref";
-	text-position: line;
-	text-color: gray;
-	text-halo-radius: 0.5;
-	text-halo-color: #CCCCCC;
 }
 
 /****************************************************/
