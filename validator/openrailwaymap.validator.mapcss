@@ -182,6 +182,34 @@ node[railway=signal][railway:signal:combined="DE-KVB:hp"][railway:signal:combine
 	assertNoMatch: "node railway=signal railway:signal:combined=DE-KVB:hp railway:signal:combined:form=light";
 }
 
+/* a signal which is a sign cannot have different states */
+node|z14-[railway=signal]["railway:signal:main:form"=sign]["railway:signal:main:states"],
+node|z14-[railway=signal]["railway:signal:distant:form"=sign]["railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:combined:form"=sign]["railway:signal:combined:states"],
+node|z14-[railway=signal]["railway:signal:shunting:form"=sign]["railway:signal:shunting:states"],
+node|z14-[railway=signal]["railway:signal:main_repeated:form"=sign]["railway:signal:main_repeated:states"],
+node|z14-[railway=signal]["railway:signal:minor:form"=sign]["railway:signal:minor:states"],
+node|z14-[railway=signal]["railway:signal:minor_distant:form"=sign]["railway:signal:minor_distant:states"],
+node|z14-[railway=signal]["railway:signal:crossing:form"=sign]["railway:signal:crossing:states"],
+node|z14-[railway=signal]["railway:signal:crossing_distant:form"=sign]["railway:signal:crossing_distant:states"],
+node|z14-[railway=signal]["railway:signal:humping:form"=sign]["railway:signal:humping:states"],
+node|z14-[railway=signal]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:states"],
+node|z14-[railway=signal]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:states"],
+node|z14-[railway=signal]["railway:signal:route:form"=sign]["railway:signal:route:states"],
+node|z14-[railway=signal]["railway:signal:route_distant:form"=sign]["railway:signal:route_distant:states"],
+node|z14-[railway=signal]["railway:signal:wrong_road:form"=sign]["railway:signal:wrong_road:states"],
+node|z14-[railway=signal]["railway:signal:stop_demand:form"=sign]["railway:signal:stop_demand:states"],
+node|z14-[railway=signal]["railway:signal:departure:form"=sign]["railway:signal:departure:states"],
+node|z14-[railway=signal]["railway:signal:resetting_switch:form"=sign]["railway:signal:resetting_switch:states"],
+node|z14-[railway=signal]["railway:signal:short_route:form"=sign]["railway:signal:short_route:states"],
+node|z14-[railway=signal]["railway:signal:brake_test:form"=sign]["railway:signal:brake_test:states"]
+{
+	throwError: "A sign cannot have different states.";
+	assertMatch: "way railway=signal railway:signal:main:states=hp0;hp1 railway:signal:main:form=sign";
+	assertNoMatch: "way railway=signal railway:signal:main:states=hp0;hp1 railway:signal:main:form=semaphore";
+	assertNoMatch: "way railway=signal railway:signal:main:states=hp0;hp1 railway:signal:main:form=light";
+}
+
 /* track numbers inside a station should be railway:track_ref, not name */
 way[railway][name=~/^[0-9]+[a-z]*.*/]
 {
