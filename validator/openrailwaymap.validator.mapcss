@@ -376,3 +376,21 @@ way[railway][traffic_mode]
 	assertNoMatch: "node railway=level_crossing traffic_mode=mixed";
 	fixChangeKey: "traffic_mode=>railway:traffic_mode";
 }
+
+/* railway:signal:stop:description is deprecated */
+node[railway:signal:stop:description][!railway:signal:stop:caption]
+{
+	throwWarning: "railway:signal:stop:description is deprecated and has been replaced by railway:signal:stop:caption";
+	assertMatch: "node railway=signal railway:signal:stop:description=70";
+	assertNoMatch: "node railway=signal railway:signal:stop:caption=70";
+	assertNoMatch: "node railway=signal railway:signal:stop:description=70 railway:signal:stop:caption=70";
+	fixChangeKey: "railway:signal:stop:description=>railway:signal:stop:caption";
+}
+
+node[railway:signal:stop:description][railway:signal:stop:caption]
+{
+	throwWarning: "railway:signal:stop:description is deprecated, replace by appropiate railway:signal:stop:caption value";
+	assertMatch: "node railway=signal railway:signal:stop:description=70 railway:signal:stop:caption=70";
+	assertNoMatch: "node railway=signal railway:signal:stop:description=70";
+	assertNoMatch: "node railway=signal railway:signal:stop:caption=70";
+}
