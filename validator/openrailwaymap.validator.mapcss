@@ -290,7 +290,7 @@ way[railway][railway!=subway][railway!=tram][railway!="light_rail"][priority][!s
 /* tracks with tracks=1 and detail=track */
 way[railway][tracks=1][detail=track]
 {
-	throwWarning: "tracks=1 not necessary if detail=track is tagged."
+	throwWarning: "tracks=1 not necessary if detail=track is tagged.";
 	assertMatch: "way railway=rail tracks=1 detail=track";
 	assertNoMatch: "way railway=rail tracks=2 detail=track";
 	assertNoMatch: "way railway=rail tracks=1 detail!=track";
@@ -300,8 +300,20 @@ way[railway][tracks=1][detail=track]
 /* tracks with tracks>1 and service=* */
 way[railway][tracks!=1][tracks][service]
 {
-	throwWarning: "If tracks are tagged with service=*, they should be mapped as one way per track."
+	throwWarning: "If tracks are tagged with service=*, they should be mapped as one way per track.";
 	assertMatch: "way railway=rail tracks=2 service";
 	assertNoMatch: "way railway=rail tracks=2 usage";
 	assertNoMatch: "way railway=rail tracks=1";
+}
+
+/* crossings and level crossings should be mapped as nodes */
+way[railway=crossing],
+way[railway=level_crossing],
+area[railway=crossing],
+area[railway=level_crossing]
+{
+	throwError: "Crossings and level crossings should be mapped as nodes";
+	assertMatch: "way railway=level_crossing railway:position:exact";
+	assertMatch: "area railway=crossing railway:position:exact";
+	assertNoMatch: "node railway=level_crossing";
 }
