@@ -346,3 +346,13 @@ area[railway=level_crossing]
 	assertMatch: "area railway=crossing railway:position:exact";
 	assertNoMatch: "node railway=level_crossing";
 }
+
+/* traffic_mode is deprecated */
+way[railway][traffic_mode]
+{
+	throwWarning: "traffic_mode is deprecated, change to railway:traffic_mode";
+	assertMatch: "way railway=rail traffic_mode=mixed";
+	assertNoMatch: "way railway=subway railway:traffic_mode=passenger";
+	assertNoMatch: "node railway=level_crossing traffic_mode=mixed";
+	fixChangeKey: "traffic_mode=>railway:traffic_mode";
+}
