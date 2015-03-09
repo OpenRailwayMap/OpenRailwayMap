@@ -68,10 +68,11 @@ way[railway][usage=freight][railway:traffic_mode=freight]
 	throwError: "usage=freight is deprecated, change to railway:traffic_mode=freight";
 	fixChangeKey: "usage=>railway:traffic_mode";
 	assertMatch: "way railway=rail usage=freight";
-	assertNoMatch: "railway=rail usage=main";
-	assertNoMatch: "railway=rail usage=branch";
-	assertNoMatch: "railway=rail usage=industrial";
-	assertNoMatch: "railway=rail railway:traffic_mode";
+	assertMatch: "way railway=rail usage=freight railway:traffic_mode=freight";
+	assertNoMatch: "way railway=rail usage=main";
+	assertNoMatch: "way railway=rail usage=branch";
+	assertNoMatch: "way railway=rail usage=industrial";
+	assertNoMatch: "way railway=rail railway:traffic_mode";
 }
 
 /* usage=freight is deprecated, should be changed to railway:traffic_mode=freight */
@@ -80,11 +81,13 @@ way[railway][usage=freight][railway:traffic_mode=~/^(passenger|mixed)$/]
 {
 	throwError: "usage=freight is deprecated, change to railway:traffic_mode=freight";
 	fixAdd: "railway:traffic_mode=mixed";
-	assertMatch: "way railway=rail usage=freight";
-	assertNoMatch: "railway=rail usage=main";
-	assertNoMatch: "railway=rail usage=branch";
-	assertNoMatch: "railway=rail usage=industrial";
-	assertNoMatch: "railway=rail railway:traffic_mode";
+	assertMatch: "way railway=rail usage=freight railway:traffic_mode=passenger";
+	assertMatch: "way railway=rail usage=freight railway:traffic_mode=mixed";
+	assertNoMatch: "way railway=rail usage=main";
+	assertNoMatch: "way railway=rail usage=branch";
+	assertNoMatch: "way railway=rail usage=industrial";
+	assertNoMatch: "way railway=rail usage=freight 'railway:traffic_mode'=freight";
+	assertNoMatch: "way railway=rail railway:traffic_mode";
 	fixRemove: "usage";
 }
 
@@ -214,31 +217,31 @@ node[railway=signal][railway:signal:combined="DE-KVB:hp"][railway:signal:combine
 }
 
 /* a signal which is a sign cannot have different states */
-node|z14-[railway=signal]["railway:signal:main:form"=sign]["railway:signal:main:states"],
-node|z14-[railway=signal]["railway:signal:distant:form"=sign]["railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:combined:form"=sign]["railway:signal:combined:states"],
-node|z14-[railway=signal]["railway:signal:shunting:form"=sign]["railway:signal:shunting:states"],
-node|z14-[railway=signal]["railway:signal:main_repeated:form"=sign]["railway:signal:main_repeated:states"],
-node|z14-[railway=signal]["railway:signal:minor:form"=sign]["railway:signal:minor:states"],
-node|z14-[railway=signal]["railway:signal:minor_distant:form"=sign]["railway:signal:minor_distant:states"],
-node|z14-[railway=signal]["railway:signal:crossing:form"=sign]["railway:signal:crossing:states"],
-node|z14-[railway=signal]["railway:signal:crossing_distant:form"=sign]["railway:signal:crossing_distant:states"],
-node|z14-[railway=signal]["railway:signal:humping:form"=sign]["railway:signal:humping:states"],
-node|z14-[railway=signal]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:states"],
-node|z14-[railway=signal]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:states"],
-node|z14-[railway=signal]["railway:signal:route:form"=sign]["railway:signal:route:states"],
-node|z14-[railway=signal]["railway:signal:route_distant:form"=sign]["railway:signal:route_distant:states"],
-node|z14-[railway=signal]["railway:signal:wrong_road:form"=sign]["railway:signal:wrong_road:states"],
-node|z14-[railway=signal]["railway:signal:stop_demand:form"=sign]["railway:signal:stop_demand:states"],
-node|z14-[railway=signal]["railway:signal:departure:form"=sign]["railway:signal:departure:states"],
-node|z14-[railway=signal]["railway:signal:resetting_switch:form"=sign]["railway:signal:resetting_switch:states"],
-node|z14-[railway=signal]["railway:signal:short_route:form"=sign]["railway:signal:short_route:states"],
-node|z14-[railway=signal]["railway:signal:brake_test:form"=sign]["railway:signal:brake_test:states"]
+node[railway=signal]["railway:signal:main:form"=sign]["railway:signal:main:states"],
+node[railway=signal]["railway:signal:distant:form"=sign]["railway:signal:distant:states"],
+node[railway=signal]["railway:signal:combined:form"=sign]["railway:signal:combined:states"],
+node[railway=signal]["railway:signal:shunting:form"=sign]["railway:signal:shunting:states"],
+node[railway=signal]["railway:signal:main_repeated:form"=sign]["railway:signal:main_repeated:states"],
+node[railway=signal]["railway:signal:minor:form"=sign]["railway:signal:minor:states"],
+node[railway=signal]["railway:signal:minor_distant:form"=sign]["railway:signal:minor_distant:states"],
+node[railway=signal]["railway:signal:crossing:form"=sign]["railway:signal:crossing:states"],
+node[railway=signal]["railway:signal:crossing_distant:form"=sign]["railway:signal:crossing_distant:states"],
+node[railway=signal]["railway:signal:humping:form"=sign]["railway:signal:humping:states"],
+node[railway=signal]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:states"],
+node[railway=signal]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:states"],
+node[railway=signal]["railway:signal:route:form"=sign]["railway:signal:route:states"],
+node[railway=signal]["railway:signal:route_distant:form"=sign]["railway:signal:route_distant:states"],
+node[railway=signal]["railway:signal:wrong_road:form"=sign]["railway:signal:wrong_road:states"],
+node[railway=signal]["railway:signal:stop_demand:form"=sign]["railway:signal:stop_demand:states"],
+node[railway=signal]["railway:signal:departure:form"=sign]["railway:signal:departure:states"],
+node[railway=signal]["railway:signal:resetting_switch:form"=sign]["railway:signal:resetting_switch:states"],
+node[railway=signal]["railway:signal:short_route:form"=sign]["railway:signal:short_route:states"],
+node[railway=signal]["railway:signal:brake_test:form"=sign]["railway:signal:brake_test:states"]
 {
 	throwError: "A sign cannot have different states.";
-	assertMatch: "way railway=signal railway:signal:main:states=hp0;hp1 railway:signal:main:form=sign";
-	assertNoMatch: "way railway=signal railway:signal:main:states=hp0;hp1 railway:signal:main:form=semaphore";
-	assertNoMatch: "way railway=signal railway:signal:main:states=hp0;hp1 railway:signal:main:form=light";
+	assertMatch: "node railway=signal railway:signal:main:states=hp0;hp1 railway:signal:main:form=sign";
+	assertNoMatch: "node railway=signal railway:signal:main:states=hp0;hp1 railway:signal:main:form=semaphore";
+	assertNoMatch: "node railway=signal railway:signal:main:states=hp0;hp1 railway:signal:main:form=light";
 }
 
 /* track numbers inside a station should be railway:track_ref, not name */
@@ -350,8 +353,8 @@ way[railway][tracks=1][detail=track]
 way[railway][tracks!=1][tracks][service]
 {
 	throwWarning: "If tracks are tagged with service=*, they should be mapped as one way per track.";
-	assertMatch: "way railway=rail tracks=2 service";
-	assertNoMatch: "way railway=rail tracks=2 usage";
+	assertMatch: "way railway=rail tracks=2 service=foo";
+	assertNoMatch: "way railway=rail tracks=2 usage=bar";
 	assertNoMatch: "way railway=rail tracks=1";
 }
 
@@ -362,9 +365,11 @@ area[railway=crossing],
 area[railway=level_crossing]
 {
 	throwError: "Crossings and level crossings should be mapped as nodes";
-	assertMatch: "way railway=level_crossing railway:position:exact";
-	assertMatch: "area railway=crossing railway:position:exact";
+	assertMatch: "way railway=level_crossing railway:position:exact=2.4";
+	assertMatch: "way railway=crossing railway:position:exact=2.4";
+	assertMatch: "area railway=crossing railway:position:exact=2.4";
 	assertNoMatch: "node railway=level_crossing";
+	assertNoMatch: "node railway=crossing";
 }
 
 /* traffic_mode is deprecated */
