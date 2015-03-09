@@ -13,8 +13,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
 	<group name="OpenRailwayMap Signale DE ESO" icon="signals.png">
-			<group name="Ks-Signale" icon="de-ks-combined.png">
-				<item name="Ks-Vorsignal" icon="de-ks-distant.png" type="node">
+			<group name="Ks-Signale" icon="de-ks-combined-32.png">
+				<item name="Ks-Vorsignal" icon="de-ks-distant-32.png" type="node">
 					<label text="Ks-Vorsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -71,7 +71,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
 					
 				</item>
-				<item name="Ks-Mehrabschnittssignal" icon="de-ks-combined.png" type="node">
+				<item name="Ks-Mehrabschnittssignal" icon="de-ks-combined-32.png" type="node">
 					<label text="Ks-Mehrabschnittssignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -151,7 +151,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Ks-Hauptsignal" icon="de-ks-main.png" type="node">
+				<item name="Ks-Hauptsignal" icon="de-ks-main-32.png" type="node">
 					<label text="Ks-Hauptsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -225,7 +225,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 			</group>
-			<item name="Sv-Signal" icon="de-sv.png" type="node">
+			<item name="Sv-Signal" icon="de-sv-hp0-32.png" type="node">
 				<label text="Sv-Signal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -311,7 +311,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 				<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 			</item>
-			<group name="Hl-Signale" icon="de-hl-signals.png">
+			<group name="Hl-Signale" icon="de-hl1-32.png">
 				<item name="Hl-Kombinationssignal" icon="de-hl-combined.png" type="node">
 					<label text="Hl-Kombinationssignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
@@ -1148,8 +1148,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="sign" />
 			</item>
 			<separator />
-			<group name="Bahnübergangssignale" icon="de-bue-signals.png">
-				<item name="Bü-Überwachungssignal (Bü 0/Bü 1)" icon="de-bue.png" type="node">
+			<group name="Bahnübergangssignale" icon="de-bue1-ds-32.png">
+				<item name="Bü-Überwachungssignal (Bü 0/Bü 1)" icon="de-bue1-ds-32.png" type="node">
 					<label text="Bü-Überwachungssignal (Bü 0/Bü 1)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1203,7 +1203,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Bü-Überwachungssignal erwarten (Bü 2/So 15)" icon="de-bue2.png" type="node">
+				<item name="Bü-Überwachungssignal erwarten (Bü 2/So 15)" icon="de-bue2-ds-28.png" type="node">
 					<label text="Bü-Überwachungssignal erwarten (Bü 2/So 15)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1618,8 +1618,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 			</group>
-			<group name="Rangiersignale" icon="de-ra-signals.png">
-				<item name="Rangierhalttafel (Ra 10)" icon="de-ra10.png" type="node">
+			<group name="Rangiersignale" icon="de-ra11-sign-32.png">
+				<item name="Rangierhalttafel (Ra 10)" icon="de-ra10-32.png" type="node">
 					<label text="Rangierhalttafel (Ra 10)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1657,7 +1657,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 				</item>
-				<item name="Rangierhaltsignal" icon="de-ra11.png" type="node">
+				<item name="Rangierhaltsignal" icon="de-ra11-sign-32.png" type="node">
 					<label text="Rangierhaltsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -2723,7 +2723,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="DE-ESO:db:zp6;DE-ESO:db:zp7;DE-ESO:db:zp8" />
 			</item>
 			<separator />
-			<item name="Blockkennzeichen" icon="de-lzb-sign.png" type="node">
+			<item name="Blockkennzeichen" icon="de-blockkennzeichen-28.png" type="node">
 				<label text="Blockkennzeichen (ETCS/LZB)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
