@@ -27,6 +27,7 @@
 		"ru" => array("ru_RU", "Русский"),
 		"sl" => array("sl_SI", "Slovenščina"),
 		"sv" => array("sv_SE", "Svenska"),
+		"tr" => array("tr_TR", "Türkçe"),
 		"uk" => array("uk_UA", "Українська"),
 		"vi" => array("vi_VN", "Tiếng Việt")
 	);
