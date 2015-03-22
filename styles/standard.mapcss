@@ -697,8 +697,8 @@ node|z14-[railway=crossing][!"crossing:barrier"][!"crossing:light"]
 {
 	z-index: 4500;
 	icon-image: "icons/crossing-basic-22.png";
-	icon-width: 11;
-	icon-height: 7;
+	icon-width: 7;
+	icon-height: 11;
 	allow-overlap: false; 
 }
 
@@ -710,9 +710,9 @@ node|z14-[railway=crossing][!"crossing:barrier"]["crossing:light"=no],
 node|z14-[railway=crossing]["crossing:barrier"=no]["crossing:light"=no]
 {
 	z-index: 5500;
-	icon-image: "icons/crossing-unsecured-32.png";
-	icon-width: 9;
-	icon-height: 16;
+	icon-image: "icons/crossing-unsecured-22.png";
+	icon-width: 11;
+	icon-height: 7;
 	allow-overlap: false; 
 }
 
@@ -723,9 +723,9 @@ node|z14-[railway=crossing][!"crossing:barrier"]["crossing:light"!=no]["crossing
 node|z14-[railway=crossing]["crossing:barrier"=no]["crossing:light"!=no]["crossing:light"]
 {
 	z-index: 5510;
-	icon-image: "icons/crossing-with-lights-32.png";
-	icon-width: 8;
-	icon-height: 16;
+	icon-image: "icons/crossing-with-lights-22.png";
+	icon-width: 11;
+	icon-height: 7;
 	allow-overlap: false; 
 }
 
@@ -735,9 +735,9 @@ node|z14-[railway=crossing]["crossing:barrier"=no]["crossing:light"!=no]["crossi
 node|z14-[railway=crossing]["crossing:barrier"!=no]["crossing:barrier"]["crossing:light"!=no]["crossing:light"]
 {
 	z-index: 5530;
-	icon-image: "icons/crossing-with-lights-and-barrier-32.png";
-	icon-width: 8;
-	icon-height: 16;
+	icon-image: "icons/crossing-with-lights-and-barrier-22.png";
+	icon-width: 11;
+	icon-height: 7;
 	allow-overlap: false; 
 }
 
@@ -748,9 +748,9 @@ node|z14-[railway=crossing][!"crossing:light"]["crossing:barrier"!=no]["crossing
 node|z14-[railway=crossing]["crossing:light"=no]["crossing:barrier"!=no]["crossing:barrier"]
 {
 	z-index: 5520;
-	icon-image: "icons/crossing-with-barrier-32.png";
-	icon-width: 9;
-	icon-height: 16;
+	icon-image: "icons/crossing-with-barrier-22.png";
+	icon-width: 11;
+	icon-height: 7;
 	allow-overlap: false; 
 }
 

@@ -5,12 +5,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg2"
-   width="8.6216564"
-   height="15.999986"
-   version="1.1">
+   version="1.0"
+   width="14.356"
+   height="8.8699999"
+   id="svg2">
   <metadata
-     id="metadata14">
+     id="metadata12">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -22,19 +22,27 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs12" />
-  <circle
-     id="circle4"
-     style="fill:#000000;stroke:none"
-     cy="1.2763532"
-     cx="4.1626873"
-     r="1.2763532" />
+     id="defs4" />
+  <rect
+     y="0.0003614731"
+     x="0"
+     height="8.8660002"
+     width="14.356"
+     id="rect4139"
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <path
-     id="path6"
-     d="m 0.27350427,8.6153661 c 3.45679023,-5.39411 3.13010443,-5.54605 4.42165243,-5.58404 0.7521367,0.0228 0.7749288,0.22792 2.051282,1.23077 1.5726496,1.15479 1.4586895,1.16999 1.4358975,2.43874 -0.0076,1.52707 0.098765,1.41311 -1.1168091,1.98291 l 0,-2.5755 -1.0712251,-0.95726 0,3.62393 -2.5527066,-0.0228 -0.022792,-2.8718 c -2.0968661,3.23647 -1.9601139,3.05413 -3.14529913,2.73504 z"
-     style="fill:#000000;stroke:none" />
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     d="M 0.50000003,0.5 13.856,0.5"
+     id="path4155" />
   <path
-     id="path8"
-     d="m 3.4871795,9.1395861 2.4843305,0 c 0,0.5698 0.1823362,0.52422 1.5042735,3.0085499 1.3903134,2.5603 1.4131054,2.38556 0.6153846,3.85185 L 4.6495726,9.8233461 C 1.3903134,16.129136 1.8005698,15.939206 0,15.817646 l 1.8005698,-3.37322 C 3.3428301,9.6562061 3.4264007,9.6486061 3.4871795,9.1395861 Z"
-     style="fill:#000000;stroke:none" />
+     id="path4135"
+     d="M 0.50000003,8.37 13.856,8.37"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+  <rect
+     y="1.5581336"
+     x="1.12878"
+     height="5.7504563"
+     width="12.09844"
+     id="rect4137"
+     style="opacity:1;fill:#ffe800;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:3.86360002;stroke-dasharray:none;stroke-opacity:1" />
 </svg>
