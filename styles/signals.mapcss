@@ -735,8 +735,10 @@ node|z14-[railway=signal]["railway:signal:distant"=hl]["railway:signal:distant:f
 /*********************************************/
 /* DE distant signal replacement by sign Ne2 */
 /*********************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign],
-node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]
+node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=no],
+node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign][!"railway:signal:distant:shortened"],
+node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=no],
+node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign][!"railway:signal:distant:shortened"]
 {
 	z-index: 9000;
 	text: "ref";
@@ -746,7 +748,51 @@ node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:dis
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de-ne2.png";
+	icon-image: "icons/de-ne2-32.png";
+	icon-width: 10;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*******************************************************************/
+/* DE distant signal replacement by sign Ne2 with reduced distance */
+/* variant used in West Germany                                    */
+/******************************************************************/
+node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes],
+node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-ne2-reduced-distance-36.png";
+	icon-width: 7;
+	icon-height: 18;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*******************************************************************/
+/* DE distant signal replacement by sign Ne2 with reduced distance */
+/* variant used in East Germany                                    */
+/******************************************************************/
+node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:dr:so3"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes],
+node|z14-[railway=signal]["railway:signal:distant"="dr:so3"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-ne2-dv301-reduced-distance-32.png";
 	icon-width: 10;
 	icon-height: 16;
 	text-allow-overlap: true;
