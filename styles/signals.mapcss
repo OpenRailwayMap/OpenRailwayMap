@@ -732,6 +732,29 @@ node|z14-[railway=signal]["railway:signal:distant"=hl]["railway:signal:distant:f
 	allow-overlap: true;
 }
 
+/************************************************/
+/* DE distant signal replacement by sign So 106 */
+/* AT Kreuztafel                                */
+/************************************************/
+node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:so106"]["railway:signal:distant:form"=sign],
+node|z14-[railway=signal]["railway:signal:distant"="so106"]["railway:signal:distant:form"=sign]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 11;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-so106-32.png";
+	icon-width: 16;
+	icon-height: 11;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+
 /*********************************************/
 /* DE distant signal replacement by sign Ne2 */
 /*********************************************/
