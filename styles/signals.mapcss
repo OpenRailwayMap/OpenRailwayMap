@@ -737,7 +737,8 @@ node|z14-[railway=signal]["railway:signal:distant"=hl]["railway:signal:distant:f
 /* AT Kreuztafel                                */
 /************************************************/
 node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:so106"]["railway:signal:distant:form"=sign],
-node|z14-[railway=signal]["railway:signal:distant"="so106"]["railway:signal:distant:form"=sign]
+node|z14-[railway=signal]["railway:signal:distant"="so106"]["railway:signal:distant:form"=sign],
+node|z14-[railway=signal]["railway:signal:distant"="AT-V2:kreuztafel"]["railway:signal:distant:form"=sign]
 {
 	z-index: 9000;
 	text: "ref";
@@ -753,7 +754,6 @@ node|z14-[railway=signal]["railway:signal:distant"="so106"]["railway:signal:dist
 	text-allow-overlap: true;
 	allow-overlap: true;
 }
-
 
 /*********************************************/
 /* DE distant signal replacement by sign Ne2 */
