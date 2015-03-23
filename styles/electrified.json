@@ -116,7 +116,43 @@
 			"caption": "25kV 60Hz&nbsp;~"
 		},
 		{
-			"minzoom": 16,
+			"minzoom": 17,
+			"maxzoom": 19,
+			"icon": "icons/de/el1v-28.png",
+			"caption": "El 1 Ausschaltsignal erwarten"
+		},
+		{
+			"minzoom": 17,
+			"maxzoom": 19,
+			"icon": "icons/de/el1-28.png",
+			"caption": "El 1 Ausschaltsignal"
+		},
+		{
+			"minzoom": 17,
+			"maxzoom": 19,
+			"icon": "icons/de/el2-28.png",
+			"caption": "El 2 Einschaltsignal"
+		},
+		{
+			"minzoom": 17,
+			"maxzoom": 19,
+			"icon": "icons/de/el3-28.png",
+			"caption": "El 3 \"Bügel ab\"-Ankündigungssignal"
+		},
+		{
+			"minzoom": 17,
+			"maxzoom": 19,
+			"icon": "icons/de/el4-28.png",
+			"caption": "El 4 \"Bügel ab\"-Signal"
+		},
+		{
+			"minzoom": 17,
+			"maxzoom": 19,
+			"icon": "icons/de/el5-28.png",
+			"caption": "El 5 \"Bügel an\"-Signal"
+		},
+		{
+			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de/el6-28.png",
 			"caption": "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
