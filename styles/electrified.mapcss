@@ -297,8 +297,8 @@ way|z2-[railway=rail][electrified][electrified!=no][frequency=60][voltage=25000]
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]
 {
 	z-index: 90;
-	icon-image: "icons/de/el6.png";
-	icon-width: 16;
-	icon-height: 16;
+	icon-image: "icons/de/el6-14.png";
+	icon-width: 14;
+	icon-height: 14;
 	allow-overlap: true;
 }
