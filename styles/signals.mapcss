@@ -1388,6 +1388,51 @@ node|z14-[railway=signal]["railway:signal:station_distant"="ne6"]["railway:signa
 	allow-overlap: true;
 }
 
+/*******************************************************/
+/* DE end of catenary sign El 6                        */
+/* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer */
+/*******************************************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:station_distant:form"="sign"]["railway:signal:electricity:turn_direction"!="left"]["railway:signal:electricity:turn_direction"!="right"],
+node|z17-[railway=signal]["railway:signal:electricity"="el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:station_distant:form"=sign]["railway:signal:electricity:turn_direction"!="left"]["railway:signal:electricity:turn_direction"!="right"],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:station_distant:form"=sign]["railway:signal:electricity:turn_direction"!="left"]["railway:signal:electricity:turn_direction"!="right"]
+{
+	z-index: 450;
+	icon-image: "icons/de-el6-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+
+/*********************************************************************/
+/* DE end of catenary sign El 6 + arrow right                        */
+/* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer + arrow right */
+/*********************************************************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:station_distant:form"="sign"]["railway:signal:electricity:turn_direction"="right"],
+node|z17-[railway=signal]["railway:signal:electricity"="el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:station_distant:form"=sign]["railway:signal:electricity:turn_direction"="right"],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:station_distant:form"=sign]["railway:signal:electricity:turn_direction"="right"]
+{
+	z-index: 450;
+	icon-image: "icons/de-el6-right-36.png";
+	icon-width: 14;
+	icon-height: 18;
+	allow-overlap: true;
+}
+
+/*********************************************************************/
+/* DE end of catenary sign El 6 + arrow left                        */
+/* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer + arrow left */
+/*********************************************************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:station_distant:form"="sign"]["railway:signal:electricity:turn_direction"="left"],
+node|z17-[railway=signal]["railway:signal:electricity"="el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:station_distant:form"=sign]["railway:signal:electricity:turn_direction"="left"],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:station_distant:form"=sign]["railway:signal:electricity:turn_direction"="left"]
+{
+	z-index: 450;
+	icon-image: "icons/de-el6-left-36.png";
+	icon-width: 14;
+	icon-height: 18;
+	allow-overlap: true;
+}
+
 /******************/
 /* AT Trapeztafel */
 /******************/
