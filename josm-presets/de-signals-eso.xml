@@ -2249,9 +2249,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Speed (km/h, in case of light signals separate the possible values(number or 'off') with ';')"
 						de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte (Zahl oder 'off') mit ';' trennen)"
 						delete_if_empty="true"
-						values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
-						display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
-						de.display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,unbekannt" />
+						values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,off"
+						display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,off"
+						de.display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,off" />
 					<combo key="railway:signal:speed_limit_distant:turn_direction"
 						text="Turn direction arrow – leave this key empty if there is no one."
 						de.text="Richtungspfeil – leer lassen, falls es keinen gibt."
@@ -2425,7 +2425,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
-				<text key="railway:signal:stop:description"
+				<text key="railway:signal:stop:caption"
 					text="Description"
 					de.text="Zusatztext"
 					default=""
