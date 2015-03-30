@@ -294,7 +294,7 @@ way[railway]["power:type"=overhead][!electrified]
 way[railway]["power:type"=overhead][electrified][electrified!=yes][electrified!=contact_line]
 {
 	throwError: tr("power:type=overhead is deprecated, conflict between {0} and {1}", "power:type=overhead", "electrified=*");
-	assertMatch: "way railway=rail power:type=overhead";
+	assertMatch: "way railway=rail power:type=overhead electrified=other";
 	assertNoMatch: "way railway=rail power:type=overhead electrified=yes";
 }
 
@@ -303,7 +303,7 @@ way[railway]["power:type"=overhead][electrified][electrified!=yes][electrified!=
 way[railway]["power:type"]["power:type"!=overhead][electrified]
 {
 	throwWarning: "power:type is deprecated, change to proper electrified value";
-	assertMatch: "way railway=rail power:type=something";
+	assertMatch: "way railway=rail power:type=something electrified=yes";
 	assertNoMatch: "way railway=rail power:type=overhead electrified=yes";
 }
 
