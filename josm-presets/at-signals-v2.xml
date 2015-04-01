@@ -11,7 +11,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 
 
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0">
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Signale AT V2" description="Preset to tag Austrian railway signals">
 	<group name="OpenRailwayMap Signale AT V2" icon="signals.png">
 		<item name="Formhauptsignal" icon="todo.png" type="node">
 			<label text="Formhauptsignal" />
