@@ -410,3 +410,13 @@ node["railway:signal:minor:states"="sh0;gsp2"]
 	assertNoMatch: "node railway=derail railway:signal:minor:states=DE-ESO:sh0;DE-ESO:sh1";
 	fixAdd: "railway:signal:minor:states=DE-ESO:sh0;DE-ESO:wn7";
 }
+
+/* German Ne 14 signs without railway:signal:train_protection:type=block_marker */
+node["railway:signal:train_protection"="DE-ESO:ne14"]["railway:signal:train_protection:type"!=block_marker]
+{
+	throwError: "Ne 14 sign requires additional tag railway:signal:train_protection:type=block_marker";
+	assertMatch: "node railway=signal railway:signal:train_protection=DE-ESO:ne14";
+	assertNoMatch: "node railway=signal railway:signal:train_protection=DE-ESO:ne14 railway:signal:train_protection:type=block_marker";
+	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp";
+	fixAdd: "railway:signal:train_protection:type=block_marker";
+}
