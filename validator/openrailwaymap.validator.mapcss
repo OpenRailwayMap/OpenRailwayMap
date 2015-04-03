@@ -408,6 +408,5 @@ node["railway:signal:minor:states"="sh0;gsp2"]
 	assertMatch: "node railway=signal railway:signal:minor:states=sh0;gsp2";
 	assertNoMatch: "node railway=derail railway:signal:minor:states=DE-ESO:sh0;DE-ESO:wn7";
 	assertNoMatch: "node railway=derail railway:signal:minor:states=DE-ESO:sh0;DE-ESO:sh1";
-	fixRemove: "railway:signal:minor:states";
 	fixAdd: "railway:signal:minor:states=DE-ESO:sh0;DE-ESO:wn7";
 }
