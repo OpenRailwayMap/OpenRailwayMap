@@ -1524,8 +1524,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:minor:states"
 						text="Displayed signals"
 						de.text="Angezeigte Signalbilder"
-						values="DE-ESO:sh0;DE-ESO:sh1,DE-ESO:hp0;DE-ESO:sh1"
-						display_values="Formsignal (Sh 0/Sh 1),Lichtsignal (Hp 0/Sh 1)"
+						values="DE-ESO:sh0;DE-ESO:sh1,DE-ESO:hp0;DE-ESO:sh1,DE-ESO:hp0;DE-ESO:kennlicht"
+						display_values="Formsignal (Sh 0/Sh 1),Lichtsignal (Hp 0/Sh 1),Zugdeckungssignal (Hp 0/Kennlicht)"
 						default=""
 						delete_if_empty="true" />
 					<check key="railway:signal:distant:marker_light"
