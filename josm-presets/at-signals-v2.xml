@@ -66,7 +66,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<combo key="railway:signal:main:function"
 				text="Signal function"
 				de.text="Signalaufgabe"
-				values="entry,exit,block,between"
+				values="entry,exit,block,intermediate"
 				display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
 				default=""
 				delete_if_empty="true" />
@@ -137,7 +137,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<combo key="railway:signal:main:function"
 				text="Signal function"
 				de.text="Signalaufgabe"
-				values="entry,exit,block,between"
+				values="entry,exit,block,intermediate"
 				display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
 				default=""
 				delete_if_empty="true" />
