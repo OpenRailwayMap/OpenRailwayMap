@@ -620,30 +620,34 @@ node|z16-[railway=switch][railway:switch=resetting]
 /****************/
 /* signal boxes */
 /****************/
-node|z11-[railway=signal_box]
+node|z8-[railway=signal_box],
+area|z8-[railway=signal_box]
 {
 	z-index: 7000;
-	text: "name";
-	font-size: 15;
+	text: "railway:ref";
+	font-size: 11;
 	font-weight: bold;
-	text-position: auto;
 	text-color: black;
 	text-halo-radius: 0.5;
 	text-halo-color: #008206;
 }
 
-area|z11-[railway=signal_box]
+node|z8-[railway=signal_box]
 {
-	z-index: 7000;
-	text: "name";
-	font-size: 15;
-	font-weight: bold;
+	text-position: auto;
+}
+
+area|z8-[railway=signal_box]
+{
 	text-position: center;
-	text-color: black;
-	text-halo-radius: 0.5;
-	text-halo-color: #008206;
 	fill-color: #008206;
 	color: #008206;
+}
+
+area|z11-[railway=signal_box],
+node|z11-[railway=signal_box]
+{
+	text: "name";
 }
 
 /**************/
