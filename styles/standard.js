@@ -445,28 +445,28 @@
             s_default['text-halo-color'] = 'orange';
         }
 
-        if (((type == 'node' && tags['railway'] == 'signal_box') && zoom >= 11)) {
+        if ((((type == 'node' || selector == 'area') && tags['railway'] == 'signal_box') && zoom >= 8)) {
             s_default['z-index'] = 7000;
-            s_default['text'] = MapCSS.e_localize(tags, 'name');
-            s_default['font-size'] = '15';
+            s_default['text'] = MapCSS.e_localize(tags, 'railway:ref');
+            s_default['font-size'] = '11';
             s_default['font-weight'] = 'bold';
-            s_default['text-position'] = 'auto';
             s_default['text-color'] = 'black';
             s_default['text-halo-radius'] = 0.5;
             s_default['text-halo-color'] = '#008206';
         }
 
-        if (((selector == 'area' && tags['railway'] == 'signal_box') && zoom >= 11)) {
-            s_default['z-index'] = 7000;
-            s_default['text'] = MapCSS.e_localize(tags, 'name');
-            s_default['font-size'] = '15';
-            s_default['font-weight'] = 'bold';
+        if (((type == 'node' && tags['railway'] == 'signal_box') && zoom >= 8)) {
+            s_default['text-position'] = 'auto';
+        }
+
+        if (((selector == 'area' && tags['railway'] == 'signal_box') && zoom >= 8)) {
             s_default['text-position'] = 'center';
-            s_default['text-color'] = 'black';
-            s_default['text-halo-radius'] = 0.5;
-            s_default['text-halo-color'] = '#008206';
             s_default['fill-color'] = '#008206';
             s_default['color'] = '#008206';
+        }
+
+        if ((((type == 'node' || selector == 'area') && tags['railway'] == 'signal_box') && zoom >= 11)) {
+            s_default['text'] = MapCSS.e_localize(tags, 'name');
         }
 
         if (((type == 'node' && tags['railway'] == 'milestone') && zoom >= 11)) {
