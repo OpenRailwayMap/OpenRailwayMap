@@ -1528,7 +1528,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Formsignal (Sh 0/Sh 1),Lichtsignal (Hp 0/Sh 1),Zugdeckungssignal (Hp 0/Kennlicht)"
 						default=""
 						delete_if_empty="true" />
-					<check key="railway:signal:distant:marker_light"
+					<check key="railway:signal:minor:marker_light"
 						text="Marker light"
 						de.text="Kennlicht"
 						default="off"
