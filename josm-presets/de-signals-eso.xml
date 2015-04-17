@@ -1116,7 +1116,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Kreuztafel (So 106)" icon="de-so106.png" type="node">
+			<item name="Kreuztafel (So 106)" icon="de-so106-32.png" type="node">
 				<label text="Kreuztafel (So 106)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />

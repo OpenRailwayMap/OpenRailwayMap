@@ -296,7 +296,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:main:function"
 				value="entry" />
 		</item>
-		<item name="Kreuztafel" icon="todo.png" type="node">
+		<item name="Kreuztafel" icon="de-so106-32.png" type="node">
 			<label text="Kreuztafel" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
