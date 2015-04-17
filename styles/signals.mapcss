@@ -1414,7 +1414,7 @@ node|z14-[railway=signal]["railway:signal:station_distant"="ne6"]["railway:signa
 /******************/
 /* AT Trapeztafel */
 /******************/
-node|z14-[railway=signal]["railway:signal:main"="AT:trapeztafel"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
+node|z14-[railway=signal]["railway:signal:main"="AT-V2:trapeztafel"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
 {
 	z-index: 1000;
 	text: "ref";
