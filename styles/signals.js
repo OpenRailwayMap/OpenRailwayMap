@@ -3,7 +3,7 @@
     'use strict';
 
     function restyle(style, tags, zoom, type, selector) {
-        var s_default = {}, s_blockkennzeichen = {};
+        var s_default = {}, s_deactivatedcross = {}, s_blockkennzeichen = {};
 
         if ((selector == 'meta')) {
             s_default['title'] = 'OpenRailwayMap signalling layer';
@@ -12,6 +12,15 @@
             s_default['author'] = 'rurseekatze';
             s_default['link'] = 'http://wiki.openstreetmap.org/wiki/OpenRailwayMap';
             s_default['watch-modified'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:distant:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:combined:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:shunting:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main_repeated:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:minor_distant:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:crossing:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:crossing_distant:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:humping:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:speed_limit_distant:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:route:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:route_distant:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:wrong_road:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:stop_demand:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:departure:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:resetting_switch:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:short_route:deactivated'] == 'yes') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:brake_test:deactivated'] == 'yes') && zoom >= 14)) {
+            s_deactivatedcross['z-index'] = 11000;
+            s_deactivatedcross['icon-image'] = 'icons/light-signal-deactivated-18.png';
+            s_deactivatedcross['icon-width'] = '9';
+            s_deactivatedcross['icon-height'] = '9';
+            s_deactivatedcross['text-allow-overlap'] = 'true';
+            s_deactivatedcross['allow-overlap'] = 'true';
         }
 
         if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'DE-ESO:hp' && tags['railway:signal:main:form'] == 'semaphore' && (!tags.hasOwnProperty('railway:signal:main:states'))) && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:main'] == 'hp' && tags['railway:signal:main:form'] == 'semaphore' && (!tags.hasOwnProperty('railway:signal:main:states'))) && zoom >= 14)) {
@@ -466,6 +475,22 @@
             s_default['icon-image'] = 'icons/de-hl1-distant-24.png';
             s_default['icon-width'] = '8';
             s_default['icon-height'] = '12';
+            s_default['text-allow-overlap'] = 'true';
+            s_default['allow-overlap'] = 'true';
+        }
+
+        if (((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:distant'] == 'DE-ESO:so106' && tags['railway:signal:distant:form'] == 'sign') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:distant'] == 'so106' && tags['railway:signal:distant:form'] == 'sign') && zoom >= 14) || ((type == 'node' && tags['railway'] == 'signal' && tags['railway:signal:distant'] == 'AT-V2:kreuztafel' && tags['railway:signal:distant:form'] == 'sign') && zoom >= 14)) {
+            s_default['z-index'] = 9000;
+            s_default['text'] = MapCSS.e_localize(tags, 'ref');
+            s_default['text-offset'] = 11;
+            s_default['text-size'] = '12';
+            s_default['text-color'] = 'black';
+            s_default['text-halo-radius'] = 1;
+            s_default['text-halo-color'] = 'white';
+            s_default['font-weight'] = 'bold';
+            s_default['icon-image'] = 'icons/de-so106-32.png';
+            s_default['icon-width'] = '16';
+            s_default['icon-height'] = '11';
             s_default['text-allow-overlap'] = 'true';
             s_default['allow-overlap'] = 'true';
         }
@@ -925,6 +950,8 @@
 
         if (Object.keys(s_default).length) {
             style['default'] = s_default; }
+        if (Object.keys(s_deactivatedcross).length) {
+            style['deactivatedcross'] = s_deactivatedcross; }
         if (Object.keys(s_blockkennzeichen).length) {
             style['blockkennzeichen'] = s_blockkennzeichen; }
         return style;
@@ -1161,62 +1188,72 @@
             height: 26, 
             offset: 1480
         },
+        'icons/de-so106-32.png': {
+            width: 32, 
+            height: 22, 
+            offset: 1506
+        },
         'icons/de-sv-hp0-16.png': {
             width: 8, 
             height: 16, 
-            offset: 1506
+            offset: 1528
         },
         'icons/de-sv-sv0-16.png': {
             width: 8, 
             height: 16, 
-            offset: 1522
+            offset: 1544
         },
         'icons/de-vr0-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1538
+            offset: 1560
         },
         'icons/de-vr0-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1570
+            offset: 1592
         },
         'icons/de-vr0-semaphore-52.png': {
             width: 24, 
             height: 53, 
-            offset: 1602
+            offset: 1624
         },
         'icons/de-vr1-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1655
+            offset: 1677
         },
         'icons/de-vr1-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1687
+            offset: 1709
         },
         'icons/de-vr1-semaphore-38.png': {
             width: 24, 
             height: 38, 
-            offset: 1719
+            offset: 1741
         },
         'icons/de-vr2-light-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1757
+            offset: 1779
         },
         'icons/de-vr2-light-repeated-32.png': {
             width: 31, 
             height: 32, 
-            offset: 1789
+            offset: 1811
         },
         'icons/de-vr2-semaphore-53.png': {
             width: 24, 
             height: 53, 
-            offset: 1821
+            offset: 1843
+        },
+        'icons/light-signal-deactivated-18.png': {
+            width: 18, 
+            height: 18, 
+            offset: 1896
         }
-    }, external_images = ['de-bue0-ds-repeated-42.png', 'de-bue0-ds-shortened-42.png', 'de-bue1-ds-repeated-42.png', 'de-bue1-ds-shortened-42.png', 'de-bue1-dv-repeated-42.png', 'de-bue1-dv-shortened-42.png', 'icons/de-bue5-ds-32.png', 'icons/de-ne2.png'], presence_tags = [], value_tags = ['ref', 'railway:signal:stop:form', 'railway:signal:whistle', 'railway:signal:stop', 'railway:signal:crossing', 'railway:signal:minor', 'railway:signal:combined:shortened', 'railway:signal:ring:only_transit', 'railway:signal:shunting:states', 'railway:signal:crossing_distant', 'railway:signal:main:function', 'railway:signal:crossing:repeated', 'railway:signal:minor:form', 'railway:signal:crossing_distant:shortened', 'railway:signal:distant', 'railway:signal:combined:form', 'railway:signal:distant:form', 'railway:signal:distant:shortened', 'railway:signal:shunting', 'railway', 'railway:signal:minor:height', 'railway:signal:crossing:shortened', 'railway:signal:main', 'railway:signal:station_distant', 'railway:signal:main:form', 'railway:signal:combined', 'railway:signal:combined:states', 'railway:signal:ring', 'railway:signal:crossing:form', 'railway:signal:train_protection', 'railway:signal:shunting:form', 'railway:signal:main:states', 'railway:signal:station_distant:form', 'railway:signal:distant:states', 'usage', 'railway:signal:distant:repeated'];
+    }, external_images = ['de-bue0-ds-repeated-42.png', 'de-bue0-ds-shortened-42.png', 'de-bue1-ds-repeated-42.png', 'de-bue1-ds-shortened-42.png', 'de-bue1-dv-repeated-42.png', 'de-bue1-dv-shortened-42.png', 'icons/de-bue5-ds-32.png', 'icons/de-ne2.png'], presence_tags = [], value_tags = ['ref', 'railway:signal:stop_demand:deactivated', 'railway:signal:whistle', 'railway:signal:stop', 'railway:signal:stop:form', 'railway:signal:crossing', 'railway:signal:minor', 'railway:signal:shunting', 'railway:signal:combined:shortened', 'railway:signal:speed_limit_distant:deactivated', 'railway:signal:distant:deactivated', 'railway:signal:ring:only_transit', 'railway:signal:shunting:states', 'railway:signal:crossing_distant:deactivated', 'railway:signal:crossing_distant', 'railway:signal:main:function', 'railway:signal:humping:deactivated', 'railway:signal:crossing:deactivated', 'railway:signal:wrong_road:deactivated', 'railway:signal:main_repeated:deactivated', 'railway:signal:minor:form', 'railway:signal:combined:deactivated', 'railway:signal:crossing_distant:shortened', 'railway:signal:distant', 'railway:signal:combined:form', 'railway:signal:brake_test:deactivated', 'railway:signal:distant:form', 'railway:signal:distant:shortened', 'railway:signal:minor:deactivated', 'railway:signal:minor_distant:deactivated', 'railway', 'railway:signal:minor:height', 'railway:signal:station_distant:form', 'railway:signal:crossing:shortened', 'railway:signal:main', 'railway:signal:combined:states', 'railway:signal:route_distant:deactivated', 'railway:signal:main:deactivated', 'railway:signal:speed_limit:deactivated', 'railway:signal:main:form', 'railway:signal:resetting_switch:deactivated', 'railway:signal:ring', 'railway:signal:crossing:form', 'railway:signal:crossing:repeated', 'railway:signal:train_protection', 'railway:signal:shunting:deactivated', 'railway:signal:short_route:deactivated', 'railway:signal:main:states', 'railway:signal:departure:deactivated', 'railway:signal:route:deactivated', 'railway:signal:shunting:form', 'railway:signal:distant:states', 'usage', 'railway:signal:distant:repeated', 'railway:signal:station_distant', 'railway:signal:combined'];
 
     MapCSS.loadStyle('signals', restyle, sprite_images, external_images, presence_tags, value_tags);
     MapCSS.preloadExternalImages('signals');

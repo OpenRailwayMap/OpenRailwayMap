@@ -117,6 +117,12 @@
 			"caption": "Ne 1 Trapeztafel"
 		},
 		{
+			"minzoom": 14,
+			"maxzoom": 19,
+			"icon": "icons/de-so106-16.png",
+			"caption": "So 106 Kreuztafel"
+		},
+		{
 			"minzoom": 17,
 			"maxzoom": 19,
 			"icon": "icons/de-ne5-ds301-16.png",
