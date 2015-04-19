@@ -55,7 +55,7 @@ Facilityinfo = function(params)
 					( \
 						SELECT ST_Transform(way, 4326) AS geom, tags->'name' AS name, tags->'uic_name' AS uicname, tags->'uic_ref' AS uicref, tags->'railway:ref' AS ref, tags->'railway' AS type, tags->'operator' AS operator, tags->'railway:station_category' AS stationcategory, osm_id AS id \
 						FROM "+prefix+"_point \
-						WHERE "+searchcondition+" ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) "+operator+" \
+						WHERE "+searchcondition+" ((tags->'railway'='station') OR (tags->'railway'='halt') OR (tags->'railway'='junction') OR (tags->'railway'='spur_junction') OR (tags->'railway'='yard') OR (tags->'railway'='crossover') OR (tags->'railway'='site') OR (tags->'railway'='service_station') OR (tags->'railway'='tram_stop')) "+operator+" \
 					) AS foo \
 					ORDER BY foo.stationcategory, NOT(LOWER(foo.name) = LOWER('"+params.name+"')), NOT(LOWER(foo.name) LIKE LOWER('"+params.name+" %')), NOT(LOWER(foo.name) LIKE LOWER('% "+params.name+"')), NOT(LOWER(foo.name) LIKE LOWER('"+params.name+"-%')), NOT(LOWER(foo.name) LIKE LOWER('%-"+params.name+"')), "+longnames+" CHAR_LENGTH(foo.name), foo.name;";
 };
