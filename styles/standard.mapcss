@@ -52,7 +52,10 @@ way|z9-[railway=razed][bridge=yes]::bridges,
 way|z9-[railway=proposed][bridge=yes]::bridges,
 way|z9-[railway=construction][bridge=yes]::bridges,
 way|z9-[railway=preserved][bridge=yes]::bridges,
-way|z9-[railway=narrow_gauge][bridge=yes]::bridges
+way|z9-[railway=narrow_gauge][bridge=yes]::bridges,
+way|z9-[railway=tram][bridge=yes]::bridges,
+way|z9-[railway=subway][bridge=yes]::bridges,
+way|z9-[railway=light_rail][bridge=yes]::bridges
 {
 	z-index: 1;
 	casing-width: 3.5; 
@@ -120,12 +123,15 @@ way[tunnel=yes]::tunnels
 /******************************************************************************/
 way[railway=rail][!service][!bridge][!tunnel], 
 way[railway=disused][!service][!bridge][!tunnel],
-way[railway=abandoned][!service][!bridge][!tunnel] , 
+way[railway=abandoned][!service][!bridge][!tunnel], 
 way[railway=razed][!service][!bridge][!tunnel], 
 way[railway=proposed][!service][!bridge][!tunnel], 
 way[railway=construction][!service][!bridge][!tunnel], 
 way[railway=preserved][!service][!bridge][!tunnel], 
-way[railway=narrow_gauge][!service][!bridge][!tunnel]
+way[railway=narrow_gauge][!service][!bridge][!tunnel],
+way[railway=tram][!service][!bridge][!tunnel],
+way[railway=subway][!service][!bridge][!tunnel],
+way[railway=light_rail][!service][!bridge][!tunnel]
 {
 	z-index: 10000;
 	text: eval(concat(tag("ref"), " ", tag("name")));
