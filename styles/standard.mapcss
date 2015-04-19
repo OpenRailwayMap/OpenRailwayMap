@@ -623,61 +623,6 @@ node|z16-[railway=switch][railway:switch=resetting]
 	text-halo-color: orange;
 }
 
-/****************/
-/* signal boxes */
-/****************/
-node|z14-16[railway=signal_box]
-{
-	z-index: 7000;
-	text: "railway:ref";
-	font-size: 11;
-	font-weight: bold;
-	text-color: #404040;
-	text-halo-radius: 1.5;
-	text-halo-color: #bfffb3;
-	text-position: auto;
-}
-
-area|z14-16[railway=signal_box]
-{
-	z-index: 7000;
-	text: "railway:ref";
-	font-size: 11;
-	font-weight: bold;
-	text-color: #404040;
-	text-halo-radius: 1.5;
-	text-halo-color: #bfffb3;
-	text-position: center;
-	color: #008206;
-	fill-color: #008206;
-}
-
-node|z17-[railway=signal_box]
-{
-	z-index: 7000;
-	text: "name";
-	font-size: 11;
-	font-weight: bold;
-	text-color: #404040;
-	text-halo-radius: 1.5;
-	text-halo-color: #bfffb3;
-	text-position: auto;
-}
-
-area|z17-[railway=signal_box]
-{
-	z-index: 7000;
-	text: "name";
-	font-size: 11;
-	font-weight: bold;
-	text-color: #404040;
-	text-halo-radius: 1.5;
-	text-halo-color: #bfffb3;
-	text-position: center;
-	color: #008206;
-	fill-color: #008206;
-}
-
 /**************/
 /* milestones */
 /**************/
