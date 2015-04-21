@@ -59,7 +59,9 @@ node|z14-[railway=signal]["railway:signal:brake_test:deactivated"=yes]::deactiva
 /*  - have no railway:signal:states=* tag  */
 /*******************************************/
 node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore][!"railway:signal:main:states"],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:main:states"]
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:main:states"],
+node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/],
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -80,9 +82,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=s
 /* DE main semaphore signals type Hp which */
 /*  - cannot display Hp 2                  */
 /*******************************************/
-
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]
+node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/],
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -126,7 +127,9 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=s
 /*  - have no railway:signal:states=* tag */
 /******************************************/
 node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light][!"railway:signal:main:states"],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:main:states"]
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:main:states"],
+node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/],
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -147,8 +150,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 /* DE main light signals type Hp which */
 /*  - cannot display Hp 2              */
 /***************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]
+node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/],
+node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/]
 {
 	z-index: 10000;
 	text: "ref";
