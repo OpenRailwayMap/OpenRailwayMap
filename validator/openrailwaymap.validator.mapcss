@@ -372,6 +372,16 @@ area[railway=level_crossing]
 	assertNoMatch: "node railway=crossing";
 }
 
+/* railway=flat_crossing is deprecated, use railway=railway_crossing instead. */
+node[railway=flat_crossing]
+{
+	throwError: "railway=flat_crossing is deprecated, use railway=railway_crossing instead.";
+	assertMatch: "node railway=flat_crossing" ;
+	assertNoMatch: "node railway=crossing";
+	assertNoMatch: "node railway=railway_crossing";
+	fixAdd: "railway=railway_crossing";
+}
+
 /* traffic_mode is deprecated */
 way[railway][traffic_mode]
 {
