@@ -867,3 +867,17 @@ node|z11-[railway=owner_change]
 	icon-width: 16;
 	icon-height: 16;
 }
+
+/**************/
+/* turntables */
+/**************/
+way|z11-[railway=turntable],
+area|z11-[railway=turntable],
+way|z11-[railway=traverser],
+area|z11-[railway=traverser]
+{
+	z-index: 880;
+	linejoin: round;
+	color: black;
+	fill-color: #FB8835;
+}
