@@ -146,10 +146,13 @@ way[railway=light_rail][!service][!bridge][!tunnel]
 	text-halo-color: white;
 }
 
-/********************************************/
-/* simple railways without service or usage */
-/********************************************/
-way|z10-[railway=rail][!usage][!service]
+/***************************************************************************************/
+/* simple railways without service or usage, and those which have no special rendering */
+/***************************************************************************************/
+way|z10-[railway=rail][!usage][!service],
+way|z10-[railway=rail][usage=tourism][!service],
+way|z10-[railway=rail][usage=military][!service],
+way|z10-[railway=rail][usage=test][!service]
 {
 	z-index: 400;
 	color: black;
@@ -420,10 +423,13 @@ way|z10-[railway=light_rail]
 	linejoin: butt;
 }
 
-/************************************************/
-/* narrow gauge tracks without service or usage */
-/************************************************/
-way|z9-[railway=narrow_gauge][!usage][!service]
+/*******************************************************************************************/
+/* narrow gauge tracks without service or usage, and those which have no special rendering */
+/*******************************************************************************************/
+way|z9-[railway=narrow_gauge][!usage][!service],
+way|z9-[railway=narrow_gauge][usage=tourism][!service],
+way|z9-[railway=narrow_gauge][usage=military][!service],
+way|z9-[railway=narrow_gauge][usage=test][!service]
 {
 	z-index: 1200;
 	color: black;
