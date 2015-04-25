@@ -874,16 +874,29 @@ node|z11-[railway=owner_change]
 	icon-height: 16;
 }
 
-/**************/
-/* turntables */
-/**************/
-way|z11-[railway=turntable],
-area|z11-[railway=turntable],
-way|z11-[railway=traverser],
-area|z11-[railway=traverser]
+/*****************************/
+/* turntables and traversers */
+/*****************************/
+way|z11-15[railway=turntable],
+area|z11-15[railway=turntable],
+way|z11-15[railway=traverser],
+area|z11-15[railway=traverser]
 {
 	z-index: 880;
 	linejoin: round;
-	color: black;
-	fill-color: #FB8835;
+	color: #ababab;
+	width: 2;
+	fill-color: #ababab;
+}
+
+way|z16-[railway=turntable],
+area|z16-[railway=turntable],
+way|z16-[railway=traverser],
+area|z16-[railway=traverser]
+{
+	z-index: 880;
+	linejoin: round;
+	color: #808080;
+	width: 2;
+	fill-color: #ababab;
 }
