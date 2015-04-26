@@ -271,6 +271,12 @@
 			"maxzoom": 21,
 			"icon": "icons/de-ra10-16.png",
 			"caption": "Ra 10 Rangierhalttafel / Verschubhalttafel"
+		},
+		{
+			"minzoom": 13,
+			"maxzoom": 19,
+			"symbol": "<text x=\"0\" y=\"11\" style=\"font-family: Arial; font-size: 11px; fill: black; stroke: #008206; stroke-width: 0.5;\">Dormagen Df</text>",
+			"caption": "Signal box"
 		}
 	]
 }
