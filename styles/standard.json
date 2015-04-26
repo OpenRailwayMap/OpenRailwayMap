@@ -263,12 +263,6 @@
 		{
 			"minzoom": 11,
 			"maxzoom": 19,
-			"symbol": "<text x=\"0\" y=\"11\" style=\"font-family: Arial; font-size: 11px; fill: black; stroke: #008206; stroke-width: 0.5;\">Dormagen Df</text>",
-			"caption": "Signal box"
-		},
-		{
-			"minzoom": 11,
-			"maxzoom": 19,
 			"symbol": "<text x=\"0\" y=\"12\" style=\"font-family: Arial Black; font-size: 12px; fill: black; font-weight: bold; stroke: white; stroke-width: 0.5;\">26.4</text>",
 			"caption": "Milestone"
 		},
