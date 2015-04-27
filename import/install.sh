@@ -31,8 +31,7 @@ cd $PROJECTPATH/import/bin
 git clone https://github.com/openstreetmap/osm2pgsql.git
 cd osm2pgsql
 ./autogen.sh
-./configure
-sed -i 's/-g -O2/-O2 -march=native -fomit-frame-pointer/' Makefile
+CFLAGS="-O2 -march=native -fomit-frame-pointer" CXXFLAGS="-O2 -march=native -fomit-frame-pointer" ./configure
 make
 cd ..
 
