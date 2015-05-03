@@ -420,3 +420,67 @@ node["railway:signal:train_protection"="DE-ESO:ne14"]["railway:signal:train_prot
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp";
 	fixAdd: "railway:signal:train_protection:type=block_marker";
 }
+
+/* combined signals include main signal functions, so separate main signals do not make sense */
+node["railway:signal:combined"]["railway:signal:main"]
+{
+	throwError: "main and combined signal at the same place";
+	assertMatch: "node railway=signal railway:signal:combined=DE-ESO:ks railway:signal:main=DE-ESO:hp";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:main=DE-ESO:hp";
+	assertNoMatch: "node railway=signal railway:signal:combined=DE-ESO:ks railway:signal:minor=DE-ESO:sh1";
+}
+
+/* combined signals include distant signal functions, so separate distant signals do not make sense */
+node["railway:signal:combined"]["railway:signal:distant"]
+{
+	throwError: "main and combined signal at the same place";
+	assertMatch: "node railway=signal railway:signal:combined=DE-ESO:ks railway:signal:distant=DE-ESO:vr";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:main=DE-ESO:hp";
+	assertNoMatch: "node railway=signal railway:signal:combined=DE-ESO:ks railway:signal:minor=DE-ESO:sh1";
+}
+
+/* a German distant signal can't be a repeated one if at the same pole as a main signal, as the prior distant
+ * signal would refer to this main signal */
+node["railway:signal:main"="DE-ESO:hp"]["railway:signal:distant:repeated"="yes"]
+{
+	throwError: "main and repeated distant signal can not be at the same place";
+	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
+	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=no";
+	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
+	fixAdd: "railway:signal:distant:shortened=yes";
+	fixRemove: "railway:signal:distant:repeated";
+}
+
+/* German Ks signals can't be distant and main at the same place */
+node["railway:signal:main"="DE-ESO:ks"]["railway:signal:distant"],
+node["railway:signal:main"="ks"]["railway:signal:distant"],
+node["railway:signal:main"]["railway:signal:distant"="DE-ESO:ks"],
+node["railway:signal:main"]["railway:signal:distant"="ks"]
+{
+	throwError: "German Ks signals can't have main and distant signal at the same place, try a combined signal instead";
+	assertMatch: "node railway=signal railway:signal:main=DE-ESO:ks railway:signal:distant=DE-ESO:vr";
+	assertMatch: "node railway=signal railway:signal:main=ks railway:signal:distant=DE-ESO:vr";
+	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:ks";
+	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=ks";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:main=DE-ESO:hp";
+	assertNoMatch: "node railway=signal railway:signal:combined=DE-ESO:ks railway:signal:minor=DE-ESO:sh1";
+}
+
+/* signals should have ref, and not railway:ref */
+node[railway=signal]["railway:ref"][!ref]
+{
+	throwError: "signals should be tagged with ref, not railway:ref";
+	assertMatch: "node railway=signal railway:ref=N1";
+	assertNoMatch: "node railway=signal railway:ref=N1 ref=N1";
+	assertNoMatch: "node railway=signal ref=N1";
+	fixChangeKey: "railway:ref=>ref";
+}
+node[railway=signal]["railway:ref"][ref]
+{
+	throwError: "signals should be tagged with ref, not railway:ref";
+	assertMatch: "node railway=signal railway:ref=N1 ref=N1";
+	assertNoMatch: "node railway=signal railway:ref=N1";
+	assertNoMatch: "node railway=signal ref=N1";
+	fixChangeKey: "railway:ref=>ref";
+}
