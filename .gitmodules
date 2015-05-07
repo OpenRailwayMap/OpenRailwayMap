@@ -1,3 +1,6 @@
 [submodule "renderer"]
 	path = renderer
 	url = https://github.com/rurseekatze/node-tileserver.git
+[submodule "blog"]
+	path = blog
+	url = https://github.com/rurseekatze/openrailwaymap-blog.git
