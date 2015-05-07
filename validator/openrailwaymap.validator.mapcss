@@ -20,12 +20,12 @@ way[railway][usage][usage!=industrial][usage!=military][service]
 	assertNoMatch: "way railway=rail usage=military service=yard";
 }
 
-/* Station mapped as way or area */
-way[railway=station], area[railway=station]
+/* Station mapped as way or relation */
+way[railway=station], relation[railway=station]
 {
 	throwError: "Station mapped as a way, but should be mapped as a node";
 	assertMatch: "way railway=station";
-	assertMatch: "area railway=station";
+	assertMatch: "relation railway=station";
 	assertNoMatch: "node railway=station";
 }
 
@@ -43,7 +43,7 @@ way[railway][!operator]
 	throwOther: "Track without with operator";
 	assertMatch: "way railway=rail";
 	assertNoMatch: "node railway=rail operator=SNCF";
-	assertNoMatch: "area railway=rail";
+	assertNoMatch: "relation railway=rail";
 	assertNoMatch: "way railway=rail operator=SNCF";
 }
 
@@ -55,7 +55,7 @@ way[railway][traffic_mode]
 	assertMatch: "way railway=rail traffic_mode=passenger";
 	assertNoMatch: "node railway=rail";
 	assertNoMatch: "way railway=rail";
-	assertNoMatch: "area railway=rail";
+	assertNoMatch: "relation railway=rail";
 	assertNoMatch: "way railway=rail railway:traffic_mode=passenger";
 }
 
@@ -97,7 +97,7 @@ way[railway][!workrules]
 	throwOther: "Track without with workrules";
 	assertMatch: "way railway=rail";
 	assertNoMatch: "node railway=rail workrules=EBO";
-	assertNoMatch: "area railway=rail";
+	assertNoMatch: "relation railway=rail";
 	assertNoMatch: "way railway=rail workrules=EBO";
 }
 
@@ -114,7 +114,7 @@ way[railway][workrules=BOStrab]
 	assertMatch: "way railway=rail workrules=BOStrab";
 	assertNoMatch: "node railway=rail";
 	assertNoMatch: "way railway=rail";
-	assertNoMatch: "area railway=rail";
+	assertNoMatch: "relation railway=rail";
 	assertNoMatch: "way railway=rail workrules=DE:EBO";
 	assertNoMatch: "way railway=rail workrules=DE:ESBO";
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
@@ -128,7 +128,7 @@ way[railway][workrules=BOA]
 	assertMatch: "way railway=rail workrules=BOA";
 	assertNoMatch: "node railway=rail";
 	assertNoMatch: "way railway=rail";
-	assertNoMatch: "area railway=rail";
+	assertNoMatch: "relation railway=rail";
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
 }
 
@@ -361,13 +361,13 @@ way[railway][tracks!=1][tracks][service]
 /* crossings and level crossings should be mapped as nodes */
 way[railway=crossing],
 way[railway=level_crossing],
-area[railway=crossing],
-area[railway=level_crossing]
+relation[railway=crossing],
+relation[railway=level_crossing]
 {
 	throwError: "Crossings and level crossings should be mapped as nodes";
 	assertMatch: "way railway=level_crossing railway:position:exact=2.4";
 	assertMatch: "way railway=crossing railway:position:exact=2.4";
-	assertMatch: "area railway=crossing railway:position:exact=2.4";
+	assertMatch: "relation railway=crossing railway:position:exact=2.4";
 	assertNoMatch: "node railway=level_crossing";
 	assertNoMatch: "node railway=crossing";
 }
