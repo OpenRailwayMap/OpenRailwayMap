@@ -1431,6 +1431,68 @@ node|z14-[railway=signal]["railway:signal:main"="AT-V2:trapeztafel"]["railway:si
 	allow-overlap: true;
 }
 
+/****************************************/
+/* DE Hamburger Hochbahn main signal    */
+/* without railway:signal:main:states=* */
+/****************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-HHA:h"]["railway:signal:main:form"=light][!"railway:signal:main:states"]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hha-h0-32.png";
+	icon-width: 6;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*************************************/
+/* DE Hamburger Hochbahn main signa  */
+/* with railway:signal:main:states=* */
+/*************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-HHA:h"]["railway:signal:main:form"=light]["railway:signal:main:states"]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hha-h1-32.png";
+	icon-width: 6;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/****************************************/
+/* DE Hamburger Hochbahn distant signal */
+/****************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-HHA:v"]["railway:signal:distant:form"=light]
+{
+	z-index: 8500;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de-hha-v1-32.png";
+	icon-width: 5;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /******************/
 /* Railway tracks */
 /******************/
