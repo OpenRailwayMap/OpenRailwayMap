@@ -218,76 +218,61 @@ way|z10-[railway=rail][!usage][service=crossover]
 /*********************************************/
 /* branch railways, service tag not rendered */
 /*********************************************/
-way|z2-5[railway=rail][usage=branch][!service]
+way|z2-[railway=rail][usage=branch][!service]
 {
 	z-index: 1000;
 	color: #DACA00;
 	width: 1.5;
 	linejoin: round;
 }
+/* thicker lines in higher zoom levels */
 way|z6-8[railway=rail][usage=branch][!service]
 {
-	z-index: 1000;
-	color: #DACA00;
 	width: 2.5;
-	linejoin: round;
 }
 way|z9-[railway=rail][usage=branch][!service]
 {
-	z-index: 1000;
-	color: #DACA00;
 	width: 3.5;
-	linejoin: round;
 }
 
 /*******************************************/
 /* main railways, service tag not rendered */
 /*******************************************/
-way|z2-5[railway=rail][usage=main][!service]
+way|z2-[railway=rail][usage=main][!service]
 {
 	z-index: 1100;
 	color: #FF8100;
 	width: 1.5;
 	linejoin: round;
 }
+/* thicker lines in higher zoom levels */
 way|z6-8[railway=rail][usage=main][!service]
 {
-	z-index: 1100;
-	color: #FF8100;
 	width: 2.5;
-	linejoin: round;
 }
 way|z9-[railway=rail][usage=main][!service]
 {
-	z-index: 1100;
-	color: #FF8100;
 	width: 3.5;
-	linejoin: round;
 }
 
 /************************************************/
 /* highspeed railways, service tag not rendered */
 /************************************************/
-way|z2-5[railway=rail][usage=main][highspeed=yes][!service]
+way|z2-[railway=rail][usage=main][highspeed=yes][!service]
 {
 	z-index: 2000;
 	color: #FF0C00;
 	width: 1.5;
 	linejoin: round;
 }
+/* thicker lines in higher zoom levels */
 way|z6-8[railway=rail][usage=main][highspeed=yes][!service]
 {
-	z-index: 2000;
-	color: #FF0C00;
 	width: 2.5;
-	linejoin: round;
 }
 way|z9-[railway=rail][usage=main][highspeed=yes][!service]
 {
-	z-index: 2000;
-	color: #FF0C00;
 	width: 3.5;
-	linejoin: round;
 }
 
 /*******************************************/
@@ -657,20 +642,7 @@ node|z11-[railway=milestone]
 /************/
 /* stations */
 /************/
-node|z11-[railway=station]
-{
-	z-index: 30000;
-	text: "name";
-	text-position: auto;
-	font-family: Arial Black;
-	font-size: 12;
-	text-color: blue;
-	font-weight: bold;
-	text-halo-radius: 1.5;
-	text-halo-color: white;
-}
-
-node|z1-11[railway=station]
+node[railway=station]
 {
 	z-index: 30000;
 	text: "railway:ref";
@@ -681,25 +653,17 @@ node|z1-11[railway=station]
 	font-weight: bold;
 	text-halo-radius: 1.5;
 	text-halo-color: white;
+}
+/* show full station name in higher zoom levels */
+node|z11-[railway=station]
+{
+	text: "name";
 }
 
 /*********/
 /* yards */
 /*********/
-node|z11-[railway=yard]
-{
-	z-index: 25000;
-	text: "name";
-	text-position: auto;
-	font-size: 12;
-	text-color: #87491D;
-	font-weight: bold;
-	font-family: Arial;
-	text-halo-radius: 1.5;
-	text-halo-color: #F1F1F1;
-}
-
-node|z1-11[railway=yard]
+node[railway=yard]
 {
 	z-index: 25000;
 	text: "railway:ref";
@@ -710,25 +674,17 @@ node|z1-11[railway=yard]
 	font-family: Arial;
 	text-halo-radius: 1.5;
 	text-halo-color: #F1F1F1;
+}
+/* show full yard name in higher zoom levels */
+node|z11-[railway=yard]
+{
+	text: "name";
 }
 
 /*********/
 /* halts */
 /*********/
-node|z11-[railway=halt]
-{
-	z-index: 20000;
-	text: "name";
-	text-position: auto;
-	font-size: 12;
-	text-color: blue;
-	font-weight: bold;
-	font-family: Arial;
-	text-halo-radius: 1.5;
-	text-halo-color: white;
-}
-
-node|z1-11[railway=halt]
+node[railway=halt]
 {
 	z-index: 20000;
 	text: "railway:ref";
@@ -739,29 +695,19 @@ node|z1-11[railway=halt]
 	font-family: Arial;
 	text-halo-radius: 1.5;
 	text-halo-color: white;
+}
+/* show full halt name in higher zoom levels */
+node|z11-[railway=halt]
+{
+	text: "name";
 }
 
 /**********************************************/
 /* junctions, crossovers and service stations */
 /**********************************************/
-node|z11-[railway=junction],
-node|z11-[railway=service_station],
-node|z11-[railway=crossover]
-{
-	z-index: 15000;
-	text: "name";
-	text-position: auto;
-	font-size: 12;
-	text-color: #616161;
-	font-weight: bold;
-	font-family: Arial;
-	text-halo-radius: 1.5;
-	text-halo-color: #F1F1F1;
-}
-
-node|z1-11[railway=junction],
-node|z1-11[railway=service_station],
-node|z1-11[railway=crossover]
+node[railway=junction],
+node[railway=service_station],
+node[railway=crossover]
 {
 	z-index: 15000;
 	text: "railway:ref";
@@ -772,25 +718,19 @@ node|z1-11[railway=crossover]
 	font-family: Arial;
 	text-halo-radius: 1.5;
 	text-halo-color: #F1F1F1;
+}
+/* show full station name in higher zoom levels */
+node|z11-[railway=junction],
+node|z11-[railway=service_station],
+node|z11-[railway=crossover]
+{
+	text: "name";
 }
 
 /*********/
 /* sites */
 /*********/
-node|z11-[railway=site]
-{
-	z-index: 10000;
-	text: "name";
-	text-position: auto;
-	font-size: 12;
-	text-color: #616161;
-	font-weight: bold;
-	font-family: Arial;
-	text-halo-radius: 1.5;
-	text-halo-color: #F1F1F1;
-}
-
-node|z1-11[railway=site]
+node[railway=site]
 {
 	z-index: 10000;
 	text: "railway:ref";
@@ -801,6 +741,11 @@ node|z1-11[railway=site]
 	font-family: Arial;
 	text-halo-radius: 1.5;
 	text-halo-color: #F1F1F1;
+}
+/* show full site name in higher zoom levels */
+node|z11-[railway=site]
+{
+	text: "name";
 }
 
 /**************/
