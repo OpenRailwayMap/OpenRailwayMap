@@ -53,9 +53,9 @@ way|z9-[railway=proposed][bridge=yes]::bridges,
 way|z9-[railway=construction][bridge=yes]::bridges,
 way|z9-[railway=preserved][bridge=yes]::bridges,
 way|z9-[railway=narrow_gauge][bridge=yes]::bridges,
-way|z9-[railway=tram][bridge=yes]::bridges,
-way|z9-[railway=subway][bridge=yes]::bridges,
-way|z9-[railway=light_rail][bridge=yes]::bridges
+way|z11-[railway=tram][bridge=yes]::bridges,
+way|z10-[railway=subway][bridge=yes]::bridges,
+way|z10-[railway=light_rail][bridge=yes]::bridges
 {
 	z-index: 1;
 	casing-width: 3.5;
