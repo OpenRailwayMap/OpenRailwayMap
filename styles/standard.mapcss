@@ -123,17 +123,17 @@ way[tunnel=yes]::tunnels
 /* refs and names                                                             */
 /* We have to exclude bridge and tunnels in order to prevent a label collison */
 /******************************************************************************/
-way[railway=rail][!service][!bridge][!tunnel],
-way[railway=disused][!service][!bridge][!tunnel],
-way[railway=abandoned][!service][!bridge][!tunnel],
-way[railway=razed][!service][!bridge][!tunnel],
-way[railway=proposed][!service][!bridge][!tunnel],
-way[railway=construction][!service][!bridge][!tunnel],
-way[railway=preserved][!service][!bridge][!tunnel],
-way[railway=narrow_gauge][!service][!bridge][!tunnel],
-way[railway=tram][!service][!bridge][!tunnel],
-way[railway=subway][!service][!bridge][!tunnel],
-way[railway=light_rail][!service][!bridge][!tunnel]
+way|z2-[railway=rail][!service][!bridge][!tunnel],
+way|z9-[railway=disused][!service][!bridge][!tunnel],
+way|z9-[railway=abandoned][!service][!bridge][!tunnel],
+way|z9-[railway=razed][!service][!bridge][!tunnel],
+way|z9-[railway=proposed][!service][!bridge][!tunnel],
+way|z9-[railway=construction][!service][!bridge][!tunnel],
+way|z9-[railway=preserved][!service][!bridge][!tunnel],
+way|z9-[railway=narrow_gauge][!service][!bridge][!tunnel],
+way|z11-[railway=tram][!service][!bridge][!tunnel],
+way|z10-[railway=subway][!service][!bridge][!tunnel],
+way|z10-[railway=light_rail][!service][!bridge][!tunnel]
 {
 	z-index: 10000;
 	text: eval(concat(tag("ref"), " ", tag("name")));
