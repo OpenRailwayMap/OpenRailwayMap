@@ -93,7 +93,17 @@ way|z9-[railway=razed]
 /*************************************************************/
 /* tunnel label (not render if the track has a track number) */
 /*************************************************************/
-way[tunnel=yes][!"railway:track_ref"]::tunnels
+way|z9-[railway=rail][tunnel=yes][!"railway:track_ref"]::tunnels,
+way|z9-[railway=disused][tunnel=yes][!"railway:track_ref"]::tunnels,
+way|z9-[railway=abandoned][tunnel=yes][!"railway:track_ref"]::tunnels,
+way|z9-[railway=razed][tunnel=yes][!"railway:track_ref"]::tunnels,
+way|z9-[railway=proposed][tunnel=yes][!"railway:track_ref"]::tunnels,
+way|z9-[railway=construction][tunnel=yes][!"railway:track_ref"]::tunnels,
+way|z9-[railway=preserved][tunnel=yes][!"railway:track_ref"]::tunnels,
+way|z9-[railway=narrow_gauge][tunnel=yes][!"railway:track_ref"]::tunnels,
+way|z11-[railway=tram][tunnel=yes][!"railway:track_ref"]::tunnels,
+way|z10-[railway=subway][tunnel=yes][!"railway:track_ref"]::tunnels,
+way|z10-[railway=light_rail][tunnel=yes][!"railway:track_ref"]::tunnels
 {
 	z-index: 4001;
 	text-position: line;
