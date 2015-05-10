@@ -109,7 +109,17 @@ way[tunnel=yes][!"railway:track_ref"]::tunnels
 /*************************/
 /* tunnels color (white) */
 /*************************/
-way[tunnel=yes]::tunnels
+way|z2-[railway=rail][tunnel=yes]::tunnels,
+way|z9-[railway=disused][tunnel=yes]::tunnels,
+way|z9-[railway=abandoned][tunnel=yes]::tunnels,
+way|z9-[railway=razed][tunnel=yes]::tunnels,
+way|z9-[railway=proposed][tunnel=yes]::tunnels,
+way|z9-[railway=construction][tunnel=yes]::tunnels,
+way|z9-[railway=preserved][tunnel=yes]::tunnels,
+way|z9-[railway=narrow_gauge][tunnel=yes]::tunnels,
+way|z11-[railway=tram][tunnel=yes]::tunnels,
+way|z10-[railway=subway][tunnel=yes]::tunnels,
+way|z10-[railway=light_rail][tunnel=yes]::tunnels
 {
 	z-index: 4000;
 	width: 6;
