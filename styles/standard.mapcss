@@ -15,7 +15,7 @@ Format details:
 meta
 {
 	title: "OpenRailwayMap infrastructure standard layer";
-	version: "0"; 
+	version: "0";
 	description: "Style for a infrastructure standard layer railroad network map.";
 	author: "rurseekatze";
 	link: "http://wiki.openstreetmap.org/wiki/OpenRailwayMap";
@@ -34,14 +34,14 @@ canvas
 way|z2-5[railway=rail][bridge=yes]::bridges
 {
 	z-index: 1;
-	casing-width: 1.5; 
+	casing-width: 1.5;
 	casing-color: #797979;
 	linejoin: butt;
 }
 way|z6-8[railway=rail][bridge=yes]::bridges
 {
 	z-index: 1;
-	casing-width: 2.5; 
+	casing-width: 2.5;
 	casing-color: #797979;
 	linejoin: butt;
 }
@@ -58,7 +58,7 @@ way|z9-[railway=subway][bridge=yes]::bridges,
 way|z9-[railway=light_rail][bridge=yes]::bridges
 {
 	z-index: 1;
-	casing-width: 3.5; 
+	casing-width: 3.5;
 	casing-color: #797979;
 	linejoin: butt;
 }
@@ -78,7 +78,9 @@ way|z12-[bridge=yes]::bridges
 /*******************************************/
 /* transparent casing of historic railways */
 /*******************************************/
-way|z9-[railway=disused], way|z9-[railway=abandoned], way|z9-[railway=razed]
+way|z9-[railway=disused],
+way|z9-[railway=abandoned],
+way|z9-[railway=razed]
 {
 	z-index: 10;
 	casing-color: black;
@@ -110,7 +112,7 @@ way[tunnel=yes][!"railway:track_ref"]::tunnels
 way[tunnel=yes]::tunnels
 {
 	z-index: 4000;
-	width: 6; 
+	width: 6;
 	color: white;
 	opacity: 0.6;
 	linecap: butt;
@@ -119,15 +121,15 @@ way[tunnel=yes]::tunnels
 
 /******************************************************************************/
 /* refs and names                                                             */
-/* We have to exclude bridge and tunnels in order to prevent a label collison */ 
+/* We have to exclude bridge and tunnels in order to prevent a label collison */
 /******************************************************************************/
-way[railway=rail][!service][!bridge][!tunnel], 
+way[railway=rail][!service][!bridge][!tunnel],
 way[railway=disused][!service][!bridge][!tunnel],
-way[railway=abandoned][!service][!bridge][!tunnel], 
-way[railway=razed][!service][!bridge][!tunnel], 
-way[railway=proposed][!service][!bridge][!tunnel], 
-way[railway=construction][!service][!bridge][!tunnel], 
-way[railway=preserved][!service][!bridge][!tunnel], 
+way[railway=abandoned][!service][!bridge][!tunnel],
+way[railway=razed][!service][!bridge][!tunnel],
+way[railway=proposed][!service][!bridge][!tunnel],
+way[railway=construction][!service][!bridge][!tunnel],
+way[railway=preserved][!service][!bridge][!tunnel],
 way[railway=narrow_gauge][!service][!bridge][!tunnel],
 way[railway=tram][!service][!bridge][!tunnel],
 way[railway=subway][!service][!bridge][!tunnel],
@@ -144,10 +146,13 @@ way[railway=light_rail][!service][!bridge][!tunnel]
 	text-halo-color: white;
 }
 
-/********************************************/
-/* simple railways without service or usage */
-/********************************************/
-way|z10-[railway=rail][!usage][!service]
+/***************************************************************************************/
+/* simple railways without service or usage, and those which have no special rendering */
+/***************************************************************************************/
+way|z10-[railway=rail][!usage][!service],
+way|z10-[railway=rail][usage=tourism][!service],
+way|z10-[railway=rail][usage=military][!service],
+way|z10-[railway=rail][usage=test][!service]
 {
 	z-index: 400;
 	color: black;
@@ -299,7 +304,10 @@ way|z10-[railway=rail][usage=industrial][!service]
 /*************************************************/
 /* industrial railways with various service tags */
 /*************************************************/
-way|z10-[railway=rail][usage=industrial][service=siding], way|z10-[railway=rail][usage=industrial][service=spur], way|z10-[railway=rail][usage=industrial][service=yard], way|z10-[railway=rail][usage=industrial][service=crossover]
+way|z10-[railway=rail][usage=industrial][service=siding],
+way|z10-[railway=rail][usage=industrial][service=spur],
+way|z10-[railway=rail][usage=industrial][service=yard],
+way|z10-[railway=rail][usage=industrial][service=crossover]
 {
 	z-index: 850;
 	color: #87491D;
@@ -415,10 +423,13 @@ way|z10-[railway=light_rail]
 	linejoin: butt;
 }
 
-/************************************************/
-/* narrow gauge tracks without service or usage */
-/************************************************/
-way|z9-[railway=narrow_gauge][!usage][!service]
+/*******************************************************************************************/
+/* narrow gauge tracks without service or usage, and those which have no special rendering */
+/*******************************************************************************************/
+way|z9-[railway=narrow_gauge][!usage][!service],
+way|z9-[railway=narrow_gauge][usage=tourism][!service],
+way|z9-[railway=narrow_gauge][usage=military][!service],
+way|z9-[railway=narrow_gauge][usage=test][!service]
 {
 	z-index: 1200;
 	color: black;
@@ -555,7 +566,10 @@ way|z9-[railway=narrow_gauge][usage=industrial][!service]
 /**************************************************************/
 /* narrow gauge industrial railways with various service tags */
 /**************************************************************/
-way|z9-[railway=narrow_gauge][usage=industrial][service=siding], way|z9-[railway=narrow_gauge][usage=industrial][service=spur], way|z9-[railway=narrow_gauge][usage=industrial][service=yard], way|z9-[railway=narrow_gauge][usage=industrial][service=crossover]
+way|z9-[railway=narrow_gauge][usage=industrial][service=siding],
+way|z9-[railway=narrow_gauge][usage=industrial][service=spur],
+way|z9-[railway=narrow_gauge][usage=industrial][service=yard],
+way|z9-[railway=narrow_gauge][usage=industrial][service=crossover]
 {
 	z-index: 830;
 	color: #87491D;
@@ -569,7 +583,8 @@ way|z9-[railway=narrow_gauge][usage=industrial][service=siding], way|z9-[railway
 /************/
 /* switches */
 /************/
-node|z16-[railway=switch][railway:local_operated=no], node|z16-[railway=switch][!railway:local_operated]
+node|z16-[railway=switch][railway:local_operated=no],
+node|z16-[railway=switch][!railway:local_operated]
 {
 	z-index: 5000;
 	symbol-shape: circle;
@@ -729,7 +744,9 @@ node|z1-11[railway=halt]
 /**********************************************/
 /* junctions, crossovers and service stations */
 /**********************************************/
-node|z11-[railway=junction], node|z11-[railway=service_station], node|z11-[railway=crossover]
+node|z11-[railway=junction],
+node|z11-[railway=service_station],
+node|z11-[railway=crossover]
 {
 	z-index: 15000;
 	text: "name";
@@ -742,7 +759,9 @@ node|z11-[railway=junction], node|z11-[railway=service_station], node|z11-[railw
 	text-halo-color: #F1F1F1;
 }
 
-node|z1-11[railway=junction], node|z1-11[railway=service_station], node|z1-11[railway=crossover]
+node|z1-11[railway=junction],
+node|z1-11[railway=service_station],
+node|z1-11[railway=crossover]
 {
 	z-index: 15000;
 	text: "railway:ref";
