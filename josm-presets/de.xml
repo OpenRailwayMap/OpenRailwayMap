@@ -193,7 +193,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item de.name="Hauptgleis" name="Siding Track" icon="siding.png" type="way">
+			<item de.name="Hauptgleis" name="Siding Track" icon="siding-32.png" type="way">
 				<label text="Siding tracks inside stations which are no yard or spur tracks. Every track is mapped individually." de.text="Nicht durchgehendes Hauptgleis in einem Bahnhof und alle sonstigen Gleise, die weder durchgehendes Hauptgleis, noch Nebengleis, Anschlussgleis, Abstellgleis oder Überleitgleis sind. Jedes Gleis wird einzeln erfasst." />
 				<space />
 				<key key="railway"
@@ -327,7 +327,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item de.name="Nebengleis / Abstellgleis" name="Yard Track" icon="yard.png" type="way">
+			<item de.name="Nebengleis / Abstellgleis" name="Yard Track" icon="yard-track-32.png" type="way">
 				<label text="Yard tracs. Every track is mapped individually." de.text="Abstellgleise in Rangier-, Güter- oder Betriebsbahnhöfen, auf denen Züge zusammengestellt und Wagen abgestellt werden. Jedes Gleis wird einzeln erfasst." />
 				<space />
 				<key key="railway"
@@ -451,7 +451,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item de.name="Anschluss- oder Verladegleis" name="Spur Track" icon="spur.png" type="way">
+			<item de.name="Anschluss- oder Verladegleis" name="Spur Track" icon="spur-25.png" type="way">
 				<label text="Short tracks connecting companies to the nearby railway line" de.text="Kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen oder Verladegleise in Industrieanlagen." />
 				<space />
 				<key key="railway"
@@ -570,7 +570,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item de.name="Überleitgleis" name="Crossover Track" icon="siding.png" type="way">
+			<item de.name="Überleitgleis" name="Crossover Track" icon="crossover-track-28.png" type="way">
 				<label text="Crossover track which makes switching between left and right track on double-tracked railway lines possible." de.text="Überleitgleis, das den Wechsel zwischen zwei Gleisen einer Strecke ermöglicht." />
 				<space />
 				<key key="railway"
@@ -1287,7 +1287,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item de.name="U-Bahngleis" name="Subway/Underground Railway" icon="subway.png" type="way">
+			<item de.name="U-Bahngleis" name="Subway/Underground Railway" icon="subway-32.png" type="way">
 				<label text="Subway tracks. May run overground but separated from car traffic. Every track is mapped individually. Additionally you can choose 'Tunnel' if it is underground." de.text="Unterirdisch verlegte Stadt- und Schnellbahnen, teilweise auch oberirdischer Verlauf möglich. Jedes Gleis wird einzeln erfasst. Zusätzlich noch im Menü 'Tunnel' auswählen!" />
 				<space />
 				<key key="railway"
@@ -1540,7 +1540,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item de.name="Geplantes Gleis" name="Proposed Track" icon="proposed.png" type="way">
+			<item de.name="Geplantes Gleis" name="Proposed Track" icon="proposed-32.png" type="way">
 				<label text="Proposed track which has not been built yet." de.text="Ein Gleis, dessen Bau geplant ist." />
 				<space />
 				<key key="railway"
@@ -2373,7 +2373,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item de.name="Brücke" name="Brücke" icon="bridge.png" type="way">
+			<item de.name="Brücke" name="Brücke" icon="bridge-32.png" type="way">
 				<key key="bridge"
 					value="yes" />
 				<key key="layer"
@@ -2394,7 +2394,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item de.name="Tunnel" name="Tunnel" icon="tunnel.png" type="way">
+			<item de.name="Tunnel" name="Tunnel" icon="tunnel-32.png" type="way">
 				<key key="tunnel"
 					value="yes" />
 				<key key="layer"
@@ -2416,7 +2416,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item de.name="Prellbock" name="Buffer Stop" icon="bufferstop.png" type="node">
+			<item de.name="Prellbock" name="Buffer Stop" icon="buffer_stop-32.png" type="node">
 				<key key="railway"
 					value="buffer_stop" />
 				<key key="railway:signal:position"
@@ -2824,7 +2824,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Freight Station" de.name="Güterbahnhof/Rangierbahnhof" icon="yard.png" type="node">
+			<item name="Freight Station" de.name="Güterbahnhof/Rangierbahnhof" icon="yard-32.png" type="node">
 				<label text="Güterbahnhof/Rangierbahnhof" />
 				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
@@ -2906,7 +2906,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Juction" de.name="Abzweig, Anst, Awanst" icon="junction.png" type="node">
+			<item name="Juction" de.name="Abzweig, Anst, Awanst" icon="junction-25.png" type="node">
 				<label text="Abzweig, Anschlusstelle oder Ausweichanschlusstelle" />
 				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
@@ -2948,7 +2948,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Crossover" de.name="Überleitstelle" icon="crossover.png" type="node">
+			<item name="Crossover" de.name="Überleitstelle" icon="crossover-28.png" type="node">
 				<label text="Überleitstelle" />
 				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
