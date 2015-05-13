@@ -238,8 +238,8 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hl][
 /* DE main light signals type Hl which */
 /*  - cannot display Hl 3b and Hl 2    */
 /***************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl(2|3b).*/]["railway:signal:main:states"=~/.*hl3a.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl(2|3b).*/]["railway:signal:main:states"=~/.*hl3a.*/]
 {
 	z-index: 10000;
 	text: "ref";
