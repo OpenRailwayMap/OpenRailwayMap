@@ -1499,7 +1499,7 @@ way|z2-[railway=rail][usage=branch]
 /****************/
 /* signal boxes */
 /****************/
-node|z13-16[railway=signal_box]
+node|z13-[railway=signal_box]
 {
 	z-index: 7000;
 	text: "railway:ref";
@@ -1510,37 +1510,16 @@ node|z13-16[railway=signal_box]
 	text-halo-color: #bfffb3;
 	text-position: auto;
 }
-
-area|z13-16[railway=signal_box]
-{
-	z-index: 7000;
-	text: "railway:ref";
-	font-size: 11;
-	font-weight: bold;
-	text-color: #404040;
-	text-halo-radius: 1.5;
-	text-halo-color: #bfffb3;
-	text-position: center;
-	color: #008206;
-	fill-color: #008206;
-}
-
+/* show full signal_box name in higher zoom levels */
 node|z17-[railway=signal_box]
 {
-	z-index: 7000;
 	text: "name";
-	font-size: 11;
-	font-weight: bold;
-	text-color: #404040;
-	text-halo-radius: 1.5;
-	text-halo-color: #bfffb3;
-	text-position: auto;
 }
 
-area|z17-[railway=signal_box]
+area|z13-[railway=signal_box]
 {
 	z-index: 7000;
-	text: "name";
+	text: "railway:ref";
 	font-size: 11;
 	font-weight: bold;
 	text-color: #404040;
@@ -1549,4 +1528,9 @@ area|z17-[railway=signal_box]
 	text-position: center;
 	color: #008206;
 	fill-color: #008206;
+}
+/* show full signal_box name in higher zoom levels */
+area|z17-[railway=signal_box]
+{
+	text: "name";
 }
