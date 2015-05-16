@@ -44,17 +44,28 @@ way|z2-[railway=rail][usage=branch][!maxspeed]
 	kothicjs-ignore-layer: true;
 }
 
-way|z10-[railway=tram][maxspeed<=10],
-way|z10-[railway=subway][maxspeed<=10],
-way|z10-[railway=light_rail][maxspeed<=10],
-way|z9-[railway=narrow_gauge][maxspeed<=10],
-way|z9-[railway=preserved][maxspeed<=10],
-way|z10-[railway=rail][maxspeed<=10],
-way|z2-[railway=rail][usage=main][maxspeed<=10],
-way|z2-[railway=rail][usage=branch][maxspeed<=10]
+/** common parts for all lines with maxspeed tag */
+way|z10-[railway=tram][maxspeed],
+way|z10-[railway=subway][maxspeed],
+way|z10-[railway=light_rail][maxspeed],
+way|z9-[railway=narrow_gauge][maxspeed],
+way|z9-[railway=preserved][maxspeed],
+way|z10-[railway=rail][maxspeed],
+way|z2-[railway=rail][usage=main][maxspeed],
+way|z2-[railway=rail][usage=branch][maxspeed],
+way|z10-["disused:railway=tram"][maxspeed],
+way|z10-["disused:railway=subway"][maxspeed],
+way|z10-["disused:railway=light_rail"][maxspeed],
+way|z9-["disused:railway=narrow_gauge"][maxspeed],
+way|z9-["disused:railway=preserved"][maxspeed],
+way|z10-["disused:railway=rail"][maxspeed],
+way|z10-["construction:railway=tram"][maxspeed],
+way|z10-["construction:railway=subway"][maxspeed],
+way|z10-["construction:railway=light_rail"][maxspeed],
+way|z9-["construction:railway=narrow_gauge"][maxspeed],
+way|z9-["construction:railway=preserved"][maxspeed],
+way|z10-["construction:railway=rail"][maxspeed]
 {
-	z-index: 1;
-	color: #0100CB;
 	width: 3.5;
 	linejoin: round;
 	text: "maxspeed";
@@ -66,6 +77,19 @@ way|z2-[railway=rail][usage=branch][maxspeed<=10]
 	text-halo-radius: 1;
 	text-halo-color: white;
 	kothicjs-ignore-layer: true;
+}
+
+way|z10-[railway=tram][maxspeed<=10],
+way|z10-[railway=subway][maxspeed<=10],
+way|z10-[railway=light_rail][maxspeed<=10],
+way|z9-[railway=narrow_gauge][maxspeed<=10],
+way|z9-[railway=preserved][maxspeed<=10],
+way|z10-[railway=rail][maxspeed<=10],
+way|z2-[railway=rail][usage=main][maxspeed<=10],
+way|z2-[railway=rail][usage=branch][maxspeed<=10]
+{
+	z-index: 1;
+	color: #0100CB;
 }
 
 way|z10-[railway=tram][maxspeed>10][maxspeed<=20],
@@ -79,17 +103,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>10][maxspeed<=20]
 {
 	z-index: 2;
 	color: #001ECB;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>20][maxspeed<=30],
@@ -103,17 +116,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>20][maxspeed<=30]
 {
 	z-index: 3;
 	color: #003DCB;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>30][maxspeed<=40],
@@ -127,17 +129,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>30][maxspeed<=40]
 {
 	z-index: 4;
 	color: #005BCB;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>40][maxspeed<=50],
@@ -151,17 +142,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>40][maxspeed<=50]
 {
 	z-index: 5;
 	color: #007ACB;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>50][maxspeed<=60],
@@ -175,17 +155,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>50][maxspeed<=60]
 {
 	z-index: 6;
 	color: #0098CB;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>60][maxspeed<=70],
@@ -199,17 +168,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>60][maxspeed<=70]
 {
 	z-index: 7;
 	color: #00B7CB;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>70][maxspeed<=80],
@@ -223,17 +181,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>70][maxspeed<=80]
 {
 	z-index: 8;
 	color: #00CBC1;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>80][maxspeed<=90],
@@ -247,17 +194,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>80][maxspeed<=90]
 {
 	z-index: 9;
 	color: #00CBA2;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>90][maxspeed<=100],
@@ -271,17 +207,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>90][maxspeed<=100]
 {
 	z-index: 10;
 	color: #00CB84;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>100][maxspeed<=110],
@@ -295,17 +220,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>100][maxspeed<=110]
 {
 	z-index: 11;
 	color: #00CB66;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>110][maxspeed<=120],
@@ -319,17 +233,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>110][maxspeed<=120]
 {
 	z-index: 12;
 	color: #00CB47;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>120][maxspeed<=130],
@@ -343,17 +246,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>120][maxspeed<=130]
 {
 	z-index: 13;
 	color: #00CB29;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>130][maxspeed<=140],
@@ -367,17 +259,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>130][maxspeed<=140]
 {
 	z-index: 14;
 	color: #00CB0A;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>140][maxspeed<=150],
@@ -391,17 +272,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>140][maxspeed<=150]
 {
 	z-index: 15;
 	color: #14CB00;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-[railway=tram][maxspeed>150][maxspeed<=160],
@@ -415,17 +285,6 @@ way|z2-[railway=rail][usage=branch][maxspeed>150][maxspeed<=160]
 {
 	z-index: 16;
 	color: #33CB00;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>160][maxspeed<=170],
@@ -435,17 +294,6 @@ way|z2-[railway=rail][usage=main][maxspeed>160][maxspeed<=170]
 {
 	z-index: 17;
 	color: #51CB00;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>170][maxspeed<=180],
@@ -455,17 +303,6 @@ way|z2-[railway=rail][usage=main][maxspeed>170][maxspeed<=180]
 {
 	z-index: 18;
 	color: #70CB00;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>180][maxspeed<=190],
@@ -475,17 +312,6 @@ way|z2-[railway=rail][usage=main][maxspeed>180][maxspeed<=190]
 {
 	z-index: 19;
 	color: #8ECB00;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>190][maxspeed<=200],
@@ -495,17 +321,6 @@ way|z2-[railway=rail][usage=main][maxspeed>190][maxspeed<=200]
 {
 	z-index: 20;
 	color: #ADCB00;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>200][maxspeed<=210],
@@ -515,17 +330,6 @@ way|z2-[railway=rail][usage=main][maxspeed>200][maxspeed<=210]
 {
 	z-index: 21;
 	color: #CBCB00;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>210][maxspeed<=220],
@@ -535,17 +339,6 @@ way|z2-[railway=rail][usage=main][maxspeed>210][maxspeed<=220]
 {
 	z-index: 22;
 	color: #CBAD00;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>220][maxspeed<=230],
@@ -555,17 +348,6 @@ way|z2-[railway=rail][usage=main][maxspeed>220][maxspeed<=230]
 {
 	z-index: 23;
 	color: #CB8E00;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>230][maxspeed<=240],
@@ -575,17 +357,6 @@ way|z2-[railway=rail][usage=main][maxspeed>230][maxspeed<=240]
 {
 	z-index: 24;
 	color: #CB7000;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>240][maxspeed<=250],
@@ -595,17 +366,6 @@ way|z2-[railway=rail][usage=main][maxspeed>240][maxspeed<=250]
 {
 	z-index: 25;
 	color: #CB5100;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>250][maxspeed<=260],
@@ -615,17 +375,6 @@ way|z2-[railway=rail][usage=main][maxspeed>250][maxspeed<=260]
 {
 	z-index: 26;
 	color: #CB3300;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>260][maxspeed<=270],
@@ -635,17 +384,6 @@ way|z2-[railway=rail][usage=main][maxspeed>260][maxspeed<=270]
 {
 	z-index: 27;
 	color: #CB1400;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>270][maxspeed<=280],
@@ -655,17 +393,6 @@ way|z2-[railway=rail][usage=main][maxspeed>270][maxspeed<=280]
 {
 	z-index: 28;
 	color: #CB0007;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>280][maxspeed<=290],
@@ -675,17 +402,6 @@ way|z2-[railway=rail][usage=main][maxspeed>280][maxspeed<=290]
 {
 	z-index: 29;
 	color: #CB0025;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>290][maxspeed<=300],
@@ -695,17 +411,6 @@ way|z2-[railway=rail][usage=main][maxspeed>290][maxspeed<=300]
 {
 	z-index: 30;
 	color: #CB0044;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>300][maxspeed<=320],
@@ -715,17 +420,6 @@ way|z2-[railway=rail][usage=main][maxspeed>300][maxspeed<=320]
 {
 	z-index: 31;
 	color: #CB0062;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>320][maxspeed<=340],
@@ -735,17 +429,6 @@ way|z2-[railway=rail][usage=main][maxspeed>320][maxspeed<=340]
 {
 	z-index: 32;
 	color: #CB0081;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>340][maxspeed<=360],
@@ -755,17 +438,6 @@ way|z2-[railway=rail][usage=main][maxspeed>340][maxspeed<=360]
 {
 	z-index: 33;
 	color: #CB009F;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>360][maxspeed<=380],
@@ -775,17 +447,6 @@ way|z2-[railway=rail][usage=main][maxspeed>360][maxspeed<=380]
 {
 	z-index: 34;
 	color: #CB00BD;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-[railway=narrow_gauge][maxspeed>380][maxspeed<=400],
@@ -795,17 +456,6 @@ way|z2-[railway=rail][usage=main][maxspeed>380][maxspeed<=400]
 {
 	z-index: 35;
 	color: #BA00CB;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed<=10],
@@ -823,17 +473,6 @@ way|z10-["construction:railway=rail"][maxspeed<=10]
 {
 	z-index: 1;
 	color: #9595e9;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>10][maxspeed<=20],
@@ -851,17 +490,6 @@ way|z10-["construction:railway=rail"][maxspeed>10][maxspeed<=20]
 {
 	z-index: 2;
 	color: #95a1e9;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>20][maxspeed<=30],
@@ -879,17 +507,6 @@ way|z10-["construction:railway=rail"][maxspeed>20][maxspeed<=30]
 {
 	z-index: 3;
 	color: #95aee9;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>30][maxspeed<=40],
@@ -907,17 +524,6 @@ way|z10-["construction:railway=rail"][maxspeed>30][maxspeed<=40]
 {
 	z-index: 4;
 	color: #95bbe9;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>40][maxspeed<=50],
@@ -935,17 +541,6 @@ way|z10-["construction:railway=rail"][maxspeed>40][maxspeed<=50]
 {
 	z-index: 5;
 	color: #95c8e9;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>50][maxspeed<=60],
@@ -963,17 +558,6 @@ way|z10-["construction:railway=rail"][maxspeed>50][maxspeed<=60]
 {
 	z-index: 6;
 	color: #95d4e9;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>60][maxspeed<=70],
@@ -991,17 +575,6 @@ way|z10-["construction:railway=rail"][maxspeed>60][maxspeed<=70]
 {
 	z-index: 7;
 	color: #95e1e9;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>70][maxspeed<=80],
@@ -1019,17 +592,6 @@ way|z10-["construction:railway=rail"][maxspeed>70][maxspeed<=80]
 {
 	z-index: 8;
 	color: #95e9e5;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>80][maxspeed<=90],
@@ -1047,17 +609,6 @@ way|z10-["construction:railway=rail"][maxspeed>80][maxspeed<=90]
 {
 	z-index: 9;
 	color: #95e9d8;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>90][maxspeed<=100],
@@ -1075,17 +626,6 @@ way|z10-["construction:railway=rail"][maxspeed>90][maxspeed<=100]
 {
 	z-index: 10;
 	color: #95e9cc;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>100][maxspeed<=110],
@@ -1103,17 +643,6 @@ way|z10-["construction:railway=rail"][maxspeed>100][maxspeed<=110]
 {
 	z-index: 11;
 	color: #95e9bf;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>110][maxspeed<=120],
@@ -1131,17 +660,6 @@ way|z10-["construction:railway=rail"][maxspeed>110][maxspeed<=120]
 {
 	z-index: 12;
 	color: #95e9b3;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>120][maxspeed<=130],
@@ -1159,17 +677,6 @@ way|z10-["construction:railway=rail"][maxspeed>120][maxspeed<=130]
 {
 	z-index: 13;
 	color: #95e9a6;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>130][maxspeed<=140],
@@ -1187,17 +694,6 @@ way|z10-["construction:railway=rail"][maxspeed>130][maxspeed<=140]
 {
 	z-index: 14;
 	color: #95e999;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>140][maxspeed<=150],
@@ -1215,17 +711,6 @@ way|z10-["construction:railway=rail"][maxspeed>140][maxspeed<=150]
 {
 	z-index: 15;
 	color: #9de995;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z10-["disused:railway=tram"][maxspeed>150][maxspeed<=160],
@@ -1243,17 +728,6 @@ way|z10-["construction:railway=rail"][maxspeed>150][maxspeed<=160]
 {
 	z-index: 16;
 	color: #aae995;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["disused:railway=narrow_gauge"][maxspeed>160][maxspeed<=170],
@@ -1265,17 +739,6 @@ way|z10-["construction:railway=rail"][maxspeed>160][maxspeed<=170]
 {
 	z-index: 17;
 	color: #b7e995;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["disused:railway=narrow_gauge"][maxspeed>170][maxspeed<=180],
@@ -1287,17 +750,6 @@ way|z10-["construction:railway=rail"][maxspeed>170][maxspeed<=180]
 {
 	z-index: 18;
 	color: #c4e995;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["disused:railway=narrow_gauge"][maxspeed>180][maxspeed<=190],
@@ -1309,17 +761,6 @@ way|z10-["construction:railway=rail"][maxspeed>180][maxspeed<=190]
 {
 	z-index: 19;
 	color: #d0e995;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["disused:railway=narrow_gauge"][maxspeed>190][maxspeed<=200],
@@ -1331,17 +772,6 @@ way|z10-["construction:railway=rail"][maxspeed>190][maxspeed<=200]
 {
 	z-index: 20;
 	color: #dde995;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>200][maxspeed<=210],
@@ -1350,17 +780,6 @@ way|z10-["construction:railway=rail"][maxspeed>200][maxspeed<=210]
 {
 	z-index: 21;
 	color: #e9e995;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>210][maxspeed<=220],
@@ -1369,17 +788,6 @@ way|z10-["construction:railway=rail"][maxspeed>210][maxspeed<=220]
 {
 	z-index: 22;
 	color: #e9dd95;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>220][maxspeed<=230],
@@ -1388,17 +796,6 @@ way|z10-["construction:railway=rail"][maxspeed>220][maxspeed<=230]
 {
 	z-index: 23;
 	color: #e9d095;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>230][maxspeed<=240],
@@ -1407,17 +804,6 @@ way|z10-["construction:railway=rail"][maxspeed>230][maxspeed<=240]
 {
 	z-index: 24;
 	color: #e9c495;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>240][maxspeed<=250],
@@ -1426,17 +812,6 @@ way|z10-["construction:railway=rail"][maxspeed>240][maxspeed<=250]
 {
 	z-index: 25;
 	color: #e9b795;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>250][maxspeed<=260],
@@ -1445,17 +820,6 @@ way|z10-["construction:railway=rail"][maxspeed>250][maxspeed<=260]
 {
 	z-index: 26;
 	color: #e9aa95;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>260][maxspeed<=270],
@@ -1464,17 +828,6 @@ way|z10-["construction:railway=rail"][maxspeed>260][maxspeed<=270]
 {
 	z-index: 27;
 	color: #e99d95;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>270][maxspeed<=280],
@@ -1483,17 +836,6 @@ way|z10-["construction:railway=rail"][maxspeed>270][maxspeed<=280]
 {
 	z-index: 28;
 	color: #e99598;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>280][maxspeed<=290],
@@ -1502,17 +844,6 @@ way|z10-["construction:railway=rail"][maxspeed>280][maxspeed<=290]
 {
 	z-index: 29;
 	color: #e995a4;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>290][maxspeed<=300],
@@ -1521,17 +852,6 @@ way|z10-["construction:railway=rail"][maxspeed>290][maxspeed<=300]
 {
 	z-index: 30;
 	color: #e995b1;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>300][maxspeed<=320],
@@ -1540,17 +860,6 @@ way|z10-["construction:railway=rail"][maxspeed>300][maxspeed<=320]
 {
 	z-index: 31;
 	color: #e995be;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>320][maxspeed<=340],
@@ -1559,17 +868,6 @@ way|z10-["construction:railway=rail"][maxspeed>320][maxspeed<=340]
 {
 	z-index: 32;
 	color: #e995cb;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>340][maxspeed<=360],
@@ -1578,17 +876,6 @@ way|z10-["construction:railway=rail"][maxspeed>340][maxspeed<=360]
 {
 	z-index: 33;
 	color: #e995d7;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>360][maxspeed<=380],
@@ -1597,17 +884,6 @@ way|z10-["construction:railway=rail"][maxspeed>360][maxspeed<=380]
 {
 	z-index: 34;
 	color: #e995e4;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way|z9-["construction:railway=narrow_gauge"][maxspeed>380][maxspeed<=400],
@@ -1616,17 +892,6 @@ way|z10-["construction:railway=rail"][maxspeed>380][maxspeed<=400]
 {
 	z-index: 35;
 	color: #e295e9;
-	width: 3.5;
-	linejoin: round;
-	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 /* German speed signals (Zs 10) */
