@@ -43,7 +43,7 @@ way[railway][!operator]
 	throwOther: "Track without with operator";
 	assertMatch: "way railway=rail";
 	assertNoMatch: "node railway=rail operator=SNCF";
-	assertNoMatch: "area railway=rail";
+	assertNoMatch: "relation railway=rail";
 	assertNoMatch: "way railway=rail operator=SNCF";
 }
 
@@ -97,7 +97,7 @@ way[railway][!workrules]
 	throwOther: "Track without with workrules";
 	assertMatch: "way railway=rail";
 	assertNoMatch: "node railway=rail workrules=EBO";
-	assertNoMatch: "area railway=rail";
+	assertNoMatch: "relation railway=rail";
 	assertNoMatch: "way railway=rail workrules=EBO";
 }
 
