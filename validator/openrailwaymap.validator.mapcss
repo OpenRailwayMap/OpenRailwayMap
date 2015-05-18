@@ -40,7 +40,7 @@ node[railway=milestone][!railway:position]
 /* Track without operator */
 way[railway][!operator]
 {
-	throwOther: "Track without with operator";
+	throwOther: "Track without operator";
 	assertMatch: "way railway=rail";
 	assertNoMatch: "node railway=rail operator=SNCF";
 	assertNoMatch: "relation railway=rail";
@@ -94,7 +94,7 @@ way[railway][usage=freight][railway:traffic_mode=~/^(passenger|mixed)$/]
 /* Track without workrules */
 way[railway][!workrules]
 {
-	throwOther: "Track without with workrules";
+	throwOther: "Track without workrules";
 	assertMatch: "way railway=rail";
 	assertNoMatch: "node railway=rail workrules=EBO";
 	assertNoMatch: "relation railway=rail";
