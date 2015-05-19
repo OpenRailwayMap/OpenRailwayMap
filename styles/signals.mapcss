@@ -1460,6 +1460,141 @@ node|z14-[railway=signal]["railway:signal:station_distant"="ne6"]["railway:signa
 	allow-overlap: true;
 }
 
+/************************************/
+/* DE power off advance sign El 1v  */
+/* AT Ankündigung Hauptschalter aus */
+/************************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el1v"]["railway:signal:electricity:type"="power_off_advance"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:electricity"="el1v"]["railway:signal:electricity:type"="power_off_advance"]["railway:signal:electricity:form"=sign],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:ankündigung_hauptschalter_aus"]["railway:signal:electricity:type"="power_off_advance"]["railway:signal:electricity:form"=sign]
+{
+	z-index: 440;
+	icon-image: "icons/de-el1v-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+
+/**************************/
+/* DE power off sign El 1 */
+/* AT Hauptschalter aus   */
+/**************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el1"]["railway:signal:electricity:type"="power_off"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:electricity"="el1"]["railway:signal:electricity:type"="power_off"]["railway:signal:electricity:form"=sign],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:hauptschalter_aus"]["railway:signal:electricity:type"="power_off"]["railway:signal:electricity:form"=sign]
+{
+	z-index: 460;
+	icon-image: "icons/de-el1-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+
+/**************************/
+/* DE power on sign El 2 */
+/* AT Hauptschalter ein   */
+/**************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el2"]["railway:signal:electricity:type"="power_on"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:electricity"="el2"]["railway:signal:electricity:type"="power_on"]["railway:signal:electricity:form"=sign],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:hauptschalter_ein"]["railway:signal:electricity:type"="power_on"]["railway:signal:electricity:form"=sign]
+{
+	z-index: 458;
+	icon-image: "icons/de-el2-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+
+/*************************************/
+/* DE pantograph down advance El 3   */
+/* AT Ankündigung Stromabnehmer tief */
+/*************************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el3"]["railway:signal:electricity:type"="pantograph_down_advance"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:electricity"="el3"]["railway:signal:electricity:type"="pantograph_down_advance"]["railway:signal:electricity:form"=sign],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:andkündigung_stromabnehmer_tief"]["railway:signal:electricity:type"="pantograph_down_advance"]["railway:signal:electricity:form"=sign]
+{
+	z-index: 440;
+	icon-image: "icons/de-el3-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+
+/***************************/
+/* DE pantograph down El 4 */
+/* AT Stromabnehmer tief   */
+/***************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el4"]["railway:signal:electricity:type"="pantograph_down"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:electricity"="el4"]["railway:signal:electricity:type"="pantograph_down"]["railway:signal:electricity:form"=sign],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:stromabnehmer_tief"]["railway:signal:electricity:type"="pantograph_down"]["railway:signal:electricity:form"=sign]
+{
+	z-index: 460;
+	icon-image: "icons/de-el4-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+
+/*************************/
+/* DE pantograph up El 5 */
+/* AT Stromabnehmer hoch */
+/*************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el5"]["railway:signal:electricity:type"="pantograph_up"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:electricity"="el5"]["railway:signal:electricity:type"="pantograph_up"]["railway:signal:electricity:form"=sign],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:stromabnehmer_hoch"]["railway:signal:electricity:type"="pantograph_up"]["railway:signal:electricity:form"=sign]
+{
+	z-index: 458;
+	icon-image: "icons/de-el5-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+
+/*******************************************************/
+/* DE end of catenary sign El 6                        */
+/* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer */
+/*******************************************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"!="left"]["railway:signal:electricity:turn_direction"!="right"],
+node|z17-[railway=signal]["railway:signal:electricity"="el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"!="left"]["railway:signal:electricity:turn_direction"!="right"],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"!="left"]["railway:signal:electricity:turn_direction"!="right"]
+{
+	z-index: 450;
+	icon-image: "icons/de-el6-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+
+/*********************************************************************/
+/* DE end of catenary sign El 6 + arrow right                        */
+/* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer + arrow right */
+/*********************************************************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"="right"],
+node|z17-[railway=signal]["railway:signal:electricity"="el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"="right"],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"="right"]
+{
+	z-index: 450;
+	icon-image: "icons/de-el6-right-36.png";
+	icon-width: 14;
+	icon-height: 18;
+	allow-overlap: true;
+}
+
+/*********************************************************************/
+/* DE end of catenary sign El 6 + arrow left                        */
+/* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer + arrow left */
+/*********************************************************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"="left"],
+node|z17-[railway=signal]["railway:signal:electricity"="el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"="left"],
+node|z17-[railway=signal]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"="left"]
+{
+	z-index: 450;
+	icon-image: "icons/de-el6-left-36.png";
+	icon-width: 14;
+	icon-height: 18;
+	allow-overlap: true;
+}
+
 /******************/
 /* AT Trapeztafel */
 /******************/
