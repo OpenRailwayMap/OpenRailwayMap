@@ -120,8 +120,8 @@ way[tunnel=yes]::tunnels
 }
 
 /******************************************************************************/
-/* refs and names                                                             */
-/* We have to exclude bridge and tunnels in order to prevent a label collison */
+/* text of tracks outside bridges and tunnels                                 */
+/* default track label contains ref and name                                  */
 /******************************************************************************/
 way[railway=rail][!service][!bridge][!tunnel],
 way[railway=disused][!service][!bridge][!tunnel],
@@ -136,7 +136,7 @@ way[railway=subway][!service][!bridge][!tunnel],
 way[railway=light_rail][!service][!bridge][!tunnel]
 {
 	z-index: 10000;
-	text: eval(concat(tag("ref"), " ", tag("name")));
+	text: eval(join(" ", tag("ref"), tag("name")));
 	text-position: line;
 	text-color: #585858;
 	font-size: 11;
@@ -144,6 +144,20 @@ way[railway=light_rail][!service][!bridge][!tunnel]
 	font-weight: bold;
 	text-halo-radius: 1;
 	text-halo-color: white;
+}
+
+/* name of abandoned railways which have abanoned:name=* and abandoned:ref=* */
+way|z11-[railway=abandoned][!bridge][!tunnel]["abandoned:name"],
+way|z11-[railway=abandoned][!bridge][!tunnel]["abandoned:ref"]
+{
+	text: eval(join(" ", tag("abandoned:ref"), tag("abandoned:name")));
+}
+
+/* name of abandoned railways which have razed:name=* and razed:ref=* */
+way|z11-[railway=razed][!bridge][!tunnel]["razed:name"],
+way|z11-[railway=razed][!bridge][!tunnel]["razed:ref"]
+{
+	text: eval(join(" ", tag("razed:ref"), tag("razed:name")));
 }
 
 /***************************************************************************************/
