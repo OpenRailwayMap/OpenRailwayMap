@@ -349,6 +349,7 @@ way|z9-[railway=construction].tracks
 	width: 3;
 	linejoin: butt;
 }
+/* colors are set below together with railway=proposed */
 
 /*********************/
 /* proposed railways */
@@ -360,6 +361,28 @@ way|z9-[railway=proposed].tracks
 	color: black;
 	width: 3;
 	linejoin: butt;
+}
+/** shared between railway=proposed and railway=construction **/
+/*  show the color of what the railway will become            */
+way|z9-[railway=construction]["construction:railway"=rail][highspeed=yes],
+way|z9-[railway=proposed]["proposed:railway"=rail][highspeed=yes]
+{
+	color: #FF0C00;
+}
+way|z10-[railway=construction]["construction:railway"=light_rail],
+way|z10-[railway=proposed]["proposed:railway"=light_rail]
+{
+	color: #00BD14;
+}
+way|z10-[railway=construction]["construction:railway"=subway],
+way|z10-[railway=proposed]["proposed:railway"=subway]
+{
+	color: #0300C3;
+}
+way|z11-[railway=construction]["construction:railway"=tram],
+way|z11-[railway=proposed]["proposed:railway"=tram]
+{
+	color: #D877B8;
 }
 
 /********************/
