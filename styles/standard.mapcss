@@ -462,7 +462,7 @@ way|z9-[railway=narrow_gauge][usage=test][!service]
 /************************************************/
 /* narrow gauge sidings without specified usage */
 /************************************************/
-way|z9-[railway=narrow_gauge][!usage][service=siding]
+way|z10-[railway=narrow_gauge][!usage][service=siding]
 {
 	z-index: 850;
 	color: black;
@@ -481,7 +481,7 @@ way|z9-[railway=narrow_gauge][!usage][service=siding]
 /****************************************************/
 /* narrow gauge yard tracks without specified usage */
 /****************************************************/
-way|z9-[railway=narrow_gauge][!usage][service=yard]
+way|z10-[railway=narrow_gauge][!usage][service=yard]
 {
 	z-index: 840;
 	color: black;
@@ -500,7 +500,7 @@ way|z9-[railway=narrow_gauge][!usage][service=yard]
 /****************************************************/
 /* narrow gauge spur tracks without specified usage */
 /****************************************************/
-way|z9-[railway=narrow_gauge][!usage][service=spur]
+way|z10-[railway=narrow_gauge][!usage][service=spur]
 {
 	z-index: 860;
 	color: #87491D;
@@ -515,7 +515,7 @@ way|z9-[railway=narrow_gauge][!usage][service=spur]
 /*********************************************************/
 /* narrow gauge crossover tracks without specified usage */
 /*********************************************************/
-way|z9-[railway=narrow_gauge][!usage][service=crossover]
+way|z10-[railway=narrow_gauge][!usage][service=crossover]
 {
 	z-index: 280;
 	color: black;
@@ -585,10 +585,10 @@ way|z9-[railway=narrow_gauge][usage=industrial][!service]
 /**************************************************************/
 /* narrow gauge industrial railways with various service tags */
 /**************************************************************/
-way|z9-[railway=narrow_gauge][usage=industrial][service=siding],
-way|z9-[railway=narrow_gauge][usage=industrial][service=spur],
-way|z9-[railway=narrow_gauge][usage=industrial][service=yard],
-way|z9-[railway=narrow_gauge][usage=industrial][service=crossover]
+way|z10-[railway=narrow_gauge][usage=industrial][service=siding],
+way|z10-[railway=narrow_gauge][usage=industrial][service=spur],
+way|z10-[railway=narrow_gauge][usage=industrial][service=yard],
+way|z10-[railway=narrow_gauge][usage=industrial][service=crossover]
 {
 	z-index: 830;
 	color: #87491D;
