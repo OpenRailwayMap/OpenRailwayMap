@@ -476,13 +476,14 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="ne1
 	allow-overlap: true;
 }
 
-/**********************************************/
-/* DE distant semaphore signals type Vr which */
-/*  - do not share post with a main signal    */
-/*  - have no railway:signal:states=* tag     */
-/**********************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=semaphore][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"][!"railway:signal:distant:states"]
+/********************************************************************************/
+/* DE distant semaphore signals type Vr which                                   */
+/*  - do not share post with a main signal                                      */
+/*  - have no railway:signal:states=* tag                                       */
+/*  - OR have railway:signal:states=* tag that does neither include Vr1 nor Vr2 */
+/********************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/]
 {
 	z-index: 9000;
 	text: "ref";
@@ -502,10 +503,11 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=v
 /**********************************************/
 /* DE distant semaphore signals type Vr which */
 /*  - do not share post with a main signal    */
+/*  - can display Vr 1                        */
 /*  - cannot display Vr 2                     */
 /**********************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/]
 {
 	z-index: 9000;
 	text: "ref";
@@ -545,21 +547,22 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=v
 	allow-overlap: true;
 }
 
-/************************************************/
-/* DE distant light signals type Vr which       */
-/*  - are no repeaters (or not tagged as such)  */
-/*  - are not shortened (or not tagged as such) */
-/*  - do not share post with a main signal      */
-/*  - have no railway:signal:states=* tag       */
-/************************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"]
+/********************************************************************************/
+/* DE distant light signals type Vr which                                       */
+/*  - are no repeaters (or not tagged as such)                                  */
+/*  - are not shortened (or not tagged as such)                                 */
+/*  - do not share post with a main signal                                      */
+/*  - have no railway:signal:states=* tag                                       */
+/*  - OR have railway:signal:states=* tag that does neither include Vr1 nor Vr2 */
+/********************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/]
 {
 	z-index: 9000;
 	text: "ref";
@@ -581,16 +584,17 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=v
 /*  - are no repeaters (or not tagged as such)  */
 /*  - are not shortened (or not tagged as such) */
 /*  - do not share post with a main signal      */
+/*  - can display Vr 1                          */
 /*  - cannot display Vr 2                       */
 /************************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/]
 {
 	z-index: 9000;
 	text: "ref";
@@ -634,16 +638,17 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=v
 	allow-overlap: true;
 }
 
-/*******************************************/
-/* DE distant light signals type Vr which  */
-/*  - are repeaters or shortened           */
-/*  - do not share post with a main signal */
-/*  - have no railway:signal:states=* tag* */
-/*******************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"][!"railway:signal:distant:states"]
+/********************************************************************************/
+/* DE distant light signals type Vr which                                       */
+/*  - are repeaters or shortened                                                */
+/*  - do not share post with a main signal                                      */
+/*  - have no railway:signal:states=* tag                                       */
+/*  - OR have railway:signal:states=* tag that does neither include Vr1 nor Vr2 */
+/********************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"!~/vr(1|2)/]
 {
 	z-index: 8500;
 	text: "ref";
@@ -664,12 +669,13 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=v
 /* DE distant light signals type Vr which  */
 /*  - are repeaters or shortened           */
 /*  - do not share post with a main signal */
+/*  - can display Vr 1                     */
 /*  - cannot display Vr 2                  */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/]
 {
 	z-index: 8500;
 	text: "ref";
