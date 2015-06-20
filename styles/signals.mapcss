@@ -25,26 +25,26 @@ meta
 /******************************************************/
 /* deactivation cross for light and semaphore signals */
 /******************************************************/
-node|z14-[railway=signal]["railway:signal:main:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:distant:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:combined:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:shunting:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:main_repeated:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:minor:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:minor_distant:deactivated"=yes],
-node|z14-[railway=signal]["railway:signal:crossing:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:crossing_distant:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:humping:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:speed_limit:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:speed_limit_distant:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:route:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:route_distant:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:wrong_road:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:stop_demand:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:departure:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:resetting_switch:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:short_route:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:brake_test:deactivated"=yes]::deactivatedcross
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:shunting:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main_repeated:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:minor:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:minor_distant:deactivated"=yes],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:crossing:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:humping:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:route:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:route_distant:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:stop_demand:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:departure:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:resetting_switch:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:short_route:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:brake_test:deactivated"=yes]::deactivatedcross
 {
 	z-index: 11000;
 	icon-image: "icons/light-signal-deactivated-18.png";
@@ -58,8 +58,8 @@ node|z14-[railway=signal]["railway:signal:brake_test:deactivated"=yes]::deactiva
 /* DE main semaphore signals type Hp which */
 /*  - have no railway:signal:states=* tag  */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore][!"railway:signal:main:states"],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:main:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore][!"railway:signal:main:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:main:states"],
 node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/],
 node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/]
 {
@@ -82,8 +82,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=s
 /* DE main semaphore signals type Hp which */
 /*  - cannot display Hp 2                  */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -104,8 +104,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=s
 /* DE main semaphore signals type Hp which */
 /*  - can display Hp 2                     */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -126,10 +126,10 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=s
 /* DE main light signals type Hp which    */
 /*  - have no railway:signal:states=* tag */
 /******************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light][!"railway:signal:main:states"],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:main:states"],
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light][!"railway:signal:main:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hp]["railway:signal:main:form"=light][!"railway:signal:main:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -150,8 +150,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 /* DE main light signals type Hp which */
 /*  - cannot display Hp 2              */
 /***************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"=~/.*hp1.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -172,8 +172,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 /* DE main light signals type Hp which */
 /*  - can display Hp 2                 */
 /***************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hp]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hp2.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -194,8 +194,8 @@ node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=l
 /* DE main light signals type Hl which    */
 /*  - have no railway:signal:states=* tag */
 /******************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light][!"railway:signal:main:states"],
-node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light][!"railway:signal:main:states"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light][!"railway:signal:main:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hl]["railway:signal:main:form"=light][!"railway:signal:main:states"]
 {
 	z-index: 10000;
 	text: "ref";
@@ -216,8 +216,8 @@ node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=l
 /* DE main light signals type Hl which  */
 /*  - cannot display Hl 2, Hl 3a, Hl 3b */
 /****************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3a.*/]["railway:signal:main:states"!~/.*hl3b.*/],
-node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3a.*/]["railway:signal:main:states"!~/.*hl3b.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3a.*/]["railway:signal:main:states"!~/.*hl3b.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3a.*/]["railway:signal:main:states"!~/.*hl3b.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -238,8 +238,8 @@ node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=l
 /* DE main light signals type Hl which */
 /*  - cannot display Hl 3b and Hl 2    */
 /***************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/],
-node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -261,8 +261,8 @@ node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=l
 /*  - can display Hl 3a, Hl 3b         */
 /*  - cannot display Hl 2              */
 /***************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/],
-node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]["railway:signal:main:states"=~/.*hl3a.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -284,10 +284,10 @@ node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=l
 /*  - can display Hl 2, Hl 3a                */
 /*  - don't have to be able to display Hl 3b */
 /*********************************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/],
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/],
-node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/],
-node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"!~/.*hl3b.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hl]["railway:signal:main:form"=light]["railway:signal:main:states"]["railway:signal:main:states"=~/.*hl3a.*/]["railway:signal:main:states"=~/.*hl2.*/]["railway:signal:main:states"=~/.*hl3b.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -308,8 +308,8 @@ node|z14-[railway=signal]["railway:signal:main"=hl]["railway:signal:main:form"=l
 /* DE combined light signals type Hl which */
 /*  - have no railway:signal:states=* tag  */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light][!"railway:signal:combined:states"],
-node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light][!"railway:signal:combined:states"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light][!"railway:signal:combined:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=hl]["railway:signal:combined:form"=light][!"railway:signal:combined:states"]
 {
 	z-index: 10000;
 	text: "ref";
@@ -330,8 +330,8 @@ node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined
 /* DE combined light signals type Hl which */
 /*  - cannot display Hl 11, Hl 12a, Hl 12b */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12a.*/]["railway:signal:combined:states"!~/.*hl12b.*/],
-node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12a.*/]["railway:signal:combined:states"!~/.*hl12b.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12a.*/]["railway:signal:combined:states"!~/.*hl12b.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12a.*/]["railway:signal:combined:states"!~/.*hl12b.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -352,8 +352,8 @@ node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined
 /* DE combined light signals type Hl which */
 /*  - cannot display Hl 12b and Hl 11      */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/],
-node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -375,8 +375,8 @@ node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined
 /*  - can display Hl 12a, Hl 12b           */
 /*  - cannot display Hl 11                 */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/],
-node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"!~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/]["railway:signal:combined:states"=~/.*hl12a.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -398,10 +398,10 @@ node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined
 /*  - can display Hl 11, Hl 12a               */
 /*  - don't have to be able to display Hl 12b */
 /**********************************************/
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/],
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/],
-node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/],
-node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"!~/.*hl12b.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=hl]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/.*hl12a.*/]["railway:signal:combined:states"=~/.*hl11.*/]["railway:signal:combined:states"=~/.*hl12b.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -423,8 +423,8 @@ node|z14-[railway=signal]["railway:signal:combined"=hl]["railway:signal:combined
 /* - which cannot show Hp 0          */
 /* - which can show Sv 0             */
 /*************************************/
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:sv"]["railway:signal:combined:states"!~/.*hp0.*/]["railway:signal:combined:states"=~/.*sv0.*/],
-node|z14-[railway=signal]["railway:signal:combined"=sv]["railway:signal:combined:states"!~/.*hp0.*/]["railway:signal:combined:states"=~/.*sv0.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:sv"]["railway:signal:combined:states"!~/.*hp0.*/]["railway:signal:combined:states"=~/.*sv0.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=sv]["railway:signal:combined:states"!~/.*hp0.*/]["railway:signal:combined:states"=~/.*sv0.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -445,8 +445,8 @@ node|z14-[railway=signal]["railway:signal:combined"=sv]["railway:signal:combined
 /* DE combined light signals type Sv */
 /* - which can show Hp 0             */
 /*************************************/
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:sv"]["railway:signal:combined:states"=~/.*hp0.*/],
-node|z14-[railway=signal]["railway:signal:combined"=sv]["railway:signal:combined:states"=~/.*hp0.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:sv"]["railway:signal:combined:states"=~/.*hp0.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=sv]["railway:signal:combined:states"=~/.*hp0.*/]
 {
 	z-index: 10001;
 	text: "ref";
@@ -466,8 +466,8 @@ node|z14-[railway=signal]["railway:signal:combined"=sv]["railway:signal:combined
 /***************************/
 /* DE main entry sign Ne 1 */
 /***************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:ne1"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry],
-node|z14-[railway=signal]["railway:signal:main"="ne1"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:ne1"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="ne1"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
 {
 	z-index: 8000;
 	icon-image: "icons/de-ne1-32.png";
@@ -481,8 +481,8 @@ node|z14-[railway=signal]["railway:signal:main"="ne1"]["railway:signal:main:form
 /*  - do not share post with a main signal    */
 /*  - have no railway:signal:states=* tag     */
 /**********************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=semaphore][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"][!"railway:signal:distant:states"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=semaphore][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"][!"railway:signal:distant:states"]
 {
 	z-index: 9000;
 	text: "ref";
@@ -504,8 +504,8 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 /*  - do not share post with a main signal    */
 /*  - cannot display Vr 2                     */
 /**********************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
 {
 	z-index: 9000;
 	text: "ref";
@@ -527,8 +527,8 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 /*  - do not share post with a main signal    */
 /*  - can display Vr 2                        */
 /**********************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=semaphore][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/]
 {
 	z-index: 9000;
 	text: "ref";
@@ -552,14 +552,14 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 /*  - do not share post with a main signal      */
 /*  - have no railway:signal:states=* tag       */
 /************************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"][!"railway:signal:distant:states"]
 {
 	z-index: 9000;
 	text: "ref";
@@ -583,14 +583,14 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 /*  - do not share post with a main signal      */
 /*  - cannot display Vr 2                       */
 /************************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"]["railway:signal:distant:shortened"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:distant:shortened"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
 {
 	z-index: 9000;
 	text: "ref";
@@ -614,10 +614,10 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 /*  - do not share post with a main signal      */
 /*  - can display Vr 2                          */
 /************************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/]
 {
 	z-index: 9000;
 	text: "ref";
@@ -640,10 +640,10 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 /*  - do not share post with a main signal */
 /*  - have no railway:signal:states=* tag* */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"][!"railway:signal:distant:states"],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"][!"railway:signal:distant:states"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"][!"railway:signal:distant:states"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"][!"railway:signal:distant:states"]
 {
 	z-index: 8500;
 	text: "ref";
@@ -666,10 +666,10 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 /*  - do not share post with a main signal */
 /*  - cannot display Vr 2                  */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"!~/.*vr2.*/]
 {
 	z-index: 8500;
 	text: "ref";
@@ -692,10 +692,10 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 /*  - do not share post with a main signal */
 /*  - can display Vr 2                     */
 /*******************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
-node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/.*vr2.*/]
 {
 	z-index: 8500;
 	text: "ref";
@@ -715,10 +715,10 @@ node|z14-[railway=signal]["railway:signal:distant"=vr]["railway:signal:distant:f
 /******************************************/
 /* DE distant light signals type Hl which */
 /******************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:hl"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:hl"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"],
-node|z14-[railway=signal]["railway:signal:distant"=hl]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
-node|z14-[railway=signal]["railway:signal:distant"=hl]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:hl"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:hl"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=hl]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=hl]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]
 {
 	z-index: 8500;
 	text: "ref";
@@ -739,9 +739,9 @@ node|z14-[railway=signal]["railway:signal:distant"=hl]["railway:signal:distant:f
 /* DE distant signal replacement by sign So 106 */
 /* AT Kreuztafel                                */
 /************************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:so106"]["railway:signal:distant:form"=sign],
-node|z14-[railway=signal]["railway:signal:distant"="so106"]["railway:signal:distant:form"=sign],
-node|z14-[railway=signal]["railway:signal:distant"="AT-V2:kreuztafel"]["railway:signal:distant:form"=sign]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:so106"]["railway:signal:distant:form"=sign],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="so106"]["railway:signal:distant:form"=sign],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="AT-V2:kreuztafel"]["railway:signal:distant:form"=sign]
 {
 	z-index: 9000;
 	text: "ref";
@@ -761,10 +761,10 @@ node|z14-[railway=signal]["railway:signal:distant"="AT-V2:kreuztafel"]["railway:
 /*********************************************/
 /* DE distant signal replacement by sign Ne2 */
 /*********************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=no],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign][!"railway:signal:distant:shortened"],
-node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=no],
-node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign][!"railway:signal:distant:shortened"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=no],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign][!"railway:signal:distant:shortened"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=no],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign][!"railway:signal:distant:shortened"]
 {
 	z-index: 9000;
 	text: "ref";
@@ -828,7 +828,7 @@ node|z14-[railway=signal]["railway:signal:distant"="dr:so3"]["railway:signal:dis
 /***************************************/
 /* DE block marker ("Blockkennzeichen) */
 /***************************************/
-node|z14-15[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]
+node|z14-15[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]
 {
 	z-index: 8500;
 	icon-image: "icons/de-blockkennzeichen-28.png";
@@ -836,7 +836,7 @@ node|z14-15[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennz
 	icon-height: 14;
 	allow-overlap: true;
 }
-node|z16-[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]
 {
 	z-index: 8500;
 	icon-image: "icons/de-blockkennzeichen-40.png";
@@ -844,7 +844,7 @@ node|z16-[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzei
 	icon-height: 20;
 	allow-overlap: true;
 }
-node|z16-17[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
+node|z16-17[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
 {
 	z-index: 8510;
 	text: "ref";
@@ -856,7 +856,7 @@ node|z16-17[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennz
 	text-halo-color: white;
 	font-weight: bold;
 }
-node|z18-[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
+node|z18-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
 {
 	z-index: 8500;
 	text: "ref";
@@ -873,8 +873,8 @@ node|z18-[railway=signal]["railway:signal:train_protection"="DE-ESO:blockkennzei
 /******************/
 /* DE signal Sh 2 */
 /******************/
-node|z17-[railway=signal]["railway:signal:minor"=sh2],
-node|z17-[railway=signal]["railway:signal:minor"="DE-ESO:sh2"]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"=sh2],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh2"]
 {
 	z-index: 4010;
 	icon-image: "icons/de-sh2-32.png";
@@ -886,10 +886,10 @@ node|z17-[railway=signal]["railway:signal:minor"="DE-ESO:sh2"]
 /**************************************/
 /* DE minor semaphore signals type Sh */
 /**************************************/
-node|z17-[railway=signal]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=normal],
-node|z17-[railway=signal]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=semaphore][!"railway:signal:minor:height"],
-node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=normal],
-node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore][!"railway:signal:minor:height"]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=normal],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=semaphore][!"railway:signal:minor:height"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=normal],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore][!"railway:signal:minor:height"]
 {
 	z-index: 4000;
 	text: "ref";
@@ -909,8 +909,8 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 /********************************************/
 /* DE minor semaphore dwarf signals type Sh */
 /********************************************/
-node|z17-[railway=signal]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=dwarf],
-node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=dwarf]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=dwarf],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"=sh]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=dwarf]
 {
 	z-index: 2000;
 	text: "ref";
@@ -930,10 +930,10 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 /**********************************/
 /* DE minor light signals type Sh */
 /**********************************/
-node|z17-[railway=signal]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal],
-node|z17-[railway=signal]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light][!"railway:signal:minor:height"],
-node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal],
-node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light][!"railway:signal:minor:height"]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light][!"railway:signal:minor:height"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"=sh]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"=sh]["railway:signal:minor:form"=light][!"railway:signal:minor:height"]
 {
 	z-index: 5000;
 	text: "ref";
@@ -953,8 +953,8 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 /****************************************/
 /* DE minor light dwarf signals type Sh */
 /****************************************/
-node|z17-[railway=signal]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light]["railway:signal:minor:height"=dwarf],
-node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"=light]["railway:signal:minor:height"=dwarf]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light]["railway:signal:minor:height"=dwarf],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"=sh]["railway:signal:minor:form"=light]["railway:signal:minor:height"=dwarf]
 {
 	z-index: 3000;
 	text: "ref";
@@ -975,9 +975,9 @@ node|z17-[railway=signal]["railway:signal:minor"=sh]["railway:signal:minor:form"
 /* DE shunting signal Ra 11 without Sh 1          */
 /* AT Wartesignal ohne "Verschubverbot aufgehoben */
 /**************************************************/
-node|z17-[railway=signal]["railway:signal:shunting"=ra11]["railway:signal:shunting:form"=sign],
-node|z17-[railway=signal]["railway:signal:shunting"="DE-ESO:ra11"]["railway:signal:shunting:form"=sign],
-node|z17-[railway=signal]["railway:signal:shunting"="AT-V2:wartesignal"]["railway:signal:shunting:form"=sign]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=ra11]["railway:signal:shunting:form"=sign],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="DE-ESO:ra11"]["railway:signal:shunting:form"=sign],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="AT-V2:wartesignal"]["railway:signal:shunting:form"=sign]
 {
 	z-index: 2800;
 	icon-image: "icons/de-ra11-sign-32.png";
@@ -990,8 +990,8 @@ node|z17-[railway=signal]["railway:signal:shunting"="AT-V2:wartesignal"]["railwa
 /**************************************/
 /* DE shunting signal Ra 11 with Sh 1 */
 /**************************************/
-node|z17-[railway=signal]["railway:signal:shunting"=ra11]["railway:signal:shunting:form"=light]["railway:signal:shunting:states"="ra11;sh1"],
-node|z17-[railway=signal]["railway:signal:shunting"="DE-ESO:ra11"]["railway:signal:shunting:form"=light]["railway:signal:shunting:states"="DE-ESO:ra11;DE-ESO:sh1"]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=ra11]["railway:signal:shunting:form"=light]["railway:signal:shunting:states"="ra11;sh1"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="DE-ESO:ra11"]["railway:signal:shunting:form"=light]["railway:signal:shunting:states"="DE-ESO:ra11;DE-ESO:sh1"]
 {
 	z-index: 2800;
 	icon-image: "icons/de-ra11-sh1-30.png";
@@ -1004,8 +1004,8 @@ node|z17-[railway=signal]["railway:signal:shunting"="DE-ESO:ra11"]["railway:sign
 /********************************************/
 /* DE shunting signal Ra 11b (without Sh 1) */
 /********************************************/
-node|z17-[railway=signal]["railway:signal:shunting"=ra11b]["railway:signal:shunting:form"=sign]["railway:signal:shunting:form"=sign],
-node|z17-[railway=signal]["railway:signal:shunting"="DE-ESO:ra11b"]["railway:signal:shunting:form"=sign]["railway:signal:shunting:form"=sign]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=ra11b]["railway:signal:shunting:form"=sign]["railway:signal:shunting:form"=sign],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="DE-ESO:ra11b"]["railway:signal:shunting:form"=sign]["railway:signal:shunting:form"=sign]
 {
 	z-index: 2800;
 	icon-image: "icons/de-ra11b-32.png";
@@ -1018,14 +1018,14 @@ node|z17-[railway=signal]["railway:signal:shunting"="DE-ESO:ra11b"]["railway:sig
 /*****************************/
 /* DE distant signal type Ks */
 /*****************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:shortened"="no"]["railway:signal:distant:repeated"="no"],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"][!"railway:signal:distant:shortened"]["railway:signal:distant:repeated"="no"],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:shortened"="no"][!"railway:signal:distant:repeated"],
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"][!"railway:signal:distant:shortened"][!"railway:signal:distant:repeated"],
-node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:shortened"="no"]["railway:signal:distant:repeated"="no"],
-node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:shortened"="no"][!"railway:signal:distant:repeated"],
-node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"][!"railway:signal:distant:shortened"]["railway:signal:distant:repeated"="no"],
-node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"][!"railway:signal:distant:shortened"][!"railway:signal:distant:repeated"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:shortened"="no"]["railway:signal:distant:repeated"="no"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"][!"railway:signal:distant:shortened"]["railway:signal:distant:repeated"="no"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:shortened"="no"][!"railway:signal:distant:repeated"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"][!"railway:signal:distant:shortened"][!"railway:signal:distant:repeated"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:shortened"="no"]["railway:signal:distant:repeated"="no"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:shortened"="no"][!"railway:signal:distant:repeated"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"][!"railway:signal:distant:shortened"]["railway:signal:distant:repeated"="no"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"][!"railway:signal:distant:shortened"][!"railway:signal:distant:repeated"]
 {
 	z-index: 8000;
 	text: "ref";
@@ -1045,8 +1045,8 @@ node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:f
 /**************************************/
 /* DE repeated distant signal type Ks */
 /**************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:repeated"="yes"],
-node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:repeated"="yes"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:repeated"="yes"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:repeated"="yes"]
 {
 	z-index: 8000;
 	text: "ref";
@@ -1066,8 +1066,8 @@ node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:f
 /***************************************/
 /* DE shortened distant signal type Ks */
 /***************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:shortened"="yes"],
-node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:shortened"="yes"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:shortened"="yes"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:shortened"="yes"]
 {
 	z-index: 8000;
 	text: "ref";
@@ -1087,8 +1087,8 @@ node|z14-[railway=signal]["railway:signal:distant"=ks]["railway:signal:distant:f
 /**************************/
 /* DE main signal type Ks */
 /**************************/
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:ks"]["railway:signal:main:form"=light]["railway:signal:main:states"="DE-ESO:hp0;DE-ESO:ks1"],
-node|z14-[railway=signal]["railway:signal:main"=ks]["railway:signal:main:form"=light]["railway:signal:main:states"="hp0;ks1"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:ks"]["railway:signal:main:form"=light]["railway:signal:main:states"="DE-ESO:hp0;DE-ESO:ks1"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=ks]["railway:signal:main:form"=light]["railway:signal:main:states"="hp0;ks1"]
 {
 	z-index: 10100;
 	text: "ref";
@@ -1108,10 +1108,10 @@ node|z14-[railway=signal]["railway:signal:main"=ks]["railway:signal:main:form"=l
 /******************************/
 /* DE combined signal type Ks */
 /******************************/
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light]["railway:signal:combined:states"="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:combined:shortened"="no"],
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light]["railway:signal:combined:states"="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2"][!"railway:signal:combined:shortened"],
-node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"]["railway:signal:combined:shortened"="no"],
-node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"][!"railway:signal:combined:shortened"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light]["railway:signal:combined:states"="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:combined:shortened"="no"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light]["railway:signal:combined:states"="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2"][!"railway:signal:combined:shortened"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"]["railway:signal:combined:shortened"="no"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"][!"railway:signal:combined:shortened"]
 {
 	z-index: 10200;
 	text: "ref";
@@ -1131,8 +1131,8 @@ node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined
 /****************************************/
 /* DE shortened combined signal type Ks */
 /****************************************/
-node|z14-[railway=signal]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light]["railway:signal:combined:states"="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:combined:shortened"="yes"],
-node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"]["railway:signal:combined:shortened"="yes"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light]["railway:signal:combined:states"="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:combined:shortened"="yes"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"]["railway:signal:combined:shortened"="yes"]
 {
 	z-index: 10200;
 	text: "ref";
@@ -1152,8 +1152,8 @@ node|z14-[railway=signal]["railway:signal:combined"=ks]["railway:signal:combined
 /*********************/
 /* DE stop post Ne 5 */
 /*********************/
-node|z17-[railway=signal]["railway:signal:stop"=ne5]["railway:signal:stop:form"=sign],
-node|z17-[railway=signal]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"=ne5]["railway:signal:stop:form"=sign],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]
 {
 	z-index: 1000;
 	icon-image: "icons/de-ne5-ds301-32.png";
@@ -1167,9 +1167,9 @@ node|z17-[railway=signal]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:st
 /* DE shunting stop sign Ra10                */
 /* AT shunting stop sign "Verschubhalttafel" */
 /*********************************************/
-node|z17-[railway=signal]["railway:signal:shunting"=ra10]["railway:signal:shunting:form"=sign],
-node|z17-[railway=signal]["railway:signal:shunting"="DE-ESO:ra10"]["railway:signal:shunting:form"=sign],
-node|z17-[railway=signal]["railway:signal:shunting"="AT-V2:verschubhalttafel"]["railway:signal:shunting:form"=sign]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=ra10]["railway:signal:shunting:form"=sign],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="DE-ESO:ra10"]["railway:signal:shunting:form"=sign],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="AT-V2:verschubhalttafel"]["railway:signal:shunting:form"=sign]
 {
 	z-index: 1010;
 	icon-image: "icons/de-ra10-32.png";
@@ -1182,14 +1182,14 @@ node|z17-[railway=signal]["railway:signal:shunting"="AT-V2:verschubhalttafel"]["
 /****************************************************/
 /* DE crossing signal Bü 0/1 which cannot show Bü 1 */
 /****************************************************/
-node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign]
 {
 	z-index: 500;
 	icon-image: "icons/de-bue0-ds-32.png";
@@ -1202,10 +1202,10 @@ node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signa
 /**********************************************************************/
 /* DE crossing signal Bü 0/1 which cannot show Bü 1 and are repeaters */
 /**********************************************************************/
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=sign]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=sign]
 {
 	z-index: 500;
 	icon-image: "de-bue0-ds-repeated-42.png";
@@ -1218,10 +1218,10 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 /**********************************************************************/
 /* DE crossing signal Bü 0/1 which cannot show Bü 1 and are shortened */
 /**********************************************************************/
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=sign],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign]
 {
 	z-index: 500;
 	icon-image: "de-bue0-ds-shortened-42.png";
@@ -1234,14 +1234,14 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 /*************************************************/
 /* DE crossing signal Bü 0/1 which can show Bü 1 */
 /*************************************************/
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light]
 {
 	z-index: 500;
 	icon-image: "icons/de-bue1-ds-32.png";
@@ -1254,10 +1254,10 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 /*******************************************************************/
 /* DE crossing signal Bü 0/1 which can show Bü 1 and are repeaters */
 /*******************************************************************/
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light]
 {
 	z-index: 500;
 	icon-image: "de-bue1-ds-repeated-42.png";
@@ -1270,10 +1270,10 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 /*******************************************************************/
 /* DE crossing signal Bü 0/1 which can show Bü 1 and are shortened */
 /*******************************************************************/
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light]
 {
 	z-index: 500;
 	icon-image: "de-bue1-ds-shortened-42.png";
@@ -1286,14 +1286,14 @@ node|z15-[railway=signal]["railway:signal:crossing"="bü"]["railway:signal:cross
 /*****************************************************************************/
 /* DE crossing signal Bü 0/1 (ex. So 16a/b) which can show Bü 1 (ex. So 16b) */
 /*****************************************************************************/
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:so16"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light]
 {
 	z-index: 500;
 	icon-image: "icons/de-bue1-dv-32.png";
@@ -1306,10 +1306,10 @@ node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:cros
 /**********************************************************************************/
 /* DE crossing signal Bü 0/1 (ex. So 16a/b) which can show Bü 1 and are repeaters */
 /**********************************************************************************/
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="so16"][!"railway:signal:crossing:shortened"]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light]
 {
 	z-index: 500;
 	icon-image: "de-bue1-dv-repeated-42.png";
@@ -1322,10 +1322,10 @@ node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:cros
 /**********************************************************************************/
 /* DE crossing signal Bü 0/1 (ex. So 16a/b) which can show Bü 1 and are shortened */
 /**********************************************************************************/
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
-node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="DE-ESO:so16"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=yes]["railway:signal:crossing:repeated"=no]["railway:signal:crossing:form"=light],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light]
 {
 	z-index: 500;
 	icon-image: "de-bue1-dv-shortened-42.png";
@@ -1338,10 +1338,10 @@ node|z15-[railway=signal]["railway:signal:crossing"="so16"]["railway:signal:cros
 /*********************************/
 /* DE crossing distant sign Bü 2 */
 /*********************************/
-node|z15-[railway=signal]["railway:signal:crossing_distant"="DE-ESO:bü2"][!"railway:signal:crossing_distant:shortened"],
-node|z15-[railway=signal]["railway:signal:crossing_distant"="DE-ESO:bü2"]["railway:signal:crossing_distant:shortened"=no],
-node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"][!"railway:signal:crossing_distant:shortened"],
-node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:signal:crossing_distant:shortened"=no]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant"="DE-ESO:bü2"][!"railway:signal:crossing_distant:shortened"],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant"="DE-ESO:bü2"]["railway:signal:crossing_distant:shortened"=no],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant"="bü2"][!"railway:signal:crossing_distant:shortened"],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant"="bü2"]["railway:signal:crossing_distant:shortened"=no]
 {
 	z-index: 500;
 	icon-image: "icons/de-bue2-ds-56.png";
@@ -1354,8 +1354,8 @@ node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:sig
 /*******************************************************/
 /* DE crossing distant sign Bü 2 with reduced distance */
 /*******************************************************/
-node|z15-[railway=signal]["railway:signal:crossing_distant"="DE-ESO:bü2"]["railway:signal:crossing_distant:shortened"=yes],
-node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:signal:crossing_distant:shortened"=yes]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant"="DE-ESO:bü2"]["railway:signal:crossing_distant:shortened"=yes],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant"="bü2"]["railway:signal:crossing_distant:shortened"=yes]
 {
 	z-index: 500;
 	icon-image: "icons/de-bue2-ds-reduced-distance-56.png";
@@ -1368,8 +1368,8 @@ node|z15-[railway=signal]["railway:signal:crossing_distant"="bü2"]["railway:sig
 /*********************************/
 /* DE whistle sign Bü 4 (DS 301) */
 /*********************************/
-node|z14-[railway=signal]["railway:signal:whistle"="DE-ESO:db:bü4"],
-node|z14-[railway=signal]["railway:signal:whistle"="db:bü4"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="DE-ESO:db:bü4"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="db:bü4"]
 {
 	z-index: 500;
 	icon-image: "icons/de-bue4-ds-32.png";
@@ -1382,8 +1382,8 @@ node|z14-[railway=signal]["railway:signal:whistle"="db:bü4"]
 /*******************************************************************/
 /* DE whistle sign Bü 4 (DS 301) for trains not stopping at a halt */
 /*******************************************************************/
-node|z14-[railway=signal]["railway:signal:whistle"="DE-ESO:db:bü4"]["railway:signal:ring:only_transit"=yes],
-node|z14-[railway=signal]["railway:signal:whistle"="db:bü4"]["railway:signal:ring:only_transit"=yes]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="DE-ESO:db:bü4"]["railway:signal:ring:only_transit"=yes],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="db:bü4"]["railway:signal:ring:only_transit"=yes]
 {
 	z-index: 500;
 	icon-image: "icons/de-bue4-ds-only-transit-43.png";
@@ -1396,8 +1396,8 @@ node|z14-[railway=signal]["railway:signal:whistle"="db:bü4"]["railway:signal:ri
 /********************************/
 /* DE whistle sign Pf1 (DV 301) */
 /********************************/
-node|z14-[railway=signal]["railway:signal:whistle"="DE-ESO:dr:pf1"],
-node|z14-[railway=signal]["railway:signal:whistle"="dr:pf1"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="DE-ESO:dr:pf1"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="dr:pf1"]
 {
 	z-index: 500;
 	icon-image: "icons/de-pf1-dv-32.png";
@@ -1409,8 +1409,8 @@ node|z14-[railway=signal]["railway:signal:whistle"="dr:pf1"]
 /*******************************************************************/
 /* DE whistle sign Pf 1 (DV 301) for trains not stopping at a halt */
 /*******************************************************************/
-node|z14-[railway=signal]["railway:signal:whistle"="DE-ESO:db:pf1"]["railway:signal:ring:only_transit"=yes],
-node|z14-[railway=signal]["railway:signal:whistle"="db:pf1"]["railway:signal:ring:only_transit"=yes]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="DE-ESO:db:pf1"]["railway:signal:ring:only_transit"=yes],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="db:pf1"]["railway:signal:ring:only_transit"=yes]
 {
 	z-index: 500;
 	icon-image: "icons/de-pf1-dv-only-transit-43.png";
@@ -1422,8 +1422,8 @@ node|z14-[railway=signal]["railway:signal:whistle"="db:pf1"]["railway:signal:rin
 /*********************/
 /* DE ring sign Bü 5 */
 /*********************/
-node|z15-[railway=signal]["railway:signal:ring"="DE-ESO:bü5"],
-node|z15-[railway=signal]["railway:signal:ring"="bü5"]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:ring"="DE-ESO:bü5"],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:ring"="bü5"]
 {
 	z-index: 500;
 	icon-image: "icons/de-bue5-ds-32.png";
@@ -1436,8 +1436,8 @@ node|z15-[railway=signal]["railway:signal:ring"="bü5"]
 /*******************************************************/
 /* DE ring sign Bü 5 for trains not stopping at a halt */
 /*******************************************************/
-node|z15-[railway=signal]["railway:signal:ring"="DE-ESO:bü5"]["railway:signal:ring:only_transit"=yes],
-node|z15-[railway=signal]["railway:signal:ring"="bü5"]["railway:signal:ring:only_transit"=yes]
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:ring"="DE-ESO:bü5"]["railway:signal:ring:only_transit"=yes],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:ring"="bü5"]["railway:signal:ring:only_transit"=yes]
 {
 	z-index: 500;
 	icon-image: "icons/de-bue5-only-transit-43.png";
@@ -1450,8 +1450,8 @@ node|z15-[railway=signal]["railway:signal:ring"="bü5"]["railway:signal:ring:onl
 /********************************/
 /* DE station distant sign Ne 6 */
 /********************************/
-node|z14-[railway=signal]["railway:signal:station_distant"="DE-ESO:ne6"]["railway:signal:station_distant:form"=sign],
-node|z14-[railway=signal]["railway:signal:station_distant"="ne6"]["railway:signal:station_distant:form"=sign]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:station_distant"="DE-ESO:ne6"]["railway:signal:station_distant:form"=sign],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:station_distant"="ne6"]["railway:signal:station_distant:form"=sign]
 {
 	z-index: 550;
 	icon-image: "icons/de-ne6-48.png";
@@ -1463,7 +1463,7 @@ node|z14-[railway=signal]["railway:signal:station_distant"="ne6"]["railway:signa
 /******************/
 /* AT Trapeztafel */
 /******************/
-node|z14-[railway=signal]["railway:signal:main"="AT-V2:trapeztafel"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:trapeztafel"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
 {
 	z-index: 1000;
 	text: "ref";
