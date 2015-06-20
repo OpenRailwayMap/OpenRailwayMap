@@ -494,3 +494,11 @@ node[railway=signal]["railway:ref"][ref]
 	assertNoMatch: "node railway=signal ref=N1";
 	fixChangeKey: "railway:ref=>ref";
 }
+
+/* signals should have a railway:signal:direction=* tag */
+node[railway=signal][!"railway:signal:direction"]
+{
+	throwError: "signals should have a railway:signal:direction=* tag";
+	assertMatch: "node railway=signal";
+	assertNoMatch: "node railway=signal railway:signal:direction=forward";
+}
