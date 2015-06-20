@@ -60,8 +60,8 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:brake_test
 /*******************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore][!"railway:signal:main:states"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore][!"railway:signal:main:states"],
-node|z14-[railway=signal]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/],
-node|z14-[railway=signal]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=hp]["railway:signal:main:form"=semaphore]["railway:signal:main:states"]["railway:signal:main:states"!~/.*hp2.*/]["railway:signal:main:states"!~/.*hp1.*/]
 {
 	z-index: 10000;
 	text: "ref";
@@ -785,8 +785,8 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 /* DE distant signal replacement by sign Ne2 with reduced distance */
 /* variant used in West Germany                                    */
 /******************************************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes],
-node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes]
 {
 	z-index: 9000;
 	text: "ref";
@@ -807,8 +807,8 @@ node|z14-[railway=signal]["railway:signal:distant"="db:ne2"]["railway:signal:dis
 /* DE distant signal replacement by sign Ne2 with reduced distance */
 /* variant used in East Germany                                    */
 /******************************************************************/
-node|z14-[railway=signal]["railway:signal:distant"="DE-ESO:dr:so3"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes],
-node|z14-[railway=signal]["railway:signal:distant"="dr:so3"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:dr:so3"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="dr:so3"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes]
 {
 	z-index: 9000;
 	text: "ref";
