@@ -18,6 +18,19 @@
 			"minzoom": 2,
 			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#70584D' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
+			"caption": "contact line"
+		},
+		{
+			"minzoom": 2,
+			"maxzoom": 15,
+			"symbol": "<g fill='none' stroke-width='2'><path stroke='#797979' stroke-linecap='butt' d='M5 6 l32 0' /><path stroke='white' stroke-linecap='butt' d='M5 8 l32 0' /><path stroke='#797979' stroke-linecap='butt' d='M5 10 l32 0' /></g>",
+			"caption": "3rd rail"
+		},
+		{
+			"minzoom": 16,
+			"maxzoom": 19,
+			"symbol": "<g fill='none' stroke-width='3'><path stroke='#797979' stroke-linecap='butt' d='M5 5 l32 0' /><path stroke-width='2' stroke='white' stroke-linecap='butt' d='M5 8 l32 0' /><path stroke='#797979' stroke-linecap='butt' d='M5 10 l32 0' /></g>",
+			"caption": "3rd rail"
 		},
 		{
 			"minzoom": 2,
