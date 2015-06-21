@@ -76,6 +76,31 @@ way|z2-[railway=rail][electrified][electrified!=no][voltage>=1000][frequency=0]
 	text: eval(concat(tag("voltage")/1000, " kV ="));
 }
 
+/* tracks electrified by rail */
+way|z10-[railway=tram][electrified=rail],
+way|z10-[railway=subway][electrified=rail],
+way|z10-[railway=light_rail][electrified=rail],
+way|z9-[railway=narrow_gauge][electrified=rail],
+way|z9-[railway=preserved][electrified=rail],
+way|z10-[railway=rail][electrified=rail],
+way|z2-[railway=rail][electrified=rail]
+{
+	z-index: 1;
+	casing-width: 2;
+	casing-color: #797979;
+	linejoin: butt;
+}
+way|z16-[railway=tram][electrified=rail],
+way|z16-[railway=subway][electrified=rail],
+way|z16-[railway=light_rail][electrified=rail],
+way|z16-[railway=narrow_gauge][electrified=rail],
+way|z16-[railway=preserved][electrified=rail],
+way|z16-[railway=rail][electrified=rail],
+way|z16-[railway=rail][electrified=rail]
+{
+	casing-width: 3;
+}
+
 way|z10-[railway=tram],
 way|z10-[railway=subway],
 way|z10-[railway=light_rail],
