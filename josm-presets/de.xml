@@ -2541,7 +2541,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 				<key key="railway:signal:minor"
-					value="sh" />
+					value="DE-ESO:sh" />
 				<combo key="railway:signal:minor:states"
 					text="Signal states"
 					de.text="Signalzustände"
