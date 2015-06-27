@@ -4217,8 +4217,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delete_if_empty="true" />
 		</item>
 		<item name="Gate" de.name="Tor" icon="gate.png" type="node">
+			<label text="Gate" de.text="Tor" />
 			<key key="barrier"
 				value="gate" />
+			<preset_link preset_name="Schutzhalttafel (Sh 2)" />
 		</item>
 	</group>
 </presets>
