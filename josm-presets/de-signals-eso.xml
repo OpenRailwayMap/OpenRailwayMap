@@ -1542,11 +1542,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<space />
 					<key key="railway"
 						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						default=""
-						delete_if_empty="true" />
 					<check key="railway:signal:minor:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -1562,8 +1557,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						values="forward,backward,both"
+						display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
 						default=""
 						delete_if_empty="true" />
 					<space />
