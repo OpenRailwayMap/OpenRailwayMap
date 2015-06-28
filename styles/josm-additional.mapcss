@@ -1,0 +1,55 @@
+/*
+OpenRailwayMap Style File for JOSM
+Additional icons for mapping railway information
+
+OpenRailwayMap Copyright (C) 2015 Michael Reichert
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See ../COPYING for details.
+
+This style is not suitable for map rendering! It uses some JOSM default icons, 
+available under GPL v2 or newer. These icons are not included.
+
+Format details:
+* http://josm.openstreetmap.de/wiki/Help/Styles/MapCSSImplementation
+* https://wiki.openstreetmap.org/wiki/MapCSS/0.2
+*/
+
+meta
+{
+	title: "OpenRailwayMap additional icons and symbols for editing";
+	version: "0"; 
+	description: "Style for a assisting mapping of railway information in JOSM. Not suitable for map rendering.";
+	author: "Nakaner";
+	link: "http://wiki.openstreetmap.org/wiki/OpenRailwayMap";
+	watch-modified: true;
+}
+
+node|z14-[railway=milestone]["railway:position"]
+{
+	z-index: 100;
+	icon-image: "icons/milestone-sign-16.png";
+	icon-width: 10;
+	icon-height: 16;
+	allow-overlap: true;
+}
+
+node|z14-[railway=milestone][!"railway:position"]
+{
+	z-index: 100;
+	icon-image: "icons/milestone-sign-without-km-16.png";
+	icon-width: 10;
+	icon-height: 16;
+	allow-overlap: true;
+}
+
+node|z16-[railway=signal][!"railway:signal:direction"]
+{
+	z-index: 100;
+	icon-image: "misc/deprecated.png";
+	/* misc/deprecated.png is part of the JOSM installation, 
+	   that's why it is not included at OpenRailwayMap repository */
+	icon-width: 16;
+	icon-height: 16;
+	allow-overlap: true;
+}
