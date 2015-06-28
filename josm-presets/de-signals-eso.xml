@@ -140,7 +140,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
-						default=""
 						delete_if_empty="true" />
 					<space />
 					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
@@ -216,7 +215,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
-						default=""
 						delete_if_empty="true" />
 					<space />
 					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
@@ -277,7 +275,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="DE-ESO:hp0;DE-ESO:sv1;DE-ESO:sv2;DE-ESO:sv3;DE-ESO:sv4;DE-ESO:sv5;DE-ESO:sv6;DE-ESO:sv0;DE-ESO:kennlicht"
 					display_values="Hp 0;Sv 1;Sv 2;Sv 3;Sv 4;Sv 5;Sv 6;Sv 0;marker light"
 					de.display_values="Hp 0;Sv 1;Sv 2;Sv 3;Sv 4;Sv 5;Sv 6;Sv 0;Kennlicht"
-					default=""
 					delete_if_empty="true" />
 				<combo key="railway:signal:combined:function"
 					text="Signal function"
@@ -292,7 +289,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delimiter=";"
 					values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 					display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
-					default=""
 					delete_if_empty="true" />
 				<check key="railway:signal:distant:shortened"
 					text="Shortened distance"
@@ -360,7 +356,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:hl4;DE-ESO:hl5;DE-ESO:hl6a;DE-ESO:hl6b;DE-ESO:hl7;DE-ESO:hl8;DE-ESO:hl9a;DE-ESO:hl9b;DE-ESO:hl10;DE-ESO:hl11;DE-ESO:hl12a;DE-ESO:hl12b;DE-ESO:kennlicht"
 						display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Hl 7;Hl 8;Hl 9a;Hl 9b;Hl 10;Hl 11;Hl 12a;Hl 12b;marker light"
 						de.display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Hl 7;Hl 8;Hl 9a;Hl 9b;Hl 10;Hl 11;Hl 12a;Hl 12b;Kennlicht"
-						default=""
 						delete_if_empty="true" />
 					<combo key="railway:signal:combined:function"
 						text="Signal function"
@@ -375,7 +370,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs12"
 						display_values="Ersatzsignal;M-Tafel"
-						default=""
 						delete_if_empty="true" />
 					<space />
 					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
@@ -435,7 +429,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:hl4;DE-ESO:hl5;DE-ESO:hl6a;DE-ESO:hl6b;DE-ESO:kennlicht"
 						display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;marker light"
 						de.display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Kennlicht"
-						default=""
 						delete_if_empty="true" />
 					<combo key="railway:signal:main:function"
 						text="Signal function"
@@ -450,7 +443,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs12"
 						display_values="Ersatzsignal;M-Tafel"
-						default=""
 						delete_if_empty="true" />
 					<space />
 					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
@@ -577,7 +569,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs7"
 						display_values="Ersatzsignal;Vorsichtsignal"
-						default=""
 						delete_if_empty="true" />
 					<space />
 					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
@@ -653,7 +644,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs7"
 						display_values="Ersatzsignal;Vorsichtsignal"
-						default=""
 						delete_if_empty="true" />
 					<space />
 					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
@@ -772,7 +762,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="DE-ESO:hp0;DE-ESO:hp1;DE-ESO:hp2"
 						display_values="Stop;Proceed;Proceed at reduced speed"
 						de.display_values="Halt;Fahrt;Langsamfahrt"
-						default=""
 						delete_if_empty="true" />
 					<combo key="railway:signal:main:function"
 						text="Signal function"
@@ -787,7 +776,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delimiter=";"
 						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 						display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
-						default=""
 						delete_if_empty="true" />
 					<space />
 					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
@@ -845,7 +833,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="DE-ESO:hp0;DE-ESO:hp1;DE-ESO:hp2;DE-ESO:kennlicht"
 						display_values="Stop;Proceed;Proceed at reduced speed;marker light"
 						de.display_values="Halt;Fahrt;Langsamfahrt;Kennlicht"
-						default=""
 						delete_if_empty="true" />
 					<combo key="railway:signal:main:function"
 						text="Signal function"
@@ -860,7 +847,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delimiter=";"
 						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 						display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
-						default=""
 						delete_if_empty="true" />
 					<space />
 					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
@@ -920,7 +906,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delimiter=";"
 						values="DE-ESO:vr0;DE-ESO:vr1;DE-ESO:vr2"
 						display_values="Halt erwarten;Fahrt erwarten;Langsamfahrt erwarten"
-						default=""
 						delete_if_empty="true" />
 					<combo key="railway:signal:distant:shortened"
 						text="Shortened distance"
@@ -987,7 +972,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="DE-ESO:vr0;DE-ESO:vr1;DE-ESO:vr2;DE-ESO:kennlicht"
 						display_values="Expect Stop;Expect Proceed;Expect Proceed at reduced speed;marker light"
 						de.display_values="Halt erwarten;Fahrt erwarten;Langsamfahrt erwarten;Kennlicht"
-						default=""
 						delete_if_empty="true" />
 					<check key="railway:signal:distant:shortened"
 						text="Shortened distance"
@@ -2658,7 +2642,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delimiter=";"
 					values="DE-ESO:zp10;DE-ESO:zp9"
 					display_values="Türen schließen Zp 10;Abfahrtssignal Zp 9"
-					default=""
 					delete_if_empty="true" />
 				<key key="railway:signal:departure:form"
 					value="light" />
