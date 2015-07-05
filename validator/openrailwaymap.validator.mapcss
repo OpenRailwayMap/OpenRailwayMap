@@ -272,7 +272,7 @@ way[railway][ref=~/^track [0-9]+[a-z]*.*/]
 /* power:type=overhead is deprecated, electrified=contact_line is sufficent */
 way[railway]["power:type"=overhead][electrified=contact_line]
 {
-	throwWarning: "power:type=overhead is deprecated, electrified=contact_line is sufficent";
+	throwError: "power:type=overhead is deprecated, electrified=contact_line is sufficent";
 	assertMatch: "way railway=rail power:type=overhead electrified=contact_line";
 	assertNoMatch: "way railway=rail power:type=overhead electrified=something";
 	fixRemove: "power:type";
@@ -302,7 +302,7 @@ way[railway]["power:type"=overhead][electrified][electrified!=yes][electrified!=
 /* This covers all objects which have power:type!=overhead and already have electrified=* */
 way[railway]["power:type"]["power:type"!=overhead][electrified]
 {
-	throwWarning: "power:type is deprecated, change to proper electrified value";
+	throwError: "power:type is deprecated, change to proper electrified value";
 	assertMatch: "way railway=rail power:type=something electrified=yes";
 	assertNoMatch: "way railway=rail power:type=overhead electrified=yes";
 }
