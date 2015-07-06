@@ -61,7 +61,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delimiter=";"
 				values="AT-V2:halt;AT-V2:frei;AT-V2:frei_mit_40;AT-V2:frei_mit_20"
 				display_values="Halt;Frei;Frei mit 40 km/h;Frei mit 20 km/h"
-				default=""
 				delete_if_empty="true" />
 			<combo key="railway:signal:main:function"
 				text="Signal function"
@@ -76,7 +75,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delimiter=";"
 				values="railway:signal:main:substitute_signal=AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
 				display_values="Ersatzsignal;Vorsichtssignal"
-				default=""
 				delete_if_empty="true" />
 			<space />
 			<preset_link preset_name="Geschwindigkeitsanzeiger" />
@@ -132,7 +130,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delimiter=";"
 				values="AT-V2:halt;AT-V2:frei;AT-V2:frei_mit_60;AT-V2:frei_mit_40;AT-V2:frei_mit_20"
 				display_values="Halt;Frei;Frei mit 60 km/h;Frei mit 40 km/h;Frei mit 20 km/h"
-				default=""
 				delete_if_empty="true" />
 			<combo key="railway:signal:main:function"
 				text="Signal function"
@@ -147,7 +144,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delimiter=";"
 				values="railway:signal:main:substitute_signal=AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
 				display_values="Ersatzsignal;Vorsichtssignal"
-				default=""
 				delete_if_empty="true" />
 			<space />
 			<preset_link preset_name="Geschwindigkeitsanzeiger" />
@@ -250,7 +246,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Signalzustände (Mehrfachauswahl)"
 				delimiter=";"
 				values="AT-V2:vorsicht;AT-V2:hauptsignal_frei;AT-V2:hauptsignal_frei_mit_60;AT-V2:hauptsignal_frei_mit_40"
-				default=""
 				delete_if_empty="true" />
 			<space />
 			<preset_link preset_name="Geschwindigkeitsvoranzeiger" />
@@ -378,7 +373,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delimiter=";"
 				values="railway:signal:main:substitute_signal=AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
 				display_values="Ersatzsignal;Vorsichtssignal"
-				default=""
 				delete_if_empty="true" />
 			<space />
 			<preset_link preset_name="Geschwindigkeitsanzeiger" />
