@@ -270,10 +270,14 @@ way[railway][name=~/^[0-9]+[a-z]*.*/][!"railway:track_ref"]
 }
 
 /* track names or ref should not include the word 'track' */
-way[railway][name=~/^Gleis [0-9]+[a-z]*.*/],
-way[railway][name=~/^track [0-9]+[a-z]*.*/],
-way[railway][ref=~/^Gleis [0-9]+[a-z]*.*/],
-way[railway][ref=~/^track [0-9]+[a-z]*.*/]
+way[railway][name=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway]["name:de"=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway][name=~/^[Tt]rack [0-9]+[a-z]*.*/],
+way[railway][name=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway]["name:fr"=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway][ref=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway][ref=~/^[Tt]rack [0-9]+[a-z]*.*/],
+way[railway][ref=~/^[Vv]oie [0-9]+[a-z]*.*/]
 {
 	throwError: "track names or ref should not include the word 'track'";
 	assertMatch: "way railway=rail name=\"Gleis 14b\"";
