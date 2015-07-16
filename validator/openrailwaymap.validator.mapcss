@@ -284,7 +284,7 @@ way[railway][ref=~/^track [0-9]+[a-z]*.*/]
 /* power:type=overhead is deprecated, electrified=contact_line is sufficent */
 way[railway]["power:type"=overhead][electrified=contact_line]
 {
-	throwWarning: "power:type=overhead is deprecated, electrified=contact_line is sufficent";
+	throwError: "power:type=overhead is deprecated, electrified=contact_line is sufficent";
 	assertMatch: "way railway=rail power:type=overhead electrified=contact_line";
 	assertNoMatch: "way railway=rail power:type=overhead electrified=something";
 	fixRemove: "power:type";
@@ -314,7 +314,7 @@ way[railway]["power:type"=overhead][electrified][electrified!=yes][electrified!=
 /* This covers all objects which have power:type!=overhead and already have electrified=* */
 way[railway]["power:type"]["power:type"!=overhead][electrified]
 {
-	throwWarning: "power:type is deprecated, change to proper electrified value";
+	throwError: "power:type is deprecated, change to proper electrified value";
 	assertMatch: "way railway=rail power:type=something electrified=yes";
 	assertNoMatch: "way railway=rail power:type=overhead electrified=yes";
 }
@@ -513,4 +513,26 @@ node[railway=signal][!"railway:signal:direction"]
 	throwError: "signals should have a railway:signal:direction=* tag";
 	assertMatch: "node railway=signal";
 	assertNoMatch: "node railway=signal railway:signal:direction=forward";
+}
+
+/* railway radio should be tagged as railway:radio=*, not radio=* */
+way[railway][radio="GSM-R"][!"railway:radio"],
+way[railway][radio="GSM-R"]["railway:radio"="gsm-r"]
+{
+	throwWarning: "radio=GSM-R is deprecated, change to railway:radio=gsm-r";
+	assertMatch: "way railway=rail radio=\"GSM-R\"";
+	assertMatch: "way railway=rail radio=\"GSM-R\" \"railway:radio\"=\"gsm-r\"";
+	assertNoMatch: "way railway=rail radio=\"GSM\"";
+	assertNoMatch: "way railway=rail radio=\"GSM-R\" \"railway:radio\"=\"gsm\"";
+	fixAdd: "railway:radio=gsm-r";
+	fixRemove: "radio";
+}
+way[railway][radio="GSM-R"]["railway:radio"]["railway:radio"!="gsm-r"],
+way[railway][radio][radio!="GSM-R"]
+{
+	throwWarning: "radio=* is deprecated, change to proper railway:radio value";
+	assertNoMatch: "way railway=rail radio=\"GSM-R\"";
+	assertNoMatch: "way railway=rail radio=\"GSM-R\" \"railway:radio\"=\"gsm-r\"";
+	assertMatch: "way railway=rail radio=\"GSM\"";
+	assertMatch: "way railway=rail radio=\"GSM-R\" \"railway:radio\"=\"gsm\"";
 }
