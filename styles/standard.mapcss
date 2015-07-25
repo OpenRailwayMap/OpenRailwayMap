@@ -361,7 +361,7 @@ way|z9-[railway=disused]
 way|z9-[railway=abandoned]
 {
 	z-index: 250;
-	dashes: 5,5;
+	dashes: 5,8;
 	color: #70584D;
 	width: 3;
 	opacity: 0.8;
