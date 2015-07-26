@@ -3368,7 +3368,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</roles>
 		</item>
 		<separator />
-		<item name="Level Crossing" de.name="Bahnübergang" icon="de-crossing.png" type="node">
+		<item name="Level Crossing" de.name="Bahnübergang" icon="presets/level_crossing.png" type="node">
 			<label text="Bahnübergang" />
 			<space />
 			<key key="railway"
