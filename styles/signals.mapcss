@@ -1021,9 +1021,9 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=
 	allow-overlap: true;
 }
 
-/*****************************/
-/* DE distant signal type Ks */
-/*****************************/
+/******************************************************/
+/* DE distant signal type Ks (no repeater, with Ne 2) */
+/******************************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:shortened"="no"]["railway:signal:distant:repeated"="no"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"][!"railway:signal:distant:shortened"]["railway:signal:distant:repeated"="no"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:shortened"="no"][!"railway:signal:distant:repeated"],
@@ -1032,6 +1032,8 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=k
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:shortened"="no"][!"railway:signal:distant:repeated"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"][!"railway:signal:distant:shortened"]["railway:signal:distant:repeated"="no"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"][!"railway:signal:distant:shortened"][!"railway:signal:distant:repeated"]
+node|z14-
+["railway"="signal"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:direction"][!"railway:signal:main"][!"railway:signal:distant:additional_light"]
 {
 	z-index: 8000;
 	text: "ref";
@@ -1048,11 +1050,12 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=k
 	allow-overlap: true;
 }
 
-/**************************************/
-/* DE repeated distant signal type Ks */
-/**************************************/
+/************************************************/
+/* DE repeated distant signal type Ks (no Ne 2) */
+/************************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:repeated"="yes"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:repeated"="yes"]
+node|z14-["railway"="signal"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:direction"]["railway:signal:distant:additional_light"="repeater"]
 {
 	z-index: 8000;
 	text: "ref";
@@ -1069,11 +1072,12 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=k
 	allow-overlap: true;
 }
 
-/***************************************/
-/* DE shortened distant signal type Ks */
-/***************************************/
+/***************************************************/
+/* DE shortened distant signal type Ks (with Ne 2) */
+/***************************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:distant:form"=light]["railway:signal:distant:states"="DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:distant:shortened"="yes"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=ks]["railway:signal:distant:form"=light]["railway:signal:distant:states"="ks1;ks2"]["railway:signal:distant:shortened"="yes"]
+node|z14-["railway"="signal"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:direction"]["railway:signal:distant:additional_light"="shortened"]
 {
 	z-index: 8000;
 	text: "ref";
@@ -1093,8 +1097,9 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=k
 /**************************/
 /* DE main signal type Ks */
 /**************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:ks"]["railway:signal:main:form"=light]["railway:signal:main:states"="DE-ESO:hp0;DE-ESO:ks1"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:ks"]["railway:signal:main:form"=light]["railway:signal:main:states"=~/^DE-ESO:hp0;DE-ESO:ks1(;(off|DE-ESO:kennlicht|\?))?$/],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=ks]["railway:signal:main:form"=light]["railway:signal:main:states"="hp0;ks1"]
+node|z14-["railway"="signal"]["railway:signal:main"="DE-ESO:ks"]["railway:signal:direction"][!"railway:signal:distant"]
 {
 	z-index: 10100;
 	text: "ref";
@@ -1118,6 +1123,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light]["railway:signal:combined:states"="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2"][!"railway:signal:combined:shortened"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"]["railway:signal:combined:shortened"="no"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"][!"railway:signal:combined:shortened"]
+node|z14-["railway"="signal"]["railway:signal:main"="DE-ESO:ks"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:direction"][!"railway:signal:distant:additional_light"]
 {
 	z-index: 10200;
 	text: "ref";
@@ -1139,6 +1145,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 /****************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light]["railway:signal:combined:states"="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2"]["railway:signal:combined:shortened"="yes"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=ks]["railway:signal:combined:form"=light]["railway:signal:combined:states"="hp0;ks1;ks2"]["railway:signal:combined:shortened"="yes"]
+node|z14-["railway"="signal"]["railway:signal:main"="DE-ESO:ks"]["railway:signal:distant"="DE-ESO:ks"]["railway:signal:direction"]["railway:signal:distant:additional_light"="shortened"]
 {
 	z-index: 10200;
 	text: "ref";
