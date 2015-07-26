@@ -856,6 +856,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
 						delete_if_empty="true" />
 					<space />
+					<preset_link preset_name="Vr-Licht-Vorsignal" />
 					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
 					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
 					<preset_link preset_name="Sh-1-Licht" />
