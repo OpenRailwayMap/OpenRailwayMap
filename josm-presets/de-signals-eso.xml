@@ -13,8 +13,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Signale DE ESO" description="Preset to tag German railway signals">
 	<group name="OpenRailwayMap Signale DE ESO" icon="signals.png">
-			<group name="Ks-Signale" icon="de-ks-combined-32.png">
-				<item name="Ks-Vorsignal" icon="de-ks-distant-32.png" type="node">
+			<group name="Ks-Signale" icon="de/ks-combined-32.png">
+				<item name="Ks-Vorsignal" icon="de/ks-distant-32.png" type="node">
 					<label text="Ks-Vorsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -79,7 +79,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
 					
 				</item>
-				<item name="Ks-Mehrabschnittssignal" icon="de-ks-combined-32.png" type="node">
+				<item name="Ks-Mehrabschnittssignal" icon="de/ks-combined-32.png" type="node">
 					<label text="Ks-Mehrabschnittssignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -159,7 +159,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Ks-Hauptsignal" icon="de-ks-main-32.png" type="node">
+				<item name="Ks-Hauptsignal" icon="de/ks-main-32.png" type="node">
 					<label text="Ks-Hauptsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -233,7 +233,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 			</group>
-			<item name="Sv-Signal" icon="de-sv-hp0-32.png" type="node">
+			<item name="Sv-Signal" icon="de/sv-hp0-32.png" type="node">
 				<label text="Sv-Signal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -313,8 +313,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 				<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 			</item>
-			<group name="Hl-Signale" icon="de-hl1-32.png">
-				<item name="Hl-Kombinationssignal" icon="de-hl12a-32.png" type="node">
+			<group name="Hl-Signale" icon="de/hl1-32.png">
+				<item name="Hl-Kombinationssignal" icon="de/hl12a-32.png" type="node">
 					<label text="Hl-Kombinationssignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -387,7 +387,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Hl-Hauptsignal" icon="de-hl3a-32.png" type="node">
+				<item name="Hl-Hauptsignal" icon="de/hl3a-32.png" type="node">
 					<label text="Hl-Hauptsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -460,7 +460,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Hl-Vorsignal" icon="de-hl1-distant-24.png" type="node">
+				<item name="Hl-Vorsignal" icon="de/hl1-distant-24.png" type="node">
 					<label text="Hl-Vorsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -719,8 +719,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
 				</item>
 			</group>
-			<group name="H/V-Signale" icon="de-hp0-semaphore-32.png">
-				<item name="Hp-Form-Hauptsignal" icon="de-hp0-semaphore-32.png" type="node">
+			<group name="H/V-Signale" icon="de/hp0-semaphore-32.png">
+				<item name="Hp-Form-Hauptsignal" icon="de/hp0-semaphore-32.png" type="node">
 					<label text="Hp-Form-Hauptsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -791,7 +791,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Hp-Licht-Hauptsignal" icon="de-hp2-light-32.png" type="node">
+				<item name="Hp-Licht-Hauptsignal" icon="de/hp2-light-32.png" type="node">
 					<label text="Hp-Licht-Hauptsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -866,7 +866,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
 				<separator />
-				<item name="Vr-Form-Vorsignal" icon="de-vr2-semaphore-32.png" type="node">
+				<item name="Vr-Form-Vorsignal" icon="de/vr2-semaphore-32.png" type="node">
 					<label text="Vr-Form-Vorsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -931,7 +931,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
 					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
 				</item>
-				<item name="Vr-Licht-Vorsignal" icon="de-vr0-light-32.png" type="node">
+				<item name="Vr-Licht-Vorsignal" icon="de/vr0-light-32.png" type="node">
 					<label text="Vr-Licht-Vorsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -996,7 +996,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
 				</item>
 			</group>
-			<item name="Sh-1-Licht" icon="de-sh1.png" type="node">
+			<item name="Sh-1-Licht" icon="de/sh1.png" type="node">
 				<label text="Sh-1-Licht an anderen Signalen wie Ks-Signalen oder Hp-Ausfahrsignalen." />
 				<space />
 				<key key="railway:signal:minor"
@@ -1004,7 +1004,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:minor:form"
 					value="light" />
 			</item>
-			<item name="Trapeztafel (Ne 1)" icon="de-ne1-32.png" type="node">
+			<item name="Trapeztafel (Ne 1)" icon="de/ne1-32.png" type="node">
 				<label text="Trapeztafel (Ne 1)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1049,7 +1049,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:main:function"
 					value="entry" />
 			</item>
-			<item name="Vorsignaltafel (Ne 2)" icon="de-ne2-32.png" type="node">
+			<item name="Vorsignaltafel (Ne 2)" icon="de/ne2-32.png" type="node">
 				<label text="Vorsignaltafel (Ne 2)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1091,7 +1091,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 			</item>
-			<item name="Kreuztafel (So 106)" icon="de-so106-32.png" type="node">
+			<item name="Kreuztafel (So 106)" icon="de/so106-32.png" type="node">
 				<label text="Kreuztafel (So 106)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1123,8 +1123,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="sign" />
 			</item>
 			<separator />
-			<group name="Bahnübergangssignale" icon="de-bue1-ds-32.png">
-				<item name="Bü-Überwachungssignal (Bü 0/Bü 1)" icon="de-bue1-ds-32.png" type="node">
+			<group name="Bahnübergangssignale" icon="de/bue1-ds-32.png">
+				<item name="Bü-Überwachungssignal (Bü 0/Bü 1)" icon="de/bue1-ds-32.png" type="node">
 					<label text="Bü-Überwachungssignal (Bü 0/Bü 1)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1178,7 +1178,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Bü-Überwachungssignal erwarten (Bü 2/So 15)" icon="de-bue2-ds-28.png" type="node">
+				<item name="Bü-Überwachungssignal erwarten (Bü 2/So 15)" icon="de/bue2-ds-28.png" type="node">
 					<label text="Bü-Überwachungssignal erwarten (Bü 2/So 15)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1225,7 +1225,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Einschaltkontakt Bahnübergang (Bü 3/So 14)" icon="de-bue3-57.png" type="node">
+				<item name="Einschaltkontakt Bahnübergang (Bü 3/So 14)" icon="de/bue3-57.png" type="node">
 					<label text="Einschaltkontakt Bahnübergang (Bü 3/So 14)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1272,7 +1272,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Pfeiftafel (Bü 4/Pf 1/2)" icon="de-bue4-ds-32.png" type="node">
+				<item name="Pfeiftafel (Bü 4/Pf 1/2)" icon="de/bue4-ds-32.png" type="node">
 					<label text="Pfeiftafel (Bü 4/Pf 1/2)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1318,7 +1318,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Läutetafel (Bü 5)" icon="de-bue5-32.png" type="node">
+				<item name="Läutetafel (Bü 5)" icon="de/bue5-32.png" type="node">
 					<label text="Läutetafel (Bü 5)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1353,7 +1353,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Bü-Kennzeichentafel" icon="de-crossing-info.png" type="node">
+				<item name="Bü-Kennzeichentafel" icon="de/crossing-info.png" type="node">
 					<label text="Bü-Kennzeichentafel" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1400,7 +1400,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Mastbauform,Zwergsignal"
 						delete_if_empty="true" />
 				</item>
-				<item name="Bü-Ankündetafel" icon="de-crossing-hint.png" type="node">
+				<item name="Bü-Ankündetafel" icon="de/crossing-hint.png" type="node">
 					<label text="Bü-Ankündetafel" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1448,8 +1448,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 			</group>
-			<group name="Schutzsignale" icon="de-sh1-semaphore-normal-32.png">
-				<item name="Schutzhaltsignal (Sh 0/Sh 1)" icon="de-sh0-semaphore-dwarf-32.png" type="node">
+			<group name="Schutzsignale" icon="de/sh1-semaphore-normal-32.png">
+				<item name="Schutzhaltsignal (Sh 0/Sh 1)" icon="de/sh0-semaphore-dwarf-32.png" type="node">
 					<label text="Schutzhaltsignal  (Sh 0/Sh 1)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1506,7 +1506,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<space />
 					<label text="Signal Gsp 2 siehe 'Gleissperre'" />
 				</item>
-				<item name="Schutzhalttafel (Sh 2)" icon="de-sh2-32.png" type="node">
+				<item name="Schutzhalttafel (Sh 2)" icon="de/sh2-32.png" type="node">
 					<label text="Schutzhalttafel (Sh 2)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1539,7 +1539,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<key key="railway:signal:minor:height"
 						value="normal" />
 				</item>
-				<item name="Wärtervorscheibe" icon="de-sh3.png" type="node">
+				<item name="Wärtervorscheibe" icon="de/sh3.png" type="node">
 					<label text="Wärtervorscheibe" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1583,8 +1583,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 			</group>
-			<group name="Rangiersignale" icon="de-ra11-sign-32.png">
-				<item name="Rangierhalttafel (Ra 10)" icon="de-ra10-32.png" type="node">
+			<group name="Rangiersignale" icon="de/ra11-sign-32.png">
+				<item name="Rangierhalttafel (Ra 10)" icon="de/ra10-32.png" type="node">
 					<label text="Rangierhalttafel (Ra 10)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1622,7 +1622,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 				</item>
-				<item name="Rangierhaltsignal" icon="de-ra11-sign-32.png" type="node">
+				<item name="Rangierhaltsignal" icon="de/ra11-sign-32.png" type="node">
 					<label text="Rangierhaltsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1723,7 +1723,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 				</item>
-				<item name="Grenzzeichen (Ra 12)" icon="de-ra12.png" type="node">
+				<item name="Grenzzeichen (Ra 12)" icon="de/ra12.png" type="node">
 					<label text="Grenzzeichen (Ra 12)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1740,8 +1740,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="DE-ESO:ra12" />
 				</item>
 			</group>
-			<group name="Zusatzsignale" icon="de-zs3-60-sign-up-32.png">
-				<item name="Richtungsanzeiger (Zs 2)" icon="de-zs2-F-38.png" type="node">
+			<group name="Zusatzsignale" icon="de/zs3-60-sign-up-32.png">
+				<item name="Richtungsanzeiger (Zs 2)" icon="de/zs2-F-38.png" type="node">
 					<label text="Richtungsanzeiger (Zs 2)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1777,7 +1777,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<key key="railway:signal:route:form"
 						value="light" />
 				</item>
-				<item name="Richtungsvoranzeiger (Zs 2v)" icon="de-zs2v-F-38.png" type="node">
+				<item name="Richtungsvoranzeiger (Zs 2v)" icon="de/zs2v-F-38.png" type="node">
 					<label text="Richtungsvoranzeiger (Zs 2v)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1814,7 +1814,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="light" />
 				</item>
 				<separator />
-				<item name="Geschwindigkeitsanzeiger (Zs 3)" icon="de-zs3-60-sign-up-32.png" type="node">
+				<item name="Geschwindigkeitsanzeiger (Zs 3)" icon="de/zs3-60-sign-up-32.png" type="node">
 					<label text="Geschwindigkeitsanzeiger (Zs 3)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1864,7 +1864,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Mastbauform,Zwergsignal"
 						delete_if_empty="true" />
 				</item>
-				<item name="Geschwindigkeitsvoranzeiger (Zs 3v)" icon="de-zs3v-60-sign-down-32.png" type="node">
+				<item name="Geschwindigkeitsvoranzeiger (Zs 3v)" icon="de/zs3v-60-sign-down-32.png" type="node">
 					<label text="Geschwindigkeitsvoranzeiger (Zs 3v)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1915,7 +1915,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Mastbauform,Zwergsignal"
 						delete_if_empty="true" />
 				</item>
-				<item name="Endesignal (Zs 10)" icon="de-zs10-sign-32.png" type="node">
+				<item name="Endesignal (Zs 10)" icon="de/zs10-sign-32.png" type="node">
 					<label text="Endesignal (Zs 10)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1961,7 +1961,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 				<separator />
-				<item name="Gegengleisanzeiger (Zs 6)" icon="de-zs6-sign-30.png" type="node">
+				<item name="Gegengleisanzeiger (Zs 6)" icon="de/zs6-sign-30.png" type="node">
 					<label text="Gegengleisanzeiger" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -2038,7 +2038,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 				<separator />
-				<item name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" icon="de-zs13-sign-30.png" type="node">
+				<item name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" icon="de/zs13-sign-30.png" type="node">
 					<label text="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -2088,8 +2088,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 			</group>
-			<group name="Langsamfahrsignale (Lf)" icon="de-lf7-70-sign-32.png">
-				<item name="Geschwindigkeitssignal" icon="de-lf7-70-sign-32.png" type="node">
+			<group name="Langsamfahrsignale (Lf)" icon="de/lf7-70-sign-32.png">
+				<item name="Geschwindigkeitssignal" icon="de/lf7-70-sign-32.png" type="node">
 					<label text="Geschwindigkeitssignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -2148,7 +2148,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 				</item>
-				<item name="Geschwindigkeits-Ankündesignal" icon="de-lf6-60-sign-down-32.png" type="node">
+				<item name="Geschwindigkeits-Ankündesignal" icon="de/lf6-60-sign-down-32.png" type="node">
 					<label text="Geschwindigkeits-Ankündesignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -2206,7 +2206,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						delete_if_empty="true" />
 				</item>
 			</group>
-			<item name="Überwachungssignal Rückfallweiche (Ne 13)" icon="de-ne13a-32.png" type="node">
+			<item name="Überwachungssignal Rückfallweiche (Ne 13)" icon="de/ne13a-32.png" type="node">
 				<label text="Überwachungssignal Rückfallweiche (Ne 13)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2246,7 +2246,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<item name="Ankündigung Überwachungssignal Rückfallweiche (Ne 12)" icon="de-ne12-38.png" type="node">
+			<item name="Ankündigung Überwachungssignal Rückfallweiche (Ne 12)" icon="de/ne12-38.png" type="node">
 				<label text="Ankündigung Überwachungssignal Rückfallweiche (Ne 12)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2285,7 +2285,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Schachbretttafel (Ne 4)" icon="de-ne4-normal-32.png" type="node">
+			<item name="Schachbretttafel (Ne 4)" icon="de/ne4-normal-32.png" type="node">
 				<label text="Schachbretttafel (Ne 4)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2326,7 +2326,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<item name="Haltetafel (Ne 5)" icon="de-ne5-ds301-32.png" type="node">
+			<item name="Haltetafel (Ne 5)" icon="de/ne5-ds301-32.png" type="node">
 				<label text="Haltetafel (Ne 5)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2368,7 +2368,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Haltepunkttafel (Ne 6)" icon="de-ne6-32.png" type="node">
+			<item name="Haltepunkttafel (Ne 6)" icon="de/ne6-32.png" type="node">
 				<label text="Haltepunkttafel (Ne 6)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2398,7 +2398,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:station_distant:form"
 					value="sign" />
 			</item>
-			<item name="Schneepflugtafel (Ne 7)" icon="de-ne7-yellow-up-32.png" type="node">
+			<item name="Schneepflugtafel (Ne 7)" icon="de/ne7-yellow-up-32.png" type="node">
 				<label text="Schneepflugtafel" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2484,7 +2484,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
-			<item name="Fahrleitungssignal (El)" icon="de-el6.png" type="node">
+			<item name="Fahrleitungssignal (El)" icon="de/el6.png" type="node">
 				<label text="Fahrleitungssignal (El)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2553,7 +2553,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					delete_if_empty="true" />
 			</item>
 			<separator />
-			<item name="Fahrtanzeiger" icon="de-fahrtanzeiger-32.png" type="node">
+			<item name="Fahrtanzeiger" icon="de/fahrtanzeiger-32.png" type="node">
 				<label text="Fahrtanzeiger" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2589,7 +2589,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:main_repeated:form"
 					value="light" />
 			</item>
-			<item name="Abfahrtssignal (Zp 9/Zp 10)" icon="de-zp9-db-38.png" type="node">
+			<item name="Abfahrtssignal (Zp 9/Zp 10)" icon="de/zp9-db-38.png" type="node">
 				<label text="Abfahrtssignal (Zp 9/Zp 10)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2626,7 +2626,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:departure:form"
 					value="light" />
 			</item>
-			<item name="Bremsprobesignal (Zp 6–Zp 8)" icon="de-zp8-32.png" type="node">
+			<item name="Bremsprobesignal (Zp 6–Zp 8)" icon="de/zp8-32.png" type="node">
 				<label text="Bremsprobesignal(Zp 6–Zp 8)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2659,7 +2659,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="DE-ESO:db:zp6;DE-ESO:db:zp7;DE-ESO:db:zp8" />
 			</item>
 			<separator />
-			<item name="Blockkennzeichen" icon="de-blockkennzeichen-28.png" type="node">
+			<item name="Blockkennzeichen" icon="de/blockkennzeichen-28.png" type="node">
 				<label text="Blockkennzeichen (ETCS/LZB)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -2704,7 +2704,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
-			<item name="LZB-Bereichskennzeichen" icon="de-lzb-section-start-32.png" type="node">
+			<item name="LZB-Bereichskennzeichen" icon="de/lzb-section-start-32.png" type="node">
 				<label text="LZB-Bereichskennzeichen" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />

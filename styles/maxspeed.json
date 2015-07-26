@@ -221,37 +221,37 @@
 		{
 			"minzoom": 16,
 			"maxzoom": 19,
-			"icon": "icons/de-zs3v-50-sign-down-22.png",
+			"icon": "icons/de/zs3v-50-sign-down-22.png",
 			"caption": "Zs 3v Geschwindigkeitsvoranzeiger"
 		},
 		{
 			"minzoom": 16,
 			"maxzoom": 19,
-			"icon": "icons/de-zs3-60-sign-up-22.png",
+			"icon": "icons/de/zs3-60-sign-up-22.png",
 			"caption": "Zs 3 Geschwindigkeitsanzeiger"
 		},
 		{
 			"minzoom": 14,
 			"maxzoom": 19,
-			"icon": "icons/de-lf6-60-sign-down-22.png",
+			"icon": "icons/de/lf6-60-sign-down-22.png",
 			"caption": "Lf 6 Geschwindigkeitsankündesignal"
 		},
 		{
 			"minzoom": 14,
 			"maxzoom": 19,
-			"icon": "icons/de-lf7-70-sign-22.png",
+			"icon": "icons/de/lf7-70-sign-22.png",
 			"caption": "Lf 7 Geschwindigkeitssignal"
 		},
 		{
 			"minzoom": 16,
 			"maxzoom": 19,
-			"icon": "icons/de-zs10-sign-22.png",
+			"icon": "icons/de/zs10-sign-22.png",
 			"caption": "Zs 10 Endesignal (Tafel)"
 		},
 		{
 			"minzoom": 16,
 			"maxzoom": 19,
-			"icon": "icons/de-zs10-light-22.png",
+			"icon": "icons/de/zs10-light-22.png",
 			"caption": "Zs 10 Endesignal (Lichtsignal)"
 		}
 	]
