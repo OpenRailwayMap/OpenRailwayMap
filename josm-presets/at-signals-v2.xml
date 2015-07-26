@@ -73,7 +73,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Substitute signal (multi-selection)"
 				de.text="Ersatzsignal (Mehrfachauswahl)"
 				delimiter=";"
-				values="railway:signal:main:substitute_signal=AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
+				values="AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
 				display_values="Ersatzsignal;Vorsichtssignal"
 				delete_if_empty="true" />
 			<space />
@@ -142,7 +142,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Substitute signal (multi-selection)"
 				de.text="Ersatzsignal (Mehrfachauswahl)"
 				delimiter=";"
-				values="railway:signal:main:substitute_signal=AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
+				values="AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
 				display_values="Ersatzsignal;Vorsichtssignal"
 				delete_if_empty="true" />
 			<space />
@@ -371,7 +371,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Substitute signal (multi-selection)"
 				de.text="Ersatzsignal (Mehrfachauswahl)"
 				delimiter=";"
-				values="railway:signal:main:substitute_signal=AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
+				values="AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
 				display_values="Ersatzsignal;Vorsichtssignal"
 				delete_if_empty="true" />
 			<space />
