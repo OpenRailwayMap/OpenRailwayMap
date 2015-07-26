@@ -2438,7 +2438,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:minor:form"
 					value="sign" />
 			</item>
-			<item de.name="Weiche" name="Switch" icon="de-switch.png" type="node">
+			<item de.name="Weiche" name="Switch" icon="de/switch.png" type="node">
 				<label text="Switch" de.text="Weiche" />
 				<space />
 				<key key="railway"
@@ -3834,7 +3834,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="isolated_track_section" />
 		</item>
 		<separator />
-		<item name="Fernsprecher" icon="de-phone.png" type="node">
+		<item name="Fernsprecher" icon="de/phone.png" type="node">
 			<label text="Fernsprecher" />
 			<key key="railway"
 				value="phone" />
