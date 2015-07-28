@@ -2484,9 +2484,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Links,Rechts"
 					default=""
 					delete_if_empty="true" />
-				<text key="railway:radius"
+				<combo key="railway:radius"
 					text="Switch radius (m)"
-					de.text="Weichenradius (m)"
+					de.text="Radius der Weichengrundform (m)"
+					values="190,300,500,760,1200,2500"
 					default=""
 					delete_if_empty="true" />
 				<text key="railway:maxspeed:straight"
@@ -2517,6 +2518,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<key key="railway"
 					value="railway_crossing" />
+				<text key="ref"
+					text="Ref"
+					de.text="Bezeichnung/Nummer"
+					default=""
+					delete_if_empty="true" />
 			</item>
 			<item name="Derailer" de.name="Gleissperre" icon="derail.png" type="node">
 				<label text="Derailer" de.text="Gleissperre" />
