@@ -2385,6 +2385,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<key key="railway"
 					value="railway_crossing" />
+				<text key="ref"
+					text="Ref"
+					de.text="Bezeichnung/Nummer"
+					default=""
+					delete_if_empty="true" />
 			</item>
 			<item name="Gleissperre" icon="derail.png" type="node">
 				<label text="Gleissperre" />
