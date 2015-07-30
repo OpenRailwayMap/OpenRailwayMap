@@ -1214,7 +1214,7 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=
 node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=sign]
 {
 	z-index: 500;
-	icon-image: "de-bue0-ds-repeated-42.png";
+	icon-image: "icons/de-bue0-ds-repeated-42.png";
 	icon-width: 9;
 	icon-height: 21;
 	text-allow-overlap: true;
@@ -1230,7 +1230,7 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=
 node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=sign]
 {
 	z-index: 500;
-	icon-image: "de-bue0-ds-shortened-42.png";
+	icon-image: "icons/de-bue0-ds-shortened-42.png";
 	icon-width: 9;
 	icon-height: 21;
 	text-allow-overlap: true;
@@ -1266,7 +1266,7 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=
 node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light]
 {
 	z-index: 500;
-	icon-image: "de-bue1-ds-repeated-42.png";
+	icon-image: "icons/de-bue1-ds-repeated-42.png";
 	icon-width: 9;
 	icon-height: 21;
 	text-allow-overlap: true;
@@ -1282,7 +1282,7 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=
 node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="bü"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light]
 {
 	z-index: 500;
-	icon-image: "de-bue1-ds-shortened-42.png";
+	icon-image: "icons/de-bue1-ds-shortened-42.png";
 	icon-width: 9;
 	icon-height: 21;
 	text-allow-overlap: true;
@@ -1318,7 +1318,7 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=
 node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=no]["railway:signal:crossing:repeated"=yes]["railway:signal:crossing:form"=light]
 {
 	z-index: 500;
-	icon-image: "de-bue1-dv-repeated-42.png";
+	icon-image: "icons/de-bue1-dv-repeated-42.png";
 	icon-width: 9;
 	icon-height: 21;
 	text-allow-overlap: true;
@@ -1334,7 +1334,7 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=
 node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="so16"]["railway:signal:crossing:shortened"=yes][!"railway:signal:crossing:repeated"]["railway:signal:crossing:form"=light]
 {
 	z-index: 500;
-	icon-image: "de-bue1-dv-shortened-42.png";
+	icon-image: "icons/de-bue1-dv-shortened-42.png";
 	icon-width: 9;
 	icon-height: 21;
 	text-allow-overlap: true;
