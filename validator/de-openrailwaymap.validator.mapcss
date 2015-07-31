@@ -120,3 +120,133 @@ way[railway][ref=~/^[0-9]{3}$/]
 	assertNoMatch: "way railway=rail ref=7400";
 	assertNoMatch: "way railway=rail ref=7400a";
 }
+
+/* workrules=EBO is deprecated, should be changed to workrules=DE:EBO */
+/* workrules=ESBO is deprecated, should be changed to workrules=DE:ESBO */
+/* workrules=BOStrab is deprecated, should be changed to workrules=DE:BOStrab */
+way[railway][workrules=EBO],
+way[railway][workrules=ESBO],
+way[railway][workrules=BOStrab]
+{
+	throwError: "workrules={1.value} is deprecated, change to workrules=DE:{1.value}";
+	assertMatch: "way railway=rail workrules=EBO";
+	assertMatch: "way railway=rail workrules=ESBO";
+	assertMatch: "way railway=rail workrules=BOStrab";
+	assertNoMatch: "node railway=rail";
+	assertNoMatch: "way railway=rail";
+	assertNoMatch: "area railway=rail";
+	assertNoMatch: "way railway=rail workrules=DE:EBO";
+	assertNoMatch: "way railway=rail workrules=DE:ESBO";
+	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
+	fixAdd: "workrules=DE:{1.value}";
+}
+
+/* workrules=BOA is deprecated, should be replaced by an adequate value */
+way[railway][workrules=BOA]
+{
+	throwError: "workrules=BOA is deprecated, replace by an adequate value";
+	assertMatch: "way railway=rail workrules=BOA";
+	assertNoMatch: "node railway=rail";
+	assertNoMatch: "way railway=rail";
+	assertNoMatch: "area railway=rail";
+	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
+}
+
+/* ks and hl signals only exist as light signals */
+node[railway=signal][railway:signal:main=ks][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant=ks][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined=ks][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:main="DE-ESO:ks"][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant="DE-ESO:ks"][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined="DE-ESO:ks"][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:main=hl][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant=hl][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined=hl][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:main="DE-ESO:hl"][railway:signal:main:form!=light],
+node[railway=signal][railway:signal:distant="DE-ESO:hl"][railway:signal:distant:form!=light],
+node[railway=signal][railway:signal:combined="DE-ESO:hl"][railway:signal:combined:form!=light]
+{
+	throwError: "{1.value} signals only exist as light signals";
+	assertMatch: "node railway=signal railway:signal:main=ks";
+	assertMatch: "node railway=signal railway:signal:main=ks railway:signal:main:form=semaphore";
+	assertMatch: "node railway=signal railway:signal:main=hl";
+	assertMatch: "node railway=signal railway:signal:main=hl railway:signal:main:form=semaphore";
+	assertNoMatch: "node railway=signal railway:signal:main=hl railway:signal:main:form=light";
+	assertNoMatch: "node railway=signal railway:signal:main=ks railway:signal:main:form=light";
+	fixAdd: "{2.key}=light";
+}
+
+/* hp signals only exist as semaphore or light signals */
+node[railway=signal][railway:signal:main=hp][railway:signal:main:form!=light][railway:signal:main:form!=semaphore],
+node[railway=signal][railway:signal:distant=vr][railway:signal:distant:form!=light][railway:signal:distant:form!=semaphore],
+node[railway=signal][railway:signal:main="DE-ESO:hp"][railway:signal:main:form!=light][railway:signal:main:form!=semaphore],
+node[railway=signal][railway:signal:distant="DE-ESO:vr"][railway:signal:distant:form!=light][railway:signal:distant:form!=semaphore]
+{
+	throwError: "hp signals only exist as semaphore or light signals";
+	assertMatch: "node railway=signal railway:signal:main=hp";
+	assertMatch: "node railway=signal railway:signal:main=hp railway:signal:main:form=typo";
+	assertNoMatch: "node railway=signal railway:signal:main=hp railway:signal:main:form=semaphore";
+	assertNoMatch: "node railway=signal railway:signal:main=hp railway:signal:main:form=light";
+}
+
+/* KVB combined hp signals only exist as light signals */
+node[railway=signal][railway:signal:combined=hp][railway:signal:combined:form!=light],
+node[railway=signal][railway:signal:combined="DE-KVB:hp"][railway:signal:combined:form!=light]
+{
+	throwError: "KVB hp signals only exist as light signals";
+	assertMatch: "node railway=signal railway:signal:combined=hp";
+	assertMatch: "node railway=signal railway:signal:combined=DE-KVB:hp railway:signal:combined:form=typo";
+	assertMatch: "node railway=signal railway:signal:combined=hp railway:signal:combined:form=semaphore";
+	assertNoMatch: "node railway=signal railway:signal:combined=hp railway:signal:combined:form=light";
+	assertNoMatch: "node railway=signal railway:signal:combined=DE-KVB:hp railway:signal:combined:form=light";
+}
+
+/* German signal Gsp 2 was renamed to Wn 7 in 2008 */
+node["railway:signal:minor:states"="DE-ESO:sh0;DE-ESO:gsp2"],
+node["railway:signal:minor:states"="sh0;gsp2"]
+{
+	throwError: "Signal Gsp 2 was renamed to Wn 7 in 2008";
+	assertMatch: "node railway=derail railway:signal:minor:states=DE-ESO:sh0;DE-ESO:gsp2";
+	assertMatch: "node railway=signal railway:signal:minor:states=sh0;gsp2";
+	assertNoMatch: "node railway=derail railway:signal:minor:states=DE-ESO:sh0;DE-ESO:wn7";
+	assertNoMatch: "node railway=derail railway:signal:minor:states=DE-ESO:sh0;DE-ESO:sh1";
+	fixAdd: "railway:signal:minor:states=DE-ESO:sh0;DE-ESO:wn7";
+}
+
+/* German Ne 14 signs without railway:signal:train_protection:type=block_marker */
+node["railway:signal:train_protection"="DE-ESO:ne14"]["railway:signal:train_protection:type"!=block_marker]
+{
+	throwError: "Ne 14 sign requires additional tag railway:signal:train_protection:type=block_marker";
+	assertMatch: "node railway=signal railway:signal:train_protection=DE-ESO:ne14";
+	assertNoMatch: "node railway=signal railway:signal:train_protection=DE-ESO:ne14 railway:signal:train_protection:type=block_marker";
+	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp";
+	fixAdd: "railway:signal:train_protection:type=block_marker";
+}
+
+/* a German distant signal can't be a repeated one if at the same pole as a main signal, as the prior distant
+ * signal would refer to this main signal */
+node["railway:signal:main"="DE-ESO:hp"]["railway:signal:distant:repeated"="yes"]
+{
+	throwError: "main and repeated distant signal can not be at the same place";
+	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
+	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=no";
+	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
+	fixAdd: "railway:signal:distant:shortened=yes";
+	fixRemove: "railway:signal:distant:repeated";
+}
+
+/* German Ks signals can't be distant and main at the same place */
+node["railway:signal:main"="DE-ESO:ks"]["railway:signal:distant"],
+node["railway:signal:main"="ks"]["railway:signal:distant"],
+node["railway:signal:main"]["railway:signal:distant"="DE-ESO:ks"],
+node["railway:signal:main"]["railway:signal:distant"="ks"]
+{
+	throwError: "German Ks signals can't have main and distant signal at the same place, try a combined signal instead";
+	assertMatch: "node railway=signal railway:signal:main=DE-ESO:ks railway:signal:distant=DE-ESO:vr";
+	assertMatch: "node railway=signal railway:signal:main=ks railway:signal:distant=DE-ESO:vr";
+	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:ks";
+	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=ks";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:main=DE-ESO:hp";
+	assertNoMatch: "node railway=signal railway:signal:combined=DE-ESO:ks railway:signal:minor=DE-ESO:sh1";
+}
