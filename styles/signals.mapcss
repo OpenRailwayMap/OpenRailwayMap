@@ -520,8 +520,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"=sh]
 /***************************/
 /* DE main entry sign Ne 1 */
 /***************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:ne1"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="ne1"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:ne1"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
 {
 	z-index: 8000;
 	icon-image: "icons/de/ne1-32.png";
@@ -693,9 +692,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 /*  - cannot display Vr 2                  */
 /*******************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"=~/vr1/]["railway:signal:distant:states"!~/vr2/]
 {
 	z-index: 8500;
 	text: "ref";
@@ -719,9 +716,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=v
 /*  - can display Vr 2                     */
 /*******************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr2/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr2/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr2/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=vr]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr2/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:distant:form"=light]["railway:signal:distant:shortened"=yes][!"railway:signal:main"]["railway:signal:distant:states"]["railway:signal:distant:states"=~/vr2/]
 {
 	z-index: 8500;
 	text: "ref";
@@ -742,9 +737,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=v
 /* DE distant light signals type Hl */
 /************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:hl"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:hl"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=hl]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=hl]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:hl"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]
 {
 	z-index: 8500;
 	text: "ref";
