@@ -53,3 +53,43 @@ node|z16-[railway=signal][!"railway:signal:direction"]
 	icon-height: 16;
 	allow-overlap: true;
 }
+
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:main"=~/^(hp|hl|ks|sv|sk)/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=~/^(vr|hl|ks|sv|sk|db:ne|dr:so)/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"=~/^(db:|dr:){0,1}lf/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"=~/^(db:|dr:){0,1}lf/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=~/^(hl|ks|sv|sk)/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=~/^(bü|dr:so|db:bü)/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant"=~/^(bü|dr:so|db:bü)/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"=~/^el/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:humping"=~/^ra/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"=~/^(pf|bü|db:bü|dr:so)/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:ring"=~/^(pf|bü|db:bü|dr:so)/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:route"=zs2],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:route_distant"=zs2v],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"=~/^(zs|dr:zs|db:zs)/],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:stop"=ne5],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:station_distant"=ne6],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:resetting_switch"=ne13],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:snowplow:order"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:snowplow"=ne7],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:short_route"=zs13],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:brake_test"=zp],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:lzb"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:lzb_start"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:main:marker_light"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:distant:marker_light"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:combined:marker_light"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:minor:marker_light"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:minor:form"=light]["railway:signal:minor:states"="sh0;sh1"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:stop:description"]
+{
+	z-index: 10000;
+	/* high z-index to overwrite other stylesheets */
+	icon-image: "misc/deprecated.png";
+	/* misc/deprecated.png is part of the JOSM installation, 
+	   that's why it is not included at OpenRailwayMap repository */
+	icon-width: 16;
+	icon-height: 16;
+	allow-overlap: true;
+}
