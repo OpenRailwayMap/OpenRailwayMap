@@ -65,7 +65,7 @@ way|z12-[bridge=yes][!"railway:track_ref"].tracks::bridges
 	font-style: italic;
 	text-halo-radius: 1;
 	text-halo-color: white;
-	text: eval(join(" ", tag("ref"), tag("bridge:name")));
+	text: eval(join(" ", tag("ref"), any(tag("bridge:name"), tag("name"))));
 }
 
 /*******************************************/
@@ -96,7 +96,7 @@ way|z10-[tunnel=yes][!"railway:track_ref"].tracks::tunnels
 	font-style: italic;
 	text-halo-radius: 1;
 	text-halo-color: white;
-	text: eval(join(" ", tag("ref"), tag("tunnel:name")));
+	text: eval(join(" ", tag("ref"), any(tag("tunnel:name"), tag("name"))));
 }
 
 /*************************/
