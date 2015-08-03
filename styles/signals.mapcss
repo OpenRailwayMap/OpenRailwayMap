@@ -1508,7 +1508,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 }
 
 /*************************************/
-/* DE Hamburger Hochbahn main signa  */
+/* DE Hamburger Hochbahn main signal */
 /* with railway:signal:main:states=* */
 /*************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-HHA:h"]["railway:signal:main:form"=light]["railway:signal:main:states"]
