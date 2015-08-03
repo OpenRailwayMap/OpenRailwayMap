@@ -1639,7 +1639,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 	allow-overlap: true;
 }
 
-node|z14-[railway=signal]["railway:signal:speed_limit"="DE-HHA:l4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=none]
+node|z14-[railway=signal]["railway:signal:speed_limit"="DE-HHA:l4"]["railway:signal:speed_limit:form"=sign]
 {
 	z-index: 310;
 	icon-image: "icons/de-hha-l4-32.png";
