@@ -19,63 +19,46 @@ echo "Started processing at $(date)"
 
 # download planet file if not existing
 echo "Getting planet file if necessary"
-echo ""
 if [ ! -f old.pbf ]; then
 	echo "Planet file not existing, now downloading it"
 	wget http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
 	mv planet-latest.osm.pbf old.pbf
 fi
-echo ""
+echo "-----"
 
-# update planet file
 echo "Updating planet file"
-echo ""
 osmupdate old.pbf new.pbf --max-merge=5 --hourly --drop-author -v
 rm old.pbf
 mv new.pbf old.pbf
 osmdate=`osmconvert old.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
 date -u -d "$osmdate" +%s > timestamp
-echo ""
+echo "-----"
 
-
-# convert planet file
 echo "Converting planet file"
-echo ""
 osmconvert old.pbf --drop-author --out-o5m >temp.o5m
-echo ""
+echo "-----"
 
-
-# pre-filter planet file
 echo "Filtering planet file"
-echo ""
 osmfilter temp.o5m --keep="railway= route=tracks route=railway route=train route=light_rail route=tram route=subway route_master=train route_master=light_rail route_master=tram route_master=subway shop=ticket vending=public_transport_tickets" --out-osm >old-railways.osm
 rm temp.o5m
-echo ""
+echo "-----"
 
-
-# load data into database
 echo "Loading data into database"
-echo ""
 osm2pgsql --create --database railmap --username olm --prefix railmap --slim --style railmap.style --hstore --hstore-add-index --number-processes 3 --cache 2048 old-railways.osm
 osmconvert old-railways.osm --out-o5m >old-railways.o5m
 rm old-railways.osm
-echo ""
+echo "-----"
 
-
-# run mapcss converter
 echo "Create MapCSS styles"
-echo ""
 cd $PROJECTPATH/styles
 for stylefile in *.mapcss
 do
 	python mapcss_converter.py --mapcss "$stylefile" --icons-path .
 done
-echo ""
+echo "-----"
 
-# prerender lowzoom tiles
 echo "Prerendering tiles"
-echo ""
 curl "http://localhost:9000/init"
-echo ""
+echo "-----"
 
 echo "Finished processing at $(date)."
