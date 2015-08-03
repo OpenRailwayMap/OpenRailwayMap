@@ -1,0 +1,122 @@
+meta
+{
+	title: "OpenRailwayMap – extra ruleset for Germany";
+	version: "2015-05-26";
+	description: "Additional validation of railway data according to the OpenRailwayMap tagging scheme.";
+	author: "rurseekatze";
+	link: "https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging";
+	watch-modified: true;
+}
+
+/* track names containing "KBS" */
+way[railway][name=~/^KBS [0-9]*.*/],
+way[railway][name=~/^Kursbuchstrecke [0-9]*.*/]
+{
+	throwError: "Tracks should not be named by their timetable number (KBS xy). Use a route relation with route=railway, instead.";
+	assertMatch: "way railway=rail name=\"KBS 258\"";
+	assertNoMatch: "way railway=rail name=Frankenbahn";
+	assertNoMatch: "way railway=light_rail ref=\"Kursbuchstrecke 710.1\"";
+	assertMatch: "way railway=light_rail name=\"Kursbuchstrecke 710.1\"";
+}
+
+/* track refs containing "KBS" */
+way[railway][ref=~/^KBS [0-9]*.*/],
+way[railway][ref=~/^Kursbuchstrecke [0-9]*.*/]
+{
+	throwError: "ref=* should be a VzG number (without \"VzG\"). Use a route relation with route=railway for KBS numbers, instead.";
+	assertMatch: "way railway=rail ref=\"KBS 258\"";
+	assertNoMatch: "way railway=rail ref=7400";
+	assertMatch: "way railway=light_rail ref=\"Kursbuchstrecke 710.1\"";
+}
+
+/* track refs containing "VzG" */
+way[railway][ref=~/^VzG [0-9]*.*/]
+{
+	throwError: "ref=* should be a VzG number without \"VzG\"";
+	assertMatch: "way railway=rail ref=\"VzG 7400\"";
+	assertNoMatch: "way railway=rail ref=7400";
+}
+
+/* track names containing "VzG" */
+way[railway][name=~/^VzG [0-9]*.*/]
+{
+	throwError: "VzG numbers should be tagged as ref=* without \"VzG\"";
+	assertMatch: "way railway=rail name=\"VzG 7400\"";
+	assertNoMatch: "way railway=rail name=7400";
+}
+
+/* track names containing only numbers (VzG)*/
+/* Strangely, JOSM also asserts a match, although it shouldn't, e.g. name=740 or name=740.5 */
+way[railway][name=~/^[0-9]{4}$/]
+{
+	throwError: "Track names should be real names. VzG numbers should be tagged ref=*. KBS numbers should be mapped as a relation with route=railway.";
+	assertMatch: "way railway=rail name=\"7400\"";
+	assertNoMatch: "way railway=rail name=\"750\"";
+	assertNoMatch: "way railway=rail ref=7400";
+	assertNoMatch: "way railway=rail name=Hohenlohebahn";
+	fixChangeKey: "name=>ref";
+}
+
+/* track names containing only numbers (KBS)*/
+way[railway][name=~/^[0-9]{3}\.[0-9]+$/],
+way[railway][name=~/^[0-9]{3}\.[0-9]{1,2}[-.][0-9]{1,2}$/]
+{
+	throwError: "Track names should be real names. KBS numbers should be mapped as a relation with route=railway.";
+	assertMatch: "way railway=rail name=\"740.4\"";
+	assertMatch: "way railway=rail name=\"790.4-5\"";
+	assertMatch: "way railway=rail name=\"790.4.5\"";
+	assertNoMatch: "way railway=rail name=\"780\"";
+	assertNoMatch: "way railway=rail name=\"790.4a5\"";
+	assertNoMatch: "way railway=rail name=Hohenlohebahn";
+	assertNoMatch: "way railway=rail name=\"790.4--5\"";
+	assertNoMatch: "way railway=rail name=\"790.4..5\"";
+	assertNoMatch: "way railway=rail name=7400";
+	assertNoMatch: "way railway=rail name=7400a";
+}
+
+/* track names containing only three digits (KBS or track number)*/
+way[railway][name=~/^[0-9]{3}$/]
+{
+	throwError: "Track names should be real names. KBS numbers should be mapped as a relation with route=railway, track numbers as railway:track_ref=*.";
+	assertMatch: "way railway=rail name=\"780\"";
+	assertNoMatch: "way railway=rail name=\"740.4\"";
+	assertNoMatch: "way railway=rail name=\"790.4-5\"";
+	assertNoMatch: "way railway=rail name=\"790.4.5\"";
+	assertNoMatch: "way railway=rail name=\"790.4a5\"";
+	assertNoMatch: "way railway=rail name=Hohenlohebahn";
+	assertNoMatch: "way railway=rail name=\"790.4--5\"";
+	assertNoMatch: "way railway=rail name=\"790.4..5\"";
+	assertNoMatch: "way railway=rail name=7400";
+	assertNoMatch: "way railway=rail name=7400a";
+}
+
+/* track refs containing only numbers that look like KBS numbers */
+way[railway][ref=~/^[0-9]{3}\.[0-9]+$/],
+way[railway][ref=~/^[0-9]{3}\.[0-9]{1,2}[-.][0-9]{1,2}$/]
+{
+	throwError: "Track refs should be VzG numbers in Germany. KBS numbers should be mapped as a relation with route=railway.";
+	assertMatch: "way railway=rail ref=\"740.4\"";
+	assertMatch: "way railway=rail ref=\"790.4-5\"";
+	assertMatch: "way railway=rail ref=\"790.4.5\"";
+	assertNoMatch: "way railway=rail ref=\"780\"";
+	assertNoMatch: "way railway=rail ref=\"790.4--5\"";
+	assertNoMatch: "way railway=rail ref=\"790.4..5\"";
+	assertNoMatch: "way railway=rail ref=\"790.4a5\"";
+	assertNoMatch: "way railway=rail ref=7400";
+	assertNoMatch: "way railway=rail ref=7400a";
+}
+
+/* track refs containing only three digits (KBS or track number) */
+way[railway][ref=~/^[0-9]{3}$/]
+{
+	throwError: "Track refs should be VzG numbers in Germany. KBS numbers should be mapped as a relation with route=railway, track numbers as railway:track_ref=*.";
+	assertMatch: "way railway=rail ref=\"780\"";
+	assertNoMatch: "way railway=rail ref=\"740.4\"";
+	assertNoMatch: "way railway=rail ref=\"790.4-5\"";
+	assertNoMatch: "way railway=rail ref=\"790.4.5\"";
+	assertNoMatch: "way railway=rail ref=\"790.4--5\"";
+	assertNoMatch: "way railway=rail ref=\"790.4..5\"";
+	assertNoMatch: "way railway=rail ref=\"790.4a5\"";
+	assertNoMatch: "way railway=rail ref=7400";
+	assertNoMatch: "way railway=rail ref=7400a";
+}
