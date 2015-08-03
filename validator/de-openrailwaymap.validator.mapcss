@@ -1,7 +1,7 @@
 meta
 {
 	title: "OpenRailwayMap – extra ruleset for Germany";
-	version: "2015-05-26";
+	version: "2015-08-03";
 	description: "Additional validation of railway data according to the OpenRailwayMap tagging scheme.";
 	author: "rurseekatze";
 	link: "https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging";
@@ -45,7 +45,7 @@ way[railway][name=~/^VzG [0-9]*.*/]
 	assertNoMatch: "way railway=rail name=7400";
 }
 
-/* track names containing only numbers (VzG)*/
+/* track names containing only numbers (VzG) */
 /* Strangely, JOSM also asserts a match, although it shouldn't, e.g. name=740 or name=740.5 */
 way[railway][name=~/^[0-9]{4}$/]
 {
@@ -57,7 +57,7 @@ way[railway][name=~/^[0-9]{4}$/]
 	fixChangeKey: "name=>ref";
 }
 
-/* track names containing only numbers (KBS)*/
+/* track names containing only numbers (KBS) */
 way[railway][name=~/^[0-9]{3}\.[0-9]+$/],
 way[railway][name=~/^[0-9]{3}\.[0-9]{1,2}[-.][0-9]{1,2}$/]
 {
@@ -74,7 +74,7 @@ way[railway][name=~/^[0-9]{3}\.[0-9]{1,2}[-.][0-9]{1,2}$/]
 	assertNoMatch: "way railway=rail name=7400a";
 }
 
-/* track names containing only three digits (KBS or track number)*/
+/* track names containing only three digits (KBS or track number) */
 way[railway][name=~/^[0-9]{3}$/]
 {
 	throwError: "Track names should be real names. KBS numbers should be mapped as a relation with route=railway, track numbers as railway:track_ref=*.";
