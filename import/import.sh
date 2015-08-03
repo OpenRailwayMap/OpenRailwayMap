@@ -39,7 +39,7 @@ osmconvert old.pbf --drop-author --out-o5m >temp.o5m
 echo "-----"
 
 echo "Filtering planet file"
-osmfilter temp.o5m --keep="railway= route=tracks route=railway route=train route=light_rail route=tram route=subway route_master=train route_master=light_rail route_master=tram route_master=subway shop=ticket vending=public_transport_tickets" --out-osm >old-railways.osm
+osmfilter temp.o5m --keep="railway= route=tracks route=railway shop=ticket vending=public_transport_tickets" --out-osm >old-railways.osm
 rm temp.o5m
 echo "-----"
 
