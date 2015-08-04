@@ -540,3 +540,36 @@ way[railway][radio][radio!="GSM-R"]
 	assertMatch: "way railway=rail radio=\"GSM\"";
 	assertMatch: "way railway=rail radio=\"GSM-R\" \"railway:radio\"=\"gsm\"";
 }
+
+/* signals should have a name that is prefixed (e.g. with DE-ESO:) */
+node[railway=signal]["railway:signal:main"]["railway:signal:main"!~/.+:.+/],
+node[railway=signal]["railway:signal:combined"]["railway:signal:combined"!~/.+:.+/],
+node[railway=signal]["railway:signal:distant"]["railway:signal:distant"!~/.+:.+/],
+node[railway=signal]["railway:signal:shunting"]["railway:signal:shunting"!~/.+:.+/],
+node[railway=signal]["railway:signal:main_repeated"]["railway:signal:main_repeated"!~/.+:.+/],
+node[railway=signal]["railway:signal:minor"]["railway:signal:minor"!~/.+:.+/],
+node[railway=signal]["railway:signal:minor_distant"]["railway:signal:minor_distant"!~/.+:.+/],
+node[railway=signal]["railway:signal:crossing"]["railway:signal:crossing"!~/.+:.+/],
+node[railway=signal]["railway:signal:crossing_distant"]["railway:signal:crossing_distant"!~/.+:.+/],
+node[railway=signal]["railway:signal:humping"]["railway:signal:humping"!~/.+:.+/],
+node[railway=signal]["railway:signal:speed_limit"]["railway:signal:speed_limit"!~/.+:.+/],
+node[railway=signal]["railway:signal:speed_limit_distant"]["railway:signal:speed_limit_distant"!~/.+:.+/],
+node[railway=signal]["railway:signal:route"]["railway:signal:route"!~/.+:.+/],
+node[railway=signal]["railway:signal:route_distant"]["railway:signal:route_distant"!~/.+:.+/],
+node[railway=signal]["railway:signal:wrong_road"]["railway:signal:wrong_road"!~/.+:.+/],
+node[railway=signal]["railway:signal:stop_demand"]["railway:signal:stop_demand"!~/.+:.+/],
+node[railway=signal]["railway:signal:departure"]["railway:signal:departure"!~/.+:.+/],
+node[railway=signal]["railway:signal:resetting_switch"]["railway:signal:resetting_switch"!~/.+:.+/],
+node[railway=signal]["railway:signal:short_route"]["railway:signal:short_route"!~/.+:.+/],
+node[railway=signal]["railway:signal:brake_test"]["railway:signal:brake_test"!~/.+:.+/]
+{
+	throwWarning: "signal names should be prefixed with an operator or country prefix";
+	assertMatch: "node railway=signal railway:signal:combined=ks";
+	assertMatch: "node railway=signal railway:signal:main=ks";
+	assertMatch: "node railway=signal railway:signal:distant=vr";
+	assertMatch: "node railway=signal railway:signal:route=zs2";
+	assertNoMatch: "node railway=signal railway:signal:combined=DE-ESO:ks";
+	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:ks";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:ks";
+	assertNoMatch: "node railway=signal railway:signal:route=DE-ESO:zs2";
+}
