@@ -20,6 +20,8 @@ TILELIST=/home/www/sites/194.245.35.149/site/olm/import/expired_tiles
 PATH="$PATH:$PROJECTPATH/import/bin"
 PATH="$PATH:$PROJECTPATH/import/bin/osm2pgsql"
 
+source $(dirname ${0})/func_filter.sh
+
 cd $DATAPATH
 
 
@@ -35,14 +37,7 @@ echo "Updating planet file"
 # END
 echo "-----"
 
-echo "Converting planet file"
-osmconvert old.pbf --drop-author --out-o5m >temp.o5m
-echo "-----"
-
-echo "Filtering planet file"
-osmfilter temp.o5m --keep="railway= route=tracks route=railway shop=ticket vending=public_transport_tickets" --out-o5m >new-railways.o5m
-rm temp.o5m
-echo "-----"
+filter_planet --out-o5m -o=new-railways.o5m
 
 echo "Generate diffs"
 osmconvert old-railways.o5m new-railways.o5m --diff-contents --fake-lonlat >changes.osc
