@@ -418,9 +418,11 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=
 	allow-overlap: true;
 }
 
-/****************************************/
-/* DE minor light dwarf signals type Sh */
-/****************************************/
+/*********************************************************/
+/* DE minor light dwarf signals type Sh                  */
+/* -also all other sh light signals that cannot show sh1 */
+/*********************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light]["railway:signal:minor:states"!~/^(.*;)?DE-ESO:sh1(;.*)?$/],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light]["railway:signal:minor:height"=dwarf]
 {
 	z-index: 3000;
@@ -470,11 +472,16 @@ node|z17-[railway="buffer_stop"]["railway:signal:direction"]["railway:signal:min
 	allow-overlap: true;
 }
 
-/**********************************/
-/* DE minor light signals type Sh */
-/**********************************/
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal],
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light][!"railway:signal:minor:height"]
+/********************************************/
+/* DE minor light signals type Sh           */
+/* -only those that are not tagged as dwarf */
+/* -those that can show sh1 OR              */
+/* -those where no states are given         */
+/********************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal]["railway:signal:minor:states"=~/^(.*;)?DE-ESO:sh1(;.*)?$/],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light]["railway:signal:minor:height"=normal][!"railway:signal:minor:states"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light][!"railway:signal:minor:height"]["railway:signal:minor:states"=~/^(.*;)?DE-ESO:sh1(;.*)?$/],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light][!"railway:signal:minor:height"][!"railway:signal:minor:states"]
 {
 	z-index: 5000;
 	text: "ref";
