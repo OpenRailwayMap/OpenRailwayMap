@@ -46,10 +46,7 @@ echo "-----"
 
 echo "Create MapCSS styles"
 cd $PROJECTPATH/styles
-for stylefile in *.mapcss
-do
-	python mapcss_converter.py --mapcss "$stylefile" --icons-path .
-done
+make
 echo "-----"
 
 echo "Prerendering tiles"
