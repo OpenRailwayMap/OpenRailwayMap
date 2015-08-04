@@ -1309,6 +1309,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="AT-V2:schaltstellenpflock" />
 				<key key="railway:signal:crossing_distant:form"
 					value="sign" />
+				<text key="railway:signal:crossing_distant:caption"
+					text="Position of level crossing (e.g. '13.427')"
+					de.text="Streckenkilometer des Bahnübergangs (z. B. '13.427')"
+					default=""
+					delete_if_empty="true" />
 			</item>
 			<item name="Pfeifpflock" icon="todo.png" type="node">
 				<label text="Pfeifpflock" />
