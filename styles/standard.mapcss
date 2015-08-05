@@ -72,7 +72,7 @@ way|z12-[bridge=yes]::bridges
 	font-style: italic;
 	text-halo-radius: 1;
 	text-halo-color: white;
-	text: eval(concat(tag("ref"), " ", tag("bridge:name")));
+	text: eval(join(" ", tag("ref"), tag("bridge:name")));
 }
 
 /*******************************************/
@@ -113,7 +113,7 @@ way|z10-[railway=light_rail][tunnel=yes][!"railway:track_ref"]::tunnels
 	font-style: italic;
 	text-halo-radius: 1;
 	text-halo-color: white;
-	text: eval(concat(tag("ref"), " ", tag("tunnel:name")));
+	text: eval(join(" ", tag("ref"), tag("tunnel:name")));
 }
 
 /*************************/
