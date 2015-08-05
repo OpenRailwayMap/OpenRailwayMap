@@ -21,7 +21,8 @@ way[railway][usage][usage!=industrial][usage!=military][service]
 }
 
 /* Station mapped as way or area */
-way[railway=station], area[railway=station]
+way[railway=station],
+area[railway=station]
 {
 	throwError: "Station mapped as a way, but should be mapped as a node";
 	assertMatch: "way railway=station";
