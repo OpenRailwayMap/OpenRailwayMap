@@ -146,6 +146,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Ersatzsignal;Vorsichtssignal"
 				delete_if_empty="true" />
 			<space />
+			<preset_link preset_name="Lichtvorsignal" />
 			<preset_link preset_name="Geschwindigkeitsanzeiger" />
 			<preset_link preset_name="Geschwindigkeitsvoranzeiger" />
 			<preset_link preset_name="Verschubsignal" />
