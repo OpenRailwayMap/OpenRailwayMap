@@ -99,8 +99,8 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="
 	allow-overlap: true;
 }
 
-/********************************/
-/* DE whistle sign Pf1 (DV 301) */
+/*********************************/
+/* DE whistle sign Pf 1 (DV 301) */
 /********************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="DE-ESO:dr:pf1"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="dr:pf1"]
@@ -357,7 +357,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-
 }
 
 /*********************************************/
-/* DE shunting stop sign Ra10                */
+/* DE shunting stop sign Ra 10               */
 /* AT shunting stop sign "Verschubhalttafel" */
 /*********************************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=ra10]["railway:signal:shunting:form"=sign],
@@ -738,9 +738,9 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=v
 	allow-overlap: true;
 }
 
-/******************************************/
-/* DE distant light signals type Hl which */
-/******************************************/
+/************************************/
+/* DE distant light signals type Hl */
+/************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:hl"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:hl"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=hl]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
@@ -991,9 +991,9 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	allow-overlap: true;
 }
 
-/*********************************************/
-/* DE distant signal replacement by sign Ne2 */
-/*********************************************/
+/**********************************************/
+/* DE distant signal replacement by sign Ne 2 */
+/**********************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=no],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign][!"railway:signal:distant:shortened"],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=no],
@@ -1014,10 +1014,10 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	allow-overlap: true;
 }
 
-/*******************************************************************/
-/* DE distant signal replacement by sign Ne2 with reduced distance */
-/* variant used in West Germany                                    */
-/******************************************************************/
+/********************************************************************/
+/* DE distant signal replacement by sign Ne 2 with reduced distance */
+/* variant used in West Germany                                     */
+/********************************************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="db:ne2"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes]
 {
@@ -1036,10 +1036,10 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	allow-overlap: true;
 }
 
-/*******************************************************************/
-/* DE distant signal replacement by sign Ne2 with reduced distance */
-/* variant used in East Germany                                    */
-/******************************************************************/
+/********************************************************************/
+/* DE distant signal replacement by sign Ne 2 with reduced distance */
+/* variant used in East Germany                                     */
+/********************************************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="DE-ESO:dr:so3"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes],
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="dr:so3"]["railway:signal:distant:form"=sign]["railway:signal:distant:shortened"=yes]
 {
