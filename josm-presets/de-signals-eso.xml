@@ -1775,7 +1775,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:route:form"
-						value="light">
+						value="light" />
 				</item>
 				<item name="Richtungsvoranzeiger (Zs 2v)" icon="de-zs2v-F-38.png" type="node">
 					<label text="Richtungsvoranzeiger (Zs 2v)" />
@@ -1811,7 +1811,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<key key="railway:signal:route:form"
-						value="light">
+						value="light" />
 				</item>
 				<separator />
 				<item name="Geschwindigkeitsanzeiger (Zs 3)" icon="de-zs3-60-sign-up-32.png" type="node">
