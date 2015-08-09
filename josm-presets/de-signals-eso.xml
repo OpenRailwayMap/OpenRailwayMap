@@ -2120,7 +2120,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						<list_entry value="DE-ESO:dr:lf1/2" display_value="Lf 1/2" short_description="Langsamfahrbeginnscheibe Lf 1/2 (ex-DR)" />
 						<list_entry value="DE-ESO:lf2" display_value="Lf 2" short_description="Anfangsscheibe Lf 2" />
 						<list_entry value="DE-ESO:lf3" display_value="Lf 3" short_description="Endscheibe Lf 3" />
-						<list_entry value="DE-ESO:db:lf5" display_value="Lf 5 DR" short_description="Anfangstafel Lf 5 (ex-DB)" />
+						<list_entry value="DE-ESO:db:lf5" display_value="Lf 5 DB" short_description="Anfangstafel Lf 5 (ex-DB)" />
 						<list_entry value="DE-ESO:dr:lf5" display_value="Lf 5 DR" short_description="Eckentafel Lf 5 (ex-DR)" />
 					</combo>
 					<key key="railway:signal:speed_limit:form"
