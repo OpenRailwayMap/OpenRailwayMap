@@ -117,7 +117,8 @@ node[railway=milestone][operator]
 }
 
 /* supervised=* is deprecated, replace it with the new crossing:supervision=* */
-node[railway=level_crossing][supervised], node[railway=crossing][supervised]
+node[railway=level_crossing][supervised],
+node[railway=crossing][supervised]
 {
 	throwWarning: "supervised=* is deprecated, replace it with the new crossing:supervision=*";
 	assertMatch: "node railway=level_crossing supervised=yes";
