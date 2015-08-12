@@ -1476,14 +1476,12 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main:deact
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:shunting:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main_repeated:deactivated"=yes]::deactivatedcross,
+/*node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main_repeated:deactivated"=yes]::deactivatedcross,*/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:minor:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:minor_distant:deactivated"=yes],
+/*node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:minor_distant:deactivated"=yes]::deactivatedcross,*/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:crossing:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant:deactivated"=yes]::deactivatedcross /*,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:humping:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:route:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:route_distant:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road:deactivated"=yes]::deactivatedcross,
@@ -1492,6 +1490,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:departure:
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:resetting_switch:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:short_route:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:brake_test:deactivated"=yes]::deactivatedcross
+*/
 {
 	z-index: 11000;
 	icon-image: "icons/light-signal-deactivated-18.png";
