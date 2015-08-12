@@ -225,10 +225,12 @@ node["railway:signal:train_protection"="DE-ESO:ne14"]["railway:signal:train_prot
 
 /* a German distant signal can't be a repeated one if at the same pole as a main signal, as the prior distant
  * signal would refer to this main signal */
-node["railway:signal:main"="DE-ESO:hp"]["railway:signal:distant:repeated"="yes"]
+node["railway:signal:main"="DE-ESO:hp"]["railway:signal:distant:repeated"="yes"]["railway:signal:main:states"!~/^(.*;)?DE-ESO:kennlicht(;.*)?$/]
 {
-	throwError: "main and repeated distant signal can not be at the same place";
+	throwError: "main and repeated distant signal usually are not at the same place";
 	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
+	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes railway:signal:main:states=DE-ESO:hp0;DE-ESO:hp1";
+	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes railway:signal:main:states=DE-ESO:hp0;DE-ESO:kennlicht";
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=no";
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr";
 	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
