@@ -1225,9 +1225,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						delete_if_empty="true" />
 				</item>
-				<item name="Einschaltkontakt Bahnübergang (Bü 3/So 14)" icon="de/bue3-57.png" type="node">
-					<label text="Einschaltkontakt Bahnübergang (Bü 3/So 14)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item de.name="Einschaltkontakt Bahnübergang/Merktafel (Bü 3)"
+				    name="Activation switch crossing/Reminder Sign (Bü 3)" icon="de-bue3-57.png" type="node">
+					<label de.text="Einschaltkontakt Bahnübergang/Merktafel (Bü 3)"
+					   text="Activation switch of a level crossing/reminder sign (Bü 3)" />
+					<label de.text="Existiert nur im Gebiet der ehemaligen Bundesbahn (DS 301)."
+					   text="This signal only exists in West Germany (former area of Deutsche Bundesbahn)." />
+					<label de.text="Wird als Punkt auf dem Gleis erfasst."
+					   text="Is being mapped as a node on the track." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1250,27 +1255,42 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
 						default=""
 						delete_if_empty="true" />
-					<space />
-					<combo key="railway:signal:crossing_distant"
-						text="Type of signal"
-						de.text="Signaltyp"
-						values="DE-ESO:bü3,DE-ESO:so14"
-						display_values="Bü 3 ex-DB,So 14 ex-DR"
-						default=""
-						delete_if_empty="true"
+					<key key="railway:signal:crossing_distant"
+						value="DE-ESO:bü3"
 						match="keyvalue!" />
 					<key key="railway:signal:crossing_distant:form"
 						value="sign" />
-					<check key="railway:signal:crossing:repeated"
-						text="Repeated"
-						de.text="Signalwiederholer (weiße Scheibe)"
+				</item>
+				<item de.name="Einschaltkontakt Bahnübergang/Merkpfahl (So 14)"
+				    name="Activation switch crossing/Reminder Pole (So 14)" icon="de-bue3-57.png" type="node">
+					<label de.text="Einschaltkontakt Bahnübergang/Merkpfahl (So 14)"
+					   text="Activation switch of a level crossing/reminder pole (So 14)" />
+					<label de.text="Existiert nur im Gebiet der ehemaligen Reichsbahn (DV 301)."
+					   text="This signal only exists in East Germany (former area of Deutsche Reichsbahn)." />
+					<label de.text="Wird als Punkt auf dem Gleis erfasst."
+					   text="Is being mapped as a node on the track." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:crossing_distant:deactivated"
+						text="Out of order"
+						de.text="Ungültigkeitskreuz"
 						default="off"
 						delete_if_empty="true" />
-					<check key="railway:signal:crossing_distant:shortened"
-						text="Shortened distance"
-						de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
-						default="off"
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						default=""
 						delete_if_empty="true" />
+					<key key="railway:signal:direction"
+						value="both" />
+					<key key="railway:signal:crossing_distant"
+						value="DE-ESO:so14"
+						match="keyvalue!" />
+					<key key="railway:signal:crossing_distant:form"
+						value="sign" />
 				</item>
 				<item name="Pfeiftafel (Bü 4/Pf 1/2)" icon="de/bue4-ds-32.png" type="node">
 					<label text="Pfeiftafel (Bü 4/Pf 1/2)" />
