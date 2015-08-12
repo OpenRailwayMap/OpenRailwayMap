@@ -28,6 +28,17 @@ canvas
 	default-lines: true;
 }
 
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit:deactivated"=yes]::deactivatedcross,
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant:deactivated"=yes]::deactivatedcross
+{
+	z-index: 11000;
+	icon-image: "icons/light-signal-deactivated-18.png";
+	icon-width: 9;
+	icon-height: 9;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 way|z10-[railway=tram][!maxspeed],
 way|z10-[railway=subway][!maxspeed],
 way|z10-[railway=light_rail][!maxspeed],
