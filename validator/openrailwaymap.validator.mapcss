@@ -457,3 +457,26 @@ node[railway=signal][name][ref=*name]
 	assertNoMatch: "node railway=signal ref=FF name=GG";
 	fixChangeKey: "name=>ref";
 }
+
+relation[railway=controlled_area]
+{
+	throwWarning: "controlled_area relations are deprecated, change to railway=interlocking";
+	fixAdd: "railway=interlocking";
+	assertMatch: "relation railway=controlled_area";
+	assertNoMatch: "relation railway=interlocking";
+	assertNoMatch: "way railway=controlled_area";
+}
+
+relation[railway=interlocking][!type]
+{
+	throwError: "interlocking relation without type=railway";
+	fixAdd: "type=railway";
+	assertMatch: "relation railway=interlocking";
+	assertNoMatch: "relation railway=interlocking type=railway";
+}
+relation[railway=interlocking][type][type!=railway]
+{
+	throwError: "interlocking relation with type other than railway";
+	assertMatch: "relation railway=interlocking type=public_transport";
+	assertNoMatch: "relation railway=interlocking type=railway";
+}
