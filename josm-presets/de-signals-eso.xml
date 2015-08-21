@@ -508,6 +508,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Vorsignalwiederholer"
 						default="off"
 						delete_if_empty="true" />
+					<check key="railway:signal:distant:shortened"
+						text="Shortened Breaking Distance"
+						de.text="Reduzierter Bremswegabstand"
+						default="off"/>
 					<space />
 					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
 				</item>
