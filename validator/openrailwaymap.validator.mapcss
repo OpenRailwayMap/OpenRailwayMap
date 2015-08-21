@@ -93,7 +93,7 @@ way[railway][usage=freight][railway:traffic_mode=~/^(passenger|mixed)$/]
 }
 
 /* Track without workrules */
-way[railway][!workrules]
+way[railway][railway!=platform][!workrules]
 {
 	throwOther: "Track without workrules";
 	assertMatch: "way railway=rail";
