@@ -361,8 +361,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:hl4;DE-ESO:hl5;DE-ESO:hl6a;DE-ESO:hl6b;DE-ESO:hl7;DE-ESO:hl8;DE-ESO:hl9a;DE-ESO:hl9b;DE-ESO:hl10;DE-ESO:hl11;DE-ESO:hl12a;DE-ESO:hl12b;DE-ESO:kennlicht"
-						display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Hl 7;Hl 8;Hl 9a;Hl 9b;Hl 10;Hl 11;Hl 12a;Hl 12b;marker light"
-						de.display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Hl 7;Hl 8;Hl 9a;Hl 9b;Hl 10;Hl 11;Hl 12a;Hl 12b;Kennlicht"
+						display_values="Hp 0 (stop);Hl 1 (vmax->vmax);Hl 2 (100->vmax);Hl 3a (40->vmax);Hl 3b (60->vmax);Hl 4 (vmax->100);Hl 5 (100->100);Hl 6a (40->100);Hl 6b (60->100);Hl 7 (vmax->40/60);Hl 8 (100->40/60);Hl 9a (40->40/60);Hl 9b (60->40/60);Hl 10 (vmax->stop);Hl 11 (100->stop);Hl 12a (40->stop);Hl 12b (60->stop);marker light"
+						de.display_values="Hp 0 (Halt);Hl 1 (vmax->vmax);Hl 2 (100->vmax);Hl 3a (40->vmax);Hl 3b (60->vmax);Hl 4 (vmax->100);Hl 5 (100->100);Hl 6a (40->100);Hl 6b (60->100);Hl 7 (vmax->40/60);Hl 8 (100->40/60);Hl 9a (40->40/60);Hl 9b (60->40/60);Hl 10 (vmax->Halt);Hl 11 (100->Halt);Hl 12a (40->Halt);Hl 12b (60->Halt);Kennlicht"
 						delete_if_empty="true" />
 					<combo key="railway:signal:combined:function"
 						text="Signal function"
@@ -495,14 +495,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="DE-ESO:hl" />
 					<key key="railway:signal:distant:form"
 						value="light" />
-					<combo key="railway:signal:distant:states" default="DE-ESO:hl1;DE-ESO:hl4;DE-ESO:hl7;DE-ESO:hl10"
-						text="Signal states"
-						de.text="Signalzustände"
-						delete_if_empty="true"
-						delimiter="|"
-						values="DE-ESO:hl1;DE-ESO:hl4;DE-ESO:hl7;DE-ESO:hl10|DE-ESO:hl1;DE-ESO:hl4;DE-ESO:hl7;DE-ESO:hl10;DE-ESO:kennlicht"
-						de.display_values="kein Kennlicht|Kennlicht möglich"
-						display_values="no marker light|marker light possible" />
+					<multiselect key="railway:signal:combined:states"
+						text="Signal states (multi-selection)"
+						de.text="Signalzustände (Mehrfachauswahl)"
+						delimiter=";"
+						values="DE-ESO:hl1;DE-ESO:hl4;DE-ESO:hl7;DE-ESO:hl10;DE-ESO:kennlicht"
+						display_values="Hl 1 (->vmax);Hl 4 (->100);Hl 7 (->40/60);Hl 10 (->stop);marker light"
+						de.display_values="Hl 1 (->vmax);Hl 4 (->100);Hl 7 (->40/60);Hl 10 (->stop);Kennlicht"
+						delete_if_empty="true" />
 					<check key="railway:signal:distant:repeated"
 						text="Repeated Signal"
 						de.text="Vorsignalwiederholer"
