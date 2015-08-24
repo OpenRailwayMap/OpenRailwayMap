@@ -495,7 +495,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="DE-ESO:hl" />
 					<key key="railway:signal:distant:form"
 						value="light" />
-					<multiselect key="railway:signal:combined:states"
+					<multiselect key="railway:signal:distant:states"
 						text="Signal states (multi-selection)"
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
