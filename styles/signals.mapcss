@@ -315,13 +315,14 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-
 {
 	z-index: 1000;
 	text: "railway:signal:stop:caption";
-	text-size: 12;
+	text-size: 10;
 	text-color: black;
 	text-halo-radius: 3;
 	text-halo-color: white;
-/*	text-offset-x: eval(cond(tag("railway:signal:stop:caption") < 100, -12, -15)); */
+	/* text-offset-x: eval(add(mul(length(tag("railway:signal:stop:caption")), 3), 6)); */
 	text-offset-x: -12;
-	text-offset-y: -12;
+	-x-kothicjs-ignore-text-offset-x: true;
+	text-offset-y: 12;
 	icon-image: "icons/de/ne5-ds301-32.png";
 	icon-width: 11;
 	icon-height: 16;
@@ -746,6 +747,7 @@ node|z16-17[railway=signal]["railway:signal:direction"]["railway:signal:train_pr
 	text: "ref";
 	text-size: 12;
 	text-offset-x: -28;
+	-x-kothicjs-ignore-text-offset-x: true;
 	text-offset-y: 12;
 	text-color: black;
 	text-halo-radius: 1;
@@ -758,6 +760,7 @@ node|z18-[railway=signal]["railway:signal:direction"]["railway:signal:train_prot
 	text: "ref";
 	text-size: 12;
 	text-offset-x: -28;
+	-x-kothicjs-ignore-text-offset-x: true;
 	text-offset-y: 12;
 	text-color: black;
 	text-halo-radius: 1;
