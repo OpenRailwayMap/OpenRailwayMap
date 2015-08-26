@@ -769,6 +769,27 @@ node|z18-[railway=signal]["railway:signal:direction"]["railway:signal:train_prot
 	text-allow-overlap: true;
 }
 
+/********************************************************************************************/
+/* DE ETCS stop marker                                                                      */
+/* This rule will be overwritten by a rule below if it is mounted at a main/combined signal */
+/********************************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-ESO:ne14"]["railway:signal:train_protection:form"=sign]["railway:signal:train_protection:type"="block_marker"]
+{
+	z-index: 8550;
+	icon-image: "icons/etcs-stop-marker-arrow-left-32.png";
+	icon-width: 16;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+}
+
 /********************************************************************************/
 /* DE distant semaphore signals type Vr which                                   */
 /*  - do not share post with a main signal                                      */
