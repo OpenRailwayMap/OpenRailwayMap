@@ -3124,7 +3124,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item de.name="Railway Landuse Area" name="Bahngelände" icon="landuse.png" type="closedway">
+			<item name="Railway Landuse Area" de.name="Bahngelände" icon="landuse.png" type="closedway">
 				<label text="Bahngelände" />
 				<key key="landuse"
 					value="railway" />
