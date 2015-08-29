@@ -64,18 +64,18 @@ way|z9-[railway=preserved][maxspeed],
 way|z10-[railway=rail][maxspeed],
 way|z2-[railway=rail][usage=main][maxspeed],
 way|z2-[railway=rail][usage=branch][maxspeed],
-way|z10-["disused:railway=tram"][maxspeed],
-way|z10-["disused:railway=subway"][maxspeed],
-way|z10-["disused:railway=light_rail"][maxspeed],
-way|z9-["disused:railway=narrow_gauge"][maxspeed],
-way|z9-["disused:railway=preserved"][maxspeed],
-way|z10-["disused:railway=rail"][maxspeed],
-way|z10-["construction:railway=tram"][maxspeed],
-way|z10-["construction:railway=subway"][maxspeed],
-way|z10-["construction:railway=light_rail"][maxspeed],
-way|z9-["construction:railway=narrow_gauge"][maxspeed],
-way|z9-["construction:railway=preserved"][maxspeed],
-way|z10-["construction:railway=rail"][maxspeed]
+way|z10-["disused:railway"="tram"][maxspeed],
+way|z10-["disused:railway"="subway"][maxspeed],
+way|z10-["disused:railway"="light_rail"][maxspeed],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed],
+way|z9-["disused:railway"="preserved"][maxspeed],
+way|z10-["disused:railway"="rail"][maxspeed],
+way|z10-["construction:railway"="tram"][maxspeed],
+way|z10-["construction:railway"="subway"][maxspeed],
+way|z10-["construction:railway"="light_rail"][maxspeed],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed],
+way|z9-["construction:railway"="preserved"][maxspeed],
+way|z10-["construction:railway"="rail"][maxspeed]
 {
 	width: 3.5;
 	linejoin: round;
@@ -469,437 +469,437 @@ way|z2-[railway=rail][usage=main][maxspeed>380][maxspeed<=400]
 	color: #BA00CB;
 }
 
-way|z10-["disused:railway=tram"][maxspeed<=10],
-way|z10-["disused:railway=subway"][maxspeed<=10],
-way|z10-["disused:railway=light_rail"][maxspeed<=10],
-way|z9-["disused:railway=narrow_gauge"][maxspeed<=10],
-way|z9-["disused:railway=preserved"][maxspeed<=10],
-way|z10-["disused:railway=rail"][maxspeed<=10],
-way|z10-["construction:railway=tram"][maxspeed<=10],
-way|z10-["construction:railway=subway"][maxspeed<=10],
-way|z10-["construction:railway=light_rail"][maxspeed<=10],
-way|z9-["construction:railway=narrow_gauge"][maxspeed<=10],
-way|z9-["construction:railway=preserved"][maxspeed<=10],
-way|z10-["construction:railway=rail"][maxspeed<=10]
+way|z10-["disused:railway"="tram"][maxspeed<=10],
+way|z10-["disused:railway"="subway"][maxspeed<=10],
+way|z10-["disused:railway"="light_rail"][maxspeed<=10],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed<=10],
+way|z9-["disused:railway"="preserved"][maxspeed<=10],
+way|z10-["disused:railway"="rail"][maxspeed<=10],
+way|z10-["construction:railway"="tram"][maxspeed<=10],
+way|z10-["construction:railway"="subway"][maxspeed<=10],
+way|z10-["construction:railway"="light_rail"][maxspeed<=10],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed<=10],
+way|z9-["construction:railway"="preserved"][maxspeed<=10],
+way|z10-["construction:railway"="rail"][maxspeed<=10]
 {
 	z-index: 1;
 	color: #9595e9;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>10][maxspeed<=20],
-way|z10-["disused:railway=subway"][maxspeed>10][maxspeed<=20],
-way|z10-["disused:railway=light_rail"][maxspeed>10][maxspeed<=20],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>10][maxspeed<=20],
-way|z9-["disused:railway=preserved"][maxspeed>10][maxspeed<=20],
-way|z10-["disused:railway=rail"][maxspeed>10][maxspeed<=20],
-way|z10-["construction:railway=tram"][maxspeed>10][maxspeed<=20],
-way|z10-["construction:railway=subway"][maxspeed>10][maxspeed<=20],
-way|z10-["construction:railway=light_rail"][maxspeed>10][maxspeed<=20],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>10][maxspeed<=20],
-way|z9-["construction:railway=preserved"][maxspeed>10][maxspeed<=20],
-way|z10-["construction:railway=rail"][maxspeed>10][maxspeed<=20]
+way|z10-["disused:railway"="tram"][maxspeed>10][maxspeed<=20],
+way|z10-["disused:railway"="subway"][maxspeed>10][maxspeed<=20],
+way|z10-["disused:railway"="light_rail"][maxspeed>10][maxspeed<=20],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>10][maxspeed<=20],
+way|z9-["disused:railway"="preserved"][maxspeed>10][maxspeed<=20],
+way|z10-["disused:railway"="rail"][maxspeed>10][maxspeed<=20],
+way|z10-["construction:railway"="tram"][maxspeed>10][maxspeed<=20],
+way|z10-["construction:railway"="subway"][maxspeed>10][maxspeed<=20],
+way|z10-["construction:railway"="light_rail"][maxspeed>10][maxspeed<=20],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>10][maxspeed<=20],
+way|z9-["construction:railway"="preserved"][maxspeed>10][maxspeed<=20],
+way|z10-["construction:railway"="rail"][maxspeed>10][maxspeed<=20]
 {
 	z-index: 2;
 	color: #95a1e9;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>20][maxspeed<=30],
-way|z10-["disused:railway=subway"][maxspeed>20][maxspeed<=30],
-way|z10-["disused:railway=light_rail"][maxspeed>20][maxspeed<=30],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>20][maxspeed<=30],
-way|z9-["disused:railway=preserved"][maxspeed>20][maxspeed<=30],
-way|z10-["disused:railway=rail"][maxspeed>20][maxspeed<=30],
-way|z10-["construction:railway=tram"][maxspeed>20][maxspeed<=30],
-way|z10-["construction:railway=subway"][maxspeed>20][maxspeed<=30],
-way|z10-["construction:railway=light_rail"][maxspeed>20][maxspeed<=30],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>20][maxspeed<=30],
-way|z9-["construction:railway=preserved"][maxspeed>20][maxspeed<=30],
-way|z10-["construction:railway=rail"][maxspeed>20][maxspeed<=30]
+way|z10-["disused:railway"="tram"][maxspeed>20][maxspeed<=30],
+way|z10-["disused:railway"="subway"][maxspeed>20][maxspeed<=30],
+way|z10-["disused:railway"="light_rail"][maxspeed>20][maxspeed<=30],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>20][maxspeed<=30],
+way|z9-["disused:railway"="preserved"][maxspeed>20][maxspeed<=30],
+way|z10-["disused:railway"="rail"][maxspeed>20][maxspeed<=30],
+way|z10-["construction:railway"="tram"][maxspeed>20][maxspeed<=30],
+way|z10-["construction:railway"="subway"][maxspeed>20][maxspeed<=30],
+way|z10-["construction:railway"="light_rail"][maxspeed>20][maxspeed<=30],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>20][maxspeed<=30],
+way|z9-["construction:railway"="preserved"][maxspeed>20][maxspeed<=30],
+way|z10-["construction:railway"="rail"][maxspeed>20][maxspeed<=30]
 {
 	z-index: 3;
 	color: #95aee9;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>30][maxspeed<=40],
-way|z10-["disused:railway=subway"][maxspeed>30][maxspeed<=40],
-way|z10-["disused:railway=light_rail"][maxspeed>30][maxspeed<=40],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>30][maxspeed<=40],
-way|z9-["disused:railway=preserved"][maxspeed>30][maxspeed<=40],
-way|z10-["disused:railway=rail"][maxspeed>30][maxspeed<=40],
-way|z10-["construction:railway=tram"][maxspeed>30][maxspeed<=40],
-way|z10-["construction:railway=subway"][maxspeed>30][maxspeed<=40],
-way|z10-["construction:railway=light_rail"][maxspeed>30][maxspeed<=40],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>30][maxspeed<=40],
-way|z9-["construction:railway=preserved"][maxspeed>30][maxspeed<=40],
-way|z10-["construction:railway=rail"][maxspeed>30][maxspeed<=40]
+way|z10-["disused:railway"="tram"][maxspeed>30][maxspeed<=40],
+way|z10-["disused:railway"="subway"][maxspeed>30][maxspeed<=40],
+way|z10-["disused:railway"="light_rail"][maxspeed>30][maxspeed<=40],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>30][maxspeed<=40],
+way|z9-["disused:railway"="preserved"][maxspeed>30][maxspeed<=40],
+way|z10-["disused:railway"="rail"][maxspeed>30][maxspeed<=40],
+way|z10-["construction:railway"="tram"][maxspeed>30][maxspeed<=40],
+way|z10-["construction:railway"="subway"][maxspeed>30][maxspeed<=40],
+way|z10-["construction:railway"="light_rail"][maxspeed>30][maxspeed<=40],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>30][maxspeed<=40],
+way|z9-["construction:railway"="preserved"][maxspeed>30][maxspeed<=40],
+way|z10-["construction:railway"="rail"][maxspeed>30][maxspeed<=40]
 {
 	z-index: 4;
 	color: #95bbe9;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>40][maxspeed<=50],
-way|z10-["disused:railway=subway"][maxspeed>40][maxspeed<=50],
-way|z10-["disused:railway=light_rail"][maxspeed>40][maxspeed<=50],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>40][maxspeed<=50],
-way|z9-["disused:railway=preserved"][maxspeed>40][maxspeed<=50],
-way|z10-["disused:railway=rail"][maxspeed>40][maxspeed<=50],
-way|z10-["construction:railway=tram"][maxspeed>40][maxspeed<=50],
-way|z10-["construction:railway=subway"][maxspeed>40][maxspeed<=50],
-way|z10-["construction:railway=light_rail"][maxspeed>40][maxspeed<=50],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>40][maxspeed<=50],
-way|z9-["construction:railway=preserved"][maxspeed>40][maxspeed<=50],
-way|z10-["construction:railway=rail"][maxspeed>40][maxspeed<=50]
+way|z10-["disused:railway"="tram"][maxspeed>40][maxspeed<=50],
+way|z10-["disused:railway"="subway"][maxspeed>40][maxspeed<=50],
+way|z10-["disused:railway"="light_rail"][maxspeed>40][maxspeed<=50],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>40][maxspeed<=50],
+way|z9-["disused:railway"="preserved"][maxspeed>40][maxspeed<=50],
+way|z10-["disused:railway"="rail"][maxspeed>40][maxspeed<=50],
+way|z10-["construction:railway"="tram"][maxspeed>40][maxspeed<=50],
+way|z10-["construction:railway"="subway"][maxspeed>40][maxspeed<=50],
+way|z10-["construction:railway"="light_rail"][maxspeed>40][maxspeed<=50],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>40][maxspeed<=50],
+way|z9-["construction:railway"="preserved"][maxspeed>40][maxspeed<=50],
+way|z10-["construction:railway"="rail"][maxspeed>40][maxspeed<=50]
 {
 	z-index: 5;
 	color: #95c8e9;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>50][maxspeed<=60],
-way|z10-["disused:railway=subway"][maxspeed>50][maxspeed<=60],
-way|z10-["disused:railway=light_rail"][maxspeed>50][maxspeed<=60],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>50][maxspeed<=60],
-way|z9-["disused:railway=preserved"][maxspeed>50][maxspeed<=60],
-way|z10-["disused:railway=rail"][maxspeed>50][maxspeed<=60],
-way|z10-["construction:railway=tram"][maxspeed>50][maxspeed<=60],
-way|z10-["construction:railway=subway"][maxspeed>50][maxspeed<=60],
-way|z10-["construction:railway=light_rail"][maxspeed>50][maxspeed<=60],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>50][maxspeed<=60],
-way|z9-["construction:railway=preserved"][maxspeed>50][maxspeed<=60],
-way|z10-["construction:railway=rail"][maxspeed>50][maxspeed<=60]
+way|z10-["disused:railway"="tram"][maxspeed>50][maxspeed<=60],
+way|z10-["disused:railway"="subway"][maxspeed>50][maxspeed<=60],
+way|z10-["disused:railway"="light_rail"][maxspeed>50][maxspeed<=60],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>50][maxspeed<=60],
+way|z9-["disused:railway"="preserved"][maxspeed>50][maxspeed<=60],
+way|z10-["disused:railway"="rail"][maxspeed>50][maxspeed<=60],
+way|z10-["construction:railway"="tram"][maxspeed>50][maxspeed<=60],
+way|z10-["construction:railway"="subway"][maxspeed>50][maxspeed<=60],
+way|z10-["construction:railway"="light_rail"][maxspeed>50][maxspeed<=60],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>50][maxspeed<=60],
+way|z9-["construction:railway"="preserved"][maxspeed>50][maxspeed<=60],
+way|z10-["construction:railway"="rail"][maxspeed>50][maxspeed<=60]
 {
 	z-index: 6;
 	color: #95d4e9;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>60][maxspeed<=70],
-way|z10-["disused:railway=subway"][maxspeed>60][maxspeed<=70],
-way|z10-["disused:railway=light_rail"][maxspeed>60][maxspeed<=70],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>60][maxspeed<=70],
-way|z9-["disused:railway=preserved"][maxspeed>60][maxspeed<=70],
-way|z10-["disused:railway=rail"][maxspeed>60][maxspeed<=70],
-way|z10-["construction:railway=tram"][maxspeed>60][maxspeed<=70],
-way|z10-["construction:railway=subway"][maxspeed>60][maxspeed<=70],
-way|z10-["construction:railway=light_rail"][maxspeed>60][maxspeed<=70],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>60][maxspeed<=70],
-way|z9-["construction:railway=preserved"][maxspeed>60][maxspeed<=70],
-way|z10-["construction:railway=rail"][maxspeed>60][maxspeed<=70]
+way|z10-["disused:railway"="tram"][maxspeed>60][maxspeed<=70],
+way|z10-["disused:railway"="subway"][maxspeed>60][maxspeed<=70],
+way|z10-["disused:railway"="light_rail"][maxspeed>60][maxspeed<=70],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>60][maxspeed<=70],
+way|z9-["disused:railway"="preserved"][maxspeed>60][maxspeed<=70],
+way|z10-["disused:railway"="rail"][maxspeed>60][maxspeed<=70],
+way|z10-["construction:railway"="tram"][maxspeed>60][maxspeed<=70],
+way|z10-["construction:railway"="subway"][maxspeed>60][maxspeed<=70],
+way|z10-["construction:railway"="light_rail"][maxspeed>60][maxspeed<=70],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>60][maxspeed<=70],
+way|z9-["construction:railway"="preserved"][maxspeed>60][maxspeed<=70],
+way|z10-["construction:railway"="rail"][maxspeed>60][maxspeed<=70]
 {
 	z-index: 7;
 	color: #95e1e9;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>70][maxspeed<=80],
-way|z10-["disused:railway=subway"][maxspeed>70][maxspeed<=80],
-way|z10-["disused:railway=light_rail"][maxspeed>70][maxspeed<=80],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>70][maxspeed<=80],
-way|z9-["disused:railway=preserved"][maxspeed>70][maxspeed<=80],
-way|z10-["disused:railway=rail"][maxspeed>70][maxspeed<=80],
-way|z10-["construction:railway=tram"][maxspeed>70][maxspeed<=80],
-way|z10-["construction:railway=subway"][maxspeed>70][maxspeed<=80],
-way|z10-["construction:railway=light_rail"][maxspeed>70][maxspeed<=80],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>70][maxspeed<=80],
-way|z9-["construction:railway=preserved"][maxspeed>70][maxspeed<=80],
-way|z10-["construction:railway=rail"][maxspeed>70][maxspeed<=80]
+way|z10-["disused:railway"="tram"][maxspeed>70][maxspeed<=80],
+way|z10-["disused:railway"="subway"][maxspeed>70][maxspeed<=80],
+way|z10-["disused:railway"="light_rail"][maxspeed>70][maxspeed<=80],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>70][maxspeed<=80],
+way|z9-["disused:railway"="preserved"][maxspeed>70][maxspeed<=80],
+way|z10-["disused:railway"="rail"][maxspeed>70][maxspeed<=80],
+way|z10-["construction:railway"="tram"][maxspeed>70][maxspeed<=80],
+way|z10-["construction:railway"="subway"][maxspeed>70][maxspeed<=80],
+way|z10-["construction:railway"="light_rail"][maxspeed>70][maxspeed<=80],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>70][maxspeed<=80],
+way|z9-["construction:railway"="preserved"][maxspeed>70][maxspeed<=80],
+way|z10-["construction:railway"="rail"][maxspeed>70][maxspeed<=80]
 {
 	z-index: 8;
 	color: #95e9e5;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>80][maxspeed<=90],
-way|z10-["disused:railway=subway"][maxspeed>80][maxspeed<=90],
-way|z10-["disused:railway=light_rail"][maxspeed>80][maxspeed<=90],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>80][maxspeed<=90],
-way|z9-["disused:railway=preserved"][maxspeed>80][maxspeed<=90],
-way|z10-["disused:railway=rail"][maxspeed>80][maxspeed<=90],
-way|z10-["construction:railway=tram"][maxspeed>80][maxspeed<=90],
-way|z10-["construction:railway=subway"][maxspeed>80][maxspeed<=90],
-way|z10-["construction:railway=light_rail"][maxspeed>80][maxspeed<=90],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>80][maxspeed<=90],
-way|z9-["construction:railway=preserved"][maxspeed>80][maxspeed<=90],
-way|z10-["construction:railway=rail"][maxspeed>80][maxspeed<=90]
+way|z10-["disused:railway"="tram"][maxspeed>80][maxspeed<=90],
+way|z10-["disused:railway"="subway"][maxspeed>80][maxspeed<=90],
+way|z10-["disused:railway"="light_rail"][maxspeed>80][maxspeed<=90],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>80][maxspeed<=90],
+way|z9-["disused:railway"="preserved"][maxspeed>80][maxspeed<=90],
+way|z10-["disused:railway"="rail"][maxspeed>80][maxspeed<=90],
+way|z10-["construction:railway"="tram"][maxspeed>80][maxspeed<=90],
+way|z10-["construction:railway"="subway"][maxspeed>80][maxspeed<=90],
+way|z10-["construction:railway"="light_rail"][maxspeed>80][maxspeed<=90],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>80][maxspeed<=90],
+way|z9-["construction:railway"="preserved"][maxspeed>80][maxspeed<=90],
+way|z10-["construction:railway"="rail"][maxspeed>80][maxspeed<=90]
 {
 	z-index: 9;
 	color: #95e9d8;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>90][maxspeed<=100],
-way|z10-["disused:railway=subway"][maxspeed>90][maxspeed<=100],
-way|z10-["disused:railway=light_rail"][maxspeed>90][maxspeed<=100],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>90][maxspeed<=100],
-way|z9-["disused:railway=preserved"][maxspeed>90][maxspeed<=100],
-way|z10-["disused:railway=rail"][maxspeed>90][maxspeed<=100],
-way|z10-["construction:railway=tram"][maxspeed>90][maxspeed<=100],
-way|z10-["construction:railway=subway"][maxspeed>90][maxspeed<=100],
-way|z10-["construction:railway=light_rail"][maxspeed>90][maxspeed<=100],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>90][maxspeed<=100],
-way|z9-["construction:railway=preserved"][maxspeed>90][maxspeed<=100],
-way|z10-["construction:railway=rail"][maxspeed>90][maxspeed<=100]
+way|z10-["disused:railway"="tram"][maxspeed>90][maxspeed<=100],
+way|z10-["disused:railway"="subway"][maxspeed>90][maxspeed<=100],
+way|z10-["disused:railway"="light_rail"][maxspeed>90][maxspeed<=100],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>90][maxspeed<=100],
+way|z9-["disused:railway"="preserved"][maxspeed>90][maxspeed<=100],
+way|z10-["disused:railway"="rail"][maxspeed>90][maxspeed<=100],
+way|z10-["construction:railway"="tram"][maxspeed>90][maxspeed<=100],
+way|z10-["construction:railway"="subway"][maxspeed>90][maxspeed<=100],
+way|z10-["construction:railway"="light_rail"][maxspeed>90][maxspeed<=100],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>90][maxspeed<=100],
+way|z9-["construction:railway"="preserved"][maxspeed>90][maxspeed<=100],
+way|z10-["construction:railway"="rail"][maxspeed>90][maxspeed<=100]
 {
 	z-index: 10;
 	color: #95e9cc;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>100][maxspeed<=110],
-way|z10-["disused:railway=subway"][maxspeed>100][maxspeed<=110],
-way|z10-["disused:railway=light_rail"][maxspeed>100][maxspeed<=110],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>100][maxspeed<=110],
-way|z9-["disused:railway=preserved"][maxspeed>100][maxspeed<=110],
-way|z10-["disused:railway=rail"][maxspeed>100][maxspeed<=110],
-way|z10-["construction:railway=tram"][maxspeed>100][maxspeed<=110],
-way|z10-["construction:railway=subway"][maxspeed>100][maxspeed<=110],
-way|z10-["construction:railway=light_rail"][maxspeed>100][maxspeed<=110],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>100][maxspeed<=110],
-way|z9-["construction:railway=preserved"][maxspeed>100][maxspeed<=110],
-way|z10-["construction:railway=rail"][maxspeed>100][maxspeed<=110]
+way|z10-["disused:railway"="tram"][maxspeed>100][maxspeed<=110],
+way|z10-["disused:railway"="subway"][maxspeed>100][maxspeed<=110],
+way|z10-["disused:railway"="light_rail"][maxspeed>100][maxspeed<=110],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>100][maxspeed<=110],
+way|z9-["disused:railway"="preserved"][maxspeed>100][maxspeed<=110],
+way|z10-["disused:railway"="rail"][maxspeed>100][maxspeed<=110],
+way|z10-["construction:railway"="tram"][maxspeed>100][maxspeed<=110],
+way|z10-["construction:railway"="subway"][maxspeed>100][maxspeed<=110],
+way|z10-["construction:railway"="light_rail"][maxspeed>100][maxspeed<=110],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>100][maxspeed<=110],
+way|z9-["construction:railway"="preserved"][maxspeed>100][maxspeed<=110],
+way|z10-["construction:railway"="rail"][maxspeed>100][maxspeed<=110]
 {
 	z-index: 11;
 	color: #95e9bf;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>110][maxspeed<=120],
-way|z10-["disused:railway=subway"][maxspeed>110][maxspeed<=120],
-way|z10-["disused:railway=light_rail"][maxspeed>110][maxspeed<=120],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>110][maxspeed<=120],
-way|z9-["disused:railway=preserved"][maxspeed>110][maxspeed<=120],
-way|z10-["disused:railway=rail"][maxspeed>110][maxspeed<=120],
-way|z10-["construction:railway=tram"][maxspeed>110][maxspeed<=120],
-way|z10-["construction:railway=subway"][maxspeed>110][maxspeed<=120],
-way|z10-["construction:railway=light_rail"][maxspeed>110][maxspeed<=120],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>110][maxspeed<=120],
-way|z9-["construction:railway=preserved"][maxspeed>110][maxspeed<=120],
-way|z10-["construction:railway=rail"][maxspeed>110][maxspeed<=120]
+way|z10-["disused:railway"="tram"][maxspeed>110][maxspeed<=120],
+way|z10-["disused:railway"="subway"][maxspeed>110][maxspeed<=120],
+way|z10-["disused:railway"="light_rail"][maxspeed>110][maxspeed<=120],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>110][maxspeed<=120],
+way|z9-["disused:railway"="preserved"][maxspeed>110][maxspeed<=120],
+way|z10-["disused:railway"="rail"][maxspeed>110][maxspeed<=120],
+way|z10-["construction:railway"="tram"][maxspeed>110][maxspeed<=120],
+way|z10-["construction:railway"="subway"][maxspeed>110][maxspeed<=120],
+way|z10-["construction:railway"="light_rail"][maxspeed>110][maxspeed<=120],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>110][maxspeed<=120],
+way|z9-["construction:railway"="preserved"][maxspeed>110][maxspeed<=120],
+way|z10-["construction:railway"="rail"][maxspeed>110][maxspeed<=120]
 {
 	z-index: 12;
 	color: #95e9b3;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>120][maxspeed<=130],
-way|z10-["disused:railway=subway"][maxspeed>120][maxspeed<=130],
-way|z10-["disused:railway=light_rail"][maxspeed>120][maxspeed<=130],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>120][maxspeed<=130],
-way|z9-["disused:railway=preserved"][maxspeed>120][maxspeed<=130],
-way|z10-["disused:railway=rail"][maxspeed>120][maxspeed<=130],
-way|z10-["construction:railway=tram"][maxspeed>120][maxspeed<=130],
-way|z10-["construction:railway=subway"][maxspeed>120][maxspeed<=130],
-way|z10-["construction:railway=light_rail"][maxspeed>120][maxspeed<=130],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>120][maxspeed<=130],
-way|z9-["construction:railway=preserved"][maxspeed>120][maxspeed<=130],
-way|z10-["construction:railway=rail"][maxspeed>120][maxspeed<=130]
+way|z10-["disused:railway"="tram"][maxspeed>120][maxspeed<=130],
+way|z10-["disused:railway"="subway"][maxspeed>120][maxspeed<=130],
+way|z10-["disused:railway"="light_rail"][maxspeed>120][maxspeed<=130],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>120][maxspeed<=130],
+way|z9-["disused:railway"="preserved"][maxspeed>120][maxspeed<=130],
+way|z10-["disused:railway"="rail"][maxspeed>120][maxspeed<=130],
+way|z10-["construction:railway"="tram"][maxspeed>120][maxspeed<=130],
+way|z10-["construction:railway"="subway"][maxspeed>120][maxspeed<=130],
+way|z10-["construction:railway"="light_rail"][maxspeed>120][maxspeed<=130],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>120][maxspeed<=130],
+way|z9-["construction:railway"="preserved"][maxspeed>120][maxspeed<=130],
+way|z10-["construction:railway"="rail"][maxspeed>120][maxspeed<=130]
 {
 	z-index: 13;
 	color: #95e9a6;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>130][maxspeed<=140],
-way|z10-["disused:railway=subway"][maxspeed>130][maxspeed<=140],
-way|z10-["disused:railway=light_rail"][maxspeed>130][maxspeed<=140],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>130][maxspeed<=140],
-way|z9-["disused:railway=preserved"][maxspeed>130][maxspeed<=140],
-way|z10-["disused:railway=rail"][maxspeed>130][maxspeed<=140],
-way|z10-["construction:railway=tram"][maxspeed>130][maxspeed<=140],
-way|z10-["construction:railway=subway"][maxspeed>130][maxspeed<=140],
-way|z10-["construction:railway=light_rail"][maxspeed>130][maxspeed<=140]
-way|z9-["construction:railway=narrow_gauge"][maxspeed>130][maxspeed<=140],
-way|z9-["construction:railway=preserved"][maxspeed>130][maxspeed<=140],
-way|z10-["construction:railway=rail"][maxspeed>130][maxspeed<=140]
+way|z10-["disused:railway"="tram"][maxspeed>130][maxspeed<=140],
+way|z10-["disused:railway"="subway"][maxspeed>130][maxspeed<=140],
+way|z10-["disused:railway"="light_rail"][maxspeed>130][maxspeed<=140],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>130][maxspeed<=140],
+way|z9-["disused:railway"="preserved"][maxspeed>130][maxspeed<=140],
+way|z10-["disused:railway"="rail"][maxspeed>130][maxspeed<=140],
+way|z10-["construction:railway"="tram"][maxspeed>130][maxspeed<=140],
+way|z10-["construction:railway"="subway"][maxspeed>130][maxspeed<=140],
+way|z10-["construction:railway"="light_rail"][maxspeed>130][maxspeed<=140]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>130][maxspeed<=140],
+way|z9-["construction:railway"="preserved"][maxspeed>130][maxspeed<=140],
+way|z10-["construction:railway"="rail"][maxspeed>130][maxspeed<=140]
 {
 	z-index: 14;
 	color: #95e999;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>140][maxspeed<=150],
-way|z10-["disused:railway=subway"][maxspeed>140][maxspeed<=150],
-way|z10-["disused:railway=light_rail"][maxspeed>140][maxspeed<=150],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>140][maxspeed<=150],
-way|z9-["disused:railway=preserved"][maxspeed>140][maxspeed<=150],
-way|z10-["disused:railway=rail"][maxspeed>140][maxspeed<=150],
-way|z10-["construction:railway=tram"][maxspeed>140][maxspeed<=150],
-way|z10-["construction:railway=subway"][maxspeed>140][maxspeed<=150],
-way|z10-["construction:railway=light_rail"][maxspeed>140][maxspeed<=150],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>140][maxspeed<=150],
-way|z9-["construction:railway=preserved"][maxspeed>140][maxspeed<=150],
-way|z10-["construction:railway=rail"][maxspeed>140][maxspeed<=150]
+way|z10-["disused:railway"="tram"][maxspeed>140][maxspeed<=150],
+way|z10-["disused:railway"="subway"][maxspeed>140][maxspeed<=150],
+way|z10-["disused:railway"="light_rail"][maxspeed>140][maxspeed<=150],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>140][maxspeed<=150],
+way|z9-["disused:railway"="preserved"][maxspeed>140][maxspeed<=150],
+way|z10-["disused:railway"="rail"][maxspeed>140][maxspeed<=150],
+way|z10-["construction:railway"="tram"][maxspeed>140][maxspeed<=150],
+way|z10-["construction:railway"="subway"][maxspeed>140][maxspeed<=150],
+way|z10-["construction:railway"="light_rail"][maxspeed>140][maxspeed<=150],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>140][maxspeed<=150],
+way|z9-["construction:railway"="preserved"][maxspeed>140][maxspeed<=150],
+way|z10-["construction:railway"="rail"][maxspeed>140][maxspeed<=150]
 {
 	z-index: 15;
 	color: #9de995;
 }
 
-way|z10-["disused:railway=tram"][maxspeed>150][maxspeed<=160],
-way|z10-["disused:railway=subway"][maxspeed>150][maxspeed<=160],
-way|z10-["disused:railway=light_rail"][maxspeed>150][maxspeed<=160],
-way|z9-["disused:railway=narrow_gauge"][maxspeed>150][maxspeed<=160],
-way|z9-["disused:railway=preserved"][maxspeed>150][maxspeed<=160],
-way|z10-["disused:railway=rail"][maxspeed>150][maxspeed<=160],
-way|z10-["construction:railway=tram"][maxspeed>150][maxspeed<=160],
-way|z10-["construction:railway=subway"][maxspeed>150][maxspeed<=160],
-way|z10-["construction:railway=light_rail"][maxspeed>150][maxspeed<=160],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>150][maxspeed<=160],
-way|z9-["construction:railway=preserved"][maxspeed>150][maxspeed<=160],
-way|z10-["construction:railway=rail"][maxspeed>150][maxspeed<=160]
+way|z10-["disused:railway"="tram"][maxspeed>150][maxspeed<=160],
+way|z10-["disused:railway"="subway"][maxspeed>150][maxspeed<=160],
+way|z10-["disused:railway"="light_rail"][maxspeed>150][maxspeed<=160],
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>150][maxspeed<=160],
+way|z9-["disused:railway"="preserved"][maxspeed>150][maxspeed<=160],
+way|z10-["disused:railway"="rail"][maxspeed>150][maxspeed<=160],
+way|z10-["construction:railway"="tram"][maxspeed>150][maxspeed<=160],
+way|z10-["construction:railway"="subway"][maxspeed>150][maxspeed<=160],
+way|z10-["construction:railway"="light_rail"][maxspeed>150][maxspeed<=160],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>150][maxspeed<=160],
+way|z9-["construction:railway"="preserved"][maxspeed>150][maxspeed<=160],
+way|z10-["construction:railway"="rail"][maxspeed>150][maxspeed<=160]
 {
 	z-index: 16;
 	color: #aae995;
 }
 
-way|z9-["disused:railway=narrow_gauge"][maxspeed>160][maxspeed<=170],
-way|z9-["disused:railway=preserved"][maxspeed>160][maxspeed<=170],
-way|z10-["disused:railway=rail"][maxspeed>160][maxspeed<=170],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>160][maxspeed<=170],
-way|z9-["construction:railway=preserved"][maxspeed>160][maxspeed<=170],
-way|z10-["construction:railway=rail"][maxspeed>160][maxspeed<=170]
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>160][maxspeed<=170],
+way|z9-["disused:railway"="preserved"][maxspeed>160][maxspeed<=170],
+way|z10-["disused:railway"="rail"][maxspeed>160][maxspeed<=170],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>160][maxspeed<=170],
+way|z9-["construction:railway"="preserved"][maxspeed>160][maxspeed<=170],
+way|z10-["construction:railway"="rail"][maxspeed>160][maxspeed<=170]
 {
 	z-index: 17;
 	color: #b7e995;
 }
 
-way|z9-["disused:railway=narrow_gauge"][maxspeed>170][maxspeed<=180],
-way|z9-["disused:railway=preserved"][maxspeed>170][maxspeed<=180],
-way|z10-["disused:railway=rail"][maxspeed>170][maxspeed<=180],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>170][maxspeed<=180],
-way|z9-["construction:railway=preserved"][maxspeed>170][maxspeed<=180],
-way|z10-["construction:railway=rail"][maxspeed>170][maxspeed<=180]
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>170][maxspeed<=180],
+way|z9-["disused:railway"="preserved"][maxspeed>170][maxspeed<=180],
+way|z10-["disused:railway"="rail"][maxspeed>170][maxspeed<=180],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>170][maxspeed<=180],
+way|z9-["construction:railway"="preserved"][maxspeed>170][maxspeed<=180],
+way|z10-["construction:railway"="rail"][maxspeed>170][maxspeed<=180]
 {
 	z-index: 18;
 	color: #c4e995;
 }
 
-way|z9-["disused:railway=narrow_gauge"][maxspeed>180][maxspeed<=190],
-way|z9-["disused:railway=preserved"][maxspeed>180][maxspeed<=190],
-way|z10-["disused:railway=rail"][maxspeed>180][maxspeed<=190],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>180][maxspeed<=190],
-way|z9-["construction:railway=preserved"][maxspeed>180][maxspeed<=190],
-way|z10-["construction:railway=rail"][maxspeed>180][maxspeed<=190]
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>180][maxspeed<=190],
+way|z9-["disused:railway"="preserved"][maxspeed>180][maxspeed<=190],
+way|z10-["disused:railway"="rail"][maxspeed>180][maxspeed<=190],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>180][maxspeed<=190],
+way|z9-["construction:railway"="preserved"][maxspeed>180][maxspeed<=190],
+way|z10-["construction:railway"="rail"][maxspeed>180][maxspeed<=190]
 {
 	z-index: 19;
 	color: #d0e995;
 }
 
-way|z9-["disused:railway=narrow_gauge"][maxspeed>190][maxspeed<=200],
-way|z9-["disused:railway=preserved"][maxspeed>190][maxspeed<=200],
-way|z10-["disused:railway=rail"][maxspeed>190][maxspeed<=200],
-way|z9-["construction:railway=narrow_gauge"][maxspeed>190][maxspeed<=200],
-way|z9-["construction:railway=preserved"][maxspeed>190][maxspeed<=200],
-way|z10-["construction:railway=rail"][maxspeed>190][maxspeed<=200]
+way|z9-["disused:railway"="narrow_gauge"][maxspeed>190][maxspeed<=200],
+way|z9-["disused:railway"="preserved"][maxspeed>190][maxspeed<=200],
+way|z10-["disused:railway"="rail"][maxspeed>190][maxspeed<=200],
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>190][maxspeed<=200],
+way|z9-["construction:railway"="preserved"][maxspeed>190][maxspeed<=200],
+way|z10-["construction:railway"="rail"][maxspeed>190][maxspeed<=200]
 {
 	z-index: 20;
 	color: #dde995;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>200][maxspeed<=210],
-way|z9-["construction:railway=preserved"][maxspeed>200][maxspeed<=210],
-way|z10-["construction:railway=rail"][maxspeed>200][maxspeed<=210]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>200][maxspeed<=210],
+way|z9-["construction:railway"="preserved"][maxspeed>200][maxspeed<=210],
+way|z10-["construction:railway"="rail"][maxspeed>200][maxspeed<=210]
 {
 	z-index: 21;
 	color: #e9e995;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>210][maxspeed<=220],
-way|z9-["construction:railway=preserved"][maxspeed>210][maxspeed<=220],
-way|z10-["construction:railway=rail"][maxspeed>210][maxspeed<=220]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>210][maxspeed<=220],
+way|z9-["construction:railway"="preserved"][maxspeed>210][maxspeed<=220],
+way|z10-["construction:railway"="rail"][maxspeed>210][maxspeed<=220]
 {
 	z-index: 22;
 	color: #e9dd95;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>220][maxspeed<=230],
-way|z9-["construction:railway=preserved"][maxspeed>220][maxspeed<=230],
-way|z10-["construction:railway=rail"][maxspeed>220][maxspeed<=230]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>220][maxspeed<=230],
+way|z9-["construction:railway"="preserved"][maxspeed>220][maxspeed<=230],
+way|z10-["construction:railway"="rail"][maxspeed>220][maxspeed<=230]
 {
 	z-index: 23;
 	color: #e9d095;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>230][maxspeed<=240],
-way|z9-["construction:railway=preserved"][maxspeed>230][maxspeed<=240],
-way|z10-["construction:railway=rail"][maxspeed>230][maxspeed<=240]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>230][maxspeed<=240],
+way|z9-["construction:railway"="preserved"][maxspeed>230][maxspeed<=240],
+way|z10-["construction:railway"="rail"][maxspeed>230][maxspeed<=240]
 {
 	z-index: 24;
 	color: #e9c495;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>240][maxspeed<=250],
-way|z9-["construction:railway=preserved"][maxspeed>240][maxspeed<=250],
-way|z10-["construction:railway=rail"][maxspeed>240][maxspeed<=250]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>240][maxspeed<=250],
+way|z9-["construction:railway"="preserved"][maxspeed>240][maxspeed<=250],
+way|z10-["construction:railway"="rail"][maxspeed>240][maxspeed<=250]
 {
 	z-index: 25;
 	color: #e9b795;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>250][maxspeed<=260],
-way|z9-["construction:railway=preserved"][maxspeed>250][maxspeed<=260],
-way|z10-["construction:railway=rail"][maxspeed>250][maxspeed<=260]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>250][maxspeed<=260],
+way|z9-["construction:railway"="preserved"][maxspeed>250][maxspeed<=260],
+way|z10-["construction:railway"="rail"][maxspeed>250][maxspeed<=260]
 {
 	z-index: 26;
 	color: #e9aa95;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>260][maxspeed<=270],
-way|z9-["construction:railway=preserved"][maxspeed>260][maxspeed<=270],
-way|z10-["construction:railway=rail"][maxspeed>260][maxspeed<=270]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>260][maxspeed<=270],
+way|z9-["construction:railway"="preserved"][maxspeed>260][maxspeed<=270],
+way|z10-["construction:railway"="rail"][maxspeed>260][maxspeed<=270]
 {
 	z-index: 27;
 	color: #e99d95;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>270][maxspeed<=280],
-way|z9-["construction:railway=preserved"][maxspeed>270][maxspeed<=280],
-way|z10-["construction:railway=rail"][maxspeed>270][maxspeed<=280]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>270][maxspeed<=280],
+way|z9-["construction:railway"="preserved"][maxspeed>270][maxspeed<=280],
+way|z10-["construction:railway"="rail"][maxspeed>270][maxspeed<=280]
 {
 	z-index: 28;
 	color: #e99598;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>280][maxspeed<=290],
-way|z9-["construction:railway=preserved"][maxspeed>280][maxspeed<=290],
-way|z10-["construction:railway=rail"][maxspeed>280][maxspeed<=290]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>280][maxspeed<=290],
+way|z9-["construction:railway"="preserved"][maxspeed>280][maxspeed<=290],
+way|z10-["construction:railway"="rail"][maxspeed>280][maxspeed<=290]
 {
 	z-index: 29;
 	color: #e995a4;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>290][maxspeed<=300],
-way|z9-["construction:railway=preserved"][maxspeed>290][maxspeed<=300],
-way|z10-["construction:railway=rail"][maxspeed>290][maxspeed<=300]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>290][maxspeed<=300],
+way|z9-["construction:railway"="preserved"][maxspeed>290][maxspeed<=300],
+way|z10-["construction:railway"="rail"][maxspeed>290][maxspeed<=300]
 {
 	z-index: 30;
 	color: #e995b1;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>300][maxspeed<=320],
-way|z9-["construction:railway=preserved"][maxspeed>300][maxspeed<=320],
-way|z10-["construction:railway=rail"][maxspeed>300][maxspeed<=320]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>300][maxspeed<=320],
+way|z9-["construction:railway"="preserved"][maxspeed>300][maxspeed<=320],
+way|z10-["construction:railway"="rail"][maxspeed>300][maxspeed<=320]
 {
 	z-index: 31;
 	color: #e995be;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>320][maxspeed<=340],
-way|z9-["construction:railway=preserved"][maxspeed>320][maxspeed<=340],
-way|z10-["construction:railway=rail"][maxspeed>320][maxspeed<=340]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>320][maxspeed<=340],
+way|z9-["construction:railway"="preserved"][maxspeed>320][maxspeed<=340],
+way|z10-["construction:railway"="rail"][maxspeed>320][maxspeed<=340]
 {
 	z-index: 32;
 	color: #e995cb;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>340][maxspeed<=360],
-way|z9-["construction:railway=preserved"][maxspeed>340][maxspeed<=360],
-way|z10-["construction:railway=rail"][maxspeed>340][maxspeed<=360]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>340][maxspeed<=360],
+way|z9-["construction:railway"="preserved"][maxspeed>340][maxspeed<=360],
+way|z10-["construction:railway"="rail"][maxspeed>340][maxspeed<=360]
 {
 	z-index: 33;
 	color: #e995d7;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>360][maxspeed<=380],
-way|z9-["construction:railway=preserved"][maxspeed>360][maxspeed<=380],
-way|z10-["construction:railway=rail"][maxspeed>360][maxspeed<=380]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>360][maxspeed<=380],
+way|z9-["construction:railway"="preserved"][maxspeed>360][maxspeed<=380],
+way|z10-["construction:railway"="rail"][maxspeed>360][maxspeed<=380]
 {
 	z-index: 34;
 	color: #e995e4;
 }
 
-way|z9-["construction:railway=narrow_gauge"][maxspeed>380][maxspeed<=400],
-way|z9-["construction:railway=preserved"][maxspeed>380][maxspeed<=400],
-way|z10-["construction:railway=rail"][maxspeed>380][maxspeed<=400]
+way|z9-["construction:railway"="narrow_gauge"][maxspeed>380][maxspeed<=400],
+way|z9-["construction:railway"="preserved"][maxspeed>380][maxspeed<=400],
+way|z10-["construction:railway"="rail"][maxspeed>380][maxspeed<=400]
 {
 	z-index: 35;
 	color: #e295e9;
