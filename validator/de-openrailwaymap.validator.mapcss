@@ -252,3 +252,25 @@ node["railway:signal:main"]["railway:signal:distant"="ks"]
 	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:main=DE-ESO:hp";
 	assertNoMatch: "node railway=signal railway:signal:combined=DE-ESO:ks railway:signal:minor=DE-ESO:sh1";
 }
+
+node[railway=signal]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=semaphore]["railway:signal:minor:states"~="DE-ESO:hp0"]
+{
+	throwError: "Sh semaphore signals cannot display Hp 0, but only Sh 0";
+	assertMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=semaphore railway:signal:minor:states=DE-ESO:hp0";
+	assertMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=semaphore railway:signal:minor:states=DE-ESO:hp0;DE-ESO:sh1";
+	assertNoMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=light railway:signal:minor:states=DE-ESO:hp0";
+	assertNoMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=light railway:signal:minor:states=DE-ESO:hp0;DE-ESO:sh1";
+	assertNoMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=semaphore railway:signal:minor:states=DE-ESO:sh0";
+	assertNoMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=semaphore railway:signal:minor:states=DE-ESO:sh0;DE-ESO:sh1";
+}
+
+node[railway=signal]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=light]["railway:signal:minor:states"~="DE-ESO:sh0"]
+{
+	throwError: "Sh light signals cannot display Sh 0, but only Hp 0";
+	assertMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=light railway:signal:minor:states=DE-ESO:sh0";
+	assertMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=light railway:signal:minor:states=DE-ESO:sh0;DE-ESO:sh1";
+	assertNoMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=light railway:signal:minor:states=DE-ESO:hp0";
+	assertNoMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=light railway:signal:minor:states=DE-ESO:hp0;DE-ESO:sh1";
+	assertNoMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=semaphore railway:signal:minor:states=DE-ESO:sh0";
+	assertNoMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=semaphore railway:signal:minor:states=DE-ESO:sh0;DE-ESO:sh1";
+}
