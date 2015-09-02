@@ -1349,8 +1349,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 /*  - can display Hl 11, Hl 12a               */
 /*  - don't have to be able to display Hl 12b */
 /**********************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/hl12a/]["railway:signal:combined:states"=~/hl11/]["railway:signal:combined:states"!~/hl12b/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/hl12a/]["railway:signal:combined:states"=~/hl11/]["railway:signal:combined:states"=~/hl12b/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]["railway:signal:combined:states"]["railway:signal:combined:states"=~/hl12a/]["railway:signal:combined:states"=~/hl11/]["railway:signal:combined:states"!~/hl12b/]
 {
 	z-index: 10000;
 	text: "ref";
