@@ -3626,8 +3626,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="shop"
 				value="ticket" />
 			<text key="operator"
-				text="Operator (e.g. 'ÖBB Personenverkehr AG')"
-				de.text="Betreiber (z. B. 'ÖBB Personenverkehr AG')"
+				text="Operator (e.g. 'ÖBB-Personenverkehr AG')"
+				de.text="Betreiber (z. B. 'ÖBB-Personenverkehr AG')"
 				default=""
 				delete_if_empty="true" />
 			<text key="name"
@@ -3860,8 +3860,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default="off"
 					delete_if_empty="true" />
 				<text key="operator"
-					text="Operator (e.g. 'ÖBB Infrastruktur AG')"
-					de.text="Betreiber (z. B. 'ÖBB Infrastruktur AG')"
+					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
+					de.text="Betreiber (z. B. 'ÖBB-Infrastruktur AG')"
 					default=""
 					delete_if_empty="true" />
 			</item>
