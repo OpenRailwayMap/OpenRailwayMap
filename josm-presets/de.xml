@@ -3757,6 +3757,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Bahnsteighöhe (in Metern, z. B. 0.76)"
 				default=""
 				delete_if_empty="true" />
+			<check key="train"
+				text="Railway traffic?"
+				de.text="Eisenbahnverkehr?"
+				default="off"
+				delete_if_empty="true" />
+			<check key="light_rail"
+				text="Light rail traffic?"
+				de.text="Stadtbahn- oder Schnellbahn-Verkehr?"
+				default="off"
+				delete_if_empty="true" />
+			<check key="subway"
+				text="Subway traffic?"
+				de.text="U-Bahn-Verkehr?"
+				default="off"
+				delete_if_empty="true" />
+			<check key="tram"
+				text="Tram traffic?"
+				de.text="Straßenbahnverkehr?"
+				default="off"
+				delete_if_empty="true" />
 		</item>
 		<item name="Ticket Counter" de.name="Fahrkartenschalter" icon="ticketshop.png" type="node">
 			<label text="Fahrkartenschalter" />
