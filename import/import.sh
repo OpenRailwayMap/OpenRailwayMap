@@ -13,6 +13,8 @@ DATAPATH=/home/www/sites/194.245.35.149/site/olm/import
 PATH="$PATH:$DATAPATH/bin"
 PATH="$PATH:$PROJECTPATH/import/bin/osm2pgsql"
 
+source $(dirname ${0})/func_filter.sh
+
 cd $DATAPATH
 
 echo "Started processing at $(date)"
@@ -34,14 +36,7 @@ osmdate=`osmconvert old.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
 date -u -d "$osmdate" +%s > timestamp
 echo "-----"
 
-echo "Converting planet file"
-osmconvert old.pbf --drop-author --out-o5m >temp.o5m
-echo "-----"
-
-echo "Filtering planet file"
-osmfilter temp.o5m --keep="railway= route=tracks route=railway shop=ticket vending=public_transport_tickets" --out-osm >old-railways.osm
-rm temp.o5m
-echo "-----"
+filter_planet --out-osm -o=old-railways.osm
 
 echo "Loading data into database"
 osm2pgsql --create --database railmap --username olm --prefix railmap --slim --style railmap.style --hstore --hstore-add-index --number-processes 3 --cache 2048 old-railways.osm
@@ -51,10 +46,7 @@ echo "-----"
 
 echo "Create MapCSS styles"
 cd $PROJECTPATH/styles
-for stylefile in *.mapcss
-do
-	python mapcss_converter.py --mapcss "$stylefile" --icons-path .
-done
+make
 echo "-----"
 
 echo "Prerendering tiles"
