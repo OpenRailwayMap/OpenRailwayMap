@@ -1,0 +1,65 @@
+.uk-overlay
+{
+	border-radius: 10px;
+}
+
+.uk-navbar
+{
+	border-radius: 5px;
+}
+
+.uk-navbar-brand
+{
+	font-weight: bolder;
+}
+
+.uk-alert
+{
+	border: 2px solid rgba(45,112,145,0.3);
+	border-radius: 8px;
+}
+
+.uk-alert-success
+{
+	background: #EBFFC6;
+	color: #659f13;
+	border-color: rgba(101,159,19,0.4);
+}
+
+.uk-panel-box
+{
+	border-radius: 8px;
+}
+
+.uk-heading-large
+{
+	text-shadow: 0px 0px 5px #ffffff;
+}
+
+.uk-text-large
+{
+	text-shadow: 0px 0px 5px #ffffff;
+}
+
+#fossgis-icon
+{
+	position: absolute;
+	top: 5px;
+}
+
+.uk-overlay-blur:hover img
+{
+	-webkit-filter: blur(1px);
+	-moz-filter: blur(1px);
+	-o-filter: blur(1px);
+	-ms-filter: blur(1px);
+	filter: blur(1px);
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+#welcomeheader
+{
+	background: url('img/header.png') 50% 0 no-repeat;
+	height: 400px;
+}

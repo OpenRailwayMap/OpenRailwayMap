@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="content-language" content="de" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>OpenRailwayMap – Startseite</title>
+		<link rel="stylesheet" href="js/uikit-2.20.3/css/uikit.min.css" />
+		<link rel="stylesheet" href="css/orm.css" />
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/uikit-2.20.3/js/uikit.min.js"></script>
+		<script src="js/openrailwaymap.js"></script>
+
+		<meta name="description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&#39;s railway infrastructure." />
+		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte">
+		<meta name="author" content="rurseekatze, Alexander Matheisen" />
+		<meta name="publisher" content="rurseekatze, Alexander Matheisen" />
+		<meta name="revisit-after" content="after 10 days" />
+		<meta name="page-topic" content="OpenRailwayMap" />
+		<meta name="robots" content="index,follow" />
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@openrailwaymap" />
+		<meta name="twitter:title" content="OpenRailwayMap" />
+		<meta name="twitter:description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&amp;#39;s railway infrastructure." />
+		<meta name="twitter:url" content="http://www.openrailwaymap.org/">
+		<!--<meta name="twitter:image" content="" />-->
+		<!--<meta name="twitter:image:src" content="" />-->
+
+		<meta property="og:site_name" content="OpenRailwayMap" />
+		<meta property="og:type" content="website" />
+		<!--<meta property="og:image" content="" />-->
+		<meta property="og:title" content="OpenRailwayMap" />
+		<meta property="og:url" content="http://www.openrailwaymap.org/" />
+		<meta property="og:description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&#39;s railway infrastructure." />
+
+		<!--<meta name="msapplication-TileImage" content="">-->
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-tooltip" content="OpenRailwayMap">
+		<meta name="msapplication-starturl" content="http://www.openrailwaymap.org/">
+		<!--<meta name="msapplication-square70x70logo" content="">-->
+		<!--<meta name="msapplication-square150x150logo" content="">-->
+		<!--<meta name="msapplication-wide310x150logo" content="">-->
+		<!--<meta name="msapplication-square310x310logo" content="">-->
+
+		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap" href="http://blog.openrailwaymap.org/de.rss" />
+		<link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="OpenRailwayMap" />
+	</head>
+
+	<body>
+		<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+			<div id="searchFacilityDialog" class="uk-modal">
+				<div class="uk-modal-dialog">
+					<a class="uk-modal-close uk-close"></a>
+					<div class="uk-modal-header">
+						<h2>Betriebsstelle suchen</h2>
+					</div>
+					<p>Die Deutsche Bahn plant, Daten im Rahmen einer Open-Data-Strategie zu veröffentlichen. Welche Daten würdet ihr euch von der Deutschen Bahn wünschen?</p>
+					<div class="uk-modal-footer uk-text-right">
+						<button class="uk-button" type="button">Abbrechen</button>
+						<button class="uk-button uk-button-primary" type="button">Suchen</button>
+					</div>
+				</div>
+			</div>
+
+			<nav class="uk-navbar uk-margin-large-bottom">
+				<a class="uk-navbar-brand uk-hidden-small" href="index.html">OpenRailwayMap</a>
+				<ul class="uk-navbar-nav uk-hidden-small">
+                    <li class="uk-parent" data-uk-dropdown>
+                        <a href="">Ansicht</a>
+                        <div class="uk-dropdown uk-dropdown-navbar">
+                            <ul class="uk-nav uk-nav-navbar">
+                                <li><a href="#">Infrastruktur</a></li>
+                                <li><a href="#">Geschwindigkeiten</a></li>
+                                <li><a href="#">Signale und Sicherungssysteme</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="uk-parent" data-uk-dropdown>
+                        <a href="">Werkzeuge</a>
+                        <div class="uk-dropdown uk-dropdown-navbar">
+                            <ul class="uk-nav uk-nav-navbar">
+                                <li><a href="#searchFacilityDialog" id="searchFacilityButton" data-uk-modal>Betriebsstelle suchen</a></li>
+                                <li><a href="#" id="searchMilestoneButton">Streckenkilometer finden</a></li>
+                                <li><a href="#" id="legendButton">Legende</a></li>
+                                <li><a href="#" id="permalinkButton">Permalink</a></li>
+                                <li><a href="#" id="reportBugButton">Kartenfehler melden</a></li>
+                                <li><a href="#" id="exportImageButton">Kartenbild exportieren</a></li>
+                            </ul>
+                        </div>
+                    </li>
+					<li class="uk-active">
+						<a href="index.html">Startseite</a>
+					</li>
+					<li>
+						<a href="info-de.html">Über das Projekt</a>
+					</li>
+					<li>
+						<a href="blog-de.html">Blog</a>
+					</li>
+					<li>
+						<a href="donation-de.html">Spenden</a>
+					</li>
+					<li>
+						<a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap">Wiki</a>
+					</li>
+				</ul>
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-parent" data-uk-dropdown>
+                            <a href="">Sprache</a>
+                            <div class="uk-dropdown uk-dropdown-navbar">
+                                <ul class="uk-nav uk-nav-navbar">
+                                    <li><a href="index-de.html">Deutsch</a></li>
+                                    <li><a href="index-en.html">Englisch</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+				<a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+				<div class="uk-navbar-brand uk-navbar-center uk-visible-small">OpenRailwayMap</div>
+			</nav>
+
+			<div class="uk-grid" data-uk-grid-margin>
+				<div class="uk-width-medium-1-1">
+					<div class="uk-vertical-align uk-text-center">
+						<div class="uk-vertical-align-middle uk-width-2-3">
+							<h1 class="uk-heading-large">OpenRailwayMap</h1>
+							<p class="uk-text-large">TODO: Hier kommt die Karte hin</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="offcanvas" class="uk-offcanvas">
+			<div class="uk-offcanvas-bar">
+				<ul class="uk-nav uk-nav-offcanvas">
+					<li class="uk-active">
+						<a href="index.html">Startseite</a>
+					</li>
+					<li>
+						<a href="info-de.html">Über das Projekt</a>
+					</li>
+					<li>
+						<a href="blog-de.html">Blog</a>
+					</li>
+					<li>
+						<a href="donation-de.html">Spenden</a>
+					</li>
+					<li>
+						<a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap">Wiki</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+</html>

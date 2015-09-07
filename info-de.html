@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="content-language" content="de" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>OpenRailwayMap – Über das Projekt</title>
+		<link rel="stylesheet" href="js/uikit-2.20.3/css/uikit.min.css" />
+		<link rel="stylesheet" href="css/orm.css" />
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/uikit-2.20.3/js/uikit.min.js"></script>
+
+		<meta name="description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&#39;s railway infrastructure." />
+		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte">
+		<meta name="title" content="OpenRailwayMap" />
+		<meta name="author" content="rurseekatze, Alexander Matheisen" />
+		<meta name="publisher" content="rurseekatze, Alexander Matheisen" />
+		<meta name="revisit-after" content="after 10 days" />
+		<meta name="page-topic" content="OpenRailwayMap" />
+		<meta name="robots" content="index,follow" />
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@openrailwaymap" />
+		<meta name="twitter:title" content="OpenRailwayMap" />
+		<meta name="twitter:description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&amp;#39;s railway infrastructure." />
+		<meta name="twitter:url" content="http://www.openrailwaymap.org/">
+		<!--<meta name="twitter:image" content="" />-->
+		<!--<meta name="twitter:image:src" content="" />-->
+
+		<meta property="og:site_name" content="OpenRailwayMap" />
+		<meta property="og:type" content="website" />
+		<!--<meta property="og:image" content="" />-->
+		<meta property="og:title" content="OpenRailwayMap" />
+		<meta property="og:url" content="http://www.openrailwaymap.org/" />
+		<meta property="og:description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&#39;s railway infrastructure." />
+
+		<!--<meta name="msapplication-TileImage" content="">-->
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-tooltip" content="OpenRailwayMap">
+		<meta name="msapplication-starturl" content="http://www.openrailwaymap.org/">
+		<!--<meta name="msapplication-square70x70logo" content="">-->
+		<!--<meta name="msapplication-square150x150logo" content="">-->
+		<!--<meta name="msapplication-wide310x150logo" content="">-->
+		<!--<meta name="msapplication-square310x310logo" content="">-->
+
+		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap" href="http://blog.openrailwaymap.org/de.rss" />
+		<link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="OpenRailwayMap" />
+	</head>
+
+	<body>
+		<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+			<nav class="uk-navbar uk-margin-large-bottom">
+				<a class="uk-navbar-brand uk-hidden-small" href="index.html">OpenRailwayMap</a>
+				<ul class="uk-navbar-nav uk-hidden-small">
+					<li>
+						<a href="index.html">Startseite</a>
+					</li>
+					<li class="uk-active">
+						<a href="info-de.html">Über das Projekt</a>
+					</li>
+					<li>
+						<a href="blog-de.html">Blog</a>
+					</li>
+					<li>
+						<a href="donation-de.html">Spenden</a>
+					</li>
+					<li>
+						<a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap">Wiki</a>
+					</li>
+				</ul>
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-parent" data-uk-dropdown>
+                            <a href="">Sprache</a>
+                            <div class="uk-dropdown uk-dropdown-navbar">
+                                <ul class="uk-nav uk-nav-navbar">
+                                    <li><a href="info-de.html">Deutsch</a></li>
+                                    <li><a href="info-en.html">Englisch</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+				<a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+				<div class="uk-navbar-brand uk-navbar-center uk-visible-small">OpenRailwayMap</div>
+			</nav>
+
+			<div class="uk-grid" data-uk-grid-margin>
+				<div class="uk-width-medium-1-1">
+					<div class="uk-vertical-align uk-text-center" id="welcomeheader">
+						<div class="uk-vertical-align-middle uk-width-2-3">
+							<h1 class="uk-heading-large">OpenRailwayMap</h1>
+							<p class="uk-text-large">Die freie Eisenbahnkarte zum Mitmachen</p>
+							<p>
+								<a class="uk-button uk-button-primary uk-button-large" href="index.html">Zur Karte</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-grid" data-uk-grid-margin>
+
+				<div class="uk-width-medium-1-2">
+					<img width="660" height="400" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjYwcHgiIGhlaWdodD0iNDAwcHgiIHZpZXdCb3g9IjAgMCA2NjAgNDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2NjAgNDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSI2NjAiIGhlaWdodD0iNDAwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0yNTguMTg0LDE0My41djExM2gxNDMuNjMydi0xMTNIMjU4LjE4NHogTTM5MC4yNDQsMjQ0LjI0N0gyNzAuNDM3di04OC40OTRoMTE5LjgwOEwzOTAuMjQ0LDI0NC4yNDcNCgkJTDM5MC4yNDQsMjQ0LjI0N3oiLz4NCgk8cG9seWdvbiBmaWxsPSIjRDhEOEQ4IiBwb2ludHM9IjI3Ni44ODEsMjM0LjcxNyAzMDEuNTcyLDIwOC43NjQgMzEwLjgyNCwyMTIuNzY4IDM0MC4wMTYsMTgxLjY4OCAzNTEuNTA1LDE5NS40MzQgDQoJCTM1Ni42ODksMTkyLjMwMyAzODQuNzQ2LDIzNC43MTcgCSIvPg0KCTxjaXJjbGUgZmlsbD0iI0Q4RDhEOCIgY3g9IjMwNS40MDUiIGN5PSIxNzguMjU3IiByPSIxMC43ODciLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+				</div>
+
+				<div class="uk-width-medium-1-2">
+					<h1>Über das Projekt</h1>
+					<p>Die OpenRailwayMap ist ein weltweites Projekt zur Erstellung einer freien Eisenbahnkarte. Das Projekt wurde Ende 2013 mit dem Ziel ins Leben gerufen, eine offene, aktuelle und detaillierte Karte des weltweiten Eisenbahnnetzes zu schaffen. Dazu werden Eisenbahndaten von vielen Freiwilligen gesammelt und in der Datenbank zusammengetagen. Wie bei der <a href="https://de.wikipedia.org/">Wikipedia</a> kann jeder mitmachen und einen kleinen Beitrag leisten. Die OpenRailwayMap setzt auf das <a href="https://www.openstreetmap.org/">OpenStreetMap</a>-Projekt auf. Die gesammelten Daten stehen unter einer freien Lizenz und können für vielfältige Zwecke lizenzkostenfrei verwendet werden.</p>
+				</div>
+
+			</div>
+
+			<div class="uk-grid" data-uk-grid-margin>
+				<div class="uk-width-medium-1-2">
+					<h1>Hintergrund</h1>
+					<p>Das Projekt entstand in Deutschland aus der Unzufriedenheit darüber, dass es von Seiten von Bahnunternehmen wie der Deutschen Bahn praktisch keine öffentlichen und für Laien einsehbaren Streckenkarten gibt. Intern verfügen die Unternehmen über genaue Daten ihrer Infrastruktur, jedoch sind diese leider nicht oder nur eingeschränkt öffentlich verfügbar. Weil es keine Karten gibt, erstellen wir also einfach unsere eigene Eisenbahnkarte!</p>
+					<h2>Daten statt Pläne</h2>
+					<p>Die wenigen in digitaler Form angebotenen Karten stehen meist nur als fertige Kartenbilder bereit, jedoch nicht die Daten, aus denen sie erzeugt wurden. Man kann solche Karten also nur so nutzen, wie sie angeboten werden. Für eine individuelle Nutzung etwa mit eigenen Darstellungsweisen oder zur Routenberechnung wären aber die Rohdaten notwendig. Die OpenRailwayMap bietet dagegen auch die rohen Geodaten an, die jeder beliebig nutzen kann.</p>
+				</div>
+
+				<div class="uk-width-medium-1-2">
+					<img width="660" height="400" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjYwcHgiIGhlaWdodD0iNDAwcHgiIHZpZXdCb3g9IjAgMCA2NjAgNDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2NjAgNDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSI2NjAiIGhlaWdodD0iNDAwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0yNTguMTg0LDE0My41djExM2gxNDMuNjMydi0xMTNIMjU4LjE4NHogTTM5MC4yNDQsMjQ0LjI0N0gyNzAuNDM3di04OC40OTRoMTE5LjgwOEwzOTAuMjQ0LDI0NC4yNDcNCgkJTDM5MC4yNDQsMjQ0LjI0N3oiLz4NCgk8cG9seWdvbiBmaWxsPSIjRDhEOEQ4IiBwb2ludHM9IjI3Ni44ODEsMjM0LjcxNyAzMDEuNTcyLDIwOC43NjQgMzEwLjgyNCwyMTIuNzY4IDM0MC4wMTYsMTgxLjY4OCAzNTEuNTA1LDE5NS40MzQgDQoJCTM1Ni42ODksMTkyLjMwMyAzODQuNzQ2LDIzNC43MTcgCSIvPg0KCTxjaXJjbGUgZmlsbD0iI0Q4RDhEOCIgY3g9IjMwNS40MDUiIGN5PSIxNzguMjU3IiByPSIxMC43ODciLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+				</div>
+
+				<div class="uk-width-medium-1-2">
+					<img width="660" height="400" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjYwcHgiIGhlaWdodD0iNDAwcHgiIHZpZXdCb3g9IjAgMCA2NjAgNDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2NjAgNDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSI2NjAiIGhlaWdodD0iNDAwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0yNTguMTg0LDE0My41djExM2gxNDMuNjMydi0xMTNIMjU4LjE4NHogTTM5MC4yNDQsMjQ0LjI0N0gyNzAuNDM3di04OC40OTRoMTE5LjgwOEwzOTAuMjQ0LDI0NC4yNDcNCgkJTDM5MC4yNDQsMjQ0LjI0N3oiLz4NCgk8cG9seWdvbiBmaWxsPSIjRDhEOEQ4IiBwb2ludHM9IjI3Ni44ODEsMjM0LjcxNyAzMDEuNTcyLDIwOC43NjQgMzEwLjgyNCwyMTIuNzY4IDM0MC4wMTYsMTgxLjY4OCAzNTEuNTA1LDE5NS40MzQgDQoJCTM1Ni42ODksMTkyLjMwMyAzODQuNzQ2LDIzNC43MTcgCSIvPg0KCTxjaXJjbGUgZmlsbD0iI0Q4RDhEOCIgY3g9IjMwNS40MDUiIGN5PSIxNzguMjU3IiByPSIxMC43ODciLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+				</div>
+
+				<div class="uk-width-medium-1-2">
+					<h2>Freie Nutzungsmöglichkeiten</h2>
+					<p>Ein weiteres Problem ergibt sich bei der Nutzung der Daten bezüglich Urheberrechten. Die Karten der Bahnunternehmen sind in der Regel urheberrechtlich geschützt, sodass sie nur mit Einschränkungen genutzt werden können. Weil wir die Daten selbst erheben und nicht aus existierenden Karten abmalen, haben wir selbst auch alle Rechte daran. Unsere Daten darf jeder lizenzkostenfrei einsetzen und beliebig weiterverarbeiten. Wir schaffen eine von Bahnunternehmen unabhängige Datenquelle in einem einheitlichen Format.</p>
+					<h2>Aktuell und fehlerfrei</h2>
+					<p>Dazu kommt, dass selbst von Bahnunternehmen stammende Daten nicht immer aktuell und fehlerfrei sind. Die Korrektur der Daten geschieht oft langsam und bürokratisch. In diesem Projekt dagegen können Fehler sehr schnell und unkompliziert behoben werden. Durch unsere verteilte Arbeitsweise kann schneller auf Änderungen in der realen Welt reagiert werden.</p>
+				</div>
+
+			</div>
+
+			<div class="uk-grid" data-uk-grid-margin>
+				<div class="uk-width-medium-1-1">
+					<div class="uk-panel uk-panel-box">
+						<h1 class="uk-heading">Beispiele</h1>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-1">
+					<p class="uk-text-large">Hier sind einige Ausschnitte von sehr gut erfassten Gegenden, die zeigen, was mit der OpenRailwayMap möglich ist.</p>
+				</div>
+
+				<div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-3">
+					 <figure class="uk-overlay uk-overlay-hover uk-overlay-blur">
+						<img src="img/example-narrow-gauge-station.png" alt="">
+						<figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+							<div>Bahnhof Schierke an der Brockenbahn mit Schmalspurgleisen und Rückfallweichen</div>
+						</figcaption>
+						<a class="uk-position-cover" href="http://www.openrailwaymap.org/?lang=de&lat=51.765091036655704&lon=10.67795991897583&zoom=17&style=standard"></a>
+					</figure>
+				</div>
+
+				<div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-3">
+					 <figure class="uk-overlay uk-overlay-hover uk-overlay-blur">
+						<img src="img/example-maxspeeds-vienna.png" alt="">
+						<figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+							<div>Streckenhöchstgeschwindigkeiten um Wien</div>
+						</figcaption>
+						<a class="uk-position-cover" href="http://www.openrailwaymap.org/?lang=de&lat=48.200422001027874&lon=16.429367065429688&zoom=10&style=maxspeed"></a>
+					</figure>
+				</div>
+
+				<div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-3">
+					 <figure class="uk-overlay uk-overlay-hover uk-overlay-blur">
+						<img src="img/example-signals-ka.png" alt="">
+						<figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+							<div>Signale in Karlsruhe Hbf</div>
+						</figcaption>
+						<a class="uk-position-cover" href="http://www.openrailwaymap.org/?lang=de&lat=48.993675081453425&lon=8.403516411781311&zoom=17&style=signals"></a>
+					</figure>
+				</div>
+			</div>
+
+			<div class="uk-grid uk-grid-match" data-uk-grid-margin>
+				<div class="uk-width-medium-1-1">
+					<div class="uk-panel uk-panel-box">
+						<h1 class="uk-heading">Daten</h1>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Welche Daten werden gesammelt?</h2>
+						<p>Erfasst werden alle schienengebundenen und aus eigener Kraft fahrenden Verkehrsmittel, also klassische (Voll-)Eisenbahnen, U-Bahnen, Straßenbahnen, Schmalspurbahnen und Miniaturbahnen. Bezüglich des Detaillierungsgrades sind kaum Grenzen gesetzt: Ob Gleisverläufe, Standorte von Signalen oder Dieselloktankstellen – alles, was sich über eine geographische Position beschreiben lässt, wird erfasst.</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-2-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Welche Daten werden nicht gesammelt?</h2>
+						<p>Unser Ziel ist vor allem eine aktuelle Karte des heutigen Bahnnetzes. Historische Daten sammeln wir momentan nur eingeschränkt. Der Grundsatz dabei lautet, dass nur Dinge der Realität in die Karte eingetragen werden. Das heißt, dass die sichtbaren Reste einer abgebauten Bahnstrecke als stillgelegte Strecke eingetragen werden, während vollständig überbaute Verläufe von Feldbahnen eher nicht erwünscht sind. In der Zukunft soll die Erfassung historischer Daten hoffentlich weiter ausgebaut werden, momentan scheitert dies noch an der mangelnden Unterstützung für solche Daten seitens des OpenStreetMap-Datenmodells.</p>
+						<p>Ebenso finden Einschienen-, Magnetschwebe-, Seil- und Standseilbahnen keine Berücksichtigung, weil sie nicht zu den klassischen Eisenbahnen gehören.</p>
+						<p>Der Fokus des Projekts liegt auf der Infrastruktur, daher werden Daten über den darauf fahrenden Verkehr nur eingeschränkt berücksichtigt. Für Daten wie Zuglinien oder Kursbuchstrecken existieren andere Projekte wie die <a href="http://öpnvkarte.de/">ÖPNV-Karte</a>.</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Woher stammen die Daten?</h2>
+						<p>Die Daten stammen von Freiwilligen auf der ganzen Welt – sogenannten Mappern – die ihre Ortskenntnis oder Aufzeichnungen aus Begehungen oder Befahrungen zusammentragen. Einige Daten werden auch aus Quellen wie etwa Luftbildern oder Datenimports gewonnen, für die wir eine Nutzungserlaubnis bekommen haben.</p>
+						<p>Mit einem Bearbeitungsprogramm werden diese Daten eingetragen und zur zentralen Datenbank hochgeladen. Aus diesen Daten wird dann automatisch die fertige Karte erzeugt und Änderungen werden so schon nach kurzer Zeit auf der Karte sichtbar.</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-2-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Wie vollständig sind die Daten?</h2>
+						<p>Das hängt stark davon ab, wie man "vollständig" definiert: Alle Bahnhöfe und Streckengleise? Oder alle Nebengleise, Weichennummern, Kilometersteine und Signale? Der Detaillierungsgrad und die jeweilge Vollständigkeit der Daten ist regional sehr unterschiedlich. Da das Projekt in Deutschland entstanden ist und dort seinen momentanen Schwerpunkt hat, ist die Datenabdeckung in Deutschland besonders hoch. Auf vielen Strecken sind die Daten schon jetzt detaillierter und aktueller als jede öffentlich einsehbare Karte (sofern es überhaupt welche gibt), während anderswo noch ganze Streckenverläufe in der Karte fehlen können.</p>
+						<p>Bei der Arbeitsweise dieses Projektes gibt es keine Garantien für die Fehlerfreiheit und Vollständigkeit der Daten. Hier muss aber angemerkt werden, dass es eine solche Garantie auch nicht bei Daten von Bahnunternehmen oder staatlichen Stellen gibt – keine Karte ist fehlerfrei. Jeder, der unsere Daten einsetzen möchte, sollte sich selbst vorab ein Bild davon machen, ob die Qualität und Aktualität für den geplanten Zweck ausreichend ist. Wenn nicht: Einfach einen Monat später nochmal nachschauen, bis dahin kann sich einiges getan haben! Ansonsten können und sollen fehlende Daten natürlich auch selbst ergänzt werden!</p>
+						<p>Eine wirklich fertige Karte wird es nie geben, da sich die Welt dort draußen ständig verändert und diese Änderungen kontinuierlich in der Karte nachgetragen werden müssen. Die Daten unterliegen also einem ständigen Bearbeitungsprozess.</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Wie kann ich Fehler melden?</h2>
+						<p>Keine Karte ist ohne Fehler. Im Gegensatz zu anderen Karten können bei diesem Projekt Fehler sehr schnell und unkompliziert korrigiert werden. Fehler kannst du einfach <a href="mailto:info@openrailwaymap.org">per Mail</a> an uns melden. Wenn du an einer Mitarbeit interessiert bist, kannst du dich auch bei OpenStreetMap anmelden und den Fehler selber beheben. Um mitzumachen, brauchst du nur einen normalen PC, ein kostenlos und frei erhältliches Bearbeitungsprogramm sowie ein wenig Grundwissen über die Eisenbahn. In einem <a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap/Tutorial">Tutorial</a> werden die ersten Schritte ausführlich erklärt.</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-2-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Unter welcher Lizenz stehen die Daten?</h2>
+						<p>Die im Rahmen des OpenRailwayMap-Projektes gesammelten Informationen werden in der OpenStreetMap-Datenbank gespeichert. Diese Daten sind unter den Bedingungen der <a href="http://opendatacommons.org/licenses/odbl/">Open Database Licence (ODbL) 1.0</a> (<a href="http://wiki.openstreetmap.org/wiki/DE:Open_Database_Licence_-_Licence_Text">inoffizielle Übersetzung</a>) verfügbar, die einzelnen Objekte in der Datenbank stehen unter der "Database Contents License (DbCL) 1.0". Weitere Informationen gibt es auf der <a href="https://www.openstreetmap.org/copyright">Copyright-Seite des OpenStreetMap-Projekts</a>. Dort gibt es auch weiterführende Links zu FAQs und Auslegungshinweisen der ODbL.</p>
+						<p>Je nach Verwendung der Daten bzw. daraus erzeugter Werke ergibt sich die Notwendigkeit, die Datenquelle anzugeben. Im folgenden Abschnitt sind verschiedene Verwendungsmöglichkeiten und die jeweiligen Nutzungsbedingungen aufgeführt.</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="uk-grid uk-grid-match" data-uk-grid-margin>
+				<div class="uk-width-medium-1-1">
+					<div class="uk-panel uk-panel-box">
+						<h1 class="uk-heading">Verwendungsmöglichkeiten</h1>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-4">
+					<div class="uk-panel">
+						<h2 class="uk-h3">OsmAnd</h2>
+						<p>Mit der beliebten Android- und iOS-App <a href="http://wiki.openstreetmap.org/wiki/DE:OsmAnd">OsmAnd</a> kann die Karte bequem auf mobilen Geräten genutzt werden. Eine Offline-Nutzung ist derzeit jedoch noch nicht möglich. Eine <a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap/API#Einbindung_in_OsmAnd">Anleitung im Wiki</a> verrät, welche Schritte notwendig sind.</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-4">
+					<div class="uk-panel">
+						<h2 class="uk-h3">QGIS</h2>
+						<p>Die Tiles der OpenRailwayMap können in das freie Geoinformationssystem QGIS <a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap/API#Einbindung_in_QGIS">eingebunden</a> werden.</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-4">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Export von Kartengrafiken</h2>
+						<p>todo</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-4">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Einbindung in Webseiten oder Anwendungen</h2>
+						<p>todo</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">API</h2>
+						<p>Über eine <a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap/API#API">API</a> können Entwickler gezielt einzelne Datensätze – etwa die geographischen Position eines bestimmten Bahnhofes – abfragen. Dabei sind die <a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap/API#Nutzungsbedingungen">Nutzungsbedingungen</a> zu beachten.</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-2-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Datensatz herunterladen</h2>
+						<p>Für Anwendungen mit einem hohen Benutzeraufkommen oder einer geforderten hohen Verfügbarkeit ist es nicht ratsam, auf die Server der OpenRailwayMap zuzugreifen. Diese sind nicht für hohe Lasten ausgelegt und können auch keine Verfügbarkeit garantieren. Da die Server der OpenRailwayMap nur durch Spenden finanziert sind, ist die Nutzung für professionelle Anwendungen ohnehin nicht gestattet. Solche Anwender sollten eigene Lösungen aufsetzen. Die Website, die Kartenstile und die gesamte verwendete Software sind freie Software. Ebenso gibt es Anwendungen, die einen Zugriff auf die Rohdaten benötigen, etwa für eine Darstellung in einem selbst definierten Stil.</p>
+						<p>In solchen Fällen ist das Herunterladen der Rohdaten erforderlich. Im Wiki sind die notwendigen Schritte und die Nutzungsbedingungen dokumentiert.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-grid uk-grid-match" data-uk-grid-margin>
+				<div class="uk-width-medium-1-1">
+					<div class="uk-panel uk-panel-box">
+						<h1 class="uk-heading">Mitmachen</h1>
+					</div>
+				</div>
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Daten erfassen und korrigieren</h2>
+						<p>In einem Projekt wie diesem ist die Erfassung von Daten die wichtigste Form der Mitarbeit. Das Projekt basiert auf dem Prinzip des "Crowdsourcing", das heißt, dass die Daten von unzähligen freiwilligen Mitarbeitern anhand von Ortskenntnis, Beobachtungen aus Spaziergängen und Zugfahrten oder mit der Hilfe von Luftbildern zusammengetragen, korrigiert und auf dem aktuellen Stand gehalten werden.</p>
+						<p>Um mitzumachen, brauchst du nur einen normalen PC, ein kostenlos und frei erhältliches Bearbeitungsprogramm sowie ein wenig Grundwissen über die Eisenbahn. Je nachdem, wie du die Daten erheben möchtest, können eine Kamera oder ein GPS-Gerät hilfreich sein. In einem Tutorial werden die ersten Schritte ausführlich erklärt.</p>
+						<a class="uk-button uk-button" href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap/Tutorial"><i class="uk-icon-help"></i> Tutorial</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Übersetzung</h2>
+						<p>OpenRailwayMap ist ein internationales Projekt. Um Nutzer aus unterschiedlichen Ländern anzusprechen und ihnen die Mitarbeit zu ermöglichen, wird eine Übersetzung der Webseite, der Wikiseiten und der JOSM-Vorlagen in möglichst viele Sprachen angestrebt. Insbesondere Leute mit Kenntnissen von bahnbezogenen Fachbegriffen in verschiedenen Sprachen sind hier gefragt.</p>
+						<a class="uk-button uk-button" href="https://www.transifex.com/projects/p/openrailwaymap/"><i class="uk-icon-transifex"></i> Übersetzungen auf Transifex</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Softwareentwicklung</h2>
+						<p>Auch Softwareentwickler sind bei OpenRailwayMap gefragt, denn es gibt jede Menge zu tun – an der Datenbank, der Kartendarstellung, der Suchfunktion und diversen Hilfsprogrammen. Dabei kannst du Fehler beheben, aber auch Verbesserungen vornehmen oder neue Funktionen implementieren.</p>
+						<a class="uk-button uk-button" href="https://github.com/rurseekatze/OpenRailwayMap"><i class="uk-icon-github"></i> Github</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Dokumentation</h2>
+						<p>Um Einsteigern die Mitarbeit so leicht wie möglich zu machen, ist eine gute Dokumentation in Form von Anleitungen, Beispielen und Tutorials notwendig. Aber auch für die fortgeschrittenen User ist eine Dokumentation wichtig, um sich auf bestimmte Vorgehensweisen zu einigen.</p>
+						<a class="uk-button uk-button" href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap"><i class="uk-icon-wiki"></i> Wiki</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Anregungen, Verbesserungsvorschläge, Fehlermeldungen</h2>
+						<p>Wenn du einen Fehler gefunden oder Ideen für Verbesserungen hast, dann nimm einfach Kontakt zu uns auf oder lege im Github-Repository ein Issue an.</p>
+						<a class="uk-button uk-button" href="contact-de.html"><i class="uk-icon-contact"></i> Kontakt</a>
+						<a class="uk-button uk-button" href="https://github.com/rurseekatze/OpenRailwayMap/issues"><i class="uk-icon-github"></i> Github-Issues</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Spenden</h2>
+						<p>Alle Arbeit im Projekt wird von Freiwilligen geleistet, die dafür kein Geld bekommen. Das Projekt verfolgt keinerlei kommerzielle Ziele. Die Server, auf denen die Webseite läuft und die Karten erzeugt werden, sind zum Teil durch Spenden, zum Teil von den Projektmitarbeitern aus eigener Tasche bezahlt. Wir möchten auch in Zukunft unabhängig von kommerziellen Interessen bleiben und die Karte ohne Werbung anbieten. Dazu sind wir auf Spenden angewiesen.</p>
+						<a class="uk-button uk-button" href="donation-de.html"><i class="uk-icon-contact"></i> Spendenseite</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Datenspenden</h2>
+						<p>Hast Du Zugriff auf Daten, die wir verwenden dürfen? Immer her damit, solche Datenquellen können wir immer gut gebrauchen. Bitte stelle dich auf unserer öffentlichen <a href="http://lists.openrailwaymap.org/lists/listinfo/openrailwaymap">Mailingliste</a> vor. Wenn du selbst Daten importieren möchtest, musst du die <a href="https://wiki.openstreetmap.org/wiki/Import/Guidelines">Import-Richtlinie</a> des OpenStreetMap-Projekts beachten und solltest ein erfahrener Mapper sein.</p>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Design und Grafik</h2>
+						<p>todo</p>
+						<a class="uk-button uk-button" href="TODO"><i class="uk-icon-github"></i> todo</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">JOSM-Vorlagen</h2>
+						<p>todo</p>
+						<a class="uk-button uk-button" href="TODO"><i class="uk-icon-contact"></i> todo</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Länderspezifisches Tagging</h2>
+						<p>todo</p>
+						<a class="uk-button uk-button" href="TODO"><i class="uk-icon-contact"></i> todo</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Styles</h2>
+						<p>todo</p>
+						<a class="uk-button uk-button" href="TODO"><i class="uk-icon-contact"></i> todo</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="uk-grid uk-grid-match" data-uk-grid-margin>
+				<div class="uk-width-medium-1-1">
+					<div class="uk-panel uk-panel-box">
+						<h1 class="uk-heading">Community</h1>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-4">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Mailingliste</h2>
+						<p>Unser wichtigster Kommunikationskanal ist die Mailingliste. Hier finden vor allem Diskussionen statt. Die Beiträge können ohne Anmeldungen gelesen werden. Zum automatischen Empfang und Schreiben von Nachrichten ist ein Abonnieren der Liste erforderlich.</p>
+						<a class="uk-button uk-button" href="http://lists.openrailwaymap.org/lists/listinfo/openrailwaymap"><i class="uk-icon-envelope"></i> Mailingliste</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-4">
+					<div class="uk-panel">
+						<h2 class="uk-h3">IRC-Chat</h2>
+						<p>Über den IRC-Kanal können schnell und unkompliziert Fragen beantwortet werden. Auch über andere Themen rund um die Eisenbahn und OpenStreetMap kann hier in lockerer Runde diskutiert werden. Eine Registrierung ist nicht notwendig.</p>
+						<a class="uk-button uk-button" href="irc://irc.oftc.net/OpenRailwayMap"><i class="uk-icon-comments"></i> IRC-Channel</a>
+						<a class="uk-button uk-button" href="http://webchat.oftc.net/?channels=OpenRailwayMap"><i class="uk-icon-comments"></i> Webchat</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-4">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Wiki</h2>
+						<p>Unsere Seiten im OpenStreetMap-Wiki sind der zentrale Anlaufpunkt für Informationen rund um das Projekt. Dort finden sich die Dokumentation zum Datenschema und Regeln zur Erfassung.</p>
+						<a class="uk-button uk-button" href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap"><i class="uk-icon-info-circle"></i> Wiki</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-4">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Veranstaltungen</h2>
+						<p>Natürlich treffen wir uns nicht nur virtuell, sondern auch in der realen Welt. Regelmäßig nehmen die treibenden Köpfe hinter der OpenRailwayMap an Hackevents teil oder organisieren Mappingpartys. Geplante Veranstaltungen werden vorher über Twitter und die Mailingliste angekündigt.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-grid uk-grid-match" data-uk-grid-margin>
+				<div class="uk-width-medium-1-1">
+					<div class="uk-panel uk-panel-box">
+						<h1 class="uk-heading">Neuigkeiten</h1>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Mailingliste</h2>
+						<p>Unser wichtigster Kommunikationsweg ist die Mailingliste. Dort werden offizielle Neuigkeiten von den Hauptverantwortlichen des Projekts veröffentlicht. Die Beiträge können ohne Anmeldungen gelesen werden. Zum automatischen Empfang und Schreiben von Nachrichten ist ein Abonnieren der Liste erforderlich.</p>
+						<a class="uk-button uk-button" href="http://lists.openrailwaymap.org/lists/listinfo/openrailwaymap"><i class="uk-icon-envelope"></i> Mailingliste</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Twitter</h2>
+						<p>Über den Twitteraccount der OpenRailwayMap gibt es kurze Infos zu neuen Funktionen, anstehenden Veranstaltungen und allem, was das Projekt gerade so bewegt.</p>
+						<a class="uk-button uk-button" href="https://twitter.com/openrailwaymap"><i class="uk-icon-twitter"></i> @openrailwaymap</a>
+					</div>
+				</div>
+
+				<div class="uk-width-medium-1-3">
+					<div class="uk-panel">
+						<h2 class="uk-h3">Blog</h2>
+						<p>Im Blog gibt es regelmäßig ausführliche Beiträge zu neuen Funktionen, Rückblicke auf vergangene Veranstaltungen und Hintergrundinfos zu verwandten Themen, mit denen sich die Projektmitarbeiter gerade beschäftigen. Ideal für alle, die die Entwicklung des Projektes mitverfolgen wollen, ohne die Mailingliste abonnieren zu müssen. Der Blog lässt sich auch als RSS-Feed abonnieren.</p>
+						<a class="uk-button uk-button" href="http://blog.openrailwaymap.org/"><i class="uk-icon-newspaper-o"></i> Blog</a>
+						<a class="uk-button uk-button" href="http://blog.openrailwaymap.org/de.rss"><i class="uk-icon-rss"></i> RSS-Feed</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="offcanvas" class="uk-offcanvas">
+			<div class="uk-offcanvas-bar">
+				<ul class="uk-nav uk-nav-offcanvas">
+					<li>
+						<a href="index.html">Startseite</a>
+					</li>
+					<li class="uk-active">
+						<a href="info-de.html">Über das Projekt</a>
+					</li>
+					<li>
+						<a href="blog-de.html">Blog</a>
+					</li>
+					<li>
+						<a href="donation-de.html">Spenden</a>
+					</li>
+					<li>
+						<a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap">Wiki</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+</html>
