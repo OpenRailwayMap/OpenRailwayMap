@@ -1150,11 +1150,11 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	allow-overlap: true;
 }
 
-/******************************************/
-/* DE main light signals type Hl which    */
-/*  - have no railway:signal:states=* tag */
-/******************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light][!"railway:signal:main:states"]
+/**********************************************************************************/
+/* DE main light signals type Hl which                                            */
+/*  - have no railway:signal:main:states tag combination which has a special icon */
+/**********************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hl"]["railway:signal:main:form"=light]
 {
 	z-index: 10000;
 	text: "ref";
@@ -1257,11 +1257,11 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	allow-overlap: true;
 }
 
-/*******************************************/
-/* DE combined light signals type Hl which */
-/*  - have no railway:signal:states=* tag  */
-/*******************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light][!"railway:signal:combined:states"]
+/**************************************************************************************/
+/* DE combined light signals type Hl which                                            */
+/*  - have no railway:signal:combined:states tag combination which has a special icon */
+/**************************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:hl"]["railway:signal:combined:form"=light]
 {
 	z-index: 10000;
 	text: "ref";
