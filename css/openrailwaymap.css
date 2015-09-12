@@ -67,7 +67,7 @@
 
 #welcomeheader
 {
-	background: url('img/header.png') 50% 0 no-repeat;
+	background: url('../img/header.png') 50% 0 no-repeat;
 	height: 400px;
 }
 
