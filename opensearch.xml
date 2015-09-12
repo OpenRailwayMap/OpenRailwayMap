@@ -9,9 +9,7 @@
 	<Attribution>Data &copy; OpenStreetMap contributors, Some Rights Reserved. Search engine provided by OpenRailwayMap.</Attribution>
 	<OutputEncoding>UTF-8</OutputEncoding>
 	<InputEncoding>UTF-8</InputEncoding>
-	<Image height="16" width="16" type="image/x-icon">http://www.openrailwaymap.org/favicon.ico</Image>
-	<Image height="64" width="64" type="image/png">http://www.openrailwaymap.org/websearch.png</Image>
-	<Image height="16" width="16" type="image/vnd.microsoft.icon">http://www.openrailwaymap.org/websearch.ico</Image>
+	<Image height="64" width="64" type="image/png">http://www.openrailwaymap.org/img/openrailwaymap-64.png</Image>
 	<moz:SearchForm>searchFormURL</moz:SearchForm>
 	<Url method="get" type="text/html" template="http://www.openrailwaymap.org/?q={searchTerms}"/>
 	<SyndicationRight>open</SyndicationRight>
