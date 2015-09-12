@@ -8,11 +8,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<title>OpenRailwayMap – Startseite</title>
-		<link rel="stylesheet" href="js/uikit-2.20.3/css/uikit.min.css" />
-		<link rel="stylesheet" href="css/openrailwaymap.css" />
-		<script src="js/jquery-2.1.4.min.js"></script>
-		<script src="js/uikit-2.20.3/js/uikit.min.js"></script>
-		<script src="js/openrailwaymap.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/uikit-2.20.3/css/uikit.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/openrailwaymap.css" />
+		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+		<!--[if lte IE 8]>
+			<link rel="stylesheet" type="text/css" href="css/leaflet.ie.css" />
+		<![endif]-->
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/uikit-2.20.3/js/uikit.min.js"></script>
+		<script type="text/javascript" src="js/leaflet-0.6.2.js"></script>
+		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
+		<script type="text/javascript" src="js/openrailwaymap.js"></script>
+		<script type="text/javascript" src="http://www.openrailwaymap.org/api/jstranslations.php?lang=de"></script>
 
 		<meta name="description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&#39;s railway infrastructure." />
 		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte">
@@ -54,7 +61,8 @@
 	</head>
 
 	<body>
-		<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+
+		<div class="uk-container uk-container-center uk-margin-top">
 			<div id="searchFacilityDialog" class="uk-modal">
 				<div class="uk-modal-dialog">
 					<a class="uk-modal-close uk-close"></a>
@@ -69,7 +77,7 @@
 				</div>
 			</div>
 
-			<nav class="uk-navbar uk-margin-large-bottom">
+			<nav class="uk-navbar">
 				<a class="uk-navbar-brand uk-hidden-small" href="index.html">OpenRailwayMap</a>
 				<ul class="uk-navbar-nav uk-hidden-small">
                     <li class="uk-parent" data-uk-dropdown>
@@ -131,16 +139,7 @@
 				<div class="uk-navbar-brand uk-navbar-center uk-visible-small">OpenRailwayMap</div>
 			</nav>
 
-			<div class="uk-grid" data-uk-grid-margin>
-				<div class="uk-width-medium-1-1">
-					<div class="uk-vertical-align uk-text-center">
-						<div class="uk-vertical-align-middle uk-width-2-3">
-							<h1 class="uk-heading-large">OpenRailwayMap</h1>
-							<p class="uk-text-large">TODO: Hier kommt die Karte hin</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div id="mapContainer"></div>
 
 		</div>
 
