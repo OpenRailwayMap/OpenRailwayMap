@@ -63,3 +63,13 @@
 	background: url('img/header.png') 50% 0 no-repeat;
 	height: 400px;
 }
+
+#mapContainer
+{
+	z-index: -1000;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	top: 0px;
+}
