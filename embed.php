@@ -30,8 +30,8 @@
 		<meta name="date" content="2010-01-01" />
 		<meta name="page-topic" content="OpenRailwayMap" />
 		<meta name="robots" content="index,follow" />
-		<link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon" />
-		<link rel="icon" href="img/favicon.ico" type="image/vnd.microsoft.icon" />
+		<link rel="shortcut icon" href="img/openrailwaymap-16.png" type="image/png" />
+		<link rel="icon" href="img/openrailwaymap-16.png" type="image/png" />
 		<meta http-equiv="content-script-type" content="text/javascript" />
 		<meta http-equiv="content-style-type" content="text/css" />
 		<link rel="stylesheet" type="text/css" href="css/embed.css" />
