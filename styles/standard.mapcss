@@ -631,6 +631,10 @@ node|z11-[railway=milestone]
 	text-halo-radius: 0.5;
 	text-halo-color: white;
 }
+node|z11-[railway=milestone]["railway:position"=~/\.0$/]
+{
+	z-index: 601;
+}
 
 /************/
 /* stations */
