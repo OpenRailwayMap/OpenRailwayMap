@@ -493,3 +493,29 @@ node[railway=switch]["railway:switch"=resetting]
 	assertNoMatch: "node railway=switch railway:switch=default railway:switch:resetting=yes";
 	fixAdd: "railway:switch:resetting=yes";
 }
+
+way[railway][name=~/[Tt]unnel/][!"tunnel:name"],
+way[railway][name=~/[Tt]unnel/]["tunnel:name"=*name]
+{
+	throwWarning: "track tagged with 'tunnel' in name, consider using tunnel:name instead and put the track name into name";
+	assertMatch: "way railway=rail name=Footunnel";
+	assertMatch: "way railway=light_rail name=Bartunnel tunnel:name=Bartunnel";
+	assertNoMatch: "way railway=rail tunnel:name=Baztunnel";
+	fixChangeKey: "name=>tunnel:name";
+}
+
+way[railway][name=~/[Bb]ridge/][!"bridge:name"],
+way[railway][name=~/[Bb]ridge/]["bridge:name"=*name],
+way[railway][name=~/[Vv]iadu[ck]t/][!"bridge:name"],
+way[railway][name=~/[Vv]iadu[ck]t/]["bridge:name"=*name],
+way[railway][name=~/[Bb]rücke/][!"bridge:name"],
+way[railway][name=~/[Bb]rücke/]["bridge:name"=*name]
+{
+	throwWarning: "track tagged with 'bridge' in name, consider using bridge:name instead and put the track name into name";
+	assertMatch: "way railway=rail name=Foobrücke";
+	assertMatch: "way railway=rail name=\"Bay bridge\"";
+	assertMatch: "way railway=rail name=\"Baz viaduct\"";
+	assertMatch: "way railway=light_rail name=\"Bar bridge\" bridge:name=\"Bar bridge\"";
+	assertNoMatch: "way railway=rail bridge:name=Foo-Viadukt";
+	fixChangeKey: "name=>bridge:name";
+}
