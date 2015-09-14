@@ -1172,23 +1172,23 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["rai
 }
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=30]
 {
-	icon-image: "icons/de-hha-l1-30-sign-44.png";
+	icon-image: "icons/de/hha/l1-30-sign-44.png";
 }
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=40]
 {
-	icon-image: "icons/de-hha-l1-40-sign-44.png";
+	icon-image: "icons/de/hha/l1-40-sign-44.png";
 }
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=50]
 {
-	icon-image: "icons/de-hha-l1-50-sign-44.png";
+	icon-image: "icons/de/hha/l1-50-sign-44.png";
 }
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=60]
 {
-	icon-image: "icons/de-hha-l1-60-sign-44.png";
+	icon-image: "icons/de/hha/l1-60-sign-44.png";
 }
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=70]
 {
-	icon-image: "icons/de-hha-l1-70-sign-44.png";
+	icon-image: "icons/de/hha/l1-70-sign-44.png";
 }
 
 /* German line speed signals (Lf 7) */
@@ -1285,7 +1285,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z14-[railway=signal]["railway:signal:speed_limit"="DE-HHA:l4"]["railway:signal:speed_limit:form"=sign]
 {
 	z-index: 410;
-	icon-image: "icons/de-hha-l4-32.png";
+	icon-image: "icons/de/hha/l4-32.png";
 	icon-width: 11;
 	icon-height: 16;
 	allow-overlap: true;
