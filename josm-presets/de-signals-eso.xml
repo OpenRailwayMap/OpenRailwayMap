@@ -1914,7 +1914,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default=""
 						delete_if_empty="true" />
 					<space />
-					<key key="railway:signal:speed_limit_distant"
+					<key key="railway:signal:speed_limit"
 						value="DE-ESO:zs3v" />
 					<combo key="railway:signal:speed_limit_distant:form"
 						text="Signal form"
