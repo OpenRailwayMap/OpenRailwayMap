@@ -609,10 +609,7 @@ way|z10-[railway=narrow_gauge][usage=industrial][service=crossover]
 /************/
 /* switches */
 /************/
-node|z16-[railway=switch]["railway:local_operated"=no]["railway:switch:resetting"=no],
-node|z16-[railway=switch][!"railway:local_operated"]["railway:switch:resetting"=no],
-node|z16-[railway=switch]["railway:local_operated"=no][!"railway:switch:resetting"],
-node|z16-[railway=switch][!"railway:local_operated"][!"railway:switch:resetting"]
+node|z16-[railway=switch]
 {
 	z-index: 5000;
 	symbol-shape: circle;
@@ -631,8 +628,7 @@ node|z16-[railway=switch][!"railway:local_operated"][!"railway:switch:resetting"
 /***************************/
 /* local operated switches */
 /***************************/
-node|z16-[railway=switch]["railway:local_operated"=yes]["railway:switch:resetting"=no],
-node|z16-[railway=switch]["railway:local_operated"=yes][!"railway:switch:resetting"]
+node|z16-[railway=switch]["railway:local_operated"=yes]
 {
 	z-index: 5000;
 	symbol-shape: circle;
