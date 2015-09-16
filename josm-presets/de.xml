@@ -2435,6 +2435,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="DE-ESO:sh0,DE-ESO:sh2"
 					display_values="Sh 0-Tafel,Sh 2-Tafel"
 					default="" />
+				<text key="ref"
+					text="Reference"
+					de.text="Bezeichnung"
+					default=""
+					delete_if_empty="true" />
 				<key key="railway:signal:minor:form"
 					value="sign" />
 			</item>
