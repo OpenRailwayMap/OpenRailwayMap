@@ -482,3 +482,14 @@ relation[railway=interlocking][type][type!=railway]
 	assertMatch: "relation railway=interlocking type=public_transport";
 	assertNoMatch: "relation railway=interlocking type=railway";
 }
+
+/* deprecated tagging for resetting switches */
+node[railway=switch]["railway:switch"=resetting]
+{
+	throwError: "Tagging for resetting switch is deprecated, change railway:switch=* to proper value";
+	assertMatch: "node railway=switch railway:switch=resetting ref=2";
+	assertNoMatch: "node railway=switch";
+	assertNoMatch: "node railway=switch railway:switch=default";
+	assertNoMatch: "node railway=switch railway:switch=default railway:switch:resetting=yes";
+	fixAdd: "railway:switch:resetting=yes";
+}
