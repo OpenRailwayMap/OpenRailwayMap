@@ -47,6 +47,17 @@ way.tracks
 	kothicjs-ignore-layer: true;
 }
 
+way["railway:lzb"=yes].tracks
+{
+	z-index: 3;
+	color: red;
+}
+way["railway:etcs"]["railway:etcs"!=no]["railway:etcs"!=0].tracks
+{
+	z-index: 4;
+	color: blue;
+}
+
 /*********************************/
 /* DE crossing distant sign Bü 2 */
 /*********************************/
