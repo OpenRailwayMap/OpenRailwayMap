@@ -41,6 +41,37 @@ way|z2-[railway=rail][usage=branch]
 	kothicjs-ignore-layer: true;
 }
 
+way|z10-[railway=tram]["railway:lzb"=yes],
+way|z10-[railway=subway]["railway:lzb"=yes],
+way|z10-[railway=light_rail]["railway:lzb"=yes],
+way|z9-[railway=narrow_gauge]["railway:lzb"=yes],
+way|z9-[railway=preserved]["railway:lzb"=yes],
+way|z10-[railway=rail]["railway:lzb"=yes],
+way|z2-[railway=rail][usage=main]["railway:lzb"=yes],
+way|z2-[railway=rail][usage=branch]["railway:lzb"=yes]
+{
+	z-index: 1;
+	width: 1;
+	color: black;
+	casing-color: gray;
+	casing-width: 2;
+}
+way|z10-[railway=tram]["railway:etcs"]["railway:etcs"!=no],
+way|z10-[railway=subway]["railway:etcs"]["railway:etcs"!=no],
+way|z10-[railway=light_rail]["railway:etcs"]["railway:etcs"!=no],
+way|z9-[railway=narrow_gauge]["railway:etcs"]["railway:etcs"!=no],
+way|z9-[railway=preserved]["railway:etcs"]["railway:etcs"!=no],
+way|z10-[railway=rail]["railway:etcs"]["railway:etcs"!=no],
+way|z2-[railway=rail][usage=main]["railway:etcs"]["railway:etcs"!=no],
+way|z2-[railway=rail][usage=branch]["railway:etcs"]["railway:etcs"!=no]
+{
+	z-index: 2;
+	width: 1;
+	color: blue;
+	casing-color: gray;
+	casing-width: 2;
+}
+
 /*********************************/
 /* DE crossing distant sign Bü 2 */
 /*********************************/
