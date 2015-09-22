@@ -645,7 +645,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de/hha-v1-32.png";
+	icon-image: "icons/de/hha/v1-32.png";
 	icon-width: 5;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -1400,7 +1400,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de/hha-h0-32.png";
+	icon-image: "icons/de/hha/h0-32.png";
 	icon-width: 6;
 	icon-height: 16;
 	text-allow-overlap: true;
@@ -1421,7 +1421,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	text-halo-radius: 1;
 	text-halo-color: white;
 	font-weight: bold;
-	icon-image: "icons/de/hha-h1-32.png";
+	icon-image: "icons/de/hha/h1-32.png";
 	icon-width: 6;
 	icon-height: 16;
 	text-allow-overlap: true;
