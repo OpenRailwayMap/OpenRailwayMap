@@ -53,7 +53,7 @@
 						echo $_GET['lat'].",\n";
 					else
 					{
-						$latlon = getLatLon('id', $type);
+						$latlon = getLatLon('id', isset($type) ? $type : "");
 						if ($latlon)
 							echo $latlon[1].",\n";
 						else
@@ -64,7 +64,7 @@
 						echo $_GET['lon'].",\n";
 					else
 					{
-						$latlon = getLatLon('id', $type);
+						$latlon = getLatLon('id', isset($type) ? $type : "");
 						if ($latlon)
 							echo $latlon[0].",\n";
 						else
