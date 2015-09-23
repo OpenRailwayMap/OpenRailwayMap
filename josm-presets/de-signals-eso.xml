@@ -2734,7 +2734,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<key key="railway"
 					value="signal" />
-				<check key="railway:signal:lzb_start:deactivated"
+				<check key="railway:signal:train_protection:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
