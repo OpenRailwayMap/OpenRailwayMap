@@ -79,7 +79,6 @@
 				echo "lang : '".$lang."',\n";
 				echo "ref : ".(isset($_GET['ref']) ? (json_encode($_GET['ref'])) : ("null")).",\n";
 				echo "name : ".(isset($_GET['name']) ? (json_encode($_GET['name'])) : ("null")).",\n";
-				echo "position : ".(isValidPosition($_GET['position']) ? (json_encode($_GET['position'])) : ("null")).",\n";
 				echo "line : ".(isset($_GET['line']) ? (json_encode($_GET['line'])) : ("null")).",\n";
 				echo "operator : ".(isset($_GET['operator']) ? (json_encode($_GET['operator'])) : ("null")).",\n";
 				echo "style : ".(isset($_GET['style']) ? (json_encode($_GET['style'])) : ("null")).",\n";
