@@ -124,7 +124,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="
 node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:ring"="DE-ESO:bü5"]
 {
 	z-index: 500;
-	icon-image: "icons/de/bue5-ds-32.png";
+	icon-image: "icons/de/bue5-32.png";
 	icon-width: 11;
 	icon-height: 16;
 	text-allow-overlap: true;
