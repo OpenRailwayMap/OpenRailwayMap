@@ -19,17 +19,17 @@
 	$filename = isset($_GET['style']) ? ("../styles/".$_GET['style'].".json") : (null);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<? echo $lang; ?>" lang="<? echo $lang; ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $lang; ?>" lang="<?php echo $lang; ?>">
 	<head>
 		<title><?=$appname?></title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="content-language" content="<? echo $lang; ?>" />
+		<meta http-equiv="content-language" content="<?php echo $lang; ?>" />
 		<link rel="stylesheet" type="text/css" href="../css/legend.css" />
 		<meta http-equiv="content-style-type" content="text/css" />
 	</head>
 	<body>
 		<table>
-			<?
+			<?php
 				$output = "";
 
 				if (file_exists($filename))
