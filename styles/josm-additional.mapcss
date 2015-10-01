@@ -43,9 +43,73 @@ node|z14-[railway=milestone][!"railway:position"]
 	allow-overlap: true;
 }
 
+/* German route distant signals (Zs 2v), missing route information */
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:route_distant"="DE-ESO:zs2v"][!"railway:signal:route_distant:states"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:route_distant"="DE-ESO:zs2v"]["railway:signal:route_distant:states"="?"]
+{
+	z-index: 85;
+	icon-width: 15;
+	icon-height: 19;
+	allow-overlap: true;
+	icon-image: "icons/de/zs2v-unknown-38.png";
+}
+
+/* German route signals (Zs 2), missing route information */
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:route"="DE-ESO:zs2"][!"railway:signal:route:states"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:route"="DE-ESO:zs2"]["railway:signal:route:states"="?"]
+{
+	z-index: 90;
+	icon-width: 15;
+	icon-height: 19;
+	allow-overlap: true;
+	icon-image: "icons/de/zs2-unknown-38.png";
+}
+
+/* German speed signals (Zs 3v), missing speed information */
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=~/(sign|light)/][!"railway:signal:speed_limit_distant:speed"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=~/(sign|light)/]["railway:signal:speed_limit_distant:speed"="?"]
+{
+	z-index: 95;
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+	icon-image: "icons/de/zs3v-empty-sign-down-44.png";
+}
+
+/* German speed signals (Zs 3), missing speed information */
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=~/(sign|light)/][!"railway:signal:speed_limit:speed"],
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=~/(sign|light)/]["railway:signal:speed_limit:speed"="?"]
+{
+	z-index: 195;
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+	icon-image: "icons/de/zs3-empty-sign-up-44.png";
+}
+
+/* German line speed signals (Lf 6), missing speed information */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign][!"railway:signal:speed_limit_distant:speed"]
+{
+	z-index: 295;
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+	icon-image: "icons/de/lf6-empty-sign-down-44.png";
+}
+
+/* German line speed signals (Lf 7), missing speed information */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign][!"railway:signal:speed_limit:speed"]
+{
+	z-index: 395;
+	icon-width: 13;
+	icon-height: 16;
+	allow-overlap: true;
+	icon-image: "icons/de/lf7-empty-sign-32.png";
+}
+
 node|z16-[railway=signal][!"railway:signal:direction"]
 {
-	z-index: 100;
+	z-index: 1000;
 	icon-image: "misc/deprecated.png";
 	/* misc/deprecated.png is part of the JOSM installation, 
 	   that's why it is not included at OpenRailwayMap repository */
