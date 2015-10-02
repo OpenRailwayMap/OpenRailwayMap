@@ -129,64 +129,6 @@ npm install touch
 # a nodejs proxy script will redirect each request either to apache or the nodejs tileserver
 # Note: Keep in mind that now 127.0.0.1 will appear as the user IP address - so you may have to change the configuration of geolocation or user statistics
 
-# if not existing, add a locales file for nqo_GN on your system by running these commands:
-# cd /usr/share/i18n/locales
-# cp en_GB nqo_GN
-# vi nqo_GN and replace
-#
-## title      "English locale for Britain"
-## source     "RAP"
-## address    "Sankt J<U00F8>rgens Alle 8, DK-1615 K<U00F8>benhavn V, Danmark"
-## contact    "Keld Simonsen"
-## email      "bug-glibc-locales@gnu.org"
-## tel        ""
-## fax        ""
-## language   "English"
-## territory  "Great Britain"
-## revision   "1.0"
-## date       "2000-06-28"
-## %
-## category  "en_GB:2000";LC_IDENTIFICATION
-## category  "en_GB:2000";LC_CTYPE
-## category  "en_GB:2000";LC_COLLATE
-## category  "en_GB:2000";LC_TIME
-## category  "en_GB:2000";LC_NUMERIC
-## category  "en_GB:2000";LC_MONETARY
-## category  "en_GB:2000";LC_MESSAGES
-## category  "en_GB:2000";LC_PAPER
-## category  "en_GB:2000";LC_NAME
-## category  "en_GB:2000";LC_ADDRESS
-## category  "en_GB:2000";LC_TELEPHONE
-#
-# with
-#
-## title      "N'ko locale for Guinea - dirty workaround for LC_MESSAGES"
-## source     "own"
-## address    "Germany"
-## contact    "Alexander Matheisen"
-## email      "AlexanderMatheisen@ish.de"
-## tel        ""
-## fax        ""
-## language   "N'ko"
-## territory  "Guinea"
-## revision   "0.1"
-## date       "2013-09-07"
-## %
-## category  "nqo_GN:2000";LC_IDENTIFICATION
-## category  "nqo_GN:2000";LC_CTYPE
-## category  "nqo_GN:2000";LC_COLLATE
-## category  "nqo_GN:2000";LC_TIME
-## category  "nqo_GN:2000";LC_NUMERIC
-## category  "nqo_GN:2000";LC_MONETARY
-## category  "nqo_GN:2000";LC_MESSAGES
-## category  "nqo_GN:2000";LC_PAPER
-## category  "nqo_GN:2000";LC_NAME
-## category  "nqo_GN:2000";LC_ADDRESS
-## category  "nqo_GN:2000";LC_TELEPHONE
-##
-# localedef -f UTF-8 -i nqo_GN nqo_GN
-
-
 # run tileserver and rendering daemon as background processes or in a screen session
 cd $PROJECTPATH/renderer
 node tileserver.js
