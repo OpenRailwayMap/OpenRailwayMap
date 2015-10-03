@@ -57,9 +57,6 @@ milestone = require('./milestone.js');
 facility = require('./facility.js');
 networklength = require('./networklength.js');
 
-// possible request types
-var queries = ['milestone', 'facility', 'networklength'];
-
 // number of cpus
 var cpus = os.cpus().length;
 
@@ -196,7 +193,7 @@ else
 				}
 
 				// if valid request
-				if (queries.indexOf(requestType) > -1)
+				if (configuration.queries.indexOf(requestType) > -1)
 				{
 					var sqlquery = eval(requestType+"(params)");
 					
