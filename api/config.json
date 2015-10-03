@@ -1,0 +1,9 @@
+{
+	"prefix" : "railmap",
+	"database" : "railmap",
+	"username" : "postgres",
+	"password" : "",
+	"geomcolumn" : "way",
+	"maxsockets" : 100,
+	"apiPort" : 9002
+}
