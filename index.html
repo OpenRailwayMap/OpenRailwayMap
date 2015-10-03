@@ -82,15 +82,20 @@
 				<a class="uk-navbar-brand uk-hidden-small" href="index.html"><img src="img/openrailwaymap-28.png" /> OpenRailwayMap</a>
 
 				<div class="uk-navbar-content uk-hidden-small">
-					<form class="uk-form uk-margin-remove uk-display-inline-block">
-						<input placeholder="Suchen" type="text">
+					<form class="uk-search" data-uk-search>
+						<input class="uk-search-field" type="search" placeholder="">
+						<div class="uk-dropdown uk-dropdown-flip uk-dropdown-search" aria-expanded="true">
+							<ul class="uk-nav uk-nav-search uk-autocomplete-results">
+								<!-- search results -->
+							</ul>
+						</div>
 						<button class="uk-button uk-button-primary">Suchen</button>
 					</form>
 				</div>
 
 				<ul class="uk-navbar-nav uk-hidden-small">
 					<li class="uk-parent" data-uk-dropdown>
-						<a href="">Ansicht</a>
+						<a href="">Ansicht <i class="uk-icon-sort-down"></i></a>
 						<div class="uk-dropdown uk-dropdown-navbar">
 							<ul class="uk-nav uk-nav-navbar">
 								<li><a href="#" class="styleSelector" data-id="standard">Infrastruktur <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a></li>
@@ -100,7 +105,7 @@
 						</div>
 					</li>
 					<li class="uk-parent" data-uk-dropdown>
-						<a href="">Werkzeuge</a>
+						<a href="">Werkzeuge <i class="uk-icon-sort-down"></i></a>
 						<div class="uk-dropdown uk-dropdown-navbar">
 							<ul class="uk-nav uk-nav-navbar">
 								<li><a href="#searchFacilityDialog" id="searchFacilityButton" data-uk-modal>Betriebsstelle suchen</a></li>
@@ -131,7 +136,7 @@
 				<div class="uk-navbar-flip">
 					<ul class="uk-navbar-nav">
 						<li class="uk-parent" data-uk-dropdown>
-							<a href="">Sprache</a>
+							<a href="">Sprache <i class="uk-icon-sort-down"></i></a>
 							<div class="uk-dropdown uk-dropdown-navbar">
 								<ul class="uk-nav uk-nav-navbar" id="langSelection">
 									<li><a href="#" data-lang="cs_CZ">Česky</a></li>
