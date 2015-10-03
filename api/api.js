@@ -226,6 +226,6 @@ else
 		}
 	}
 
-	http.createServer(onRequest).listen(9002);
+	http.createServer(onRequest).listen(configuration.apiPort);
 	logger.info('Worker has started.');
 }
