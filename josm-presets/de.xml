@@ -3562,7 +3562,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delete_if_empty="true" />
 			<combo key="crossing:supervision"
 				text="Type of supervision" de.text="Art der Überwachung"
-				values="no,camera,attendant,automatic,phohne"
+				values="no,camera,attendant,automatic,phone"
 				display_values="no,camera,attendant,automatic,phone"
 				de.display_values="keine Überwachung,Kamera,Schrankenwärter/Fahrdienstleiter/Posten,Gefahrenraum-Freimeldeanlage,Telefon (Anrufschranken)"
 				default=""
