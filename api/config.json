@@ -6,5 +6,5 @@
 	"geomcolumn" : "way",
 	"maxsockets" : 100,
 	"apiPort" : 9002,
-	"queries": ['milestone', 'facility', 'networklength']
+	"queries": ["milestone", "facility", "networklength"]
 }
