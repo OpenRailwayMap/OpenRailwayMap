@@ -65,6 +65,15 @@
 	transition-timing-function: ease-in-out;
 }
 
+.uk-search
+{
+	border: 1px solid #DDD;
+	background: #FFF none repeat scroll 0% 0%;
+	color: #444;
+	transition: all 0.2s linear 0s;
+	border-radius: 4px;
+}
+
 #welcomeheader
 {
 	background: url('../img/header.png') 50% 0 no-repeat;
