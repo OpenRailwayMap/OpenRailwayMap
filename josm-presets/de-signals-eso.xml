@@ -361,9 +361,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:hl4;DE-ESO:hl5;DE-ESO:hl6a;DE-ESO:hl6b;DE-ESO:hl7;DE-ESO:hl8;DE-ESO:hl9a;DE-ESO:hl9b;DE-ESO:hl10;DE-ESO:hl11;DE-ESO:hl12a;DE-ESO:hl12b;DE-ESO:kennlicht"
-						display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Hl 7;Hl 8;Hl 9a;Hl 9b;Hl 10;Hl 11;Hl 12a;Hl 12b;marker light"
-						de.display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Hl 7;Hl 8;Hl 9a;Hl 9b;Hl 10;Hl 11;Hl 12a;Hl 12b;Kennlicht"
-						delete_if_empty="true" />
+						display_values="Hp 0 (stop);Hl 1 (vmax->vmax);Hl 2 (100 kph -> vmax);Hl 3a (40 kph -> vmax);Hl 3b (60 kph -> vmax);Hl 4 (vmax -> 100 kph);Hl 5 (100 kph -> 100 kph);Hl 6a (40 kph -> 100 kph);Hl 6b (60 kph -> 100 kph);Hl 7 (vmax -> 40  or 60 kph);Hl 8 (100 kph -> 40 or 60 kph);Hl 9a (40 kph -> 40 or 60 kph);Hl 9b (60 kph -> 40 or 60 kph);Hl 10 (vmax -> stop);Hl 11 (100 kph -> stop);Hl 12a (40 kph -> stop);Hl 12b (60 kph -> stop);marker light"
+						de.display_values="Hp 0 (Halt);Hl 1 (Höchstgeschwindigkeit->Höchstgeschwindigkeit);Hl 2 (100 km/h -> Höchstgeschwindigkeit);Hl 3a (40 km/h -> Höchstgeschwindigkeit);Hl 3b (60 km/h -> Höchstgeschwindigkeit);Hl 4 (Höchstgeschwindigkeit -> 100 km/h);Hl 5 (100 km/h -> 100 km/h);Hl 6a (40 km/h -> 100 km/h);Hl 6b (60 km/h -> 100 km/h);Hl 7 (Höchstgeschwindigkeit -> 40  oder 60 km/h);Hl 8 (100 km/h -> 40 or 60 km/h);Hl 9a (40 km/h -> 40 oder 60 km/h);Hl 9b (60 km/h -> 40 oder 60 km/h);Hl 10 (Höchstgeschwindigkeit -> stop);Hl 11 (100 km/h -> stop);Hl 12a (40 km/h -> stop);Hl 12b (60 km/h -> stop);Kennlicht" />
 					<combo key="railway:signal:combined:function"
 						text="Signal function"
 						de.text="Signalaufgabe"
@@ -433,10 +432,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal states (multi-selection)"
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
-						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:hl4;DE-ESO:hl5;DE-ESO:hl6a;DE-ESO:hl6b;DE-ESO:kennlicht"
-						display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;marker light"
-						de.display_values="Hp 0;Hl 1;Hl 2;Hl 3a;Hl 3b;Hl 4;Hl 5;Hl 6a;Hl 6b;Kennlicht"
-						delete_if_empty="true" />
+						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:kennlicht"
+						display_values="Hp 0 (stop);Hl 1 (vmax);Hl 2 (100 kph);Hl 3a (40 kph);Hl 3b (60 kph);marker light"
+						de.display_values="Hp 0 (Halt);Hl 1 (Höchstgeschwindigkeit);Hl 2 (100 km/h);Hl 3a (40 km/h);Hl 3b (60 km/h);Kennlicht" />
 					<combo key="railway:signal:main:function"
 						text="Signal function"
 						de.text="Signalaufgabe"
@@ -495,14 +493,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="DE-ESO:hl" />
 					<key key="railway:signal:distant:form"
 						value="light" />
-					<combo key="railway:signal:distant:states" default="DE-ESO:hl1;DE-ESO:hl4;DE-ESO:hl7;DE-ESO:hl10"
-						text="Signal states"
-						de.text="Signalzustände"
-						delete_if_empty="true"
-						delimiter="|"
-						values="DE-ESO:hl1;DE-ESO:hl4;DE-ESO:hl7;DE-ESO:hl10|DE-ESO:hl1;DE-ESO:hl4;DE-ESO:hl7;DE-ESO:hl10;DE-ESO:kennlicht"
-						de.display_values="kein Kennlicht|Kennlicht möglich"
-						display_values="no marker light|marker light possible" />
+					<multiselect key="railway:signal:distant:states"
+						text="Signal states (multi-selection)"
+						de.text="Signalzustände (Mehrfachauswahl)"
+						delimiter=";"
+						values="DE-ESO:hl1;DE-ESO:hl4;DE-ESO:hl7;DE-ESO:hl10;DE-ESO:kennlicht"
+						display_values="Hl 1 (vmax ahead);Hl 4 (100 kph ahead);Hl 7 (40 or 60 kph ahead);Hl 10 (stop ahead);marker light"
+						de.display_values="Hl 1 (Fahrt erwarten);Hl 4 (100 km/h erwarten);Hl 7 (40 oder 60 km/h erwarten);Hl 10 (Halt erwarten);Kennlicht" />
 					<check key="railway:signal:distant:repeated"
 						text="Repeated Signal"
 						de.text="Vorsignalwiederholer"
