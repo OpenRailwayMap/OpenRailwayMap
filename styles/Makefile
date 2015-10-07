@@ -18,3 +18,6 @@ check: $(JSFILES)
 		grep 'var external_images = ' $^ | grep -v 'var external_images = \[\];$$'; \
 		false; \
 	fi
+	for i in $(JSFILES); do \
+		python -m json.tool < $${i}on > /dev/null || exit 1; \
+	done
