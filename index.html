@@ -82,14 +82,13 @@
 				<a class="uk-navbar-brand uk-hidden-small" href="index.html"><img src="img/openrailwaymap-28.png" /> OpenRailwayMap</a>
 
 				<div class="uk-navbar-content uk-hidden-small">
-					<form class="uk-search" data-uk-search>
-						<input class="uk-search-field" type="search" placeholder="">
+					<form class="uk-search" id="searchForm" data-uk-search>
+						<input class="uk-search-field" type="search" placeholder="" id="searchInput">
 						<div class="uk-dropdown uk-dropdown-flip uk-dropdown-search" aria-expanded="true">
-							<ul class="uk-nav uk-nav-search uk-autocomplete-results">
-								<!-- search results -->
+							<ul class="uk-nav uk-nav-search uk-autocomplete-results" id="searchResults">
 							</ul>
 						</div>
-						<button class="uk-button uk-button-primary">Suchen</button>
+						<button type="button" class="uk-button uk-button-primary" id="searchButton">Suchen</button>
 					</form>
 				</div>
 
