@@ -71,9 +71,9 @@ else
 
 // response headers
 var headers = {};
-headers["Access-Control-Allow-Origin"] = "*";
+headers["Access-Control-Allow-Origin"] = configuration.corsAllowOrigin;
 headers["Access-Control-Allow-Methods"] = "GET";
-headers["Access-Control-Allow-Credentials"] = false;
+headers["Access-Control-Allow-Credentials"] = true;
 headers["Access-Control-Max-Age"] = '86400';
 headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept";
 
