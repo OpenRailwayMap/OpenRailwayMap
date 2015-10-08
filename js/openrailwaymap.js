@@ -109,6 +109,109 @@ function Startposition(map)
 		this.setPosition();
 }
 
+// perform a synchron API request
+function requestAPI(requestType, query, handler)
+{
+	$.ajax(
+	{
+		crossDomain: true,
+		type: 'GET',
+		url: 'http://api.openrailwaymap.org/'+requestType+'?'+query.replace(/ /g, "+"),
+		dataType: 'json',
+		success: function(response) { handler(response); },
+		error: function(error) { console.log('Error: '+error); handler(false); }
+	});
+}
+
+// performs a search request
+function searchRequest(input)
+{
+	//TODO
+	//this.layer.removeAllFeatures();
+	//this.marker.setOpacity(0);
+
+	if (input.length == 0)
+	{
+		$('#searchResults').html('<li class="uk-nav-header uk-skip">Suchergebnisse</li>');
+		$('#searchResults').append('<li>Empty input</li>');
+		$('#searchForm').addClass('uk-open uk-active');
+		setTimeout(function() {
+			$('#searchForm').removeClass('uk-open uk-active');
+		}, 3500);
+		//TODO
+		//this.layer.removeAllFeatures();
+		return false;
+	}
+
+	$('#searchResults').html('<li class="uk-nav-header uk-skip">Suchergebnisse</li>');
+	$('#searchResults').append('<li>Loading</li>');
+	$('#searchForm').addClass('uk-open uk-active');
+	setTimeout(function() {
+		$('#searchForm').removeClass('uk-active');
+	}, 500);
+
+	// TODO
+	//requestAPI('search', 'q='+input+'&extended=0', function(response)
+	requestAPI('facility', 'ref='+input, function(response)
+	{
+		$('#searchResults').html('<li class="uk-nav-header uk-skip">Suchergebnisse</li>');
+
+		if (response && response.length > 0)
+		{
+			for (var i=0; i < response.length; i++)
+			{
+				$('#searchResults').append('<li class="uk-nav-divider uk-skip"></li>');
+
+				if (response[i]['type'] == "milestone")
+				{
+					var title = translations['kilometer']+' '+response[i]['position']+', '+translations['track']+' '+response[i]['ref'];
+					var description = translations['kilometer']+' '+response[i]['position']+', '+translations['track']+' '+response[i]['ref'];
+				}
+				else if (response[i]['type'] == "level_crossing")
+				{
+					var title = translations['level_crossing']+' '+response[i]['position']+', '+translations['track']+' '+response[i]['ref'];
+					var description = translations['level_crossing']+' '+response[i]['position']+', '+translations['track']+' '+response[i]['ref'];
+				}
+				else
+				{
+					var title = response[i]['name'];
+					var description = response[i]['name'];
+				}
+
+				// TODO operator
+
+				$('#searchResults').append('<li data-id="'+response[i]['id']+'" data-lat="'+response[i]['lat']+'" data-lon="'+response[i]['lon']+'" class="searchItem"><a href="#">'+title+'<div>'+description+'</div></a></li>');
+			}
+
+			//TODO oder automatisch
+			$('#searchResults').append('<li class="uk-nav-divider uk-skip"></li>');
+			$('#searchResults').append('<li class="uk-search-moreresults" data-moreresults="true"><a href="#" onclick="" id="searchMoreResults">Weitere Ergebnisse</a></li>');
+
+			$(".searchItem").on("click", function()
+			{
+				var lat = $(this).data('lat');
+				var lon = $(this).data('lon');
+				// TODO
+				//map.setView(new L.LatLng(lat, lon), 14);
+				//this.marker.setLatLng([lat, lon]);
+				//this.marker.setOpacity(1);
+			});
+		}
+		else
+		{
+			$('#searchResults').html('<li class="uk-nav-header uk-skip">Suchergebnisse</li>');
+			$('#searchResults').append('<li>Nothing found</li>');
+			$('#searchForm').addClass('uk-open uk-active');
+			setTimeout(function() {
+				$('#searchForm').removeClass('uk-open uk-active');
+			}, 3500);
+			//TODO
+			//this.layer.removeAllFeatures();
+			return false;
+		}
+	});
+}
+
 // changes the current map rendering style to the style given as parameter
 function setStyle(style)
 {
@@ -147,8 +250,8 @@ function setStyle(style)
 function updatePermalink(style)
 {
 	gEBI('permalinkButton').href = getPermalinkUrl(style);
-	if (gEBI("desktopButton") != null)
-		gEBI('desktopButton').href = (getPermalinkUrl(style).replace("mobile.php", "index.php"))+"&mobile=0";
+	if (gEBI('desktopButton') != null)
+		gEBI('desktopButton').href = (getPermalinkUrl(style).replace('mobile.php', 'index.php'))+'&mobile=0';
 }
 
 // updates map's center
@@ -162,9 +265,9 @@ $(document).ready(function()
 	var params = {};
 
 	// TODO in config auslagern
-	root = "http://www.openrailwaymap.org/";
-	tiledir = "http://{s}.tiles.openrailwaymap.org/";
-	availableStyles = new Array("standard", "maxspeed", "signals");
+	root = 'http://www.openrailwaymap.org/';
+	tiledir = 'http://{s}.tiles.openrailwaymap.org/';
+	availableStyles = new Array('standard', 'maxspeed', 'signals');
 
 	/*
 	if (params['offset'] != null)
@@ -270,16 +373,27 @@ $(document).ready(function()
 	if (params['style'] != null && availableStyles.indexOf(params['style']) >= 0)
 		setStyle(params['style']);
 	else
-		setStyle("standard");
+		setStyle('standard');
 	var lat = 51.58248;
 	var lon = 15.6501;
 	var zoom = 7;
 	map.setView(new L.LatLng(lat, lon), zoom);
 	// onclick event of locate button
-	$("#locateButton").on('click', function()
+	$('#locateButton').on('click', function()
 	{
 		startposition.setPosition();
 	});
 	// initialize the permalink url
 	//updatePermalink(railmap.selectedStyle);
+
+	$('#searchButton').on('click', function()
+	{
+		searchRequest($('#searchInput').val());
+	});
+
+	$(document).keypress(function(e)
+	{
+		if (e.which == 13)
+			searchRequest($('#searchInput').val());
+	});
 });
