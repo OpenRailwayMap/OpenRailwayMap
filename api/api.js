@@ -105,7 +105,7 @@ else
 		if (toobusy())
 		{
 			logger.info('Server too busy. Aborting.');
-			headers["Content-Type"] = "text/plain";
+			headers["Content-Type"] = "text/plain; charset=utf-8";
 			response.writeHead(503, headers);
 			response.end();
 			return;
@@ -150,7 +150,7 @@ else
 				if (err)
 				{
 					logger.warn('An error occurred during '+requestType+' request: "'+err+'" Aborting.');
-					headers["Content-Type"] = "text/plain";
+					headers["Content-Type"] = "text/plain; charset=utf-8";
 					response.writeHead(500, headers);
 					response.end();
 					return;
@@ -166,7 +166,7 @@ else
 				if (data.rows.length == 0)
 					data.rows = {};
 				
-				headers["Content-Type"] = "application/json";
+				headers["Content-Type"] = "application/json; charset=utf-8";
 				response.writeHead(200, headers);
 
 				if (params.callback)
@@ -186,7 +186,7 @@ else
 				if (err)
 				{
 					logger.error('Connection to database '+connection+' failed. Returning.');
-					headers["Content-Type"] = "text/plain";
+					headers["Content-Type"] = "text/plain; charset=utf-8";
 					response.writeHead(500, headers);
 					response.end();
 					return;
@@ -200,7 +200,7 @@ else
 					if (!sqlquery)
 					{
 						client.end();
-						headers["Content-Type"] = "text/plain";
+						headers["Content-Type"] = "text/plain; charset=utf-8";
 						response.writeHead(200, headers);
 						response.end("[]");
 						logger.error("Invalid parameters: "+JSON.stringify(params));
@@ -212,7 +212,7 @@ else
 				else
 				{
 					client.end();
-					headers["Content-Type"] = "text/plain";
+					headers["Content-Type"] = "text/plain; charset=utf-8";
 					response.writeHead(200, headers);
 					response.end("[]");
 					if (requestType != "favicon.ico")
