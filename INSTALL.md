@@ -92,35 +92,12 @@ Installation Instructions
     SECURITY INVOKER
     COST 100;" | psql -d railmap
 
-    $ echo "ALTER FUNCTION hstore2json(hs public.hstore) OWNER TO apache;"  | psql -d railmap
+ It is necessary to to set permissions for the tables. Replace `user` by the username of the user that runs the API server process:
 
- Now you can load some data into your database:
-
-    $ osm2pgsql --create --database railmap --username railmap --prefix railmap --slim --style railmap.style --hstore --hstore-add-index --number-processes 3 --cache 2048 old-railways.osm
-
-TODO import
- Run
-
-    $ ./import.sh
-
- initially to 
-
-TODO permissions
- It is necessary to to set permissions for the tables. Replace `apache` by the username of the user running the apache webserver, :
-
+    $ echo "ALTER TABLE geometry_columns OWNER TO railmap"  | psql -d railmap
+    $ echo "ALTER TABLE spatial_ref_sys OWNER TO railmap;"  | psql -d railmap
+    $ echo "CREATE ROLE user;" | psql -d railmap
     $ echo "ALTER ROLE user LOGIN;" | psql -d railmap
-    $ echo "ALTER TABLE geometry_columns OWNER TO olm; ALTER TABLE spatial_ref_sys OWNER TO olm;"  | psql -d railmap
-    $ echo "GRANT SELECT ON geometry_columns TO apache; GRANT SELECT ON spatial_ref_sys TO apache;"  | psql -d railmap
-    $ echo "GRANT SELECT ON geography_columns TO apache;"  | psql -d railmap
-    $ echo "CREATE ROLE apache;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_point TO apache;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_line TO apache;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_polygon TO apache;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_rels TO apache;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_nodes TO apache;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_ways TO apache;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_roads TO apache;" | psql -d railmap
-    $ echo "CREATE ROLE w3_user1;" | psql -d railmap
     $ echo "GRANT SELECT ON railmap_point TO user;" | psql -d railmap
     $ echo "GRANT SELECT ON railmap_line TO user;" | psql -d railmap
     $ echo "GRANT SELECT ON railmap_polygon TO user;" | psql -d railmap
@@ -128,6 +105,9 @@ TODO permissions
     $ echo "GRANT SELECT ON railmap_nodes TO user;" | psql -d railmap
     $ echo "GRANT SELECT ON railmap_ways TO user;" | psql -d railmap
     $ echo "GRANT SELECT ON railmap_roads TO user;" | psql -d railmap
+    $ echo "GRANT SELECT ON geography_columns TO user;"  | psql -d railmap
+    $ echo "GRANT SELECT ON geometry_columns TO user;"  | psql -d railmap
+    $ echo "GRANT SELECT ON spatial_ref_sys TO user;"  | psql -d railmap
 
  Compile the MapCSS styles:
 
@@ -148,6 +128,12 @@ TODO permissions
     $ node tileserver.js
     $ [Ctrl][A][D]
 
+ Run
+
+    $ ./import.sh
+
+ initially to download OSM data, import it into the database and prerender some tiles.
+
  Note that you have to recompile the stylesheets every time you change the MapCSS files to apply the changes. It is also necessary to restart the tileserver to reload the stylesheets.
 
     $ cd styles
@@ -166,11 +152,6 @@ TODO permissions
     $ node proxy.js
     $ [Ctrl][A][D]
 
- Start the initial rendering:
-
-    $ cd renderer
-    $ node init-rendering.js
-
  You can jump back to the session to see log output or to restart the processes:
 
     $ screen -r tileserver
@@ -185,10 +166,6 @@ TODO permissions
 
 ## Configuration
 
- There are a lot of configuration settings to set in `config.json`. See https://github.com/rurseekatze/node-tileserver/blob/master/README.md for further details. The default params are ok most cases. The tileserver has to be restarted after configuration changes.
+ There are a lot of configuration settings in `renderer/config.json`. See https://github.com/rurseekatze/node-tileserver/blob/master/README.md for further details. The default params are ok for most cases. The tileserver has to be restarted after configuration changes.
 
-TODO
-domains konfigurieren in proxy.js
-js files konfigurieren
-
- It is also necassary to change the setting parameters in `import/config.cfg` and `api/config.json` depending on your envoironment.
+ It is also necassary to change setting parameters in `import/config.cfg`, `api/config.json` and `proxy.js` depending on your envoironment. More information on detailled configuration will be added in future.
