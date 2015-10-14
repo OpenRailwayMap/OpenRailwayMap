@@ -6,13 +6,7 @@
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
-# path to the project directory
-PROJECTPATH=/home/www/sites/194.245.35.149/site/orm
-# directory where the planet file and other data files are stored, can be equal to PROJECTPATH
-DATAPATH=/home/www/sites/194.245.35.149/site/olm/import
-PATH="$PATH:$DATAPATH/bin"
-PATH="$PATH:$PROJECTPATH/import/bin/osm2pgsql"
-
+source $(dirname ${0})/config.cfg
 source $(dirname ${0})/func_filter.sh
 
 cd $DATAPATH
@@ -34,23 +28,17 @@ rm old.pbf
 mv new.pbf old.pbf
 osmdate=`osmconvert old.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
 date -u -d "$osmdate" +%s > timestamp
+filter_planet --out-osm -o=old-railways.osm
 echo "-----"
 
-filter_planet --out-osm -o=old-railways.osm
-
 echo "Loading data into database"
-osm2pgsql --create --database railmap --username olm --prefix railmap --slim --style railmap.style --hstore --hstore-add-index --number-processes 3 --cache 2048 old-railways.osm
+osm2pgsql --create --database $DBNAME --username $DBUSER --prefix $DBPREFIX --slim --style railmap.style --hstore --hstore-add-index --number-processes $NUMPROCESSES --cache $CACHE old-railways.osm
 osmconvert old-railways.osm --out-o5m >old-railways.o5m
 rm old-railways.osm
 echo "-----"
 
-echo "Create MapCSS styles"
-cd $PROJECTPATH/styles
-make
-echo "-----"
-
 echo "Prerendering tiles"
-curl "http://localhost:9000/init"
+curl "http://localhost:$TILESERVERPORT/init"
 echo "-----"
 
-echo "Finished processing at $(date)."
+echo "Finished processing at $(date)"
