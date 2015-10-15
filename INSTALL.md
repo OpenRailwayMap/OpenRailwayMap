@@ -40,9 +40,7 @@ Installation Instructions
     $ gcc osmupdate.c -o ../osmupdate
     $ gcc osmfilter.c -O3 -o ../osmfilter
     $ gcc osmconvert.c -lz -O3 -o ../osmconvert
-    $ cp osmupdate /usr/local/bin
-    $ cp osmfilter /usr/local/bin
-    $ cp osmconvert /usr/local/bin
+    $ cp osmupdate osmfilter osmconvert /usr/local/bin
     $ cd ..
     $ rm -fr osmctools
 
@@ -94,8 +92,8 @@ Installation Instructions
 
  It is necessary to to set permissions for the tables. Replace `user` by the username of the user that runs the API server process:
 
-    $ echo "ALTER TABLE geometry_columns OWNER TO railmap"  | psql -d railmap
-    $ echo "ALTER TABLE spatial_ref_sys OWNER TO railmap;"  | psql -d railmap
+    $ echo "ALTER TABLE geometry_columns OWNER TO railmap;" | psql -d railmap
+    $ echo "ALTER TABLE spatial_ref_sys OWNER TO railmap;" | psql -d railmap
     $ echo "CREATE ROLE user;" | psql -d railmap
     $ echo "ALTER ROLE user LOGIN;" | psql -d railmap
     $ echo "GRANT SELECT ON railmap_point TO user;" | psql -d railmap
@@ -109,14 +107,18 @@ Installation Instructions
     $ echo "GRANT SELECT ON geometry_columns TO user;"  | psql -d railmap
     $ echo "GRANT SELECT ON spatial_ref_sys TO user;"  | psql -d railmap
 
+ Now get the code for node-tileserver:
+
+    $ cd ..
+    $ git submodule update --init renderer
+
  Compile the MapCSS styles:
 
-    $ cd ../styles
-    $ make
+    $ make -C styles
 
  Switch to the renderer subdirectory:
 
-    $ cd ../renderer
+    $ cd renderer
 
  After that you can install all necessary NodeJS modules with npm:
 
@@ -136,8 +138,7 @@ Installation Instructions
 
  Note that you have to recompile the stylesheets every time you change the MapCSS files to apply the changes. It is also necessary to restart the tileserver to reload the stylesheets.
 
-    $ cd styles
-    $ make
+    $ make -C styles
     $ screen -r tileserver
     $ [Ctrl][C]
     $ node tileserver.js
