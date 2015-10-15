@@ -1215,7 +1215,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						match="keyvalue!" />
 					<key key="railway:signal:crossing_distant:form"
 						value="sign" />
-					<check key="railway:signal:crossing:repeated"
+					<check key="railway:signal:crossing_distant:repeated"
 						text="Repeated"
 						de.text="Signalwiederholer (weiße Scheibe)"
 						default="off"
