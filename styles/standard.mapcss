@@ -62,7 +62,7 @@ way|z10-[railway=light_rail][bridge=yes]::bridges
 	casing-color: #797979;
 	linejoin: butt;
 }
-way|z12-[bridge=yes]::bridges
+way|z12-[bridge=yes][!"railway:track_ref"]::bridges
 {
 	z-index: 4000;
 	text-position: line;
@@ -183,17 +183,17 @@ way|z11-[railway=razed][!bridge][!tunnel]["razed:ref"]
 /*****************************************/
 /* track ref's on tracks inside stations */
 /*****************************************/
-way|z17-[railway=rail][!bridge]["railway:track_ref"],
-way|z17-[railway=disused][!bridge]["railway:track_ref"],
-way|z17-[railway=abandoned][!bridge]["railway:track_ref"],
-way|z17-[railway=razed][!bridge]["railway:track_ref"],
-way|z17-[railway=proposed][!bridge]["railway:track_ref"],
-way|z17-[railway=construction][!bridge]["railway:track_ref"],
-way|z17-[railway=preserved][!bridge]["railway:track_ref"],
-way|z17-[railway=light_rail][!bridge]["railway:track_ref"],
-way|z17-[railway=narrow_gauge][!bridge]["railway:track_ref"],
-way|z17-[railway=tram][!bridge]["railway:track_ref"],
-way|z17-[railway=subway][!bridge]["railway:track_ref"]
+way|z17-[railway=rail]["railway:track_ref"],
+way|z17-[railway=disused]["railway:track_ref"],
+way|z17-[railway=abandoned]["railway:track_ref"],
+way|z17-[railway=razed]["railway:track_ref"],
+way|z17-[railway=proposed]["railway:track_ref"],
+way|z17-[railway=construction]["railway:track_ref"],
+way|z17-[railway=preserved]["railway:track_ref"],
+way|z17-[railway=light_rail]["railway:track_ref"],
+way|z17-[railway=narrow_gauge]["railway:track_ref"],
+way|z17-[railway=tram]["railway:track_ref"],
+way|z17-[railway=subway]["railway:track_ref"]
 {
 	text: "railway:track_ref";
 	text-position: line;
