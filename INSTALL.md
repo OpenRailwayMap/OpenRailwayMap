@@ -1,6 +1,19 @@
 Installation Instructions
 =========================
 
+## Dependencies
+
+CentOS:
+
+    $ yum update
+    $ yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgresql-devel postgis unzip gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel npm nodejs git python wget php php-php-gettext php-pgsql python-ply python-imaging pycairo python-cairosvg pygtk2 pygtk2-devel
+
+Debian/Ubuntu:
+    $ apt-get install --no-install-recommends postgresql-9.3-postgis-2.1
+    $ apt-get install gzip postgresql-common libgeoip1 geoip-database geoip-bin php5-geoip php-gettext unzip python-ply python-imaging python-cairo python-cairosvg librsvg2-2 librsvg2-dev libpango1.0-dev libcairo2-dev libcairomm-1.0-dev libjpeg-turbo8-dev libpangomm-1.4-1 libpangomm-1.4-dev npm nodejs wget zlib1g-dev osm2pgsql php5-pgsql
+    $ apt-get install git libgif-dev build-essential g++
+    $ apt-get install nodejs-legacy # see https://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu for the reason
+
 ## Installation
 
  The following instructions assume installation on an CentOS server with sudo permissions. These steps assume CentOS 6, if using different version of Ubuntu the available versions of software may change requiring slight modifications to these steps. It may be necessary to change parts of this instructions for using on other environments.
@@ -16,12 +29,11 @@ Installation Instructions
 
  First install all dependencies. Depending on your operating system and environment, you may use another command like apt-get. Package names can differ from the names mentioned below:
 
-    $ yum update
-    $ yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgresql-devel postgis unzip gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel npm nodejs git python wget php php-php-gettext php-pgsql python-ply python-imaging pycairo python-cairosvg pygtk2 pygtk2-devel
+
 
  For system-specific installation of Cairo view the [node-canvas Wiki](https://github.com/LearnBoost/node-canvas/wiki/_pages).
 
- Install osm2pgsql:
+ Install osm2pgsql (Ubuntu and Debian users may use their `osm2pgsql` package provided by their distribution instead):
 
     $ cd import
     $ git clone https://github.com/openstreetmap/osm2pgsql.git
@@ -33,7 +45,7 @@ Installation Instructions
     $ cd ..
     $ rm -fr osm2pgsql
 
- Install osmctools:
+ Install osmctools (Ubuntu and Debian users may use their `osmctools` package provided by their distribution instead):
 
     $ git clone https://gitlab.com/osm-c-tools/osmctools.git
     $ cd osmctools
@@ -49,11 +61,13 @@ Installation Instructions
     $ su postgres
     $ createuser railmap
     $ createdb -E UTF8 -O railmap railmap
-    $ createlang plpgsql railmap
-    $ psql -d railmap -f /usr/share/pgsql/contrib/postgis-64.sql
-    $ psql -d railmap -f /usr/share/pgsql/contrib/postgis-1.5/spatial_ref_sys.sql
-    $ psql -d railmap -f /usr/share/pgsql/contrib/hstore.sql
-    $ psql -d railmap -f osm2pgsql/900913.sql
+    $ createlang plpgsql railmap # not necessary on Postgres >= 9.3
+    $ psql -d railmap -f /usr/share/pgsql/contrib/postgis-64.sql # Postgres < 9.x
+    $ psql -d railmap -f /usr/share/pgsql/contrib/postgis-1.5/spatial_ref_sys.sql # Postgres < 9.x
+    $ psql -d railmap -c "CREATE extension postgis;" # Postgres >= 9.x
+    $ psql -d railmap -f /usr/share/pgsql/contrib/hstore.sql # Postgres < 9.x
+    $ psql -d railmap -c "CREATE extension hstore;" # Postgres >= 9.x
+    $ psql -d railmap -f osm2pgsql/900913.sql # not necessary for PostGIS >= 2.x
 
  If you are using PostgreSQL version < 9.3 you also need to add a function (from https://gist.github.com/kenaniah/1315484):
 
@@ -132,6 +146,7 @@ Installation Instructions
 
  Run
 
+    $ cd ../import
     $ ./import.sh
 
  initially to download OSM data, import it into the database and prerender some tiles.
