@@ -938,9 +938,6 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"=~/^1(0|1|2)0$/]
 {
 	z-index: eval(95 + tag("railway:signal:speed_limit_distant:speed")/2);
-	icon-width: 14;
-	icon-height: 19;
-	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=10]
 {
@@ -953,6 +950,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=20]
 {
 	icon-image: "icons/de/zs3v-20-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=30]
 {
@@ -961,6 +961,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=30]
 {
 	icon-image: "icons/de/zs3v-30-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=40]
 {
@@ -969,6 +972,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=40]
 {
 	icon-image: "icons/de/zs3v-40-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=50]
 {
@@ -977,6 +983,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=50]
 {
 	icon-image: "icons/de/zs3v-50-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=60]
 {
@@ -985,6 +994,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=60]
 {
 	icon-image: "icons/de/zs3v-60-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=70]
 {
@@ -993,6 +1005,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=70]
 {
 	icon-image: "icons/de/zs3v-70-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=80]
 {
@@ -1001,6 +1016,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=80]
 {
 	icon-image: "icons/de/zs3v-80-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=90]
 {
@@ -1009,6 +1027,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=90]
 {
 	icon-image: "icons/de/zs3v-90-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=100]
 {
@@ -1017,6 +1038,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=100]
 {
 	icon-image: "icons/de/zs3v-100-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=110]
 {
@@ -1025,6 +1049,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=110]
 {
 	icon-image: "icons/de/zs3v-110-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=120]
 {
@@ -1033,6 +1060,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=120]
 {
 	icon-image: "icons/de/zs3v-120-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=130]
 {
@@ -1080,6 +1110,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=20]
 {
 	icon-image: "icons/de/zs3-20-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=30]
 {
@@ -1088,6 +1121,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=30]
 {
 	icon-image: "icons/de/zs3-30-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=40]
 {
@@ -1096,6 +1132,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=40]
 {
 	icon-image: "icons/de/zs3-40-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=50]
 {
@@ -1104,6 +1143,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=50]
 {
 	icon-image: "icons/de/zs3-50-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=60]
 {
@@ -1112,6 +1154,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=60]
 {
 	icon-image: "icons/de/zs3-60-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=70]
 {
@@ -1120,6 +1165,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=70]
 {
 	icon-image: "icons/de/zs3-70-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=80]
 {
@@ -1128,6 +1176,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=80]
 {
 	icon-image: "icons/de/zs3-80-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=90]
 {
@@ -1136,6 +1187,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=90]
 {
 	icon-image: "icons/de/zs3-90-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=100]
 {
@@ -1144,6 +1198,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=100]
 {
 	icon-image: "icons/de/zs3-100-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=110]
 {
@@ -1152,6 +1209,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=110]
 {
 	icon-image: "icons/de/zs3-110-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=120]
 {
@@ -1160,6 +1220,9 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=120]
 {
 	icon-image: "icons/de/zs3-120-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
 }
 node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=130]
 {
