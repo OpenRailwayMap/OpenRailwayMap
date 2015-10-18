@@ -509,6 +509,16 @@ way[railway][name=~/[Tt]unnel/]["tunnel:name"=*name]
 	fixChangeKey: "name=>tunnel:name";
 }
 
+way[railway][wikipedia=~/[Tt]unnel/][!"tunnel:wikipedia"],
+way[railway][wikipedia=~/[Tt]unnel/]["tunnel:wikipedia"=*wikipedia]
+{
+	throwWarning: "track tagged with 'tunnel' in wikipedia, consider using tunnel:wikipedia instead and put the track wikipedia entry into wikipedia";
+	assertMatch: "way railway=rail wikipedia=Footunnel";
+	assertMatch: "way railway=light_rail wikipedia=Bartunnel tunnel:wikipedia=Bartunnel";
+	assertNoMatch: "way railway=rail tunnel:wikipedia=Baztunnel";
+	fixChangeKey: "wikipedia=>tunnel:wikipedia";
+}
+
 way[railway][name=~/[Bb]ridge/][!"bridge:name"],
 way[railway][name=~/[Bb]ridge/]["bridge:name"=*name],
 way[railway][name=~/[Vv]iadu[ck]t/][!"bridge:name"],
@@ -523,4 +533,20 @@ way[railway][name=~/[Bb]rücke/]["bridge:name"=*name]
 	assertMatch: "way railway=light_rail name=\"Bar bridge\" bridge:name=\"Bar bridge\"";
 	assertNoMatch: "way railway=rail bridge:name=Foo-Viadukt";
 	fixChangeKey: "name=>bridge:name";
+}
+
+way[railway][wikipedia=~/[Bb]ridge/][!"bridge:wikipedia"],
+way[railway][wikipedia=~/[Bb]ridge/]["bridge:wikipedia"=*wikipedia],
+way[railway][wikipedia=~/[Vv]iadu[ck]t/][!"bridge:wikipedia"],
+way[railway][wikipedia=~/[Vv]iadu[ck]t/]["bridge:wikipedia"=*wikipedia],
+way[railway][wikipedia=~/[Bb]rücke/][!"bridge:wikipedia"],
+way[railway][wikipedia=~/[Bb]rücke/]["bridge:wikipedia"=*wikipedia]
+{
+	throwWarning: "track tagged with 'bridge' in wikipedia, consider using bridge:wikipedia instead and put track wikipedia entry into wikipedia";
+	assertMatch: "way railway=rail wikipedia=Foobrücke";
+	assertMatch: "way railway=rail wikipedia=\"Bay bridge\"";
+	assertMatch: "way railway=rail wikipedia=\"Baz viaduct\"";
+	assertMatch: "way railway=light_rail wikipedia=\"Bar bridge\" bridge:wikipedia=\"Bar bridge\"";
+	assertNoMatch: "way railway=rail bridge:wikipedia=Foo-Viadukt";
+	fixChangeKey: "wikipedia=>bridge:wikipedia";
 }
