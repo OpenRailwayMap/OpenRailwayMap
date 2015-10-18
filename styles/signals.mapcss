@@ -939,6 +939,99 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	allow-overlap: true;
 }
 
+/************************************************************************/
+/* AT distant light signals which                                       */
+/*  - do not share post with a main signal                              */
+/*  - can show stop or does not have railway:signal:distant:states tag  */
+/*  - if the signal can also show other aspects, later rules will match */
+/************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="AT-V2:vorsignal"]["railway:signal:distant:form"=light][!"railway:signal:main"]["railway:signal:distant:states"~="AT-V2:vorsicht"]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/vorsignal-vorsicht-33.png";
+	icon-width: 16;
+	icon-height: 17;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/************************************************************************/
+/* AT distant light signals which                                       */
+/*  - do not share post with a main signal                              */
+/*  - can show proceed with full speed                                  */
+/*  - if the signal can also show other aspects, later rules will match */
+/************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="AT-V2:vorsignal"]["railway:signal:distant:form"=light][!"railway:signal:main"]["railway:signal:distant:states"~="AT-V2:hauptsignal_frei"]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/vorsignal-hauptsignal-frei-33.png";
+	icon-width: 16;
+	icon-height: 17;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/************************************************************************/
+/* AT distant light signals which                                       */
+/*  - do not share post with a main signal                              */
+/*  - can show proceed with 40 kph speed (on narrow gauge lines 20 kph) */
+/*  - if the signal can also show other aspects, later rules will match */
+/************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="AT-V2:vorsignal"]["railway:signal:distant:form"=light][!"railway:signal:main"]["railway:signal:distant:states"~="AT-V2:hauptsignal_frei_mit_40"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="AT-V2:vorsignal"]["railway:signal:distant:form"=light][!"railway:signal:main"]["railway:signal:distant:states"~="AT-V2:hauptsignal_frei_mit_20"]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/vorsignal-hauptsignal-frei-mit-40-33.png";
+	icon-width: 16;
+	icon-height: 17;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/************************************************************************/
+/* AT distant light signals which                                       */
+/*  - do not share post with a main signal                              */
+/*  - can show proceed with 60 kph speed                                */
+/*  - if the signal can also show other aspects, later rules will match */
+/************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="AT-V2:vorsignal"]["railway:signal:distant:form"=light][!"railway:signal:main"]["railway:signal:distant:states"~="AT-V2:hauptsignal_frei_mit_60"]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/vorsignal-hauptsignal-frei-mit-60-33.png";
+	icon-width: 16;
+	icon-height: 17;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /************************************************/
 /* DE distant signal replacement by sign So 106 */
 /* AT Kreuztafel                                */
@@ -1144,6 +1237,96 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	text-halo-color: white;
 	font-weight: bold;
 	icon-image: "icons/de/hp2-light-32.png";
+	icon-width: 8;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/************************************************************************/
+/* AT main light signals                                                */
+/*  - can show stop or does not have railway:signal:main:states tag     */
+/*  - if the signal can also show other aspects, later rules will match */
+/************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:hauptsignal"]["railway:signal:main:form"=light]["railway:signal:main:states"~="AT-V2:halt"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:hauptsignal"]["railway:signal:main:form"=light][!"railway:signal:main:states"]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/hauptsignal-halt-32.png";
+	icon-width: 8;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*********************************************************************************************/
+/* AT main light signals                                                                     */
+/*  - can show proceed with full speed                                                       */
+/* If the signal can show "proceed with 60 or 40 kph" the next rule also matches and is used */
+/*********************************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:hauptsignal"]["railway:signal:main:form"=light]["railway:signal:main:states"~="AT-V2:frei"]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/hauptsignal-frei-32.png";
+	icon-width: 8;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************************************************************************/
+/* AT main light signals                                                               */
+/*  - can show proceed with 40 kph or 20 kph                                                    */
+/* If the signal can show "proceed with 60 kph" the next rule also matches and is used */
+/***************************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:hauptsignal"]["railway:signal:main:form"=light]["railway:signal:main:states"~="AT-V2:frei_mit_40"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:hauptsignal"]["railway:signal:main:form"=light]["railway:signal:main:states"~="AT-V2:frei_mit_20"]
+/* On narrow gauge railway lines "frei mit 40" is called "frei mit 20" but has the same appearance. */
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/hauptsignal-frei-mit-40-32.png";
+	icon-width: 8;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/**************************************/
+/* AT main light signals              */
+/*  - can show proceed with 60 kph    */
+/**************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:hauptsignal"]["railway:signal:main:form"=light]["railway:signal:main:states"~="AT-V2:frei_mit_60"]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-size: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/hauptsignal-frei-mit-60-32.png";
 	icon-width: 8;
 	icon-height: 16;
 	text-allow-overlap: true;
