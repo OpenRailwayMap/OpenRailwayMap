@@ -1304,6 +1304,47 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 	icon-image: "icons/at/geschwindigkeitsanzeiger-160-sign-28.png";
 }
 
+/* West German branch line speed signals (Lf 4 DS 301) */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(1|2|3|4|5|6|7|8)0$/]
+{
+	z-index: eval(295 + tag("railway:signal:speed_limit_distant:speed")/2);
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=10]
+{
+	icon-image: "icons/de/lf4-ds301-10-sign-down-44.png";
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=20]
+{
+	icon-image: "icons/de/lf4-ds301-20-sign-down-44.png";
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=30]
+{
+	icon-image: "icons/de/lf4-ds301-30-sign-down-44.png";
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=40]
+{
+	icon-image: "icons/de/lf4-ds301-40-sign-down-44.png";
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=50]
+{
+	icon-image: "icons/de/lf4-ds301-50-sign-down-44.png";
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=60]
+{
+	icon-image: "icons/de/lf4-ds301-60-sign-down-44.png";
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=70]
+{
+	icon-image: "icons/de/lf4-ds301-70-sign-down-44.png";
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=80]
+{
+	icon-image: "icons/de/lf4-ds301-80-sign-down-44.png";
+}
+
 
 /* German line speed signals (Lf 6) */
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(1|2|3|4|5|6|7|8|9)0$/],
@@ -1489,6 +1530,26 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["rai
 node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=70]
 {
 	icon-image: "icons/de/hha/l1-70-sign-44.png";
+}
+
+/* East German line speed signal "Eckentafel" (Lf 5) */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:dr:lf5"]["railway:signal:speed_limit:form"=sign]
+{
+	z-index: 395;
+	icon-width: 12;
+	icon-height: 16;
+	icon-image: "icons/de/lf5-dv301-sign-32.png";
+	allow-overlap: true;
+}
+
+/* West German line speed signal "Anfangstafel" (Lf 5) */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:db:lf5"]["railway:signal:speed_limit:form"=sign]
+{
+	z-index: 395;
+	icon-width: 11;
+	icon-height: 16;
+	icon-image: "icons/de/lf5-ds301-sign-32.png";
+	allow-overlap: true;
 }
 
 /* German line speed signals (Lf 7) */
