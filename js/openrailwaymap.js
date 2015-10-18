@@ -233,8 +233,8 @@ function setStyle(style)
 
 	/*
 	updateLegend("legend", style || MapCSS.availableStyles[0]);
-	updatePermalink(railmap.selectedStyle || MapCSS.availableStyles[0]);
 	*/
+	map.updatePermalink();
 
 	// mark selected item as checked
 	$('.styleSelector').each(function(index, element)
@@ -246,19 +246,58 @@ function setStyle(style)
 	});
 }
 
-// renews the permalink url after zooming, changing style or dragging the map
-function updatePermalink(style)
-{
-	gEBI('permalinkButton').href = getPermalinkUrl(style);
-	if (gEBI('desktopButton') != null)
-		gEBI('desktopButton').href = (getPermalinkUrl(style).replace('mobile.php', 'index.php'))+'&mobile=0';
-}
-
 // updates map's center
 function updateMap()
 {
 	map.setView(map.getCenter(), map.getZoom());
 }
+
+function zoomPrecision(zoom)
+{
+	return Math.max(0, Math.ceil(Math.log(zoom) / Math.LN2));
+}
+
+L.Map.ORM = L.Map.extend(
+{
+	getLayer: function()
+	{
+		for (var i in this._layers)
+		{
+			var layer = this._layers[i];
+			if (layer.options && layer.options.code)
+				return layer.options.code;
+		}
+	},
+
+	getStyle: function()
+	{
+		for (var i in this._layers)
+		{
+			var layer = this._layers[i];
+			if (layer.selectedStyle)
+				return layer.selectedStyle;
+		}
+	},
+
+	getUrl: function(marker)
+	{
+		var center = this.getCenter();
+		var zoom = this.getZoom();
+		var layer = this.getLayer();
+		var style = this.getStyle();
+
+		center = center.wrap();
+
+		var precision = zoomPrecision(zoom);
+
+		return 'http://www.openrailwaymap.org/beta#zoom='+zoom+'&lat='+center.lat.toFixed(precision)+'&lon='+center.lng.toFixed(precision)+'&layers='+layer+'&style='+style;
+	},
+
+	updatePermalink: function()
+	{
+		history.replaceState(null, "openrailwaymap", this.getUrl());
+	}
+});
 
 $(document).ready(function()
 {
@@ -285,45 +324,57 @@ $(document).ready(function()
 		setStyle($(this).data('id'));
 	});
 
-	map = L.map('mapContainer');
+	map = new L.Map.ORM('mapContainer');
+	var lat = 51.58248;
+	var lon = 15.6501;
+	var zoom = 7;
+	map.setView(new L.LatLng(lat, lon), zoom);
+	history.pushState(null, 'openrailwaymap', map.getUrl());
 
-	/*map.on('moveend', function(e)
-	{
-		updatePermalink(railmap.selectedStyle);
-	});*/
+	// setting start position
+	//startposition = new Startposition(map);
+	// loading timestamp
+	//var timestamp = new Timestamp("info");
+	// create search
+	//search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
 
 	// grayscale mapnik background layer
 	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
-		maxZoom: 19
+		maxZoom: 19,
+		code: 'mapnikgray'
 	}).addTo(map);
 
 	// normal mapnik background layer
 	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
-		maxZoom: 19
+		maxZoom: 19,
+		code: 'mapnik'
 	});
 
 	// grayscale MapQuest background layer
 	var mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapquestAttribution'],
-		maxZoom: 18
+		maxZoom: 18,
+		code: 'mapquestgray'
 	});
 
 	// normal MapQuest background layer
 	var mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapquestAttribution'],
-		maxZoom: 18
+		maxZoom: 18,
+		code: 'mapquest'
 	});
 
 	// blank background map
 	var blank = new L.TileLayer(root+'/img/blank.png',
 	{
-		maxZoom: 20
+		maxZoom: 20,
+		code: 'blank'
 	});
 
 	// TODO var
@@ -338,7 +389,6 @@ $(document).ready(function()
 	/*map.on('zoomend', function(e)
 	{
 		updateLegend("legend", railmap.selectedStyle);
-		updatePermalink(railmap.selectedStyle);
 	});*/
 
 	var hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',
@@ -360,31 +410,26 @@ $(document).ready(function()
 		[translations['railmap']]: railmap
 	};
 
-	var scaleLine = new L.Control.Scale({metric: true, maxWidth: 200}).addTo(map);
-	var layerSwitch = new L.Control.Layers(baseLayers, overlays).addTo(map);
-
-	// setting start position
-	//startposition = new Startposition(map);
-	// loading timestamp
-	//var timestamp = new Timestamp("info");
-	// create search
-	//search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
-	// set rendering style
 	if (params['style'] != null && availableStyles.indexOf(params['style']) >= 0)
 		setStyle(params['style']);
 	else
 		setStyle('standard');
-	var lat = 51.58248;
-	var lon = 15.6501;
-	var zoom = 7;
-	map.setView(new L.LatLng(lat, lon), zoom);
+
+	var scaleLine = new L.Control.Scale({metric: true, maxWidth: 200}).addTo(map);
+	var layerSwitch = new L.Control.Layers(baseLayers, overlays);
+	map.addControl(layerSwitch);
+
+	// TODO zoomstart zoomend zoomlevelschange resize layeradd layerremove baselayerchange overlayadd overlayremove
+	map.on('moveend', function(e)
+	{
+		map.updatePermalink();
+	});
+
 	// onclick event of locate button
 	$('#locateButton').on('click', function()
 	{
 		startposition.setPosition();
 	});
-	// initialize the permalink url
-	//updatePermalink(railmap.selectedStyle);
 
 	$('#searchButton').on('click', function()
 	{
