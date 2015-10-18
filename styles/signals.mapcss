@@ -319,8 +319,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-
 	text-halo-color: white;
 	/* text-offset-x: eval(add(mul(length(tag("railway:signal:stop:caption")), 3), 6)); */
 	text-offset-x: -12;
-	kothicjs-ignore-text-offset-x: true;
-	text-offset-y: 12;
+	text-offset-y: -12;
 	icon-image: "icons/de/ne5-ds301-32.png";
 	icon-width: 11;
 	icon-height: 16;
@@ -339,6 +338,14 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]["railway:signal:stop:caption"=~/...../]
 {
 	text-offset-x: -21;
+}
+
+@media not (user-agent: josm) {
+	node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]
+	{
+		text-offset-x: 0;
+		text-offset-y: 12;
+	}
 }
 
 /*********************************************/
@@ -730,30 +737,24 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:train_prot
 	icon-height: 20;
 	allow-overlap: true;
 }
-node|z16-17[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
+node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
 {
 	z-index: 8510;
 	text: "ref";
-	text-offset-x: -28;
-	kothicjs-ignore-text-offset-x: true;
-	text-offset-y: 12;
+	text-offset-x: -10;
 	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
 	font-weight: bold;
 }
 node|z18-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
 {
 	z-index: 8500;
-	text: "ref";
-	text-offset-x: -28;
-	kothicjs-ignore-text-offset-x: true;
-	text-offset-y: 12;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
 	text-allow-overlap: true;
+}
+@media not (user-agent: josm) {
+	node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
+	{
+		text-offset-x: 0;
+	}
 }
 
 /********************************************************************************************/
