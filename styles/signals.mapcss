@@ -360,8 +360,10 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=
 
 /********************************************/
 /* DE minor semaphore dwarf signals type Sh */
+/* DE Sh 0 at buffer stops                  */
 /********************************************/
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=dwarf]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:form"=semaphore]["railway:signal:minor:height"=dwarf],
+node|z17-[railway="buffer_stop"]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh0"]["railway:signal:minor:form"=sign]
 {
 	z-index: 2000;
 	text: "ref";
@@ -460,10 +462,11 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE
 	allow-overlap: true;
 }
 
-/******************/
-/* DE signal Sh 2 */
-/******************/
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh2"]
+/************************************************/
+/* DE signal Sh 2 as signal and at buffer stops */
+/************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh2"],
+node|z17-[railway="buffer_stop"]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh2"]
 {
 	z-index: 4010;
 	icon-image: "icons/de/sh2-32.png";
