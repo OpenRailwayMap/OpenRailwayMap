@@ -78,9 +78,19 @@ function changeLanguage(lang)
 // returns a permalink storing all current settings (language, position, zoom, url params); style parameter is necessary, lang parameter is not necessary
 function getPermalinkUrl(style, lang)
 {
-	var url = root+(window.location.pathname.substr(1));
+	// root may contain subdirectories as well as the location
+	// remove those that are part of both
+	var rdirs = root.split('://')[1].split('/').slice(1).filter(function(n){ return n !== "" });	// skip the first part which is just the hostname
+	var pdirs = window.location.pathname.split('/').filter(function(n){ return n !== "" });
 
-	url += '?lang='+((lang) ? lang : params['lang']);
+	for (i = 0; i < rdirs.length; i++) {
+		if (rdirs[i] == pdirs[0])
+			pdirs.shift();
+		else
+			break;
+	}
+
+	var url = root + pdirs.join('/') + '?lang=' + ((lang) ? lang : params['lang']);
 
 	if (params['id'] != null)
 		url += '&id='+params['id'];
