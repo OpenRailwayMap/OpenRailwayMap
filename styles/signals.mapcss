@@ -1644,12 +1644,12 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:shunting:deactivated"=yes]::deactivatedcross,
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting:deactivated"=yes]::deactivatedcross,
 /*node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main_repeated:deactivated"=yes]::deactivatedcross,*/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:minor:deactivated"=yes]::deactivatedcross,
 /*node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:minor_distant:deactivated"=yes]::deactivatedcross,*/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:crossing:deactivated"=yes]::deactivatedcross,
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant:deactivated"=yes]::deactivatedcross /*,
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing:deactivated"=yes]::deactivatedcross,
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant:deactivated"=yes]::deactivatedcross /*,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:humping:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:route:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:route_distant:deactivated"=yes]::deactivatedcross,
