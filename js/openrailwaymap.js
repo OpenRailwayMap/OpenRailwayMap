@@ -105,7 +105,7 @@ OpenRailwayMap = function(config)
 		updateLegend("legend", railmap.selectedStyle);
 	});*/
 
-	// TODO zoomstart zoomend zoomlevelschange resize layeradd layerremove baselayerchange overlayadd overlayremove
+	// TODO layeradd layerremove baselayerchange overlayadd overlayremove
 	this._map.on('moveend', function(e)
 	{
 		this.updatePermalink();
@@ -162,7 +162,8 @@ OpenRailwayMap.prototype =
 
 		var precision = Math.max(0, Math.ceil(Math.log(zoom) / Math.LN2));
 
-		return 'http://www.openrailwaymap.org/beta#zoom='+zoom+'&lat='+center.lat.toFixed(precision)+'&lon='+center.lng.toFixed(precision)+'&layers='+layerName+'&style='+style;
+		// TODO save lang, osmid, osmtype, searchquery, ref, name, position, line
+		return this._root+'#zoom='+zoom+'&lat='+center.lat.toFixed(precision)+'&lon='+center.lng.toFixed(precision)+'&layers='+layerName+'&style='+style;
 	},
 
 	updatePermalink: function()

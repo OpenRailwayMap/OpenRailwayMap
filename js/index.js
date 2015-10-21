@@ -215,37 +215,29 @@ function searchRequest(input)
 
 $(document).ready(function()
 {
-	// TODO in config auslagern
-	var map = new OpenRailwayMap(
+	$.getJSON("js/config.json", function(data)
 	{
-		'mapContainerId': 'mapContainer',
-		'appName': 'openrailwaymap',
-		'lat': 51.58248,
-		'lon': 15.6501,
-		'zoom': 7,
-		'tiledir': 'http://{s}.tiles.openrailwaymap.org/',
-		'root': 'http://www.openrailwaymap.org/',
-		'availableStyles': ['standard', 'maxspeed', 'signals']
-	});
+		var map = new OpenRailwayMap(config);
 
-	$(".styleSelector").on("click", function()
-	{
-		map.setStyle($(this).data('id'));
-	});
+		$(".styleSelector").on("click", function()
+		{
+			map.setStyle($(this).data('id'));
+		});
 
-	$('#locateButton').on('click', function()
-	{
-		startposition.setPosition();
-	});
+		$('#locateButton').on('click', function()
+		{
+			startposition.setPosition();
+		});
 
-	$('#searchButton').on('click', function()
-	{
-		searchRequest($('#searchInput').val());
-	});
-
-	$(document).keypress(function(e)
-	{
-		if (e.which == 13)
+		$('#searchButton').on('click', function()
+		{
 			searchRequest($('#searchInput').val());
+		});
+
+		$(document).keypress(function(e)
+		{
+			if (e.which == 13)
+				searchRequest($('#searchInput').val());
+		});
 	});
 });
