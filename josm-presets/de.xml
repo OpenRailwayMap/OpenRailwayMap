@@ -2912,12 +2912,54 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Juction" de.name="Abzweig, Anst, Awanst" icon="junction-25.png" type="node">
-				<label text="Abzweig, Anschlusstelle oder Ausweichanschlusstelle" />
+			<item name="Juction" de.name="Abzweig" icon="junction-25.png" type="node">
+				<label text="Abzweig" />
 				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="junction" />
+				<text key="name"
+					text="Name"
+					de.text="Name"
+					default=""
+					delete_if_empty="true" />
+				<text key="railway:ref"
+					text="Short name (DS100, such as 'NAN')"
+					de.text="Abkürzung (nach DS100, z. B. 'NAN')"
+					default=""
+					delete_if_empty="true" />
+				<text key="operator"
+					text="Operator (e.g. 'DB Netz AG')"
+					de.text="Betreiber (z. B. 'DB Netz AG')"
+					default=""
+					delete_if_empty="true" />
+				<text key="start_date"
+					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+					default=""
+					delete_if_empty="true" />
+				<text key="image"
+					text="Image URL"
+					de.text="URL eines Bildes"
+					default=""
+					delete_if_empty="true" />
+				<text key="wikipedia"
+					text="Wikipedia article in the format (Language):(Article)"
+					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+					default=""
+					delete_if_empty="true" />
+				<text key="ele"
+					text="Height above sea level (m)"
+					de.text="Höhe über Meeresspiegel (m)"
+					default=""
+					delete_if_empty="true" />
+			</item>
+			<item name="Spur juction" de.name="Anst / Awanst" icon="junction-25.png" type="node">
+				<label text="Anschlusstelle oder Ausweichanschlusstelle" />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<space />
+				<key key="railway"
+					value="spur_junction" />
 				<text key="name"
 					text="Name"
 					de.text="Name"
