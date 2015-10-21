@@ -444,8 +444,8 @@
 				exit;
 			$query = "SELECT
 						id, ST_X(geom), ST_Y(geom)
-						FROM ".$type."s
-						WHERE (id = ".$id.");";
+						FROM " . $_GET[$type] . "s
+						WHERE (id = " . $_GET[$id] . ");";
 			$response = requestDetails($query, $connection);
 			pg_close($connection);
 
@@ -791,9 +791,10 @@
 	// checks if given type-parameter is valid
 	function isValidType($type)
 	{
-		if (!$type || !isset($type))
+		if (!$type || !isset($type) || !isset($_GET[$type]))
 			return false;
 
+		$type = $_GET[$type];
 		// check if given object type is invalid
 		if (($type != "node") && ($type != "way") && ($type != "relation"))
 		{
@@ -804,13 +805,13 @@
 		return true;
 	}
 
-
 	// checks if given osm id is valid
 	function isValidId($id)
 	{
-		if (!$id || !isset($id))
+		if (!$id || !isset($id) || !isset($_GET[$id]))
 			return false;
 
+		$id = $_GET[$id];
 		if (!ctype_digit($id))
 		{
 			reportError("Given id contains not-numeric characters: ".$id);
@@ -820,13 +821,13 @@
 		return true;
 	}
 
-
 	// checks if given coordinate is valid
 	function isValidCoordinate($coord)
 	{
-		if (!$coord || !isset($coord))
+		if (!$coord || !isset($coord) || !isset($_GET[$coord]))
 			return false;
 
+		$coord = $_GET[$coord];
 		if (!is_numeric($coord))
 		{
 			reportError("Given coordinate contains not-numeric characters: ".$coord);
@@ -840,9 +841,10 @@
 	// checks if given zoom level is valid
 	function isValidZoom($zoom)
 	{
-		if (!$zoom || !isset($zoom))
+		if (!$zoom || !isset($zoom) || !isset($_GET[$zoom]))
 			return false;
 
+		$zoom = $_GET[$zoom];
 		if (!ctype_digit($zoom))
 		{
 			reportError("Given zoom level is not valid: ".$zoom);
@@ -856,9 +858,10 @@
 	// checks if given timezone offset is valid
 	function isValidOffset($offset)
 	{
-		if (!$offset || !isset($offset))
+		if (!$offset || !isset($offset) || !isset($_GET[$offset]))
 			return false;
 
+		$offset = $_GET[$offset];
 		if (!is_numeric($offset))
 		{
 			reportError("Given timezone offset is not valid: ".$offset);
