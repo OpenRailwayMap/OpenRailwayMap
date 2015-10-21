@@ -296,7 +296,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-
 	z-index: 1000;
 	text: "ref";
 	text-offset: 11;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -315,7 +314,6 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-
 {
 	z-index: 1000;
 	text: "railway:signal:stop:caption";
-	text-size: 10;
 	text-color: black;
 	text-halo-radius: 3;
 	text-halo-color: white;
@@ -368,7 +366,6 @@ node|z17-[railway="buffer_stop"]["railway:signal:direction"]["railway:signal:min
 	z-index: 2000;
 	text: "ref";
 	text-offset: 11;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -429,7 +426,6 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE
 	z-index: 3000;
 	text: "ref";
 	text-offset: 10;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -450,7 +446,6 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE
 	z-index: 4000;
 	text: "ref";
 	text-offset: 11;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -484,7 +479,6 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE
 	z-index: 5000;
 	text: "ref";
 	text-offset: 11;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -519,7 +513,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 8000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -539,7 +532,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 8000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -559,7 +551,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 8000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -584,7 +575,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 8500;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -643,7 +633,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 8500;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -668,7 +657,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 8500;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -692,7 +680,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 8500;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -713,7 +700,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 8500;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -748,7 +734,6 @@ node|z16-17[railway=signal]["railway:signal:direction"]["railway:signal:train_pr
 {
 	z-index: 8510;
 	text: "ref";
-	text-size: 12;
 	text-offset-x: -28;
 	kothicjs-ignore-text-offset-x: true;
 	text-offset-y: 12;
@@ -761,7 +746,6 @@ node|z18-[railway=signal]["railway:signal:direction"]["railway:signal:train_prot
 {
 	z-index: 8500;
 	text: "ref";
-	text-size: 12;
 	text-offset-x: -28;
 	kothicjs-ignore-text-offset-x: true;
 	text-offset-y: 12;
@@ -786,7 +770,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:train_prot
 	allow-overlap: true;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -804,7 +787,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -827,7 +809,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -849,7 +830,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -877,7 +857,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -905,7 +884,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -930,7 +908,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -953,7 +930,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -976,7 +952,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1000,7 +975,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1023,7 +997,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1045,7 +1018,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 11;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1066,7 +1038,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 11;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1087,7 +1058,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 11;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1108,7 +1078,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	z-index: 9000;
 	text: "ref";
 	text-offset: 11;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1129,7 +1098,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1150,7 +1118,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1171,7 +1138,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1192,7 +1158,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1213,7 +1178,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1234,7 +1198,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1257,7 +1220,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1279,7 +1241,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1303,7 +1264,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1324,7 +1284,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1345,7 +1304,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1366,7 +1324,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1387,7 +1344,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1409,7 +1365,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1431,7 +1386,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1452,7 +1406,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1473,7 +1426,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1494,7 +1446,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1516,7 +1467,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1538,7 +1488,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1560,7 +1509,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1581,7 +1529,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1602,7 +1549,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10000;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1623,7 +1569,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	z-index: 10001;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1643,7 +1588,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	z-index: 10100;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1664,7 +1608,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	z-index: 10200;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
@@ -1684,7 +1627,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	z-index: 10200;
 	text: "ref";
 	text-offset: 12;
-	text-size: 12;
 	text-color: black;
 	text-halo-radius: 1;
 	text-halo-color: white;
