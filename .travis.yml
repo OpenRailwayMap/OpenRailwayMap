@@ -1,0 +1,28 @@
+language: python
+python:
+ - 2.7
+ - 3.2
+sudo: false
+notifications:
+  irc:
+    channels:
+      - "irc.oftc.net#OpenRailwayMap"
+    on_success: change
+    on_failure: change
+    use_notice: true
+    skip_join: true
+addons:
+  apt:
+    packages:
+    - libxml2-utils
+    - php5-cli
+    - python3-cairo
+    - python3-ply
+    - python-imaging
+    - python-cairo
+    - python-ply
+    - python-rsvg
+install:
+ - pip install cairocffi pillow ply
+script:
+ - make check PHP=/usr/bin/php5
