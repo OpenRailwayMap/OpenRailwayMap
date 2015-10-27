@@ -307,9 +307,28 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-
 	allow-overlap: true;
 }
 
-/*********************/
-/* DE stop post Ne 5 */
-/*********************/
+/**************************************************/
+/* DE stop demand post Ne 5 (Ne 5 as light signal)*/
+/**************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop_demand"="DE-ESO:ne5"]["railway:signal:stop_demand:form"=light]
+{
+	z-index: 1000;
+	text: "ref";
+	text-offset: 11;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de/ne5-light-32.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/****************************/
+/* DE stop post Ne 5 as sign*/
+/****************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]
 {
 	z-index: 1000;
