@@ -28,6 +28,23 @@ canvas
 	default-lines: true;
 }
 
+/* those tracks that are rendered at all                           */
+/* later rules still may decide to not render a track matched here */
+way|z2-[railway=rail],
+way|z9-[railway=disused],
+way|z9-[railway=abandoned],
+way|z9-[railway=razed],
+way|z9-[railway=proposed],
+way|z9-[railway=construction],
+way|z9-[railway=preserved],
+way|z9-[railway=narrow_gauge],
+way|z11-[railway=tram],
+way|z10-[railway=subway],
+way|z10-[railway=light_rail]
+{
+	set .tracks;
+}
+
 /***********/
 /* bridges */
 /***********/
@@ -45,24 +62,14 @@ way|z6-8[railway=rail][bridge=yes]::bridges
 	casing-color: #797979;
 	linejoin: butt;
 }
-way|z9-[railway=rail][bridge=yes]::bridges,
-way|z9-[railway=disused][bridge=yes]::bridges,
-way|z9-[railway=abandoned][bridge=yes]::bridges,
-way|z9-[railway=razed][bridge=yes]::bridges,
-way|z9-[railway=proposed][bridge=yes]::bridges,
-way|z9-[railway=construction][bridge=yes]::bridges,
-way|z9-[railway=preserved][bridge=yes]::bridges,
-way|z9-[railway=narrow_gauge][bridge=yes]::bridges,
-way|z11-[railway=tram][bridge=yes]::bridges,
-way|z10-[railway=subway][bridge=yes]::bridges,
-way|z10-[railway=light_rail][bridge=yes]::bridges
+way|z9-[bridge=yes].tracks::bridges
 {
 	z-index: 1;
 	casing-width: 3.5;
 	casing-color: #797979;
 	linejoin: butt;
 }
-way|z12-[bridge=yes][!"railway:track_ref"]::bridges
+way|z12-[bridge=yes][!"railway:track_ref"].tracks::bridges
 {
 	z-index: 4000;
 	text-position: line;
@@ -93,17 +100,7 @@ way|z9-[railway=razed]
 /*************************************************************/
 /* tunnel label (not render if the track has a track number) */
 /*************************************************************/
-way|z9-[railway=rail][tunnel=yes][!"railway:track_ref"]::tunnels,
-way|z9-[railway=disused][tunnel=yes][!"railway:track_ref"]::tunnels,
-way|z9-[railway=abandoned][tunnel=yes][!"railway:track_ref"]::tunnels,
-way|z9-[railway=razed][tunnel=yes][!"railway:track_ref"]::tunnels,
-way|z9-[railway=proposed][tunnel=yes][!"railway:track_ref"]::tunnels,
-way|z9-[railway=construction][tunnel=yes][!"railway:track_ref"]::tunnels,
-way|z9-[railway=preserved][tunnel=yes][!"railway:track_ref"]::tunnels,
-way|z9-[railway=narrow_gauge][tunnel=yes][!"railway:track_ref"]::tunnels,
-way|z11-[railway=tram][tunnel=yes][!"railway:track_ref"]::tunnels,
-way|z10-[railway=subway][tunnel=yes][!"railway:track_ref"]::tunnels,
-way|z10-[railway=light_rail][tunnel=yes][!"railway:track_ref"]::tunnels
+way|z9-[tunnel=yes][!"railway:track_ref"].tracks::tunnels
 {
 	z-index: 4001;
 	text-position: line;
@@ -119,17 +116,7 @@ way|z10-[railway=light_rail][tunnel=yes][!"railway:track_ref"]::tunnels
 /*************************/
 /* tunnels color (white) */
 /*************************/
-way|z2-[railway=rail][tunnel=yes]::tunnels,
-way|z9-[railway=disused][tunnel=yes]::tunnels,
-way|z9-[railway=abandoned][tunnel=yes]::tunnels,
-way|z9-[railway=razed][tunnel=yes]::tunnels,
-way|z9-[railway=proposed][tunnel=yes]::tunnels,
-way|z9-[railway=construction][tunnel=yes]::tunnels,
-way|z9-[railway=preserved][tunnel=yes]::tunnels,
-way|z9-[railway=narrow_gauge][tunnel=yes]::tunnels,
-way|z11-[railway=tram][tunnel=yes]::tunnels,
-way|z10-[railway=subway][tunnel=yes]::tunnels,
-way|z10-[railway=light_rail][tunnel=yes]::tunnels
+way[tunnel=yes].tracks::tunnels
 {
 	z-index: 4000;
 	width: 6;
@@ -143,17 +130,7 @@ way|z10-[railway=light_rail][tunnel=yes]::tunnels
 /* text of tracks outside bridges and tunnels */
 /* default track label contains ref and name  */
 /**********************************************/
-way|z2-[railway=rail][!service][!bridge][!tunnel],
-way|z9-[railway=disused][!service][!bridge][!tunnel],
-way|z9-[railway=abandoned][!service][!bridge][!tunnel],
-way|z9-[railway=razed][!service][!bridge][!tunnel],
-way|z9-[railway=proposed][!service][!bridge][!tunnel],
-way|z9-[railway=construction][!service][!bridge][!tunnel],
-way|z9-[railway=preserved][!service][!bridge][!tunnel],
-way|z9-[railway=narrow_gauge][!service][!bridge][!tunnel],
-way|z11-[railway=tram][!service][!bridge][!tunnel],
-way|z10-[railway=subway][!service][!bridge][!tunnel],
-way|z10-[railway=light_rail][!service][!bridge][!tunnel]
+way[!service][!bridge][!tunnel].tracks
 {
 	z-index: 10000;
 	text: eval(join(" ", tag("ref"), tag("name")));
@@ -183,17 +160,7 @@ way|z11-[railway=razed][!bridge][!tunnel]["razed:ref"]
 /*****************************************/
 /* track ref's on tracks inside stations */
 /*****************************************/
-way|z17-[railway=rail]["railway:track_ref"],
-way|z17-[railway=disused]["railway:track_ref"],
-way|z17-[railway=abandoned]["railway:track_ref"],
-way|z17-[railway=razed]["railway:track_ref"],
-way|z17-[railway=proposed]["railway:track_ref"],
-way|z17-[railway=construction]["railway:track_ref"],
-way|z17-[railway=preserved]["railway:track_ref"],
-way|z17-[railway=light_rail]["railway:track_ref"],
-way|z17-[railway=narrow_gauge]["railway:track_ref"],
-way|z17-[railway=tram]["railway:track_ref"],
-way|z17-[railway=subway]["railway:track_ref"]
+way|z17-["railway:track_ref"].tracks
 {
 	text: "railway:track_ref";
 	text-position: line;
