@@ -1,0 +1,17 @@
+{
+	"data_format": 1,
+	"data_url": "http://www.openrailwaymap.org/taginfo/taginfo.json",
+	"project":
+	{
+		"name": "OpenRailwayMap",
+		"description": "An OpenStreetMap-based project for creating a map of the world's railway infrastructure",
+		"project_url": "http://www.openrailwaymap.org/",
+		"doc_url": "http://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging",
+		"icon_url": "http://www.openrailwaymap.org/img/openrailwaymap-16.png",
+		"contact_name": "Alexander Matheisen",
+		"contact_email": "info@openrailwaymap.org"
+	},
+	"tags":
+	[
+	]
+}
