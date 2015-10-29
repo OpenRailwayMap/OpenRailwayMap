@@ -13,5 +13,12 @@
 	},
 	"tags":
 	[
+		{
+			"key": "railway",
+			"value": "buffer_stop",
+			"object_types": ["node"],
+			"description": "Currently not rendered on the map. Used for calculating the usable length of a track and routing purposes.",
+			"doc_url": "http://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging#Buffer_stops"
+		}
 	]
 }
