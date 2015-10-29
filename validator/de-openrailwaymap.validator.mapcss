@@ -225,17 +225,40 @@ node["railway:signal:train_protection"="DE-ESO:ne14"]["railway:signal:train_prot
 
 /* a German distant signal can't be a repeated one if at the same pole as a main signal, as the prior distant
  * signal would refer to this main signal */
-node["railway:signal:main"="DE-ESO:hp"]["railway:signal:distant:repeated"="yes"]["railway:signal:main:states"!~/^(.*;)?DE-ESO:kennlicht(;.*)?$/]
+node["railway:signal:distant:repeated"="yes"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:states"!~/^(.*;)?DE-ESO:kennlicht(;.*)?$/],
+node["railway:signal:distant:repeated"="yes"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:states"~="DE-ESO:kennlicht"]["railway:signal:distant:shortened"="no"],
+node["railway:signal:distant:repeated"="yes"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:states"~="DE-ESO:kennlicht"][!"railway:signal:distant:shortened"],
+node["railway:signal:distant:repeated"="yes"]["railway:signal:main"=~/^DE-ESO:/]["railway:signal:main"!="DE-ESO:hp"]
 {
 	throwError: "main and repeated distant signal usually are not at the same place";
 	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
 	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes railway:signal:main:states=DE-ESO:hp0;DE-ESO:hp1";
-	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes railway:signal:main:states=DE-ESO:hp0;DE-ESO:kennlicht";
+	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes railway:signal:main:states=DE-ESO:hp0;DE-ESO:kennlicht railway:signal:distant:shortened=yes";
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=no";
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr";
 	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
 	fixAdd: "railway:signal:distant:shortened=yes";
 	fixRemove: "railway:signal:distant:repeated";
+}
+
+/* a German distant signal can't be both a repeated and a distant one. The only exception is H/V signals
+ * for Halbregelabstand areas, determined by main signal at the same pole being able to show Kennlicht */
+node["railway:signal:distant:repeated"="yes"]["railway:signal:distant:shortened"="yes"]["railway:signal:distant"=~/^DE-ESO:/]["railway:signal:distant"!="DE-ESO:vr"],
+node["railway:signal:distant:repeated"="yes"]["railway:signal:distant:shortened"="yes"]["railway:signal:distant"="DE-ESO:vr"][!"railway:signal:main"],
+node["railway:signal:distant:repeated"="yes"]["railway:signal:distant:shortened"="yes"]["railway:signal:main"]["railway:signal:main"!="DE-ESO:hp"],
+node["railway:signal:distant:repeated"="yes"]["railway:signal:distant:shortened"="yes"]["railway:signal:distant"="DE-ESO:vr"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:states"!~/^(.*;)?DE-ESO:kennlicht(;.*)?$/]
+{
+	throwError: "German distant signals can't be repeated and shortened at the same time";
+	assertMatch: "node railway=signal railway:signal:distant:repeated=yes railway:signal:distant:shortened=yes railway:signal:distant=DE-ESO:ks";
+	assertMatch: "node railway=signal railway:signal:distant:repeated=yes railway:signal:distant:shortened=yes railway:signal:distant=DE-ESO:vr";
+	assertMatch: "node railway=signal railway:signal:distant:repeated=yes railway:signal:distant:shortened=yes railway:signal:main=DE-ESO:hl";
+	assertMatch: "node railway=signal railway:signal:distant:repeated=yes railway:signal:distant:shortened=yes railway:signal:distant=DE-ESO:vr railway:signal:main=DE-ESO:hp";
+	assertMatch: "node railway=signal railway:signal:distant:repeated=yes railway:signal:distant:shortened=yes railway:signal:distant=DE-ESO:vr railway:signal:main=DE-ESO:hp railway:signal:main:states=DE-ESO:hp0;DE-ESO:hp1";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:ks railway:signal:distant:repeated=yes";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:ks railway:signal:distant:shortened=yes";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes railway:signal:distant:shortened=yes railway:signal:main=DE-ESO:hp railway:signal:main:states=DE-ESO:kennlicht;DE-ESO:hp1";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
+	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:distant:shortened=yes";
 }
 
 /* German Ks signals can't be distant and main at the same place */
