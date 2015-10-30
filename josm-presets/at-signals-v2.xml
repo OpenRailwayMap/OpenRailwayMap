@@ -13,7 +13,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Signale AT V2" description="Preset to tag Austrian railway signals">
 	<group name="OpenRailwayMap Signale AT V2" icon="signals.png">
-		<item name="Formhauptsignal" icon="todo.png" type="node">
+		<item name="Formhauptsignal" type="node">
 			<label text="Formhauptsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -82,7 +82,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<preset_link preset_name="Verschubsignal" />
 			<preset_link preset_name="Abfahrtsignal" />
 		</item>
-		<item name="Lichthauptsignal" icon="todo.png" type="node">
+		<item name="Lichthauptsignal" type="node">
 			<label text="Lichthauptsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -153,7 +153,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<preset_link preset_name="Abfahrtsignal" />
 		</item>
 		<separator />
-		<item name="Formvorsignal" icon="todo.png" type="node">
+		<item name="Formvorsignal" type="node">
 			<label text="Formvorsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -200,7 +200,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<space />
 			<preset_link preset_name="Geschwindigkeitsvoranzeiger" />
 		</item>
-		<item name="Lichtvorsignal" icon="todo.png" type="node">
+		<item name="Lichtvorsignal" type="node">
 			<label text="Lichtvorsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -324,7 +324,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="sign" />
 		</item>
 		<separator />
-		<item name="Schutzsignal" icon="todo.png" type="node">
+		<item name="Schutzsignal" type="node">
 			<label text="Schutzsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -381,7 +381,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<preset_link preset_name="Verschubsignal" />
 			<preset_link preset_name="Abfahrtsignal" />
 		</item>
-		<item name="Sperrsignal, verstellbar" icon="todo.png" type="node">
+		<item name="Sperrsignal, verstellbar" type="node">
 			<label text="Sperrsignal, verstellbar" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -426,7 +426,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				delete_if_empty="true" />
 		</item>
-		<item name="Sperrsignal, fix" icon="todo.png" type="node">
+		<item name="Sperrsignal, fix" type="node">
 			<label text="Sperrsignal, fix" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -508,8 +508,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delete_if_empty="true" />
 		</item>
 		<separator />
-		<group name="Verschubsignale" icon="todo.png">
-			<item name="Verschubsignal" icon="todo.png" type="node">
+		<group name="Verschubsignale">
+			<item name="Verschubsignal" type="node">
 				<label text="Verschubsignal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -554,7 +554,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<item name="Verschubhalttafel" icon="todo.png" type="node">
+			<item name="Verschubhalttafel" type="node">
 				<label text="Verschubhalttafel" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -592,7 +592,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Wartesignal (Tafel)" icon="todo.png" type="node">
+			<item name="Wartesignal (Tafel)" type="node">
 				<label text="Wartesignal (Tafel)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -630,7 +630,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<item name="Wartesignal (Lichtsignal)" icon="todo.png" type="node">
+			<item name="Wartesignal (Lichtsignal)" type="node">
 				<label text="Wartesignal (Lichtsignal)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -670,7 +670,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<item name="Abdrücksignal" icon="todo.png" type="node">
+			<item name="Abdrücksignal" type="node">
 				<label text="Abdrücksignal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -712,7 +712,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<separator />
-		<item name="Geschwindigkeitsanzeiger" icon="todo.png" type="node">
+		<item name="Geschwindigkeitsanzeiger" type="node">
 			<label text="Geschwindigkeitsanzeiger" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -762,7 +762,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				delete_if_empty="true" />
 		</item>
-		<item name="Geschwindigkeitsvoranzeiger" icon="todo.png" type="node">
+		<item name="Geschwindigkeitsvoranzeiger" type="node">
 			<label text="Geschwindigkeitsvoranzeiger" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -812,7 +812,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				delete_if_empty="true" />
 		</item>
-		<item name="Geschwindigkeitstafel" icon="todo.png" type="node">
+		<item name="Geschwindigkeitstafel" type="node">
 			<label text="Geschwindigkeitstafel" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -863,7 +863,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				delete_if_empty="true" />
 		</item>
-		<item name="Ankündigungstafel" icon="todo.png" type="node">
+		<item name="Ankündigungstafel" type="node">
 			<label text="Ankündigungstafel" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -907,8 +907,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				delete_if_empty="true" />
 		</item>
-		<group name="Langsamfahrsignale" icon="todo.png">
-			<item name="Ankündigungssignal" icon="todo.png" type="node">
+		<group name="Langsamfahrsignale">
+			<item name="Ankündigungssignal" type="node">
 				<label text="Ankündigungssignal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -952,7 +952,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<item name="Anfangssignal" icon="todo.png" type="node">
+			<item name="Anfangssignal" type="node">
 				<label text="Anfangssignal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -996,7 +996,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<item name="Endsignal" icon="todo.png" type="node">
+			<item name="Endsignal" type="node">
 				<label text="Endsignal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1095,7 +1095,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:electricity:form"
 				value="sign" />
 		</item>
-		<item name="Schaltzeiger/Stellungszeiger" icon="todo.png" type="node">
+		<item name="Schaltzeiger/Stellungszeiger" type="node">
 			<label text="Schaltzeiger/Stellungszeiger" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1131,8 +1131,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="sign" />
 		</item>
 		<separator />
-		<group name="Eisenbahnkreuzungen" icon="todo.png">
-			<item name="Eisenbahnkreuzungs-Überwachungssignal" icon="todo.png" type="node">
+		<group name="Eisenbahnkreuzungen">
+			<item name="Eisenbahnkreuzungs-Überwachungssignal" type="node">
 				<label text="Eisenbahnkreuzungs-Überwachungssignal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1165,7 +1165,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:crossing:form"
 					value="light" />
 			</item>
-			<item name="Eisenbahnkreuzungs-Zusatztafel Anfang" icon="todo.png" type="node">
+			<item name="Eisenbahnkreuzungs-Zusatztafel Anfang" type="node">
 				<label text="Eisenbahnkreuzungs-Zusatztafel Anfang" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1207,7 +1207,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<item name="Eisenbahnkreuzungs-Zusatztafel Ende" icon="todo.png" type="node">
+			<item name="Eisenbahnkreuzungs-Zusatztafel Ende" type="node">
 				<label text="Eisenbahnkreuzungs-Zusatztafel Ende" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1249,7 +1249,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					delete_if_empty="true" />
 			</item>
-			<item name="Rautentafel" icon="todo.png" type="node">
+			<item name="Rautentafel" type="node">
 				<label text="Rautentafel" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1280,7 +1280,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:crossing_distant:form"
 					value="sign" />
 			</item>
-			<item name="Schaltstellenpflock" icon="todo.png" type="node">
+			<item name="Schaltstellenpflock" type="node">
 				<label text="Schaltstellenpflock" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1316,7 +1316,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					default=""
 					delete_if_empty="true" />
 			</item>
-			<item name="Pfeifpflock" icon="todo.png" type="node">
+			<item name="Pfeifpflock" type="node">
 				<label text="Pfeifpflock" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1347,7 +1347,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:whistle:form"
 					value="sign" />
 			</item>
-			<item name="Gruppenpfeifpflock" icon="todo.png" type="node">
+			<item name="Gruppenpfeifpflock" type="node">
 				<label text="Gruppenpfeifpflock" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1378,7 +1378,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:whistle:form"
 					value="sign" />
 			</item>
-			<item name="Endpflock" icon="todo.png" type="node">
+			<item name="Endpflock" type="node">
 				<label text="Endpflock" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1482,7 +1482,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:station_distant:form"
 				value="sign" />
 		</item>
-		<item name="Weichenüberwachungssignal" icon="todo.png" type="node">
+		<item name="Weichenüberwachungssignal" type="node">
 			<label text="Weichenüberwachungssignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1520,8 +1520,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				delete_if_empty="true" />
 		</item>
-		<group name="Grenzmarken" icon="todo.png">
-			<item name="Grenzmarke" icon="todo.png" type="node">
+		<group name="Grenzmarken">
+			<item name="Grenzmarke" type="node">
 				<label text="Grenzmarke" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1537,7 +1537,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:fouling_point"
 					value="AT-V2:grenzmarke" />
 			</item>
-			<item name="Markierte Grenzmarke" icon="todo.png" type="node">
+			<item name="Markierte Grenzmarke" type="node">
 				<label text="Markierte Grenzmarke" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1553,7 +1553,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:fouling_point"
 					value="AT-V2:markierte_grenzmarke" />
 			</item>
-			<item name="Verschub-Grenzmarke" icon="todo.png" type="node">
+			<item name="Verschub-Grenzmarke" type="node">
 				<label text="Verschub-Grenzmarke" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1569,7 +1569,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:fouling_point"
 					value="AT-V2:verschub-grenzmarke" />
 			</item>
-			<item name="Grenzmarke für Rollwagenbetrieb" icon="todo.png" type="node">
+			<item name="Grenzmarke für Rollwagenbetrieb" type="node">
 				<label text="Grenzmarke für Rollwagenbetrieb" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1586,7 +1586,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="AT-V2:grenzmarke_rollwagenbetrieb" />
 			</item>
 		</group>
-		<item name="Bremsprobesignal" icon="todo.png" type="node">
+		<item name="Bremsprobesignal" type="node">
 			<label text="Bremsprobesignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1618,7 +1618,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:brake_test:states"
 				value="AT-V2:bremsen_anlegen;AT-V2:bremsen_lösen;AT-V2:bremsprobe_beendet" />
 		</item>
-		<item name="Abfahrtsignal" icon="todo.png" type="node">
+		<item name="Abfahrtsignal" type="node">
 			<label text="Abfahrtsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1648,7 +1648,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:departure:form"
 				value="light" />
 		</item>
-		<item name="Fahrerlaubnissignal" icon="todo.png" type="node">
+		<item name="Fahrerlaubnissignal" type="node">
 			<label text="Fahrerlaubnissignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1688,8 +1688,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default="off"
 				delete_if_empty="true" />
 		</item>
-		<group name="Räumsignale" icon="todo.png">
-			<item name="Räumarbeit einstellen" icon="todo.png" type="node">
+		<group name="Räumsignale">
+			<item name="Räumarbeit einstellen" type="node">
 				<label text="Räumarbeit einstellen" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1721,7 +1721,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:snowplow:type"
 					value="up" />
 			</item>
-			<item name="Mittelräumer heben" icon="todo.png" type="node">
+			<item name="Mittelräumer heben" type="node">
 				<label text="Mittelräumer heben" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1753,7 +1753,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:snowplow:type"
 					value="up" />
 			</item>
-			<item name="Räumarbeit aufnehmen" icon="todo.png" type="node">
+			<item name="Räumarbeit aufnehmen" type="node">
 				<label text="Räumarbeit aufnehmen" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1786,7 +1786,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="down" />
 			</item>
 		</group>
-		<item name="LZB-Bereichskennzeichen" icon="todo.png" type="node">
+		<item name="LZB-Bereichskennzeichen" type="node">
 			<label text="LZB-Bereichskennzeichen" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1833,7 +1833,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Signalnachahmer" icon="todo.png" type="node">
+		<item name="Signalnachahmer" type="node">
 			<label text="Signalnachahmer" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1878,7 +1878,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				delete_if_empty="true" />
 		</item>
-		<item name="Fahrwegende" icon="todo.png" type="node">
+		<item name="Fahrwegende" type="node">
 			<label text="Fahrwegende" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1916,7 +1916,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				delete_if_empty="true" />
 		</item>
-		<item name="Dienstruhe" icon="todo.png" type="node">
+		<item name="Dienstruhe" type="node">
 			<label text="Dienstruhe" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1954,7 +1954,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				delete_if_empty="true" />
 		</item>
-		<item name="ETCS-Blockkennzeichen" icon="todo.png" type="node">
+		<item name="ETCS-Blockkennzeichen" type="node">
 			<label text="ETCS-Blockkennzeichen" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
