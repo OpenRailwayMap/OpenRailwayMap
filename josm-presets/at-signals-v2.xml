@@ -23,26 +23,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Signal ref"
 				de.text="Signalbezeichnung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:main:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:main"
 				value="AT-V2:hauptsignal" />
@@ -54,28 +54,28 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				display_values="Mastbauform,Zwergsignal"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<multiselect key="railway:signal:main:states"
 				text="Signal states (multi-selection)"
 				de.text="Signalzustände (Mehrfachauswahl)"
 				delimiter=";"
 				values="AT-V2:halt;AT-V2:frei;AT-V2:frei_mit_40;AT-V2:frei_mit_20"
 				display_values="Halt;Frei;Frei mit 40 km/h;Frei mit 20 km/h"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:main:function"
 				text="Signal function"
 				de.text="Signalaufgabe"
 				values="entry,exit,block,intermediate"
 				display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<multiselect key="railway:signal:main:substitute_signal"
 				text="Substitute signal (multi-selection)"
 				de.text="Ersatzsignal (Mehrfachauswahl)"
 				delimiter=";"
 				values="AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
 				display_values="Ersatzsignal;Vorsichtssignal"
-				delete_if_empty="true" />
+				/>
 			<space />
 			<preset_link preset_name="Geschwindigkeitsanzeiger" />
 			<preset_link preset_name="Geschwindigkeitsvoranzeiger" />
@@ -92,26 +92,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Signal ref"
 				de.text="Signalbezeichnung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:main:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:main"
 				value="AT-V2:hauptsignal" />
@@ -123,28 +123,28 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				display_values="Mastbauform,Zwergsignal"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<multiselect key="railway:signal:main:states"
 				text="Signal states (multi-selection)"
 				de.text="Signalzustände (Mehrfachauswahl)"
 				delimiter=";"
 				values="AT-V2:halt;AT-V2:frei;AT-V2:frei_mit_60;AT-V2:frei_mit_40;AT-V2:frei_mit_20"
 				display_values="Halt;Frei;Frei mit 60 km/h;Frei mit 40 km/h;Frei mit 20 km/h"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:main:function"
 				text="Signal function"
 				de.text="Signalaufgabe"
 				values="entry,exit,block,intermediate"
 				display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<multiselect key="railway:signal:main:substitute_signal"
 				text="Substitute signal (multi-selection)"
 				de.text="Ersatzsignal (Mehrfachauswahl)"
 				delimiter=";"
 				values="AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
 				display_values="Ersatzsignal;Vorsichtssignal"
-				delete_if_empty="true" />
+				/>
 			<space />
 			<preset_link preset_name="Lichtvorsignal" />
 			<preset_link preset_name="Geschwindigkeitsanzeiger" />
@@ -163,26 +163,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Signal ref"
 				de.text="Signalbezeichnung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:distant:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:distant"
 				value="AT-V2:vorsignal" />
@@ -194,7 +194,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				display_values="Mastbauform,Zwergsignal"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:distant:states"
 				value="AT-V2:vorsicht;AT-V2:hauptsignal_frei" />
 			<space />
@@ -210,26 +210,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Signal ref"
 				de.text="Signalbezeichnung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:distant:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:distant"
 				value="AT-V2:vorsignal" />
@@ -241,13 +241,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				display_values="Mastbauform,Zwergsignal"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<multiselect key="railway:signal:distant:states"
 				text="Signal states (multi-selection)"
 				de.text="Signalzustände (Mehrfachauswahl)"
 				delimiter=";"
 				values="AT-V2:vorsicht;AT-V2:hauptsignal_frei;AT-V2:hauptsignal_frei_mit_60;AT-V2:hauptsignal_frei_mit_40"
-				delete_if_empty="true" />
+				/>
 			<space />
 			<preset_link preset_name="Geschwindigkeitsvoranzeiger" />
 		</item>
@@ -262,21 +262,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:main"
 				value="AT-V2:trapeztafel" />
@@ -288,7 +288,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				display_values="Normalhöhe,Zwergsignal"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:main:function"
 				value="entry" />
 		</item>
@@ -302,21 +302,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:distant"
 				value="AT-V2:kreuztafel" />
@@ -334,26 +334,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Signal ref"
 				de.text="Signalbezeichnung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:minor:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Gleismitte/am Prellbock"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:minor"
 				value="AT-V2:schutzsignal" />
@@ -365,7 +365,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				display_values="Mastbauform,Zwergsignal"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:minor:states"
 				value="AT:fahrverbot;AT:fahrverbot_aufgehoben" />
 			<multiselect key="railway:signal:minor:substitute_signal"
@@ -374,7 +374,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delimiter=";"
 				values="AT-V2:ersatzsignal;AT-V2:vorsichtssignal"
 				display_values="Ersatzsignal;Vorsichtssignal"
-				delete_if_empty="true" />
+				/>
 			<space />
 			<preset_link preset_name="Geschwindigkeitsanzeiger" />
 			<preset_link preset_name="Geschwindigkeitsvoranzeiger" />
@@ -391,26 +391,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Signal ref"
 				de.text="Signalbezeichnung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:minor:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:minor"
 				value="AT-V2:sperrsignal" />
@@ -424,7 +424,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<item name="Sperrsignal, fix" type="node">
 			<label text="Sperrsignal, fix" />
@@ -436,26 +436,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Signal ref"
 				de.text="Signalbezeichnung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:minor:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward,both"
 				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:minor"
 				value="AT-V2:weiterfahrt_verboten" />
@@ -467,7 +467,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<item name="Haltscheibe" icon="de-sh2.png" type="node">
 			<label text="Haltscheibe" />
@@ -479,21 +479,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:minor"
 				value="AT-V2:haltscheibe" />
@@ -505,7 +505,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<separator />
 		<group name="Verschubsignale">
@@ -519,26 +519,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal ref"
 					de.text="Signalbezeichnung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<check key="railway:signal:shunting:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:shunting"
 					value="AT-V2:verschubsignal" />
@@ -552,7 +552,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="normal,dwarf"
 					default=""
 					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
+					/>
 			</item>
 			<item name="Verschubhalttafel" type="node">
 				<label text="Verschubhalttafel" />
@@ -564,21 +564,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:shunting"
 					value="AT-V2:verschubhalttafel" />
@@ -590,7 +590,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="normal,dwarf"
 					display_values="Mastbauform,Zwergsignal"
 					default=""
-					delete_if_empty="true" />
+					/>
 			</item>
 			<item name="Wartesignal (Tafel)" type="node">
 				<label text="Wartesignal (Tafel)" />
@@ -602,21 +602,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:shunting"
 					value="AT-V2:wartesignal" />
@@ -628,7 +628,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="normal,dwarf"
 					default=""
 					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
+					/>
 			</item>
 			<item name="Wartesignal (Lichtsignal)" type="node">
 				<label text="Wartesignal (Lichtsignal)" />
@@ -640,21 +640,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:shunting"
 					value="AT-V2:wartesignal" />
@@ -668,7 +668,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="normal,dwarf"
 					default=""
 					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
+					/>
 			</item>
 			<item name="Abdrücksignal" type="node">
 				<label text="Abdrücksignal" />
@@ -680,21 +680,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:humping"
 					value="AT-V2:abdrücksignal" />
@@ -708,7 +708,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="normal,dwarf"
 					display_values="Mastbauform,Zwergsignal"
 					default=""
-					delete_if_empty="true" />
+					/>
 			</item>
 		</group>
 		<separator />
@@ -722,21 +722,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:speed_limit"
 				value="AT-V2:geschwindigkeitsanzeiger" />
@@ -746,11 +746,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="light,sign"
 				display_values="Lichtsignal,Tafel"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:speed_limit:speed" default=""
 				text="Speed (km/h, in case of light signals separate the possible values (number or 'off') with ';')"
 				de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte (Zahl oder 'off') mit ';' trennen)"
-				delete_if_empty="true"
 				values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,?"
 				display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,unknown"
 				de.display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,unbekannt" />
@@ -760,7 +759,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<item name="Geschwindigkeitsvoranzeiger" type="node">
 			<label text="Geschwindigkeitsvoranzeiger" />
@@ -772,21 +771,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:speed_limit_distant"
 				value="AT-V2:geschwindigkeitvorsanzeiger" />
@@ -796,11 +795,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="light,sign"
 				display_values="Lichtsignal,Tafel"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:speed_limit_distant:speed" default=""
 				text="Speed (km/h, in case of light signals separate the possible values(number or 'off') with ';')"
 				de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte (Zahl oder 'off') mit ';' trennen)"
-				delete_if_empty="true"
 				values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,?"
 				display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,unknown"
 				de.display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,unbekannt" />
@@ -810,7 +808,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<item name="Geschwindigkeitstafel" type="node">
 			<label text="Geschwindigkeitstafel" />
@@ -822,21 +820,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:speed_limit"
 				value="AT-V2:geschwindigkeitstafel" />
@@ -848,11 +846,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="light,sign"
 				display_values="Lichtsignal,Tafel"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:speed_limit:speed" default=""
 				text="Speed (km/h, in case of light signals separate the possible values (number or 'off') with ';')"
 				de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte (Zahl oder 'off') mit ';' trennen)"
-				delete_if_empty="true"
 				values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
 				display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
 			<combo key="railway:signal:speed_limit:height"
@@ -861,7 +858,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<item name="Ankündigungstafel" type="node">
 			<label text="Ankündigungstafel" />
@@ -873,21 +870,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:speed_limit_distant"
 				value="AT-V2:ankündigungstafel" />
@@ -896,7 +893,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<combo key="railway:signal:speed_limit_distant:speed" default=""
 				text="Speed (km/h, in case of light signals separate the possible values(number or 'off') with ';')"
 				de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte (Zahl oder 'off') mit ';' trennen)"
-				delete_if_empty="true"
 				values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
 				display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
 			<combo key="railway:signal:speed_limit_distant:height"
@@ -905,7 +901,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<group name="Langsamfahrsignale">
 			<item name="Ankündigungssignal" type="node">
@@ -918,21 +914,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:speed_limit_distant"
 					value="AT-V2:ankündigungssignal" />
@@ -941,7 +937,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:speed_limit_distant:speed" default=""
 					text="Speed (km/h, in case of light signals separate the possible values(number or 'off') with ';')"
 					de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte (Zahl oder 'off') mit ';' trennen)"
-					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
 				<combo key="railway:signal:speed_limit_distant:height"
@@ -950,7 +945,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="normal,dwarf"
 					default=""
 					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
+					/>
 			</item>
 			<item name="Anfangssignal" type="node">
 				<label text="Anfangssignal" />
@@ -962,21 +957,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:speed_limit"
 					value="AT-V2:anfangssignal" />
@@ -985,7 +980,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:speed_limit:speed" default=""
 					text="Speed (km/h, in case of light signals separate the possible values (number or 'off') with ';')"
 					de.text="Geschwindigkeit (km/h, bei Lichtsignalen mögliche Werte (Zahl oder 'off') mit ';' trennen)"
-					delete_if_empty="true"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
 				<combo key="railway:signal:speed_limit:height"
@@ -994,7 +988,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="normal,dwarf"
 					default=""
 					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
+					/>
 			</item>
 			<item name="Endsignal" type="node">
 				<label text="Endsignal" />
@@ -1006,21 +1000,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:speed_limit"
 					value="AT-V2:endsignal" />
@@ -1034,7 +1028,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="normal,dwarf"
 					default=""
 					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
+					/>
 			</item>
 		</group>
 		<separator />
@@ -1048,21 +1042,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,overhead"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<combo key="railway:signal:electricity"
 				text="Exact type"
@@ -1070,28 +1064,28 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="AT-V2:ankündigung_hauptschalter_aus,AT-V2:hauptschalter_aus,AT-V2:hauptschalter_ein,AT-V2:ankündigung_stromabnehmer_tief,AT-V2:stromabnehmer_tief,AT-V2:stromabnehmer_hoch,AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer;AT-V2:bahnhof-streckentrennung_anfang;AT-V2:bahnhof-streckentrennung_ende"
 				display_values="Ankündigung Hauptschalter aus,Hauptschalter aus,Hauptschalter ein,Ankündigung Stromabnehmer tief,Stromabnehmer tief,Stromabnehmer hoch,Halt für Fahrzeuge mit angehobenem Stromabnehmer,Bahnhof-Streckentrennung Anfang,Bahnhof-Streckentrennung Ende"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:electricity:turn_direction"
 				text="Turn direction arrow – if the signals only valid for some turn directions at the next switch/junction. Leave this key empty if there is no arrow."
 				de.text="Richtungs – falls das Signal an der nächsten Weiche/Abzweigung nur für bestimmte Richtungen gilt. Leer lassen, falls es keinen Richtungspfeil gibt."
 				values="left,through,right"
 				display_values="links,geradeaus,rechts"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:electricity:height"
 				text="Signal height"
 				de.text="Signalbauform"
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:electricity:type"
 				text="Meaning"
 				de.text="Bedeutung"
 				values="power_off_advance,power_off,power_on,pantograph_down_advance,pantograph_down,pantograph_up,end_of_catenary,pantograph_down,pantograph_up"
 				display_values="Ankündigung Hauptschalter aus,Hauptschalter aus,Hauptschalter ein,Ankündigung Stromabnehmer tief,Stromabnehmer tief,Stromabnehmer hoch,Halt für Fahrzeuge mit angehobenem Stromabnehmer,Bahnhof-Streckentrennung Anfang,Bahnhof-Streckentrennung Ende"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:electricity:form"
 				value="sign" />
 		</item>
@@ -1105,21 +1099,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,overhead"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:electricity"
 				value="AT-V2:schaltzeiger" />
@@ -1142,21 +1136,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:crossing"
 					value="AT-V2:ek_überwachungssignal" />
@@ -1175,21 +1169,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<key key="railway:signal:crossing_hint"
 					value="AT-V2:eküs" />
 				<key key="railway:signal:crossing_hint:form"
@@ -1198,14 +1192,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Caption (e.g. '3 EK')"
 					de.text="Beschriftung (z. B. '3 EK')"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:crossing_hint:height"
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
 					default=""
 					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
+					/>
 			</item>
 			<item name="Eisenbahnkreuzungs-Zusatztafel Ende" type="node">
 				<label text="Eisenbahnkreuzungs-Zusatztafel Ende" />
@@ -1217,21 +1211,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<key key="railway:signal:crossing_info"
 					value="AT-V2:eküs" />
 				<key key="railway:signal:crossing_info:form"
@@ -1240,14 +1234,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Caption (e.g. 'EK 3')"
 					de.text="Beschriftung (z. B. 'EK 3')"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:crossing_info:height"
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
 					default=""
 					display_values="Mastbauform,Zwergsignal"
-					delete_if_empty="true" />
+					/>
 			</item>
 			<item name="Rautentafel" type="node">
 				<label text="Rautentafel" />
@@ -1259,21 +1253,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:crossing_distant"
 					value="AT-V2:rautentafel" />
@@ -1290,21 +1284,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:crossing_distant"
 					value="AT-V2:schaltstellenpflock" />
@@ -1314,7 +1308,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Position of level crossing (e.g. '13.427')"
 					de.text="Streckenkilometer der Eisenbahnkreuzung (z. B. '13.427')"
 					default=""
-					delete_if_empty="true" />
+					/>
 			</item>
 			<item name="Pfeifpflock" type="node">
 				<label text="Pfeifpflock" />
@@ -1326,21 +1320,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:whistle"
 					value="AT-V2:pfeifpflock" />
@@ -1357,21 +1351,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:whistle"
 					value="AT-V2:gruppenpfeifpflock" />
@@ -1388,21 +1382,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<space />
 				<key key="railway:signal:whistle"
 					value="AT-V2:endpflock" />
@@ -1420,21 +1414,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:stop"
 				value="AT-V2:haltepunkt" />
 			<key key="railway:signal:stop:form"
@@ -1445,12 +1439,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 			<text key="railway:signal:stop:description"
 				text="Description"
 				de.text="Zusatztext"
 				default=""
-				delete_if_empty="true" />
+				/>
 		</item>
 		<item name="Haltestellentafel" icon="de/ne6-32.png" type="node">
 			<label text="Haltestellentafel" />
@@ -1462,21 +1456,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:station_distant"
 				value="AT-V2:haltestellentafel" />
 			<key key="railway:signal:station_distant:form"
@@ -1492,21 +1486,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:resetting_switch"
 				value="AT-V2:weichenüberwachungssignal" />
@@ -1518,7 +1512,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<group name="Grenzmarken">
 			<item name="Grenzmarke" type="node">
@@ -1533,7 +1527,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<key key="railway:signal:fouling_point"
 					value="AT-V2:grenzmarke" />
 			</item>
@@ -1549,7 +1543,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<key key="railway:signal:fouling_point"
 					value="AT-V2:markierte_grenzmarke" />
 			</item>
@@ -1565,7 +1559,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<key key="railway:signal:fouling_point"
 					value="AT-V2:verschub-grenzmarke" />
 			</item>
@@ -1581,7 +1575,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<key key="railway:signal:fouling_point"
 					value="AT-V2:grenzmarke_rollwagenbetrieb" />
 			</item>
@@ -1596,21 +1590,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward,both"
 				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:brake_test"
 				value="AT-V2:bremsprobesignal" />
 			<key key="railway:signal:brake_test:form"
@@ -1628,21 +1622,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward,both"
 				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:departure"
 				value="AT-V2:abfahrt" />
 			<key key="railway:signal:departure:form"
@@ -1658,21 +1652,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward,both"
 				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:departure"
 				value="AT-V2:fahrerlaubnissignal" />
 			<combo key="railway:signal:departure:form"
@@ -1681,12 +1675,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="light,sign"
 				display_values="Lichtsignal,Tafel"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:departure:repeated"
 				text="Repeated Signal"
 				de.text="Vorsignalwiederholer"
 				default="off"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<group name="Räumsignale">
 			<item name="Räumarbeit einstellen" type="node">
@@ -1699,21 +1693,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<key key="railway:signal:snowplow"
 					value="AT-V2:räumarbeit_einstellen" />
 				<key key="railway:signal:snowplow:form"
@@ -1731,21 +1725,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<key key="railway:signal:snowplow"
 					value="AT-V2:mittelräumer_heben" />
 				<key key="railway:signal:snowplow:form"
@@ -1763,21 +1757,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					default="off"
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
 					default=""
-					delete_if_empty="true" />
+					/>
 				<key key="railway:signal:snowplow"
 					value="AT-V2:räumarbeit_aufnehmen" />
 				<key key="railway:signal:snowplow:form"
@@ -1796,26 +1790,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:catenary_mast"
 				text="On catenary mast"
 				de.text="Am Oberleitungsmast"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:train_protection"
 				value="AT-V2:lzb-bereichskennzeichen" />
 			<key key="railway:signal:train_protection:form"
@@ -1826,12 +1820,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="start,section"
 				display_values="LZB Anfang,Bereichswechsel"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<text key="railway:position:exact"
 				text="Exact position (e.g. '13.427')"
 				de.text="Standortangabe (z. B. '13.427')"
 				default=""
-				delete_if_empty="true" />
+				/>
 		</item>
 		<item name="Signalnachahmer" type="node">
 			<label text="Signalnachahmer" />
@@ -1843,26 +1837,26 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Signal ref"
 				de.text="Signalbezeichnung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:main_repeated:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:main_repeated"
 				value="AT-V2:signalnachahmer" />
@@ -1876,7 +1870,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="AT-V2:ersatzsignal, "
 				display_values="Kann Ersatzsignal anzeigen,Kann kein Ersatzsignal anzeigen"
 				default=""
-				delete_if_empty="true" />
+				/>
 		</item>
 		<item name="Fahrwegende" type="node">
 			<label text="Fahrwegende" />
@@ -1888,21 +1882,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:minor"
 				value="AT-V2:fahrwegende" />
@@ -1914,7 +1908,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<item name="Dienstruhe" type="node">
 			<label text="Dienstruhe" />
@@ -1926,21 +1920,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<space />
 			<key key="railway:signal:main:substitute_signal"
 				value="AT-V2:dienstruhe" />
@@ -1952,7 +1946,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="normal,dwarf"
 				default=""
 				display_values="Mastbauform,Zwergsignal"
-				delete_if_empty="true" />
+				/>
 		</item>
 		<item name="ETCS-Blockkennzeichen" type="node">
 			<label text="ETCS-Blockkennzeichen" />
@@ -1964,31 +1958,31 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
 				de.text="Signalstandort"
 				values="left,right"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<combo key="railway:signal:direction"
 				text="Direction"
 				de.text="Anzeigerichtung"
 				values="forward,backward"
 				display_values="In Wegrichtung,Entgegen Wegrichtung"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<check key="railway:signal:catenary_mast"
 				text="On catenary mast"
 				de.text="Am Oberleitungsmast"
 				default="off"
-				delete_if_empty="true" />
+				/>
 			<text key="ref"
 				text="Block reference"
 				de.text="Blockbezeichner"
 				default=""
-				delete_if_empty="true" />
+				/>
 			<key key="railway:signal:train_protection"
 				value="AT-V2:etcs-blockkennzeichen" />
 			<key key="railway:signal:train_protection:form"
