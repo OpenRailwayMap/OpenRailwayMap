@@ -23,7 +23,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
@@ -35,14 +34,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:distant"
@@ -54,7 +51,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<combo key="railway:signal:distant:states" default="DE-ESO:ks1;DE-ESO:ks2"
 						text="Signal states"
@@ -87,7 +83,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:combined:deactivated"
 						text="Out of order"
@@ -99,14 +94,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:combined"
@@ -118,7 +111,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<combo key="railway:signal:combined:states" default="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2"
 						text="Signal states"
@@ -137,7 +129,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:combined:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -166,7 +157,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
@@ -178,14 +168,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:main"
@@ -197,9 +185,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
-					<combo key="railway:signal:main:states" default=""
+					<combo key="railway:signal:main:states"
 						text="Signal states"
 						de.text="Signalzustände"
 						delimiter="|"
@@ -211,7 +198,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:main:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -239,7 +225,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="ref"
 					text="Signal ref"
 					de.text="Signalbezeichnung"
-					default=""
 					/>
 				<check key="railway:signal:combined:deactivated"
 					text="Out of order"
@@ -251,14 +236,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<space />
 				<key key="railway:signal:combined"
@@ -270,7 +253,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalbauform"
 					values="normal,dwarf"
 					display_values="Mastbauform,Zwergsignal"
-					default=""
 					/>
 				<multiselect key="railway:signal:combined:states"
 					text="Signal states, Hamburg names (multi-selection)"
@@ -285,7 +267,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalaufgabe"
 					values="entry,exit,block,intermediate"
 					display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-					default=""
 					/>
 				<multiselect key="railway:signal:combined:substitute_signal"
 					text="Substitute signal (multi-selection)"
@@ -320,7 +301,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:combined:deactivated"
 						text="Out of order"
@@ -332,14 +312,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:combined"
@@ -351,7 +329,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:combined:states"
 						text="Signal states (multi-selection)"
@@ -365,7 +342,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:combined:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -392,7 +368,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
@@ -404,14 +379,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:main"
@@ -423,7 +396,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:main:states"
 						text="Signal states (multi-selection)"
@@ -437,7 +409,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:main:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -464,7 +435,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
@@ -476,14 +446,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:distant"
@@ -520,7 +488,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:combined:deactivated"
 						text="Out of order"
@@ -532,14 +499,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:combined"
@@ -551,7 +516,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<combo key="railway:signal:combined:states" default="DE-ESO:hp0;DE-ESO:sk1;DE-ESO:sk2"
 						text="Signal states"
@@ -565,7 +529,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:combined:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -594,7 +557,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
@@ -606,14 +568,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:main"
@@ -625,7 +585,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<combo key="railway:signal:main:states" default="DE-ESO:hp0;DE-ESO:sk1"
 						text="Signal states"
@@ -639,7 +598,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:main:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -666,7 +624,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
@@ -678,14 +635,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:distant"
@@ -724,7 +679,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
@@ -736,14 +690,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:main"
@@ -755,7 +707,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:main:states"
 						text="Signal states (multi-selection)"
@@ -770,7 +721,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:main:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -795,7 +745,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
@@ -807,14 +756,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:main"
@@ -826,7 +773,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:main:states"
 						text="Signal states (multi-selection)"
@@ -841,7 +787,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:main:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -870,7 +815,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
@@ -882,14 +826,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:distant"
@@ -901,7 +843,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:distant:states"
 						text="Signal states (multi-selection)"
@@ -915,7 +856,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Verkürzter Bremsweg"
 						values="DE-ESO:db:ne2,DE-ESO:dr:so3c"
 						display_values="DB (weißes Dreieck),DR (Kreis)"
-						default=""
 						/>
 					<check key="railway:signal:distant:repeated"
 						text="Repeated Signal"
@@ -935,7 +875,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
@@ -947,14 +886,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:distant"
@@ -966,7 +903,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<multiselect key="railway:signal:distant:states"
 						text="Signal states (multi-selection)"
@@ -1015,19 +951,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<text key="railway:position:exact"
 					text="Exact position of wrong-line signals (e.g. '13.427')"
 					de.text="Standortangabe an Trapeztafeln im Gegengleis (z. B. '13.427')"
-					default=""
 					/>
 				<space />
 				<key key="railway:signal:main"
@@ -1039,7 +972,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalbauform"
 					values="normal,dwarf"
 					display_values="Normalhöhe,Zwergsignal"
-					default=""
 					/>
 				<key key="railway:signal:main:function"
 					value="entry" />
@@ -1060,14 +992,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<space />
 				<combo key="railway:signal:distant"
@@ -1075,7 +1005,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Typ"
 					values="DE-ESO:db:ne2,DE-ESO:dr:so3,DE-ESO:dr:so3b"
 					display_values="Ne 2 ex-DB,So 3 ex-DR, So 3b ex-DR (mit schwarzem Punkt)"
-					default=""
 					match="keyvalue!" />
 				<key key="railway:signal:distant:form"
 					value="sign" />
@@ -1101,14 +1030,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<space />
 				<key key="railway:signal:distant"
@@ -1134,14 +1061,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<combo key="railway:signal:crossing"
@@ -1149,14 +1074,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signaltyp"
 						values="DE-ESO:bü,DE-ESO:so16"
 						display_values="Bü (ex-DB),So 16 (ex-DR)"
-						default=""
 						match="keyvalue!" />
 					<combo key="railway:signal:crossing:states"
 						text="Signal states"
 						de.text="Signalzustände"
 						values="DE-ESO:bü0;DE-ESO:bü1,DE-ESO:so16a;DE-ESO:so16b"
 						display_values="Bü 0/1 (ex-DB),So 16a/b (ex-DR)"
-						default=""
 						/>
 					<key key="railway:signal:crossing:form"
 						value="light" />
@@ -1187,14 +1110,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<combo key="railway:signal:crossing_distant"
@@ -1202,7 +1123,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signaltyp"
 						values="DE-ESO:bü2,DE-ESO:so15"
 						display_values="Bü 2 'Rautentafel' ex-DB,So 15 ex-DR"
-						default=""
 						match="keyvalue!" />
 					<key key="railway:signal:crossing_distant:form"
 						value="sign" />
@@ -1238,14 +1158,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<key key="railway:signal:crossing_distant"
 						value="DE-ESO:bü3"
@@ -1274,7 +1192,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<key key="railway:signal:direction"
 						value="both" />
@@ -1300,14 +1217,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<combo key="railway:signal:whistle"
@@ -1315,7 +1230,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signaltyp"
 						values="DE-ESO:db:bü4,DE-ESO:dr:pf1,DE-ESO:dr:pf2"
 						display_values="Bü 4 (ex-DB),Pf 1 (einfache Pfeiftafel ex-DR),Pf 2 (doppelte Pfeiftafel ex-DR)"
-						default=""
 						/>
 					<key key="railway:signal:whistle:form"
 						value="sign" />
@@ -1346,14 +1260,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<key key="railway:signal:ring"
 						value="DE-ESO:bü5" />
@@ -1381,14 +1293,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<key key="railway:signal:crossing_info"
 						value="DE-ESO:bü-kennzeichentafel" />
@@ -1397,7 +1307,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="railway:signal:crossing_info:caption"
 						text="Caption (e.g. 'Bü 123,4')"
 						de.text="Beschriftung (z. B. 'Bü 123,4')"
-						default=""
 						/>
 					<check key="railway:signal:crossing_info:repeated"
 						text="Repeated"
@@ -1408,7 +1317,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						default=""
 						display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
@@ -1428,14 +1336,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<key key="railway:signal:crossing_hint"
 						value="DE-ESO:bü-ankündetafel" />
@@ -1444,7 +1350,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="railway:signal:crossing_hint:caption"
 						text="Caption (e.g. 'Bü 123,4')"
 						de.text="Beschriftung (z. B. 'Bü 123,4')"
-						default=""
 						/>
 					<check key="railway:signal:crossing_hint:repeated"
 						text="Repeated"
@@ -1455,7 +1360,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						default=""
 						display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
@@ -1470,7 +1374,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:minor:deactivated"
 						text="Out of order"
@@ -1482,14 +1385,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge,in_track"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Gleismitte/am Prellbock"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:minor"
@@ -1499,21 +1400,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="light,semaphore,sign"
 						display_values="Lichtsignal,Formsignal,Tafel"
-						default=""
 						/>
 					<combo key="railway:signal:minor:height"
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 					<combo key="railway:signal:minor:states"
 						text="Displayed signals"
 						de.text="Angezeigte Signalbilder"
 						values="DE-ESO:hp0;DE-ESO:sh1,DE-ESO:sh0;DE-ESO:sh1,DE-ESO:hp0;DE-ESO:kennlicht"
 						display_values="Lichtsignal (Hp 0/Sh 1),Formsignal (Sh 0/Sh 1),Zugdeckungssignal (Hp 0/Kennlicht)"
-						default=""
 						/>
 					<space />
 					<label text="Signal Gsp 2 siehe 'Gleissperre'" />
@@ -1534,14 +1432,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,in_track"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward,both"
 						display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:minor"
@@ -1560,7 +1456,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="ref"
 						text="Signal ref"
 						de.text="Signalbezeichnung"
-						default=""
 						/>
 					<check key="railway:signal:minor_distant:deactivated"
 						text="Out of order"
@@ -1572,14 +1467,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:minor_distant"
@@ -1591,7 +1484,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 				</item>
 			</group>
@@ -1612,14 +1504,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:shunting"
@@ -1631,7 +1521,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 				</item>
 				<item name="Rangierhaltsignal" icon="de/ra11-sign-32.png" type="node">
@@ -1650,14 +1539,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<combo key="railway:signal:shunting"
@@ -1665,28 +1552,24 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signaltyp"
 						values="DE-ESO:ra11,DE-ESO:ra11b"
 						display_values="Ra 11 (gelb),Ra 11b (weiß)"
-						default=""
 						match="keyvalue!" />
 					<combo key="railway:signal:shunting:form"
 						text="Signal form"
 						de.text="Anzeigeart"
 						values="light,sign"
 						display_values="Lichtsignal mit Sh 1,Tafel"
-						default=""
 						/>
 					<combo key="railway:signal:shunting:states"
 						text="Signal states"
 						de.text="Signalzustände"
 						values="DE-ESO:ra11;DE-ESO:sh1, "
 						display_values="Ra 11 / Sh 1,-nur Tafel-"
-						default=""
 						/>
 					<combo key="railway:signal:shunting:height"
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 				</item>
 				<item name="Abdrücksignal (Ra 6–Ra 9)" icon="de-humping.png" type="node">
@@ -1705,14 +1588,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:humping"
@@ -1722,7 +1603,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="light,semaphore"
 						display_values="Lichtsignal,Formsignal"
-						default=""
 						/>
 					<key key="railway:signal:humping:states"
 						value="DE-ESO:ra6;DE-ESO:ra7;DE-ESO:ra8;DE-ESO:ra9" />
@@ -1731,7 +1611,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalbauform"
 						values="normal,dwarf"
 						display_values="Mastbauform,Zwergsignal"
-						default=""
 						/>
 				</item>
 				<item name="Grenzzeichen (Ra 12)" icon="de/ra12.png" type="node">
@@ -1745,7 +1624,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-						default=""
 						/>
 					<key key="railway:signal:fouling_point"
 						value="DE-ESO:ra12" />
@@ -1768,14 +1646,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:route"
@@ -1783,7 +1659,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="railway:signal:route:states"
 						text="Signal states (separated by ';', use '?' if you don't know all possible values)"
 						de.text="Mögliche Anzeigewerte (getrennt durch ';', verwende '?', wenn du nicht alle Werte kennst)"
-						default=""
 						/>
 					<key key="railway:signal:route:form"
 						value="light" />
@@ -1804,14 +1679,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:route_distant"
@@ -1819,7 +1692,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<text key="railway:signal:route_distant:states"
 						text="Signal states (separated by ';', use '?' if you don't know all possible values)"
 						de.text="Mögliche Anzeigewerte (getrennt durch ';', verwende '?', wenn du nicht alle Werte kennst)"
-						default=""
 						/>
 					<key key="railway:signal:route_distant:form"
 						value="light" />
@@ -1841,14 +1713,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:speed_limit"
@@ -1870,7 +1740,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						default=""
 						display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
@@ -1890,14 +1759,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:speed_limit_distant"
@@ -1907,7 +1774,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="light,sign"
 						display_values="Lichtsignal,Tafel"
-						default=""
 						/>
 					<multiselect key="railway:signal:speed_limit_distant:speed" 
 						text="Speed (km/h)"
@@ -1920,7 +1786,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						default=""
 						display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
@@ -1940,14 +1805,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<key key="railway:signal:speed_limit"
@@ -1957,7 +1820,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="light,sign"
 						display_values="Lichtsignal,Tafel"
-						default=""
 						/>
 					<key key="railway:signal:speed_limit:speed"
 						value="none" />
@@ -1965,7 +1827,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						default=""
 						display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
@@ -1986,17 +1847,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
-					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" default="" match="keyvalue!">
+					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" match="keyvalue!">
 		         	<list_entry value="DE-ESO:db:zs6" display_value="Zs 6 DB" short_description="Gegengleisanzeiger Zs 6 (ex-DB)" />
 		         	<list_entry value="DE-ESO:dr:zs7" display_value="Zs 7 DR" short_description="Gegengleisanzeiger Zs 7 (ex-DR)" />
 		         </combo>
@@ -2005,7 +1864,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="sign,light"
 						display_values="Tafel,Leuchtanzeige"
-						default=""
 						/>
 				</item>
 				<item name="Gegengleisfahrt-Ersatzsignal (Zs 8)" icon="de-zs8.png" type="node">
@@ -2024,17 +1882,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
-					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" default="" match="keyvalue!">
+					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" match="keyvalue!">
 						<list_entry value="DE-ESO:db:zs8" display_value="Zs 8 DB" short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DB)" />
 						<list_entry value="DE-ESO:dr:zs8" display_value="Zs 8 DR" short_description="Linksfahrtersatzsignal Zs 8 (ex-DR)" />
 		            </combo>
@@ -2043,7 +1899,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="sign,light"
 						display_values="Tafel,Leuchtanzeige"
-						default=""
 						/>
 				</item>
 				<separator />
@@ -2063,14 +1918,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
 					<combo key="railway:signal:short_route"
@@ -2078,20 +1931,17 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signaltyp"
 						values="DE-ESO:zs13,DE-ESO:dr:zs6,DE-ESO:dr:zs106"
 						display_values="Zs 13,Zs 6 (Lichtsignal ex-DR),Zs 106 (Tafel ex-DR)"
-						default=""
 						match="keyvalue!" />
 					<combo key="railway:signal:short_route:form"
 						text="Signal form"
 						de.text="Anzeigeart"
 						values="light,sign"
 						display_values="Lichtsignal,Tafel"
-						default=""
 						/>
 					<combo key="railway:signal:short_route:height"
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						default=""
 						display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
@@ -2113,17 +1963,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
-					<combo key="railway:signal:speed_limit" text="Type of signal" de.text="Signaltyp" default="" match="keyvalue!">
+					<combo key="railway:signal:speed_limit" text="Type of signal" de.text="Signaltyp" match="keyvalue!">
 						<list_entry value="DE-ESO:lf7" display_value="Lf 7" short_description="Geschwindigkeitssignal Lf 7" />
 						<list_entry value="DE-ESO:dr:lf1/2" display_value="Lf 1/2" short_description="Langsamfahrbeginnscheibe Lf 1/2 (ex-DR)" />
 						<list_entry value="DE-ESO:lf2" display_value="Lf 2" short_description="Anfangsscheibe Lf 2" />
@@ -2133,7 +1981,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					</combo>
 					<key key="railway:signal:speed_limit:form"
 						value="sign" />
-					<combo key="railway:signal:speed_limit:speed" default=""
+					<combo key="railway:signal:speed_limit:speed"
 						text="Speed (km/h)"
 						de.text="Geschwindigkeit (km/h)"
 						values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
@@ -2143,7 +1991,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						default=""
 						display_values="Mastbauform,Zwergsignal"
 						/>
 					<combo key="railway:signal:speed_limit:turn_direction"
@@ -2152,7 +1999,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="left,through,right"
 						display_values="Left,Through,Right"
 						de.display_values="Links,Geradeaus,Rechts"
-						default=""
 						/>
 				</item>
 				<item name="Geschwindigkeits-Ankündesignal" icon="de/lf6-60-sign-down-32.png" type="node">
@@ -2171,17 +2017,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-						default=""
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
 						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						default=""
 						/>
 					<space />
-					<combo key="railway:signal:speed_limit_distant" text="Type of signal" de.text="Signaltyp" default="" match="keyvalue!">
+					<combo key="railway:signal:speed_limit_distant" text="Type of signal" de.text="Signaltyp" match="keyvalue!">
 						<list_entry value="DE-ESO:lf6" display_value="Lf 6" short_description="Geschwindigkeits-Ankündesignal Lf 6" />
 						<list_entry value="DE-ESO:lf1" display_value="Lf 1" short_description="Langsamfahrscheibe Lf 1" />
 						<list_entry value="DE-ESO:db:lf4" display_value="Lf 4 DB" short_description="Geschwindigkeitstafel Lf 4 (ex-DB)" />
@@ -2189,7 +2033,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					</combo>
 					<key key="railway:signal:speed_limit_distant:form"
 						value="sign" />
-					<combo key="railway:signal:speed_limit_distant:speed" default=""
+					<combo key="railway:signal:speed_limit_distant:speed"
 						text="Speed (km/h)"
 						de.text="Geschwindigkeit (km/h)"
 						values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,off"
@@ -2199,7 +2043,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						default=""
 						display_values="Mastbauform,Zwergsignal"
 						/>
 					<combo key="railway:signal:speed_limit_distant:turn_direction"
@@ -2208,7 +2051,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="left,through,right"
 						display_values="Left,Through,Right"
 						de.display_values="Links,Geradeaus,Rechts"
-						default=""
 						/>
 				</item>
 			</group>
@@ -2228,14 +2070,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<space />
 				<key key="railway:signal:resetting_switch"
@@ -2248,7 +2088,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					default=""
 					display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
@@ -2268,14 +2107,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<space />
 				<key key="railway:signal:resetting_switch_distant"
@@ -2286,7 +2123,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					default=""
 					display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
@@ -2307,27 +2143,23 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<combo key="railway:signal:expected_position"
 					text="Side of track where the signal would be mounted usually"
 					de.text="Gleisseite, auf der man das Signal normalerweise erwarten würde"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
 					match="keyvalue!" />
 				<combo key="railway:signal:expected_position:height"
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					default=""
 					display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
@@ -2347,14 +2179,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<key key="railway:signal:stop"
 					value="DE-ESO:ne5" />
@@ -2364,13 +2194,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					default=""
 					display_values="Mastbauform,Zwergsignal"
 					/>
 				<text key="railway:signal:stop:caption"
 					text="Description"
 					de.text="Zusatztext"
-					default=""
 					/>
 			</item>
 			<item name="Haltepunkttafel (Ne 6)" icon="de/ne6-32.png" type="node">
@@ -2389,14 +2217,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<key key="railway:signal:station_distant"
 					value="DE-ESO:ne6" />
@@ -2419,14 +2245,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<key key="railway:signal:snowplow"
 					value="DE-ESO:ne7" />
@@ -2436,14 +2260,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					default=""
 					display_values="Mastbauform,Zwergsignal"
 					/>
 				<combo key="railway:signal:snowplow:type"
 					text="Order"
 					de.text="Anweisung"
 					values="up,down"
-					default=""
 					display_values="Heben,Senken"
 					/>
 			</item>
@@ -2456,7 +2278,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="ref"
 					text="Signal ref"
 					de.text="Signalbezeichner"
-					default=""
 					/>
 				<check key="railway:signal:train_protection:deactivated"
 					text="Out of order"
@@ -2468,14 +2289,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right,bridge,overhead"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Oberleitung"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<check key="railway:signal:catenary_mast"
 					text="On catenary mast"
@@ -2505,14 +2324,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right,overhead"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<space />
 				<combo key="railway:signal:electricity"
@@ -2520,7 +2337,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signaltyp"
 					values="DE-ESO:el1v,DE-ESO:el1,DE-ESO:el2,DE-ESO:el3,DE-ESO:el4,DE-ESO:el5,DE-ESO:el6"
 					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
-					default=""
 					/>
 				<combo key="railway:signal:electricity:turn_direction"
 					text="Turn direction arrow – leave this key empty if there is no one."
@@ -2528,13 +2344,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,through,right"
 					display_values="Left,Through,Right"
 					de.display_values="Links,Geradeaus,Rechts"
-					default=""
 					/>
 				<combo key="railway:signal:electricity:height"
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					default=""
 					display_values="Mastbauform,Zwergsignal"
 					/>
 				<combo key="railway:signal:electricity:type"
@@ -2542,19 +2356,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Bedeutung"
 					values="power_off_advance,power_off,power_on,pantograph_down_advance,pantograph_down,pantograph_up,end_of_catenary"
 					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
-					default=""
 					/>
 				<key key="railway:signal:electricity:form"
 					value="sign" />
 				<text key="railway:signal:electricity:voltage"
 					text="Voltage (if mentioned)"
 					de.text="Spannung (falls angezeigt)"
-					default=""
 					/>
 				<text key="railway:signal:electricity:frequency"
 					text="Frequency (if mentioned)"
 					de.text="Frequenz (falls angezeigt)"
-					default=""
 					/>
 			</item>
 			<separator />
@@ -2567,7 +2378,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="ref"
 					text="Signal ref"
 					de.text="Signalbezeichnung"
-					default=""
 					/>
 				<check key="railway:signal:main_repeated:deactivated"
 					text="Out of order"
@@ -2579,14 +2389,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward,both"
 					display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-					default=""
 					/>
 				<space />
 				<key key="railway:signal:main_repeated"
@@ -2610,14 +2418,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward,both"
 					display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-					default=""
 					/>
 				<key key="railway:signal:departure"
 					value="DE-ESO:zp" />
@@ -2647,14 +2453,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward,both"
 					display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-					default=""
 					/>
 				<key key="railway:signal:brake_test"
 					value="DE-ESO:zp" />
@@ -2683,14 +2487,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<check key="railway:signal:catenary_mast"
 					text="On catenary mast"
@@ -2700,7 +2502,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="ref"
 					text="Block reference"
 					de.text="Blockbezeichner"
-					default=""
 					/>
 				<key key="railway:signal:train_protection"
 					value="DE-ESO:blockkennzeichen" /> 
@@ -2725,14 +2526,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
 					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					default=""
 					/>
 				<check key="railway:signal:catenary_mast"
 					text="On catenary mast"
@@ -2755,7 +2554,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					default=""
 					/>
 				<key key="railway:signal:radio"
 					value="DE-ESO:zugfunk-kanalhinweis" />
@@ -2764,7 +2562,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="railway:signal:radio:frequency"
 					text="Frequency/Channel"
 					de.text="Kanal"
-					default=""
 					/>
 			</item>
 	</group>
