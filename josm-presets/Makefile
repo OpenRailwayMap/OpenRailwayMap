@@ -9,7 +9,7 @@ all: $(PRESETFILES)
 	cd ../styles/icons; find . -name "*.png" | zip -r ../../josm-presets/$@ -@
 
 check: *.xml
-	@xmllint --noout *.xml
+	@xmllint --schema http://josm.openstreetmap.de/tagging-preset-1.0 --noout *.xml
 
 clean:
 	@rm -f *.zip
