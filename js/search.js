@@ -100,14 +100,21 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			for (var i=0; i<results.length; i++)
 			{
 				var result = document.createElement("div");
-				if (results[i]['type'] == "milestone")
-					result.innerHTML = '<b>'+translations['kilometer']+' '+results[i]['position']+', '+translations['track']+' '+results[i]['ref']+'</b>';
-				else if (results[i]['type'] == "level_crossing")
-					result.innerHTML = '<b>'+translations['level_crossing']+' '+results[i]['position']+', '+translations['track']+' '+results[i]['ref']+'</b>';
-				else
-					result.innerHTML = '<b>'+results[i]['name']+'</b>';
+				var inner = "";
 
-				if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
+				if (results[i]['type'] == 'milestone' || results[i]['type'] == 'signal')
+					inner = translations['kilometer'] + ' ' + results[i]['position'] + ', ' + translations['track'] + ' ' + results[i]['ref'];
+				else if (results[i]['type'] == "level_crossing")
+					inner = translations['level_crossing'] + ' ' + results[i]['position'] + ', ' + translations['track'] + ' ' + results[i]['ref'];
+				else if (results[i]['name'])
+					inner = results[i]['name'];
+				else if (results[i]['ref'])
+					inner = results[i]['ref'];
+
+				if (inner)
+					result.innerHTML = '<b>' + inner + '</b>';
+
+				if (results[i]['type'] != null && typeof results[i]['type'] != undefined && translations[results[i]['type']])
 					result.innerHTML += '&nbsp;'+translations[results[i]['type']];
 				if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
 					result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
