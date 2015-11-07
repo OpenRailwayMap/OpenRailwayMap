@@ -13,7 +13,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap special AVG signals" description="Preset to tag some special railway signals used by Albtal-Verkehrs-Gesellschaft around Karlsruhe">
 	<group name="OpenRailwayMap AVG-Signale" icon="signals.png">
-		<item name="Hp-Licht-Hauptsignal (AVG)" icon="de-hp2-light-32.png" type="node">
+		<item name="Hp-Licht-Hauptsignal (AVG)" icon="de/hp2-light-32.png" type="node">
 			<label text="Hp-Licht-Hauptsignal als Einfahrtsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -68,7 +68,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
 			<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 		</item>
-		<item name="Vorsignaltafel mit Halt erwarten aufgehoben (Ne 2, Vf 1)" icon="de-ne2-32.png" type="node">
+		<item name="Vorsignaltafel mit Halt erwarten aufgehoben (Ne 2, Vf 1)" icon="de/ne2-32.png" type="node">
 			<label text="Vorsignaltafel (Ne 2) mit Halt erwarten aufgehoben (Vf 1)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
