@@ -434,7 +434,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				/>
 		</item>
-		<item name="Haltscheibe" icon="de-sh2.png" type="node">
+		<item name="Haltscheibe" icon="de/sh2-32.png" type="node">
 			<label text="Haltscheibe" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />

@@ -478,8 +478,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
 				</item>
 			</group>
-			<group name="Sk-Signale" icon="de:sk-signals.png">
-				<item name="Sk-Kombinationssignal" icon="de-sk-combined.png" type="node">
+			<group name="Sk-Signale">
+				<item name="Sk-Kombinationssignal" type="node">
 					<label text="Sk-Kombinationssignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -548,7 +548,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Sk-Hauptsignal" icon="de-sk-main.png" type="node">
+				<item name="Sk-Hauptsignal" type="node">
 					<label text="Sk-Hauptsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -615,7 +615,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Sk-Vorsignal" icon="de-sk-distant.png" type="node">
+				<item name="Sk-Vorsignal" type="node">
 					<label text="Sk-Vorsignal" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1572,7 +1572,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
-				<item name="Abdrücksignal (Ra 6–Ra 9)" icon="de-humping.png" type="node">
+				<item name="Abdrücksignal (Ra 6–Ra 9)" type="node">
 					<label text="Abdrücksignal (Ra 6–Ra 9)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -1866,7 +1866,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Tafel,Leuchtanzeige"
 						/>
 				</item>
-				<item name="Gegengleisfahrt-Ersatzsignal (Zs 8)" icon="de-zs8.png" type="node">
+				<item name="Gegengleisfahrt-Ersatzsignal (Zs 8)" type="node">
 					<label text="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 					<label text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -2579,7 +2579,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
-			<item name="Zugfunk-Kanalhinweis" icon="de-radio.png" type="node">
+			<item name="Zugfunk-Kanalhinweis" type="node">
 				<label text="Zugfunk-Kanalhinweis" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
