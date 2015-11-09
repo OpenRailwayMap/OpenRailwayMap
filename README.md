@@ -12,8 +12,6 @@
 
 ## Installation
 
- **ATTENTION:** The included binaries can only be used on i386 Linux systems. If you use other systems, you have to compile the programs for your environment.
-
  * Copy all files and folders into a webserver directory
  * Run manually the install script import/install.sh - it might not run correctly on every distribution/platform and has no error exceptions
  * After successful installation, modify paths and parameters in every file and run import/import.sh
