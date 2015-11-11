@@ -1,4 +1,6 @@
-.phony: all
+.POSIX:
+
+.PHONY: all
 
 JSFILES = maxspeed.js signals.js standard.js
 
@@ -19,5 +21,5 @@ check: $(JSFILES)
 		false; \
 	fi
 	@for i in $(JSFILES); do \
-		python -m json.tool < $${i}on > /dev/null || exit 1; \
+		python -m json.tool < $${i}on > /dev/null; \
 	done
