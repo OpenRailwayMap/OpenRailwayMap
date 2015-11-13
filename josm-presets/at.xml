@@ -3489,11 +3489,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway"
 					value="track_scale" />
 			</item>
-			<item name="Kran" type="node">
-				<label text="Kran" />
-				<key key="man_made"
-					value="crane" />
-			</item>
 			<item name="Lademaßlehre" type="node">
 				<label text="Lademaßlehre" />
 				<key key="railway"
@@ -3712,17 +3707,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<text key="wikipedia"
 				text="Wikipedia article in the format (Language):(Article)"
 				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-				/>
-		</item>
-		<item name="Firma mit Gleisanschluss" type="closedway">
-			<label text="Firma mit Gleisanschluss" />
-			<key key="landuse"
-				value="industrial" />
-			<key key="man_made"
-				value="works" />
-			<text key="name"
-				text="Name"
-				de.text="Name"
 				/>
 		</item>
 		<item name="Tor" type="node">
