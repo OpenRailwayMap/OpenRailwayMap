@@ -6,7 +6,7 @@ all: $(PRESETFILES)
 
 %.zip: %.xml
 	@zip $@ $^
-	cd ../styles/icons; find . -name "*.png" | zip -r ../../josm-presets/$@ -@
+	cd ../styles/icons; grep -o 'icon="[^"]*' ../../josm-presets/$^ | sed 's/^icon="//' | zip -r ../../josm-presets/$@ -@
 
 check: *.xml
 	@xmllint --schema http://josm.openstreetmap.de/tagging-preset-1.0 --noout *.xml
