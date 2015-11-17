@@ -1,4 +1,4 @@
-.POSIX:
+SHELL = /bin/sh -e
 
 .PHONY: check
 
