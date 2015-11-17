@@ -453,15 +453,21 @@ node[railway=signal]["railway:signal:brake_test"]["railway:signal:brake_test"!~/
 	assertNoMatch: "node railway=signal railway:signal:route=DE-ESO:zs2";
 }
 
-/* signals identification should be tagged as ref, not as name */
+/* signal and switch identification should be tagged as ref, not as name */
 node[railway=signal][name][!ref],
-node[railway=signal][name][ref=*name]
+node[railway=signal][name][ref=*name],
+node[railway=switch][name][!ref],
+node[railway=switch][name][ref=*name]
 {
-	throwWarning: "signals identification should be tagged as ref, not as name";
+	throwWarning: tr("{0} identification should be tagged as ref, not as name", "{0.value}");
 	assertMatch: "node railway=signal name=FF";
 	assertMatch: "node railway=signal name=FF ref=FF";
+	assertMatch: "node railway=switch name=12";
+	assertMatch: "node railway=switch name=12 ref=12";
 	assertNoMatch: "node railway=signal ref=FF";
 	assertNoMatch: "node railway=signal ref=FF name=GG";
+	assertNoMatch: "node railway=switch ref=12";
+	assertNoMatch: "node railway=switch ref=12 name=13";
 	fixChangeKey: "name=>ref";
 }
 
