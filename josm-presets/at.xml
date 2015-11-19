@@ -49,28 +49,23 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="highspeed"
 					text="High-speed line (~ >200 km/h)"
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					default="off"
 					/>
 				<check key="railway:tilting"
 					text="Used by tilting trains"
 					de.text="Neigetechnik-Ausrüstung"
-					default="off"
 					/>
 				<space />
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="Linienzugbeeinflussung (LZB)"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -125,7 +120,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -150,12 +144,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="Hauptgleis" icon="siding-32.png" type="way">
@@ -179,23 +171,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="highspeed"
 					text="High-speed line (~ >200 km/h)"
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					default="off"
 					/>
 				<space />
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="Linienzugbeeinflussung (LZB)"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -239,7 +227,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -264,12 +251,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="Nebengleis / Abstellgleis" icon="yard-track-32.png" type="way">
@@ -294,12 +279,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -343,7 +326,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -368,12 +350,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="Anschluss- oder Verladegleis" icon="spur-25.png" type="way">
@@ -390,17 +370,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="Linienzugbeeinflussung (LZB)"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -444,7 +421,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -469,12 +445,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="Überleitgleis" icon="crossover-track-28.png" type="way">
@@ -494,23 +468,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="highspeed"
 					text="High-speed line (~ >200 km/h)"
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					default="off"
 					/>
 				<space />
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="LZB"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -555,7 +525,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -580,12 +549,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<separator />
@@ -631,17 +598,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="LZB"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -699,7 +663,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -724,12 +687,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="Erhaltene Bahnstrecke" type="way">
@@ -767,12 +728,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<combo key="railway:radio"
 					text="Radio"
@@ -824,7 +783,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -849,12 +807,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="Miniaturbahn / Parkeisenbahn" type="way">
@@ -893,7 +849,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<combo key="railway:radio"
 					text="Radio"
@@ -935,7 +890,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -960,12 +914,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<separator />
@@ -1004,17 +956,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="LZB"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -1066,7 +1015,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless (slab track)"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<text key="incline"
 					text="Incline (e.g.. '3%')"
@@ -1085,12 +1033,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="U-Bahngleis" icon="subway-32.png" type="way">
@@ -1120,17 +1066,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="LZB"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -1182,7 +1125,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<text key="incline"
 					text="Incline (e.g.. '3%')"
@@ -1228,17 +1170,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="LZB"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -1290,7 +1229,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<text key="incline"
 					text="Incline (e.g.. '3%')"
@@ -1309,12 +1247,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<separator />
@@ -1353,23 +1289,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="highspeed"
 					text="Highspeed traffic (~ >200 km/h)"
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					default="off"
 					/>
 				<check key="railway:tilting"
 					text="Used by tilting trains"
 					de.text="Neigetechnik-Ausrüstung"
-					default="off"
 					/>
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="LZB"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -1428,7 +1360,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -1453,12 +1384,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="Gleis im Bau" type="way">
@@ -1496,23 +1425,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="highspeed"
 					text="Highspeed traffic (~ >200 km/h)"
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					default="off"
 					/>
 				<check key="railway:tilting"
 					text="Used by tilting trains"
 					de.text="Neigetechnik-Ausrüstung"
-					default="off"
 					/>
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="LZB"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -1571,7 +1496,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -1596,12 +1520,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="Stillgelegtes Gleis" icon="disused.png" type="way">
@@ -1639,18 +1561,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="highspeed"
 					text="Highspeed traffic (~ >200 km/h)"
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					default="off"
 					/>
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="LZB"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -1708,7 +1627,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -1737,12 +1655,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="Abgebautes Gleis" icon="abandoned.png" type="way">
@@ -1780,18 +1696,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="highspeed"
 					text="Highspeed traffic (~ >200 km/h)"
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					default="off"
 					/>
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="LZB"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -1849,7 +1762,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -1878,12 +1790,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<item name="Überbauter Streckenverlauf" icon="razed.png" type="way">
@@ -1922,18 +1832,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="highspeed"
 					text="Highspeed traffic (~ >200 km/h)"
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					default="off"
 					/>
 				<space />
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					default="off"
 					/>
 				<check key="railway:lzb"
 					text="LZB"
 					de.text="Linienzugbeeinflussung (LZB)"
-					default="off"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
@@ -1992,7 +1899,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
-					default="off"
 					/>
 				<combo key="rack"
 					text="Rack"
@@ -2021,12 +1927,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
-					default="off"
 					/>
 				<check key="cutting"
 					text="Cutting"
 					de.text="Einschnitt"
-					default="off"
 					/>
 			</item>
 			<separator />
@@ -2096,22 +2000,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:local_operated"
 					text="Local operated"
 					de.text="Ortsgestellt"
-					default="off"
 					/>
 				<check key="railway:switch:electric"
 					text="Electric"
 					de.text="Elektrischer Weichenantrieb"
-					default="off"
 					/>
 				<check key="railway:switch:heated"
 					text="Heated"
 					de.text="Weichenheizung"
-					default="off"
 					/>
 				<check key="railway:switch:resetting"
 					text="resetting switch"
 					de.text="Rückfallweiche"
-					default="off"
 					/>
 				<combo key="railway:switch"
 					text="Switch type"
@@ -2148,7 +2048,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:switch:movable_frog"
 					text="Movable frog"
 					de.text="Bewegliches Herzstück"
-					default="off"
 					/>
 			</item>
 			<item name="Kreuzung" type="node">
@@ -2175,12 +2074,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:local_operated"
 					text="Local operated"
 					de.text="Ortsbedient"
-					default="off"
 					/>
 				<check key="railway:signal:minor:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<key key="railway:signal:minor"
 					value="AT-V2:sperrsignal" />
@@ -2243,17 +2140,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:local_operated"
 				text="Local operated"
 				de.text="Ortsbedient"
-				default="off"
 				/>
 			<check key="building"
 				text="Building"
 				de.text="Gebäude"
-				default="off"
 				/>
 			<check key="disused"
 				text="out of service"
 				de.text="Außer Betrieb"
-				default="off"
 				/>
 		</item>
 		<group name="Betriebsstellen">
@@ -2665,22 +2559,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="train"
 					text="Railway traffic?"
 					de.text="Eisenbahnverkehr?"
-					default="off"
 					/>
 				<check key="light_rail"
 					text="Light rail traffic?"
 					de.text="Stadtbahn- oder Schnellbahn-Verkehr?"
-					default="off"
 					/>
 				<check key="subway"
 					text="Subway traffic?"
 					de.text="U-Bahn-Verkehr?"
-					default="off"
 					/>
 				<check key="tram"
 					text="Tram traffic?"
 					de.text="Straßenbahnverkehr?"
-					default="off"
 					/>
 				<text key="operator"
 					text="Operator (e.g. 'ÖBB-Personenverkehr AG')"
@@ -2750,22 +2640,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="train"
 					text="Railway traffic?"
 					de.text="Eisenbahnverkehr?"
-					default="off"
 					/>
 				<check key="light_rail"
 					text="Light rail traffic?"
 					de.text="Stadtbahn- oder Schnellbahn-Verkehr?"
-					default="off"
 					/>
 				<check key="subway"
 					text="Subway traffic?"
 					de.text="U-Bahn-Verkehr?"
-					default="off"
 					/>
 				<check key="tram"
 					text="Tram traffic?"
 					de.text="Straßenbahnverkehr?"
-					default="off"
 					/>
 				<roles>
 					<role key=""
@@ -3085,23 +2971,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="crossing:light"
 				text="Lights"
 				de.text="Warnlicht"
-				default="off"
 				/>
 			<check key="crossing:saltire"
 				text="Saltire"
 				de.text="Andreaskreuz"
-				default="off"
 				/>
 			<check key="crossing:bell"
 				text="Bell"
 				de.text="Akustischer Warnton"
-				default="off"
 				/>
 			<space />
 			<check key="crossing:chicane"
 				text="Chicane"
 				de.text="Umlaufgitter"
-				default="off"
 				/>
 			<combo key="crossing:supervision"
 				text="Type of supervision" de.text="Art der Überwachung"
@@ -3122,7 +3004,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="crossing:on_demand"
 				text="On demand"
 				de.text="Anrufschranke"
-				default="off"
 				/>
 		</item>
 		<item name="Little crossing for pedestrians" de.name="Reisendenübergang" type="node">
@@ -3152,23 +3033,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="crossing:light"
 				text="Lights"
 				de.text="Warnlicht"
-				default="off"
 				/>
 			<check key="crossing:saltire"
 				text="Saltire"
 				de.text="Andreaskreuz"
-				default="off"
 				/>
 			<check key="crossing:bell"
 				text="Bell"
 				de.text="Akustischer Warnton"
-				default="off"
 				/>
 			<space />
 			<check key="crossing:chicane"
 				text="Chicane"
 				de.text="Umlaufgitter"
-				default="off"
 				/>
 			<combo key="crossing:supervision"
 				text="Type of supervision" de.text="Art der Überwachung"
@@ -3189,7 +3066,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="crossing:on_demand"
 				text="On demand"
 				de.text="Anrufschranke"
-				default="off"
 				/>
 		</item>
 		<separator />
@@ -3216,12 +3092,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:milestone:catenary_mast"
 				text="On catenary mast"
 				de.text="Am Oberleitungsmast"
-				default="off"
 				/>
 			<check key="railway:milestone:emergency_brake_override"
 				text="Emergency brake override"
 				de.text="Notbremsüberbrückung (NBÜ)"
-				default="off"
 				/>
 			<combo key="railway:milestone:emergency_brake_override:direction"
 				text="Direction of emergency brake override (if existing)"
@@ -3245,17 +3119,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="area"
 				text="Area"
 				de.text="Fläche"
-				default="off"
 				/>
 			<check key="lit"
 				text="Lit"
 				de.text="Beleuchtet"
-				default="off"
 				/>
 			<check key="covered"
 				text="Covered"
 				de.text="Überdacht"
-				default="off"
 				/>
 			<combo key="surface"
 				text="Surface"
@@ -3284,22 +3155,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="train"
 				text="Railway traffic?"
 				de.text="Eisenbahnverkehr?"
-				default="off"
 				/>
 			<check key="light_rail"
 				text="Light rail traffic?"
 				de.text="Stadtbahn- oder Schnellbahn-Verkehr?"
-				default="off"
 				/>
 			<check key="subway"
 				text="Subway traffic?"
 				de.text="U-Bahn-Verkehr?"
-				default="off"
 				/>
 			<check key="tram"
 				text="Tram traffic?"
 				de.text="Straßenbahnverkehr?"
-				default="off"
 				/>
 		</item>
 		<item name="Fahrkartenschalter" type="node">
@@ -3337,7 +3204,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="bicycle"
 				text="Accessible with bicycles"
 				de.text="Passierbar mit Fahrrädern"
-				default="off"
 				/>
 		</item>
 		<item name="Bahnhofsgebäude" type="closedway">
@@ -3411,7 +3277,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="building"
 					text="Building"
 					de.text="Gebäude"
-					default="off"
 					/>
 			</item>
 			<item name="Wasserkran" type="node">
@@ -3436,7 +3301,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="area"
 					text="Area"
 					de.text="Fläche"
-					default="off"
 					/>
 			</item>
 			<item name="Waschanlage" type="node,closedway">
@@ -3446,7 +3310,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="building"
 					text="Building"
 					de.text="Gebäude"
-					default="off"
 					/>
 			</item>
 			<item name="Lokgrube" type="node">
@@ -3461,7 +3324,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="building"
 					text="Building"
 					de.text="Gebäude"
-					default="off"
 					/>
 				<text key="name"
 					text="Name"
@@ -3475,7 +3337,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="building"
 					text="Building"
 					de.text="Gebäude"
-					default="off"
 					/>
 				<text key="name"
 					text="Name"
@@ -3505,7 +3366,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
-					default="off"
 					/>
 				<combo key="surface"
 					text="Surface"
@@ -3520,7 +3380,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="area"
 					text="Area"
 					de.text="Fläche"
-					default="off"
 					/>
 				<text key="operator"
 					text="Operator (e.g. 'ÖBB-Infrastruktur AG')"
