@@ -189,9 +189,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal states"
 						de.text="Signalzustände"
 						delimiter="|"
-						values="DE-ESO:hp0;DE-ESO:ks1|DE-ESO:hp0;DE-ESO:ks1;DE-ESO:kennlicht|DE-ESO:hp0;DE-ESO:ks1;off"
-						de.display_values="Hp 0 und Ks 1|Hp 0, Ks 1 und Kennlicht|Hp 0, Ks 1 und Dunkelschaltung"
-						display_values="Hp 0 and Ks 1|Hp 0, Ks 1 and marker light|Hp 0, Ks 1 and dark" />
+						values="DE-ESO:hp0;DE-ESO:ks1|DE-ESO:hp0;DE-ESO:ks1;DE-ESO:kennlicht|DE-ESO:hp0;DE-ESO:ks1;off|DE-ESO:hp0|DE-ESO:hp0;off"
+						de.display_values="Hp 0 und Ks 1|Hp 0, Ks 1 und Kennlicht|Hp 0, Ks 1 und Dunkelschaltung|Hp 0|Hp 0 und Dunkelschaltung (ETCS-Zufahrtsicherungssignal)"
+						display_values="Hp 0 and Ks 1|Hp 0, Ks 1 and marker light|Hp 0, Ks 1 and dark|Hp 0|Hp 0 and dark (ETCS approach protection signal)" />
 					<combo key="railway:signal:main:function"
 						text="Signal function"
 						de.text="Signalaufgabe"
