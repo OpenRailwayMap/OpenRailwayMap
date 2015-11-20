@@ -1039,7 +1039,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Einschnitt"
 					/>
 			</item>
-			<item name="U-Bahngleis" icon="subway-32.png" type="way">
+			<item name="U-Bahngleis" icon="de/subway-32.png" type="way">
 				<label text="Unterirdisch verlegte Stadt- und Schnellbahnen, teilweise auch oberirdischer Verlauf möglich. Jedes Gleis wird einzeln erfasst. Zusätzlich noch im Menü 'Tunnel' auswählen!" />
 				<space />
 				<key key="railway"

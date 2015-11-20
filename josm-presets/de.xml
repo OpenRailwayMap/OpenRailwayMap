@@ -1116,7 +1116,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Einschnitt"
 					/>
 			</item>
-			<item de.name="U-Bahngleis" name="Subway/Underground Railway" icon="subway-32.png" type="way">
+			<item de.name="U-Bahngleis" name="Subway/Underground Railway" icon="de/subway-32.png" type="way">
 				<label text="Subway tracks. May run overground but separated from car traffic. Every track is mapped individually. Additionally you can choose 'Tunnel' if it is underground." de.text="Unterirdisch verlegte Stadt- und Schnellbahnen, teilweise auch oberirdischer Verlauf möglich. Jedes Gleis wird einzeln erfasst. Zusätzlich noch im Menü 'Tunnel' auswählen!" />
 				<space />
 				<key key="railway"
