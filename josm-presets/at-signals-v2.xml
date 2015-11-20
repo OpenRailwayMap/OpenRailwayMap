@@ -229,6 +229,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Signalzustände (Mehrfachauswahl)"
 				delimiter=";"
 				values="AT-V2:vorsicht;AT-V2:hauptsignal_frei;AT-V2:hauptsignal_frei_mit_60;AT-V2:hauptsignal_frei_mit_40"
+				display_values="Vorsicht;Hauptsignal frei;Hauptsignal frei mit 60 km/h;Hauptsignal frei mit 40 km/h"
 				/>
 			<space />
 			<preset_link preset_name="Geschwindigkeitsvoranzeiger" />
