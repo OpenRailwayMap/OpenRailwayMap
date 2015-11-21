@@ -199,19 +199,63 @@ way[railway][name=~/^[0-9]+[a-z]*.*/][!"railway:track_ref"]
 }
 
 /* track names or ref should not include the word 'track' */
-way[railway][name=~/^[Gg]leis [0-9]+[a-z]*.*/],
-way[railway]["name:de"=~/^[Gg]leis [0-9]+[a-z]*.*/],
-way[railway][name=~/^[Tt]rack [0-9]+[a-z]*.*/],
-way[railway][name=~/^[Vv]oie [0-9]+[a-z]*.*/],
-way[railway]["name:fr"=~/^[Vv]oie [0-9]+[a-z]*.*/],
-way[railway][ref=~/^[Gg]leis [0-9]+[a-z]*.*/],
-way[railway][ref=~/^[Tt]rack [0-9]+[a-z]*.*/],
-way[railway][ref=~/^[Vv]oie [0-9]+[a-z]*.*/]
+way[railway][railway!=platform][name=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway][railway!=platform]["name:de"=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway][railway!=platform][name=~/^[Tt]rack [0-9]+[a-z]*.*/],
+way[railway][railway!=platform][name=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway][railway!=platform]["name:fr"=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway][railway!=platform][ref=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway][railway!=platform][ref=~/^[Tt]rack [0-9]+[a-z]*.*/],
+way[railway][railway!=platform][ref=~/^[Vv]oie [0-9]+[a-z]*.*/]
 {
-	throwError: "track names or ref should not include the word 'track'";
+	throwError: "track names or refs should not include the word 'track', tag those numbers as railway:track_ref";
 	assertMatch: "way railway=rail name=\"Gleis 14b\"";
 	assertMatch: "way railway=rail ref=\"track 4b\"";
 	assertNoMatch: "way railway=rail name=14b";
+}
+
+way[railway=platform][!description][name=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway=platform][!description]["name:de"=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway=platform][!description][name=~/^[Tt]rack [0-9]+[a-z]*.*/],
+way[railway=platform][!description][name=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway=platform][!description]["name:fr"=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway=platform][!description][ref=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway=platform][!description][ref=~/^[Tt]rack [0-9]+[a-z]*.*/],
+way[railway=platform][!description][ref=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway=platform][description=*name][name=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway=platform][description=*"name:de"]["name:de"=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway=platform][description=*name][name=~/^[Tt]rack [0-9]+[a-z]*.*/],
+way[railway=platform][description=*name][name=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway=platform][description=*"name:fr"]["name:fr"=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway=platform][description=*ref][ref=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway=platform][description=*ref][ref=~/^[Tt]rack [0-9]+[a-z]*.*/],
+way[railway=platform][description=*ref][ref=~/^[Vv]oie [0-9]+[a-z]*.*/]
+{
+	throwError: "platform names or refs should not include the word 'track', write that as 'description', put the bare numbers in 'ref', separated by ';'";
+	fixChangeKey: "{2.key}=>description";
+	assertMatch: "way railway=platform name=\"Gleis 14b\"";
+	assertMatch: "way railway=platform name=\"Gleis 14b\" description=\"Gleis 14b\"";
+	assertMatch: "way railway=platform ref=\"track 4b\"";
+	assertMatch: "way railway=platform ref=\"track 4b\" ref=\"track 4b\"";
+	assertNoMatch: "way railway=platform name=14b";
+	assertNoMatch: "way railway=rail name=14b";
+	assertNoMatch: "way railway=platform name=14b description=other";
+}
+
+way[railway=platform][description][description!=*name][name=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway=platform][description][description!=*"name:de"]["name:de"=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway=platform][description][description!=*name][name=~/^[Tt]rack [0-9]+[a-z]*.*/],
+way[railway=platform][description][description!=*name][name=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway=platform][description][description!=*"name:fr"]["name:fr"=~/^[Vv]oie [0-9]+[a-z]*.*/],
+way[railway=platform][description][description!=*ref][ref=~/^[Gg]leis [0-9]+[a-z]*.*/],
+way[railway=platform][description][description!=*ref][ref=~/^[Tt]rack [0-9]+[a-z]*.*/],
+way[railway=platform][description][description!=*ref][ref=~/^[Vv]oie [0-9]+[a-z]*.*/]
+{
+	throwError: "platform names or refs should not include the word 'track', write that as 'description', put the bare numbers in 'ref', separated by ';'";
+	assertMatch: "way railway=platform name=\"Gleis 14b\" description=other";
+	assertMatch: "way railway=platform ref=\"track 4b\" description=other";
+	assertNoMatch: "way railway=platform name=14b";
+	assertNoMatch: "way railway=platform name=14b description=14b";
 }
 
 /* power:type=overhead is deprecated, electrified=contact_line is sufficent */
