@@ -1,6 +1,6 @@
 .PHONY: check clean
 
-PRESETFILES = at.zip at-signals-v2.zip de.zip de-avg-signals.zip de-signals-eso.zip
+PRESETFILES = at.zip at-signals-v2.zip de.zip de-avg-signals.zip de-signals-eso.zip de-signals-bostrab.zip
 
 all: $(PRESETFILES)
 
