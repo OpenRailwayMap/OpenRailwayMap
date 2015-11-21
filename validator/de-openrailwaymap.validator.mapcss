@@ -293,3 +293,69 @@ node[railway=signal]["railway:signal:minor"="DE-ESO:sh"]["railway:signal:minor:f
 	assertNoMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=semaphore railway:signal:minor:states=DE-ESO:sh0";
 	assertNoMatch: "node railway=signal railway:signal:minor=DE-ESO:sh railway:signal:minor:form=semaphore railway:signal:minor:states=DE-ESO:sh0;DE-ESO:sh1";
 }
+
+/* Check correct tagging of Zs3/Zs3v signs */
+node[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"]["railway:signal:speed_limit_distant:speed"!~/^[1-9][0-9]?[05]$/]["railway:signal:speed_limit_distant:speed"!=5],
+node[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed" > 160]
+{
+	throwError: "Zs3v sign signals can only have a single speed, are a multiple of 5 and cannot be greater than 160";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=sign railway:signal:speed_limit_distant:speed=foo";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=sign railway:signal:speed_limit_distant:speed=05";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=sign railway:signal:speed_limit_distant:speed=87";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=sign railway:signal:speed_limit_distant:speed=200";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=sign railway:signal:speed_limit_distant:speed=\"80;90\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=light railway:signal:speed_limit_distant:speed=foo";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=light railway:signal:speed_limit_distant:speed=\"87\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=light railway:signal:speed_limit_distant:speed=\"80;90\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=sign railway:signal:speed_limit_distant:speed=5";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=sign railway:signal:speed_limit_distant:speed=80";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit_distant:form=sign railway:signal:speed_limit_distant:speed=85";
+}
+node[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"]["railway:signal:speed_limit:speed"!~/^[1-9][0-9]?[05]$/]["railway:signal:speed_limit:speed"!=5],
+node[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed" > 160]
+{
+	throwError: "Zs3 sign signals can only have a single speed, are a multiple of 5 and cannot be greater than 160";
+	assertMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=sign railway:signal:speed_limit:speed=foo";
+	assertMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=sign railway:signal:speed_limit:speed=05";
+	assertMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=sign railway:signal:speed_limit:speed=87";
+	assertMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=sign railway:signal:speed_limit:speed=200";
+	assertMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=sign railway:signal:speed_limit:speed=\"80;90\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=foo";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=87";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"80;90\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=sign railway:signal:speed_limit:speed=5";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=sign railway:signal:speed_limit:speed=80";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=sign railway:signal:speed_limit:speed=85";
+}
+
+/* Check correct tagging of Zs3/Zs3v light signals */
+node[railway=signal]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit_distant:speed"]["railway:signal:speed_limit_distant:speed"!~/^([1-9]0|1[0-6]0|off|\?)(;([1-9]0|1[0-6]0|off|\?))*$/]
+{
+	throwError: "Zs3v light signal states should have the form 'speed[;speed …][;off][;?], speeds can only be multiples of 10";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=foo";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=85";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=200";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=\"80;foo\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=\"80\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=\"80;120\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=\"80;off\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=\"80;120;off;?\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=\"?;80;off;120\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=\"80;?\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant=\"DE-ESO:zs3v\" railway:signal:speed_limit:form=light railway:signal:speed_limit_distant:speed=\"off;?\"";
+}
+node[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"]["railway:signal:speed_limit:speed"!~/^([1-9]0|1[0-6]0|off|\?)(;([1-9]0|1[0-6]0|off|\?))*$/]
+{
+	throwError: "Zs3 light signal states should have the form 'speed[;speed …][;off][;?], speeds can only be multiples of 10";
+	assertMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=foo";
+	assertMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=85";
+	assertMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=200";
+	assertMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"80;foo\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"80\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"80;120\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"80;off\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"80;120;off;?\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"?;80;off;120\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"80;?\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"off;?\"";
+}
