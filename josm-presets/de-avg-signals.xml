@@ -103,7 +103,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 		</item>
 		<separator />
-		<item name="Bü-Überwachungssignal (Bü 200/Bü 201)" type="node">
+		<item name="Bü-Überwachungssignal (Bü 200/Bü 201)" icon="de/avg/bue201-32.png" type="node">
 			<label text="Bü-Überwachungssignal (Bü 200/Bü 201)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -134,7 +134,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:crossing:form"
 				value="light" />
 		</item>
-		<item name="Bü-Überwachungssignal erwarten (Bü 200v/201v)" type="node">
+		<item name="Bü-Überwachungssignal erwarten (Bü 200v/201v)" icon="de/avg/bue201v-32.png" type="node">
 			<label text="Bü-Überwachungssignal erwarten (Bü 200v/201v)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -249,7 +249,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Possible Signals"
 				de.text="Anzeigbare Signale"
 				delimiter=";"
-				values="DE-AVG:w1;DE-AVG:w2;DE-AVG:w3;DE-AVG:w4;DE-AVG:w5;DE-AVG:w11;DE-AVG:w12;DE-AVG:w13 "
+				values="DE-AVG:w1;DE-AVG:w2;DE-AVG:w3;DE-AVG:w4;DE-AVG:w5;DE-AVG:w11;DE-AVG:w12;DE-AVG:w13"
 				de.display_values="geradeaus 30 km/h;rechts 30 km/h;links 30 km/h;Störung;Weiche stellbereit;geradeaus (vmax);rechts;links"
 				/>
 			<combo key="railway:signal:switch:height"
@@ -259,7 +259,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				/>
 		</item>
-		<item name="Weichenvorrücksignal (Wv)" type="node">
+		<item name="Weichenvorrücksignal (Wv)" icon="de/avg/wv1-32.png" type="node">
 			<label text="Weichenvorrücksignal (Wv)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -297,7 +297,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 		</item>
 		<separator />
-		<item name="Streckentrenner (El 1, St 7)" type="node">
+		<item name="Streckentrenner (El 1, St 7)" icon="de/bostrab/st7-18.png" type="node">
 			<label text="Streckentrenner (El 1, St 7)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -339,7 +339,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="sign" />
 		</item>
 		<separator />
-		<item name="Anforderungssignal (St 9)" type="node">
+		<item name="Anforderungssignal (St 9)" icon="de/bostrab/st9-16.png" type="node">
 			<label text="Anforderungssignal (St 9)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -370,7 +370,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="light" />
 		</item>
 		<separator />
-		<item name="Türen schließen (A 1)" type="node">
+		<item name="Türen schließen (A 1)" icon="de/bostrab/a1-16.png" type="node">
 			<label text="Türen schließen (A 1)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -401,7 +401,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="light" />
 		</item>
 		<separator />
-		<item name="Beginn der Zugsicherung (So 1)" type="node">
+		<item name="Beginn der Zugsicherung (So 1)" icon="de/bostrab/so1-16.png" type="node">
 			<label text="Beginn der Zugsicherung (So 1)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -431,7 +431,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:train_protection:form"
 				value="sign" />
 		</item>
-		<item name="Ende der Zugsicherung (So 2)" type="node">
+		<item name="Ende der Zugsicherung (So 2)" icon="de/bostrab/so2-16.png" type="node">
 			<label text="Ende der Zugsicherung (So 2)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -461,7 +461,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:train_protection:form"
 				value="sign" />
 		</item>
-		<item name="Ende des Lichtraumprofils nach EBO (Ra 14)" type="node">
+		<item name="Ende des Lichtraumprofils nach EBO (Ra 14)" icon="de/avg/ra14-32.png" type="node">
 			<label text="Ende des Lichtraumprofils nach EBO (Ra 14)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
