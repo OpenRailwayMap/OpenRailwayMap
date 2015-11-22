@@ -336,27 +336,13 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-
 	text-color: black;
 	text-halo-radius: 3;
 	text-halo-color: white;
-	/* text-offset-x: eval(add(mul(length(tag("railway:signal:stop:caption")), 3), 6)); */
-	text-offset-x: -12;
+	text-offset-x: eval(length(tag("railway:signal:stop:caption")) * (0 - 3) - 6);
 	text-offset-y: -12;
 	icon-image: "icons/de/ne5-ds301-32.png";
 	icon-width: 11;
 	icon-height: 16;
 	text-allow-overlap: true;
 	allow-overlap: true;
-}
-/* workaround for missing cond() support in KothicJS: match at least 3 chars */
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]["railway:signal:stop:caption"=~/.../]
-{
-	text-offset-x: -15;
-}
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]["railway:signal:stop:caption"=~/..../]
-{
-	text-offset-x: -18;
-}
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]["railway:signal:stop:caption"=~/...../]
-{
-	text-offset-x: -21;
 }
 
 @media not (user-agent: josm) {
