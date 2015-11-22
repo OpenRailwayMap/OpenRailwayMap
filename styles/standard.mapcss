@@ -638,6 +638,134 @@ node|z11-[railway=milestone]["railway:position"=~/\.0$/]
 	z-index: 601;
 }
 
+/***************************************/
+/* level crossings without information */
+/***************************************/
+node|z14-[railway=level_crossing][!"crossing:barrier"][!"crossing:light"]
+{
+	z-index: 4500;
+	icon-image: "icons/level-crossing-basic-24.png";
+	icon-width: 12;
+	icon-height: 7;
+	allow-overlap: false; 
+}
+
+/***********************************************/
+/* level crossings without barriers and lights */
+/***********************************************/
+node|z14-[railway=level_crossing]["crossing:barrier"=no][!"crossing:light"],
+node|z14-[railway=level_crossing][!"crossing:barrier"]["crossing:light"=no],
+node|z14-[railway=level_crossing]["crossing:barrier"=no]["crossing:light"=no]
+{
+	z-index: 5500;
+	icon-image: "icons/level-crossing-32.png";
+	icon-width: 16;
+	icon-height: 11;
+	allow-overlap: false; 
+}
+
+/*******************************/
+/* level crossings with lights */
+/*******************************/
+node|z14-[railway=level_crossing][!"crossing:barrier"]["crossing:light"!=no]["crossing:light"],
+node|z14-[railway=level_crossing]["crossing:barrier"=no]["crossing:light"!=no]["crossing:light"]
+{
+	z-index: 5510;
+	icon-image: "icons/level-crossing-with-lights-32.png";
+	icon-width: 16;
+	icon-height: 11;
+	allow-overlap: false; 
+}
+
+/*******************************************/
+/* level crossings with lights and barrier */
+/*******************************************/
+node|z14-[railway=level_crossing]["crossing:barrier"!=no]["crossing:barrier"]["crossing:light"!=no]["crossing:light"]
+{
+	z-index: 5530;
+	icon-image: "icons/level-crossing-with-lights-and-barrier-28.png";
+	icon-width: 14;
+	icon-height: 12;
+	allow-overlap: false; 
+}
+
+/********************************/
+/* level crossings with barrier */
+/********************************/
+node|z14-[railway=level_crossing][!"crossing:light"]["crossing:barrier"!=no]["crossing:barrier"],
+node|z14-[railway=level_crossing]["crossing:light"=no]["crossing:barrier"!=no]["crossing:barrier"]
+{
+	z-index: 5520;
+	icon-image: "icons/level-crossing-with-barrier-28.png";
+	icon-width: 14;
+	icon-height: 12;
+	allow-overlap: false; 
+}
+
+/*********************************/
+/* crossings without information */
+/*********************************/
+node|z14-[railway=crossing][!"crossing:barrier"][!"crossing:light"]
+{
+	z-index: 4500;
+	icon-image: "icons/crossing-basic-22.png";
+	icon-width: 7;
+	icon-height: 11;
+	allow-overlap: false; 
+}
+
+/*****************************************/
+/* crossings without barriers and lights */
+/*****************************************/
+node|z14-[railway=crossing]["crossing:barrier"=no][!"crossing:light"],
+node|z14-[railway=crossing][!"crossing:barrier"]["crossing:light"=no],
+node|z14-[railway=crossing]["crossing:barrier"=no]["crossing:light"=no]
+{
+	z-index: 5500;
+	icon-image: "icons/crossing-unsecured-22.png";
+	icon-width: 11;
+	icon-height: 7;
+	allow-overlap: false; 
+}
+
+/*************************/
+/* crossings with lights */
+/*************************/
+node|z14-[railway=crossing][!"crossing:barrier"]["crossing:light"!=no]["crossing:light"],
+node|z14-[railway=crossing]["crossing:barrier"=no]["crossing:light"!=no]["crossing:light"]
+{
+	z-index: 5510;
+	icon-image: "icons/crossing-with-lights-22.png";
+	icon-width: 11;
+	icon-height: 7;
+	allow-overlap: false; 
+}
+
+/*************************************/
+/* crossings with lights and barrier */
+/*************************************/
+node|z14-[railway=crossing]["crossing:barrier"!=no]["crossing:barrier"]["crossing:light"!=no]["crossing:light"]
+{
+	z-index: 5530;
+	icon-image: "icons/crossing-with-lights-and-barrier-22.png";
+	icon-width: 11;
+	icon-height: 7;
+	allow-overlap: false; 
+}
+
+/**************************/
+/* crossings with barrier */
+/**************************/
+node|z14-[railway=crossing][!"crossing:light"]["crossing:barrier"!=no]["crossing:barrier"],
+node|z14-[railway=crossing]["crossing:light"=no]["crossing:barrier"!=no]["crossing:barrier"]
+{
+	z-index: 5520;
+	icon-image: "icons/crossing-with-barrier-22.png";
+	icon-width: 11;
+	icon-height: 7;
+	allow-overlap: false; 
+}
+
 /************/
 /* stations */
 /************/
