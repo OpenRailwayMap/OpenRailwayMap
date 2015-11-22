@@ -523,6 +523,63 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE
 	allow-overlap: true;
 }
 
+/********************************************/
+/* AT shunting light signals (Verschubverbot)  */
+/********************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="AT-V2:verschubsignal"]["railway:signal:shunting:form"=light]
+{
+	z-index: 5000;
+	text: "ref";
+	text-offset: 11;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/verschubverbot-aufgehoben-28.png";
+	icon-width: 10;
+	icon-height: 14;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*************************************************/
+/* AT minor light signals (Sperrsignale) as sign */
+/*************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="AT-V2:weiterfahrt_verboten"]["railway:signal:minor:form"=sign]
+{
+	z-index: 5000;
+	text: "ref";
+	text-offset: 11;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/weiterfahrt-verboten-24.png";
+	icon-width: 12;
+	icon-height: 12;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/**************************************************************/
+/* AT minor light signals (Sperrsignale) as semaphore signals */
+/**************************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="AT-V2:sperrsignal"]["railway:signal:minor:form"=semaphore]
+{
+	z-index: 5000;
+	text: "ref";
+	text-offset: 11;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/weiterfahrt-erlaubt-28.png";
+	icon-width: 7;
+	icon-height: 14;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /***************************/
 /* DE main entry sign Ne 1 */
 /***************************/
@@ -1035,6 +1092,28 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	allow-overlap: true;
 }
 
+/************************************************************************/
+/* AT distant semaphore signals which                                   */
+/*  - do not share post with a main signal                              */
+/*  - can show stop or does not have railway:signal:distant:states tag  */
+/*  - if the signal can also show other aspects, later rules will match */
+/************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="AT-V2:vorsignal"]["railway:signal:distant:form"=semaphore]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/vorsicht-semaphore-38.png";
+	icon-width: 12;
+	icon-height: 19;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /************************************************/
 /* DE distant signal replacement by sign So 106 */
 /* AT Kreuztafel                                */
@@ -1161,6 +1240,67 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 /*  - can display Hp 2                     */
 /*******************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:hp"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"~="DE-ESO:hp2"]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de/hp2-semaphore-40.png";
+	icon-width: 12;
+	icon-height: 20;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*******************************************/
+/* AT main semaphore signals type Hp which */
+/*  - have no railway:signal:states=* tag  */
+/*******************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:hauptsignal"]["railway:signal:main:form"=semaphore]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de/hp0-semaphore-32.png";
+	icon-width: 16;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*******************************************/
+/* AT main semaphore signals type Hp which */
+/*  - can show "Frei"                      */
+/*******************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:hauptsignal"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"~="AT-V2:frei"]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de/hp1-semaphore-38.png";
+	icon-width: 12;
+	icon-height: 19;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*******************************************/
+/* AT main semaphore signals type Hp which */
+/*  - can show "Frei mit 40"/"Frei mit 20" */
+/*******************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:hauptsignal"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"~="AT-V2:frei_mit_40"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:hauptsignal"]["railway:signal:main:form"=semaphore]["railway:signal:main:states"~="AT-V2:frei_mit_20"]
 {
 	z-index: 10000;
 	text: "ref";
