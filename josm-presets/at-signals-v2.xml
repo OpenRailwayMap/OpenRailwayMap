@@ -982,7 +982,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<combo key="railway:signal:electricity"
 				text="Exact type"
 				de.text="Signaltyp"
-				values="AT-V2:ankündigung_hauptschalter_aus,AT-V2:hauptschalter_aus,AT-V2:hauptschalter_ein,AT-V2:ankündigung_stromabnehmer_tief,AT-V2:stromabnehmer_tief,AT-V2:stromabnehmer_hoch,AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer;AT-V2:bahnhof-streckentrennung_anfang;AT-V2:bahnhof-streckentrennung_ende"
+				values="AT-V2:ankündigung_hauptschalter_aus,AT-V2:hauptschalter_aus,AT-V2:hauptschalter_ein,AT-V2:ankündigung_stromabnehmer_tief,AT-V2:stromabnehmer_tief,AT-V2:stromabnehmer_hoch,AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer,AT-V2:bahnhof-streckentrennung_anfang,AT-V2:bahnhof-streckentrennung_ende"
 				display_values="Ankündigung Hauptschalter aus,Hauptschalter aus,Hauptschalter ein,Ankündigung Stromabnehmer tief,Stromabnehmer tief,Stromabnehmer hoch,Halt für Fahrzeuge mit angehobenem Stromabnehmer,Bahnhof-Streckentrennung Anfang,Bahnhof-Streckentrennung Ende"
 				/>
 			<combo key="railway:signal:electricity:turn_direction"
@@ -1724,8 +1724,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:main_repeated:states"
 				value="AT-V2:hauptsignal_halt;AT-V2:hauptsignal_frei;AT-V2:hauptsignal_frei_geschwindigkeitsbeschränkung" />
 			<combo key="railway:signal:main_repeated:substitute_signal"
-				text="Direction"
-				de.text="Anzeigerichtung"
+				text="Substitute signal"
+				de.text="Ersatzsignal"
 				values="AT-V2:ersatzsignal, "
 				display_values="Kann Ersatzsignal anzeigen,Kann kein Ersatzsignal anzeigen"
 				/>
