@@ -13,7 +13,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Signale AT V2" description="Preset to tag Austrian railway signals">
 	<group name="OpenRailwayMap Signale AT V2" icon="signals.png">
-		<item name="Formhauptsignal" type="node">
+		<item name="Formhauptsignal" type="node" icon="de/hp1-semaphore-38.png" >
 			<label text="Formhauptsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -77,7 +77,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<preset_link preset_name="Verschubsignal" />
 			<preset_link preset_name="Abfahrtsignal" />
 		</item>
-		<item name="Lichthauptsignal" type="node">
+		<item name="Lichthauptsignal" type="node" icon="at/hauptsignal-frei-mit-40-32.png" >
 			<label text="Lichthauptsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -143,7 +143,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<preset_link preset_name="Abfahrtsignal" />
 		</item>
 		<separator />
-		<item name="Formvorsignal" type="node">
+		<item name="Formvorsignal" type="node" icon="at/vorsicht-semaphore-38.png" >
 			<label text="Formvorsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -186,7 +186,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<space />
 			<preset_link preset_name="Geschwindigkeitsvoranzeiger" />
 		</item>
-		<item name="Lichtvorsignal" type="node">
+		<item name="Lichtvorsignal" type="node" icon="at/vorsignal-hauptsignal-frei-mit-40-22.png" >
 			<label text="Lichtvorsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -355,7 +355,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<preset_link preset_name="Verschubsignal" />
 			<preset_link preset_name="Abfahrtsignal" />
 		</item>
-		<item name="Sperrsignal, verstellbar" type="node">
+		<item name="Sperrsignal, verstellbar" type="node" icon="at/weiterfahrt-erlaubt-28.png" >
 			<label text="Sperrsignal, verstellbar" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -396,7 +396,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				/>
 		</item>
-		<item name="Sperrsignal, fix" type="node">
+		<item name="Sperrsignal, fix" type="node" icon="at/weiterfahrt-verboten-24.png" >
 			<label text="Sperrsignal, fix" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -472,7 +472,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<separator />
 		<group name="Verschubsignale">
-			<item name="Verschubsignal" type="node">
+			<item name="Verschubsignal" type="node" icon="at/verschubverbot-aufgehoben-28.png" >
 				<label text="Verschubsignal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -513,7 +513,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
-			<item name="Verschubhalttafel" type="node">
+			<item name="Verschubhalttafel" type="node" icon="de/ra10-32.png" >
 				<label text="Verschubhalttafel" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -548,7 +548,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
-			<item name="Wartesignal (Tafel)" type="node">
+			<item name="Wartesignal (Tafel)" type="node" icon="de/ra11-sign-32.png" >
 				<label text="Wartesignal (Tafel)" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -659,7 +659,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<separator />
-		<item name="Geschwindigkeitsanzeiger" type="node">
+		<item name="Geschwindigkeitsanzeiger" type="node" icon="at/geschwindigkeitsanzeiger-40-sign-28.png" >
 			<label text="Geschwindigkeitsanzeiger" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -704,7 +704,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				/>
 		</item>
-		<item name="Geschwindigkeitsvoranzeiger" type="node">
+		<item name="Geschwindigkeitsvoranzeiger" type="node" icon="at/geschwindigkeitsvoranzeiger-40-light-28.png" >
 			<label text="Geschwindigkeitsvoranzeiger" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -749,7 +749,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				/>
 		</item>
-		<item name="Geschwindigkeitstafel" type="node">
+		<item name="Geschwindigkeitstafel" type="node" icon="at/geschwindigkeitstafel-80-sign-32.png" >
 			<label text="Geschwindigkeitstafel" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -795,7 +795,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				/>
 		</item>
-		<item name="Ankündigungstafel" type="node">
+		<item name="Ankündigungstafel" type="node" icon="at/ankuendigungstafel-80-sign-44.png" >
 			<label text="Ankündigungstafel" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1647,7 +1647,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="down" />
 			</item>
 		</group>
-		<item name="LZB-Bereichskennzeichen" type="node">
+		<item name="LZB-Bereichskennzeichen" type="node" icon="de/lzb-section-start-32.png" >
 			<label text="LZB-Bereichskennzeichen" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
