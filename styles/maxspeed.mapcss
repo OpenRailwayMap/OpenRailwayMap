@@ -585,6 +585,14 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 	icon-height: 19;
 	allow-overlap: true;
 }
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=30]
+{
+	z-index: 110;
+	icon-image: "icons/de/zs3v-30-light-38.png";
+	icon-width: 14;
+	icon-height: 19;
+	allow-overlap: true;
+}
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=40]
 {
 	icon-image: "icons/de/zs3v-40-sign-down-44.png";
@@ -708,6 +716,129 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=160]
 {
 	icon-image: "icons/de/zs3v-160-sign-down-44.png";
+}
+
+/* Austrian speed signals (Geschwindigkeitsvoranzeiger) as as signs */
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(1|2|3|4|5|6|7|8|9)0$/],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=100]
+{
+	z-index: eval(95 + tag("railway:signal:speed_limit_distant:speed")/2);
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=10]
+{
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-10-sign-44.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=20]
+{
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-20-sign-44.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=30]
+{
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-30-sign-44.png";
+}
+/* Austrian speed signals (Geschwindigkeitsvoranzeiger) as light signals */
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=30]
+{
+	z-index: 110;
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-30-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=40]
+{
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-40-sign-44.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=40]
+{
+	z-index: 115;
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-40-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=50]
+{
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-50-sign-44.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=50]
+{
+	z-index: 120;
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-50-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=60]
+{
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-60-sign-44.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=60]
+{
+	z-index: 125;
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-60-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=70]
+{
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-70-sign-44.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=70]
+{
+	z-index: 130;
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-70-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=80]
+{
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-80-sign-44.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=80]
+{
+	z-index: 135;
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-80-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=90]
+{
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-90-sign-44.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=90]
+{
+	z-index: 140;
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-90-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=100]
+{
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-100-sign-44.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=100]
+{
+	z-index: 145;
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-100-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=120]
+{
+	z-index: 155;
+	icon-image: "icons/at/geschwindigkeitsvoranzeiger-120-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
 }
 
 /* German speed signals (Zs 3) as signs*/
@@ -894,33 +1025,97 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 {
 	icon-image: "icons/at/geschwindigkeitsanzeiger-30-sign-28.png";
 }
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=30]
+{
+	z-index: 210;
+	icon-image: "icons/at/geschwindigkeitsanzeiger-30-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=40]
 {
 	icon-image: "icons/at/geschwindigkeitsanzeiger-40-sign-28.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=40]
+{
+	z-index: 215;
+	icon-image: "icons/at/geschwindigkeitsanzeiger-40-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
 }
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=50]
 {
 	icon-image: "icons/at/geschwindigkeitsanzeiger-50-sign-28.png";
 }
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=50]
+{
+	z-index: 220;
+	icon-image: "icons/at/geschwindigkeitsanzeiger-50-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=60]
 {
 	icon-image: "icons/at/geschwindigkeitsanzeiger-60-sign-28.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=60]
+{
+	z-index: 225;
+	icon-image: "icons/at/geschwindigkeitsanzeiger-60-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
 }
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=70]
 {
 	icon-image: "icons/at/geschwindigkeitsanzeiger-70-sign-28.png";
 }
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=70]
+{
+	z-index: 230;
+	icon-image: "icons/at/geschwindigkeitsanzeiger-70-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=80]
 {
 	icon-image: "icons/at/geschwindigkeitsanzeiger-80-sign-28.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=80]
+{
+	z-index: 235;
+	icon-image: "icons/at/geschwindigkeitsanzeiger-80-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
 }
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=90]
 {
 	icon-image: "icons/at/geschwindigkeitsanzeiger-90-sign-28.png";
 }
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=90]
+{
+	z-index: 240;
+	icon-image: "icons/at/geschwindigkeitsanzeiger-90-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
+}
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=100]
 {
 	icon-image: "icons/at/geschwindigkeitsanzeiger-100-sign-28.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=100]
+{
+	z-index: 245;
+	icon-image: "icons/at/geschwindigkeitsanzeiger-100-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
 }
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=110]
 {
@@ -929,6 +1124,14 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=120]
 {
 	icon-image: "icons/at/geschwindigkeitsanzeiger-120-sign-28.png";
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"~=120]
+{
+	z-index: 255;
+	icon-image: "icons/at/geschwindigkeitsanzeiger-120-light-28.png";
+	icon-width: 14;
+	icon-height: 14;
+	allow-overlap: true;
 }
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=160]
 {
