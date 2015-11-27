@@ -108,424 +108,86 @@ way[maxspeed].dtracks
 	kothicjs-ignore-layer: true;
 }
 
-way[maxspeed<=10].tracks
-{
-	z-index: 1;
-	color: #0100CB;
-}
-
-way[maxspeed>10][maxspeed<=20].tracks
-{
-	z-index: 2;
-	color: #001ECB;
-}
-
-way[maxspeed>20][maxspeed<=30].tracks
-{
-	z-index: 3;
-	color: #003DCB;
-}
-
-way[maxspeed>30][maxspeed<=40].tracks
-{
-	z-index: 4;
-	color: #005BCB;
-}
-
-way[maxspeed>40][maxspeed<=50].tracks
-{
-	z-index: 5;
-	color: #007ACB;
-}
-
-way[maxspeed>50][maxspeed<=60].tracks
-{
-	z-index: 6;
-	color: #0098CB;
-}
-
-way[maxspeed>60][maxspeed<=70].tracks
-{
-	z-index: 7;
-	color: #00B7CB;
-}
-
-way[maxspeed>70][maxspeed<=80].tracks
-{
-	z-index: 8;
-	color: #00CBC1;
-}
-
-way[maxspeed>80][maxspeed<=90].tracks
-{
-	z-index: 9;
-	color: #00CBA2;
-}
-
-way[maxspeed>90][maxspeed<=100].tracks
-{
-	z-index: 10;
-	color: #00CB84;
-}
-
-way[maxspeed>100][maxspeed<=110].tracks
-{
-	z-index: 11;
-	color: #00CB66;
-}
-
-way[maxspeed>110][maxspeed<=120].tracks
-{
-	z-index: 12;
-	color: #00CB47;
-}
-
-way[maxspeed>120][maxspeed<=130].tracks
-{
-	z-index: 13;
-	color: #00CB29;
-}
-
-way[maxspeed>130][maxspeed<=140].tracks
-{
-	z-index: 14;
-	color: #00CB0A;
-}
-
-way[maxspeed>140][maxspeed<=150].tracks
-{
-	z-index: 15;
-	color: #14CB00;
-}
-
-way[maxspeed>150][maxspeed<=160].tracks
-{
-	z-index: 16;
-	color: #33CB00;
-}
-
-way[maxspeed>160][maxspeed<=170].hstracks
-{
-	z-index: 17;
-	color: #51CB00;
-}
-
-way[maxspeed>170][maxspeed<=180].hstracks
-{
-	z-index: 18;
-	color: #70CB00;
-}
-
-way[maxspeed>180][maxspeed<=190].hstracks
-{
-	z-index: 19;
-	color: #8ECB00;
-}
-
-way[maxspeed>190][maxspeed<=200].hstracks
-{
-	z-index: 20;
-	color: #ADCB00;
-}
-
-way[maxspeed>200][maxspeed<=210].hstracks
-{
-	z-index: 21;
-	color: #CBCB00;
-}
-
-way[maxspeed>210][maxspeed<=220].hstracks
-{
-	z-index: 22;
-	color: #CBAD00;
-}
-
-way[maxspeed>220][maxspeed<=230].hstracks
-{
-	z-index: 23;
-	color: #CB8E00;
-}
-
-way[maxspeed>230][maxspeed<=240].hstracks
-{
-	z-index: 24;
-	color: #CB7000;
-}
-
-way[maxspeed>240][maxspeed<=250].hstracks
-{
-	z-index: 25;
-	color: #CB5100;
-}
-
-way[maxspeed>250][maxspeed<=260].hstracks
-{
-	z-index: 26;
-	color: #CB3300;
-}
-
-way[maxspeed>260][maxspeed<=270].hstracks
-{
-	z-index: 27;
-	color: #CB1400;
-}
-
-way[maxspeed>270][maxspeed<=280].hstracks
-{
-	z-index: 28;
-	color: #CB0007;
-}
-
-way[maxspeed>280][maxspeed<=290].hstracks
-{
-	z-index: 29;
-	color: #CB0025;
-}
-
-way[maxspeed>290][maxspeed<=300].hstracks
-{
-	z-index: 30;
-	color: #CB0044;
-}
-
-way[maxspeed>300][maxspeed<=320].hstracks
-{
-	z-index: 31;
-	color: #CB0062;
-}
-
-way[maxspeed>320][maxspeed<=340].hstracks
-{
-	z-index: 32;
-	color: #CB0081;
-}
-
-way[maxspeed>340][maxspeed<=360].hstracks
-{
-	z-index: 33;
-	color: #CB009F;
-}
-
-way[maxspeed>360][maxspeed<=380].hstracks
-{
-	z-index: 34;
-	color: #CB00BD;
-}
-
-way[maxspeed>380][maxspeed<=400].hstracks
-{
-	z-index: 35;
-	color: #BA00CB;
-}
-
-way[maxspeed<=10].dtracks
-{
-	z-index: 1;
-	color: #9595e9;
-}
-
-way[maxspeed>10][maxspeed<=20].dtracks
-{
-	z-index: 2;
-	color: #95a1e9;
-}
-
-way[maxspeed>20][maxspeed<=30].dtracks
-{
-	z-index: 3;
-	color: #95aee9;
-}
-
-way[maxspeed>30][maxspeed<=40].dtracks
-{
-	z-index: 4;
-	color: #95bbe9;
-}
-
-way[maxspeed>40][maxspeed<=50].dtracks
-{
-	z-index: 5;
-	color: #95c8e9;
-}
-
-way[maxspeed>50][maxspeed<=60].dtracks
-{
-	z-index: 6;
-	color: #95d4e9;
-}
-
-way[maxspeed>60][maxspeed<=70].dtracks
-{
-	z-index: 7;
-	color: #95e1e9;
-}
-
-way[maxspeed>70][maxspeed<=80].dtracks
-{
-	z-index: 8;
-	color: #95e9e5;
-}
-
-way[maxspeed>80][maxspeed<=90].dtracks
-{
-	z-index: 9;
-	color: #95e9d8;
-}
-
-way[maxspeed>90][maxspeed<=100].dtracks
-{
-	z-index: 10;
-	color: #95e9cc;
-}
-
-way[maxspeed>100][maxspeed<=110].dtracks
-{
-	z-index: 11;
-	color: #95e9bf;
-}
-
-way[maxspeed>110][maxspeed<=120].dtracks
-{
-	z-index: 12;
-	color: #95e9b3;
-}
-
-way[maxspeed>120][maxspeed<=130].dtracks
-{
-	z-index: 13;
-	color: #95e9a6;
-}
-
-way[maxspeed>130][maxspeed<=140].dtracks
-{
-	z-index: 14;
-	color: #95e999;
-}
-
-way[maxspeed>140][maxspeed<=150].dtracks
-{
-	z-index: 15;
-	color: #9de995;
-}
-
-way[maxspeed>150][maxspeed<=160].dtracks
-{
-	z-index: 16;
-	color: #aae995;
-}
-
-way[maxspeed>160][maxspeed<=170].dhstracks
-{
-	z-index: 17;
-	color: #b7e995;
-}
-
-way[maxspeed>170][maxspeed<=180].dhstracks
-{
-	z-index: 18;
-	color: #c4e995;
-}
-
-way[maxspeed>180][maxspeed<=190].dhstracks
-{
-	z-index: 19;
-	color: #d0e995;
-}
-
-way[maxspeed>190][maxspeed<=200].dhstracks
-{
-	z-index: 20;
-	color: #dde995;
-}
-
-way[maxspeed>200][maxspeed<=210].chstracks
-{
-	z-index: 21;
-	color: #e9e995;
-}
-
-way[maxspeed>210][maxspeed<=220].chstracks
-{
-	z-index: 22;
-	color: #e9dd95;
-}
-
-way[maxspeed>220][maxspeed<=230].chstracks
-{
-	z-index: 23;
-	color: #e9d095;
-}
-
-way[maxspeed>230][maxspeed<=240].chstracks
-{
-	z-index: 24;
-	color: #e9c495;
-}
-
-way[maxspeed>240][maxspeed<=250].chstracks
-{
-	z-index: 25;
-	color: #e9b795;
-}
-
-way[maxspeed>250][maxspeed<=260].chstracks
-{
-	z-index: 26;
-	color: #e9aa95;
-}
-
-way[maxspeed>260][maxspeed<=270].chstracks
-{
-	z-index: 27;
-	color: #e99d95;
-}
-
-way[maxspeed>270][maxspeed<=280].chstracks
-{
-	z-index: 28;
-	color: #e99598;
-}
-
-way[maxspeed>280][maxspeed<=290].chstracks
-{
-	z-index: 29;
-	color: #e995a4;
-}
-
-way[maxspeed>290][maxspeed<=300].chstracks
-{
-	z-index: 30;
-	color: #e995b1;
-}
-
-way[maxspeed>300][maxspeed<=320].chstracks
-{
-	z-index: 31;
-	color: #e995be;
-}
-
-way[maxspeed>320][maxspeed<=340].chstracks
-{
-	z-index: 32;
-	color: #e995cb;
-}
-
-way[maxspeed>340][maxspeed<=360].chstracks
-{
-	z-index: 33;
-	color: #e995d7;
-}
-
-way[maxspeed>360][maxspeed<=380].chstracks
-{
-	z-index: 34;
-	color: #e995e4;
-}
-
-way[maxspeed>380][maxspeed<=400].chstracks
-{
-	z-index: 35;
-	color: #e295e9;
+way[maxspeed=~/^(1|2|3|4|5|6|7|8|9)(0|1|2|3|4|5|6|7|8|9)*$/].tracks
+{
+	z-index: eval(1+tag("maxspeed")/10);
+	color: eval(
+		cond(tag("maxspeed") <=  10, "#0100CB",
+		cond(tag("maxspeed") <=  20, "#001ECB",
+		cond(tag("maxspeed") <=  30, "#003DCB",
+		cond(tag("maxspeed") <=  40, "#005BCB",
+		cond(tag("maxspeed") <=  50, "#007ACB",
+		cond(tag("maxspeed") <=  60, "#0098CB",
+		cond(tag("maxspeed") <=  70, "#00B7CB",
+		cond(tag("maxspeed") <=  80, "#00CBC1",
+		cond(tag("maxspeed") <=  90, "#00CBA2",
+		cond(tag("maxspeed") <= 100, "#00CB84",
+		cond(tag("maxspeed") <= 110, "#00CB66",
+		cond(tag("maxspeed") <= 120, "#00CB47",
+		cond(tag("maxspeed") <= 130, "#00CB29",
+		cond(tag("maxspeed") <= 140, "#00CB0A",
+		cond(tag("maxspeed") <= 150, "#14CB00",
+		cond(tag("maxspeed") <= 160, "#33CB00",
+		cond(tag("maxspeed") <= 170, "#51CB00",
+		cond(tag("maxspeed") <= 180, "#70CB00",
+		cond(tag("maxspeed") <= 190, "#8ECB00",
+		cond(tag("maxspeed") <= 200, "#ADCB00",
+		cond(tag("maxspeed") <= 210, "#CBCB00",
+		cond(tag("maxspeed") <= 220, "#CBAD00",
+		cond(tag("maxspeed") <= 230, "#CB8E00",
+		cond(tag("maxspeed") <= 240, "#CB7000",
+		cond(tag("maxspeed") <= 250, "#CB5100",
+		cond(tag("maxspeed") <= 260, "#CB3300",
+		cond(tag("maxspeed") <= 270, "#CB1400",
+		cond(tag("maxspeed") <= 280, "#CB0007",
+		cond(tag("maxspeed") <= 290, "#CB0025",
+		cond(tag("maxspeed") <= 300, "#CB0044",
+		cond(tag("maxspeed") <= 320, "#CB0062",
+		cond(tag("maxspeed") <= 340, "#CB0081",
+		cond(tag("maxspeed") <= 360, "#CB009F",
+		cond(tag("maxspeed") <= 380, "#CB00BD",
+		     "#BA00CB")))))))))))))))))))))))))))))))))));
+}
+
+way[maxspeed=~/^(1|2|3|4|5|6|7|8|9)(0|1|2|3|4|5|6|7|8|9)*$/].dtracks
+{
+	z-index: eval(1+tag("maxspeed")/10);
+	color: eval(
+		cond(tag("maxspeed") <=  10, "#9595e9",
+		cond(tag("maxspeed") <=  20, "#95a1e9",
+		cond(tag("maxspeed") <=  30, "#95aee9",
+		cond(tag("maxspeed") <=  40, "#95bbe9",
+		cond(tag("maxspeed") <=  50, "#95c8e9",
+		cond(tag("maxspeed") <=  60, "#95d4e9",
+		cond(tag("maxspeed") <=  70, "#95e1e9",
+		cond(tag("maxspeed") <=  80, "#95e9e5",
+		cond(tag("maxspeed") <=  90, "#95e9d8",
+		cond(tag("maxspeed") <= 100, "#95e9cc",
+		cond(tag("maxspeed") <= 110, "#95e9bf",
+		cond(tag("maxspeed") <= 120, "#95e9b3",
+		cond(tag("maxspeed") <= 130, "#95e9a6",
+		cond(tag("maxspeed") <= 140, "#95e999",
+		cond(tag("maxspeed") <= 150, "#9de995",
+		cond(tag("maxspeed") <= 160, "#aae995",
+		cond(tag("maxspeed") <= 170, "#b7e995",
+		cond(tag("maxspeed") <= 180, "#c4e995",
+		cond(tag("maxspeed") <= 190, "#d0e995",
+		cond(tag("maxspeed") <= 200, "#dde995",
+		cond(tag("maxspeed") <= 210, "#e9e995",
+		cond(tag("maxspeed") <= 220, "#e9dd95",
+		cond(tag("maxspeed") <= 230, "#e9d095",
+		cond(tag("maxspeed") <= 240, "#e9c495",
+		cond(tag("maxspeed") <= 250, "#e9b795",
+		cond(tag("maxspeed") <= 260, "#e9aa95",
+		cond(tag("maxspeed") <= 270, "#e99d95",
+		cond(tag("maxspeed") <= 280, "#e99598",
+		cond(tag("maxspeed") <= 290, "#e995a4",
+		cond(tag("maxspeed") <= 300, "#e995b1",
+		cond(tag("maxspeed") <= 320, "#e995be",
+		cond(tag("maxspeed") <= 340, "#e995cb",
+		cond(tag("maxspeed") <= 360, "#e995d7",
+		cond(tag("maxspeed") <= 380, "#e995e4",
+		     "#e295e9")))))))))))))))))))))))))))))))))));
 }
 
 /* German speed signals (Zs 10) */
