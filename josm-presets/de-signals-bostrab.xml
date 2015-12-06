@@ -255,7 +255,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delimiter=","
 				values="DE-BOStrab:a1;off,DE-BOStrab:a2;off,DE-BOStrab:a1;DE-BOStrab:a2;off" 
 				display_values="A 1 (close doors),A 2 (depart),A 1 (close doors) + A 2 (depart)"
-				de.display_values="A 1 (Türen schließen);A 2 (Abfahren),A 1 (Türen schließen);A 2 (Abfahrt)" />
+				de.display_values="A 1 (Türen schließen),A 2 (Abfahren),A 1 (Türen schließen);A 2 (Abfahrt)" />
 			<key key="railway:signal:departure:form"
 				value="light" />
 		</item>
