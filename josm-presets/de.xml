@@ -4,14 +4,14 @@
 OpenRailwayMap JOSM Presets File
 Edition for German railways (in German)
 
-OpenRailwayMap Copyright (C) 2012-2014 Alexander Matheisen
+OpenRailwayMap Copyright (C) 2012-2015 Alexander Matheisen ad others
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
 See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 
 
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Infrastructure DE" description="Preset to tag German railway infrastructure">
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="2015-12-06" shortdescription="OpenRailwayMap Infrastructure DE" description="Preset to tag German railway infrastructure">
 	<group name="OpenRailwayMap Infrastructure DE" de.name="OpenRailwayMap Infrastruktur DE" icon="signals.png">
 		<item de.name="Allgemeine Angaben" name="General Information" icon="rail.png" type="way">
 			<combo key="railway" text="Type of Track" de.text="Art des Gleises"
@@ -45,7 +45,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</combo>
 			<combo key="operator"
 				text="operator" de.text="Betreiber"
-				values="DB Netz AG"
+				values="DB Netz AG,ÖBB-Infrastruktur AG"
 				default=""
 			/>
 			<text key="start_date"
@@ -92,6 +92,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<list_entry value="test" display_value="test" de.display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
 				</combo>
 				<key key="service" value="" />
+				<check key="highspeed"
+					text="High-speed line (~ >200 km/h)"
+					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
+					/>
 			</item>
 			<item de.name="Hauptgleis" name="Siding Track" icon="siding-32.png" type="way">
 				<text key="railway:track_ref"
@@ -202,8 +206,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Frequency"
 					de.text="Frequenz"
 					values="16.7,0,16.67,50,60,25"					
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
+					de.display_values="16.7 Hz (Standard in Deutschland und Österreich),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany and Austria),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					/>
 			</item>
 			<item de.name="Zugsicherung, Zugfunkt" name="Train Protection, Radio" type="way">
@@ -303,6 +307,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Cutting"
 					de.text="Einschnitt"
 					/>
+				<space />
+				<check key="lit"
+					text="Lit"
+					de.text="Beleuchtung"
+					/>
 			</item>
 		</group>
 			<separator />
@@ -358,8 +367,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:minor"
 					text="Exact type of signal"
 					de.text="Signaltyp"
-					values="DE-ESO:sh0,DE-ESO:sh2"
-					display_values="Sh 0-Tafel,Sh 2-Tafel"
+					values="DE-ESO:sh0,DE-ESO:sh2,DE-BOStrab:sh2,AT-V2:weiterfahrt_verboten"
+					de.display_values="Sh 0-Tafel (deutsche Voll-/Schmalspurbahn),Sh 2-Tafel (deutsche Voll-/Schmalspurbahn),Sh 2 (Straßen-/U-/Stadtbahn),Weiterfahrt verboten (Österreich)"
+					display_values="Sh 0 sign (German railway/German narrow gauge railway),Sh 2 sign (German railway/German narrow gauge railway),Sh 2 (tram/light rail/subway),Weiterfahrt verboten (Austria)"
 					/>
 				<key key="railway:signal:minor:form"
 					value="sign" />
@@ -456,13 +466,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					/>
-				<key key="railway:signal:minor"
-					value="DE-ESO:sh" />
+				<combo key="railway:signal:minor"
+					text="Signal"
+					de.text="Signal"
+					values="DE-ESO:sh,AT-V2:sperrsignal"
+					de.display_values="Deutschland (Voll-/Schmalspurbahn),Österreich"
+					display_values="Germany,Austria" />
 				<combo key="railway:signal:minor:states"
 					text="Signal states"
 					de.text="Signalzustände"
-					values="DE-ESO:sh0;DE-ESO:sh1,DE-ESO:sh0;DE-ESO:wn7"
-					display_values="Sh 0 / Sh 1,Sh 0 / Wn 7 (vormals Gsp 2)"
+					delimiter="|"
+					values="DE-ESO:sh0;DE-ESO:sh1|DE-ESO:sh0;DE-ESO:wn7|AT-V2:weiterfahrt_verboten;AT-V2:weiterfahrt_erlaubt"
+					de.display_values="Sh 0/Sh 1 (Deutschland)|Sh 0/Wn 7 (ehem. Gsp 2, Deutschland)|Weiterfahrt verboten/erlaubt (Österreich)"
+					display_values="Sh 0/Sh 1 (Germany)|Sh 0/Wn 7 (former Gsp 2, Germany)|Weiterfahrt verboten/erlaubt (Austria)"
 					/>
 				<key key="railway:signal:minor:form"
 					value="semaphore" />
@@ -482,7 +498,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Isolierstoß,Achszähler"
 					/>
 			</item>
-		<!--</group>-->
 		<item name="Signal Box" de.name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="signal box" de.text="Stellwerk" />
 			<space />
@@ -501,6 +516,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Stellwerkstechnik"
 				values="mechanical,electric,track_diagram,electronic"
 				display_values="Mechanisches Stellwerk,Elektrisches/Elektromechanisches Stellwerk,Gleisbildstellwerk,Elektronisches Stellwerk (ESTW)"
+				/>
+			<combo key="operator"
+				text="operator" de.text="Betreiber"
+				values="DB Netz AG,ÖBB-Infrastruktur AG"
+				default=""
 				/>
 			<text key="start_date"
 				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -847,9 +867,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS100)"
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
+				<combo key="operator"
+					text="operator" de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -882,9 +903,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS100)"
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
+				<combo key="operator"
+					text="operator" de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -1014,9 +1036,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS100)"
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG' or 'DB Station&amp;Service AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG' oder 'DB Station&amp;Service AG')"
+				<combo key="operator"
+					text="operator" de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<check key="train"
 					text="Railway traffic?"
@@ -1949,12 +1972,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Wikipedia article in the format (Language):(Article)"
 				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
 				/>
-		</item>
-		<item name="Gate" de.name="Tor" type="node">
-			<label text="Gate" de.text="Tor" />
-			<key key="barrier"
-				value="gate" />
-			<preset_link preset_name="Schutzhalttafel (Sh 2)" />
 		</item>
 	</group>
 </presets>
