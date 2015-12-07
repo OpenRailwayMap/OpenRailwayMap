@@ -9,8 +9,8 @@
 
 	require_once("functions.php");
 
-	$format = $_GET['format'];
-	$callback = $_GET['callback'];
+	$format = isset($_GET['format']) ? $_GET['format'] : '';
+	$callback = isset($_GET['callback']) ? $_GET['callback'] : '';
 
 	// request location for api
 	$position = geoip_record_by_name(getUserIP());
