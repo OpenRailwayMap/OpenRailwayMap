@@ -27,7 +27,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:signal:main:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
-				default="off"
 				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
@@ -79,7 +78,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:main:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -130,7 +128,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:combined:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -181,7 +178,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:distant:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -232,7 +228,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:signal:departure:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
-				default="off"
 				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
@@ -269,7 +264,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit_distant:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -324,7 +318,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit_distant:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -370,7 +363,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -425,7 +417,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -471,7 +462,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -506,7 +496,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -546,7 +535,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:minor:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -578,7 +566,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:minor:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -611,7 +598,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:minor:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -642,7 +628,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:ring:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -672,7 +657,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:stop:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -715,7 +699,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:electricity:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -754,7 +737,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:electricity:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -793,7 +775,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:electricity:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -832,7 +813,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:electricity:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -871,7 +851,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:electricity:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -910,7 +889,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:electricity:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -955,7 +933,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:signal:switch:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
-				default="off"
 				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
@@ -1011,7 +988,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:signal:crossing:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
-				default="off"
 				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
@@ -1052,7 +1028,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:signal:crossing_distant:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
-				default="off"
 				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
@@ -1084,7 +1059,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:signal:train_protection:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
-				default="off"
 				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
@@ -1116,7 +1090,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:signal:train_protection:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
-				default="off"
 				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
@@ -1148,7 +1121,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:signal:passing:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
-				default="off"
 				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
@@ -1185,7 +1157,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<check key="railway:signal:passing:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
-				default="off"
 				/>
 			<combo key="railway:signal:position"
 				text="Signal position"
@@ -1228,7 +1199,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:main:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1274,7 +1244,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:shunting:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1316,7 +1285,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:distant:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1362,7 +1330,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit_distant:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1410,7 +1377,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:departure:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1446,7 +1412,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:electricity:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1485,7 +1450,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:electricity:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1525,7 +1489,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:minor:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1556,7 +1519,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit_distant:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1611,7 +1573,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:minor_distant:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1649,7 +1610,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1698,7 +1658,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1742,7 +1701,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:speed_limit:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1779,7 +1737,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:stop:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1820,7 +1777,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<check key="railway:signal:wrong_road:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
-						default="off"
 						/>
 					<combo key="railway:signal:position"
 						text="Signal position"
@@ -1854,7 +1810,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<check key="railway:signal:route:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
-						default="off"
 						/>
 					<combo key="railway:signal:position"
 						text="Signal position"
@@ -1895,7 +1850,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:switch:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1940,7 +1894,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:switch:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -1998,7 +1951,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:main:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
@@ -2049,7 +2001,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="railway:signal:combined:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
-					default="off"
 					/>
 				<combo key="railway:signal:position"
 					text="Signal position"
