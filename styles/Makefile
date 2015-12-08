@@ -11,8 +11,8 @@ all: $(JSFILES) $(ZIPFILES)
 	python ../renderer/mapcss_converter.py --mapcss $^ --icons-path .
 
 %.zip: %.mapcss
-	zip $@ $^
-	grep -o 'icon-image: "[^"]*' $^ | sed 's/icon-image: "//' | zip -r $@ -@
+	zip $@ $^ | sed '/^[ \t]*adding: /d'
+	grep -o 'icon-image: "[^"]*' $^ | sed 's/icon-image: "//' | zip -r $@ -@ | sed '/^[ \t]*adding: /d'
 
 clean:
 	rm -f $(JSFILES)
