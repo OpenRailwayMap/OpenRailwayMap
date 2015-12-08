@@ -31,16 +31,34 @@ canvas
 /* those tracks that are rendered at all                           */
 /* later rules still may decide to not render a track matched here */
 way|z2-[railway=rail],
-way|z9-[railway=disused],
-way|z9-[railway=abandoned],
-way|z9-[railway=razed],
-way|z9-[railway=proposed],
-way|z9-[railway=construction],
-way|z9-[railway=preserved],
 way|z9-[railway=narrow_gauge],
-way|z11-[railway=tram],
+way|z10-[railway=light_rail],
 way|z10-[railway=subway],
-way|z10-[railway=light_rail]
+way|z11-[railway=tram],
+way|z9-[railway=disused]["disused:railway"!=light_rail]["disused:railway"!=subway]["disused:railway"!=tram],
+way|z10-[railway=disused]["disused:railway"=light_rail],
+way|z10-[railway=disused]["disused:railway"=subway],
+way|z11-[railway=disused]["disused:railway"=tram],
+way|z9-[railway=abandoned]["abandoned:railway"!=light_rail]["abandoned:railway"!=subway]["abandoned:railway"!=tram],
+way|z10-[railway=abandoned]["abandoned:railway"=light_rail],
+way|z10-[railway=abandoned]["abandoned:railway"=subway],
+way|z11-[railway=abandoned]["abandoned:railway"=tram],
+way|z9-[railway=preserved]["preserved:railway"!=light_rail]["preserved:railway"!=subway]["preserved:railway"!=tram],
+way|z10-[railway=preserved]["preserved:railway"=light_rail],
+way|z10-[railway=preserved]["preserved:railway"=subway],
+way|z11-[railway=preserved]["preserved:railway"=tram],
+way|z9-[railway=razed]["razed:railway"!=light_rail]["razed:railway"!=subway]["razed:railway"!=tram],
+way|z10-[railway=razed]["razed:railway"=light_rail],
+way|z10-[railway=razed]["razed:railway"=subway],
+way|z11-[railway=razed]["razed:railway"=tram],
+way|z9-[railway=proposed]["proposed:railway"!=light_rail]["proposed:railway"!=subway]["proposed:railway"!=tram],
+way|z10-[railway=proposed]["proposed:railway"=light_rail],
+way|z10-[railway=proposed]["proposed:railway"=subway],
+way|z11-[railway=proposed]["proposed:railway"=tram],
+way|z9-[railway=construction]["construction:railway"!=light_rail]["construction:railway"!=subway]["construction:railway"!=tram],
+way|z10-[railway=construction]["construction:railway"=light_rail],
+way|z10-[railway=construction]["construction:railway"=subway],
+way|z11-[railway=construction]["construction:railway"=tram]
 {
 	set .tracks;
 }
@@ -72,9 +90,9 @@ way|z12-[bridge=yes][!"railway:track_ref"].tracks::bridges
 /*******************************************/
 /* transparent casing of historic railways */
 /*******************************************/
-way|z9-[railway=disused],
-way|z9-[railway=abandoned],
-way|z9-[railway=razed]
+way|z9-[railway=disused].tracks,
+way|z9-[railway=abandoned].tracks,
+way|z9-[railway=razed].tracks
 {
 	z-index: 10;
 	casing-color: black;
@@ -323,7 +341,7 @@ way|z9-[railway=preserved]
 /*******************************/
 /* railways under construction */
 /*******************************/
-way|z9-[railway=construction]
+way|z9-[railway=construction].tracks
 {
 	z-index: 400;
 	dashes: 9,9;
@@ -335,7 +353,7 @@ way|z9-[railway=construction]
 /*********************/
 /* proposed railways */
 /*********************/
-way|z9-[railway=proposed]
+way|z9-[railway=proposed].tracks
 {
 	z-index: 350;
 	dashes: 2,8;
