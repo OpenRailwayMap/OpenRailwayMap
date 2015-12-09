@@ -17,7 +17,7 @@
 		$lang = getUserLang();
 	// offset of user's timezone to UTC
 	$offset = offset($_GET['offset']);
-	$callback = $_GET['callback'];
+	$callback = isset($_GET['callback']) ? $_GET['callback'] : '';
 
 	date_default_timezone_set("UTC");
 
