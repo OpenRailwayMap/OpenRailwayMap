@@ -548,8 +548,7 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* German speed signals (Zs 3v) as signs */
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(1|2|3|4|5|6|7|8|9)0$/],
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^1(0|1|2|3|4|5|6)0$/]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^([1-9]|1[0-6])0$/]
 {
 	z-index: eval(95 + tag("railway:signal:speed_limit_distant:speed")/2);
 	icon-width: 22;
@@ -719,8 +718,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* Austrian speed signals (Geschwindigkeitsvoranzeiger) as signs */
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(1|2|3|4|5|6|7|8|9)0$/],
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=100]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:geschwindigkeitvorsanzeiger"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^([1-9]|10)0$/]
 {
 	z-index: eval(95 + tag("railway:signal:speed_limit_distant:speed")/2);
 	icon-width: 22;
@@ -842,8 +840,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* German speed signals (Zs 3) as signs*/
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^(1|2|3|4|5|6|7|8|9)0$/],
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^1(0|1|2|3|4|5|6)0$/]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^([1-9]|1[0-6])0$/]
 {
 	z-index: eval(195 + tag("railway:signal:speed_limit:speed")/2);
 	icon-width: 22;
@@ -1005,8 +1002,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* Austrian speed signals (Geschwindigkeitsanzeiger)*/
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^(1|2|3|4|5|6|7|8|9)0$/],
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^1(0|1|2|6)0$/]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitsanzeiger"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^([1-9]|1[0-26])0$/]
 {
 	z-index: eval(195 + tag("railway:signal:speed_limit:speed")/2);
 	icon-width: 14;
@@ -1139,7 +1135,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* West German branch line speed signals (Lf 4 DS 301) */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(1|2|3|4|5|6|7|8)0$/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:db:lf4"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^[1-8]0$/]
 {
 	z-index: eval(295 + tag("railway:signal:speed_limit_distant:speed")/2);
 	icon-width: 22;
@@ -1181,9 +1177,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 
 
 /* German line speed signals (Lf 6) */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(1|2|3|4|5|6|7|8|9)0$/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^1(0|1|2|3|4|5|6|7|8|9)0$/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=200]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(1?[1-9]|[12]0)0$/]
 {
 	z-index: eval(295 + tag("railway:signal:speed_limit_distant:speed")/2);
 	icon-width: 22;
@@ -1272,9 +1266,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* Austrian line speed signals (Ankündigungstafel) */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:ankündigungstafel"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(1|2|3|4|5|6|7|8|9)0$/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:ankündigungstafel"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^1(0|1|2|3|4|5|6|7|8|9)0$/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:ankündigungstafel"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=200]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="AT-V2:ankündigungstafel"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(1?[1-9]|[12]0)0$/]
 {
 	z-index: eval(295 + tag("railway:signal:speed_limit_distant:speed")/2);
 	icon-width: 22;
@@ -1338,7 +1330,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 	icon-image: "icons/at/ankuendigungstafel-140-sign-44.png";
 }
 
-node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^(3|4|5|6|7)0$/]
+node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^[3-7]0$/]
 {
 	z-index: eval(295 + tag("railway:signal:speed_limit_distant:speed")/2);
 	icon-width: 22;
@@ -1387,9 +1379,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* German line speed signals (Lf 7) */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^(1|2|3|4|5|6|7|8|9)0$/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^1(0|1|2|3|4|5|6|7|8|9)0$/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=200]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^(1?[1-9]|[12]0)0$/]
 {
 	z-index: eval(395 + tag("railway:signal:speed_limit:speed")/2);
 	icon-width: 13;
@@ -1478,8 +1468,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* Austrian line speed signals (Geschwindigkeitstafel) */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitstafel"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^(1|2|3|4|5|6|7|8|9)(0|5)$/],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitstafel"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^1(0|1|2|3|4|5|6)0$/]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="AT-V2:geschwindigkeitstafel"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^[1-9][05]|1[0-6]0$/]
 {
 	z-index: eval(395 + tag("railway:signal:speed_limit:speed")/2);
 	icon-width: 16;
