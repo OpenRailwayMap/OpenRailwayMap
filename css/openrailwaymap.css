@@ -1,3 +1,9 @@
+noscript .uk-alert
+{
+	margin-top: 20px;
+	border: 2px solid rgba(216,80,48,0.3);
+}
+
 .uk-overlay
 {
 	border-radius: 10px;
