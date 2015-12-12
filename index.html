@@ -76,31 +76,31 @@
 						<fieldset>
 							<div class="uk-form-row">
 								<span class="uk-form-help-inline">Name</span>
-								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. Meerbusch-Osterath" autocomplete novalidate>
+								<input id="facilityNameInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. Meerbusch-Osterath" autocomplete novalidate>
 							</div>
 							<div class="uk-form-row">
 								<span class="uk-form-help-inline">Betriebsstellenkürzel</span>
-								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. KKW" autocomplete novalidate>
+								<input id="facilityRefInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. KKW" autocomplete novalidate>
 							</div>
 							<div class="uk-form-row">
 								<span class="uk-form-help-inline">UIC-Nummer</span>
-								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 80012345" autocomplete novalidate>
+								<input id="facilityUICrefInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 80012345" autocomplete novalidate>
 							</div>
 							<div class="uk-form-row">
 								<span class="uk-form-help-inline">Streckenbetreiber (optional)</span>
-								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. DB Netz oder Q12345" autocomplete novalidate>
+								<input id="facilityOperatorInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. DB Netz oder Q12345" autocomplete novalidate>
 							</div>
 						</fieldset>
 					</form>
 					<p><strong>Schnellsuche über Suchbox:</strong> <code>&lt;Name&gt;</code> / <code>&lt;Betriebsstellenkürzel&gt;</code> / <code>&lt;UIC-Nummer&gt;</code></p>
 					<div class="uk-modal-footer uk-text-right">
 						<button class="uk-button uk-modal-close" type="button">Abbrechen</button>
-						<button class="uk-button uk-button-primary" type="button"><i class="uk-icon-search"></i> Suchen</button>
+						<button id="searchFacilityButton" class="uk-button uk-button-primary" type="button"><i class="uk-icon-search"></i> Suchen</button>
 					</div>
 				</div>
 			</div>
 
-			<div id="searchMileageDialog" class="uk-modal">
+			<div id="searchMilestoneDialog" class="uk-modal">
 				<div class="uk-modal-dialog">
 					<a class="uk-modal-close uk-close"></a>
 					<div class="uk-modal-header">
@@ -110,22 +110,22 @@
 						<fieldset>
 							<div class="uk-form-row">
 								<span class="uk-form-help-inline">Streckennummer</span>
-								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 2610" autocomplete novalidate>
+								<input id="milestoneRefInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 2610" autocomplete novalidate>
 							</div>
 							<div class="uk-form-row">
 								<span class="uk-form-help-inline">Streckenkilometer</span>
-								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 42.0" autocomplete novalidate>
+								<input id="milestonePositionInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 42.0" autocomplete novalidate>
 							</div>
 							<div class="uk-form-row">
 								<span class="uk-form-help-inline">Streckenbetreiber (optional)</span>
-								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. DB Netz oder Q12345" autocomplete novalidate>
+								<input id="milestoneOperatorInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. DB Netz oder Q12345" autocomplete novalidate>
 							</div>
 						</fieldset>
 					</form>
 					<p><strong>Schnellsuche über Suchbox:</strong> <code>&lt;Streckennummer&gt; &lt;Streckenkilometer&gt;</code></p>
 					<div class="uk-modal-footer uk-text-right">
 						<button class="uk-button uk-modal-close" type="button">Abbrechen</button>
-						<button class="uk-button uk-button-primary" type="button"><i class="uk-icon-search"></i> Suchen</button>
+						<button id="searchMilestoneButton" class="uk-button uk-button-primary" type="button"><i class="uk-icon-search"></i> Suchen</button>
 					</div>
 				</div>
 			</div>
@@ -179,7 +179,7 @@
 						<div class="uk-dropdown uk-dropdown-navbar">
 							<ul class="uk-nav uk-nav-navbar">
 								<li><a href="#searchFacilityDialog" data-action="searchFacility" data-uk-modal>Betriebsstelle suchen</a></li>
-								<li><a href="#searchMileageDialog" data-action="searchMilestone" data-uk-modal>Streckenkilometer suchen</a></li>
+								<li><a href="#searchMilestoneDialog" data-action="searchMilestone" data-uk-modal>Streckenkilometer suchen</a></li>
 								<li><a href="#legendDialog" data-action="legend" data-uk-modal>Legende</a></li>
 							</ul>
 						</div>
@@ -274,7 +274,7 @@
 					</li>
 					<li class="uk-nav-header">Werkzeuge</li>
 					<li><a href="#searchFacilityDialog" data-action="searchFacility" data-uk-modal>Betriebsstelle suchen</a></li>
-					<li><a href="#searchMileageDialog" data-action="searchMilestone" data-uk-modal>Streckenkilometer suchen</a></li>
+					<li><a href="#searchMilestoneDialog" data-action="searchMilestone" data-uk-modal>Streckenkilometer suchen</a></li>
 					<li><a href="#legendDialog" data-action="legend" data-uk-modal>Legende</a></li>
 					<li class="uk-nav-header">Infos</li>
 					<li>

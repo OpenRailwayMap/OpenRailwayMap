@@ -215,7 +215,7 @@ function searchRequest(input)
 
 $(document).ready(function()
 {
-	$.getJSON("js/config.json", function(data)
+	$.getJSON("js/config.json", function(config)
 	{
 		var map = new OpenRailwayMap(config);
 
@@ -224,10 +224,12 @@ $(document).ready(function()
 			map.setStyle($(this).data('id'));
 		});
 
+		/*
 		$('#locateButton').on('click', function()
 		{
 			startposition.setPosition();
 		});
+		*/
 
 		$('#searchButton').on('click', function()
 		{

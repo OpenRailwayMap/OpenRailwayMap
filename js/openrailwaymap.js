@@ -8,16 +8,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 OpenRailwayMap = function(config)
 {
+	var self = this;
 	this._appName = config['appName'];
 	this._mapContainerId = config['mapContainerId'];
 	this._lat = config['lat'];
 	this._lon = config['lon'];
 	this._zoom = config['zoom'];
-	this._tiledir = config['tiledir'];
+	this._tileUrl = config['tileUrl'];
 	this._root = config['root'];
+	this._apiUrl = config['apiUrl'];
 	this._availableStyles = config['availableStyles'];
 
-	this._map = new L.Map.OpenRailwayMap(this._mapContainerId);
+	this._map = new L.Map(this._mapContainerId);
 
 	// setting start position
 	//startposition = new Startposition(map);
@@ -26,7 +28,7 @@ OpenRailwayMap = function(config)
 	// create search
 	//search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
 
-	this._railmap = new L.TileLayer(this._tiledir+this._availableStyles[0]+'/{z}/{x}/{y}.png',
+	this._railmap = new L.TileLayer(this._tileUrl+this._availableStyles[0]+'/{z}/{x}/{y}.png',
 	{
 		attribution: translations['railmapAttribution'],
 		minZoom: 2,
@@ -108,7 +110,78 @@ OpenRailwayMap = function(config)
 	// TODO layeradd layerremove baselayerchange overlayadd overlayremove
 	this._map.on('moveend', function(e)
 	{
-		this.updatePermalink();
+		self.updatePermalink();
+	});
+
+	$('#searchFacilityButton').on('click', function()
+	{
+		// TODO validate params
+
+		var params = {};
+
+		if ($('#facilityNameInput').val().length > 0)
+			params['name'] = $('#facilityNameInput').val();
+		else if ($('#facilityRefInput').val().length > 0)
+			params['ref'] = $('#facilityRefInput').val();
+		else if ($('#facilityUICrefInput').val().length > 0)
+			params['uicref'] = $('#facilityUICrefInput').val();
+
+		if ($('#facilityOperatorInput').val().length > 0)
+			params['operator'] = $('#facilityOperatorInput').val();
+
+		$.ajax(
+		{
+			context: this,
+			dataType: 'json',
+			data: params, 
+			url: self._apiUrl+'facility',
+			type: 'GET'
+		})
+		.done(function(data)
+		{
+			for (var charge in data)
+			{
+				console.log(data[charge]);
+			}
+		})
+		.fail(function(jqXHR, status)
+		{
+			// TODO Laden fehlgeschlagen
+		});
+	});
+
+	$('#searchMilestoneButton').on('click', function()
+	{
+		// TODO validate params
+
+		var params = {};
+
+		if ($('#milestoneRefInput').val().length > 0)
+			params['ref'] = $('#milestoneRefInput').val();
+		if ($('#milestonePositionInput').val().length > 0)
+			params['position'] = $('#milestonePositionInput').val();
+		if ($('#milestoneOperatorInput').val().length > 0)
+			params['operator'] = $('#milestoneOperatorInput').val();
+
+		$.ajax(
+		{
+			context: this,
+			dataType: 'json',
+			data: params, 
+			url: self._apiUrl+'milestone',
+			type: 'GET'
+		})
+		.done(function(data)
+		{
+			for (var charge in data)
+			{
+				console.log(data[charge]);
+			}
+		})
+		.fail(function(jqXHR, status)
+		{
+			// TODO Laden fehlgeschlagen
+		});
 	});
 };
 
@@ -137,7 +210,7 @@ OpenRailwayMap.prototype =
 		// helper variable for saving current map style
 		this._railmap.selectedStyle = style;
 		// change tileserver url to load different style
-		this._railmap._url = this._tiledir+style+'/{z}/{x}/{y}.png';
+		this._railmap._url = this._tileUrl+style+'/{z}/{x}/{y}.png';
 		// reload all tiles after style was changed
 		this._railmap.redraw();
 
