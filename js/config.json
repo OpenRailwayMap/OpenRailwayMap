@@ -1,10 +1,11 @@
 {
-	'mapContainerId': 'mapContainer',
-	'appName': 'openrailwaymap',
-	'lat': 51.58248,
-	'lon': 15.6501,
-	'zoom': 7,
-	'tiledir': 'http://{s}.tiles.openrailwaymap.org/',
-	'root': 'http://www.openrailwaymap.org/beta',
-	'availableStyles': ['standard', 'maxspeed', 'signals']
+	"mapContainerId": "mapContainer",
+	"appName": "openrailwaymap",
+	"lat": 51.58248,
+	"lon": 15.6501,
+	"zoom": 7,
+	"tileUrl": "http://{s}.tiles.openrailwaymap.org/",
+	"root": "http://www.openrailwaymap.org/beta",
+	"apiUrl": "http://api.openrailwaymap.org/",
+	"availableStyles": ["standard", "maxspeed", "signals"]
 }
