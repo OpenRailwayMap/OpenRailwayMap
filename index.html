@@ -65,16 +65,80 @@
 	<body>
 
 		<div class="uk-container uk-container-center uk-margin-top">
+
 			<div id="searchFacilityDialog" class="uk-modal">
 				<div class="uk-modal-dialog">
 					<a class="uk-modal-close uk-close"></a>
 					<div class="uk-modal-header">
 						<h2>Betriebsstelle suchen</h2>
 					</div>
-					<p>Die Deutsche Bahn plant, Daten im Rahmen einer Open-Data-Strategie zu veröffentlichen. Welche Daten würdet ihr euch von der Deutschen Bahn wünschen?</p>
+					<form class="uk-form">
+						<fieldset>
+							<div class="uk-form-row">
+								<span class="uk-form-help-inline">Name</span>
+								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. Meerbusch-Osterath" autocomplete novalidate>
+							</div>
+							<div class="uk-form-row">
+								<span class="uk-form-help-inline">Betriebsstellenkürzel</span>
+								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. KKW" autocomplete novalidate>
+							</div>
+							<div class="uk-form-row">
+								<span class="uk-form-help-inline">UIC-Nummer</span>
+								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 80012345" autocomplete novalidate>
+							</div>
+							<div class="uk-form-row">
+								<span class="uk-form-help-inline">Streckenbetreiber (optional)</span>
+								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. DB Netz oder Q12345" autocomplete novalidate>
+							</div>
+						</fieldset>
+					</form>
+					<p><strong>Schnellsuche über Suchbox:</strong> <code>&lt;Name&gt;</code> / <code>&lt;Betriebsstellenkürzel&gt;</code> / <code>&lt;UIC-Nummer&gt;</code></p>
 					<div class="uk-modal-footer uk-text-right">
-						<button class="uk-button" type="button">Abbrechen</button>
-						<button class="uk-button uk-button-primary" type="button">Suchen</button>
+						<button class="uk-button uk-modal-close" type="button">Abbrechen</button>
+						<button class="uk-button uk-button-primary" type="button"><i class="uk-icon-search"></i> Suchen</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="searchMileageDialog" class="uk-modal">
+				<div class="uk-modal-dialog">
+					<a class="uk-modal-close uk-close"></a>
+					<div class="uk-modal-header">
+						<h2>Streckenkilometer suchen</h2>
+					</div>
+					<form class="uk-form">
+						<fieldset>
+							<div class="uk-form-row">
+								<span class="uk-form-help-inline">Streckennummer</span>
+								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 2610" autocomplete novalidate>
+							</div>
+							<div class="uk-form-row">
+								<span class="uk-form-help-inline">Streckenkilometer</span>
+								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 42.0" autocomplete novalidate>
+							</div>
+							<div class="uk-form-row">
+								<span class="uk-form-help-inline">Streckenbetreiber (optional)</span>
+								<input class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. DB Netz oder Q12345" autocomplete novalidate>
+							</div>
+						</fieldset>
+					</form>
+					<p><strong>Schnellsuche über Suchbox:</strong> <code>&lt;Streckennummer&gt; &lt;Streckenkilometer&gt;</code></p>
+					<div class="uk-modal-footer uk-text-right">
+						<button class="uk-button uk-modal-close" type="button">Abbrechen</button>
+						<button class="uk-button uk-button-primary" type="button"><i class="uk-icon-search"></i> Suchen</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="legendDialog" class="uk-modal">
+				<div class="uk-modal-dialog">
+					<a class="uk-modal-close uk-close"></a>
+					<div class="uk-modal-header">
+						<h2>Legende</h2>
+					</div>
+					<p>bla</p>
+					<div class="uk-modal-footer uk-text-right">
+						<button class="uk-button uk-modal-close" type="button">Schließen</button>
 					</div>
 				</div>
 			</div>
@@ -115,13 +179,8 @@
 						<div class="uk-dropdown uk-dropdown-navbar">
 							<ul class="uk-nav uk-nav-navbar">
 								<li><a href="#searchFacilityDialog" data-action="searchFacility" data-uk-modal>Betriebsstelle suchen</a></li>
-								<li><a href="#" data-action="searchMilestone">Streckenkilometer suchen</a></li>
-								<li><a href="#" data-action="searchRoute">Streckennummer suchen</a></li>
-								<li><a href="#" data-action="searchTrack">Bahnhofsgleis suchen</a></li>
-								<li><a href="#" data-action="searchSignal">Signal suchen</a></li>
-								<li><a href="#" data-action="legend">Legende</a></li>
-								<li><a href="#" data-action="reportBug">Kartenfehler melden</a></li>
-								<li><a href="#" data-action="exportImage">Kartenbild exportieren</a></li>
+								<li><a href="#searchMileageDialog" data-action="searchMilestone" data-uk-modal>Streckenkilometer suchen</a></li>
+								<li><a href="#legendDialog" data-action="legend" data-uk-modal>Legende</a></li>
 							</ul>
 						</div>
 					</li>
