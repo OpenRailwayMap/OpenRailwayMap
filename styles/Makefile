@@ -2,13 +2,14 @@ SHELL = /bin/sh -e
 
 .PHONY: all
 
+PYTHON = python
 JSFILES = maxspeed.js signals.js standard.js electrified.js
 ZIPFILES = maxspeed.zip signals.zip standard.zip electrified.zip josm-additional.zip
 
 all: $(JSFILES) $(ZIPFILES)
 
 %.js: %.mapcss
-	python ../renderer/mapcss_converter.py --mapcss $^ --icons-path .
+	$(PYTHON) ../renderer/mapcss_converter.py --mapcss $^ --icons-path .
 
 %.zip: %.mapcss
 	zip $@ $^ | sed '/^[ \t]*adding: /d'
@@ -27,5 +28,5 @@ check: $(JSFILES)
 		false; \
 	fi
 	@for i in $(JSFILES); do \
-		python -m json.tool < $${i}on > /dev/null; \
+		$(PYTHON) -m json.tool < $${i}on > /dev/null; \
 	done
