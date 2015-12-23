@@ -149,6 +149,48 @@ way[maxspeed=~/^[1-9][0-9]*$/].tracks
 		     "#BA00CB")))))))))))))))))))))))))))))))))));
 }
 
+/* lines tagged in mph (miles per hour) */
+way[maxspeed=~/^[1-9][0-9]* mph$/].tracks
+{
+	z-index: eval(1 + (replace(tag("maxspeed"), " mph", "") * 1.609344 / 10));
+	color: eval(
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  10, "#0100CB",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  20, "#001ECB",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  30, "#003DCB",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  40, "#005BCB",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  50, "#007ACB",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  60, "#0098CB",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  70, "#00B7CB",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  80, "#00CBC1",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  90, "#00CBA2",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 100, "#00CB84",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 110, "#00CB66",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 120, "#00CB47",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 130, "#00CB29",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 140, "#00CB0A",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 150, "#14CB00",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 160, "#33CB00",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 170, "#51CB00",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 180, "#70CB00",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 190, "#8ECB00",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 200, "#ADCB00",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 210, "#CBCB00",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 220, "#CBAD00",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 230, "#CB8E00",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 240, "#CB7000",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 250, "#CB5100",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 260, "#CB3300",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 270, "#CB1400",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 280, "#CB0007",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 290, "#CB0025",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 300, "#CB0044",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 320, "#CB0062",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 340, "#CB0081",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 360, "#CB009F",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 380, "#CB00BD",
+		     "#BA00CB")))))))))))))))))))))))))))))))))));
+}
+
 way[maxspeed=~/^[1-9][0-9]*$/].dtracks
 {
 	z-index: eval(1+tag("maxspeed")/10);
@@ -187,6 +229,48 @@ way[maxspeed=~/^[1-9][0-9]*$/].dtracks
 		cond(tag("maxspeed") <= 340, "#e995cb",
 		cond(tag("maxspeed") <= 360, "#e995d7",
 		cond(tag("maxspeed") <= 380, "#e995e4",
+		     "#e295e9")))))))))))))))))))))))))))))))))));
+}
+
+/* lines tagged in mph (miles per hour) */
+way[maxspeed=~/^[1-9][0-9]* mph$/].dtracks
+{
+	z-index: eval(1 + (replace(tag("maxspeed"), " mph", "") * 1.609344 / 10));
+	color: eval(
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  10, "#9595e9",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  20, "#95a1e9",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  30, "#95aee9",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  40, "#95bbe9",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  50, "#95c8e9",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  60, "#95d4e9",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  70, "#95e1e9",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  80, "#95e9e5",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <=  90, "#95e9d8",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 100, "#95e9cc",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 110, "#95e9bf",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 120, "#95e9b3",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 130, "#95e9a6",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 140, "#95e999",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 150, "#9de995",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 160, "#aae995",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 170, "#b7e995",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 180, "#c4e995",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 190, "#d0e995",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 200, "#dde995",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 210, "#e9e995",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 220, "#e9dd95",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 230, "#e9d095",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 240, "#e9c495",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 250, "#e9b795",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 260, "#e9aa95",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 270, "#e99d95",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 280, "#e99598",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 290, "#e995a4",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 300, "#e995b1",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 320, "#e995be",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 340, "#e995cb",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 360, "#e995d7",
+		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 380, "#e995e4",
 		     "#e295e9")))))))))))))))))))))))))))))))))));
 }
 
