@@ -578,8 +578,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
+					text="Short name (DS 100 or DB 640)"
+					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
 				<text key="uic_ref"
 					text="UIC-ID"
@@ -641,8 +641,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (DS100, z. B. 'ABC')"
+					text="Short name (DS 100 or DB 640)"
+					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
 				<text key="uic_ref"
 					text="UIC-ID"
@@ -743,8 +743,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
+					text="Short name (DS 100 or DB 640)"
+					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
 				<combo key="operator"
 					text="operator"
@@ -780,8 +780,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
+					text="Short name (DS 100 or DB 640)"
+					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
 				<combo key="operator"
 					text="operator"
@@ -818,8 +818,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS100, such as 'NAN')"
-					de.text="Abkürzung (nach DS100, z. B. 'NAN')"
+					text="Short name (DS 100 or DB 640)"
+					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
 				<combo key="operator"
 					text="operator"
@@ -856,8 +856,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS100, such as 'NAN')"
-					de.text="Abkürzung (nach DS100, z. B. 'NAN')"
+					text="Short name (DS 100 or DB 640)"
+					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
 				<combo key="operator"
 					text="operator"
@@ -894,8 +894,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
+					text="Short name (DS 100 or DB 640)"
+					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
 				<combo key="operator"
 					text="operator"
@@ -932,8 +932,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
+					text="Short name (DS 100 or DB 640)"
+					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
 				<combo key="operator"
 					text="operator"
@@ -979,8 +979,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
+					text="Short name (DS 100 or DB 640)"
+					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
 				<text key="uic_ref"
 					text="UIC-ID"
@@ -1070,8 +1070,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="UIC-Bahnhofsname"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS100)"
-					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
+					text="Short name (DS 100 or DB 640)"
+					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
 				<combo key="operator"
 					text="operator"
@@ -1139,12 +1139,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="route"
 				value="tracks" />
 			<text key="name"
-				text="Name of track (e.g. '1234 Eifelquerbahn Gerolstein - Kaisersesch')"
+				text="Name of track (e.g. '1234 Eifelquerbahn Gerolstein – Kaisersesch')"
 				de.text="Streckenname (z. B. '1234 Eifelquerbahn Gerolstein – Kaisersesch')"
 				/>
 			<text key="ref"
-				text="Line ref (VzG number, e.g. '2379')"
-				de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
+				text="Line ref (VzG number, e.g. '2379' or '222 01')"
+				de.text="Streckennummer (VzG-Nummer, z. B. '2379' oder '222 01')"
 				/>
 			<text key="from"
 				text="Initial station"
@@ -1154,9 +1154,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Terminus station"
 				de.text="Streckenende"
 				/>
-			<text key="operator"
-				text="Operator (e.g. 'DB Netz AG')"
-				de.text="Betreiber (z. B. 'DB Netz AG')"
+			<combo key="operator"
+				text="operator"
+				de.text="Betreiber"
+				values="DB Netz AG,ÖBB-Infrastruktur AG"
+				default=""
 				/>
 			<text key="wikipedia"
 				text="Wikipedia article in the format (Language):(Article)"
