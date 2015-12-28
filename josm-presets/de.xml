@@ -83,8 +83,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Streckenname"
 					/>
 				<text key="ref"
-					text="Line reference (VzG number, e.g. '2379')"
-					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
+					text="Line reference (VzG number, e.g. '2379' or '222 01')"
+					de.text="Streckennummer (VzG-Nummer, z. B. '2379' oder '222 01')"
 					/>
 				<text key="railway:track_ref"
 					text="Track ref (inside station)"
