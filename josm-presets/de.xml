@@ -2,17 +2,17 @@
 
 <!--
 OpenRailwayMap JOSM Presets File
-Edition for German railways (in German)
+Edition for German and Austrian railways (in German)
 
-OpenRailwayMap Copyright (C) 2012-2015 Alexander Matheisen ad others
+OpenRailwayMap Copyright (C) 2012-2015 Alexander Matheisen and others
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
 See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 
 
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="2015-12-06" shortdescription="OpenRailwayMap Infrastructure DE" description="Preset to tag German railway infrastructure">
-	<group name="OpenRailwayMap Infrastructure DE" de.name="OpenRailwayMap Infrastruktur DE" icon="signals.png">
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="2015-12-28" shortdescription="OpenRailwayMap Infrastructure DE+AT" description="Preset to tag German and Austrian railway infrastructure">
+	<group name="OpenRailwayMap Infrastructure DE+AT" de.name="OpenRailwayMap Infrastruktur DE+AT" icon="signals.png">
 		<item de.name="Allgemeine Angaben" name="General Information" icon="rail.png" type="way">
 			<combo key="railway" text="Type of Track" de.text="Art des Gleises"
 				values="rail,tram,light_rail,subway,narrow_gauge,preserved,miniature,proposed,construction,disused,abandoned,razed"
