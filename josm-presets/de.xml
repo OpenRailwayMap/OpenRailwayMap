@@ -47,7 +47,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="operator" de.text="Betreiber"
 				values="DB Netz AG,ÖBB-Infrastruktur AG"
 				default=""
-			/>
+				/>
 			<text key="start_date"
 				text="start date (YYYY, YYYY-MM, YYYY-MM-DD)"
 				de.text="Inbetriebnahme (YYYY, YYYY-MM, YYYY-MM-DD)"
@@ -66,8 +66,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<group name="Track Usage" de.name="Gleisnutzung" icon="rail.png">
 			<item de.name="Durchgehendes Hauptgleis" name="Main Track" icon="rail.png" type="way">
-				<label
-					text="Don't use this preset for industrial railway lines (harbours, mines, large factories) and military lines."
+				<label text="Don't use this preset for industrial railway lines (harbours, mines, large factories) and military lines."
 					de.text="Nicht für Hafen-, Bergwerks-, Industrie- und Militärbahnen verwenden." />
 				<text key="name"
 					text="Railway name"
@@ -210,7 +209,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="16.7 Hz (default in Germany and Austria),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					/>
 			</item>
-			<item de.name="Zugsicherung, Zugfunkt" name="Train Protection, Radio" type="way">
+			<item de.name="Zugsicherung, Zugfunk" name="Train Protection, Radio" type="way">
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
@@ -248,7 +247,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:bidirectional" 
 					text="Bidirectional traffic (depends on direction of OSM way)" 
 					de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)"
-					match="key" >
+					match="key">
 					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
 					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
 					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
@@ -295,7 +294,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Zahnstange"
 					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
 					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					match="key"	/>
+					match="key" 
+					/>
 				<text key="incline"
 					text="Incline (e.g.. '3%')"
 					de.text="Steigung (z. B. '3%')"/>
@@ -375,7 +375,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="sign" />
 			</item>
 			<item de.name="Weiche" name="Switch" icon="de/switch.png" type="node">
-				<label text="Switch" de.text="Weiche" />
+				<label text="Switch"
+					de.text="Weiche" />
 				<space />
 				<key key="railway"
 					value="switch" />
@@ -438,7 +439,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Railway Crossing" de.name="Kreuzung" type="node">
-				<label de.text="Kreuzung" text="Two tracks crosses each other without a switch" />
+				<label de.text="Kreuzung"
+					text="Two tracks crosses each other without a switch" />
 				<space />
 				<key key="railway"
 					value="railway_crossing" />
@@ -448,7 +450,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Derailer" de.name="Gleissperre" type="node">
-				<label text="Derailer" de.text="Gleissperre" />
+				<label text="Derailer"
+					de.text="Gleissperre" />
 				<space />
 				<key key="railway"
 					value="derail" />
@@ -486,7 +489,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="dwarf" />
 			</item>
 			<item name="Vacancy Detection" de.name="Gleisfreimeldeanlage" type="node">
-				<label text="Track vacancy detection" de.text="Gleisfreimeldeanlage" />
+				<label text="Track vacancy detection"
+					de.text="Gleisfreimeldeanlage" />
 				<space />
 				<key key="railway"
 					value="vacancy_detection" />
@@ -553,8 +557,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<group name="Operating Sites" de.name="Betriebsstellen">
 			<item name="Station" de.name="Bahnhof" type="node">
-				<label text="Passenger station and stations which are used both for passengers and freight" de.text="Personenbahnhöfe und Bahnhöfe mit gemischter Nutzung" />
-				<label text="Is being mapped as a node inside the area. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Passenger station and stations which are used both for passengers and freight"
+					de.text="Personenbahnhöfe und Bahnhöfe mit gemischter Nutzung" />
+				<label text="Is being mapped as a node inside the area. The node does not belong to a track."
+					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="station" />
@@ -612,8 +618,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Halt" de.name="Haltepunkt/Haltestelle" type="node">
-				<label de.text="Haltepunkt/Haltestelle" text="a small station without switches" />
-				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label de.text="Haltepunkt/Haltestelle"
+					text="a small station without switches" />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
+					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="halt" />
@@ -671,8 +679,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Tram Stop" de.name="Straßenbahnhaltestelle" icon="tramstop.png" type="node">
-				<label text="Tram Stop" de.text="Straßenbahnhaltestelle" />
-				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Tram Stop"
+					de.text="Straßenbahnhaltestelle" />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
+					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="tram_stop" />
@@ -717,7 +727,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Freight Station" de.name="Güterbahnhof/Rangierbahnhof" icon="yard-32.png" type="node">
 				<label text="Güterbahnhof/Rangierbahnhof" />
-				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
+					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="yard" />
@@ -751,7 +762,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Service Station" de.name="Betriebsbahnhof" type="node">
 				<label text="Betriebsbahnhof" />
-				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
+					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="service_station" />
@@ -785,7 +797,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Juction" de.name="Abzweig" icon="junction-25.png" type="node">
 				<label text="Abzweig" />
-				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
+					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="junction" />
@@ -820,7 +833,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Spur juction" de.name="Anst / Awanst" icon="spur-25.png" type="node">
 				<label text="Anschlusstelle oder Ausweichanschlusstelle" />
-				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
+					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="spur_junction" />
@@ -855,7 +869,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Crossover" de.name="Überleitstelle" icon="crossover-28.png" type="node">
 				<label text="Überleitstelle" />
-				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
+					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="crossover" />
@@ -868,7 +883,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
 				<combo key="operator"
-					text="operator" de.text="Betreiber"
+					text="operator"
+					de.text="Betreiber"
 					values="DB Netz AG,ÖBB-Infrastruktur AG"
 					default=""
 					/>
@@ -891,7 +907,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Station Part or Blockpost" de.name="Bahnhofsteil, Blockstelle, Deckungsstelle" type="node">
 				<label text="Bahnhofsteil, Blockstelle, Deckungsstelle" />
-				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track." de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
+				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
+					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
 				<key key="railway"
 					value="site" />
@@ -904,7 +921,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
 				<combo key="operator"
-					text="operator" de.text="Betreiber"
+					text="operator"
+					de.text="Betreiber"
 					values="DB Netz AG,ÖBB-Infrastruktur AG"
 					default=""
 					/>
@@ -927,8 +945,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<separator />
 			<item name="Stop Position" de.name="Halteposition" type="node">
-				<label text="Stop Position" de.text="Halteposition" />
-				<label text="It is mapped as a node which is part of the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+				<label text="Stop Position"
+					de.text="Halteposition" />
+				<label text="It is mapped as a node which is part of the track."
+					de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<combo key="public_transport"
 					text="Public transport?"
@@ -1037,7 +1057,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
 				<combo key="operator"
-					text="operator" de.text="Betreiber"
+					text="operator"
+					de.text="Betreiber"
 					values="DB Netz AG,ÖBB-Infrastruktur AG"
 					default=""
 					/>
@@ -1658,7 +1679,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Technik"
 				de.text="Mode"
 				values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
+				display_values="analogue,GSM-R"
 				de.display_values="Analog,GSM-R"
 				/>
 		</item>
@@ -1867,7 +1888,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Rollbock Siding" de.name="Rollwagen-/Rollschemelverladung" type="node">
-				<label text="Rollbock Siding/Transporter Trailers Siding" de.text="Rollwagenverladung" />
+				<label text="Rollbock Siding/Transporter Trailers Siding"
+					de.text="Rollwagenverladung" />
 				<key key="railway"
 					value="carrier_truck_pit" />
 			</item>
