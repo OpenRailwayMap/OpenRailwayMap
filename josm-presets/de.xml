@@ -26,9 +26,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<combo key="gauge"
 				text="Gauge [mm]"
 				de.text="Spurweite [mm]"
-				values="1800,1524,1520,1458,1450,1435,1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
-				display_values="1800,1524 (Russian broad gauge),1520 (Russian broad gauge),1458,1450,1435 (standard gauge),1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
-				de.display_values="1800,1524 (Russische Breitspur),1520 (Russische Breitspur),1458,1450,1435 (Normalspur),1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
+				values="1800,1524,1520,1458,1450,1435,1100,1040,1000,900,889,880,860,800,775,760,750,660,655,630,600,580,575,560,550,500,381,320,184,144,127,89"
+				display_values="1800,1524 (Russian broad gauge),1520 (Russian broad gauge),1458,1450,1435 (standard gauge),1100,1040,1000 (meter gauge),900,889,880,860,800,775,760 (Bosnian gauge),750,660,655,630,600,580,575,560,550,500,381,320,184,144,127,89"
+				de.display_values="1800,1524 (Russische Breitspur),1520 (Russische Breitspur),1458,1450,1435 (Normalspur),1100,1040,1000 (Meterspur),900,889,880,860,800,775,760 (Bosnische Spurweite),750,660,655,630,600,580,575,560,550,500,381,320,184,144,127,89"
 				default="1435"
 				values_sort="false"
 				/>
