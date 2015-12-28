@@ -522,7 +522,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mechanisches Stellwerk,Elektrisches/Elektromechanisches Stellwerk,Gleisbildstellwerk,Elektronisches Stellwerk (ESTW)"
 				/>
 			<combo key="operator"
-				text="operator" de.text="Betreiber"
+				text="operator"
+				de.text="Betreiber"
 				values="DB Netz AG,ÖBB-Infrastruktur AG"
 				default=""
 				/>
@@ -592,9 +593,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="1,2,3,4,5,6,7"
 					display_values="1,2,3,4,5,6,7"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Station&amp;Service AG')"
-					de.text="Betreiber (z. B. 'DB Station&amp;Service AG')"
+				<combo key="operator"
+					text="operator"
+					de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="network"
 					text="Network"
@@ -653,9 +656,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="1,2,3,4,5,6,7"
 					display_values="1,2,3,4,5,6,7"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Station&amp;Service AG')"
-					de.text="Betreiber (z. B. 'DB Station&amp;Service AG')"
+				<combo key="operator"
+					text="operator"
+					de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="network"
 					text="Network"
@@ -709,8 +714,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="UIC-Bahnhofsname"
 					/>
 				<text key="operator"
-					text="Operator (e.g. 'Rheinbahn')"
-					de.text="Betreiber (z. B. 'Rheinbahn')"
+					text="Operator (e.g. 'Rheinbahn AG')"
+					de.text="Betreiber (z. B. 'Rheinbahn AG')"
 					/>
 				<text key="network"
 					text="Network"
@@ -739,9 +744,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS100)"
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
+				<combo key="operator"
+					text="operator"
+					de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -774,9 +781,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS100)"
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
+				<combo key="operator"
+					text="operator"
+					de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -810,9 +819,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS100, such as 'NAN')"
 					de.text="Abkürzung (nach DS100, z. B. 'NAN')"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
+				<combo key="operator"
+					text="operator"
+					de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -846,9 +857,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS100, such as 'NAN')"
 					de.text="Abkürzung (nach DS100, z. B. 'NAN')"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
+				<combo key="operator"
+					text="operator"
+					de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -995,9 +1008,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Tram traffic?"
 					de.text="Straßenbahnverkehr?"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG' or 'DB Station&amp;Service AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG' oder 'DB Station&amp;Service AG')"
+				<combo key="operator"
+					text="operator"
+					de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="network"
 					text="Network"
@@ -1599,9 +1614,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<space />
 			<key key="shop"
 				value="ticket" />
-			<text key="operator"
-				text="Operator (e.g. 'Deutsche Bahn')"
-				de.text="Betreiber (z. B. 'Deutsche Bahn')"
+			<combo key="operator"
+				text="operator"
+				de.text="Betreiber"
+				values="DB Vertrieb GmbH,ÖBB-Personenverkehr AG"
+				default=""
 				/>
 			<text key="name"
 				text="Name (e.g. 'Reisezentrum')"
@@ -1807,9 +1824,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Area"
 					de.text="Fläche"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
+				<combo key="operator"
+					text="operator"
+					de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 			</item>
 			<separator />
