@@ -45,7 +45,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 			</combo>
 			<combo key="operator"
-				text="operator" de.text="Betreiber"
+				text="operator"
+				de.text="Betreiber"
 				values="DB Netz AG,ÖBB-Infrastruktur AG"
 				default=""
 				/>
@@ -188,7 +189,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</group>
 		<group name="More Track Details" de.name="Weitere Gleisdetails" icon="rail.png">
 			<item de.name="Elektrifizierung" name="Electrification" type="way">
-				<combo key="electrified" text="electrified with" de.text="elektrifiziert mit"
+				<combo key="electrified"
+					text="electrified with"
+					de.text="elektrifiziert mit"
 					values="contact_line,rail,ground-level_power_supply,yes,no"
 					display_values="catenary,third rail,ground-level power supply,other,not electrified"
 					de.display_values="Oberleitung,Stromschiene,versenkbare Mittelstromschiene,andere,nicht elektrifiziert"
@@ -205,7 +208,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"					
+					values="16.7,0,16.67,50,60,25"
 					de.display_values="16.7 Hz (Standard in Deutschland und Österreich),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
 					display_values="16.7 Hz (default in Germany and Austria),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
 					/>
@@ -261,8 +264,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
 				<space />
-				<label
-					text="If tilting trains have a different speed limit …"
+				<label text="If tilting trains have a different speed limit …"
 					de.text="Wenn Neigetechnikzüge eine andere Höchstgeschwindigkeit haben …" />
 				<combo key="maxspeed:tilting"
 					text="Maxspeed of Used by tilting trains (kph)"
@@ -270,8 +272,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
 				<space />
-				<label
-					text="If the speed limits of the two directions are different, use the following to fields:"
+				<label text="If the speed limits of the two directions are different, use the following to fields:"
 					de.text="Wenn für beide Richtungen unterschiedliche Geschwindigkeitsbeschränkungen gelten, verwende folgende zwei Felder:" />
 				<combo key="maxspeed:forward"
 					text="Maxspeed in direction of OSM way (kph)"
