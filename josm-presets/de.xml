@@ -205,12 +205,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Oberleitung,Stromschiene,versenkbare Mittelstromschiene,andere,nicht elektrifiziert"
 					match="key"
 					/>
+				<!-- The following list contains all voltages that were used for railways in Germany and Austria, according to https://de.wikipedia.org/wiki/Liste_der_Bahnstromsysteme. When there will be a separate JOSM preset for historic railways, we can remove all entries that does not exist anymore -->
 				<combo key="voltage"
 					text="Voltage"
 					de.text="Spannung"
-					values="15000,400,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
-					display_values="15 kV (default in Germany),400 V,500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),400 V,500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					values="15000,45,180,220,400,500,550,600,650,750,800,850,1000,1100,1200,1500,1800,2200,2400,3000,5000,5500,6300,6500,6600,8000,10000,20000,25000"
+					display_values="15 kV (default in Germany and Austria),45 V,180 V,220 V,400 V,500 V,550 V,600 V,650 V,750 V,800 V,850 V,1000 V,1100 V,1200 V,1500 V,1800 V,2200 V,2400 V,3000 V,5000 V,5500 V,6300 V,6500 V,6600 V,8000 V,10 kV,20 kV,25 kV"
+					de.display_values="15 kV (Standard in Deutschland und Österreich),45 V,180 V,220 V,400 V,500 V,550 V,600 V,650 V,750 V,800 V,850 V,1000 V,1100 V,1200 V,1500 V,1800 V,2200 V,2400 V,3000 V,5000 V,5500 V,6300 V,6500 V,6600 V,8000 V,10 kV,20 kV,25 kV"
 					value_sort="false"
 					/>
 				<combo key="frequency"
