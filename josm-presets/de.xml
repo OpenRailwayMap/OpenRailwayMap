@@ -4,21 +4,75 @@
 OpenRailwayMap JOSM Presets File
 Edition for German railways (in German)
 
-OpenRailwayMap Copyright (C) 2012-2014 Alexander Matheisen
+OpenRailwayMap Copyright (C) 2012-2015 Alexander Matheisen ad others
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
 See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 
 
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Infrastructure DE" description="Preset to tag German railway infrastructure">
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="2015-12-06" shortdescription="OpenRailwayMap Infrastructure DE" description="Preset to tag German railway infrastructure">
 	<group name="OpenRailwayMap Infrastructure DE" de.name="OpenRailwayMap Infrastruktur DE" icon="signals.png">
-		<group name="Tracks" de.name="Gleise" icon="rail.png">
-			<item de.name="Streckengleis / Durchgehendes Hauptgleis" name="Main Track" icon="rail.png" type="way">
-				<label text="Tracks outside stations and main tracks (straight passing tracks) inside stations. Every track is mapped individually." de.text="Streckengleise (ohne Überleitgleise) und durchgehende Hauptgleise in einem Bahnhof. Jedes Gleis wird einzeln erfasst." />
-				<space />
-				<key key="railway"
-					value="rail" />
+		<item de.name="Allgemeine Angaben" name="General Information" icon="rail.png" type="way">
+			<combo key="railway" text="Type of Track" de.text="Art des Gleises"
+				values="rail,tram,light_rail,subway,narrow_gauge,preserved,miniature,proposed,construction,disused,abandoned,razed"
+				display_values="heavy railway,tram,subway,light_rail,narrow gauge,preserved,miniature,proposed,under construction,disused,abandoned,razed"
+				de.display_values="Vollbahn,Straßenbahn,U-Bahn,Stadtbahn,Schmalspurbahn,erhaltenes Gleis,Miniatur-/Parkbahn,in Planung,in Bau,stillgelegt,abgebaut,überbaut"
+				values_sort="false"
+				match="keyvalue!" />
+			<label text="If the track is not in use (i.e. proposed, under construction etc.), please also fill out"
+				de.text="Fall das Gleis nicht in Betrieb ist (z.B. geplant, in Bau usw.), bitte auch folgende Vorlage ausfüllen:"
+				/>
+			<combo key="gauge"
+				text="Gauge [mm]"
+				de.text="Spurweite [mm]"
+		values="1800,1524,1520,1458,1450,1435,1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
+				display_values="1800,1524 (Russian broad gauge),1520 (Russian broad gauge),1458,1450,1435 (standard gauge),1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
+				de.display_values="1800,1524 (Russische Breitspur),1520 (Russische Breitspur),1458,1450,1435 (Normalspur),1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
+				default="1435"
+				values_sort="false"
+				/>
+			<combo key="railway:traffic_mode"
+				text="Traffic mode"
+				de.text="Verkehrsart"
+				values="mixed,passenger,freight"
+				de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
+				/>
+			<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
+				<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+				<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
+				<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
+			</combo>
+			<combo key="operator"
+				text="operator" de.text="Betreiber"
+				values="DB Netz AG,ÖBB-Infrastruktur AG"
+				default=""
+			/>
+			<text key="start_date"
+				text="start date (YYYY, YYYY-MM, YYYY-MM-DD)"
+				de.text="Inbetriebnahme (YYYY, YYYY-MM, YYYY-MM-DD)"
+				/>
+			<text key="end_date"
+				text="end date (YYYY, YYYY-MM, YYYY-MM-DD)"
+				de.text="Zeitpunkt der Betriebseinstellung (YYYY, YYYY-MM, YYYY-MM-DD)"
+				/>
+			<preset_link preset_name="Main Track" />
+			<preset_link preset_name="Siding Track" />
+			<preset_link preset_name="Yard and Spur Track" />
+			<preset_link preset_name="Electrification" />
+			<preset_link preset_name="Train Protection, Radio" />
+			<preset_link preset_name="Speed Limit" />
+			<preset_link preset_name="Track System, Line Routeing" />
+		</item>
+		<group name="Track Usage" de.name="Gleisnutzung" icon="rail.png">
+			<item de.name="Durchgehendes Hauptgleis" name="Main Track" icon="rail.png" type="way">
+				<label
+					text="Don't use this preset for industrial railway lines (harbours, mines, large factories) and military lines."
+					de.text="Nicht für Hafen-, Bergwerks-, Industrie- und Militärbahnen verwenden." />
+				<text key="name"
+					text="Railway name"
+					de.text="Streckenname"
+					/>
 				<text key="ref"
 					text="Line reference (VzG number, e.g. '2379')"
 					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
@@ -27,591 +81,224 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Track ref (inside station)"
 					de.text="Gleisnummer (im Bahnhof)"
 					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />	
 				<combo key="usage" text="Usage" de.text="Nutzung">
-					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" de.short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, in der Regel zumindest abschnittsweise mit mehr als 100 km/h befahrbar" short_description="An important line; often double tracks, electrified; usually more than 100 km/h" />
-					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" de.short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." short_description="less important line; often single-tracked; not electrified; less than 100 km/h" />
+					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" de.short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, in der Regel zumindest abschnittsweise mit mehr als 100 km/h befahrbar" short_description="An important line; often double tracks, electrified; usually more than 100 km/h"
+					match="keyvalue!" />
+					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" de.short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." short_description="less important line; often single-tracked; not electrified; less than 100 km/h"
+					match="keyvalue!" />
 					<list_entry value="industrial" de.display_value="Industriebahn" display_value="industrial/mine railway" de.short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." short_description="A line only used for freight trains inside industrial areas or mines." />
 					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" de.short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." short_description="A line only used by military trains" />
 					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" de.short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
 					<list_entry value="test" display_value="test" de.display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
 				</combo>
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
-					/>
+				<key key="service" value="" />
 				<check key="highspeed"
 					text="High-speed line (~ >200 km/h)"
 					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					/>
-				<check key="railway:tilting"
-					text="Used by tilting trains"
-					de.text="Neigetechnik-Ausrüstung"
-					/>
-				<space />
-				<check key="lit"
-					text="Lit"
-					de.text="Beleuchtung"
-					/>
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="Linienzugbeeinflussung (LZB)"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:gnt"
-					text="Tilting train system"
-					de.text="Geschwindigkeitsüberwachung Neigetechnik"
-					values="yes,no,zub122,zub262"
-					display_values="Ja,Nein,ZUB122,ZUB262"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<space />
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<combo key="maxspeed:tilting"
-					text="Maxspeed of Used by tilting trains (km/h)"
-					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Ja (mit Oberleitung),Ja (mit Stromschiene)"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (default in Germany),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"					
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1520,1524,1800"
-					display_values="1435 mm (Normalspur),1520 mm (Russische Breitspur),1524 mm (Russische Breitspur),1800 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
 					/>
 			</item>
 			<item de.name="Hauptgleis" name="Siding Track" icon="siding-32.png" type="way">
-				<label text="Siding tracks inside stations which are no yard or spur tracks. Every track is mapped individually." de.text="Nicht durchgehendes Hauptgleis in einem Bahnhof und alle sonstigen Gleise, die weder durchgehendes Hauptgleis, noch Nebengleis, Anschlussgleis, Abstellgleis oder Überleitgleis sind. Jedes Gleis wird einzeln erfasst." />
-				<space />
-				<key key="railway"
-					value="rail" />
-				<key key="service"
-					value="siding" />
 				<text key="railway:track_ref"
 					text="Track ref (inside station)"
 					de.text="Gleisnummer (im Bahnhof)"
 					/>
 				<space />
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
-					/>
-				<check key="highspeed"
-					text="High-speed line (~ >200 km/h)"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
+				<combo key="usage" text="Type of railway infrastructure" de.text="Streckenart" editable="false" >
+					<list_entry
+						value="industrial"
+						de.display_value="Industriebahn"
+						display_value="industrial/mine railway"
+						de.short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen."
+						short_description="A line only used for freight trains inside industrial areas or mines." />
+					<list_entry
+						value="military"
+						de.display_value="Militärbahn"
+						display_value="military railway"
+						de.short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen."
+						short_description="A line only used by military trains" />
+					<!-- value=" " is a workaround, see https://josm.openstreetmap.de/ticket/12160 -->
+					<list_entry
+						value=" "
+						display_value="other"
+						de.display_value="andere"
+						short_description="Main line, branch, tourism lines and test lines"
+						de.short_description="Hauptbahn, Nebenbahn, Tourismusstrecken, Teststrecke" />
+				</combo>
+				<space />
+				<combo key="service" text="Purpose" de.text="Zweck" editable="false" >
+					<list_entry
+						value="siding"
+						de.display_value="Hauptgleis"
+						display_value="siding track"
+						de.short_description="Gleise für Überholungen und Zugkreuzungen. Hauptsignale vorhanden."
+						short_description="Track is used by trains to be overtaken or at stations or to wait meeting a train of the other direction. There are main signals."
+						match="keyvalue" />
+					<list_entry
+						value="crossover"
+						de.display_value="Überleitgleis"
+						display_value="crossover track"
+						de.short_description="verbindet zwei durchgehende Hauptgleise"
+						short_description="connects two main tracks"
+						match="keyvalue" />
+				</combo>
+			</item>
+			<item de.name="Nebengleise" name="Yard and Spur Track" icon="spur-25.png" type="way">
+				<text key="railway:track_ref"
+					text="Track ref (inside station)"
+					de.text="Gleisnummer (im Bahnhof)"
 					/>
 				<space />
-				<check key="lit"
-					text="Lit"
-					de.text="Beleuchtung"
+				<combo key="usage" text="Type of railway infrastructure" de.text="Streckenart" editable="false" >
+					<list_entry
+						value="industrial"
+						de.display_value="Industriebahn"
+						display_value="industrial/mine railway"
+						de.short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen."
+						short_description="A line only used for freight trains inside industrial areas or mines." />
+					<list_entry
+						value="military"
+						de.display_value="Militärbahn"
+						display_value="military railway"
+						de.short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen."
+						short_description="A line only used by military trains" />
+					<!-- value=" " is a workaround, see https://josm.openstreetmap.de/ticket/12160 -->
+					<list_entry
+						value=" "
+						display_value="other"
+						de.display_value="andere"
+						short_description="Main line, branch, tourism lines and test lines" de.short_description="Hauptbahn, Nebenbahn, Tourismusstrecke, Teststrecke" />
+				</combo>
+				<space />
+				<combo key="service" text="Purpose" de.text="Zweck" editable="false" >
+					<list_entry
+						value="yard"
+						de.display_value="Abstellgleis"
+						display_value="yard track"
+						de.short_description="Gleis, das nur zum Rangieren und Abstellen von Zügen verwendet wird. Keine Hauptsignale."
+						short_description="Track which is only used for shunting and parking. No main signals."
+						match="keyvalue" />
+					<list_entry
+						value="spur" de.display_value="Gleisanschluss/Ladegleis"
+						display_value="spur track"
+						de.short_description="Anschlussgleis zu einem Betrieb oder Ladegleis"
+						short_description="Spur track to a factory or track where cars are loaded."
+						match="keyvalue" />
+				</combo>
+			</item>
+		</group>
+		<group name="More Track Details" de.name="Weitere Gleisdetails" icon="rail.png">
+			<item de.name="Elektrifizierung" name="Electrification" type="way">
+				<combo key="electrified" text="electrified with" de.text="elektrifiziert mit"
+					values="contact_line,rail,ground-level_power_supply,yes,no"
+					display_values="catenary,third rail,ground-level power supply,other,not electrified"
+					de.display_values="Oberleitung,Stromschiene,versenkbare Mittelstromschiene,andere,nicht elektrifiziert"
+					match="key"
 					/>
+				<combo key="voltage"
+					text="Voltage"
+					de.text="Spannung"
+					values="15000,400,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
+					display_values="15 kV (default in Germany),400 V,500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					de.display_values="15 kV (Standard in Deutschland),400 V,500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
+					value_sort="false"
+					/>
+				<combo key="frequency"
+					text="Frequency"
+					de.text="Frequenz"
+					values="16.7,0,16.67,50,60,25"					
+					de.display_values="16.7 Hz (Standard in Deutschland und Österreich),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
+					display_values="16.7 Hz (default in Germany and Austria),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
+					/>
+			</item>
+			<item de.name="Zugsicherung, Zugfunkt" name="Train Protection, Radio" type="way">
 				<check key="railway:pzb"
 					text="PZB"
 					de.text="Punktförmige Zugbeeinflussung (PZB)"
+					match="key"
 					/>
 				<check key="railway:lzb"
 					text="Linienzugbeeinflussung (LZB)"
 					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (default in Germany),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1520,1524,1800"
-					display_values="1435 mm (Normalspur),1520 mm (Russische Breitspur),1524 mm (Russische Breitspur),1800 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<item de.name="Nebengleis / Abstellgleis" name="Yard Track" icon="yard-track-32.png" type="way">
-				<label text="Yard tracs. Every track is mapped individually." de.text="Abstellgleise in Rangier-, Güter- oder Betriebsbahnhöfen, auf denen Züge zusammengestellt und Wagen abgestellt werden. Jedes Gleis wird einzeln erfasst." />
-				<space />
-				<key key="railway"
-					value="rail" />
-				<key key="service"
-					value="yard" />
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<space />
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
-					/>
-				<space />
-				<check key="lit"
-					text="Lit"
-					de.text="Beleuchtung"
-					/>
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (default in Germany),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1520,1524,1800"
-					display_values="1435 mm (Normalspur),1520 mm (Russische Breitspur),1524 mm (Russische Breitspur),1800 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Year of opening"
-					de.text="Zeitpunkt der Inbetriebnahme"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<item de.name="Anschluss- oder Verladegleis" name="Spur Track" icon="spur-25.png" type="way">
-				<label text="Short tracks connecting companies to the nearby railway line" de.text="Kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen oder Verladegleise in Industrieanlagen." />
-				<space />
-				<key key="railway"
-					value="rail" />
-				<key key="service"
-					value="spur" />
-				<space />
-				<key key="railway:traffic_mode"
-					value="freight" />
-				<space />
-				<check key="lit"
-					text="Lit"
-					de.text="Beleuchtung"
-					/>
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="Linienzugbeeinflussung (LZB)"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (default in Germany),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,16.67,50,60,25,0"
-					display_values="16.7 Hz (default in Germany),16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz,DC"
-					de.display_values="16.7 Hz (Standard in Deutschland),16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz,Gleichspannung"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1520,1524,1800"
-					display_values="1435 mm (Normalspur),1520 mm (Russische Breitspur),1524 mm (Russische Breitspur),1800 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<item de.name="Überleitgleis" name="Crossover Track" icon="crossover-track-28.png" type="way">
-				<label text="Crossover track which makes switching between left and right track on double-tracked railway lines possible." de.text="Überleitgleis, das den Wechsel zwischen zwei Gleisen einer Strecke ermöglicht." />
-				<space />
-				<key key="railway"
-					value="rail" />
-				<key key="service"
-					value="crossover" />
-				<space />
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
-					/>
-				<check key="highspeed"
-					text="High-speed line (~ >200 km/h)"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					/>
-				<check key="railway:tilting"
-					text="Used by tilting trains"
-					de.text="Neigetechnik-Ausrüstung"
-					/>
-				<space />
-				<check key="lit"
-					text="Lit"
-					de.text="Beleuchtung"
-					/>
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="LZB"
-					de.text="Linienzugbeeinflussung (LZB)"
+					match="key"
 					/>
 				<combo key="railway:gnt"
 					text="Tilting train system"
 					de.text="Geschwindigkeitsüberwachung Neigetechnik"
 					values="yes,no,zub122,zub262"
 					display_values="Ja,Nein,ZUB122,ZUB262"
+					match="key"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
 					de.text="ETCS"
 					values="yes,no,0,1,2,3"
 					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
+					match="key"
 					/>
+				<space />
 				<combo key="railway:radio"
 					text="Radio"
 					de.text="Zugfunk"
 					values="analogue,gsm-r"
 					display_values="analogue,GSM-R"
 					de.display_values="Analog,GSM-R"
+					match="key"
 					/>
 				<space />
+				<combo key="railway:bidirectional" 
+					text="Bidirectional traffic (depends on direction of OSM way)" 
+					de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)"
+					match="key" >
+					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
+					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
+					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
+				</combo>
+			</item>
+			<item de.name="Höchstgeschwindigkeit" name="Speed Limit" type="way">
 				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
+					text="Maxspeed (kph)"
 					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
+				<space />
+				<label
+					text="If tilting trains have a different speed limit …"
+					de.text="Wenn Neigetechnikzüge eine andere Höchstgeschwindigkeit haben …" />
 				<combo key="maxspeed:tilting"
-					text="Maxspeed of Used by tilting trains (km/h)"
+					text="Maxspeed of Used by tilting trains (kph)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
 					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
 					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
 				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (default in Germany),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in large parts of Germany),50 Hz,60 Hz,25 Hz"
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1520,1524,1800"
-					display_values="1435 mm (Normalspur),1520 mm (Russische Breitspur),1524 mm (Russische Breitspur),1800 mm"
-					default="1435"
-					/>
+				<label
+					text="If the speed limits of the two directions are different, use the following to fields:"
+					de.text="Wenn für beide Richtungen unterschiedliche Geschwindigkeitsbeschränkungen gelten, verwende folgende zwei Felder:" />
+				<combo key="maxspeed:forward"
+					text="Maxspeed in direction of OSM way (kph)"
+					de.text="Höchstgeschwindigkeit in Richtung des OSM-Wegs (kph)"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
+				<combo key="maxspeed:backward"
+					text="Maxspeed in opposite direction of OSM way (kph)"
+					de.text="Höchstgeschwindigkeit entgegen der Richtung des OSM-Wegs (kph)"
+					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
+					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
+			</item>
+			<item de.name="Oberbau, Trassierung" name="Track System, Line Routeing" type="way">
 				<check key="railway:ballastless"
 					text="Ballastless"
 					de.text="Feste Fahrbahn"
+					match="key"
 					/>
 				<combo key="rack"
 					text="Rack"
 					de.text="Zahnstange"
 					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
 					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
+					match="key"	/>
 				<text key="incline"
 					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
+					de.text="Steigung (z. B. '3%')"/>
 				<check key="embankment"
 					text="Embankment"
 					de.text="Damm"
@@ -620,1445 +307,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Cutting"
 					de.text="Einschnitt"
 					/>
-			</item>
-			<separator />
-			<item de.name="Schmalspurgleis" name="Narrow-gauge Track" type="way">
-				<label text="Narrow-gauge tracks are tracks with a gauge lower than 1435 mm. Every track is mapped individually." de.text="Schmalspurgleise sind in Deutschland Gleise mit einer Spurweite unter der Normalspurweite von 1435mm. Jedes Gleis wird einzeln erfasst." />
-				<space />
-				<key key="railway"
-					value="narrow_gauge" />
-				<text key="ref"
-					text="Line ref (VzG number, e.g. '2379')"
-					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
-					/>
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<combo key="usage" text="Usage (leave empty if main track or line)" de.text="Nutzung (leer lassen bei Strecken- und Hauptgleisen)">
-					<list_entry value="branch" display_value="Reguläre Strecke" de.display_value="regular line" short_description="Eine Schmalspurbahn, auf der regulärer Personen- und/oder Güterverkehr stattfindet." />
-					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
-					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
-				</combo>
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
-					/>
-				<combo key="service" text="Track service" de.text="Gleisfunktion">
-				  <list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" /><!-- FIXME: Abgrenzung zwischen (nicht durchgehenden) Hauptgleisen und (planmäßig nicht von Zügen befahrenen) Nebengleisen herausstellen -->
-					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
-					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
-					<list_entry value="spur" display_value="Anschlussgleis" short_description="Meist kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen" />
-					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
-				</combo>
 				<space />
 				<check key="lit"
 					text="Lit"
 					de.text="Beleuchtung"
 					/>
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="LZB"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,400,600,750,1200,1500,2400,3000,6600"
-					display_values="15 kV (default in Germany),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V"
-					de.display_values="15 kV (Standard in Deutschland),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in large parts of Germany),50 Hz,60 Hz,25 Hz"
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500"
-					display_values="1100 mm,1000 mm (Meterspur),900 mm,889 mm,880 mm,860 mm,800 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
 			</item>
-			<item de.name="Erhaltene Bahnstrecke" name="Preserved Track" type="way">
-				<label text="A Track which is only used for tourism." de.text="Ein Gleis, auf dem kein regulärer Betrieb mehr stattfindet und nun für touristische Zwecke erhalten bleibt (z. B. Draisinenstrecken)." />
-				<space />
-				<key key="railway"
-					value="preserved" />
-				<text key="ref"
-					text="Line ref (VzG number, e.g. '2379')"
-					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
-					/>
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
-					/>
-				<combo key="service" text="Track service" de.text="Gleisfunktion">
-					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
-					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
-					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
-					<list_entry value="spur" display_value="Anschlussgleis" short_description="Meist kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen" />
-					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
-				</combo>
-				<space />
-				<check key="lit"
-					text="Lit"
-					de.text="Beleuchtung"
-					/>
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,400,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (default in Germany),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in large parts of Germany),50 Hz,60 Hz,25 Hz"
-					dedisplay_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1800,1524,1520,1458,1450,1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
-					display_values="1435 mm (Normalspur),1800 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1100 mm,1000 mm (Meterspur),900 mm,889 mm,880 mm,860 mm,800 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<item de.name="Miniaturbahn / Parkeisenbahn" name="Miniature Railway" type="way">
-				<label text="Miniature Railway which is usually used for tourists and leisure, gauge up to 600 mm." de.text="Parkeisenbahnen und vergleichbare, in der Regel touristisch genutzte, Schmalspurbahnen bis etwa 600 mm Spurweite." />
-				<space />
-				<key key="railway"
-					value="miniature" />
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<combo key="usage" text="Usage (leave empty if main track or line)" de.text="Nutzung (leer lassen bei Strecken- und Hauptgleisen)">
-					<list_entry value="branch" display_value="Reguläre Strecke" de.display_value="regular line" short_description="Eine Schmalspurbahn, auf der regulärer Personen- und/oder Güterverkehr stattfindet." />
-					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
-				</combo>
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
-					/>
-				<combo key="service" text="Track service" de.text="Gleisfunktion">
-					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
-					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
-					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
-					<list_entry value="spur" display_value="Anschlussgleis" short_description="Meist kurze Gleise, die Industriebetriebe an eine Bahnstrecke anschließen" />
-					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Durchgehendes Hauptgleis (Fortsetzung der freien Strecke im Bahnhof)" />
-				</combo>
-				<space />
-				<check key="lit"
-					text="Lit"
-					de.text="Beleuchtung"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="45,220,400,600,750,1200,1500,6600"
-					display_values="45 V,220 V,400 V,600 V,750 V,1200 V,1500 V,6600 V"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in large parts of Germany),50 Hz,60 Hz,25 Hz"
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="381,320,184,144,127,89"
-					display_values="381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<separator />
-			<item de.name="Straßenbahngleis" name="Tram" type="way">
-				<label text="Trams and underground trams. Every track is mapped individually." de.text="Ebenerdig oder teilweise unterirdisch verlegte Straßenbahngleise oder straßenbahnähnlich verlegte Stadtbahnstrecken. Jedes Gleis wird einzeln erfasst." />
-				<space />
-				<key key="railway"
-					value="tram" />
-				<text key="ref"
-					text="Line ref"
-					de.text="Streckennummer"
-					/>
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,freight, "
-					de.display_values="Gemischt,Güterverkehr,Personenverkehr" display_values="mixed,freight,passenger"
-					default="passenger"
-					/>
-				<combo key="service" text="Track service" de.text="Gleisfunktion">
-					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
-					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
-					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
-					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
-				</combo>
-				<space />
-				<check key="lit"
-					text="Lit"
-					de.text="Beleuchtung"
-					/>
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="LZB"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
-					display_values="15 kV (default in Germany),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="0,16.7,16.67,50,60,25"
-					de.display_values="Gleichspannung,16.7 Hz, 16 2/3 Hz, 50 Hz, 60 Hz, 25 Hz"
-					display_values="DC,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1458,1450,1100,1000,900,750,600"
-					display_values="1435 mm (Normalspur),1458 mm,1450 mm,1100 mm,1000 mm (Meterspur),900 mm,750 mm,600 mm"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless (slab track)"
-					de.text="Feste Fahrbahn"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'Rheinbahn')"
-					de.text="Betreiber (z. B. 'Rheinbahn')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<item de.name="U-Bahngleis" name="Subway/Underground Railway" icon="de/subway-32.png" type="way">
-				<label text="Subway tracks. May run overground but separated from car traffic. Every track is mapped individually. Additionally you can choose 'Tunnel' if it is underground." de.text="Unterirdisch verlegte Stadt- und Schnellbahnen, teilweise auch oberirdischer Verlauf möglich. Jedes Gleis wird einzeln erfasst. Zusätzlich noch im Menü 'Tunnel' auswählen!" />
-				<space />
-				<key key="railway"
-					value="subway" />
-				<text key="ref"
-					text="Line ref"
-					de.text="Streckennummer"
-					/>
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<combo key="service" text="Track service" de.text="Gleisfunktion">
-					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
-					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
-					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
-					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
-				</combo>
-				<check key="lit"
-					text="Lit"
-					de.text="Beleuchtung"
-					/>
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="LZB"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
-					display_values="15 kV (default in Germany),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="0,16.7,16.67,50,60,25"
-					de.display_values="Gleichspannung,16.7 Hz, 16 2/3 Hz, 50 Hz, 60 Hz, 25 Hz"
-					display_values="DC,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1458,1450,1100,1000,900,750,600"
-					display_values="1435 mm (Normalspur),1458 mm,1450 mm,1100 mm,1000 mm (Meterspur),900 mm,750 mm,600 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'Rheinbahn')"
-					de.text="Betreiber (z. B. 'Rheinbahn')"
-					/>
-			</item>
-			<item de.name="Stadt-/Schnellbahngleis" name="Light Rail" type="way">
-				<label text="Light rail tracks. May run under- or overground, usually separated from car traffic. Uses usually a different voltage and frequency and differnt vehicles. Every track is mapped individually." de.text="Stadtbahnen und straßenbahnähnliche Untergrund- oder Überlandbahnen. Unterscheiden sich meist durch ein anderes Stromsystem, eigene Signaltechnik oder einen speziellen Fuhrpark (z. B. S-Bahnen Hamburg und Berlin, Hamburger Hochbahn) und sind meist völlig vom restlichen Straßenverkehr getrennt. Jedes Gleis wird einzeln erfasst." />
-				<space />
-				<key key="railway"
-					value="light_rail" />
-				<text key="ref"
-					text="Line ref"
-					de.text="Streckennummer"
-					/>
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<key key="railway:traffic_mode"
-					value="passenger" />
-				<combo key="service" text="Track service" de.text="Gleisfunktion">
-					<list_entry value="siding" display_value="Nebengleis" short_description="Gleise in Bahnhöfen, die parallel zum durchgehenden Hauptgleis verlaufen und zum Überholen und Halten von Zügen dienen" />
-					<list_entry value="yard" display_value="Abstellgleis" short_description="Gleise in Rangier-, Güter- oder Betriebsbahnhöfen, die zum Rangieren, Zusammenstellen von Zügen und Abstellen von Wagen dienen" />
-					<list_entry value="crossover" display_value="Überleitgleis" short_description="Kurze Gleise, die das Wechseln zwischen zwei Gleisen ermöglichen" />
-					<list_entry value=" " display_value="Haupt-/Streckengleis" short_description="Ein Streckengleis oder durchgehendes Hauptgleis in einem Bahnhof" />
-				</combo>
-				<space />
-				<check key="lit"
-					text="Lit"
-					de.text="Beleuchtung"
-					/>
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="LZB"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,500,550,600,750,850,1000,1200,1500,2400,3000,6500,6600,11000,25000"
-					display_values="15 kV (default in Germany),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),500 V,550 V,600 V,750 V,850 V,1000 V,1200 V,1500 V,2400 V,3000 V,6500 V,6600 V,11 kV,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="0,16.7,16.67,50,60,25"
-					de.display_values="Gleichspannung,16.7 Hz, 16 2/3 Hz, 50 Hz, 60 Hz, 25 Hz"
-					display_values="DC,16.7 Hz,16 2/3 Hz,50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1458,1450,1100,1000,900,750,600"
-					display_values="1435 mm (Normalspur),1458 mm,1450 mm,1100 mm,1000 mm (Meterspur),900 mm,750 mm,600 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'Rheinbahn')"
-					de.text="Betreiber (z. B. 'Rheinbahn')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<separator />
-			<item de.name="Geplantes Gleis" name="Proposed Track" icon="proposed-32.png" type="way">
-				<label text="Proposed track which has not been built yet." de.text="Ein Gleis, dessen Bau geplant ist." />
-				<space />
-				<key key="railway"
-					value="proposed" />
-					<text key="ref"
-					text="Line ref (VzG number, e.g. '2379')"
-					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
-					/>
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<combo key="usage" text="Usage" de.text="Nutzung">
-					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
-					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
-				</combo>
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
-					/>
-				<check key="highspeed"
-					text="Highspeed traffic (~ >200 km/h)"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					/>
-				<check key="railway:tilting"
-					text="Used by tilting trains"
-					de.text="Neigetechnik-Ausrüstung"
-					/>
-				<space />
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="LZB"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:gnt"
-					text="Tilting train system"
-					de.text="Geschwindigkeitsüberwachung Neigetechnik"
-					values="yes,no,zub122,zub262"
-					display_values="Ja,Nein,ZUB122,ZUB262"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<space />
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<combo key="maxspeed:tilting"
-					text="Maxspeed of Used by tilting trains (km/h)"
-					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,400,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (default in Germany),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"					
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1800,1524,1520,1458,1450,1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
-					display_values="1435 mm (Normalspur),1800 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1100 mm,1000 mm (Meterspur),900 mm,889 mm,880 mm,860 mm,800 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<item de.name="Gleis im Bau" name="Track under construction" type="way">
-				<label text="Track under construction but not finished." de.text="Ein Gleis, dessen Bau momentan noch nicht fertiggestellt ist." />
-				<space />
-				<key key="railway"
-					value="construction" />
-					<text key="ref"
-					text="Line ref (VzG number, e.g. '2379')"
-					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
-					/>
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<combo key="usage" text="Usage" de.text="Nutzung">
-					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
-					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
-				</combo>
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" display_values="mixed,passenger,freight"
-					/>
-				<check key="highspeed"
-					text="Highspeed traffic (~ >200 km/h)"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					/>
-				<check key="railway:tilting"
-					text="Used by tilting trains"
-					de.text="Neigetechnik-Ausrüstung"
-					/>
-				<space />
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="LZB"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:gnt"
-					text="Tilting train system"
-					de.text="Geschwindigkeitsüberwachung Neigetechnik"
-					values="yes,no,zub122,zub262"
-					display_values="Ja,Nein,ZUB122,ZUB262"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<space />
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<combo key="maxspeed:tilting"
-					text="Maxspeed of Used by tilting trains (km/h)"
-					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,400,600,750,1200,1500,2400,3000,6600,25000"
-					display_values="15 kV (default in Germany),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),400 V,600 V,750 V,1200 V,1500 V,2400 V,3000 V,6600 V,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"					
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1800,1524,1520,1458,1450,1100,1000,900,889,880,860,800,775,750,660,655,630,600,575,560,550,500,381,320,184,144,127,89"
-					display_values="1435 mm (Normalspur),1800 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1100 mm,1000 mm (Meterspur),900 mm,889 mm,880 mm,860 mm,800 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<item de.name="Stillgelegtes Gleis" name="Disused Track" icon="disused.png" type="way">
-				<label text="Ein Gleis, das zwar noch vorhanden ist und jederzeit wieder genutzt werden könnte, im Moment aber nicht mehr in Betrieb ist." />
-				<space />
-				<key key="railway"
-					value="disused" />
-					<text key="ref"
-					text="Line ref (VzG number, e.g. '2379')"
-					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
-					/>
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<combo key="usage" text="Usage" de.text="Nutzung">
-					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
-					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
-				</combo>
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" 
-					display_values="mixed,passenger,freight"
-					/>
-				<check key="highspeed"
-					text="Highspeed traffic (~ >200 km/h)"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					/>
-				<space />
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="LZB"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,180,220,400,600,650,750,800,1100,1200,1500,2400,3000,5000,5500,6300,6600,8000,10000,20000,25000"
-					display_values="15 kV (default in Germany),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"					
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1800,1600,1524,1520,1458,1450,1440,1432,1100,1000,925,915,900,889,880,860,820,800,785,775,750,660,655,630,600,575,560,550,500,410,381,320,184,144,127,89"
-					display_values="1435 mm (Normalspur),1800 mm,1600 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1440 mm,1432 mm,1100 mm,1000 mm (Meterspur),925 mm,915 mm,900 mm,889 mm,880 mm,860 mm,820 mm,800 mm,785 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,410 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="end_date"
-					text="Closed at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Stilllegung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<item de.name="Abgebautes Gleis" name="Abandoned Track" icon="abandoned.png" type="way">
-				<label text="A tracks whose rails has been dismounted but whose train path and ballast is still visible on ground." de.text="Ein Gleis, das entfernt wurde. Das Gleisbett ist weiterhin vorhanden und der Streckenverlauf ist weiterhin sichtbar." />
-				<space />
-				<key key="railway"
-					value="razed" />
-				<text key="ref"
-					text="Line ref (VzG number, e.g. '2379')"
-					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
-					/>
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<combo key="usage" text="Usage" de.text="Nutzung">
-					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
-					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
-				</combo>
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr" 
-					display_values="mixed,passenger,freight"
-					/>
-				<check key="highspeed"
-					text="Highspeed traffic (~ >200 km/h)"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					/>
-				<space />
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="LZB"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,180,220,400,600,650,750,800,1100,1200,1500,2400,3000,5000,5500,6300,6600,8000,10000,20000,25000"
-					display_values="15 kV (default in Germany),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
-					de.display_values="15 kV (Standard in Deutschland),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"					
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1800,1600,1524,1520,1458,1450,1440,1432,1100,1000,925,915,900,889,880,860,820,800,785,775,750,660,655,630,600,575,560,550,500,410,381,320,184,144,127,89"
-					display_values="1435 mm (Normalspur),1800 mm,1600 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1440 mm,1432 mm,1100 mm,1000 mm (Meterspur),925 mm,915 mm,900 mm,889 mm,880 mm,860 mm,820 mm,800 mm,785 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,410 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="end_date"
-					text="Closed at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Stilllegung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
-			<item de.name="Überbauter Streckenverlauf" name="Razed Track" icon="razed.png" type="way">
-				<label text="Overbuilt track which could only be seen if you know where it is." de.text="Ein ehemaliges Gleis, dessen Verlauf heute durch Überbauung o.ä. nur noch zu erahnen ist." />
-				<space />
-				<key key="railway"
-					value="razed" />
-				<text key="ref"
-					text="Line ref (VzG number, e.g. '2379')"
-					de.text="Streckennummer (VzG-Nummer, z. B. '2379')"
-					/>
-				<text key="railway:track_ref"
-					text="Track ref (inside station)"
-					de.text="Gleisnummer (im Bahnhof)"
-					/>
-				<text key="name"
-					text="Railway name"
-					de.text="Streckenname"
-					/>
-				<space />
-				<combo key="usage" text="Usage" de.text="Nutzung">
-					<list_entry value="main" de.display_value="Hauptbahn" display_value="main line" short_description="Strecke mit übergeordneter Bedeutung; meist zweigleisig, meist elektrifiziert, zumindest abschnittsweise mit mehr als 100 km/h befahrbar" />
-					<list_entry value="branch" de.display_value="Nebenbahn" display_value="branch line" short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." />
-					<list_entry value="industrial" display_value="Industriebahn" de.display_value="industrial/mine railway" short_description="Eine Strecke, die ausschließlich dem Güterverkehr dient und in der Regel Eigentum eines Industrieunternehmens ist. Meist nur innerhalb von Hafengebieten, Industrieanlagen, Tagebauen." />
-					<list_entry value="military" de.display_value="Militärbahn" display_value="military railway" short_description="Eine Strecke, die ausschließlich dem Militärverkehr dient. Meistens Strecken zwischen normalen Bahnstrecken und Munitionsdepots oder Truppenübungsplätzen." />
-					<list_entry value="tourism" de.display_value="Tourismusbahn" display_value="tourism" short_description="Eine Strecke, die ausschließlich touristischen Zwecken dient, z. B. Museumsstrecken oder Draisinenbahnen." />
-					<list_entry value="test" display_value="Teststrecke" short_description="Eine Strecke, auf der neue Schienenfahrzeuge getestet werden." />
-				</combo>
-				<combo key="railway:traffic_mode"
-					text="Traffic mode"
-					de.text="Verkehrsart"
-					values="mixed,passenger,freight"
-					de.display_values="Gemischt,Personenverkehr,Güterverkehr"
-					display_values="mixed,passenger only,freight only"
-					/>
-				<check key="highspeed"
-					text="Highspeed traffic (~ >200 km/h)"
-					de.text="Hochgeschwindigkeitsstrecke (~ >200 km/h)"
-					/>
-				<space />
-				<check key="railway:pzb"
-					text="PZB"
-					de.text="Punktförmige Zugbeeinflussung (PZB)"
-					/>
-				<check key="railway:lzb"
-					text="LZB"
-					de.text="Linienzugbeeinflussung (LZB)"
-					/>
-				<combo key="railway:etcs"
-					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Yes,No,Level 0,Level 1,Level 2,Level 3"
-					de.display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
-					/>
-				<combo key="railway:radio"
-					text="Radio"
-					de.text="Zugfunk"
-					values="analogue,gsm-r"
-					display_values="analogue,GSM-R"
-					de.display_values="Analog,GSM-R"
-					/>
-				<combo key="railway:preferred_direction" text="Direction of use (depends on direction of OSM way)" de.text="Regelfahrtrichtung (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="forward" display_value="forward (in the same direction as the OSM way)" de.display_value="In Wegrichtung" short_description="Das Gleis wird üblicherweise in die Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
-					<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
-				</combo>
-				<combo key="railway:bidirectional" text="Bidirectional traffic (depends on direction of OSM way)" de.text="Gleiswechselbetrieb (abhängig von Richtung des OSM-Ways)">
-					<list_entry value="regular" de.display_value="Gleiswechselbetrieb" short_description="Das Gleis ist für beide Fahrtrichtungen mit Signalen ausgestattet und kann daher regulär entgegen der üblichen Fahrtrichtung befahren werden." />
-					<list_entry value="signals" de.display_value="Signalisierter Falschfahrbetrieb" short_description="Das Gleis ist signaltechnisch nur für eine Fahrtrichtung ausgelegt, sodass weiterhin Falschfahrten notwendig sind, diese sind aber durch Signale geregelt." />
-					<list_entry value="possible" de.display_value="Falschfahrt möglich" short_description="Signaltechnisch besteht keine Möglichkeit einer Befahrung des Gegengleises. Es ist ein schriftlicher Befehl notwendig." />
-				</combo>
-				<combo key="maxspeed"
-					text="Maxspeed (km/h)"
-					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
-				<label text="Different speed limits depending on direction can be tagged manually using maxspeed:forward= and maxspeed:backward=*." de.text="Unterschiedliche Geschwindigkeiten je Richtung können manuell mit maxspeed:forward=* bzw. maxspeed:backward=* getaggt werden." />
-				<space />
-				<combo key="electrified"
-					text="Electrification"
-					de.text="Elektrifizierung"
-					values="yes,no,contact_line,rail"
-					display_values="Ja,Nein,Oberleitung,Stromschiene"
-					/>
-				<combo key="voltage"
-					text="Voltage"
-					de.text="Spannung"
-					values="15000,180,220,400,600,650,750,800,1100,1200,1500,2400,3000,5000,5500,6300,6600,8000,10000,20000,25000"
-					de.display_values="15 kV (Standard in Deutschland),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
-					display_values="15 kV (default in Germany),45 V,220 V,400 V,600 V,650 V,750 V,800 V,1100 V,1200 V,1500 V,2400 V,3000 V,5000 V,5500 V,6300 V,6600 V,8000 V,10 kV,20 kV,25 kV"
-					/>
-				<combo key="frequency"
-					text="Frequency"
-					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"					
-					de.display_values="16.7 Hz (Standard in Deutschland),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					display_values="16.7 Hz (default in Germany),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
-					/>
-				<combo key="gauge"
-					text="Gauge"
-					de.text="Spurweite"
-					values="1435,1800,1600,1524,1520,1458,1450,1440,1432,1100,1000,925,915,900,889,880,860,820,800,785,775,750,660,655,630,600,575,560,550,500,410,381,320,184,144,127,89"
-					display_values="1435 mm (Normalspur),1800 mm,1600 mm,1524 mm (Russische Breitspur),1520 mm (Russische Breitspur),1458 mm,1450 mm,1440 mm,1432 mm,1100 mm,1000 mm (Meterspur),925 mm,915 mm,900 mm,889 mm,880 mm,860 mm,820 mm,800 mm,785 mm,775 mm,750 mm,660 mm,655 mm,630 mm,600 mm,575 mm,560 mm,550 mm,500 mm,410 mm,381 mm,320 mm,184 mm,144 mm,127 mm,89 mm"
-					default="1435"
-					/>
-				<check key="railway:ballastless"
-					text="Ballastless"
-					de.text="Feste Fahrbahn"
-					/>
-				<combo key="rack"
-					text="Rack"
-					de.text="Zahnstange"
-					values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"
-					display_values="Ja,Nein,System Riggenbach,System Strub,System Abt,System Locher,System Riggenbach-Klose,System Marsh,System Von Roll"
-					/>
-				<text key="incline"
-					text="Incline (e.g.. '3%')"
-					de.text="Steigung (z. B. '3%')"
-					/>
-				<space />
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="end_date"
-					text="Closed at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Stilllegung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
-					/>
-				<space />
-				<check key="embankment"
-					text="Embankment"
-					de.text="Damm"
-					/>
-				<check key="cutting"
-					text="Cutting"
-					de.text="Einschnitt"
-					/>
-			</item>
+		</group>
 			<separator />
 			<item de.name="Brücke" name="Brücke" icon="bridge-32.png" type="way">
 				<key key="bridge"
@@ -2073,7 +328,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Image URL"
 					de.text="URL eines Bildes"
 					/>
-				<text key="wikipedia"
+				<text key="bridge:wikipedia"
 					text="Wikipedia article in the format (Language):(Article)"
 					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
 					/>
@@ -2091,7 +346,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Image URL"
 					de.text="URL eines Bildes"
 					/>
-				<text key="wikipedia"
+				<text key="tunnel:wikipedia"
 					text="Wikipedia article in the format (Language):(Article)"
 					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
 					/>
@@ -2112,8 +367,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:minor"
 					text="Exact type of signal"
 					de.text="Signaltyp"
-					values="DE-ESO:sh0,DE-ESO:sh2"
-					display_values="Sh 0-Tafel,Sh 2-Tafel"
+					values="DE-ESO:sh0,DE-ESO:sh2,DE-BOStrab:sh2,AT-V2:weiterfahrt_verboten"
+					de.display_values="Sh 0-Tafel (deutsche Voll-/Schmalspurbahn),Sh 2-Tafel (deutsche Voll-/Schmalspurbahn),Sh 2 (Straßen-/U-/Stadtbahn),Weiterfahrt verboten (Österreich)"
+					display_values="Sh 0 sign (German railway/German narrow gauge railway),Sh 2 sign (German railway/German narrow gauge railway),Sh 2 (tram/light rail/subway),Weiterfahrt verboten (Austria)"
 					/>
 				<key key="railway:signal:minor:form"
 					value="sign" />
@@ -2210,13 +466,19 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					/>
-				<key key="railway:signal:minor"
-					value="DE-ESO:sh" />
+				<combo key="railway:signal:minor"
+					text="Signal"
+					de.text="Signal"
+					values="DE-ESO:sh,AT-V2:sperrsignal"
+					de.display_values="Deutschland (Voll-/Schmalspurbahn),Österreich"
+					display_values="Germany,Austria" />
 				<combo key="railway:signal:minor:states"
 					text="Signal states"
 					de.text="Signalzustände"
-					values="DE-ESO:sh0;DE-ESO:sh1,DE-ESO:sh0;DE-ESO:wn7"
-					display_values="Sh 0 / Sh 1,Sh 0 / Wn 7 (vormals Gsp 2)"
+					delimiter="|"
+					values="DE-ESO:sh0;DE-ESO:sh1|DE-ESO:sh0;DE-ESO:wn7|AT-V2:weiterfahrt_verboten;AT-V2:weiterfahrt_erlaubt"
+					de.display_values="Sh 0/Sh 1 (Deutschland)|Sh 0/Wn 7 (ehem. Gsp 2, Deutschland)|Weiterfahrt verboten/erlaubt (Österreich)"
+					display_values="Sh 0/Sh 1 (Germany)|Sh 0/Wn 7 (former Gsp 2, Germany)|Weiterfahrt verboten/erlaubt (Austria)"
 					/>
 				<key key="railway:signal:minor:form"
 					value="semaphore" />
@@ -2236,7 +498,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Isolierstoß,Achszähler"
 					/>
 			</item>
-		</group>
 		<item name="Signal Box" de.name="Stellwerk" icon="signalbox.png" type="node,closedway">
 			<label text="signal box" de.text="Stellwerk" />
 			<space />
@@ -2255,6 +516,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Stellwerkstechnik"
 				values="mechanical,electric,track_diagram,electronic"
 				display_values="Mechanisches Stellwerk,Elektrisches/Elektromechanisches Stellwerk,Gleisbildstellwerk,Elektronisches Stellwerk (ESTW)"
+				/>
+			<combo key="operator"
+				text="operator" de.text="Betreiber"
+				values="DB Netz AG,ÖBB-Infrastruktur AG"
+				default=""
 				/>
 			<text key="start_date"
 				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -2601,9 +867,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS100)"
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
+				<combo key="operator"
+					text="operator" de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -2636,9 +903,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS100)"
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG')"
+				<combo key="operator"
+					text="operator" de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<text key="start_date"
 					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
@@ -2768,9 +1036,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS100)"
 					de.text="Abkürzung (nach DS100, z. B. 'ABC')"
 					/>
-				<text key="operator"
-					text="Operator (e.g. 'DB Netz AG' or 'DB Station&amp;Service AG')"
-					de.text="Betreiber (z. B. 'DB Netz AG' oder 'DB Station&amp;Service AG')"
+				<combo key="operator"
+					text="operator" de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
 					/>
 				<check key="train"
 					text="Railway traffic?"
@@ -3703,12 +1972,6 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Wikipedia article in the format (Language):(Article)"
 				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
 				/>
-		</item>
-		<item name="Gate" de.name="Tor" type="node">
-			<label text="Gate" de.text="Tor" />
-			<key key="barrier"
-				value="gate" />
-			<preset_link preset_name="Schutzhalttafel (Sh 2)" />
 		</item>
 	</group>
 </presets>
