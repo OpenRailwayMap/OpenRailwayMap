@@ -2344,6 +2344,84 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Frequenz (falls angezeigt)"
 					/>
 			</item>
+			<group name="Signale für Schiebelokomotiven und Sperrfahrten (Ts)">
+				<item name="Nachschieben einstellen (Ts 1)" type="node">
+					<label text="Nachschieben einstellen" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:helper_engine:deactivated"
+						text="Out of order"
+						de.text="Ungültigkeitskreuz"
+						/>
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						/>
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						/>
+					<space />
+					<key key="railway:signal:helper_engine"
+						value="DE-ESO:ts" />
+					<combo key="railway:signal:helper_engine:form"
+						text="Signal form"
+						de.text="Anzeigeart"
+						values="light,sign"
+						display_values="Lichtsignal,Tafel"
+						/>
+					<key key="railway:signal:helper_engine:states"
+						value="DE-ESO:ts1" />
+					<combo key="railway:signal:helper_engine:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						/>
+				</item>
+				<item name="Halt/Weiterfahrt für zurückkehrende Schieblokomotiven und Sperrfahrten (Ts 2/3)" type="node">
+					<label text="Halt/Weiterfahrt für zurückkehrende Schieblokomotiven und Sperrfahrten" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:helper_engine:deactivated"
+						text="Out of order"
+						de.text="Ungültigkeitskreuz"
+						/>
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						/>
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						/>
+					<space />
+					<key key="railway:signal:helper_engine"
+						value="DE-ESO:ts" />
+					<key key="railway:signal:helper_engine:form"
+						value="semaphore" />
+					<key key="railway:signal:helper_engine:states"
+						value="DE-ESO:ts2;DE-ESO:ts3" />
+					<combo key="railway:signal:helper_engine:height"
+						text="Signal height"
+						de.text="Signalbauform"
+						values="normal,dwarf"
+						display_values="Mastbauform,Zwergsignal"
+						/>
+				</item>
+			</group>
 			<separator />
 			<item name="Fahrtanzeiger" icon="de/fahrtanzeiger-32.png" type="node">
 				<label text="Fahrtanzeiger" />
