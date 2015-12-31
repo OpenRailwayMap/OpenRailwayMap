@@ -6,6 +6,9 @@
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
+# extend environment paths by location of osmconvert, osmupdate and osmfilter
+export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
+
 source $(dirname ${0})/config.cfg
 source $(dirname ${0})/func_filter.sh
 
@@ -52,5 +55,8 @@ if [ -s $TILELIST ]; then
 	find 7 -exec touch -t 197001010000 {} \;
 fi
 echo "-----"
+
+rm timestamp
+mv timestamp_tmp timestamp
 
 echo "Finished processing at $(date)"
