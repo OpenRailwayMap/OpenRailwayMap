@@ -475,7 +475,9 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE
 /* DE signal Sh 2 as signal and at buffer stops */
 /************************************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh2"],
-node|z17-[railway="buffer_stop"]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh2"]
+node|z17-[railway="buffer_stop"]["railway:signal:direction"]["railway:signal:minor"="DE-ESO:sh2"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-BOStrab:sh2"],
+node|z17-[railway="buffer_stop"]["railway:signal:direction"]["railway:signal:minor"="DE-BOStrab:sh2"]
 {
 	z-index: 4010;
 	icon-image: "icons/de/sh2-32.png";
