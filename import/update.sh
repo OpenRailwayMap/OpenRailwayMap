@@ -56,6 +56,7 @@ if [ -s $TILELIST ]; then
 fi
 echo "-----"
 
+cd $DATAPATH
 rm timestamp
 mv timestamp_tmp timestamp
 
