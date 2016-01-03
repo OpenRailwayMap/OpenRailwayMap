@@ -1605,6 +1605,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Platform height (in meters, e. g. 0.76)"
 				de.text="Bahnsteighöhe (in Metern, z. B. 0.76)"
 				/>
+			<combo key="gauge"
+				text="Platform height [mm]"
+				de.text="Bahnsteighöhe [mm]"
+				values="0.19,0.38,0.55,0.76,0.92,0.96,0.130"
+				display_values="190,380,550,760,920,960,1300"
+				de.display_values="190,380,550,760,920,960,1300"
+				default=""
+				values_sort="false"
+				/>
 			<combo key="operator"
 				text="operator"
 				de.text="Betreiber"
