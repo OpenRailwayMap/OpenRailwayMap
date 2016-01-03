@@ -1605,6 +1605,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Platform height (in meters, e. g. 0.76)"
 				de.text="Bahnsteighöhe (in Metern, z. B. 0.76)"
 				/>
+			<combo key="operator"
+				text="operator"
+				de.text="Betreiber"
+				values="DB Station&amp;Service AG,ÖBB-Infrastruktur AG"
+				default=""
+				/>
 			<check key="train"
 				text="Railway traffic?"
 				de.text="Eisenbahnverkehr?"
