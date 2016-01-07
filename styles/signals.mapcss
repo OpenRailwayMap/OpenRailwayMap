@@ -345,7 +345,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-
 	allow-overlap: true;
 }
 
-@media not (user-agent: josm) {
+@supports not (user-agent: josm) {
 	node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]
 	{
 		text-offset-x: 0;
@@ -821,7 +821,7 @@ node|z18-[railway=signal]["railway:signal:direction"]["railway:signal:train_prot
 	z-index: 8500;
 	text-allow-overlap: true;
 }
-@media not (user-agent: josm) {
+@supports not (user-agent: josm) {
 	node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-ESO:blockkennzeichen"]::blockkennzeichen
 	{
 		text-offset-x: 0;
