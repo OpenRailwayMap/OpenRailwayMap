@@ -1601,11 +1601,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="yes,no,incorrect"
 				display_values="Ja,Nein,Ja (aber nicht sinnvoll)"
 				/>
-			<text key="height"
-				text="Platform height (in meters, e. g. 0.76)"
-				de.text="Bahnsteighöhe (in Metern, z. B. 0.76)"
-				/>
-			<combo key="gauge"
+			<combo key="height"
 				text="Platform height [mm]"
 				de.text="Bahnsteighöhe [mm]"
 				values="0.19,0.38,0.55,0.76,0.92,0.96,0.130"
