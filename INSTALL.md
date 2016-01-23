@@ -105,7 +105,7 @@ Debian/Ubuntu:
     SECURITY INVOKER
     COST 100;" | psql -d railmap
 
- It is necessary to to set permissions for the tables. Replace `user` by the username of the user that runs the API server process:
+ It is necessary to to set permissions for the tables. Note that the `railmap` in `railmap_point` and others is the database prefix as used in `osm2pqsql`. Replace `user` by the username of the user that runs the API server process:
 
     $ echo "ALTER TABLE geometry_columns OWNER TO railmap;" | psql -d railmap
     $ echo "ALTER TABLE spatial_ref_sys OWNER TO railmap;" | psql -d railmap
