@@ -144,7 +144,7 @@
 			_paq.push(["enableLinkTracking"]);
 
 			(function() {
-			var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.openlinkmap.org/";
+			var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.openrailwaymap.org/";
 			_paq.push(["setTrackerUrl", u+"piwik.php"]);
 			_paq.push(["setSiteId", "2"]);
 			var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
