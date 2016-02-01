@@ -27,7 +27,7 @@
 
 ## Contact
 
- * [Email](info@openrailwaymap.org)
+ * [Email](mailto:info@openrailwaymap.org)
  * [Mailinglist](http://lists.openrailwaymap.org/lists/listinfo/openrailwaymap)
 
 ## License
