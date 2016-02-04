@@ -36,22 +36,6 @@ function createMap(embed)
 		maxZoom: 19
 	});
 
-	MapCSS.onImagesLoad = function()
-	{
-		map.addLayer(railmap);
-
-		map.on('zoomend', function(e)
-		{
-			updateLegend("legend", MapCSS.availableStyles[0]);
-			updatePermalink(MapCSS.availableStyles[0]);
-			railmap.redraw();
-		});
-
-		if (params['style'] != null && styleValid(params['style']))
-			setStyle(params['style']);
-		else
-			setStyle("standard");
-	};
 	MapCSS.preloadSpriteImage("standard", root+"styles/standard.png");
 	MapCSS.preloadSpriteImage("signals", root+"styles/signals.png");
 	MapCSS.preloadSpriteImage("maxspeed", root+"styles/maxspeed.png");
@@ -71,6 +55,23 @@ function createMap(embed)
 
 	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
 	var layerSwitch = new L.Control.Layers(baseLayers, overlays).addTo(map);
+
+	MapCSS.onImagesLoad = function()
+	{
+		map.addLayer(railmap);
+
+		map.on('zoomend', function(e)
+		{
+			updateLegend("legend", MapCSS.availableStyles[0]);
+			updatePermalink(MapCSS.availableStyles[0]);
+			railmap.redraw();
+		});
+
+		if (params['style'] != null && styleValid(params['style']))
+			setStyle(params['style']);
+		else
+			setStyle("standard");
+	};
 
 	// only in not-embed mode
 	if (!embed)
