@@ -53,20 +53,7 @@ function createMap(embed)
 		});
 	}
 
-	// hillshading layer
-	var hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
-	{
-		attribution: translations['hillshadingAttribution'],
-		maxZoom: 17
-	});
-
-	var baseLayers = backgroundLayers();
-	var overlays = new Object();
-	overlays[translations['hillshading']] = hillshading;
-	overlays[translations['railmap']] = railmap;
-
-	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
-	var layerSwitch = new L.Control.Layers(baseLayers, overlays).addTo(map);
+	setupControls();
 
 	// only in not-embed mode
 	if (!embed)

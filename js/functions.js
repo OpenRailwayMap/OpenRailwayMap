@@ -178,8 +178,8 @@ function mobileRedirection()
 	}
 }
 
-// returns an object containing the background layers
-function backgroundLayers()
+// create layer and zoom controls
+function setupControls()
 {
 	// grayscale mapnik background layer
 	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -220,5 +220,17 @@ function backgroundLayers()
 	baseLayers[translations['mapquestGrayscale']] = mapquestGray;
 	baseLayers[translations['blank']] = blank;
 
-	return baseLayers;
+	// hillshading layer
+	var hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
+	{
+		attribution: translations['hillshadingAttribution'],
+		maxZoom: 17
+	});
+
+	var overlays = new Object();
+	overlays[translations['hillshading']] = hillshading;
+	overlays[translations['railmap']] = railmap;
+
+	new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
+	new L.Control.Layers(baseLayers, overlays).addTo(map);
 }
