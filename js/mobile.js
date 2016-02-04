@@ -183,9 +183,5 @@ function getStyleSelection()
 // returns true if the given stylename is a valid and available style; otherwise false is returned
 function styleValid(style)
 {
-	for (var i=0; i<availableStyles.length; i++)
-		if (availableStyles[i] == style)
-			return true;
-
-	return false;
+	return (availableStyles.indexOf(style) >= 0);
 }
