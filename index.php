@@ -43,45 +43,7 @@
 		<script type="text/javascript" src="js/leaflet-0.6.2.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
 		<?php
-			// params
-			echo "<script type=\"text/javascript\">\n";
-				echo "var params={\n";
-				echo "id : ".(isValidId('id') ? ($_GET['id']) : ("null")).",\n";
-				echo "type : ".(isValidType('type') ? ("'".$_GET['type']."'") : ("null")).",\n";
-				echo "lat : ";
-					if (isValidCoordinate('lat'))
-						echo $_GET['lat'].",\n";
-					else
-					{
-						$latlon = getLatLon('id', isset($type) ? $type : "");
-						if ($latlon)
-							echo $latlon[1].",\n";
-						else
-							echo "null,\n";
-					}
-				echo "lon : ";
-					if (isValidCoordinate('lon'))
-						echo $_GET['lon'].",\n";
-					else
-					{
-						$latlon = getLatLon('id', isset($type) ? $type : "");
-						if ($latlon)
-							echo $latlon[0].",\n";
-						else
-							echo "null,\n";
-					}
-				echo "zoom : ".(isValidZoom('zoom') ? ($_GET['zoom']) : ("null")).",\n";
-				echo "offset : ".(isValidOffset('offset') ? ($_GET['offset']) : ("null")).",\n";
-				echo "searchquery : ".(isset($_GET['q']) ? (json_encode($_GET['q'])) : ("''")).",\n";
-				echo "lang : '".$lang."',\n";
-				echo "ref : ".(isset($_GET['ref']) ? (json_encode($_GET['ref'])) : ("null")).",\n";
-				echo "name : ".(isset($_GET['name']) ? (json_encode($_GET['name'])) : ("null")).",\n";
-				echo "line : ".(isset($_GET['line']) ? (json_encode($_GET['line'])) : ("null")).",\n";
-				echo "operator : ".(isset($_GET['operator']) ? (json_encode($_GET['operator'])) : ("null")).",\n";
-				echo "style : ".(isset($_GET['style']) ? (json_encode($_GET['style'])) : ("null")).",\n";
-				echo "mobile : ".(isset($_GET['mobile']) ? (($_GET['mobile'] != '0' && $_GET['mobile'] != 'false') ? "true" : "false") : ("null"))."\n";
-				echo "};\n";
-			echo "</script>\n";
+			urlArgsToParam(true);
 
 			switch ($lang)
 			{
