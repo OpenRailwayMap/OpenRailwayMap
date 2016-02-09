@@ -60,7 +60,7 @@
 		<script type="text/javascript" src="styles/maxspeed.js"></script>
 		<script type="text/javascript" src="styles/electrified.js"></script>
 		<?php
-			urlArgsToParam(true);
+			urlArgsToParam(true, $urlbase);
 
 			switch ($lang)
 			{

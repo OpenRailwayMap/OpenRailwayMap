@@ -43,7 +43,7 @@
 		<script type="text/javascript" src="js/leaflet-0.6.2.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
 		<?php
-			urlArgsToParam(true);
+			urlArgsToParam(true, $urlbase);
 
 			switch ($lang)
 			{

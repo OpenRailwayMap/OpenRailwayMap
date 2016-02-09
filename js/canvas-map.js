@@ -8,7 +8,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 // main function, creates map and layers, controls other functions
 function createMap(embed)
 {
-	root = "http://www.openrailwaymap.org/";
+	root = params['urlbase'];
 	tiledir = "http://tiles.openrailwaymap.org/vector/";
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
 

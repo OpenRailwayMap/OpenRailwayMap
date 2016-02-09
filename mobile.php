@@ -46,7 +46,7 @@
 		<script>L_DISABLE_3D = true;</script>
 
 		<?php
-			urlArgsToParam(true);
+			urlArgsToParam(true, $urlbase);
 
 			switch ($lang)
 			{

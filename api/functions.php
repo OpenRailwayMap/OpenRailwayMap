@@ -1047,10 +1047,11 @@
 			echo $jsonData;
 	}
 
-	function urlArgsToParam($checkMobile)
+	function urlArgsToParam($checkMobile, $urlbase)
 	{
 		echo "<script type=\"text/javascript\">\n";
 			echo "var params={\n";
+			echo "urlbase : '" . $urlbase . "',\n";
 			echo "id : ".(isValidId('id') ? ($_GET['id']) : ("null")).",\n";
 			echo "type : ".(isValidType('type') ? ("'".$_GET['type']."'") : ("null")).",\n";
 			echo "lat : ";

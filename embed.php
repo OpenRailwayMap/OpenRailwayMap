@@ -42,7 +42,7 @@
 		<script type="text/javascript" src="js/leaflet-0.6.2.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
 		<?php
-			urlArgsToParam(false);
+			urlArgsToParam(false, $urlbase);
 		?>
 		<script type="text/javascript" src="api/jstranslations.php?lang=<? echo $lang; ?>"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>

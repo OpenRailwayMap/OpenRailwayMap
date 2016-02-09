@@ -11,6 +11,8 @@
 	$timestampFile = "../../olm/import/timestamp";
 	// email address to send error reports to
 	$mail = "info@openrailwaymap.org";
+	// base part of the server url, must end with '/'
+	$urlbase = "http://www.openrailwaymap.org/";
 	// available translations
 	$langs = array(
 		"cs" => array("cs_CZ", "Česky"),
