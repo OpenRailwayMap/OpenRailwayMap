@@ -75,7 +75,7 @@ OpenRailwayMap = function(config)
 		code: 'blank'
 	});
 
-	this._hillshading = new L.TileLayer('http://toolserver.org/~cmarqu/hill/{z}/{x}/{y}.png',
+	this._hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
 	{
 		attribution: translations['hillshadingAttribution'],
 		maxZoom: 17
