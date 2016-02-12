@@ -5,6 +5,12 @@
 		{
 			"minzoom": 2,
 			"maxzoom": 19,
+			"symbol": "<g fill=\"none\" stroke=\"#FFB900\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "Punktförmige Zugbeeinflussung"
+		},
+		{
+			"minzoom": 2,
+			"maxzoom": 19,
 			"symbol": "<g fill=\"none\" stroke=\"red\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Linienzugbeeinflussung"
 		},

@@ -47,6 +47,11 @@ way.tracks
 	kothicjs-ignore-layer: true;
 }
 
+way["railway:pzb"=yes].tracks
+{
+	z-index: 2;
+	color: #FFB900;
+}
 way["railway:lzb"=yes].tracks
 {
 	z-index: 3;
