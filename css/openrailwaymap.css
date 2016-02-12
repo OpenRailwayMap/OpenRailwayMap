@@ -31,6 +31,7 @@ a, .uk-link, a:hover, .uk-link:hover
 	padding: 10px;
 	border: 1px solid #dddddd;
 	border-top: 1px solid #4e9a06;
+	box-shadow: 0px 0px 42px 5px rgba(232,232,232,1);
 }
 
 .uk-panel-box
@@ -55,18 +56,21 @@ noscript .uk-alert
 {
 	border-radius: 10px;
 	border: 1px solid #dddddd;
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 .uk-navbar
 {
 	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 #mapNav
 {
-	-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
-	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
 	margin-bottom: 10px;
 }
 
