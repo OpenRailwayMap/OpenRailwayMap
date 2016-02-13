@@ -35,6 +35,11 @@ way|z10-[railway=rail],
 way|z2-[railway=rail][usage=main],
 way|z2-[railway=rail][usage=branch]
 {
+	set .tracks;
+}
+
+way.tracks
+{
 	z-index: 0;
 	color: gray;
 	width: 3.5;
