@@ -35,11 +35,40 @@ way|z10-[railway=rail],
 way|z2-[railway=rail][usage=main],
 way|z2-[railway=rail][usage=branch]
 {
+	set .tracks;
+}
+
+way.tracks
+{
 	z-index: 0;
 	color: gray;
 	width: 3.5;
 	linejoin: round;
 	kothicjs-ignore-layer: true;
+}
+
+way["railway:pzb"=no]["railway:lzb"=no][!"railway:etcs"].tracks,
+way["railway:pzb"=no]["railway:lzb"=no]["railway:etcs"=no].tracks,
+way["railway:pzb"=no]["railway:lzb"=no]["railway:etcs"=0].tracks
+{
+	z-index: 1;
+	color: black;
+	width: 2.5;
+}
+way["railway:pzb"=yes].tracks
+{
+	z-index: 2;
+	color: #FFB900;
+}
+way["railway:lzb"=yes].tracks
+{
+	z-index: 3;
+	color: red;
+}
+way["railway:etcs"]["railway:etcs"!=no]["railway:etcs"!=0].tracks
+{
+	z-index: 4;
+	color: blue;
 }
 
 /*********************************/
