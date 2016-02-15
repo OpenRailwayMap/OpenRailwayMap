@@ -8,7 +8,8 @@ function filter_planet
 
 	echo "Filtering planet file"
 	osmfilter temp.o5m \
-		--keep="railway= route=tracks route=railway" \
+		--drop-relations \
+		--keep="railway=" \
 		--drop-tags="fixme= note= source= maxspeed:source= source:maxspeed= wheelchair:description= public_transport= tram=yes bus=yes train=yes subway=yes light_rail=yes lines=" \
 		$*
 	rm temp.o5m
