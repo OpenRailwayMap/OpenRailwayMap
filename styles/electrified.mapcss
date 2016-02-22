@@ -36,10 +36,14 @@ way|z9-[railway=preserved],
 way|z10-[railway=rail],
 way|z2-[railway=rail]
 {
-	set.tracks
+	set .tracks;
+}
+way[electrified][electrified!=no].tracks
+{
+	set .etracks;
 }
 
-way[electrified][electrified!=no][voltage][frequency].tracks
+way[voltage][frequency].etracks
 {
 	text: eval(concat(tag("voltage"), " V ", tag("frequency"), " Hz"));
 	text-position: line;
@@ -50,27 +54,27 @@ way[electrified][electrified!=no][voltage][frequency].tracks
 	text-halo-radius: 1;
 	text-halo-color: white;
 }
-way[electrified][electrified!=no][voltage][frequency=0].tracks
+way[voltage][frequency=0].etracks
 {
 	text: eval(concat(tag("voltage"), " V ="));
 }
-way[electrified][electrified!=no][voltage>=1000][frequency].tracks
+way[voltage>=1000][frequency].etracks
 {
 	text: eval(concat(tag("voltage")/1000, " kV ", tag("frequency"), " Hz"));
 }
-way[electrified][electrified!=no][voltage>=1000][frequency=0].tracks
+way[voltage>=1000][frequency=0].etracks
 {
 	text: eval(concat(tag("voltage")/1000, " kV ="));
 }
 
 /* tracks electrified by rail */
-way[electrified=rail].tracks
+way[electrified=rail].etracks
 {
 	z-index: 1;
 	casing-width: 2;
 	casing-color: #797979;
 }
-way|z16-[electrified=rail].tracks
+way|z16-[electrified=rail].etracks
 {
 	casing-width: 3;
 }
@@ -100,97 +104,97 @@ way[electrified=no]["abandoned:electrified"]["abandoned:electrified"!=no].tracks
 	color: #70584D;
 }
 
-way[electrified][electrified!=no][frequency=0][voltage<750].tracks
+way[frequency=0][voltage<750].etracks
 {
 	z-index: 2;
 	color: #FF79B8;
 }
 
-way[electrified][electrified!=no][frequency=0][voltage=750].tracks
+way[frequency=0][voltage=750].etracks
 {
 	z-index: 3;
 	color: #F930FF;
 }
 
-way[electrified][electrified!=no][frequency=0][voltage>750][voltage<1000].tracks
+way[frequency=0][voltage>750][voltage<1000].etracks
 {
 	z-index: 4;
 	color: #D033FF;
 }
 
-way[electrified][electrified!=no][frequency=0][voltage=1000].tracks
+way[frequency=0][voltage=1000].etracks
 {
 	z-index: 5;
 	color: #5C1CCB;
 }
 
-way[electrified][electrified!=no][frequency=0][voltage>1000][voltage<1500].tracks
+way[frequency=0][voltage>1000][voltage<1500].etracks
 {
 	z-index: 6;
 	color: #007ACB;
 }
 
-way[electrified][electrified!=no][frequency=0][voltage=1500].tracks
+way[frequency=0][voltage=1500].etracks
 {
 	z-index: 7;
 	color: #0098CB;
 }
 
-way[electrified][electrified!=no][frequency=0][voltage>1500][voltage<3000].tracks
+way[frequency=0][voltage>1500][voltage<3000].etracks
 {
 	z-index: 8;
 	color: #00B7CB;
 }
 
-way[electrified][electrified!=no][frequency=0][voltage=3000].tracks
+way[frequency=0][voltage=3000].etracks
 {
 	z-index: 9;
 	color: #0000FF;
 }
 
-way[electrified][electrified!=no][frequency=0][voltage>3000].tracks
+way[frequency=0][voltage>3000].etracks
 {
 	z-index: 10;
 	color: #1969FF;
 }
 
-way[electrified][electrified!=no][frequency][frequency!=0][voltage<15000].tracks
+way[frequency][frequency!=0][voltage<15000].etracks
 {
 	z-index: 11;
 	color: #97FF2F;
 }
 
-way[electrified][electrified!=no][frequency][frequency!=0][voltage>=15000][voltage<25000].tracks
+way[frequency][frequency!=0][voltage>=15000][voltage<25000].etracks
 {
 	z-index: 12;
 	color: #F1F100;
 }
 
-way[electrified][electrified!=no][frequency="16.67"][voltage=15000].tracks
+way[frequency="16.67"][voltage=15000].etracks
 {
 	z-index: 13;
 	color: #00FF00;
 }
 
-way[electrified][electrified!=no][frequency="16.7"][voltage=15000].tracks
+way[frequency="16.7"][voltage=15000].etracks
 {
 	z-index: 14;
 	color: #00CB66;
 }
 
-way[electrified][electrified!=no][frequency][frequency!=0][voltage>=25000].tracks
+way[frequency][frequency!=0][voltage>=25000].etracks
 {
 	z-index: 15;
 	color: #FF9F19;
 }
 
-way[electrified][electrified!=no][frequency=50][voltage=25000].tracks
+way[frequency=50][voltage=25000].etracks
 {
 	z-index: 16;
 	color: #FF0000;
 }
 
-way[electrified][electrified!=no][frequency=60][voltage=25000].tracks
+way[frequency=60][voltage=25000].etracks
 {
 	z-index: 17;
 	color: #C00000;
