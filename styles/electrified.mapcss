@@ -85,7 +85,8 @@ way.tracks
 }
 
 way[!electrified].tracks,
-way[electrified!=no][!voltage].tracks
+way[electrified!=no][!voltage].tracks,
+way[electrified!=no][!frequency].tracks
 {
 	z-index: 0;
 	color: gray;
