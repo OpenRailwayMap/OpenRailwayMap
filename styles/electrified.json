@@ -15,6 +15,11 @@
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#70584D' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
+			"caption": "Deelectrified"
+		},
+		{
+			"minzoom": 2,
+			"symbol": "<g fill='none' stroke='#797979' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "contact line"
 		},
 		{
