@@ -42,7 +42,51 @@ way[electrified][electrified!=no].tracks
 	set .etracks;
 }
 
-way[voltage][frequency].etracks
+way["proposed:electrified"].tracks,
+way|z10-[railway=proposed]["proposed:railway"="tram"]["proposed:electrified"],
+way|z10-[railway=proposed][!"proposed:railway"]["proposed"="tram"]["proposed:electrified"],
+way|z10-[railway=proposed]["proposed:railway"="subway"]["proposed:electrified"],
+way|z10-[railway=proposed][!"proposed:railway"]["proposed"="subway"]["proposed:electrified"],
+way|z10-[railway=proposed]["proposed:railway"="light_rail"]["proposed:electrified"],
+way|z10-[railway=proposed][!"proposed:railway"]["proposed"="light_rail"]["proposed:electrified"],
+way|z9-[railway=proposed]["proposed:railway"="narrow_gauge"]["proposed:electrified"],
+way|z9-[railway=proposed][!"proposed:railway"]["proposed"="narrow_gauge"]["proposed:electrified"],
+way|z9-[railway=proposed]["proposed:railway"="preserved"]["proposed:electrified"],
+way|z9-[railway=proposed][!"proposed:railway"]["proposed"="preserved"]["proposed:electrified"],
+way|z6-[railway=proposed]["proposed:railway"="rail"]["proposed:electrified"],
+way|z6-[railway=proposed][!"proposed:railway"]["proposed"="rail"]["proposed:electrified"]
+{
+	set .ptracks;
+}
+way["proposed:electrified"!=no].ptracks
+{
+	set .eptracks;
+}
+
+way["construction:electrified"].tracks,
+way|z10-[railway=construction]["construction:railway"="tram"]["construction:electrified"],
+way|z10-[railway=construction][!"construction:railway"]["construction"="tram"]["construction:electrified"],
+way|z10-[railway=construction]["construction:railway"="subway"]["construction:electrified"],
+way|z10-[railway=construction][!"construction:railway"]["construction"="subway"]["construction:electrified"],
+way|z10-[railway=construction]["construction:railway"="light_rail"]["construction:electrified"],
+way|z10-[railway=construction][!"construction:railway"]["construction"="light_rail"]["construction:electrified"],
+way|z9-[railway=construction]["construction:railway"="narrow_gauge"]["construction:electrified"],
+way|z9-[railway=construction][!"construction:railway"]["construction"="narrow_gauge"]["construction:electrified"],
+way|z9-[railway=construction]["construction:railway"="preserved"]["construction:electrified"],
+way|z9-[railway=construction][!"construction:railway"]["construction"="preserved"]["construction:electrified"],
+way|z6-[railway=construction]["construction:railway"="rail"]["construction:electrified"],
+way|z6-[railway=construction][!"construction:railway"]["construction"="rail"]["construction:electrified"]
+{
+	set .ctracks;
+}
+way["construction:electrified"!=no].ctracks
+{
+	set .ectracks;
+}
+
+way[voltage][frequency].etracks,
+way["proposed:voltage"]["proposed:frequency"].eptracks,
+way["construction:voltage"]["construction:frequency"].ectracks
 {
 	text: eval(concat(tag("voltage"), " V ", tag("frequency"), " Hz"));
 	text-position: line;
@@ -53,35 +97,79 @@ way[voltage][frequency].etracks
 	text-halo-radius: 1;
 	text-halo-color: white;
 }
+way["proposed:voltage"]["proposed:frequency"].eptracks,
+way["construction:voltage"]["construction:frequency"].ectracks
+{
+	font-style: italic;
+}
 way[voltage][frequency=0].etracks
 {
 	text: eval(concat(tag("voltage"), " V ="));
+}
+way["proposed:voltage"]["proposed:frequency"=0].eptracks
+{
+	text: eval(concat(tag("proposed:voltage"), " V ="));
+}
+way["construction:voltage"]["construction:frequency"=0].ectracks
+{
+	text: eval(concat(tag("construction:voltage"), " V ="));
 }
 way[voltage>=1000][frequency].etracks
 {
 	text: eval(concat(tag("voltage")/1000, " kV ", tag("frequency"), " Hz"));
 }
+way["proposed:voltage">=1000]["proposed:frequency"].eptracks
+{
+	text: eval(concat(tag("proposed:voltage")/1000, " kV ", tag("proposed:frequency"), " Hz"));
+}
+way["construction:voltage">=1000]["construction:frequency"].ectracks
+{
+	text: eval(concat(tag("construction:voltage")/1000, " kV ", tag("construction:frequency"), " Hz"));
+}
 way[voltage>=1000][frequency=0].etracks
 {
 	text: eval(concat(tag("voltage")/1000, " kV ="));
 }
+way["proposed:voltage">=1000]["proposed:frequency"=0].eptracks
+{
+	text: eval(concat(tag("proposed:voltage")/1000, " kV ="));
+}
+way["construction:voltage">=1000]["construction:frequency"=0].ectracks
+{
+	text: eval(concat(tag("construction:voltage")/1000, " kV ="));
+}
 
 /* tracks electrified by rail */
-way[electrified=rail].etracks
+way[electrified=rail].etracks,
+way["proposed:electrified"=rail].eptracks,
+way["construction:electrified"=rail].ectracks
 {
 	z-index: 1;
 	casing-width: 2;
 	casing-color: #797979;
 }
-way|z16-[electrified=rail].etracks
+way|z16-[electrified=rail].etracks,
+way|z16-["proposed:electrified"=rail].eptracks,
+way|z16-["construction:electrified"=rail].ectracks
 {
 	casing-width: 3;
 }
 
-way.tracks
+way.tracks,
+way.ptracks,
+way.ctracks
 {
 	width: 2;
 	kothicjs-ignore-layer: true;
+}
+way["proposed:voltage"]["proposed:frequency"].eptracks
+{
+	dashes: 2,8;
+	width: 3;
+}
+way["construction:voltage"]["construction:frequency"].ectracks
+{
+	dashes: 5,5;
 }
 
 way[!electrified].tracks,
@@ -92,7 +180,9 @@ way[electrified!=no][!frequency].tracks
 	color: gray;
 }
 
-way[electrified=no].tracks
+way[electrified=no].tracks,
+way["proposed:electrified"=no].ptracks,
+way["construction:electrified"=no].ctracks
 {
 	z-index: 1;
 	color: black;
@@ -104,97 +194,129 @@ way[electrified=no]["abandoned:electrified"]["abandoned:electrified"!=no].tracks
 	color: #70584D;
 }
 
-way[frequency=0][voltage<750].etracks
+way[frequency=0][voltage<750].etracks,
+way["proposed:frequency"=0]["proposed:voltage"<750].eptracks,
+way["construction:frequency"=0]["construction:voltage"<750].ectracks
 {
 	z-index: 2;
 	color: #FF79B8;
 }
 
-way[frequency=0][voltage=750].etracks
+way[frequency=0][voltage=750].etracks,
+way["proposed:frequency"=0]["proposed:voltage"=750].eptracks,
+way["construction:frequency"=0]["construction:voltage"=750].cptracks
 {
 	z-index: 3;
 	color: #F930FF;
 }
 
-way[frequency=0][voltage>750][voltage<1000].etracks
+way[frequency=0][voltage>750][voltage<1000].etracks,
+way["proposed:frequency"=0]["proposed:voltage">750]["proposed:voltage"<1000].eptracks,
+way["construction:frequency"=0]["construction:voltage">750]["construction:voltage"<1000].ectracks
 {
 	z-index: 4;
 	color: #D033FF;
 }
 
-way[frequency=0][voltage=1000].etracks
+way[frequency=0][voltage=1000].etracks,
+way["proposed:frequency"=0]["proposed:voltage"=1000].eptracks,
+way["construction:frequency"=0]["construction:voltage"=1000].ectracks
 {
 	z-index: 5;
 	color: #5C1CCB;
 }
 
-way[frequency=0][voltage>1000][voltage<1500].etracks
+way[frequency=0][voltage>1000][voltage<1500].etracks,
+way["proposed:frequency"=0]["proposed:voltage">1000]["proposed:voltage"<1500].eptracks,
+way["construction:frequency"=0]["construction:voltage">1000]["construction:voltage"<1500].ectracks
 {
 	z-index: 6;
 	color: #007ACB;
 }
 
-way[frequency=0][voltage=1500].etracks
+way[frequency=0][voltage=1500].etracks,
+way["proposed:frequency"=0]["proposed:voltage"=1500].eptracks,
+way["construction:frequency"=0]["construction:voltage"=1500].ectracks
 {
 	z-index: 7;
 	color: #0098CB;
 }
 
-way[frequency=0][voltage>1500][voltage<3000].etracks
+way[frequency=0][voltage>1500][voltage<3000].etracks,
+way["proposed:frequency"=0]["proposed:voltage">1500]["proposed:voltage"<3000].eptracks,
+way["construction:frequency"=0]["construction:voltage">1500]["construction:voltage"<3000].ectracks
 {
 	z-index: 8;
 	color: #00B7CB;
 }
 
-way[frequency=0][voltage=3000].etracks
+way[frequency=0][voltage=3000].etracks,
+way["proposed:frequency"=0]["proposed:voltage"=3000].eptracks,
+way["construction:frequency"=0]["construction:voltage"=3000].ectracks
 {
 	z-index: 9;
 	color: #0000FF;
 }
 
-way[frequency=0][voltage>3000].etracks
+way[frequency=0][voltage>3000].etracks,
+way["proposed:frequency"=0]["proposed:voltage">3000].eptracks,
+way["construction:frequency"=0]["construction:voltage">3000].ectracks
 {
 	z-index: 10;
 	color: #1969FF;
 }
 
-way[frequency][frequency!=0][voltage<15000].etracks
+way[frequency][frequency!=0][voltage<15000].etracks,
+way["proposed:frequency"!=0]["proposed:voltage"<15000].eptracks,
+way["construction:frequency"!=0]["construction:voltage"<15000].ectracks
 {
 	z-index: 11;
 	color: #97FF2F;
 }
 
-way[frequency][frequency!=0][voltage>=15000][voltage<25000].etracks
+way[frequency][frequency!=0][voltage>=15000][voltage<25000].etracks,
+way["proposed:frequency"!=0]["proposed:voltage">15000]["proposed:voltage"<25000].eptracks,
+way["construction:frequency"!=0]["construction:voltage">15000]["construction:voltage"<25000].ectracks
 {
 	z-index: 12;
 	color: #F1F100;
 }
 
-way[frequency="16.67"][voltage=15000].etracks
+way[frequency="16.67"][voltage=15000].etracks,
+way["proposed:frequency"="16.67"]["proposed:voltage"=15000].eptracks,
+way["construction:frequency"="16.67"]["construction:voltage"=15000].ectracks
 {
 	z-index: 13;
 	color: #00FF00;
 }
 
-way[frequency="16.7"][voltage=15000].etracks
+way[frequency="16.7"][voltage=15000].etracks,
+way["proposed:frequency"="16.7"]["proposed:voltage"=15000].eptracks,
+way["construction:frequency"="16.7"]["construction:voltage"=15000].ectracks
 {
 	z-index: 14;
 	color: #00CB66;
 }
 
-way[frequency][frequency!=0][voltage>=25000].etracks
+way[frequency][frequency!=0][voltage>=25000].etracks,
+way["proposed:frequency"!=0]["proposed:voltage">25000].eptracks,
+way["construction:frequency"!=0]["construction:voltage">25000].ectracks
 {
 	z-index: 15;
 	color: #FF9F19;
 }
 
-way[frequency=50][voltage=25000].etracks
+way[frequency=50][voltage=25000].etracks,
+way["proposed:frequency"=50]["proposed:voltage"=25000].eptracks,
+way["construction:frequency"=50]["construction:voltage"=25000].ectracks
 {
 	z-index: 16;
 	color: #FF0000;
 }
 
-way[frequency=60][voltage=25000].etracks
+way[frequency=60][voltage=25000].etracks,
+way["proposed:frequency"=60]["proposed:voltage"=25000].eptracks,
+way["construction:frequency"=60]["construction:voltage"=25000].ectracks
 {
 	z-index: 17;
 	color: #C00000;
