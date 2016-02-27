@@ -94,18 +94,16 @@ OpenRailwayMap = function(config)
 		maxZoom: 17
 	});
 
-	this.baseLayers = {
-		[translations['mapnik']]: this.mapnik,
-		[translations['mapnikGrayscale']]: this.mapnikGray,
-		[translations['mapquest']]: this.mapquest,
-		[translations['mapquestGrayscale']]: this.mapquestGray,
-		[translations['blank']]: this.blank
-	};
+	this.baseLayers = {};
+	this.baseLayers[translations['mapnik']] = this.mapnik;
+	this.baseLayers[translations['mapnikGrayscale']] = this.mapnikGray;
+	this.baseLayers[translations['mapquest']] = this.mapquest;
+	this.baseLayers[translations['mapquestGrayscale']] = this.mapquestGray;
+	this.baseLayers[translations['blank']] = this.blank;
 
-	this.overlays = {
-		[translations['hillshading']]: this.hillshading,
-		[translations['railmap']]: this.railmap
-	};
+	this.overlays = {};
+	this.overlays[translations['hillshading']] = this.hillshading;
+	this.overlays[translations['railmap']] = this.railmap;
 
 	var scaleLine = new L.Control.Scale({metric: true, maxWidth: 200}).addTo(this.map);
 	var layerSwitch = new L.Control.Layers(this.baseLayers, this.overlays);
