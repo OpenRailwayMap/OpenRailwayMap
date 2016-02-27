@@ -25,6 +25,14 @@ a, .uk-link, a:hover, .uk-link:hover
     background-color: #57a70c;
 }
 
+.uk-nav-navbar > li > a:hover,
+.uk-nav-navbar > li > a:focus,
+.uk-nav-navbar > li > a:active,
+.uk-nav-navbar > li > a.uk-active
+{
+	background-color: #4e9a06;
+}
+
 .uk-panel
 {
 	background-color: white;
