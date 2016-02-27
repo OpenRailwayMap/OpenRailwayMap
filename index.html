@@ -70,32 +70,32 @@
 				<div class="uk-modal-dialog">
 					<a class="uk-modal-close uk-close"></a>
 					<div class="uk-modal-header">
-						<h2>Betriebsstelle suchen</h2>
+						<h2 data-i18n="Search station"></h2>
 					</div>
 					<form class="uk-form">
 						<fieldset>
 							<div class="uk-form-row">
-								<span class="uk-form-help-inline">Name</span>
+								<span class="uk-form-help-inline" data-i18n="Name"></span>
 								<input id="facilityNameInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. Meerbusch-Osterath" autocomplete novalidate>
 							</div>
 							<div class="uk-form-row">
-								<span class="uk-form-help-inline">Betriebsstellenkürzel</span>
+								<span class="uk-form-help-inline" data-i18n="Station code"></span>
 								<input id="facilityRefInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. KKW" autocomplete novalidate>
 							</div>
 							<div class="uk-form-row">
-								<span class="uk-form-help-inline">UIC-Nummer</span>
+								<span class="uk-form-help-inline" data-i18n="UIC reference"></span>
 								<input id="facilityUICrefInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 80012345" autocomplete novalidate>
 							</div>
 							<div class="uk-form-row">
-								<span class="uk-form-help-inline">Streckenbetreiber (optional)</span>
+								<span class="uk-form-help-inline" data-i18n="Line operator (optional)"></span>
 								<input id="facilityOperatorInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. DB Netz oder Q12345" autocomplete novalidate>
 							</div>
 						</fieldset>
 					</form>
-					<p><strong>Schnellsuche über Suchbox:</strong> <code>&lt;Name&gt;</code> / <code>&lt;Betriebsstellenkürzel&gt;</code> / <code>&lt;UIC-Nummer&gt;</code></p>
+					<p><strong data-i18n="Quick search shortcut:"></strong> <code>&lt;<span data-i18n="Name"></span>&gt;</code> / <code>&lt;<span data-i18n="Station code"></span>&gt;</code> / <code>&lt;<span data-i18n="UIC reference"></span>&gt;</code></p>
 					<div class="uk-modal-footer uk-text-right">
-						<button class="uk-button uk-modal-close" type="button">Abbrechen</button>
-						<button id="searchFacilityButton" class="uk-button uk-button-primary" type="button"><i class="uk-icon-search"></i> Suchen</button>
+						<button class="uk-button uk-modal-close" type="button" data-i18n="Close"></button>
+						<button id="searchFacilityButton" class="uk-button uk-button-primary" type="button"><i class="uk-icon-search"></i> <span data-i18n="Search"></span></button>
 					</div>
 				</div>
 			</div>
@@ -104,28 +104,28 @@
 				<div class="uk-modal-dialog">
 					<a class="uk-modal-close uk-close"></a>
 					<div class="uk-modal-header">
-						<h2>Streckenkilometer suchen</h2>
+						<h2 data-i18n="Search milestone"></h2>
 					</div>
 					<form class="uk-form">
 						<fieldset>
 							<div class="uk-form-row">
-								<span class="uk-form-help-inline">Streckennummer</span>
+								<span class="uk-form-help-inline" data-i18n="Line reference"></span>
 								<input id="milestoneRefInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 2610" autocomplete novalidate>
 							</div>
 							<div class="uk-form-row">
-								<span class="uk-form-help-inline">Streckenkilometer</span>
+								<span class="uk-form-help-inline" data-i18n="Milestone"></span>
 								<input id="milestonePositionInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. 42.0" autocomplete novalidate>
 							</div>
 							<div class="uk-form-row">
-								<span class="uk-form-help-inline">Streckenbetreiber (optional)</span>
+								<span class="uk-form-help-inline" data-i18n="Line operator (optional)"></span>
 								<input id="milestoneOperatorInput" class="uk-align-right uk-form-width-medium" type="text" placeholder="z.B. DB Netz oder Q12345" autocomplete novalidate>
 							</div>
 						</fieldset>
 					</form>
-					<p><strong>Schnellsuche über Suchbox:</strong> <code>&lt;Streckennummer&gt; &lt;Streckenkilometer&gt;</code></p>
+					<p><strong data-i18n="Quick search shortcut:"></strong> <code>&lt;<span data-i18n="Line reference"></span>&gt; &lt;<span data-i18n="Milestone"></span>&gt;</code></p>
 					<div class="uk-modal-footer uk-text-right">
-						<button class="uk-button uk-modal-close" type="button">Abbrechen</button>
-						<button id="searchMilestoneButton" class="uk-button uk-button-primary" type="button"><i class="uk-icon-search"></i> Suchen</button>
+						<button class="uk-button uk-modal-close" type="button" data-i18n="Close"></button>
+						<button id="searchMilestoneButton" class="uk-button uk-button-primary" type="button"><i class="uk-icon-search"></i> <span data-i18n="Search"></span></button>
 					</div>
 				</div>
 			</div>
@@ -134,11 +134,11 @@
 				<div class="uk-modal-dialog">
 					<a class="uk-modal-close uk-close"></a>
 					<div class="uk-modal-header">
-						<h2>Legende</h2>
+						<h2 data-i18n="Legend"></h2>
 					</div>
 					<p>bla</p>
 					<div class="uk-modal-footer uk-text-right">
-						<button class="uk-button uk-modal-close" type="button">Schließen</button>
+						<button class="uk-button uk-modal-close" type="button" data-i18n="Close"></button>
 					</div>
 				</div>
 			</div>
@@ -153,70 +153,70 @@
 							<ul class="uk-nav uk-nav-search uk-autocomplete-results" id="searchResults">
 							</ul>
 						</div>
-						<button type="button" class="uk-button uk-button-primary" id="searchButton">Suchen</button>
+						<button type="button" class="uk-button uk-button-primary" id="searchButton" data-i18n="Search"></button>
 					</form>
 				</div>
 
 				<ul class="uk-navbar-nav uk-hidden-small">
 					<li class="uk-parent" data-uk-dropdown>
-						<a href="">Ansicht <i class="uk-icon-sort-down"></i></a>
+						<a href=""><span data-i18n="Style"></span> <i class="uk-icon-sort-down"></i></a>
 						<div class="uk-dropdown uk-dropdown-navbar">
-							<ul class="uk-nav uk-nav-navbar">
+							<ul class="uk-nav uk-nav-navbar styleSelection">
 								<li>
-									<a href="#" class="styleSelector" data-id="standard">Infrastruktur <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
+									<a href="#" class="styleSelector" data-id="standard"><span data-i18n="Infrastructure"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
 								</li>
 								<li>
-									<a href="#" class="styleSelector" data-id="maxspeed">Geschwindigkeiten <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
+									<a href="#" class="styleSelector" data-id="maxspeed"><span data-i18n="Maxspeeds"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
 								</li>
 								<li>
-									<a href="#" class="styleSelector" data-id="signals">Signale und Sicherungssysteme <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
+									<a href="#" class="styleSelector" data-id="signals"><span data-i18n="Signalling"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
 								</li>
 							</ul>
 						</div>
 					</li>
 					<li class="uk-parent" data-uk-dropdown>
-						<a href="">Werkzeuge <i class="uk-icon-sort-down"></i></a>
+						<a href=""><span data-i18n="Tools"></span> <i class="uk-icon-sort-down"></i></a>
 						<div class="uk-dropdown uk-dropdown-navbar">
 							<ul class="uk-nav uk-nav-navbar">
-								<li><a href="#searchFacilityDialog" data-action="searchFacility" data-uk-modal>Betriebsstelle suchen</a></li>
-								<li><a href="#searchMilestoneDialog" data-action="searchMilestone" data-uk-modal>Streckenkilometer suchen</a></li>
-								<li><a href="#legendDialog" data-action="legend" data-uk-modal>Legende</a></li>
+								<li><a href="#searchFacilityDialog" data-action="searchFacility" data-uk-modal data-i18n="Search station"></a></li>
+								<li><a href="#searchMilestoneDialog" data-action="searchMilestone" data-uk-modal data-i18n="Search milestone"></a></li>
+								<li><a href="#legendDialog" data-action="legend" data-uk-modal data-i18n="Legend"></a></li>
 							</ul>
 						</div>
 					</li>
 					<li>
-						<a href="about.html">Über das Projekt</a>
+						<a href="about.html" data-i18n="About this project"></a>
 					</li>
 					<li>
-						<a href="blog.html">Blog</a>
+						<a href="blog.html" data-i18n="Blog"></a>
 					</li>
 					<li>
-						<a href="donation.html">Spenden</a>
+						<a href="donation.html" data-i18n="Donate"></a>
 					</li>
 					<li>
-						<a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap">Wiki</a>
+						<a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap" data-i18n="Wiki"></a>
 					</li>
 					<li class="uk-parent" data-uk-dropdown>
-						<a href="">Sprache <i class="uk-icon-sort-down"></i></a>
+						<a href=""><span data-i18n="Language"></span> <i class="uk-icon-sort-down"></i></a>
 						<div class="uk-dropdown uk-dropdown-navbar">
-							<ul class="uk-nav uk-nav-navbar" id="langSelection">
-								<li><a href="#" data-lang="cs_CZ">Česky</a></li>
-								<li><a href="#" data-lang="da_DK">Dansk</a></li>
-								<li><a href="#" data-lang="de_DE">Deutsch</a></li>
-								<li><a href="#" data-lang="el_GR">Ελληνικά</a></li>
-								<li><a href="#" data-lang="en_GB">English</a></li>
-								<li><a href="#" data-lang="es_ES">Español</a></li>
-								<li><a href="#" data-lang="fr_FR">Français</a></li>
-								<li><a href="#" data-lang="nl_NL">Nederlands</a></li>
-								<li><a href="#" data-lang="nqo_GN">ߒߞߏ</a></li>
-								<li><a href="#" data-lang="pl_PL">Polski</a></li>
-								<li><a href="#" data-lang="pt_PT">Português</a></li>
-								<li><a href="#" data-lang="ru_RU">Русский</a></li>
-								<li><a href="#" data-lang="sl_SI">Slovenščina</a></li>
-								<li><a href="#" data-lang="sv_SE">Svenska</a></li>
-								<li><a href="#" data-lang="tr_TR">Türkçe</a></li>
-								<li><a href="#" data-lang="uk_UA">Українська</a></li>
-								<li><a href="#" data-lang="vi_VN">Tiếng Việt</a></li>
+							<ul class="uk-nav uk-nav-navbar langSelection">
+								<li><a href="#" data-lang="cs_CZ">Česky <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="da_DK">Dansk <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="de_DE">Deutsch <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="el_GR">Ελληνικά <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="en_GB">English <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="es_ES">Español <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="fr_FR">Français <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="nl_NL">Nederlands <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="nqo_GN">ߒߞߏ <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="pl_PL">Polski <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="pt_PT">Português <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="ru_RU">Русский <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="sl_SI">Slovenščina <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="sv_SE">Svenska <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="tr_TR">Türkçe <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="uk_UA">Українська <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+								<li><a href="#" data-lang="vi_VN">Tiếng Việt <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
 							</ul>
 						</div>
 					</li>
@@ -241,53 +241,53 @@
 			<div class="uk-offcanvas-bar">
 				<ul class="uk-nav uk-nav-parent-icon uk-nav-offcanvas" data-uk-nav>
 					<li class="uk-parent">
-						<a href="#">Sprache</a>
-						<ul class="uk-nav-sub" id="langSelection">
-							<li><a href="#" data-lang="cs_CZ">Česky</a></li>
-							<li><a href="#" data-lang="da_DK">Dansk</a></li>
-							<li><a href="#" data-lang="de_DE">Deutsch</a></li>
-							<li><a href="#" data-lang="el_GR">Ελληνικά</a></li>
-							<li><a href="#" data-lang="en_GB">English</a></li>
-							<li><a href="#" data-lang="es_ES">Español</a></li>
-							<li><a href="#" data-lang="fr_FR">Français</a></li>
-							<li><a href="#" data-lang="nl_NL">Nederlands</a></li>
-							<li><a href="#" data-lang="nqo_GN">ߒߞߏ</a></li>
-							<li><a href="#" data-lang="pl_PL">Polski</a></li>
-							<li><a href="#" data-lang="pt_PT">Português</a></li>
-							<li><a href="#" data-lang="ru_RU">Русский</a></li>
-							<li><a href="#" data-lang="sl_SI">Slovenščina</a></li>
-							<li><a href="#" data-lang="sv_SE">Svenska</a></li>
-							<li><a href="#" data-lang="tr_TR">Türkçe</a></li>
-							<li><a href="#" data-lang="uk_UA">Українська</a></li>
-							<li><a href="#" data-lang="vi_VN">Tiếng Việt</a></li>
+						<a href="#" data-i18n="Language"></a>
+						<ul class="uk-nav-sub langSelection">
+							<li><a href="#" data-lang="cs_CZ">Česky <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="da_DK">Dansk <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="de_DE">Deutsch <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="el_GR">Ελληνικά <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="en_GB">English <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="es_ES">Español <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="fr_FR">Français <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="nl_NL">Nederlands <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="nqo_GN">ߒߞߏ <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="pl_PL">Polski <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="pt_PT">Português <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="ru_RU">Русский <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="sl_SI">Slovenščina <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="sv_SE">Svenska <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="tr_TR">Türkçe <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="uk_UA">Українська <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="vi_VN">Tiếng Việt <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
 						</ul>
 					</li>
-					<li class="uk-nav-header">Ansicht</li>
+					<li class="uk-nav-header" data-i18n="Style"></li>
 					<li>
-						<a href="#" class="styleSelector" data-id="standard">Infrastruktur <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
+						<a href="#" class="styleSelector" data-id="standard"><span data-i18n="Infrastructure"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
 					</li>
 					<li>
-						<a href="#" class="styleSelector" data-id="maxspeed">Geschwindigkeiten <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
+						<a href="#" class="styleSelector" data-id="maxspeed"><span data-i18n="Maxspeeds"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
 					</li>
 					<li>
-						<a href="#" class="styleSelector" data-id="signals">Signale und Sicherungssysteme <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
+						<a href="#" class="styleSelector" data-id="signals"><span data-i18n="Signalling"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
 					</li>
-					<li class="uk-nav-header">Werkzeuge</li>
-					<li><a href="#searchFacilityDialog" data-action="searchFacility" data-uk-modal>Betriebsstelle suchen</a></li>
-					<li><a href="#searchMilestoneDialog" data-action="searchMilestone" data-uk-modal>Streckenkilometer suchen</a></li>
-					<li><a href="#legendDialog" data-action="legend" data-uk-modal>Legende</a></li>
-					<li class="uk-nav-header">Infos</li>
+					<li class="uk-nav-header" data-i18n="Tools"></li>
+					<li><a href="#searchFacilityDialog" data-action="searchFacility" data-uk-modal data-i18n="Search station"></a></li>
+					<li><a href="#searchMilestoneDialog" data-action="searchMilestone" data-uk-modal data-i18n="Search milestone"></a></li>
+					<li><a href="#legendDialog" data-action="legend" data-uk-modal data-i18n="Legend"></a></li>
+					<li class="uk-nav-header" data-i18n="Information"></li>
 					<li>
-						<a href="about.html">Über das Projekt</a>
-					</li>
-					<li>
-						<a href="blog.html">Blog</a>
+						<a href="about.html" data-i18n="About this project"></a>
 					</li>
 					<li>
-						<a href="donation.html">Spenden</a>
+						<a href="blog.html" data-i18n="Blog"></a>
 					</li>
 					<li>
-						<a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap">Wiki</a>
+						<a href="donation.html" data-i18n="Donate"></a>
+					</li>
+					<li>
+						<a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap" data-i18n="Wiki"></a>
 					</li>
 				</ul>
 			</div>

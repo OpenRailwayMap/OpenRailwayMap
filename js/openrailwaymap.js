@@ -9,17 +9,30 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 OpenRailwayMap = function(config)
 {
 	var self = this;
-	this._appName = config['appName'];
-	this._mapContainerId = config['mapContainerId'];
-	this._lat = config['lat'];
-	this._lon = config['lon'];
-	this._zoom = config['zoom'];
-	this._tileUrl = config['tileUrl'];
-	this._root = config['root'];
-	this._apiUrl = config['apiUrl'];
-	this._availableStyles = config['availableStyles'];
+	this.appName = config['appName'];
+	this.mapContainerId = config['mapContainerId'];
+	this.lat = config['lat'];
+	this.lon = config['lon'];
+	this.zoom = config['zoom'];
+	this.tileUrl = config['tileUrl'];
+	this.apiUrl = config['apiUrl'];
+	this.availableStyles = config['availableStyles'];
+	this.availableTranslations = config['availableTranslations'];
+	this.lang = null;
+	this.language = null;
 
-	this._map = new L.Map(this._mapContainerId);
+	// translate website to user language
+	this.lang = this.getUserLang();
+	this.translate();
+
+	// language selector
+	$('ul.langSelection').on('click', 'a', function()
+	{
+		self.lang = $(this).data('lang');
+		self.translate();
+	});
+
+	this.map = new L.Map(this.mapContainerId);
 
 	// setting start position
 	//startposition = new Startposition(map);
@@ -28,24 +41,24 @@ OpenRailwayMap = function(config)
 	// create search
 	//search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
 
-	this._railmap = new L.TileLayer(this._tileUrl+this._availableStyles[0]+'/{z}/{x}/{y}.png',
+	this.railmap = new L.TileLayer(this.tileUrl+this.availableStyles[0]+'/{z}/{x}/{y}.png',
 	{
 		attribution: translations['railmapAttribution'],
 		minZoom: 2,
 		maxZoom: 19,
 		tileSize: 256
-	}).addTo(this._map);
+	}).addTo(this.map);
 
 	// grayscale mapnik background layer
-	this._mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	this.mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
 		maxZoom: 19,
 		code: 'mapnikgray'
-	}).addTo(this._map);
+	}).addTo(this.map);
 
 	// normal mapnik background layer
-	this._mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	this.mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
 		maxZoom: 19,
@@ -53,7 +66,7 @@ OpenRailwayMap = function(config)
 	});
 
 	// grayscale MapQuest background layer
-	this._mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+	this.mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapquestAttribution'],
 		maxZoom: 18,
@@ -61,7 +74,7 @@ OpenRailwayMap = function(config)
 	});
 
 	// normal MapQuest background layer
-	this._mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+	this.mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapquestAttribution'],
 		maxZoom: 18,
@@ -69,46 +82,46 @@ OpenRailwayMap = function(config)
 	});
 
 	// blank background map
-	this._blank = new L.TileLayer(this._root+'/img/blank.png',
+	this.blank = new L.TileLayer(window.location.origin + window.location.pathname +'/img/blank.png',
 	{
 		maxZoom: 20,
 		code: 'blank'
 	});
 
-	this._hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
+	this.hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
 	{
 		attribution: translations['hillshadingAttribution'],
 		maxZoom: 17
 	});
 
-	this._baseLayers = {
-		[translations['mapnik']]: this._mapnik,
-		[translations['mapnikGrayscale']]: this._mapnikGray,
-		[translations['mapquest']]: this._mapquest,
-		[translations['mapquestGrayscale']]: this._mapquestGray,
-		[translations['blank']]: this._blank
+	this.baseLayers = {
+		[translations['mapnik']]: this.mapnik,
+		[translations['mapnikGrayscale']]: this.mapnikGray,
+		[translations['mapquest']]: this.mapquest,
+		[translations['mapquestGrayscale']]: this.mapquestGray,
+		[translations['blank']]: this.blank
 	};
 
-	this._overlays = {
-		[translations['hillshading']]: this._hillshading,
-		[translations['railmap']]: this._railmap
+	this.overlays = {
+		[translations['hillshading']]: this.hillshading,
+		[translations['railmap']]: this.railmap
 	};
 
-	var scaleLine = new L.Control.Scale({metric: true, maxWidth: 200}).addTo(this._map);
-	var layerSwitch = new L.Control.Layers(this._baseLayers, this._overlays);
-	this._map.addControl(layerSwitch);
+	var scaleLine = new L.Control.Scale({metric: true, maxWidth: 200}).addTo(this.map);
+	var layerSwitch = new L.Control.Layers(this.baseLayers, this.overlays);
+	this.map.addControl(layerSwitch);
 
-	this._map.setView(new L.LatLng(this._lat, this._lon), this._zoom);
-	history.pushState(null, this._appName, this.getUrl());
-	this.setStyle(this._availableStyles[0]);
+	this.map.setView(new L.LatLng(this.lat, this.lon), this.zoom);
+	history.pushState(null, this.appName, this.getUrl());
+	this.setStyle(this.availableStyles[0]);
 
-	/*this._map.on('zoomend', function(e)
+	/*this.map.on('zoomend', function(e)
 	{
 		updateLegend("legend", railmap.selectedStyle);
 	});*/
 
 	// TODO layeradd layerremove baselayerchange overlayadd overlayremove
-	this._map.on('moveend', function(e)
+	this.map.on('moveend', function(e)
 	{
 		self.updatePermalink();
 	});
@@ -134,7 +147,7 @@ OpenRailwayMap = function(config)
 			context: this,
 			dataType: 'json',
 			data: params, 
-			url: self._apiUrl+'facility',
+			url: self.apiUrl+'facility',
 			type: 'GET'
 		})
 		.done(function(data)
@@ -168,7 +181,7 @@ OpenRailwayMap = function(config)
 			context: this,
 			dataType: 'json',
 			data: params, 
-			url: self._apiUrl+'milestone',
+			url: self.apiUrl+'milestone',
 			type: 'GET'
 		})
 		.done(function(data)
@@ -193,9 +206,9 @@ OpenRailwayMap.prototype =
 		$('.styleSelector').each(function(index, element)
 		{
 			if ($(this).data('id') == style)
-				$(this).children().addClass('uk-icon-check');
+				$($(this).children()[1]).addClass('uk-icon-check');
 			else
-				$(this).children().removeClass('uk-icon-check');
+				$($(this).children()[1]).removeClass('uk-icon-check');
 		});
 
 		/*
@@ -208,11 +221,11 @@ OpenRailwayMap.prototype =
 		*/
 
 		// helper variable for saving current map style
-		this._railmap.selectedStyle = style;
+		this.railmap.selectedStyle = style;
 		// change tileserver url to load different style
-		this._railmap._url = this._tileUrl+style+'/{z}/{x}/{y}.png';
+		this.railmap._url = this.tileUrl+style+'/{z}/{x}/{y}.png';
 		// reload all tiles after style was changed
-		this._railmap.redraw();
+		this.railmap.redraw();
 
 		//updateLegend("legend", style || MapCSS.availableStyles[0]);
 		this.updatePermalink();
@@ -220,13 +233,13 @@ OpenRailwayMap.prototype =
 
 	getUrl: function(marker)
 	{
-		var center = this._map.getCenter();
-		var zoom = this._map.getZoom();
-		var style = this._railmap.selectedStyle;
+		var center = this.map.getCenter();
+		var zoom = this.map.getZoom();
+		var style = this.railmap.selectedStyle;
 
-		for (var i in this._map._layers)
+		for (var i in this.map._layers)
 		{
-			var layer = this._map._layers[i];
+			var layer = this.map._layers[i];
 			if (layer.options && layer.options.code)
 				var layerName = layer.options.code;
 		}
@@ -235,13 +248,93 @@ OpenRailwayMap.prototype =
 
 		var precision = Math.max(0, Math.ceil(Math.log(zoom) / Math.LN2));
 
-		// TODO save lang, osmid, osmtype, searchquery, ref, name, position, line
+		// TODO save osmid, osmtype, searchquery, ref, name, position, line
 		var baseUrl = window.location.origin + window.location.pathname;
 		return baseUrl+'#zoom='+zoom+'&lat='+center.lat.toFixed(precision)+'&lon='+center.lng.toFixed(precision)+'&layers='+layerName+'&style='+style;
 	},
 
 	updatePermalink: function()
 	{
-		history.replaceState(null, this._appName, this.getUrl());
+		history.replaceState(null, this.appName, this.getUrl());
+	},
+
+	translate: function()
+	{
+		var self = this;
+		var baseurl = window.location.origin + window.location.pathname.replace('index.html', '');
+
+		$.getJSON(baseurl + 'locales/'+this.lang+'.json')
+		.done(function(data)
+		{
+			self.language = data;
+			self.replaceStringsByTranslations();
+
+			$('ul.langSelection a i').removeClass('uk-icon-check');
+			$('ul.langSelection a').each(function(index, element)
+			{
+				if ($(this).data('lang') == self.lang)
+					$($(this).children()[0]).addClass('uk-icon-check');
+					return;
+			});
+		})
+		.fail(function(jqXHR, status)
+		{
+			alert('Website translation failed');
+		});
+	},
+
+	replaceStringsByTranslations: function()
+	{
+		var stringsToTranslate = $("[data-i18n]");
+
+		for (var i=0; i<stringsToTranslate.length; i++)
+		{
+			var originalText = $(stringsToTranslate[i]).data('i18n');
+			var translatedText = this.translateString(originalText);
+			stringsToTranslate[i].innerHTML = translatedText;
+		}
+	},
+
+	translateString: function(text, n)
+	{
+		var translation = this.language.translations[text];
+
+		if (!n && typeof translation == 'object')
+			return translation[0];
+
+		if (n && typeof translation == 'object')
+		{
+			var plural = eval(this.language.plural.replace('n', n));
+			// avoid array index overflow
+			plural = Math.min(plural, this.language.nplurals);
+			return translation[plural].replace('%d', n);
+		}
+
+		if (typeof translation != 'undefined' && translation.length > 0)
+			return translation;
+
+		return text;
+	},
+
+	getUserLang: function()
+	{
+		var lang = navigator.language || navigator.userLanguage || 'en-GB';
+		var languages = navigator.languages || [lang];
+
+		for (var i=0; i<navigator.languages.length; i++)
+		{
+			// lang-country combination as first choice
+			var langcountrycode = navigator.languages[i].replace('-', '_');
+			for (var key in this.availableTranslations)
+				if (this.availableTranslations.hasOwnProperty(key) && this.availableTranslations[key] === langcountrycode)
+					return langcountrycode;
+
+			// only lang as second choice
+			var langcode = langcountrycode.split('_')[0];
+			if (this.availableTranslations.hasOwnProperty(langcode))
+				return this.availableTranslations[langcode];
+		}
+
+		return 'en_GB';
 	}
 };

@@ -5,7 +5,26 @@
 	"lon": 15.6501,
 	"zoom": 7,
 	"tileUrl": "http://{s}.tiles.openrailwaymap.org/",
-	"root": "http://www.openrailwaymap.org/beta",
 	"apiUrl": "http://api.openrailwaymap.org/",
-	"availableStyles": ["standard", "maxspeed", "signals"]
+	"availableStyles": ["standard", "maxspeed", "signals"],
+	"availableTranslations":
+	{
+		"cs": "cs_CZ",
+		"da": "da_DK",
+		"de": "de_DE",
+		"el": "el_GR",
+		"en": "en_GB",
+		"es": "es_ES",
+		"fr": "fr_FR",
+		"nl": "nl_NL",
+		"nqo": "nqo_GN",
+		"pl": "pl_PL",
+		"pt": "pt_PT",
+		"ru": "ru_RU",
+		"sl": "sl_SI",
+		"sv": "sv_SE",
+		"tr": "tr_TR",
+		"uk": "uk_UA",
+		"vi": "vi_VN"
+	}
 }
