@@ -2,7 +2,6 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -15,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="G2a_20_Tafel.svg">
+   sodipodi:docname="G2a_40_Tafel.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="-174.30095"
-     inkscape:cy="103.34427"
+     inkscape:cx="180.66664"
+     inkscape:cy="106.17269"
      inkscape:document-units="px"
      inkscape:current-layer="layer5"
      showgrid="false"
@@ -63,24 +62,12 @@
        id="rect4663"
        width="140.77524"
        height="214.75842"
-       x="-38.225254"
-       y="-97.768845" />
-    <g
-       id="layer6-4"
-       transform="translate(-14.385668,-85.221902)"
-       sketch:type="MSShapeGroup"
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none">
-      <g
-         id="g3807"
-         transform="translate(0.011049,-0.403379)"
-         style="fill:#000000;fill-opacity:1">
-        <path
-           d="m 91.849356,181.34082 -91.309686,0 0,-29.06787 61.971183,-79.646173 C 91.847263,34.419437 21.301751,20.500446 21.301751,58.010163 l 0,14.52935 -23.0801553,0 c 0,0 0,8.585168 0,-12.95236 0,-21.537528 9.8497381,-50.456677 50.0920463,-50.456677 40.242308,0 59.906888,45.479872 36.474377,75.369293 l -54.746985,67.930581 61.808322,0 0,28.91047"
-           id="path3774"
-           inkscape:connector-curvature="0"
-           style="fill:#000000;fill-opacity:1"
-           sodipodi:nodetypes="cccczcczzcccc" />
-      </g>
-    </g>
+       x="-34.927212"
+       y="-96.990112" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.41389729"
+       d="m 39.151814,-60.205626 -45.8593762,101.035151 -0.00586,0 0,18.43555 55.0527352,0 0,21.71875 18.435542,0 0,-21.71875 10.85938,0 0,-18.43555 -10.85938,0 0,-39.90039037 -18.435542,0 0,39.90039037 -33.845704,0 45.796876,-100.892573 -21.138672,-0.142578 z"
+       id="rect4407"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

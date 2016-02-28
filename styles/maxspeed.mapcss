@@ -1104,6 +1104,137 @@ node|z14-[railway=signal]["railway:signal:speed_limit_distant"="DE-HHA:l1"]["rai
 	icon-image: "icons/de/hha/l1-70-sign-44.png";
 }
 
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g3"]["railway:signal:speed_limit:form"=sign]
+{
+	z-index: 410;
+	icon-width: 11;
+	icon-height: 16;
+	allow-overlap: true;
+	icon-image: "icons/de/bostrab/g3-32.png";
+}
+
+/* German tram distance speed limit signals as signs (G 1a) */
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-BOStrab:g1a"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^[1-5]0$/],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-BOStrab:g1a"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^[1-3]5$/]
+{
+	z-index: eval(295 + tag("railway:signal:speed_limit_distant:speed")/2);
+	icon-width: 22;
+	icon-height: 19;
+	allow-overlap: true;
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-BOStrab:g1a"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=10]
+{
+	icon-image: "icons/de/bostrab/g1a-10-44.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-BOStrab:g1a"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=15]
+{
+	icon-image: "icons/de/bostrab/g1a-15-44.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-BOStrab:g1a"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=20]
+{
+	icon-image: "icons/de/bostrab/g1a-20-44.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-BOStrab:g1a"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=25]
+{
+	icon-image: "icons/de/bostrab/g1a-25-44.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-BOStrab:g1a"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=30]
+{
+	icon-image: "icons/de/bostrab/g1a-30-44.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-BOStrab:g1a"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=35]
+{
+	icon-image: "icons/de/bostrab/g1a-35-44.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-BOStrab:g1a"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=40]
+{
+	icon-image: "icons/de/bostrab/g1a-40-44.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-BOStrab:g1a"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=50]
+{
+	icon-image: "icons/de/bostrab/g1a-50-44.png";
+}
+
+/* German tram speed limit signals as signs (G 4) */
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^[2-57]0$/],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^[23]5$/]
+{
+	z-index: eval(295 + tag("railway:signal:speed_limit:speed")/2);
+	icon-width: 11;
+	icon-height: 16;
+	allow-overlap: true;
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=20]
+{
+	icon-image: "icons/de/bostrab/g4-20-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=25]
+{
+	icon-image: "icons/de/bostrab/g4-25-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=30]
+{
+	icon-image: "icons/de/bostrab/g4-30-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=35]
+{
+	icon-image: "icons/de/bostrab/g4-35-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=40]
+{
+	icon-image: "icons/de/bostrab/g4-40-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=50]
+{
+	icon-image: "icons/de/bostrab/g4-50-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=70]
+{
+	icon-image: "icons/de/bostrab/g4-70-32.png";
+}
+
+/* German tram speed limit signals as signs (G 2a) */
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g2a"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^[1-5]0$/],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g2a"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^[1-3]5$/]
+{
+	z-index: eval(295 + tag("railway:signal:speed_limit:speed")/2);
+	icon-width: 11;
+	icon-height: 16;
+	allow-overlap: true;
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g2a"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=10]
+{
+	icon-image: "icons/de/bostrab/g2a-10-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g2a"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=15]
+{
+	icon-image: "icons/de/bostrab/g2a-15-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g2a"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=20]
+{
+	icon-image: "icons/de/bostrab/g2a-20-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g2a"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=25]
+{
+	icon-image: "icons/de/bostrab/g2a-25-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g2a"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=30]
+{
+	icon-image: "icons/de/bostrab/g2a-30-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g2a"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=35]
+{
+	icon-image: "icons/de/bostrab/g2a-35-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g2a"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=40]
+{
+	icon-image: "icons/de/bostrab/g2a-40-32.png";
+}
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g2a"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=50]
+{
+	icon-image: "icons/de/bostrab/g2a-50-32.png";
+}
+
 /* East German line speed signal "Eckentafel" (Lf 5) */
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:dr:lf5"]["railway:signal:speed_limit:form"=sign]
 {
