@@ -8,7 +8,7 @@ a, .uk-link, a:hover, .uk-link:hover
 	color: #4e9a06;
 }
 
-.uk-button-primary
+.uk-button-primary, .uk-pagination > .uk-active > span
 {
 	background-color: #4e9a06;
 	background-image: -webkit-linear-gradient(top, #78c72A, #4e9a06);
@@ -31,13 +31,6 @@ a, .uk-link, a:hover, .uk-link:hover
 .uk-nav-navbar > li > a.uk-active
 {
 	background-color: #4e9a06;
-}
-
-.uk-pagination > .uk-active > span
-{
-	background-color: #4e9a06;
-	background-image: -webkit-linear-gradient(top, #78c72A, #4e9a06);
-	background-image: linear-gradient(to bottom, #78C72A, #4e9a06);
 }
 
 .uk-panel
