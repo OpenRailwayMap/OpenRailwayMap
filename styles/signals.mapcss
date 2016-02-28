@@ -1228,6 +1228,75 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="
 	allow-overlap: true;
 }
 
+/**********************************/
+/* FI distant light signals which */
+/* general rules                  */
+/**********************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=~/^FI:Eo(-v)?$/]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"=~/^FI:Eo(-v)?$/]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]
+{
+	z-index: 9000;
+	text: "ref";
+	text-offset: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***********************************************/
+/* FI distant light signals which              */
+/*  - are no repeaters (or not tagged as such) */
+/*  - do not share post with a main signal     */
+/***********************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="FI:Eo"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="FI:Eo"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]
+{
+	icon-width: 9;
+	icon-height: 15;
+	icon-image: "icons/fi/eo0-new-30.png";
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="FI:Eo-v"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="FI:Eo-v"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]
+{
+	icon-width: 10;
+	icon-height: 10;
+	icon-image: "icons/fi/eo0-old-20.png";
+}
+
+/***********************************************/
+/* FI distant light signals which              */
+/*  - are no repeaters (or not tagged as such) */
+/*  - do not share post with a main signal     */
+/*  - can display Eo 1 (expect proceed)        */
+/***********************************************/
+/* new type */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="FI:Eo"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"]["railway:signal:distant:states"~="FI:Eo1"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="FI:Eo"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]["railway:signal:distant:states"~="FI:Eo1"]
+{
+	icon-image: "icons/fi/eo1-new-30.png";
+}
+/* old type */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="FI:Eo-v"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"]["railway:signal:distant:states"~="FI:Eo1"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="FI:Eo-v"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]["railway:signal:distant:states"~="FI:Eo1"]
+{
+	icon-image: "icons/fi/eo1-old-20.png";
+}
+
+/***********************************************/
+/* FI distant light signals (new type) which   */
+/*  - are no repeaters (or not tagged as such) */
+/*  - do not share post with a main signal     */
+/*  - can display Eo 2 (expect proceed)        */
+/***********************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="FI:Eo"]["railway:signal:distant:form"=light]["railway:signal:distant:repeated"=no][!"railway:signal:main"]["railway:signal:distant:states"~="FI:Eo2"],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:distant"="FI:Eo"]["railway:signal:distant:form"=light][!"railway:signal:distant:repeated"][!"railway:signal:main"]["railway:signal:distant:states"~="FI:Eo2"]
+{
+	icon-image: "icons/fi/eo2-new-30.png";
+}
+
 /************************************************/
 /* DE distant signal replacement by sign So 106 */
 /* AT Kreuztafel                                */
@@ -1574,6 +1643,78 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-
 	icon-height: 16;
 	text-allow-overlap: true;
 	allow-overlap: true;
+}
+
+/*************************/
+/* FI main light signals */
+/* general rules         */
+/*************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=~/^FI:Po(-v)?$/]["railway:signal:main:form"=light]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po"]["railway:signal:main:form"=light]
+{
+	icon-width: 9;
+	icon-height: 15;
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po-v"]["railway:signal:main:form"=light]
+{
+	icon-width: 7;
+	icon-height: 16;
+}
+
+/***********************************************/
+/* FI main light signals which                 */
+/*  - have no railway:signal:main:states=* tag */
+/***********************************************/
+/* new type */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po"]["railway:signal:main:form"=light]
+{
+	icon-image: "icons/fi/po0-new-30.png";
+}
+/* old type */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po-v"]["railway:signal:main:form"=light]
+{
+	icon-image: "icons/fi/po0-old-32.png";
+}
+
+/********************************/
+/* FI main light signals which  */
+/*  - can display Po1 (proceed) */
+/********************************/
+/* new type */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po"]["railway:signal:main:form"=light]["railway:signal:main:states"~="FI:Po1"]
+{
+	icon-image: "icons/fi/po1-new-30.png";
+}
+/* old type */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po-v"]["railway:signal:main:form"=light]["railway:signal:main:states"~="FI:Po1"]
+{
+	icon-image: "icons/fi/po1-old-32.png";
+}
+
+/*********************************************/
+/* FI main light signals which               */
+/*  - can display Po2 (proceed at low speed) */
+/*********************************************/
+/* new type */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po"]["railway:signal:main:form"=light]["railway:signal:main:states"~="FI:Po2"]
+{
+	icon-image: "icons/fi/po2-new-30.png";
+}
+/* old type */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po-v"]["railway:signal:main:form"=light]["railway:signal:main:states"~="FI:Po2"]
+{
+	icon-image: "icons/fi/po2-old-32.png";
 }
 
 /**********************************************************************************/
