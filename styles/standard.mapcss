@@ -850,3 +850,14 @@ area|z16-[railway=traverser]
 	width: 2;
 	fill-color: #ababab;
 }
+
+/******************/
+/* railway phones */
+/******************/
+node|z17-[railway=phone]
+{
+	z-index: 880;
+	icon-image: "icons/phone-32.png";
+	icon-width: 12;
+	icon-height: 16;
+}
