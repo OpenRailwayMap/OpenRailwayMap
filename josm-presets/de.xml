@@ -1713,15 +1713,30 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway"
 				value="radio" />
 			<key key="man_made"
-				value="tower" />
+				value="mast" />
 			<key key="tower:type"
 				value="communication" />
+			<check key="communication:gsm-r"
+				text="GSM-R?"
+				de.text="GSM-R?"
+				/>
 			<combo key="railway:radio"
 				text="Technik"
 				de.text="Mode"
 				values="analogue,gsm-r"
 				display_values="analogue,GSM-R"
 				de.display_values="Analog,GSM-R"
+				/>
+			<text key="ref"
+				text="Reference code"
+				de.text="Referenznummer"
+				default=""
+				delete_if_empty="true" />
+			<combo key="operator"
+				text="operator"
+				de.text="Betreiber"
+				values="DB Netz AG,ÖBB-Infrastruktur AG"
+				default=""
 				/>
 		</item>
 		<separator />
