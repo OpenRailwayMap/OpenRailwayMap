@@ -44,6 +44,7 @@
 		if ($lastupdate)
 		{
 			header("Content-Type: text/plain; charset=UTF-8");
+			header('Access-Control-Allow-Origin: *');
 
 			$difference = timeAgo(time(), $lastupdate, $offset);
 
@@ -94,6 +95,7 @@
 		if ($lastupdate)
 		{
 			header("Content-Type: text/plain; charset=UTF-8");
+			header('Access-Control-Allow-Origin: *');
 
 			$difference = timeAgo(time(), $lastupdate, $offset);
 
