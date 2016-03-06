@@ -29,7 +29,7 @@ function createMap(embed)
 	});
 
 	// railmap layer
-	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.js',
+	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.json',
 	{
 		attribution: translations['railmapAttribution'],
 		minZoom: 2,
