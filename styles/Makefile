@@ -24,7 +24,7 @@ clean:
 check: $(JSFILES)
 	@if [ -n "`grep 'var external_images = ' $^ | grep -v 'var external_images = \[\];$$'`" ]; then \
 		echo "bad image references found:"; \
-		@grep 'var external_images = ' $^ | grep -v 'var external_images = \[\];$$'; \
+		grep 'var external_images = ' $^ | grep -v 'var external_images = \[\];$$'; \
 		false; \
 	fi
 	@for i in $(JSFILES); do \
