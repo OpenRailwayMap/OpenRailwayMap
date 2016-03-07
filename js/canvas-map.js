@@ -8,7 +8,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 // main function, creates map and layers, controls other functions
 function createMap(embed)
 {
-	root = "http://www.openrailwaymap.org/";
+	root = params['urlbase'];
 	tiledir = "http://tiles.openrailwaymap.org/vector/";
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
 
@@ -28,38 +28,6 @@ function createMap(embed)
 		updatePermalink(MapCSS.availableStyles[0]);
 	});
 
-	// grayscale mapnik background layer
-	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-	{
-		attribution: translations['mapnikAttribution'],
-		maxZoom: 19
-	}).addTo(map);
-	// normal mapnik background layer
-	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-	{
-		attribution: translations['mapnikAttribution'],
-		maxZoom: 19
-	});
-
-	// grayscale MapQuest background layer
-	var mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-	{
-		attribution: translations['mapquestAttribution'],
-		maxZoom: 18
-	});
-	// normal MapQuest background layer
-	var mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-	{
-		attribution: translations['mapquestAttribution'],
-		maxZoom: 18
-	});
-
-	// blank background map
-	var blank = new L.TileLayer(root+'/img/blank.png',
-	{
-		maxZoom: 20
-	});
-
 	// railmap layer
 	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.js',
 	{
@@ -67,6 +35,13 @@ function createMap(embed)
 		minZoom: 2,
 		maxZoom: 19
 	});
+
+	MapCSS.preloadSpriteImage("standard", root+"styles/standard.png");
+	MapCSS.preloadSpriteImage("signals", root+"styles/signals.png");
+	MapCSS.preloadSpriteImage("maxspeed", root+"styles/maxspeed.png");
+	MapCSS.preloadSpriteImage("electrified", root+"styles/electrified.png");
+
+	setupControls();
 
 	MapCSS.onImagesLoad = function()
 	{
@@ -84,31 +59,6 @@ function createMap(embed)
 		else
 			setStyle("standard");
 	};
-	MapCSS.preloadSpriteImage("standard", root+"styles/standard.png");
-	MapCSS.preloadSpriteImage("signals", root+"styles/signals.png");
-	MapCSS.preloadSpriteImage("maxspeed", root+"styles/maxspeed.png");
-	MapCSS.preloadSpriteImage("electrified", root+"styles/electrified.png");
-
-	// hillshading layer
-	var hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
-	{
-		attribution: translations['hillshadingAttribution'],
-		maxZoom: 17
-	});
-
-	var baseLayers = new Object();
-	baseLayers[translations['mapnik']] = mapnik;
-	baseLayers[translations['mapnikGrayscale']] = mapnikGray;
-	baseLayers[translations['mapquest']] = mapquest;
-	baseLayers[translations['mapquestGrayscale']] = mapquestGray;
-	baseLayers[translations['blank']] = blank;
-
-	var overlays = new Object();
-	overlays[translations['hillshading']] = hillshading;
-	overlays[translations['railmap']] = railmap;
-
-	var scaleLine = new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
-	var layerSwitch = new L.Control.Layers(baseLayers, overlays).addTo(map);
 
 	// only in not-embed mode
 	if (!embed)

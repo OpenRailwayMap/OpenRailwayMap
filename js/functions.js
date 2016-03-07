@@ -177,3 +177,60 @@ function mobileRedirection()
 		document.location.href = "http://www.openrailwaymap.org/mobile.php?"+paramlist.substr(1);
 	}
 }
+
+// create layer and zoom controls
+function setupControls()
+{
+	// grayscale mapnik background layer
+	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	{
+		attribution: translations['mapnikAttribution'],
+		maxZoom: 19
+	}).addTo(map);
+	// normal mapnik background layer
+	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	{
+		attribution: translations['mapnikAttribution'],
+		maxZoom: 19
+	});
+
+	// grayscale MapQuest background layer
+	var mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+	{
+		attribution: translations['mapquestAttribution'],
+		maxZoom: 18
+	});
+	// normal MapQuest background layer
+	var mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+	{
+		attribution: translations['mapquestAttribution'],
+		maxZoom: 18
+	});
+
+	// blank background map
+	var blank = new L.TileLayer(root+'/img/blank.png',
+	{
+		maxZoom: 20
+	});
+
+	var baseLayers = new Object();
+	baseLayers[translations['mapnik']] = mapnik;
+	baseLayers[translations['mapnikGrayscale']] = mapnikGray;
+	baseLayers[translations['mapquest']] = mapquest;
+	baseLayers[translations['mapquestGrayscale']] = mapquestGray;
+	baseLayers[translations['blank']] = blank;
+
+	// hillshading layer
+	var hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
+	{
+		attribution: translations['hillshadingAttribution'],
+		maxZoom: 17
+	});
+
+	var overlays = new Object();
+	overlays[translations['hillshading']] = hillshading;
+	overlays[translations['railmap']] = railmap;
+
+	new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
+	new L.Control.Layers(baseLayers, overlays).addTo(map);
+}
