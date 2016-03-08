@@ -1,8 +1,18 @@
 SHELL = /bin/sh -e
 
-.PHONY: check
+.PHONY: check all
 
 PHP := php
+
+all:
+	$(MAKE) -C josm-presets $@
+	$(MAKE) -C styles $@
+	$(MAKE) -C locales $@
+
+clean:
+	$(MAKE) -C josm-presets $@
+	$(MAKE) -C styles $@
+	$(MAKE) -C locales $@
 
 check-php: *.php api/*.php
 
@@ -10,5 +20,5 @@ check:
 	@for pf in $$(find . -name '*.php'); do \
 		$(PHP) -l $${pf}; \
 	done
-	@make -C josm-presets $@
-	@make -C styles $@
+	$(MAKE) -C josm-presets $@
+	$(MAKE) -C styles $@
