@@ -57,7 +57,7 @@ Debian/Ubuntu:
     $ cd ..
     $ rm -fr osmctools
 
- Set up the PostgreSQL database with all necessary extensions such as hstore:
+ Set up the PostgreSQL database with PostGIS and hstore extensions:
 
     $ su postgres
     $ createuser railmap
