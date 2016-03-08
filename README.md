@@ -7,7 +7,7 @@
 
 ## Authors
 
- See the AUTHORS file for more information.
+ See the [authors file](AUTHORS) for a complete list of all contributors.
 
 ## Installation
 
