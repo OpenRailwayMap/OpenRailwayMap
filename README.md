@@ -1,9 +1,10 @@
 # OpenRailwayMap
 
- An OpenStreetMap-based project for creating a map of the world's railway infrastructure.
+ An OpenStreetMap-based project for creating a detailled map of the world's railway infrastructure.
 
  See the [OpenRailwayMap website](http://www.openrailwaymap.org/), the [OpenStreetMap Wiki](http://wiki.openrailwaymap.org/) and the [Github repository](https://github.com/rurseekatze/OpenRailwayMap) for more information.
 
+ This repository contains all project-related components, including the OpenRailwayMap [website](http://www.openrailwaymap.org/), the API interface, map rendering styles, the map renderer, the database backend, [JOSM](http://josm.openstreetmap.de/) tagging presets, validation rules for JOSM and a [Taginfo](http://taginfo.openstreetmap.org/) project file.
 
 ## Authors
 
@@ -11,18 +12,26 @@
 
 ## Installation
 
-Follow the [installation instructions](INSTALL.md).
+ Follow the [installation instructions](INSTALL.md).
 
 ## Contribute
 
- Want to contribute to OpenRailwayMap? Patches for new features, bug fixes, documentation, examples and others are welcome. Take a look at the Wiki for more information on [how to contribute](http://wiki.openstreetmap.org/wiki/OpenRailwayMap#Contribute). Also see the [issues at Github](https://github.com/rurseekatze/OpenRailwayMap/issues).
+ Contributions to this project are welcome, read [how to contribute](http://www.openrailwaymap.org/contribute.html) and the [contribution guidelines](CONTRIBUTING.md) for further details.
 
- You can honor this project also by a donation with [Flattr](https://flattr.com/thing/1327262/OpenRailwayMap) or [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9KCKT39N7AGL8). This project is operated by the developers in their spare time and has no commercial goals. By making a donation you can show that you appreciate the voluntary work of the developers and can motivate them to continue the project in the future.
+ If you would like to report an issue, please use the [issue tracker](https://github.com/rurseekatze/OpenRailwayMap/issues) on GitHub or contact us via one of the ways described below.
 
-## Contact
+## Donations
+
+ You can honor this project also by a donation with [Flattr](https://flattr.com/thing/1327262/OpenRailwayMap), [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9KCKT39N7AGL8) and bank transfers to [FOSSGIS e.V.](http://fossgis.de/) (reason for transfer "OpenRailwayMap"). This project is operated by the developers in their spare time and has no commercial goals. By making a donation you can show that you appreciate the voluntary work of the developers and can motivate them to continue the project in the future.
+
+## Contact & News
 
  * [Email](mailto:info@openrailwaymap.org)
- * [Mailinglist](http://lists.openrailwaymap.org/lists/listinfo/openrailwaymap)
+ * [Mailing list](http://lists.openrailwaymap.org/lists/listinfo/openrailwaymap)
+ * [#OpenRailwayMap](http://webchat.oftc.net/?channels=OpenRailwayMap) IRC-Channel
+ * [@openrailwaymap](https://twitter.com/openrailwaymap) on Twitter
+ * [OpenRailwayMap Blog](http://blog.openrailwaymap.org/) (RSS [de](http://blog.openrailwaymap.org/de.rss) [en](http://blog.openrailwaymap.org/en.rss))
+ * [OpenStreetMap Wiki Page](http://wiki.openstreetmap.org/wiki/OpenRailwayMap)
 
 ## License
 
