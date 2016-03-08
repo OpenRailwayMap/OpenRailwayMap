@@ -2,9 +2,8 @@
 
  An OpenStreetMap-based project for creating a map of the world's railway infrastructure.
 
- http://www.openrailwaymap.org/
+ See the [OpenRailwayMap website](http://www.openrailwaymap.org/), the [OpenStreetMap Wiki](http://wiki.openrailwaymap.org/) and the [Github repository](https://github.com/rurseekatze/OpenRailwayMap) for more information.
 
- See the [Wiki](http://wiki.openrailwaymap.org/) or the [Github repository](https://github.com/rurseekatze/OpenRailwayMap) for more information.
 
 ## Authors
 
@@ -12,12 +11,7 @@
 
 ## Installation
 
- * Copy all files and folders into a webserver directory
- * Run manually the install script import/install.sh - it might not run correctly on every distribution/platform and has no error exceptions
- * After successful installation, modify paths and parameters in every file and run import/import.sh
- * Add a cronjob to run import/update.sh (daily seems to be a good frequency)
-
- * TO BE IMPROVED...
+Follow the [installation instructions](INSTALL.md).
 
 ## Contribute
 
