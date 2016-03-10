@@ -131,9 +131,9 @@ Debian/Ubuntu:
     $ cd ..
     $ git submodule update --init renderer
 
- Compile the MapCSS styles:
+ Compile the MapCSS styles and translations:
 
-    $ make -C styles
+    $ make
 
  Switch to the renderer subdirectory:
 
