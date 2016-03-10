@@ -6,14 +6,18 @@ Installation Instructions
 CentOS:
 
     $ yum update
-    $ yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgresql-devel postgis unzip gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel npm nodejs git python wget php php-php-gettext php-pgsql python-ply python-imaging pycairo python-cairosvg pygtk2 pygtk2-devel
+    $ yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgresql-devel postgis unzip gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel npm nodejs git python wget php php-php-gettext php-pgsql python-ply python-imaging pycairo python-cairosvg pygtk2 pygtk2-devel make
+    # in case you want to build osm2pgsql from sources
+    $ yum install cmake
 
 Debian/Ubuntu:
 
     $ apt-get install --no-install-recommends postgresql-9.3-postgis-2.1
     $ apt-get install gzip postgresql-common libgeoip1 geoip-database geoip-bin php5-geoip php-gettext unzip python-ply python-imaging python-cairo python-cairosvg librsvg2-2 librsvg2-dev libpango1.0-dev libcairo2-dev libcairomm-1.0-dev libjpeg-turbo8-dev libpangomm-1.4-1 libpangomm-1.4-dev npm nodejs wget zlib1g-dev osm2pgsql php5-pgsql
-    $ apt-get install git libgif-dev build-essential g++
+    $ apt-get install git libgif-dev build-essential g++ make
     $ apt-get install nodejs-legacy # see https://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu for the reason
+    # in case you want to build osm2pgsql from sources
+    $ apt-get install cmake
 
 ## Installation
 
@@ -38,13 +42,13 @@ Debian/Ubuntu:
 
     $ cd import
     $ git clone https://github.com/openstreetmap/osm2pgsql.git
-    $ cd osm2pgsql
-    $ ./autogen.sh
-    $ CFLAGS="-O2 -march=native -fomit-frame-pointer" CXXFLAGS="-O2 -march=native -fomit-frame-pointer" ./configure
+    $ mkdir osm2pgsql-build
+    $ cd osm2pgsql-build
+    $ cmake ../osm2pgsql
     $ make
     $ cp osm2pgsql /usr/local/bin
     $ cd ..
-    $ rm -fr osm2pgsql
+    $ rm -fr osm2pgsql osm2pgsql-build
 
  Install osmctools (Ubuntu and Debian users may use their `osmctools` package provided by their distribution instead):
 
