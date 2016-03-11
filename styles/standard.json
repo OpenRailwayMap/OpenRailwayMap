@@ -219,7 +219,7 @@
 			"caption": "Milestone"
 		},
 		{
-			"minzoom": 1,
+			"minzoom": 8,
 			"maxzoom": 11,
 			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: blue; font-weight: bold; stroke: white; stroke-width: 1.5;\">KB</text>",
 			"caption": "Station"
@@ -230,7 +230,7 @@
 			"caption": "Station"
 		},
 		{
-			"minzoom": 1,
+			"minzoom": 8,
 			"maxzoom": 11,
 			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: #87491D; font-weight: bold; stroke: #F1F1F1; stroke-width: 1.5;\">KNG</text>",
 			"caption": "Yard"
@@ -241,7 +241,7 @@
 			"caption": "Yard"
 		},
 		{
-			"minzoom": 1,
+			"minzoom": 10,
 			"maxzoom": 11,
 			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: blue; stroke: white; stroke-width: 1.5;\">KANM</text>",
 			"caption": "Halt"
@@ -252,7 +252,7 @@
 			"caption": "Halt"
 		},
 		{
-			"minzoom": 1,
+			"minzoom": 8,
 			"maxzoom": 11,
 			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: #616161; stroke: #F1F1F1; stroke-width: 1.5;\">KWEB</text>",
 			"caption": "Junction, Crossover, Service Station, Site"

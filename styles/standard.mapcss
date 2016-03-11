@@ -683,7 +683,7 @@ node|z14-[railway=crossing]
 /************/
 /* stations */
 /************/
-node[railway=station]
+node|z8-[railway=station]
 {
 	z-index: 30000;
 	text: "railway:ref";
@@ -704,7 +704,7 @@ node|z11-[railway=station]
 /*********/
 /* yards */
 /*********/
-node[railway=yard]
+node|z8-[railway=yard]
 {
 	z-index: 25000;
 	text: "railway:ref";
@@ -725,7 +725,7 @@ node|z11-[railway=yard]
 /*********/
 /* halts */
 /*********/
-node[railway=halt]
+node|z10-[railway=halt]
 {
 	z-index: 20000;
 	text: "railway:ref";
@@ -746,9 +746,9 @@ node|z11-[railway=halt]
 /**********************************************/
 /* junctions, crossovers and service stations */
 /**********************************************/
-node[railway=junction],
-node[railway=service_station],
-node[railway=crossover]
+node|z8-[railway=junction],
+node|z8-[railway=service_station],
+node|z8-[railway=crossover]
 {
 	z-index: 15000;
 	text: "railway:ref";
@@ -771,7 +771,7 @@ node|z11-[railway=crossover]
 /*********/
 /* sites */
 /*********/
-node[railway=site]
+node|z8-[railway=site]
 {
 	z-index: 10000;
 	text: "railway:ref";
