@@ -20,12 +20,12 @@
 			"caption": "Bridge"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"3.5\"><path stroke-linecap=\"round\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"white\" stroke-width=\"6\"><path stroke-linecap=\"butt\" opacity=\"0.6\" d=\"M9 8 l24 0\" /></g>",
 			"caption": "Tunnel"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><text x=\"2\" y=\"12\" style=\"font-family: Verdana; font-weight: bold; font-size: 12px; fill: #585858; stroke: white; stroke-width: 0.5;\">2610</text>",
 			"caption": "Line ref"
 		},

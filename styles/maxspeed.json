@@ -3,182 +3,182 @@
 	"mapfeatures":
 	[
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"gray\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "No information"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#0100CB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#9595e9\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "1-10 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#001ECB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95a1e9\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "11-20 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#003DCB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95aee9\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "21-30 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#005BCB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95bbe9\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "31-40 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#007ACB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95c8e9\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "41-50 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#0098CB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95d4e9\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "51-60 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#00B7CB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95e1e9\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "61-70 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#00CBC1\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95e9e5\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "71-80 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#00CBA2\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95e9d8\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "81-90 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#00CB84\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95e9cc\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "91-100 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#00CB66\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95e9bf\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "101-110 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#00CB47\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95e9b3\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "111-120 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#00CB29\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95e9a6\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "121-130 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#00CB0A\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#95e999\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "131-140 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#14CB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#9de995\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "141-150 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#33CB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#aae995\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "151-160 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#51CB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#b7e995\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "161-170 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#70CB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#c4e995\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "171-180 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#8ECB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#d0e995\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "181-190 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#ADCB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#dde995\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "191-200 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CBCB00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e9e995\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "201-210 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CBAD00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e9dd95\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "211-220 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB8E00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e9d095\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "221-230 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB7000\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#e9c495\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "231-240 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB5100\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e9b795\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "241-250 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB3300\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e9aa95\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "251-260 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB1400\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e99d95\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "261-270 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB0007\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e99598\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "271-280 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB0025\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e995a4\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "281-290 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB0044\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e995b1\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "291-300 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB0062\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e995be\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "301-320 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB0081\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e995cb\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "321-340 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB009F\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e995d7\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "341-360 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#CB00BD\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e995e4\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "361-380 km/h (disused/under construction)"
 		},
 		{
-			"minzoom": 0,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#BA00CB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#e295e9\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "381-400 km/h (disused/under construction)"
 		},
