@@ -37,7 +37,7 @@
 
 				foreach ($legend['mapfeatures'] as $feature)
 				{
-					if ($zoom >= $feature['minzoom'] && $zoom <= $feature['maxzoom'])
+					if ($zoom >= $feature['minzoom'] && (!isset($feature['maxzoom']) || $zoom <= $feature['maxzoom']))
 					{
 						if (isset($feature['symbol']) && $feature['symbol'] != null)
 							$output .= "<tr><td style=\"width: 80px; height: 16px;\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">".$feature['symbol']."</svg></td><td>"._($feature['caption'])."</td></tr>\n";

@@ -4,19 +4,16 @@
 	[
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='gray' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "No information"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='black' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "Not electrified"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#70584D' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "contact line"
 		},
@@ -28,145 +25,121 @@
 		},
 		{
 			"minzoom": 16,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke-width='3'><path stroke='#797979' stroke-linecap='butt' d='M5 5 l32 0' /><path stroke-width='2' stroke='white' stroke-linecap='butt' d='M5 8 l32 0' /><path stroke='#797979' stroke-linecap='butt' d='M5 10 l32 0' /></g>",
 			"caption": "3rd rail"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#FF79B8' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "Less than 750V&nbsp;="
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#F930FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "750V&nbsp;="
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#D033FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "750 &ndash; 1000V&nbsp;="
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#5C1CCB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "1kV&nbsp;="
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#007ACB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "1 &ndash; 1.5kV&nbsp;="
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#0098CB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "1.5kV&nbsp;="
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#00B7CB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "1.5 &ndash; 3kV&nbsp;="
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#0000FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "3kV&nbsp;="
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#1969FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "More than 3kV&nbsp;="
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#97FF2F' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "Less than 15kV&nbsp;~"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#00FF00' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "15kV 16&#8532;Hz"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#00CB66' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "15kV 16.7Hz"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#F1F100' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "15 &ndash; 25kV&nbsp;~"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#FF9F19' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "At least 25kV&nbsp;~"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#FF0000' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "25kV 50Hz&nbsp;~"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill='none' stroke='#C00000' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "25kV 60Hz&nbsp;~"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/el1v-28.png",
 			"caption": "El 1 Ausschaltsignal erwarten"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/el1-28.png",
 			"caption": "El 1 Ausschaltsignal"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/el2-28.png",
 			"caption": "El 2 Einschaltsignal"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/el3-28.png",
 			"caption": "El 3 \"Bügel ab\"-Ankündigungssignal"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/el4-28.png",
 			"caption": "El 4 \"Bügel ab\"-Signal"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/el5-28.png",
 			"caption": "El 5 \"Bügel an\"-Signal"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/el6-28.png",
 			"caption": "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 		}
