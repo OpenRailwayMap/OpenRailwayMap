@@ -154,22 +154,22 @@
 			"caption": "Narrow gauge track"
 		},
 		{
-			"minzoom": 9,
+			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g><text x=\"17\" y=\"13\" style=\"font-family: Arial; font-size: 12px; fill: gray; stroke: #cccccc; stroke-width: 0.5;\">7</text>",
 			"caption": "Narrow gauge siding"
 		},
 		{
-			"minzoom": 9,
+			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g><text x=\"17\" y=\"13\" style=\"font-family: Arial; font-size: 12px; fill: gray; stroke: #cccccc; stroke-width: 0.5;\">7</text>",
 			"caption": "Narrow gauge yard"
 		},
 		{
-			"minzoom": 9,
+			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#87491D\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Narrow gauge spur"
 		},
 		{
-			"minzoom": 9,
+			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Narrow gauge crossover"
 		},
@@ -194,7 +194,7 @@
 			"caption": "Narrow gauge industrial line"
 		},
 		{
-			"minzoom": 9,
+			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#87491D\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Narrow gauge industrial service"
 		},
