@@ -450,7 +450,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=
 /********************************************/
 /* DE shunting signal Ra 11b (without Sh 1) */
 /********************************************/
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="DE-ESO:ra11b"]["railway:signal:shunting:form"=sign]["railway:signal:shunting:form"=sign]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="DE-ESO:ra11b"]["railway:signal:shunting:form"=sign]
 {
 	z-index: 2800;
 	icon-image: "icons/de/ra11b-32.png";
