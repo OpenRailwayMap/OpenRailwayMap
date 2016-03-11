@@ -4,43 +4,94 @@
 	[
 		{
 			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='gray' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail"
+				}
+			}],
 			"caption": "No information"
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='black' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"electrified":"no"
+				}
+			}],
 			"caption": "Not electrified"
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#70584D' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"electrified":"no",
+					"deelectrified":"contact_line"
+				}
+			}],
 			"caption": "Deelectrified"
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='gray' stroke-width='2'><path stroke-linecap='butt' stroke-dasharray=\"2,8\" d='M5 8 l32 0' /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"proposed:voltage":"25000",
+					"proposed:frequency":"50",
+					"proposed:electrified":"contact_line"
+				}
+			}],
 			"caption": "Electrification proposed"
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='gray' stroke-width='2'><path stroke-linecap='butt' stroke-dasharray=\"5,5\" d='M5 8 l32 0' /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"construction:voltage":"25000",
+					"construction:frequency":"50",
+					"construction:electrified":"contact_line"
+				}
+			}],
 			"caption": "Electrification under construction"
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#797979' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"voltage":"25000",
+					"frequency":"50",
+					"electrified":"contact_line"
+				}
+			}],
 			"caption": "contact line"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 15,
-			"symbol": "<g fill='none' stroke-width='2'><path stroke='#797979' stroke-linecap='butt' d='M5 6 l32 0' /><path stroke='white' stroke-linecap='butt' d='M5 8 l32 0' /><path stroke='#797979' stroke-linecap='butt' d='M5 10 l32 0' /></g>",
-			"caption": "3rd rail"
-		},
-		{
-			"minzoom": 16,
-			"symbol": "<g fill='none' stroke-width='3'><path stroke='#797979' stroke-linecap='butt' d='M5 5 l32 0' /><path stroke-width='2' stroke='white' stroke-linecap='butt' d='M5 8 l32 0' /><path stroke='#797979' stroke-linecap='butt' d='M5 10 l32 0' /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"voltage":"25000",
+					"frequency":"50",
+					"electrified":"rail"
+				}
+			}],
 			"caption": "3rd rail"
 		},
 		{
@@ -50,24 +101,33 @@
 		{
 			"minzoom": 2,
 			"replace": [
-				{ "%COLOR%":"FF79B8","%CAPTION%":"Less than 750V =" },
-				{ "%COLOR%":"F930FF","%CAPTION%":"750V =" },
-				{ "%COLOR%":"D033FF","%CAPTION%":"750 – 1000V =" },
-				{ "%COLOR%":"5C1CCB","%CAPTION%":"1kV =" },
-				{ "%COLOR%":"007ACB","%CAPTION%":"1 – 1.5kV =" },
-				{ "%COLOR%":"0098CB","%CAPTION%":"1.5kV =" },
-				{ "%COLOR%":"00B7CB","%CAPTION%": "1.5 – 3kV ="},
-				{ "%COLOR%":"0000FF","%CAPTION%": "3kV ="},
-				{ "%COLOR%":"1969FF","%CAPTION%": "More than 3kV ="},
-				{ "%COLOR%":"97FF2F","%CAPTION%": "Less than 15kV ~"},
-				{ "%COLOR%":"00FF00","%CAPTION%": "15kV 16⅔Hz ~"},
-				{ "%COLOR%":"00CB66","%CAPTION%": "15kV 16.7H ~"},
-				{ "%COLOR%":"F1F100","%CAPTION%": "15 – 25kV ~"},
-				{ "%COLOR%":"FF9F19","%CAPTION%": "At least 25kV ~"},
-				{ "%COLOR%":"FF0000","%CAPTION%": "25kV 50Hz ~"},
-				{ "%COLOR%":"C00000","%CAPTION%": "25kV 60Hz ~"}
+				{ "%VOLTAGE%":  600,"%FREQUENCY%":0,"%CAPTION%":"Less than 750V =" },
+				{ "%VOLTAGE%":  750,"%FREQUENCY%":0,"%CAPTION%":"750V =" },
+				{ "%VOLTAGE%":  800,"%FREQUENCY%":0,"%CAPTION%":"750 – 1000V =" },
+				{ "%VOLTAGE%": 1000,"%FREQUENCY%":0,"%CAPTION%":"1kV =" },
+				{ "%VOLTAGE%": 1200,"%FREQUENCY%":0,"%CAPTION%":"1 – 1.5kV =" },
+				{ "%VOLTAGE%": 1500,"%FREQUENCY%":0,"%CAPTION%":"1.5kV =" },
+				{ "%VOLTAGE%": 2000,"%FREQUENCY%":0,"%CAPTION%":"1.5 – 3kV =" },
+				{ "%VOLTAGE%": 3000,"%FREQUENCY%":0,"%CAPTION%":"3kV =" },
+				{ "%VOLTAGE%": 5000,"%FREQUENCY%":0,"%CAPTION%":"More than 3kV =" },
+				{ "%VOLTAGE%":10000,"%FREQUENCY%":25,"%CAPTION%":"Less than 15kV ~" },
+				{ "%VOLTAGE%":15000,"%FREQUENCY%":"16.67","%CAPTION%":"15kV 16⅔Hz ~" },
+				{ "%VOLTAGE%":15000,"%FREQUENCY%":"16.7","%CAPTION%":"15kV 16.7Hz ~" },
+				{ "%VOLTAGE%":20000,"%FREQUENCY%":25,"%CAPTION%":"15 – 25kV ~" },
+				{ "%VOLTAGE%":26000,"%FREQUENCY%":25,"%CAPTION%":"At least 25kV ~" },
+				{ "%VOLTAGE%":25000,"%FREQUENCY%":50,"%CAPTION%":"25kV 50Hz ~" },
+				{ "%VOLTAGE%":25000,"%FREQUENCY%":60,"%CAPTION%":"25kV 60Hz ~" }
 			],
-			"symbol": "<g fill='none' stroke='#%COLOR%' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"voltage":"%VOLTAGE%",
+					"frequency":"%FREQUENCY%",
+					"electrified":"contact_line"
+				}
+			}],
 			"caption": "%CAPTION%"
 		},
 		{
@@ -77,15 +137,25 @@
 		{
 			"minzoom": 17,
 			"replace": [
-				{ "%SIGNAL%":"el1v", "%CAPTION%":"El 1v Ausschaltsignal erwarten" },
-				{ "%SIGNAL%":"el1", "%CAPTION%":"El 1 Ausschaltsignal" },
-				{ "%SIGNAL%":"el2", "%CAPTION%":"El 2 Einschaltsignal" },
-				{ "%SIGNAL%":"el3", "%CAPTION%":"El 3 \"Bügel ab\"-Ankündigungssignal" },
-				{ "%SIGNAL%":"el4", "%CAPTION%":"El 4 \"Bügel ab\"-Signal" },
-				{ "%SIGNAL%":"el5", "%CAPTION%":"El 5 \"Bügel an\"-Signal" },
-				{ "%SIGNAL%":"el6", "%CAPTION%":"El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer" }
+				{ "%SIGNAL%":"el1v", "%TYPE%":"power_off_advance", "%CAPTION%":"El 1v Ausschaltsignal erwarten" },
+				{ "%SIGNAL%":"el1", "%TYPE%":"power_off", "%CAPTION%":"El 1 Ausschaltsignal" },
+				{ "%SIGNAL%":"el2", "%TYPE%":"power_on", "%CAPTION%":"El 2 Einschaltsignal" },
+				{ "%SIGNAL%":"el3", "%TYPE%":"pantograph_down_advance", "%CAPTION%":"El 3 \"Bügel ab\"-Ankündigungssignal" },
+				{ "%SIGNAL%":"el4", "%TYPE%":"pantograph_down", "%CAPTION%":"El 4 \"Bügel ab\"-Signal" },
+				{ "%SIGNAL%":"el5", "%TYPE%":"pantograph_up", "%CAPTION%":"El 5 \"Bügel an\"-Signal" },
+				{ "%SIGNAL%":"el6", "%TYPE%":"end_of_catenary", "%CAPTION%":"El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer" }
 			],
-			"icon": "icons/de/%SIGNAL%-28.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:electricity":"DE-ESO:%SIGNAL%",
+					"railway:signal:electricity:type":"%TYPE%",
+					"railway:signal:electricity:form":"sign"
+				}
+			}],
 			"caption": "%CAPTION%"
 		}
 	]

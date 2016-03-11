@@ -8,38 +8,94 @@
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill=\"none\" stroke=\"gray\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"usage":"main"
+				}
+			}],
 			"caption": "No information about train protection"
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:etcs":"no",
+					"railway:lzb":"no",
+					"railway:pzb":"no",
+					"usage":"main"
+				}
+			}],
 			"caption": "no train protection"
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill=\"none\" stroke=\"#FFB900\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:pzb":"yes",
+					"usage":"main"
+				}
+			}],
 			"caption": "Punktförmige Zugbeeinflussung"
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill=\"none\" stroke=\"red\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:lzb":"yes",
+					"usage":"main"
+				}
+			}],
 			"caption": "Linienzugbeeinflussung"
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill=\"none\" stroke=\"blue\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:etcs":"yes",
+					"usage":"main"
+				}
+			}],
 			"caption": "ETCS"
 		},
 		{
 			"minzoom": 5,
-			"maxzoom": 19,
-			"symbol": "<g fill=\"none\" stroke=\"blue\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"9,9\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"construction:railway:etcs":"yes",
+					"usage":"main"
+				}
+			}],
 			"caption": "ETCS under construction"
 		},
 		{
 			"minzoom": 13,
-			"symbol": "<text x=\"0\" y=\"11\" style=\"font-family: Arial; font-size: 11px; fill: black; stroke: #008206; stroke-width: 0.5;\">Dormagen Df</text>",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"name":"Dormagen Df",
+					"railway":"signal_box",
+					"railway:ref":"Df"
+				}
+			}],
 			"caption": "Signal box"
 		},
 		{
@@ -48,231 +104,642 @@
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/hp0-semaphore-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:hp",
+					"railway:signal:main:form":"semaphore"
+				}
+			}],
 			"caption": "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/hp1-semaphore-19.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:hp",
+					"railway:signal:main:form":"semaphore",
+					"railway:signal:main:states":"DE-ESO:hp1"
+				}
+			}],
 			"caption": "Hp-Formhauptsignal ohne Hp 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/hp2-semaphore-20.png",
+			"lineheight": 20,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:hp",
+					"railway:signal:main:form":"semaphore",
+					"railway:signal:main:states":"DE-ESO:hp2"
+				}
+			}],
 			"caption": "Hp-Formhauptsignal mit Hp 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/hp0-light-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:hp",
+					"railway:signal:main:form":"light"
+				}
+			}],
 			"caption": "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/hp1-light-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:hp",
+					"railway:signal:main:form":"light",
+					"railway:signal:main:states":"DE-ESO:hp1"
+				}
+			}],
 			"caption": "Hp-Lichthauptsignal ohne Hp 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/hp2-light-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:hp",
+					"railway:signal:main:form":"light",
+					"railway:signal:main:states":"DE-ESO:hp2"
+				}
+			}],
 			"caption": "Hp-Lichthauptsignal mit Hp 2"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/sh1-semaphore-normal-12.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:minor":"DE-ESO:sh",
+					"railway:signal:minor:form":"semaphore"
+				}
+			}],
 			"caption": "Sh-Formsperrsignal"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/sh0-semaphore-dwarf-12.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:minor":"DE-ESO:sh",
+					"railway:signal:minor:form":"semaphore",
+					"railway:signal:minor:height":"dwarf"
+				}
+			}],
 			"caption": "Sh-Zwerg-Formsperrsignal"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/sh1-light-normal-12.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:minor":"DE-ESO:sh",
+					"railway:signal:minor:form":"light"
+				}
+			}],
 			"caption": "Sh-Lichtsperrsignal"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/sh0-light-dwarf-12.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:minor":"DE-ESO:sh",
+					"railway:signal:minor:form":"light",
+					"railway:signal:minor:height":"dwarf"
+				}
+			}],
 			"caption": "Sh-Zwerg-Lichtsperrsignal"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/ks-distant-repeated-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:ks",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:repeated":"yes"
+				}
+			}],
 			"caption": "Ks-Vorsignalwiederholer"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/ks-distant-shortened-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:ks",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:shortened":"yes"
+				}
+			}],
 			"caption": "Ks-Vorsignal in verkürztem Bremswegabstand"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/ks-distant-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:ks",
+					"railway:signal:distant:form":"light"
+				}
+			}],
 			"caption": "Ks-Vorsignal"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/ks-main-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:ks",
+					"railway:signal:main:form":"light"
+				}
+			}],
 			"caption": "Ks-Hauptsignal"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/ks-combined-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:combined":"DE-ESO:ks",
+					"railway:signal:combined:form":"light"
+				}
+			}],
 			"caption": "Ks-Mehrabschnittssignal"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/ks-combined-shortened-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:combined":"DE-ESO:ks",
+					"railway:signal:combined:form":"light",
+					"railway:signal:combined:shortened":"yes"
+				}
+			}],
 			"caption": "Ks-Mehrabschnittssignal in verkürztem Bremswegabstand"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/sv-sv0-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:combined":"DE-ESO:sv",
+					"railway:signal:combined:states":"DE-ESO:sv0"
+				}
+			}],
 			"caption": "Sv-Signal ohne Hp 0"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/sv-hp0-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:combined":"DE-ESO:sv",
+					"railway:signal:combined:states":"DE-ESO:hp0"
+				}
+			}],
 			"caption": "Sv-Signal mit Hp 0"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/ne1-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:ne1",
+					"railway:signal:main:form":"sign",
+					"railway:signal:main:function":"entry"
+				}
+			}],
 			"caption": "Ne 1 Trapeztafel"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/so106-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:so106",
+					"railway:signal:distant:form":"sign"
+				}
+			}],
 			"caption": "So 106 Kreuztafel"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/ne5-ds301-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:stop":"DE-ESO:ne5",
+					"railway:signal:stop:form":"sign"
+				}
+			}],
 			"caption": "Ne 5 Haltetafel"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/vr0-semaphore-26.png",
+			"lineheight": 28,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"semaphore"
+				}
+			}],
 			"caption": "Vr-Formvorsignal ohne Angabe der Signalzustände"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/vr1-semaphore-19.png",
+			"lineheight": 28,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"semaphore",
+					"railway:signal:distant:states":"DE-ESO:vr1"
+				}
+			}],
 			"caption": "Vr-Formvorsignal ohne Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/vr2-semaphore-27.png",
+			"lineheight": 28,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"semaphore",
+					"railway:signal:distant:states":"DE-ESO:vr2"
+				}
+			}],
 			"caption": "Vr-Formvorsignal mit Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/vr0-light-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"light"
+				}
+			}],
 			"caption": "Vr-Lichtvorsignal ohne Angabe der Signalzustände"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/vr1-light-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:states":"DE-ESO:vr1"
+				}
+			}],
 			"caption": "Vr-Lichtvorsignal ohne Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/vr2-light-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:states":"DE-ESO:vr2"
+				}
+			}],
 			"caption": "Vr-Lichtvorsignal mit Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/vr0-light-repeated-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:repeated":"yes"
+				}
+			}],
 			"caption": "Vr-Lichtvorsignalwiederholer ohne Angabe der Signalzustände"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/vr1-light-repeated-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:repeated":"yes",
+					"railway:signal:distant:states":"DE-ESO:vr1"
+				}
+			}],
 			"caption": "Vr-Lichtvorsignalwiederholer ohne Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/vr2-light-repeated-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:repeated":"yes",
+					"railway:signal:distant:states":"DE-ESO:vr2"
+				}
+			}],
 			"caption": "Vr-Lichtvorsignalwiederholer mit Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 15,
-			"icon": "icons/de/blockkennzeichen-14.png",
-			"caption": "Blockkennzeichen"
-		},
-		{
-			"minzoom": 16,
-			"icon": "icons/de/blockkennzeichen-20.png",
+			"lineheight": 20,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:train_protection":"DE-ESO:blockkennzeichen"
+				}
+			}],
 			"caption": "Blockkennzeichen"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 16,
-			"icon": "icons/de/bue4-ds-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:whistle":"DE-ESO:db:bü4"
+				}
+			}],
 			"caption": "Bü 4 Pfeiftafel"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/bue4-ds-only-transit-21.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:whistle":"DE-ESO:db:bü4",
+					"railway:signal:ring:only_transit":"yes"
+				}
+			}],
 			"caption": "Bü 4 Pfeiftafel für durchfahrende Züge"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 16,
-			"icon": "icons/de/pf1-dv-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:whistle":"DE-ESO:dr:pf1"
+				}
+			}],
 			"caption": "ex-Pf 1 Pfeiftafel"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/pf1-dv-only-transit-21.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:whistle":"DE-ESO:dr:pf1",
+					"railway:signal:ring:only_transit":"yes"
+				}
+			}],
 			"caption": "ex-Pf 1 Pfeiftafel für durchfahrende Züge"
 		},
 		{
 			"minzoom": 15,
-			"maxzoom": 16,
-			"icon": "icons/de/bue5-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:ring":"DE-ESO:bü5"
+				}
+			}],
 			"caption": "Bü 5 Läutetafel"
 		},
 		{
 			"minzoom": 15,
-			"icon": "icons/de/bue5-only-transit-21.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:ring":"DE-ESO:bü5",
+					"railway:signal:ring:only_transit":"yes"
+				}
+			}],
 			"caption": "Bü 5 Läutetafel für durchfahrende Züge"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/ne6-24.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:station_distant":"DE-ESO:ne6",
+					"railway:signal:station_distant:form":"sign"
+				}
+			}],
 			"caption": "Ne 6 Haltepunkttafel"
 		},
 		{
 			"minzoom": 15,
-			"icon": "icons/de/bue2-ds-28.png",
+			"lineheight": 30,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:crossing_distant":"DE-ESO:bü2",
+					"railway:signal:crossing_distant:form":"sign"
+				}
+			}],
 			"caption": "Bü 2 Rautentafel"
 		},
 		{
 			"minzoom": 15,
-			"icon": "icons/de/bue2-ds-reduced-distance-28.png",
+			"lineheight": 30,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:crossing_distant":"DE-ESO:bü2",
+					"railway:signal:crossing_distant:form":"sign",
+					"railway:signal:crossing_distant:shortened":"yes"
+				}
+			}],
 			"caption": "Bü 2 Rautentafel in verkürztem Bremswegabstand"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/ra11-sign-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:shunting":"DE-ESO:ra11",
+					"railway:signal:shunting:form":"sign"
+				}
+			}],
 			"caption": "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/ra11-sh1-15.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:shunting":"DE-ESO:ra11",
+					"railway:signal:shunting:form":"light",
+					"railway:signal:shunting:states":"DE-ESO:ra11;DE-ESO:sh1"
+				}
+			}],
 			"caption": "Ra 11 Wartezeichen mit Sh 1"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/ra11b-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:shunting":"DE-ESO:ra11b",
+					"railway:signal:shunting:form":"sign"
+				}
+			}],
 			"caption": "Ra 11b Wartezeichen"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/ra10-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:shunting":"DE-ESO:ra10",
+					"railway:signal:shunting:form":"sign"
+				}
+			}],
 			"caption": "Ra 10 Rangierhalttafel / Verschubhalttafel"
 		},
 		{
@@ -281,77 +748,221 @@
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/po0-new-15.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"FI:Po",
+					"railway:signal:main:form":"light"
+				}
+			}],
 			"caption": "main signal new type (aspects not given)"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/po1-new-15.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"FI:Po",
+					"railway:signal:main:states":"FI:Po1",
+					"railway:signal:main:form":"light"
+				}
+			}],
 			"caption": "main signal new type with Po 1"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/po2-new-15.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"FI:Po",
+					"railway:signal:main:states":"FI:Po2",
+					"railway:signal:main:form":"light"
+				}
+                       }],
 			"caption": "main signal new type with Po 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/po0-old-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"FI:Po-v",
+					"railway:signal:main:form":"light"
+				}
+			}],
 			"caption": "main signal old type (aspects not given)"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/po1-old-16.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"FI:Po-v",
+					"railway:signal:main:states":"FI:Po1",
+					"railway:signal:main:form":"light"
+				}
+			}],
 			"caption": "main signal old type with Po 1"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/po2-old-16.png",
+			"features": [{
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"FI:Po-v",
+					"railway:signal:main:states":"FI:Po2",
+					"railway:signal:main:form":"light"
+				}
+                       }],
 			"caption": "main signal old type with Po 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/eo0-new-15.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"FI:Eo",
+					"railway:signal:distant:form":"light"
+				}
+                       }],
 			"caption": "distant signal new type (aspects not given)"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/eo1-new-15.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"FI:Eo",
+					"railway:signal:distant:states":"FI:Eo1",
+					"railway:signal:distant:form":"light"
+				}
+			}],
 			"caption": "distant signal new type with Eo 1"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/eo2-new-15.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"FI:Eo",
+					"railway:signal:distant:states":"FI:Eo2",
+					"railway:signal:distant:form":"light"
+				}
+                       }],
 			"caption": "distant signal new type with Eo 2"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/eo0-old-10.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"FI:Eo-v",
+					"railway:signal:distant:form":"light"
+				}
+			}],
 			"caption": "distant signal old type (aspects not given)"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/eo1-old-10.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"FI:Eo-v",
+					"railway:signal:distant:states":"FI:Eo1",
+					"railway:signal:distant:form":"light"
+				}
+			}],
 			"caption": "distant signal old type with Eo 1"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/fi/eo1-po1-combined-block-15.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:combined":"FI:So",
+					"railway:signal:combined:states":"FI:Eo1;FI:Po1",
+					"railway:signal:combined:form":"light"
+				}
+			}],
 			"caption": "block signal type So"
 		},
 		{
 			"minzoom": 15,
-			"icon": "icons/fi/to1-12.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:crossing":"FI:To",
+					"railway:signal:crossing:form":"light"
+				}
+			}],
 			"caption": "crossing signal type To"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/fi/ro0-new-12.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:shunting":"FI:Ro",
+					"railway:signal:shunting:states": "FI:Ro0",
+					"railway:signal:shunting:form":"light"
+				}
+			}],
 			"caption": "shunting signal type Ro"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/fi/lo0-12.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:minor":"FI:Lo",
+					"railway:signal:minor:states": "FI:Lo0",
+					"railway:signal:minor:form":"light"
+				}
+			}],
 			"caption": "minor signal type Lo"
 		}
 	]

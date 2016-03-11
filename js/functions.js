@@ -40,6 +40,24 @@ function updateLegend(id, style)
 	gEBI(id).src = window.openrailwaymap.root+"api/legend-generator.php?zoom="+map.getZoom()+"&style="+style+"&lang="+params['lang'];
 }
 
+// draws the legend entries on canvas
+function drawLegendIcons(cnt, zoom, st) {
+	MapCSS.preloadSpriteImage(st, '../styles/' + st + '.png');
+	var style = { styles: [st] };
+	for (i = 0; i <= cnt; i++) {
+		var element = document.getElementById('legend-' + i);
+		var data = element.dataset.geojson;
+
+		if (!data) {
+			console.debug("found", 'legend-' + i, " but element has no GeoJSON data");
+			continue;
+		}
+
+		data = '{"features":' + data + ',"granularity":100}';
+
+		Kothic.render(element, JSON.parse(data), zoom, style);
+	}
+}
 
 // renews the permalink url after zooming, changing style or dragging the map
 function updatePermalink(style)
