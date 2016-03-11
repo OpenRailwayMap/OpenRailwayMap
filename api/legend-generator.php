@@ -28,35 +28,35 @@
 		<meta http-equiv="content-style-type" content="text/css" />
 	</head>
 	<body>
-		<table>
-			<?php
-				$output = "";
+		<?php
+			$output = "";
 
-				if (file_exists($filename))
+			if (file_exists($filename))
+			{
+				$legend = json_decode(file_get_contents($filename), true);
+
+				foreach ($legend['mapfeatures'] as $feature)
 				{
-					$legend = json_decode(file_get_contents($filename), true);
-
-					foreach ($legend['mapfeatures'] as $feature)
+					if ($zoom >= $feature['minzoom'] && $zoom <= $feature['maxzoom'])
 					{
-						if ($zoom >= $feature['minzoom'] && $zoom <= $feature['maxzoom'])
-						{
-							if (isset($feature['symbol']) && $feature['symbol'] != null)
-								$output .= "<tr><td style=\"width: 80px; height: 16px;\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">".$feature['symbol']."</svg></td><td>"._($feature['caption'])."</td></tr>\n";
-							else
-								$output .= "<tr><td style=\"width: 80px; height: 16px;\"><img src=\"../styles/".$feature['icon']."\" /></svg></td><td>"._($feature['caption'])."</td></tr>\n";
-						}
+						if (isset($feature['symbol']) && $feature['symbol'] != null)
+							$output .= "<tr><td style=\"width: 80px; height: 16px;\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">".$feature['symbol']."</svg></td><td>"._($feature['caption'])."</td></tr>\n";
+						else
+							$output .= "<tr><td style=\"width: 80px; height: 16px;\"><img src=\"../styles/".$feature['icon']."\" /></svg></td><td>"._($feature['caption'])."</td></tr>\n";
 					}
-
-					// if no features are rendered in this zoom level, show message
-					if ($output == "")
-						$output = "<tr><td style=\"width: 0px; height: 16px;\"></td><td>"._("Nothing to see in this zoom level. Please zoom in.")."</td style=\"width: 100%; height: 16px;\"></tr>\n";
 				}
-				// if legend cannot be loaded
-				else
-					$output = "<tr><td style=\"width: 0px; height: 16px;\"></td><td style=\"width: 100%; height: 16px;\">"._("Legend not available for this style.")."</td></tr>\n";
 
-				echo $output;
-			?>
-		</table>
+				// if no features are rendered in this zoom level, show message
+				if ($output == "")
+					$output = '<p>' . _('Nothing to see in this zoom level. Please zoom in.') . "</p>\n";
+				else
+					$output = "\t\t<table>\n" . $output . "\t\t</table>\n";
+			}
+			// if legend cannot be loaded
+			else
+				$output = '<p>' . _('Legend not available for this style.') . "</p>\n";
+
+			echo $output;
+		?>
 	</body>
 </html>
