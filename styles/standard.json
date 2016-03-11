@@ -3,19 +3,7 @@
 	"mapfeatures":
 	[
 		{
-			"minzoom": 2,
-			"maxzoom": 5,
-			"symbol": "<g fill=\"none\" stroke=\"#797979\" stroke-width=\"4.5\"><path stroke-linecap=\"butt\" d=\"M9 8 l24 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Bridge"
-		},
-		{
-			"minzoom": 6,
-			"maxzoom": 8,
-			"symbol": "<g fill=\"none\" stroke=\"#797979\" stroke-width=\"7.5\"><path stroke-linecap=\"butt\" d=\"M9 8 l24 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Bridge"
-		},
-		{
-			"minzoom": 9,
+			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"#797979\" stroke-width=\"10.5\"><path stroke-linecap=\"butt\" d=\"M9 8 l24 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"3.5\"><path stroke-linecap=\"round\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Bridge"
 		},
