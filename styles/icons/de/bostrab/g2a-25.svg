@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="G2a_20_Tafel.svg">
+   sodipodi:docname="G2a_25_Tafel.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="-174.30095"
-     inkscape:cy="103.34427"
+     inkscape:zoom="1.0000001"
+     inkscape:cx="81.229922"
+     inkscape:cy="145.77748"
      inkscape:document-units="px"
      inkscape:current-layer="layer5"
      showgrid="false"
@@ -56,18 +56,24 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="schwarz"
-     transform="translate(42.927212,104.99011)"
+     transform="translate(-115.27474,107.26884)"
      style="display:inline">
     <rect
        style="fill:#ffd815;fill-opacity:1;stroke:#ffffff;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4663"
        width="140.77524"
        height="214.75842"
-       x="-38.225254"
-       y="-97.768845" />
+       x="123.27474"
+       y="-99.268845" />
+    <path
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.41389729"
+       d="m 212.7454,-63.837062 0,0.0713 -0.0121,0 0,8.977434 0.0121,0 0,26.907996 9.48339,0 c 0,-2.87173 2.92987,-3.712031 5.11493,-3.730216 2.9131,0 5.41392,1.731685 5.41392,4.358786 l -0.0849,14.175813 c 0,4.2049889 -1.40667,7.6405399 -5.21998,7.6432239 -3.81796,-0.0025 -5.46159,-2.636052 -5.46159,-7.6593979 l -9.23048,0 c 0,8.9814179 3.95901,17.1928029 14.69207,17.1958829 8.84482,-0.002 14.68965,-6.208317 14.68965,-13.811375 -0.0161,-5.9953069 0.0501,-11.9909759 -0.009,-17.9860889 -0.15291,-7.820657 -5.15768,-11.990209 -10.86444,-12.118752 -3.09861,0.0022 -6.75317,1.409638 -9.04008,3.478044 l 0,-18.453916 19.90452,0 0,-8.977434 -21.76068,0 0,-0.0713 -7.62723,0 z"
+       id="rect4407"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccccccccc" />
     <g
        id="layer6-4"
-       transform="translate(-14.385668,-85.221902)"
+       transform="matrix(0.63658468,0,0,0.63658468,145.69246,-45.050953)"
        sketch:type="MSShapeGroup"
        style="display:inline;fill:#000000;fill-opacity:1;stroke:none">
       <g

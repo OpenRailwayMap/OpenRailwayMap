@@ -15,8 +15,8 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="f0.svg"
-   inkscape:export-filename="/home/michael/Entwicklung/OpenRailwayMap/styles/icons/de/bostrab/f0-32.png"
+   sodipodi:docname="f2.svg"
+   inkscape:export-filename="/home/michael/Entwicklung/OpenRailwayMap/styles/icons/de/bostrab/f2-32.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -28,15 +28,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.9195959"
-     inkscape:cx="1.0338659"
-     inkscape:cy="25.255548"
+     inkscape:zoom="11.313708"
+     inkscape:cx="22.835013"
+     inkscape:cy="9.1358043"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1366"
-     inkscape:window-height="719"
+     inkscape:window-width="1920"
+     inkscape:window-height="1031"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1" />
@@ -70,20 +70,20 @@
        cx="8"
        cy="1044.3622"
        r="7" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4140"
+       width="3.0803571"
+       height="10.267858"
+       x="907.15125"
+       y="510.06573"
+       transform="matrix(0.5,0.8660254,-0.8660254,0.5,0,0)" />
     <circle
        r="7"
        cy="-8"
        cx="1028.3622"
        id="circle4207"
        style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="matrix(0,1,-1,0,0,0)" />
-    <rect
-       y="-12.946411"
-       x="1026.9916"
-       height="10.267858"
-       width="3.0803571"
-       id="rect4209"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(0,1,-1,0,0,0)" />
   </g>
 </svg>

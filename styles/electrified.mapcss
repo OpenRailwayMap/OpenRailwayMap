@@ -220,6 +220,19 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 	allow-overlap: true;
 }
 
+/*******************************************/
+/* DE tram power off shortly signal (St 7) */
+/*******************************************/
+node|z17-[railway=signal]["railway:signal:electricity"="DE-BOStrab:st7"]["railway:signal:electricity:type"="power_off_shortly"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:electricity"="DE-AVG:st7"]["railway:signal:electricity:type"="power_off_shortly"]["railway:signal:electricity:form"="sign"]
+{
+	z-index: 459;
+	icon-image: "icons/de/bostrab/st7-24.png";
+	icon-width: 11;
+	icon-height: 12;
+	allow-overlap: true;
+}
+
 /**************************/
 /* DE power on sign El 2 */
 /* AT Hauptschalter ein   */

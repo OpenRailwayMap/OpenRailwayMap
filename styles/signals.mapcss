@@ -306,6 +306,34 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=
 	allow-overlap: true;
 }
 
+/***************************************************/
+/* DE tram signal "start of train protection" So 1 */
+/***************************************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-BOStrab:so1"]["railway:signal:train_protection:form"=sign]["railway:signal:train_protection:type"=start],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-AVG:so1"]["railway:signal:train_protection:form"=sign]["railway:signal:train_protection:type"=start]
+{
+	z-index: 501;
+	icon-image: "icons/de/bostrab/so1-24.png";
+	icon-width: 12;
+	icon-height: 12;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************************************/
+/* DE tram signal "end of train protection" So 2 */
+/***************************************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-BOStrab:so2"]["railway:signal:train_protection:form"=sign]["railway:signal:train_protection:type"=end],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="DE-AVG:so2"]["railway:signal:train_protection:form"=sign]["railway:signal:train_protection:type"=end]
+{
+	z-index: 501;
+	icon-image: "icons/de/bostrab/so2-24.png";
+	icon-width: 12;
+	icon-height: 12;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /********************************/
 /* DE station distant sign Ne 6 */
 /********************************/
@@ -417,6 +445,74 @@ node|z17-[railway="buffer_stop"]["railway:signal:direction"]["railway:signal:min
 	icon-height: 11;
 	text-allow-overlap: true;
 	allow-overlap: true;
+}
+
+/********************************/
+/* DE tram minor stop sign Sh 1 */
+/********************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE-BOStrab:sh1"]["railway:signal:minor:form"=sign]
+{
+	z-index: 2000;
+	text: "ref";
+	text-offset: 11;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de/bostrab/sh1-24.png";
+	icon-width: 12;
+	icon-height: 12;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/****************************************/
+/* DE tram passing prohibited sign So 5 */
+/****************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:passing"="DE-BOStrab:so5"]["railway:signal:passing:form"=sign]["railway:signal:passing:type"="no_passing"]
+{
+	z-index: 2001;
+	text: "railway:signal:passing:caption";
+	text-color: black;
+	text-halo-radius: 3;
+	text-halo-color: white;
+	text-offset-x: 0;
+	text-offset-y: 12;
+	font-weight: bold;
+	icon-image: "icons/de/bostrab/so5-24.png";
+	icon-width: 12;
+	icon-height: 12;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/********************************************/
+/* DE tram passing prohibited end sign So 6 */
+/********************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:passing"="DE-BOStrab:so6"]["railway:signal:passing:form"=sign]["railway:signal:passing:type"="passing_allowed"]
+{
+	z-index: 2001;
+	text: "railway:signal:passing:caption";
+	text-color: black;
+	text-halo-radius: 3;
+	text-halo-color: white;
+	text-offset-x: 0;
+	text-offset-y: 12;
+	font-weight: bold;
+	icon-image: "icons/de/bostrab/so6-24.png";
+	icon-width: 12;
+	icon-height: 12;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+@supports (user-agent: josm) {
+    node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:passing"="DE-BOStrab:so5"]["railway:signal:passing:form"=sign]["railway:signal:passing:type"="no_passing"],
+	node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:passing"="DE-BOStrab:so6"]["railway:signal:passing:form"=sign]["railway:signal:passing:type"="passing_allowed"]
+	{
+		text-offset-x: eval(length(tag("railway:signal:stop:caption")) * (0 - 3) - 6);
+		text-offset-y: -12;
+	}
 }
 
 /**************************************************/
@@ -1703,6 +1799,55 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	icon-height: 16;
 	text-allow-overlap: true;
 	allow-overlap: true;
+}
+
+/************************************/
+/* DE tram main signal "Fahrsignal" */
+/* general rules                    */
+/************************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main"=~/^DE-(BOStrab|AVG):f$/]["railway:signal:main:form"=light] {
+	z-index: 10000;
+	text: "ref";
+	text-offset: 16;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-width: 10;
+	icon-height: 20;
+	text-allow-overlap: true;
+	allow-overlap: true;
+	icon-image: "icons/de/bostrab/f0-40.png";
+}
+
+/************************************/
+/* DE tram main signal "Fahrsignal" */
+/* can show F 1 (proceed straight)  */
+/************************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-BOStrab:f"]["railway:signal:main:form"=light]["railway:signal:main:states"~="DE-BOStrab:f1"],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-AVG:f"]["railway:signal:main:form"=light]["railway:signal:main:states"~="DE-AVG:f1"]
+{
+	icon-image: "icons/de/bostrab/f1-40.png";
+}
+
+/************************************/
+/* DE tram main signal "Fahrsignal" */
+/* can show F 2 (proceed right)     */
+/************************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-BOStrab:f"]["railway:signal:main:form"=light]["railway:signal:main:states"~="DE-BOStrab:f2"],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-AVG:f"]["railway:signal:main:form"=light]["railway:signal:main:states"~="DE-AVG:f2"]
+{
+	icon-image: "icons/de/bostrab/f2-40.png";
+}
+
+/************************************/
+/* DE tram main signal "Fahrsignal" */
+/* can show F 3 (proceed left)      */
+/************************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-BOStrab:f"]["railway:signal:main:form"=light]["railway:signal:main:states"~="DE-BOStrab:f3"],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-AVG:f"]["railway:signal:main:form"=light]["railway:signal:main:states"~="DE-AVG:f3"]
+{
+	icon-image: "icons/de/bostrab/f3-40.png";
 }
 
 /****************************************/

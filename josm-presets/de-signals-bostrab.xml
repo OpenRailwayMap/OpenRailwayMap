@@ -254,8 +254,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:departure:form"
 				value="light" />
 		</item>
-		<group name="Speed Signals" de.name="Geschwindigkeitssignale">	
-			<item name="Distant Speed Limit Sign (G 1a)" de.name="Tafel Ankündigung Geschwindigkeitsbeschränkung (G 1a)" icon="de/hha/l1-30-sign-44.png" type="node">
+		<group name="Speed Signals" de.name="Geschwindigkeitssignale" icon="de/bostrab/g2a-40-32.png">
+			<item name="Distant Speed Limit Sign (G 1a)" de.name="Tafel Ankündigung Geschwindigkeitsbeschränkung (G 1a)" icon="de/bostrab/g1a-30-44.png" type="node">
 				<label text="Distant Speed Limit Sign (G 1a)" de.text="Ankündigung einer Geschwindigkeitsbeschränkung (G 1a) als Tafel" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
@@ -354,7 +354,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:speed_limit_distant:turn_direction"
 					value="" />
 			</item>
-			<item name="Speed Limit Sign (G 2a)" de.name="Tafel Beginn Geschwindigkeitsbeschränkung (G 2a)" icons="de/bostrab/g2a-20-32.png" type="node">
+			<item name="Speed Limit Sign (G 2a)" de.name="Tafel Beginn Geschwindigkeitsbeschränkung (G 2a)" icon="de/bostrab/g2a-20-32.png" type="node">
 				<label text="Speed Limit Sign (G 2a)" de.text="Beginn einer Geschwindigkeitsbeschränkung (G 2a) als Tafel" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
@@ -453,7 +453,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:speed_limit:turn_direction"
 					value="" />
 			</item>
-			<item name="End of Speed Limit (G 3)" de.name="Ende Geschwindigkeitsbeschränkung (G 3)" type="node">
+			<item name="End of Speed Limit (G 3)" de.name="Ende Geschwindigkeitsbeschränkung (G 3)" icon="de/bostrab/g3-32.png" type="node">
 				<label text="End of Speed Limit (G 3)" de.text="Ende einer Geschwindigkeitsbeschränkung (G 3)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
@@ -485,7 +485,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:speed_limit:speed"
 					value="none" />
 			</item>
-			<item name="Speed Limit Sign (G 4)" de.name="Beginn Geschwindigkeitsbegrenzung (G 4)" icon="de/lf7-30-sign-32.png" type="node">
+			<item name="Speed Limit Sign (G 4)" de.name="Beginn Geschwindigkeitsbegrenzung (G 4)" icon="de/bostrab/g4-50-32.png" type="node">
 				<label text="Speed Limit Sign (G 4)." de.text="Beginn einer Geschwindigkeitsbegrenzung (G 4)" />
 				<label text="This signal is used if the speed limit is increased after the a section with a lower speed limit."
 					de.text="Dieses Signal wird verwendet, wenn die zulässige Höchstgeschwindigkeit angehoben wird." />
