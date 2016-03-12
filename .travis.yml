@@ -25,4 +25,5 @@ addons:
 install:
  - pip install cairocffi pillow ply
 script:
+ - make
  - make check PHP=/usr/bin/php5
