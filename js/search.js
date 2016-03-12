@@ -118,6 +118,10 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 					result.innerHTML += '&nbsp;'+translations[results[i]['type']];
 				if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
 					result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
+				if (results[i]['ref'] && (results[i]['type'] == 'station' || results[i]['type'] == 'halt' || results[i]['type'] == 'junction' ||
+						results[i]['type'] == 'spur_junction' || results[i]['type'] == 'yard' || results[i]['type'] == 'crossover' ||
+						results[i]['type'] == 'site' || results[i]['type'] == 'service_station' || results[i]['type'] == 'tram_stop'))
+					result.innerHTML += ' <i>[' + results[i]['ref'] + ']</i>';
 
 				selfSearch = this;
 				result.setAttribute('class', 'resultEntry');

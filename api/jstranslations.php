@@ -52,6 +52,7 @@
 	echo "translations['service_station'] = '".addslashes(_("Service station"))."';\n";
 	echo "translations['tram_stop'] = '".addslashes(_("Tram stop"))."';\n";
 	echo "translations['milestone'] = '".addslashes(_("Milestone"))."';\n";
+	echo "translations['signal'] = '".addslashes(_("Signal"))."';\n";
 	echo "translations['level_crossing'] = '".addslashes(_("Level crossing"))."';\n";
 	echo "translations['crossing'] = '".addslashes(_("Crossing"))."';\n";
 ?>
