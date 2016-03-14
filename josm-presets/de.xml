@@ -1713,13 +1713,27 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				default=""
 				/>
 		</item>
-		<item name="Zugfunk" type="node">
-			<label text="Zugfunk" />
+		<item name="Radio tower/mast" de.name="Zugfunkmast" type="node">
+			<label text="Radio tower/mast" de.text="Zugfunkmast" />
 			<space />
 			<key key="railway"
 				value="radio" />
-			<key key="man_made"
-				value="mast" />
+			<label
+				de.text="Ein Mast ist ein einzelner Beton- oder Stahlfachwerkmast."
+				text="A mast is often a single mast of concrete or steel framework." />
+			<label
+				de.text="Ein Turm ist meist innen begehbar oder besteigbar und bietet Plattformen,"
+				text="A tower is accessible inside (stairs inside) and provides platforms," />
+			<label
+				de.text="ein Mast besitzt lediglich eine Außenleiter bzw. Sprossenkonstruktion, ggf. kleine Arbeitsplattformen."
+				text="whereas a mast only offers ladder steps to climb it." />
+			<combo key="man_made"
+				text="mast/tower"
+				de.text="Mast/Turm"
+				display_values="tower,mast"
+				de.display_values="Turm,Mast"
+				values="tower,mast"
+				/>
 			<key key="tower:type"
 				value="communication" />
 			<check key="communication:gsm-r"
