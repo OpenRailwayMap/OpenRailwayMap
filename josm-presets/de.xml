@@ -1702,7 +1702,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="isolated_track_section" />
 		</item>
 		<separator />
-		<item name="Phone (Railway)" de.name="(Strecken-)Fernsprecher" icon="de/phone.png" type="node">
+		<item name="Phone (Railway)" de.name="(Strecken-)Fernsprecher" icon="phone-32.png" type="node">
 			<label text="Phone (Railway)" de.text="(Strecken-)Fernsprecher" />
 			<key key="railway"
 				value="phone" />
