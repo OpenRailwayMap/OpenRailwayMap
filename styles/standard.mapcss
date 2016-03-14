@@ -816,10 +816,11 @@ node|z14-[railway=tram_stop]
 /*****************/
 /* owner changes */
 /*****************/
-node|z11-[railway=owner_change]
+node|z11-[railway=border],
+node|z13-[railway=owner_change]
 {
 	z-index: 10000;
-	icon-image: "icons/owner-change.png";
+	icon-image: "icons/border-32.png";
 	icon-width: 16;
 	icon-height: 16;
 }
