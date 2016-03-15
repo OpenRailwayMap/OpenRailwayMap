@@ -116,32 +116,52 @@
 			"lineheight": 20,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [35,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:speed_limit_distant":"DE-ESO:zs3v",
 					"railway:signal:speed_limit_distant:form":"sign",
 					"railway:signal:speed_limit_distant:speed":"30"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [65,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:speed_limit_distant":"DE-ESO:zs3v",
+					"railway:signal:speed_limit_distant:form":"light",
+					"railway:signal:speed_limit_distant:speed":"30"
 				}
 			}],
-			"caption": "Zs 3v Geschwindigkeits­voranzeiger"
+			"caption": "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
 		},
 		{
 			"minzoom": 17,
 			"lineheight": 20,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [35,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:speed_limit":"DE-ESO:zs3",
 					"railway:signal:speed_limit:form":"sign",
 					"railway:signal:speed_limit:speed":"30"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [65,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:speed_limit":"DE-ESO:zs3",
+					"railway:signal:speed_limit:form":"light",
+					"railway:signal:speed_limit:speed":"30"
 				}
 			}],
-			"caption": "Zs 3 Geschwindigkeits­anzeiger"
+			"caption": "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 		},
 		{
 			"minzoom": 14,
