@@ -118,25 +118,20 @@
 		},
 		{
 			"minzoom": 14,
+			"lineheight": 20,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,60],
+				"coordinates": [40,60],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:main":"DE-ESO:hp",
 					"railway:signal:main:form":"semaphore",
 					"railway:signal:main:states":"DE-ESO:hp1"
-				}
-			}],
-			"caption": "Hp-Formhauptsignal ohne Hp 2"
-		},
-		{
-			"minzoom": 14,
-			"lineheight": 20,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -145,7 +140,7 @@
 					"railway:signal:main:states":"DE-ESO:hp2"
 				}
 			}],
-			"caption": "Hp-Formhauptsignal mit Hp 2"
+			"caption": "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
 		},
 		{
 			"minzoom": 14,
@@ -165,22 +160,17 @@
 			"minzoom": 14,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [40,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:main":"DE-ESO:hp",
 					"railway:signal:main:form":"light",
 					"railway:signal:main:states":"DE-ESO:hp1"
-				}
-			}],
-			"caption": "Hp-Lichthauptsignal ohne Hp 2"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -189,27 +179,22 @@
 					"railway:signal:main:states":"DE-ESO:hp2"
 				}
 			}],
-			"caption": "Hp-Lichthauptsignal mit Hp 2"
+			"caption": "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
 		},
 		{
 			"minzoom": 17,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,60],
+				"coordinates": [40,60],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:minor":"DE-ESO:sh",
 					"railway:signal:minor:form":"semaphore"
-				}
-			}],
-			"caption": "Sh-Formsperrsignal"
-		},
-		{
-			"minzoom": 17,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,60],
+				"coordinates": [60,60],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -218,27 +203,22 @@
 					"railway:signal:minor:height":"dwarf"
 				}
 			}],
-			"caption": "Sh-Zwerg-Formsperrsignal"
+			"caption": "Sh-Formsperrsignal (normal, Zwergsignal)"
 		},
 		{
 			"minzoom": 17,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,60],
+				"coordinates": [40,60],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:minor":"DE-ESO:sh",
 					"railway:signal:minor:form":"light"
-				}
-			}],
-			"caption": "Sh-Lichtsperrsignal"
-		},
-		{
-			"minzoom": 17,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,60],
+				"coordinates": [60,60],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -247,11 +227,21 @@
 					"railway:signal:minor:height":"dwarf"
 				}
 			}],
-			"caption": "Sh-Zwerg-Lichtsperrsignal"
+			"caption": "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 		},
 		{
 			"minzoom": 14,
-			"features": [{
+			"features": [
+				{
+				"type": "Point",
+				"coordinates": [30,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:ks",
+					"railway:signal:distant:form":"light"
+				}},
+				{
 				"type": "Point",
 				"coordinates": [50,50],
 				"properties": {
@@ -260,15 +250,10 @@
 					"railway:signal:distant":"DE-ESO:ks",
 					"railway:signal:distant:form":"light",
 					"railway:signal:distant:repeated":"yes"
-				}
-			}],
-			"caption": "Ks-Vorsignalwiederholer"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [70,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -277,21 +262,7 @@
 					"railway:signal:distant:shortened":"yes"
 				}
 			}],
-			"caption": "Ks-Vorsignal in verkürztem Bremswegabstand"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:distant":"DE-ESO:ks",
-					"railway:signal:distant:form":"light"
-				}
-			}],
-			"caption": "Ks-Vorsignal"
+			"caption": "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
 		},
 		{
 			"minzoom": 14,
@@ -309,52 +280,44 @@
 		},
 		{
 			"minzoom": 14,
-			"features": [{
+			"features": [
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [40,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:combined":"DE-ESO:ks",
 					"railway:signal:combined:form":"light"
-				}
-			}],
-			"caption": "Ks-Mehrabschnittssignal"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:combined":"DE-ESO:ks",
 					"railway:signal:combined:form":"light",
 					"railway:signal:combined:shortened":"yes"
-				}
-			}],
-			"caption": "Ks-Mehrabschnittssignal in verkürztem Bremswegabstand"
+				}}
+			],
+			"caption": "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
 		},
 		{
 			"minzoom": 14,
-			"features": [{
+			"features": [
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [40,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:combined":"DE-ESO:sv",
 					"railway:signal:combined:states":"DE-ESO:sv0"
-				}
-			}],
-			"caption": "Sv-Signal ohne Hp 0"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -362,7 +325,7 @@
 					"railway:signal:combined:states":"DE-ESO:hp0"
 				}
 			}],
-			"caption": "Sv-Signal mit Hp 0"
+			"caption": "Sv-Signal (ohne Hp 0, mit Hp 0)"
 		},
 		{
 			"minzoom": 14,
@@ -427,23 +390,17 @@
 			"lineheight": 28,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [40,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:distant":"DE-ESO:vr",
 					"railway:signal:distant:form":"semaphore",
 					"railway:signal:distant:states":"DE-ESO:vr1"
-				}
-			}],
-			"caption": "Vr-Formvorsignal ohne Vr 2"
-		},
-		{
-			"minzoom": 14,
-			"lineheight": 28,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -452,57 +409,22 @@
 					"railway:signal:distant:states":"DE-ESO:vr2"
 				}
 			}],
-			"caption": "Vr-Formvorsignal mit Vr 2"
+			"caption": "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
 		},
 		{
 			"minzoom": 14,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [35,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:distant":"DE-ESO:vr",
 					"railway:signal:distant:form":"light"
-				}
-			}],
-			"caption": "Vr-Lichtvorsignal ohne Angabe der Signalzustände"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:distant":"DE-ESO:vr",
-					"railway:signal:distant:form":"light",
-					"railway:signal:distant:states":"DE-ESO:vr1"
-				}
-			}],
-			"caption": "Vr-Lichtvorsignal ohne Vr 2"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:distant":"DE-ESO:vr",
-					"railway:signal:distant:form":"light",
-					"railway:signal:distant:states":"DE-ESO:vr2"
-				}
-			}],
-			"caption": "Vr-Lichtvorsignal mit Vr 2"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [65,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -511,13 +433,23 @@
 					"railway:signal:distant:repeated":"yes"
 				}
 			}],
-			"caption": "Vr-Lichtvorsignalwiederholer ohne Angabe der Signalzustände"
+			"caption": "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 		},
 		{
 			"minzoom": 14,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [35,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:states":"DE-ESO:vr1"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [65,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -527,13 +459,23 @@
 					"railway:signal:distant:states":"DE-ESO:vr1"
 				}
 			}],
-			"caption": "Vr-Lichtvorsignalwiederholer ohne Vr 2"
+			"caption": "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 		},
 		{
 			"minzoom": 14,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [35,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:vr",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:states":"DE-ESO:vr2"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [65,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -543,7 +485,7 @@
 					"railway:signal:distant:states":"DE-ESO:vr2"
 				}
 			}],
-			"caption": "Vr-Lichtvorsignalwiederholer mit Vr 2"
+			"caption": "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 		},
 		{
 			"minzoom": 14,
@@ -561,22 +503,18 @@
 		},
 		{
 			"minzoom": 14,
+			"lineheight": 20,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [40,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:whistle":"DE-ESO:db:bü4"
-				}
-			}],
-			"caption": "Bü 4 Pfeiftafel"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -584,26 +522,22 @@
 					"railway:signal:ring:only_transit":"yes"
 				}
 			}],
-			"caption": "Bü 4 Pfeiftafel für durchfahrende Züge"
+			"caption": "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
 		},
 		{
 			"minzoom": 14,
+			"lineheight": 20,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [40,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:whistle":"DE-ESO:dr:pf1"
-				}
-			}],
-			"caption": "ex-Pf 1 Pfeiftafel"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -611,26 +545,22 @@
 					"railway:signal:ring:only_transit":"yes"
 				}
 			}],
-			"caption": "ex-Pf 1 Pfeiftafel für durchfahrende Züge"
+			"caption": "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
 		},
 		{
 			"minzoom": 15,
+			"lineheight": 20,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [40,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:ring":"DE-ESO:bü5"
-				}
-			}],
-			"caption": "Bü 5 Läutetafel"
-		},
-		{
-			"minzoom": 15,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -638,7 +568,7 @@
 					"railway:signal:ring:only_transit":"yes"
 				}
 			}],
-			"caption": "Bü 5 Läutetafel für durchfahrende Züge"
+			"caption": "Bü 5 Läutetafel (normal, für durchfahrende Züge)"
 		},
 		{
 			"minzoom": 14,
@@ -659,22 +589,16 @@
 			"lineheight": 30,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [40,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:crossing_distant":"DE-ESO:bü2",
 					"railway:signal:crossing_distant:form":"sign"
-				}
-			}],
-			"caption": "Bü 2 Rautentafel"
-		},
-		{
-			"minzoom": 15,
-			"lineheight": 30,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -683,7 +607,7 @@
 					"railway:signal:crossing_distant:shortened":"yes"
 				}
 			}],
-			"caption": "Bü 2 Rautentafel in verkürztem Bremswegabstand"
+			"caption": "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
 		},
 		{
 			"minzoom": 17,
@@ -750,51 +674,16 @@
 			"minzoom": 14,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,60],
+				"coordinates": [40,60],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:main":"FI:Po",
 					"railway:signal:main:form":"light"
-				}
-			}],
-			"caption": "main signal new type (aspects not given)"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
+				}},
+				{
 				"type": "Point",
-				"coordinates": [50,60],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:main":"FI:Po",
-					"railway:signal:main:states":"FI:Po1",
-					"railway:signal:main:form":"light"
-				}
-			}],
-			"caption": "main signal new type with Po 1"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,60],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:main":"FI:Po",
-					"railway:signal:main:states":"FI:Po2",
-					"railway:signal:main:form":"light"
-				}
-                       }],
-			"caption": "main signal new type with Po 2"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -802,13 +691,23 @@
 					"railway:signal:main:form":"light"
 				}
 			}],
-			"caption": "main signal old type (aspects not given)"
+			"caption": "main signal without aspects given (new type, old type)"
 		},
 		{
 			"minzoom": 14,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [40,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"FI:Po",
+					"railway:signal:main:states":"FI:Po1",
+					"railway:signal:main:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -817,12 +716,23 @@
 					"railway:signal:main:form":"light"
 				}
 			}],
-			"caption": "main signal old type with Po 1"
+			"caption": "main signal with Po 1 (new type, old type)"
 		},
 		{
 			"minzoom": 14,
 			"features": [{
-				"coordinates": [50,50],
+				"type": "Point",
+				"coordinates": [40,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"FI:Po",
+					"railway:signal:main:states":"FI:Po2",
+					"railway:signal:main:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [60,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -830,37 +740,56 @@
 					"railway:signal:main:states":"FI:Po2",
 					"railway:signal:main:form":"light"
 				}
-                       }],
-			"caption": "main signal old type with Po 2"
+			}],
+			"caption": "main signal with Po 2 (new type, old type)"
 		},
 		{
 			"minzoom": 14,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,60],
+				"coordinates": [40,60],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:distant":"FI:Eo",
 					"railway:signal:distant:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [60,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"FI:Eo-v",
+					"railway:signal:distant:form":"light"
 				}
-                       }],
-			"caption": "distant signal new type (aspects not given)"
+			}],
+			"caption": "distant signal without aspects given (new type, old type)"
 		},
 		{
 			"minzoom": 14,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,60],
+				"coordinates": [40,60],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:distant":"FI:Eo",
 					"railway:signal:distant:states":"FI:Eo1",
 					"railway:signal:distant:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [60,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"FI:Eo-v",
+					"railway:signal:distant:states":"FI:Eo1",
+					"railway:signal:distant:form":"light"
 				}
 			}],
-			"caption": "distant signal new type with Eo 1"
+			"caption": "distant signal with Eo 1 (new type, old type)"
 		},
 		{
 			"minzoom": 14,
@@ -874,37 +803,8 @@
 					"railway:signal:distant:states":"FI:Eo2",
 					"railway:signal:distant:form":"light"
 				}
-                       }],
-			"caption": "distant signal new type with Eo 2"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,60],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:distant":"FI:Eo-v",
-					"railway:signal:distant:form":"light"
-				}
 			}],
-			"caption": "distant signal old type (aspects not given)"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:distant":"FI:Eo-v",
-					"railway:signal:distant:states":"FI:Eo1",
-					"railway:signal:distant:form":"light"
-				}
-			}],
-			"caption": "distant signal old type with Eo 1"
+			"caption": "distant signal with Eo 2 (new type)"
 		},
 		{
 			"minzoom": 14,
