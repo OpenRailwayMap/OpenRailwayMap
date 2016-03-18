@@ -1746,16 +1746,40 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 		</item>
 		<separator />
-		<item name="Grenzpunkt" icon="owner-change.png" type="node">
-			<label text="Eigentumswechsel der Infrastruktur an Privatbahnanschlüssen und Landesgrenzen" />
+		<item name="Change of Operator" de.name="Betreibergrenze" icon="owner-change.svg" type="node">
+			<label text="Owner/operator change at spur sidings and connections between national and regional companies"
+				de.text="Betreibergrenze der Infrastruktur an Gleisanschlüssen und Übergängen Privat-/Staatsbahn" />
 			<key key="railway"
 				value="owner_change" />
 			<space />
-			<label text="Manuell sind noch folgende Tags zu ergänzen:" />
-			<label text="- railway:name:(Kürzel Betreiber 1)=(Name)" />
-			<label text="- railway:name:(Kürzel Betreiber 2)=(Name)" />
-			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
-			<label text="- railway:ref:(Kürzel Betreiber 1)=(Abkürzung)" />
+			<label text="You have to add manually following tags:"
+				de.text="Manuell sind noch folgende Tags zu ergänzen:" />
+			<label text="- railway:name:(abbrevation of operator 1) = (name of this location)"
+				de.text="- railway:name:(Kürzel Betreiber 1) = (Name)" />
+			<label text="- railway:name:(abbrevation of operator 1) = (name of this location)"
+				de.text="- railway:name:(Kürzel Betreiber 2) = (Name)" />
+			<label text="- railway:name:(abbrevation of operator 1) = (abbrevation of this location)"
+				de.text="- railway:ref:(Kürzel Betreiber 1) = (Abkürzung)" />
+			<label text="- railway:name:(abbrevation of operator 2) = (abbrevation of this location)"
+				de.text="- railway:ref:(Kürzel Betreiber 2) = (Abkürzung)" />
+		</item>
+		<item name="Border" de.name="Grenzpunkt" icon="presets/douane.png" type="node">
+			<!-- presets/douane.png is included in JOSM's internal preset set -->
+			<label text="Change of owner/operator near a boundary (admin_level<=2)"
+				de.text="Eigentumswechsel der Infrastruktur nahe der Staatsgrenze" />
+			<key key="railway"
+				value="border" />
+			<space />
+			<label text="You have to add manually following tags:"
+				de.text="Manuell sind noch folgende Tags zu ergänzen:" />
+			<label text="- railway:name:(abbrevation of operator 1) = (name of this location)"
+				de.text="- railway:name:(Kürzel Betreiber 1) = (Name)" />
+			<label text="- railway:name:(abbrevation of operator 1) = (name of this location)"
+				de.text="- railway:name:(Kürzel Betreiber 2) = (Name)" />
+			<label text="- railway:name:(abbrevation of operator 1) = (abbrevation of this location)"
+				de.text="- railway:ref:(Kürzel Betreiber 1) = (Abkürzung)" />
+			<label text="- railway:name:(abbrevation of operator 2) = (abbrevation of this location)"
+				de.text="- railway:ref:(Kürzel Betreiber 2) = (Abkürzung)" />
 		</item>
 		<group name="Supply Points (Water, Coal, …)" de.name="Versorgung">
 			<item name="Tankstelle" type="node,closedway">
