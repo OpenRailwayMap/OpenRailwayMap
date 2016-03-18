@@ -326,7 +326,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<separator />
-		<item de.name="Brücke" name="Brücke" icon="bridge-32.png" type="way">
+		<item de.name="Brücke" name="Bridge" icon="bridge-32.png" type="way">
 			<combo key="bridge"
 				text="Bridge type"
 				de.text="Brückentyp"
@@ -334,6 +334,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.display_values="Einfache Brücke,Auslegerbrücke,Bewegliche Brücke,Trestle-Brücke,Viadukt"
 				display_values="Non-specific bridge,Cantilever bridge,Movable bridge,Trestle bridge,Viaduct"
 				values_sort="false"
+				default="yes"
 				/>
 			<combo key="bridge:movable"
 				text="Movable bridge"
@@ -430,8 +431,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:minor:form"
 				value="sign" />
 		</item>
-		<item de.name="Weiche" name="Switch" icon="de/switch.png" type="node">
-			<label text="Switch"
+		<item de.name="Weiche" name="Point" icon="de/switch.png" type="node">
+			<label text="Point (BE), Switch (AE)"
 				de.text="Weiche" />
 			<space />
 			<key key="railway"
@@ -787,7 +788,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Freight Station" de.name="Güterbahnhof/Rangierbahnhof" icon="yard-32.png" type="node">
-				<label text="Güterbahnhof/Rangierbahnhof" />
+				<label text="Freight Station" de.text="Güterbahnhof/Rangierbahnhof" />
 				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
 					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
@@ -824,7 +825,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Service Station" de.name="Betriebsbahnhof" type="node">
-				<label text="Betriebsbahnhof" />
+				<label text="Service Station" de.text="Betriebsbahnhof" />
 				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
 					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
@@ -861,7 +862,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Juction" de.name="Abzweig" icon="junction-25.png" type="node">
-				<label text="Abzweig" />
+				<label text="Junction" de.text="Abzweig" />
+				<label
+					text="Location outside a station where one railway line forks from another."
+					de.text="Stelle außerhalb eines Bahnhofs, an der eine Strecke von einer anderen abzweigt."
+					/>
 				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
 					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
@@ -899,7 +904,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Spur juction" de.name="Anst / Awanst" icon="spur-25.png" type="node">
-				<label text="Anschlusstelle oder Ausweichanschlusstelle" />
+				<label text="Spur junction" de.text="Anschlusstelle oder Ausweichanschlusstelle" />
+				<label
+					text="Location where a (usually short) spur track forks"
+					de.text="Stelle, an der an Anschlussgleis außerhalb eines Bahnhofs"
+					/>
+				<label
+					text="form the main line outside a station"
+					de.text="von der Strecke abzweigt."
+					/>
 				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
 					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
@@ -937,7 +950,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Crossover" de.name="Überleitstelle" icon="crossover-28.png" type="node">
-				<label text="Überleitstelle" />
+				<label text="Crossover" de.text="Überleitstelle" />
 				<label text="Is being mapped as a node inside the operating site. The node does not belong to a track."
 					de.text="Wird als Punkt in der Mitte der Betriebsstelle (nicht auf einem Gleis) erfasst." />
 				<space />
@@ -1088,12 +1101,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Railway Landuse Area" de.name="Bahngelände" type="closedway">
-				<label text="Bahngelände" />
+				<label text="Railway landuse area" de.text="Bahngelände" />
 				<key key="landuse"
 					value="railway" />
 			</item>
 			<item name="Operating Site Relation" de.name="Betriebsstellenrelation" type="relation">
-				<label text="Betriebsstellenrelation" />
+				<label text="Operating Site Relation" de.text="Betriebsstellenrelation" />
 				<space />
 				<key key="railway"
 					value="facility" />
@@ -1185,8 +1198,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<separator />
-		<item name="VzG-Strecke" type="relation">
-			<label text="VzG-Strecke" />
+		<item name="Line Number (Infrastructure)" de.name="VzG-Strecke" type="relation">
+			<label
+				text="Line number assigned by the infrastructure operator" de.text="VzG-Strecke"/>
 			<space />
 			<key key="type"
 				value="route" />
@@ -1226,8 +1240,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					type="way" />
 			</roles>
 		</item>
-		<item name="Kursbuchstrecke" type="relation">
-			<label text="Kursbuchstrecke" />
+		<item name="Timetable Number" de.name="Kursbuchstrecke" type="relation">
+			<label text="Route relation of table number at the national timetable which is assigned to a route" de.text="Kursbuchstrecke" />
 			<space />
 			<key key="type"
 				value="route" />
@@ -1261,8 +1275,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					type="way" />
 			</roles>
 		</item>
-		<item name="Linienvariante" type="relation">
-			<label text="Linienvariante" />
+		<item name="Public Transport Route" de.name="ÖPNV-Routenrelation" type="relation">
+			<label text="Public Transport Route" de.text="ÖPNV-Routenrelation" />
 			<space />
 			<key key="type"
 				value="route" />
@@ -1351,8 +1365,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					member_expression="public_transport=platform" />
 			</roles>
 		</item>
-		<item name="Hauptlinie" type="relation">
-			<label text="Hauptlinie" />
+		<item name="Master Route Relation" de.name="Masterroute" type="relation">
+			<label text="Master Route Relation" de.text="Masterroute" />
 			<space />
 			<key key="type"
 				value="route_master" />
@@ -1443,7 +1457,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<separator />
 		<item name="Level Crossing" de.name="Bahnübergang" icon="styles/standard/transport/railway/level_crossing.svg" type="node">
-			<label text="Bahnübergang" />
+			<label text="Level Crossing" de.text="Bahnübergang" />
 			<space />
 			<key key="railway"
 				value="level_crossing" />
@@ -1602,8 +1616,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
 				/>
 		</item>
-		<item name="Platform" de.name="Bahnsteig" type="way,closedway">
-			<label text="Bahnsteig" />
+		<item name="Platform" de.name="Bahnsteig" type="way,closedway,multipolygon">
+			<label text="Platform" de.text="Bahnsteig" />
 			<key key="railway"
 				value="platform" />
 			<text key="name"
@@ -1679,7 +1693,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 		</item>
 		<item name="Ticket Counter" de.name="Fahrkartenschalter" type="node">
-			<label text="Fahrkartenschalter" />
+			<label text="Ticket Counter" de.text="Fahrkartenschalter" />
 			<space />
 			<key key="shop"
 				value="ticket" />
@@ -1699,7 +1713,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 		</item>
 		<item name="Subway Entrance" de.name="U-Bahn-Zugang" type="node">
-			<label text="U-Bahn-Zugang" />
+			<label text="Subway Entrance" de.text="U-Bahn-Zugang" />
 			<key key="railway"
 				value="subway_entrance" />
 			<text key="name"
@@ -1718,7 +1732,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 		</item>
 		<item name="Station Building" de.name="Bahnhofsgebäude" type="closedway">
-			<label text="Bahnhofsgebäude" />
+			<label text="Station Building" de.text="Bahnhofsgebäude" />
 			<space />
 			<key key="building"
 				value="train_station" />
@@ -1741,8 +1755,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="railway" />
 		</item>
 		<separator />
-		<item name="Stromsystemwechsel" type="node">
-			<label text="Stromsystemwechsel" />
+		<item name="Change of Power" de.name="Stromsystemwechsel" type="node">
+			<label text="Change of Power (voltage and/or frequency)" de.text="Stromsystemwechsel" />
 			<key key="railway"
 				value="isolated_track_section" />
 		</item>
@@ -1851,12 +1865,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Water Crane" de.name="Wasserkran" type="node">
-				<label text="Wasserkran" />
+				<label text="Water Crane" de.text="Wasserkran" />
 				<key key="railway"
 					value="water_crane" />
 			</item>
 			<item name="Water Tower" de.name="Wasserturm" type="node,closedway">
-				<label text="Wasserturm" />
+				<label text="Water Tower" de.text="Wasserturm" />
 				<space />
 				<key key="railway"
 					value="water_tower" />
@@ -1866,7 +1880,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="yes" />
 			</item>
 			<item name="Coaling Facility" de.name="Bekohlungsanlage" type="node,closedway">
-				<label text="Bekohlungsanlage" />
+				<label text="Coaling Facility" de.text="Bekohlungsanlage" />
 				<key key="railway"
 					value="coaling_facility" />
 				<check key="area"
@@ -1875,7 +1889,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Train Wash" de.name="Waschanlage" type="node,closedway">
-				<label text="Waschanlage" />
+				<label text="Train Wash" de.text="Waschanlage" />
 				<key key="railway"
 					value="wash" />
 				<check key="building"
@@ -1884,12 +1898,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Pit" de.name="Lokgrube" type="node">
-				<label text="Lokgrube" />
+				<label text="Pit" de.text="Lokgrube" />
 				<key key="railway"
 					value="pit" />
 			</item>
 			<item name="Engine Shed" de.name="Lokschuppen" type="node,closedway">
-				<label text="Lokschuppen" />
+				<label text="Engine Shed" de.text="Lokschuppen" />
 				<key key="railway"
 					value="engine_shed" />
 				<check key="building"
@@ -1902,7 +1916,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Workshop" de.name="Werkstatt" type="node,closedway">
-				<label text="Werkstatt" />
+				<label text="Workhop" de.text="Werkstatt" />
 				<key key="railway"
 					value="workshop" />
 				<check key="building"
@@ -1916,8 +1930,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<group name="Verladeeinrichtungen">
-			<item name="Gleiswaage" type="node">
-				<label text="Gleiswaage" />
+			<item name="Wagon Weightbridge" de.name="Gleiswaage" type="node">
+				<label text="Wagon Weightbridge" de.text="Gleiswaage" />
 				<key key="railway"
 					value="track_scale" />
 			</item>
@@ -1927,7 +1941,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="loading_gauge" />
 			</item>
 			<item name="Team Track" de.name="Verladerampe/Ladestraße" type="node,way,closedway">
-				<label text="Verladerampe/Ladestraße" />
+				<label text="Team Track" de.text="Verladerampe/Ladestraße" />
 				<key key="railway"
 					value="loading_ramp" />
 				<text key="name"
@@ -1960,8 +1974,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<separator />
-			<item name="Eisenbahnfährverladestelle" type="node">
-				<label text="Eisenbahnfährverladestelle" />
+			<item name="Train Ferry Slip" de.name="Eisenbahnfährverladestelle" type="node">
+				<label text="Train Ferry Slip" de.text="Eisenbahnfährverladestelle" />
 				<key key="amenity"
 					value="ferry_terminal" />
 				<key key="railway"
@@ -1983,8 +1997,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Betreiber"
 					/>
 			</item>
-			<item name="Eisenbahnfährverlauf" type="way">
-				<label text="Eisenbahnfährverlauf" />
+			<item name="Train Ferry (Way)" de.name="Eisenbahnfährverlauf (Way)" type="way">
+				<label text="Train Ferry (Way)" de.text="Eisenbahnfährverlauf (Way)" />
 				<key key="route"
 					value="ferry" />
 				<key key="railway"
@@ -1998,8 +2012,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Betreiber"
 					/>
 			</item>
-			<item name="Eisenbahnfährlinie" type="relation">
-				<label text="Eisenbahnfährlinie" />
+			<item name="Train Ferry Line (Route Relation)" de.name="Eisenbahnfährlinie (Routenrelation)" type="relation">
+				<label text="Train Ferry Line (Route Relation)" de.text="Eisenbahnfährlinie (Routenrelation)" />
 				<key key="type"
 					value="route" />
 				<key key="route"
@@ -2016,8 +2030,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<separator />
-			<item name="Containerterminal" de.name="Container-Umschlagbahnhof" type="node,closedway">
-				<label text="Container-Umschlagbahnhof" />
+			<item name="Container Terminal" de.name="Container-Umschlagbahnhof" type="node,closedway">
+				<label text="Container Terminal" de.text="Container-Umschlagbahnhof" />
 				<space />
 				<key key="man_made"
 					value="container_terminal" />
@@ -2102,7 +2116,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<item name="Turntable" de.name="Drehscheibe" type="node,closedway">
-			<label text="Drehscheibe" />
+			<label text="Turntable" de.text="Drehscheibe" />
 			<key key="railway"
 				value="turntable" />
 		</item>
