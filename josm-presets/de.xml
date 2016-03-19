@@ -1765,7 +1765,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<item name="Border" de.name="Grenzpunkt" icon="presets/douane.png" type="node">
 			<!-- presets/douane.png is included in JOSM's internal preset set -->
-			<label text="Change of owner/operator near a boundary (admin_level<=2)"
+			<label text="Change of owner/operator near a boundary (admin_level&lt;=2)"
 				de.text="Eigentumswechsel der Infrastruktur nahe der Staatsgrenze" />
 			<key key="railway"
 				value="border" />
