@@ -37,10 +37,7 @@
 		<meta http-equiv="content-style-type" content="text/css" />
 		<link rel="stylesheet" type="text/css" href="css/map.css" />
 		<link rel="stylesheet" href="css/leaflet.css" />
-		<!--[if lte IE 8]>
-			<link rel="stylesheet" href="css/leaflet.ie.css" />
-		<![endif]-->
-		<script type="text/javascript" src="js/leaflet-0.6.2.js"></script>
+		<script type="text/javascript" src="js/leaflet.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
 		<script type="text/javascript" src="renderer/kothic/kothic.js"></script>
 		<script type="text/javascript" src="renderer/kothic/renderer/path.js"></script>
