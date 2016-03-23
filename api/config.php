@@ -13,7 +13,7 @@
 	$mail = "info@openrailwaymap.org";
 
 	// base part of the server url, must end with '/'
-	if ($_SERVER['HTTPS'])
+	if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'])
 		$urlbase = 'https://';
 	else
 		$urlbase = 'http://';
