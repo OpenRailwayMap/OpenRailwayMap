@@ -3,212 +3,177 @@
 	"mapfeatures":
 	[
 		{
-			"minzoom": 0,
-			"maxzoom": 19,
+			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"gray\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "No information about train protection"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "no train protection"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill=\"none\" stroke=\"#FFB900\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Punktförmige Zugbeeinflussung"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill=\"none\" stroke=\"red\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Linienzugbeeinflussung"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 19,
 			"symbol": "<g fill=\"none\" stroke=\"blue\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "ETCS"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/hp0-semaphore-16.png",
 			"caption": "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/hp1-semaphore-19.png",
 			"caption": "Hp-Formhauptsignal ohne Hp 2"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/hp2-semaphore-20.png",
 			"caption": "Hp-Formhauptsignal mit Hp 2"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/hp0-light-16.png",
 			"caption": "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/hp1-light-16.png",
 			"caption": "Hp-Lichthauptsignal ohne Hp 2"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/hp2-light-16.png",
 			"caption": "Hp-Lichthauptsignal mit Hp 2"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/sh1-semaphore-normal-12.png",
 			"caption": "Sh-Formsperrsignal"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/sh0-semaphore-dwarf-12.png",
 			"caption": "Sh-Zwerg-Formsperrsignal"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/sh1-light-normal-12.png",
 			"caption": "Sh-Lichtsperrsignal"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/sh0-light-dwarf-12.png",
 			"caption": "Sh-Zwerg-Lichtsperrsignal"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/ks-distant-repeated-16.png",
 			"caption": "Ks-Vorsignalwiederholer"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/ks-distant-shortened-16.png",
 			"caption": "Ks-Vorsignal in verkürztem Bremswegabstand"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/ks-distant-16.png",
 			"caption": "Ks-Vorsignal"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/ks-main-16.png",
 			"caption": "Ks-Hauptsignal"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/ks-combined-16.png",
 			"caption": "Ks-Mehrabschnittssignal"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/ks-combined-shortened-16.png",
 			"caption": "Ks-Mehrabschnittssignal in verkürztem Bremswegabstand"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/sv-sv0-16.png",
 			"caption": "Sv-Signal ohne Hp 0"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/sv-hp0-16.png",
 			"caption": "Sv-Signal mit Hp 0"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/ne1-16.png",
 			"caption": "Ne 1 Trapeztafel"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/so106-16.png",
 			"caption": "So 106 Kreuztafel"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 19,
 			"icon": "icons/de/ne5-ds301-16.png",
 			"caption": "Ne 5 Haltetafel"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/vr0-semaphore-26.png",
 			"caption": "Vr-Formvorsignal ohne Angabe der Signalzustände"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/vr1-semaphore-19.png",
 			"caption": "Vr-Formvorsignal ohne Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/vr2-semaphore-27.png",
 			"caption": "Vr-Formvorsignal mit Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/vr0-light-16.png",
 			"caption": "Vr-Lichtvorsignal ohne Angabe der Signalzustände"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/vr1-light-16.png",
 			"caption": "Vr-Lichtvorsignal ohne Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/vr2-light-16.png",
 			"caption": "Vr-Lichtvorsignal mit Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/vr0-light-repeated-16.png",
 			"caption": "Vr-Lichtvorsignalwiederholer ohne Angabe der Signalzustände"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/vr1-light-repeated-16.png",
 			"caption": "Vr-Lichtvorsignalwiederholer ohne Vr 2"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 19,
 			"icon": "icons/de/vr2-light-repeated-16.png",
 			"caption": "Vr-Lichtvorsignalwiederholer mit Vr 2"
 		},
@@ -220,7 +185,6 @@
 		},
 		{
 			"minzoom": 16,
-			"maxzoom": 19,
 			"icon": "icons/de/blockkennzeichen-20.png",
 			"caption": "Blockkennzeichen"
 		},
@@ -232,7 +196,6 @@
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 21,
 			"icon": "icons/de/bue4-ds-only-transit-21.png",
 			"caption": "Bü 4 Pfeiftafel für durchfahrende Züge"
 		},
@@ -244,7 +207,6 @@
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 21,
 			"icon": "icons/de/pf1-dv-only-transit-21.png",
 			"caption": "ex-Pf 1 Pfeiftafel für durchfahrende Züge"
 		},
@@ -256,55 +218,46 @@
 		},
 		{
 			"minzoom": 15,
-			"maxzoom": 21,
 			"icon": "icons/de/bue5-only-transit-21.png",
 			"caption": "Bü 5 Läutetafel für durchfahrende Züge"
 		},
 		{
 			"minzoom": 14,
-			"maxzoom": 21,
 			"icon": "icons/de/ne6-24.png",
 			"caption": "Ne 6 Haltepunkttafel"
 		},
 		{
 			"minzoom": 15,
-			"maxzoom": 21,
 			"icon": "icons/de/bue2-ds-28.png",
 			"caption": "Bü 2 Rautentafel"
 		},
 		{
 			"minzoom": 15,
-			"maxzoom": 21,
 			"icon": "icons/de/bue2-ds-reduced-distance-28.png",
 			"caption": "Bü 2 Rautentafel in verkürztem Bremswegabstand"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 21,
 			"icon": "icons/de/ra11-sign-16.png",
 			"caption": "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 21,
 			"icon": "icons/de/ra11-sh1-15.png",
 			"caption": "Ra 11 Wartezeichen mit Sh 1"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 21,
 			"icon": "icons/de/ra11b-16.png",
 			"caption": "Ra 11b Wartezeichen"
 		},
 		{
 			"minzoom": 17,
-			"maxzoom": 21,
 			"icon": "icons/de/ra10-16.png",
 			"caption": "Ra 10 Rangierhalttafel / Verschubhalttafel"
 		},
 		{
 			"minzoom": 13,
-			"maxzoom": 19,
 			"symbol": "<text x=\"0\" y=\"11\" style=\"font-family: Arial; font-size: 11px; fill: black; stroke: #008206; stroke-width: 0.5;\">Dormagen Df</text>",
 			"caption": "Signal box"
 		}
