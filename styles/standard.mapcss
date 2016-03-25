@@ -463,8 +463,6 @@ way|z9-[railway=narrow_gauge][usage=test][!service]
 	color: black;
 	width: 1.5;
 	casing-width: 1.5;
-	casing-color: black;
-	casing-dashes: 3,3;
 }
 
 /************************************************/
@@ -476,8 +474,6 @@ way|z10-[railway=narrow_gauge][!usage][service=siding]
 	color: black;
 	width: 1.5;
 	casing-width: 1;
-	casing-color: black;
-	casing-dashes: 3,3;
 }
 
 /****************************************************/
@@ -489,8 +485,6 @@ way|z10-[railway=narrow_gauge][!usage][service=yard]
 	color: black;
 	width: 1.5;
 	casing-width: 1;
-	casing-color: black;
-	casing-dashes: 3,3;
 }
 
 /****************************************************/
@@ -502,8 +496,6 @@ way|z10-[railway=narrow_gauge][!usage][service=spur]
 	color: #87491D;
 	width: 1.5;
 	casing-width: 1;
-	casing-color: #87491D;
-	casing-dashes: 3,3;
 	text-position: line;
 }
 
@@ -516,8 +508,6 @@ way|z10-[railway=narrow_gauge][!usage][service=crossover]
 	color: black;
 	width: 1.5;
 	casing-width: 1;
-	casing-color: black;
-	casing-dashes: 3,3;
 }
 
 /**********************************************************/
@@ -529,8 +519,6 @@ way|z9-[railway=narrow_gauge][usage=branch][!service]
 	color: #DACA00;
 	width: 1.5;
 	casing-width: 1.5;
-	casing-color: #DACA00;
-	casing-dashes: 3,3;
 }
 
 /********************************************************/
@@ -542,8 +530,6 @@ way|z9-[railway=narrow_gauge][usage=main][!service]
 	color: #FF8100;
 	width: 1.5;
 	casing-width: 1.5;
-	casing-color: #FF8100;
-	casing-dashes: 3,3;
 }
 
 /*************************************************************/
@@ -555,8 +541,6 @@ way|z9-[railway=narrow_gauge][usage=main][highspeed=yes][!service]
 	color: #FF0C00;
 	width: 1.5;
 	casing-width: 1.5;
-	casing-color: #FF0C00;
-	casing-dashes: 3,3;
 }
 
 /********************************************************/
@@ -568,8 +552,6 @@ way|z9-[railway=narrow_gauge][usage=industrial][!service]
 	color: #87491D;
 	width: 1.5;
 	casing-width: 1.5;
-	casing-color: #87491D;
-	casing-dashes: 3,3;
 }
 
 /**************************************************************/
@@ -584,7 +566,12 @@ way|z10-[railway=narrow_gauge][usage=industrial][service=crossover]
 	color: #87491D;
 	width: 1.5;
 	casing-width: 1;
-	casing-color: #87491D;
+}
+
+/* must stay last: apply the color of the line also to the casing */
+way[railway=narrow_gauge].tracks
+{
+	casing-color: eval(prop("color"));
 	casing-dashes: 3,3;
 }
 
