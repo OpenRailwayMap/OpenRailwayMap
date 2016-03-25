@@ -24,6 +24,11 @@
 		},
 		{
 			"minzoom": 10,
+			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"4.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "Narrow gauge track"
+		},
+		{
+			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"2\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><text x=\"17\" y=\"13\" style=\"font-family: Arial; font-size: 12px; fill: gray; stroke: #cccccc; stroke-width: 0.5;\">7</text>",
 			"caption": "Siding"
 		},
@@ -147,56 +152,6 @@
 			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"#00BD14\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Light rail"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"4.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge track"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g><text x=\"17\" y=\"13\" style=\"font-family: Arial; font-size: 12px; fill: gray; stroke: #cccccc; stroke-width: 0.5;\">7</text>",
-			"caption": "Narrow gauge siding"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g><text x=\"17\" y=\"13\" style=\"font-family: Arial; font-size: 12px; fill: gray; stroke: #cccccc; stroke-width: 0.5;\">7</text>",
-			"caption": "Narrow gauge yard"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#87491D\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge spur"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge crossover"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#DACA00\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#DACA00\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge branch line"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#FF8100\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#FF8100\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge main line"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#FF0C00\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#FF0C00\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge highspeed line"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#87491D\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge industrial line"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#87491D\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge industrial service"
 		},
 		{
 			"minzoom": 16,
