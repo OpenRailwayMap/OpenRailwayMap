@@ -71,7 +71,6 @@ way|z10-[bridge=yes].tracks::bridges
 	z-index: 1;
 	casing-width: 3.5;
 	casing-color: #797979;
-	linejoin: butt;
 }
 way|z12-[bridge=yes][!"railway:track_ref"].tracks::bridges
 {
@@ -98,7 +97,6 @@ way|z9-[railway=razed].tracks
 	casing-color: black;
 	casing-opacity: 0.2;
 	casing-width: 1;
-	linejoin: butt;
 	width: 0.8
 }
 
@@ -129,7 +127,6 @@ way|z10-[tunnel=yes].tracks::tunnels
 	color: white;
 	opacity: 0.6;
 	linecap: butt;
-	linejoin: butt;
 }
 
 /**********************************************/
@@ -191,7 +188,6 @@ way|z10-[railway=rail][usage=test][!service]
 	z-index: 400;
 	color: black;
 	width: 2.5;
-	linejoin: round;
 }
 
 /***********************************/
@@ -202,7 +198,6 @@ way|z10-[railway=rail][!usage][service=siding]
 	z-index: 870;
 	color: black;
 	width: 2;
-	linejoin: round;
 }
 
 /***************************************/
@@ -213,7 +208,6 @@ way|z10-[railway=rail][!usage][service=yard]
 	z-index: 860;
 	color: black;
 	width: 1.5;
-	linejoin: round;
 }
 
 /***************************************/
@@ -224,7 +218,6 @@ way|z10-[railway=rail][!usage][service=spur]
 	z-index: 880;
 	color: #87491D;
 	width: 3;
-	linejoin: round;
 	text-position: line;
 }
 
@@ -236,7 +229,6 @@ way|z10-[railway=rail][!usage][service=crossover]
 	z-index: 300;
 	color: black;
 	width: 1;
-	linejoin: round;
 }
 
 /*********************************************/
@@ -247,7 +239,6 @@ way|z2-[railway=rail][usage=branch][!service]
 	z-index: 1000;
 	color: #DACA00;
 	width: 1.5;
-	linejoin: round;
 }
 /* thicker lines in higher zoom levels */
 way|z6-8[railway=rail][usage=branch][!service]
@@ -267,7 +258,6 @@ way|z2-[railway=rail][usage=main][!service]
 	z-index: 1100;
 	color: #FF8100;
 	width: 1.5;
-	linejoin: round;
 }
 /* thicker lines in higher zoom levels */
 way|z6-8[railway=rail][usage=main][!service]
@@ -287,7 +277,6 @@ way|z2-[railway=rail][usage=main][highspeed=yes][!service]
 	z-index: 2000;
 	color: #FF0C00;
 	width: 1.5;
-	linejoin: round;
 }
 /* thicker lines in higher zoom levels */
 way|z6-8[railway=rail][usage=main][highspeed=yes][!service]
@@ -307,7 +296,6 @@ way|z10-[railway=rail][usage=industrial][!service]
 	z-index: 850;
 	color: #87491D;
 	width: 2;
-	linejoin: round;
 }
 
 /*************************************************/
@@ -321,7 +309,6 @@ way|z10-[railway=rail][usage=industrial][service=crossover]
 	z-index: 850;
 	color: #87491D;
 	width: 1.5;
-	linejoin: round;
 }
 
 /**********************/
@@ -332,7 +319,6 @@ way|z9-[railway=preserved]
 	z-index: 400;
 	color: #70584D;
 	width: 2;
-	linejoin: butt;
 	casing-width: 2;
 	casing-color: #70584D;
 	casing-dashes: 3,10;
@@ -347,7 +333,6 @@ way|z9-[railway=construction].tracks
 	dashes: 9,9;
 	color: black;
 	width: 3;
-	linejoin: butt;
 }
 /* colors are set below together with railway=proposed */
 
@@ -360,7 +345,6 @@ way|z9-[railway=proposed].tracks
 	dashes: 2,8;
 	color: black;
 	width: 3;
-	linejoin: butt;
 }
 /** shared between railway=proposed and railway=construction **/
 /*  show the color of what the railway will become            */
@@ -403,7 +387,6 @@ way|z9-[railway=disused]
 	z-index: 300;
 	color: #70584D;
 	width: 3;
-	linejoin: round;
 }
 
 /**********************/
@@ -416,7 +399,6 @@ way|z9-[railway=abandoned]
 	color: #70584D;
 	width: 3;
 	opacity: 0.8;
-	linejoin: round;
 }
 
 /******************/
@@ -429,7 +411,6 @@ way|z9-[railway=razed]
 	color: #70584D;
 	opacity: 0.6;
 	width: 3;
-	linejoin: round;
 }
 
 /***************/
@@ -440,7 +421,6 @@ way|z11-[railway=tram]
 	z-index: 1100;
 	color: #D877B8;
 	width: 2.5;
-	linejoin: butt;
 }
 
 /*****************/
@@ -451,7 +431,6 @@ way|z10-[railway=subway]
 	z-index: 1100;
 	color: #0300C3;
 	width: 2.5;
-	linejoin: butt;
 }
 
 /*********************/
@@ -462,7 +441,6 @@ way|z10-[railway=light_rail]
 	z-index: 1100;
 	color: #00BD14;
 	width: 2.5;
-	linejoin: butt;
 }
 
 /*******************************************************************************************/
@@ -476,7 +454,6 @@ way|z9-[railway=narrow_gauge][usage=test][!service]
 	z-index: 1200;
 	color: black;
 	width: 1.5;
-	linejoin: butt;
 	casing-width: 1.5;
 	casing-color: black;
 	casing-dashes: 3,3;
@@ -490,7 +467,6 @@ way|z10-[railway=narrow_gauge][!usage][service=siding]
 	z-index: 850;
 	color: black;
 	width: 1.5;
-	linejoin: round;
 	casing-width: 1;
 	casing-color: black;
 	casing-dashes: 3,3;
@@ -504,7 +480,6 @@ way|z10-[railway=narrow_gauge][!usage][service=yard]
 	z-index: 840;
 	color: black;
 	width: 1.5;
-	linejoin: round;
 	casing-width: 1;
 	casing-color: black;
 	casing-dashes: 3,3;
@@ -521,7 +496,6 @@ way|z10-[railway=narrow_gauge][!usage][service=spur]
 	casing-width: 1;
 	casing-color: #87491D;
 	casing-dashes: 3,3;
-	linejoin: round;
 	text-position: line;
 }
 
@@ -536,7 +510,6 @@ way|z10-[railway=narrow_gauge][!usage][service=crossover]
 	casing-width: 1;
 	casing-color: black;
 	casing-dashes: 3,3;
-	linejoin: round;
 }
 
 /**********************************************************/
@@ -550,7 +523,6 @@ way|z9-[railway=narrow_gauge][usage=branch][!service]
 	casing-width: 1.5;
 	casing-color: #DACA00;
 	casing-dashes: 3,3;
-	linejoin: round;
 }
 
 /********************************************************/
@@ -564,7 +536,6 @@ way|z9-[railway=narrow_gauge][usage=main][!service]
 	casing-width: 1.5;
 	casing-color: #FF8100;
 	casing-dashes: 3,3;
-	linejoin: round;
 }
 
 /*************************************************************/
@@ -578,7 +549,6 @@ way|z9-[railway=narrow_gauge][usage=main][highspeed=yes][!service]
 	casing-width: 1.5;
 	casing-color: #FF0C00;
 	casing-dashes: 3,3;
-	linejoin: round;
 }
 
 /********************************************************/
@@ -592,7 +562,6 @@ way|z9-[railway=narrow_gauge][usage=industrial][!service]
 	casing-width: 1.5;
 	casing-color: #87491D;
 	casing-dashes: 3,3;
-	linejoin: round;
 }
 
 /**************************************************************/
@@ -609,7 +578,6 @@ way|z10-[railway=narrow_gauge][usage=industrial][service=crossover]
 	casing-width: 1;
 	casing-color: #87491D;
 	casing-dashes: 3,3;
-	linejoin: round;
 }
 
 /************/
@@ -867,7 +835,6 @@ way|z11-15[railway=traverser],
 area|z11-15[railway=traverser]
 {
 	z-index: 880;
-	linejoin: round;
 	color: #ababab;
 	width: 2;
 	fill-color: #ababab;
@@ -879,7 +846,6 @@ way|z16-[railway=traverser],
 area|z16-[railway=traverser]
 {
 	z-index: 880;
-	linejoin: round;
 	color: #808080;
 	width: 2;
 	fill-color: #ababab;
