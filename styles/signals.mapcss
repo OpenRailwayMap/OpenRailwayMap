@@ -346,25 +346,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:station_di
 	allow-overlap: true;
 }
 
-/******************/
-/* AT Trapeztafel */
-/******************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:trapeztafel"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
-{
-	z-index: 1000;
-	text: "ref";
-	text-offset: 11;
-	text-color: black;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	font-weight: bold;
-	icon-image: "icons/de/ne1-32.png";
-	icon-width: 16;
-	icon-height: 10;
-	text-allow-overlap: true;
-	allow-overlap: true;
-}
-
 /**************************************************/
 /* DE stop demand post Ne 5 (Ne 5 as light signal)*/
 /**************************************************/
@@ -696,8 +677,10 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="AT
 
 /***************************/
 /* DE main entry sign Ne 1 */
+/* AT Trapeztafel          */
 /***************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:ne1"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-ESO:ne1"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry],
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-V2:trapeztafel"]["railway:signal:main:form"=sign]["railway:signal:main:function"=entry]
 {
 	z-index: 8000;
 	icon-image: "icons/de/ne1-32.png";
