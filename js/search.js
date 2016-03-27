@@ -180,10 +180,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	// perform a synchron API request
 	this.sendRequest = function(requestType, query, handler)
 	{
-		if (window.XMLHttpRequest)
-			var request = new window.XMLHttpRequest;
-		else
-			var request = new ActiveXObject("MSXML2.XMLHTTP.3.0");
+		var request = new XMLHttpRequest();
 
 		request.open("GET", 'http://api.openrailwaymap.org/'+requestType+'?'+query.replace(/ /g, "+"), true);
 		request.onreadystatechange = function()
