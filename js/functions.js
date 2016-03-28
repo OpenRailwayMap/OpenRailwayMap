@@ -171,10 +171,12 @@ function mobileRedirection()
 		var paramlist = "";
 
 		for (var param in params)
-			if (params[param] != null)
+			if (param == 'urlbase')
+				continue;
+			else if (params[param])
 				paramlist += "&"+param+"="+params[param];
 
-		document.location.href = "http://www.openrailwaymap.org/mobile.php?"+paramlist.substr(1);
+		document.location.href = params.urlbase + "mobile.php?" + paramlist.substr(1);
 	}
 }
 
