@@ -154,6 +154,7 @@ function isMobileDevice()
 		|| navigator.userAgent.match(/iPod/i)
 		|| navigator.userAgent.match(/BlackBerry/i)
 		|| navigator.userAgent.match(/Windows Phone/i)
+		|| navigator.userAgent.match(/Jolla/)
 	)
 		return true;
 
