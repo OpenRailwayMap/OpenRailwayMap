@@ -33,7 +33,7 @@
 
 			function writeLine($payload, $caption)
 			{
-				return '<tr><td style="width: 80px; height: 16px;">' . $payload . '</td><td>' . _($caption) . "</td></tr>\n";
+				return '<tr><td style="width: 80px; height: 16px;">' . $payload . '</td><td>' . htmlspecialchars(_($caption)) . "</td></tr>\n";
 			}
 
 			if (file_exists($filename))

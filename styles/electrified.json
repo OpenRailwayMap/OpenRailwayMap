@@ -31,82 +31,82 @@
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#FF79B8' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "Less than 750V&nbsp;="
+			"caption": "Less than 750V ="
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#F930FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "750V&nbsp;="
+			"caption": "750V ="
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#D033FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "750 &ndash; 1000V&nbsp;="
+			"caption": "750 – 1000V ="
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#5C1CCB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "1kV&nbsp;="
+			"caption": "1kV ="
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#007ACB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "1 &ndash; 1.5kV&nbsp;="
+			"caption": "1 – 1.5kV ="
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#0098CB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "1.5kV&nbsp;="
+			"caption": "1.5kV ="
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#00B7CB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "1.5 &ndash; 3kV&nbsp;="
+			"caption": "1.5 – 3kV ="
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#0000FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "3kV&nbsp;="
+			"caption": "3kV ="
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#1969FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "More than 3kV&nbsp;="
+			"caption": "More than 3kV ="
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#97FF2F' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "Less than 15kV&nbsp;~"
+			"caption": "Less than 15kV ~"
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#00FF00' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "15kV 16&#8532;Hz"
+			"caption": "15kV 16⅔Hz ~"
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#00CB66' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "15kV 16.7Hz"
+			"caption": "15kV 16.7Hz ~"
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#F1F100' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "15 &ndash; 25kV&nbsp;~"
+			"caption": "15 – 25kV ~"
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#FF9F19' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "At least 25kV&nbsp;~"
+			"caption": "At least 25kV ~"
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#FF0000' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "25kV 50Hz&nbsp;~"
+			"caption": "25kV 50Hz ~"
 		},
 		{
 			"minzoom": 2,
 			"symbol": "<g fill='none' stroke='#C00000' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "25kV 60Hz&nbsp;~"
+			"caption": "25kV 60Hz ~"
 		},
 		{
 			"minzoom": 17,
