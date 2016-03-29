@@ -44,11 +44,22 @@
 				{
 					if ($zoom >= $feature['minzoom'] && (!isset($feature['maxzoom']) || $zoom <= $feature['maxzoom']))
 					{
-						if (isset($feature['symbol']) && $feature['symbol'] != null)
-							$payload = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' . $feature['symbol'] . '</svg>';
-						else
-							$payload = '<img src="../styles/' . $feature['icon'] . '" />';
-						$output .= writeLine($payload, $feature['caption']);
+						if (isset($feature['replace'])) {
+							foreach ($feature['replace'] as $replace) {
+								$caption = str_replace(array_keys($replace), array_values($replace), $feature['caption']);
+								if (isset($feature['symbol']) && $feature['symbol'] != null)
+									$payload = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' . str_replace(array_keys($replace), array_values($replace), $feature['symbol']) . '</svg>';
+								else
+									$payload = '<img src="../styles/' . str_replace(array_keys($replace), array_values($replace), $feature['icon']) . '" />';
+								$output .= writeLine($payload, $caption);
+							}
+						} else {
+							if (isset($feature['symbol']) && $feature['symbol'] != null)
+								$payload = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' . $feature['symbol'] . '</svg>';
+							else
+								$payload = '<img src="../styles/' . $feature['icon'] . '" />';
+							$output .= writeLine($payload, $feature['caption']);
+						}
 					}
 				}
 
