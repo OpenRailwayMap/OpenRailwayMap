@@ -54,13 +54,13 @@
 		{
 			"minzoom": 17,
 			"replace": [
-				{ "%SIGNAL%":"el1v", "%CAPTION%":"El 1v Ausschaltsignal erwarten" },
-				{ "%SIGNAL%":"el1", "%CAPTION%":"El 1 Ausschaltsignal" },
-				{ "%SIGNAL%":"el2", "%CAPTION%":"El 2 Einschaltsignal" },
-				{ "%SIGNAL%":"el3", "%CAPTION%":"El 3 \"Bügel ab\"-Ankündigungssignal" },
-				{ "%SIGNAL%":"el4", "%CAPTION%":"El 4 \"Bügel ab\"-Signal" },
-				{ "%SIGNAL%":"el5", "%CAPTION%":"El 5 \"Bügel an\"-Signal" },
-				{ "%SIGNAL%":"el6", "%CAPTION%":"El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer" }
+				{ "%SIGNAL%":"el1v", "%CAPTION%":"El 1v Ausschaltsignal erwarten" },
+				{ "%SIGNAL%":"el1", "%CAPTION%":"El 1 Ausschaltsignal" },
+				{ "%SIGNAL%":"el2", "%CAPTION%":"El 2 Einschaltsignal" },
+				{ "%SIGNAL%":"el3", "%CAPTION%":"El 3 \"Bügel ab\"-Ankündigungssignal" },
+				{ "%SIGNAL%":"el4", "%CAPTION%":"El 4 \"Bügel ab\"-Signal" },
+				{ "%SIGNAL%":"el5", "%CAPTION%":"El 5 \"Bügel an\"-Signal" },
+				{ "%SIGNAL%":"el6", "%CAPTION%":"El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer" }
 			],
 			"icon": "icons/de/%SIGNAL%-28.png",
 			"caption": "%CAPTION%"
