@@ -258,161 +258,6 @@
 	}
 
 
-	// gets a wikipedia article by given link and returns the first lines
-	function getWikipediaBeginning($url)
-	{
-		if (!$url)
-			return false;
-
-		$url = str_replace(" ", "_", rawurldecode($url));
-		// mobile version of wikipedia is easier to parse
-		$url = str_replace(".wikipedia.org", ".m.wikipedia.org", $url);
-
-		// download article
-		$response = apiRequest($url);
-		$content = $response[0];
-
-		if ($content)
-		{
-			// delete everything after main article
-			$content = explode("<div class=\"section\"><h2 class=\"section_heading\" id=\"section_1\">", $content);
-
-			// delete headline
-			$content = explode("</h1>", $content[0]);
-
-			// remove tables and other not needed elements
-			$content = preg_replace("/<table\b[^>]*>.*<\/table>/s", "", $content[1]);
-			$content = preg_replace("/<span\b[^>]*>.*<\/span>/s", "", $content);
-			$content = preg_replace("/<sup\b[^>]*>.*<\/sup>/s", "", $content);
-			$content = preg_replace("/<div.class=.thumbcaption\b[^>]*>.*<\/div>/s", "", $content);
-
-			return trim(strip_tags($content));
-		}
-
-		return false;
-	}
-
-
-	// gets the first image of a wikipedia article
-	function getWikipediaImage($url)
-	{
-		if (!$url)
-			return false;
-
-		$url = str_replace(" ", "_", rawurldecode($url));
-		// mobile version of wikipedia is easier to parse
-		$url = str_replace(".wikipedia.org", ".m.wikipedia.org", $url);
-
-		// download article
-		$response = apiRequest($url);
-		$content = $response[0];
-
-		if ($content)
-		{
-			// delete everything after first paragraph
-			$content = explode("<div class=\"section\"><h2 class=\"section_heading\" id=\"section_2\">", $content);
-
-			// remove wikipedia images
-			$content = preg_replace("<img alt=\".*\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Disambig_gray.svg/25px-Disambig_gray.svg.png\" width=\"25\" height=\"19\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Disambig_gray.svg/38px-Disambig_gray.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Disambig_gray.svg/50px-Disambig_gray.svg.png 2x\">", "", $content[0]);
-			$content = preg_replace("<img alt=\".*\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Disambig-dark.svg/25px-Disambig-dark.svg.png\" width=\"25\" height=\"19\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Disambig-dark.svg/38px-Disambig-dark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Disambig-dark.svg/50px-Disambig-dark.svg.png 2x\">", "", $content);
-			$content = preg_replace("<img alt=\".*\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Homoph_colour.svg/20px-Homoph_colour.svg.png\" width=\"20\" height=\"15\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Homoph_colour.svg/30px-Homoph_colour.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/63/Homoph_colour.svg/40px-Homoph_colour.svg.png 2x\">", "", $content);
-			$content = preg_replace("<img alt=\".*\" src=\"//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png\" width=\"50\" height=\"39\" srcset=\"//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x\">", "", $content);
-			$content = preg_replace("<img alt=\".*\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disambig_colour.svg/20px-Disambig_colour.svg.png\" width=\"20\" height=\"15\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disambig_colour.svg/30px-Disambig_colour.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disambig_colour.svg/40px-Disambig_colour.svg.png 2x\">", "", $content);
-
-			// get image url
-			$pattern = "/<img.+src=\"(\S+)\"\s\w+=.+>/i";
-			preg_match($pattern, $content, $matches);
-
-			// change link from thumb-link to link to the big image
-			// if width was given in the image url
-			if (strpos($matches[1], "/thumb/") !== false)
-			{
-				$pos = strripos($matches[1], "/");
-				$image = substr($matches[1], 0, $pos);
-			}
-			$image = str_replace("thumb/", "", $image);
-
-			return str_replace("//", "http://", $image);
-		}
-		return false;
-	}
-
-
-	// gets the url of an image's thumbnail
-	function getWikipediaThumbnailUrl($url)
-	{
-		// size of thumbnails
-		$thumbsize = 280;
-
-		if (!$url)
-			return false;
-
-		// check if thumbnail size is bigger than original size
-		if (strpos($url, "special:filepath") === false)
-			$imagesize = getimagesize($url);
-		if ($response && ($imagesize[0] > $thumbsize) || substr($url, -3, 3))
-		{
-			// don't use archive images
-			$url = str_replace("archive/", "", $url);
-			$url = preg_replace("/20.+%21/", "", $url);
-			// get thumbnail
-			if (substr($url, 0, 29) == "http://commons.wikimedia.org/")
-				return $url."?width=".$thumbsize."px";
-			else if ((substr($url, 0, 38) == "http://upload.wikimedia.org/wikipedia/") && (substr($url, 38, 7) != "commons"))
-				return $url;
-			else
-			{
-				$url = str_replace("wikipedia/commons", "wikipedia/commons/thumb", $url);
-				$filename = explode("/", $url);
-				$url = $url."/".$thumbsize."px-".$filename[count($filename)-1];
-
-				// svg thumbs need a .png at the end
-				if (substr($filename[count($filename)-1], -3, 3 ) == "svg")
-					$url = $url.".png";
-			}
-		}
-		return $url;
-	}
-
-
-	// request all objects with given tags for a given bbox and echo them
-	function getObjectsForBbox($connection, $bbox)
-	{
-		// if no bbox was given
-		if (!$bbox)
-		{
-			reportError("Some parameters are missing.");
-			return false;
-		}
-
-		// if there is no connecting to server
-		if (!$connection)
-		{
-			reportError("Not connected to database.");
-			return false;
-		}
-
-		// requests
-		$types = array("node", "way", "relation");
-
-		// executing requests
-		$list = array();
-		foreach ($types as $type)
-		{
-			$response = requestDetails("SELECT ST_X(geom), ST_Y(geom), id
-											FROM ".$type."s
-											WHERE geom && ST_SetSRID(ST_MakeBox2D(ST_Point(".$bbox[0].",".$bbox[1]."), ST_Point(".$bbox[2].",".$bbox[3].")), 4326);", $connection);
-			// putting out the results
-			if ($response)
-			{
-				foreach ($response as $element)
-					array_push($list, array($element['st_x'], $element['st_y'], $element['id'], $type));
-			}
-		}
-		return $list;
-	}
-
-
 	// requests a given url by using curl and returns the response
 	function apiRequest($url)
 	{
@@ -468,50 +313,6 @@
 	}
 
 
-	// get the url to a given article for an given translation
-	function getWikipediaTranslation($article, $lang, $langs)
-	{
-		// if no translation is needed because source lang and translation lang are equal
-		if ($lang == $langs[0])
-			return "http://".$lang.".wikipedia.org/wiki/".$article;
-
-		// api request
-		$url = "http://".$lang.".wikipedia.org/w/api.php?action=query&titles=".$article."&prop=langlinks&lllimit=max&format=php&redirects";
-		$response = apiRequest($url);
-		$request = $response[0];
-
-		if ($request)
-		{
-			// search for translation with the highest user rating
-			$data = unserialize($request);
-
-			foreach ($langs as $translation)
-			{
-				if (isset($data['query']['pages']))
-				{
-					foreach ($data['query']['pages'] as $element)
-					{
-						for ($i=0; $i < count($element['langlinks']); $i++)
-						{
-							if ($element['langlinks'][$i]['lang'] == $translation)
-								return "http://".$translation.".wikipedia.org/wiki/".$element['langlinks'][$i]['*'];
-
-							if ($element['langlinks'][$i]['lang'] == "en")
-								$english = $element['langlinks'][$i]['*'];
-						}
-					}
-				}
-			}
-		}
-
-		if ($english)
-			return "http://en.wikipedia.org/wiki/".$english;
-
-		// if no translation was found, return source article
-		return "http://".$lang.".wikipedia.org/wiki/".$article;
-	}
-
-
 	// returns translation for given key-value-pair
 	function translateKeyValue($key, $value)
 	{
@@ -521,18 +322,6 @@
 			return "";
 		else
 			return $keyvalue;
-	}
-
-
-	// returns the name of an wikipedia article by an given url
-	function formatWikipediaName($wikipedia)
-	{
-		if (!$wikipedia)
-			return false;
-
-		// take article name out of url
-		$name = explode("#", substr($wikipedia, 29));
-		return str_replace("_", " ", $name[0]);
 	}
 
 
@@ -652,49 +441,6 @@
 	}
 
 
-	// get article name and article language by a given value and key-language
-	function formatWikipediaLink($value, $keyLang)
-	{
-		// if if the article name is already encoded because it was given in a full url, or like this
-		$preencoded = true;
-
-		// if a full url is given
-		if (substr($value, 0, 7) == "http://")
-		{
-			$article[0] = substr($value, 29);
-			$article[1] = substr($value, 7, 2);
-			$preencoded = true;
-		}
-
-		// if given value has the form "de:Baum"
-		else if (substr($value, 2, 1) == ":")
-		{
-			$article[0] = substr($value, 3);
-			$article[1] = substr($value, 0, 2);
-			$preencoded = false;
-		}
-
-		// if only the article name is given
-		else
-		{
-			$article[0] = $value;
-			$preencoded = false;
-			// if language is mentoined in the key
-			if ($keyLang)
-				$article[1] = $keyLang;
-			// else if no language is mentioned, use english
-			else
-				$article[1] = "en";
-		}
-
-		// if string is not preencoded,
-		if (!$preencoded)
-			$article[0] = rawurlencode($article[0]);
-
-		return $article;
-	}
-
-
 	// returns the name wich matches most the user's language
 	function getNameDetail($langs, $names)
 	{
@@ -735,46 +481,6 @@
 		// return values as array
 		return array($name, $namelang);
 	}
-
-
-	// returns the tag which has a wikipedia link and correct errors in format
-	function getWikipediaDetail($langs, $wikipedias)
-	{
-		// do translation of wikipedia link
-		if (count($wikipedias) > 0)
-		{
-			// select translation
-			foreach ($langs as $lang)
-			{
-				foreach ($wikipedias as $article)
-				{
-					$wplang = substr($article['keys'], 10, 2);
-					if ($lang == $wplang)
-					{
-						$wikipedialang = $wplang;
-						$wikipedia = $article['values'];
-						break 2;
-					}
-				}
-			}
-			// if no tag with explicit language was found, take the first (language doesn't matter because of wikipedia translation)
-			if (!isset($wikipedia))
-			{
-				$wikipedialang = substr($wikipedias[0]['keys'], 10, 2);
-				$wikipedia = $wikipedias[0]['values'];
-			}
-
-			$wikipedia = formatWikipediaLink($wikipedia, $wikipedialang);
-			$wikilink = getWikipediaTranslation($wikipedia[0], $wikipedia[1], $langs);
-			$wikipediatitle = formatWikipediaName($wikilink);
-		}
-		else
-			return false;
-
-		// return values as array
-		return array($wikipedia, $wikilink, $wikipediatitle);
-	}
-
 
 	// formats a given distance in meters
 	function formatDistance($meters)
@@ -869,35 +575,6 @@
 		}
 
 		return true;
-	}
-
-
-	// returns equivalent osm object type by given olm type
-	function olm2osm($type)
-	{
-		switch ($type)
-		{
-			case "point":
-				return "node";
-			case "line":
-				return "way";
-			case "polygon":
-				return "way";
-			default:
-				return $type;
-		}
-	}
-
-
-	// returns image url if only url to image website is given
-	function getImageUrl($url)
-	{
-		if (substr($url, 0, 39) == "http://commons.wikimedia.org/wiki/File:")
-			return "http://commons.wikimedia.org/wiki/special:filepath/".substr($url, 39);
-		else if (substr($url, 0, 40) == "http://commons.wikimedia.org/wiki/Image:")
-			return "http://commons.wikimedia.org/wiki/special:filepath/".substr($url, 40);
-		else
-			return $url;
 	}
 
 

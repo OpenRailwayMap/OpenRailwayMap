@@ -23,20 +23,24 @@
 
 
 	// getting timestamp
-	$timestamp = implode(" ", @file($timestampFile));
-
-	if ($timestamp)
-	{
-		if ($format == "xml")
-			echo xmlTimestampOut($timestamp, $offset, $lang);
-		else if ($format == "json")
-			echo jsonTimestampOut($timestamp, $offset, $lang, $callback);
-		else
-			echo textTimestampOut($timestamp, $offset);
-	}
-	else
+	$tsfile = @file($timestampFile);
+	if (!$tsfile) {
 		echo "NULL";
+	} else {
+		$timestamp = implode(" ", $tsfile);
 
+		if ($timestamp)
+		{
+			if ($format == "xml")
+				echo xmlTimestampOut($timestamp, $offset, $lang);
+			else if ($format == "json")
+				echo jsonTimestampOut($timestamp, $offset, $lang, $callback);
+			else
+				echo textTimestampOut($timestamp, $offset);
+		}
+		else
+			echo "NULL";
+	}
 
 	// output of timestamp data in plain text format, given: timestamp of last update, offset to user's timezone in hours, lang
 	function textTimestampOut($lastupdate, $offset = 0)

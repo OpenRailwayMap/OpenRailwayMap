@@ -45,10 +45,7 @@ function josm(url)
 // perform a synchron API request
 function requestApi(file, query, handler)
 {
-	if (window.XMLHttpRequest)
-		var request = new window.XMLHttpRequest;
-	else
-		var request = new ActiveXObject("MSXML2.XMLHTTP.3.0");
+	var request = new XMLHttpRequest();
 
 	request.open("GET", root+'api/'+file+'.php?'+query, true);
 	request.onreadystatechange = function()
