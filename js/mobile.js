@@ -14,7 +14,7 @@ function createMap(embed)
 	// path to the bitmap tile directory
 	tiledir = "http://{s}.tiles.openrailwaymap.org/";
 	// available map rendering styles
-	availableStyles = new Array("standard", "maxspeed", "signals", "electrified");
+	availableStyles = new Array("standard", "maxspeed", "signals");
 
 	if (params['offset'] != null)
 		offset = params['offset'];

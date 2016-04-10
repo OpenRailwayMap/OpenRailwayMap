@@ -151,6 +151,7 @@ function isMobileDevice()
 		|| navigator.userAgent.match(/iPod/i)
 		|| navigator.userAgent.match(/BlackBerry/i)
 		|| navigator.userAgent.match(/Windows Phone/i)
+		|| navigator.userAgent.match(/Jolla/)
 	)
 		return true;
 
@@ -168,10 +169,12 @@ function mobileRedirection()
 		var paramlist = "";
 
 		for (var param in params)
-			if (params[param] != null)
+			if (param == 'urlbase')
+				continue;
+			else if (params[param])
 				paramlist += "&"+param+"="+params[param];
 
-		document.location.href = "http://www.openrailwaymap.org/mobile.php?"+paramlist.substr(1);
+		document.location.href = params.urlbase + "mobile.php?" + paramlist.substr(1);
 	}
 }
 
