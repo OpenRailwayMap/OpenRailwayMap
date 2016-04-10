@@ -17,7 +17,8 @@
 		$urlbase = 'https://';
 	else
 		$urlbase = 'http://';
-	$urlbase .= $_SERVER['SERVER_NAME'] . $_SERVER['CONTEXT_PREFIX'] . '/';
+	$urlbase .= $_SERVER['SERVER_NAME'] . $_SERVER['CONTEXT_PREFIX'];
+	$urlbase .= dirname(substr($_SERVER['SCRIPT_FILENAME'], strlen($_SERVER['CONTEXT_DOCUMENT_ROOT']))) . '/';
 
 	// available translations
 	$langs = array(
