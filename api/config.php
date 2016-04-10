@@ -8,7 +8,7 @@
 
 
 	// path to the timestamp file containing
-	$timestampFile = "../../olm/import/timestamp";
+	$timestampFile = "../import/timestamp";
 	// email address to send error reports to
 	$mail = "info@openrailwaymap.org";
 
