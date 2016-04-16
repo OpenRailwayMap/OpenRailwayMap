@@ -992,6 +992,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					match="keyvalue!" />
 				<key key="railway:signal:distant:form"
 					value="sign" />
+				<combo key="railway:signal:distant:height"
+                                        text="Signal height"
+                                        de.text="Signalbauform"
+                                        values="normal,dwarf"
+                                        display_values="Normalhöhe,Zwergsignal"
+                                        />
 				<check key="railway:signal:distant:shortened"
 					text="Shortened distance"
 					de.text="Verkürzter Bremsweg"
