@@ -8,10 +8,10 @@ ZIPFILES = maxspeed.zip signals.zip standard.zip electrified.zip josm-additional
 
 all: $(JSFILES) $(ZIPFILES)
 
-%.js: %.mapcss
+%.js: %.mapcss common.mapcss
 	$(PYTHON) ../renderer/mapcss_converter.py --mapcss $^ --icons-path .
 
-%.zip: %.mapcss josm-import.awk
+%.zip: %.mapcss common.mapcss josm-import.awk
 	echo $(shell TDIR=$$(mktemp -d); \
 		gawk -f $(CURDIR)/josm-import.awk $< > $${TDIR}/$<; \
 		pushd $${TDIR}; \

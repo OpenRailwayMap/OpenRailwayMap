@@ -28,6 +28,8 @@ canvas
 	default-lines: true;
 }
 
+@import url("common.mapcss");
+
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit:deactivated"=yes]::deactivatedcross,
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant:deactivated"=yes]::deactivatedcross
 {
@@ -39,19 +41,8 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 	allow-overlap: true;
 }
 
-way|z9-[railway=narrow_gauge],
-way|z9-[railway=preserved],
-way|z10-[railway=rail],
-way|z2-[railway=rail][usage=main]
-{
-	set .hstracks;
-}
-
-way.hstracks,
-way|z10-[railway=tram],
-way|z10-[railway=subway],
-way|z10-[railway=light_rail],
-way|z2-[railway=rail][usage=branch]
+way.tracks_present,
+way.tracks_preserved
 {
 	set .tracks;
 }
@@ -64,34 +55,8 @@ way[!maxspeed].tracks
 	kothicjs-ignore-layer: true;
 }
 
-way|z9-["railway"="construction"]["construction:railway"="narrow_gauge"],
-way|z9-["railway"="construction"]["construction:railway"="preserved"],
-way|z10-["railway"="construction"]["construction:railway"="rail"],
-way|z9-["railway"="construction"]["construction"="narrow_gauge"],
-way|z9-["railway"="construction"]["construction"="preserved"],
-way|z10-["railway"="construction"]["construction"="rail"]
-{
-	set .chstracks;
-}
-
-way.chstracks,
-way|z9-["disused:railway"="narrow_gauge"],
-way|z9-["disused:railway"="preserved"],
-way|z10-["disused:railway"="rail"]
-{
-	set .dhstracks;
-}
-
-way.dhstracks,
-way|z10-["disused:railway"="tram"],
-way|z10-["disused:railway"="subway"],
-way|z10-["disused:railway"="light_rail"],
-way|z10-["railway"="construction"]["construction:railway"="tram"],
-way|z10-["railway"="construction"]["construction:railway"="subway"],
-way|z10-["railway"="construction"]["construction:railway"="light_rail"],
-way|z10-["railway"="construction"]["construction"="tram"],
-way|z10-["railway"="construction"]["construction"="subway"],
-way|z10-["railway"="construction"]["construction"="light_rail"]
+way.tracks_construction,
+way.tracks_disused
 {
 	set .dtracks;
 }
