@@ -11,7 +11,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 
 
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="2015-12-28" shortdescription="OpenRailwayMap Infrastructure DE+AT" description="Preset to tag German and Austrian railway infrastructure">
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="2016-04-18" shortdescription="OpenRailwayMap Infrastructure DE+AT" description="Preset to tag German and Austrian railway infrastructure">
 	<group name="OpenRailwayMap Infrastructure DE+AT" de.name="OpenRailwayMap Infrastruktur DE+AT" icon="signals.png">
 		<item de.name="Allgemeine Angaben" name="General Information" icon="rail.png" type="way">
 			<combo key="railway" text="Type of Track" de.text="Art des Gleises">
@@ -327,13 +327,42 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</group>
 		<separator />
 		<item de.name="Brücke" name="Brücke" icon="bridge-32.png" type="way">
-			<key key="bridge"
-				value="yes" />
+			<combo key="bridge"
+				text="Bridge type"
+				de.text="Brückentyp"
+				values="yes,cantilever,movable,trestle,viaduct"
+				de.display_values="Einfache Brücke,Auslegerbrücke,Bewegliche Brücke,Trestle-Brücke,Viadukt"
+				display_values="Non-specific bridge,Cantilever bridge,Movable bridge,Trestle bridge,Viaduct"
+				values_sort="false"
+				/>
+			<combo key="bridge:movable"
+				text="Movable bridge"
+				de.text="Bewegliche Brücke"
+				values=" ,bascule,drawbridge,lift,swing"
+				de.display_values="nein,Klappbrücke,Zugbrücke,Hubbrücke,Drehbrücke"
+				display_values="no,Bascule bridge,Drawbridge,Swing bridge"
+				values_sort="false"
+				/>
+			<combo key="bridge:structure"
+				text="Load-bearing architecture (for non-specific bridges)"
+				de.text="Tragwerkskonstruktion (bei einfachen Brücken)"
+				values="arch,beam,truss,suspension,cable-stayed"
+				de.display_values="Bogenbrücke,Balkenbrücke,Fachwerkbrücke,Hängebrücke mit festen Deck,Schrägseilbrücke"
+				display_values="Arch bridge,Beam bridge,Truss bridge,Suspension bridge,Cable-stayed bridge"
+				/>
 			<key key="layer"
 				value="1" />
 			<text key="bridge:name"
 				text="Bridge name"
 				de.text="Name der Brücke"
+				/>
+			<text key="bridge:length"
+				text="Length of bridge [m]"
+				de.text="Länge der Brücke [m]"
+				/>
+			<text key="start_date"
+				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+				de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
 				/>
 			<text key="image"
 				text="Image URL"
@@ -342,6 +371,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<text key="bridge:wikipedia"
 				text="Wikipedia article in the format (Language):(Article)"
 				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+				/>
+			<text key="bridge:wikidata"
+				text="Wikidata item"
+				de.text="Wikidata-Datenobjekt"
 				/>
 		</item>
 		<item de.name="Tunnel" name="Tunnel" icon="tunnel-32.png" type="way">
@@ -353,6 +386,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Tunnel name"
 				de.text="Name des Tunnels"
 				/>
+			<text key="tunnel:length"
+				text="Length of tunnel [m]"
+				de.text="Länge des Tunnels [m]"
+				/>
+			<text key="start_date"
+				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+				de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+				/>
 			<text key="image"
 				text="Image URL"
 				de.text="URL eines Bildes"
@@ -360,6 +401,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<text key="tunnel:wikipedia"
 				text="Wikipedia article in the format (Language):(Article)"
 				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+				/>
+			<text key="tunnel:wikidata"
+				text="Wikidata item"
+				de.text="Wikidata-Datenobjekt"
 				/>
 		</item>
 		<separator />
