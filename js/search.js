@@ -63,17 +63,18 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 						var words = input.split(" ");
 						for (var i=0; i<words.length; i++)
 						{
-							if (words[i].indexOf(",") > 0 || words[i].indexOf(".") > 0)
+							if (/[0-9][.,][0-9]/.test(words[i]))
 							{
 								var pos = words[i];
 								words.splice(i, 1);
 								break;
 							}
 						}
-						var ref = words.join(" ");
 
 						if (pos)
 						{
+							var ref = words.join(" ");
+
 							self.sendRequest("milestone", "position="+pos+"&ref="+ref, function(response)
 							{
 								self.finishResults(response);
