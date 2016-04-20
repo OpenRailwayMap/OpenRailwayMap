@@ -8,6 +8,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 {
+	this.apibase = 'http://api.openrailwaymap.org/';
+
 	// clears the visible parts of a search
 	this.clear = function()
 	{
@@ -99,15 +101,14 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		{
 			this.bar.removeChild(this.bar.lastChild);
 			this.bar.className = 'infoBar';
+			var milestoneSearch = response.responseURL.startsWith(this.apibase + 'milestone?');
 			for (var i=0; i<results.length; i++)
 			{
 				var result = document.createElement("div");
 				var inner = "";
 
-				if (results[i]['type'] == 'milestone' || results[i]['type'] == 'signal')
+				if (milestoneSearch)
 					inner = translations['kilometer'] + ' ' + results[i]['position'] + ', ' + translations['track'] + ' ' + results[i]['ref'];
-				else if (results[i]['type'] == "level_crossing")
-					inner = translations['level_crossing'] + ' ' + results[i]['position'] + ', ' + translations['track'] + ' ' + results[i]['ref'];
 				else if (results[i]['name'])
 					inner = results[i]['name'];
 				else if (results[i]['ref'])
@@ -184,7 +185,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	{
 		var request = new XMLHttpRequest();
 
-		request.open("GET", 'http://api.openrailwaymap.org/'+requestType+'?'+query.replace(/ /g, "+"), true);
+		request.open("GET", this.apibase + requestType + '?' + query.replace(/ /g, "+"), true);
 		request.onreadystatechange = function()
 		{
 			if (request.readyState === 4)
