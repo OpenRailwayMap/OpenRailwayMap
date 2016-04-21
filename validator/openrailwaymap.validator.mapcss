@@ -590,3 +590,8 @@ way[railway][wikipedia=~/[Bb]rücke/]["bridge:wikipedia"=*wikipedia]
 	assertNoMatch: "way railway=rail bridge:wikipedia=Foo-Viadukt";
 	fixChangeKey: "wikipedia=>bridge:wikipedia";
 }
+
+node:unconnected[railway=signal]
+{
+	throwError: "signals should be tagged on the track, move the node to the track the signal affects";
+}
