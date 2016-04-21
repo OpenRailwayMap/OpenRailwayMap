@@ -305,27 +305,17 @@ way[railway]["power:type"]["power:type"!=overhead][!electrified]
 	assertNoMatch: "way railway=rail power:type=overhead electrified=yes";
 }
 
-/* priority on railway lines is deprecated, remove if usage or service is tagged */
-way[railway][priority][service],
-way[railway][priority][usage],
-way[railway=tram][priority],
-way[railway=subway][priority],
-way[railway="light_rail"][priority]
+/* priority on railway lines is deprecated, remove it */
+way[railway][priority],
+node[railway][priority]
 {
-	throwWarning: "priority on railway lines is deprecated, remove if usage or service is tagged";
+	throwError: "priority on railway objects is deprecated, remove it";
 	assertMatch: "way railway=rail priority=primary service=siding";
 	assertMatch: "way railway=rail priority=primary usage=main";
-	assertNoMatch: "way railway=rail priority=primary";
-	fixRemove: "priority";
-}
-
-/* priority on railway lines is deprecated, add proper usage or service tags */
-way[railway][railway!=subway][railway!=tram][railway!="light_rail"][priority][!service][!usage]
-{
-	throwWarning: "priority on railway lines is deprecated, add proper usage or service tags";
 	assertMatch: "way railway=rail priority=primary";
-	assertNoMatch: "way railway=rail priority=primary service=siding";
-	assertNoMatch: "way railway=rail priority=primary usage=main";
+	assertMatch: "node railway=buffer_stop priority=yard";
+	assertNoMatch: "way highway=primary priority=primary";
+	fixRemove: "priority";
 }
 
 /* tracks with tracks=1 and detail=track */
