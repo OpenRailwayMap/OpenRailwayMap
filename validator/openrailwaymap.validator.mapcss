@@ -595,3 +595,12 @@ node:unconnected[railway=signal]
 {
 	throwError: "signals should be tagged on the track, move the node to the track the signal affects";
 }
+
+way[railway][lanes]
+{
+	throwWarning: "lanes=* is used for highways, not railways; use tracks=* instead";
+	assertMatch: "way railway=rail lanes=2";
+	assertMatch: "way railway=subway lanes=2 tracks=2";
+	assertNoMatch: "way railway=rail tracks=1";
+	fixChangeKey: "lanes=>tracks";
+}
