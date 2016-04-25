@@ -604,3 +604,10 @@ way[railway][lanes]
 	assertNoMatch: "way railway=rail tracks=1";
 	fixChangeKey: "lanes=>tracks";
 }
+
+way[railway][maxspeed=signals]
+{
+	throwWarning: "maxspeed=signals is deprecated, tag the highest possible speed instead";
+	assertMatch: "way railway=rail maxspeed=signals";
+	assertNoMatch: "way railway=subway maxspeed=100";
+}
