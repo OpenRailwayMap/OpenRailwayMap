@@ -58,7 +58,7 @@ $ cd OpenRailwayMap
 
  For system-specific installation of Cairo view the [node-canvas Wiki](https://github.com/LearnBoost/node-canvas/wiki/_pages).
 
- Install Leaflet:
+ Install Leaflet and the Leaflet extension that provides the edit link:
 
 ```shell
 $ make install-deps
