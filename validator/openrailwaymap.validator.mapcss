@@ -611,3 +611,23 @@ way[railway][maxspeed=signals]
 	assertMatch: "way railway=rail maxspeed=signals";
 	assertNoMatch: "way railway=subway maxspeed=100";
 }
+
+way[railway]["mph:maxspeed"=~/^[0-9]+$/]["maxspeed"]
+{
+	throwWarning: "maxspeed should contain the value as it is shown on the line with mph as unit";
+	assertMatch: "way railway=rail \"mph:maxspeed\"=100 maxspeed=161";
+	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50 mph\" maxspeed=161";
+	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50\"";
+	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50 mph\"";
+	/* fixAdd: "maxspeed={1.value} mph"; */
+}
+
+way[railway]["mph:maxspeed"=~/^[0-9]+ mph$/]["maxspeed"]
+{
+	throwWarning: "maxspeed should contain the value as it is shown on the line with mph as unit";
+	assertNoMatch: "way railway=rail \"mph:maxspeed\"=100 maxspeed=161";
+	assertMatch: "way railway=rail \"mph:maxspeed\"=\"50 mph\" maxspeed=161";
+	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50\"";
+	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50 mph\"";
+	fixChangeKey: "mph:maxspeed=>maxspeed";
+}
