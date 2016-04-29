@@ -56,6 +56,6 @@
 	$maxzoom = 21;
 	// lowest rendered zoomlevel+2
 	$minzoom = 8;
-	// scale fector used for vector tiling
+	// scale factor used for vector tiling
 	$intscalefactor = 10000;
 ?>
