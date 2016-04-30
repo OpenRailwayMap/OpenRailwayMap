@@ -1188,6 +1188,10 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 {
 	icon-image: "icons/de/bostrab/g4-50-32.png";
 }
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=60]
+{
+	icon-image: "icons/de/bostrab/g4-60-32.png";
+}
 node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=70]
 {
 	icon-image: "icons/de/bostrab/g4-70-32.png";
