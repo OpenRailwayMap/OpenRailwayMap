@@ -144,6 +144,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
 					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
+					<preset_link preset_name="ETCS-Halt-Tafel (Ne 14, ETCS Stop Marker)" />
 				</item>
 				<item name="Ks-Hauptsignal" icon="de/ks-main-32.png" type="node">
 					<label text="Ks-Hauptsignal" />
@@ -210,6 +211,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
 					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
 					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
+					<preset_link preset_name="ETCS-Halt-Tafel (Ne 14, ETCS Stop Marker)" />
 				</item>
 			</group>
 			<item name="Sv-Signal" icon="de/sv-hp0-32.png" type="node">
