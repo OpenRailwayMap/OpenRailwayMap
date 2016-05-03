@@ -8,6 +8,11 @@
 			"caption": "No information"
 		},
 		{
+			"minzoom": 12,
+			"symbol": "<g fill=\"none\" stroke=\"gray\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"4,4\" d=\"M5 8 l32 0\" /></g>",
+			"caption": "speed only given for one direction"
+		},
+		{
 			"minzoom": 2,
 			"symbol": "<g fill=\"none\" stroke=\"#0100CB\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#9595e9\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
 			"caption": "1-10 km/h (disused/under construction)"

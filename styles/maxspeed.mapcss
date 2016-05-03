@@ -110,7 +110,7 @@ way[maxspeed].dtracks
 
 way[maxspeed=~/^[1-9][0-9]*$/].tracks
 {
-	z-index: eval(1+tag("maxspeed")/10);
+	z-index: eval(50+tag("maxspeed")/10);
 	color: eval(
 		cond(tag("maxspeed") <=  10, "#0100CB",
 		cond(tag("maxspeed") <=  20, "#001ECB",
@@ -147,6 +147,96 @@ way[maxspeed=~/^[1-9][0-9]*$/].tracks
 		cond(tag("maxspeed") <= 360, "#CB009F",
 		cond(tag("maxspeed") <= 380, "#CB00BD",
 		     "#BA00CB")))))))))))))))))))))))))))))))))));
+}
+
+way|z12-["railway:preferred_direction"="forward"]["maxspeed:forward"=~/^[1-9][0-9]*$/].tracks,
+way|z12-["railway:preferred_direction"="backward"]["maxspeed:backward"!~/^[1-9][0-9]*$/]["maxspeed:forward"=~/^[1-9][0-9]*$/].tracks,
+way|z12-[!"railway:preferred_direction"]["maxspeed:forward"=~/^[1-9][0-9]*$/].tracks
+{
+	z-index: eval(1+tag("maxspeed:forward")/10);
+	color: eval(
+		cond(tag("maxspeed:forward") <=  10, "#0100CB",
+		cond(tag("maxspeed:forward") <=  20, "#001ECB",
+		cond(tag("maxspeed:forward") <=  30, "#003DCB",
+		cond(tag("maxspeed:forward") <=  40, "#005BCB",
+		cond(tag("maxspeed:forward") <=  50, "#007ACB",
+		cond(tag("maxspeed:forward") <=  60, "#0098CB",
+		cond(tag("maxspeed:forward") <=  70, "#00B7CB",
+		cond(tag("maxspeed:forward") <=  80, "#00CBC1",
+		cond(tag("maxspeed:forward") <=  90, "#00CBA2",
+		cond(tag("maxspeed:forward") <= 100, "#00CB84",
+		cond(tag("maxspeed:forward") <= 110, "#00CB66",
+		cond(tag("maxspeed:forward") <= 120, "#00CB47",
+		cond(tag("maxspeed:forward") <= 130, "#00CB29",
+		cond(tag("maxspeed:forward") <= 140, "#00CB0A",
+		cond(tag("maxspeed:forward") <= 150, "#14CB00",
+		cond(tag("maxspeed:forward") <= 160, "#33CB00",
+		cond(tag("maxspeed:forward") <= 170, "#51CB00",
+		cond(tag("maxspeed:forward") <= 180, "#70CB00",
+		cond(tag("maxspeed:forward") <= 190, "#8ECB00",
+		cond(tag("maxspeed:forward") <= 200, "#ADCB00",
+		cond(tag("maxspeed:forward") <= 210, "#CBCB00",
+		cond(tag("maxspeed:forward") <= 220, "#CBAD00",
+		cond(tag("maxspeed:forward") <= 230, "#CB8E00",
+		cond(tag("maxspeed:forward") <= 240, "#CB7000",
+		cond(tag("maxspeed:forward") <= 250, "#CB5100",
+		cond(tag("maxspeed:forward") <= 260, "#CB3300",
+		cond(tag("maxspeed:forward") <= 270, "#CB1400",
+		cond(tag("maxspeed:forward") <= 280, "#CB0007",
+		cond(tag("maxspeed:forward") <= 290, "#CB0025",
+		cond(tag("maxspeed:forward") <= 300, "#CB0044",
+		cond(tag("maxspeed:forward") <= 320, "#CB0062",
+		cond(tag("maxspeed:forward") <= 340, "#CB0081",
+		cond(tag("maxspeed:forward") <= 360, "#CB009F",
+		cond(tag("maxspeed:forward") <= 380, "#CB00BD",
+		     "#BA00CB")))))))))))))))))))))))))))))))))));
+	dashes: 4,4;
+	width: 3;
+}
+
+way|z12-["railway:preferred_direction"="backward"]["maxspeed:backward"=~/^[1-9][0-9]*$/].tracks,
+way|z12-["railway:preferred_direction"="forward"]["maxspeed:forward"!~/^[1-9][0-9]*$/]["maxspeed:backward"=~/^[1-9][0-9]*$/].tracks,
+way|z12-[!"railway:preferred_direction"]["maxspeed:forward"!~/^[1-9][0-9]*$/]["maxspeed:backward"=~/^[1-9][0-9]*$/].tracks
+{
+	z-index: eval(1+tag("maxspeed:backward")/10);
+	color: eval(
+		cond(tag("maxspeed:backward") <=  10, "#0100CB",
+		cond(tag("maxspeed:backward") <=  20, "#001ECB",
+		cond(tag("maxspeed:backward") <=  30, "#003DCB",
+		cond(tag("maxspeed:backward") <=  40, "#005BCB",
+		cond(tag("maxspeed:backward") <=  50, "#007ACB",
+		cond(tag("maxspeed:backward") <=  60, "#0098CB",
+		cond(tag("maxspeed:backward") <=  70, "#00B7CB",
+		cond(tag("maxspeed:backward") <=  80, "#00CBC1",
+		cond(tag("maxspeed:backward") <=  90, "#00CBA2",
+		cond(tag("maxspeed:backward") <= 100, "#00CB84",
+		cond(tag("maxspeed:backward") <= 110, "#00CB66",
+		cond(tag("maxspeed:backward") <= 120, "#00CB47",
+		cond(tag("maxspeed:backward") <= 130, "#00CB29",
+		cond(tag("maxspeed:backward") <= 140, "#00CB0A",
+		cond(tag("maxspeed:backward") <= 150, "#14CB00",
+		cond(tag("maxspeed:backward") <= 160, "#33CB00",
+		cond(tag("maxspeed:backward") <= 170, "#51CB00",
+		cond(tag("maxspeed:backward") <= 180, "#70CB00",
+		cond(tag("maxspeed:backward") <= 190, "#8ECB00",
+		cond(tag("maxspeed:backward") <= 200, "#ADCB00",
+		cond(tag("maxspeed:backward") <= 210, "#CBCB00",
+		cond(tag("maxspeed:backward") <= 220, "#CBAD00",
+		cond(tag("maxspeed:backward") <= 230, "#CB8E00",
+		cond(tag("maxspeed:backward") <= 240, "#CB7000",
+		cond(tag("maxspeed:backward") <= 250, "#CB5100",
+		cond(tag("maxspeed:backward") <= 260, "#CB3300",
+		cond(tag("maxspeed:backward") <= 270, "#CB1400",
+		cond(tag("maxspeed:backward") <= 280, "#CB0007",
+		cond(tag("maxspeed:backward") <= 290, "#CB0025",
+		cond(tag("maxspeed:backward") <= 300, "#CB0044",
+		cond(tag("maxspeed:backward") <= 320, "#CB0062",
+		cond(tag("maxspeed:backward") <= 340, "#CB0081",
+		cond(tag("maxspeed:backward") <= 360, "#CB009F",
+		cond(tag("maxspeed:backward") <= 380, "#CB00BD",
+		     "#BA00CB")))))))))))))))))))))))))))))))))));
+	dashes: 4,4;
+	width: 3;
 }
 
 /* lines tagged in mph (miles per hour) */
