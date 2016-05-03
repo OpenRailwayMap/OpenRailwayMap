@@ -139,7 +139,7 @@ Debian/Ubuntu:
     $ cd ..
     $ git submodule update --init renderer
 
- Compile the MapCSS styles and translations:
+ Compile the MapCSS styles, JOSM presets and translations:
 
     $ make
 
