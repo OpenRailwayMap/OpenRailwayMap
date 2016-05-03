@@ -192,6 +192,7 @@ way|z12-[!"railway:preferred_direction"]["maxspeed:forward"=~/^[1-9][0-9]*$/].tr
 		     "#BA00CB")))))))))))))))))))))))))))))))))));
 	dashes: 4,4;
 	width: 3;
+	text: "maxspeed:forward";
 }
 
 way|z12-["railway:preferred_direction"="backward"]["maxspeed:backward"=~/^[1-9][0-9]*$/].tracks,
@@ -237,6 +238,7 @@ way|z12-[!"railway:preferred_direction"]["maxspeed:forward"!~/^[1-9][0-9]*$/]["m
 		     "#BA00CB")))))))))))))))))))))))))))))))))));
 	dashes: 4,4;
 	width: 3;
+	text: "maxspeed:backward";
 }
 
 /* lines tagged in mph (miles per hour) */
