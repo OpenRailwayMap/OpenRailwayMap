@@ -131,6 +131,14 @@ way|z10-[tunnel=yes].tracks::tunnels
 	linecap: butt;
 	linejoin: butt;
 }
+/* also cap the tracks inside the tunnel with a straight line,
+ * otherwise the round end of the track would run out of the
+ * tunnel with the normal track color instead of the lighter one,
+ * looking like a glith. */
+way|z10-[tunnel=yes].tracks
+{
+	linecap: butt;
+}
 
 /**********************************************/
 /* text of tracks outside bridges and tunnels */
