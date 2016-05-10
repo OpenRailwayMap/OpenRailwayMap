@@ -96,14 +96,6 @@ way[maxspeed].dtracks
 {
 	width: 3.5;
 	text: "maxspeed";
-	text-position: line;
-	text-color: black;
-	font-size: 11;
-	font-family: Verdana Bold;
-	font-weight: bold;
-	text-halo-radius: 1;
-	text-halo-color: white;
-	kothicjs-ignore-layer: true;
 }
 
 way[maxspeed=~/^[1-9][0-9]*$/].tracks
@@ -145,6 +137,7 @@ way[maxspeed=~/^[1-9][0-9]*$/].tracks
 		cond(tag("maxspeed") <= 360, "#CB009F",
 		cond(tag("maxspeed") <= 380, "#CB00BD",
 		     "#BA00CB")))))))))))))))))))))))))))))))))));
+	set .styled;
 }
 
 way|z12-["railway:preferred_direction"="forward"]["maxspeed:forward"=~/^[1-9][0-9]*$/].tracks,
@@ -191,6 +184,7 @@ way|z12-[!"railway:preferred_direction"]["maxspeed:forward"=~/^[1-9][0-9]*$/].tr
 	dashes: 4,4;
 	width: 3;
 	text: "maxspeed:forward";
+	set .styled;
 }
 
 way|z12-["railway:preferred_direction"="backward"]["maxspeed:backward"=~/^[1-9][0-9]*$/].tracks,
@@ -237,6 +231,7 @@ way|z12-[!"railway:preferred_direction"]["maxspeed:forward"!~/^[1-9][0-9]*$/]["m
 	dashes: 4,4;
 	width: 3;
 	text: "maxspeed:backward";
+	set .styled;
 }
 
 /* lines tagged in mph (miles per hour) */
@@ -279,6 +274,7 @@ way[maxspeed=~/^[1-9][0-9]* mph$/].tracks
 		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 360, "#CB009F",
 		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 380, "#CB00BD",
 		     "#BA00CB")))))))))))))))))))))))))))))))))));
+	set .styled;
 }
 
 way[maxspeed=~/^[1-9][0-9]*$/].dtracks
@@ -320,6 +316,7 @@ way[maxspeed=~/^[1-9][0-9]*$/].dtracks
 		cond(tag("maxspeed") <= 360, "#e995d7",
 		cond(tag("maxspeed") <= 380, "#e995e4",
 		     "#e295e9")))))))))))))))))))))))))))))))))));
+	set .styled;
 }
 
 /* lines tagged in mph (miles per hour) */
@@ -362,6 +359,19 @@ way[maxspeed=~/^[1-9][0-9]* mph$/].dtracks
 		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 360, "#e995d7",
 		cond(replace(tag("maxspeed"), " mph", "") * 1.609344 <= 380, "#e995e4",
 		     "#e295e9")))))))))))))))))))))))))))))))))));
+	set .styled;
+}
+
+way.styled
+{
+	text-position: line;
+	text-color: black;
+	font-size: 11;
+	font-family: Verdana Bold;
+	font-weight: bold;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	kothicjs-ignore-layer: true;
 }
 
 /* German speed signals (Zs 10) */
