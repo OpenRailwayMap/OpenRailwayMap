@@ -141,7 +141,6 @@ way[railway][workrules=BOStrab]
 	fixAdd: "workrules=DE:{1.value}";
 }
 
-/* workrules=BOA is deprecated, should be replaced by an adequate value */
 way[railway][workrules=BOA]
 {
 	throwError: "workrules=BOA is deprecated, replace by an adequate value";
@@ -150,6 +149,22 @@ way[railway][workrules=BOA]
 	assertNoMatch: "way railway=rail";
 	assertNoMatch: "area railway=rail";
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
+}
+
+way[railway][workrules="DE-BOStrab"]
+{
+	throwError: "workrules: separate country and ruleset by : , not by -";
+	assertMatch: "way railway=rail workrules=DE-BOStrab";
+	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
+	fixAdd: "workrules=DE:BOStrab";
+}
+
+way[railway][workrules="DE-EBO"]
+{
+	throwError: "workrules: separate country and ruleset by : , not by -";
+	assertMatch: "way railway=rail workrules=DE-EBO";
+	assertNoMatch: "way railway=rail workrules=DE:EBO";
+	fixAdd: "workrules=DE:EBO";
 }
 
 /* ks and hl signals only exist as light signals */
