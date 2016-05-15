@@ -66,7 +66,7 @@ function createMap(embed)
 		// loading timestamp
 		var timestamp = new Timestamp("info");
 		// create search
-		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", menu);
+		search = new Search(map, 'searchBox', 'searchBar', 'searchButton', 'clearButton', 'searchInBounds', menu);
 		// build style selection and it's event handling
 		getStyleSelection();
 		// set rendering style

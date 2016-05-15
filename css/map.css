@@ -319,6 +319,19 @@ noscript p
 	margin-bottom: -30px;
 }
 
+/* search options */
+.searchOptions
+{
+	font-size: 90%;
+	vertical-align: middle;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white;
+	width: 230px;
+	padding: 0 0.3em;
+}
+
 /* links of contact, more info, ... */
 #linkBar
 {
