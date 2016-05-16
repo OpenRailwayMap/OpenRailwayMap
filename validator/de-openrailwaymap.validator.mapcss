@@ -374,3 +374,12 @@ node[railway=signal]["railway:signal:speed_limit"="DE-ESO:zs3"]["railway:signal:
 	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"80;?\"";
 	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:zs3\" railway:signal:speed_limit:form=light railway:signal:speed_limit:speed=\"off;?\"";
 }
+
+/* There are people that say Zs10 light signals have never existed in reality. */
+node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:db:zs10"]["railway:signal:speed_limit:form"=light]
+{
+	throwWarning: "It is unclear if Zs10 light signals have ever been placed, please double check.";
+	assertMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:db:zs10\" railway:signal:speed_limit:form=light";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:db:zs1\" railway:signal:speed_limit:form=light";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:db:zs10\" railway:signal:speed_limit:form=sign";
+}
