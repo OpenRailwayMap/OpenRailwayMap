@@ -69,7 +69,6 @@ way[electrified=rail].tracks
 	z-index: 1;
 	casing-width: 2;
 	casing-color: #797979;
-	linejoin: butt;
 }
 way|z16-[electrified=rail].tracks
 {
@@ -79,7 +78,6 @@ way|z16-[electrified=rail].tracks
 way.tracks
 {
 	width: 2;
-	linejoin: round;
 	kothicjs-ignore-layer: true;
 }
 

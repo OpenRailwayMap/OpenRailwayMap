@@ -61,7 +61,6 @@ way[!maxspeed].tracks
 	z-index: 0;
 	color: gray;
 	width: 3.5;
-	linejoin: round;
 	kothicjs-ignore-layer: true;
 }
 
@@ -96,7 +95,6 @@ way[maxspeed].tracks,
 way[maxspeed].dtracks
 {
 	width: 3.5;
-	linejoin: round;
 	text: "maxspeed";
 	text-position: line;
 	text-color: black;

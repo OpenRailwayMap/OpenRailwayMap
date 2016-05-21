@@ -43,7 +43,6 @@ way.tracks
 	z-index: 0;
 	color: gray;
 	width: 3.5;
-	linejoin: round;
 	kothicjs-ignore-layer: true;
 }
 
