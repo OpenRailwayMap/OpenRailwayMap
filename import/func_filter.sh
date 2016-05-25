@@ -11,8 +11,7 @@ function filter_planet
 
 	echo "Filtering planet file"
 	osmfilter temp.o5m \
-		--keep="railway=" \
-		--drop-tags="fixme= note= source= maxspeed:source= source:maxspeed= wheelchair:description= public_transport= tram=yes bus=yes train=yes subway=yes light_rail=yes lines= highway= foot= bicycle= tracktype= mtb:scale= postal_code= sidewalk=" \
+		--parameter-file=$(dirname ${0})/osmfilter.params \
 		$*
 	rm temp.o5m
 	echo "-----"
