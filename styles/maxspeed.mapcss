@@ -1246,7 +1246,7 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* German tram speed limit signals as signs (G 4) */
-node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^[2-57]0$/],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^[2-7]0$/],
 node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-BOStrab:g4"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^[23]5$/]
 {
 	z-index: eval(295 + tag("railway:signal:speed_limit:speed")/2);
