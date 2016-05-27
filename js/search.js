@@ -16,14 +16,14 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		this.bar.className = "infoBarOut";
 		this.box.focus();
 		this.marker.setOpacity(0);
-    }
+	}
 
 	// resets all parameters for a new search
-    this.reset = function()
-    {
-    	this.bar.innerHTML = "";
+	this.reset = function()
+	{
+		this.bar.innerHTML = "";
 		//TODO this.layer.removeAllFeatures();
-    }
+	}
 
 	// sends a search request
 	this.send = function()
@@ -88,9 +88,9 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 
 	// shows the returned search results
 	this.showResults = function(response)
-    {
-    	if (!response)
-    		return false;
+	{
+		if (!response)
+			return false;
 
 		var results = JSON.parse(response.responseText);
 		if (results.length > 0)
@@ -135,11 +135,11 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			loadingIndicator.innerHTML = loading;
 			this.bar.appendChild(loadingIndicator);
 		}
-    }
+	}
 
 	// finishes adding more results to the result list
 	this.finishResults = function(response)
-    {
+	{
 		this.showResults(response);
 		this.bar.removeChild(this.bar.lastChild);
 
@@ -163,7 +163,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			setTimeout(removeErrorMessage, 3500);
 			this.bar.className = "infoBar";
 		}
-    }
+	}
 
 	// called when clicking on a search results, jumps to point and draws something on the map
 	this.showResult = function(lat, lon)
