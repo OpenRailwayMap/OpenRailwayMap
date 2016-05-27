@@ -16,6 +16,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		this.bar.className = "infoBarOut";
 		this.box.focus();
 		this.marker.setOpacity(0);
+		this.request = "";
 	}
 
 	// resets all parameters for a new search
