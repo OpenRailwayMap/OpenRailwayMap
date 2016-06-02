@@ -591,9 +591,10 @@ way[railway][wikipedia=~/[Bb]rücke/]["bridge:wikipedia"=*wikipedia]
 	fixChangeKey: "wikipedia=>bridge:wikipedia";
 }
 
-node:unconnected[railway=signal]
+node:unconnected[railway=signal],
+node:unconnected[railway=milestone]
 {
-	throwError: "signals should be tagged on the track, move the node to the track the signal affects";
+	throwError: "{1.value}s should be tagged on the track, move the node to the track the {1.value} affects";
 }
 
 way[railway][lanes]
