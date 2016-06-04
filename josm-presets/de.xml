@@ -1449,7 +1449,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="level_crossing" />
 			<text key="railway:ref"
 				text="Name (no position)"
-				de.text="Name (keine Kilometerangabe oder kreuzende Straße)"
+				de.text="Name (keine Kilometerangabe)"
 				/>
 			<text key="railway:position"
 				text="Position (rounded, e.g. '12.3'; km)"
@@ -1511,7 +1511,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="crossing" />
 			<text key="railway:ref"
 				text="Name (no position)"
-				de.text="Name (keine Kilometerangabe oder kreuzende Straße)"
+				de.text="Name (keine Kilometerangabe)"
 				/>
 			<text key="railway:position"
 				text="Position (rounded, e.g. '12.3'; km)"
