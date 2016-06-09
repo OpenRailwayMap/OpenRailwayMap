@@ -2,9 +2,11 @@
 railway=
 
 --drop-tags=
+created_by=
 fixme=
 note=
 source=
+source:date=
 maxspeed:source=
 source:maxspeed=
 source:maxspeed:forward=
@@ -27,3 +29,11 @@ tracktype=
 mtb:scale=
 postal_code=
 sidewalk=
+tiger:cfcc=
+tiger:county=
+tiger:reviewed=
+tiger:name_base=
+tiger:name_type=
+tiger:tlid=
+tiger:source=
+tiger:upload_uuid=
