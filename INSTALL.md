@@ -82,7 +82,8 @@ Debian/Ubuntu:
     $ psql -d railmap -c "CREATE extension hstore;" # Postgres >= 9.x
     $ psql -d railmap -f osm2pgsql/900913.sql # not necessary for PostGIS >= 2.x
 
- If you are using PostgreSQL version < 9.3 you also need to add a function (from https://gist.github.com/kenaniah/1315484):
+ You have to add a function (from https://gist.github.com/kenaniah/1315484) to convert from hstore to JSON
+ (even if you have PostgreSQL > 9.3):
 
     $ echo "CREATE OR REPLACE FUNCTION public.hstore2json (
       hs public.hstore
