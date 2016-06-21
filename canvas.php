@@ -16,11 +16,11 @@
 	includeLocale($lang);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<? echo $lang; ?>" lang="<? echo $lang; ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $lang; ?>" lang="<?php echo $lang; ?>">
 	<head>
 		<title>OpenRailwayMap</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="content-language" content="<? echo $lang; ?>" />
+		<meta http-equiv="content-language" content="<?php echo $lang; ?>" />
 		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte" />
 		<meta name="title" content="OpenRailwayMap" />
 		<meta name="author" content="rurseekatze, Alexander Matheisen" />
@@ -30,7 +30,7 @@
 		<meta name="date" content="2010-01-01" />
 		<meta name="page-topic" content="OpenRailwayMap" />
 		<meta name="robots" content="index,follow" />
-		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap RSS Feed" href="http://www.matheisen.org/<? echo ($lang == 'de') ? 'de' : 'en'; ?>/orm.rss" />
+		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap RSS Feed" href="http://www.matheisen.org/<?php echo ($lang == 'de') ? 'de' : 'en'; ?>/orm.rss" />
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon" />
 		<link rel="icon" href="img/favicon.ico" type="image/vnd.microsoft.icon" />
 		<meta http-equiv="content-script-type" content="text/javascript" />
@@ -90,7 +90,7 @@
 					break;
 			}
 		?>
-		<script type="text/javascript" src="api/jstranslations.php?lang=<? echo $lang; ?>"></script>
+		<script type="text/javascript" src="api/jstranslations.php?lang=<?php echo $lang; ?>"></script>
 		<script type="text/javascript" src="js/search.js"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>
 		<script type="text/javascript" src="js/timestamp.js"></script>
