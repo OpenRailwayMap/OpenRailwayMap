@@ -194,19 +194,6 @@ function setupControls()
 		maxZoom: 19
 	});
 
-	// grayscale MapQuest background layer
-	var mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-	{
-		attribution: translations['mapquestAttribution'],
-		maxZoom: 18
-	});
-	// normal MapQuest background layer
-	var mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-	{
-		attribution: translations['mapquestAttribution'],
-		maxZoom: 18
-	});
-
 	// blank background map
 	var blank = new L.TileLayer(root+'/img/blank.png',
 	{
@@ -216,8 +203,6 @@ function setupControls()
 	var baseLayers = new Object();
 	baseLayers[translations['mapnik']] = mapnik;
 	baseLayers[translations['mapnikGrayscale']] = mapnikGray;
-	baseLayers[translations['mapquest']] = mapquest;
-	baseLayers[translations['mapquestGrayscale']] = mapquestGray;
 	baseLayers[translations['blank']] = blank;
 
 	// hillshading layer
