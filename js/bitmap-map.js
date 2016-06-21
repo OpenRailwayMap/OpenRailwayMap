@@ -35,6 +35,25 @@ function createMap(embed)
 		});
 	}
 
+	// grayscale mapnik background layer
+	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	{
+		attribution: translations['mapnikAttribution'],
+		maxZoom: 19
+	}).addTo(map);
+	// normal mapnik background layer
+	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	{
+		attribution: translations['mapnikAttribution'],
+		maxZoom: 19
+	});
+
+	// blank background map
+	var blank = new L.TileLayer(root+'/img/blank.png',
+	{
+		maxZoom: 20
+	});
+
 	// railmap layer
 	railmap = new L.TileLayer(tiledir+'standard/{z}/{x}/{y}.png',
 	{
@@ -63,8 +82,6 @@ function createMap(embed)
 	var baseLayers = new Object();
 	baseLayers[translations['mapnik']] = mapnik;
 	baseLayers[translations['mapnikGrayscale']] = mapnikGray;
-	baseLayers[translations['mapquest']] = mapquest;
-	baseLayers[translations['mapquestGrayscale']] = mapquestGray;
 	baseLayers[translations['blank']] = blank;
 
 	var overlays = new Object();

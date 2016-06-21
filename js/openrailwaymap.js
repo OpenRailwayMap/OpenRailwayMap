@@ -65,22 +65,6 @@ OpenRailwayMap = function(config)
 		code: 'mapnik'
 	});
 
-	// grayscale MapQuest background layer
-	this.mapquestGray = new L.TileLayer.Grayscale('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-	{
-		attribution: translations['mapquestAttribution'],
-		maxZoom: 18,
-		code: 'mapquestgray'
-	});
-
-	// normal MapQuest background layer
-	this.mapquest = new L.TileLayer('http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-	{
-		attribution: translations['mapquestAttribution'],
-		maxZoom: 18,
-		code: 'mapquest'
-	});
-
 	// blank background map
 	this.blank = new L.TileLayer(window.location.origin + window.location.pathname +'/img/blank.png',
 	{
@@ -97,8 +81,6 @@ OpenRailwayMap = function(config)
 	this.baseLayers = {};
 	this.baseLayers[translations['mapnik']] = this.mapnik;
 	this.baseLayers[translations['mapnikGrayscale']] = this.mapnikGray;
-	this.baseLayers[translations['mapquest']] = this.mapquest;
-	this.baseLayers[translations['mapquestGrayscale']] = this.mapquestGray;
 	this.baseLayers[translations['blank']] = this.blank;
 
 	this.overlays = {};
