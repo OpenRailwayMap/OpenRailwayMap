@@ -77,7 +77,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 						{
 							var ref = words.join(" ");
 
-							self.sendRequest("milestone", "position="+pos+"&ref="+ref, function(response)
+							self.sendRequest("milestone", "position=" + pos.replace(',', '.') + "&ref=" + ref, function(response)
 							{
 								self.finishResults(response);
 							});
