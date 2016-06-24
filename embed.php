@@ -16,11 +16,11 @@
 	includeLocale($lang);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<? echo $lang; ?>" lang="<? echo $lang; ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $lang; ?>" lang="<?php echo $lang; ?>">
 	<head>
 		<title>OpenRailwayMap</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="content-language" content="<? echo $lang; ?>" />
+		<meta http-equiv="content-language" content="<?php echo $lang; ?>" />
 		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte" />
 		<meta name="title" content="OpenRailwayMap" />
 		<meta name="author" content="rurseekatze, Alexander Matheisen" />
@@ -41,7 +41,7 @@
 		<?php
 			urlArgsToParam(false, $urlbase);
 		?>
-		<script type="text/javascript" src="api/jstranslations.php?lang=<? echo $lang; ?>"></script>
+		<script type="text/javascript" src="api/jstranslations.php?lang=<?php echo $lang; ?>"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
 		<script type="text/javascript" src="js/bitmap-map.js"></script>
