@@ -7,5 +7,5 @@
 	"maxsockets" : 100,
 	"apiPort" : 9002,
 	"queries": ["milestone", "facility", "networklength"],
-	"corsAllowOrigin": "http://www.openrailwaymap.org"
+	"corsAllowOrigin": "*"
 }
