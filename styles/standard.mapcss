@@ -185,6 +185,100 @@ way|z17-["railway:track_ref"].tracks
 	shield-shape: rectangular;
 }
 
+/**** COLORS ****/
+
+/***************************************************************************************/
+/* simple railways without service or usage, and those which have no special rendering */
+/* sidings without specified usage                                                     */
+/* yard tracks without specified usage                                                 */
+/* crossover tracks without specified usage                                            */
+/***************************************************************************************/
+way[!usage][!service].tracks,
+way[usage=tourism][!service].tracks,
+way[usage=military][!service].tracks,
+way[usage=test][!service].tracks,
+way[!usage][service=siding].tracks,
+way[!usage][service=yard].tracks,
+way[!usage][service=crossover].tracks
+{
+	color: black;
+}
+
+/***************************************/
+/* spur tracks without specified usage */
+/***************************************/
+way[!usage][service=spur].tracks
+{
+	color: #87491D;
+}
+
+/*********************************************/
+/* branch railways, service tag not rendered */
+/*********************************************/
+way[usage=branch][!service].tracks
+{
+	color: #DACA00;
+}
+
+/*******************************************/
+/* main railways, service tag not rendered */
+/*******************************************/
+way[usage=main][!service].tracks
+{
+	color: #FF8100;
+}
+
+/************************************************/
+/* highspeed railways, service tag not rendered */
+/************************************************/
+way[usage=main][highspeed=yes][!service].tracks
+{
+	color: #FF0C00;
+}
+
+/*************************************************/
+/* industrial railways without service tag       */
+/* industrial railways with various service tags */
+/*************************************************/
+way[usage=industrial][!service].tracks,
+way[usage=industrial][service=siding].tracks,
+way[usage=industrial][service=spur].tracks,
+way[usage=industrial][service=yard].tracks,
+way[usage=industrial][service=crossover].tracks
+{
+	color: #87491D;
+}
+
+/*********************/
+/* light rail tracks */
+/*********************/
+way[railway=light_rail].tracks,
+way[railway=construction]["construction:railway"=light_rail].tracks,
+way[railway=proposed]["proposed:railway"=light_rail].tracks
+{
+       color: #00BD14;
+}
+
+/*****************/
+/* subway tracks */
+/*****************/
+way[railway=subway].tracks,
+way[railway=construction]["construction:railway"=subway].tracks,
+way[railway=proposed]["proposed:railway"=subway].tracks
+{
+       color: #0300C3;
+}
+
+/***************/
+/* tram tracks */
+/***************/
+way[railway=tram].tracks,
+way[railway=construction]["construction:railway"=tram].tracks,
+way[railway=proposed]["proposed:railway"=tram].tracks
+{
+       color: #D877B8;
+}
+
 /***************************************************************************************/
 /* simple railways without service or usage, and those which have no special rendering */
 /***************************************************************************************/
@@ -194,7 +288,6 @@ way|z10-[railway=rail][usage=military][!service],
 way|z10-[railway=rail][usage=test][!service]
 {
 	z-index: 400;
-	color: black;
 	width: 2.5;
 }
 
@@ -204,7 +297,6 @@ way|z10-[railway=rail][usage=test][!service]
 way|z10-[railway=rail][!usage][service=siding]
 {
 	z-index: 870;
-	color: black;
 	width: 2;
 }
 
@@ -214,7 +306,6 @@ way|z10-[railway=rail][!usage][service=siding]
 way|z10-[railway=rail][!usage][service=yard]
 {
 	z-index: 860;
-	color: black;
 	width: 1.5;
 }
 
@@ -224,7 +315,6 @@ way|z10-[railway=rail][!usage][service=yard]
 way|z10-[railway=rail][!usage][service=spur]
 {
 	z-index: 880;
-	color: #87491D;
 	width: 3;
 	text-position: line;
 }
@@ -235,7 +325,6 @@ way|z10-[railway=rail][!usage][service=spur]
 way|z10-[railway=rail][!usage][service=crossover]
 {
 	z-index: 300;
-	color: black;
 	width: 1;
 }
 
@@ -245,7 +334,6 @@ way|z10-[railway=rail][!usage][service=crossover]
 way|z2-[railway=rail][usage=branch][!service]
 {
 	z-index: 1000;
-	color: #DACA00;
 	width: 1.5;
 }
 /* thicker lines in higher zoom levels */
@@ -264,7 +352,6 @@ way|z9-[railway=rail][usage=branch][!service]
 way|z2-[railway=rail][usage=main][!service]
 {
 	z-index: 1100;
-	color: #FF8100;
 	width: 1.5;
 }
 /* thicker lines in higher zoom levels */
@@ -283,7 +370,6 @@ way|z9-[railway=rail][usage=main][!service]
 way|z2-[railway=rail][usage=main][highspeed=yes][!service]
 {
 	z-index: 2000;
-	color: #FF0C00;
 	width: 1.5;
 }
 /* thicker lines in higher zoom levels */
@@ -302,7 +388,6 @@ way|z9-[railway=rail][usage=main][highspeed=yes][!service]
 way|z10-[railway=rail][usage=industrial][!service]
 {
 	z-index: 850;
-	color: #87491D;
 	width: 2;
 }
 
@@ -315,7 +400,6 @@ way|z10-[railway=rail][usage=industrial][service=yard],
 way|z10-[railway=rail][usage=industrial][service=crossover]
 {
 	z-index: 850;
-	color: #87491D;
 	width: 1.5;
 }
 
@@ -339,10 +423,8 @@ way|z9-[railway=construction].tracks
 {
 	z-index: 400;
 	dashes: 9,9;
-	color: black;
 	width: 3;
 }
-/* colors are set below together with railway=proposed */
 
 /*********************/
 /* proposed railways */
@@ -351,40 +433,7 @@ way|z9-[railway=proposed].tracks
 {
 	z-index: 350;
 	dashes: 2,8;
-	color: black;
 	width: 3;
-}
-/** shared between railway=proposed and railway=construction **/
-/*  show the color of what the railway will become            */
-way|z9-[railway=construction]["construction:railway"=rail][usage=main],
-way|z9-[railway=proposed]["proposed:railway"=rail][usage=main]
-{
-	color: #FF8100;
-}
-way|z9-[railway=construction]["construction:railway"=rail][usage=main][highspeed=yes],
-way|z9-[railway=proposed]["proposed:railway"=rail][usage=main][highspeed=yes]
-{
-	color: #FF0C00;
-}
-way|z9-[railway=construction]["construction:railway"=rail][usage=branch],
-way|z9-[railway=proposed]["proposed:railway"=rail][usage=branch]
-{
-	color: #DACA00;
-}
-way|z10-[railway=construction]["construction:railway"=light_rail],
-way|z10-[railway=proposed]["proposed:railway"=light_rail]
-{
-	color: #00BD14;
-}
-way|z10-[railway=construction]["construction:railway"=subway],
-way|z10-[railway=proposed]["proposed:railway"=subway]
-{
-	color: #0300C3;
-}
-way|z11-[railway=construction]["construction:railway"=tram],
-way|z11-[railway=proposed]["proposed:railway"=tram]
-{
-	color: #D877B8;
 }
 
 /********************/
@@ -421,33 +470,16 @@ way|z9-[railway=razed]
 	width: 3;
 }
 
-/***************/
-/* tram tracks */
-/***************/
-way|z11-[railway=tram]
-{
-	z-index: 1100;
-	color: #D877B8;
-	width: 2.5;
-}
-
-/*****************/
-/* subway tracks */
-/*****************/
-way|z10-[railway=subway]
-{
-	z-index: 1100;
-	color: #0300C3;
-	width: 2.5;
-}
-
 /*********************/
+/* tram tracks       */
+/* subway tracks     */
 /* light rail tracks */
 /*********************/
+way|z11-[railway=tram],
+way|z10-[railway=subway],
 way|z10-[railway=light_rail]
 {
 	z-index: 1100;
-	color: #00BD14;
 	width: 2.5;
 }
 
@@ -460,11 +492,8 @@ way|z9-[railway=narrow_gauge][usage=military][!service],
 way|z9-[railway=narrow_gauge][usage=test][!service]
 {
 	z-index: 1200;
-	color: black;
 	width: 1.5;
 	casing-width: 1.5;
-	casing-color: black;
-	casing-dashes: 3,3;
 }
 
 /************************************************/
@@ -473,11 +502,8 @@ way|z9-[railway=narrow_gauge][usage=test][!service]
 way|z10-[railway=narrow_gauge][!usage][service=siding]
 {
 	z-index: 850;
-	color: black;
 	width: 1.5;
 	casing-width: 1;
-	casing-color: black;
-	casing-dashes: 3,3;
 }
 
 /****************************************************/
@@ -486,11 +512,8 @@ way|z10-[railway=narrow_gauge][!usage][service=siding]
 way|z10-[railway=narrow_gauge][!usage][service=yard]
 {
 	z-index: 840;
-	color: black;
 	width: 1.5;
 	casing-width: 1;
-	casing-color: black;
-	casing-dashes: 3,3;
 }
 
 /****************************************************/
@@ -499,11 +522,8 @@ way|z10-[railway=narrow_gauge][!usage][service=yard]
 way|z10-[railway=narrow_gauge][!usage][service=spur]
 {
 	z-index: 860;
-	color: #87491D;
 	width: 1.5;
 	casing-width: 1;
-	casing-color: #87491D;
-	casing-dashes: 3,3;
 	text-position: line;
 }
 
@@ -513,11 +533,8 @@ way|z10-[railway=narrow_gauge][!usage][service=spur]
 way|z10-[railway=narrow_gauge][!usage][service=crossover]
 {
 	z-index: 280;
-	color: black;
 	width: 1.5;
 	casing-width: 1;
-	casing-color: black;
-	casing-dashes: 3,3;
 }
 
 /**********************************************************/
@@ -526,11 +543,8 @@ way|z10-[railway=narrow_gauge][!usage][service=crossover]
 way|z9-[railway=narrow_gauge][usage=branch][!service]
 {
 	z-index: 880;
-	color: #DACA00;
 	width: 1.5;
 	casing-width: 1.5;
-	casing-color: #DACA00;
-	casing-dashes: 3,3;
 }
 
 /********************************************************/
@@ -539,11 +553,8 @@ way|z9-[railway=narrow_gauge][usage=branch][!service]
 way|z9-[railway=narrow_gauge][usage=main][!service]
 {
 	z-index: 1080;
-	color: #FF8100;
 	width: 1.5;
 	casing-width: 1.5;
-	casing-color: #FF8100;
-	casing-dashes: 3,3;
 }
 
 /*************************************************************/
@@ -552,11 +563,8 @@ way|z9-[railway=narrow_gauge][usage=main][!service]
 way|z9-[railway=narrow_gauge][usage=main][highspeed=yes][!service]
 {
 	z-index: 2980;
-	color: #FF0C00;
 	width: 1.5;
 	casing-width: 1.5;
-	casing-color: #FF0C00;
-	casing-dashes: 3,3;
 }
 
 /********************************************************/
@@ -565,11 +573,8 @@ way|z9-[railway=narrow_gauge][usage=main][highspeed=yes][!service]
 way|z9-[railway=narrow_gauge][usage=industrial][!service]
 {
 	z-index: 830;
-	color: #87491D;
 	width: 1.5;
 	casing-width: 1.5;
-	casing-color: #87491D;
-	casing-dashes: 3,3;
 }
 
 /**************************************************************/
@@ -581,10 +586,14 @@ way|z10-[railway=narrow_gauge][usage=industrial][service=yard],
 way|z10-[railway=narrow_gauge][usage=industrial][service=crossover]
 {
 	z-index: 830;
-	color: #87491D;
 	width: 1.5;
 	casing-width: 1;
-	casing-color: #87491D;
+}
+
+/* must stay last: apply the color of the line also to the casing */
+way[railway=narrow_gauge].tracks
+{
+	casing-color: eval(prop("color"));
 	casing-dashes: 3,3;
 }
 
