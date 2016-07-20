@@ -1456,7 +1456,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</roles>
 		</item>
 		<separator />
-		<item name="Level Crossing" de.name="Bahnübergang" icon="styles/standard/transport/railway/level_crossing.svg" type="node">
+		<item name="Level Crossing" de.name="Bahnübergang" icon="presets/transport/railway/level_crossing.svg" type="node">
 			<label text="Level Crossing" de.text="Bahnübergang" />
 			<space />
 			<key key="railway"
