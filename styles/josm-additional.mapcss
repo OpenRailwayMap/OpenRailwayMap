@@ -110,8 +110,8 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 node|z16-[railway=signal][!"railway:signal:direction"]
 {
 	z-index: 1000;
-	icon-image: "misc/deprecated.png";
-	/* misc/deprecated.png is part of the JOSM installation, 
+	icon-image: "presets/misc/deprecated.png";
+	/* presets/misc/deprecated.png is part of the JOSM installation, 
 	   that's why it is not included at OpenRailwayMap repository */
 	icon-width: 16;
 	icon-height: 16;
@@ -150,8 +150,8 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:stop:descr
 {
 	z-index: 10000;
 	/* high z-index to overwrite other stylesheets */
-	icon-image: "misc/deprecated.png";
-	/* misc/deprecated.png is part of the JOSM installation, 
+	icon-image: "presets/misc/deprecated.png";
+	/* presets/misc/deprecated.png is part of the JOSM installation, 
 	   that's why it is not included at OpenRailwayMap repository */
 	icon-width: 16;
 	icon-height: 16;
