@@ -95,10 +95,11 @@ OpenRailwayMap = function(config)
 	history.pushState(null, this.appName, this.getUrl());
 	this.setStyle(this.availableStyles[0]);
 
-	/*this.map.on('zoomend', function(e)
+	this.map.on('zoomend', function(e)
 	{
-		updateLegend("legend", railmap.selectedStyle);
-	});*/
+		self.updateLegend(self.railmap.selectedStyle);
+		//railmap.redraw();
+	});
 
 	// TODO layeradd layerremove baselayerchange overlayadd overlayremove
 	this.map.on('moveend', function(e)
@@ -176,6 +177,18 @@ OpenRailwayMap = function(config)
 			// TODO Laden fehlgeschlagen
 		});
 	});
+
+	/*
+	MapCSS.onImagesLoad = function()
+	{
+		map.addLayer(railmap);
+
+		if (params['style'] != null && styleValid(params['style']))
+			setStyle(params['style']);
+		else
+			setStyle("standard");
+	};
+	*/
 };
 
 
@@ -194,10 +207,9 @@ OpenRailwayMap.prototype =
 		/*
 		for (var i=0; i<MapCSS.availableStyles.length; i++)
 			if (MapCSS.availableStyles[i] != style)
-				railmap.disableStyle(MapCSS.availableStyles[i]);
+				this.railmap.disableStyle(MapCSS.availableStyles[i]);
 
-		railmap.enableStyle(style);
-		railmap.redraw();
+		this.railmap.enableStyle(style);
 		*/
 
 		// helper variable for saving current map style
@@ -207,7 +219,8 @@ OpenRailwayMap.prototype =
 		// reload all tiles after style was changed
 		this.railmap.redraw();
 
-		//updateLegend("legend", style || MapCSS.availableStyles[0]);
+		this.updateLegend(style || MapCSS.availableStyles[0]);
+		//this.updateLegend(style);
 		this.updatePermalink();
 	},
 
@@ -316,5 +329,87 @@ OpenRailwayMap.prototype =
 		}
 
 		return 'en_GB';
+	},
+
+	// reload the legend after changing zoomlevel or stylesheet
+	updateLegend: function(style)
+	{
+		var self = this;
+		// TODO .json legend file statisch einbinden
+
+		var baseurl = window.location.origin + window.location.pathname.replace('index.html', '');
+		$.getJSON(baseurl + 'styles/'+style+'.json')
+		.done(function(data)
+		{
+			// if no features are rendered in this zoom level, show message
+			if (data.mapfeatures.length == 0)
+			{
+				$('#legend').html('<p>'+translateString('Nothing to see in this zoom level. Please zoom in.')+'</p>');
+				return;
+			}
+
+			MapCSS.onImagesLoad = function()
+			{
+				$('#legend').html('<table>');
+
+				for (var i = 0; i < data.mapfeatures.length; i++)
+				{
+					var feature = data.mapfeatures[i];
+
+					if (self.map.getZoom() >= feature.minzoom && (feature.maxzoom == null || self.map.getZoom() <= feature.maxzoom) && feature.features != null)
+					{
+						var lineheight = (feature.lineheight != null) ? feature.lineheight : 16;
+						if (feature['replace'] != null)
+						{
+							for (var j = 0; j < feature['replace'].length; j++)
+							{
+								var replaceObj = feature['replace'][j];
+								var replaceFeature = JSON.parse(JSON.stringify(feature.features));
+								var caption = self.translateString(feature.caption);
+
+								for (var replaceKey in replaceObj)
+								{
+									// replace placeholders in values of items
+									for (var item in replaceFeature)
+									{
+										for (var key in replaceFeature[item].properties)
+										{
+											replaceFeature[item].properties[key] = replaceFeature[item].properties[key].replace(replaceKey, replaceObj[replaceKey]);
+										}
+									}
+									// replace placeholders in captions
+									caption.replace(replaceKey, replaceObj[replaceKey]);
+								}
+
+								var row = '<tr>';
+								row += '<td><canvas id="legend-'+i+'" width="80" height="'+lineheight+'"></canvas></td>';
+								row += '<td style="height: '+lineheight+'px;">'+caption+'</td>';
+								row += '</tr>';
+								$('#legend').append(row);
+								console.log(replaceFeature);
+								Kothic.render(document.getElementById('legend-'+i), {'features': replaceFeature, 'granularity': 100}, self.map.getZoom(), { styles: [style] });
+							}
+						}
+						else
+						{
+							var row = '<tr>';
+							row += '<td><canvas id="legend-'+i+'" width="80" height="'+lineheight+'"></canvas></td>';
+							row += '<td style="height: '+lineheight+'px;">'+self.translateString(feature.caption)+'</td>';
+							row += '</tr>';
+							$('#legend').append(row);
+
+							Kothic.render(document.getElementById('legend-'+i), {'features': feature.features, 'granularity': 100}, self.map.getZoom(), { styles: [style] });
+						}
+					}
+				}
+				$('#legend').append('</table>');
+			};
+
+			MapCSS.preloadSpriteImage(style, baseurl + 'styles/'+style+'.png');
+		})
+		.fail(function(jqXHR, status)
+		{
+			$('#legend').append('<p>'+translateString('Legend not available for this style.')+'</p>');
+		});
 	}
 };
