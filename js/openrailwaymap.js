@@ -9,11 +9,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 OpenRailwayMap = function(config)
 {
 	var self = this;
+
+	this.urlParams = {};
+	window.location.hash.replace(new RegExp("([^#=&]+)(=([^&]*))?", "g"), function($0, $1, $2, $3) {self.urlParams[$1] = $3;});
+
 	this.appName = config['appName'];
 	this.mapContainerId = config['mapContainerId'];
-	this.lat = config['lat'];
-	this.lon = config['lon'];
-	this.zoom = config['zoom'];
+	this.lat = this.urlParams['lat'] || config['lat'];
+	this.lon = this.urlParams['lon'] || config['lon'];
+	this.zoom = this.urlParams['zoom'] || config['zoom'];
 	this.tileUrl = config['tileUrl'];
 	this.apiUrl = config['apiUrl'];
 	this.availableStyles = config['availableStyles'];
@@ -34,8 +38,6 @@ OpenRailwayMap = function(config)
 
 	this.map = new L.Map(this.mapContainerId);
 
-	// setting start position
-	//startposition = new Startposition(map);
 	// loading timestamp
 	//var timestamp = new Timestamp("info");
 	// create search
@@ -55,7 +57,7 @@ OpenRailwayMap = function(config)
 		attribution: translations['mapnikAttribution'],
 		maxZoom: 19,
 		code: 'mapnikgray'
-	}).addTo(this.map);
+	});
 
 	// normal mapnik background layer
 	this.mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -91,9 +93,24 @@ OpenRailwayMap = function(config)
 	var layerSwitch = new L.Control.Layers(this.baseLayers, this.overlays);
 	this.map.addControl(layerSwitch);
 
+	// set initial map state from permalink
 	this.map.setView(new L.LatLng(this.lat, this.lon), this.zoom);
+	this.setStyle(this.urlParams['style'] || this.availableStyles[0]);
+	for (var layername in this.baseLayers)
+		if (this.baseLayers[layername].options.code == this.urlParams['layers'])
+			this.baseLayers[layername].addTo(this.map);
+
+	// if layername in permalink was invalid
+	for (var i in this.map._layers)
+	{
+		var layer = this.map._layers[i];
+		if (layer.options && layer.options.code)
+			var selectedBackgroundLayer = layer.options.code;
+	}
+	if (selectedBackgroundLayer == null)
+		this.baseLayers[translations['mapnikGrayscale']].addTo(this.map);
+
 	history.pushState(null, this.appName, this.getUrl());
-	this.setStyle(this.availableStyles[0]);
 
 	this.map.on('zoomend', function(e)
 	{
