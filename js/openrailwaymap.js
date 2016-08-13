@@ -386,7 +386,6 @@ OpenRailwayMap.prototype =
 								row += '<td style="height: '+lineheight+'px;">'+caption+'</td>';
 								row += '</tr>';
 								$('#legend').append(row);
-								console.log(replaceFeature);
 								Kothic.render(document.getElementById('legend-'+i), {'features': replaceFeature, 'granularity': 100}, self.map.getZoom(), { styles: [style] });
 							}
 						}
