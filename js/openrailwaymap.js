@@ -95,6 +95,8 @@ OpenRailwayMap = function(config)
 
 	// set initial map state from permalink
 	this.map.setView(new L.LatLng(this.lat, this.lon), this.zoom);
+	// set position by geolocation API if available
+	this.map.locate({timeout: 3000, enableHighAccuracy: true, setView: true, watch: false});
 	this.setStyle(this.urlParams['style'] || this.availableStyles[0]);
 	for (var layername in this.baseLayers)
 		if (this.baseLayers[layername].options.code == this.urlParams['layers'])
