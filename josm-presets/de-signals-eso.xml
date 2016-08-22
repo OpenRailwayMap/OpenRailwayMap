@@ -716,10 +716,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
-						display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
+						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12;no"
+						display_values="substitution signal (Zs 1 ex-DB);substitution signal (Zs 1 ex-DR);cautiousness signal (Zs 7);M Board (Zs 12);no substitution signal"
+						de.display_values="Ersatzsignal (Zs 1 ex-DB);Ersatzsignal (Zs 1 ex-DR);Vorsichtsignal (Zs 7);M-Tafel (Zs 12);kein Ersatzsignal vorhanden"
+						values_sort="false"
 						/>
 					<space />
+					<preset_link preset_name="Sh-1-Licht" />
+					<preset_link preset_name="ex-DR Diamond Board (Zs 103)" />
 					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
 					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
 					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
@@ -1595,6 +1599,30 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						/>
 					<key key="railway:signal:fouling_point"
 						value="DE-ESO:ra12" />
+				</item>
+				<item name="ex-DR Diamond Board (Zs 103)" de.name="ex-DR Rautentafel (Zs 103)" type="node">
+					<label text="ex-DR Rautentafel (Zs 103)" />
+					<label text="existiert nur an Formhauptsignalen in Ostdeutschland" />
+					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						/>
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						/>
+					<key key="railway:signal:shunting"
+						value="DE-ESO:zs103" />
+					<key key="railway:signal:shunting:form"
+						value="sign" />
 				</item>
 			</group>
 			<group name="Zusatzsignale" icon="de/zs3-60-sign-up-32.png">
