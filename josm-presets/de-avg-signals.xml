@@ -63,10 +63,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Ersatzsignal (ex-DB);Vorsichtsignal;M-Tafel"
 				/>
 			<space />
-			<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
-			<preset_link preset_name="Sh-1-Licht" />
-			<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
-			<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+			<preset_link preset_name="Speed Indicator (Zs 3)" />
+			<preset_link preset_name="Sh 1 Light" />
+			<preset_link preset_name="Left-Track Indicator (Zs 6)" />
+			<preset_link preset_name="Left-Track Substitute Indicator (Zs 8)" />
 		</item>
 		<item name="Vorsignaltafel mit Halt erwarten aufgehoben (Ne 2, Vf 1)" icon="de/ne2-32.png" type="node">
 			<label text="Vorsignaltafel (Ne 2) mit Halt erwarten aufgehoben (Vf 1)" />
