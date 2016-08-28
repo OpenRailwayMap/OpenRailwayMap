@@ -66,13 +66,23 @@ way|z11-[railway=construction]["construction:railway"=tram]
 /***********/
 /* bridges */
 /***********/
-way|z10-[bridge=yes].tracks::bridges
+way|z10-[bridge=yes].tracks,
+way|z10-[bridge=cantilever].tracks,
+way|z10-[bridge=covered].tracks,
+way|z10-[bridge=movable].tracks,
+way|z10-[bridge=trestle].tracks,
+way|z10-[bridge=viaduct].tracks
+{
+	set .bridge;
+}
+
+way.bridge::bridges
 {
 	z-index: 1;
 	casing-width: 3.5;
 	casing-color: #797979;
 }
-way|z12-[bridge=yes][!"railway:track_ref"].tracks::bridges
+way|z12-[!"railway:track_ref"].bridge::bridges
 {
 	z-index: 4000;
 	text-position: line;
