@@ -6,7 +6,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
-function Search(map, box, bar, searchButton, clearButton, mobilemenu)
+function Search(map, box, bar, searchButton, clearButton, boundsCheckbox, mobilemenu)
 {
 	// clears the visible parts of a search
 	this.clear = function()
@@ -43,7 +43,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		}
 
 		// if a new string was entered or other search type
-		if (input != this.request)
+		if (input != this.request || this.boundsCheckbox.checked != this.requestBounds)
 		{
 			this.reset();
 			// show search results box
@@ -51,14 +51,16 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			// show that search results are loaded
 			this.bar.innerHTML += "<div class=\"loadingMoreInfo\">"+loading+"</div>";
 			this.request = input;
+			this.requestBounds = this.boundsCheckbox.checked;
+			var boundsstring = this.requestBounds ? '&bounds=' + map.getBounds().toBBoxString() : '';
 
-			this.sendRequest("facility", "uicref="+input, function(response)
+			this.sendRequest("facility", "uicref=" + input + boundsstring, function(response)
 			{
 				self.showResults(response);
-				self.sendRequest("facility", "ref="+input, function(response)
+				self.sendRequest("facility", "ref=" + input + boundsstring, function(response)
 				{
 					self.showResults(response);
-					self.sendRequest("facility", "name="+input, function(response)
+					self.sendRequest("facility", "name=" + input + boundsstring, function(response)
 					{
 						var words = input.split(" ");
 						for (var i=0; i<words.length; i++)
@@ -74,7 +76,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 
 						if (pos)
 						{
-							self.sendRequest("milestone", "position="+pos+"&ref="+ref, function(response)
+							self.sendRequest("milestone", "position=" + pos + "&ref=" + ref + boundsstring, function(response)
 							{
 								self.finishResults(response);
 							});
@@ -203,8 +205,10 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	this.box = gEBI(box);
 	this.searchButton = gEBI(searchButton);
 	this.clearButton = gEBI(clearButton);
+	this.boundsCheckbox = gEBI(boundsCheckbox);
 	this.bar = gEBI(bar);
 	this.request = "";
+	this.requestBounds = false;
 	this.mobilemenu = mobilemenu || null;
 	this.marker = L.marker([0, 0], {opacity: 0, clickable: false}).addTo(this.map);
 

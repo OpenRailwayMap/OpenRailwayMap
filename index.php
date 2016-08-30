@@ -161,6 +161,7 @@
 			<div id="searchButton" onclick="Search.request();">
 				<b>&#8629;</b>
 			</div>
+			<p class="searchOptions"><input type="checkbox" id="searchInBounds" /><label for="searchInBounds" id="searchInBoundsLabel"><?=_("Search only in the current map view")?></label></p>
 			<br />
 			<div id="searchBar" class="infoBarOut"></div>
 			<div id="detailsBar" class="infoBarOut"></div>
