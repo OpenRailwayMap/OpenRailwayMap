@@ -1503,6 +1503,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<space />
 					<key key="railway"
 						value="signal" />
+					<text key="ref"
+						text="Signal ref"
+						de.text="Signalbezeichnung"
+						/>
 					<check key="railway:signal:shunting:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
