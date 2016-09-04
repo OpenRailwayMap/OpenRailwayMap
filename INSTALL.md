@@ -27,8 +27,9 @@ Debian/Ubuntu:
 
     $ su root
 
- Move to your favorite directory and clone this repository:
+ Clone this repository (in the following `/var/www/html/OpenRailwayMap/`):
 
+    $ cd /var/www/html/
     $ git clone https://github.com/rurseekatze/OpenRailwayMap.git
     $ cd OpenRailwayMap
 
@@ -68,6 +69,8 @@ Debian/Ubuntu:
     $ cp osmupdate osmfilter osmconvert /usr/local/bin
     $ cd ..
     $ rm -fr osmctools
+
+## Setting Up the Database
 
  Set up the PostgreSQL database with PostGIS and hstore extensions:
 
@@ -135,6 +138,58 @@ Debian/Ubuntu:
     $ echo "GRANT SELECT ON geometry_columns TO user;"  | psql -d railmap
     $ echo "GRANT SELECT ON spatial_ref_sys TO user;"  | psql -d railmap
 
+## Setting Up the Webserver and PHP
+
+ We use Apache. Set up one vhost per subdomain (website, tileserver, API). They are placed at
+ `/etc/apache2/sites-available/` on Ubuntu/Debian. Other distros use `/etc/apache/vhosts.d/` or
+ just another directory. Log files will be saved to `/var/log/apache2/` You should change this
+ path if you are using other systems, e.g. to `/var/log/httpd/` on CentOS/RHEL.
+
+ Vhost configuration of the website (`www.openrailwaymap.org.conf`)
+
+    <VirtualHost *:80>
+    DocumentRoot /var/www/html/OpenRailwayMap/
+    ServerName www.openrailwaymap.org
+    ServerAlias openrailwaymap.org
+    <Directory /var/www/html/OpenRailwayMap/>
+         AllowOverride None
+    </Directory>
+    ErrorLog /var/log/apache2/www.openrailwaymap.org.error.log
+    LogLevel warn
+    CustomLog /var/log/apache2/www.openrailwaymap.org.access.log combined
+    </VirtualHost>
+
+ API is served by api.js which listens on port 9002, therefore we forward incoming request to this port.
+ Vhost configuration of the API (`api.openrailwaymap.org.conf`) looks like this:
+
+    <VirtualHost *:80>
+    ServerName api.openrailwaymap.org
+    ProxyPreserveHost On
+    ProxyPass / http://localhost:9002/
+    ProxyPassReverse / http://localhost:9002/
+    ErrorLog /var/log/apache2/api.openrailwaymap.org.error.log
+    LogLevel warn
+    CustomLog /var/log/apache2/api.openrailwaymap.org.access.log combined
+    </VirtualHost>
+
+ Tileserver is served by tileserver.js which listens on port 9000, therefore we forward incoming request to this port.
+ Vhost configuration of the API (`tiles.openrailwaymap.org.conf`) looks like this:
+
+    <VirtualHost *:80>
+    ServerName tiles.openrailwaymap.org
+    ServerAlias  a.tiles.openrailwaymap.org b.tiles.openrailwaymap.org c.tiles.openrailwaymap.org
+    ProxyPreserveHost On
+    ProxyPass / http://localhost:9000/
+    ProxyPassReverse / http://localhost:9000/
+    ErrorLog /var/log/apache2/tiles.openrailwaymap.org.error.log
+    LogLevel warn
+    CustomLog /var/log/apache2/tiles.openrailwaymap.org.access.log combined
+    </VirtualHost>
+
+Make sure that your server does not accept request on port 9000 and 9002 from outside (to circumvent the proxy and its logging).
+
+## Setting Up the Tileserver
+
  Now get the code for node-tileserver:
 
     $ cd ..
@@ -173,19 +228,36 @@ Debian/Ubuntu:
     $ node tileserver.js
     $ [Ctrl][A][D]
 
- You need a proxy that routes incoming requests.Configure the parallel running webserver (in most cases Apache) to listen on `127.0.0.1:8080`. A NodeJS proxy will redirect each request either to the webserver or the tileserver. Keep in mind that now 127.0.0.1 will appear as the user IP address - so you may have to change the configuration of geolocation or user statistics. Start the proxy in a screen session:
+## Enabling New Apache Configuration
 
- Remember to change the domains in the script and the configuration of your parallel running webservers. The NodeJS proxy listens on port 80 while parallel webservers should listen on 8080.
+ Now you enable the necessary Apache modules (mod_proxy, mod_proxy_http), enable the new virtual
+ hosts and restart Apache. On Ubuntu/Debian this is done using
 
-    $ cd ..
-    $ screen -R proxy
-    $ node proxy.js
-    $ [Ctrl][A][D]
+    $ sudo a2enmod proxy
+    $ sudo a2enmod proxy_http
+    $ cd /etc/apache2/site-available
+    $ sudo a2ensite www.openrailwaymap.org.conf
+    $ sudo a2ensite api.openrailwaymap.org.conf
+    $ sudo a2ensite tiles.openrailwaymap.org.conf
+
+ On other distros this is done by adding following entries to your Apache configuration (vhost do not have to be enabled because your Apache configuration contains `IncludeOptional /etc/apache2/vhosts.d/*.conf`. Check that the proxy modules are enabled. `httpd.conf should contain
+
+    LoadModule mod_proxy
+    LoadModule mod_proxy_http
+
+ Now reload (maybe restart?) Apache (the daemon is called *httpd* on some systems). On systems using systemd:
+
+    $ sudo systemctl reload apache2.service
+
+ On systems using SysVinit:
+
+    $ sudo /etc/init.d apache2 reload
 
  You can jump back to the session to see log output or to restart the processes:
 
     $ screen -r tileserver
-    $ screen -r proxy
+
+## Keeping Your Data Up To Date
 
  Create a cronjob that executes the following script to update the database and rerender expired tiles:
 
@@ -198,4 +270,4 @@ Debian/Ubuntu:
 
  There are a lot of configuration settings in `renderer/config.json`. See https://github.com/rurseekatze/node-tileserver/blob/master/README.md for further details. The default params are ok for most cases. The tileserver has to be restarted after configuration changes.
 
- It is also necassary to change setting parameters in `import/config.cfg`, `api/config.json` and `proxy.js` depending on your envoironment. More information on detailled configuration will be added in future.
+ It is also necassary to change setting parameters in `import/config.cfg` and `api/config.json` depending on your environment. More information on detailled configuration will be added in future.
