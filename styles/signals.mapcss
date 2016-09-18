@@ -1701,6 +1701,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	set .fi_main_combined_signals;
 }
 
+
 /***********************************************/
 /* FI main light signals which                 */
 /*  - have no railway:signal:main:states=* tag */
@@ -1776,14 +1777,6 @@ node.fi_main_combined_signal_icon
 	font-weight: bold;
 	text-allow-overlap: true;
 	allow-overlap: true;
-}
-
-/************************************/
-/* FI combined block signal type So */
-/************************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="FI:So"]["railway:signal:combined:form"=light]["railway:signal:combined:states"~="FI:Po1"]["railway:signal:combined:states"~="FI:Eo1"]
-{
-	icon-image: "icons/fi/eo1-po1-combined-block-30.png";
 }
 
 /**********************************************************************************/
