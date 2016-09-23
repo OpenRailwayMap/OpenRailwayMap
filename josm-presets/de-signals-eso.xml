@@ -2072,7 +2072,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:resetting_switch:form"
 					value="light" />
 				<key key="railway:signal:resetting_switch:states"
-					value="DE-ESO:so18;DE-ESO:so18b" />
+					value="DE-ESO:ne13a;DE-ESO:ne13b" />
 				<combo key="railway:signal:resetting_switch:height"
 					text="Signal height"
 					de.text="Signalbauform"
