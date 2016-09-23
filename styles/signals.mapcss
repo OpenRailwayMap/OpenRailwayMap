@@ -305,6 +305,19 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=
 	allow-overlap: true;
 }
 
+/**************************/
+/* FI crossing signal To  */
+/**************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"="FI:To"]["railway:signal:crossing:form"=light]
+{
+	z-index: 500;
+	icon-image: "icons/fi/to1-24.png";
+	icon-width: 7;
+	icon-height: 12;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /***************************************************/
 /* DE tram signal "start of train protection" So 1 */
 /***************************************************/
@@ -617,9 +630,47 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE
 	allow-overlap: true;
 }
 
-/********************************************/
+/*******************************************/
+/* FI shunting light signals type Ro (new) */
+/*******************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="FI:Ro"]["railway:signal:shunting:states"~="FI:Ro0"]["railway:signal:shunting:form"=light]
+{
+	z-index: 5000;
+	text: "ref";
+	text-offset: 11;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/fi/ro0-new-24.png";
+	icon-width: 11;
+	icon-height: 12;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/******************************************************/
+/* FI minor light signals type Lo at moveable bridges */
+/******************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="FI:Lo"]["railway:signal:minor:states"~="FI:Lo0"]["railway:signal:minor:form"=light]
+{
+	z-index: 5000;
+	text: "ref";
+	text-offset: 11;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/fi/lo0-24.png";
+	icon-width: 7;
+	icon-height: 12;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***********************************************/
 /* AT shunting light signals (Verschubverbot)  */
-/********************************************/
+/***********************************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"="AT-V2:verschubsignal"]["railway:signal:shunting:form"=light]
 {
 	z-index: 5000;
@@ -1627,11 +1678,95 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-
 	allow-overlap: true;
 }
 
-/*************************/
-/* FI main light signals */
-/* general rules         */
-/*************************/
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=~/^FI:Po(-v)?$/]["railway:signal:main:form"=light]
+/*******************************************/
+/* FI main and combined light signals      */
+/* - general rules applying to all signals */
+/*******************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po"]["railway:signal:main:form"=light]
+{
+	icon-width: 9;
+	icon-height: 15;
+	set .fi_main_combined_signals;
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po-v"]["railway:signal:main:form"=light]
+{
+	icon-width: 7;
+	icon-height: 16;
+	set .fi_main_combined_signals;
+}
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="FI:So"]["railway:signal:combined:form"=light]
+{
+	icon-width: 12;
+	icon-height: 15;
+	set .fi_main_combined_signals;
+}
+
+
+/***********************************************/
+/* FI main light signals which                 */
+/*  - have no railway:signal:main:states=* tag */
+/***********************************************/
+/* new type */
+node["railway:signal:main"="FI:Po"].fi_main_combined_signals
+{
+	icon-image: "icons/fi/po0-new-30.png";
+	set .fi_main_combined_signal_icon;
+}
+/* old type */
+node["railway:signal:main"="FI:Po-v"].fi_main_combined_signals
+{
+	icon-image: "icons/fi/po0-old-32.png";
+	set .fi_main_combined_signal_icon;
+}
+
+/********************************/
+/* FI main light signals which  */
+/*  - can display Po1 (proceed) */
+/********************************/
+/* new type */
+node["railway:signal:main"="FI:Po"]["railway:signal:main:states"~="FI:Po1"].fi_main_combined_signals
+{
+	icon-image: "icons/fi/po1-new-30.png";
+	set .fi_main_combined_signal_icon;
+}
+/* old type */
+node["railway:signal:main"="FI:Po-v"]["railway:signal:main:states"~="FI:Po1"].fi_main_combined_signals
+{
+	icon-image: "icons/fi/po1-old-32.png";
+	set .fi_main_combined_signal_icon;
+}
+
+/*********************************************/
+/* FI main light signals which               */
+/*  - can display Po2 (proceed at low speed) */
+/*********************************************/
+/* new type */
+node["railway:signal:main"="FI:Po"]["railway:signal:main:states"~="FI:Po2"].fi_main_combined_signals
+{
+	icon-image: "icons/fi/po2-new-30.png";
+	set .fi_main_combined_signal_icon;
+}
+/* old type */
+node["railway:signal:main"="FI:Po-v"]["railway:signal:main:states"~="FI:Po2"].fi_main_combined_signals
+{
+	icon-image: "icons/fi/po2-old-32.png";
+	set .fi_main_combined_signal_icon;
+}
+
+/************************************/
+/* FI combined block signal type So */
+/************************************/
+node["railway:signal:combined"="FI:So"]["railway:signal:combined:states"~="FI:Po1"]["railway:signal:combined:states"~="FI:Eo1"].fi_main_combined_signals
+{
+	icon-image: "icons/fi/eo1-po1-combined-block-30.png";
+	set .fi_main_combined_signal_icon;
+}
+
+/************************************************/
+/* FI main and combined light signals           */
+/* - more general rules applying to all signals */
+/************************************************/
+node.fi_main_combined_signal_icon
 {
 	z-index: 10000;
 	text: "ref";
@@ -1642,61 +1777,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"=~/^F
 	font-weight: bold;
 	text-allow-overlap: true;
 	allow-overlap: true;
-}
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po"]["railway:signal:main:form"=light]
-{
-	icon-width: 9;
-	icon-height: 15;
-}
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po-v"]["railway:signal:main:form"=light]
-{
-	icon-width: 7;
-	icon-height: 16;
-}
-
-/***********************************************/
-/* FI main light signals which                 */
-/*  - have no railway:signal:main:states=* tag */
-/***********************************************/
-/* new type */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po"]["railway:signal:main:form"=light]
-{
-	icon-image: "icons/fi/po0-new-30.png";
-}
-/* old type */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po-v"]["railway:signal:main:form"=light]
-{
-	icon-image: "icons/fi/po0-old-32.png";
-}
-
-/********************************/
-/* FI main light signals which  */
-/*  - can display Po1 (proceed) */
-/********************************/
-/* new type */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po"]["railway:signal:main:form"=light]["railway:signal:main:states"~="FI:Po1"]
-{
-	icon-image: "icons/fi/po1-new-30.png";
-}
-/* old type */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po-v"]["railway:signal:main:form"=light]["railway:signal:main:states"~="FI:Po1"]
-{
-	icon-image: "icons/fi/po1-old-32.png";
-}
-
-/*********************************************/
-/* FI main light signals which               */
-/*  - can display Po2 (proceed at low speed) */
-/*********************************************/
-/* new type */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po"]["railway:signal:main:form"=light]["railway:signal:main:states"~="FI:Po2"]
-{
-	icon-image: "icons/fi/po2-new-30.png";
-}
-/* old type */
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="FI:Po-v"]["railway:signal:main:form"=light]["railway:signal:main:states"~="FI:Po2"]
-{
-	icon-image: "icons/fi/po2-old-32.png";
 }
 
 /**********************************************************************************/

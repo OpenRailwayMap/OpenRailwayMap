@@ -260,6 +260,81 @@
 			"minzoom": 13,
 			"symbol": "<text x=\"0\" y=\"11\" style=\"font-family: Arial; font-size: 11px; fill: black; stroke: #008206; stroke-width: 0.5;\">Dormagen Df</text>",
 			"caption": "Signal box"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/po0-new-15.png",
+			"caption": "Finnish main signal new type (aspects not given)"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/po1-new-15.png",
+			"caption": "Finnish main signal new type with Po&nbsp;1"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/po2-new-15.png",
+			"caption": "Finnish main signal new type with Po&nbsp;2"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/po0-old-16.png",
+			"caption": "Finnish main signal old type (aspects not given)"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/po1-old-16.png",
+			"caption": "Finnish main signal old type with Po&nbsp;1"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/po2-old-16.png",
+			"caption": "Finnish main signal old type with Po&nbsp;2"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/eo0-new-15.png",
+			"caption": "Finnish distant signal new type (aspects not given)"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/eo1-new-15.png",
+			"caption": "Finnish distant signal new type with Eo&nbsp;1"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/eo2-new-15.png",
+			"caption": "Finnish distant signal new type with Eo&nbsp;2"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/eo0-old-10.png",
+			"caption": "Finnish distant signal old type (aspects not given)"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/eo1-old-10.png",
+			"caption": "Finnish distant signal old type with Eo&nbsp;1"
+		},
+		{
+			"minzoom": 14,
+			"icon": "icons/fi/eo1-po1-combined-block-15.png",
+			"caption": "Finnish block signal type So"
+		},
+		{
+			"minzoom": 15,
+			"icon": "icons/fi/to1-12.png",
+			"caption": "Finnish crossing signal type To"
+		},
+		{
+			"minzoom": 17,
+			"icon": "icons/fi/ro0-new-12.png",
+			"caption": "Finnish shunting signal type Ro"
+		},
+		{
+			"minzoom": 17,
+			"icon": "icons/fi/lo0-12.png",
+			"caption": "Finnish minor signal type Lo"
 		}
 	]
 }
