@@ -148,12 +148,14 @@ way["construction:voltage"]["construction:frequency"].ectracks
 	dashes: 5,5;
 }
 
-way[!electrified].tracks,
-way[electrified!=no][!voltage].tracks,
-way[electrified!=no][!frequency].tracks
-{
-	z-index: 0;
-	color: gray;
+@supports not (user-agent: josm) {
+	way[!electrified].tracks,
+	way[electrified!=no][!voltage].tracks,
+	way[electrified!=no][!frequency].tracks
+	{
+		z-index: 0;
+		color: gray;
+	}
 }
 
 way[electrified=no].tracks,
