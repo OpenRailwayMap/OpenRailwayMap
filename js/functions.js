@@ -41,22 +41,123 @@ function updateLegend(id, style)
 }
 
 // draws the legend entries on canvas
-function drawLegendIcons(cnt, zoom, st) {
+function drawLegendIcons(zoom, st, root) {
 	MapCSS.preloadSpriteImage(st, '../styles/' + st + '.png');
 	var style = { styles: [st] };
-	for (i = 0; i <= cnt; i++) {
-		var element = document.getElementById('legend-' + i);
-		var data = element.dataset.geojson;
 
-		if (!data) {
-			console.debug("found", 'legend-' + i, " but element has no GeoJSON data");
-			continue;
+	var handler = function(request)
+	{
+		var div = gEBI('legend-container');
+
+		var response = request.status === 200 ? request.responseText : '';
+		if (!response || response.length <= 0 || response == "NULL") {
+			var p = document.createElement('p');
+			p.appendChild(document.createTextNode('Legend not available for this style.'));
+			div.appendChild(p);
+			setIframeElementHeight(window.frameElement);
+			return;
 		}
 
-		data = '{"features":' + data + ',"granularity":100}';
+		var data = JSON.parse(response);
+		var table = document.createElement('table');
 
-		Kothic.render(element, JSON.parse(data), zoom, style);
+		var writeLine = function(lineheight, caption, features)
+		{
+			var tr = document.createElement('tr');
+			var td0 = document.createElement('td');
+			var td1 = document.createElement('td');
+
+			var canvas = document.createElement('canvas');
+			canvas.width = 80;
+			canvas.height = lineheight;
+			td0.appendChild(canvas);
+			tr.appendChild(td0);
+			var caption = document.createTextNode(caption);
+			td1.appendChild(caption);
+			tr.appendChild(td1);
+
+			table.appendChild(tr);
+
+			var obj = {};
+			obj.features = features;
+			obj.granularity = 100;
+			Kothic.render(canvas, obj, zoom, style);
+		}
+
+		for (var i = 0; i < data.mapfeatures.length; i++) {
+			var feature = data.mapfeatures[i];
+
+			if (feature.minzoom && feature.minzoom > zoom)
+				continue;
+			if (feature.maxzoom && feature.maxzoom < zoom)
+				continue;
+
+			var lh = feature.lineheight || 16;
+
+			if (feature.heading) {
+				var tr = document.createElement('tr');
+				var td0 = document.createElement('td');
+				td0.colspan = 2;
+				td0.className = 'section';
+				var caption = document.createTextNode(feature.heading);
+				td0.appendChild(caption);
+				tr.appendChild(td0);
+				table.appendChild(tr);
+			} else if (feature.replace) {
+				var k, m, n, cp, fe;
+				for (var j = 0; j < feature.replace.length; j++) {
+					cp = feature.caption;
+					// replace caption here instead of doing it below as that
+					// would try to do the same replacement for every entry in
+					// features again.
+					for (k in feature.replace[j]) {
+						cp = cp.replace(k, feature.replace[j][k]);
+					}
+					// sadly one can't just copy feature.features here as that would be just a
+					// reference to the original object, so the original would be modified, too
+					fe = [];
+					for (m = 0; m < feature.features.length; m++) {
+						fe[m] = {};
+						fe[m].type = feature.features[m].type;
+						fe[m].coordinates = feature.features[m].coordinates;
+						// again, no deep copy
+						fe[m].properties = {};
+						for (n in feature.features[m].properties) {
+							fe[m].properties[n] = feature.features[m].properties[n];
+							for (k in feature.replace[j]) {
+								fe[m].properties[n] = fe[m].properties[n].replace(k, feature.replace[j][k]);
+							}
+						}
+					}
+					writeLine(lh, cp, fe);
+				}
+			} else {
+				writeLine(lh, feature.caption, feature.features);
+			}
+		}
+
+		if (table.firstChild) {
+			div.appendChild(table);
+		} else {
+			table.remove();
+			var p = document.createElement('p');
+			p.appendChild(document.createTextNode('Nothing to see in this zoom level. Please zoom in.'));
+			div.appendChild(p);
+		}
+
+		setIframeElementHeight(window.frameElement);
 	}
+
+	var request = new XMLHttpRequest();
+
+	request.open("GET", root + '../styles/' + st + '.json', true);
+	request.onreadystatechange = function()
+	{
+		if (request.readyState === 4)
+			handler(request);
+	};
+	request.send(null);
+
 }
 
 // renews the permalink url after zooming, changing style or dragging the map
@@ -201,11 +302,9 @@ function queryLatLonZoom(lat, lon, zoom)
 	return queryLatLon(lat, lon)+"&zoom="+zoom;
 }
 
-
-// resize the height of an iframe with a given id to the height of the content
-function setIframeHeight(id)
+// resize the height of a given iframe to the height of the content
+function setIframeElementHeight(legend)
 {
-	var legend = gEBI(id);
 	var doc = legend.contentDocument ? legend.contentDocument : legend.contentWindow.document;
 	legend.style.visibility = 'hidden';
 	legend.style.height = "10px";
@@ -213,6 +312,12 @@ function setIframeHeight(id)
 	var html = doc.documentElement;
 	legend.style.height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)+4+"px";
 	legend.style.visibility = 'visible';
+}
+
+// resize the height of an iframe with a given id to the height of the content
+function setIframeHeight(id)
+{
+	setIframeElementHeight(gEBI(id));
 }
 
 // check whether the visitor uses a mobile device or not

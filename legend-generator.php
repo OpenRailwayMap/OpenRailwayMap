@@ -40,61 +40,10 @@
 		<script type="text/javascript" src="js/functions.js"></script>
 		</script>
 	</head>
-	<?php
-		$output = "";
-
-		function writeLine($index, $height, $payload, $caption)
-		{
-			$line = "\t\t\t<tr><td";
-
-			if ($height) {
-				$line .= ' style="height: ' . $height . 'px;"';
-			} else {
-				$height = '16';
-			}
-
-			return $line . '><canvas width="80" height="' . $height . '" id="legend-' . $index
-					. '" data-geojson=' . "'" . $payload
-					. "'></canvas></td>\n\t\t\t\t<td>"
-					. htmlspecialchars(_($caption)) . "</td></tr>\n";
-		}
-
-		if (file_exists($filename))
-		{
-			$legend = json_decode(file_get_contents($filename), true);
-			$cnt = -1;
-
-			foreach ($legend['mapfeatures'] as $feature)
-			{
-				if ($zoom >= $feature['minzoom'] && (!isset($feature['maxzoom']) || $zoom <= $feature['maxzoom']) && (isset($feature['features']) || isset($feature['heading'])))
-				{
-					$lineheight = isset($feature['lineheight']) ? $feature['lineheight'] : '';
-
-					if (isset($feature['heading'])) {
-						$output .= "\t\t\t<tr><td colspan=\"2\" class=\"section\">" . htmlspecialchars(_($feature['heading'])) . "</td></tr>\n";
-					} else if (isset($feature['replace'])) {
-						foreach ($feature['replace'] as $replace) {
-							$caption = str_replace(array_keys($replace), array_values($replace), _($feature['caption']));
-							$payload = str_replace(array_keys($replace), array_values($replace), json_encode($feature['features']));
-							$output .= writeLine(++$cnt, $lineheight, $payload, $caption);
-						}
-					} else {
-						$output .= writeLine(++$cnt, $lineheight, json_encode($feature['features']), _($feature['caption']));
-					}
-				}
-			}
-
-			// if no features are rendered in this zoom level, show message
-			if ($output == "")
-				$output = "<body>\n<p>" . _('Nothing to see in this zoom level. Please zoom in.') . "</p>\n";
-			else
-				$output = "<body onload=\"drawLegendIcons($cnt, $zoom, '" . $_GET['style'] . "')\">\n\t\t<table>\n" . $output . "\t\t</table>\n";
-		}
-		// if legend cannot be loaded
-		else
-			$output = "<body>\n\t\t<p>" . _('Legend not available for this style.') . "</p>\n";
-
-		echo $output;
-	?>
+	<body onload="drawLegendIcons(<?php
+		echo "$zoom, '" . $_GET['style'] . "', '" . $urlbase . "'";
+	?>)">
+		<div id='legend-container'>
+		</div>
 	</body>
 </html>
