@@ -19,9 +19,13 @@ html,body
 
 td
 {
+	margin: 0;
+}
+
+td:first-child
+{
 	width: 80px;
 	height: 16px;
-	margin: 0px;
 }
 
 svg

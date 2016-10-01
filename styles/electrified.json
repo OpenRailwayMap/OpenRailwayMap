@@ -30,118 +30,40 @@
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#FF79B8' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "Less than 750V&nbsp;="
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#F930FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "750V&nbsp;="
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#D033FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "750 &ndash; 1000V&nbsp;="
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#5C1CCB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "1kV&nbsp;="
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#007ACB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "1 &ndash; 1.5kV&nbsp;="
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#0098CB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "1.5kV&nbsp;="
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#00B7CB' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "1.5 &ndash; 3kV&nbsp;="
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#0000FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "3kV&nbsp;="
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#1969FF' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "More than 3kV&nbsp;="
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#97FF2F' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "Less than 15kV&nbsp;~"
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#00FF00' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "15kV 16&#8532;Hz"
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#00CB66' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "15kV 16.7Hz"
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#F1F100' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "15 &ndash; 25kV&nbsp;~"
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#FF9F19' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "At least 25kV&nbsp;~"
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#FF0000' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "25kV 50Hz&nbsp;~"
-		},
-		{
-			"minzoom": 2,
-			"symbol": "<g fill='none' stroke='#C00000' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
-			"caption": "25kV 60Hz&nbsp;~"
+			"replace": [
+				{ "%COLOR%":"FF79B8","%CAPTION%":"Less than 750V =" },
+				{ "%COLOR%":"F930FF","%CAPTION%":"750V =" },
+				{ "%COLOR%":"D033FF","%CAPTION%":"750 – 1000V =" },
+				{ "%COLOR%":"5C1CCB","%CAPTION%":"1kV =" },
+				{ "%COLOR%":"007ACB","%CAPTION%":"1 – 1.5kV =" },
+				{ "%COLOR%":"0098CB","%CAPTION%":"1.5kV =" },
+				{ "%COLOR%":"00B7CB","%CAPTION%": "1.5 – 3kV ="},
+				{ "%COLOR%":"0000FF","%CAPTION%": "3kV ="},
+				{ "%COLOR%":"1969FF","%CAPTION%": "More than 3kV ="},
+				{ "%COLOR%":"97FF2F","%CAPTION%": "Less than 15kV ~"},
+				{ "%COLOR%":"00FF00","%CAPTION%": "15kV 16⅔Hz ~"},
+				{ "%COLOR%":"00CB66","%CAPTION%": "15kV 16.7H ~"},
+				{ "%COLOR%":"F1F100","%CAPTION%": "15 – 25kV ~"},
+				{ "%COLOR%":"FF9F19","%CAPTION%": "At least 25kV ~"},
+				{ "%COLOR%":"FF0000","%CAPTION%": "25kV 50Hz ~"},
+				{ "%COLOR%":"C00000","%CAPTION%": "25kV 60Hz ~"}
+			],
+			"symbol": "<g fill='none' stroke='#%COLOR%' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
+			"caption": "%CAPTION%"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/el1v-28.png",
-			"caption": "El 1 Ausschaltsignal erwarten"
-		},
-		{
-			"minzoom": 17,
-			"icon": "icons/de/el1-28.png",
-			"caption": "El 1 Ausschaltsignal"
-		},
-		{
-			"minzoom": 17,
-			"icon": "icons/de/el2-28.png",
-			"caption": "El 2 Einschaltsignal"
-		},
-		{
-			"minzoom": 17,
-			"icon": "icons/de/el3-28.png",
-			"caption": "El 3 \"Bügel ab\"-Ankündigungssignal"
-		},
-		{
-			"minzoom": 17,
-			"icon": "icons/de/el4-28.png",
-			"caption": "El 4 \"Bügel ab\"-Signal"
-		},
-		{
-			"minzoom": 17,
-			"icon": "icons/de/el5-28.png",
-			"caption": "El 5 \"Bügel an\"-Signal"
-		},
-		{
-			"minzoom": 17,
-			"icon": "icons/de/el6-28.png",
-			"caption": "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
+			"replace": [
+				{ "%SIGNAL%":"el1v", "%CAPTION%":"El 1v Ausschaltsignal erwarten" },
+				{ "%SIGNAL%":"el1", "%CAPTION%":"El 1 Ausschaltsignal" },
+				{ "%SIGNAL%":"el2", "%CAPTION%":"El 2 Einschaltsignal" },
+				{ "%SIGNAL%":"el3", "%CAPTION%":"El 3 \"Bügel ab\"-Ankündigungssignal" },
+				{ "%SIGNAL%":"el4", "%CAPTION%":"El 4 \"Bügel ab\"-Signal" },
+				{ "%SIGNAL%":"el5", "%CAPTION%":"El 5 \"Bügel an\"-Signal" },
+				{ "%SIGNAL%":"el6", "%CAPTION%":"El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer" }
+			],
+			"icon": "icons/de/%SIGNAL%-28.png",
+			"caption": "%CAPTION%"
 		}
 	]
 }
