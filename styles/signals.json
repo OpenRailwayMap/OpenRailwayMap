@@ -140,10 +140,12 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"heading": "Germany"
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,60],
@@ -158,6 +160,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"lineheight": 20,
 			"features": [{
 				"type": "Point",
@@ -184,6 +187,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"lineheight": 28,
 			"features": [{
 				"type": "Point",
@@ -199,6 +203,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"lineheight": 28,
 			"features": [{
 				"type": "Point",
@@ -225,6 +230,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -239,6 +245,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [40,50],
@@ -264,6 +271,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [35,50],
@@ -288,6 +296,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [35,50],
@@ -314,6 +323,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [35,50],
@@ -340,6 +350,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -354,6 +365,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [
 				{
 				"type": "Point",
@@ -379,6 +391,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [
 				{
 				"type": "Point",
@@ -414,6 +427,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE-HH" ],
 			"features": [
 				{
 				"type": "Point",
@@ -438,6 +452,7 @@
 		},
 		{
 			"minzoom": 17,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [40,60],
@@ -462,6 +477,7 @@
 		},
 		{
 			"minzoom": 17,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [40,60],
@@ -486,6 +502,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -501,6 +518,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -515,6 +533,7 @@
 		},
 		{
 			"minzoom": 17,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -529,6 +548,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"lineheight": 20,
 			"features": [{
 				"type": "Point",
@@ -543,6 +563,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"lineheight": 20,
 			"features": [{
 				"type": "Point",
@@ -566,6 +587,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"lineheight": 20,
 			"features": [{
 				"type": "Point",
@@ -589,6 +611,7 @@
 		},
 		{
 			"minzoom": 15,
+			"bbox": [ "DE" ],
 			"lineheight": 20,
 			"features": [{
 				"type": "Point",
@@ -612,6 +635,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -626,6 +650,7 @@
 		},
 		{
 			"minzoom": 15,
+			"bbox": [ "DE" ],
 			"lineheight": 30,
 			"features": [{
 				"type": "Point",
@@ -651,6 +676,7 @@
 		},
 		{
 			"minzoom": 17,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -665,6 +691,7 @@
 		},
 		{
 			"minzoom": 17,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -680,6 +707,7 @@
 		},
 		{
 			"minzoom": 17,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -694,6 +722,7 @@
 		},
 		{
 			"minzoom": 17,
+			"bbox": [ "DE" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -708,10 +737,12 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "FI" ],
 			"heading": "Finland"
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "FI" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [40,60],
@@ -735,6 +766,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "FI" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [40,60],
@@ -760,6 +792,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "FI" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [40,60],
@@ -785,6 +818,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "FI" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [40,60],
@@ -808,6 +842,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "FI" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [40,60],
@@ -833,6 +868,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "FI" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,60],
@@ -848,6 +884,7 @@
 		},
 		{
 			"minzoom": 14,
+			"bbox": [ "FI" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -863,6 +900,7 @@
 		},
 		{
 			"minzoom": 15,
+			"bbox": [ "FI" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -877,6 +915,7 @@
 		},
 		{
 			"minzoom": 17,
+			"bbox": [ "FI" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
@@ -892,6 +931,7 @@
 		},
 		{
 			"minzoom": 17,
+			"bbox": [ "FI" ],
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],

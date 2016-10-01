@@ -16,6 +16,7 @@
 	includeLocale($lang);
 
 	$zoom = isset($_GET['zoom']) ? ($_GET['zoom']) : (null);
+	$bbox = isset($_GET['bounds']) ? ($_GET['bounds']) : (null);
 	$filename = isset($_GET['style']) ? ("styles/".$_GET['style'].".json") : (null);
 ?>
 <!DOCTYPE html>
@@ -24,6 +25,7 @@
 		<title><?=$appname?></title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="css/legend.css" />
+		<script type="text/javascript" src="js/leaflet.js"></script>
 		<script type="text/javascript" src="renderer/kothic/kothic.js"></script>
 		<script type="text/javascript" src="renderer/kothic/renderer/path.js"></script>
 		<script type="text/javascript" src="renderer/kothic/renderer/line.js"></script>
@@ -43,7 +45,7 @@
 		?>
 	</head>
 	<body onload="drawLegendIcons(<?php
-		echo "$zoom, '" . $_GET['style'] . "', '" . $urlbase . "'";
+		echo "$zoom, '" . $_GET['style'] . "', '" . $urlbase . "', '" . $bbox . "'";
 	?>)">
 		<div id='legend-container'>
 		</div>

@@ -40,6 +40,7 @@ function createMap(embed)
 		{
 			map.on('moveend', function(e)
 			{
+				updateLegend("legend", railmap.selectedStyle);
 				updatePermalink(railmap.selectedStyle);
 			});
 		}

@@ -37,6 +37,7 @@ function createMap(embed)
 
 		map.on('moveend', function(e)
 		{
+			updateLegend("legend", MapCSS.availableStyles[0]);
 			updatePermalink(MapCSS.availableStyles[0]);
 		});
 

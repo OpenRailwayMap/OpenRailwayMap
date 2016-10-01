@@ -37,13 +37,15 @@ function getUserLang()
 // reload the legend after changing zoomlevel or stylesheet
 function updateLegend(id, style)
 {
-	gEBI(id).src = window.openrailwaymap.root+"legend-generator.php?zoom="+map.getZoom()+"&style="+style+"&lang="+params['lang'];
+	gEBI(id).src = window.openrailwaymap.root + 'legend-generator.php?zoom=' + map.getZoom() + '&style=' + style + '&lang=' + params['lang'] + '&bounds=' + map.getBounds().toBBoxString();
 }
 
 // draws the legend entries on canvas
-function drawLegendIcons(zoom, st, root) {
+function drawLegendIcons(zoom, st, bbox) {
 	MapCSS.preloadSpriteImage(st, '../styles/' + st + '.png');
 	var style = { styles: [st] };
+	var table = gEBI('legend-table');
+	var bounds = bbox ? JSON.parse('[' + bbox + ']') : [];
 
 	window.openrailwaymap = {
 		'root': params['urlbase']
@@ -91,6 +93,23 @@ function drawLegendIcons(zoom, st, root) {
 				Kothic.render(canvas, obj, zoom, style);
 			}
 
+			// create intersection list for all given boxes
+			var matched_boxes = [];
+			if (bounds) {
+				var mapbounds = L.latLngBounds(L.latLng(bounds[0], bounds[1]), L.latLng(bounds[2], bounds[3]));
+				for (var key in data.bboxes) {
+					if (!data.bboxes.hasOwnProperty(key))
+						continue;
+
+					var fbox = data.bboxes[key];
+					if (Array.isArray(fbox) && fbox.length === 4) {
+						var fbounds = L.latLngBounds(L.latLng(fbox[0], fbox[1]), L.latLng(fbox[2], fbox[3]));
+						if (fbounds && mapbounds.intersects(fbounds))
+							matched_boxes.push(key);
+					}
+				}
+			}
+
 			for (var i = 0; i < data.mapfeatures.length; i++) {
 				var feature = data.mapfeatures[i];
 
@@ -98,6 +117,20 @@ function drawLegendIcons(zoom, st, root) {
 					continue;
 				if (feature.maxzoom && feature.maxzoom < zoom)
 					continue;
+
+				var fboxes = feature.bbox;
+				if (fboxes && fboxes.length >= 0) {
+					// if feature has a non-empty bbox, check if is in the list of those that
+					// intersect the currently visible area
+					var inbounds = false;
+					for (var j = 0; (j < fboxes.length) && !inbounds; j++) {
+						inbounds = (matched_boxes.findIndex(function(element) {
+									return element === fboxes[j];
+								}) >= 0);
+					}
+					if (!inbounds)
+						continue;
+				}
 
 				var lh = feature.lineheight || 16;
 
