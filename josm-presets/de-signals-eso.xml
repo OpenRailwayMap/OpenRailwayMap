@@ -342,8 +342,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="DE-ESO:dr:zs1;DE-ESO:db:zs12"
-						display_values="Ersatzsignal;M-Tafel"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs12;no"
+						display_values="Ersatzsignal;M-Tafel;kein Ersatzsignal"
 						/>
 					<space />
 					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
