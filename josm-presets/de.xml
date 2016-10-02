@@ -1876,8 +1876,24 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="water_tower" />
 				<key key="man_made"
 					value="water_tower" />
-				<key key="building"
-					value="yes" />
+				<check key="building"
+					text="Building"
+					de.text="Gebäude"
+					/>
+				<combo key="operator"
+					text="operator"
+					de.text="Betreiber"
+					values="DB Netz AG,ÖBB-Infrastruktur AG"
+					default=""
+					/>
+				<text key="height"
+					text="Tower height [m]"
+					de.text="Turmhöhe [m]"
+					/>
+				<text key="capacity"
+					text="Capacity [m³]"
+					de.text="Fassungsvermögen [m³]"
+					/>
 			</item>
 			<item name="Coaling Facility" de.name="Bekohlungsanlage" type="node,closedway">
 				<label text="Coaling Facility" de.text="Bekohlungsanlage" />
