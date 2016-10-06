@@ -51,14 +51,22 @@ way|z9-[railway=razed]["razed:railway"!=light_rail]["razed:railway"!=subway]["ra
 way|z10-[railway=razed]["razed:railway"=light_rail],
 way|z10-[railway=razed]["razed:railway"=subway],
 way|z11-[railway=razed]["razed:railway"=tram],
-way|z9-[railway=proposed]["proposed:railway"!=light_rail]["proposed:railway"!=subway]["proposed:railway"!=tram],
+way|z9-[railway=proposed]["proposed:railway"]["proposed:railway"!="light_rail"]["proposed:railway"!="subway"]["proposed:railway"!="tram"]["proposed:railway"!="platform"],
 way|z10-[railway=proposed]["proposed:railway"=light_rail],
 way|z10-[railway=proposed]["proposed:railway"=subway],
 way|z11-[railway=proposed]["proposed:railway"=tram],
-way|z9-[railway=construction]["construction:railway"!=light_rail]["construction:railway"!=subway]["construction:railway"!=tram],
+way|z9-[railway=proposed]["proposed"]["proposed"!="light_rail"]["proposed"!="subway"]["proposed"!="tram"]["proposed"!="platform"],
+way|z10-[railway=proposed]["proposed"="light_rail"],
+way|z10-[railway=proposed]["proposed"="subway"],
+way|z11-[railway=proposed]["proposed"="tram"],
+way|z9-[railway=construction]["construction:railway"]["construction:railway"!="light_rail"]["construction:railway"!="subway"]["construction:railway"!="tram"]["construction:railway"!="platform"],
 way|z10-[railway=construction]["construction:railway"=light_rail],
 way|z10-[railway=construction]["construction:railway"=subway],
-way|z11-[railway=construction]["construction:railway"=tram]
+way|z11-[railway=construction]["construction:railway"=tram],
+way|z9-[railway=construction]["construction"]["construction"!="light_rail"]["construction"!="subway"]["construction"!="tram"]["construction"!="platform"],
+way|z10-[railway=construction]["construction"="light_rail"],
+way|z10-[railway=construction]["construction"="subway"],
+way|z11-[railway=construction]["construction"="tram"]
 {
 	set .tracks;
 }
@@ -225,6 +233,8 @@ way[!usage][service=spur].tracks
 /*********************************************/
 /* branch railways, service tag not rendered */
 /*********************************************/
+way[railway=construction]["construction:railway"=rail][usage=branch].tracks,
+way[railway=proposed]["proposed:railway"=rail][usage=branch].tracks,
 way[usage=branch][!service].tracks
 {
 	color: #DACA00;
@@ -233,6 +243,10 @@ way[usage=branch][!service].tracks
 /*******************************************/
 /* main railways, service tag not rendered */
 /*******************************************/
+/** shared between railway=proposed and railway=construction **/
+/*  show the color of what the railway will become            */
+way[railway=construction]["construction:railway"=rail][usage=main].tracks,
+way[railway=proposed]["proposed:railway"=rail][usage=main].tracks,
 way[usage=main][!service].tracks
 {
 	color: #FF8100;
@@ -241,6 +255,8 @@ way[usage=main][!service].tracks
 /************************************************/
 /* highspeed railways, service tag not rendered */
 /************************************************/
+way[railway=construction]["construction:railway"=rail][usage=main][highspeed=yes].tracks,
+way[railway=proposed]["proposed:railway"=rail][usage=main][highspeed=yes].tracks,
 way[usage=main][highspeed=yes][!service].tracks
 {
 	color: #FF0C00;
@@ -264,7 +280,9 @@ way[usage=industrial][service=crossover].tracks
 /*********************/
 way[railway=light_rail].tracks,
 way[railway=construction]["construction:railway"=light_rail].tracks,
-way[railway=proposed]["proposed:railway"=light_rail].tracks
+way[railway=construction]["construction"=light_rail].tracks,
+way[railway=proposed]["proposed:railway"=light_rail].tracks,
+way[railway=proposed]["proposed"=light_rail].tracks
 {
        color: #00BD14;
 }
@@ -274,7 +292,9 @@ way[railway=proposed]["proposed:railway"=light_rail].tracks
 /*****************/
 way[railway=subway].tracks,
 way[railway=construction]["construction:railway"=subway].tracks,
-way[railway=proposed]["proposed:railway"=subway].tracks
+way[railway=construction]["construction"=subway].tracks,
+way[railway=proposed]["proposed:railway"=subway].tracks,
+way[railway=proposed]["proposed"=subway].tracks
 {
        color: #0300C3;
 }
@@ -284,7 +304,9 @@ way[railway=proposed]["proposed:railway"=subway].tracks
 /***************/
 way[railway=tram].tracks,
 way[railway=construction]["construction:railway"=tram].tracks,
-way[railway=proposed]["proposed:railway"=tram].tracks
+way[railway=construction]["construction"=tram].tracks,
+way[railway=proposed]["proposed:railway"=tram].tracks,
+way[railway=proposed]["proposed"=tram].tracks
 {
        color: #D877B8;
 }

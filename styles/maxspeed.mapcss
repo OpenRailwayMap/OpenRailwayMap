@@ -64,9 +64,12 @@ way[!maxspeed].tracks
 	kothicjs-ignore-layer: true;
 }
 
-way|z9-["construction:railway"="narrow_gauge"],
-way|z9-["construction:railway"="preserved"],
-way|z10-["construction:railway"="rail"]
+way|z9-["railway"="construction"]["construction:railway"="narrow_gauge"],
+way|z9-["railway"="construction"]["construction:railway"="preserved"],
+way|z10-["railway"="construction"]["construction:railway"="rail"],
+way|z9-["railway"="construction"]["construction"="narrow_gauge"],
+way|z9-["railway"="construction"]["construction"="preserved"],
+way|z10-["railway"="construction"]["construction"="rail"]
 {
 	set .chstracks;
 }
@@ -83,9 +86,12 @@ way.dhstracks,
 way|z10-["disused:railway"="tram"],
 way|z10-["disused:railway"="subway"],
 way|z10-["disused:railway"="light_rail"],
-way|z10-["construction:railway"="tram"],
-way|z10-["construction:railway"="subway"],
-way|z10-["construction:railway"="light_rail"]
+way|z10-["railway"="construction"]["construction:railway"="tram"],
+way|z10-["railway"="construction"]["construction:railway"="subway"],
+way|z10-["railway"="construction"]["construction:railway"="light_rail"],
+way|z10-["railway"="construction"]["construction"="tram"],
+way|z10-["railway"="construction"]["construction"="subway"],
+way|z10-["railway"="construction"]["construction"="light_rail"]
 {
 	set .dtracks;
 }
