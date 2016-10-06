@@ -6,9 +6,7 @@ Installation Instructions
 CentOS:
 
     $ yum update
-    $ yum install gzip zlib zlib-devel postgresql-server postgresql-libs postgresql postgresql-common postgresql-devel postgis unzip gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel npm nodejs git python wget php php-php-gettext php-pgsql python-ply python-imaging pycairo python-cairosvg pygtk2 pygtk2-devel make
-    # in case you want to build osm2pgsql from sources
-    $ yum install cmake
+    $ yum install gzip zlib zlib-devel postgresql postgresql-contrib postgresql-server postgresql-libs postgresql-common postgresql-devel postgis unzip gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel npm nodejs git python wget php php-php-gettext php-pgsql python-ply python-imaging pycairo python-cairosvg pygtk2 pygtk2-devel make cmake boost-devel expat-devel bzip2-devel geos-devel proj-devel proj-epsg lua-devel gcc-c++
 
 Debian/Ubuntu:
 
@@ -35,8 +33,6 @@ Debian/Ubuntu:
 
  First install all dependencies. Depending on your operating system and environment, you may use another command like apt-get. Package names can differ from the names mentioned below:
 
-
-
  For system-specific installation of Cairo view the [node-canvas Wiki](https://github.com/LearnBoost/node-canvas/wiki/_pages).
 
  Install Leaflet:
@@ -55,7 +51,7 @@ Debian/Ubuntu:
     $ cd osm2pgsql-build
     $ cmake ../osm2pgsql
     $ make
-    $ cp osm2pgsql /usr/local/bin
+    $ sudo make install
     $ cd ..
     $ rm -fr osm2pgsql osm2pgsql-build
 
@@ -63,9 +59,9 @@ Debian/Ubuntu:
 
     $ git clone https://gitlab.com/osm-c-tools/osmctools.git
     $ cd osmctools
-    $ gcc osmupdate.c -o ../osmupdate
-    $ gcc osmfilter.c -O3 -o ../osmfilter
-    $ gcc osmconvert.c -lz -O3 -o ../osmconvert
+    $ gcc src/osmupdate.c -o osmupdate
+    $ gcc src/osmfilter.c -O3 -o osmfilter
+    $ gcc src/osmconvert.c -lz -O3 -o osmconvert
     $ cp osmupdate osmfilter osmconvert /usr/local/bin
     $ cd ..
     $ rm -fr osmctools
@@ -74,16 +70,17 @@ Debian/Ubuntu:
 
  Set up the PostgreSQL database with PostGIS and hstore extensions:
 
-    $ su postgres
-    $ createuser railmap
-    $ createdb -E UTF8 -O railmap railmap
-    $ createlang plpgsql railmap # not necessary on Postgres >= 9.3
-    $ psql -d railmap -f /usr/share/pgsql/contrib/postgis-64.sql # Postgres < 9.x
-    $ psql -d railmap -f /usr/share/pgsql/contrib/postgis-1.5/spatial_ref_sys.sql # Postgres < 9.x
-    $ psql -d railmap -c "CREATE extension postgis;" # Postgres >= 9.x
-    $ psql -d railmap -f /usr/share/pgsql/contrib/hstore.sql # Postgres < 9.x
-    $ psql -d railmap -c "CREATE extension hstore;" # Postgres >= 9.x
-    $ psql -d railmap -f osm2pgsql/900913.sql # not necessary for PostGIS >= 2.x
+    $ sudo -u postgres createuser -P -d railmap
+    $ sudo -u postgres createdb -E UTF8 -O railmap railmap
+
+    $ sudo -u postgres psql -d railmap -c "CREATE EXTENSION postgis;"
+    $ sudo -u postgres psql -d railmap -c "CREATE EXTENSION postgis_topology;"
+    $ sudo -u postgres psql -d railmap -c "CREATE EXTENSION postgis_sfcgal;"
+    $ sudo -u postgres psql -d railmap -c "CREATE EXTENSION hstore;"
+
+    $ sudo service postgresql-9.5 initdb
+    $ sudo service postgresql-9.5 start
+    $ sudo chkconfig postgresql-9.5 on
 
  You have to add a function (from https://gist.github.com/kenaniah/1315484) to convert from hstore to JSON
  (even if you have PostgreSQL > 9.3):
