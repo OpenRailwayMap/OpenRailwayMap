@@ -50,7 +50,7 @@ var assert = require('assert');
 var http = require("http");
 var url = require("url");
 var pg = require('pg');
-var toobusy = require('toobusy');
+var toobusy = require('toobusy-js');
 
 // include query modules
 milestone = require('./milestone.js');
