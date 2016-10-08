@@ -185,7 +185,7 @@ Debian/Ubuntu:
 
 Make sure that your server does not accept request on port 9000 and 9002 from outside (to circumvent the proxy and its logging).
 
-## Setting Up the Tileserver
+## Setting up the Tileserver
 
  Now get the code for node-tileserver:
 
@@ -223,6 +223,29 @@ Make sure that your server does not accept request on port 9000 and 9002 from ou
     $ screen -r tileserver
     $ [Ctrl][C]
     $ node tileserver.js
+    $ [Ctrl][A][D]
+
+## Setting up the API
+
+ Switch to the renderer subdirectory:
+
+    $ cd api
+
+ After that you can install all necessary NodeJS modules with npm:
+
+    $ npm install
+
+ Start the tileserver in a screen session:
+
+    $ screen -R api
+    $ node api.js
+    $ [Ctrl][A][D]
+
+ To restart the API server, switch back to the screen:
+
+    $ screen -r api
+    $ [Ctrl][C]
+    $ node api.js
     $ [Ctrl][A][D]
 
 ## Enabling New Apache Configuration

@@ -1,7 +1,7 @@
 {
 	"prefix" : "railmap",
 	"database" : "railmap",
-	"username" : "postgres",
+	"username" : "railmap",
 	"password" : "",
 	"geomcolumn" : "way",
 	"maxsockets" : 100,
