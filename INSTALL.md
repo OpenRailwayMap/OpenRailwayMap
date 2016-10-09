@@ -70,7 +70,7 @@ Debian/Ubuntu:
 
  Set up the PostgreSQL database with PostGIS and hstore extensions:
 
-    $ sudo -u postgres createuser -P -d railmap
+    $ sudo -u postgres createuser
     $ sudo -u postgres createdb -E UTF8 -O railmap railmap
 
     $ sudo -u postgres psql -d railmap -c "CREATE EXTENSION postgis;"
@@ -81,6 +81,24 @@ Debian/Ubuntu:
     $ sudo service postgresql-9.5 initdb
     $ sudo service postgresql-9.5 start
     $ sudo chkconfig postgresql-9.5 on
+
+For authentication to the database, we are using `md5` method. Edit your `pg_hba.conf` to use `md5` authentication for local unix sockets and local TCP/IP connections from your host.
+
+The database password is managed in a `pgpass` file. Create a `pgpass` file (or edit the existing one) in the home directory of the user that will be used for running the processes of API, tileserver and import/update scripts:
+
+    $ vim ~/.pgpass
+
+Add a line with this format:
+
+    hostname:port:database:username:password
+
+in this example (replace `YOURPASSWORD` by the password you entered in the `createuser` command):
+
+    localhost:5432:railmap:railmap:YOURPASSWORD
+
+Then set the correct file permissions:
+
+    $ chmod 600 ~/.pgpass
 
  You have to add a function (from https://gist.github.com/kenaniah/1315484) to convert from hstore to JSON
  (even if you have PostgreSQL > 9.3):
@@ -117,23 +135,6 @@ Debian/Ubuntu:
     CALLED ON NULL INPUT
     SECURITY INVOKER
     COST 100;" | psql -d railmap
-
- It is necessary to to set permissions for the tables. Note that the `railmap` in `railmap_point` and others is the database prefix as used in `osm2pqsql`. Replace `user` by the username of the user that runs the API server process:
-
-    $ echo "ALTER TABLE geometry_columns OWNER TO railmap;" | psql -d railmap
-    $ echo "ALTER TABLE spatial_ref_sys OWNER TO railmap;" | psql -d railmap
-    $ echo "CREATE ROLE user;" | psql -d railmap
-    $ echo "ALTER ROLE user LOGIN;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_point TO user;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_line TO user;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_polygon TO user;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_rels TO user;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_nodes TO user;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_ways TO user;" | psql -d railmap
-    $ echo "GRANT SELECT ON railmap_roads TO user;" | psql -d railmap
-    $ echo "GRANT SELECT ON geography_columns TO user;"  | psql -d railmap
-    $ echo "GRANT SELECT ON geometry_columns TO user;"  | psql -d railmap
-    $ echo "GRANT SELECT ON spatial_ref_sys TO user;"  | psql -d railmap
 
 ## Setting Up the Webserver and PHP
 
