@@ -51,6 +51,7 @@ var http = require("http");
 var url = require("url");
 var pg = require('pg');
 var toobusy = require('toobusy-js');
+var pgPass = require('pgpass');
 
 // include query modules
 milestone = require('./milestone.js');
@@ -64,165 +65,178 @@ var cpus = os.cpus().length;
 http.globalAgent.maxSockets = configuration.maxsockets;
 
 // database connection
-if (configuration.password == "")
-	var connection = "postgres://"+configuration.username+"@localhost/"+configuration.database;
-else
-	var connection = "postgres://"+configuration.username+":"+configuration.password+"@localhost/"+configuration.database;
-
-// response headers
-var headers = {};
-headers["Access-Control-Allow-Origin"] = configuration.corsAllowOrigin;
-headers["Access-Control-Allow-Methods"] = "GET";
-headers["Access-Control-Allow-Credentials"] = true;
-headers["Access-Control-Max-Age"] = '86400';
-headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept";
-
-
-// fork workers
-if (cluster.isMaster)
+var connectionDetails =
 {
-	for (var i=0; i<cpus; i++)
-		cluster.fork();
-	cluster.on("exit", function(worker, code, signal)
-	{
-		cluster.fork();
-	});
-	logger.info('Master has started.');
-}
-// start tile server instance
-else
+	'host' : 'localhost' ,
+	'database': configuration.database,
+	'user' : configuration.username
+};
+
+pgPass(connectionDetails, function(password)
 {
-	// handle exceptions
-	process.on('uncaughtException', function(err)
+	if (typeof password == 'undefined')
 	{
-		logger.fatal('An uncaughtException occurred:');
-		logger.fatal(err.message);
+		logger.fatal('PGPASS file cannot be read or no matching line for given connection info found.');
 		process.exit(1);
-	});
+	}
 
-	function onRequest(request, response)
+	var connection = "postgres://"+configuration.username+":"+password+"@localhost/"+configuration.database;
+
+	// response headers
+	var headers = {};
+	headers["Access-Control-Allow-Origin"] = configuration.corsAllowOrigin;
+	headers["Access-Control-Allow-Methods"] = "GET";
+	headers["Access-Control-Allow-Credentials"] = true;
+	headers["Access-Control-Max-Age"] = '86400';
+	headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept";
+
+
+	// fork workers
+	if (cluster.isMaster)
 	{
-		if (toobusy())
+		for (var i=0; i<cpus; i++)
+			cluster.fork();
+		cluster.on("exit", function(worker, code, signal)
 		{
-			logger.info('Server too busy. Aborting.');
-			headers["Content-Type"] = "text/plain; charset=utf-8";
-			response.writeHead(503, headers);
-			response.end();
-			return;
-		}
-		else
+			cluster.fork();
+		});
+		logger.info('Master has started.');
+	}
+	// start tile server instance
+	else
+	{
+		// handle exceptions
+		process.on('uncaughtException', function(err)
 		{
-			var query = url.parse(request.url, true);
-			var params = query.query;
+			logger.fatal('An uncaughtException occurred:');
+			logger.fatal(err.message);
+			process.exit(1);
+		});
 
-			// escape input parameters to avoid sql injections
-			for (var key in params)
+		function onRequest(request, response)
+		{
+			if (toobusy())
 			{
-				params[key] = params[key].trim().replace("%", "").replace("*", "").replace(/[\0\x08\x09\x1a\n\r"'\\\%]/g, function (char) {
-					switch (char) {
-						case "\0":
-						    return "\\0";
-						case "\x08":
-						    return "\\b";
-						case "\x09":
-						    return "\\t";
-						case "\x1a":
-						    return "\\z";
-						case "\n":
-						    return "\\n";
-						case "\r":
-						    return "\\r";
-						case "\"":
-						case "'":
-						case "\\":
-						case "%":
-						    return "\\"+char;
-					}
-				});
+				logger.info('Server too busy. Aborting.');
+				headers["Content-Type"] = "text/plain; charset=utf-8";
+				response.writeHead(503, headers);
+				response.end();
+				return;
 			}
+			else
+			{
+				var query = url.parse(request.url, true);
+				var params = query.query;
+
+				// escape input parameters to avoid sql injections
+				for (var key in params)
+				{
+					params[key] = params[key].trim().replace("%", "").replace("*", "").replace(/[\0\x08\x09\x1a\n\r"'\\\%]/g, function (char) {
+						switch (char) {
+							case "\0":
+								return "\\0";
+							case "\x08":
+								return "\\b";
+							case "\x09":
+								return "\\t";
+							case "\x1a":
+								return "\\z";
+							case "\n":
+								return "\\n";
+							case "\r":
+								return "\\r";
+							case "\"":
+							case "'":
+							case "\\":
+							case "%":
+								return "\\"+char;
+						}
+					});
+				}
 			
-			var requestType = query.pathname.substr(1);
+				var requestType = query.pathname.substr(1);
 
-			logger.info('Received '+requestType+' request with params '+JSON.stringify(params));
+				logger.info('Received '+requestType+' request with params '+JSON.stringify(params));
 
-			var responseHandler = function(err, data)
-			{
-				if (err)
+				var responseHandler = function(err, data)
 				{
-					logger.warn('An error occurred during '+requestType+' request: "'+err+'" Aborting.');
-					headers["Content-Type"] = "text/plain; charset=utf-8";
-					response.writeHead(500, headers);
-					response.end();
-					return;
-				}
+					if (err)
+					{
+						logger.warn('An error occurred during '+requestType+' request: "'+err+'" Aborting.');
+						headers["Content-Type"] = "text/plain; charset=utf-8";
+						response.writeHead(500, headers);
+						response.end();
+						return;
+					}
 
-				logger.trace('Returning response...');
+					logger.trace('Returning response...');
 
-				// parse GeoJSON database response to object
-				if (data.rows[0] && data.rows[0].geometry)
-					for (i=0; i<data.rows.length; i++)
-						data.rows[i].geometry = JSON.parse(data.rows[i].geometry);
+					// parse GeoJSON database response to object
+					if (data.rows[0] && data.rows[0].geometry)
+						for (i=0; i<data.rows.length; i++)
+							data.rows[i].geometry = JSON.parse(data.rows[i].geometry);
 
-				if (data.rows.length == 0)
-					data.rows = {};
+					if (data.rows.length == 0)
+						data.rows = {};
 				
-				headers["Content-Type"] = "application/json; charset=utf-8";
-				response.writeHead(200, headers);
+					headers["Content-Type"] = "application/json; charset=utf-8";
+					response.writeHead(200, headers);
 
-				if (params.callback)
-					response.end(params.callback+'('+JSON.stringify(data.rows)+')');
-				else
-					response.end(JSON.stringify(data.rows));
+					if (params.callback)
+						response.end(params.callback+'('+JSON.stringify(data.rows)+')');
+					else
+						response.end(JSON.stringify(data.rows));
 
-				logger.trace('Finished request.');
+					logger.trace('Finished request.');
 
-				client.end();
-			};
+					client.end();
+				};
 
-			logger.trace('Connecting to database '+connection+'...');
-			var client = new pg.Client(connection);
-			client.connect(function(err)
-			{
-				if (err)
+				logger.trace('Connecting to database '+connection+'...');
+				var client = new pg.Client(connection);
+				client.connect(function(err)
 				{
-					logger.error('Connection to database '+connection+' failed. Returning.');
-					headers["Content-Type"] = "text/plain; charset=utf-8";
-					response.writeHead(500, headers);
-					response.end();
-					return;
-				}
+					if (err)
+					{
+						logger.error('Connection to database '+connection+' failed. Returning.');
+						headers["Content-Type"] = "text/plain; charset=utf-8";
+						response.writeHead(500, headers);
+						response.end();
+						return;
+					}
 
-				// if valid request
-				if (configuration.queries.indexOf(requestType) > -1)
-				{
-					var sqlquery = eval(requestType+"(params)");
+					// if valid request
+					if (configuration.queries.indexOf(requestType) > -1)
+					{
+						var sqlquery = eval(requestType+"(params)");
 					
-					if (!sqlquery)
+						if (!sqlquery)
+						{
+							client.end();
+							headers["Content-Type"] = "text/plain; charset=utf-8";
+							response.writeHead(200, headers);
+							response.end("[]");
+							logger.error("Invalid parameters: "+JSON.stringify(params));
+							return;
+						}
+
+						client.query(sqlquery, responseHandler);
+					}
+					else
 					{
 						client.end();
 						headers["Content-Type"] = "text/plain; charset=utf-8";
 						response.writeHead(200, headers);
 						response.end("[]");
-						logger.error("Invalid parameters: "+JSON.stringify(params));
+						if (requestType != "favicon.ico")
+							logger.error("Invalid request: "+requestType);
 						return;
-					}		
-
-					client.query(sqlquery, responseHandler);
-				}
-				else
-				{
-					client.end();
-					headers["Content-Type"] = "text/plain; charset=utf-8";
-					response.writeHead(200, headers);
-					response.end("[]");
-					if (requestType != "favicon.ico")
-						logger.error("Invalid request: "+requestType);
-					return;
-				}			
-			});
+					}
+				});
+			}
 		}
-	}
 
-	http.createServer(onRequest).listen(configuration.apiPort);
-	logger.info('Worker has started.');
-}
+		http.createServer(onRequest).listen(configuration.apiPort);
+		logger.info('Worker has started.');
+	}
+});
