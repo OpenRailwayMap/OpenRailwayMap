@@ -76,10 +76,11 @@ pgPass(connectionDetails, function(password)
 {
 	if (typeof password == 'undefined')
 	{
-		logger.fatal('PGPASS file cannot be read or no matching line for given connection info found.');
+		logger.fatal('PGPASS file cannot be read or no matching line for given connection info found');
 		process.exit(1);
 	}
 
+	logger.debug('Successfully read password using PGPASS');
 	var connection = "postgres://"+configuration.username+":"+password+"@localhost/"+configuration.database;
 
 	// response headers
