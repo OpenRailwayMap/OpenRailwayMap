@@ -18,9 +18,12 @@
 	else
 		$urlbase = 'http://';
 	$urlbase .= $_SERVER['SERVER_NAME'] . $_SERVER['CONTEXT_PREFIX'];
-	$urlbase .= dirname(substr($_SERVER['SCRIPT_FILENAME'], strlen($_SERVER['CONTEXT_DOCUMENT_ROOT']))) . '/';
+	$subdir = dirname(substr($_SERVER['SCRIPT_FILENAME'], strlen($_SERVER['CONTEXT_DOCUMENT_ROOT'])));
+	if ($subdir === '.')
+		$subdir = '';
+	$urlbase .= $subdir . '/';
+	unset($subdir);
 
-	// available translations
 	$langs = array(
 		"cs" => array("cs_CZ", "Česky"),
 		"da" => array("da_DK", "Dansk"),
