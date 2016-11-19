@@ -146,7 +146,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<key key="railway:signal:combined"
 					value="DE-BOStrab:h" />
-				<multiselect key="railway:signal:main:states"
+				<multiselect key="railway:signal:combined:states"
 					text="Possible Signals"
 					de.text="Anzeigbare Signale"
 					delimiter=";"
@@ -195,7 +195,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 				<space />
 				<key key="railway:signal:distant"
-					value="DE-BOStrab:h" />
+					value="DE-BOStrab:v" />
 				<multiselect key="railway:signal:distant:states"
 					text="Possible Signals"
 					de.text="Anzeigbare Signale"
