@@ -174,7 +174,7 @@ node[railway=signal]["railway:signal:brake_test:form"=sign]["railway:signal:brak
 }
 
 /* track numbers inside a station should be railway:track_ref, not name */
-way[railway][name=~/^[0-9]+[a-z]*.*/]["railway:track_ref"=*name]
+way[railway][railway!=platform][name=~/^[0-9]+[a-z]*.*/]["railway:track_ref"=*name]
 {
 	throwError: "track numbers inside a station should be railway:track_ref, not name";
 	assertMatch: "way railway=rail name=4 railway:track_ref=4";
@@ -186,7 +186,7 @@ way[railway][name=~/^[0-9]+[a-z]*.*/]["railway:track_ref"=*name]
 	assertNoMatch: "way railway=rail name=3";
 	fixRemove: "name";
 }
-way[railway][name=~/^[0-9]+[a-z]*.*/][!"railway:track_ref"]
+way[railway][railway!=platform][name=~/^[0-9]+[a-z]*.*/][!"railway:track_ref"]
 {
 	throwError: "track numbers inside a station should be railway:track_ref, not name";
 	assertMatch: "way railway=rail name=4";
@@ -195,7 +195,26 @@ way[railway][name=~/^[0-9]+[a-z]*.*/][!"railway:track_ref"]
 	assertMatch: "way railway=rail name=14b";
 	assertNoMatch: "way railway=rail name=\"Gleis 14b\"";
 	assertNoMatch: "way railway=rail name=\"track 4b\"";
+	assertNoMatch: "way railway=platform name=3";
 	fixChangeKey: "name=>railway:track_ref";
+}
+way[railway=platform]["railway:track_ref"][!ref],
+way[railway=platform]["railway:track_ref"]["railway:track_ref"=*ref]
+{
+	throwError: "platforms should have the numbers in ref, not railway:track_ref";
+	assertMatch: "way railway=platform railway:track_ref=3";
+	assertMatch: "way railway=platform railway:track_ref=3 ref=3";
+	assertNoMatch: "way railway=rail railway:track_ref=3";
+	assertNoMatch: "way railway=platform railway:track_ref=3 ref=4";
+	fixChangeKey: "railway:track_ref=>ref";
+}
+way[railway=platform]["railway:track_ref"]["ref"]["railway:track_ref"!=*ref]
+{
+	throwError: "platforms should have the numbers in ref, not railway:track_ref";
+	assertMatch: "way railway=platform railway:track_ref=3 ref=4";
+	assertNoMatch: "way railway=platform railway:track_ref=3";
+	assertNoMatch: "way railway=platform railway:track_ref=3 ref=3";
+	assertNoMatch: "way railway=rail railway:track_ref=3";
 }
 
 /* track names or ref should not include the word 'track' */
