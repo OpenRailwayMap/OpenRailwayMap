@@ -13,14 +13,24 @@
 	$mail = "info@openrailwaymap.org";
 
 	// base part of the server url, must end with '/'
-	if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'])
+	if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']) {
 		$urlbase = 'https://';
-	else
+		$defaultport = 443;
+	} else {
 		$urlbase = 'http://';
-	$urlbase .= $_SERVER['SERVER_NAME'] . $_SERVER['CONTEXT_PREFIX'];
-	$urlbase .= dirname(substr($_SERVER['SCRIPT_FILENAME'], strlen($_SERVER['CONTEXT_DOCUMENT_ROOT']))) . '/';
+		$defaultport = 80;
+	}
+	$urlbase .= $_SERVER['SERVER_NAME'];
+	if ($_SERVER['SERVER_PORT'] != $defaultport)
+		$urlbase .= ':' . $_SERVER['SERVER_PORT'];
+	unset($defaultport);
+	$urlbase .= $_SERVER['CONTEXT_PREFIX'];
+	$subdir = dirname(substr($_SERVER['SCRIPT_FILENAME'], strlen($_SERVER['CONTEXT_DOCUMENT_ROOT'])));
+	if ($subdir === '.')
+		$subdir = '';
+	$urlbase .= $subdir . '/';
+	unset($subdir);
 
-	// available translations
 	$langs = array(
 		"cs" => array("cs_CZ", "Česky"),
 		"da" => array("da_DK", "Dansk"),
