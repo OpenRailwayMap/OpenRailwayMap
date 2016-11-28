@@ -12,7 +12,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 source $(dirname ${0})/config.cfg
 source $(dirname ${0})/func_filter.sh
 
-cd $DATAPATH
+cd $PROJECTPATH
+cd import
 
 echo "Started processing at $(date)"
 

@@ -12,7 +12,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 source $(dirname ${0})/config.cfg
 source $(dirname ${0})/func_filter.sh
 
-cd $DATAPATH
+cd $PROJECTPATH
+cd import
 
 echo "Started processing at $(date)"
 
@@ -35,16 +36,16 @@ mv new-railways.o5m old-railways.o5m
 echo "-----"
 
 echo "Updating database"
-rm $TILELIST
+rm expired_tiles
 osm2pgsql --database $DBNAME --username $DBUSER --append --prefix $DBPREFIX --slim --style railmap.style --number-processes $NUMPROCESSES --hstore --hstore-add-index --cache $CACHE --expire-tiles 15 --expire-output expired_tiles changes.osc
 rm changes.osc
 echo "-----"
 
 echo "Rerender expired tiles"
-if [ -s $TILELIST ]; then
-	cd $PROJECTPATH/renderer
-	node expire-tiles.js $TILELIST
-	cd $TILESPATH
+if [ -s expired_tiles ]; then
+	cd ../renderer
+	node expire-tiles.js expired_tiles
+	cd ../tiles
 	find 0 -exec touch -t 197001010000 {} \;
 	find 1 -exec touch -t 197001010000 {} \;
 	find 2 -exec touch -t 197001010000 {} \;
@@ -56,7 +57,7 @@ if [ -s $TILELIST ]; then
 fi
 echo "-----"
 
-cd $DATAPATH
+cd ../import
 rm timestamp
 mv timestamp_tmp timestamp
 
