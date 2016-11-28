@@ -257,11 +257,6 @@
 			"caption": "Ra 10 Rangierhalttafel / Verschubhalttafel"
 		},
 		{
-			"minzoom": 13,
-			"symbol": "<text x=\"0\" y=\"11\" style=\"font-family: Arial; font-size: 11px; fill: black; stroke: #008206; stroke-width: 0.5;\">Dormagen Df</text>",
-			"caption": "Signal box"
-		},
-		{
 			"minzoom": 14,
 			"icon": "icons/fi/po0-new-15.png",
 			"caption": "Finnish main signal new type (aspects not given)"
@@ -335,6 +330,11 @@
 			"minzoom": 17,
 			"icon": "icons/fi/lo0-12.png",
 			"caption": "Finnish minor signal type Lo"
+		},
+		{
+			"minzoom": 13,
+			"symbol": "<text x=\"0\" y=\"11\" style=\"font-family: Arial; font-size: 11px; fill: black; stroke: #008206; stroke-width: 0.5;\">Dormagen Df</text>",
+			"caption": "Signal box"
 		}
 	]
 }
