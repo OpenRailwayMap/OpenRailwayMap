@@ -6,7 +6,13 @@ Installation Instructions
 CentOS:
 
     $ yum update
-    $ yum install gzip zlib zlib-devel postgresql postgresql-contrib postgresql-server postgresql-libs postgresql-common postgresql-devel postgis unzip gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel npm nodejs git python wget php php-php-gettext php-pgsql python-ply python-imaging pycairo python-cairosvg pygtk2 pygtk2-devel make cmake boost-devel expat-devel bzip2-devel geos-devel proj-devel proj-epsg lua-devel gcc-c++
+    $ yum install gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel cairo cairo-devel cairomm-devel pango pango-devel pangomm pangomm-devel npm nodejs python php php-php-gettext php-pgsql python-ply python-imaging pycairo python-cairosvg pygtk2 pygtk2-devel make cmake boost-devel expat-devel geos-devel proj-devel proj-epsg lua-devel gcc-c++
+
+    $ yum install postgresql postgresql-contrib postgresql-server postgresql-libs postgresql-common postgresql-devel postgis
+
+    $ yum install libjpeg-turbo-devel giflib-devel
+
+    $ yum install git wget zlib zlib-devel gzip unzip bzip2-devel
 
 Debian/Ubuntu:
 
@@ -99,42 +105,6 @@ in this example (replace `YOURPASSWORD` by the password you entered in the `crea
 Then set the correct file permissions:
 
     $ chmod 600 ~/.pgpass
-
- You have to add a function (from https://gist.github.com/kenaniah/1315484) to convert from hstore to JSON
- (even if you have PostgreSQL > 9.3):
-
-    $ echo "CREATE OR REPLACE FUNCTION public.hstore2json (
-      hs public.hstore
-    )
-    RETURNS text AS
-    $body$
-    DECLARE
-      rv text;
-      r record;
-    BEGIN
-      rv:='';
-      for r in (select key, val from each(hs) as h(key, val)) loop
-        if rv<>'' then
-          rv:=rv||',';
-        end if;
-        rv:=rv || '"'  || r.key || '":';
-
-        --Perform escaping
-        r.val := REPLACE(r.val, E'\\', E'\\\\');
-        r.val := REPLACE(r.val, '"', E'\\"');
-        r.val := REPLACE(r.val, E'\n', E'\\n');
-        r.val := REPLACE(r.val, E'\r', E'\\r');
-
-        rv:=rv || CASE WHEN r.val IS NULL THEN 'null' ELSE '"'  || r.val || '"' END;
-      end loop;
-      return '{'||rv||'}';
-    END;
-    $body$
-    LANGUAGE 'plpgsql'
-    IMMUTABLE
-    CALLED ON NULL INPUT
-    SECURITY INVOKER
-    COST 100;" | psql -d railmap
 
 ## Setting Up the Webserver and PHP
 
