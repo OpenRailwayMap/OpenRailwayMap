@@ -143,7 +143,6 @@
 				</select>
 			</form>
 			<br />
-			<a href="http://joker.com/" id="poweredby"><img src="img/ad.png" /></a>
 			<p id="info"></p>
 			<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="PaypalButton">
 				<input type="hidden" name="cmd" value="_s-xclick">
