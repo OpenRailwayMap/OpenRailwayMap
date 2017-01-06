@@ -43,11 +43,7 @@ Debian/Ubuntu:
 
  Install Leaflet:
 
-    $ wget http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.zip
-    $ unzip leaflet.zip
-    $ mv leaflet.js images js
-    $ sed s,images/,../js/images/, leaflet.css > css/leaflet.css
-    $ rm leaflet.zip leaflet-src.js leaflet.css
+    $ make install-deps
 
  Install osm2pgsql (Ubuntu and Debian users may use their `osm2pgsql` package provided by their distribution instead):
 

@@ -35,3 +35,6 @@ import/timestamp
 
 # ignore NodeJs modules
 node_modules
+
+# ignore download directory for dependencies
+download/
