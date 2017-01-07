@@ -84,3 +84,12 @@ node,way    wheelchair:description  text    delete
 node,way    mtb:scale               text    delete
 node,way    postal_code             text    delete
 node,way    sidewalk                text    delete
+node,way    public_transport        text    delete
+node,way    lines                   text    delete
+node,way    detail                  text    delete
+node,way    tracks                  text    delete
+node,way    lanes                   text    delete
+node,way    highway                 text    delete
+node,way    foot                    text    delete
+node,way    bicycle                 text    delete
+node,way    tracktype               text    delete
