@@ -51,8 +51,9 @@ way[railway][!operator]
 /* traffic_mode is deprecated, should be changed to railway:traffic_mode */
 way[railway][traffic_mode]
 {
-	throwError: "Key traffic_mode is deprecated, change to railway:traffic_mode";
+	throwError: "Key traffic_mode is deprecated";
 	fixChangeKey: "traffic_mode=>railway:traffic_mode";
+	suggestAlternative: "railway:traffic_mode";
 	assertMatch: "way railway=rail traffic_mode=passenger";
 	assertNoMatch: "node railway=rail";
 	assertNoMatch: "way railway=rail";
@@ -66,8 +67,9 @@ way[railway][traffic_mode]
 way[railway][usage=freight][!railway:traffic_mode],
 way[railway][usage=freight][railway:traffic_mode=freight]
 {
-	throwError: "usage=freight is deprecated, change to railway:traffic_mode=freight";
+	throwError: "usage=freight is deprecated";
 	fixChangeKey: "usage=>railway:traffic_mode";
+	suggestAlternative: "railway:traffic_mode=freight";
 	assertMatch: "way railway=rail usage=freight";
 	assertMatch: "way railway=rail usage=freight railway:traffic_mode=freight";
 	assertNoMatch: "way railway=rail usage=main";
@@ -80,8 +82,10 @@ way[railway][usage=freight][railway:traffic_mode=freight]
 /* rule with auto-fix if railway:traffic_mode=(passenger|mixed) */
 way[railway][usage=freight][railway:traffic_mode=~/^(passenger|mixed)$/]
 {
-	throwError: "usage=freight is deprecated, change to railway:traffic_mode=freight";
+	throwError: "usage=freight is deprecated";
 	fixAdd: "railway:traffic_mode=mixed";
+	fixRemove: "usage";
+	suggestAlternative: "railway:traffic_mode=mixed";
 	assertMatch: "way railway=rail usage=freight railway:traffic_mode=passenger";
 	assertMatch: "way railway=rail usage=freight railway:traffic_mode=mixed";
 	assertNoMatch: "way railway=rail usage=main";
@@ -89,7 +93,6 @@ way[railway][usage=freight][railway:traffic_mode=~/^(passenger|mixed)$/]
 	assertNoMatch: "way railway=rail usage=industrial";
 	assertNoMatch: "way railway=rail usage=freight 'railway:traffic_mode'=freight";
 	assertNoMatch: "way railway=rail railway:traffic_mode";
-	fixRemove: "usage";
 }
 
 /* Track without workrules */
@@ -125,10 +128,11 @@ way[railway][operator] > node[railway=milestone][operator]
 node[railway=level_crossing][supervised],
 node[railway=crossing][supervised]
 {
-	throwWarning: "supervised=* is deprecated, replace it with the new crossing:supervision=*";
+	throwWarning: "supervised=* is deprecated";
+	fixChangeKey: "supervised=>crossing:supervision";
+	suggestAlternative: "crossing:supervision";
 	assertMatch: "node railway=level_crossing supervised=yes";
 	assertNoMatch: "node railway=level_crossing";
-	fixChangeKey: "supervised=>crossing:supervision";
 }
 
 /* signal specification given but node is not tagged as signal or equivalent type */
@@ -177,6 +181,8 @@ node[railway=signal]["railway:signal:brake_test:form"=sign]["railway:signal:brak
 way[railway][railway!=platform][name=~/^[0-9]+[a-z]*.*/]["railway:track_ref"=*name]
 {
 	throwError: "track numbers inside a station should be railway:track_ref, not name";
+	fixRemove: "name";
+	suggestAlternative: "railway:track_ref";
 	assertMatch: "way railway=rail name=4 railway:track_ref=4";
 	assertMatch: "way railway=rail name=4a railway:track_ref=4a";
 	assertMatch: "way railway=light_rail name=14 railway:track_ref=14";
@@ -184,11 +190,12 @@ way[railway][railway!=platform][name=~/^[0-9]+[a-z]*.*/]["railway:track_ref"=*na
 	assertNoMatch: "way railway=rail name=\"Gleis 14b\"";
 	assertNoMatch: "way railway=rail name=\"Gleis 14b\" railway:track_ref=14b";
 	assertNoMatch: "way railway=rail name=3";
-	fixRemove: "name";
 }
 way[railway][railway!=platform][name=~/^[0-9]+[a-z]*.*/][!"railway:track_ref"]
 {
 	throwError: "track numbers inside a station should be railway:track_ref, not name";
+	fixChangeKey: "name=>railway:track_ref";
+	suggestAlternative: "railway:track_ref";
 	assertMatch: "way railway=rail name=4";
 	assertMatch: "way railway=rail name=4a";
 	assertMatch: "way railway=light_rail name=14";
@@ -196,17 +203,17 @@ way[railway][railway!=platform][name=~/^[0-9]+[a-z]*.*/][!"railway:track_ref"]
 	assertNoMatch: "way railway=rail name=\"Gleis 14b\"";
 	assertNoMatch: "way railway=rail name=\"track 4b\"";
 	assertNoMatch: "way railway=platform name=3";
-	fixChangeKey: "name=>railway:track_ref";
 }
 way[railway=platform]["railway:track_ref"][!ref],
 way[railway=platform]["railway:track_ref"]["railway:track_ref"=*ref]
 {
 	throwError: "platforms should have the numbers in ref, not railway:track_ref";
+	fixChangeKey: "railway:track_ref=>ref";
+	suggestAlternative: "ref";
 	assertMatch: "way railway=platform railway:track_ref=3";
 	assertMatch: "way railway=platform railway:track_ref=3 ref=3";
 	assertNoMatch: "way railway=rail railway:track_ref=3";
 	assertNoMatch: "way railway=platform railway:track_ref=3 ref=4";
-	fixChangeKey: "railway:track_ref=>ref";
 }
 way[railway=platform]["railway:track_ref"]["ref"]["railway:track_ref"!=*ref]
 {
@@ -252,6 +259,7 @@ way[railway=platform][description=*ref][ref=~/^[Vv]oie [0-9]+[a-z]*.*/]
 {
 	throwError: "platform names or refs should not include the word 'track', write that as 'description', put the bare numbers in 'ref', separated by ';'";
 	fixChangeKey: "{2.key}=>description";
+	suggestAlternative: "description";
 	assertMatch: "way railway=platform name=\"Gleis 14b\"";
 	assertMatch: "way railway=platform name=\"Gleis 14b\" description=\"Gleis 14b\"";
 	assertMatch: "way railway=platform ref=\"track 4b\"";
@@ -280,22 +288,24 @@ way[railway=platform][description][description!=*ref][ref=~/^[Vv]oie [0-9]+[a-z]
 /* power:type=overhead is deprecated, electrified=contact_line is sufficent */
 way[railway]["power:type"=overhead][electrified=contact_line]
 {
-	throwError: "power:type=overhead is deprecated, electrified=contact_line is sufficent";
+	throwError: "power:type=overhead is deprecated";
+	fixRemove: "power:type";
+	suggestAlternative: "electrified=contact_line";
 	assertMatch: "way railway=rail power:type=overhead electrified=contact_line";
 	assertNoMatch: "way railway=rail power:type=overhead electrified=something";
-	fixRemove: "power:type";
 }
 
 /* power:type=overhead is deprecated, change to electrified=contact_line */
 way[railway]["power:type"=overhead][electrified=yes],
 way[railway]["power:type"=overhead][!electrified]
 {
-	throwError: "power:type=overhead is deprecated, change to electrified=contact_line";
+	throwError: "power:type=overhead is deprecated";
+	fixRemove: "power:type";
+	fixAdd: "electrified=contact_line";
+	suggestAlternative: "electrified=contact_line";
 	assertMatch: "way railway=rail power:type=overhead";
 	assertMatch: "way railway=rail power:type=overhead electrified=yes";
 	assertNoMatch: "way railway=rail power:type=overhead electrified=something";
-	fixRemove: "power:type";
-	fixAdd: "electrified=contact_line";
 }
 
 /* power:type=overhead is deprecated, conflict with existing electrified=* */
@@ -329,22 +339,23 @@ way[railway][priority],
 node[railway][priority]
 {
 	throwError: "priority on railway objects is deprecated, remove it";
+	fixRemove: "priority";
 	assertMatch: "way railway=rail priority=primary service=siding";
 	assertMatch: "way railway=rail priority=primary usage=main";
 	assertMatch: "way railway=rail priority=primary";
 	assertMatch: "node railway=buffer_stop priority=yard";
 	assertNoMatch: "way highway=primary priority=primary";
-	fixRemove: "priority";
 }
 
 /* tracks with tracks=1 and detail=track */
 way[railway][tracks=1][detail=track]
 {
 	throwWarning: "tracks=1 not necessary if detail=track is tagged.";
+	fixRemove: "tracks";
+	suggestAlternative: "detail=track";
 	assertMatch: "way railway=rail tracks=1 detail=track";
 	assertNoMatch: "way railway=rail tracks=2 detail=track";
 	assertNoMatch: "way railway=rail tracks=1 detail!=track";
-	fixRemove: "tracks";
 }
 
 /* tracks with tracks>1 and service=* */
@@ -373,31 +384,23 @@ area[railway=level_crossing]
 /* railway=flat_crossing is deprecated, use railway=railway_crossing instead. */
 node[railway=flat_crossing]
 {
-	throwError: "railway=flat_crossing is deprecated, use railway=railway_crossing instead.";
+	throwError: "railway=flat_crossing is deprecated";
+	fixAdd: "railway=railway_crossing";
+	suggestAlternative: "railway=railway_crossing";
 	assertMatch: "node railway=flat_crossing" ;
 	assertNoMatch: "node railway=crossing";
 	assertNoMatch: "node railway=railway_crossing";
-	fixAdd: "railway=railway_crossing";
-}
-
-/* traffic_mode is deprecated */
-way[railway][traffic_mode]
-{
-	throwWarning: "traffic_mode is deprecated, change to railway:traffic_mode";
-	assertMatch: "way railway=rail traffic_mode=mixed";
-	assertNoMatch: "way railway=subway railway:traffic_mode=passenger";
-	assertNoMatch: "node railway=level_crossing traffic_mode=mixed";
-	fixChangeKey: "traffic_mode=>railway:traffic_mode";
 }
 
 /* railway:signal:stop:description is deprecated */
 node[railway:signal:stop:description][!railway:signal:stop:caption]
 {
 	throwWarning: "railway:signal:stop:description is deprecated and has been replaced by railway:signal:stop:caption";
+	fixChangeKey: "railway:signal:stop:description=>railway:signal:stop:caption";
+	suggestAlternative: "railway:signal:stop:caption";
 	assertMatch: "node railway=signal railway:signal:stop:description=70";
 	assertNoMatch: "node railway=signal railway:signal:stop:caption=70";
 	assertNoMatch: "node railway=signal railway:signal:stop:description=70 railway:signal:stop:caption=70";
-	fixChangeKey: "railway:signal:stop:description=>railway:signal:stop:caption";
 }
 node[railway:signal:stop:description][railway:signal:stop:caption]
 {
@@ -429,18 +432,20 @@ node["railway:signal:combined"]["railway:signal:distant"]
 node[railway=signal]["railway:ref"][!ref]
 {
 	throwError: "signals should be tagged with ref, not railway:ref";
+	fixChangeKey: "railway:ref=>ref";
+	suggestAlternative: "ref";
 	assertMatch: "node railway=signal railway:ref=N1";
 	assertNoMatch: "node railway=signal railway:ref=N1 ref=N1";
 	assertNoMatch: "node railway=signal ref=N1";
-	fixChangeKey: "railway:ref=>ref";
 }
 node[railway=signal]["railway:ref"][ref]
 {
 	throwError: "signals should be tagged with ref, not railway:ref";
+	fixChangeKey: "railway:ref=>ref";
+	suggestAlternative: "ref";
 	assertMatch: "node railway=signal railway:ref=N1 ref=N1";
 	assertNoMatch: "node railway=signal railway:ref=N1";
 	assertNoMatch: "node railway=signal ref=N1";
-	fixChangeKey: "railway:ref=>ref";
 }
 
 /* signals should have a railway:signal:direction=* tag */
@@ -455,22 +460,23 @@ node[railway=signal][!"railway:signal:direction"]
 way[railway][radio="GSM-R"][!"railway:radio"],
 way[railway][radio="GSM-R"]["railway:radio"="gsm-r"]
 {
-	throwWarning: "radio=GSM-R is deprecated, change to railway:radio=gsm-r";
+	throwWarning: "radio=GSM-R is deprecated";
+	fixAdd: "railway:radio=gsm-r";
+	fixRemove: "radio";
+	suggestAlternative: "railway:radio=gsm-r";
 	assertMatch: "way railway=rail radio=\"GSM-R\"";
 	assertMatch: "way railway=rail radio=\"GSM-R\" \"railway:radio\"=\"gsm-r\"";
 	assertNoMatch: "way railway=rail radio=\"GSM\"";
 	assertNoMatch: "way railway=rail radio=\"GSM-R\" \"railway:radio\"=\"gsm\"";
-	fixAdd: "railway:radio=gsm-r";
-	fixRemove: "radio";
 }
 way[railway][radio="GSM-R"]["railway:radio"]["railway:radio"!="gsm-r"],
 way[railway][radio][radio!="GSM-R"]
 {
 	throwWarning: "radio=* is deprecated, change to proper railway:radio value";
-	assertNoMatch: "way railway=rail radio=\"GSM-R\"";
-	assertNoMatch: "way railway=rail radio=\"GSM-R\" \"railway:radio\"=\"gsm-r\"";
 	assertMatch: "way railway=rail radio=\"GSM\"";
 	assertMatch: "way railway=rail radio=\"GSM-R\" \"railway:radio\"=\"gsm\"";
+	assertNoMatch: "way railway=rail radio=\"GSM-R\"";
+	assertNoMatch: "way railway=rail radio=\"GSM-R\" \"railway:radio\"=\"gsm-r\"";
 }
 
 /* signals should have a name that is prefixed (e.g. with DE-ESO:) */
@@ -513,6 +519,8 @@ node[railway=switch][name][!ref],
 node[railway=switch][name][ref=*name]
 {
 	throwWarning: tr("{0} identification should be tagged as ref, not as name", "{0.value}");
+	fixChangeKey: "name=>ref";
+	suggestAlternative: "ref";
 	assertMatch: "node railway=signal name=FF";
 	assertMatch: "node railway=signal name=FF ref=FF";
 	assertMatch: "node railway=switch name=12";
@@ -521,13 +529,13 @@ node[railway=switch][name][ref=*name]
 	assertNoMatch: "node railway=signal ref=FF name=GG";
 	assertNoMatch: "node railway=switch ref=12";
 	assertNoMatch: "node railway=switch ref=12 name=13";
-	fixChangeKey: "name=>ref";
 }
 
 relation[railway=controlled_area]
 {
-	throwWarning: "controlled_area relations are deprecated, change to railway=interlocking";
+	throwWarning: "controlled_area relations are deprecated";
 	fixAdd: "railway=interlocking";
+	suggestAlternative: "railway=interlocking";
 	assertMatch: "relation railway=controlled_area";
 	assertNoMatch: "relation railway=interlocking";
 	assertNoMatch: "way railway=controlled_area";
@@ -537,6 +545,7 @@ relation[railway=interlocking][!type]
 {
 	throwError: "interlocking relation without type=railway";
 	fixAdd: "type=railway";
+	suggestAlternative: "type=railway";
 	assertMatch: "relation railway=interlocking";
 	assertNoMatch: "relation railway=interlocking type=railway";
 }
@@ -551,31 +560,34 @@ relation[railway=interlocking][type][type!=railway]
 node[railway=switch]["railway:switch"=resetting]
 {
 	throwError: "Tagging for resetting switch is deprecated, change railway:switch=* to proper value";
+	fixAdd: "railway:switch:resetting=yes";
+	suggestAlternative: "railway:switch + railway:switch:resetting=yes";
 	assertMatch: "node railway=switch railway:switch=resetting ref=2";
 	assertNoMatch: "node railway=switch";
 	assertNoMatch: "node railway=switch railway:switch=default";
 	assertNoMatch: "node railway=switch railway:switch=default railway:switch:resetting=yes";
-	fixAdd: "railway:switch:resetting=yes";
 }
 
 way[railway][name=~/[Tt]unnel/][!"tunnel:name"],
 way[railway][name=~/[Tt]unnel/]["tunnel:name"=*name]
 {
 	throwWarning: "track tagged with 'tunnel' in name, consider using tunnel:name instead and put the track name into name";
+	fixChangeKey: "name=>tunnel:name";
+	suggestAlternative: "tunnel:name";
 	assertMatch: "way railway=rail name=Footunnel";
 	assertMatch: "way railway=light_rail name=Bartunnel tunnel:name=Bartunnel";
 	assertNoMatch: "way railway=rail tunnel:name=Baztunnel";
-	fixChangeKey: "name=>tunnel:name";
 }
 
 way[railway][wikipedia=~/[Tt]unnel/][!"tunnel:wikipedia"],
 way[railway][wikipedia=~/[Tt]unnel/]["tunnel:wikipedia"=*wikipedia]
 {
 	throwWarning: "track tagged with 'tunnel' in wikipedia, consider using tunnel:wikipedia instead and put the track wikipedia entry into wikipedia";
+	fixChangeKey: "wikipedia=>tunnel:wikipedia";
+	suggestAlternative: "tunnel:wikipedia";
 	assertMatch: "way railway=rail wikipedia=Footunnel";
 	assertMatch: "way railway=light_rail wikipedia=Bartunnel tunnel:wikipedia=Bartunnel";
 	assertNoMatch: "way railway=rail tunnel:wikipedia=Baztunnel";
-	fixChangeKey: "wikipedia=>tunnel:wikipedia";
 }
 
 way[railway][name=~/[Bb]ridge/][!"bridge:name"],
@@ -586,12 +598,13 @@ way[railway][name=~/[Bb]rücke/][!"bridge:name"],
 way[railway][name=~/[Bb]rücke/]["bridge:name"=*name]
 {
 	throwWarning: "track tagged with 'bridge' in name, consider using bridge:name instead and put the track name into name";
+	fixChangeKey: "name=>bridge:name";
+	suggestAlternative: "bridge:name";
 	assertMatch: "way railway=rail name=Foobrücke";
 	assertMatch: "way railway=rail name=\"Bay bridge\"";
 	assertMatch: "way railway=rail name=\"Baz viaduct\"";
 	assertMatch: "way railway=light_rail name=\"Bar bridge\" bridge:name=\"Bar bridge\"";
 	assertNoMatch: "way railway=rail bridge:name=Foo-Viadukt";
-	fixChangeKey: "name=>bridge:name";
 }
 
 way[railway][wikipedia=~/[Bb]ridge/][!"bridge:wikipedia"],
@@ -602,12 +615,13 @@ way[railway][wikipedia=~/[Bb]rücke/][!"bridge:wikipedia"],
 way[railway][wikipedia=~/[Bb]rücke/]["bridge:wikipedia"=*wikipedia]
 {
 	throwWarning: "track tagged with 'bridge' in wikipedia, consider using bridge:wikipedia instead and put track wikipedia entry into wikipedia";
+	fixChangeKey: "wikipedia=>bridge:wikipedia";
+	suggestAlternative: "bridge:wikipedia";
 	assertMatch: "way railway=rail wikipedia=Foobrücke";
 	assertMatch: "way railway=rail wikipedia=\"Bay bridge\"";
 	assertMatch: "way railway=rail wikipedia=\"Baz viaduct\"";
 	assertMatch: "way railway=light_rail wikipedia=\"Bar bridge\" bridge:wikipedia=\"Bar bridge\"";
 	assertNoMatch: "way railway=rail bridge:wikipedia=Foo-Viadukt";
-	fixChangeKey: "wikipedia=>bridge:wikipedia";
 }
 
 node:unconnected[railway=signal],
@@ -618,11 +632,12 @@ node:unconnected[railway=milestone]
 
 way[railway][lanes]
 {
-	throwWarning: "lanes=* is used for highways, not railways; use tracks=* instead";
+	throwWarning: "lanes=* is used for highways, not railways";
+	fixChangeKey: "lanes=>tracks";
+	suggestAlternative: "tracks";
 	assertMatch: "way railway=rail lanes=2";
 	assertMatch: "way railway=subway lanes=2 tracks=2";
 	assertNoMatch: "way railway=rail tracks=1";
-	fixChangeKey: "lanes=>tracks";
 }
 
 way[railway][maxspeed=signals]
@@ -635,30 +650,32 @@ way[railway][maxspeed=signals]
 way[railway]["mph:maxspeed"=~/^[0-9]+$/]["maxspeed"]
 {
 	throwWarning: "maxspeed should contain the value as it is shown on the line with mph as unit";
+	/* fixAdd: "maxspeed={1.value} mph"; */
+	suggestAlternative: "maxspeed";
 	assertMatch: "way railway=rail \"mph:maxspeed\"=100 maxspeed=161";
 	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50 mph\" maxspeed=161";
 	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50\"";
 	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50 mph\"";
-	/* fixAdd: "maxspeed={1.value} mph"; */
 }
 
 way[railway]["mph:maxspeed"=~/^[0-9]+ mph$/]["maxspeed"]
 {
 	throwWarning: "maxspeed should contain the value as it is shown on the line with mph as unit";
-	assertNoMatch: "way railway=rail \"mph:maxspeed\"=100 maxspeed=161";
+	fixChangeKey: "mph:maxspeed=>maxspeed";
+	suggestAlternative: "maxspeed";
 	assertMatch: "way railway=rail \"mph:maxspeed\"=\"50 mph\" maxspeed=161";
+	assertNoMatch: "way railway=rail \"mph:maxspeed\"=100 maxspeed=161";
 	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50\"";
 	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50 mph\"";
-	fixChangeKey: "mph:maxspeed=>maxspeed";
 }
 
 area[building=station],
 area[building=railway_station]
 {
 	throwWarning: "Wrong tag for railway station building";
+	fixAdd: "building=train_station";
+	suggestAlternative: "building=train_station";
 	assertMatch: "area building=station name=Bahnhof";
 	assertMatch: "area building=railway_station name=Bahnhof";
 	assertNoMatch: "area building=train_station name=Bahnhof";
-	fixAdd: "building=train_station";
-	suggestAlternative: "building=train_station";
 }
