@@ -1,7 +1,7 @@
 meta
 {
 	title: "OpenRailwayMap – extra ruleset for Germany";
-	version: "2015-08-03";
+	version: "2017-01-09";
 	description: "Additional validation of railway data according to the OpenRailwayMap tagging scheme.";
 	author: "rurseekatze";
 	link: "https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging";
@@ -14,9 +14,9 @@ way[railway][name=~/^Kursbuchstrecke [0-9]*.*/]
 {
 	throwError: "Tracks should not be named by their timetable number (KBS xy). Use a route relation with route=railway, instead.";
 	assertMatch: "way railway=rail name=\"KBS 258\"";
+	assertMatch: "way railway=light_rail name=\"Kursbuchstrecke 710.1\"";
 	assertNoMatch: "way railway=rail name=Frankenbahn";
 	assertNoMatch: "way railway=light_rail ref=\"Kursbuchstrecke 710.1\"";
-	assertMatch: "way railway=light_rail name=\"Kursbuchstrecke 710.1\"";
 }
 
 /* track refs containing "KBS" */
@@ -25,8 +25,8 @@ way[railway][ref=~/^Kursbuchstrecke [0-9]*.*/]
 {
 	throwError: "ref=* should be a VzG number (without \"VzG\"). Use a route relation with route=railway for KBS numbers, instead.";
 	assertMatch: "way railway=rail ref=\"KBS 258\"";
-	assertNoMatch: "way railway=rail ref=7400";
 	assertMatch: "way railway=light_rail ref=\"Kursbuchstrecke 710.1\"";
+	assertNoMatch: "way railway=rail ref=7400";
 }
 
 /* track refs containing "VzG" */
@@ -58,11 +58,12 @@ way[railway][ref=~/^[0-9]{4}-[0-9]+/]
 way[railway][name=~/^[0-9]{4}$/]
 {
 	throwError: "Track names should be real names. VzG numbers should be tagged ref=*. KBS numbers should be mapped as a relation with route=railway.";
+	fixChangeKey: "name=>ref";
+	suggestAlternative: "ref";
 	assertMatch: "way railway=rail name=\"7400\"";
 	assertNoMatch: "way railway=rail name=\"750\"";
 	assertNoMatch: "way railway=rail ref=7400";
 	assertNoMatch: "way railway=rail name=Hohenlohebahn";
-	fixChangeKey: "name=>ref";
 }
 
 /* track names containing only numbers (KBS) */
@@ -137,6 +138,7 @@ way[railway][workrules=ESBO],
 way[railway][workrules=BOStrab]
 {
 	throwError: "workrules={1.value} is deprecated, change to workrules=DE:{1.value}";
+	fixAdd: "workrules=DE:{1.value}";
 	assertMatch: "way railway=rail workrules=EBO";
 	assertMatch: "way railway=rail workrules=ESBO";
 	assertMatch: "way railway=rail workrules=BOStrab";
@@ -146,7 +148,6 @@ way[railway][workrules=BOStrab]
 	assertNoMatch: "way railway=rail workrules=DE:EBO";
 	assertNoMatch: "way railway=rail workrules=DE:ESBO";
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
-	fixAdd: "workrules=DE:{1.value}";
 }
 
 way[railway][workrules=BOA]
@@ -162,17 +163,19 @@ way[railway][workrules=BOA]
 way[railway][workrules="DE-BOStrab"]
 {
 	throwError: "workrules: separate country and ruleset by : , not by -";
+	fixAdd: "workrules=DE:BOStrab";
+	suggestAlternative: "workrules=DE:BOStrab";
 	assertMatch: "way railway=rail workrules=DE-BOStrab";
 	assertNoMatch: "way railway=rail workrules=DE:BOStrab";
-	fixAdd: "workrules=DE:BOStrab";
 }
 
 way[railway][workrules="DE-EBO"]
 {
 	throwError: "workrules: separate country and ruleset by : , not by -";
+	fixAdd: "workrules=DE:EBO";
+	suggestAlternative: "workrules=DE:EBO";
 	assertMatch: "way railway=rail workrules=DE-EBO";
 	assertNoMatch: "way railway=rail workrules=DE:EBO";
-	fixAdd: "workrules=DE:EBO";
 }
 
 /* ks and hl signals only exist as light signals */
@@ -184,13 +187,13 @@ node[railway=signal][railway:signal:distant="DE-ESO:hl"][railway:signal:distant:
 node[railway=signal][railway:signal:combined="DE-ESO:hl"][railway:signal:combined:form!=light]
 {
 	throwError: "{1.value} signals only exist as light signals";
+	fixAdd: "{2.key}=light";
 	assertMatch: "node railway=signal railway:signal:main=DE-ESO:ks";
 	assertMatch: "node railway=signal railway:signal:main=DE-ESO:ks railway:signal:main:form=semaphore";
 	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hl";
 	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hl railway:signal:main:form=semaphore";
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hl railway:signal:main:form=light";
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:ks railway:signal:main:form=light";
-	fixAdd: "{2.key}=light";
 }
 
 /* hp signals only exist as semaphore or light signals */
@@ -229,21 +232,23 @@ node["railway:signal:minor:states"="DE-ESO:sh0;DE-ESO:gsp2"],
 node["railway:signal:minor:states"="sh0;gsp2"]
 {
 	throwError: "Signal Gsp 2 was renamed to Wn 7 in 2008";
+	fixAdd: "railway:signal:minor:states=DE-ESO:sh0;DE-ESO:wn7";
+	suggestAlternative: "railway:signal:minor:states=DE-ESO:sh0;DE-ESO:wn7";
 	assertMatch: "node railway=derail railway:signal:minor:states=DE-ESO:sh0;DE-ESO:gsp2";
 	assertMatch: "node railway=signal railway:signal:minor:states=sh0;gsp2";
 	assertNoMatch: "node railway=derail railway:signal:minor:states=DE-ESO:sh0;DE-ESO:wn7";
 	assertNoMatch: "node railway=derail railway:signal:minor:states=DE-ESO:sh0;DE-ESO:sh1";
-	fixAdd: "railway:signal:minor:states=DE-ESO:sh0;DE-ESO:wn7";
 }
 
 /* German Ne 14 signs without railway:signal:train_protection:type=block_marker */
 node["railway:signal:train_protection"="DE-ESO:ne14"]["railway:signal:train_protection:type"!=block_marker]
 {
 	throwError: "Ne 14 sign requires additional tag railway:signal:train_protection:type=block_marker";
+	fixAdd: "railway:signal:train_protection:type=block_marker";
+	suggestAlternative: "railway:signal:train_protection:type=block_marker";
 	assertMatch: "node railway=signal railway:signal:train_protection=DE-ESO:ne14";
 	assertNoMatch: "node railway=signal railway:signal:train_protection=DE-ESO:ne14 railway:signal:train_protection:type=block_marker";
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp";
-	fixAdd: "railway:signal:train_protection:type=block_marker";
 }
 
 /* a German distant signal can't be a repeated one if at the same pole as a main signal, as the prior distant
@@ -254,14 +259,15 @@ node["railway:signal:distant:repeated"="yes"]["railway:signal:main"="DE-ESO:hp"]
 node["railway:signal:distant:repeated"="yes"]["railway:signal:main"=~/^DE-ESO:/]["railway:signal:main"!="DE-ESO:hp"]
 {
 	throwError: "main and repeated distant signal usually are not at the same place";
+	fixAdd: "railway:signal:distant:shortened=yes";
+	fixRemove: "railway:signal:distant:repeated";
+	suggestAlternative: "railway:signal:distant:shortened=yes";
 	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
 	assertMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes railway:signal:main:states=DE-ESO:hp0;DE-ESO:hp1";
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes railway:signal:main:states=DE-ESO:hp0;DE-ESO:kennlicht railway:signal:distant:shortened=yes";
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=no";
 	assertNoMatch: "node railway=signal railway:signal:main=DE-ESO:hp railway:signal:distant=DE-ESO:vr";
 	assertNoMatch: "node railway=signal railway:signal:distant=DE-ESO:vr railway:signal:distant:repeated=yes";
-	fixAdd: "railway:signal:distant:shortened=yes";
-	fixRemove: "railway:signal:distant:repeated";
 }
 
 /* a German distant signal can't be both a repeated and a distant one. The only exception is H/V signals
