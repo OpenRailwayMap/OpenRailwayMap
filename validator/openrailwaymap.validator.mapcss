@@ -1,7 +1,7 @@
 meta
 {
 	title: "OpenRailwayMap – international validation ruleset";
-	version: "2015-05-26";
+	version: "2017-01-09";
 	description: "Validation of railway data according to the OpenRailwayMap tagging scheme.";
 	author: "rurseekatze";
 	link: "https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging";
@@ -650,4 +650,15 @@ way[railway]["mph:maxspeed"=~/^[0-9]+ mph$/]["maxspeed"]
 	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50\"";
 	assertNoMatch: "way railway=rail \"mph:maxspeed\"=\"50 mph\"";
 	fixChangeKey: "mph:maxspeed=>maxspeed";
+}
+
+area[building=station],
+area[building=railway_station]
+{
+	throwWarning: "Wrong tag for railway station building";
+	assertMatch: "area building=station name=Bahnhof";
+	assertMatch: "area building=railway_station name=Bahnhof";
+	assertNoMatch: "area building=train_station name=Bahnhof";
+	fixAdd: "building=train_station";
+	suggestAlternative: "building=train_station";
 }
