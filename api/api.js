@@ -182,7 +182,7 @@ pgPass(connectionDetails, function(password)
 					
 						if (!sqlquery)
 						{
-							client.end();
+							done();
 							headers["Content-Type"] = "text/plain; charset=utf-8";
 							response.writeHead(200, headers);
 							response.end("[]");
@@ -227,7 +227,7 @@ pgPass(connectionDetails, function(password)
 					}
 					else
 					{
-						client.end();
+						done();
 						headers["Content-Type"] = "text/plain; charset=utf-8";
 						response.writeHead(200, headers);
 						response.end("[]");
