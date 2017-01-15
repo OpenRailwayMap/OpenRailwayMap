@@ -42,7 +42,6 @@ var fs = require('graceful-fs');
 // load configuraion file
 configuration = require('./config.json');
 
-
 // include necessary modules
 var cluster = require('cluster');
 var os = require('os');
@@ -50,6 +49,7 @@ var assert = require('assert');
 var http = require("http");
 var url = require("url");
 var pg = require('pg');
+var Pool = require('pg-pool');
 var toobusy = require('toobusy-js');
 var pgPass = require('pgpass');
 
@@ -67,10 +67,14 @@ http.globalAgent.maxSockets = configuration.maxsockets;
 // database connection
 var connectionDetails =
 {
-	'host' : 'localhost' ,
+	'host': configuration.host,
+	'port': configuration.port,
 	'database': configuration.database,
-	'user' : configuration.username
+	'user': configuration.username,
+	'max': parseInt(configuration.maxPoolSize / cpus),
+	'idleTimeoutMillis': 10000
 };
+
 
 pgPass(connectionDetails, function(password)
 {
@@ -81,7 +85,7 @@ pgPass(connectionDetails, function(password)
 	}
 
 	logger.debug('Successfully read password using PGPASS');
-	var connection = "postgres://"+configuration.username+":"+password+"@localhost/"+configuration.database;
+	connectionDetails['password'] = password;
 
 	// response headers
 	var headers = {};
@@ -159,47 +163,12 @@ pgPass(connectionDetails, function(password)
 
 				logger.info('Received '+requestType+' request with params '+JSON.stringify(params));
 
-				var responseHandler = function(err, data)
-				{
-					client.end();
-
-					if (err)
-					{
-						logger.warn('An error occurred during '+requestType+' request: "'+err+'" Aborting.');
-						headers["Content-Type"] = "text/plain; charset=utf-8";
-						response.writeHead(500, headers);
-						response.end();
-						return;
-					}
-
-					logger.trace('Returning response...');
-
-					// parse GeoJSON database response to object
-					if (data.rows[0] && data.rows[0].geometry)
-						for (i=0; i<data.rows.length; i++)
-							data.rows[i].geometry = JSON.parse(data.rows[i].geometry);
-
-					if (data.rows.length == 0)
-						data.rows = {};
-				
-					headers["Content-Type"] = "application/json; charset=utf-8";
-					response.writeHead(200, headers);
-
-					if (params.callback)
-						response.end(params.callback+'('+JSON.stringify(data.rows)+')');
-					else
-						response.end(JSON.stringify(data.rows));
-
-					logger.trace('Finished request.');
-				};
-
-				logger.trace('Connecting to database '+connection+'...');
-				var client = new pg.Client(connection);
-				client.connect(function(err)
+				logger.trace('Connecting to database...');
+				pool.connect(function(err, client, done)
 				{
 					if (err)
 					{
-						logger.error('Connection to database '+connection+' failed. Returning.');
+						logger.error('Fetching client from database pool failed: ' + err);
 						headers["Content-Type"] = "text/plain; charset=utf-8";
 						response.writeHead(500, headers);
 						response.end();
@@ -221,7 +190,40 @@ pgPass(connectionDetails, function(password)
 							return;
 						}
 
-						client.query(sqlquery, responseHandler);
+						client.query(sqlquery, function(err, data)
+						{
+							// release client back to the pool
+							done();
+
+							if (err)
+							{
+								logger.warn('An error occurred during '+requestType+' request: "'+err+'" Aborting.');
+								headers["Content-Type"] = "text/plain; charset=utf-8";
+								response.writeHead(500, headers);
+								response.end();
+								return;
+							}
+
+							logger.trace('Returning response...');
+
+							// parse GeoJSON database response to object
+							if (data.rows[0] && data.rows[0].geometry)
+								for (i=0; i<data.rows.length; i++)
+									data.rows[i].geometry = JSON.parse(data.rows[i].geometry);
+
+							if (data.rows.length == 0)
+								data.rows = {};
+
+							headers["Content-Type"] = "application/json; charset=utf-8";
+							response.writeHead(200, headers);
+
+							if (params.callback)
+								response.end(params.callback+'('+JSON.stringify(data.rows)+')');
+							else
+								response.end(JSON.stringify(data.rows));
+
+							logger.trace('Finished request.');
+						});
 					}
 					else
 					{
@@ -237,6 +239,11 @@ pgPass(connectionDetails, function(password)
 			}
 		}
 
+		var pool = new Pool(connectionDetails);
+		pool.on('error', function (err, client)
+		{
+			logger.error('Idle database client error: ' + err.message)
+		});
 		http.createServer(onRequest).listen(configuration.apiPort);
 		logger.info('Worker has started.');
 	}

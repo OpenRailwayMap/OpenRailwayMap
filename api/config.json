@@ -1,10 +1,13 @@
 {
-	"prefix" : "railmap",
-	"database" : "railmap",
-	"username" : "railmap",
-	"geomcolumn" : "way",
-	"maxsockets" : 100,
-	"apiPort" : 9002,
+	"prefix": "openrailwaymap",
+	"database": "openrailwaymap",
+	"username": "openrailwaymap",
+	"host": "localhost",
+	"port": 5432,
+	"maxPoolSize": 60,
+	"geomcolumn": "way",
+	"maxsockets": 100,
+	"apiPort": 9002,
 	"queries": ["milestone", "facility", "networklength"],
 	"corsAllowOrigin": "*"
 }
