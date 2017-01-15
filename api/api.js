@@ -161,6 +161,8 @@ pgPass(connectionDetails, function(password)
 
 				var responseHandler = function(err, data)
 				{
+					client.end();
+
 					if (err)
 					{
 						logger.warn('An error occurred during '+requestType+' request: "'+err+'" Aborting.');
@@ -189,8 +191,6 @@ pgPass(connectionDetails, function(password)
 						response.end(JSON.stringify(data.rows));
 
 					logger.trace('Finished request.');
-
-					client.end();
 				};
 
 				logger.trace('Connecting to database '+connection+'...');
