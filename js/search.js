@@ -54,39 +54,41 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			this.bar.innerHTML += "<div class=\"loadingMoreInfo\">"+loading+"</div>";
 			this.request = input;
 
-			this.sendRequest("facility", "uicref="+input, function(response)
+			queryRef = function(response)
 			{
 				self.showResults(response);
-				self.sendRequest("facility", "ref="+input, function(response)
+				self.sendRequest("facility", "ref=" + input, function(response)
 				{
-					self.showResults(response);
-					self.sendRequest("facility", "name="+input, function(response)
-					{
-						var words = input.split(" ");
-						for (var i=0; i<words.length; i++)
-						{
-							if (/[0-9][.,][0-9]/.test(words[i]))
-							{
-								var pos = words[i];
-								words.splice(i, 1);
-								break;
-							}
-						}
-
-						if (pos)
-						{
-							var ref = words.join(" ");
-
-							self.sendRequest("milestone", "position=" + pos.replace(',', '.') + "&ref=" + ref, function(response)
-							{
-								self.finishResults(response);
-							});
-						}
-						else
-							self.finishResults(response);
-					});
+					self.finishResults(response);
 				});
-			});
+			}
+
+			if((input.length != 7) || isNaN(input)) {
+				self.sendRequest("facility", "name=" + input, function(response)
+				{
+					var words = input.split(" ");
+					for (var i = 0; i<words.length; i++)
+					{
+						if (/[0-9][.,][0-9]/.test(words[i]))
+						{
+							var pos = words[i];
+							words.splice(i, 1);
+							break;
+						}
+					}
+
+					if (pos)
+					{
+						var ref = words.join(" ");
+
+						self.sendRequest("milestone", "position=" + pos.replace(',', '.') + "&ref=" + ref, queryRef);
+					}
+					else
+						queryRef(response);
+				});
+			} else {
+				this.sendRequest("facility", "uicref=" + input, queryRef);
+			}
 		}
 	}
 
