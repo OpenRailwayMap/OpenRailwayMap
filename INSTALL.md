@@ -12,13 +12,13 @@ CentOS:
 
     $ yum install libjpeg-turbo-devel giflib-devel
 
-    $ yum install git wget zlib zlib-devel gzip unzip bzip2-devel
+    $ yum install git wget zlib zlib-devel gzip unzip bzip2-devel zip
 
 Debian/Ubuntu:
 
     $ apt-get install --no-install-recommends postgresql-9.3-postgis-2.1
     $ apt-get install gzip postgresql-common libgeoip1 geoip-database geoip-bin php5-geoip php-gettext unzip python-ply python-imaging python-cairo python-cairosvg librsvg2-2 librsvg2-dev libpango1.0-dev libcairo2-dev libcairomm-1.0-dev libjpeg-turbo8-dev libpangomm-1.4-1 libpangomm-1.4-dev npm nodejs wget zlib1g-dev osm2pgsql php5-pgsql
-    $ apt-get install git libgif-dev build-essential g++ make
+    $ apt-get install git libgif-dev build-essential g++ make zip
     $ apt-get install nodejs-legacy # see https://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu for the reason
     # in case you want to build osm2pgsql from sources
     $ apt-get install cmake
