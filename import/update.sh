@@ -10,55 +10,32 @@
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
 source $(dirname ${0})/config.cfg
-source $(dirname ${0})/func_filter.sh
 
-cd $PROJECTPATH
-cd import
+cd $PROJECTPATH/import
 
 echo "Started processing at $(date)"
 
-echo "Updating planet file"
-if [ "$SKIPUPDATE" = false ]; then
-	osmupdate old.pbf new.pbf --max-merge=5 --hourly --drop-author -v
-	rm old.pbf
-	mv new.pbf old.pbf
-	osmdate=`osmconvert old.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
-	date -u -d "$osmdate" +%s > timestamp_tmp
-fi
-echo "-----"
-
-filter_planet --out-o5m -o=new-railways.o5m
-
-echo "Generate diffs"
-osmconvert old-railways.o5m new-railways.o5m --diff-contents --fake-lonlat >changes.osc
-rm old-railways.o5m
-mv new-railways.o5m old-railways.o5m
-echo "-----"
-
-echo "Updating database"
-rm expired_tiles
-osm2pgsql --database $DBNAME --username $DBUSER --append --prefix $DBPREFIX --slim --style railmap.style --number-processes $NUMPROCESSES --hstore --hstore-add-index --cache $CACHE --expire-tiles 15 --expire-output expired_tiles changes.osc
+echo "[1/3] Fetching diff"
+date -u +%s > timestamp_tmp
+TIMESTAMP=$(<timestamp)
+UPDATE=`date -u -d "@$TIMESTAMP" +%Y-%m-%dT%H:%M:%SZ`
+osmupdate $UPDATE changes.osc --day -v
+osmconvert changes.osc --drop-relations --out-osc > changes-norelation.osc
 rm changes.osc
-echo "-----"
 
-echo "Rerender expired tiles"
+echo "[2/3] Updating database"
+rm expired_tiles
+osm2pgsql --database $DBNAME --username $DBUSER --prefix $DBPREFIX --append --slim --merc --expire-output expired_tiles --expire-tiles 15 --hstore-all --hstore-match-only --hstore-add-index --style openrailwaymap.style --number-processes $NUMPROCESSES --flat-nodes flatnodes --cache $CACHE changes-norelation.osc
+rm changes-norelation.osc
+
+echo "[3/3] Expiring tiles"
 if [ -s expired_tiles ]; then
-	cd ../renderer
+	cd $PROJECTPATH/renderer
 	node expire-tiles.js expired_tiles
-	cd ../tiles
-	find 0 -exec touch -t 197001010000 {} \;
-	find 1 -exec touch -t 197001010000 {} \;
-	find 2 -exec touch -t 197001010000 {} \;
-	find 3 -exec touch -t 197001010000 {} \;
-	find 4 -exec touch -t 197001010000 {} \;
-	find 5 -exec touch -t 197001010000 {} \;
-	find 6 -exec touch -t 197001010000 {} \;
-	find 7 -exec touch -t 197001010000 {} \;
+	# TODO config path
+	cd /srv/tiles/tiles/[0-7] -execdir touch -t 197001010000 {} +
 fi
-echo "-----"
 
-cd ../import
-rm timestamp
-mv timestamp_tmp timestamp
+mv ${PROJECTPATH}/import/timestamp_tmp ${PROJECTPATH}/import/TIMESTAMP
 
 echo "Finished processing at $(date)"

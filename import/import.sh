@@ -10,39 +10,24 @@
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
 source $(dirname ${0})/config.cfg
-source $(dirname ${0})/func_filter.sh
 
-cd $PROJECTPATH
-cd import
+cd $PROJECTPATH/import
 
 echo "Started processing at $(date)"
 
-# download planet file if not existing
-echo "Getting planet file if necessary"
-if [ ! -f old.pbf ]; then
-	echo "Planet file not existing, now downloading it"
-	wget http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
-	mv planet-latest.osm.pbf old.pbf
-fi
-echo "-----"
-
-echo "Updating planet file"
-osmupdate old.pbf new.pbf --max-merge=5 --hourly --drop-author -v
-rm old.pbf
-mv new.pbf old.pbf
-osmdate=`osmconvert old.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
+echo "[1/3] Downloading planet file"
+wget http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
+osmdate=`osmconvert planet-latest.osm.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
 date -u -d "$osmdate" +%s > timestamp
-filter_planet --out-osm -o=old-railways.osm
-echo "-----"
 
-echo "Loading data into database"
-osm2pgsql --create --database $DBNAME --username $DBUSER --prefix $DBPREFIX --slim --style railmap.style --hstore --hstore-add-index --number-processes $NUMPROCESSES --cache $CACHE old-railways.osm
-osmconvert old-railways.osm --out-o5m >old-railways.o5m
-rm old-railways.osm
-echo "-----"
+echo "[2/3] Import data into database"
+osmconvert planet-latest.osm.pbf --drop-relations --out-pbf > planet-latest-norelations.osm.pbf
+osm2pgsql --database $DBNAME --username $DBUSER --prefix $DBPREFIX --create --slim --merc --hstore-all --hstore-match-only --hstore-add-index --style openrailwaymap.style --number-processes $NUMPROCESSES --flat-nodes flatnodes --cache $CACHE --input-reader pbf planet-latest-norelations.osm.pbf
+rm planet-latest.osm.pbf
+rm planet-latest-norelations.osm.pbf
 
-echo "Prerendering tiles"
-curl "http://localhost:$TILESERVERPORT/init"
-echo "-----"
+echo "[3/3] Prerendering tiles"
+cd $PROJECTPATH/renderer
+./init.sh
 
 echo "Finished processing at $(date)"
