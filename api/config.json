@@ -4,7 +4,7 @@
 	"username": "openrailwaymap",
 	"host": "localhost",
 	"port": 5432,
-	"maxPoolSize": 60,
+	"maxPoolSize": 30,
 	"geomcolumn": "way",
 	"maxsockets": 100,
 	"apiPort": 9002,
