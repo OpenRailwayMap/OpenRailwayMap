@@ -32,10 +32,10 @@ echo "[3/3] Expiring tiles"
 if [ -s expired_tiles ]; then
 	cd $PROJECTPATH/renderer
 	node expire-tiles.js expired_tiles
-	# TODO config path
-	cd /srv/tiles/tiles/[0-7] -execdir touch -t 197001010000 {} +
+	# TODO get levels from config file
+	find ${TILEDIR}/tiles/[0-7] -execdir touch -t 197001010000 {} +
 fi
 
-mv ${PROJECTPATH}/import/timestamp_tmp ${PROJECTPATH}/import/TIMESTAMP
+mv ${PROJECTPATH}/import/timestamp_tmp ${PROJECTPATH}/import/timestamp
 
 echo "Finished processing at $(date)"
