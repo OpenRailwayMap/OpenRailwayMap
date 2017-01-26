@@ -21,6 +21,12 @@ date -u +%s > timestamp_tmp
 TIMESTAMP=$(<timestamp)
 UPDATE=`date -u -d "@$TIMESTAMP" +%Y-%m-%dT%H:%M:%SZ`
 osmupdate $UPDATE changes.osc --day -v
+
+if [ ! -s changes.osc ]; then
+	echo "No new data available"
+	exit 0
+fi
+
 osmconvert changes.osc --drop-relations --out-osc > changes-norelation.osc
 rm changes.osc
 
