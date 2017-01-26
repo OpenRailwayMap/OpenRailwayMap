@@ -5,6 +5,7 @@
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
+set -e
 
 # extend environment paths by location of osmconvert, osmupdate and osmfilter
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
