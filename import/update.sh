@@ -20,7 +20,7 @@ echo "[1/3] Fetching diff"
 date -u +%s > timestamp_tmp
 TIMESTAMP=$(<timestamp)
 UPDATE=`date -u -d "@$TIMESTAMP" +%Y-%m-%dT%H:%M:%SZ`
-osmupdate $UPDATE changes.osc --day -v
+osmupdate $UPDATE changes.osc -v
 
 if [ ! -s changes.osc ]; then
 	echo "No new data available"
