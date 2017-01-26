@@ -11,20 +11,22 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
 source $(dirname ${0})/config.cfg
 
+# default to current directory
+DATADIR=${DATADIR:-.}
+
 cd $PROJECTPATH/import
 
 echo "Started processing at $(date)"
 
 echo "[1/3] Downloading planet file"
-wget http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
-osmdate=`osmconvert planet-latest.osm.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`
+wget -O ${DATADIR}/planet-latest.osm.pbf http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
+osmdate=$(osmconvert ${DATADIR}/planet-latest.osm.pbf --out-timestamp | tr '[TZ]' ' ' | sed 's/ *$//g'`)
 date -u -d "$osmdate" +%s > timestamp
 
 echo "[2/3] Import data into database"
-osmconvert planet-latest.osm.pbf --drop-relations --out-pbf > planet-latest-norelations.osm.pbf
-osm2pgsql --database $DBNAME --username $DBUSER --prefix $DBPREFIX --create --slim --merc --hstore-all --hstore-match-only --hstore-add-index --style openrailwaymap.style --number-processes $NUMPROCESSES --flat-nodes flatnodes --cache $CACHE --input-reader pbf planet-latest-norelations.osm.pbf
-rm planet-latest.osm.pbf
-rm planet-latest-norelations.osm.pbf
+osmconvert ${DATADIR}/planet-latest.osm.pbf --drop-relations --out-pbf > ${DATADIR}/planet-latest-norelations.osm.pbf
+osm2pgsql --database $DBNAME --username $DBUSER --prefix $DBPREFIX --create --slim --merc --hstore-all --hstore-match-only --hstore-add-index --style openrailwaymap.style --number-processes $NUMPROCESSES --flat-nodes ${DATADIR}/flatnodes --cache $CACHE --input-reader pbf ${DATADIR}/planet-latest-norelations.osm.pbf
+rm ${DATADIR}/planet-latest.osm.pbf ${DATADIR}/planet-latest-norelations.osm.pbf
 
 echo "[3/3] Prerendering tiles"
 cd $PROJECTPATH/renderer
