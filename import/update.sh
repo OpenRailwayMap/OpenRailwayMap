@@ -21,7 +21,7 @@ echo "Started processing at $(date)"
 
 echo "[1/3] Fetching diff"
 TIMESTAMP=$(<timestamp)
-TIMESTAMP_NEW=$(<date -u +%s)
+TIMESTAMP_NEW=$(date -u +%s)
 UPDATE=`date -u -d "@$TIMESTAMP" +%Y-%m-%dT%H:%M:%SZ`
 osmupdate $UPDATE ${DATADIR}/changes.osc -v
 
