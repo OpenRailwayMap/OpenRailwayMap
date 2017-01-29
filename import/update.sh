@@ -20,8 +20,8 @@ cd $PROJECTPATH/import
 echo "Started processing at $(date)"
 
 echo "[1/3] Fetching diff"
-date -u +%s > timestamp_tmp
 TIMESTAMP=$(<timestamp)
+TIMESTAMP_NEW=$(<date -u +%s)
 UPDATE=`date -u -d "@$TIMESTAMP" +%Y-%m-%dT%H:%M:%SZ`
 osmupdate $UPDATE ${DATADIR}/changes.osc -v
 
@@ -48,6 +48,6 @@ if [ -s ${DATADIR}/expired_tiles ]; then
 	find ${TILEDIR}/tiles/[0-7] -execdir touch -t 197001010000 {} +
 fi
 
-mv ${PROJECTPATH}/import/timestamp_tmp ${PROJECTPATH}/import/timestamp
+echo ${TIMESTAMP_NEW} > ${PROJECTPATH}/import/timestamp
 
 echo "Finished processing at $(date)"
