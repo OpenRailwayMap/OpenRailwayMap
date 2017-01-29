@@ -35,7 +35,8 @@ rm ${DATADIR}/changes.osc
 
 echo "[2/3] Updating database"
 # remove old expire information, will be recreated by osm2pgsql according to the incoming changes
-rm ${DATADIR}/expired_tiles
+# may not exist, e.g. on first run after import
+rm -f ${DATADIR}/expired_tiles
 osm2pgsql --database $DBNAME --username $DBUSER --prefix $DBPREFIX --append --slim --merc --expire-output ${DATADIR}/expired_tiles --expire-tiles 15 --hstore-all --hstore-match-only --hstore-add-index --style openrailwaymap.style --number-processes $NUMPROCESSES --flat-nodes ${DATADIR}/flatnodes --cache $CACHE ${DATADIR}/changes-norelation.osc
 rm ${DATADIR}/changes-norelation.osc
 
