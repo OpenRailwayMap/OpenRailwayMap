@@ -381,7 +381,7 @@ way.styled
 }
 
 /* German speed signals (Zs 10) */
-node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:db:zs10"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=none]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:db:zs10"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=none]
 {
 	z-index: 90;
 	icon-image: "icons/de/zs10-sign-44.png";
@@ -390,7 +390,7 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 	allow-overlap: true;
 }
 
-node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:db:zs10"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"=none]
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:db:zs10"]["railway:signal:speed_limit:form"=light]["railway:signal:speed_limit:speed"=none]
 {
 	z-index: 95;
 	icon-image: "icons/de/zs10-light-44.png";
