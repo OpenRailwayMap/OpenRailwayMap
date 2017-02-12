@@ -12,11 +12,11 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Signale DE ESO" description="Preset to tag German railway signals">
-	<group name="OpenRailwayMap Signale DE ESO" icon="signals.png">
-			<group name="Ks-Signale" icon="de/ks-combined-32.png">
-				<item name="Ks-Vorsignal" icon="de/ks-distant-32.png" type="node">
-					<label text="Ks-Vorsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+	<group name="OpenRailwayMap Signals Germany ESO" de.name="OpenRailwayMap Signale DE ESO" icon="signals.png">
+			<group name="Ks Signals" de.name="Ks-Signale" icon="de/ks-combined-32.png">
+				<item name="Ks Distant Signal" de.name="Ks-Vorsignal" icon="de/ks-distant-32.png" type="node">
+					<label text="Ks Distant Signal" de.text="Ks-Vorsignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -32,13 +32,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:distant"
@@ -49,7 +51,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<combo key="railway:signal:distant:states"
 						default="DE-ESO:ks1;DE-ESO:ks2"
@@ -68,13 +71,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Vorsignalwiederholer"
 						/>
 					<space />
-					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
-					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
+					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
+					<preset_link preset_name="Distant Speed Indicator (Zs 3v)" />
 					
 				</item>
-				<item name="Ks-Mehrabschnittssignal" icon="de/ks-combined-32.png" type="node">
-					<label text="Ks-Mehrabschnittssignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Ks Combined Signal" de.name="Ks-Mehrabschnittssignal" icon="de/ks-combined-32.png" type="node">
+					<label text="Ks Combined Signal" de.text="Ks-Mehrabschnittssignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -90,13 +93,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:combined"
@@ -107,7 +112,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<combo key="railway:signal:combined:states"
 						default="DE-ESO:hp0;DE-ESO:ks1;DE-ESO:ks2"
@@ -132,23 +138,24 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
-						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
+						display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12)"
+						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
 						/>
 					<space />
-					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
-					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
-					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
-					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
-					<preset_link preset_name="Sh-1-Licht" />
-					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
-					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
-					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
-					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
-					<preset_link preset_name="ETCS-Halt-Tafel (Ne 14, ETCS Stop Marker)" />
+					<preset_link preset_name="Route Indicator (Zs 2)" />
+					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
+					<preset_link preset_name="Speed Indicator (Zs 3)" />
+					<preset_link preset_name="Distant Speed Indicator (Zs 3v)" />
+					<preset_link preset_name="Sh 1 Light" />
+					<preset_link preset_name="Short Entry Indicator (Zs 13)" />
+					<preset_link preset_name="Left-Track Indicator (Zs 6)" />
+					<preset_link preset_name="Left-Track Substitute Indicator (Zs 8)" />
+					<preset_link preset_name="Starting Order and Close Doors Signal (Zp 9/Zp 10)" />
+					<preset_link preset_name="ETCS Stop Marker (Ne 14)" />
 				</item>
-				<item name="Ks-Hauptsignal" icon="de/ks-main-32.png" type="node">
-					<label text="Ks-Hauptsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Ks Main Signal" de.name="Ks-Hauptsignal" icon="de/ks-main-32.png" type="node">
+					<label text="Ks Main Signal" de.text="Ks-Hauptsignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -164,13 +171,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:main"
@@ -181,7 +190,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<combo key="railway:signal:main:states"
 						text="Signal states"
@@ -201,22 +211,23 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
-						display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
+						display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12)"
+						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
 						/>
 					<space />
-					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
-					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
-					<preset_link preset_name="Sh-1-Licht" />
-					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
-					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
-					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
-					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
-					<preset_link preset_name="ETCS-Halt-Tafel (Ne 14, ETCS Stop Marker)" />
+					<preset_link preset_name="Route Indicator (Zs 2)" />
+					<preset_link preset_name="Speed Indicator (Zs 3)" />
+					<preset_link preset_name="Sh 1 Light" />
+					<preset_link preset_name="Short Entry Indicator (Zs 13)" />
+					<preset_link preset_name="Left-Track Indicator (Zs 6)" />
+					<preset_link preset_name="Left-Track Substitute Indicator (Zs 8)" />
+					<preset_link preset_name="Starting Order and Close Doors Signal (Zp 9/Zp 10)" />
+					<preset_link preset_name="ETCS Stop Marker (Ne 14)" />
 				</item>
 			</group>
-			<item name="Sv-Signal" icon="de/sv-hp0-32.png" type="node">
-				<label text="Sv-Signal" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Sv Signal" de.name="Sv-Signal" icon="de/sv-hp0-32.png" type="node">
+				<label text="Sv Signal" de.text="Sv-Signal" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -232,13 +243,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					display_values="left,right,on a bridge over the tracks"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<space />
 				<key key="railway:signal:combined"
@@ -249,7 +262,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
 					/>
 				<multiselect key="railway:signal:combined:states"
 					text="Signal states, Hamburg names (multi-selection)"
@@ -270,27 +284,28 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Ersatzsignal (Mehrfachauswahl)"
 					delimiter=";"
 					values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
-					display_values="Ersatzsignal;Vorsichtsignal;M-Tafel"
+					display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12)"
+					de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
 					/>
 				<check key="railway:signal:distant:shortened"
 					text="Shortened distance"
 					de.text="Verkürzter Bremsweg (Weißer Bremspfeil)"
 					/>
 				<space />
-				<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
-				<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
-				<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
-				<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
-				<preset_link preset_name="Sh-1-Licht" />
-				<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
-				<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
-				<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
-				<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
+				<preset_link preset_name="Route Indicator (Zs 2)" />
+				<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
+				<preset_link preset_name="Speed Indicator (Zs 3)" />
+				<preset_link preset_name="Distant Speed Indicator (Zs 3v)" />
+				<preset_link preset_name="Sh 1 Light" />
+				<preset_link preset_name="Short Entry Indicator (Zs 13)" />
+				<preset_link preset_name="Left-Track Indicator (Zs 6)" />
+				<preset_link preset_name="Left-Track Substitute Indicator (Zs 8)" />
+				<preset_link preset_name="Starting Order and Close Doors Signal (Zp 9/Zp 10)" />
 			</item>
-			<group name="Hl-Signale" icon="de/hl1-32.png">
-				<item name="Hl-Kombinationssignal" icon="de/hl12a-32.png" type="node">
-					<label text="Hl-Kombinationssignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<group name="Hl Signals" de.name="Hl-Signale" icon="de/hl1-32.png">
+				<item name="Hl Combined Signal" de.name="Hl-Kombinationssignal" icon="de/hl12a-32.png" type="node">
+					<label text="Hl Combined Signal" de.text="Hl-Kombinationssignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -306,13 +321,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:combined"
@@ -323,15 +340,16 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<multiselect key="railway:signal:combined:states"
 						text="Signal states (multi-selection)"
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:hl4;DE-ESO:hl5;DE-ESO:hl6a;DE-ESO:hl6b;DE-ESO:hl7;DE-ESO:hl8;DE-ESO:hl9a;DE-ESO:hl9b;DE-ESO:hl10;DE-ESO:hl11;DE-ESO:hl12a;DE-ESO:hl12b;DE-ESO:kennlicht;?"
-						display_values="Hp 0 (stop);Hl 1 (vmax->vmax);Hl 2 (100 kph -> vmax);Hl 3a (40 kph -> vmax);Hl 3b (60 kph -> vmax);Hl 4 (vmax -> 100 kph);Hl 5 (100 kph -> 100 kph);Hl 6a (40 kph -> 100 kph);Hl 6b (60 kph -> 100 kph);Hl 7 (vmax -> 40  or 60 kph);Hl 8 (100 kph -> 40 or 60 kph);Hl 9a (40 kph -> 40 or 60 kph);Hl 9b (60 kph -> 40 or 60 kph);Hl 10 (vmax -> stop);Hl 11 (100 kph -> stop);Hl 12a (40 kph -> stop);Hl 12b (60 kph -> stop);marker light;unknown"
-						de.display_values="Hp 0 (Halt);Hl 1 (Höchstgeschwindigkeit->Höchstgeschwindigkeit);Hl 2 (100 km/h -> Höchstgeschwindigkeit);Hl 3a (40 km/h -> Höchstgeschwindigkeit);Hl 3b (60 km/h -> Höchstgeschwindigkeit);Hl 4 (Höchstgeschwindigkeit -> 100 km/h);Hl 5 (100 km/h -> 100 km/h);Hl 6a (40 km/h -> 100 km/h);Hl 6b (60 km/h -> 100 km/h);Hl 7 (Höchstgeschwindigkeit -> 40  oder 60 km/h);Hl 8 (100 km/h -> 40 or 60 km/h);Hl 9a (40 km/h -> 40 oder 60 km/h);Hl 9b (60 km/h -> 40 oder 60 km/h);Hl 10 (Höchstgeschwindigkeit -> stop);Hl 11 (100 km/h -> stop);Hl 12a (40 km/h -> stop);Hl 12b (60 km/h -> stop);Kennlicht;unbekannt" />
+						display_values="Hp 0 (stop);Hl 1 (vmax->vmax);Hl 2 (100 kph -> vmax);Hl 3a (40 kph -> vmax);Hl 3b (60 kph -> vmax);Hl 4 (vmax -> 100 kph);Hl 5 (100 kph -> 100 kph);Hl 6a (40 kph -> 100 kph);Hl 6b (60 kph -> 100 kph);Hl 7 (vmax -> 40 or 60 kph);Hl 8 (100 kph -> 40 or 60 kph);Hl 9a (40 kph -> 40 or 60 kph);Hl 9b (60 kph -> 40 or 60 kph);Hl 10 (vmax -> stop);Hl 11 (100 kph -> stop);Hl 12a (40 kph -> stop);Hl 12b (60 kph -> stop);marker light;unknown"
+						de.display_values="Hp 0 (Halt);Hl 1 (Höchstgeschwindigkeit->Höchstgeschwindigkeit);Hl 2 (100 km/h -> Höchstgeschwindigkeit);Hl 3a (40 km/h -> Höchstgeschwindigkeit);Hl 3b (60 km/h -> Höchstgeschwindigkeit);Hl 4 (Höchstgeschwindigkeit -> 100 km/h);Hl 5 (100 km/h -> 100 km/h);Hl 6a (40 km/h -> 100 km/h);Hl 6b (60 km/h -> 100 km/h);Hl 7 (Höchstgeschwindigkeit -> 40 oder 60 km/h);Hl 8 (100 km/h -> 40 or 60 km/h);Hl 9a (40 km/h -> 40 oder 60 km/h);Hl 9b (60 km/h -> 40 oder 60 km/h);Hl 10 (Höchstgeschwindigkeit -> stop);Hl 11 (100 km/h -> stop);Hl 12a (40 km/h -> stop);Hl 12b (60 km/h -> stop);Kennlicht;unbekannt" />
 					<combo key="railway:signal:combined:function"
 						text="Signal function"
 						de.text="Signalaufgabe"
@@ -343,20 +361,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs12;no"
-						display_values="Ersatzsignal;M-Tafel;kein Ersatzsignal"
+						de.display_values="Ersatzsignal (Zs 1);M-Tafel (Zs 12);kein Ersatzsignal"
+						display_values="substitute signal (Zs 1);M Board (Zs 12);no substitute signal"
 						/>
 					<space />
-					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
-					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
-					<preset_link preset_name="Sh-1-Licht" />
-					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
-					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
-					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
-					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
+					<preset_link preset_name="Route Indicator (Zs 2)" />
+					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
+					<preset_link preset_name="Sh 1 Light" />
+					<preset_link preset_name="Short Entry Indicator (Zs 13)" />
+					<preset_link preset_name="Left-Track Indicator (Zs 6)" />
+					<preset_link preset_name="Left-Track Substitute Indicator (Zs 8)" />
+					<preset_link preset_name="Starting Order and Close Doors Signal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Hl-Hauptsignal" icon="de/hl3a-32.png" type="node">
-					<label text="Hl-Hauptsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Hl Main Signal" de.name="Hl-Hauptsignal" icon="de/hl3a-32.png" type="node">
+					<label text="Hl Main Signal" de.text="Hl-Hauptsignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -372,13 +391,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:main"
@@ -389,7 +410,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<multiselect key="railway:signal:main:states"
 						text="Signal states (multi-selection)"
@@ -409,20 +431,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs12"
-						display_values="Ersatzsignal;M-Tafel"
+						display_values="substitute signal (Zs 1);M Board (Zs 12)"
+						de.display_values="Ersatzsignal (Zs 1);M-Tafel (Zs 12)"
 						/>
 					<space />
-					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
-					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
-					<preset_link preset_name="Sh-1-Licht" />
-					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
-					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
-					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
-					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
+					<preset_link preset_name="Route Indicator (Zs 2)" />
+					<preset_link preset_name="Speed Indicator (Zs 3)" />
+					<preset_link preset_name="Sh 1 Light" />
+					<preset_link preset_name="Short Entry Indicator (Zs 13)" />
+					<preset_link preset_name="Left-Track Indicator (Zs 6)" />
+					<preset_link preset_name="Left-Track Substitute Indicator (Zs 8)" />
+					<preset_link preset_name="Starting Order and Close Doors Signal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Hl-Vorsignal" icon="de/hl1-distant-24.png" type="node">
-					<label text="Hl-Vorsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Hl Distant Signal" de.name="Hl-Vorsignal" icon="de/hl1-distant-24.png" type="node">
+					<label text="Hl Distant Signal" de.text="Hl-Vorsignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -438,13 +461,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:distant"
@@ -467,13 +492,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Reduzierter Bremswegabstand"
 						/>
 					<space />
-					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
+					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
 				</item>
 			</group>
-			<group name="Sk-Signale">
-				<item name="Sk-Kombinationssignal" type="node">
-					<label text="Sk-Kombinationssignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<group name="Sk Signals" de.name="Sk-Signale">
+				<item name="Sk Combined Signal" de.name="Sk-Kombinationssignal" type="node">
+					<label text="Sk Combined Signal" de.text="Sk-Kombinationssignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -489,13 +514,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:combined"
@@ -506,7 +533,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<combo key="railway:signal:combined:states"
 						default="DE-ESO:hp0;DE-ESO:sk1;DE-ESO:sk2"
@@ -527,22 +555,23 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs7"
-						display_values="Ersatzsignal;Vorsichtsignal"
+						display_values="substitute signal (Zs 1);cautioness signal (Zs 7)"
+						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7)"
 						/>
 					<space />
-					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
-					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
-					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
-					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
-					<preset_link preset_name="Sh-1-Licht" />
-					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
-					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
-					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
-					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
+					<preset_link preset_name="Speed Indicator (Zs 3)" />
+					<preset_link preset_name="Distant Speed Indicator (Zs 3v)" />
+					<preset_link preset_name="Route Indicator (Zs 2)" />
+					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
+					<preset_link preset_name="Sh 1 Light" />
+					<preset_link preset_name="Short Entry Indicator (Zs 13)" />
+					<preset_link preset_name="Left-Track Indicator (Zs 6)" />
+					<preset_link preset_name="Left-Track Substitute Indicator (Zs 8)" />
+					<preset_link preset_name="Starting Order and Close Doors Signal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Sk-Hauptsignal" type="node">
-					<label text="Sk-Hauptsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Sk Main Signal" de.name="Sk-Hauptsignal" type="node">
+					<label text="Sk Main Signal" de.text="Sk-Hauptsignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -558,13 +587,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:main"
@@ -575,7 +606,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<combo key="railway:signal:main:states"
 						default="DE-ESO:hp0;DE-ESO:sk1"
@@ -596,20 +628,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs7"
-						display_values="Ersatzsignal;Vorsichtsignal"
+						display_values="substitute signal (Zs 1);cautioness signal (Zs 7)"
+						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7)"
 						/>
 					<space />
-					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
-					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
-					<preset_link preset_name="Sh-1-Licht" />
-					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
-					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
-					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
-					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
+					<preset_link preset_name="Route Indicator (Zs 2)" />
+					<preset_link preset_name="Speed Indicator (Zs 3)" />
+					<preset_link preset_name="Sh 1 Light" />
+					<preset_link preset_name="Short Entry Indicator (Zs 13)" />
+					<preset_link preset_name="Left-Track Indicator (Zs 6)" />
+					<preset_link preset_name="Left-Track Substitute Indicator (Zs 8)" />
+					<preset_link preset_name="Starting Order and Close Doors Signal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Sk-Vorsignal" type="node">
-					<label text="Sk-Vorsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Sk Distant Signal" de.name="Sk-Vorsignal" type="node">
+					<label text="Sk Distant Signal" de.text="Sk-Vorsignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -625,13 +658,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:distant"
@@ -655,14 +690,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Vorsignalwiederholer"
 						/>
 					<space />
-					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
-					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
+					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
+					<preset_link preset_name="Distant Speed Indicator (Zs 3v)" />
 				</item>
 			</group>
-			<group name="H/V-Signale" icon="de/hp0-semaphore-32.png">
-				<item name="Hp-Form-Hauptsignal" icon="de/hp0-semaphore-32.png" type="node">
-					<label text="Hp-Form-Hauptsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<group name="H/V Signals" de.name="H/V-Signale" icon="de/hp0-semaphore-32.png">
+				<item name="Hp Semaphore Main Signal" de.name="Hp-Form-Hauptsignal" icon="de/hp0-semaphore-32.png" type="node">
+					<label text="Hp Semaphore Main Signal" de.text="Hp-Form-Hauptsignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -678,13 +713,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:main"
@@ -695,7 +732,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<multiselect key="railway:signal:main:states"
 						text="Signal states (multi-selection)"
@@ -722,17 +760,17 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values_sort="false"
 						/>
 					<space />
-					<preset_link preset_name="Sh-1-Licht" />
+					<preset_link preset_name="Sh 1 Light" />
+					<preset_link preset_name="Speed Indicator (Zs 3)" />
+					<preset_link preset_name="Short Entry Indicator (Zs 13)" />
+					<preset_link preset_name="Left-Track Indicator (Zs 6)" />
+					<preset_link preset_name="Left-Track Substitute Indicator (Zs 8)" />
+					<preset_link preset_name="Starting Order and Close Doors Signal (Zp 9/Zp 10)" />
 					<preset_link preset_name="ex-DR Diamond Board (Zs 103)" />
-					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
-					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
-					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
-					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
-					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
 				</item>
-				<item name="Hp-Licht-Hauptsignal" icon="de/hp2-light-32.png" type="node">
-					<label text="Hp-Licht-Hauptsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Hp Light Signal" de.name="Hp-Licht-Hauptsignal" icon="de/hp2-light-32.png" type="node">
+					<label text="Hp Light Signal" de.text="Hp-Licht-Hauptsignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -748,13 +786,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:main"
@@ -765,7 +805,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<multiselect key="railway:signal:main:states"
 						text="Signal states (multi-selection)"
@@ -787,22 +828,23 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
-						display_values="Ersatzsignal (ex-DB);Ersatzsignal (ex-DR);Vorsichtsignal;M-Tafel"
+						display_values="substitution signal (ex-DB Zs 1),substitution signal (ex-DR Zs 1),cautioness signal (Zs 7),M board (Zs 12)"
+						de.display_values="Ersatzsignal (ex-DB Zs 1);Ersatzsignal (ex-DR Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
 						/>
 					<space />
-					<preset_link preset_name="Vr-Licht-Vorsignal" />
-					<preset_link preset_name="Richtungsanzeiger (Zs 2)" />
-					<preset_link preset_name="Geschwindigkeitsanzeiger (Zs 3)" />
-					<preset_link preset_name="Sh-1-Licht" />
-					<preset_link preset_name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
-					<preset_link preset_name="Gegengleisanzeiger (Zs 6)" />
-					<preset_link preset_name="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
-					<preset_link preset_name="Abfahrtssignal (Zp 9/Zp 10)" />
+					<preset_link preset_name="Vr Distant Light Signal" />
+					<preset_link preset_name="Route Indicator (Zs 2)" />
+					<preset_link preset_name="Speed Indicator (Zs 3)" />
+					<preset_link preset_name="Sh 1 Light" />
+					<preset_link preset_name="Short Entry Indicator (Zs 13)" />
+					<preset_link preset_name="Left-Track Indicator (Zs 6)" />
+					<preset_link preset_name="Left-Track Substitute Indicator (Zs 8)" />
+					<preset_link preset_name="Starting Order and Close Doors Signal (Zp 9/Zp 10)" />
 				</item>
 				<separator />
-				<item name="Vr-Form-Vorsignal" icon="de/vr2-semaphore-32.png" type="node">
-					<label text="Vr-Form-Vorsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Vr Semaphore Distant Signal" de.name="Vr-Form-Vorsignal" icon="de/vr2-semaphore-32.png" type="node">
+					<label text="Vr Semaphore Distant Signal" de.text="Vr-Form-Vorsignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -818,13 +860,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:distant"
@@ -835,7 +879,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<multiselect key="railway:signal:distant:states"
 						text="Signal states (multi-selection)"
@@ -857,12 +902,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Vorsignalwiederholer"
 						/>
 					<space />
-					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
-					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
+					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
+					<preset_link preset_name="Distant Speed Indicator (Zs 3v)" />
 				</item>
-				<item name="Vr-Licht-Vorsignal" icon="de/vr0-light-32.png" type="node">
-					<label text="Vr-Licht-Vorsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Vr Distant Light Signal" de.name="Vr-Licht-Vorsignal" icon="de/vr0-light-32.png" type="node">
+					<label text="Vr Distant Light Signal" de.text="Vr-Licht-Vorsignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -878,13 +923,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:distant"
@@ -895,7 +942,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<multiselect key="railway:signal:distant:states"
 						text="Signal states (multi-selection)"
@@ -915,21 +963,21 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Vorsignalwiederholer"
 						/>
 					<space />
-					<preset_link preset_name="Richtungsvoranzeiger (Zs 2v)" />
-					<preset_link preset_name="Geschwindigkeitsvoranzeiger (Zs 3v)" />
+					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
+					<preset_link preset_name="Distant Speed Indicator (Zs 3v)" />
 				</item>
 			</group>
-			<item name="Sh-1-Licht" icon="de/sh1.png" type="node">
-				<label text="Sh-1-Licht an anderen Signalen wie Ks-Signalen oder Hp-Ausfahrsignalen." />
+			<item name="Sh 1 Light" de.name="Sh-1-Licht" icon="de/sh1.png" type="node">
+				<label text="Sh 1 lights at other signals like Ks, Hp or Hl signals" de.text="Sh-1-Licht an anderen Signalen wie Ks-, Hl- oder Hp-Signalen." />
 				<space />
 				<key key="railway:signal:minor"
 					value="DE-ESO:sh1" />
 				<key key="railway:signal:minor:form"
 					value="light" />
 			</item>
-			<item name="Trapeztafel (Ne 1)" icon="de/ne1-32.png" type="node">
-				<label text="Trapeztafel (Ne 1)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Trapezoir Board (Ne 1)" de.name="Trapeztafel (Ne 1)" icon="de/ne1-32.png" type="node">
+				<label text="Trapezoir Board (Ne 1)" de.text="Trapeztafel (Ne 1)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -941,16 +989,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					display_values="left,right,on a bridge over the tracks"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<text key="railway:position:exact"
-					text="Exact position of wrong-line signals (e.g. '13.427')"
+					text="Exact position if signal is mounted at the left track (e.g. '13.427')"
 					de.text="Standortangabe an Trapeztafeln im Gegengleis (z. B. '13.427')"
 					/>
 				<space />
@@ -967,9 +1017,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:main:function"
 					value="entry" />
 			</item>
-			<item name="Vorsignaltafel (Ne 2)" icon="de/ne2-32.png" type="node">
-				<label text="Vorsignaltafel (Ne 2)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Distant Signal Board (Ne 2)" de.name="Vorsignaltafel (Ne 2)" icon="de/ne2-32.png" type="node">
+				<label text="Distant Signal Board (Ne 2)" de.text="Vorsignaltafel (Ne 2)" />
+				<label text="This signal is only mapped if there is no semaphore/light distant signal." de.text="Dieses Signal wird nur erfasst, wenn es ohne Vorsignal aufgestellt ist." />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -981,20 +1032,23 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					display_values="left,right,on a bridge over the tracks"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<space />
 				<combo key="railway:signal:distant"
 					text="Type"
 					de.text="Typ"
 					values="DE-ESO:db:ne2,DE-ESO:dr:so3,DE-ESO:dr:so3b"
-					display_values="Ne 2 ex-DB,So 3 ex-DR, So 3b ex-DR (mit schwarzem Punkt)"
+					display_values="Ne 2 ex-DB,So 3 ex-DR, So 3b ex-DR (with black dot)"
+					de.display_values="Ne 2 ex-DB,So 3 ex-DR, So 3b ex-DR (mit schwarzem Punkt)"
 					match="keyvalue!" />
 				<key key="railway:signal:distant:form"
 					value="sign" />
@@ -1009,9 +1063,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Verkürzter Bremsweg"
 					/>
 			</item>
-			<item name="Kreuztafel (So 106)" icon="de/so106-32.png" type="node">
-				<label text="Kreuztafel (So 106)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Cross Board (So 106)" de.name="Kreuztafel (So 106)" icon="de/so106-32.png" type="node">
+				<label text="Cross Board (So 106)" de.text="Kreuztafel (So 106)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -1023,13 +1077,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					display_values="left,right,on a bridge over the tracks"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<space />
 				<key key="railway:signal:distant"
@@ -1038,10 +1094,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="sign" />
 			</item>
 			<separator />
-			<group name="Bahnübergangssignale" icon="de/bue1-ds-32.png">
-				<item name="Bü-Überwachungssignal (Bü 0/Bü 1)" icon="de/bue1-ds-32.png" type="node">
-					<label text="Bü-Überwachungssignal (Bü 0/Bü 1)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<group name="Crossing Signals" de.name="Bahnübergangssignale" icon="de/bue1-ds-32.png">
+				<item name="Crossing Protection Signal (Bü 0/1)" de.name="Bü-Überwachungssignal (Bü 0/Bü 1)" icon="de/bue1-ds-32.png" type="node">
+					<label text="Crossing Protection Signal (Bü 0/1)" de.text="Bü-Überwachungssignal (Bü 0/Bü 1)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1053,13 +1109,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<combo key="railway:signal:crossing"
@@ -1085,9 +1143,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
 						/>
 				</item>
-				<item name="Bü-Überwachungssignal erwarten (Bü 2/So 15)" icon="de/bue2-ds-28.png" type="node">
-					<label text="Bü-Überwachungssignal erwarten (Bü 2/So 15)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Diamond Board (Bü 2)/Warning Board (So 15)" de.name="Rautentafel (Bü 2)/Warntafel (So 15)" icon="de/bue2-ds-28.png" type="node">
+					<label text="Diamond Board (Bü 2)/Warning Board (So 15)" de.text="Rautentafel (Bü 2)/Warntafel (So 15)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1099,20 +1157,24 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<combo key="railway:signal:crossing_distant"
 						text="Type of signal"
 						de.text="Signaltyp"
-						values="DE-ESO:bü2,DE-ESO:so15"
-						display_values="Bü 2 'Rautentafel' ex-DB,So 15 ex-DR"
+						values="DE-ESO:bü2|DE-ESO:so15"
+						delimiter="|"
+						display_values="diamond board (Bü 2, only West Germany)|warning board (So 15, only East Germany)"
+						de.display_values="Rautentafel (Bü 2, nur ex-DB)|Warntafel (So 15, nur ex-DR)"
 						match="keyvalue!" />
 					<key key="railway:signal:crossing_distant:form"
 						value="sign" />
@@ -1125,10 +1187,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
 						/>
 				</item>
-				<item de.name="Einschaltkontakt Bahnübergang/Merktafel (Bü 3)"
-				    name="Activation switch crossing/Reminder Sign (Bü 3)" icon="de/bue3-57.png" type="node">
+				<item de.name="Einschaltkontakt Bahnübergang (Merktafel, Bü 3)"
+				    name="Activation switch crossing (Reminder Board, Bü 3)" icon="de/bue3-57.png" type="node">
 					<label de.text="Einschaltkontakt Bahnübergang/Merktafel (Bü 3)"
-					   text="Activation switch of a level crossing/reminder sign (Bü 3)" />
+					   text="Activation switch of a level crossing/ (Reminder Board, Bü 3)" />
 					<label de.text="Existiert nur im Gebiet der ehemaligen Bundesbahn (DS 301)."
 					   text="This signal only exists in West Germany (former area of Deutsche Bundesbahn)." />
 					<label de.text="Wird als Punkt auf dem Gleis erfasst."
@@ -1144,13 +1206,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<key key="railway:signal:crossing_distant"
 						value="DE-ESO:bü3"
@@ -1177,7 +1241,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<key key="railway:signal:direction"
 						value="both" />
@@ -1187,9 +1252,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<key key="railway:signal:crossing_distant:form"
 						value="sign" />
 				</item>
-				<item name="Pfeiftafel (Bü 4/Pf 1/2)" icon="de/bue4-ds-32.png" type="node">
-					<label text="Pfeiftafel (Bü 4/Pf 1/2)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Whistle Board (Bü 4, Pf 1/2)" de.name="Pfeiftafel (Bü 4/Pf 1/2)" icon="de/bue4-ds-32.png" type="node">
+					<label text="Whistle Board (Bü 4, Pf 1/2)" de.text="Pfeiftafel (Bü 4/Pf 1/2)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1201,20 +1266,23 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<combo key="railway:signal:whistle"
 						text="Exact type"
 						de.text="Signaltyp"
 						values="DE-ESO:db:bü4,DE-ESO:dr:pf1,DE-ESO:dr:pf2"
-						display_values="Bü 4 (ex-DB),Pf 1 (einfache Pfeiftafel ex-DR),Pf 2 (doppelte Pfeiftafel ex-DR)"
+						display_values="Bü 4 (ex-DB),Pf 1 (one board, ex-DR),Pf 2 (two boards at one post, ex-DR)"
+						de.display_values="Bü 4 (ex-DB),Pf 1 (einfache Pfeiftafel ex-DR),Pf 2 (doppelte Pfeiftafel ex-DR)"
 						/>
 					<key key="railway:signal:whistle:form"
 						value="sign" />
@@ -1228,9 +1296,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						default="off"
 						/>
 				</item>
-				<item name="Läutetafel (Bü 5)" icon="de/bue5-32.png" type="node">
-					<label text="Läutetafel (Bü 5)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Ring Board (Bü 5)" de.name="Läutetafel (Bü 5)" icon="de/bue5-32.png" type="node">
+					<label text="Ring Board (Bü 5)" de.text="Läutetafel (Bü 5)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1242,13 +1310,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<key key="railway:signal:ring"
 						value="DE-ESO:bü5" />
@@ -1259,9 +1329,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Zwei senkrechte Striche?"
 						/>
 				</item>
-				<item name="Bü-Kennzeichentafel" icon="de/crossing-info.png" type="node">
-					<label text="Bü-Kennzeichentafel" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Level Crossing Marker Board" de.name="Bü-Kennzeichentafel" icon="de/crossing-info.png" type="node">
+					<label text="Level Crossing Marker Board" de.text="Bü-Kennzeichentafel" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1279,7 +1349,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<key key="railway:signal:crossing_info"
 						value="DE-ESO:bü-kennzeichentafel" />
@@ -1297,12 +1368,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
-				<item name="Bü-Ankündetafel" icon="de/crossing-hint.png" type="node">
-					<label text="Bü-Ankündetafel" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Level Crossing Announcement Board" de.name="Bü-Ankündetafel" icon="de/crossing-hint.png" type="node">
+					<label text="Level Crossing Announcement Board" de.text="Bü-Ankündetafel" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1320,7 +1392,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<key key="railway:signal:crossing_hint"
 						value="DE-ESO:bü-ankündetafel" />
@@ -1338,14 +1411,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
 			</group>
-			<group name="Schutzsignale" icon="de/sh1-semaphore-normal-32.png">
-				<item name="Schutzhaltsignal (Sh 0/Sh 1)" icon="de/sh0-semaphore-dwarf-32.png" type="node">
-					<label text="Schutzhaltsignal  (Sh 0/Sh 1)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<group name="Protective and Shunting Signals (Sh)" de.name="Schutzsignale" icon="de/sh1-semaphore-normal-32.png">
+				<item name="Shunting Stop Signal (Sh 0/Sh 1)" de.name="Schutzhaltsignal (Sh 0/Sh 1)" icon="de/sh0-semaphore-dwarf-32.png" type="node">
+					<label text="Shunting Stop Signal (Sh 0/Sh 1)" de.text="Schutzhaltsignal  (Sh 0/Sh 1)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1361,13 +1435,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge,in_track"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Gleismitte/am Prellbock"
+						display_values="left,right,on a bridge over the tracks,in the track/at the buffer stop"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Gleismitte/am Prellbock"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:minor"
@@ -1382,20 +1458,22 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<combo key="railway:signal:minor:states"
 						text="Displayed signals"
 						de.text="Angezeigte Signalbilder"
 						values="DE-ESO:hp0;DE-ESO:sh1,DE-ESO:sh0;DE-ESO:sh1,DE-ESO:hp0;DE-ESO:kennlicht"
-						display_values="Lichtsignal (Hp 0/Sh 1),Formsignal (Sh 0/Sh 1),Zugdeckungssignal (Hp 0/Kennlicht)"
+						display_values="light signal (Hp 0/Sh 1),semaphore signal (Sh 0/Sh 1),Hp 0/marker light"
+						de.display_values="Lichtsignal (Hp 0/Sh 1),Formsignal (Sh 0/Sh 1),Zugdeckungssignal (Hp 0/Kennlicht)"
 						/>
 					<space />
 					<label text="Signal Gsp 2 siehe 'Gleissperre'" />
 				</item>
-				<item name="Schutzhalttafel (Sh 2)" icon="de/sh2-32.png" type="node">
-					<label text="Schutzhalttafel (Sh 2)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Protective Stop (Sh 2)" de.name="Schutzhalttafel (Sh 2)" icon="de/sh2-32.png" type="node">
+					<label text="Protective Stop (Sh 2)" de.text="Schutzhalttafel (Sh 2)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1423,9 +1501,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<key key="railway:signal:minor:height"
 						value="normal" />
 				</item>
-				<item name="Wärtervorscheibe" icon="de/sh3.png" type="node">
-					<label text="Wärtervorscheibe" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Expect Sh 2 Board" de.name="Wärtervorscheibe" icon="de/sh3.png" type="node">
+					<label text="Expect Sh 2 Board" de.text="Wärtervorscheibe" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1441,13 +1519,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:minor_distant"
@@ -1458,14 +1538,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
 			</group>
-			<group name="Rangiersignale" icon="de/ra11-sign-32.png">
-				<item name="Rangierhalttafel (Ra 10)" icon="de/ra10-32.png" type="node">
-					<label text="Rangierhalttafel (Ra 10)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<group name="Shunting Signals" de.name="Rangiersignale" icon="de/ra11-sign-32.png">
+				<item name="Limit of Shunting Board (Ra 10)" de.name="Rangierhalttafel (Ra 10)" icon="de/ra10-32.png" type="node">
+					<label text="Limit of Shunting Board (Ra 10)" de.text="Rangierhalttafel (Ra 10)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1483,7 +1564,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:shunting"
@@ -1494,12 +1576,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
-				<item name="Rangierhaltsignal" icon="de/ra11-sign-32.png" type="node">
+				<item name="Waiting Board (Ra 11)" de.name="Rangierhaltsignal (Ra 11)" icon="de/ra11-sign-32.png" type="node">
 					<label text="Rangierhaltsignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1521,37 +1604,42 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<combo key="railway:signal:shunting"
 						text="Type of signal"
 						de.text="Signaltyp"
 						values="DE-ESO:ra11,DE-ESO:ra11b"
-						display_values="Ra 11 (gelb),Ra 11b (weiß)"
+						display_values="Ra 11 (yellow),Ra 11b (white)"
+						de.display_values="Ra 11 (gelb),Ra 11b (weiß)"
 						match="keyvalue!" />
 					<combo key="railway:signal:shunting:form"
 						text="Signal form"
 						de.text="Anzeigeart"
 						values="light,sign"
-						display_values="Lichtsignal mit Sh 1,Tafel"
+						display_values="light signal with Sh 1,board"
+						de.display_values="Lichtsignal mit Sh 1,Tafel"
 						/>
 					<combo key="railway:signal:shunting:states"
 						text="Signal states"
 						de.text="Signalzustände"
 						values="DE-ESO:ra11;DE-ESO:sh1, "
-						display_values="Ra 11 / Sh 1,-nur Tafel-"
+						display_values="Ra 11/Sh 1,only board"
+						de.display_values="Ra 11/Sh 1,nur Tafel"
 						/>
 					<combo key="railway:signal:shunting:height"
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
-				<item name="Abdrücksignal (Ra 6–Ra 9)" type="node">
-					<label text="Abdrücksignal (Ra 6–Ra 9)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Hump Yard Signal (Ra 6–9)" de.name="Abdrücksignal (Ra 6–Ra 9)" type="node">
+					<label text="Hump Yard Signal (Ra 6–9)" de.text="Abdrücksignal (Ra 6–Ra 9)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1569,7 +1657,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:humping"
@@ -1586,12 +1675,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
-				<item name="Grenzzeichen (Ra 12)" icon="de/ra12.png" type="node">
-					<label text="Grenzzeichen (Ra 12)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Clear-of-Points Marker (Ra 12)" de.name="Grenzzeichen (Ra 12)" icon="de/ra12.png" type="node">
+					<label text="Clear-of-Points Marker (Ra 12)" de.text="Grenzzeichen (Ra 12)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1629,10 +1719,10 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="sign" />
 				</item>
 			</group>
-			<group name="Zusatzsignale" icon="de/zs3-60-sign-up-32.png">
-				<item name="Richtungsanzeiger (Zs 2)" icon="de/zs2-F-38.png" type="node">
-					<label text="Richtungsanzeiger (Zs 2)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<group name="Subsidiary Signals" de.name="Zusatzsignale" icon="de/zs3-60-sign-up-32.png">
+				<item name="Route Indicator (Zs 2)" de.name="Richtungsanzeiger (Zs 2)" icon="de/zs2-F-38.png" type="node">
+					<label text="Route Indicator (Zs 2)" de.text="Richtungsanzeiger (Zs 2)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1644,13 +1734,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:route"
@@ -1662,9 +1754,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<key key="railway:signal:route:form"
 						value="light" />
 				</item>
-				<item name="Richtungsvoranzeiger (Zs 2v)" icon="de/zs2v-F-38.png" type="node">
-					<label text="Richtungsvoranzeiger (Zs 2v)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Route Announcing Indicator (Zs 2v)" de.name="Richtungsvoranzeiger (Zs 2v)" icon="de/zs2v-F-38.png" type="node">
+					<label text="Route Announcing Indicator (Zs 2v)" de.text="Richtungsvoranzeiger (Zs 2v)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1676,13 +1768,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:route_distant"
@@ -1695,9 +1789,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="light" />
 				</item>
 				<separator />
-				<item name="Geschwindigkeitsanzeiger (Zs 3)" icon="de/zs3-60-sign-up-32.png" type="node">
-					<label text="Geschwindigkeitsanzeiger (Zs 3)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Speed Indicator (Zs 3)" de.name="Geschwindigkeitsanzeiger (Zs 3)" icon="de/zs3-60-sign-up-32.png" type="node">
+					<label text="Speed Indicator (Zs 3)" de.text="Geschwindigkeitsanzeiger (Zs 3)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1709,13 +1803,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:speed_limit"
@@ -1737,12 +1833,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
-				<item name="Geschwindigkeitsvoranzeiger (Zs 3v)" icon="de/zs3v-60-sign-down-32.png" type="node">
-					<label text="Geschwindigkeitsvoranzeiger (Zs 3v)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Distant Speed Indicator (Zs 3v)" de.name="Geschwindigkeitsvoranzeiger (Zs 3v)" icon="de/zs3v-60-sign-down-32.png" type="node">
+					<label text="Distant Speed Indicator (Zs 3v)" de.text="Geschwindigkeitsvoranzeiger (Zs 3v)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1754,13 +1851,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:speed_limit_distant"
@@ -1782,12 +1881,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
-				<item name="Endesignal (Zs 10)" icon="de/zs10-sign-32.png" type="node">
-					<label text="Endesignal (Zs 10)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="End of Speed Restriction (Zs 10)" de.name="Endesignal (Zs 10)" icon="de/zs10-sign-32.png" type="node">
+					<label text="End of Speed Restriction (Zs 10)" de.text="Endesignal (Zs 10)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1799,13 +1899,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:speed_limit"
@@ -1822,13 +1924,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
 				<separator />
-				<item name="Gegengleisanzeiger (Zs 6)" icon="de/zs6-sign-30.png" type="node">
-					<label text="Gegengleisanzeiger" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Left-Track Indicator (Zs 6)" de.name="Gegengleisanzeiger (Zs 6)" icon="de/zs6-sign-30.png" type="node">
+					<label text="Left-Track Indicator (Zs 6)" de.text="Gegengleisanzeiger" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1840,13 +1943,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" match="keyvalue!">
@@ -1860,9 +1965,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="Tafel,Leuchtanzeige"
 						/>
 				</item>
-				<item name="Gegengleisfahrt-Ersatzsignal (Zs 8)" type="node">
-					<label text="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Left-Track Substitute Indicator (Zs 8)" de.name="Gegengleisfahrt-Ersatzsignal (Zs 8)" type="node">
+					<label text="Left-Track Substitute Indicator (Zs 8)" de.text="Gegengleisfahrt-Ersatzsignal (Zs 8)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1874,18 +1979,20 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" match="keyvalue!">
-						<list_entry value="DE-ESO:db:zs8" display_value="Zs 8 DB" short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DB)" />
-						<list_entry value="DE-ESO:dr:zs8" display_value="Zs 8 DR" short_description="Linksfahrtersatzsignal Zs 8 (ex-DR)" />
+						<list_entry value="DE-ESO:db:zs8" display_value="Zs 8 DB" short_description="Left-Track Order Signal Zs 8 (ex-DB)" de.short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DB)" />
+						<list_entry value="DE-ESO:dr:zs8" display_value="Zs 8 DR" short_description="Left-Track Substitute Signal Zs 8 (ex-DB)" de.short_description="Linksfahrtersatzsignal Zs 8 (ex-DR)" />
 		            </combo>
 					<combo key="railway:signal:wrong_road:form"
 						text="Signal form"
@@ -1895,9 +2002,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						/>
 				</item>
 				<separator />
-				<item name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" icon="de/zs13-sign-30.png" type="node">
-					<label text="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Short Entry Indicator (Zs 13)" de.name="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" icon="de/zs13-sign-30.png" type="node">
+					<label text="Short Entry Indicator (Zs 13)" de.text="Stumpfgleis- und Frühhaltanzeiger (Zs 13)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1909,20 +2016,23 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<combo key="railway:signal:short_route"
 						text="Type of signal"
 						de.text="Signaltyp"
 						values="DE-ESO:zs13,DE-ESO:dr:zs6,DE-ESO:dr:zs106"
-						display_values="Zs 13,Zs 6 (Lichtsignal ex-DR),Zs 106 (Tafel ex-DR)"
+						display_values="Zs 13,Zs 6 (light signal ex-DR),Zs 106 (board ex-DR)"
+						de.display_values="Zs 13,Zs 6 (Lichtsignal ex-DR),Zs 106 (Tafel ex-DR)"
 						match="keyvalue!" />
 					<combo key="railway:signal:short_route:form"
 						text="Signal form"
@@ -1934,14 +2044,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
 			</group>
-			<group name="Langsamfahrsignale (Lf)" icon="de/lf7-70-sign-32.png">
-				<item name="Geschwindigkeitssignal" icon="de/lf7-70-sign-32.png" type="node">
-					<label text="Geschwindigkeitssignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<group name="Speed Restriction Signs (Lf)" de.name="Langsamfahrsignale (Lf)" icon="de/lf7-70-sign-32.png">
+				<item name="Speed Restriction Sign" de.name="Geschwindigkeitssignal" icon="de/lf7-70-sign-32.png" type="node">
+					<label name="Speed Restriction Sign" text="Geschwindigkeitssignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1953,22 +2064,24 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<combo key="railway:signal:speed_limit" text="Type of signal" de.text="Signaltyp" match="keyvalue!">
-						<list_entry value="DE-ESO:lf7" display_value="Lf 7" short_description="Geschwindigkeitssignal Lf 7" />
-						<list_entry value="DE-ESO:dr:lf1/2" display_value="Lf 1/2" short_description="Langsamfahrbeginnscheibe Lf 1/2 (ex-DR)" />
-						<list_entry value="DE-ESO:lf2" display_value="Lf 2" short_description="Anfangsscheibe Lf 2" />
-						<list_entry value="DE-ESO:lf3" display_value="Lf 3" short_description="Endscheibe Lf 3" />
-						<list_entry value="DE-ESO:db:lf5" display_value="Lf 5 DB" short_description="Anfangstafel Lf 5 (ex-DB)" />
-						<list_entry value="DE-ESO:dr:lf5" display_value="Lf 5 DR" short_description="Eckentafel Lf 5 (ex-DR)" />
+						<list_entry value="DE-ESO:lf7" display_value="Lf 7" short_description="Permanent Speed Restriction" de.short_description="Geschwindigkeitssignal" />
+						<list_entry value="DE-ESO:dr:lf1/2" display_value="Lf 1/2" short_description="Permanent Speed Restriction (ex-DR)" de.short_description="Langsamfahrbeginnscheibe (ex-DR)" />
+						<list_entry value="DE-ESO:lf2" display_value="Lf 2" short_description="Temporary Speed Restriction Begin Board" de.short_description="Anfangsscheibe" />
+						<list_entry value="DE-ESO:lf3" display_value="Lf 3" short_description="End of Temporary Speed Restriction" de.short_description="Endscheibe" />
+						<list_entry value="DE-ESO:db:lf5" display_value="Lf 5 DB" short_description="Permanent Speed Restriction Begin Board (ex-DB)" de.short_description="Anfangstafel (ex-DB)" />
+						<list_entry value="DE-ESO:dr:lf5" display_value="Lf 5 DR" short_description="Corner Board (ex-DR)" de.short_description="Eckentafel (ex-DR)" />
 					</combo>
 					<key key="railway:signal:speed_limit:form"
 						value="sign" />
@@ -1982,7 +2095,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<combo key="railway:signal:speed_limit:turn_direction"
 						text="Turn direction arrow – leave this key empty if there is no one."
@@ -1992,9 +2106,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.display_values="Links,Geradeaus,Rechts"
 						/>
 				</item>
-				<item name="Geschwindigkeits-Ankündesignal" icon="de/lf6-60-sign-down-32.png" type="node">
-					<label text="Geschwindigkeits-Ankündesignal" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Advance Warning Indicator" de.name="Geschwindigkeits-Ankündesignal" icon="de/lf6-60-sign-down-32.png" type="node">
+					<label text="Advance Warning Indicator (Announces a Speed Restriction)" de.text="Geschwindigkeits-Ankündesignal" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -2006,20 +2120,22 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<combo key="railway:signal:speed_limit_distant" text="Type of signal" de.text="Signaltyp" match="keyvalue!">
-						<list_entry value="DE-ESO:lf6" display_value="Lf 6" short_description="Geschwindigkeits-Ankündesignal Lf 6" />
-						<list_entry value="DE-ESO:lf1" display_value="Lf 1" short_description="Langsamfahrscheibe Lf 1" />
-						<list_entry value="DE-ESO:db:lf4" display_value="Lf 4 DB" short_description="Geschwindigkeitstafel Lf 4 (ex-DB)" />
-						<list_entry value="DE-ESO:dr:lf4" display_value="Lf 4" short_description="Geschwindigkeitstafel Lf 4 (ex-DR)" />
+						<list_entry value="DE-ESO:lf6" display_value="Lf 6" short_description="advance warning indicator" de.short_description="Geschwindigkeits-Ankündesignal Lf 6" />
+						<list_entry value="DE-ESO:lf1" display_value="Lf 1" short_description="warning board (temporary speed restriction)" de.short_description="Langsamfahrscheibe Lf 1" />
+						<list_entry value="DE-ESO:db:lf4" display_value="Lf 4 DB" short_description="advance warning indicator (ex-DB)" de.short_description="Geschwindigkeitstafel Lf 4 (ex-DB)" />
+						<list_entry value="DE-ESO:dr:lf4" display_value="Lf 4" de.short_description="advance warning indicator (ex-DR)" />
 					</combo>
 					<key key="railway:signal:speed_limit_distant:form"
 						value="sign" />
@@ -2033,7 +2149,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 					<combo key="railway:signal:speed_limit_distant:turn_direction"
 						text="Turn direction arrow – leave this key empty if there is no one."
@@ -2044,9 +2161,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						/>
 				</item>
 			</group>
-			<item name="Überwachungssignal Rückfallweiche (Ne 13)" icon="de/ne13a-32.png" type="node">
-				<label text="Überwachungssignal Rückfallweiche (Ne 13)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Protection Signal of a Resetting Switch (Ne 13)" de.name="Überwachungssignal Rückfallweiche (Ne 13)" icon="de/ne13a-32.png" type="node">
+				<label text="Protection Signal of a Resetting Switch (Ne 13)" de.text="Überwachungssignal Rückfallweiche (Ne 13)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2064,7 +2181,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<space />
 				<key key="railway:signal:resetting_switch"
@@ -2077,12 +2195,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
-			<item name="Ankündigung Überwachungssignal Rückfallweiche (Ne 12)" icon="de/ne12-38.png" type="node">
-				<label text="Ankündigung Überwachungssignal Rückfallweiche (Ne 12)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Resetting Switch Announcement Board (Ne 12)" de.name="Ankündigung Überwachungssignal Rückfallweiche (Ne 12)" icon="de/ne12-38.png" type="node">
+				<label text="Announcement Board of a Resetting Switch Protection Signal (Ne 12)" de.text="Ankündigung Überwachungssignal Rückfallweiche (Ne 12)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2100,7 +2219,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<space />
 				<key key="railway:signal:resetting_switch_distant"
@@ -2111,13 +2231,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
 			<separator />
-			<item name="Schachbretttafel (Ne 4)" icon="de/ne4-normal-32.png" type="node">
-				<label text="Schachbretttafel (Ne 4)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Chequerboard Sign (Ne 4)" de.name="Schachbretttafel (Ne 4)" icon="de/ne4-normal-32.png" type="node">
+				<label text="Chequerboard Sign (Ne 4)" de.text="Schachbretttafel (Ne 4)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2135,24 +2256,27 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<combo key="railway:signal:expected_position"
 					text="Side of track where the signal would be mounted usually"
 					de.text="Gleisseite, auf der man das Signal normalerweise erwarten würde"
 					values="left,right"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					display_values="left in direction of OSM way,right in direction of OSM way"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					match="keyvalue!" />
 				<combo key="railway:signal:expected_position:height"
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
-			<item name="Haltetafel (Ne 5)" icon="de/ne5-ds301-32.png" type="node">
-				<label text="Haltetafel (Ne 5)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Stop Marker (Ne 5)" de.name="Haltetafel (Ne 5)" icon="de/ne5-ds301-32.png" type="node">
+				<label text="Stop Marker (Ne 5)" de.text="Haltetafel (Ne 5)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2170,7 +2294,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<key key="railway:signal:stop"
 					value="DE-ESO:ne5" />
@@ -2180,14 +2305,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
 					/>
 				<text key="railway:signal:stop:caption"
-					text="Description"
+					text="text on subsidiary plate"
 					de.text="Zusatztext"
 					/>
 			</item>
-			<item name="stop request (Ne 5)" de.name="Anforderung Bedarfshalt (Ne 5)" icon="de/ne5-light-32.png" type="node">
+			<item name="Stop Request Signal (Ne 5)" de.name="Anforderung Bedarfshalt (Ne 5)" icon="de/ne5-light-32.png" type="node">
 				<label text="Stop sign as light signal (Ne 5) with meaning of 'stop requested'" de.text="Haltetafel als Lichtsignal (Ne 5) in der Bedeutung 'Anforderung Bedarfshalt'," />
 				<label text="shows a white flashing H on a black background if someone wants to enter the train" de.text="zeigt bei Haltewunsch ein weiß blinkendes H auf schwarzem Grund" />
 				<label text="according to DB Ril 301.1401 (6) / ESO AB 220a" de.text="nach DB-Richtlinie 301.1401 (6) bzw. ESO AB 220a" />
@@ -2209,7 +2335,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<key key="railway:signal:stop_demand"
 					value="DE-ESO:ne5" />
@@ -2219,12 +2346,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
-			<item name="Haltepunkttafel (Ne 6)" icon="de/ne6-32.png" type="node">
-				<label text="Haltepunkttafel (Ne 6)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Halt Advance Board (Ne 6)" de.name="Haltepunkttafel (Ne 6)" icon="de/ne6-32.png" type="node">
+				<label text="Halt Advance Board (Ne 6)" de.text="Haltepunkttafel (Ne 6)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2242,16 +2370,17 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<key key="railway:signal:station_distant"
 					value="DE-ESO:ne6" />
 				<key key="railway:signal:station_distant:form"
 					value="sign" />
 			</item>
-			<item name="Schneepflugtafel (Ne 7)" icon="de/ne7-yellow-up-32.png" type="node">
-				<label text="Schneepflugtafel" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Snowplow Sign (Ne 7)" de.name="Schneepflugtafel (Ne 7)" icon="de/ne7-yellow-up-32.png" type="node">
+				<label text="Snowplow Sign (Ne 7)" de.text="Schneepflugtafel" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2269,7 +2398,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<key key="railway:signal:snowplow"
 					value="DE-ESO:ne7" />
@@ -2279,7 +2409,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
 					/>
 				<combo key="railway:signal:snowplow:type"
 					text="Order"
@@ -2288,8 +2419,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Heben,Senken"
 					/>
 			</item>
-			<item name="ETCS-Halt-Tafel (Ne 14, ETCS Stop Marker)" icon="etcs-stop-marker-arrow-left-32.png" type="node">
-				<label text="ETCS-Halt-Tafel (Ne 14), auch bekannt als ETCS Stop Marker" />
+			<item name="ETCS Stop Marker (Ne 14)" de.name="ETCS-Halt-Tafel (Ne 14, ETCS Stop Marker)" icon="etcs-stop-marker-arrow-left-32.png" type="node">
+				<label text="ETCS Stop Marker (Ne 14)" de.text="ETCS-Halt-Tafel (Ne 14), auch bekannt als ETCS Stop Marker" />
 				<label text="Wird als Punkt auf dem Gleis erfasst. Steht am Hauptsignal oder virtuellem Signal (Level 2 ohne Signale)." />
 				<space />
 				<key key="railway"
@@ -2306,13 +2437,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge,overhead"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Oberleitung"
+					display_values="left,right,on a bridge over the tracks,overhead (at catenary level)"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,in der Oberleitung"
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<check key="railway:signal:catenary_mast"
 					text="On catenary mast"
@@ -2325,9 +2458,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
-			<item name="Fahrleitungssignal (El)" icon="de/el6-28.png" type="node">
-				<label text="Fahrleitungssignal (El)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Catenary Signals (El)" de.name="Fahrleitungssignal (El)" icon="de/el6-28.png" type="node">
+				<label text="Catenary Signals (El)" de.text="Fahrleitungssignal (El)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2339,20 +2472,23 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,overhead"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
+					display_values="left,right,overhead (at catenary level)"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,in der Oberleitung"
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<space />
 				<combo key="railway:signal:electricity"
 					text="Exact type"
 					de.text="Signaltyp"
 					values="DE-ESO:el1v,DE-ESO:el1,DE-ESO:el2,DE-ESO:el3,DE-ESO:el4,DE-ESO:el5,DE-ESO:el6"
-					display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
+					display_values="Open Circuit Breaker Ahead (El 1v),Open Circuit Breaker (El 1),Close Circuit Breaker (El 2),Advance Lower Pantograph (El 3),Execute Sign for Lower Pantograph(s) (El 4),Execute Sign for Raise Pantograph(s) (El 5),Limit of Electric Traction (El 6)"
+					de.display_values="Ausschaltsignal erwarten (El 1v),Ausschaltsignal (El 1),Einschaltsignal (El 2),Bügel-ab-Signal erwarten (El 3),Bügel-ab-Signal (El 4),Bügel-an-Signal (El 5),Halt für Fahrzeuge mit gehobenem Stromabnehmer (El 6)"
 					/>
 				<combo key="railway:signal:electricity:turn_direction"
 					text="Turn direction arrow – leave this key empty if there is no one."
@@ -2365,7 +2501,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
-					display_values="Mastbauform,Zwergsignal"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
 					/>
 				<combo key="railway:signal:electricity:type"
 					text="Meaning"
@@ -2376,18 +2513,18 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:electricity:form"
 					value="sign" />
 				<text key="railway:signal:electricity:voltage"
-					text="Voltage (if mentioned)"
+					text="voltage (if mentioned on subsidiary plate)"
 					de.text="Spannung (falls angezeigt)"
 					/>
 				<text key="railway:signal:electricity:frequency"
-					text="Frequency (if mentioned)"
+					text="frequency (if mentioned on subsidiary plate)"
 					de.text="Frequenz (falls angezeigt)"
 					/>
 			</item>
-			<group name="Signale für Schiebelokomotiven und Sperrfahrten (Ts)">
-				<item name="Nachschieben einstellen (Ts 1)" type="node">
-					<label text="Nachschieben einstellen" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<group name="Signals for Helper Engines (Ts)" de.name="Signale für Schiebelokomotiven und Sperrfahrten (Ts)">
+				<item name="Stop Banking (Ts 1)" de.name="Nachschieben einstellen (Ts 1)" type="node">
+					<label text="Stop Banking (Ts 1)" de.text="Nachschieben einstellen" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -2399,13 +2536,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:helper_engine"
@@ -2422,12 +2561,13 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
-				<item name="Halt/Weiterfahrt für zurückkehrende Schieblokomotiven und Sperrfahrten (Ts 2/3)" type="node">
-					<label text="Halt/Weiterfahrt für zurückkehrende Schieblokomotiven und Sperrfahrten" />
-					<label text="Wird als Punkt auf dem Gleis erfasst." />
+				<item name="Stop/Proceed for Returning Helper Engines (Ts 2/3)" de.name="Halt/Weiterfahrt für zurückkehrende Schieblokomotiven und Sperrfahrten (Ts 2/3)" type="node">
+					<label text="Stop/Proceed for Returning Helper Engines (Ts 2/3)" de.text="Halt/Weiterfahrt für zurückkehrende Schieblokomotiven und Sperrfahrten" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -2439,13 +2579,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right,bridge"
-						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						display_values="left,right,on a bridge over the tracks"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
 					<combo key="railway:signal:direction"
 						text="Direction"
 						de.text="Anzeigerichtung"
 						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						display_values="in direction of OSM way,against direction of OSM way"
+						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
 					<key key="railway:signal:helper_engine"
@@ -2458,14 +2600,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal height"
 						de.text="Signalbauform"
 						values="normal,dwarf"
-						display_values="Mastbauform,Zwergsignal"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
 			</group>
 			<separator />
-			<item name="Fahrtanzeiger" icon="de/fahrtanzeiger-32.png" type="node">
-				<label text="Fahrtanzeiger" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Proceed Indicatgor" de.name="Fahrtanzeiger" icon="de/fahrtanzeiger-32.png" type="node">
+				<label text="Proceed Indicatgor" de.text="Fahrtanzeiger" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2481,7 +2624,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					display_values="left,right,on a bridge over the tracks"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
@@ -2495,9 +2639,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:main_repeated:form"
 					value="light" />
 			</item>
-			<item name="Abfahrtssignal (Zp 9/Zp 10)" icon="de/zp9-db-38.png" type="node">
-				<label text="Abfahrtssignal (Zp 9/Zp 10)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Starting Order and Close Doors Signal (Zp 9/Zp 10)" de.name="Abfahrtssignal und Türen schließen (Zp 9/Zp 10)" icon="de/zp9-db-38.png" type="node">
+				<label text="Starting Order and Close Doors Signal (Zp 9/Zp 10)" de.text="Abfahrtssignal und Türen schließen (Zp 9/Zp 10)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2509,7 +2653,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					display_values="left,right,on a bridge over the tracks"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
@@ -2524,14 +2669,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalzustände (Mehrfachauswahl)"
 					delimiter=";"
 					values="DE-ESO:zp10;DE-ESO:zp9"
-					display_values="Türen schließen Zp 10;Abfahrtssignal Zp 9"
+					display_values="close doors (Zp 10);starting order (Zp 9)"
+					de.display_values="Türen schließen Zp 10;Abfahrtssignal Zp 9"
 					/>
 				<key key="railway:signal:departure:form"
 					value="light" />
 			</item>
-			<item name="Bremsprobesignal (Zp 6–Zp 8)" icon="de/zp8-32.png" type="node">
-				<label text="Bremsprobesignal(Zp 6–Zp 8)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Break Test Signals (Zp6–8)" de.name="Bremsprobesignal (Zp 6–Zp 8)" icon="de/zp8-32.png" type="node">
+				<label text="Break Test Signals (Zp6–8)" de.text="Bremsprobesignal(Zp 6–Zp 8)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2543,7 +2689,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right,bridge"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					display_values="left,right,on a bridge over the tracks"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
 				<combo key="railway:signal:direction"
 					text="Direction"
@@ -2559,12 +2706,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="DE-ESO:db:zp6;DE-ESO:db:zp7;DE-ESO:db:zp8" />
 			</item>
 			<separator />
-			<item name="Blockkennzeichen" icon="de/blockkennzeichen-28.png" type="node">
-				<label text="Blockkennzeichen (ETCS/LZB)" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Block Marker" de.name="Blockkennzeichen" icon="de/blockkennzeichen-28.png" type="node">
+				<label text="Block Marker (ETCS/LZB)" de.text="Blockkennzeichen (ETCS/LZB)" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
-				<label text="ETCS-Halt-Tafel (Ne 14) siehe …" />
-				<preset_link preset_name="ETCS-Halt-Tafel (Ne 14, ETCS Stop Marker)" />
+				<label text="ETCS Stop Marker (Ne 14) see …" de.text="ETCS-Halt-Tafel (Ne 14) siehe …" />
+				<preset_link preset_name="ETCS Stop Marker (Ne 14)" />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2582,7 +2729,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<check key="railway:signal:catenary_mast"
 					text="On catenary mast"
@@ -2599,9 +2747,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
-			<item name="LZB-Bereichskennzeichen" icon="de/lzb-section-start-32.png" type="node">
-				<label text="LZB-Bereichskennzeichen" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="LZB Section Marker" de.name="LZB-Bereichskennzeichen" icon="de/lzb-section-start-32.png" type="node">
+				<label text="LZB Section Marker" de.text="LZB-Bereichskennzeichen" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2619,7 +2767,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Direction"
 					de.text="Anzeigerichtung"
 					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
+					display_values="in direction of OSM way,against direction of OSM way"
+					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 					/>
 				<check key="railway:signal:catenary_mast"
 					text="On catenary mast"
@@ -2630,9 +2779,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
-			<item name="Zugfunk-Kanalhinweis" type="node">
-				<label text="Zugfunk-Kanalhinweis" />
-				<label text="Wird als Punkt auf dem Gleis erfasst." />
+			<item name="Train Radio Board" de.name="Zugfunk-Kanalhinweis" type="node">
+				<label text="Train Radio Board" de.text="Zugfunk-Kanalhinweis" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<key key="railway"
 					value="signal" />
@@ -2648,7 +2797,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					value="sign" />
 				<text key="railway:signal:radio:frequency"
 					text="Frequency/Channel"
-					de.text="Kanal"
+					de.text="Frequenz/Kanal"
 					/>
 			</item>
 	</group>
