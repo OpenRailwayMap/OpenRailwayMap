@@ -194,26 +194,26 @@ Make sure that your server does not accept request on port 9000 and 9002 from ou
 
 ## Setting up the API
 
- Switch to the renderer subdirectory:
+ In case your system uses systemd you can install the unit file for the API server:
 
     $ cd api
+    $ sudo make install-systemd
+
+ The user and group the service will run defaults to "openrailwaymap", you can change this in the makefile or by passing the ORM_USER or ORM_GROUP variables to make.
+
+ If you are not using systemd either write an init script or start the server in a screen session.
 
  After that you can install all necessary NodeJS modules with npm:
 
     $ npm install
 
- Start the tileserver in a screen session:
+ Start the API server:
 
-    $ screen -R api
-    $ node api.js
-    $ [Ctrl][A][D]
+    $ sudo systemctl start orm-api.service
 
- To restart the API server, switch back to the screen:
+ Optionally enable autostart:
 
-    $ screen -r api
-    $ [Ctrl][C]
-    $ node api.js
-    $ [Ctrl][A][D]
+    $ sudo systemctl enable orm-api.service
 
 ## Enabling New Apache Configuration
 

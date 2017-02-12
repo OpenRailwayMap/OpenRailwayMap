@@ -1,0 +1,18 @@
+[Unit]
+Description=OpenRailwayMap API server
+Requires=postgresql-9.6.service
+After=postgresql-9.6.service
+
+[Service]
+ExecStart=/usr/bin/node @@API_BASEDIR@@/api.js
+WorkingDirectory=@@API_BASEDIR@@
+Restart=always
+RestartSec=10s
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=orm-api
+User=@@ORM_USER@@
+Group=@@ORM_GROUP@@
+
+[Install]
+WantedBy=multi-user.target
