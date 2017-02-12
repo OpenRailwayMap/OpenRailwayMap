@@ -215,6 +215,13 @@ Make sure that your server does not accept request on port 9000 and 9002 from ou
 
     $ sudo systemctl enable orm-api.service
 
+ If you want to filter the OpenRailwayMap log entries into their own files using rsyslogd you can install the config file and restart rsyslogd:
+
+    $ sudo make install-rsyslog
+    $ sudo systemctl restart rsyslog.service
+
+ Do not forget to add the logfiles to logrotate.
+
 ## Enabling New Apache Configuration
 
  Now you enable the necessary Apache modules (mod_proxy, mod_proxy_http), enable the new virtual
