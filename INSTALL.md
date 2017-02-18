@@ -171,11 +171,21 @@ Make sure that your server does not accept request on port 9000 and 9002 from ou
 
     $ npm install
 
- Start the tileserver in a screen session:
+ In case your system uses systemd you can install the unit file for the API server:
 
-    $ screen -R tileserver
-    $ node tileserver.js
-    $ [Ctrl][A][D]
+    $ sudo make install-systemd
+
+ The user and group the service will run defaults to "openrailwaymap", you can change this in the makefile or by passing the ORM_USER or ORM_GROUP variables to make.
+
+ If you are not using systemd either write an init script or start the server in a screen session.
+
+ Start the API server:
+
+    $ sudo systemctl start orm-tileserver.service
+
+ Optionally enable autostart:
+
+    $ sudo systemctl enable orm-tileserver.service
 
  Run
 
@@ -187,10 +197,7 @@ Make sure that your server does not accept request on port 9000 and 9002 from ou
  Note that you have to recompile the stylesheets every time you change the MapCSS files to apply the changes. It is also necessary to restart the tileserver to reload the stylesheets.
 
     $ make -C styles
-    $ screen -r tileserver
-    $ [Ctrl][C]
-    $ node tileserver.js
-    $ [Ctrl][A][D]
+    $ sudo systemctl restart orm-tileserver.service
 
 ## Setting up the API
 
