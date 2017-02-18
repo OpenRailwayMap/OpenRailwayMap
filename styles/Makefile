@@ -8,12 +8,18 @@ ZIPFILES = maxspeed.zip signals.zip standard.zip electrified.zip josm-additional
 
 all: $(JSFILES) $(ZIPFILES)
 
-%.js: %.mapcss
+%.js: %.mapcss common.mapcss
 	$(PYTHON) ../renderer/mapcss_converter.py --mapcss $^ --icons-path .
 
-%.zip: %.mapcss
-	zip $@ $^ | sed '/^[ \t]*adding: /d'
-	grep -o 'icon-image: "[^"]*' $^ | sed 's/icon-image: "//' | zip -r $@ -@ | sed '/^[ \t]*adding: /d'
+%.zip: %.mapcss common.mapcss josm-import.awk
+	echo $(shell TDIR=$$(mktemp -d); \
+		gawk -f $(CURDIR)/josm-import.awk $< > $${TDIR}/$<; \
+		pushd $${TDIR}; \
+			zip $@ $< | sed '/^[ \t]*adding: /d'; \
+		popd; \
+		mv $${TDIR}/$@ . ; \
+		rm -r $${TDIR})
+	grep -o 'icon-image: "[^"]*' $< | sed 's/icon-image: "//' | zip -r $@ -@ | sed '/^[ \t]*adding: /d'
 
 clean:
 	rm -f $(JSFILES)

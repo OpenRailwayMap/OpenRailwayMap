@@ -28,12 +28,10 @@ canvas
 	default-lines: true;
 }
 
-way|z10-[railway=tram],
-way|z10-[railway=subway],
-way|z10-[railway=light_rail],
-way|z9-[railway=narrow_gauge],
-way|z9-[railway=preserved],
-way|z2-[railway=rail]
+@import url("common.mapcss");
+
+way.tracks_present,
+way.tracks_preserved
 {
 	set .tracks;
 }
@@ -43,18 +41,7 @@ way[electrified][electrified!=no].tracks
 }
 
 way["proposed:electrified"].tracks,
-way|z10-[railway=proposed]["proposed:railway"="tram"]["proposed:electrified"],
-way|z10-[railway=proposed][!"proposed:railway"]["proposed"="tram"]["proposed:electrified"],
-way|z10-[railway=proposed]["proposed:railway"="subway"]["proposed:electrified"],
-way|z10-[railway=proposed][!"proposed:railway"]["proposed"="subway"]["proposed:electrified"],
-way|z10-[railway=proposed]["proposed:railway"="light_rail"]["proposed:electrified"],
-way|z10-[railway=proposed][!"proposed:railway"]["proposed"="light_rail"]["proposed:electrified"],
-way|z9-[railway=proposed]["proposed:railway"="narrow_gauge"]["proposed:electrified"],
-way|z9-[railway=proposed][!"proposed:railway"]["proposed"="narrow_gauge"]["proposed:electrified"],
-way|z9-[railway=proposed]["proposed:railway"="preserved"]["proposed:electrified"],
-way|z9-[railway=proposed][!"proposed:railway"]["proposed"="preserved"]["proposed:electrified"],
-way|z6-[railway=proposed]["proposed:railway"="rail"]["proposed:electrified"],
-way|z6-[railway=proposed][!"proposed:railway"]["proposed"="rail"]["proposed:electrified"]
+way["proposed:electrified"].tracks_proposed
 {
 	set .ptracks;
 }
@@ -64,18 +51,7 @@ way["proposed:electrified"!=no].ptracks
 }
 
 way["construction:electrified"].tracks,
-way|z10-[railway=construction]["construction:railway"="tram"]["construction:electrified"],
-way|z10-[railway=construction][!"construction:railway"]["construction"="tram"]["construction:electrified"],
-way|z10-[railway=construction]["construction:railway"="subway"]["construction:electrified"],
-way|z10-[railway=construction][!"construction:railway"]["construction"="subway"]["construction:electrified"],
-way|z10-[railway=construction]["construction:railway"="light_rail"]["construction:electrified"],
-way|z10-[railway=construction][!"construction:railway"]["construction"="light_rail"]["construction:electrified"],
-way|z9-[railway=construction]["construction:railway"="narrow_gauge"]["construction:electrified"],
-way|z9-[railway=construction][!"construction:railway"]["construction"="narrow_gauge"]["construction:electrified"],
-way|z9-[railway=construction]["construction:railway"="preserved"]["construction:electrified"],
-way|z9-[railway=construction][!"construction:railway"]["construction"="preserved"]["construction:electrified"],
-way|z6-[railway=construction]["construction:railway"="rail"]["construction:electrified"],
-way|z6-[railway=construction][!"construction:railway"]["construction"="rail"]["construction:electrified"]
+way["construction:electrified"].tracks_construction
 {
 	set .ctracks;
 }
