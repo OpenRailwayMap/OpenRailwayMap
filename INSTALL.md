@@ -3,6 +3,10 @@ Installation Instructions
 
 ## Dependencies
 
+Required versions:
+
+* PostgreSQL >= 9.3
+
 CentOS:
 
     $ yum update
@@ -14,9 +18,9 @@ CentOS:
 
     $ yum install git wget zlib zlib-devel gzip unzip bzip2-devel zip
 
-Debian/Ubuntu:
+ Debian/Ubuntu:
 
-    $ apt-get install --no-install-recommends postgresql-9.3-postgis-2.1
+    $ apt-get install --no-install-recommends postgresql-9.5-postgis-2.2
     $ apt-get install gzip postgresql-common libgeoip1 geoip-database geoip-bin php5-geoip php-gettext unzip python-ply python-imaging python-cairo python-cairosvg librsvg2-2 librsvg2-dev libpango1.0-dev libcairo2-dev libcairomm-1.0-dev libjpeg-turbo8-dev libpangomm-1.4-1 libpangomm-1.4-dev npm nodejs wget zlib1g-dev osm2pgsql php5-pgsql
     $ apt-get install git libgif-dev build-essential g++ make zip
     $ apt-get install nodejs-legacy # see https://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu for the reason
@@ -70,7 +74,7 @@ Debian/Ubuntu:
 
 ## Setting Up the Database
 
- Set up the PostgreSQL database with PostGIS and hstore extensions:
+ This chapter describes the installation of the PostgreSQL database with PostGIS and hstore extensions. The following commands show the installation of PostgreSQL 9.5, but they should be equal for all version >= 9.3.
 
     $ sudo -u postgres createuser railmap
     $ sudo -u postgres createdb -E UTF8 -O railmap railmap
@@ -84,21 +88,21 @@ Debian/Ubuntu:
     $ sudo service postgresql-9.5 start
     $ sudo chkconfig postgresql-9.5 on
 
-For authentication to the database, we are using `md5` method. Edit your `pg_hba.conf` to use `md5` authentication for local unix sockets and local TCP/IP connections from your host.
+ For authentication to the database, we are using `md5` method. Edit your `pg_hba.conf` to use `md5` authentication for local unix sockets and local TCP/IP connections from your host.
 
-The database password is managed in a `pgpass` file. Create a `pgpass` file (or edit the existing one) in the home directory of the user that will be used for running the processes of API, tileserver and import/update scripts:
+ The database password is managed in a `pgpass` file. Create a `pgpass` file (or edit the existing one) in the home directory of the user that will be used for running the processes of API, tileserver and import/update scripts:
 
     $ vim ~/.pgpass
 
-Add a line with this format:
+ Add a line with this format:
 
     hostname:port:database:username:password
 
-in this example (replace `YOURPASSWORD` by the password you entered in the `createuser` command):
+ in this example (replace `YOURPASSWORD` by the password you entered in the `createuser` command):
 
     localhost:5432:railmap:railmap:YOURPASSWORD
 
-Then set the correct file permissions:
+ Then set the correct file permissions:
 
     $ chmod 600 ~/.pgpass
 
