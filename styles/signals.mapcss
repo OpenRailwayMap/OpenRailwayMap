@@ -37,8 +37,19 @@ way|z2-[railway=rail][usage=branch]
 {
 	set .tracks;
 }
+/* those tracks under construction that are about to be shown */
+way|z10-[railway=construction]["construction:railway"=rail]["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0],
+way|z10-[railway=construction][!"construction:railway"]["construction"=rail]["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0],
+way|z5-[railway=construction]["construction:railway"=rail][usage=main]["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0],
+way|z5-[railway=construction][!"construction:railway"]["construction"=rail][usage=main]["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0],
+way|z5-[railway=construction]["construction:railway"=rail][usage=branch]["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0],
+way|z5-[railway=construction][!"construction:railway"]["construction"=rail][usage=branch]["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0]
+{
+	set .ctracks;
+}
 
-way.tracks
+way.tracks,
+way.ctracks
 {
 	z-index: 0;
 	color: gray;
@@ -64,9 +75,16 @@ way["railway:lzb"=yes].tracks
 	z-index: 3;
 	color: red;
 }
-way["railway:etcs"]["railway:etcs"!=no]["railway:etcs"!=0].tracks
+way["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0].tracks,
+way.ctracks
 {
 	z-index: 4;
+	color: blue;
+	dashes: 9,9;
+}
+way["railway:etcs"]["railway:etcs"!=no]["railway:etcs"!=0].tracks
+{
+	z-index: 10;
 	color: blue;
 }
 
