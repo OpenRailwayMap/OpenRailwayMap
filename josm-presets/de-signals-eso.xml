@@ -1143,8 +1143,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
 						/>
 				</item>
-				<item name="Diamond Board (Bü 2)/Warning Board (So 15)" de.name="Rautentafel (Bü 2)/Warntafel (So 15)" icon="de/bue2-ds-28.png" type="node">
-					<label text="Diamond Board (Bü 2)/Warning Board (So 15)" de.text="Rautentafel (Bü 2)/Warntafel (So 15)" />
+				<item name="Diamond Board (Bü 2)" de.name="Rautentafel ex-DB (Bü 2)" icon="de/bue2-ds-28.png" type="node">
+					<label text="Diamond Board (Bü 2). Expect crossing signale (Bü 0/1)" de.text="Rautentafel ex-DB. Bü-Überwachungssignal erwarten (Bü 2)" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
 					<key key="railway"
@@ -1168,24 +1168,42 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
 						/>
 					<space />
-					<combo key="railway:signal:crossing_distant"
-						text="Type of signal"
-						de.text="Signaltyp"
-						values="DE-ESO:bü2|DE-ESO:so15"
-						delimiter="|"
-						display_values="diamond board (Bü 2, only West Germany)|warning board (So 15, only East Germany)"
-						de.display_values="Rautentafel (Bü 2, nur ex-DB)|Warntafel (So 15, nur ex-DR)"
-						match="keyvalue!" />
+					<key key="railway:signal:crossing_distant"
+						value="DE-ESO:bü2" />
 					<key key="railway:signal:crossing_distant:form"
 						value="sign" />
-					<check key="railway:signal:crossing_distant:repeated"
-						text="Repeated"
-						de.text="Signalwiederholer (weiße Scheibe)"
-						/>
 					<check key="railway:signal:crossing_distant:shortened"
-						text="Shortened distance"
+						text="Shortened distance (white triangle)"
 						de.text="Verkürzter Bremswegabstand (weißes Dreieck)"
 						/>
+				</item>
+				<item name="Warning Board (So 15)" de.name="Warntafel (So 15)" icon="de/bue3-57.png" type="node">
+					<label text="Warning board (So 15) in East Germany (expect crossing signal)" de.text="Warntafel ex-DR. Bü-Überwachungssignal erwarten (So 15)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:crossing_distant:deactivated"
+						text="Out of order"
+						de.text="Ungültigkeitskreuz"
+						/>
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right,bridge"
+						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+						/>
+					<combo key="railway:signal:direction"
+						text="Direction"
+						de.text="Anzeigerichtung"
+						values="forward,backward"
+						display_values="In Wegrichtung,Entgegen Wegrichtung"
+						/>
+					<space />
+					<key key="railway:signal:crossing_distant"
+						value="DE-ESO:so15" />
+					<key key="railway:signal:crossing_distant:form"
+						value="sign" />
 				</item>
 				<item de.name="Einschaltkontakt Bahnübergang (Merktafel, Bü 3)"
 				    name="Activation switch crossing (Reminder Board, Bü 3)" icon="de/bue3-57.png" type="node">
