@@ -93,3 +93,7 @@ node,way    highway                 text    delete
 node,way    foot                    text    delete
 node,way    bicycle                 text    delete
 node,way    tracktype               text    delete
+node,way    horse                   text    delete
+node,way    VRS:gemeinde            text    delete
+node,way    VRS:ortsteil            text    delete
+node,way    VRS:ref                 text    delete
