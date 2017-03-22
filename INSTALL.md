@@ -49,7 +49,7 @@ CentOS:
 
     $ make install-deps
 
- Install osm2pgsql (Ubuntu and Debian users may use their `osm2pgsql` package provided by their distribution instead):
+ Install osm2pgsql 0.90.0 or greater (Ubuntu and Debian users may use their `osm2pgsql` package provided by their distribution instead, if it's new enough):
 
     $ cd import
     $ git clone https://github.com/openstreetmap/osm2pgsql.git
