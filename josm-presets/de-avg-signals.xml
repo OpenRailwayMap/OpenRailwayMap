@@ -12,6 +12,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap special AVG signals" description="Preset to tag some special railway signals used by Albtal-Verkehrs-Gesellschaft around Karlsruhe">
+	<chunk id="direction_fw_bw">
+		<combo key="railway:signal:direction"
+			text="Direction"
+			de.text="Anzeigerichtung"
+			values="forward,backward"
+			display_values="in direction of OSM way,against direction of OSM way"
+			de.display_values="In Wegrichtung,Entgegen Wegrichtung"
+			/>
+	</chunk>
 	<group name="OpenRailwayMap AVG-Signale" icon="signals.png">
 		<item name="Hp-Licht-Hauptsignal (AVG)" icon="de/hp2-light-32.png" type="node">
 			<label text="Hp-Licht-Hauptsignal als Einfahrtsignal" />
@@ -34,12 +43,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:main"
 				value="DE-ESO:hp" />
@@ -85,12 +89,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:distant"
 				value="DE-AVG:vf1" />
@@ -120,17 +119,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:crossing"
 				value="DE-AVG:bü200" />
 			<key key="railway:signal:crossing:states"
-				value="DE-AVG:bü200;DE-AVG:bü201"/>
+				value="DE-AVG:bü200;DE-AVG:bü201" />
 			<key key="railway:signal:crossing:form"
 				value="light" />
 		</item>
@@ -151,12 +145,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge,overhead"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Oberleitung"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:crossing_distant"
 				value="DE-AVG:bü200v" />
@@ -187,17 +176,12 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:main"
 				value="DE-AVG:f" />
 			<key key="railway:signal:main:form"
-				value="light"/>
+				value="light" />
 			<combo key="railway:signal:main:height"
 				text="Signal height"
 				de.text="Signalbauform"
@@ -205,7 +189,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				/>
 			<key key="railway:signal:main:states"
-				value="DE-AVG:f0;DE-AVG:f1"/>
+				value="DE-AVG:f0;DE-AVG:f1" />
 			<check key="railway:signal:route"
 				text="Display Track Number?"
 				de.text="Anzeige einer Gleisnummer?"
@@ -234,12 +218,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,overhead,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:switch"
 				value="DE-AVG:w" />
@@ -276,12 +255,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,overhead,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:switch"
 				value="DE-AVG:wv" />
@@ -314,12 +288,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,overhead"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<combo key="railway:signal:electricity"
 				text="Exact type"
@@ -334,7 +303,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Mastbauform,Zwergsignal"
 				/>
 			<key key="railway:signal:electricity:type"
-				value="power_off_shortly"/>
+				value="power_off_shortly" />
 			<key key="railway:signal:electricity:form"
 				value="sign" />
 		</item>
@@ -356,12 +325,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<key key="railway:signal:request"
 				value="DE-AVG:st9" />
 			<key key="railway:signal:request:states"
@@ -387,12 +351,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung,"
-				/>
+			<reference ref="direction_fw_bw" />
 			<key key="railway:signal:departure"
 				value="DE-AVG:a1" />
 			<key key="railway:signal:departure:states"
@@ -418,12 +377,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung,"
-				/>
+			<reference ref="direction_fw_bw" />
 			<key key="railway:signal:train_protection"
 				value="DE-AVG:so1" />
 			<key key="railway:signal:train_protection:type"
@@ -448,12 +402,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung,"
-				/>
+			<reference ref="direction_fw_bw" />
 			<key key="railway:signal:train_protection"
 				value="DE-AVG:so2" />
 			<key key="railway:signal:train_protection:type"
@@ -478,12 +427,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung,"
-				/>
+			<reference ref="direction_fw_bw" />
 			<key key="railway:signal:loading_gauge"
 				value="DE-AVG:ra14" />
 			<key key="railway:signal:loading_gauge:form"
@@ -506,12 +450,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung,"
-				/>
+			<reference ref="direction_fw_bw" />
 			<key key="railway:signal:stop_demand"
 				value="DE-AVG:hw1" />
 			<key key="railway:signal:stop_demand:states"

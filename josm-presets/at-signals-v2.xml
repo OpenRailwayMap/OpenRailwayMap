@@ -12,6 +12,24 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Signale AT V2" description="Preset to tag Austrian railway signals">
+	<chunk id="direction_fw_bw">
+		<combo key="railway:signal:direction"
+			text="Direction"
+			de.text="Anzeigerichtung"
+			values="forward,backward"
+			display_values="in direction of OSM way,against direction of OSM way"
+			de.display_values="In Wegrichtung,Entgegen Wegrichtung"
+			/>
+	</chunk>
+	<chunk id="direction_fw_bw_b">
+		<combo key="railway:signal:direction"
+			text="Direction"
+			de.text="Anzeigerichtung"
+			values="forward,backward,both"
+			display_values="in direction of OSM way,against direction of OSM way,both directions"
+			de.display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
+			/>
+	</chunk>
 	<group name="OpenRailwayMap Signale AT V2" icon="signals.png">
 		<item name="Formhauptsignal" type="node" icon="de/hp1-semaphore-38.png" >
 			<label text="Formhauptsignal" />
@@ -33,12 +51,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:main"
 				value="AT-V2:hauptsignal" />
@@ -96,12 +109,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:main"
 				value="AT-V2:hauptsignal" />
@@ -161,12 +169,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:distant"
 				value="AT-V2:vorsignal" />
@@ -203,12 +206,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:distant"
 				value="AT-V2:vorsignal" />
@@ -247,12 +245,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:main"
 				value="AT-V2:trapeztafel" />
@@ -283,12 +276,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:distant"
 				value="AT-V2:kreuztafel" />
@@ -316,12 +304,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Gleismitte/am Prellbock"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:minor"
 				value="AT-V2:schutzsignal" />
@@ -368,12 +351,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:minor"
 				value="AT-V2:sperrsignal" />
@@ -408,12 +386,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward,both"
-				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-				/>
+			<reference ref="direction_fw_bw_b" />
 			<space />
 			<key key="railway:signal:minor"
 				value="AT-V2:weiterfahrt_verboten" />
@@ -442,12 +415,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:minor"
 				value="AT-V2:haltscheibe" />
@@ -482,12 +450,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:shunting"
 					value="AT-V2:verschubsignal" />
@@ -518,12 +481,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:shunting"
 					value="AT-V2:verschubhalttafel" />
@@ -552,12 +510,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:shunting"
 					value="AT-V2:wartesignal" />
@@ -586,12 +539,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:shunting"
 					value="AT-V2:wartesignal" />
@@ -622,12 +570,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:humping"
 					value="AT-V2:abdrücksignal" />
@@ -660,12 +603,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:speed_limit"
 				value="AT-V2:geschwindigkeitsanzeiger" />
@@ -704,12 +642,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:speed_limit_distant"
 				value="AT-V2:geschwindigkeitvorsanzeiger" />
@@ -748,12 +681,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:speed_limit"
 				value="AT-V2:geschwindigkeitstafel" />
@@ -793,12 +721,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:speed_limit_distant"
 				value="AT-V2:ankündigungstafel" />
@@ -833,12 +756,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:speed_limit_distant"
 					value="AT-V2:ankündigungssignal" />
@@ -872,12 +790,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:speed_limit"
 					value="AT-V2:anfangssignal" />
@@ -911,12 +824,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:speed_limit"
 					value="AT-V2:endsignal" />
@@ -949,12 +857,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,overhead"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<combo key="railway:signal:electricity"
 				text="Exact type"
@@ -999,12 +902,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,overhead"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:electricity"
 				value="AT-V2:schaltzeiger" />
@@ -1033,12 +931,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:crossing"
 					value="AT-V2:ek_überwachungssignal" />
@@ -1063,12 +956,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<key key="railway:signal:crossing_hint"
 					value="AT-V2:eküs" />
 				<key key="railway:signal:crossing_hint:form"
@@ -1100,12 +988,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<key key="railway:signal:crossing_info"
 					value="AT-V2:eküs" />
 				<key key="railway:signal:crossing_info:form"
@@ -1137,12 +1020,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:crossing_distant"
 					value="AT-V2:rautentafel" />
@@ -1165,12 +1043,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:crossing_distant"
 					value="AT-V2:schaltstellenpflock" />
@@ -1197,12 +1070,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:whistle"
 					value="AT-V2:pfeifpflock" />
@@ -1225,12 +1093,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:whistle"
 					value="AT-V2:gruppenpfeifpflock" />
@@ -1253,12 +1116,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right,bridge"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:whistle"
 					value="AT-V2:endpflock" />
@@ -1282,12 +1140,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<key key="railway:signal:stop"
 				value="AT-V2:haltepunkt" />
 			<key key="railway:signal:stop:form"
@@ -1319,12 +1172,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<key key="railway:signal:station_distant"
 				value="AT-V2:haltestellentafel" />
 			<key key="railway:signal:station_distant:form"
@@ -1346,12 +1194,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:resetting_switch"
 				value="AT-V2:weichenüberwachungssignal" />
@@ -1442,12 +1285,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward,both"
-				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-				/>
+			<reference ref="direction_fw_bw_b" />
 			<key key="railway:signal:brake_test"
 				value="AT-V2:bremsprobesignal" />
 			<key key="railway:signal:brake_test:form"
@@ -1471,12 +1309,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward,both"
-				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-				/>
+			<reference ref="direction_fw_bw_b" />
 			<key key="railway:signal:departure"
 				value="AT-V2:abfahrt" />
 			<key key="railway:signal:departure:form"
@@ -1498,12 +1331,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward,both"
-				display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-				/>
+			<reference ref="direction_fw_bw_b" />
 			<key key="railway:signal:departure"
 				value="AT-V2:fahrerlaubnissignal" />
 			<combo key="railway:signal:departure:form"
@@ -1534,12 +1362,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<key key="railway:signal:snowplow"
 					value="AT-V2:räumarbeit_einstellen" />
 				<key key="railway:signal:snowplow:form"
@@ -1563,12 +1386,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<key key="railway:signal:snowplow"
 					value="AT-V2:mittelräumer_heben" />
 				<key key="railway:signal:snowplow:form"
@@ -1592,12 +1410,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<key key="railway:signal:snowplow"
 					value="AT-V2:räumarbeit_aufnehmen" />
 				<key key="railway:signal:snowplow:form"
@@ -1622,12 +1435,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<check key="railway:signal:catenary_mast"
 				text="On catenary mast"
 				de.text="Am Oberleitungsmast"
@@ -1667,12 +1475,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,bridge"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:main_repeated"
 				value="AT-V2:signalnachahmer" />
@@ -1703,12 +1506,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:minor"
 				value="AT-V2:fahrwegende" />
@@ -1737,12 +1535,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right,in_track"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:main:substitute_signal"
 				value="AT-V2:dienstruhe" />
@@ -1771,12 +1564,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="left,right"
 				display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 				/>
-			<combo key="railway:signal:direction"
-				text="Direction"
-				de.text="Anzeigerichtung"
-				values="forward,backward"
-				display_values="In Wegrichtung,Entgegen Wegrichtung"
-				/>
+			<reference ref="direction_fw_bw" />
 			<check key="railway:signal:catenary_mast"
 				text="On catenary mast"
 				de.text="Am Oberleitungsmast"
