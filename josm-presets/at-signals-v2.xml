@@ -12,6 +12,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Signale AT V2" description="Preset to tag Austrian railway signals">
+	<chunk id="sig_ref">
+		<key key="railway"
+			value="signal" />
+		<text key="ref"
+			text="Signal ref"
+			de.text="Signalbezeichnung"
+			/>
+	</chunk>
 	<chunk id="direction_fw_bw">
 		<combo key="railway:signal:direction"
 			text="Direction"
@@ -35,12 +43,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Formhauptsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<key key="railway"
-				value="signal" />
-			<text key="ref"
-				text="Signal ref"
-				de.text="Signalbezeichnung"
-				/>
+			<reference ref="sig_ref" />
 			<check key="railway:signal:main:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
@@ -93,12 +96,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Lichthauptsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<key key="railway"
-				value="signal" />
-			<text key="ref"
-				text="Signal ref"
-				de.text="Signalbezeichnung"
-				/>
+			<reference ref="sig_ref" />
 			<check key="railway:signal:main:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
@@ -153,12 +151,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Formvorsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<key key="railway"
-				value="signal" />
-			<text key="ref"
-				text="Signal ref"
-				de.text="Signalbezeichnung"
-				/>
+			<reference ref="sig_ref" />
 			<check key="railway:signal:distant:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
@@ -190,12 +183,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Lichtvorsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<key key="railway"
-				value="signal" />
-			<text key="ref"
-				text="Signal ref"
-				de.text="Signalbezeichnung"
-				/>
+			<reference ref="sig_ref" />
 			<check key="railway:signal:distant:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
@@ -288,12 +276,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Schutzsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<key key="railway"
-				value="signal" />
-			<text key="ref"
-				text="Signal ref"
-				de.text="Signalbezeichnung"
-				/>
+			<reference ref="sig_ref" />
 			<check key="railway:signal:minor:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
@@ -335,12 +318,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Sperrsignal, verstellbar" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<key key="railway"
-				value="signal" />
-			<text key="ref"
-				text="Signal ref"
-				de.text="Signalbezeichnung"
-				/>
+			<reference ref="sig_ref" />
 			<check key="railway:signal:minor:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
@@ -370,12 +348,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Sperrsignal, fix" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<key key="railway"
-				value="signal" />
-			<text key="ref"
-				text="Signal ref"
-				de.text="Signalbezeichnung"
-				/>
+			<reference ref="sig_ref" />
 			<check key="railway:signal:minor:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
@@ -434,12 +407,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="Verschubsignal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					/>
+				<reference ref="sig_ref" />
 				<check key="railway:signal:shunting:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
@@ -1459,12 +1427,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Signalnachahmer" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<key key="railway"
-				value="signal" />
-			<text key="ref"
-				text="Signal ref"
-				de.text="Signalbezeichnung"
-				/>
+			<reference ref="sig_ref" />
 			<check key="railway:signal:main_repeated:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"

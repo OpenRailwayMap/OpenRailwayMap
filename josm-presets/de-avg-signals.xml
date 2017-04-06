@@ -12,6 +12,14 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap special AVG signals" description="Preset to tag some special railway signals used by Albtal-Verkehrs-Gesellschaft around Karlsruhe">
+	<chunk id="sig_ref">
+		<key key="railway"
+			value="signal" />
+		<text key="ref"
+			text="Signal ref"
+			de.text="Signalbezeichnung"
+			/>
+	</chunk>
 	<chunk id="direction_fw_bw">
 		<combo key="railway:signal:direction"
 			text="Direction"
@@ -26,12 +34,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Hp-Licht-Hauptsignal als Einfahrtsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<key key="railway"
-				value="signal" />
-			<text key="ref"
-				text="Signal ref"
-				de.text="Signalbezeichnung"
-				/>
+			<reference ref="sig_ref" />
 			<check key="railway:signal:main:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
@@ -159,12 +162,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Fahrsignal  (F 0/F 1)" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
-			<key key="railway"
-				value="signal" />
-			<text key="ref"
-				text="Signal ref"
-				de.text="Signalbezeichnung"
-				/>
+			<reference ref="sig_ref" />
 			<check key="railway:signal:main:deactivated"
 				text="Out of order"
 				de.text="Ungültigkeitskreuz"
