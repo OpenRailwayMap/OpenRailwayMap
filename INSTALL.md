@@ -77,13 +77,13 @@ CentOS:
 
  This chapter describes the installation of the PostgreSQL database with PostGIS and hstore extensions. The following commands show the installation of PostgreSQL 9.5, but they should be equal for all version >= 9.3.
 
-    $ sudo -u postgres createuser railmap
-    $ sudo -u postgres createdb -E UTF8 -O railmap railmap
+    $ sudo -u postgres createuser openrailwaymap
+    $ sudo -u postgres createdb -E UTF8 -O openrailwaymap openrailwaymap
 
-    $ sudo -u postgres psql -d railmap -c "CREATE EXTENSION postgis;"
-    $ sudo -u postgres psql -d railmap -c "CREATE EXTENSION postgis_topology;"
-    $ sudo -u postgres psql -d railmap -c "CREATE EXTENSION postgis_sfcgal;"
-    $ sudo -u postgres psql -d railmap -c "CREATE EXTENSION hstore;"
+    $ sudo -u postgres psql -d openrailwaymap -c "CREATE EXTENSION postgis;"
+    $ sudo -u postgres psql -d openrailwaymap -c "CREATE EXTENSION postgis_topology;"
+    $ sudo -u postgres psql -d openrailwaymap -c "CREATE EXTENSION postgis_sfcgal;"
+    $ sudo -u postgres psql -d openrailwaymap -c "CREATE EXTENSION hstore;"
 
     $ sudo service postgresql-9.5 initdb
     $ sudo service postgresql-9.5 start
@@ -101,7 +101,7 @@ CentOS:
 
  in this example (replace `YOURPASSWORD` by the password you entered in the `createuser` command):
 
-    localhost:5432:railmap:railmap:YOURPASSWORD
+    localhost:5432:openrailwaymap:openrailwaymap:YOURPASSWORD
 
  Then set the correct file permissions:
 

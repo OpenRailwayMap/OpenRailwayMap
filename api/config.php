@@ -51,9 +51,9 @@
 		"vi" => array("vi_VN", "Tiếng Việt")
 	);
 	// name of database
-	$db = "railmap";
+	$db = "openrailwaymap";
 	// prefix of osm2pgsql tables
-	$prefix = "railmap";
+	$prefix = "openrailwaymap";
 	// name of application
 	$appname = "OpenRailwayMap";
 	// useragent used for curl requests
