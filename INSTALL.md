@@ -6,6 +6,7 @@ Installation Instructions
 Required versions:
 
 * PostgreSQL >= 9.3
+* osm2pgsql >= 0.90.0
 
 CentOS:
 
