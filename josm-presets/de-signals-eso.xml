@@ -12,18 +12,39 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Signale DE ESO" description="Preset to tag German railway signals">
+	<chunk id="sig_ref">
+		<key key="railway"
+			value="signal" />
+		<text key="ref"
+			text="Signal ref"
+			de.text="Signalbezeichnung"
+			/>
+	</chunk>
+	<chunk id="direction_fw_bw">
+		<combo key="railway:signal:direction"
+			text="Direction"
+			de.text="Anzeigerichtung"
+			values="forward,backward"
+			display_values="in direction of OSM way,against direction of OSM way"
+			de.display_values="In Wegrichtung,Entgegen Wegrichtung"
+			/>
+	</chunk>
+	<chunk id="direction_fw_bw_b">
+		<combo key="railway:signal:direction"
+			text="Direction"
+			de.text="Anzeigerichtung"
+			values="forward,backward,both"
+			display_values="in direction of OSM way,against direction of OSM way,both directions"
+			de.display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
+			/>
+	</chunk>
 	<group name="OpenRailwayMap Signals Germany ESO" de.name="OpenRailwayMap Signale DE ESO" icon="signals.png">
 			<group name="Ks Signals" de.name="Ks-Signale" icon="de/ks-combined-32.png">
 				<item name="Ks Distant Signal" de.name="Ks-Vorsignal" icon="de/ks-distant-32.png" type="node">
 					<label text="Ks Distant Signal" de.text="Ks-Vorsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -35,13 +56,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:distant"
 						value="DE-ESO:ks" />
@@ -79,12 +94,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Ks Combined Signal" de.text="Ks-Mehrabschnittssignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:combined:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -96,13 +106,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:combined"
 						value="DE-ESO:ks" />
@@ -157,12 +161,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Ks Main Signal" de.text="Ks-Hauptsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -174,13 +173,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:main"
 						value="DE-ESO:ks" />
@@ -229,12 +222,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="Sv Signal" de.text="Sv-Signal" />
 				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					/>
+				<reference ref="sig_ref" />
 				<check key="railway:signal:combined:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
@@ -246,13 +234,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left,right,on a bridge over the tracks"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:combined"
 					value="DE-ESO:sv" />
@@ -307,12 +289,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Hl Combined Signal" de.text="Hl-Kombinationssignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:combined:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -324,13 +301,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:combined"
 						value="DE-ESO:hl" />
@@ -377,12 +348,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Hl Main Signal" de.text="Hl-Hauptsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -394,13 +360,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:main"
 						value="DE-ESO:hl" />
@@ -447,12 +407,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Hl Distant Signal" de.text="Hl-Vorsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -464,13 +419,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:distant"
 						value="DE-ESO:hl" />
@@ -500,12 +449,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Sk Combined Signal" de.text="Sk-Kombinationssignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:combined:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -517,13 +461,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:combined"
 						value="DE-ESO:sk" />
@@ -573,12 +511,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Sk Main Signal" de.text="Sk-Hauptsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -590,13 +523,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:main"
 						value="DE-ESO:sk" />
@@ -644,12 +571,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Sk Distant Signal" de.text="Sk-Vorsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -661,13 +583,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:distant"
 						value="DE-ESO:sk" />
@@ -699,12 +615,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Hp Semaphore Main Signal" de.text="Hp-Form-Hauptsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -716,13 +627,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:main"
 						value="DE-ESO:hp" />
@@ -772,12 +677,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Hp Light Signal" de.text="Hp-Licht-Hauptsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:main:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -789,13 +689,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:main"
 						value="DE-ESO:hp" />
@@ -846,12 +740,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Vr Semaphore Distant Signal" de.text="Vr-Form-Vorsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -863,13 +752,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:distant"
 						value="DE-ESO:vr" />
@@ -909,12 +792,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Vr Distant Light Signal" de.text="Vr-Licht-Vorsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:distant:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -926,13 +804,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:distant"
 						value="DE-ESO:vr" />
@@ -992,13 +864,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left,right,on a bridge over the tracks"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<text key="railway:position:exact"
 					text="Exact position if signal is mounted at the left track (e.g. '13.427')"
 					de.text="Standortangabe an Trapeztafeln im Gegengleis (z. B. '13.427')"
@@ -1035,13 +901,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left,right,on a bridge over the tracks"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<combo key="railway:signal:distant"
 					text="Type"
@@ -1080,13 +940,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left,right,on a bridge over the tracks"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:distant"
 					value="DE-ESO:so106" />
@@ -1112,13 +966,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<combo key="railway:signal:crossing"
 						text="Exact type"
@@ -1160,13 +1008,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:crossing_distant"
 						value="DE-ESO:bü2" />
@@ -1193,12 +1035,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:crossing_distant"
 						value="DE-ESO:so15" />
@@ -1227,13 +1064,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<key key="railway:signal:crossing_distant"
 						value="DE-ESO:bü3"
 						match="keyvalue!" />
@@ -1287,13 +1118,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<combo key="railway:signal:whistle"
 						text="Exact type"
@@ -1331,13 +1156,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<key key="railway:signal:ring"
 						value="DE-ESO:bü5" />
 					<key key="railway:signal:ring:form"
@@ -1363,13 +1182,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<key key="railway:signal:crossing_info"
 						value="DE-ESO:bü-kennzeichentafel" />
 					<key key="railway:signal:crossing_info:form"
@@ -1406,13 +1219,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<key key="railway:signal:crossing_hint"
 						value="DE-ESO:bü-ankündetafel" />
 					<key key="railway:signal:crossing_hint:form"
@@ -1439,12 +1246,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Shunting Stop Signal (Sh 0/Sh 1)" de.text="Schutzhaltsignal  (Sh 0/Sh 1)" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:minor:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -1456,13 +1258,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks,in the track/at the buffer stop"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Gleismitte/am Prellbock"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:minor"
 						value="DE-ESO:sh" />
@@ -1505,12 +1301,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="left,right,in_track"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward,both"
-						display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-						/>
+					<reference ref="direction_fw_bw_b" />
 					<space />
 					<key key="railway:signal:minor"
 						value="DE-ESO:sh2" />
@@ -1523,12 +1314,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Expect Sh 2 Board" de.text="Wärtervorscheibe" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:minor_distant:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -1540,13 +1326,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:minor_distant"
 						value="DE-ESO:dr:sh3" />
@@ -1578,13 +1358,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:shunting"
 						value="DE-ESO:ra10" />
@@ -1602,12 +1376,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label text="Rangierhaltsignal" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
-					<key key="railway"
-						value="signal" />
-					<text key="ref"
-						text="Signal ref"
-						de.text="Signalbezeichnung"
-						/>
+					<reference ref="sig_ref" />
 					<check key="railway:signal:shunting:deactivated"
 						text="Out of order"
 						de.text="Ungültigkeitskreuz"
@@ -1618,13 +1387,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<combo key="railway:signal:shunting"
 						text="Type of signal"
@@ -1671,13 +1434,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="left,right"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:humping"
 						value="DE-ESO:ra" />
@@ -1725,12 +1482,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						values="left,right,bridge"
 						display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<key key="railway:signal:shunting"
 						value="DE-ESO:zs103" />
 					<key key="railway:signal:shunting:form"
@@ -1755,13 +1507,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:route"
 						value="DE-ESO:zs2" />
@@ -1789,13 +1535,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:route_distant"
 						value="DE-ESO:zs2v" />
@@ -1824,13 +1564,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:speed_limit"
 						value="DE-ESO:zs3" />
@@ -1872,13 +1606,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:speed_limit_distant"
 						value="DE-ESO:zs3v" />
@@ -1920,13 +1648,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:speed_limit"
 						value="DE-ESO:db:zs10" />
@@ -1964,13 +1686,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" match="keyvalue!">
 		         	<list_entry value="DE-ESO:db:zs6" display_value="Zs 6 DB" short_description="Gegengleisanzeiger Zs 6 (ex-DB)" />
@@ -2000,13 +1716,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" match="keyvalue!">
 						<list_entry value="DE-ESO:db:zs8" display_value="Zs 8 DB" short_description="Left-Track Order Signal Zs 8 (ex-DB)" de.short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DB)" />
@@ -2037,13 +1747,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<combo key="railway:signal:short_route"
 						text="Type of signal"
@@ -2085,13 +1789,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<combo key="railway:signal:speed_limit" text="Type of signal" de.text="Signaltyp" match="keyvalue!">
 						<list_entry value="DE-ESO:lf7" display_value="Lf 7" short_description="Permanent Speed Restriction" de.short_description="Geschwindigkeitssignal" />
@@ -2141,13 +1839,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<combo key="railway:signal:speed_limit_distant" text="Type of signal" de.text="Signaltyp" match="keyvalue!">
 						<list_entry value="DE-ESO:lf6" display_value="Lf 6" short_description="advance warning indicator" de.short_description="Geschwindigkeits-Ankündesignal Lf 6" />
@@ -2195,13 +1887,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:resetting_switch"
 					value="DE-ESO:ne13" />
@@ -2233,13 +1919,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:resetting_switch_distant"
 					value="DE-ESO:ne12" />
@@ -2270,13 +1950,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<combo key="railway:signal:expected_position"
 					text="Side of track where the signal would be mounted usually"
 					de.text="Gleisseite, auf der man das Signal normalerweise erwarten würde"
@@ -2308,13 +1982,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<key key="railway:signal:stop"
 					value="DE-ESO:ne5" />
 				<key key="railway:signal:stop:form"
@@ -2349,13 +2017,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<key key="railway:signal:stop_demand"
 					value="DE-ESO:ne5" />
 				<key key="railway:signal:stop_demand:form"
@@ -2384,13 +2046,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<key key="railway:signal:station_distant"
 					value="DE-ESO:ne6" />
 				<key key="railway:signal:station_distant:form"
@@ -2412,13 +2068,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<key key="railway:signal:snowplow"
 					value="DE-ESO:ne7" />
 				<key key="railway:signal:snowplow:form"
@@ -2441,12 +2091,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="ETCS Stop Marker (Ne 14)" de.text="ETCS-Halt-Tafel (Ne 14), auch bekannt als ETCS Stop Marker" />
 				<label text="Wird als Punkt auf dem Gleis erfasst. Steht am Hauptsignal oder virtuellem Signal (Level 2 ohne Signale)." />
 				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichner"
-					/>
+				<reference ref="sig_ref" />
 				<check key="railway:signal:train_protection:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
@@ -2458,13 +2103,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left,right,on a bridge over the tracks,overhead (at catenary level)"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,in der Oberleitung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<check key="railway:signal:catenary_mast"
 					text="On catenary mast"
 					de.text="Am Oberleitungsmast"
@@ -2493,13 +2132,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left,right,overhead (at catenary level)"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,in der Oberleitung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<space />
 				<combo key="railway:signal:electricity"
 					text="Exact type"
@@ -2557,13 +2190,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:helper_engine"
 						value="DE-ESO:ts" />
@@ -2600,13 +2227,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="left,right,on a bridge over the tracks"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 						/>
-					<combo key="railway:signal:direction"
-						text="Direction"
-						de.text="Anzeigerichtung"
-						values="forward,backward"
-						display_values="in direction of OSM way,against direction of OSM way"
-						de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-						/>
+					<reference ref="direction_fw_bw" />
 					<space />
 					<key key="railway:signal:helper_engine"
 						value="DE-ESO:ts" />
@@ -2628,12 +2249,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<label text="Proceed Indicatgor" de.text="Fahrtanzeiger" />
 				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
-				<key key="railway"
-					value="signal" />
-				<text key="ref"
-					text="Signal ref"
-					de.text="Signalbezeichnung"
-					/>
+				<reference ref="sig_ref" />
 				<check key="railway:signal:main_repeated:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
@@ -2645,12 +2261,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left,right,on a bridge over the tracks"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward,both"
-					display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-					/>
+				<reference ref="direction_fw_bw_b" />
 				<space />
 				<key key="railway:signal:main_repeated"
 					value="DE-ESO:fahrtanzeiger" />
@@ -2674,12 +2285,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left,right,on a bridge over the tracks"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward,both"
-					display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-					/>
+				<reference ref="direction_fw_bw_b" />
 				<key key="railway:signal:departure"
 					value="DE-ESO:zp" />
 				<multiselect key="railway:signal:departure:states"
@@ -2710,12 +2316,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left,right,on a bridge over the tracks"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward,both"
-					display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
-					/>
+				<reference ref="direction_fw_bw_b" />
 				<key key="railway:signal:brake_test"
 					value="DE-ESO:zp" />
 				<key key="railway:signal:brake_test:form"
@@ -2743,13 +2344,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<check key="railway:signal:catenary_mast"
 					text="On catenary mast"
 					de.text="Am Oberleitungsmast"
@@ -2781,13 +2376,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="left,right"
 					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					/>
-				<combo key="railway:signal:direction"
-					text="Direction"
-					de.text="Anzeigerichtung"
-					values="forward,backward"
-					display_values="in direction of OSM way,against direction of OSM way"
-					de.display_values="In Wegrichtung,Entgegen Wegrichtung"
-					/>
+				<reference ref="direction_fw_bw" />
 				<check key="railway:signal:catenary_mast"
 					text="On catenary mast"
 					de.text="Am Oberleitungsmast"
