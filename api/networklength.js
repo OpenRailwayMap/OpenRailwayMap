@@ -2,7 +2,7 @@
 OpenRailwayMap Copyright (C) 2014 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See https://github.com/rurseekatze/OpenRailwayMap for details.
+See https://github.com/openrailwaymap/OpenRailwayMap for details.
 */
 
 

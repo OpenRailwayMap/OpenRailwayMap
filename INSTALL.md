@@ -39,7 +39,7 @@ CentOS:
  Clone this repository (in the following `/var/www/html/OpenRailwayMap/`):
 
     $ cd /var/www/html/
-    $ git clone https://github.com/rurseekatze/OpenRailwayMap.git
+    $ git clone https://github.com/openrailwaymap/OpenRailwayMap.git
     $ cd OpenRailwayMap
 
  First install all dependencies. Depending on your operating system and environment, you may use another command like apt-get. Package names can differ from the names mentioned below:

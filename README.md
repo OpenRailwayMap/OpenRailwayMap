@@ -2,7 +2,7 @@
 
  An OpenStreetMap-based project for creating a detailled map of the world's railway infrastructure.
 
- See the [OpenRailwayMap website](http://www.openrailwaymap.org/), the [OpenStreetMap Wiki](http://wiki.openrailwaymap.org/) and the [Github repository](https://github.com/rurseekatze/OpenRailwayMap) for more information.
+ See the [OpenRailwayMap website](http://www.openrailwaymap.org/), the [OpenStreetMap Wiki](http://wiki.openrailwaymap.org/) and the [Github repository](https://github.com/openrailwaymap/OpenRailwayMap) for more information.
 
  This repository contains all project-related components, including the OpenRailwayMap [website](http://www.openrailwaymap.org/), the API interface, map rendering styles, the map renderer, the database backend, [JOSM](http://josm.openstreetmap.de/) tagging presets, validation rules for JOSM and a [Taginfo](http://taginfo.openstreetmap.org/) project file.
 
@@ -18,7 +18,7 @@
 
  Contributions to this project are welcome, read [how to contribute](http://www.openrailwaymap.org/contribute.html) and the [contribution guidelines](CONTRIBUTING.md) for further details.
 
- If you would like to report an issue, please use the [issue tracker](https://github.com/rurseekatze/OpenRailwayMap/issues) on GitHub or contact us via one of the ways described below.
+ If you would like to report an issue, please use the [issue tracker](https://github.com/openrailwaymap/OpenRailwayMap/issues) on GitHub or contact us via one of the ways described below.
 
 ## Donations
 

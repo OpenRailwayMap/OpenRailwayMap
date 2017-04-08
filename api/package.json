@@ -11,7 +11,7 @@
 	"repository":
 	{
 		"type": "git",
-		"url": "https://github.com/rurseekatze/OpenRailwayMap"
+		"url": "https://github.com/openrailwaymap/OpenRailwayMap"
 	},
 	"author":
 	{
@@ -19,13 +19,13 @@
 		"email": "info@matheisen.org",
 		"url": "http://www.matheisen.org/"
 	},
-	"url": "http://github.com/rurseekatze/OpenRailwayMap",
-	"homepage": "http://github.com/rurseekatze/OpenRailwayMap",
+	"url": "http://github.com/openrailwaymap/OpenRailwayMap",
+	"homepage": "http://github.com/openrailwaymap/OpenRailwayMap",
 	"license": "GPLv3+",
 	"bugs":
 	{
 		"email": "info@matheisen.org",
-		"url": "https://github.com/rurseekatze/OpenRailwayMap/issues"
+		"url": "https://github.com/openrailwaymap/OpenRailwayMap/issues"
 	},
 	"dependencies":
 	{
