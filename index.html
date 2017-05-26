@@ -86,6 +86,91 @@
 
 	<body>
 
+		<nav id="mapNav" class="uk-navbar">
+			<a class="uk-navbar-brand uk-hidden-small" href="index.html"><img src="img/openrailwaymap-28.png" /> OpenRailwayMap</a>
+
+			<div class="uk-navbar-content uk-hidden-small">
+				<form class="uk-search" id="searchForm" data-uk-search>
+					<input class="uk-search-field" type="search" placeholder="" id="searchInput">
+					<div class="uk-dropdown uk-dropdown-flip uk-dropdown-search" aria-expanded="true">
+						<ul class="uk-nav uk-nav-search uk-autocomplete-results" id="searchResults">
+						</ul>
+					</div>
+					<button type="button" class="uk-button uk-button-primary" id="searchButton" data-i18n="Search"></button>
+				</form>
+			</div>
+
+			<ul class="uk-navbar-nav uk-hidden-small">
+				<li class="uk-parent" data-uk-dropdown>
+					<a href=""><span data-i18n="Style"></span> <i class="uk-icon-sort-down"></i></a>
+					<div class="uk-dropdown uk-dropdown-navbar">
+						<ul class="uk-nav uk-nav-navbar styleSelection">
+							<li>
+								<a href="#" class="styleSelector" data-id="standard"><span data-i18n="Infrastructure"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
+							</li>
+							<li>
+								<a href="#" class="styleSelector" data-id="maxspeed"><span data-i18n="Maxspeeds"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
+							</li>
+							<li>
+								<a href="#" class="styleSelector" data-id="signals"><span data-i18n="Signalling"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="uk-parent" data-uk-dropdown>
+					<a href=""><span data-i18n="Tools"></span> <i class="uk-icon-sort-down"></i></a>
+					<div class="uk-dropdown uk-dropdown-navbar">
+						<ul class="uk-nav uk-nav-navbar">
+							<li><a href="#searchFacilityDialog" data-action="searchFacility" data-uk-modal data-i18n="Search station"></a></li>
+							<li><a href="#searchMilestoneDialog" data-action="searchMilestone" data-uk-modal data-i18n="Search milestone"></a></li>
+							<li><a href="#legendDialog" data-action="legend" data-uk-modal data-i18n="Legend"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="about.html" data-i18n="About this project"></a>
+				</li>
+				<li>
+					<a href="blog.html" data-i18n="Blog"></a>
+				</li>
+				<li>
+					<a href="donation.html" data-i18n="Donate"></a>
+				</li>
+				<li>
+					<a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap" data-i18n="Wiki"></a>
+				</li>
+				<li class="uk-parent" data-uk-dropdown>
+					<a href=""><span data-i18n="Language"></span> <i class="uk-icon-sort-down"></i></a>
+					<div class="uk-dropdown uk-dropdown-navbar">
+						<ul class="uk-nav uk-nav-navbar langSelection">
+							<li><a href="#" data-lang="ca_ES">Català <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="cs_CZ">Česky <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="da_DK">Dansk <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="de_DE">Deutsch <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="el_GR">Ελληνικά <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="en_GB">English <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="es_ES">Español <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="fr_FR">Français <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="ja_JP">日本語 <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="lt_LT">Lietuvių <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="nl_NL">Nederlands <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="nqo_GN">ߒߞߏ <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="pl_PL">Polski <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="pt_PT">Português <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="ru_RU">Русский <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="sl_SI">Slovenščina <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="sv_SE">Svenska <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="tr_TR">Türkçe <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="uk_UA">Українська <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+							<li><a href="#" data-lang="vi_VN">Tiếng Việt <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+			<div class="uk-navbar-brand uk-navbar-center uk-visible-small">OpenRailwayMap</div>
+		</nav>
+
 		<div class="uk-container uk-container-center uk-margin-top">
 
 			<div id="searchFacilityDialog" class="uk-modal">
@@ -164,91 +249,6 @@
 					</div>
 				</div>
 			</div>
-
-			<nav id="mapNav" class="uk-navbar">
-				<a class="uk-navbar-brand uk-hidden-small" href="index.html"><img src="img/openrailwaymap-28.png" /> OpenRailwayMap</a>
-
-				<div class="uk-navbar-content uk-hidden-small">
-					<form class="uk-search" id="searchForm" data-uk-search>
-						<input class="uk-search-field" type="search" placeholder="" id="searchInput">
-						<div class="uk-dropdown uk-dropdown-flip uk-dropdown-search" aria-expanded="true">
-							<ul class="uk-nav uk-nav-search uk-autocomplete-results" id="searchResults">
-							</ul>
-						</div>
-						<button type="button" class="uk-button uk-button-primary" id="searchButton" data-i18n="Search"></button>
-					</form>
-				</div>
-
-				<ul class="uk-navbar-nav uk-hidden-small">
-					<li class="uk-parent" data-uk-dropdown>
-						<a href=""><span data-i18n="Style"></span> <i class="uk-icon-sort-down"></i></a>
-						<div class="uk-dropdown uk-dropdown-navbar">
-							<ul class="uk-nav uk-nav-navbar styleSelection">
-								<li>
-									<a href="#" class="styleSelector" data-id="standard"><span data-i18n="Infrastructure"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
-								</li>
-								<li>
-									<a href="#" class="styleSelector" data-id="maxspeed"><span data-i18n="Maxspeeds"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
-								</li>
-								<li>
-									<a href="#" class="styleSelector" data-id="signals"><span data-i18n="Signalling"></span> <i class="styleSelectorChecked uk-align-right uk-vertical-align-middle"></i></a>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li class="uk-parent" data-uk-dropdown>
-						<a href=""><span data-i18n="Tools"></span> <i class="uk-icon-sort-down"></i></a>
-						<div class="uk-dropdown uk-dropdown-navbar">
-							<ul class="uk-nav uk-nav-navbar">
-								<li><a href="#searchFacilityDialog" data-action="searchFacility" data-uk-modal data-i18n="Search station"></a></li>
-								<li><a href="#searchMilestoneDialog" data-action="searchMilestone" data-uk-modal data-i18n="Search milestone"></a></li>
-								<li><a href="#legendDialog" data-action="legend" data-uk-modal data-i18n="Legend"></a></li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<a href="about.html" data-i18n="About this project"></a>
-					</li>
-					<li>
-						<a href="blog.html" data-i18n="Blog"></a>
-					</li>
-					<li>
-						<a href="donation.html" data-i18n="Donate"></a>
-					</li>
-					<li>
-						<a href="http://wiki.openstreetmap.org/wiki/DE:OpenRailwayMap" data-i18n="Wiki"></a>
-					</li>
-					<li class="uk-parent" data-uk-dropdown>
-						<a href=""><span data-i18n="Language"></span> <i class="uk-icon-sort-down"></i></a>
-						<div class="uk-dropdown uk-dropdown-navbar">
-							<ul class="uk-nav uk-nav-navbar langSelection">
-								<li><a href="#" data-lang="ca_ES">Català <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="cs_CZ">Česky <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="da_DK">Dansk <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="de_DE">Deutsch <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="el_GR">Ελληνικά <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="en_GB">English <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="es_ES">Español <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="fr_FR">Français <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="ja_JP">日本語 <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="lt_LT">Lietuvių <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="nl_NL">Nederlands <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="nqo_GN">ߒߞߏ <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="pl_PL">Polski <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="pt_PT">Português <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="ru_RU">Русский <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="sl_SI">Slovenščina <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="sv_SE">Svenska <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="tr_TR">Türkçe <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="uk_UA">Українська <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-								<li><a href="#" data-lang="vi_VN">Tiếng Việt <i class="uk-align-right uk-vertical-align-middle"></i></a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-				<a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
-				<div class="uk-navbar-brand uk-navbar-center uk-visible-small">OpenRailwayMap</div>
-			</nav>
 
 			<div id="mapContainer"></div>
 
