@@ -1296,7 +1296,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<space />
 			<combo key="crossing:barrier"
 				text="Barriers" de.text="Schranken"
-				values="half,double_half,full,gates,yes,no"
+				values="half,double_half,full,gate,yes,no"
 				de.display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Tore (England),Beschrankt,Unbeschrankt"
 				display_values="half boom gate,double half boom gate,full boom gate,gates (turnable),yes,no"
 				/>
@@ -1358,7 +1358,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<space />
 			<combo key="crossing:barrier"
 				text="Barriers" de.text="Schranken"
-				values="half,double_half,full,gates,yes,no"
+				values="half,double_half,full,gate,yes,no"
 				de.display_values="Halbschranke,Vollabschluss ('doppelte Halbschranke'),Vollschranke,Tore (England),Beschrankt,Unbeschrankt"
 				display_values="half boom gate,double half boom gate,full boom gate,gates (turnable),yes,no"
 				/>
