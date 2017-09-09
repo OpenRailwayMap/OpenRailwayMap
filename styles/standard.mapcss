@@ -880,3 +880,24 @@ node|z17-[railway=phone]
 	icon-width: 12;
 	icon-height: 16;
 }
+
+/*************************************/
+/* radio towers (GSM-R and analogue) */
+/*************************************/
+node|z13-[railway=radio][man_made=mast],
+node|z13-[railway=radio][man_made=tower] {
+	z-index: 880;
+	icon-image: "icons/radio-mast-30.png";
+	icon-width: 10;
+	icon-height: 15;
+}
+
+/**************************************************************/
+/* radio beam antennas (GSM-R and analogue) used near tunnels */
+/**************************************************************/
+node|z13-[railway=radio][man_made=antenna] {
+	z-index: 880;
+	icon-image: "icons/radio-antenna-20.png";
+	icon-width: 10;
+	icon-height: 10;
+}
