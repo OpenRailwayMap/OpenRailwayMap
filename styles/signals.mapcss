@@ -53,7 +53,10 @@ way[!"construction:railway"]["construction"=rail]["construction:railway:etcs"]["
 
 way["railway:pzb"=no]["railway:lzb"=no][!"railway:etcs"].tracks,
 way["railway:pzb"=no]["railway:lzb"=no]["railway:etcs"=no].tracks,
-way["railway:pzb"=no]["railway:lzb"=no]["railway:etcs"=0].tracks
+way["railway:pzb"=no]["railway:lzb"=no]["railway:etcs"=0].tracks,
+way["railway:atb"=no][!"railway:etcs"].tracks,
+way["railway:atb"=no]["railway:etcs"=no].tracks,
+way["railway:atb"=no]["railway:etcs"=0].tracks
 {
 	z-index: 1;
 	color: black;
@@ -69,10 +72,18 @@ way["railway:lzb"=yes].tracks
 	z-index: 3;
 	color: red;
 }
+way["railway:atb"=yes].tracks,
+way["railway:atb-eg"=yes].tracks,
+way["railway:atb-ng"=yes].tracks,
+way["railway:atb-vv"=yes].tracks
+{
+	z-index: 4;
+	color: #FF8C00;
+}
 way["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0].tracks,
 way.ctracks
 {
-	z-index: 4;
+	z-index: 9;
 	color: blue;
 	dashes: 9,9;
 }
