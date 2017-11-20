@@ -25,6 +25,7 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"railway:atb":"no",
 					"railway:etcs":"no",
 					"railway:lzb":"no",
 					"railway:pzb":"no",
@@ -45,6 +46,19 @@
 				}
 			}],
 			"caption": "Punktförmige Zugbeeinflussung"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:atb":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "automatische treinbeïnvloeding"
 		},
 		{
 			"minzoom": 2,
