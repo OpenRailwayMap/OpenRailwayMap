@@ -49,7 +49,7 @@ msgid "Last update"
 msgstr "Dernière mise à jour"
 
 msgid "Empty input."
-msgstr ""
+msgstr "Entrée vide"
 
 msgid "Kilometer"
 msgstr "Kilomètre"
@@ -58,7 +58,7 @@ msgid "Track"
 msgstr "Voie"
 
 msgid "Permalink"
-msgstr "Ombrage de relief"
+msgstr "Lien permanent"
 
 msgid "Hillshading"
 msgstr "Relief ombré"
@@ -181,10 +181,10 @@ msgid "Junction"
 msgstr "Aiguillage"
 
 msgid "Yard"
-msgstr "yard"
+msgstr "Triage"
 
 msgid "Crossover"
-msgstr ""
+msgstr "Traversée"
 
 msgid "Site"
 msgstr "Site"
@@ -196,7 +196,7 @@ msgid "Tram stop"
 msgstr "Arrêt de tramway"
 
 msgid "Milestone"
-msgstr ""
+msgstr "Borne"
 
 msgid "Level crossing"
 msgstr "Passage à niveau"
@@ -223,13 +223,13 @@ msgid "Siding"
 msgstr "Voie de service"
 
 msgid "Yard track"
-msgstr ""
+msgstr "Voie de triage"
 
 msgid "Spur"
 msgstr "Embranchement"
 
 msgid "Crossover track"
-msgstr "Cross-over"
+msgstr "Voie de traversée"
 
 msgid "Branch line"
 msgstr "Ligne secondaire"
@@ -265,7 +265,7 @@ msgid "Abandoned track"
 msgstr "Voie abandonnée"
 
 msgid "Razed track"
-msgstr ""
+msgstr "Voie démontée"
 
 msgid "Tram"
 msgstr "Tramway"
@@ -304,7 +304,7 @@ msgid "Narrow gauge industrial line"
 msgstr "Ligne à vocation industrielle à voie étroite"
 
 msgid "Narrow gauge industrial service"
-msgstr ""
+msgstr "Voie de service industrielle à voie étroite"
 
 msgid "Switch (remote-controlled)"
 msgstr "Aiguille (télécommandée)"
@@ -316,7 +316,7 @@ msgid "Resetting switch"
 msgstr ""
 
 msgid "Signal box"
-msgstr ""
+msgstr "Poste d'aiguillage"
 
 msgid "Owner change"
 msgstr ""
@@ -328,7 +328,7 @@ msgid "Buffer stop"
 msgstr "Heurtoir"
 
 msgid "Isolated track section"
-msgstr ""
+msgstr "Section de voie isolée"
 
 msgid "Platform"
 msgstr "Quai"
@@ -418,7 +418,7 @@ msgid "Factory connected to railroad line"
 msgstr "Usine embranchée"
 
 msgid "Rack"
-msgstr ""
+msgstr "Crémaillère"
 
 msgid "Embankment"
 msgstr "Remblai"
@@ -466,7 +466,7 @@ msgid "Language"
 msgstr "Langue"
 
 msgid "Desktop version"
-msgstr ""
+msgstr "Site pour PC"
 
 msgid "Style"
 msgstr "Style"
@@ -475,10 +475,10 @@ msgid "Search"
 msgstr "Recherche"
 
 msgid "Mapnik no-labels"
-msgstr ""
+msgstr "Mapnik sans étiquettes"
 
 msgid "Mapnik no-labels Grayscale"
-msgstr ""
+msgstr "Mapnik sans étiquettes en niveaux de gris"
 
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
