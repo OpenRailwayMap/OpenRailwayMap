@@ -47,12 +47,14 @@ way.tracks_preserved
 	set .tracks;
 }
 
-way[!maxspeed].tracks
-{
-	z-index: 0;
-	color: gray;
-	width: 3.5;
-	kothicjs-ignore-layer: true;
+@supports not (user-agent: josm) {
+	way[!maxspeed].tracks
+	{
+		z-index: 0;
+		color: gray;
+		width: 3.5;
+		kothicjs-ignore-layer: true;
+	}
 }
 
 way.tracks_construction,
