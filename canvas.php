@@ -97,17 +97,6 @@
 		<script type="text/javascript" src="js/timestamp.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
 		<script type="text/javascript" src="js/canvas-map.js"></script>
-		<script type="text/javascript">
-		/* <![CDATA[ */
-			(function(){
-				var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-				s.type = 'text/javascript';
-				s.mode = 'auto';
-				s.async = true;
-				s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-				t.parentNode.insertBefore(s, t);
-			})();
-		/* ]]> */</script>
 	</head>
 	<body onload="createMap(false);">
 		<div id="fullscreen" class="fullscreenOut"></div>
@@ -135,12 +124,6 @@
 				<input type="image" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
 				<img alt="" border="0" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/scr/pixel.gif" width="1" height="1">
 			</form>
-			<a class="FlattrButton" id="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.openrailwaymap.org/"></a>
-			<noscript>
-				<a href="http://flattr.com/thing/1327262/OpenRailwayMap" target="_blank">
-					<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-				</a>
-			</noscript>
 			<div id="linkBar">
 				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
 				<a class="links" id="infoButton" href="http://blog.openrailwaymap.org/" target="_blank"><?=_("Blog")?></a>&nbsp;•
