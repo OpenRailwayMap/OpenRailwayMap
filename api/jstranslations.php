@@ -26,10 +26,7 @@
 	echo "translations['mapnik'] = '".addslashes(_("Mapnik"))."';\n";
 	echo "translations['mapnikGrayscale'] = '".addslashes(_("Mapnik Grayscale"))."';\n";
 	echo "translations['mapnikAttribution'] = '".addslashes(_("Map data &copy; OpenStreetMap contributors"))."';\n";
-	echo "translations['mapquest'] = '".addslashes(_("MapQuest"))."';\n";
-	echo "translations['mapquestGrayscale'] = '".addslashes(_("MapQuest Grayscale"))."';\n";
 	echo "translations['blank'] = '".addslashes(_("No background map"))."';\n";
-	echo "translations['mapquestAttribution'] = '".addslashes(_("Tiles Courtesy of <a href=\"http://www.mapquest.com/\" target=\"_blank\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo.png\">"))."';\n";
 	echo "translations['captionless'] = '".addslashes(_("Mapnik no-labels"))."';\n";
 	echo "translations['captionlessGrayscale'] = '".addslashes(_("Mapnik no-labels Grayscale"))."';\n";
 	echo "translations['captionlessAttribution'] = '".addslashes(_("Map data &copy; OpenStreetMap contributors"))."';\n";
