@@ -9,7 +9,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 function createMap(embed)
 {
 	root = params['urlbase'];
-	tiledir = "http://tiles.openrailwaymap.org/vector/";
+	tiledir = "https://tiles.openrailwaymap.org/vector/";
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
 
 	if (params['offset'] != null)

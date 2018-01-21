@@ -8,7 +8,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 {
-	this.apibase = 'http://api.openrailwaymap.org/';
+	this.apibase = 'https://api.openrailwaymap.org/';
 
 	// clears the visible parts of a search
 	this.clear = function()
