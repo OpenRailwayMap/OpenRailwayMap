@@ -71,6 +71,12 @@ way[maxspeed].dtracks
 	text: "maxspeed";
 }
 
+way[maxspeed].tracks[!usage],
+way[maxspeed].dtracks[!usage]
+{
+	width: 1.5;
+}
+
 way[maxspeed=~/^[1-9][0-9]*$/].tracks
 {
 	z-index: eval(50+tag("maxspeed")/10);
