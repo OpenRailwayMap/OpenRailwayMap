@@ -182,13 +182,13 @@ function mobileRedirection()
 function setupControls()
 {
 	// grayscale mapnik background layer
-	var mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	var mapnikGray = new L.TileLayer.Grayscale('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
 		maxZoom: 19
 	}).addTo(map);
 	// normal mapnik background layer
-	var mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	var mapnik = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: translations['mapnikAttribution'],
 		maxZoom: 19
@@ -206,7 +206,7 @@ function setupControls()
 	baseLayers[translations['blank']] = blank;
 
 	// hillshading layer
-	var hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
+	var hillshading = new L.TileLayer('https://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
 	{
 		attribution: translations['hillshadingAttribution'],
 		maxZoom: 17

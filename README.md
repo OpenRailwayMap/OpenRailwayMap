@@ -22,7 +22,7 @@
 
 ## Donations
 
- You can honor this project also by a donation with [Flattr](https://flattr.com/thing/1327262/OpenRailwayMap), [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9KCKT39N7AGL8) and bank transfers to [FOSSGIS e.V.](http://fossgis.de/) (reason for transfer "OpenRailwayMap"). This project is operated by the developers in their spare time and has no commercial goals. By making a donation you can show that you appreciate the voluntary work of the developers and can motivate them to continue the project in the future.
+ You can honor this project also by a donation with [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9KCKT39N7AGL8) and bank transfers to [FOSSGIS e.V.](http://fossgis.de/) (reason for transfer "OpenRailwayMap"). This project is operated by the developers in their spare time and has no commercial goals. By making a donation you can show that you appreciate the voluntary work of the developers and can motivate them to continue the project in the future.
 
 ## Contact & News
 

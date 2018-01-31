@@ -40,13 +40,15 @@ way[!"construction:railway"]["construction"=rail]["construction:railway:etcs"]["
 	set .ctracks;
 }
 
-way.tracks,
-way.ctracks
-{
-	z-index: 0;
-	color: gray;
-	width: 3.5;
-	kothicjs-ignore-layer: true;
+@supports not (user-agent: josm) {
+	way.tracks,
+	way.ctracks
+	{
+		z-index: 0;
+		color: gray;
+		width: 3.5;
+		kothicjs-ignore-layer: true;
+	}
 }
 
 way["railway:pzb"=no]["railway:lzb"=no][!"railway:etcs"].tracks,
