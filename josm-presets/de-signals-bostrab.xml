@@ -1514,6 +1514,44 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				</item>
 		</group>
 		<group name="Karlsruhe (VBK)">
+			<item name="Distand Signal on sight (Fv)" de.name="Vorankündigungssignale (Fv)" icon="de/avg/bue201v-32.png" type="node">
+				<label text="Distand Signal on sight (Fv)" de.text="Vorankündigungssignale (Fv)" />
+				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
+				<space />
+				<reference ref="sig_ref" />
+				<check key="railway:signal:distant:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,overhead,bridge"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung,Signalbrücke"
+					display_values="left,right,catenary,bridge"
+					/>
+				<reference ref="direction_fw_bw" />
+				<space />
+				<key key="railway:signal:distant"
+					value="DE-VBK:fv" />
+				<key key="railway:signal:distant:form"
+					value="light" />
+				<multiselect key="railway:signal:distant:states"
+					text="Possible Signals"
+					de.text="Anzeigbare Signale"
+					delimiter=";"
+					values="DE-VBK:fv0;DE-VBK:fv1;DE-VBK:fv2;DE-VBK:fv3;?"
+					display_values="Fv 0;Fv 1;Fv 2;Fv 3;unknown"
+					de.display_values="Fv 0 (Halt erwarten);Fv1 1 (Fahrt geradeaus erwarten);Fv 2 (Fahrt nach rechts erwarten);Fv 3 (Fahrt nach links erwarten);unbekannt"
+					/>
+				<combo key="railway:signal:distant:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
+					/>
+			</item>
 			<item name="Switch Driveup Signal (Wv)" de.name="Weichenvorrücksignal (Wv)" icon="de/avg/wv1-32.png" type="node">
 				<label text="Switch Driveup Signal (Wv)" de.text="Weichenvorrücksignal (Wv)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
@@ -1546,8 +1584,8 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
-			<item name="Swicht Signal (W)" de.name="Weichensignal (W)" icon="de/bostrab/w5-16.png" type="node">
-				<label text="Swicht Signal (W)" de.text="Weichensignale (W)" />
+			<item name="Switch Signal (W)" de.name="Weichensignal (W)" icon="de/bostrab/w5-16.png" type="node">
+				<label text="Switch Signal (W)" de.text="Weichensignale (W)" />
 				<label text="Only in Karlsruhe" de.text="Nur in Karlsruhe" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
@@ -1578,9 +1616,9 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Possible Signals"
 					de.text="Anzeigbare Signale"
 					delimiter=";"
-					values="DE-VBK:w0;DE-VBK:w1;DE-VBK:w2;DE-VBK:w3;DE-VBK:w4;DE-VBK:w5;DE-VBK:w11;DE-VBK:w12;DE-VBK:w13;DE-VBK:w14"
-					display_values="W 0 (switch occupied);W 1 (straight 15 kph);W 2 (right 15 kph);W 3 (left 15 kph);W 4 (error);W 5 (idle);W 11 (straight vmax);W 12 (right);W 13 (left);W 14 (movement from frog to blade only if the blades are at the right position)"
-					de.display_values="W 0 (Weiche wird momentan befahren);W 1 (geradeaus 15 km/h);W 2 (rechts 15 km/h);W 3 (links 15 km/h);W 4 (Störung);W 5 (Weiche stellbereit);W 11 (geradeaus (vmax));W 12 (rechts);W 13 (links);W 14 (Weiche darf nicht aufgefahren werden)"
+					values="DE-VBK:w0;DE-VBK:w1;DE-VBK:w2;DE-VBK:w3;DE-VBK:w4;DE-VBK:w5;DE-VBK:w11;DE-VBK:w12;DE-VBK:w13;DE-VBK:w14;DE-VBK:w15;?"
+					display_values="W 0 (switch occupied);W 1 (straight 15 kph);W 2 (right 15 kph);W 3 (left 15 kph);W 4 (error);W 5 (idle);W 11 (straight vmax);W 12 (right);W 13 (left);W 14 (movement from frog to blade only if the blades are at the right position);W 15 (movement from frog to blade allowed);unknown"
+					de.display_values="W 0 (Weiche wird momentan befahren);W 1 (geradeaus 15 km/h);W 2 (rechts 15 km/h);W 3 (links 15 km/h);W 4 (Störung);W 5 (Weiche stellbereit);W 11 (geradeaus (vmax));W 12 (rechts);W 13 (links);W 14 (Weiche darf nicht aufgefahren werden);W 15 (Weiche darf stumpf aufgefahren werden);unbekannt"
 					/>
 				<combo key="railway:signal:switch:height"
 					text="Signal height"
