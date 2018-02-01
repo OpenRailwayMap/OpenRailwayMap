@@ -206,7 +206,7 @@ function setupControls()
 	baseLayers[translations['blank']] = blank;
 
 	// hillshading layer
-	var hillshading = new L.TileLayer('https://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
+	var hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
 	{
 		attribution: translations['hillshadingAttribution'],
 		maxZoom: 17
