@@ -1,23 +1,24 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
+# amontero <amontero@tinet.org>, 2015
 # Geogast <danmey@web.de>, 2014
+# Marco Antonio <marcoantoniofrias@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:23+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/openrailwaymap/"
-"language/es/)\n"
+"PO-Revision-Date: 2017-09-20 00:48+0000\n"
+"Last-Translator: Marco Antonio <marcoantoniofrias@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/rurseekatze/openrailwaymap/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -29,41 +30,39 @@ msgid "Contact"
 msgstr "Contacto"
 
 msgid "Javascript is not activated"
-msgstr "Javascript no está activado."
+msgstr "Javascript no está activado"
 
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Javascript es necesario para mostrar el mapa y presentar la página web. Por "
-"favor, activa Javascript en los ajustes de tu browser."
+msgstr "Javascript es necesario para mostrar el mapa y ejecutar esta página web. Active Javascript en los ajustes de su navegador."
 
 msgid "Loading..."
-msgstr "cargando..."
+msgstr "Cargando..."
 
 msgid "Nothing found."
 msgstr "No se encontró nada."
 
 msgid "Last update"
-msgstr "última actualización"
+msgstr "Última actualización"
 
 msgid "Empty input."
-msgstr "entrada vacía"
+msgstr "Entrada vacía."
 
 msgid "Kilometer"
-msgstr "kilómetro"
+msgstr "Kilómetro"
 
 msgid "Track"
-msgstr "vía"
+msgstr "Vía"
 
 msgid "Permalink"
-msgstr "enlace permanente"
+msgstr "Enlace permanente"
 
 msgid "Hillshading"
-msgstr ""
+msgstr "Sombreado de relieve"
 
 msgid "Hillshading by <a href='http://nasa.gov/'>NASA SRTM</a>"
-msgstr ""
+msgstr "Sombreado de relieve por <a href='http://nasa.gov/'>NASA SRTM</a>"
 
 msgid "OpenRailwayMap"
 msgstr "OpenRailwayMap"
@@ -75,69 +74,69 @@ msgid "Mapnik"
 msgstr "Mapnik"
 
 msgid "Mapnik Grayscale"
-msgstr "Mapnik, escala de grises"
+msgstr "Escala de grises Mapnik"
 
 msgid "Map data &copy; OpenStreetMap contributors"
-msgstr ""
+msgstr "Datos del mapa &copy; contribuidores OpenStreetMap"
 
 msgid "Select a map style"
-msgstr "selecciona un estilo de mapa"
+msgstr "Seleccione un estilo de mapa"
 
 msgid "Public transport"
-msgstr "transporte público"
+msgstr "Transporte público"
 
 msgid "Search results"
-msgstr "resultados de búsqueda"
+msgstr "Resultados de la búsqueda"
 
 msgid "Search only in the current map view"
-msgstr ""
+msgstr "Buscar sólo en la vista del mapa actual"
 
 msgid "HTML-Code"
-msgstr "código HTML"
+msgstr "Código HTML"
 
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
+msgstr "Copie este fragmento de código HTML en su sitio web para mostrar un mapa pequeño con un marcador."
 
 msgid "Fullscreen"
-msgstr "pantalla completa"
+msgstr "Pantalla completa"
 
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d segundo"
+msgstr[1] "%d segundos"
 
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d minuto"
+msgstr[1] "%d minutos"
 
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d hora"
+msgstr[1] "%d horas"
 
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d día"
+msgstr[1] "%d días"
 
 #, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d semana"
+msgstr[1] "%d semanas"
 
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d mes"
+msgstr[1] "%d meses"
 
 #, php-format
 msgid "more than %s ago"
@@ -148,208 +147,208 @@ msgid "%s ago"
 msgstr "hace %s"
 
 msgid "Infrastructure"
-msgstr "infraestructura"
+msgstr "Infraestructura"
 
 msgid "Signalling"
-msgstr "señales"
+msgstr "Señalización"
 
 msgid "Maxspeeds"
-msgstr "velocidades máximas"
+msgstr "Velocidades máximas"
 
 msgid "Halt"
-msgstr "parada"
+msgstr "Parada"
 
 msgid "Station"
-msgstr "estación"
+msgstr "Estación"
 
 msgid "Junction"
-msgstr "empalme"
+msgstr "Empalme"
 
 msgid "Yard"
-msgstr "playa de maniobras"
+msgstr "Patio de maniobras"
 
 msgid "Crossover"
-msgstr "puesto de banalización"
+msgstr "Cruce"
 
 msgid "Site"
-msgstr "sitio"
+msgstr "Sitio"
 
 msgid "Service station"
-msgstr ""
+msgstr "Estación de servicio"
 
 msgid "Tram stop"
-msgstr "parada de tranvía"
+msgstr "Parada de tranvía"
 
 msgid "Milestone"
-msgstr "hito kilométrico"
+msgstr "Hito kilométrico"
 
 msgid "Level crossing"
-msgstr "paso a nivel"
+msgstr "Paso a nivel"
 
 msgid "Crossing"
-msgstr "paso a nivel (peatones)"
+msgstr "Cruce"
 
 msgid "Legend"
-msgstr "leyenda"
+msgstr "Leyenda"
 
 msgid "Bridge"
-msgstr "puente"
+msgstr "Puente"
 
 msgid "Tunnel"
-msgstr "túnel"
+msgstr "Túnel"
 
 msgid "Line ref"
-msgstr "referencia de la vía"
+msgstr "Referencia de la vía"
 
 msgid "Railroad line"
-msgstr "ferrovía"
+msgstr "Ferrovía"
 
 msgid "Siding"
-msgstr "vía lateral"
+msgstr "Vía lateral"
 
 msgid "Yard track"
-msgstr "riel en playa de maniobras"
+msgstr "Vía en patio de maniobras"
 
 msgid "Spur"
-msgstr "tramo de acceso"
+msgstr "Tramo de acceso"
 
 msgid "Crossover track"
-msgstr "vía banalizada"
+msgstr "Vía de cruce"
 
 msgid "Branch line"
-msgstr "línea secundaria"
+msgstr "Línea ramal"
 
 msgid "Main line"
-msgstr "línea principal"
+msgstr "Línea principal"
 
 msgid "Highspeed line"
-msgstr "vía de alta velocidad"
+msgstr "Línea de alta velocidad"
 
 msgid "Industrial line"
-msgstr "línea industrial"
+msgstr "Línea industrial"
 
 msgid "Industrial service track"
-msgstr "vía lateral de una línea industrial"
+msgstr "Vía industrial de servicio"
 
 msgid "Preserved track"
-msgstr "vía de ferrocarril histórico"
+msgstr "Vía ferroviaria histórica"
 
 msgid "Preserved service track"
-msgstr "vía lateral de un ferrocarril histórico"
+msgstr "Vía ferroviaria de servicio histórica"
 
 msgid "Track under construction"
-msgstr "vía en construcción"
+msgstr "Vía en construcción"
 
 msgid "Proposed track"
-msgstr "recorrido propuesto"
+msgstr "Vía propuesta"
 
 msgid "Disused track"
-msgstr "vía en desuso"
+msgstr "Vía en desuso"
 
 msgid "Abandoned track"
-msgstr "vía abandonada"
+msgstr "Vía abandonada"
 
 msgid "Razed track"
-msgstr "vía levantada"
+msgstr "Vía levantada"
 
 msgid "Tram"
-msgstr "tranvía"
+msgstr "Tranvía"
 
 msgid "Subway"
-msgstr "subte"
+msgstr "Subterráneo"
 
 msgid "Light rail"
-msgstr "tren ligero"
+msgstr "Tren ligero"
 
 msgid "Narrow gauge track"
-msgstr "vía de trocha angosta"
+msgstr "Vía de trocha angosta"
 
 msgid "Narrow gauge siding"
-msgstr "vía lateral de trocha angosta"
+msgstr "Vía lateral de trocha angosta"
 
 msgid "Narrow gauge yard"
-msgstr "playa de maniobras de trocha angosta"
+msgstr "Patio de maniobras de trocha angosta"
 
 msgid "Narrow gauge spur"
-msgstr "tramo de acceso de trocha angosta"
+msgstr "Vía de acceso de trocha angosta"
 
 msgid "Narrow gauge crossover"
-msgstr "puesto de banalización de trocha angosta"
+msgstr "Cruce de trocha angosta"
 
 msgid "Narrow gauge branch line"
-msgstr "línea secundaria de trocha angosta"
+msgstr "Línea ramal de trocha angosta"
 
 msgid "Narrow gauge main line"
-msgstr "línea principal de trocha angosta"
+msgstr "Línea principal de trocha angosta"
 
 msgid "Narrow gauge highspeed line"
-msgstr "vía de trocha angosta y alta velocidad"
+msgstr "Línea de alta velocidad de trocha angosta"
 
 msgid "Narrow gauge industrial line"
-msgstr "vía industrial de trocha angosta"
+msgstr "Línea industrial de trocha angosta"
 
 msgid "Narrow gauge industrial service"
-msgstr "vía lateral de una línea industrial de trocha angosta"
+msgstr "Vía industrial de servicio de trocha angosta"
 
 msgid "Switch (remote-controlled)"
-msgstr "desvío (controlado a distancia)"
+msgstr "Desvío (controlado a distancia)"
 
 msgid "Switch (local operated)"
-msgstr "desvío (atendido en el lugar)"
+msgstr "Desvío (operado localmente)"
 
 msgid "Resetting switch"
-msgstr ""
+msgstr "Reinicio de desvío"
 
 msgid "Signal box"
-msgstr "cabín de señales"
+msgstr "Cabina de señales"
 
 msgid "Owner change"
-msgstr "cambio de dueño"
+msgstr "Cambio de dueño"
 
 msgid "Railway crossing"
-msgstr "cruce a nivel entre ferrocarriles"
+msgstr "Cruce a nivel entre ferrocarriles"
 
 msgid "Buffer stop"
-msgstr "paragolpe"
+msgstr "Topera"
 
 msgid "Isolated track section"
-msgstr "separación de segmentos"
+msgstr "Vía de separación de segmentos"
 
 msgid "Platform"
-msgstr "andén"
+msgstr "Andén"
 
 msgid "Vending machine"
-msgstr "máquina expendedora de tickets"
+msgstr "Máquina expendedora de boletos"
 
 msgid "Ticket shop"
-msgstr "boletería"
+msgstr "Boletería"
 
 msgid "Subway entrance"
-msgstr "entrada de subte"
+msgstr "Entrada de subterráneo"
 
 msgid "Phone"
-msgstr "teléfono"
+msgstr "Teléfono"
 
 msgid "Water tower"
-msgstr "torre de agua"
+msgstr "Torre de agua"
 
 msgid "Fuel"
-msgstr "combustible"
+msgstr "Combustible"
 
 msgid "Water crane"
-msgstr "grúa de agua"
+msgstr "Grúa de agua"
 
 msgid "Coaling facility"
 msgstr ""
 
 msgid "Wash"
-msgstr "lavadero automático"
+msgstr "Lavadero"
 
 msgid "Pit"
 msgstr ""
 
 msgid "Loading gauge"
-msgstr "gálibo"
+msgstr "Gálibo"
 
 msgid "Hump yard"
 msgstr "lomo de asno"
@@ -466,4 +465,4 @@ msgid "Mapnik no-labels Grayscale"
 msgstr "Mapnik sin etiquetas escala de grises"
 
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
