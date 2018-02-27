@@ -1,19 +1,19 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
 # fri <pavelfric@seznam.cz>, 2013-2014
+# Michal Pustějovský <Michal.Pustejovsky@seznam.cz>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:23+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Czech (http://www.transifex.com/projects/p/openrailwaymap/"
-"language/cs/)\n"
+"PO-Revision-Date: 2017-09-23 19:12+0000\n"
+"Last-Translator: Michal Pustějovský <Michal.Pustejovsky@seznam.cz>\n"
+"Language-Team: Czech (http://www.transifex.com/rurseekatze/openrailwaymap/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,9 +34,7 @@ msgstr "Javascript není zapnut"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Javascript je potřeba pro ukázání mapy a běh této stránky. Zapněte, prosím, "
-"Javascript v nastavení vašeho prohlížeče."
+msgstr "Javascript je potřeba pro ukázání mapy a běh této stránky. Zapněte, prosím, Javascript v nastavení vašeho prohlížeče."
 
 msgid "Loading..."
 msgstr "Nahrává se..."
@@ -45,7 +43,7 @@ msgid "Nothing found."
 msgstr "Nic nebylo nalezeno."
 
 msgid "Last update"
-msgstr ""
+msgstr "Poslední aktualizace"
 
 msgid "Empty input."
 msgstr "Prázdný vstup."
@@ -98,9 +96,7 @@ msgstr "Kód HTML"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Zkopírujte tento úryvek kódu HTML a připojte jej ke svým stránkám, aby se "
-"zobrazovala malá mapa se značením."
+msgstr "Zkopírujte tento úryvek kódu HTML a připojte jej ke svým stránkám, aby se zobrazovala malá mapa se značením."
 
 msgid "Fullscreen"
 msgstr "Celá obrazovka"
@@ -165,22 +161,22 @@ msgid "Maxspeeds"
 msgstr "Traťové rychlosti"
 
 msgid "Halt"
-msgstr ""
+msgstr "Zastávka"
 
 msgid "Station"
 msgstr "Stanice"
 
 msgid "Junction"
-msgstr ""
+msgstr "Odbočka"
 
 msgid "Yard"
-msgstr ""
+msgstr "Nákladní nádraží"
 
 msgid "Crossover"
 msgstr "Místo křížení tratí"
 
 msgid "Site"
-msgstr ""
+msgstr "Provozní místo"
 
 msgid "Service station"
 msgstr "Servisní stanice"
@@ -297,8 +293,7 @@ msgid "Narrow gauge industrial line"
 msgstr "Tovární trať úzkokolejné/úzkorozchodné železniční tratě"
 
 msgid "Narrow gauge industrial service"
-msgstr ""
-"Vedlejší kolej tovární tratě úzkokolejné/úzkorozchodné železniční tratě"
+msgstr "Vedlejší kolej tovární tratě úzkokolejné/úzkorozchodné železniční tratě"
 
 msgid "Switch (remote-controlled)"
 msgstr "Výhybka (řízená vzdáleně)"
@@ -319,154 +314,154 @@ msgid "Railway crossing"
 msgstr "Křížení tratí"
 
 msgid "Buffer stop"
-msgstr ""
+msgstr "Zarážedlo"
 
 msgid "Isolated track section"
-msgstr ""
+msgstr "Změna systému proudu"
 
 msgid "Platform"
-msgstr ""
+msgstr "Nástupiště"
 
 msgid "Vending machine"
-msgstr ""
+msgstr "Prodejní automat"
 
 msgid "Ticket shop"
-msgstr ""
+msgstr "Prodejna lístků"
 
 msgid "Subway entrance"
-msgstr ""
+msgstr "Vchod do metra"
 
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
 msgid "Water tower"
-msgstr ""
+msgstr "Vodojem"
 
 msgid "Fuel"
 msgstr "Čerpací stanice"
 
 msgid "Water crane"
-msgstr ""
+msgstr "Vodní jeřáb"
 
 msgid "Coaling facility"
-msgstr ""
+msgstr "Zauhlování"
 
 msgid "Wash"
-msgstr ""
+msgstr "Mycí linka"
 
 msgid "Pit"
-msgstr ""
+msgstr "Lokomotivní jáma"
 
 msgid "Loading gauge"
-msgstr ""
+msgstr "Ložná míra"
 
 msgid "Hump yard"
-msgstr ""
+msgstr "Spádoviště"
 
 msgid "Rail brake"
-msgstr ""
+msgstr "Kolejová brzda"
 
 msgid "Engine shed"
-msgstr ""
+msgstr "Bouda na lokomotivu"
 
 msgid "Workshop"
-msgstr ""
+msgstr "Dílna"
 
 msgid "Radio tower"
-msgstr ""
+msgstr "Vlakový rozhlas"
 
 msgid "Turntable"
-msgstr ""
+msgstr "Točna, otočná plošina"
 
 msgid "Traverser"
-msgstr ""
+msgstr "Dopravníkový pás"
 
 msgid "Loading ramp"
-msgstr ""
+msgstr "Nakládací nakloněná plošina"
 
 msgid "Crane"
-msgstr ""
+msgstr "Jeřáb"
 
 msgid "Track scale"
-msgstr ""
+msgstr "Kolejová váha"
 
 msgid "Carrier truck pit"
-msgstr ""
+msgstr "Nakládka na valník"
 
 msgid "Gauge conversion"
-msgstr ""
+msgstr "Změna rozchodu"
 
 msgid "Gate"
-msgstr ""
+msgstr "Brána"
 
 msgid "Museum"
-msgstr ""
+msgstr "Železniční muzeum"
 
 msgid "Container terminal"
-msgstr ""
+msgstr "Překládací nádraží/stanice"
 
 msgid "Station building"
-msgstr ""
+msgstr "Nádražní budovy"
 
 msgid "Factory connected to railroad line"
-msgstr ""
+msgstr "Podnik s železniční přípojkou"
 
 msgid "Rack"
-msgstr ""
+msgstr "Ozubnice"
 
 msgid "Embankment"
-msgstr ""
+msgstr "Násep"
 
 msgid "Cutting"
-msgstr ""
+msgstr "Zářez"
 
 msgid "Miniature railway"
-msgstr ""
+msgstr "Parková železnice"
 
 msgid "Funicular"
-msgstr ""
+msgstr "Pozemní lanová dráha"
 
 msgid "Military line"
-msgstr ""
+msgstr "Vojenská trať"
 
 msgid "Military service track"
-msgstr ""
+msgstr "Vojenská vedlejší kolej"
 
 msgid "Ferry terminal"
-msgstr ""
+msgstr "Nákladiště/Výkladiště železničního trajektu"
 
 msgid "Ferry"
-msgstr ""
+msgstr "Železniční trajekt"
 
 msgid "Test line"
-msgstr ""
+msgstr "Zkušební dráha"
 
 msgid "Test service track"
-msgstr ""
+msgstr "Vedlejší kolej zkušební dráhy"
 
 msgid "Car shuttle"
-msgstr ""
+msgstr "Nákladiště/Výkladiště vlaku s auty"
 
 msgid "Rolling highway"
-msgstr ""
+msgstr "Transport ucelených nákladních vozů po železnici (RoLa)"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr ""
+msgstr "Na této úrovni zvětšení se nedá nic vidět. Proveďte, prosím, přiblížení."
 
 msgid "Legend not available for this style."
-msgstr ""
+msgstr "Pro tento styl nejsou dostupné vysvětlivky."
 
 msgid "Language"
-msgstr ""
+msgstr "Jazyk"
 
 msgid "Desktop version"
-msgstr ""
+msgstr "Verze pro stolní počítač"
 
 msgid "Style"
-msgstr ""
+msgstr "Styl"
 
 msgid "Search"
-msgstr ""
+msgstr "Hledání"
 
 msgid "Mapnik no-labels"
 msgstr ""
@@ -475,4 +470,4 @@ msgid "Mapnik no-labels Grayscale"
 msgstr ""
 
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
