@@ -1,4 +1,4 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
@@ -10,10 +10,9 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:23+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Greek (http://www.transifex.com/projects/p/openrailwaymap/"
-"language/el/)\n"
+"PO-Revision-Date: 2017-09-19 19:41+0000\n"
+"Last-Translator: Γιάννης Ανθυμίδης\n"
+"Language-Team: Greek (http://www.transifex.com/rurseekatze/openrailwaymap/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,10 +33,7 @@ msgstr "Το JavaScript δεν είναι ενεργοποιημένο"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Υποστήριξη JavaScript απαιτείται για να εμφανιστεί ο χάρτης και να "
-"λειτουργήσει αυτή η ιστοσελίδα. Παρακαλώ ενεργοποιήστε το JavaScript στις "
-"ρυθμίσεις του περιηγητή σας. "
+msgstr "Υποστήριξη JavaScript απαιτείται για να εμφανιστεί ο χάρτης και να λειτουργήσει αυτή η ιστοσελίδα. Παρακαλώ ενεργοποιήστε το JavaScript στις ρυθμίσεις του περιηγητή σας. "
 
 msgid "Loading..."
 msgstr "Φόρτωση..."
@@ -46,7 +42,7 @@ msgid "Nothing found."
 msgstr "Δεν βρέθηκε."
 
 msgid "Last update"
-msgstr ""
+msgstr "Τελευταία ενημέρωση"
 
 msgid "Empty input."
 msgstr "Κενή καταχώρηση."
@@ -99,9 +95,7 @@ msgstr "Κώδικας HTML"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Αντιγράψτε αυτό το απόσπασμα κώδικα HTML στην ιστοσελίδα σας για να "
-"προβάλλετε έναν μικρό χάρτη με δείκτη."
+msgstr "Αντιγράψτε αυτό το απόσπασμα κώδικα HTML στην ιστοσελίδα σας για να προβάλλετε έναν μικρό χάρτη με δείκτη."
 
 msgid "Fullscreen"
 msgstr "Πλήρης οθόνη"
@@ -445,24 +439,22 @@ msgid "Rolling highway"
 msgstr ""
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr ""
-"Δεν εμφανίζεται τίποτα αξιόλογο σε αυτό το επίπεδο μεγέθυνσης. Παρακαλώ "
-"μεγεθυνθείτε."
+msgstr "Δεν εμφανίζεται τίποτα αξιόλογο σε αυτό το επίπεδο μεγέθυνσης. Παρακαλώ μεγεθυνθείτε."
 
 msgid "Legend not available for this style."
 msgstr "Δεν είναι διαθέσιμο το υπόμνημα για αυτό το στυλ."
 
 msgid "Language"
-msgstr ""
+msgstr "Γλώσσα"
 
 msgid "Desktop version"
-msgstr ""
+msgstr "Έκδοση ιστότοπου για υπολογιστή"
 
 msgid "Style"
-msgstr ""
+msgstr "Εμφάνιση"
 
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 msgid "Mapnik no-labels"
 msgstr ""
@@ -471,4 +463,4 @@ msgid "Mapnik no-labels Grayscale"
 msgstr ""
 
 msgid "Blog"
-msgstr ""
+msgstr "Ιστολόγιο"
