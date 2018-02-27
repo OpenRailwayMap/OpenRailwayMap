@@ -1,19 +1,19 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
 # Maurits Meulenbelt <mfmeulenbelt@gmail.com>, 2014
+# Heimen Stoffels <vistausss@outlook.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:22+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Dutch (http://www.transifex.com/projects/p/openrailwaymap/"
-"language/nl/)\n"
+"PO-Revision-Date: 2017-09-20 02:43+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/rurseekatze/openrailwaymap/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,12 +34,10 @@ msgstr "Javascript is niet geactiveerd"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Javascript is nodig om de kaart te laten zien en deze website te draaien. "
-"Zet javascript aan in de browserinstellingen."
+msgstr "Javascript is benodigd om de kaart weer te geven en deze website te draaien. Zet Javascript aan in de browserinstellingen."
 
 msgid "Loading..."
-msgstr "Aan het laden…"
+msgstr "Bezig met laden…"
 
 msgid "Nothing found."
 msgstr "Niets gevonden."
@@ -78,7 +76,7 @@ msgid "Mapnik Grayscale"
 msgstr "Mapnik in Grijstinten"
 
 msgid "Map data &copy; OpenStreetMap contributors"
-msgstr "Kaartgegevens &copy; OpenStreetMap medewerkers"
+msgstr "Kaartgegevens &copy; OpenStreetMap-medewerkers"
 
 msgid "Select a map style"
 msgstr "Selecteer een kaartstijl"
@@ -98,9 +96,7 @@ msgstr "HTML-Code"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Kopieer dit stukje HTML-code in uw website om een kleine kaart met een "
-"markering te tonen."
+msgstr "Kopieer dit stukje HTML-code in uw website om een kleine kaart met een markering te tonen."
 
 msgid "Fullscreen"
 msgstr "Volledig scherm"
@@ -273,7 +269,7 @@ msgid "Narrow gauge yard"
 msgstr "Smalspooremplacement"
 
 msgid "Narrow gauge spur"
-msgstr "Smalspooransluiting"
+msgstr "Smalspooraansluiting"
 
 msgid "Narrow gauge crossover"
 msgstr "Smalspoor-kruiswissel"
@@ -300,7 +296,7 @@ msgid "Switch (local operated)"
 msgstr "Wissel (lokaal bestuurd)"
 
 msgid "Resetting switch"
-msgstr ""
+msgstr "Terugzetwissel"
 
 msgid "Signal box"
 msgstr "Seinhuis"
@@ -324,7 +320,7 @@ msgid "Vending machine"
 msgstr "Verkoopautomaat"
 
 msgid "Ticket shop"
-msgstr "Kaartenverkoop"
+msgstr "Kaartverkoop"
 
 msgid "Subway entrance"
 msgstr "Metro-ingang"
@@ -414,7 +410,7 @@ msgid "Cutting"
 msgstr "Uitgraving"
 
 msgid "Miniature railway"
-msgstr "Minitrein"
+msgstr "Miniatuurtrein"
 
 msgid "Funicular"
 msgstr "Kabelspoorweg"
@@ -447,7 +443,7 @@ msgid "Nothing to see in this zoom level. Please zoom in."
 msgstr "Op dit zoomniveau is niets te zien. Gelieve in te zoomen."
 
 msgid "Legend not available for this style."
-msgstr "De legenda is voor deze stijl niet beschikbaar."
+msgstr "De legenda is niet beschikbaar voor deze stijl."
 
 msgid "Language"
 msgstr "Taal"
@@ -468,4 +464,4 @@ msgid "Mapnik no-labels Grayscale"
 msgstr "Mapnik etiketloos in Grijstinten"
 
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
