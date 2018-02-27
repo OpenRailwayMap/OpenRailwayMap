@@ -1,19 +1,19 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
-# bitsteller <nbnet@arcor.de>, 2014
+# Magnus Österlund, 2015
+# bitsteller <nbnet@arcor.de>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:27+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Swedish (http://www.transifex.com/projects/p/openrailwaymap/"
-"language/sv/)\n"
+"PO-Revision-Date: 2017-09-23 19:49+0000\n"
+"Last-Translator: Magnus Österlund\n"
+"Language-Team: Swedish (http://www.transifex.com/rurseekatze/openrailwaymap/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,15 +34,13 @@ msgstr "Javascript ej aktiverad"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Javascript behövs för att visa kartan och hemsidan. Var god sätt på "
-"Javascript i din webläsarens inställningar."
+msgstr "Javascript behövs för att visa kartan och hemsidan. Var god sätt på Javascript i din webläsarens inställningar."
 
 msgid "Loading..."
-msgstr "Ladda..."
+msgstr "Laddar..."
 
 msgid "Nothing found."
-msgstr "Ingenting hittades."
+msgstr "Inget hittades."
 
 msgid "Last update"
 msgstr "Senast uppdaterad"
@@ -57,7 +55,7 @@ msgid "Track"
 msgstr "Spår"
 
 msgid "Permalink"
-msgstr ""
+msgstr "Permanent länk"
 
 msgid "Hillshading"
 msgstr ""
@@ -75,10 +73,10 @@ msgid "Mapnik"
 msgstr "Mapnik"
 
 msgid "Mapnik Grayscale"
-msgstr ""
+msgstr "Mapnik (gråskala)"
 
 msgid "Map data &copy; OpenStreetMap contributors"
-msgstr ""
+msgstr "Kartdata &copy; OpenStreetMap bidragande"
 
 msgid "Select a map style"
 msgstr "Välj kartstil"
@@ -98,9 +96,7 @@ msgstr "HTML-kod"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Kopiera HTML kodsträngen i din egen hemsida för att visa en liten karta med "
-"markör."
+msgstr "Kopiera HTML kodsträngen i din egen hemsida för att visa en liten karta med markör."
 
 msgid "Fullscreen"
 msgstr "Helskärm"
@@ -143,7 +139,7 @@ msgstr[1] "%d månader"
 
 #, php-format
 msgid "more than %s ago"
-msgstr ""
+msgstr "Fler än %s sedan"
 
 #, php-format
 msgid "%s ago"
@@ -153,7 +149,7 @@ msgid "Infrastructure"
 msgstr "Infrastruktur"
 
 msgid "Signalling"
-msgstr ""
+msgstr "Signaler"
 
 msgid "Maxspeeds"
 msgstr "Hastighetsbegränsingar"
@@ -168,7 +164,7 @@ msgid "Junction"
 msgstr "Växel"
 
 msgid "Yard"
-msgstr ""
+msgstr "Bangård"
 
 msgid "Crossover"
 msgstr ""
@@ -186,10 +182,10 @@ msgid "Milestone"
 msgstr "Milstolpe"
 
 msgid "Level crossing"
-msgstr ""
+msgstr "Plankorsning"
 
 msgid "Crossing"
-msgstr ""
+msgstr "Övergångsställe"
 
 msgid "Legend"
 msgstr "Teckenförklaring"
@@ -201,10 +197,10 @@ msgid "Tunnel"
 msgstr "Tunnel"
 
 msgid "Line ref"
-msgstr ""
+msgstr "Linjenummer"
 
 msgid "Railroad line"
-msgstr ""
+msgstr "Järnvägslinje"
 
 msgid "Siding"
 msgstr ""
@@ -225,10 +221,10 @@ msgid "Main line"
 msgstr "Stambana"
 
 msgid "Highspeed line"
-msgstr "Höghastighetsban"
+msgstr "Höghastighetsbana"
 
 msgid "Industrial line"
-msgstr ""
+msgstr "Industrispår"
 
 msgid "Industrial service track"
 msgstr ""
@@ -243,16 +239,16 @@ msgid "Track under construction"
 msgstr "Spår under byggnation"
 
 msgid "Proposed track"
-msgstr ""
+msgstr "Föreslaget spår"
 
 msgid "Disused track"
-msgstr ""
+msgstr "oanvänt spår"
 
 msgid "Abandoned track"
-msgstr ""
+msgstr "övergivet spår"
 
 msgid "Razed track"
-msgstr ""
+msgstr "upprivet spår"
 
 msgid "Tram"
 msgstr "Spårvagn"
@@ -294,13 +290,13 @@ msgid "Narrow gauge industrial service"
 msgstr ""
 
 msgid "Switch (remote-controlled)"
-msgstr ""
+msgstr "Fjärrstyrd växel"
 
 msgid "Switch (local operated)"
-msgstr ""
+msgstr "Lokalstyrd växel"
 
 msgid "Resetting switch"
-msgstr ""
+msgstr "Fjäderväxel"
 
 msgid "Signal box"
 msgstr ""
@@ -315,7 +311,7 @@ msgid "Buffer stop"
 msgstr ""
 
 msgid "Isolated track section"
-msgstr ""
+msgstr "Isolerat spåravsnitt"
 
 msgid "Platform"
 msgstr "Perrong"
@@ -339,7 +335,7 @@ msgid "Fuel"
 msgstr ""
 
 msgid "Water crane"
-msgstr ""
+msgstr "Vattenkran"
 
 msgid "Coaling facility"
 msgstr ""
@@ -357,7 +353,7 @@ msgid "Hump yard"
 msgstr ""
 
 msgid "Rail brake"
-msgstr ""
+msgstr "Spårbroms"
 
 msgid "Engine shed"
 msgstr ""
@@ -378,7 +374,7 @@ msgid "Loading ramp"
 msgstr ""
 
 msgid "Crane"
-msgstr ""
+msgstr "Lyftkran"
 
 msgid "Track scale"
 msgstr ""
@@ -396,7 +392,7 @@ msgid "Museum"
 msgstr "Museum"
 
 msgid "Container terminal"
-msgstr ""
+msgstr "Containerterminal"
 
 msgid "Station building"
 msgstr "Stationsbyggnad"
@@ -468,4 +464,4 @@ msgid "Mapnik no-labels Grayscale"
 msgstr ""
 
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
