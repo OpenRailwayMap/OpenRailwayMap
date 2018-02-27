@@ -1,4 +1,4 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
@@ -11,10 +11,9 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:22+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/openrailwaymap/"
-"language/fr/)\n"
+"PO-Revision-Date: 2017-09-23 19:49+0000\n"
+"Last-Translator: operon\n"
+"Language-Team: French (http://www.transifex.com/rurseekatze/openrailwaymap/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,9 +34,7 @@ msgstr "Javascript n'est pas activé"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Javascript est nécessaire pour l'affichage de la carte et la navigation sur "
-"ce site. Merci de l'activer dans les paramètres de votre navigateur."
+msgstr "Javascript est nécessaire pour l'affichage de la carte et la navigation sur ce site. Merci de l'activer dans les paramètres de votre navigateur."
 
 msgid "Loading..."
 msgstr "Chargement..."
@@ -49,7 +46,7 @@ msgid "Last update"
 msgstr "Dernière mise à jour"
 
 msgid "Empty input."
-msgstr "Entrée vide"
+msgstr "Entrée vide."
 
 msgid "Kilometer"
 msgstr "Kilomètre"
@@ -99,9 +96,7 @@ msgstr "Code HTML"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Copier cet extrait de code HTML dans votre site web pour visualiser une "
-"petite carte avec un marqueur"
+msgstr "Copier cet extrait de code HTML dans votre site web pour visualiser une petite carte avec un marqueur"
 
 msgid "Fullscreen"
 msgstr "Plein écran"
@@ -184,13 +179,13 @@ msgid "Tram stop"
 msgstr "Arrêt de tramway"
 
 msgid "Milestone"
-msgstr "Borne"
+msgstr "Borne kilométrique"
 
 msgid "Level crossing"
 msgstr "Passage à niveau"
 
 msgid "Crossing"
-msgstr ""
+msgstr "Croisement"
 
 msgid "Legend"
 msgstr "Légende"
@@ -310,7 +305,7 @@ msgid "Owner change"
 msgstr ""
 
 msgid "Railway crossing"
-msgstr ""
+msgstr "Passage à niveau"
 
 msgid "Buffer stop"
 msgstr "Heurtoir"
@@ -337,22 +332,22 @@ msgid "Water tower"
 msgstr "Château d'eau"
 
 msgid "Fuel"
-msgstr ""
+msgstr "Gazole"
 
 msgid "Water crane"
 msgstr "Prise d'eau"
 
 msgid "Coaling facility"
-msgstr ""
+msgstr "Installation de distribution de charbon"
 
 msgid "Wash"
 msgstr "Lavage"
 
 msgid "Pit"
-msgstr ""
+msgstr "Fosse"
 
 msgid "Loading gauge"
-msgstr ""
+msgstr "Gabarit"
 
 msgid "Hump yard"
 msgstr "Triage à bosse"
@@ -364,7 +359,7 @@ msgid "Engine shed"
 msgstr "Dépôt"
 
 msgid "Workshop"
-msgstr ""
+msgstr "Atelier"
 
 msgid "Radio tower"
 msgstr "Tour de communication"
@@ -373,7 +368,7 @@ msgid "Turntable"
 msgstr "Plaque tournante"
 
 msgid "Traverser"
-msgstr ""
+msgstr "Pont transbordeur"
 
 msgid "Loading ramp"
 msgstr "Rampe de chargement"
@@ -382,16 +377,16 @@ msgid "Crane"
 msgstr "Grue"
 
 msgid "Track scale"
-msgstr ""
+msgstr "Echelle"
 
 msgid "Carrier truck pit"
-msgstr ""
+msgstr "Rollbocks"
 
 msgid "Gauge conversion"
 msgstr "Changement d'écartement"
 
 msgid "Gate"
-msgstr ""
+msgstr "Porte"
 
 msgid "Museum"
 msgstr "Musée"
