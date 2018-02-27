@@ -1,4 +1,4 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
@@ -11,10 +11,9 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:27+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Vietnamese (http://www.transifex.com/projects/p/"
-"openrailwaymap/language/vi/)\n"
+"PO-Revision-Date: 2017-09-23 19:12+0000\n"
+"Last-Translator: Minh Nguyễn <minh@nguyen.cincinnati.oh.us>\n"
+"Language-Team: Vietnamese (http://www.transifex.com/rurseekatze/openrailwaymap/language/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,9 +34,7 @@ msgstr "JavaScript không được kích hoạt"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Trang Web này cần JavaScript để hoạt động và hiển thị bản đồ. Xin vui lòng "
-"bật lên tùy chọn JavaScript trong trình duyệt của bạn."
+msgstr "Trang Web này cần JavaScript để hoạt động và hiển thị bản đồ. Xin vui lòng bật lên tùy chọn JavaScript trong trình duyệt của bạn."
 
 msgid "Loading..."
 msgstr "Đang tải…"
@@ -99,9 +96,7 @@ msgstr "Mã HTML"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Chép dán đoạn mã HTML này vào trang Web của bạn để hiển thị một bản đồ nhỏ "
-"có ghim."
+msgstr "Chép dán đoạn mã HTML này vào trang Web của bạn để hiển thị một bản đồ nhỏ có ghim."
 
 msgid "Fullscreen"
 msgstr "Toàn màn hình"
@@ -202,7 +197,7 @@ msgid "Railroad line"
 msgstr "Đường sắt"
 
 msgid "Siding"
-msgstr ""
+msgstr "Đường tránh"
 
 msgid "Yard track"
 msgstr ""
@@ -262,10 +257,10 @@ msgid "Narrow gauge track"
 msgstr "Đường khổ hẹp"
 
 msgid "Narrow gauge siding"
-msgstr ""
+msgstr "Đường tránh khổ hẹp"
 
 msgid "Narrow gauge yard"
-msgstr ""
+msgstr "Sân đường sắt khổ hẹp"
 
 msgid "Narrow gauge spur"
 msgstr "Nhánh khổ hẹp"
@@ -346,7 +341,7 @@ msgid "Pit"
 msgstr ""
 
 msgid "Loading gauge"
-msgstr ""
+msgstr "Khổ tải trọng"
 
 msgid "Hump yard"
 msgstr ""
@@ -355,7 +350,7 @@ msgid "Rail brake"
 msgstr "Phanh trên ray"
 
 msgid "Engine shed"
-msgstr ""
+msgstr "Nhà đầu máy"
 
 msgid "Workshop"
 msgstr "Xưởng"
@@ -376,7 +371,7 @@ msgid "Crane"
 msgstr "Vòi"
 
 msgid "Track scale"
-msgstr ""
+msgstr "Cân xe ray"
 
 msgid "Carrier truck pit"
 msgstr ""
@@ -436,7 +431,7 @@ msgid "Car shuttle"
 msgstr ""
 
 msgid "Rolling highway"
-msgstr ""
+msgstr "Đường sắt chở xe tải"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
 msgstr "Mức thu phóng này không có gì để nhìn. Xin vui lòng phóng to."
@@ -463,4 +458,4 @@ msgid "Mapnik no-labels Grayscale"
 msgstr "Mapnik không nhãn thang độ xám"
 
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
