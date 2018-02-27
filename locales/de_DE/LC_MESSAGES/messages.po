@@ -1,19 +1,18 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
-# Alexander Matheisen <AlexanderMatheisen@ish.de>, 2013-2014
+# Alexander Matheisen <alex@matheisen.org>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:24+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: German (http://www.transifex.com/projects/p/openrailwaymap/"
-"language/de/)\n"
+"PO-Revision-Date: 2017-09-23 19:11+0000\n"
+"Last-Translator: Alexander Matheisen <alex@matheisen.org>\n"
+"Language-Team: German (http://www.transifex.com/rurseekatze/openrailwaymap/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,9 +33,7 @@ msgstr "Javascript ist nicht eingeschaltet"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Javascript wird benötigt, um die Karte und diese Webseite anzuzeigen. Bitte "
-"schalten Sie Javascript in Ihren Browsereinstellungen ein."
+msgstr "Javascript wird benötigt, um die Karte und diese Webseite anzuzeigen. Bitte schalten Sie Javascript in Ihren Browsereinstellungen ein."
 
 msgid "Loading..."
 msgstr "Laden..."
@@ -98,9 +95,7 @@ msgstr "HTML-Code"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Kopieren Sie diesen HTML-Code und binden sie ihn ein in eine eigene Webseite "
-"ein, um eine kleine Karte mit einer Markierung anzuzeigen."
+msgstr "Kopieren Sie diesen HTML-Code und binden sie ihn ein in eine eigene Webseite ein, um eine kleine Karte mit einer Markierung anzuzeigen."
 
 msgid "Fullscreen"
 msgstr "Vollbild"
@@ -186,7 +181,7 @@ msgid "Tram stop"
 msgstr "Straßenbahnhaltestelle"
 
 msgid "Milestone"
-msgstr "Kilometerstein"
+msgstr "Streckenkilometer"
 
 msgid "Signal"
 msgstr "Signal"
