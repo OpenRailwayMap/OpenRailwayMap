@@ -1,4 +1,4 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
@@ -11,16 +11,14 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:22+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Polish (http://www.transifex.com/projects/p/openrailwaymap/"
-"language/pl/)\n"
+"PO-Revision-Date: 2017-09-23 19:31+0000\n"
+"Last-Translator: diverpl <mkubien@gmail.com>\n"
+"Language-Team: Polish (http://www.transifex.com/rurseekatze/openrailwaymap/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl_PL\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -36,9 +34,7 @@ msgstr "Javascript jest wyłączony"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-" Aby wyświetlić mapę i uruchomić stronę potrzebny jest Javascript. Proszę go "
-"włączyć w ustawieniach przeglądarki."
+msgstr " Aby wyświetlić mapę i uruchomić stronę potrzebny jest Javascript. Proszę go włączyć w ustawieniach przeglądarki."
 
 msgid "Loading..."
 msgstr "Ładowanie..."
@@ -100,9 +96,7 @@ msgstr "Kod HTML"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Skopiuj ten fragment kodu HTML na swoją stronę, by pokazać małą mapę ze "
-"znacznikiem."
+msgstr "Skopiuj ten fragment kodu HTML na swoją stronę, by pokazać małą mapę ze znacznikiem."
 
 msgid "Fullscreen"
 msgstr "Pełny ekran"
@@ -113,6 +107,7 @@ msgid_plural "%d seconds"
 msgstr[0] "%d sekunda"
 msgstr[1] "%d sekundy"
 msgstr[2] "%d sekund"
+msgstr[3] "%d sekund"
 
 #, php-format
 msgid "%d minute"
@@ -120,6 +115,7 @@ msgid_plural "%d minutes"
 msgstr[0] "%d minuta"
 msgstr[1] "%d minuty"
 msgstr[2] "%d minut"
+msgstr[3] "%d minut"
 
 #, php-format
 msgid "%d hour"
@@ -127,6 +123,7 @@ msgid_plural "%d hours"
 msgstr[0] "%d godzina"
 msgstr[1] "%d godziny"
 msgstr[2] "%d godzin"
+msgstr[3] "%d godzin"
 
 #, php-format
 msgid "%d day"
@@ -134,6 +131,7 @@ msgid_plural "%d days"
 msgstr[0] "%d dzień"
 msgstr[1] "%d dni"
 msgstr[2] "%d dni"
+msgstr[3] "%d dni"
 
 #, php-format
 msgid "%d week"
@@ -141,6 +139,7 @@ msgid_plural "%d weeks"
 msgstr[0] "%d tydzień"
 msgstr[1] "%d tygodnie"
 msgstr[2] "%d tygodni"
+msgstr[3] "%d tygodni"
 
 #, php-format
 msgid "%d month"
@@ -476,4 +475,4 @@ msgid "Mapnik no-labels Grayscale"
 msgstr "Mapnik bez opisów (szary)"
 
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
