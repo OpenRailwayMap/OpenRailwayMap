@@ -1,19 +1,18 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
-# ViriatoLusitano <marcosoliveira.2405@gmail.com>, 2014
+# ViriatoLusitano <marcosoliveira.2405@gmail.com>, 2014-2015,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:21+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Portuguese (http://www.transifex.com/projects/p/"
-"openrailwaymap/language/pt/)\n"
+"PO-Revision-Date: 2017-11-25 13:10+0000\n"
+"Last-Translator: ViriatoLusitano <marcosoliveira.2405@gmail.com>\n"
+"Language-Team: Portuguese (http://www.transifex.com/rurseekatze/openrailwaymap/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,9 +33,7 @@ msgstr "Javascript não está activado"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"É necessário activar o Javascript para poder visualizar o mapa. Por favor "
-"active-o nas definições do seu navegador de Internet."
+msgstr "É necessário activar o Javascript para poder visualizar o mapa. Por favor active-o nas definições do seu navegador de Internet."
 
 msgid "Loading..."
 msgstr "Aguarde..."
@@ -54,7 +51,7 @@ msgid "Kilometer"
 msgstr "Quilometro"
 
 msgid "Track"
-msgstr ""
+msgstr "Caminho"
 
 msgid "Permalink"
 msgstr "Ligação Permanente"
@@ -69,7 +66,7 @@ msgid "OpenRailwayMap"
 msgstr "OpenRailwayMap"
 
 msgid "Rendering: OpenRailwayMap"
-msgstr ""
+msgstr "Renderização: OpenRailwayMap"
 
 msgid "Mapnik"
 msgstr "Mapnik"
@@ -98,9 +95,7 @@ msgstr "Código HTML"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Copie este código HTML para o seu site para mostrar um pequeno mapa com um "
-"pontador. "
+msgstr "Copie este código HTML para o seu site para mostrar um pequeno mapa com um pontador. "
 
 msgid "Fullscreen"
 msgstr "Ecrã Inteiro"
@@ -174,7 +169,7 @@ msgid "Crossover"
 msgstr ""
 
 msgid "Site"
-msgstr ""
+msgstr "Instalação"
 
 msgid "Service station"
 msgstr "Estação de serviço"
@@ -210,10 +205,10 @@ msgid "Siding"
 msgstr "Linha de ultrapassagem"
 
 msgid "Yard track"
-msgstr "Linhade manobras"
+msgstr "Linha de manobras"
 
 msgid "Spur"
-msgstr "Linha auxiliar"
+msgstr "Ramal de Inserção"
 
 msgid "Crossover track"
 msgstr "Linha de serviço"
@@ -273,7 +268,7 @@ msgid "Narrow gauge yard"
 msgstr "Linha de manobras de via estreita"
 
 msgid "Narrow gauge spur"
-msgstr "Linha auxiliar de via estreita"
+msgstr "Ramal de Inserção de via estreita"
 
 msgid "Narrow gauge crossover"
 msgstr "Linha de serviço de via estreita"
@@ -294,13 +289,13 @@ msgid "Narrow gauge industrial service"
 msgstr "Linha industrial de serviço de via estreita"
 
 msgid "Switch (remote-controlled)"
-msgstr ""
+msgstr "Agulha (controlo remoto)"
 
 msgid "Switch (local operated)"
-msgstr ""
+msgstr "Agulha (operada no local)"
 
 msgid "Resetting switch"
-msgstr ""
+msgstr "Agulha automática"
 
 msgid "Signal box"
 msgstr "Caixa de Sinal"
@@ -309,7 +304,7 @@ msgid "Owner change"
 msgstr "Mudança de operador"
 
 msgid "Railway crossing"
-msgstr ""
+msgstr "Passagem de nível"
 
 msgid "Buffer stop"
 msgstr "Para-choque de via"
@@ -339,13 +334,13 @@ msgid "Fuel"
 msgstr "Combustível"
 
 msgid "Water crane"
-msgstr ""
+msgstr "Aguada"
 
 msgid "Coaling facility"
 msgstr ""
 
 msgid "Wash"
-msgstr ""
+msgstr "Lavagem"
 
 msgid "Pit"
 msgstr ""
@@ -357,7 +352,7 @@ msgid "Hump yard"
 msgstr ""
 
 msgid "Rail brake"
-msgstr ""
+msgstr "Travão"
 
 msgid "Engine shed"
 msgstr ""
@@ -369,10 +364,10 @@ msgid "Radio tower"
 msgstr "Torre de Rádio"
 
 msgid "Turntable"
-msgstr ""
+msgstr "Girador ferroviário"
 
 msgid "Traverser"
-msgstr ""
+msgstr "Mesa de transferência"
 
 msgid "Loading ramp"
 msgstr "Rampa de carga"
@@ -432,10 +427,10 @@ msgid "Ferry"
 msgstr "Ferry"
 
 msgid "Test line"
-msgstr ""
+msgstr "Linha de testes"
 
 msgid "Test service track"
-msgstr ""
+msgstr "Linha de testes de serviço"
 
 msgid "Car shuttle"
 msgstr ""
@@ -468,4 +463,4 @@ msgid "Mapnik no-labels Grayscale"
 msgstr "Mapnik simplificado (Preto e Branco)"
 
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
