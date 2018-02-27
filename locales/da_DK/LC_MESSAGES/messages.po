@@ -1,4 +1,4 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
@@ -10,10 +10,9 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:24+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Danish (Denmark) (http://www.transifex.com/projects/p/"
-"openrailwaymap/language/da_DK/)\n"
+"PO-Revision-Date: 2017-09-20 01:02+0000\n"
+"Last-Translator: Alexander Matheisen <alex@matheisen.org>\n"
+"Language-Team: Danish (Denmark) (http://www.transifex.com/rurseekatze/openrailwaymap/language/da_DK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,9 +33,7 @@ msgstr "Javascript er ikke aktiveret"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Javascript er nødvendigt for at vise kortet og køre denne webside. Sæt "
-"Javascript til i dine browser indstillinger."
+msgstr "Javascript er nødvendigt for at vise kortet og køre denne webside. Sæt Javascript til i dine browser indstillinger."
 
 msgid "Loading..."
 msgstr "Indlæser..."
@@ -98,9 +95,7 @@ msgstr "HTML-kode"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Kopier denne HTML kodestump ind i dit webstd og vis et lille kort med en "
-"markør."
+msgstr "Kopier denne HTML kodestump ind i dit webstd og vis et lille kort med en markør."
 
 msgid "Fullscreen"
 msgstr "Fuld skærm"
