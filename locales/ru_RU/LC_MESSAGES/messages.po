@@ -1,11 +1,11 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
 # gwinder <gr3ss0r@gmail.com>, 2014
-# Nikolay Parukhin <parukhin@gmail.com>, 2014
+# Nikolay Parukhin <parukhin@gmail.com>, 2014-2016
 # Sergey <gr3ss0r@gmail.com>, 2014
 # XAN_ <xan.ukraine@gmail.com>, 2014
 msgid ""
@@ -13,16 +13,14 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:23+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/"
-"openrailwaymap/language/ru_RU/)\n"
+"PO-Revision-Date: 2017-09-19 23:37+0000\n"
+"Last-Translator: Nikolay Parukhin <parukhin@gmail.com>\n"
+"Language-Team: Russian (Russia) (http://www.transifex.com/rurseekatze/openrailwaymap/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru_RU\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -38,12 +36,10 @@ msgstr "Javascript не активирован"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Javascript необходим для показа карты и работы веб-сайта. Пожалуйста "
-"включите Javascript в настройках вашего браузера."
+msgstr "Javascript необходим для показа карты и работы веб-сайта. Пожалуйста включите Javascript в настройках вашего браузера."
 
 msgid "Loading..."
-msgstr "Загрузка..."
+msgstr "Загрузка…"
 
 msgid "Nothing found."
 msgstr "Ничего не найдено."
@@ -102,9 +98,7 @@ msgstr "HTML код"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Скопируйте данный фрагмент HTML кода на свою страницу, что бы отобразить "
-"маленькую карту с отметкой."
+msgstr "Скопируйте данный фрагмент HTML кода на свою страницу, что бы отобразить маленькую карту с отметкой."
 
 msgid "Fullscreen"
 msgstr "Полный экран"
@@ -115,6 +109,7 @@ msgid_plural "%d seconds"
 msgstr[0] "%d секунда"
 msgstr[1] "%d секунды"
 msgstr[2] "%d секунд"
+msgstr[3] "%d секунд"
 
 #, php-format
 msgid "%d minute"
@@ -122,6 +117,7 @@ msgid_plural "%d minutes"
 msgstr[0] "%d минута"
 msgstr[1] "%d минуты"
 msgstr[2] "%d минут"
+msgstr[3] "%d минут"
 
 #, php-format
 msgid "%d hour"
@@ -129,6 +125,7 @@ msgid_plural "%d hours"
 msgstr[0] "%d час"
 msgstr[1] "%d часа"
 msgstr[2] "%d часов"
+msgstr[3] "%d часов"
 
 #, php-format
 msgid "%d day"
@@ -136,6 +133,7 @@ msgid_plural "%d days"
 msgstr[0] "%d день"
 msgstr[1] "%d дня"
 msgstr[2] "%d дней"
+msgstr[3] "%d дней"
 
 #, php-format
 msgid "%d week"
@@ -143,6 +141,7 @@ msgid_plural "%d weeks"
 msgstr[0] "%d неделя"
 msgstr[1] "%d недели"
 msgstr[2] "%d недель"
+msgstr[3] "%d недель"
 
 #, php-format
 msgid "%d month"
@@ -150,6 +149,7 @@ msgid_plural "%d months"
 msgstr[0] "%d месяц"
 msgstr[1] "%d месяца"
 msgstr[2] "%d месяцев"
+msgstr[3] "%d месяцев"
 
 #, php-format
 msgid "more than %s ago"
@@ -175,7 +175,7 @@ msgid "Station"
 msgstr "Станция"
 
 msgid "Junction"
-msgstr ""
+msgstr "Железнодорожный узел"
 
 msgid "Yard"
 msgstr "Сортировочная станция"
@@ -187,7 +187,7 @@ msgid "Site"
 msgstr ""
 
 msgid "Service station"
-msgstr ""
+msgstr "Техническая станция"
 
 msgid "Tram stop"
 msgstr "Трамвайная остановка"
@@ -211,10 +211,10 @@ msgid "Tunnel"
 msgstr "Туннель"
 
 msgid "Line ref"
-msgstr "Номер линии"
+msgstr "Номер пути"
 
 msgid "Railroad line"
-msgstr "Жележнодорожная линия"
+msgstr "Жележнодорожная путь"
 
 msgid "Siding"
 msgstr "Боковой путь"
@@ -229,16 +229,16 @@ msgid "Crossover track"
 msgstr ""
 
 msgid "Branch line"
-msgstr "Второстепенная линия"
+msgstr "Второстепенный путь"
 
 msgid "Main line"
-msgstr "Основная линия"
+msgstr "Основной путь"
 
 msgid "Highspeed line"
 msgstr "Высокоскоростная магистраль"
 
 msgid "Industrial line"
-msgstr "Промышленная линия"
+msgstr "Промышленный путь"
 
 msgid "Industrial service track"
 msgstr "Промышленный служебный путь"
@@ -286,19 +286,19 @@ msgid "Narrow gauge spur"
 msgstr "Подъездной узкоколейный путь"
 
 msgid "Narrow gauge crossover"
-msgstr ""
+msgstr "Узкоколейный перекрестный съезд"
 
 msgid "Narrow gauge branch line"
-msgstr "Узкоколейная второстепенная линия"
+msgstr "Узкоколейный второстепенный путь"
 
 msgid "Narrow gauge main line"
-msgstr "Узкоколейная главная линия"
+msgstr "Узкоколейный главный путь"
 
 msgid "Narrow gauge highspeed line"
-msgstr "Узкоколейная высокоскоростная линия"
+msgstr "Узкоколейный высокоскоростной путь"
 
 msgid "Narrow gauge industrial line"
-msgstr "Узкоколейная промышленная линия"
+msgstr "Узкоколейный промышленный путь"
 
 msgid "Narrow gauge industrial service"
 msgstr "Узкоколейная промышленно-служебная"
@@ -352,7 +352,7 @@ msgid "Water crane"
 msgstr "Водяной кран"
 
 msgid "Coaling facility"
-msgstr ""
+msgstr "Устройство углеподачи"
 
 msgid "Wash"
 msgstr "Мойка"
@@ -361,43 +361,43 @@ msgid "Pit"
 msgstr ""
 
 msgid "Loading gauge"
-msgstr ""
+msgstr "Габарит погрузки"
 
 msgid "Hump yard"
-msgstr ""
+msgstr "Сортировочная горка"
 
 msgid "Rail brake"
-msgstr ""
+msgstr "Рельсовый тормоз"
 
 msgid "Engine shed"
-msgstr ""
+msgstr "Локомотивное депо"
 
 msgid "Workshop"
 msgstr "Мастерская"
 
 msgid "Radio tower"
-msgstr ""
+msgstr "Радиомачта"
 
 msgid "Turntable"
 msgstr "Поворотный круг"
 
 msgid "Traverser"
-msgstr ""
+msgstr "Передвижная платформа"
 
 msgid "Loading ramp"
-msgstr ""
+msgstr "Погрузочная платформа"
 
 msgid "Crane"
 msgstr "Кран"
 
 msgid "Track scale"
-msgstr ""
+msgstr "Вагонные весы"
 
 msgid "Carrier truck pit"
 msgstr ""
 
 msgid "Gauge conversion"
-msgstr ""
+msgstr "Изменение ширины колеи"
 
 msgid "Gate"
 msgstr "Ворота"
@@ -406,7 +406,7 @@ msgid "Museum"
 msgstr "Музей"
 
 msgid "Container terminal"
-msgstr ""
+msgstr "Контейнерный пункт"
 
 msgid "Station building"
 msgstr "Станционное здание"
@@ -430,7 +430,7 @@ msgid "Funicular"
 msgstr "Фуникулёр"
 
 msgid "Military line"
-msgstr "Военная линия"
+msgstr "Военный путь"
 
 msgid "Military service track"
 msgstr "Военный служебный путь"
@@ -442,7 +442,7 @@ msgid "Ferry"
 msgstr "Паром"
 
 msgid "Test line"
-msgstr "Испытательная линия"
+msgstr "Испытательный путь"
 
 msgid "Test service track"
 msgstr "Испытательный служебный путь"
@@ -451,7 +451,7 @@ msgid "Car shuttle"
 msgstr ""
 
 msgid "Rolling highway"
-msgstr ""
+msgstr "Шоссе на колёсах"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
 msgstr "Ничего не видно на этом масштабе. Пожалуйста увеличте масштаб."
@@ -478,4 +478,4 @@ msgid "Mapnik no-labels Grayscale"
 msgstr "Mapnik без подписей черно-белый"
 
 msgid "Blog"
-msgstr ""
+msgstr "Блог"
