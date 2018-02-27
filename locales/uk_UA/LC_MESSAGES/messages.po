@@ -1,4 +1,4 @@
-# OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
@@ -10,16 +10,14 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2014-06-25 21:27+0100\n"
-"Last-Translator: Alexander Matheisen <AlexanderMatheisen@ish.de>\n"
-"Language-Team: Ukrainian (http://www.transifex.com/projects/p/openrailwaymap/"
-"language/uk/)\n"
+"PO-Revision-Date: 2017-09-20 04:02+0000\n"
+"Last-Translator: Alexander Matheisen <alex@matheisen.org>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/rurseekatze/openrailwaymap/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -35,9 +33,7 @@ msgstr "Javascript відключений"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr ""
-"Javascript потрібен для відображення мапи та роботи сайту.  Увімкніть "
-"Javascript у налаштуваннях Вашого браузера."
+msgstr "Javascript потрібен для відображення мапи та роботи сайту.  Увімкніть Javascript у налаштуваннях Вашого браузера."
 
 msgid "Loading..."
 msgstr "Завантаження…"
@@ -99,9 +95,7 @@ msgstr "HTML-код"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr ""
-"Скопіюйте цей HTML-код на свій веб-сайт, щоб показати маленьку мапу з "
-"маркером."
+msgstr "Скопіюйте цей HTML-код на свій веб-сайт, щоб показати маленьку мапу з маркером."
 
 msgid "Fullscreen"
 msgstr "Повний екран"
