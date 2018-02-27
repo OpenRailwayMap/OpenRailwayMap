@@ -27,8 +27,6 @@
 	echo "translations['mapnikGrayscale'] = '".addslashes(_("Mapnik Grayscale"))."';\n";
 	echo "translations['mapnikAttribution'] = '".addslashes(_("Map data &copy; OpenStreetMap contributors"))."';\n";
 	echo "translations['blank'] = '".addslashes(_("No background map"))."';\n";
-	echo "translations['captionless'] = '".addslashes(_("Mapnik no-labels"))."';\n";
-	echo "translations['captionlessGrayscale'] = '".addslashes(_("Mapnik no-labels Grayscale"))."';\n";
 	echo "translations['captionlessAttribution'] = '".addslashes(_("Map data &copy; OpenStreetMap contributors"))."';\n";
 	echo "translations['styleSelection'] = '".addslashes(_("Select a map style"))."';\n";
 	echo "translations['publictransport'] = '".addslashes(_("Public transport"))."';\n";
