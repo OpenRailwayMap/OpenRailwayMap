@@ -84,6 +84,11 @@
 		<script type="text/javascript">
 			mobileRedirection();
 		</script>
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="OpenRailwayMap">
+		<link rel="manifest" href="manifest.json">
 	</head>
 	<body onload="createMap(false);">
 		<div id="moreInfo" class="moreInfoFalse"></div>
