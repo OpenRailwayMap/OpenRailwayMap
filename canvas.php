@@ -97,6 +97,11 @@
 		<script type="text/javascript" src="js/timestamp.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
 		<script type="text/javascript" src="js/canvas-map.js"></script>
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="OpenRailwayMap">
+		<link rel="manifest" href="manifest.json">
 	</head>
 	<body onload="createMap(false);">
 		<div id="fullscreen" class="fullscreenOut"></div>
