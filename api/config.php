@@ -32,6 +32,7 @@
 	unset($subdir);
 
 	$langs = array(
+		"ca" => array("ca_ES", "Català"),
 		"cs" => array("cs_CZ", "Česky"),
 		"da" => array("da_DK", "Dansk"),
 		"de" => array("de_DE", "Deutsch"),
