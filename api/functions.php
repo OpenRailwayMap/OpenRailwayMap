@@ -10,45 +10,6 @@
 	require_once("config.php");
 
 
-	// connects do database
-	function connectToDatabase($dbname)
-	{
-		if (!isset($dbname))
-		{
-			reportError("Database name was not given.");
-			return false;
-		}
-
-		$connection = pg_pconnect("dbname=".$dbname);
-		// if connection could not be set up
-		if (!$connection)
-		{
-			reportError("Could not connect to database.");
-			return false;
-		}
-
-		return $connection;
-	}
-
-
-	// needed for usort
-	function compare($a, $b)
-	{
-		if ((int)$a[3] == (int)$b[3])
-		    return 0;
-
-		return ((int)$a[3] < (int)$b[3]) ? -1 : 1;
-	}
-
-
-	// sorts a multidimensional array of next objects by distance
-	function sortArray($array)
-	{
-		usort($array, "compare");
-		return $array;
-	}
-
-
 	// sets a language file for gettext, either in the given or the most matching language
 	function includeLocale($lang)
 	{
@@ -277,83 +238,11 @@
 	}
 
 
-	// returns latlon of given id and type
-	function getLatLon($id, $type)
-	{
-		global $db;
-
-		if (isValidId($id) && isValidType($type))
-		{
-			$connection = connectToDatabase($db);
-			if (!$connection)
-				exit;
-			$query = "SELECT
-						id, ST_X(geom), ST_Y(geom)
-						FROM " . $_GET[$type] . "s
-						WHERE (id = " . $_GET[$id] . ");";
-			$response = requestDetails($query, $connection);
-			pg_close($connection);
-
-			if (!$response)
-			{
-				$connection = connectToDatabase($ptdb);
-				if (!$connection)
-					exit;
-				$response = requestDetails($query, $connection);
-				pg_close($connection);
-				if (!$response)
-					return false;
-			}
-
-			foreach ($response as $element)
-				return array($element['st_x'], $element['st_y']);
-		}
-
-		return false;
-	}
-
-
-	// returns translation for given key-value-pair
-	function translateKeyValue($key, $value)
-	{
-		$tag = $key."=".$value;
-		$keyvalue = dgettext("tags", $tag);
-		if ($name[0] == $keyvalue)
-			return "";
-		else
-			return $keyvalue;
-	}
-
-
-	// make a database request by a given query string
-	function requestDetails($request, $connection)
-	{
-		$result = pg_query($connection, $request);
-
-		if (!$result)
-			return false;
-
-		return pg_fetch_all($result);
-	}
-
-
 	// beginning of xml output: header, first root element
 	function xmlStart($root)
 	{
 		header("Content-Type: application/xml; charset=UTF-8");
 		return "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<".$root.">\n";
-	}
-
-
-	// formats a given distance in meters
-	function formatDistance($meters)
-	{
-		if ($meters > 1000)
-			$distance = round($meters/1000, 2)."km";
-		else
-			$distance = (int)$meters."m";
-
-		return $distance;
 	}
 
 
@@ -374,6 +263,7 @@
 		return true;
 	}
 
+
 	// checks if given osm id is valid
 	function isValidId($id)
 	{
@@ -389,6 +279,7 @@
 
 		return true;
 	}
+
 
 	// checks if given coordinate is valid
 	function isValidCoordinate($coord)
@@ -465,24 +356,12 @@
 				if (isValidCoordinate('lat'))
 					echo $_GET['lat'].",\n";
 				else
-				{
-					$latlon = getLatLon('id', isset($type) ? $type : "");
-					if ($latlon)
-						echo $latlon[1].",\n";
-					else
-						echo "null,\n";
-				}
+					echo "null,\n";
 			echo "lon : ";
 				if (isValidCoordinate('lon'))
 					echo $_GET['lon'].",\n";
 				else
-				{
-					$latlon = getLatLon('id', isset($type) ? $type : "");
-					if ($latlon)
-						echo $latlon[0].",\n";
-					else
-						echo "null,\n";
-				}
+					echo "null,\n";
 			echo "zoom : " . (isValidZoom('zoom') ? ($_GET['zoom']) : ("null")) . ",\n";
 			echo "offset : " . (isValidOffset('offset') ? ($_GET['offset']) : ("null")) . ",\n";
 			echo "searchquery : " . (isset($_GET['q']) ? (json_encode($_GET['q'])) : ("''")) . ",\n";
@@ -497,5 +376,4 @@
 			echo "};\n";
 		echo "</script>\n";
 	}
-
 ?>
