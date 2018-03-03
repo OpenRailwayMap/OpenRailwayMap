@@ -42,19 +42,41 @@ function josm(url)
 }
 
 
-// perform a synchron API request
-function requestApi(file, query, handler)
+// perform an async GET request
+function getRequest(url, handler)
 {
 	var request = new XMLHttpRequest();
 
-	request.open("GET", root+'api/'+file+'.php?'+query, true);
-	request.onreadystatechange = function()
+	request.open("GET", url, true);
+
+	request.onload = function()
 	{
-		if (request.readyState === 4)
-			if (request.status === 200)
-				handler(request);
+		if (request.status >= 200 && request.status < 400)
+		{
+			handler(request.responseText);
+		}
+		else
+		{
+			console.log('Server returned ' + request.status + ' for ' + request);
+			console.log('Server response: ' + request.responseText);
+			handler(false);
+		}
 	};
-	request.send(null);
+
+	request.onerror = function()
+	{
+		console.log('Error: ' + error);
+		handler(false);
+	};
+
+	request.send();
+}
+
+
+// perform an async API request
+function requestAPI(request, params, handler)
+{
+	getRequest(apiUrl + request + '?' + params.replace(/ /g, '+'), handler);
 }
 
 

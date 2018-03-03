@@ -10,6 +10,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 function createMap(embed)
 {
 	root = params['urlbase'];
+	apiUrl = 'https://api.openrailwaymap.org/';
 	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
 	// path to the bitmap tile directory
 	tiledir = "https://{s}.tiles.openrailwaymap.org/";
