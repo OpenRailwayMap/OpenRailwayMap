@@ -69,55 +69,6 @@
 	}
 
 
-	// returns human-readable timestamp of given timestamp
-	function timestampString($timestamp, $offset)
-	{
-		return date("d.m.Y H:i", ($timestamp+($offset*3600)));
-	}
-
-
-	// returns the difference between two timestamps
-	function timeAgo($latest, $reference, $offset = 0)
-	{
-		return ($latest+($offset*3600))-$reference;
-	}
-
-
-	// returns an human-readable string of the given difference timestamp
-	function timeAgoString($diff)
-	{
-		if (!$diff)
-			return false;
-
-		// unit conversion factors
-		$units[0] = 60;	// seconds
-		$units[1] = 60;	// minutes
-		$units[2] = 24;	// hours
-		$units[3] = 7;	// days
-		$units[4] = 4;	// weeks
-		$units[5] = 12;	// months
-
-		// calculating difference as human readable string
-		for ($i=0; $i<count($units); $i++)
-		{
-			if ($diff >= $units[$i])
-				$diff = $diff / $units[$i];
-			else
-				break;
-		}
-
-		// singular and plural forms
-		$interval[0] = sprintf(ngettext("%d second", "%d seconds", (int)$diff), (int)$diff);
-		$interval[1] = sprintf(ngettext("%d minute", "%d minutes", (int)$diff), (int)$diff);
-		$interval[2] = sprintf(ngettext("%d hour", "%d hours", (int)$diff), (int)$diff);
-		$interval[3] = sprintf(ngettext("%d day", "%d days", (int)$diff), (int)$diff);
-		$interval[4] = sprintf(ngettext("%d week", "%d weeks", (int)$diff), (int)$diff);
-		$interval[5] = sprintf(ngettext("%d month", "%d months", (int)$diff), (int)$diff);
-
-		return sprintf(_("more than %s ago"), $interval[$i]);
-	}
-
-
 	// send error report to own mail account
 	function reportError($error = "")
 	{

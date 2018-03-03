@@ -50,4 +50,5 @@
 	echo "translations['signal'] = '".addslashes(_("Signal"))."';\n";
 	echo "translations['level_crossing'] = '".addslashes(_("Level crossing"))."';\n";
 	echo "translations['crossing'] = '".addslashes(_("Crossing"))."';\n";
+	echo "translations['ago'] = '".addslashes(_("%s ago"))."';\n";
 ?>
