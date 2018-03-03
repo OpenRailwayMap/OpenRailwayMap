@@ -39,6 +39,7 @@
 		"el" => array("el_GR", "Ελληνικά"),
 		"en" => array("en_GB", "English"),
 		"es" => array("es_ES", "Español"),
+		"fi" => array("fi_FI", "Suomi"),
 		"fr" => array("fr_FR", "Français"),
 		"nl" => array("nl_NL", "Nederlands"),
 		"nqo" => array("nqo_GN", "ߒߞߏ"),
