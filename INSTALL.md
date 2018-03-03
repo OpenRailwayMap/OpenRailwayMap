@@ -151,11 +151,14 @@ $ chmod 600 ~/.pgpass
 ```
 
  API is served by api.js which listens on port 9002, therefore we forward incoming request to this port.
+ Create a ProxyPass exception and Alias for the timestamp file, so that it is accessible under http://api.openrailwaymap.org/timestamp.
  Vhost configuration of the API (`api.openrailwaymap.org.conf`) looks like this:
 
 ```ApacheConf
 <VirtualHost *:80>
     ServerName api.openrailwaymap.org
+    ProxyPass /timestamp !
+    Alias "/timestamp" "/var/www/html/OpenRailwayMap/import/timestamp"
     ProxyPreserveHost On
     ProxyPass / http://localhost:9002/
     ProxyPassReverse / http://localhost:9002/
