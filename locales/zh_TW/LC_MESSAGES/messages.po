@@ -1,0 +1,517 @@
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+#
+# Translators:
+# Supaplex <bejokeup@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenRailwayMap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2017-09-22 15:50+0000\n"
+"Last-Translator: Supaplex <bejokeup@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/rurseekatze/openrailwaymap/language/zh_TW/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "More Info"
+msgstr "更多資訊"
+
+msgid "Contact"
+msgstr "聯絡資訊"
+
+msgid "Javascript is not activated"
+msgstr "並未啟動 Javascript"
+
+msgid ""
+"Javascript is needed to show the map and run this website. Please turn on "
+"Javascript in your browser settings."
+msgstr "網站需要 Javascript 才能執行和顯示地圖。請在瀏覽器設定中啟用 Javascript"
+
+msgid "Loading..."
+msgstr "載入中..."
+
+msgid "Nothing found."
+msgstr "什麼都找不到。"
+
+msgid "Last update"
+msgstr "最後更新"
+
+msgid "Empty input."
+msgstr "空白輸入"
+
+msgid "Kilometer"
+msgstr "公里"
+
+msgid "Track"
+msgstr "軌道"
+
+msgid "Permalink"
+msgstr "永久連結"
+
+msgid "Hillshading"
+msgstr "山部暈渲"
+
+msgid "Hillshading by <a href='http://nasa.gov/'>NASA SRTM</a>"
+msgstr "<a href='http://nasa.gov/'>NASA SRTM</a> 製作的山部暈渲"
+
+msgid "Rendering: OpenRailwayMap"
+msgstr "渲染算圖：OpenRailwayMap"
+
+msgid "Mapnik"
+msgstr "Mapnik"
+
+msgid "Mapnik Grayscale"
+msgstr "Mapnik 灰階"
+
+msgid "Map data &copy; OpenStreetMap contributors"
+msgstr "地圖資料 &copy; 開放街圖貢獻者"
+
+msgid "Select a map style"
+msgstr "選擇地圖樣式"
+
+msgid "Public transport"
+msgstr "大眾運輸"
+
+msgid "Search results"
+msgstr "搜尋結果"
+
+msgid "Search only in the current map view"
+msgstr "只搜尋目前檢視地圖畫面"
+
+msgid "HTML-Code"
+msgstr "HTML 碼"
+
+msgid ""
+"Copy this HTML code snippet into your website to show a small map with a "
+"marker."
+msgstr "複製這段 HTML 碼然後嵌入到你的網站，能夠在你網站上顯示有標記符號的小地圖。"
+
+msgid "Fullscreen"
+msgstr "全螢幕"
+
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d 秒"
+
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d 分"
+
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d 小時"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d 天"
+
+#, php-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d 週"
+
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d 月"
+
+#, php-format
+msgid "more than %s ago"
+msgstr "比  %s 更久以前"
+
+#, php-format
+msgid "%s ago"
+msgstr "%s 前"
+
+msgid "Infrastructure"
+msgstr "設施"
+
+msgid "Signalling"
+msgstr "號誌"
+
+msgid "Maxspeeds"
+msgstr "最高速限"
+
+msgid "Electrification"
+msgstr ""
+
+msgid "Halt"
+msgstr "招呼站"
+
+msgid "Station"
+msgstr "車站"
+
+msgid "Junction"
+msgstr "道岔"
+
+msgid "Yard"
+msgstr "鐵路車廠"
+
+msgid "Crossover"
+msgstr "交叉"
+
+msgid "Site"
+msgstr "站點"
+
+msgid "Service station"
+msgstr "服務車站"
+
+msgid "Tram stop"
+msgstr "電車站"
+
+msgid "Milestone"
+msgstr "里程"
+
+msgid "Signal"
+msgstr ""
+
+msgid "Level crossing"
+msgstr "平交道"
+
+msgid "Crossing"
+msgstr "交叉"
+
+msgid "Legend"
+msgstr "圖例"
+
+msgid "Bridge"
+msgstr "橋樑"
+
+msgid "Tunnel"
+msgstr "隧道"
+
+msgid "Line ref"
+msgstr "線路編號"
+
+msgid "Railroad line"
+msgstr "鐵路路線"
+
+msgid "Siding"
+msgstr "側線"
+
+msgid "Yard track"
+msgstr "車廠軌道"
+
+msgid "Spur"
+msgstr "工業支線"
+
+msgid "Crossover track"
+msgstr "轉徹器"
+
+msgid "Branch line"
+msgstr "支線"
+
+msgid "Main line"
+msgstr "幹線"
+
+msgid "Highspeed line"
+msgstr "高速鐵路"
+
+msgid "Industrial line"
+msgstr "工業路線"
+
+msgid "Industrial service track"
+msgstr "工業服務路線"
+
+msgid "Preserved track"
+msgstr "保存軌道"
+
+msgid "Preserved service track"
+msgstr "保存服務軌道"
+
+msgid "Track under construction"
+msgstr "施工中軌道"
+
+msgid "Proposed track"
+msgstr "計畫中軌道"
+
+msgid "Disused track"
+msgstr "未使用軌道"
+
+msgid "Abandoned track"
+msgstr "廢棄軌道"
+
+msgid "Razed track"
+msgstr "夷平軌道"
+
+msgid "Tram"
+msgstr "電車"
+
+msgid "Subway"
+msgstr "捷運"
+
+msgid "Light rail"
+msgstr "輕軌"
+
+msgid "Narrow gauge track"
+msgstr "窄軌"
+
+msgid "Narrow gauge siding"
+msgstr "窄軌側線"
+
+msgid "Narrow gauge yard"
+msgstr "窄軌車廠線"
+
+msgid "Narrow gauge spur"
+msgstr "窄軌工業支線"
+
+msgid "Narrow gauge crossover"
+msgstr "窄軌轉徹器"
+
+msgid "Narrow gauge branch line"
+msgstr "窄軌支線"
+
+msgid "Narrow gauge main line"
+msgstr "窄軌主線"
+
+msgid "Narrow gauge highspeed line"
+msgstr "窄軌高速路線"
+
+msgid "Narrow gauge industrial line"
+msgstr "窄軌工業線"
+
+msgid "Narrow gauge industrial service"
+msgstr "窄軌工業服務"
+
+msgid "Switch (remote-controlled)"
+msgstr "轉徹器 (遠端控制)"
+
+msgid "Switch (local operated)"
+msgstr "轉徹器 (現場控制)"
+
+msgid "Resetting switch"
+msgstr "復位開關"
+
+msgid "Signal box"
+msgstr "號誌盒"
+
+msgid "Owner change"
+msgstr "擁有者改變"
+
+msgid "Railway crossing"
+msgstr "鐵路平交道"
+
+msgid "Buffer stop"
+msgstr "止衝器"
+
+msgid "Isolated track section"
+msgstr "獨立的軌道部分"
+
+msgid "Platform"
+msgstr "月臺"
+
+msgid "Vending machine"
+msgstr "販賣機"
+
+msgid "Ticket shop"
+msgstr "售票亭"
+
+msgid "Subway entrance"
+msgstr "捷運出口"
+
+msgid "Phone"
+msgstr "電話"
+
+msgid "Water tower"
+msgstr "水塔"
+
+msgid "Fuel"
+msgstr "加油"
+
+msgid "Water crane"
+msgstr "水鶴"
+
+msgid "Coaling facility"
+msgstr "煤礦設施"
+
+msgid "Wash"
+msgstr "洗"
+
+msgid "Pit"
+msgstr "坑"
+
+msgid "Loading gauge"
+msgstr "車輛斷面界限"
+
+msgid "Hump yard"
+msgstr "駝峰調車"
+
+msgid "Rail brake"
+msgstr "鐵路制軔"
+
+msgid "Engine shed"
+msgstr "機務段"
+
+msgid "Workshop"
+msgstr "鐵路機廠"
+
+msgid "Radio tower"
+msgstr "無線電塔"
+
+msgid "Turntable"
+msgstr "轉盤"
+
+msgid "Traverser"
+msgstr "轉盤"
+
+msgid "Loading ramp"
+msgstr "裝卸貨跳板"
+
+msgid "Crane"
+msgstr "起重機"
+
+msgid "Track scale"
+msgstr "軌道規模"
+
+msgid "Carrier truck pit"
+msgstr "承載貨列坑"
+
+msgid "Gauge conversion"
+msgstr "改變軌距"
+
+msgid "Gate"
+msgstr "閘門"
+
+msgid "Museum"
+msgstr "博物館"
+
+msgid "Container terminal"
+msgstr "貨櫃碼頭"
+
+msgid "Station building"
+msgstr "車站建築"
+
+msgid "Factory connected to railroad line"
+msgstr "連接到鐵路的工廠"
+
+msgid "Rack"
+msgstr "機架"
+
+msgid "Embankment"
+msgstr "堤"
+
+msgid "Cutting"
+msgstr "下挖"
+
+msgid "Miniature railway"
+msgstr "微型鐵路"
+
+msgid "Funicular"
+msgstr "纜車"
+
+msgid "Military line"
+msgstr "軍事路線"
+
+msgid "Military service track"
+msgstr "軍事服務路線"
+
+msgid "Ferry terminal"
+msgstr "渡輪終點站"
+
+msgid "Ferry"
+msgstr "渡輪"
+
+msgid "Test line"
+msgstr "測試路線"
+
+msgid "Test service track"
+msgstr "測試服務路線"
+
+msgid "Car shuttle"
+msgstr "汽車擺渡列車"
+
+msgid "Rolling highway"
+msgstr "滾動公路"
+
+msgid "Nothing to see in this zoom level. Please zoom in."
+msgstr "這個縮放層面看不到東西，請放大再看。"
+
+msgid "Legend not available for this style."
+msgstr "這種樣式下無法檢視圖徽。"
+
+msgid "Language"
+msgstr "語言"
+
+msgid "Desktop version"
+msgstr "桌面版版本"
+
+msgid "Style"
+msgstr "樣式"
+
+msgid "Search"
+msgstr "搜尋"
+
+msgid "Blog"
+msgstr "部落格"
+
+msgid "No information"
+msgstr ""
+
+msgid "speed only given for one direction"
+msgstr ""
+
+msgid "main track, service track"
+msgstr ""
+
+msgid "Quick search shortcut"
+msgstr ""
+
+msgid "Placeholder"
+msgstr ""
+
+msgid "Donate"
+msgstr ""
+
+msgid "Tools"
+msgstr ""
+
+msgid "Wiki"
+msgstr ""
+
+msgid "Search milestone"
+msgstr ""
+
+msgid "Station code"
+msgstr ""
+
+msgid "Search station"
+msgstr ""
+
+msgid "UIC reference"
+msgstr ""
+
+msgid "About this project"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Line operator"
+msgstr ""
+
+msgid "Operator"
+msgstr ""
+
+msgid "More results"
+msgstr ""
+
+msgid "Spur junction"
+msgstr ""
+
+msgid "No background map"
+msgstr ""

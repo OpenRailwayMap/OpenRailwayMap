@@ -52,7 +52,8 @@
 		"sv" => array("sv_SE", "Svenska"),
 		"tr" => array("tr_TR", "Türkçe"),
 		"uk" => array("uk_UA", "Українська"),
-		"vi" => array("vi_VN", "Tiếng Việt")
+		"vi" => array("vi_VN", "Tiếng Việt"),
+		"zh" => array("zh_TW", "正體中文")
 	);
 	// name of database
 	$db = "openrailwaymap";
