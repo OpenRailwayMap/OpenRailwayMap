@@ -41,6 +41,7 @@
 		"es" => array("es_ES", "Español"),
 		"fi" => array("fi_FI", "Suomi"),
 		"fr" => array("fr_FR", "Français"),
+		"ja" => array("ja_JP", "日本語"),
 		"nl" => array("nl_NL", "Nederlands"),
 		"nqo" => array("nqo_GN", "ߒߞߏ"),
 		"pl" => array("pl_PL", "Polski"),
