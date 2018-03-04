@@ -93,7 +93,7 @@ function getRequest(url, handler)
 
 	request.onerror = function()
 	{
-		console.log('Error: ' + error);
+		console.log('Error: ' + request.status);
 		handler(false);
 	};
 
