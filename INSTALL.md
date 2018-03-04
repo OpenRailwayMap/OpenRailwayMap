@@ -12,7 +12,7 @@ CentOS:
 
 ```shell
 $ yum update
-$ yum install gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel cairo cairo-devel cairomm-devel pango pango-devel pangomm pangomm-devel npm nodejs python php php-php-gettext php-pgsql python-ply python-imaging pycairo python-cairosvg pygtk2 pygtk2-devel make cmake boost-devel expat-devel geos-devel proj-devel proj-epsg lua-devel gcc-c++
+$ yum install gnome-python2-rsvg pygobject2 pygobject2-devel librsvg2 librsvg2-devel cairo cairo-devel cairomm-devel pango pango-devel pangomm pangomm-devel npm nodejs python python-pip php php-php-gettext php-pgsql python-ply python-imaging pycairo python-cairosvg pygtk2 pygtk2-devel make cmake boost-devel expat-devel geos-devel proj-devel proj-epsg lua-devel gcc-c++
 
 $ yum install postgresql postgresql-contrib postgresql-server postgresql-libs postgresql-common postgresql-devel postgis
 
@@ -30,6 +30,10 @@ $ apt-get install git libgif-dev build-essential g++ make zip
 $ apt-get install nodejs-legacy # see https://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu for the reason
 # in case you want to build osm2pgsql from sources
 $ apt-get install cmake
+```
+
+```shell
+$ pip install pojson
 ```
 
 ## Installation

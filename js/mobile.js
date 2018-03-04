@@ -11,11 +11,20 @@ function createMap(embed)
 {
 	root = params['urlbase'];
 	apiUrl = 'https://api.openrailwaymap.org/';
-	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
+	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+_("Loading...");
 	// path to the bitmap tile directory
 	tiledir = "https://{s}.tiles.openrailwaymap.org/";
 	// available map rendering styles
-	availableStyles = new Array("standard", "maxspeed", "signals");
+	availableStyles = {
+		"standard": "Infrastructure",
+		"maxspeed": "Maxspeeds",
+		"signals": "Signalling"
+	};
+
+	getRequest(root + "/locales/" + langcodes[params['lang']] + "/LC_MESSAGES/messages.json", function(response)
+	{
+		translations = JSON.parse(response);
+	});
 
 	if (params['offset'] != null)
 		offset = params['offset'];
@@ -39,7 +48,7 @@ function createMap(embed)
 	// railmap layer
 	railmap = new L.TileLayer(tiledir+'standard/{z}/{x}/{y}.png',
 	{
-		attribution: translations['railmapAttribution'],
+		attribution: _("Rendering: OpenRailwayMap"),
 		minZoom: 2,
 		maxZoom: 19,
 		tileSize: 256
@@ -105,7 +114,7 @@ function setStyle(style)
 	var selectableItems = gEBI('styleSelectionBar').getElementsByTagName('div');
 	for (var i=0; i<selectableItems.length; i++)
 	{
-		if (selectableItems[i].innerHTML == translations['style.'+style])
+		if (selectableItems[i].innerHTML == _(availableStyles[style]))
 		{
 			selectableItems[i].innerHTML = selectableItems[i].innerHTML+'<small>✓</small>';
 			selectableItems[i].onclick = null;
@@ -125,13 +134,14 @@ function setStyle(style)
 // build a radio-button list of available map styles
 function getStyleSelection()
 {
-	for (var i=0; i<availableStyles.length; i++)
-		gEBI('styleSelectionBar').innerHTML += '<div class="resultEntry" onclick="setStyle(\''+availableStyles[i]+'\')" value="'+availableStyles[i]+'">'+translations['style.'+availableStyles[i]]+'</div>';
+	for (var style in availableStyles)
+		if (availableStyles.hasOwnProperty(style))
+			gEBI('styleSelectionBar').innerHTML += '<div class="resultEntry" onclick="setStyle(\''+style+'\')" value="'+style+'">'+_(availableStyles[style])+'</div>';
 }
 
 
 // returns true if the given stylename is a valid and available style; otherwise false is returned
 function styleValid(style)
 {
-	return (availableStyles.indexOf(style) >= 0);
+	return (availableStyles.hasOwnProperty(style));
 }

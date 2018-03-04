@@ -13,15 +13,14 @@ function Timestamp(box)
 	// returns an human-readable string of the given time difference
 	this.timeAgoString = function(diff)
 	{
-		// singular and plural forms of units and their conversion factors
-		// TODO add translation strings here
+		// list of units and their conversion factors
 		var units = [
-			[60, "%d second", "%d seconds"],
-			[60, "%d minute", "%d minutes"],
-			[24, "%d hour", "%d hours"],
-			[7, "%d day", "%d days"],
-			[4, "%d week", "%d weeks"],
-			[12, "%d month", "%d months"]
+			[60, "%d second"],
+			[60, "%d minute"],
+			[24, "%d hour"],
+			[7, "%d day"],
+			[4, "%d week"],
+			[12, "%d month"]
 		];
 
 		// calculating difference as human readable string
@@ -34,10 +33,7 @@ function Timestamp(box)
 		}
 
 		var human = Math.floor(diff);
-		// TODO parse pluralForms expression here
-		//var plural = pluralIndex(human);
-		var plural = 0;
-		return units[i][plural+1].replace(/%s/, human);
+		return _(units[i][1], human);
 	}
 
 	// requests the timestamp
@@ -45,15 +41,15 @@ function Timestamp(box)
 	{
 		requestAPI("timestamp", null, function(response)
 		{
-			if (response && response.responseText.length > 0)
+			if (response && response.length > 0)
 			{
-				var timestamp = parseInt(response.responseText);
+				var timestamp = parseInt(response);
 				var lastUpdate = new Date(0);
 				lastUpdate.setUTCSeconds(timestamp);
 				var now = new Date();
 				var lastUpdateString = lastUpdate.toLocaleString();
 				var agoString = self.timeAgoString(now.getTime() - lastUpdate.getTime());
-				self.box.innerHTML = translations['update'] + ":<br />" + lastUpdateString + ", " + translations['ago'].replace(/%s/, agoString);
+				self.box.innerHTML = _("Last update") + ":<br />" + lastUpdateString + ", " + _("%s ago").replace(/%s/, agoString);
 			}
 			// cannot fetch update timestamp
 			else

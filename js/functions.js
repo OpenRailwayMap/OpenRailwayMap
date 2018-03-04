@@ -6,6 +6,31 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
+langcodes = {
+	"ca": "ca_ES",
+	"cs": "cs_CZ",
+	"da": "da_DK",
+	"de": "de_DE",
+	"el": "el_GR",
+	"en": "en_GB",
+	"es": "es_ES",
+	"fi": "fi_FI",
+	"fr": "fr_FR",
+	"ja": "ja_JP",
+	"lt": "lt_LT",
+	"nl": "nl_NL",
+	"nqo": "nqo_GN",
+	"pl": "pl_PL",
+	"pt": "pt_PT",
+	"ru": "ru_RU",
+	"sl": "sl_SI",
+	"sv": "sv_SE",
+	"tr": "tr_TR",
+	"uk": "uk_UA",
+	"vi": "vi_VN",
+	"zh": "zh_TW"
+};
+
 // reload the legend after changing zoomlevel or stylesheet
 function updateLegend(id, style)
 {
@@ -206,13 +231,13 @@ function setupControls()
 	// grayscale mapnik background layer
 	var mapnikGray = new L.TileLayer.Grayscale('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
-		attribution: translations['mapnikAttribution'],
+		attribution: _("Map data &copy; OpenStreetMap contributors"),
 		maxZoom: 19
 	}).addTo(map);
 	// normal mapnik background layer
 	var mapnik = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
-		attribution: translations['mapnikAttribution'],
+		attribution: _("Map data &copy; OpenStreetMap contributors"),
 		maxZoom: 19
 	});
 
@@ -223,21 +248,34 @@ function setupControls()
 	});
 
 	var baseLayers = new Object();
-	baseLayers[translations['mapnik']] = mapnik;
-	baseLayers[translations['mapnikGrayscale']] = mapnikGray;
-	baseLayers[translations['blank']] = blank;
+	baseLayers[_("Mapnik")] = mapnik;
+	baseLayers[_("Mapnik Grayscale")] = mapnikGray;
+	baseLayers[_("No background map")] = blank;
 
 	// hillshading layer
 	var hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
 	{
-		attribution: translations['hillshadingAttribution'],
+		attribution: _("Hillshading by <a href='http://nasa.gov/'>NASA SRTM</a>"),
 		maxZoom: 17
 	});
 
 	var overlays = new Object();
-	overlays[translations['hillshading']] = hillshading;
-	overlays[translations['railmap']] = railmap;
+	overlays[_("Hillshading")] = hillshading;
+	overlays[_("OpenRailwayMap")] = railmap;
 
 	new L.Control.Scale({metric:true, maxWidth:200}).addTo(map);
 	new L.Control.Layers(baseLayers, overlays).addTo(map);
+}
+
+function _(sourcemsg, n)
+{
+	if (typeof translations[sourcemsg] === 'undefined')
+		return sourcemsg;
+
+	if (n === undefined)
+		return translations[sourcemsg][1];
+
+	var pluralForms = translations[""]["Plural-Forms"].match(/plural=(.*);/)[1];
+	var pluralIndex = eval(pluralForms.replace(/n/), n) + 1;
+	return translations[sourcemsg][pluralIndex].replace(/%d/, n);
 }

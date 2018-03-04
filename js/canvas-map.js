@@ -11,7 +11,19 @@ function createMap(embed)
 	root = params['urlbase'];
 	apiUrl = 'https://api.openrailwaymap.org/';
 	tiledir = "https://tiles.openrailwaymap.org/vector/";
-	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
+	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+_("Loading...");
+	// available map rendering styles
+	availableStyles = {
+		"standard": "Infrastructure",
+		"maxspeed": "Maxspeeds",
+		"signals": "Signalling",
+		"electrified": "Electrification"
+	};
+
+	getRequest(root + "/locales/" + langcodes[params['lang']] + "/LC_MESSAGES/messages.json", function(response)
+	{
+		translations = JSON.parse(response);
+	});
 
 	if (params['offset'] != null)
 		offset = params['offset'];
@@ -32,7 +44,7 @@ function createMap(embed)
 	// railmap layer
 	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.json',
 	{
-		attribution: translations['railmapAttribution'],
+		attribution: _("Rendering: OpenRailwayMap"),
 		minZoom: 2,
 		maxZoom: 19
 	});
@@ -113,9 +125,9 @@ function setStyle(style)
 // build a radio-button list of available map styles
 function getStyleSelection()
 {
-	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><b>'+translations['styleSelection']+':</b><br /><p>';
+	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><b>'+_("Select a map style")+':</b><br /><p>';
 	for (var i=0; i<MapCSS.availableStyles.length; i++)
-		gEBI('styleSelectionBar').innerHTML += '<label><input onchange="setStyle(this.value)" type="radio" name="style" value="'+MapCSS.availableStyles[i]+'">'+translations['style.'+MapCSS.availableStyles[i]]+'</label><br />';
+		gEBI('styleSelectionBar').innerHTML += '<label><input onchange="setStyle(this.value)" type="radio" name="style" value="'+MapCSS.availableStyles[i]+'">'+_(availableStyles[MapCSS.availableStyles[i]])+'</label><br />';
 	gEBI('styleSelectionBar').innerHTML += '</p></form>';
 }
 

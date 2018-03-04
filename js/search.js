@@ -36,7 +36,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		// if nothing was entered
 		if (input.length == 0)
 		{
-			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+translations['empty']+"</b></center></div>";
+			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+_("Empty input.")+"</b></center></div>";
 			this.bar.className = "infoBar";
 			var bar = this.bar.id;
 			setTimeout("gEBI('"+bar+"').innerHTML = ''; gEBI('"+bar+"').className = 'infoBarOut';", 3500);
@@ -110,7 +110,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 				var inner = "";
 
 				if (milestoneSearch)
-					inner = translations['kilometer'] + ' ' + results[i]['position'] + ', ' + translations['track'] + ' ' + results[i]['ref'];
+					inner = _("Kilometer") + ' ' + results[i]['position'] + ', ' + _("Track") + ' ' + results[i]['ref'];
 				else if (results[i]['name'])
 					inner = results[i]['name'];
 				else if (results[i]['ref'])
@@ -119,8 +119,8 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 				if (inner)
 					result.innerHTML = '<b>' + inner + '</b>';
 
-				if (results[i]['type'] != null && typeof results[i]['type'] != undefined && translations[results[i]['type']])
-					result.innerHTML += '&nbsp;'+translations[results[i]['type']];
+				if (results[i]['type'] != null && typeof results[i]['type'] != undefined && _(results[i]['type']))
+					result.innerHTML += '&nbsp;'+_(results[i]['type']);
 				if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
 					result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
 				if (results[i]['ref'] && (results[i]['type'] == 'station' || results[i]['type'] == 'halt' || results[i]['type'] == 'junction' ||
@@ -153,7 +153,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		{
 			var bar = this.bar.id;
 
-			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+translations['nothing']+"</b></center></div>";
+			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+_("Nothing found.")+"</b></center></div>";
 
 			var self = this;
 			var removeErrorMessage = function()
