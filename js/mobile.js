@@ -14,13 +14,37 @@ window.openrailwaymap = {
 		"standard": "Infrastructure",
 		"maxspeed": "Maxspeeds",
 		"signals": "Signalling",
+	},
+	'availableTranslations': {
+		"ca": "ca_ES",
+		"cs": "cs_CZ",
+		"da": "da_DK",
+		"de": "de_DE",
+		"el": "el_GR",
+		"en": "en_GB",
+		"es": "es_ES",
+		"fi": "fi_FI",
+		"fr": "fr_FR",
+		"ja": "ja_JP",
+		"lt": "lt_LT",
+		"nl": "nl_NL",
+		"nqo": "nqo_GN",
+		"pl": "pl_PL",
+		"pt": "pt_PT",
+		"ru": "ru_RU",
+		"sl": "sl_SI",
+		"sv": "sv_SE",
+		"tr": "tr_TR",
+		"uk": "uk_UA",
+		"vi": "vi_VN",
+		"zh": "zh_TW"
 	}
 };
 
 // main function, creates map and layers, controls other functions
 function createMap(embed)
 {
-	getRequest(window.openrailwaymap.root + "/locales/" + langcodes[params['lang']] + "/LC_MESSAGES/messages.json", function(response)
+	getRequest(window.openrailwaymap.root + "/locales/" + getUserLang() + "/LC_MESSAGES/messages.json", function(response)
 	{
 		window.openrailwaymap.translations = JSON.parse(response);
 

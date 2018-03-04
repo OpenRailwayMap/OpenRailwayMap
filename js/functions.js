@@ -6,30 +6,33 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
-langcodes = {
-	"ca": "ca_ES",
-	"cs": "cs_CZ",
-	"da": "da_DK",
-	"de": "de_DE",
-	"el": "el_GR",
-	"en": "en_GB",
-	"es": "es_ES",
-	"fi": "fi_FI",
-	"fr": "fr_FR",
-	"ja": "ja_JP",
-	"lt": "lt_LT",
-	"nl": "nl_NL",
-	"nqo": "nqo_GN",
-	"pl": "pl_PL",
-	"pt": "pt_PT",
-	"ru": "ru_RU",
-	"sl": "sl_SI",
-	"sv": "sv_SE",
-	"tr": "tr_TR",
-	"uk": "uk_UA",
-	"vi": "vi_VN",
-	"zh": "zh_TW"
-};
+// returns the lang-region-code that fits the best to the user
+function getUserLang()
+{
+	// override browser settings when language is set in url
+	if (window.openrailwaymap.availableTranslations.hasOwnProperty(params['lang']))
+		return window.openrailwaymap.availableTranslations[params['lang']];
+
+	var lang = navigator.language || navigator.userLanguage || 'en-GB';
+	var languages = navigator.languages || [lang];
+
+	for (var i=0; i<navigator.languages.length; i++)
+	{
+		// lang-country combination as first choice
+		var langcountrycode = navigator.languages[i].replace('-', '_');
+		for (var key in window.openrailwaymap.availableTranslations)
+			if (window.openrailwaymap.availableTranslations.hasOwnProperty(key) && window.openrailwaymap.availableTranslations[key] === langcountrycode)
+				return langcountrycode;
+
+		// only lang as second choice
+		var langcode = langcountrycode.split('_')[0];
+		if (window.openrailwaymap.availableTranslations.hasOwnProperty(langcode))
+			return window.openrailwaymap.availableTranslations[langcode];
+	}
+
+	return 'en_GB';
+}
+
 
 // reload the legend after changing zoomlevel or stylesheet
 function updateLegend(id, style)
