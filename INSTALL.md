@@ -160,7 +160,7 @@ $ chmod 600 ~/.pgpass
 
     ProxyPass /timestamp !
     Alias "/timestamp" "/var/www/html/OpenRailwayMap/import/timestamp"
-    Header add Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Origin "*"
     <location /timestamp>
         ForceType text/plain
     </location>
