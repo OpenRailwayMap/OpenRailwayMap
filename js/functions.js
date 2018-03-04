@@ -104,7 +104,10 @@ function getRequest(url, handler)
 // perform an async API request
 function requestAPI(request, params, handler)
 {
-	getRequest(window.openrailwaymap.apiUrl + request + '?' + params.replace(/ /g, '+'), handler);
+	if (params)
+		getRequest(window.openrailwaymap.apiUrl + request + '?' + params.replace(/ /g, '+'), handler);
+	else
+		getRequest(window.openrailwaymap.apiUrl + request, handler);
 }
 
 
