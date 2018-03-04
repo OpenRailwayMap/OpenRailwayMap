@@ -157,12 +157,18 @@ $ chmod 600 ~/.pgpass
 ```ApacheConf
 <VirtualHost *:80>
     ServerName api.openrailwaymap.org
+
     ProxyPass /timestamp !
     Alias "/timestamp" "/var/www/html/OpenRailwayMap/import/timestamp"
     Header add Access-Control-Allow-Origin "*"
+    <location /timestamp>
+        ForceType text/plain
+    </location>
+
     ProxyPreserveHost On
     ProxyPass / http://localhost:9002/
     ProxyPassReverse / http://localhost:9002/
+
     ErrorLog /var/log/apache2/api.openrailwaymap.org.error.log
     LogLevel warn
     CustomLog /var/log/apache2/api.openrailwaymap.org.access.log combined
