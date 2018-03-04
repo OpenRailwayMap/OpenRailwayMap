@@ -8,7 +8,25 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 {
+	// mapping of types returned by API and human-readable strings
+	this.typeMapping = {
+		"track": "Track",
+		"halt": "Halt",
+		"station": "Station",
+		"junction": "Junction",
+		"yard": "Yard",
+		"crossover": "Crossover",
+		"site": "Site",
+		"service_station": "Service station",
+		"tram_stop": "Tram stop",
+		"milestone": "Milestone",
+		"signal": "Signal",
+		"level_crossing": "Level crossing",
+		"crossing": "Crossing"
+	};
+
 	this.loading = "<img class='loading' src='"+window.openrailwaymap.root+"/img/loading.gif'><br>"+_("Loading...");
+
 	// clears the visible parts of a search
 	this.clear = function()
 	{
@@ -118,8 +136,8 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 				if (inner)
 					result.innerHTML = '<b>' + inner + '</b>';
 
-				if (results[i]['type'] != null && typeof results[i]['type'] != undefined && _(results[i]['type']))
-					result.innerHTML += '&nbsp;'+_(results[i]['type']);
+				if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
+					result.innerHTML += '&nbsp;'+_(this.typeMapping[results[i]['type']]);
 				if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
 					result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
 				if (results[i]['ref'] && (results[i]['type'] == 'station' || results[i]['type'] == 'halt' || results[i]['type'] == 'junction' ||
