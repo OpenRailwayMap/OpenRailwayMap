@@ -8,8 +8,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 {
-	this.apibase = 'https://api.openrailwaymap.org/';
-
+	this.loading = "<img class='loading' src='"+window.openrailwaymap.root+"/img/loading.gif'><br>"+_("Loading...");
 	// clears the visible parts of a search
 	this.clear = function()
 	{
@@ -51,7 +50,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			// show search results box
 			this.bar.className = "infoBar";
 			// show that search results are loaded
-			this.bar.innerHTML += "<div class=\"loadingMoreInfo\">"+loading+"</div>";
+			this.bar.innerHTML += "<div class=\"loadingMoreInfo\">"+this.loading+"</div>";
 			this.request = input;
 
 			queryRef = function(response)
@@ -103,7 +102,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		{
 			this.bar.removeChild(this.bar.lastChild);
 			this.bar.className = 'infoBar';
-			var milestoneSearch = response.responseURL.startsWith(this.apibase + 'milestone?');
+			var milestoneSearch = response.responseURL.startsWith(window.openrailwaymap.apiUrl + 'milestone?');
 			for (var i=0; i<results.length; i++)
 			{
 				var result = document.createElement("div");
@@ -137,7 +136,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 
 			var loadingIndicator = document.createElement("div");
 			loadingIndicator.setAttribute('class', 'loadingMoreInfo');
-			loadingIndicator.innerHTML = loading;
+			loadingIndicator.innerHTML = this.loading;
 			this.bar.appendChild(loadingIndicator);
 		}
 	}
@@ -187,7 +186,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	{
 		var request = new XMLHttpRequest();
 
-		request.open("GET", this.apibase + requestType + '?' + query.replace(/ /g, "+"), true);
+		request.open("GET", window.openrailwaymap.apiUrl + requestType + '?' + query.replace(/ /g, "+"), true);
 		request.onreadystatechange = function()
 		{
 			if (request.readyState === 4)

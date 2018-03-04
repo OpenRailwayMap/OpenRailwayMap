@@ -6,100 +6,99 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
+window.openrailwaymap = {
+	'root': params['urlbase'],
+	'apiUrl': 'https://api.openrailwaymap.org/',
+	'tiledir': 'https://{s}.tiles.openrailwaymap.org/',
+	'availableStyles': {
+		"standard": "Infrastructure",
+		"maxspeed": "Maxspeeds",
+		"signals": "Signalling",
+	}
+};
+
 // main function, creates map and layers, controls other functions
 function createMap(embed)
 {
-	root = params['urlbase'];
-	apiUrl = 'https://api.openrailwaymap.org/';
-	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+_("Loading...");
-	// path to the bitmap tile directory
-	tiledir = "https://{s}.tiles.openrailwaymap.org/";
-	// available map rendering styles
-	availableStyles = {
-		"standard": "Infrastructure",
-		"maxspeed": "Maxspeeds",
-		"signals": "Signalling"
-	};
-
-	getRequest(root + "/locales/" + langcodes[params['lang']] + "/LC_MESSAGES/messages.json", function(response)
+	getRequest(window.openrailwaymap.root + "/locales/" + langcodes[params['lang']] + "/LC_MESSAGES/messages.json", function(response)
 	{
-		translations = JSON.parse(response);
+		window.openrailwaymap.translations = JSON.parse(response);
+
+		if (params['offset'] != null)
+			offset = params['offset'];
+		else
+		{
+			// get time offset to UTC
+			var now = new Date();
+			offset = -(now.getTimezoneOffset() / 60);
+		}
+
+		map = L.map('mapFrame');
+
+		if (!embed)
+		{
+			map.on('moveend', function(e)
+			{
+				updatePermalink(railmap.selectedStyle);
+			});
+		}
+
+		// railmap layer
+		railmap = new L.TileLayer(window.openrailwaymap.tiledir+'standard/{z}/{x}/{y}.png',
+		{
+			attribution: _("Rendering: OpenRailwayMap"),
+			minZoom: 2,
+			maxZoom: 19,
+			tileSize: 256
+		}).addTo(map);
+
+		if (!embed)
+		{
+			map.on('zoomend', function(e)
+			{
+				updateLegend("legend", railmap.selectedStyle);
+				updatePermalink(railmap.selectedStyle);
+			});
+		}
+
+		setupControls();
+
+		// only in not-embed mode
+		if (!embed)
+		{
+			// setting start position
+			startposition = new Startposition(map);
+			// loading timestamp
+			var timestamp = new Timestamp("info");
+			// create search
+			search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
+			// build style selection and it's event handling
+			getStyleSelection();
+			// set rendering style
+			if (params['style'] != null && styleValid(params['style']))
+				applyStyle(params['style']);
+			else
+				applyStyle("standard");
+			// onclick event of locate button
+			gEBI("locateButton").onclick = function()
+			{
+				startposition.setPosition();
+			};
+			// initialize the permalink url
+			updatePermalink(railmap.selectedStyle);
+		}
+		else
+		{
+			// set rendering style
+			if (params['style'] != null && styleValid(params['style']))
+				setStyle(params['style']);
+			else
+				setStyle("standard");
+
+			// setting start position
+			startposition = new Startposition(map);
+		}
 	});
-
-	if (params['offset'] != null)
-		offset = params['offset'];
-	else
-	{
-		// get time offset to UTC
-		var now = new Date();
-		offset = -(now.getTimezoneOffset() / 60);
-	}
-
-	map = L.map('mapFrame');
-
-	if (!embed)
-	{
-		map.on('moveend', function(e)
-		{
-			updatePermalink(railmap.selectedStyle);
-		});
-	}
-
-	// railmap layer
-	railmap = new L.TileLayer(tiledir+'standard/{z}/{x}/{y}.png',
-	{
-		attribution: _("Rendering: OpenRailwayMap"),
-		minZoom: 2,
-		maxZoom: 19,
-		tileSize: 256
-	}).addTo(map);
-
-	if (!embed)
-	{
-		map.on('zoomend', function(e)
-		{
-			updateLegend("legend", railmap.selectedStyle);
-			updatePermalink(railmap.selectedStyle);
-		});
-	}
-
-	setupControls();
-
-	// only in not-embed mode
-	if (!embed)
-	{
-		// setting start position
-		startposition = new Startposition(map);
-		// loading timestamp
-		var timestamp = new Timestamp("info");
-		// create search
-		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
-		// build style selection and it's event handling
-		getStyleSelection();
-		// set rendering style
-		if (params['style'] != null && styleValid(params['style']))
-			applyStyle(params['style']);
-		else
-			applyStyle("standard");
-		// onclick event of locate button
-		gEBI("locateButton").onclick = function()
-		{
-			startposition.setPosition();
-		};
-		// initialize the permalink url
-		updatePermalink(railmap.selectedStyle);
-	}
-	else
-	{
-		// set rendering style
-		if (params['style'] != null && styleValid(params['style']))
-			setStyle(params['style']);
-		else
-			setStyle("standard");
-
-		// setting start position
-		startposition = new Startposition(map);
-	}
 }
 
 
@@ -109,7 +108,7 @@ function setStyle(style)
 	// helper variable for saving current map style
 	railmap.selectedStyle = style;
 	// change tileserver url to load different style
-	railmap._url = tiledir+style+'/{z}/{x}/{y}.png';
+	railmap._url = window.openrailwaymap.tiledir+style+'/{z}/{x}/{y}.png';
 	// reload all tiles after style was changed
 	railmap.redraw();
 }
@@ -136,9 +135,9 @@ function applyStyle(style)
 function getStyleSelection()
 {
 	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><b>'+_("Select a map style")+':</b><br /><p>';
-	for (var style in availableStyles)
-		if (availableStyles.hasOwnProperty(style))
-			gEBI('styleSelectionBar').innerHTML += '<label><input onchange="applyStyle(this.value)" type="radio" name="style" value="'+style+'">'+_(availableStyles[style])+'</label><br />';
+	for (var style in window.openrailwaymap.availableStyles)
+		if (window.openrailwaymap.availableStyles.hasOwnProperty(style))
+			gEBI('styleSelectionBar').innerHTML += '<label><input onchange="applyStyle(this.value)" type="radio" name="style" value="'+style+'">'+_(window.openrailwaymap.availableStyles[style])+'</label><br />';
 	gEBI('styleSelectionBar').innerHTML += '</p></form>';
 }
 
@@ -146,5 +145,5 @@ function getStyleSelection()
 // returns true if the given stylename is a valid and available style; otherwise false is returned
 function styleValid(style)
 {
-	return (availableStyles.hasOwnProperty(style));
+	return (window.openrailwaymap.availableStyles.hasOwnProperty(style));
 }

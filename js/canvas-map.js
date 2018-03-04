@@ -5,98 +5,99 @@ This is free software, and you are welcome to redistribute it under certain cond
 See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
-// main function, creates map and layers, controls other functions
-function createMap(embed)
-{
-	root = params['urlbase'];
-	apiUrl = 'https://api.openrailwaymap.org/';
-	tiledir = "https://tiles.openrailwaymap.org/vector/";
-	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+_("Loading...");
-	// available map rendering styles
-	availableStyles = {
+
+window.openrailwaymap = {
+	'root': params['urlbase'],
+	'apiUrl': 'https://api.openrailwaymap.org/',
+	'tiledir': 'https://tiles.openrailwaymap.org/vector/',
+	'availableStyles': {
 		"standard": "Infrastructure",
 		"maxspeed": "Maxspeeds",
 		"signals": "Signalling",
 		"electrified": "Electrification"
-	};
-
-	getRequest(root + "/locales/" + langcodes[params['lang']] + "/LC_MESSAGES/messages.json", function(response)
-	{
-		translations = JSON.parse(response);
-	});
-
-	if (params['offset'] != null)
-		offset = params['offset'];
-	else
-	{
-		// get time offset to UTC
-		var now = new Date();
-		offset = -(now.getTimezoneOffset() / 60);
 	}
+};
 
-	map = L.map('mapFrame');
-
-	map.on('moveend', function(e)
+// main function, creates map and layers, controls other functions
+function createMap(embed)
+{
+	getRequest(window.openrailwaymap.root + "/locales/" + langcodes[params['lang']] + "/LC_MESSAGES/messages.json", function(response)
 	{
-		updatePermalink(MapCSS.availableStyles[0]);
-	});
+		window.openrailwaymap.translations = JSON.parse(response);
 
-	// railmap layer
-	railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.json',
-	{
-		attribution: _("Rendering: OpenRailwayMap"),
-		minZoom: 2,
-		maxZoom: 19
-	});
-
-	MapCSS.preloadSpriteImage("standard", root+"styles/standard.png");
-	MapCSS.preloadSpriteImage("signals", root+"styles/signals.png");
-	MapCSS.preloadSpriteImage("maxspeed", root+"styles/maxspeed.png");
-	MapCSS.preloadSpriteImage("electrified", root+"styles/electrified.png");
-
-	setupControls();
-
-	MapCSS.onImagesLoad = function()
-	{
-		map.addLayer(railmap);
-
-		map.on('zoomend', function(e)
+		if (params['offset'] != null)
+			offset = params['offset'];
+		else
 		{
-			updateLegend("legend", MapCSS.availableStyles[0]);
+			// get time offset to UTC
+			var now = new Date();
+			offset = -(now.getTimezoneOffset() / 60);
+		}
+
+		map = L.map('mapFrame');
+
+		map.on('moveend', function(e)
+		{
 			updatePermalink(MapCSS.availableStyles[0]);
-			railmap.redraw();
 		});
 
-		if (params['style'] != null && styleValid(params['style']))
-			setStyle(params['style']);
-		else
-			setStyle("standard");
-	};
-
-	// only in not-embed mode
-	if (!embed)
-	{
-		// loading timestamp
-		var timestamp = new Timestamp("info");
-		// create search
-		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
-		// build style selection and it's event handling
-		getStyleSelection();
-		// setting start position
-		startposition = new Startposition(map);
-		// onclick event of locate button
-		gEBI("locateButton").onclick = function()
+		// railmap layer
+		railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.json',
 		{
-			startposition.setPosition();
+			attribution: _("Rendering: OpenRailwayMap"),
+			minZoom: 2,
+			maxZoom: 19
+		});
+
+		MapCSS.preloadSpriteImage("standard", window.openrailwaymap.root+"styles/standard.png");
+		MapCSS.preloadSpriteImage("signals", window.openrailwaymap.root+"styles/signals.png");
+		MapCSS.preloadSpriteImage("maxspeed", window.openrailwaymap.root+"styles/maxspeed.png");
+		MapCSS.preloadSpriteImage("electrified", window.openrailwaymap.root+"styles/electrified.png");
+
+		setupControls();
+
+		MapCSS.onImagesLoad = function()
+		{
+			map.addLayer(railmap);
+
+			map.on('zoomend', function(e)
+			{
+				updateLegend("legend", MapCSS.availableStyles[0]);
+				updatePermalink(MapCSS.availableStyles[0]);
+				railmap.redraw();
+			});
+
+			if (params['style'] != null && styleValid(params['style']))
+				setStyle(params['style']);
+			else
+				setStyle("standard");
 		};
-		// initialize the permalink url
-		updatePermalink(MapCSS.availableStyles[0]);
-	}
-	else
-	{
-		// setting start position
-		startposition = new Startposition(map);
-	}
+
+		// only in not-embed mode
+		if (!embed)
+		{
+			// loading timestamp
+			var timestamp = new Timestamp("info");
+			// create search
+			search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
+			// build style selection and it's event handling
+			getStyleSelection();
+			// setting start position
+			startposition = new Startposition(map);
+			// onclick event of locate button
+			gEBI("locateButton").onclick = function()
+			{
+				startposition.setPosition();
+			};
+			// initialize the permalink url
+			updatePermalink(MapCSS.availableStyles[0]);
+		}
+		else
+		{
+			// setting start position
+			startposition = new Startposition(map);
+		}
+	});
 }
 
 
@@ -127,7 +128,7 @@ function getStyleSelection()
 {
 	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><b>'+_("Select a map style")+':</b><br /><p>';
 	for (var i=0; i<MapCSS.availableStyles.length; i++)
-		gEBI('styleSelectionBar').innerHTML += '<label><input onchange="setStyle(this.value)" type="radio" name="style" value="'+MapCSS.availableStyles[i]+'">'+_(availableStyles[MapCSS.availableStyles[i]])+'</label><br />';
+		gEBI('styleSelectionBar').innerHTML += '<label><input onchange="setStyle(this.value)" type="radio" name="style" value="'+MapCSS.availableStyles[i]+'">'+_(window.openrailwaymap.availableStyles[MapCSS.availableStyles[i]])+'</label><br />';
 	gEBI('styleSelectionBar').innerHTML += '</p></form>';
 }
 

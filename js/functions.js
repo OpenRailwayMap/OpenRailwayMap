@@ -34,7 +34,7 @@ langcodes = {
 // reload the legend after changing zoomlevel or stylesheet
 function updateLegend(id, style)
 {
-	gEBI(id).src = root+"api/legend-generator.php?zoom="+map.getZoom()+"&style="+style+"&lang="+params['lang'];
+	gEBI(id).src = window.openrailwaymap.root+"api/legend-generator.php?zoom="+map.getZoom()+"&style="+style+"&lang="+params['lang'];
 }
 
 
@@ -101,7 +101,7 @@ function getRequest(url, handler)
 // perform an async API request
 function requestAPI(request, params, handler)
 {
-	getRequest(apiUrl + request + '?' + params.replace(/ /g, '+'), handler);
+	getRequest(window.openrailwaymap.apiUrl + request + '?' + params.replace(/ /g, '+'), handler);
 }
 
 
@@ -242,7 +242,7 @@ function setupControls()
 	});
 
 	// blank background map
-	var blank = new L.TileLayer(root+'/img/blank.png',
+	var blank = new L.TileLayer(window.openrailwaymap.root+'/img/blank.png',
 	{
 		maxZoom: 20
 	});
@@ -269,13 +269,13 @@ function setupControls()
 
 function _(sourcemsg, n)
 {
-	if (typeof translations[sourcemsg] === 'undefined')
+	if (typeof window.openrailwaymap.translations[sourcemsg] === 'undefined')
 		return sourcemsg;
 
 	if (n === undefined)
-		return translations[sourcemsg][1];
+		return window.openrailwaymap.translations[sourcemsg][1];
 
-	var pluralForms = translations[""]["Plural-Forms"].match(/plural=(.*);/)[1];
+	var pluralForms = window.openrailwaymap.translations[""]["Plural-Forms"].match(/plural=(.*);/)[1];
 	var pluralIndex = eval(pluralForms.replace(/n/), n) + 1;
-	return translations[sourcemsg][pluralIndex].replace(/%d/, n);
+	return window.openrailwaymap.translations[sourcemsg][pluralIndex].replace(/%d/, n);
 }
