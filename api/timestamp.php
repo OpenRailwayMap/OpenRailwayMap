@@ -42,6 +42,15 @@
 			echo "NULL";
 	}
 
+
+	// beginning of xml output: header, first root element
+	function xmlStart($root)
+	{
+		header("Content-Type: application/xml; charset=UTF-8");
+		return "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<".$root.">\n";
+	}
+
+
 	// output of timestamp data in plain text format, given: timestamp of last update, offset to user's timezone in hours, lang
 	function textTimestampOut($lastupdate, $offset = 0)
 	{

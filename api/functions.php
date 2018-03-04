@@ -142,30 +142,6 @@
 	}
 
 
-	// returns a lat/lon pair for a given IP by requesting hostip.info
-	function getPositionByIp($ip)
-	{
-		if (!$ip)
-			return false;
-
-		// request location for api
-		$url = "http://api.hostip.info/?ip=".$ip;
-		$response = apiRequest($url);
-		$data = $response[0];
-		if (!$data)
-		{
-			reportError("Location request by IP didn't reponse.");
-			return false;
-		}
-
-		// extract lat/lon and return string
-		$data = explode("tes>", $data);
-		$data = explode("</gml:coo", $data[1]);
-
-		return $data[0];
-	}
-
-
 	// checks if given offset-parameter is valid and takes standard value if missing
 	function offset($offset)
 	{
@@ -216,33 +192,6 @@
 		}
 
 		return $coordinates;
-	}
-
-
-	// requests a given url by using curl and returns the response
-	function apiRequest($url)
-	{
-		if (!$url)
-			return false;
-		$c = curl_init();
-		curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($c, CURLOPT_URL, $url);
-		curl_setopt($c, CURLOPT_USERAGENT, $useragent);
-		$response = curl_exec($c);
-		$info = curl_getinfo($c);
-		curl_close($c);
-		if ($response && $info)
-			return array($response, $info);
-
-		return false;
-	}
-
-
-	// beginning of xml output: header, first root element
-	function xmlStart($root)
-	{
-		header("Content-Type: application/xml; charset=UTF-8");
-		return "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<".$root.">\n";
 	}
 
 
@@ -329,19 +278,6 @@
 		}
 
 		return true;
-	}
-
-
-	// produces a JSON(P) output
-	function jsonOutput($data, $callback)
-	{
-		header("Content-Type: application/json; charset=UTF-8");
-		$jsonData = json_encode($data);
-		// JSONP request?
-		if (isset($callback))
-			echo $callback.'('.$jsonData.')';
-		else
-			echo $jsonData;
 	}
 
 
