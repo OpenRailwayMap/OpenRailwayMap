@@ -97,6 +97,13 @@
 		<meta name="apple-mobile-web-app-title" content="OpenRailwayMap">
 		<link rel="manifest" href="webapp-manifest.json">
 		<meta name="theme-color" content="#4e9a06">
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@openrailwaymap" />
+		<meta name="twitter:title" content="OpenRailwayMap" />
+		<meta name="twitter:description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&amp;#39;s railway infrastructure." />
+		<meta name="twitter:url" content="https://www.openrailwaymap.org/">
+		<meta name="twitter:image" content="https://www.openrailwaymap.org/img/openrailwaymap-310.png" />
 	</head>
 	<body onload="createMap(false);">
 		<div id="moreInfo" class="moreInfoFalse"></div>
