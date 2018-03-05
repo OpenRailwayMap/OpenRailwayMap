@@ -18,24 +18,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>OpenRailwayMap</title>
+		<meta charset="utf-8">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="content-language" content="<?php echo $lang; ?>" />
-		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte" />
+
+		<title>OpenRailwayMap</title>
 		<meta name="title" content="OpenRailwayMap" />
-		<meta name="author" content="rurseekatze, Alexander Matheisen" />
-		<meta name="publisher" content="rurseekatze, Alexander Matheisen" />
-		<meta name="copyright" content="GNU General Public License v3" />
-		<meta name="revisit-after" content="after 90 days" />
-		<meta name="date" content="2010-01-01" />
+		<meta name="application-name" content="OpenRailwayMap" />
 		<meta name="page-topic" content="OpenRailwayMap" />
+		<meta name="description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&#39;s railway infrastructure." />
+		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte" />
 		<meta name="robots" content="index,follow" />
+
 		<link rel="shortcut icon" href="img/openrailwaymap-16.png" type="image/png" />
 		<link rel="icon" href="img/openrailwaymap-16.png" type="image/png" />
+
 		<meta http-equiv="content-script-type" content="text/javascript" />
 		<meta http-equiv="content-style-type" content="text/css" />
+
 		<link rel="stylesheet" type="text/css" href="css/embed.css" />
-		<link rel="stylesheet" href="css/leaflet.css" />
+		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+
 		<script type="text/javascript" src="js/leaflet.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
 		<?php
