@@ -110,6 +110,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-title" content="OpenRailwayMap">
 		<link rel="manifest" href="webapp-manifest.json">
+		<meta name="theme-color" content="#4e9a06">
 	</head>
 	<body onload="createMap(false);">
 		<div id="fullscreen" class="fullscreenOut"></div>
