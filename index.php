@@ -92,6 +92,13 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-title" content="OpenRailwayMap">
 		<link rel="manifest" href="webapp-manifest.json">
+
+		<meta property="og:site_name" content="OpenRailwayMap" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="img/openrailwaymap-600.png" />
+		<meta property="og:title" content="OpenRailwayMap" />
+		<meta property="og:url" content="https://www.openrailwaymap.org/" />
+		<meta property="og:description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&#39;s railway infrastructure." />
 	</head>
 	<body onload="createMap(false);">
 		<div id="moreInfo" class="moreInfoFalse"></div>
