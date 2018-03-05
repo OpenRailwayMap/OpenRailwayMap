@@ -31,8 +31,8 @@
 		<meta name="page-topic" content="OpenRailwayMap" />
 		<meta name="robots" content="index,follow" />
 
-		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap Deutsch" href="http://blog.openrailwaymap.org/de.rss" hreflang="de" />
-		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap English" href="http://blog.openrailwaymap.org/en.rss" hreflang="en" />
+		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap Deutsch" href="https://blog.openrailwaymap.org/de.rss" hreflang="de" />
+		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap English" href="https://blog.openrailwaymap.org/en.rss" hreflang="en" />
 
 		<link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="OpenRailwayMap" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
