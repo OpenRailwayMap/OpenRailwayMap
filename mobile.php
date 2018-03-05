@@ -30,7 +30,10 @@
 		<meta name="date" content="2010-01-01" />
 		<meta name="page-topic" content="OpenRailwayMap" />
 		<meta name="robots" content="index,follow" />
-		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap RSS Feed" href="http://www.matheisen.org/<?php echo ($lang == 'de') ? 'de' : 'en'; ?>/orm.rss" />
+
+		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap Deutsch" href="http://blog.openrailwaymap.org/de.rss" />
+		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap English" href="http://blog.openrailwaymap.org/en.rss" />
+
 		<link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="OpenRailwayMap" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<link rel="shortcut icon" href="img/openrailwaymap-16.png" type="image/png" />
