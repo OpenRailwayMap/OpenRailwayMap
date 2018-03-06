@@ -18,8 +18,8 @@ function Timestamp(box)
 			{
 				self.show(response.responseText);
 			}
-		requestApi("timestamp", "format=text&offset="+offset+"&lang="+params['lang'], handler);
-    }
+		requestAPI("timestamp", "format=text&offset="+offset+"&lang="+params['lang'], handler);
+	}
 
 	// shows the requested timestamp
 	this.show = function(response)
