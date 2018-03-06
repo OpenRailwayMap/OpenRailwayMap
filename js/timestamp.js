@@ -24,7 +24,7 @@ function Timestamp(box)
 	// shows the requested timestamp
 	this.show = function(response)
 	{
-		if ((response.length > 0) && (response != "NULL"))
+		if (response && (response.length > 0) && (response != "NULL"))
 			this.box.innerHTML = translations['update']+":<br />"+response;
 	}
 
