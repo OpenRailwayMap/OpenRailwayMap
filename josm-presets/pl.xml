@@ -42,6 +42,8 @@
 		</item>
 		<group icon="rail.png" name="Track Usage" pl.name="Użycie torów">
 			<item icon="rail.png" name="Main track" pl.name="Tor główny" type="way">
+				<!-- FIXME: this preset is not detected -->
+				<key key="service"/>
 				<label pl.text="Nie używaj tego szablonu dla torów linii przemysłowych (fabryk, kopalń, portów) i wojskowych." text="Don't use this preset for industrial railway lines (harbours, mines, large factories) and military lines."/>
 				<text key="name" pl.text="Nazwa toru" text="Railway name"/>
 				<text key="ref" pl.text="Numer linii" text="Line reference"/>
@@ -54,7 +56,6 @@
 					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
 					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
 				</combo>
-				<key key="service" value=""/>
 				<check key="highspeed" pl.text="Linia dużych prędkości (powyżej 200 km/h)" text="High-speed line (over 200 km/h)"/>
 			</item>
 			<item icon="crossover-track.svg" name="Crossover track" pl.name="Łącznica">
