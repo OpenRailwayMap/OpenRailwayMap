@@ -3,6 +3,12 @@
 	<chunk id="rail_infrastructure_operator">
 		<combo display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Zarządca infrastruktury" text="Infrastructure operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
 	</chunk>
+	<chunk id="traffic_modes">
+		<check key="train" pl.text="Używany w ruchu kolejowym?" text="Railway traffic?"/>
+		<check key="light_rail" pl.text="Używany w ruchu [szybkiej] kolei miejskiej?" text="Light rail traffic?"/>
+		<check key="subway" pl.text="Używany przez metro?" text="Subway traffic?"/>
+		<check key="tram" pl.text="Używany w ruchu tramwajów?" text="Tram traffic?"/>
+	</chunk>
 	<group icon="signals.png" name="OpenRailwayMap PL: infrastructure" pl.name="OpenRailwayMap PL: infrastruktura">
 		<item icon="rail.png" name="Track" pl.name="Tor" type="way">
 			<combo key="railway" match="keyvalue!" pl.text="Typ toru" text="Type of track">
@@ -365,11 +371,8 @@
 				<text key="uic_ref" pl.text="Numer UIC" text="UIC-ID"/>
 				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
 				<text key="local_ref" pl.text="Numer toru (np. 5a)" text="track number (e.g. 5 or 5a)"/>
-				<check key="train" pl.text="Używany w ruchu kolejowym?" text="Railway traffic?"/>
-				<check key="light_rail" pl.text="Używany w ruchu szybkiej (lekkiej) kolei miejskiej?" text="Light rail traffic?"/>
-				<check key="subway" pl.text="Używany przez metro?" text="Subway traffic?"/>
-				<check key="tram" pl.text="Używany w ruchu tramwajów?" text="Tram traffic?"/>
 				<reference ref="rail_infrastructure_operator"/>
+				<reference ref="traffic_modes"/>
 				<text key="network" pl.text="Sieć" text="Network"/>
 				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
 				<text key="railway:position" pl.text="Pozycja (np. 12.3) [km]" text="Distance indication (rounded, e.g. '12.3'; km)"/>
@@ -390,10 +393,7 @@
 				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
 				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
 				<reference ref="rail_infrastructure_operator"/>
-				<check key="train" pl.text="Używany w ruchu kolejowym?" text="Railway traffic?"/>
-				<check key="light_rail" pl.text="Używany przez szybką (lekką) kolej miejską?" text="Light rail traffic?"/>
-				<check key="subway" pl.text="Używany przez metro?" text="Subway traffic?"/>
-				<check key="tram" pl.text="Używany przez tramwaje?" text="Tram traffic?"/>
+				<reference ref="traffic_modes"/>
 				<roles>
 					<role count="1" key="" pl.text="Posterunek (punkt/obszar)" requisite="required" text="Railway facility node/area" type="node,closedway"/>
 					<role key="stop" pl.text="Miejsce zatrzymania" requisite="required" text="Stop positions" type="node"/>
@@ -499,10 +499,7 @@
 			<combo display_values="yes,no,incorrect" key="tactile_paving" pl.display_values="tak,nie,nieprawidłowe" pl.text="Wyczuwalne/dotykowe oznakowanie poziome" text="Tactile Paving" values="yes,no,incorrect"/>
 			<combo default="" display_values="190,380,550,760,920,960,1300" key="height" pl.display_values="190,380,550,760,920,960,1300" pl.text="Wysokość [mm]" text="Height [mm]" values="0.19,0.38,0.55,0.76,0.92,0.96,0.130" values_sort="false"/>
 			<text key="operator" pl.text="Operator" text="operator"/>
-			<check key="train" pl.text="Używany w ruchu kolejowym?" text="Railway traffic?"/>
-			<check key="light_rail" pl.text="Używany przez szybką (lekką) kolej miejską?" text="Light rail traffic?"/>
-			<check key="subway" pl.text="Używany przez metro?" text="Subway traffic?"/>
-			<check key="tram" pl.text="Używany przez tramwaje?" text="Tram traffic?"/>
+			<reference ref="traffic_modes"/>
 		</item>
 		<item name="Ticket Counter" pl.name="Kasa biletowa" type="node">
 			<label pl.text="Kasa biletowa" text="Ticket Counter"/>
