@@ -9,6 +9,9 @@ This is free software, and you are welcome to redistribute it under certain cond
 See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" description="Preset to tag Polish railway infrastructure" shortdescription="OpenRailwayMap infrastructure PL" version="2018-03-21">
+	<chunk id="rail_infrastructure_operator">
+		<combo display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="Operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+	</chunk>
 	<group icon="signals.png" name="OpenRailwayMap infrastructure PL" pl.name="Polska infrastruktura OpenRailwayMap">
 		<item icon="rail.png" name="Track" pl.name="Tor" type="way">
 			<combo key="railway" match="keyvalue!" pl.text="Typ toru" text="Type of track">
@@ -33,7 +36,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<list_entry display_value="backward" pl.display_value="do tyłu" pl.short_description="Tor jest używany w kierunku przeciwnym do kierunku linii w OSM." short_description="The track is used in the other direction than the OSM way." value="backward"/>
 				<list_entry display_value="both" pl.display_value="w obu kierunkach" value="both"/>
 			</combo>
-			<combo display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="Operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+			<reference ref="rail_infrastructure_operator"/>
 			<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 			<text key="end_date" pl.text="Data likwidacji w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="End date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 			<preset_link preset_name="Main track"/>
@@ -208,7 +211,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<text key="name" pl.text="Nazwa (np. Rybnik RbA)" text="Name (eg. Rybnik RbA)"/>
 			<text key="railway:ref" pl.text="Identyfikator (np. RbA)" text="Identifier (eg. RbA)"/>
 			<combo display_values="mechanical,electric,diagram-based,electronic" key="railway:signal_box" pl.display_values="mechaniczna,elektryczna,oparta na diagramach,elektroniczna" pl.text="Rodzaj nastawni" text="Signal box type" values="mechanical,electric,track_diagram,electronic"/>
-			<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+			<reference ref="rail_infrastructure_operator"/>
 			<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 			<text key="railway:position" pl.text="Pozycja (np. 12.3) [km]" text="Distance indication (rounded, e.g. '12.3'; km)"/>
 			<text key="railway:position:exact" pl.text="Dokładna pozycja (np. 12.345) [km]" text="Exact distance indication (exact, e.g. '12.345'; km)"/>
@@ -229,7 +232,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="uic_ref" pl.text="Identyfikator UIC" text="UIC-ID"/>
 				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
 				<combo display_values="tourist,local,regional,conurbation,voivodeship,premium" key="railway:station_category" pl.display_values="turystyczna,lokalna,regionalna,aglomeracyjna,wojewódzka,premium" pl.text="Kategoria" text="Station category" values="PL:tourist,PL:local,PL:regional,PL:conurbation,PL:voivodeship,PL:premium"/>
-				<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+				<reference ref="rail_infrastructure_operator"/>
 				<text key="network" pl.text="Sieć" text="Network"/>
 				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
@@ -246,7 +249,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="uic_ref" pl.text="Identyfikator UIC" text="UIC-ID"/>
 				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
 				<combo display_values="tourist,local,regional,conurbation,voivodeship,premium" key="railway:station_category" pl.display_values="turystyczna,lokalna,regionalna,aglomeracyjna,wojewódzka,premium" pl.text="Kategoria" text="Station category" values="PL:tourist,PL:local,PL:regional,PL:conurbation,PL:voivodeship,PL:premium"/>
-				<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+				<reference ref="rail_infrastructure_operator"/>
 				<text key="network" pl.text="Sieć" text="Network"/>
 				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
@@ -273,7 +276,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway" value="yard"/>
 				<text key="name" pl.text="Nazwa" text="Name"/>
 				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
-				<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+				<reference ref="rail_infrastructure_operator"/>
 				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
 				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
@@ -285,7 +288,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway" value="service_station"/>
 				<text key="name" pl.text="Nazwa" text="Name"/>
 				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
-				<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+				<reference ref="rail_infrastructure_operator"/>
 				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
 				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
@@ -298,7 +301,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway" value="junction"/>
 				<text key="name" pl.text="Nazwa" text="Name"/>
 				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
-				<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+				<reference ref="rail_infrastructure_operator"/>
 				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
 				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
@@ -311,7 +314,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway" value="spur_junction"/>
 				<text key="name" pl.text="Nazwa" text="Name"/>
 				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
-				<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+				<reference ref="rail_infrastructure_operator"/>
 				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
 				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
@@ -323,7 +326,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway" value="crossover"/>
 				<text key="name" pl.text="Nazwa" text="Name"/>
 				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
-				<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+				<reference ref="rail_infrastructure_operator"/>
 				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
 				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
@@ -335,7 +338,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway" value="site"/>
 				<text key="name" pl.text="Nazwa" text="Name"/>
 				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
-				<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+				<reference ref="rail_infrastructure_operator"/>
 				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
 				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
@@ -357,7 +360,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<check key="light_rail" pl.text="Używany w ruchu szybkiej (lekkiej) kolei miejskiej?" text="Light rail traffic?"/>
 				<check key="subway" pl.text="Używany przez metro?" text="Subway traffic?"/>
 				<check key="tram" pl.text="Używany w ruchu tramwajów?" text="Tram traffic?"/>
-				<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+				<reference ref="rail_infrastructure_operator"/>
 				<text key="network" pl.text="Sieć" text="Network"/>
 				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
 				<text key="railway:position" pl.text="Pozycja (np. 12.3) [km]" text="Distance indication (rounded, e.g. '12.3'; km)"/>
@@ -377,7 +380,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="uic_ref" pl.text="Numer UIC" text="UIC-ID"/>
 				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
 				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
-				<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+				<reference ref="rail_infrastructure_operator"/>
 				<check key="train" pl.text="Używany w ruchu kolejowym?" text="Railway traffic?"/>
 				<check key="light_rail" pl.text="Używany przez szybką (lekką) kolej miejską?" text="Light rail traffic?"/>
 				<check key="subway" pl.text="Używany przez metro?" text="Subway traffic?"/>
@@ -402,7 +405,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<text key="ref" pl.text="Numer (np. 140)" text="Ref (eg. 140)"/>
 			<text key="from" pl.text="Stacja początkowa" text="Initial station"/>
 			<text key="to" pl.text="Stacja końcowa" text="Terminus station"/>
-			<combo default="" display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Operator" text="operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+			<reference ref="rail_infrastructure_operator"/>
 			<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
 			<roles>
 				<role key="" pl.text="Tor linii" requisite="required" text="Tracks" type="way"/>
