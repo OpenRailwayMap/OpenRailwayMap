@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-OpenRailwayMap JOSM Presets file
-Edition for Polish railways (in Polish)
-
-OpenRailwayMap Copyright (C) 2012–2015 Alexander Matheisen and others
-This program comes with ABSOLUTELY NO WARRANTY.
-This is free software, and you are welcome to redistribute it under certain conditions.
-See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
--->
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" description="Preset to tag Polish railway infrastructure" shortdescription="OpenRailwayMap infrastructure PL" version="2018-03-21">
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Grzegorz Szymaszek" pl.shortdescription="OpenRailwayMap PL: infrastruktura" shortdescription="OpenRailwayMap PL: infrastructure" version="2018-03-23">
 	<chunk id="rail_infrastructure_operator">
 		<combo display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Zarządca infrastruktury" text="Infrastructure operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
 	</chunk>
-	<group icon="signals.png" name="OpenRailwayMap infrastructure PL" pl.name="Polska infrastruktura OpenRailwayMap">
+	<group icon="signals.png" name="OpenRailwayMap PL: infrastructure" pl.name="OpenRailwayMap PL: infrastruktura">
 		<item icon="rail.png" name="Track" pl.name="Tor" type="way">
 			<combo key="railway" match="keyvalue!" pl.text="Typ toru" text="Type of track">
 				<list_entry display_value="Heavy Railway" pl.display_value="zwykły tor" value="rail"/>
