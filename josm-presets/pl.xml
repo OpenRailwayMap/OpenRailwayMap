@@ -41,7 +41,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<text key="end_date" pl.text="Data likwidacji w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="End date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
 			<preset_link preset_name="Main track"/>
 			<preset_link preset_name="Siding track"/>
-			<preset_link preset_name="Yard and spur track"/>
+			<preset_link preset_name="Crossover track"/>
+			<preset_link preset_name="Spur track"/>
+			<preset_link preset_name="Yard track"/>
 			<preset_link preset_name="Electrification"/>
 			<preset_link preset_name="Train protection, radio"/>
 			<preset_link preset_name="Speed limit"/>
@@ -53,45 +55,60 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<text key="name" pl.text="Nazwa toru" text="Railway name"/>
 				<text key="ref" pl.text="Numer linii" text="Line reference"/>
 				<text key="railway:track_ref" pl.text="Numer toru (na stacji)" text="Track ref (inside station)"/>
-				<combo key="usage" pl.text="Użycie" text="Usage">
-					<list_entry display_value="main line" match="keyvalue!" pl.display_value="linia główna" pl.short_description="Ważna linia kolejowa, często dwutorowa, zelektryfikowana, o prędkości konstrukcyjnej powyżej 100 km/h." short_description="An important line; often double tracks, electrified; usually more than 100 km/h" value="main"/>
-					<list_entry display_value="branch" match="keyvalue!" pl.display_value="odgałęzienie" pl.short_description="Mniej ważna linia, często jednotorowa, niezelektryfikowana, prędkość konstrukcyjna poniżej 100 km/h." short_description="less important line; often single-tracked; not electrified; less than 100 km/h" value="branch"/>
-					<list_entry display_value="industrial" match="keyvalue!" pl.display_value="przemysł" value="industrial"/>
-					<list_entry display_value="military" match="keyvalue!" pl.display_value="wojsko" value="military"/>
-					<list_entry display_value="tourism" match="keyvalue!" pl.display_value="turystyka" value="tourism"/>
-					<list_entry display_value="test" match="keyvalue!" pl.display_value="tor testowy" value="test"/>
+				<combo key="usage" match="keyvalue!" pl.text="Użycie" text="Usage">
+					<list_entry display_value="main line" pl.display_value="linia główna" pl.short_description="Ważna linia kolejowa, często dwutorowa, zelektryfikowana, o prędkości konstrukcyjnej powyżej 100 km/h." short_description="An important line; often double tracks, electrified; usually more than 100 km/h" value="main"/>
+					<list_entry display_value="branch" pl.display_value="odgałęzienie" pl.short_description="Mniej ważna linia, często jednotorowa, niezelektryfikowana, prędkość konstrukcyjna poniżej 100 km/h." short_description="less important line; often single-tracked; not electrified; less than 100 km/h" value="branch"/>
+					<list_entry display_value="industrial" pl.display_value="przemysł" value="industrial"/>
+					<list_entry display_value="military" pl.display_value="wojsko" value="military"/>
+					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
+					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
 				</combo>
 				<key key="service" value=""/>
 				<check key="highspeed" pl.text="Linia dużych prędkości (powyżej 200 km/h)" text="High-speed line (over 200 km/h)"/>
 			</item>
-			<item icon="siding-32.png" name="Siding track" pl.name="Tor dodatkowy" type="way">
+			<item icon="crossover-track.svg" name="Crossover track" pl.name="Łącznica">
+				<label pl.text="Połączenie pomiędzy torami głównymi" text="Connection between main tracks"/>
+				<key key="service" value="crossover"/>
 				<text key="railway:track_ref" pl.text="Numer toru (na stacji)" text="Track ref (inside station)"/>
 				<space/>
 				<combo editable="false" key="usage" pl.text="Użycie" text="Usage">
-					<list_entry display_value="industrial" match="keyvalue!" pl.display_value="przemysł" value="industrial"/>
-					<list_entry display_value="military" match="keyvalue!" pl.display_value="wojsko" value="military"/>
-					<list_entry display_value="tourism" match="keyvalue!" pl.display_value="turystyka" value="tourism"/>
-					<list_entry display_value="test" match="keyvalue!" pl.display_value="tor testowy" value="test"/>
-				</combo>
-				<space/>
-				<combo editable="false" key="service" pl.text="Rola" text="Purpose">
-					<list_entry display_value="siding track" match="keyvalue" pl.display_value="mijanka" pl.short_description="Tor jest używany przez pociągi, które mają zostać wyprzedzone lub czekające na pociągi z innego kierunku." short_description="Track is used by trains to be overtaken or at stations or to wait meeting a train of the other direction. There are main signals." value="siding"/>
-					<list_entry display_value="crossover track" match="keyvalue" pl.display_value="łącznica" pl.short_description="Łącznica pomiędzy dwoma głównymi torami." short_description="connects two main tracks" value="crossover"/>
+					<list_entry display_value="industrial" pl.display_value="przemysł" value="industrial"/>
+					<list_entry display_value="military" pl.display_value="wojsko" value="military"/>
+					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
+					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
 				</combo>
 			</item>
-			<item icon="spur-25.png" name="Yard and spur track" pl.name="Bocznica, tor rozrządowy" type="way">
+			<item icon="siding-32.png" name="Siding track" pl.name="Tor dodatkowy" type="way">
+				<key key="service" value="siding"/>
 				<text key="railway:track_ref" pl.text="Numer toru (na stacji)" text="Track ref (inside station)"/>
 				<space/>
 				<combo editable="false" key="usage" pl.text="Użycie" text="Usage">
-					<list_entry display_value="industrial" match="keyvalue!" pl.display_value="przemysł" value="industrial"/>
-					<list_entry display_value="military" match="keyvalue!" pl.display_value="wojsko" value="military"/>
-					<list_entry display_value="tourism" match="keyvalue!" pl.display_value="turystyka" value="tourism"/>
-					<list_entry display_value="test" match="keyvalue!" pl.display_value="tor testowy" value="test"/>
+					<list_entry display_value="industrial" pl.display_value="przemysł" value="industrial"/>
+					<list_entry display_value="military" pl.display_value="wojsko" value="military"/>
+					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
+					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
 				</combo>
+			</item>
+			<item icon="spur-25.png" name="Spur track" pl.name="Bocznica" type="way">
+				<key key="service" value="spur"/>
+				<text key="railway:track_ref" pl.text="Numer toru (na stacji)" text="Track ref (inside station)"/>
 				<space/>
-				<combo editable="false" key="service" pl.text="Rola" text="Purpose">
-					<list_entry display_value="siding track" match="keyvalue" pl.display_value="mijanka" pl.short_description="Tor jest używany przez pociągi, które mają zostać wyprzedzone lub czekające na pociągi z innego kierunku." short_description="Track is used by trains to be overtaken or at stations or to wait meeting a train of the other direction. There are main signals." value="siding"/>
-					<list_entry display_value="crossover track" match="keyvalue" pl.display_value="łącznica" pl.short_description="Łącznica pomiędzy dwoma głównymi torami." short_description="connects two main tracks" value="crossover"/>
+				<combo editable="false" key="usage" pl.text="Użycie" text="Usage">
+					<list_entry display_value="industrial" pl.display_value="przemysł" value="industrial"/>
+					<list_entry display_value="military" pl.display_value="wojsko" value="military"/>
+					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
+					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
+				</combo>
+			</item>
+			<item icon="yard-track.svg" name="Yard track" pl.name="Tor rozrządowy" type="way">
+				<key key="service" value="yard"/>
+				<text key="railway:track_ref" pl.text="Numer toru (na stacji)" text="Track ref (inside station)"/>
+				<space/>
+				<combo editable="false" key="usage" pl.text="Użycie" text="Usage">
+					<list_entry display_value="industrial" pl.display_value="przemysł" value="industrial"/>
+					<list_entry display_value="military" pl.display_value="wojsko" value="military"/>
+					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
+					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
 				</combo>
 			</item>
 		</group>
