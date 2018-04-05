@@ -16,6 +16,9 @@ function Timestamp(box)
 		// input is in milliseconds
 		diff /= 1000;
 
+		if (diff <= 0)
+			diff = 1; // greetings from the future
+
 		// list of units and their conversion factors
 		var units = [
 			[60, "%d second"],
@@ -23,7 +26,7 @@ function Timestamp(box)
 			[24, "%d hour"],
 			[7, "%d day"],
 			[4, "%d week"],
-			[12, "%d month"]
+			[1, "%d month"] // factor one to not modify the value
 		];
 
 		// calculating difference as human readable string
@@ -34,6 +37,10 @@ function Timestamp(box)
 			else
 				break;
 		}
+
+		// no match, go back to last entry
+		if (i === units.length)
+			i--;
 
 		var human = Math.floor(diff);
 		return _(units[i][1], human);
