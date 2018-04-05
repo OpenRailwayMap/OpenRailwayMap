@@ -85,8 +85,6 @@ function getRequest(url, handler)
 		}
 		else
 		{
-			console.log('Server returned ' + request.status + ' for ' + request);
-			console.log('Server response: ' + request.responseText);
 			handler(false);
 		}
 	};
