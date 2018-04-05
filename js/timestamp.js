@@ -13,6 +13,9 @@ function Timestamp(box)
 	// returns an human-readable string of the given time difference
 	this.timeAgoString = function(diff)
 	{
+		// input is in milliseconds
+		diff /= 1000;
+
 		// list of units and their conversion factors
 		var units = [
 			[60, "%d second"],
