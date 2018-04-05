@@ -66,7 +66,7 @@ function createMap(embed)
 		});
 
 		// railmap layer
-		railmap = new L.TileLayer.Kothic(tiledir+'{z}/{x}/{y}.json',
+		railmap = new L.TileLayer.Kothic(window.openrailwaymap.tiledir+'{z}/{x}/{y}.json',
 		{
 			attribution: _("Rendering: OpenRailwayMap"),
 			minZoom: 2,
