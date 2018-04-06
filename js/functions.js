@@ -5,13 +5,12 @@ This is free software, and you are welcome to redistribute it under certain cond
 See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
-
 // returns the lang-region-code that fits the best to the user
 function getUserLang()
 {
 	// override browser settings when language is set in url
-	if (window.openrailwaymap.availableTranslations.hasOwnProperty(params['lang']))
-		return window.openrailwaymap.availableTranslations[params['lang']];
+	if (params['availableTranslations'].hasOwnProperty(params['lang']))
+		return params['availableTranslations'][params['lang']][0];
 
 	var lang = navigator.language || navigator.userLanguage || 'en-GB';
 	var languages = navigator.languages || [lang];
@@ -20,14 +19,15 @@ function getUserLang()
 	{
 		// lang-country combination as first choice
 		var langcountrycode = languages[i].replace('-', '_');
-		for (var key in window.openrailwaymap.availableTranslations)
-			if (window.openrailwaymap.availableTranslations.hasOwnProperty(key) && window.openrailwaymap.availableTranslations[key] === langcountrycode)
+		for (var key in params['availableTranslations']) {
+			if (params['availableTranslations'].hasOwnProperty(key) && params['availableTranslations'][key][0] === langcountrycode)
 				return langcountrycode;
+		}
 
 		// only lang as second choice
 		var langcode = langcountrycode.split('_')[0];
-		if (window.openrailwaymap.availableTranslations.hasOwnProperty(langcode))
-			return window.openrailwaymap.availableTranslations[langcode];
+		if (params['availableTranslations'].hasOwnProperty(langcode))
+			return params['availableTranslations'][langcode][0];
 	}
 
 	return 'en_GB';
