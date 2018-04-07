@@ -28,6 +28,14 @@ td:first-child
 	height: 16px;
 }
 
+td.section {
+	width: 100%;
+	font-weight: bold;
+	font-size: 12px;
+	height: 1.6em;
+	padding-top: 1em;
+}
+
 svg
 {
 	height: 16px;

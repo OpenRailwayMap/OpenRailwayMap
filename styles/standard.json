@@ -3,6 +3,10 @@
 	"mapfeatures":
 	[
 		{
+			"minzoom": 2,
+			"heading": "Track type"
+		},
+		{
 			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"#797979\" stroke-width=\"10.5\"><path stroke-linecap=\"butt\" d=\"M9 8 l24 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"3.5\"><path stroke-linecap=\"round\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Bridge"
@@ -26,6 +30,10 @@
 			"minzoom": 10,
 			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"4.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
 			"caption": "Narrow gauge track"
+		},
+		{
+			"minzoom": 2,
+			"heading": "Track usage"
 		},
 		{
 			"minzoom": 10,
@@ -172,6 +180,10 @@
 			"minzoom": 11,
 			"symbol": "<text x=\"0\" y=\"12\" style=\"font-family: Arial Black; font-size: 12px; fill: black; font-weight: bold; stroke: white; stroke-width: 0.5;\">26.4</text>",
 			"caption": "Milestone"
+		},
+		{
+			"minzoom": 8,
+			"heading": "Operating Sites"
 		},
 		{
 			"minzoom": 8,

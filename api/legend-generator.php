@@ -42,7 +42,9 @@
 				{
 					if ($zoom >= $feature['minzoom'] && (!isset($feature['maxzoom']) || $zoom <= $feature['maxzoom']))
 					{
-						if (isset($feature['replace'])) {
+						if (isset($feature['heading'])) {
+							$output .= '<tr><td colspan="2" class="section">' . htmlspecialchars(_($feature['heading'])) . "</td></tr>\n";
+						} else if (isset($feature['replace'])) {
 							foreach ($feature['replace'] as $replace) {
 								$caption = str_replace(array_keys($replace), array_values($replace), _($feature['caption']));
 								if (isset($feature['symbol']) && $feature['symbol'] != null)

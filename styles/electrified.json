@@ -45,6 +45,10 @@
 		},
 		{
 			"minzoom": 2,
+			"heading": "Voltage"
+		},
+		{
+			"minzoom": 2,
 			"replace": [
 				{ "%COLOR%":"FF79B8","%CAPTION%":"Less than 750V =" },
 				{ "%COLOR%":"F930FF","%CAPTION%":"750V =" },
@@ -65,6 +69,10 @@
 			],
 			"symbol": "<g fill='none' stroke='#%COLOR%' stroke-width='2'><path stroke-linecap='butt' d='M5 8 l32 0' /></g>",
 			"caption": "%CAPTION%"
+		},
+		{
+			"minzoom": 17,
+			"heading": "signals"
 		},
 		{
 			"minzoom": 17,
