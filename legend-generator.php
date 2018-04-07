@@ -38,7 +38,9 @@
 		<script type="text/javascript" src="renderer/kothic/utils/rbush.js"></script>
 		<script type="text/javascript" src="styles/<?php echo $_GET['style']; ?>.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
-		</script>
+		<?php
+			urlArgsToParam(false, $urlbase . '../');
+		?>
 	</head>
 	<body onload="drawLegendIcons(<?php
 		echo "$zoom, '" . $_GET['style'] . "', '" . $urlbase . "'";

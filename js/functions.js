@@ -45,112 +45,120 @@ function drawLegendIcons(zoom, st, root) {
 	MapCSS.preloadSpriteImage(st, '../styles/' + st + '.png');
 	var style = { styles: [st] };
 
+	window.openrailwaymap = {
+		'root': params['urlbase']
+	};
+
 	var handler = function(request)
 	{
-		var div = gEBI('legend-container');
-
-		var response = request.status === 200 ? request.responseText : '';
-		if (!response || response.length <= 0 || response == "NULL") {
-			var p = document.createElement('p');
-			p.appendChild(document.createTextNode('Legend not available for this style.'));
-			div.appendChild(p);
-			setIframeElementHeight(window.frameElement);
-			return;
-		}
-
-		var data = JSON.parse(response);
-		var table = document.createElement('table');
-
-		var writeLine = function(lineheight, caption, features)
+		getRequest(window.openrailwaymap.root + "locales/" + getUserLang() + "/LC_MESSAGES/messages.json", function(langresponse)
 		{
-			var tr = document.createElement('tr');
-			var td0 = document.createElement('td');
-			var td1 = document.createElement('td');
+			window.openrailwaymap.translations = JSON.parse(langresponse);
+			var div = gEBI('legend-container');
 
-			var canvas = document.createElement('canvas');
-			canvas.width = 80;
-			canvas.height = lineheight;
-			td0.appendChild(canvas);
-			tr.appendChild(td0);
-			var caption = document.createTextNode(caption);
-			td1.appendChild(caption);
-			tr.appendChild(td1);
+			var response = request.status === 200 ? request.responseText : '';
+			if (!response || response.length <= 0 || response == "NULL") {
+				var p = document.createElement('p');
+				p.appendChild(document.createTextNode('Legend not available for this style.'));
+				div.appendChild(p);
+				setIframeElementHeight(window.frameElement);
+				return;
+			}
 
-			table.appendChild(tr);
+			var data = JSON.parse(response);
+			var table = document.createElement('table');
 
-			var obj = {};
-			obj.features = features;
-			obj.granularity = 100;
-			Kothic.render(canvas, obj, zoom, style);
-		}
-
-		for (var i = 0; i < data.mapfeatures.length; i++) {
-			var feature = data.mapfeatures[i];
-
-			if (feature.minzoom && feature.minzoom > zoom)
-				continue;
-			if (feature.maxzoom && feature.maxzoom < zoom)
-				continue;
-
-			var lh = feature.lineheight || 16;
-
-			if (feature.heading) {
+			var writeLine = function(lineheight, caption, features)
+			{
 				var tr = document.createElement('tr');
 				var td0 = document.createElement('td');
-				td0.colspan = 2;
-				td0.className = 'section';
-				var caption = document.createTextNode(feature.heading);
-				td0.appendChild(caption);
+				var td1 = document.createElement('td');
+
+				var canvas = document.createElement('canvas');
+				canvas.width = 80;
+				canvas.height = lineheight;
+				td0.appendChild(canvas);
 				tr.appendChild(td0);
+				var caption = document.createTextNode(caption);
+				td1.appendChild(caption);
+				tr.appendChild(td1);
+
 				table.appendChild(tr);
-			} else if (feature.replace) {
-				var k, m, n, cp, fe;
-				for (var j = 0; j < feature.replace.length; j++) {
-					cp = feature.caption;
-					// replace caption here instead of doing it below as that
-					// would try to do the same replacement for every entry in
-					// features again.
-					for (k in feature.replace[j]) {
-						cp = cp.replace(k, feature.replace[j][k]);
-					}
-					// sadly one can't just copy feature.features here as that would be just a
-					// reference to the original object, so the original would be modified, too
-					fe = [];
-					for (m = 0; m < feature.features.length; m++) {
-						fe[m] = {};
-						fe[m].type = feature.features[m].type;
-						fe[m].coordinates = feature.features[m].coordinates;
-						// again, no deep copy
-						fe[m].properties = {};
-						for (n in feature.features[m].properties) {
-							fe[m].properties[n] = feature.features[m].properties[n];
-							for (k in feature.replace[j]) {
-								fe[m].properties[n] = fe[m].properties[n].replace(k, feature.replace[j][k]);
+
+				var obj = {};
+				obj.features = features;
+				obj.granularity = 100;
+				Kothic.render(canvas, obj, zoom, style);
+			}
+
+			for (var i = 0; i < data.mapfeatures.length; i++) {
+				var feature = data.mapfeatures[i];
+
+				if (feature.minzoom && feature.minzoom > zoom)
+					continue;
+				if (feature.maxzoom && feature.maxzoom < zoom)
+					continue;
+
+				var lh = feature.lineheight || 16;
+
+				if (feature.heading) {
+					var tr = document.createElement('tr');
+					var td0 = document.createElement('td');
+					td0.colspan = 2;
+					td0.className = 'section';
+					var caption = document.createTextNode(_(feature.heading));
+					td0.appendChild(caption);
+					tr.appendChild(td0);
+					table.appendChild(tr);
+				} else if (feature.replace) {
+					var k, m, n, cp, fe;
+					for (var j = 0; j < feature.replace.length; j++) {
+						cp = _(feature.caption);
+						// replace caption here instead of doing it below as that
+						// would try to do the same replacement for every entry in
+						// features again.
+						for (k in feature.replace[j]) {
+							cp = cp.replace(k, feature.replace[j][k]);
+						}
+						// sadly one can't just copy feature.features here as that would be just a
+						// reference to the original object, so the original would be modified, too
+						fe = [];
+						for (m = 0; m < feature.features.length; m++) {
+							fe[m] = {};
+							fe[m].type = feature.features[m].type;
+							fe[m].coordinates = feature.features[m].coordinates;
+							// again, no deep copy
+							fe[m].properties = {};
+							for (n in feature.features[m].properties) {
+								fe[m].properties[n] = feature.features[m].properties[n];
+								for (k in feature.replace[j]) {
+									fe[m].properties[n] = fe[m].properties[n].replace(k, feature.replace[j][k]);
+								}
 							}
 						}
+						writeLine(lh, cp, fe);
 					}
-					writeLine(lh, cp, fe);
+				} else {
+					writeLine(lh, _(feature.caption), feature.features);
 				}
-			} else {
-				writeLine(lh, feature.caption, feature.features);
 			}
-		}
 
-		if (table.firstChild) {
-			div.appendChild(table);
-		} else {
-			table.remove();
-			var p = document.createElement('p');
-			p.appendChild(document.createTextNode('Nothing to see in this zoom level. Please zoom in.'));
-			div.appendChild(p);
-		}
+			if (table.firstChild) {
+				div.appendChild(table);
+			} else {
+				table.remove();
+				var p = document.createElement('p');
+				p.appendChild(document.createTextNode('Nothing to see in this zoom level. Please zoom in.'));
+				div.appendChild(p);
+			}
 
-		setIframeElementHeight(window.frameElement);
+			setIframeElementHeight(window.frameElement);
+		});
 	}
 
 	var request = new XMLHttpRequest();
 
-	request.open("GET", root + '../styles/' + st + '.json', true);
+	request.open("GET", window.openrailwaymap.root + 'styles/' + st + '.json', true);
 	request.onreadystatechange = function()
 	{
 		if (request.readyState === 4)
