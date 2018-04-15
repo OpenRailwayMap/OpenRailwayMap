@@ -144,234 +144,6 @@
 		},
 		{
 			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:main":"DE-ESO:hp",
-					"railway:signal:main:form":"light"
-				}
-			}],
-			"caption": "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [40,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:main":"DE-ESO:hp",
-					"railway:signal:main:form":"light",
-					"railway:signal:main:states":"DE-ESO:hp1"
-				}},
-				{
-				"type": "Point",
-				"coordinates": [60,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:main":"DE-ESO:hp",
-					"railway:signal:main:form":"light",
-					"railway:signal:main:states":"DE-ESO:hp2"
-				}
-			}],
-			"caption": "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
-		},
-		{
-			"minzoom": 17,
-			"features": [{
-				"type": "Point",
-				"coordinates": [40,60],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:minor":"DE-ESO:sh",
-					"railway:signal:minor:form":"semaphore"
-				}},
-				{
-				"type": "Point",
-				"coordinates": [60,60],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:minor":"DE-ESO:sh",
-					"railway:signal:minor:form":"semaphore",
-					"railway:signal:minor:height":"dwarf"
-				}
-			}],
-			"caption": "Sh-Formsperrsignal (normal, Zwergsignal)"
-		},
-		{
-			"minzoom": 17,
-			"features": [{
-				"type": "Point",
-				"coordinates": [40,60],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:minor":"DE-ESO:sh",
-					"railway:signal:minor:form":"light"
-				}},
-				{
-				"type": "Point",
-				"coordinates": [60,60],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:minor":"DE-ESO:sh",
-					"railway:signal:minor:form":"light",
-					"railway:signal:minor:height":"dwarf"
-				}
-			}],
-			"caption": "Sh-Lichtsperrsignal (normal, Zwergsignal)"
-		},
-		{
-			"minzoom": 14,
-			"features": [
-				{
-				"type": "Point",
-				"coordinates": [30,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:distant":"DE-ESO:ks",
-					"railway:signal:distant:form":"light"
-				}},
-				{
-				"type": "Point",
-				"coordinates": [50,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:distant":"DE-ESO:ks",
-					"railway:signal:distant:form":"light",
-					"railway:signal:distant:repeated":"yes"
-				}},
-				{
-				"type": "Point",
-				"coordinates": [70,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:distant":"DE-ESO:ks",
-					"railway:signal:distant:form":"light",
-					"railway:signal:distant:shortened":"yes"
-				}
-			}],
-			"caption": "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:main":"DE-ESO:ks",
-					"railway:signal:main:form":"light"
-				}
-			}],
-			"caption": "Ks-Hauptsignal"
-		},
-		{
-			"minzoom": 14,
-			"features": [
-				{
-				"type": "Point",
-				"coordinates": [40,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:combined":"DE-ESO:ks",
-					"railway:signal:combined:form":"light"
-				}},
-				{
-				"type": "Point",
-				"coordinates": [60,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:combined":"DE-ESO:ks",
-					"railway:signal:combined:form":"light",
-					"railway:signal:combined:shortened":"yes"
-				}}
-			],
-			"caption": "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
-		},
-		{
-			"minzoom": 14,
-			"features": [
-				{
-				"type": "Point",
-				"coordinates": [40,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:combined":"DE-ESO:sv",
-					"railway:signal:combined:states":"DE-ESO:sv0"
-				}},
-				{
-				"type": "Point",
-				"coordinates": [60,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:combined":"DE-ESO:sv",
-					"railway:signal:combined:states":"DE-ESO:hp0"
-				}
-			}],
-			"caption": "Sv-Signal (ohne Hp 0, mit Hp 0)"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:main":"DE-ESO:ne1",
-					"railway:signal:main:form":"sign",
-					"railway:signal:main:function":"entry"
-				}
-			}],
-			"caption": "Ne 1 Trapeztafel"
-		},
-		{
-			"minzoom": 14,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:distant":"DE-ESO:so106",
-					"railway:signal:distant:form":"sign"
-				}
-			}],
-			"caption": "So 106 Kreuztafel"
-		},
-		{
-			"minzoom": 17,
-			"features": [{
-				"type": "Point",
-				"coordinates": [50,50],
-				"properties": {
-					"railway":"signal",
-					"railway:signal:direction":"forward",
-					"railway:signal:stop":"DE-ESO:ne5",
-					"railway:signal:stop:form":"sign"
-				}
-			}],
-			"caption": "Ne 5 Haltetafel"
-		},
-		{
-			"minzoom": 14,
 			"lineheight": 28,
 			"features": [{
 				"type": "Point",
@@ -410,6 +182,45 @@
 				}
 			}],
 			"caption": "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
+		},
+		{
+			"minzoom": 14,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:hp",
+					"railway:signal:main:form":"light"
+				}
+			}],
+			"caption": "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
+		},
+		{
+			"minzoom": 14,
+			"features": [{
+				"type": "Point",
+				"coordinates": [40,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:hp",
+					"railway:signal:main:form":"light",
+					"railway:signal:main:states":"DE-ESO:hp1"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [60,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:hp",
+					"railway:signal:main:form":"light",
+					"railway:signal:main:states":"DE-ESO:hp2"
+				}
+			}],
+			"caption": "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
 		},
 		{
 			"minzoom": 14,
@@ -486,6 +297,195 @@
 				}
 			}],
 			"caption": "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+		},
+		{
+			"minzoom": 14,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:ks",
+					"railway:signal:main:form":"light"
+				}
+			}],
+			"caption": "Ks-Hauptsignal"
+		},
+		{
+			"minzoom": 14,
+			"features": [
+				{
+				"type": "Point",
+				"coordinates": [40,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:combined":"DE-ESO:ks",
+					"railway:signal:combined:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [60,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:combined":"DE-ESO:ks",
+					"railway:signal:combined:form":"light",
+					"railway:signal:combined:shortened":"yes"
+				}}
+			],
+			"caption": "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
+		},
+		{
+			"minzoom": 14,
+			"features": [
+				{
+				"type": "Point",
+				"coordinates": [30,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:ks",
+					"railway:signal:distant:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:ks",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:repeated":"yes"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [70,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:ks",
+					"railway:signal:distant:form":"light",
+					"railway:signal:distant:shortened":"yes"
+				}
+			}],
+			"caption": "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
+		},
+		{
+			"minzoom": 14,
+			"features": [
+				{
+				"type": "Point",
+				"coordinates": [40,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:combined":"DE-ESO:sv",
+					"railway:signal:combined:states":"DE-ESO:sv0"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [60,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:combined":"DE-ESO:sv",
+					"railway:signal:combined:states":"DE-ESO:hp0"
+				}
+			}],
+			"caption": "Sv-Signal (ohne Hp 0, mit Hp 0)"
+		},
+		{
+			"minzoom": 17,
+			"features": [{
+				"type": "Point",
+				"coordinates": [40,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:minor":"DE-ESO:sh",
+					"railway:signal:minor:form":"semaphore"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [60,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:minor":"DE-ESO:sh",
+					"railway:signal:minor:form":"semaphore",
+					"railway:signal:minor:height":"dwarf"
+				}
+			}],
+			"caption": "Sh-Formsperrsignal (normal, Zwergsignal)"
+		},
+		{
+			"minzoom": 17,
+			"features": [{
+				"type": "Point",
+				"coordinates": [40,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:minor":"DE-ESO:sh",
+					"railway:signal:minor:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [60,60],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:minor":"DE-ESO:sh",
+					"railway:signal:minor:form":"light",
+					"railway:signal:minor:height":"dwarf"
+				}
+			}],
+			"caption": "Sh-Lichtsperrsignal (normal, Zwergsignal)"
+		},
+		{
+			"minzoom": 14,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:main":"DE-ESO:ne1",
+					"railway:signal:main:form":"sign",
+					"railway:signal:main:function":"entry"
+				}
+			}],
+			"caption": "Ne 1 Trapeztafel"
+		},
+		{
+			"minzoom": 14,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:distant":"DE-ESO:so106",
+					"railway:signal:distant:form":"sign"
+				}
+			}],
+			"caption": "So 106 Kreuztafel"
+		},
+		{
+			"minzoom": 17,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:stop":"DE-ESO:ne5",
+					"railway:signal:stop:form":"sign"
+				}
+			}],
+			"caption": "Ne 5 Haltetafel"
 		},
 		{
 			"minzoom": 14,
