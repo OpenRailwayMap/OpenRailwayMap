@@ -131,6 +131,10 @@ $ vim ~/.pgpass
 $ chmod 600 ~/.pgpass
 ```
 
+ It is important to configure the maximum number of concurrent connections to your PostgreSQL database. Otherwise it can happen that for example the database update fails because of missing free database connections. Search for the setting `max_connections` in your `postgresql.conf` and choose a value which is equal to or greater than the result of the following formula. If there are more applications connecting to PostgreSQL on your system, you have to consider them too in this calculation.
+
+    max_connections = (maxPoolSize in renderer/config.json) + (maxPoolSize in api/config.json) + (NUMPROCESSES in import/config.cfg) + (superuser_reserved_connections in postgresql.conf)
+
 ## Setting Up the Webserver and PHP
 
  We use Apache. Set up one vhost per subdomain (website, tileserver, API). They are placed at
