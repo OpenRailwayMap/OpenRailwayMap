@@ -73,7 +73,7 @@
 				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:main:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
 				<check key="railway:signal:main:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
 			</item>
-			<item name="Semafor świetlny samoczynny (dwustawna blokada liniowa)">
+			<item name="Semafor świetlny samoczynny (dwustawna blokada liniowa)" type="node">
 				<key key="railway:signal:main" value="PL-PKP:s"/>
 				<key key="railway:signal:main:form" value="light"/>
 				<key key="railway:signal:main:function" value="block"/>
@@ -88,7 +88,7 @@
 				</combo>
 				<check key="railway:signal:main:substitute_signal" text="Wskaźnik jazdy pociągu towarowego (W 22)" value_on="PL-PKP:w22"/>
 			</item>
-			<item name="Semafor świetlny samoczynny">
+			<item name="Semafor świetlny samoczynny" type="node">
 				<key key="railway:signal:combined" value="PL-PKP:s"/>
 				<key key="railway:signal:combined:form" value="light"/>
 				<key key="railway:signal:combined:function" value="block"/>
