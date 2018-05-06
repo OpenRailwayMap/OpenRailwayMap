@@ -41,7 +41,7 @@
 				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:main:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
 				<check key="railway:signal:main:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
 			</item>
-			<item name="Semafor świetlny" type="node">
+			<item name="Semafor świetlny półsamoczynny" type="node">
 				<key key="railway:signal:main" value="PL-PKP:s"/>
 				<key key="railway:signal:main:form" value="light"/>
 				<multiselect key="railway:signal:main:states" match="key" text="Podawane sygnały">
@@ -72,6 +72,38 @@
 				<combo display_values="normalny,karzełkowy" key="railway:signal:main:height" text="Wysokość [m]" values="normal,dwarf"/>
 				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:main:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
 				<check key="railway:signal:main:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
+			</item>
+			<item name="Semafor świetlny samoczynny (dwustawna blokada liniowa)">
+				<key key="railway:signal:main" value="PL-PKP:s"/>
+				<key key="railway:signal:main:form" value="light"/>
+				<key key="railway:signal:main:function" value="block"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<combo editable="false" key="railway:signal:combined:states" match="keyvalue!" text="Rodzaj blokady liniowej">
+					<list_entry display_value="jednokierunkowa" value="PL-PKP:s1;PL-PKP:s2"/>
+					<list_entry display_value="jednokierunkowa (z możliwością nadania sygnału S 1a)" value="PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2"/>
+					<list_entry display_value="dwukierunkowa" value="off;PL-PKP:s1;PL-PKP:s2"/>
+					<list_entry display_value="dwukierunkowa (z możliwością nadania sygnału S 1a)" value="off;PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2"/>
+				</combo>
+			</item>
+			<item name="Semafor świetlny samoczynny">
+				<key key="railway:signal:combined" value="PL-PKP:s"/>
+				<key key="railway:signal:combined:form" value="light"/>
+				<key key="railway:signal:combined:function" value="block"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<combo editable="false" key="railway:signal:combined:states" match="key" text="Rodzaj blokady liniowej">
+					<list_entry display_value="trzystawna jednokierunkowa" value="PL-PKP:s1;PL-PKP:s2;PL-PKP:s5"/>
+					<list_entry display_value="trzystawna jednokierunkowa (z możliwością nadania sygnału S 1a)" value="PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2;PL-PKP:s5"/>
+					<list_entry display_value="trzystawna dwukierunkowa" value="off;PL-PKP:s1;PL-PKP:s2;PL-PKP:s5"/>
+					<list_entry display_value="trzystawna dwukierunkowa (z możliwością nadania sygnału S 1a)" value="off;PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2;PL-PKP:s5"/>
+					<list_entry display_value="czterostawna jednokierunkowa" value="PL-PKP:s1;PL-PKP:s2;PL-PKP:s3;PL-PKP:s5"/>
+					<list_entry display_value="czterostawna jednokierunkowa (z możliwością nadania sygnału S 1a)" value="PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2;PL-PKP:s3;PL-PKP:s5"/>
+					<list_entry display_value="czterostawna dwukierunkowa" value="off;PL-PKP:s1;PL-PKP:s2;PL-PKP:s3;PL-PKP:s5"/>
+					<list_entry display_value="czterostawna dwukierunkowa (z możliwością nadania sygnału S 1a)" value="off;PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2;PL-PKP:s3;PL-PKP:s5"/>
+				</combo>
 			</item>
 		</group>
 		<item name="Sygnalizator powtarzający" type="node">
