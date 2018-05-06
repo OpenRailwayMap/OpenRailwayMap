@@ -77,14 +77,14 @@
 		<item name="Sygnalizator powtarzający" type="node">
 			<key key="railway:signal:main_repeated" value="PL:sp"/>
 			<key key="railway:signal:main_repeated:form" value="light"/>
-			<combo key="railway:signal:main_repeated:states" match="keyvalue!" text="Nadawane sygnały">
-				<list_entry display_value="Sp 1, Sp 2" value="PL:sp1;PL:sp2"/>
-				<list_entry display_value="Sp 1, Sp 2, Sp 3" value="PL:sp1;PL:sp2;PL:sp3"/>
-				<list_entry display_value="Sp 1, Sp 2, Sp 4" value="PL:sp1;PL:sp2;PL:sp4"/>
-				<list_entry display_value="Sp 1, Sp 2, Sp 3, Sp 4" value="PL:sp1;PL:sp2;PL:sp3;PL:sp4"/>
-			</combo>
 			<reference ref="signal_ref"/>
 			<text key="caption" text="Treść tablicy wskazującej kolejność"/>
+			<multiselect key="railway:signal:main_repeated:states" match="key" text="Nadawane sygnały">
+				<list_entry display_value="Sp 1" short_description="Semafor wskazuje sygnał Sr 1 lub S 1 Stój" value="PL:sp1"/>
+				<list_entry display_value="Sp 2" short_description="Semafor wskazuje sygnał zezwalający na jazdę z największą dozwoloną prędkością" value="PL:sp2"/>
+				<list_entry display_value="Sp 3" short_description="Semafor wskazuje sygnał zezwalający na jazdę z prędkością nieprzekraczającą 100 km/h" value="PL:sp3"/>
+				<list_entry display_value="Sp 4" short_description="Semafor wskazuje sygnał zezwalający na jazdę z prędkością zmniejszoną do 40 lub 60 km/h" value="PL:sp4"/>
+			</multiselect>
 			<check key="railway:signal:main_repeated:deactivated" text="Wyłączony z użytku"/>
 			<reference ref="signal_position"/>
 			<reference ref="signal_directions"/>
