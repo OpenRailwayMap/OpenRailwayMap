@@ -86,6 +86,7 @@
 					<list_entry display_value="dwukierunkowa" value="off;PL-PKP:s1;PL-PKP:s2"/>
 					<list_entry display_value="dwukierunkowa (z możliwością nadania sygnału S 1a)" value="off;PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2"/>
 				</combo>
+				<check key="railway:signal:main:substitute_signal" text="Wskaźnik jazdy pociągu towarowego (W 22)" value_on="PL-PKP:w22"/>
 			</item>
 			<item name="Semafor świetlny samoczynny">
 				<key key="railway:signal:combined" value="PL-PKP:s"/>
@@ -104,6 +105,7 @@
 					<list_entry display_value="czterostawna dwukierunkowa" value="off;PL-PKP:s1;PL-PKP:s2;PL-PKP:s3;PL-PKP:s5"/>
 					<list_entry display_value="czterostawna dwukierunkowa (z możliwością nadania sygnału S 1a)" value="off;PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2;PL-PKP:s3;PL-PKP:s5"/>
 				</combo>
+				<check key="railway:signal:combined:substitute_signal" text="Wskaźnik jazdy pociągu towarowego (W 22)" value_on="PL-PKP:w22"/>
 			</item>
 		</group>
 		<item name="Sygnalizator powtarzający" type="node">
