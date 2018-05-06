@@ -129,12 +129,12 @@
 				<key key="railway:signal:distant" value="PL:o"/>
 				<key key="railway:signal:distant:form" value="light"/>
 				<reference ref="signal_ref"/>
-				<combo key="railway:signal:distant:states" match="keyvalue!" text="Nadawane sygnały">
-					<list_entry display_value="Os 1, Os 2" value="PL:os1;PL:os2"/>
-					<list_entry display_value="Os 1, Os 2, Os 3" value="PL:os1;PL:os2;PL:os3"/>
-					<list_entry display_value="Os 1, Os 2, Os 4" value="PL:os1;PL:os2;PL:os4"/>
-					<list_entry display_value="Os 1, Os 2, Os 3, Os 4" value="PL:os1;PL:os2;PL:os3;PL:os4"/>
-				</combo>
+				<multiselect key="railway:signal:distant:states" match="key" text="Nadawane sygnały">
+					<list_entry display_value="Os 1" short_description="Semafor, do którego tarcza się odnosi, wskazuje sygnał Stój" value="PL:os1"/>
+					<list_entry display_value="Os 2" short_description="Semafor, do którego tarcza się odnosi, wskazuje sygnał zezwalający na jazdę z największą dozwoloną prędkością" value="PL:os2"/>
+					<list_entry display_value="Os 3" short_description="Semafor, do którego tarcza się odnosi, wskazuje sygnał zezwalający na jazdę z prędkością nieprzekraczającą 100 km/h" value="PL:os3"/>
+					<list_entry display_value="Os 4" short_description="Semafor, do którego tarcza się odnosi, wskazuje sygnał zezwalający na jazdę z prędkością zmniejszoną do 40 lub 60 km/h" value="PL:os4"/>
+				</multiselect>
 				<space/>
 				<check key="railway:signal:distant:deactivated" text="Wyłączona z użytku"/>
 				<reference ref="signal_position"/>
