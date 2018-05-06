@@ -80,7 +80,7 @@
 				<reference ref="signal_ref"/>
 				<reference ref="signal_position"/>
 				<reference ref="signal_directions"/>
-				<combo editable="false" key="railway:signal:combined:states" match="keyvalue!" text="Rodzaj blokady liniowej">
+				<combo editable="false" key="railway:signal:main:states" match="keyvalue!" text="Rodzaj blokady liniowej">
 					<list_entry display_value="jednokierunkowa" value="PL-PKP:s1;PL-PKP:s2"/>
 					<list_entry display_value="jednokierunkowa (z możliwością nadania sygnału S 1a)" value="PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2"/>
 					<list_entry display_value="dwukierunkowa" value="off;PL-PKP:s1;PL-PKP:s2"/>
@@ -95,7 +95,7 @@
 				<reference ref="signal_ref"/>
 				<reference ref="signal_position"/>
 				<reference ref="signal_directions"/>
-				<combo editable="false" key="railway:signal:combined:states" match="key" text="Rodzaj blokady liniowej">
+				<combo editable="false" key="railway:signal:combined:states" match="keyvalue!" text="Rodzaj blokady liniowej">
 					<list_entry display_value="trzystawna jednokierunkowa" value="PL-PKP:s1;PL-PKP:s2;PL-PKP:s5"/>
 					<list_entry display_value="trzystawna jednokierunkowa (z możliwością nadania sygnału S 1a)" value="PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2;PL-PKP:s5"/>
 					<list_entry display_value="trzystawna dwukierunkowa" value="off;PL-PKP:s1;PL-PKP:s2;PL-PKP:s5"/>
