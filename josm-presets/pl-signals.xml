@@ -41,10 +41,26 @@
 				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:main:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
 				<check key="railway:signal:main:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
 			</item>
-			<item name="Semafor świetlny półsamoczynny" type="node">
+			<item name="Semafor świetlny półsamoczynny (1 odstęp)" type="node">
+				<label text="Semafor, którego wskazanie informuje tylko o następnym odstępie."/>
 				<key key="railway:signal:main" value="PL-PKP:s"/>
 				<key key="railway:signal:main:form" value="light"/>
-				<multiselect key="railway:signal:main:states" match="key" text="Podawane sygnały">
+				<key key="railway:signal:main:states" value="PL-PKP:s1;PL-PKP:s2"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:main:deactivated" text="Wyłączony z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalny,karzełkowy" key="railway:signal:main:height" text="Wysokość [m]" values="normal,dwarf"/>
+				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:main:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
+				<check key="railway:signal:main:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
+				<preset_link preset_name="Tarcza manewrowa na semaforze półsamoczynnym"/>
+			</item>
+			<item name="Semafor świetlny półsamoczynny (ponad 1 odstęp)" type="node">
+				<label text="Semafor, którego wskazanie informuje przynajmniej o dwóch kolejnych odstępach."/>
+				<key key="railway:signal:combined" value="PL-PKP:s"/>
+				<key key="railway:signal:combined:form" value="light"/>
+				<multiselect key="railway:signal:combined:states" match="key" text="Nadawane sygnały">
 					<list_entry display_value="S 1" short_description="Stój" value="PL-PKP:s1"/>
 					<list_entry display_value="S 2" short_description="Jazda z największą dozwoloną prędkością" value="PL-PKP:s2"/>
 					<list_entry display_value="S 3" short_description="Jazda z największą dozwoloną prędkością — w przodzie są dwa odstępy blokowe wolne — albo przy następnym semaforze z prędkością nie większą niż 100 km/h" value="PL-PKP:s3"/>
@@ -62,16 +78,21 @@
 					<list_entry display_value="S 12a" short_description="Jazda z prędkością nieprzekraczającą 60 km/h, a przy następnym semaforze — z prędkością zmniejszoną do 40 lub 60 km/h" value="PL-PKP:s12a"/>
 					<list_entry display_value="S 13" short_description="Jazda z prędkością nieprzekraczającą 40 km/h, a przy następnym semaforze — Stój" value="PL-PKP:s13"/>
 					<list_entry display_value="S 13a" short_description="Jazda z prędkością nieprzekraczającą 60 km/h, a przy następnym semaforze — Stój" value="PL-PKP:s13a"/>
-					<list_entry display_value="Ms 2" short_description="Jazda manewrowa dozwolona" value="PL-PKP:ms2"/>
 				</multiselect>
 				<reference ref="signal_ref"/>
-				<check key="railway:signal:main:deactivated" text="Wyłączony z użytku"/>
+				<check key="railway:signal:combined:deactivated" text="Wyłączony z użytku"/>
 				<reference ref="signal_position"/>
 				<reference ref="signal_directions"/>
 				<space/>
-				<combo display_values="normalny,karzełkowy" key="railway:signal:main:height" text="Wysokość [m]" values="normal,dwarf"/>
-				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:main:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
-				<check key="railway:signal:main:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
+				<combo display_values="normalny,karzełkowy" key="railway:signal:combined:height" text="Wysokość [m]" values="normal,dwarf"/>
+				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:combined:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
+				<check key="railway:signal:combined:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
+				<preset_link preset_name="Tarcza manewrowa na semaforze półsamoczynnym"/>
+			</item>
+			<item name="Tarcza manewrowa na semaforze półsamoczynnym" type="node">
+				<label text="Komora światła białego pozwalająca na wyświetlenie sygnału Ms 2."/>
+				<key key="railway:signal:shunting" value="PL-PKP:ms2"/>
+				<key key="railway:signal:shunting:form" value="light"/>
 			</item>
 			<item name="Semafor świetlny samoczynny (dwustawna blokada liniowa)" type="node">
 				<key key="railway:signal:main" value="PL-PKP:s"/>
