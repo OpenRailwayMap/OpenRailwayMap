@@ -44,7 +44,7 @@
 			<item name="Semafor świetlny" type="node">
 				<key key="railway:signal:main" value="PL:s"/>
 				<key key="railway:signal:main:form" value="light"/>
-				<multiselect key="railway:signal:main:states" match="key!" text="Podawane sygnały">
+				<multiselect key="railway:signal:main:states" match="key" text="Podawane sygnały">
 					<list_entry display_value="S 1" short_description="Stój" value="PL:s1"/>
 					<list_entry display_value="S 2" short_description="Jazda z największą dozwoloną prędkością" value="PL:s2"/>
 					<list_entry display_value="S 3" short_description="Jazda z największą dozwoloną prędkością — w przodzie są dwa odstępy blokowe wolne — albo przy następnym semaforze z prędkością nie większą niż 100 km/h" value="PL:s3"/>
