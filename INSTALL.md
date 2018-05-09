@@ -6,7 +6,7 @@ Installation Instructions
 Required versions:
 
 * PostgreSQL >= 9.3
-* osm2pgsql >= 0.90.0
+* osm2pgsql >= 0.96.0
 
 CentOS:
 
@@ -64,18 +64,19 @@ $ cd OpenRailwayMap
 $ make install-deps
 ```
 
- Install osm2pgsql 0.90.0 or greater (Ubuntu and Debian users may use their `osm2pgsql` package provided by their distribution instead, if it's new enough):
+ Install osm2pgsql 0.96.0 or greater (Ubuntu and Debian users may use their `osm2pgsql` package provided by their distribution instead, if it's new enough):
 
 ```shell
 $ cd import
-$ git clone https://github.com/openstreetmap/osm2pgsql.git
+$ wget https://github.com/openstreetmap/osm2pgsql/archive/0.96.0.tar.gz
+$ tar -xvzf 0.96.0.tar.gz
 $ mkdir osm2pgsql-build
 $ cd osm2pgsql-build
-$ cmake ../osm2pgsql
+$ cmake ../osm2pgsql-0.96.0
 $ make
 $ sudo make install
 $ cd ..
-$ rm -fr osm2pgsql osm2pgsql-build
+$ rm -fr osm2pgsql-build osm2pgsql-0.96.0 0.96.0.tar.gz
 ```
 
  Install osmctools (Ubuntu and Debian users may use their `osmctools` package provided by their distribution instead):
