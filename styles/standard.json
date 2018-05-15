@@ -367,6 +367,7 @@
 		},
 		{
 			"minzoom": 8,
+			"lineheight": 20,
 			"features": [{
 				"type": "Point",
 				"coordinates": [40,50],
@@ -431,6 +432,7 @@
 		},
 		{
 			"minzoom": 11,
+			"lineheight": 20,
 			"features": [{
 				"type": "Point",
 				"coordinates": [50,50],
