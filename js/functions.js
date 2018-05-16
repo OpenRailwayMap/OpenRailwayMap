@@ -16,10 +16,10 @@ function getUserLang()
 	var lang = navigator.language || navigator.userLanguage || 'en-GB';
 	var languages = navigator.languages || [lang];
 
-	for (var i=0; i<navigator.languages.length; i++)
+	for (var i = 0; i < languages.length; i++)
 	{
 		// lang-country combination as first choice
-		var langcountrycode = navigator.languages[i].replace('-', '_');
+		var langcountrycode = languages[i].replace('-', '_');
 		for (var key in window.openrailwaymap.availableTranslations)
 			if (window.openrailwaymap.availableTranslations.hasOwnProperty(key) && window.openrailwaymap.availableTranslations[key] === langcountrycode)
 				return langcountrycode;
