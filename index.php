@@ -105,7 +105,7 @@
 		<meta name="twitter:url" content="https://www.openrailwaymap.org/">
 		<meta name="twitter:image" content="https://www.openrailwaymap.org/img/openrailwaymap-310.png" />
 	</head>
-	<body onload="createMap(false);">
+	<body>
 		<div id="moreInfo" class="moreInfoFalse"></div>
 		<div id="sideBar" class="sideBar">
 			<b id="header"><a href="index.php">OpenRailwayMap</a></b>

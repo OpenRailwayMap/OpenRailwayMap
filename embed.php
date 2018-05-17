@@ -46,9 +46,9 @@
 		?>
 		<script type="text/javascript" src="js/startposition.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
-		<script type="text/javascript" src="js/bitmap-map.js"></script>
+		<script type="text/javascript" src="js/embed.js"></script>
 	</head>
-	<body onload="createMap(true);">
+	<body>
 		<div id="mapFrame">
 			<noscript>
 				<p><b><?=_("Javascript is not activated")?></b><br /><?=_("Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings.")?></p>

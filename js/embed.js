@@ -60,11 +60,6 @@ isReady(function(event)
 
 		map = L.map('mapFrame');
 
-		map.on('moveend', function(e)
-		{
-			updatePermalink(railmap.selectedStyle);
-		});
-
 		// railmap layer
 		railmap = new L.TileLayer(window.openrailwaymap.tiledir+'standard/{z}/{x}/{y}.png',
 		{
@@ -74,37 +69,16 @@ isReady(function(event)
 			tileSize: 256
 		}).addTo(map);
 
-		map.on('zoomend', function(e)
-		{
-			updateLegend("legend", railmap.selectedStyle);
-			updatePermalink(railmap.selectedStyle);
-		});
-
 		setupControls();
 
-		if (gEBI("menuButton") != null)
-			menu = new Mobilemenu("menu", "menuButton");
-
-		// setting start position
-		startposition = new Startposition(map);
-		// loading timestamp
-		var timestamp = new Timestamp("info");
-		// create search
-		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", menu);
-		// build style selection and it's event handling
-		getStyleSelection();
 		// set rendering style
 		if (params['style'] != null && styleValid(params['style']))
 			setStyle(params['style']);
 		else
 			setStyle("standard");
-		// onclick event of locate button
-		gEBI("locateButton").onclick = function()
-		{
-			startposition.setPosition();
-		};
-		// initialize the permalink url
-		updatePermalink(railmap.selectedStyle);
+
+		// setting start position
+		startposition = new Startposition(map);
 	});
 });
 
@@ -118,23 +92,21 @@ function setStyle(style)
 	railmap._url = window.openrailwaymap.tiledir+style+'/{z}/{x}/{y}.png';
 	// reload all tiles after style was changed
 	railmap.redraw();
+}
+
+
+// changes the current map rendering style to the style given as parameter and updates legend, permalink and style selection
+function applyStyle(style)
+{
+	setStyle(style);
 
 	// mark selected item as checked
-	var selectableItems = gEBI('styleSelectionBar').getElementsByTagName('div');
+	var selectableItems = gEBI('styleSelectionBar').getElementsByTagName('input');
 	for (var i=0; i<selectableItems.length; i++)
-	{
-		if (selectableItems[i].innerHTML == _(window.openrailwaymap.availableStyles[style]))
-		{
-			selectableItems[i].innerHTML = selectableItems[i].innerHTML+'<small>✓</small>';
-			selectableItems[i].onclick = null;
-		}
-		else
-		{
-			selectableItems[i].innerHTML = selectableItems[i].innerHTML.replace("<small>✓</small>", "");
-			selectableItems[i].onclick = Function("setStyle('"+selectableItems[i].getAttribute("value")+"')");
-		}
-	}
+		if (selectableItems[i].value == style)
+			var index = i;
 
+	selectableItems[index].checked = true;
 	updateLegend("legend", style);
 	updatePermalink(railmap.selectedStyle);
 }
@@ -143,9 +115,11 @@ function setStyle(style)
 // build a radio-button list of available map styles
 function getStyleSelection()
 {
+	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><b>'+_("Select a map style")+':</b><br /><p>';
 	for (var style in window.openrailwaymap.availableStyles)
 		if (window.openrailwaymap.availableStyles.hasOwnProperty(style))
-			gEBI('styleSelectionBar').innerHTML += '<div class="resultEntry" onclick="setStyle(\''+style+'\')" value="'+style+'">'+_(window.openrailwaymap.availableStyles[style])+'</div>';
+			gEBI('styleSelectionBar').innerHTML += '<label><input onchange="applyStyle(this.value)" type="radio" name="style" value="'+style+'">'+_(window.openrailwaymap.availableStyles[style])+'</label><br />';
+	gEBI('styleSelectionBar').innerHTML += '</p></form>';
 }
 
 

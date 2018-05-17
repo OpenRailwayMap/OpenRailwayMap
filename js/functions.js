@@ -6,6 +6,15 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
+// helper function which calls callback when the page is loaded
+function isReady(callback)
+{
+	if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading")
+		callback();
+	else
+		document.addEventListener('DOMContentLoaded', callback);
+}
+
 // returns the lang-region-code that fits the best to the user
 function getUserLang()
 {
@@ -32,7 +41,6 @@ function getUserLang()
 
 	return 'en_GB';
 }
-
 
 // reload the legend after changing zoomlevel or stylesheet
 function updateLegend(id, style)
@@ -67,13 +75,11 @@ function updatePermalink(style)
 		gEBI('desktopButton').href = (getPermalinkUrl(style).replace("mobile.php", "index.php"))+"&mobile=0";
 }
 
-
 // shorter than document.get... everywhere
 function gEBI(id)
 {
 	return document.getElementById(id);
 }
-
 
 // prevent josm remote plugin of showing message
 function josm(url)
@@ -86,7 +92,6 @@ function josm(url)
 	}
 	return true;
 }
-
 
 // perform an async GET request
 function getRequest(url, handler)
@@ -116,7 +121,6 @@ function getRequest(url, handler)
 	request.send();
 }
 
-
 // perform an async API request
 function requestAPI(request, params, handler)
 {
@@ -126,20 +130,17 @@ function requestAPI(request, params, handler)
 		getRequest(window.openrailwaymap.apiUrl + request, handler);
 }
 
-
 // updates map's center
 function updateMap()
 {
 	map.setView(map.getCenter(), map.getZoom());
 }
 
-
 // reloads the page in a different language
 function changeLanguage(lang)
 {
 	window.location = getPermalinkUrl(railmap.selectedStyle, lang);
 }
-
 
 // returns a permalink storing all current settings (language, position, zoom, url params); style parameter is necessary, lang parameter is not necessary
 function getPermalinkUrl(style, lang)
@@ -182,20 +183,17 @@ function getPermalinkUrl(style, lang)
 	return url;
 }
 
-
 // builds a lat-lon url parameter
 function queryLatLon(lat, lon)
 {
 	return "lat="+lat+"&lon="+lon;
 }
 
-
 // builds a lat-lon url parameter with zoom
 function queryLatLonZoom(lat, lon, zoom)
 {
 	return queryLatLon(lat, lon)+"&zoom="+zoom;
 }
-
 
 // resize the height of an iframe with a given id to the height of the content
 function setIframeHeight(id)

@@ -42,8 +42,9 @@ window.openrailwaymap = {
 	}
 };
 
+
 // main function, creates map and layers, controls other functions
-function createMap(embed)
+isReady(function(event)
 {
 	getRequest(window.openrailwaymap.root + "/locales/" + getUserLang() + "/LC_MESSAGES/messages.json", function(response)
 	{
@@ -97,32 +98,23 @@ function createMap(embed)
 				setStyle("standard");
 		};
 
-		// only in not-embed mode
-		if (!embed)
+		// loading timestamp
+		var timestamp = new Timestamp("info");
+		// create search
+		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
+		// build style selection and it's event handling
+		getStyleSelection();
+		// setting start position
+		startposition = new Startposition(map);
+		// onclick event of locate button
+		gEBI("locateButton").onclick = function()
 		{
-			// loading timestamp
-			var timestamp = new Timestamp("info");
-			// create search
-			search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
-			// build style selection and it's event handling
-			getStyleSelection();
-			// setting start position
-			startposition = new Startposition(map);
-			// onclick event of locate button
-			gEBI("locateButton").onclick = function()
-			{
-				startposition.setPosition();
-			};
-			// initialize the permalink url
-			updatePermalink(MapCSS.availableStyles[0]);
-		}
-		else
-		{
-			// setting start position
-			startposition = new Startposition(map);
-		}
+			startposition.setPosition();
+		};
+		// initialize the permalink url
+		updatePermalink(MapCSS.availableStyles[0]);
 	});
-}
+});
 
 
 // changes the current map rendering style to the JS stylefile given as parameter

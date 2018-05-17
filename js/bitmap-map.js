@@ -41,8 +41,9 @@ window.openrailwaymap = {
 	}
 };
 
+
 // main function, creates map and layers, controls other functions
-function createMap(embed)
+isReady(function(event)
 {
 	getRequest(window.openrailwaymap.root + "/locales/" + getUserLang() + "/LC_MESSAGES/messages.json", function(response)
 	{
@@ -59,13 +60,10 @@ function createMap(embed)
 
 		map = L.map('mapFrame');
 
-		if (!embed)
+		map.on('moveend', function(e)
 		{
-			map.on('moveend', function(e)
-			{
-				updatePermalink(railmap.selectedStyle);
-			});
-		}
+			updatePermalink(railmap.selectedStyle);
+		});
 
 		// railmap layer
 		railmap = new L.TileLayer(window.openrailwaymap.tiledir+'standard/{z}/{x}/{y}.png',
@@ -76,54 +74,36 @@ function createMap(embed)
 			tileSize: 256
 		}).addTo(map);
 
-		if (!embed)
+		map.on('zoomend', function(e)
 		{
-			map.on('zoomend', function(e)
-			{
-				updateLegend("legend", railmap.selectedStyle);
-				updatePermalink(railmap.selectedStyle);
-			});
-		}
+			updateLegend("legend", railmap.selectedStyle);
+			updatePermalink(railmap.selectedStyle);
+		});
 
 		setupControls();
 
-		// only in not-embed mode
-		if (!embed)
-		{
-			// setting start position
-			startposition = new Startposition(map);
-			// loading timestamp
-			var timestamp = new Timestamp("info");
-			// create search
-			search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
-			// build style selection and it's event handling
-			getStyleSelection();
-			// set rendering style
-			if (params['style'] != null && styleValid(params['style']))
-				applyStyle(params['style']);
-			else
-				applyStyle("standard");
-			// onclick event of locate button
-			gEBI("locateButton").onclick = function()
-			{
-				startposition.setPosition();
-			};
-			// initialize the permalink url
-			updatePermalink(railmap.selectedStyle);
-		}
+		// setting start position
+		startposition = new Startposition(map);
+		// loading timestamp
+		var timestamp = new Timestamp("info");
+		// create search
+		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton");
+		// build style selection and it's event handling
+		getStyleSelection();
+		// set rendering style
+		if (params['style'] != null && styleValid(params['style']))
+			applyStyle(params['style']);
 		else
+			applyStyle("standard");
+		// onclick event of locate button
+		gEBI("locateButton").onclick = function()
 		{
-			// set rendering style
-			if (params['style'] != null && styleValid(params['style']))
-				setStyle(params['style']);
-			else
-				setStyle("standard");
-
-			// setting start position
-			startposition = new Startposition(map);
-		}
+			startposition.setPosition();
+		};
+		// initialize the permalink url
+		updatePermalink(railmap.selectedStyle);
 	});
-}
+});
 
 
 // changes the current map rendering style to the style given as parameter
