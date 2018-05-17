@@ -49,15 +49,6 @@ isReady(function(event)
 	{
 		window.openrailwaymap.translations = JSON.parse(response);
 
-		if (params['offset'] != null)
-			offset = params['offset'];
-		else
-		{
-			// get time offset to UTC
-			var now = new Date();
-			offset = -(now.getTimezoneOffset() / 60);
-		}
-
 		map = L.map('mapFrame');
 
 		// railmap layer
