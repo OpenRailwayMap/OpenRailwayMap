@@ -232,7 +232,7 @@
 	}
 
 
-	function urlArgsToParam($checkMobile, $urlbase)
+	function urlArgsToParam($urlbase)
 	{
 		echo "<script type=\"text/javascript\">\n";
 			echo "var params={\n";
@@ -257,8 +257,6 @@
 			echo "name : " . (isset($_GET['name']) ? (json_encode($_GET['name'])) : ("null")) . ",\n";
 			echo "line : " . (isset($_GET['line']) ? (json_encode($_GET['line'])) : ("null")) . ",\n";
 			echo "operator : " . (isset($_GET['operator']) ? (json_encode($_GET['operator'])) : ("null")) . ",\n";
-			if ($checkMobile)
-				echo "mobile : " . (isset($_GET['mobile']) ? (($_GET['mobile'] != '0' && $_GET['mobile'] != 'false') ? "true" : "false") : ("null")) . ",\n";
 			echo "style : " . (isset($_GET['style']) ? (json_encode($_GET['style'])) : ("null")) . "\n";
 			echo "};\n";
 		echo "</script>\n";

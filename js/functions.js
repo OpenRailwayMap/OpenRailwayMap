@@ -71,8 +71,6 @@ function drawLegendIcons(cnt, zoom, st) {
 function updatePermalink(style)
 {
 	gEBI('permalinkButton').href = getPermalinkUrl(style);
-	if (gEBI("desktopButton") != null)
-		gEBI('desktopButton').href = (getPermalinkUrl(style).replace("mobile.php", "index.php"))+"&mobile=0";
 }
 
 // shorter than document.get... everywhere
@@ -206,43 +204,6 @@ function setIframeHeight(id)
 	var html = doc.documentElement;
 	legend.style.height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)+4+"px";
 	legend.style.visibility = 'visible';
-}
-
-// check whether the visitor uses a mobile device or not
-function isMobileDevice()
-{
-	if (navigator.userAgent.match(/Android/i)
-		|| navigator.userAgent.match(/webOS/i)
-		|| navigator.userAgent.match(/iPhone/i)
-		|| navigator.userAgent.match(/iPad/i)
-		|| navigator.userAgent.match(/iPod/i)
-		|| navigator.userAgent.match(/BlackBerry/i)
-		|| navigator.userAgent.match(/Windows Phone/i)
-		|| navigator.userAgent.match(/Jolla/)
-	)
-		return true;
-
-	if (window.innerWidth <= 800 && window.innerHeight <= 600)
-		return true;
-
-	return false;
-}
-
-// redirect to mobile website if necessary
-function mobileRedirection()
-{
-	if (params['mobile'] || isMobileDevice() && params['mobile'] == null)
-	{
-		var paramlist = "";
-
-		for (var param in params)
-			if (param == 'urlbase')
-				continue;
-			else if (params[param])
-				paramlist += "&"+param+"="+params[param];
-
-		document.location.href = params.urlbase + "mobile.php?" + paramlist.substr(1);
-	}
 }
 
 // create layer and zoom controls

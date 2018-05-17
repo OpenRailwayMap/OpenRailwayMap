@@ -49,7 +49,7 @@
 		<script type="text/javascript" src="js/leaflet.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
 		<?php
-			urlArgsToParam(true, $urlbase);
+			urlArgsToParam($urlbase);
 
 			switch ($lang)
 			{
@@ -87,10 +87,6 @@
 		<script type="text/javascript" src="js/timestamp.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
 		<script type="text/javascript" src="js/bitmap-map.js"></script>
-		<!-- redirect to mobile version if necessary -->
-		<script type="text/javascript">
-			mobileRedirection();
-		</script>
 
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">

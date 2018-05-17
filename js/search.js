@@ -6,7 +6,7 @@ See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
-function Search(map, box, bar, searchButton, clearButton, mobilemenu)
+function Search(map, box, bar, searchButton, clearButton)
 {
 	// mapping of types returned by API and human-readable strings
 	this.typeMapping = {
@@ -191,10 +191,6 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	this.showResult = function(lat, lon)
 	{
 		this.map.setView(new L.LatLng(lat, lon), 14);
-		// hide menu in mobile mode
-		if (this.mobilemenu != null)
-			this.mobilemenu.hide();
-
 		this.marker.setLatLng([lat, lon]);
 		this.marker.setOpacity(1);
 	}
@@ -226,7 +222,6 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	this.clearButton = gEBI(clearButton);
 	this.bar = gEBI(bar);
 	this.request = "";
-	this.mobilemenu = mobilemenu || null;
 	this.marker = L.marker([0, 0], {opacity: 0, clickable: false}).addTo(this.map);
 
 	var self = this;
