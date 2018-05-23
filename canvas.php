@@ -67,37 +67,6 @@
 		<script type="text/javascript" src="styles/electrified.js"></script>
 		<?php
 			urlArgsToParam(true, $urlbase);
-
-			switch ($lang)
-			{
-				case "de":
-					$paypalbuttonlang = "de_DE";
-					break;
-				case "en":
-					$paypalbuttonlang = "en_US";
-					break;
-				case "fr":
-					$paypalbuttonlang = "fr_FR";
-					break;
-				case "es":
-					$paypalbuttonlang = "es_ES";
-					break;
-				case "nl":
-					$paypalbuttonlang = "nl_NL";
-					break;
-				case "it":
-					$paypalbuttonlang = "it_IT";
-					break;
-				case "ru":
-					$paypalbuttonlang = "ru_RU";
-					break;
-				case "pl":
-					$paypalbuttonlang = "pl_PL";
-					break;
-				default:
-					$paypalbuttonlang = "en_US";
-					break;
-			}
 		?>
 		<script type="text/javascript" src="js/search.js"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>
@@ -138,16 +107,11 @@
 			</form>
 			<br />
 			<p id="info"></p>
-			<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="PaypalButton">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="9KCKT39N7AGL8">
-				<input type="image" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
-				<img alt="" border="0" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/scr/pixel.gif" width="1" height="1">
-			</form>
 			<div id="linkBar">
 				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
 				<a class="links" id="infoButton" href="http://blog.openrailwaymap.org/" target="_blank"><?=_("Blog")?></a>&nbsp;•
 				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>&nbsp;•
+				<a class="links" id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9KCKT39N7AGL8"><?=_("Donate")?></a>&nbsp;•
 				<a class="links" id="permalinkButton" href="#"><?=_("Permalink")?></a>
 				<script language="javascript">
 					var usr = "info";

@@ -52,37 +52,6 @@
 
 		<?php
 			urlArgsToParam(true, $urlbase);
-
-			switch ($lang)
-			{
-				case "de":
-					$paypalbuttonlang = "de_DE";
-					break;
-				case "en":
-					$paypalbuttonlang = "en_US";
-					break;
-				case "fr":
-					$paypalbuttonlang = "fr_FR";
-					break;
-				case "es":
-					$paypalbuttonlang = "es_ES";
-					break;
-				case "nl":
-					$paypalbuttonlang = "nl_NL";
-					break;
-				case "it":
-					$paypalbuttonlang = "it_IT";
-					break;
-				case "ru":
-					$paypalbuttonlang = "ru_RU";
-					break;
-				case "pl":
-					$paypalbuttonlang = "pl_PL";
-					break;
-				default:
-					$paypalbuttonlang = "en_US";
-					break;
-			}
 		?>
 		<script type="text/javascript" src="js/search.js"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>
@@ -156,6 +125,7 @@
 				<a style="display:block" class="resultEntry" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap"><?=_("More Info")?></a>
 				<a style="display:block" class="resultEntry" id="infoButton" href="http://blog.openrailwaymap.org/"><?=_("Blog")?></a>
 				<a style="display:block" class="resultEntry" id="contactButton" href="#"><?=_("Contact")?></a>
+				<a style="display:block" class="resultEntry" id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9KCKT39N7AGL8"><?=_("Donate")?></a>
 				<a style="display:block" class="resultEntry" id="permalinkButton" href=""><?=_("Permalink")?></a>
 				<a style="display:block" class="resultEntry" id="desktopButton" href=""><?=_("Desktop version")?></a>
 				<script language="javascript">
