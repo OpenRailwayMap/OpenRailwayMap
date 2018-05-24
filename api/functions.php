@@ -3,7 +3,7 @@
 	OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 	This program comes with ABSOLUTELY NO WARRANTY.
 	This is free software, and you are welcome to redistribute it under certain conditions.
-	See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+	See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	*/
 
 
@@ -78,7 +78,7 @@
 		// generating message
 		$message = "An error happened in ".$appname.":";
 		$message .= "\n\nTime..... ".date("d.m.Y-H:i", time());
-		$message .= "\nIP....... http://www.utrace.de/?query=".getUserIP();
+		$message .= "\nIP....... https://www.utrace.de/?query=".getUserIP();
 		$message .= "\nHeader... ".$_SERVER['HTTP_USER_AGENT'];
 		$message .= "\nError.... ".$error;
 

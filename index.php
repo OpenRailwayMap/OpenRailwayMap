@@ -3,7 +3,7 @@
 	OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 	This program comes with ABSOLUTELY NO WARRANTY.
 	This is free software, and you are welcome to redistribute it under certain conditions.
-	See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+	See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	*/
 
 	require_once("api/functions.php");
@@ -94,8 +94,8 @@
 			<br />
 			<p id="info"></p>
 			<div id="linkBar">
-				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
-				<a class="links" id="infoButton" href="http://blog.openrailwaymap.org/" target="_blank"><?=_("Blog")?></a>&nbsp;•
+				<a class="links" id="infoButton" href="https://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
+				<a class="links" id="infoButton" href="https://blog.openrailwaymap.org/" target="_blank"><?=_("Blog")?></a>&nbsp;•
 				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>&nbsp;•
 				<a class="links" id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9KCKT39N7AGL8"><?=_("Donate")?></a>&nbsp;•
 				<a class="links" id="permalinkButton" href=""><?=_("Permalink")?></a>

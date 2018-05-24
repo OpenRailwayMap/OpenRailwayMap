@@ -3,7 +3,7 @@
 # OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
-# See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+# See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 # extend environment paths by location of osmconvert, osmupdate and osmfilter
@@ -19,7 +19,7 @@ cd $PROJECTPATH/import
 echo "Started processing at $(date)"
 
 echo "[1/3] Downloading planet file"
-wget -O ${DATADIR}/planet-latest.osm.pbf http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
+wget -O ${DATADIR}/planet-latest.osm.pbf https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
 osmdate=$(osmconvert ${DATADIR}/planet-latest.osm.pbf --out-timestamp)
 date -u -d "$osmdate" +%s > timestamp
 
