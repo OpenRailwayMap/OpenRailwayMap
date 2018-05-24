@@ -143,19 +143,25 @@ $ chmod 600 ~/.pgpass
  just another directory. Log files will be saved to `/var/log/apache2/` You should change this
  path if you are using other systems, e.g. to `/var/log/httpd/` on CentOS/RHEL.
 
+ The following documentation describes these parts of the configuration which are specific for OpenRailwayMap. The complete VirtualHost configuration files used on production (including e.g. Let's Encrypt HTTPS) are managed in the subdirectory `apache-config`.
+
  Vhost configuration of the website (`www.openrailwaymap.org.conf`)
 
 ```ApacheConf
 <VirtualHost *:80>
     DocumentRoot /var/www/html/OpenRailwayMap/
     ServerName www.openrailwaymap.org
-    ServerAlias openrailwaymap.org
+    ServerAlias openrailwaymap.org 88.99.61.211 [2a01:4f8:10a:e03::2]
+
     <Directory /var/www/html/OpenRailwayMap/>
-         AllowOverride None
+        AllowOverride None
     </Directory>
-    ErrorLog /var/log/apache2/www.openrailwaymap.org.error.log
+
+    ErrorLog /var/log/httpd/www.openrailwaymap.org.error.log
     LogLevel warn
-    CustomLog /var/log/apache2/www.openrailwaymap.org.access.log combined
+    CustomLog /var/log/httpd/www.openrailwaymap.org.access.log combined
+
+    DirectoryIndex index.php
 </VirtualHost>
 ```
 
@@ -166,6 +172,9 @@ $ chmod 600 ~/.pgpass
 ```ApacheConf
 <VirtualHost *:80>
     ServerName api.openrailwaymap.org
+    DocumentRoot /var/www/html/OpenRailwayMap
+
+    ProxyPass /server-status !
 
     ProxyPass /timestamp !
     Alias "/timestamp" "/var/www/html/OpenRailwayMap/import/timestamp"
@@ -178,9 +187,9 @@ $ chmod 600 ~/.pgpass
     ProxyPass / http://localhost:9002/
     ProxyPassReverse / http://localhost:9002/
 
-    ErrorLog /var/log/apache2/api.openrailwaymap.org.error.log
+    ErrorLog /var/log/httpd/api.openrailwaymap.org.error.log
     LogLevel warn
-    CustomLog /var/log/apache2/api.openrailwaymap.org.access.log combined
+    CustomLog /var/log/httpd/api.openrailwaymap.org.access.log combined
 </VirtualHost>
 ```
 
@@ -190,13 +199,16 @@ $ chmod 600 ~/.pgpass
 ```ApacheConf
 <VirtualHost *:80>
     ServerName tiles.openrailwaymap.org
-    ServerAlias  a.tiles.openrailwaymap.org b.tiles.openrailwaymap.org c.tiles.openrailwaymap.org
+    ServerAlias a.tiles.openrailwaymap.org b.tiles.openrailwaymap.org c.tiles.openrailwaymap.org
+
     ProxyPreserveHost On
     ProxyPass / http://localhost:9000/
     ProxyPassReverse / http://localhost:9000/
-    ErrorLog /var/log/apache2/tiles.openrailwaymap.org.error.log
+    ProxyPass /server-status !
+
+    ErrorLog /var/log/httpd/tiles.openrailwaymap.org.error.log
     LogLevel warn
-    CustomLog /var/log/apache2/tiles.openrailwaymap.org.access.log combined
+    CustomLog /var/log/httpd/tiles.openrailwaymap.org.access.log combined
 </VirtualHost>
 ```
 
