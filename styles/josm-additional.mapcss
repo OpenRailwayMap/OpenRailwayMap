@@ -11,7 +11,7 @@ This style is not suitable for map rendering! It uses some JOSM default icons,
 available under GPL v2 or newer. These icons are not included.
 
 Format details:
-* http://josm.openstreetmap.de/wiki/Help/Styles/MapCSSImplementation
+* https://josm.openstreetmap.de/wiki/Help/Styles/MapCSSImplementation
 * https://wiki.openstreetmap.org/wiki/MapCSS/0.2
 */
 
@@ -21,7 +21,7 @@ meta
 	version: "0"; 
 	description: "Style for a assisting mapping of railway information in JOSM. Not suitable for map rendering.";
 	author: "Nakaner";
-	link: "http://wiki.openstreetmap.org/wiki/OpenRailwayMap";
+	link: "https://wiki.openstreetmap.org/wiki/OpenRailwayMap";
 	watch-modified: true;
 }
 
