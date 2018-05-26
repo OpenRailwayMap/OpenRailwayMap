@@ -112,6 +112,7 @@
 				<a class="links" id="infoButton" href="https://blog.openrailwaymap.org/" target="_blank"><?=_("Blog")?></a>&nbsp;•
 				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>&nbsp;•
 				<a class="links" id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9KCKT39N7AGL8"><?=_("Donate")?></a>&nbsp;•
+				<a class="links" id="imprintButton" href="/imprint"><?=_("Imprint &amp; Privacy Policy")?></a>&nbsp;•
 				<a class="links" id="permalinkButton" href="#"><?=_("Permalink")?></a>
 				<script language="javascript">
 					var usr = "info";
