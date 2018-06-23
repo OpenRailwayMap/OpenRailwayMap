@@ -3,7 +3,7 @@
 	OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 	This program comes with ABSOLUTELY NO WARRANTY.
 	This is free software, and you are welcome to redistribute it under certain conditions.
-	See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+	See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	*/
 
 
@@ -69,30 +69,6 @@
 	}
 
 
-	// send error report to own mail account
-	function reportError($error = "")
-	{
-		global $mail;
-		global $appname;
-
-		// generating message
-		$message = "An error happened in ".$appname.":";
-		$message .= "\n\nTime..... ".date("d.m.Y-H:i", time());
-		$message .= "\nIP....... http://www.utrace.de/?query=".getUserIP();
-		$message .= "\nHeader... ".$_SERVER['HTTP_USER_AGENT'];
-		$message .= "\nError.... ".$error;
-
-		// sending error report by mail to given mail address
-		$sended = mail($mail, "Error Report ".$appname, $message, "From: ".$appname." <".$mail.">");
-
-		// check if mail was being send
-		if(!$sended)
-			return false;
-
-		return true;
-	}
-
-
 	// checks if given offset-parameter is valid and takes standard value if missing
 	function offset($offset)
 	{
@@ -100,10 +76,7 @@
 			return 0;
 
 		if (strlen($offset) > 4)
-		{
-			reportError("Given offset is too long: ".$offset);
 			return 0;
-		}
 
 		return $offset;
 	}
@@ -114,17 +87,11 @@
 	{
 		// if no bbox is given
 		if (!$bbox)
-		{
-			reportError("Bbox was not given.");
 			return false;
-		}
 
 		// if bbox isn't too big
 		if (abs($right - $left) > 0.5 or abs($top - $bottom) > 0.2)
-		{
-			reportError("Bbox too big.");
 			return false;
-		}
 
 		// parsing values from given string
 		$coordinates = explode(",", $bbox);
@@ -155,10 +122,7 @@
 		$type = $_GET[$type];
 		// check if given object type is invalid
 		if (($type != "node") && ($type != "way") && ($type != "relation"))
-		{
-			reportError("Given type was invalid: ".$type);
 			return false;
-		}
 
 		return true;
 	}
@@ -172,10 +136,7 @@
 
 		$id = $_GET[$id];
 		if (!ctype_digit($id))
-		{
-			reportError("Given id contains not-numeric characters: ".$id);
 			return false;
-		}
 
 		return true;
 	}
@@ -189,10 +150,7 @@
 
 		$coord = $_GET[$coord];
 		if (!is_numeric($coord))
-		{
-			reportError("Given coordinate contains not-numeric characters: ".$coord);
 			return false;
-		}
 
 		return true;
 	}
@@ -206,10 +164,7 @@
 
 		$zoom = $_GET[$zoom];
 		if (!ctype_digit($zoom))
-		{
-			reportError("Given zoom level is not valid: ".$zoom);
 			return false;
-		}
 
 		return true;
 	}
@@ -223,10 +178,7 @@
 
 		$offset = $_GET[$offset];
 		if (!is_numeric($offset))
-		{
-			reportError("Given timezone offset is not valid: ".$offset);
 			return false;
-		}
 
 		return true;
 	}
