@@ -1,0 +1,386 @@
+/*
+OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+*/
+
+
+@charset "utf-8";
+
+html
+{
+	background: #f2f2f2;
+}
+
+body
+{
+	font: normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+
+/* navigation bar */
+nav
+{
+	overflow: hidden;
+	background: #f7f7f7;
+	background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+	background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* navigation bar items */
+nav a,
+nav .dropdown a
+{
+	display: block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-decoration: none;
+	height: 41px;
+	line-height: 40px;
+	color: #444444;
+	font-size: 14px;
+	font-weight: normal;
+	border: 1px solid transparent;
+	text-shadow: 0 1px 0 #ffffff;
+	float: left;
+	overflow: hidden;
+}
+
+nav a
+{
+	padding: 0 15px;
+}
+
+/* navigation bar brand with logo */
+nav > a:first-child
+{
+	font-size: 18px;
+	font-weight: bolder;
+	margin-top: -1px;
+}
+
+nav > a:first-child img
+{
+	max-width: 100%;
+	height: auto;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 0;
+	vertical-align: middle;
+}
+
+/* navigation bar items hover */
+/* only on non-touch devices to avoid "sticky hover" */
+@media (hover: hover)
+{
+	nav > a:hover:not(:first-child),
+	nav > .dropdown:hover
+	{
+		background: inherit;
+		background-color: #fafafa;
+		border-left-color: rgba(0, 0, 0, 0.1);
+		border-right-color: rgba(0, 0, 0, 0.1);
+		border-top-color: 0;
+		border-bottom: 0;
+		box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+}
+
+nav > a:hover,
+nav > .dropdown:hover
+{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+nav #responsive-menu-button
+{
+	display: none;
+}
+
+@media screen and (max-width: 800px)
+{
+	nav > a:not(:first-child),
+	nav .dropdown,
+	nav #search-input,
+	nav #search-button
+	{
+		display: none;
+	}
+
+	nav #responsive-menu-button
+	{
+		float: right;
+		display: block;
+	}
+
+	nav.responsive
+	{
+		position: relative;
+	}
+
+	nav.responsive #responsive-menu-button
+	{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	nav.responsive a,
+	nav.responsive .dropdown,
+	nav.responsive #search-input,
+	nav.responsive #search-button
+	{
+		float: none;
+		display: block;
+		text-align: left;
+	}
+
+	nav.responsive #search-input
+	{
+		margin-left: 10px;
+		margin-right: 10px;
+		width: auto;
+	}
+
+	nav.responsive .dropdown-content
+	{
+		display: none;
+	}
+
+	/* only on non-touch devices to avoid "sticky hover" */
+	@media (hover: hover)
+	{
+		nav.responsive .dropdown-content a:hover
+		{
+			background: inherit;
+			background-color: #fafafa;
+			border-left-color: rgba(0, 0, 0, 0.1);
+			border-right-color: rgba(0, 0, 0, 0.1);
+			border-top-color: rgba(0, 0, 0, 0.2);
+			border-bottom-color: rgba(0, 0, 0, 0.2);
+			box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	nav.responsive .dropdown-content a:hover
+	{
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	nav.responsive .dropdown-content.open
+	{
+		display: block;
+		border-left: 4px solid #4e9a06;
+		background: inherit;
+		background-color: #fafafa;
+		border-right-color: rgba(0, 0, 0, 0.1);
+		border-top-color: rgba(0, 0, 0, 0.2);
+		border-bottom-color: rgba(0, 0, 0, 0.2);
+	}
+
+	nav.responsive .dropdown-content.open a
+	{
+		padding-left: 25px;
+	}
+}
+
+@media screen and (min-width: 800px)
+{
+	nav .dropdown
+	{
+		display: block;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		text-decoration: none;
+		height: 41px;
+		line-height: 40px;
+		color: #444444;
+		font-size: 14px;
+		font-weight: normal;
+		border: 1px solid transparent;
+		text-shadow: 0 1px 0 #ffffff;
+		float: left;
+		overflow: hidden;
+	}
+
+	nav .dropdown-content
+	{
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		z-index: 1;
+		margin-top: 40px;
+		margin-left: -1px;
+	}
+
+	nav .dropdown-content a
+	{
+		float: none;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+	nav .dropdown-content a:hover
+	{
+		background-color: #4e9a06;
+		color: #ffffff;
+		outline: none;
+		box-shadow: inset 0 2px 4px rgba(0 ,0, 0, 0.2);
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	nav .dropdown:hover .dropdown-content
+	{
+		display: block;
+	}
+}
+
+/* text styling */
+h1
+{
+	font-size: 36px;
+	line-height: 42px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	margin: 0 0 15px 0;
+	color: #4e9a06;
+	font-weight: bold;
+	text-transform: none;
+}
+
+h1 > i,
+h2 > i,
+h3 > i,
+h4 > i,
+h5 > i,
+h6 > i
+{
+	font-size: 35px;
+}
+
+a
+{
+	background: transparent;
+	color: #4e9a06;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+a:active,
+a:focus,
+button:active,
+button:focus
+{
+	outline: 0;
+}
+
+/* responsive grid layout */
+main
+{
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	list-style: none;
+}
+
+main > h1,
+main > p
+{
+	flex: none;
+	margin-left: 10px;
+	margin-bottom: 0px;
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	text-shadow: 0px 0px 8px rgba(232, 232, 232, 1);
+}
+
+main section
+{
+	flex: none;
+	margin: 0;
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+main section div
+{
+	margin-top: 25px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	padding: 10px;
+	background-color: white;
+	border: 1px solid #dddddd;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgb(221, 221, 221);
+	border-top: 1px solid #4e9a06;
+	box-shadow: 0px 0px 42px 5px rgba(232, 232, 232, 1);
+}
+
+.box-1-1,
+.box-1-2,
+.box-1-3,
+.box-2-3,
+.box-1-4
+{
+	width: 100%;
+}
+
+@media only screen and (min-width: 790px)
+{
+	.box-1-2
+	{
+		width: 50%;
+	}
+
+	.box-1-3
+	{
+		width: 50%;
+	}
+
+	.box-2-3
+	{
+		width: 66.67%;
+	}
+}
+
+@media only screen and (min-width: 940px)
+{
+	.box-1-3
+	{
+		width: 33.33%;
+	}
+
+	.box-1-4
+	{
+		width: 25%;
+	}
+}

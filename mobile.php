@@ -3,7 +3,7 @@
 	OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 	This program comes with ABSOLUTELY NO WARRANTY.
 	This is free software, and you are welcome to redistribute it under certain conditions.
-	See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+	See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	*/
 
 	require_once("api/functions.php");
@@ -15,75 +15,63 @@
 
 	includeLocale($lang);
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $lang; ?>" lang="<?php echo $lang; ?>">
+<!DOCTYPE html>
+<html>
 	<head>
-		<title>OpenRailwayMap</title>
+		<meta charset="utf-8">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="content-language" content="<?php echo $lang; ?>" />
-		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>OpenRailwayMap</title>
 		<meta name="title" content="OpenRailwayMap" />
-		<meta name="author" content="rurseekatze, Alexander Matheisen" />
-		<meta name="publisher" content="rurseekatze, Alexander Matheisen" />
-		<meta name="copyright" content="GNU General Public License v3" />
-		<meta name="revisit-after" content="after 90 days" />
-		<meta name="date" content="2010-01-01" />
+		<meta name="application-name" content="OpenRailwayMap" />
 		<meta name="page-topic" content="OpenRailwayMap" />
+		<meta name="description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&#39;s railway infrastructure." />
+		<meta name="keywords" content="openstreetmap, openrailwaymap, alexander matheisen, rurseekatze, openlayers, osm, matheisen, orm, eisenbahnkarte, bahnkarte, railmap, railway, railways, eisenbahn, streckenkarte" />
 		<meta name="robots" content="index,follow" />
-		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap RSS Feed" href="http://www.matheisen.org/<?php echo ($lang == 'de') ? 'de' : 'en'; ?>/orm.rss" />
+
+		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap Deutsch" href="https://blog.openrailwaymap.org/de.rss" hreflang="de" />
+		<link rel="alternate" type="application/rss+xml" title="OpenRailwayMap English" href="https://blog.openrailwaymap.org/en.rss" hreflang="en" />
+
 		<link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="OpenRailwayMap" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 		<link rel="shortcut icon" href="img/openrailwaymap-16.png" type="image/png" />
 		<link rel="icon" href="img/openrailwaymap-16.png" type="image/png" />
+
 		<meta http-equiv="content-script-type" content="text/javascript" />
 		<meta http-equiv="content-style-type" content="text/css" />
+
 		<link rel="stylesheet" type="text/css" href="css/mobile.css" />
-		<link rel="stylesheet" href="css/leaflet.css" />
+		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+
 		<script type="text/javascript" src="js/leaflet.js"></script>
 		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
 		<script>L_DISABLE_3D = true;</script>
 
 		<?php
 			urlArgsToParam(true, $urlbase);
-
-			switch ($lang)
-			{
-				case "de":
-					$paypalbuttonlang = "de_DE";
-					break;
-				case "en":
-					$paypalbuttonlang = "en_US";
-					break;
-				case "fr":
-					$paypalbuttonlang = "fr_FR";
-					break;
-				case "es":
-					$paypalbuttonlang = "es_ES";
-					break;
-				case "nl":
-					$paypalbuttonlang = "nl_NL";
-					break;
-				case "it":
-					$paypalbuttonlang = "it_IT";
-					break;
-				case "ru":
-					$paypalbuttonlang = "ru_RU";
-					break;
-				case "pl":
-					$paypalbuttonlang = "pl_PL";
-					break;
-				default:
-					$paypalbuttonlang = "en_US";
-					break;
-			}
 		?>
-		<script type="text/javascript" src="api/jstranslations.php?lang=<?php echo $lang; ?>"></script>
 		<script type="text/javascript" src="js/search.js"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>
 		<script type="text/javascript" src="js/timestamp.js"></script>
 		<script type="text/javascript" src="js/mobilemenu.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
 		<script type="text/javascript" src="js/mobile.js"></script>
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="OpenRailwayMap">
+		<link rel="manifest" href="webapp-manifest.json">
+		<meta name="theme-color" content="#4e9a06">
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@openrailwaymap" />
+		<meta name="twitter:title" content="OpenRailwayMap" />
+		<meta name="twitter:description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&amp;#39;s railway infrastructure." />
+		<meta name="twitter:url" content="https://www.openrailwaymap.org/">
+		<meta name="twitter:image" content="https://www.openrailwaymap.org/img/openrailwaymap-310.png" />
 	</head>
 	<body onload="createMap(false);">
 		<div id="header">
@@ -134,9 +122,11 @@
 			</div>
 			<hr class="separator" />
 			<div class="box">
-				<a style="display:block" class="resultEntry" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap"><?=_("More Info")?></a>
-				<a style="display:block" class="resultEntry" id="infoButton" href="http://blog.openrailwaymap.org/"><?=_("Blog")?></a>
+				<a style="display:block" class="resultEntry" id="infoButton" href="https://wiki.openstreetmap.org/wiki/OpenRailwayMap"><?=_("More Info")?></a>
+				<a style="display:block" class="resultEntry" id="infoButton" href="https://blog.openrailwaymap.org/"><?=_("Blog")?></a>
 				<a style="display:block" class="resultEntry" id="contactButton" href="#"><?=_("Contact")?></a>
+				<a style="display:block" class="resultEntry" id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9KCKT39N7AGL8"><?=_("Donate")?></a>
+				<a style="display:block" class="resultEntry" id="imprintButton" href="/imprint"><?=_("Imprint &amp; Privacy Policy")?></a>
 				<a style="display:block" class="resultEntry" id="permalinkButton" href=""><?=_("Permalink")?></a>
 				<a style="display:block" class="resultEntry" id="desktopButton" href=""><?=_("Desktop version")?></a>
 				<script language="javascript">

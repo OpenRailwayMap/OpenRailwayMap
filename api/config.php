@@ -3,12 +3,10 @@
 	OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 	This program comes with ABSOLUTELY NO WARRANTY.
 	This is free software, and you are welcome to redistribute it under certain conditions.
-	See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+	See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	*/
 
 
-	// path to the timestamp file containing
-	$timestampFile = "../import/timestamp";
 	// email address to send error reports to
 	$mail = "info@openrailwaymap.org";
 
@@ -32,13 +30,17 @@
 	unset($subdir);
 
 	$langs = array(
+		"ca" => array("ca_ES", "Català"),
 		"cs" => array("cs_CZ", "Česky"),
 		"da" => array("da_DK", "Dansk"),
 		"de" => array("de_DE", "Deutsch"),
 		"el" => array("el_GR", "Ελληνικά"),
 		"en" => array("en_GB", "English"),
 		"es" => array("es_ES", "Español"),
+		"fi" => array("fi_FI", "Suomi"),
 		"fr" => array("fr_FR", "Français"),
+		"ja" => array("ja_JP", "日本語"),
+		"lt" => array("lt_LT", "Lietuvių"),
 		"nl" => array("nl_NL", "Nederlands"),
 		"nqo" => array("nqo_GN", "ߒߞߏ"),
 		"pl" => array("pl_PL", "Polski"),
@@ -48,24 +50,11 @@
 		"sv" => array("sv_SE", "Svenska"),
 		"tr" => array("tr_TR", "Türkçe"),
 		"uk" => array("uk_UA", "Українська"),
-		"vi" => array("vi_VN", "Tiếng Việt")
+		"vi" => array("vi_VN", "Tiếng Việt"),
+		"zh" => array("zh_TW", "正體中文")
 	);
-	// name of database
-	$db = "openrailwaymap";
-	// prefix of osm2pgsql tables
-	$prefix = "openrailwaymap";
 	// name of application
 	$appname = "OpenRailwayMap";
 	// useragent used for curl requests
 	$useragent = "openrailwaymap.org";
-	// path to tiles directory
-	$tiledir = "/home/www/sites/194.245.35.149/site/orm/tiles/";
-	// name of geometry column
-	$geomcolumn = "way";
-	// highest rendered zoomlevel+2
-	$maxzoom = 21;
-	// lowest rendered zoomlevel+2
-	$minzoom = 8;
-	// scale factor used for vector tiling
-	$intscalefactor = 10000;
 ?>

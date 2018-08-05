@@ -2,13 +2,30 @@
 OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
 
 function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 {
-	this.apibase = 'https://api.openrailwaymap.org/';
+	// mapping of types returned by API and human-readable strings
+	this.typeMapping = {
+		"track": "Track",
+		"halt": "Halt",
+		"station": "Station",
+		"junction": "Junction",
+		"yard": "Yard",
+		"crossover": "Crossover",
+		"site": "Site",
+		"service_station": "Service station",
+		"tram_stop": "Tram stop",
+		"milestone": "Milestone",
+		"signal": "Signal",
+		"level_crossing": "Level crossing",
+		"crossing": "Crossing"
+	};
+
+	this.loading = "<img class='loading' src='"+window.openrailwaymap.root+"/img/loading.gif'><br>"+_("Loading...");
 
 	// clears the visible parts of a search
 	this.clear = function()
@@ -36,7 +53,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		// if nothing was entered
 		if (input.length == 0)
 		{
-			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+translations['empty']+"</b></center></div>";
+			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+_("Empty input.")+"</b></center></div>";
 			this.bar.className = "infoBar";
 			var bar = this.bar.id;
 			setTimeout("gEBI('"+bar+"').innerHTML = ''; gEBI('"+bar+"').className = 'infoBarOut';", 3500);
@@ -51,42 +68,44 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			// show search results box
 			this.bar.className = "infoBar";
 			// show that search results are loaded
-			this.bar.innerHTML += "<div class=\"loadingMoreInfo\">"+loading+"</div>";
+			this.bar.innerHTML += "<div class=\"loadingMoreInfo\">"+this.loading+"</div>";
 			this.request = input;
 
-			this.sendRequest("facility", "uicref="+input, function(response)
+			queryRef = function(response)
 			{
 				self.showResults(response);
-				self.sendRequest("facility", "ref="+input, function(response)
+				self.sendRequest("facility", "ref=" + input, function(response)
 				{
-					self.showResults(response);
-					self.sendRequest("facility", "name="+input, function(response)
-					{
-						var words = input.split(" ");
-						for (var i=0; i<words.length; i++)
-						{
-							if (/[0-9][.,][0-9]/.test(words[i]))
-							{
-								var pos = words[i];
-								words.splice(i, 1);
-								break;
-							}
-						}
-
-						if (pos)
-						{
-							var ref = words.join(" ");
-
-							self.sendRequest("milestone", "position=" + pos.replace(',', '.') + "&ref=" + ref, function(response)
-							{
-								self.finishResults(response);
-							});
-						}
-						else
-							self.finishResults(response);
-					});
+					self.finishResults(response);
 				});
-			});
+			}
+
+			if((input.length != 7) || isNaN(input)) {
+				self.sendRequest("facility", "name=" + input, function(response)
+				{
+					var words = input.split(" ");
+					for (var i = 0; i<words.length; i++)
+					{
+						if (/[0-9][.,][0-9]/.test(words[i]))
+						{
+							var pos = words[i];
+							words.splice(i, 1);
+							break;
+						}
+					}
+
+					if (pos)
+					{
+						var ref = words.join(" ");
+
+						self.sendRequest("milestone", "position=" + pos.replace(',', '.') + "&ref=" + ref, queryRef);
+					}
+					else
+						queryRef(response);
+				});
+			} else {
+				this.sendRequest("facility", "uicref=" + input, queryRef);
+			}
 		}
 	}
 
@@ -101,14 +120,14 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		{
 			this.bar.removeChild(this.bar.lastChild);
 			this.bar.className = 'infoBar';
-			var milestoneSearch = response.responseURL.startsWith(this.apibase + 'milestone?');
+			var milestoneSearch = response.responseURL.startsWith(window.openrailwaymap.apiUrl + 'milestone?');
 			for (var i=0; i<results.length; i++)
 			{
 				var result = document.createElement("div");
 				var inner = "";
 
 				if (milestoneSearch)
-					inner = translations['kilometer'] + ' ' + results[i]['position'] + ', ' + translations['track'] + ' ' + results[i]['ref'];
+					inner = _("Kilometer") + ' ' + results[i]['position'] + ', ' + _("Track") + ' ' + results[i]['ref'];
 				else if (results[i]['name'])
 					inner = results[i]['name'];
 				else if (results[i]['ref'])
@@ -117,8 +136,8 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 				if (inner)
 					result.innerHTML = '<b>' + inner + '</b>';
 
-				if (results[i]['type'] != null && typeof results[i]['type'] != undefined && translations[results[i]['type']])
-					result.innerHTML += '&nbsp;'+translations[results[i]['type']];
+				if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
+					result.innerHTML += '&nbsp;'+_(this.typeMapping[results[i]['type']]);
 				if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
 					result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
 				if (results[i]['ref'] && (results[i]['type'] == 'station' || results[i]['type'] == 'halt' || results[i]['type'] == 'junction' ||
@@ -135,7 +154,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 
 			var loadingIndicator = document.createElement("div");
 			loadingIndicator.setAttribute('class', 'loadingMoreInfo');
-			loadingIndicator.innerHTML = loading;
+			loadingIndicator.innerHTML = this.loading;
 			this.bar.appendChild(loadingIndicator);
 		}
 	}
@@ -151,7 +170,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		{
 			var bar = this.bar.id;
 
-			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+translations['nothing']+"</b></center></div>";
+			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+_("Nothing found.")+"</b></center></div>";
 
 			var self = this;
 			var removeErrorMessage = function()
@@ -185,7 +204,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 	{
 		var request = new XMLHttpRequest();
 
-		request.open("GET", this.apibase + requestType + '?' + query.replace(/ /g, "+"), true);
+		request.open("GET", window.openrailwaymap.apiUrl + requestType + '?' + query.replace(/ /g, "+"), true);
 		request.onreadystatechange = function()
 		{
 			if (request.readyState === 4)

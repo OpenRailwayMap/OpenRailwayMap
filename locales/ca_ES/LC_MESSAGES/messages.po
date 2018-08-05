@@ -1,0 +1,777 @@
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+#
+# Translators:
+# amontero <amontero@tinet.org>, 2015
+# Catalanoic <catalanoic@gmail.com>, 2015
+# Marc Riera Irigoyen <inactive+Markitus95@transifex.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenRailwayMap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2017-09-20 02:22+0000\n"
+"Last-Translator: Marc Riera Irigoyen <inactive+Markitus95@transifex.com>\n"
+"Language-Team: Catalan (https://www.transifex.com/rurseekatze/openrailwaymap/language/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "More Info"
+msgstr "Més informació"
+
+msgid "Contact"
+msgstr "Contacte"
+
+msgid "Javascript is not activated"
+msgstr "Javascript no està activat"
+
+msgid ""
+"Javascript is needed to show the map and run this website. Please turn on "
+"Javascript in your browser settings."
+msgstr "Es necessita Javascript per mostrar el mapa i que la web funcioni. Activeu-lo a la configuració del navegador."
+
+msgid "Loading..."
+msgstr "S'està carregant..."
+
+msgid "Nothing found."
+msgstr "No s'ha trobat res."
+
+msgid "Last update"
+msgstr "Última actualització"
+
+msgid "Empty input."
+msgstr "Entrada buida."
+
+msgid "Kilometer"
+msgstr "Quilòmetre"
+
+msgid "Track"
+msgstr "Via"
+
+msgid "Permalink"
+msgstr "Enllaç permanent"
+
+msgid "Hillshading"
+msgstr "Topografia"
+
+msgid "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
+msgstr "Topografia: <a href='https://www.nasa.gov/'>NASA SRTM</a>"
+
+msgid "Rendering: OpenRailwayMap"
+msgstr "S'està renderitzant: OpenRailwayMap"
+
+msgid "Mapnik"
+msgstr "Mapnik"
+
+msgid "Mapnik Grayscale"
+msgstr "Mapnik en escala de grisos"
+
+msgid "Map data &copy; OpenStreetMap contributors"
+msgstr "Mapes &copy; col·laboradors d'OpenStreetMap"
+
+msgid "Select a map style"
+msgstr "Selecciona un estil de mapa"
+
+msgid "Public transport"
+msgstr "Transport públic"
+
+msgid "Search results"
+msgstr "Cerca resultats"
+
+msgid "Search only in the current map view"
+msgstr "Cerca només a la vista actual"
+
+msgid "HTML-Code"
+msgstr "Codi HTML"
+
+msgid ""
+"Copy this HTML code snippet into your website to show a small map with a "
+"marker."
+msgstr "Copieu aquest fragment de codi HTML a la vostra web per mostrar-hi un mapa en miniatura amb una marca."
+
+msgid "Fullscreen"
+msgstr "Pantalla completa"
+
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d segon"
+msgstr[1] "%d segons"
+
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minut"
+msgstr[1] "%d minuts"
+
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d hora"
+msgstr[1] "%d hores"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d dia"
+msgstr[1] "%d dies"
+
+#, php-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d setmana"
+msgstr[1] "%d setmanes"
+
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d mes"
+msgstr[1] "%d mesos"
+
+#, php-format
+msgid "more than %s ago"
+msgstr "fa més de %s"
+
+#, php-format
+msgid "%s ago"
+msgstr "fa %s"
+
+msgid "Infrastructure"
+msgstr "Infraestructura"
+
+msgid "Signalling"
+msgstr "Senyalització"
+
+msgid "Maxspeeds"
+msgstr "Velocitats màximes"
+
+msgid "Electrification"
+msgstr ""
+
+msgid "Halt"
+msgstr "Baixador"
+
+msgid "Station"
+msgstr "Estació"
+
+msgid "Junction"
+msgstr "Bifurcació"
+
+msgid "Yard"
+msgstr "Dipòsit"
+
+msgid "Crossover"
+msgstr "Punt de banalització"
+
+msgid "Site"
+msgstr "Lloc"
+
+msgid "Service station"
+msgstr "Estació de servei"
+
+msgid "Tram stop"
+msgstr "Parada de tramvia"
+
+msgid "Milestone"
+msgstr "Fita quilomètrica"
+
+msgid "Signal"
+msgstr ""
+
+msgid "Level crossing"
+msgstr "Pas a nivell"
+
+msgid "Crossing"
+msgstr "Pas a nivell per a vianants"
+
+msgid "Legend"
+msgstr "Llegenda"
+
+msgid "Bridge"
+msgstr "Pont"
+
+msgid "Tunnel"
+msgstr "Túnel"
+
+msgid "Line ref"
+msgstr "Referència de línia"
+
+msgid "Railroad line"
+msgstr "Línia de ferrocarril"
+
+msgid "Siding"
+msgstr "Apartador"
+
+msgid "Yard track"
+msgstr "Via de dipòsit"
+
+msgid "Spur"
+msgstr "Ramal"
+
+msgid "Crossover track"
+msgstr "Via banalitzada"
+
+msgid "Branch line"
+msgstr "Línia secundària"
+
+msgid "Main line"
+msgstr "Línia principal"
+
+msgid "Highspeed line"
+msgstr "Línia d'alta velocitat"
+
+msgid "Industrial line"
+msgstr "Línia industrial"
+
+msgid "Industrial service track"
+msgstr "Via de servei industrial"
+
+msgid "Preserved track"
+msgstr "Via de ferrocarril històric"
+
+msgid "Preserved service track"
+msgstr "Via de servei de ferrocarril històric"
+
+msgid "Track under construction"
+msgstr "Via en construcció"
+
+msgid "Proposed track"
+msgstr "Via en projecte"
+
+msgid "Disused track"
+msgstr "Via en desús"
+
+msgid "Abandoned track"
+msgstr "Via abandonada"
+
+msgid "Razed track"
+msgstr "Via aixecada"
+
+msgid "Tram"
+msgstr "Tramvia"
+
+msgid "Subway"
+msgstr "Metro"
+
+msgid "Light rail"
+msgstr "Metro lleuger"
+
+msgid "Narrow gauge track"
+msgstr "Via estreta"
+
+msgid "Switch (remote-controlled)"
+msgstr "Canvi d'agulles (operat remotament)"
+
+msgid "Switch (local operated)"
+msgstr "Canvi d'agulles (operat manualment)"
+
+msgid "Resetting switch"
+msgstr "Agulla talonable"
+
+msgid "Signal box"
+msgstr "Enclavament"
+
+msgid "Owner change"
+msgstr "Canvi de propietat"
+
+msgid "Railway crossing"
+msgstr "Creuament de vies"
+
+msgid "Buffer stop"
+msgstr "Topera"
+
+msgid "Isolated track section"
+msgstr "Secció de via aïllada"
+
+msgid "Platform"
+msgstr "Andana"
+
+msgid "Vending machine"
+msgstr "Màquina d'autovenda"
+
+msgid "Ticket shop"
+msgstr "Taquilla"
+
+msgid "Subway entrance"
+msgstr "Boca de metro"
+
+msgid "Phone"
+msgstr "Telèfon"
+
+msgid "Water tower"
+msgstr "Torre d'aigua"
+
+msgid "Fuel"
+msgstr "Combustible"
+
+msgid "Water crane"
+msgstr "Grua d'aigua"
+
+msgid "Coaling facility"
+msgstr "Torre de carbó"
+
+msgid "Wash"
+msgstr "Túnel de rentat"
+
+msgid "Pit"
+msgstr "Fossat"
+
+msgid "Loading gauge"
+msgstr "Gàlib"
+
+msgid "Hump yard"
+msgstr "Esquena d'ase"
+
+msgid "Rail brake"
+msgstr "Fre de via"
+
+msgid "Engine shed"
+msgstr "Dipòsit de locomotores"
+
+msgid "Workshop"
+msgstr "Taller"
+
+msgid "Radio tower"
+msgstr "Torre de ràdio"
+
+msgid "Turntable"
+msgstr "Rotonda"
+
+msgid "Traverser"
+msgstr "Carro transbordador"
+
+msgid "Loading ramp"
+msgstr "Rampa de càrrega"
+
+msgid "Crane"
+msgstr "Grua"
+
+msgid "Track scale"
+msgstr "Bàscula"
+
+msgid "Carrier truck pit"
+msgstr "Fossat de camions"
+
+msgid "Gauge conversion"
+msgstr "Canviador d'ample"
+
+msgid "Gate"
+msgstr "Porta"
+
+msgid "Museum"
+msgstr "Museu"
+
+msgid "Container terminal"
+msgstr "Terminal de contenidors"
+
+msgid "Station building"
+msgstr "Edifici de l'estació"
+
+msgid "Factory connected to railroad line"
+msgstr "Fàbrica connectada a una línia de ferrocarril"
+
+msgid "Rack"
+msgstr "Cremallera"
+
+msgid "Embankment"
+msgstr "Terraplè"
+
+msgid "Cutting"
+msgstr "Trinxera"
+
+msgid "Miniature railway"
+msgstr "Ferrocarril en miniatura"
+
+msgid "Funicular"
+msgstr "Funicular"
+
+msgid "Military line"
+msgstr "Línia militar"
+
+msgid "Military service track"
+msgstr "Via de servei militar"
+
+msgid "Ferry terminal"
+msgstr "Terminal de ferris"
+
+msgid "Ferry"
+msgstr "Ferri"
+
+msgid "Test line"
+msgstr "Línia de proves"
+
+msgid "Test service track"
+msgstr "Via de proves"
+
+msgid "Car shuttle"
+msgstr "Llançadora de cotxes"
+
+msgid "Rolling highway"
+msgstr "Autopista ferroviària"
+
+msgid "Nothing to see in this zoom level. Please zoom in."
+msgstr "No hi ha res visible amb aquest nivell de zoom. Apropeu el mapa."
+
+msgid "Legend not available for this style."
+msgstr "La llegenda no està disponible per a aquest estil."
+
+msgid "Language"
+msgstr "Llengua"
+
+msgid "Desktop version"
+msgstr "Versió d'escriptori"
+
+msgid "Style"
+msgstr "Estil"
+
+msgid "Search"
+msgstr "Cerca"
+
+msgid "Blog"
+msgstr "Bloc"
+
+msgid "No information"
+msgstr ""
+
+msgid "speed only given for one direction"
+msgstr ""
+
+msgid "main track, service track"
+msgstr ""
+
+msgid "Quick search shortcut"
+msgstr ""
+
+msgid "Placeholder"
+msgstr ""
+
+msgid "Donate"
+msgstr ""
+
+msgid "Tools"
+msgstr ""
+
+msgid "Wiki"
+msgstr ""
+
+msgid "Search milestone"
+msgstr ""
+
+msgid "Station code"
+msgstr ""
+
+msgid "Search station"
+msgstr ""
+
+msgid "UIC reference"
+msgstr ""
+
+msgid "About this project"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Line operator"
+msgstr ""
+
+msgid "Operator"
+msgstr ""
+
+msgid "More results"
+msgstr ""
+
+msgid "Spur junction"
+msgstr ""
+
+msgid "No background map"
+msgstr ""
+
+msgid "Deelectrified"
+msgstr ""
+
+msgid "No information about train protection"
+msgstr ""
+
+msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
+msgstr ""
+
+msgid "Track usage"
+msgstr ""
+
+msgid "Lf 7 Geschwindigkeitssignal"
+msgstr ""
+
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr ""
+
+msgid "1.5 – 3kV ="
+msgstr ""
+
+msgid "ETCS under construction"
+msgstr ""
+
+msgid "3kV ="
+msgstr ""
+
+msgid "Germany"
+msgstr ""
+
+msgid "Not electrified"
+msgstr ""
+
+msgid "shunting signal type Ro"
+msgstr ""
+
+msgid "Track type"
+msgstr ""
+
+msgid "El 5 \"Bügel an\"-Signal"
+msgstr ""
+
+msgid "Linienzugbeeinflussung"
+msgstr ""
+
+msgid "25kV 50Hz ~"
+msgstr ""
+
+msgid "So 106 Kreuztafel"
+msgstr ""
+
+msgid "Ra 11 Wartezeichen mit Sh 1"
+msgstr ""
+
+msgid "Junction, Crossover, Service Station, Site"
+msgstr ""
+
+msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
+msgstr ""
+
+msgid "At least 25kV ~"
+msgstr ""
+
+msgid "minor signal type Lo"
+msgstr ""
+
+msgid "Finland"
+msgstr ""
+
+msgid "15 – 25kV ~"
+msgstr ""
+
+msgid "ETCS"
+msgstr ""
+
+msgid "Electrification under construction"
+msgstr ""
+
+msgid "no train protection"
+msgstr ""
+
+msgid "Blockkennzeichen"
+msgstr ""
+
+msgid "Ne 6 Haltepunkttafel"
+msgstr ""
+
+msgid "Ne 1 Trapeztafel"
+msgstr ""
+
+msgid "15kV 16⅔Hz ~"
+msgstr ""
+
+msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
+msgstr ""
+
+msgid "signals"
+msgstr ""
+
+msgid "Ne 5 Haltetafel"
+msgstr ""
+
+msgid "Voltage"
+msgstr ""
+
+msgid "More than 3kV ="
+msgstr ""
+
+msgid "Lf 6 Geschwindigkeits­ankündesignal"
+msgstr ""
+
+msgid "3rd rail"
+msgstr ""
+
+msgid "750 – 1000V ="
+msgstr ""
+
+msgid "Less than 15kV ~"
+msgstr ""
+
+msgid "1kV ="
+msgstr ""
+
+msgid "crossing signal type To"
+msgstr ""
+
+msgid "1 – 1.5kV ="
+msgstr ""
+
+msgid "block signal type So"
+msgstr ""
+
+msgid "%SPDMIN%-%SPDMAX% km/h"
+msgstr ""
+
+msgid "1.5kV ="
+msgstr ""
+
+msgid "El 2 Einschaltsignal"
+msgstr ""
+
+msgid "Ra 10 Rangierhalttafel / Verschubhalttafel"
+msgstr ""
+
+msgid "Zs 10 Endesignal (Tafel)"
+msgstr ""
+
+msgid "El 1 Ausschaltsignal"
+msgstr ""
+
+msgid "Ra 11b Wartezeichen"
+msgstr ""
+
+msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
+msgstr ""
+
+msgid "Less than 750V ="
+msgstr ""
+
+msgid "Punktförmige Zugbeeinflussung"
+msgstr ""
+
+msgid "Operating Sites"
+msgstr ""
+
+msgid "train protection"
+msgstr ""
+
+msgid "contact line"
+msgstr ""
+
+msgid "El 4 \"Bügel ab\"-Signal"
+msgstr ""
+
+msgid "750V ="
+msgstr ""
+
+msgid "25kV 60Hz ~"
+msgstr ""
+
+msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
+msgstr ""
+
+msgid "Electrification proposed"
+msgstr ""
+
+msgid "El 1v Ausschaltsignal erwarten"
+msgstr ""
+
+msgid "15kV 16.7Hz ~"
+msgstr ""
+
+msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
+msgstr ""
+
+msgid "distant signal with Eo 2 (new type)"
+msgstr ""
+
+msgid "Ks-Hauptsignal"
+msgstr ""
+
+msgid "Bü 5 Läutetafel (normal, für durchfahrende Züge)"
+msgstr ""
+
+msgid "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
+msgstr ""
+
+msgid "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
+msgstr ""
+
+msgid "El 4 \"Bügel ab\"-Signal"
+msgstr ""
+
+msgid "Vr-Formvorsignal ohne Angabe der Signalzustände"
+msgstr ""
+
+msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
+msgstr ""
+
+msgid "main signal without aspects given (new type, old type)"
+msgstr ""
+
+msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
+msgstr ""
+
+msgid "main signal with Po 1 (new type, old type)"
+msgstr ""
+
+msgid "main signal with Po 2 (new type, old type)"
+msgstr ""
+
+msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
+msgstr ""
+
+msgid "distant signal with Eo 1 (new type, old type)"
+msgstr ""
+
+msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
+msgstr ""
+
+msgid "Sv-Signal (ohne Hp 0, mit Hp 0)"
+msgstr ""
+
+msgid "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
+msgstr ""
+
+msgid "El 5 \"Bügel an\"-Signal"
+msgstr ""
+
+msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "distant signal without aspects given (new type, old type)"
+msgstr ""
+
+msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
+msgstr ""
+
+msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
+msgstr ""
+
+msgid "Imprint &amp; Privacy Policy"
+msgstr ""

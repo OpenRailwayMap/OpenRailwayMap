@@ -3,279 +3,443 @@
 	"mapfeatures":
 	[
 		{
+			"minzoom": 2,
+			"heading": "Track type"
+		},
+		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"#797979\" stroke-width=\"10.5\"><path stroke-linecap=\"butt\" d=\"M9 8 l24 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"3.5\"><path stroke-linecap=\"round\" d=\"M5 8 l32 0\" /></g>",
+			"features": [
+				{"type": "LineString",
+				"coordinates": [[10,50],[20,50]],
+				"properties": {
+					"railway":"rail"
+				}},
+				{"type": "LineString",
+				"coordinates": [[20,50],[50,50]],
+				"properties": {
+					"bridge":"yes",
+					"railway":"rail"
+				}},
+				{"type": "LineString",
+				"coordinates": [[50,50],[60,50]],
+				"properties": {
+					"railway":"rail"
+				}}
+			],
 			"caption": "Bridge"
 		},
 		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"3.5\"><path stroke-linecap=\"round\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"white\" stroke-width=\"6\"><path stroke-linecap=\"butt\" opacity=\"0.6\" d=\"M9 8 l24 0\" /></g>",
+			"features": [
+				{"type": "LineString",
+				"coordinates": [[10,50],[20,50]],
+				"properties": {
+					"railway":"rail"
+				}},
+				{"type": "LineString",
+				"coordinates": [[20,50],[50,50]],
+				"properties": {
+					"railway":"rail",
+					"tunnel":"yes"
+				}},
+				{"type": "LineString",
+				"coordinates": [[50,50],[60,50]],
+				"properties": {
+					"railway":"rail"
+				}}
+			],
 			"caption": "Tunnel"
 		},
 		{
 			"minzoom": 2,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><text x=\"2\" y=\"12\" style=\"font-family: Verdana; font-weight: bold; font-size: 12px; fill: #585858; stroke: white; stroke-width: 0.5;\">2610</text>",
+			"features": [
+				{"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"rail",
+					"usage":"main",
+					"ref":1761
+				}}
+			],
 			"caption": "Line ref"
 		},
 		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [
+				{"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"rail"
+				}}
+			],
 			"caption": "Railroad line"
 		},
 		{
+			"minzoom": 9,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"narrow_gauge"
+				}
+			}],
+			"caption": "Narrow gauge track"
+		},
+		{
+			"minzoom": 2,
+			"heading": "Track usage"
+		},
+		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"2\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><text x=\"17\" y=\"13\" style=\"font-family: Arial; font-size: 12px; fill: gray; stroke: #cccccc; stroke-width: 0.5;\">7</text>",
+			"features": [
+				{"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:track_ref":7,
+					"service":"siding"
+				}}
+			],
 			"caption": "Siding"
 		},
 		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><text x=\"17\" y=\"13\" style=\"font-family: Arial; font-size: 12px; fill: gray; stroke: #cccccc; stroke-width: 0.5;\">7</text>",
+			"features": [
+				{"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:track_ref":7,
+					"service":"yard"
+				}}
+			],
 			"caption": "Yard track"
 		},
 		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"3\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"rail",
+					"service":"spur"
+				}
+			}],
 			"caption": "Spur"
 		},
 		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"rail",
+					"service":"crossover"
+				}
+			}],
 			"caption": "Crossover track"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 5,
-			"symbol": "<g fill=\"none\" stroke=\"#DACA00\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Branch line"
-		},
-		{
-			"minzoom": 6,
-			"maxzoom": 8,
-			"symbol": "<g fill=\"none\" stroke=\"#DACA00\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Branch line"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#DACA00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"rail",
+					"usage":"branch"
+				}
+			}],
 			"caption": "Branch line"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 5,
-			"symbol": "<g fill=\"none\" stroke=\"#FF8100\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Main line"
-		},
-		{
-			"minzoom": 6,
-			"maxzoom": 8,
-			"symbol": "<g fill=\"none\" stroke=\"#FF8100\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Main line"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#FF8100\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"rail",
+					"usage":"main"
+				}
+			}],
 			"caption": "Main line"
 		},
 		{
 			"minzoom": 2,
-			"maxzoom": 5,
-			"symbol": "<g fill=\"none\" stroke=\"#FF0C00\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Highspeed line"
-		},
-		{
-			"minzoom": 6,
-			"maxzoom": 8,
-			"symbol": "<g fill=\"none\" stroke=\"#FF0C00\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Highspeed line"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#FF0C00\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"highspeed":"yes",
+					"railway":"rail",
+					"usage":"main"
+				}
+			}],
 			"caption": "Highspeed line"
 		},
 		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"2\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"rail",
+					"usage":"industrial"
+				}
+			}],
 			"caption": "Industrial line"
 		},
 		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"rail",
+					"service":"yard",
+					"usage":"industrial"
+				}
+			}],
 			"caption": "Industrial service track"
 		},
 		{
 			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#70584D\" stroke-width=\"2\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#70584D\" stroke-width=\"6\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,10\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"preserved"
+				}
+			}],
 			"caption": "Preserved track"
 		},
 		{
 			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"9,9\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"construction:railway":"rail",
+					"railway":"construction"
+				}
+			}],
 			"caption": "Track under construction"
 		},
 		{
 			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-dasharray=\"2,8\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"proposed:railway":"rail",
+					"railway":"proposed"
+				}
+			}],
 			"caption": "Proposed track"
 		},
 		{
 			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"4\"><path stroke-linecap=\"butt\" opacity=\"0.2\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#70584D\" stroke-width=\"3\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"disused:railway":"rail",
+					"railway":"disused"
+				}
+			}],
 			"caption": "Disused track"
 		},
 		{
 			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"4\"><path stroke-linecap=\"butt\" stroke-dasharray=\"5,5\" opacity=\"0.2\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#70584D\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-dasharray=\"5,5\" opacity=\"0.8\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"abandoned:railway":"rail",
+					"railway":"abandoned"
+				}
+			}],
 			"caption": "Abandoned track"
 		},
 		{
 			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"4\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,7\" opacity=\"0.2\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#70584D\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-dasharray=\"3,7\" opacity=\"0.6\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"razed:railway":"rail",
+					"railway":"razed"
+				}
+			}],
 			"caption": "Razed track"
 		},
 		{
 			"minzoom": 11,
-			"symbol": "<g fill=\"none\" stroke=\"#D877B8\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"tram"
+				}
+			}],
 			"caption": "Tram"
 		},
 		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"#0300C3\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [
+				{"type": "LineString",
+				"coordinates": [[10,50],[20,50]],
+				"properties": {
+					"railway":"subway"
+				}},
+				{"type": "LineString",
+				"coordinates": [[20,50],[60,50]],
+				"properties": {
+					"railway":"subway",
+					"tunnel":"yes"
+				}}
+			],
 			"caption": "Subway"
 		},
 		{
 			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"#00BD14\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"railway":"light_rail"
+				}
+			}],
 			"caption": "Light rail"
 		},
 		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"4.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge track"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g><text x=\"17\" y=\"13\" style=\"font-family: Arial; font-size: 12px; fill: gray; stroke: #cccccc; stroke-width: 0.5;\">7</text>",
-			"caption": "Narrow gauge siding"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g><text x=\"17\" y=\"13\" style=\"font-family: Arial; font-size: 12px; fill: gray; stroke: #cccccc; stroke-width: 0.5;\">7</text>",
-			"caption": "Narrow gauge yard"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#87491D\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge spur"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"black\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"black\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge crossover"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#DACA00\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#DACA00\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge branch line"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#FF8100\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#FF8100\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge main line"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#FF0C00\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#FF0C00\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge highspeed line"
-		},
-		{
-			"minzoom": 9,
-			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#87491D\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge industrial line"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"#87491D\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g><g fill=\"none\" stroke=\"#87491D\" stroke-width=\"2.5\"><path stroke-linecap=\"butt\" stroke-dasharray=\"3,3\" d=\"M5 8 l32 0\" /></g>",
-			"caption": "Narrow gauge industrial service"
-		},
-		{
 			"minzoom": 16,
-			"symbol": "<text x=\"0\" y=\"12\" style=\"font-family: Arial; font-size: 12px; fill: black; font-weight: bold; stroke: white; stroke-width: 0.5;\">W23</text>",
+			"features": [{
+				"type": "Point",
+				"coordinates": [30,50],
+				"properties": {
+					"railway":"switch",
+					"ref":"W23"
+				}
+			}],
 			"caption": "Switch (remote-controlled)"
 		},
 		{
 			"minzoom": 16,
-			"symbol": "<text x=\"0\" y=\"12\" style=\"font-family: Arial; font-size: 12px; fill: black; font-weight: bold; stroke: yellow; stroke-width: 0.5;\">W23</text>",
+			"features": [{
+				"type": "Point",
+				"coordinates": [30,50],
+				"properties": {
+					"railway":"switch",
+					"railway:local_operated":"yes",
+					"ref":"W23"
+				}
+			}],
 			"caption": "Switch (local operated)"
 		},
 		{
 			"minzoom": 16,
-			"symbol": "<text x=\"0\" y=\"12\" style=\"font-family: Arial; font-size: 12px; fill: black; font-weight: bold; stroke: orange; stroke-width: 0.5;\">W23</text>",
+			"features": [{
+				"type": "Point",
+				"coordinates": [30,50],
+				"properties": {
+					"railway":"switch",
+					"railway:switch:resetting":"yes",
+					"ref":"W23"
+				}
+			}],
 			"caption": "Resetting switch"
 		},
 		{
 			"minzoom": 11,
-			"symbol": "<text x=\"0\" y=\"12\" style=\"font-family: Arial Black; font-size: 12px; fill: black; font-weight: bold; stroke: white; stroke-width: 0.5;\">26.4</text>",
+			"features": [{
+				"type": "Point",
+				"coordinates": [30,50],
+				"properties": {
+					"railway":"milestone",
+					"railway:position":26.4
+				}
+			}],
 			"caption": "Milestone"
 		},
 		{
 			"minzoom": 8,
-			"maxzoom": 11,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: blue; font-weight: bold; stroke: white; stroke-width: 1.5;\">KB</text>",
-			"caption": "Station"
+			"heading": "Operating Sites"
 		},
 		{
-			"minzoom": 12,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: blue; font-weight: bold; stroke: white; stroke-width: 1.5;\">Bonn Hbf</text>",
+			"minzoom": 8,
+			"lineheight": 20,
+			"features": [{
+				"type": "Point",
+				"coordinates": [40,50],
+				"properties": {
+					"railway":"station",
+					"railway:ref":"KB",
+					"name":"Bonn Hbf"
+				}
+			}],
 			"caption": "Station"
 		},
 		{
 			"minzoom": 8,
-			"maxzoom": 11,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: #87491D; font-weight: bold; stroke: #F1F1F1; stroke-width: 1.5;\">KNG</text>",
-			"caption": "Yard"
-		},
-		{
-			"minzoom": 12,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: #87491D; font-weight: bold; stroke: #F1F1F1; stroke-width: 1.5;\">Neuss Gbf</text>",
+			"features": [{
+				"type": "Point",
+				"coordinates": [40,50],
+				"properties": {
+					"railway":"yard",
+					"railway:ref":"KNG",
+					"name":"Neuss Gbf"
+				}
+			}],
 			"caption": "Yard"
 		},
 		{
 			"minzoom": 10,
-			"maxzoom": 11,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: blue; stroke: white; stroke-width: 1.5;\">KANM</text>",
-			"caption": "Halt"
-		},
-		{
-			"minzoom": 12,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: blue; stroke: white; stroke-width: 1.5;\">Angermund</text>",
+			"features": [{
+				"type": "Point",
+				"coordinates": [40,50],
+				"properties": {
+					"railway":"halt",
+					"railway:ref":"HLEM",
+					"name":"Lemmie"
+				}
+			}],
 			"caption": "Halt"
 		},
 		{
 			"minzoom": 8,
-			"maxzoom": 11,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: #616161; stroke: #F1F1F1; stroke-width: 1.5;\">KWEB</text>",
-			"caption": "Junction, Crossover, Service Station, Site"
-		},
-		{
-			"minzoom": 12,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial Black; font-size: 14px; fill: #616161; stroke: #F1F1F1; stroke-width: 1.5;\">Lohbruch</text>",
+			"features": [{
+				"type": "Point",
+				"coordinates": [40,50],
+				"properties": {
+					"railway":"service_station",
+					"railway:ref":"KWEB",
+					"name":"Lohbruch"
+				}
+			}],
 			"caption": "Junction, Crossover, Service Station, Site"
 		},
 		{
 			"minzoom": 13,
-			"maxzoom": 13,
-			"icon": "icons/tramstop.png",
-			"caption": "Tram stop"
-		},
-		{
-			"minzoom": 14,
-			"symbol": "<text x=\"0\" y=\"13\" style=\"font-family: Arial; font-size: 13px; fill: #D877B8; font-weight: bold; stroke: white; stroke-width: 0.5;\">Grundend</text>",
+			"features": [{
+				"type": "Point",
+				"coordinates": [40,50],
+				"properties": {
+					"railway":"tram_stop",
+					"name":"Grundend"
+				}
+			}],
 			"caption": "Tram stop"
 		},
 		{
 			"minzoom": 11,
-			"icon": "icons/border-32.png",
+			"lineheight": 20,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"border"
+				}
+			}],
 			"caption": "Owner change"
 		}
 	]

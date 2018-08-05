@@ -1,7 +1,7 @@
 language: python
 python:
  - 2.7
- - 3.2
+ - 3.3
 cache: pip
 sudo: false
 notifications:
@@ -24,7 +24,7 @@ addons:
     - python-ply
     - python-rsvg
 install:
- - pip install cairocffi pillow ply
+ - pip install cairocffi pillow ply pojson
 script:
  - make
  - make check PHP=/usr/bin/php5
