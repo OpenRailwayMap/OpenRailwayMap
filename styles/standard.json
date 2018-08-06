@@ -419,6 +419,19 @@
 			"caption": "Junction, Crossover, Service Station, Site"
 		},
 		{
+			"minzoom": 10,
+			"features": [{
+				"type": "Point",
+				"coordinates": [40,50],
+				"properties": {
+					"railway":"station",
+					"station":"subway",
+					"name":"Rathaus"
+				}
+			}],
+			"caption": "Subway/Light rail station"
+		},
+		{
 			"minzoom": 13,
 			"features": [{
 				"type": "Point",
