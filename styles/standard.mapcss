@@ -254,7 +254,7 @@ way[railway=construction]["construction"=light_rail].tracks,
 way[railway=proposed]["proposed:railway"=light_rail].tracks,
 way[railway=proposed]["proposed"=light_rail].tracks
 {
-       color: #00BD14;
+	color: #00BD14;
 }
 
 /*****************/
@@ -266,7 +266,7 @@ way[railway=construction]["construction"=subway].tracks,
 way[railway=proposed]["proposed:railway"=subway].tracks,
 way[railway=proposed]["proposed"=subway].tracks
 {
-       color: #0300C3;
+	color: #0300C3;
 }
 
 /***************/
@@ -278,7 +278,7 @@ way[railway=construction]["construction"=tram].tracks,
 way[railway=proposed]["proposed:railway"=tram].tracks,
 way[railway=proposed]["proposed"=tram].tracks
 {
-       color: #D877B8;
+	color: #D877B8;
 }
 
 /***************************************************************************************/
