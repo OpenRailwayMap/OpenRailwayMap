@@ -318,6 +318,14 @@
 				<combo display_values="normalna" key="railway:signal:speed_limit:height" text="Wysokość [m]" values="normal"/>
 			</item>
 		</group>
+		<item name="Sygnalizator próby hamulców" type="node">
+			<key key="railway:signal:brake_test" value="PL-PKP:rhs"/>
+			<key key="railway:signal:brake_test:form" value="light"/>
+			<key key="railway:signal:brake_test:states" value="PL-PKP:rhs1;PL-PKP:rhs2;PL-PKP:rhs3"/>
+			<reference ref="signal_ref"/>
+			<reference ref="signal_position"/>
+			<reference ref="signal_directions"/>
+		</item>
 		<group name="Wskaźniki">
 			<item name="Wskaźnik zatrzymania (W 4)" type="node">
 				<key key="railway" value="signal"/>
