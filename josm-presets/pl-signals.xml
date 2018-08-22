@@ -327,6 +327,12 @@
 			<reference ref="signal_directions"/>
 		</item>
 		<group name="Wskaźniki">
+			<item name="Wskaźnik kierunku jazdy (W 2)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:route" value="PL-PKP:w2"/>
+				<key key="railway:signal:route:form" value="light"/>
+				<text key="railway:signal:route:states" text="Skróty nazwy stacji"/>
+			</item>
 			<item name="Wskaźnik zatrzymania (W 4)" type="node">
 				<key key="railway" value="signal"/>
 				<key key="railway:signal:stop" value="PL-PKP:w4"/>
@@ -346,10 +352,19 @@
 				<space/>
 				<combo display_values="normalna" key="railway:signal:shunting:height" text="Wysokość [m]" values="normal"/>
 			</item>
-			<item name="Wskaźnik ostrzegania (W 6, W 6a, W 6b, W 7)" type="node">
+			<item name="Wskaźnik ostrzegania (W 6, W 6a, W 7)" type="node">
 				<key key="railway" value="signal"/>
 				<key key="railway:signal:whistle:form" value="sign"/>
 				<combo display_values="W 6,W 6a,W 6b,W 7" key="railway:signal:whistle" text="Wskaźnik" values="PL-PKP:w6,PL-PKP:w6a,PL-PKP:w6b,PL-PKP:w7"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:whistle:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Wskaźnik ostrzegania (W 6b)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:whistle" value="PL-PKP:w6b"/>
+				<key key="railway:signal:whistle:form" value="sign"/>
 				<reference ref="signal_position"/>
 				<reference ref="signal_directions"/>
 				<space/>
