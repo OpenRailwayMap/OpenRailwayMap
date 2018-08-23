@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<presets baselanguage="pl" xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Grzegorz Szymaszek" shortdescription="OpenRailwayMap PL: sygnalizacja" version="2018-08-22">
+<presets baselanguage="pl" xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Grzegorz Szymaszek" shortdescription="OpenRailwayMap PL: sygnalizacja" version="2018-08-23">
 	<chunk id="signal_ref">
 		<key key="railway" value="signal"/>
 		<text key="ref" text="Identyfikator sygnalizatora/wskaźnika"/>
@@ -269,7 +269,16 @@
 				<combo display_values="normalna" key="railway:signal:humping:height" text="Wysokość [m]" values="normal"/>
 			</item>
 		</group>
-		<group name="Tarcze zaporowe">
+		<group name="Sygnały zamknięcia toru">
+			<item name="Tarcza zaporowa (Z 1)" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z1"/>
+				<key key="railway:signal:minor:form" value="sign"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:minor:height" text="Wysokość [m]" values="normal"/>
+			</item>
 			<item name="Tarcza zaporowa kształtowa" type="node">
 				<key key="railway:signal:minor" value="PL-PKP:z"/>
 				<key key="railway:signal:minor:form" value="semaphore"/>
@@ -280,6 +289,52 @@
 				<reference ref="signal_directions"/>
 				<space/>
 				<combo display_values="normalna" key="railway:signal:minor:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Tarcza zaporowa świetlna" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:zs"/>
+				<key key="railway:signal:minor:form" value="light"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:zs1;PL-PKP:zs2"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:minor:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:minor:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Latarnia wykolejnicowa" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z"/>
+				<key key="railway:signal:minor:height" value="dwarf"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:z1wk;PL-PKP:z2wk"/>
+				<combo key="railway:signal:minor:form" display_values="elektryczna,mechaniczna" text="Forma sygnalizatora" values="light,semaphore"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+			</item>
+			<item name="Latarnia na obrotnicy" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z"/>
+				<key key="railway:signal:minor:form" value="light"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:z1o;PL-PKP:z2o"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+			</item>
+			<item name="Latarnia na wadze pomostowej" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z"/>
+				<key key="railway:signal:minor:form" value="light"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:z1wg;PL-PKP:z2wg"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+			</item>
+			<item name="Latarnia na punkcie przestawczym zestawów kołowych" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z1p"/>
+				<key key="railway:signal:minor:form" value="sign"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+			</item>
+			<item name="Latarnia na żurawiu wodnym" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z"/>
+				<key key="railway:signal:minor:form" value="light"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:z1z;PL-PKP:z2z"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
 			</item>
 		</group>
 		<group name="Przenośne tarcze zatrzymania i zmniejszenia prędkości">

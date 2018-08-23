@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Grzegorz Szymaszek" pl.shortdescription="OpenRailwayMap PL: infrastruktura" shortdescription="OpenRailwayMap PL: infrastructure" version="2018-03-25">
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Grzegorz Szymaszek" pl.shortdescription="OpenRailwayMap PL: infrastruktura" shortdescription="OpenRailwayMap PL: infrastructure" version="2018-08-23">
 	<chunk id="rail_infrastructure_operator">
 		<combo display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Zarządca infrastruktury" text="Infrastructure operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
 	</chunk>
@@ -171,11 +171,6 @@
 		<separator/>
 		<item icon="buffer_stop-32.png" name="Buffer Stop" pl.name="Kozioł oporowy" type="node">
 			<key key="railway" value="buffer_stop"/>
-			<combo display_values="left,right,in_track" key="railway:signal:position" pl.display_values="po lewej,po prawej,pośrodku" pl.text="Pozycja" text="Position" values="left,right,in_track"/>
-			<combo display_values="forward,backward" key="railway:signal:direction" pl.text="Kierunek" pl.display_values="do przodu,do tyłu" text="Direction" values="forward,backward"/>
-			<combo display_values="S 1 (“stop”),Z 1 (“stop”),Zs 1 (“stop”)" key="railway:signal:minor" pl.display_values="S 1 („stój” na semaforze),Z 1 („stój” na tarczy zaporowej),Zs 1 („stój” na tarczy zaporowej świetlnej)" pl.text="Sygnał" text="Exact type of signal" values="PL:s1,PL:z1,PL:zs1"/>
-			<key key="railway:signal:minor:form" value="sign"/>
-			<combo display_values="light,semaphore,sign" key="railway:signal:minor:form" pl.display_values="semafor świetlny (tarcza zaporowa świetlna),tarcza zaporowa kształtowa,wskaźnik" pl.text="Forma sygnalizatora" text="Form" values="light,semaphore,sign"/>
 		</item>
 		<item icon="de/switch.png" name="Point" pl.name="Rozjazd" type="node">
 			<label pl.text="Rozjazd" text="Point (British English), Switch (American English)"/>
@@ -207,11 +202,6 @@
 			<key key="railway:derail" value="wedge"/>
 			<text key="ref" pl.text="Numer" text="Ref"/>
 			<check key="railway:local_operated" pl.text="Sterowana lokalnie" text="Local operated"/>
-			<check key="railway:signal:minor:deactivated" pl.text="Wyłączona z użytku" text="Out of order"/>
-			<combo display_values="Z" key="railway:signal:minor" pl.display_values="Z" pl.text="Sygnalizator" text="Signal" values="PL:z"/>
-			<combo delimiter="|" display_values="Z 1wk, Z 2wk" key="railway:signal:minor:states" pl.display_values="Z 1wk, Z 2wk" pl.text="Sygnały" text="Signal states" values="PL:z1wk;PL:z2wk"/>
-			<combo display_values="light,semaphore" key="railway:signal:minor:form" pl.display_values="latarnia elektryczna,latarnia mechaniczna" pl.text="Forma sygnalizatora" text="Form" values="light,semaphore"/>
-			<key key="railway:signal:minor:height" value="dwarf"/>
 		</item>
 		<item name="Vacancy Detection" pl.name="Czujnik zajętości" type="node">
 			<label pl.text="Czujnik zajętości toru" text="Track vacancy detection"/>
