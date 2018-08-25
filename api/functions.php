@@ -3,7 +3,7 @@
 	OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 	This program comes with ABSOLUTELY NO WARRANTY.
 	This is free software, and you are welcome to redistribute it under certain conditions.
-	See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+	See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	*/
 
 
@@ -69,79 +69,6 @@
 	}
 
 
-	// returns human-readable timestamp of given timestamp
-	function timestampString($timestamp, $offset)
-	{
-		return date("d.m.Y H:i", ($timestamp+($offset*3600)));
-	}
-
-
-	// returns the difference between two timestamps
-	function timeAgo($latest, $reference, $offset = 0)
-	{
-		return ($latest+($offset*3600))-$reference;
-	}
-
-
-	// returns an human-readable string of the given difference timestamp
-	function timeAgoString($diff)
-	{
-		if (!$diff)
-			return false;
-
-		// unit conversion factors
-		$units[0] = 60;	// seconds
-		$units[1] = 60;	// minutes
-		$units[2] = 24;	// hours
-		$units[3] = 7;	// days
-		$units[4] = 4;	// weeks
-		$units[5] = 12;	// months
-
-		// calculating difference as human readable string
-		for ($i=0; $i<count($units); $i++)
-		{
-			if ($diff >= $units[$i])
-				$diff = $diff / $units[$i];
-			else
-				break;
-		}
-
-		// singular and plural forms
-		$interval[0] = sprintf(ngettext("%d second", "%d seconds", (int)$diff), (int)$diff);
-		$interval[1] = sprintf(ngettext("%d minute", "%d minutes", (int)$diff), (int)$diff);
-		$interval[2] = sprintf(ngettext("%d hour", "%d hours", (int)$diff), (int)$diff);
-		$interval[3] = sprintf(ngettext("%d day", "%d days", (int)$diff), (int)$diff);
-		$interval[4] = sprintf(ngettext("%d week", "%d weeks", (int)$diff), (int)$diff);
-		$interval[5] = sprintf(ngettext("%d month", "%d months", (int)$diff), (int)$diff);
-
-		return sprintf(_("more than %s ago"), $interval[$i]);
-	}
-
-
-	// send error report to own mail account
-	function reportError($error = "")
-	{
-		global $mail;
-		global $appname;
-
-		// generating message
-		$message = "An error happened in ".$appname.":";
-		$message .= "\n\nTime..... ".date("d.m.Y-H:i", time());
-		$message .= "\nIP....... http://www.utrace.de/?query=".getUserIP();
-		$message .= "\nHeader... ".$_SERVER['HTTP_USER_AGENT'];
-		$message .= "\nError.... ".$error;
-
-		// sending error report by mail to given mail address
-		$sended = mail($mail, "Error Report ".$appname, $message, "From: ".$appname." <".$mail.">");
-
-		// check if mail was being send
-		if(!$sended)
-			return false;
-
-		return true;
-	}
-
-
 	// checks if given offset-parameter is valid and takes standard value if missing
 	function offset($offset)
 	{
@@ -149,10 +76,7 @@
 			return 0;
 
 		if (strlen($offset) > 4)
-		{
-			reportError("Given offset is too long: ".$offset);
 			return 0;
-		}
 
 		return $offset;
 	}
@@ -163,17 +87,11 @@
 	{
 		// if no bbox is given
 		if (!$bbox)
-		{
-			reportError("Bbox was not given.");
 			return false;
-		}
 
 		// if bbox isn't too big
 		if (abs($right - $left) > 0.5 or abs($top - $bottom) > 0.2)
-		{
-			reportError("Bbox too big.");
 			return false;
-		}
 
 		// parsing values from given string
 		$coordinates = explode(",", $bbox);
@@ -204,10 +122,7 @@
 		$type = $_GET[$type];
 		// check if given object type is invalid
 		if (($type != "node") && ($type != "way") && ($type != "relation"))
-		{
-			reportError("Given type was invalid: ".$type);
 			return false;
-		}
 
 		return true;
 	}
@@ -221,10 +136,7 @@
 
 		$id = $_GET[$id];
 		if (!ctype_digit($id))
-		{
-			reportError("Given id contains not-numeric characters: ".$id);
 			return false;
-		}
 
 		return true;
 	}
@@ -238,10 +150,7 @@
 
 		$coord = $_GET[$coord];
 		if (!is_numeric($coord))
-		{
-			reportError("Given coordinate contains not-numeric characters: ".$coord);
 			return false;
-		}
 
 		return true;
 	}
@@ -255,10 +164,7 @@
 
 		$zoom = $_GET[$zoom];
 		if (!ctype_digit($zoom))
-		{
-			reportError("Given zoom level is not valid: ".$zoom);
 			return false;
-		}
 
 		return true;
 	}
@@ -272,10 +178,7 @@
 
 		$offset = $_GET[$offset];
 		if (!is_numeric($offset))
-		{
-			reportError("Given timezone offset is not valid: ".$offset);
 			return false;
-		}
 
 		return true;
 	}
@@ -299,9 +202,9 @@
 				else
 					echo "null,\n";
 			echo "zoom : " . (isValidZoom('zoom') ? ($_GET['zoom']) : ("null")) . ",\n";
+			echo "lang : " . (isset($_GET['lang']) ? ("'".$_GET['lang']."'") : ("null")) . ",\n";
 			echo "offset : " . (isValidOffset('offset') ? ($_GET['offset']) : ("null")) . ",\n";
 			echo "searchquery : " . (isset($_GET['q']) ? (json_encode($_GET['q'])) : ("''")) . ",\n";
-			echo "lang : '" . $lang . "',\n";
 			echo "ref : " . (isset($_GET['ref']) ? (json_encode($_GET['ref'])) : ("null")) . ",\n";
 			echo "name : " . (isset($_GET['name']) ? (json_encode($_GET['name'])) : ("null")) . ",\n";
 			echo "line : " . (isset($_GET['line']) ? (json_encode($_GET['line'])) : ("null")) . ",\n";

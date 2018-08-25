@@ -30,7 +30,7 @@ distclean: clean
 download/leaflet-$(DEP_LEAFLET_VERSION).zip:
 	mkdir -p download
 	# do this in 2 steps to make sure only a completely downloaded file is used
-	wget -O download/leaflet.zip http://cdn.leafletjs.com/leaflet/v$(DEP_LEAFLET_VERSION)/leaflet.zip
+	wget -O download/leaflet.zip https://cdn.leafletjs.com/leaflet/v$(DEP_LEAFLET_VERSION)/leaflet.zip
 	mv download/leaflet.zip download/leaflet-$(DEP_LEAFLET_VERSION).zip
 
 download-deps: download/leaflet-$(DEP_LEAFLET_VERSION).zip

@@ -4,127 +4,205 @@
 	[
 		{
 			"minzoom": 2,
-			"symbol": "<g fill=\"none\" stroke=\"gray\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l32 0\" /></g>",
+			"features": [
+				{"type": "LineString", "coordinates": [[10,50],[80,50]], "properties": { "railway":"rail", "usage":"main" }}
+			],
 			"caption": "No information"
 		},
 		{
 			"minzoom": 12,
-			"symbol": "<g fill=\"none\" stroke=\"gray\" stroke-width=\"3\"><path stroke-linecap=\"butt\" stroke-dasharray=\"4,4\" d=\"M5 8 l32 0\" /></g>",
+			"features": [
+				{"type": "LineString", "coordinates": [[10,50],[80,50]], "properties": { "railway":"rail", "usage":"main", "maxspeed:forward": 1 }}
+			],
 			"caption": "speed only given for one direction"
-		},
-		{
-			"minzoom": 10,
-			"symbol": "<g fill=\"none\" stroke=\"gray\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"gray\" stroke-width=\"1.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
-			"caption": "main track, service track"
 		},
 		{
 			"minzoom": 2,
 			"maxzoom": 8,
 			"replace": [
-				{"%SPDMIN%":  1,"%SPDMAX%": 10, "%COLORUSED%":"0100CB"},
-				{"%SPDMIN%": 11,"%SPDMAX%": 20, "%COLORUSED%":"001ECB"},
-				{"%SPDMIN%": 21,"%SPDMAX%": 30, "%COLORUSED%":"003DCB"},
-				{"%SPDMIN%": 31,"%SPDMAX%": 40, "%COLORUSED%":"005BCB"},
-				{"%SPDMIN%": 41,"%SPDMAX%": 50, "%COLORUSED%":"007ACB"},
-				{"%SPDMIN%": 51,"%SPDMAX%": 60, "%COLORUSED%":"0098CB"},
-				{"%SPDMIN%": 61,"%SPDMAX%": 70, "%COLORUSED%":"00B7CB"},
-				{"%SPDMIN%": 71,"%SPDMAX%": 80, "%COLORUSED%":"00CBC1"},
-				{"%SPDMIN%": 81,"%SPDMAX%": 90, "%COLORUSED%":"00CBA2"},
-				{"%SPDMIN%": 91,"%SPDMAX%":100, "%COLORUSED%":"00CB84"},
-				{"%SPDMIN%":101,"%SPDMAX%":110, "%COLORUSED%":"00CB66"},
-				{"%SPDMIN%":111,"%SPDMAX%":120, "%COLORUSED%":"00CB47"},
-				{"%SPDMIN%":121,"%SPDMAX%":130, "%COLORUSED%":"00CB29"},
-				{"%SPDMIN%":131,"%SPDMAX%":140, "%COLORUSED%":"00CB0A"},
-				{"%SPDMIN%":141,"%SPDMAX%":150, "%COLORUSED%":"14CB00"},
-				{"%SPDMIN%":151,"%SPDMAX%":160, "%COLORUSED%":"33CB00"},
-				{"%SPDMIN%":161,"%SPDMAX%":170, "%COLORUSED%":"51CB00"},
-				{"%SPDMIN%":171,"%SPDMAX%":180, "%COLORUSED%":"70CB00"},
-				{"%SPDMIN%":181,"%SPDMAX%":190, "%COLORUSED%":"8ECB00"},
-				{"%SPDMIN%":191,"%SPDMAX%":200, "%COLORUSED%":"ADCB00"},
-				{"%SPDMIN%":201,"%SPDMAX%":210, "%COLORUSED%":"CBCB00"},
-				{"%SPDMIN%":211,"%SPDMAX%":220, "%COLORUSED%":"CBAD00"},
-				{"%SPDMIN%":221,"%SPDMAX%":230, "%COLORUSED%":"CB8E00"},
-				{"%SPDMIN%":231,"%SPDMAX%":240, "%COLORUSED%":"CB7000"},
-				{"%SPDMIN%":241,"%SPDMAX%":250, "%COLORUSED%":"CB5100"},
-				{"%SPDMIN%":251,"%SPDMAX%":260, "%COLORUSED%":"CB3300"},
-				{"%SPDMIN%":261,"%SPDMAX%":270, "%COLORUSED%":"CB1400"},
-				{"%SPDMIN%":271,"%SPDMAX%":280, "%COLORUSED%":"CB0007"},
-				{"%SPDMIN%":281,"%SPDMAX%":290, "%COLORUSED%":"CB0025"},
-				{"%SPDMIN%":291,"%SPDMAX%":300, "%COLORUSED%":"CB0044"},
-				{"%SPDMIN%":301,"%SPDMAX%":320, "%COLORUSED%":"CB0062"},
-				{"%SPDMIN%":321,"%SPDMAX%":340, "%COLORUSED%":"CB0081"},
-				{"%SPDMIN%":341,"%SPDMAX%":360, "%COLORUSED%":"CB009F"},
-				{"%SPDMIN%":361,"%SPDMAX%":380, "%COLORUSED%":"CB00BD"},
-				{"%SPDMIN%":381,"%SPDMAX%":400, "%COLORUSED%":"BA00CB"}
+				{"%SPDMIN%":  1,"%SPDMAX%": 10},
+				{"%SPDMIN%": 11,"%SPDMAX%": 20},
+				{"%SPDMIN%": 21,"%SPDMAX%": 30},
+				{"%SPDMIN%": 31,"%SPDMAX%": 40},
+				{"%SPDMIN%": 41,"%SPDMAX%": 50},
+				{"%SPDMIN%": 51,"%SPDMAX%": 60},
+				{"%SPDMIN%": 61,"%SPDMAX%": 70},
+				{"%SPDMIN%": 71,"%SPDMAX%": 80},
+				{"%SPDMIN%": 81,"%SPDMAX%": 90},
+				{"%SPDMIN%": 91,"%SPDMAX%":100},
+				{"%SPDMIN%":101,"%SPDMAX%":110},
+				{"%SPDMIN%":111,"%SPDMAX%":120},
+				{"%SPDMIN%":121,"%SPDMAX%":130},
+				{"%SPDMIN%":131,"%SPDMAX%":140},
+				{"%SPDMIN%":141,"%SPDMAX%":150},
+				{"%SPDMIN%":151,"%SPDMAX%":160},
+				{"%SPDMIN%":161,"%SPDMAX%":170},
+				{"%SPDMIN%":171,"%SPDMAX%":180},
+				{"%SPDMIN%":181,"%SPDMAX%":190},
+				{"%SPDMIN%":191,"%SPDMAX%":200},
+				{"%SPDMIN%":201,"%SPDMAX%":210},
+				{"%SPDMIN%":211,"%SPDMAX%":220},
+				{"%SPDMIN%":221,"%SPDMAX%":230},
+				{"%SPDMIN%":231,"%SPDMAX%":240},
+				{"%SPDMIN%":241,"%SPDMAX%":250},
+				{"%SPDMIN%":251,"%SPDMAX%":260},
+				{"%SPDMIN%":261,"%SPDMAX%":270},
+				{"%SPDMIN%":271,"%SPDMAX%":280},
+				{"%SPDMIN%":281,"%SPDMAX%":290},
+				{"%SPDMIN%":291,"%SPDMAX%":300},
+				{"%SPDMIN%":301,"%SPDMAX%":320},
+				{"%SPDMIN%":321,"%SPDMAX%":340},
+				{"%SPDMIN%":341,"%SPDMAX%":360},
+				{"%SPDMIN%":361,"%SPDMAX%":380},
+				{"%SPDMIN%":381,"%SPDMAX%":400}
 			],
-			"symbol": "<g fill=\"none\" stroke=\"#%COLORUSED%\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g>",
+			"features": [
+				{"type": "LineString", "coordinates": [[10,50],[45,50]], "properties": { "maxspeed":"%SPDMIN%", "railway":"rail", "usage":"main" }}
+			],
 			"caption": "%SPDMIN%-%SPDMAX% km/h"
 		},
 		{
 			"minzoom": 9,
 			"replace": [
-				{"%SPDMIN%":  1,"%SPDMAX%": 10, "%COLORUSED%":"0100CB", "%COLORCONSTR%":"9595e9"},
-				{"%SPDMIN%": 11,"%SPDMAX%": 20, "%COLORUSED%":"001ECB", "%COLORCONSTR%":"95a1e9"},
-				{"%SPDMIN%": 21,"%SPDMAX%": 30, "%COLORUSED%":"003DCB", "%COLORCONSTR%":"95aee9"},
-				{"%SPDMIN%": 31,"%SPDMAX%": 40, "%COLORUSED%":"005BCB", "%COLORCONSTR%":"95bbe9"},
-				{"%SPDMIN%": 41,"%SPDMAX%": 50, "%COLORUSED%":"007ACB", "%COLORCONSTR%":"95c8e9"},
-				{"%SPDMIN%": 51,"%SPDMAX%": 60, "%COLORUSED%":"0098CB", "%COLORCONSTR%":"95d4e9"},
-				{"%SPDMIN%": 61,"%SPDMAX%": 70, "%COLORUSED%":"00B7CB", "%COLORCONSTR%":"95e1e9"},
-				{"%SPDMIN%": 71,"%SPDMAX%": 80, "%COLORUSED%":"00CBC1", "%COLORCONSTR%":"95e9e5"},
-				{"%SPDMIN%": 81,"%SPDMAX%": 90, "%COLORUSED%":"00CBA2", "%COLORCONSTR%":"95e9d8"},
-				{"%SPDMIN%": 91,"%SPDMAX%":100, "%COLORUSED%":"00CB84", "%COLORCONSTR%":"95e9cc"},
-				{"%SPDMIN%":101,"%SPDMAX%":110, "%COLORUSED%":"00CB66", "%COLORCONSTR%":"95e9bf"},
-				{"%SPDMIN%":111,"%SPDMAX%":120, "%COLORUSED%":"00CB47", "%COLORCONSTR%":"95e9b3"},
-				{"%SPDMIN%":121,"%SPDMAX%":130, "%COLORUSED%":"00CB29", "%COLORCONSTR%":"95e9a6"},
-				{"%SPDMIN%":131,"%SPDMAX%":140, "%COLORUSED%":"00CB0A", "%COLORCONSTR%":"95e999"},
-				{"%SPDMIN%":141,"%SPDMAX%":150, "%COLORUSED%":"14CB00", "%COLORCONSTR%":"9de995"},
-				{"%SPDMIN%":151,"%SPDMAX%":160, "%COLORUSED%":"33CB00", "%COLORCONSTR%":"aae995"},
-				{"%SPDMIN%":161,"%SPDMAX%":170, "%COLORUSED%":"51CB00", "%COLORCONSTR%":"b7e995"},
-				{"%SPDMIN%":171,"%SPDMAX%":180, "%COLORUSED%":"70CB00", "%COLORCONSTR%":"c4e995"},
-				{"%SPDMIN%":181,"%SPDMAX%":190, "%COLORUSED%":"8ECB00", "%COLORCONSTR%":"d0e995"},
-				{"%SPDMIN%":191,"%SPDMAX%":200, "%COLORUSED%":"ADCB00", "%COLORCONSTR%":"dde995"},
-				{"%SPDMIN%":201,"%SPDMAX%":210, "%COLORUSED%":"CBCB00", "%COLORCONSTR%":"e9e995"},
-				{"%SPDMIN%":211,"%SPDMAX%":220, "%COLORUSED%":"CBAD00", "%COLORCONSTR%":"e9dd95"},
-				{"%SPDMIN%":221,"%SPDMAX%":230, "%COLORUSED%":"CB8E00", "%COLORCONSTR%":"e9d095"},
-				{"%SPDMIN%":231,"%SPDMAX%":240, "%COLORUSED%":"CB7000", "%COLORCONSTR%":"e9c495"},
-				{"%SPDMIN%":241,"%SPDMAX%":250, "%COLORUSED%":"CB5100", "%COLORCONSTR%":"e9b795"},
-				{"%SPDMIN%":251,"%SPDMAX%":260, "%COLORUSED%":"CB3300", "%COLORCONSTR%":"e9aa95"},
-				{"%SPDMIN%":261,"%SPDMAX%":270, "%COLORUSED%":"CB1400", "%COLORCONSTR%":"e99d95"},
-				{"%SPDMIN%":271,"%SPDMAX%":280, "%COLORUSED%":"CB0007", "%COLORCONSTR%":"e99598"},
-				{"%SPDMIN%":281,"%SPDMAX%":290, "%COLORUSED%":"CB0025", "%COLORCONSTR%":"e995a4"},
-				{"%SPDMIN%":291,"%SPDMAX%":300, "%COLORUSED%":"CB0044", "%COLORCONSTR%":"e995b1"},
-				{"%SPDMIN%":301,"%SPDMAX%":320, "%COLORUSED%":"CB0062", "%COLORCONSTR%":"e995be"},
-				{"%SPDMIN%":321,"%SPDMAX%":340, "%COLORUSED%":"CB0081", "%COLORCONSTR%":"e995cb"},
-				{"%SPDMIN%":341,"%SPDMAX%":360, "%COLORUSED%":"CB009F", "%COLORCONSTR%":"e995d7"},
-				{"%SPDMIN%":361,"%SPDMAX%":380, "%COLORUSED%":"CB00BD", "%COLORCONSTR%":"e995e4"},
-				{"%SPDMIN%":381,"%SPDMAX%":400, "%COLORUSED%":"BA00CB", "%COLORCONSTR%":"e295e9"}
+				{"%SPDMIN%":  1,"%SPDMAX%": 10},
+				{"%SPDMIN%": 11,"%SPDMAX%": 20},
+				{"%SPDMIN%": 21,"%SPDMAX%": 30},
+				{"%SPDMIN%": 31,"%SPDMAX%": 40},
+				{"%SPDMIN%": 41,"%SPDMAX%": 50},
+				{"%SPDMIN%": 51,"%SPDMAX%": 60},
+				{"%SPDMIN%": 61,"%SPDMAX%": 70},
+				{"%SPDMIN%": 71,"%SPDMAX%": 80},
+				{"%SPDMIN%": 81,"%SPDMAX%": 90},
+				{"%SPDMIN%": 91,"%SPDMAX%":100},
+				{"%SPDMIN%":101,"%SPDMAX%":110},
+				{"%SPDMIN%":111,"%SPDMAX%":120},
+				{"%SPDMIN%":121,"%SPDMAX%":130},
+				{"%SPDMIN%":131,"%SPDMAX%":140},
+				{"%SPDMIN%":141,"%SPDMAX%":150},
+				{"%SPDMIN%":151,"%SPDMAX%":160},
+				{"%SPDMIN%":161,"%SPDMAX%":170},
+				{"%SPDMIN%":171,"%SPDMAX%":180},
+				{"%SPDMIN%":181,"%SPDMAX%":190},
+				{"%SPDMIN%":191,"%SPDMAX%":200},
+				{"%SPDMIN%":201,"%SPDMAX%":210},
+				{"%SPDMIN%":211,"%SPDMAX%":220},
+				{"%SPDMIN%":221,"%SPDMAX%":230},
+				{"%SPDMIN%":231,"%SPDMAX%":240},
+				{"%SPDMIN%":241,"%SPDMAX%":250},
+				{"%SPDMIN%":251,"%SPDMAX%":260},
+				{"%SPDMIN%":261,"%SPDMAX%":270},
+				{"%SPDMIN%":271,"%SPDMAX%":280},
+				{"%SPDMIN%":281,"%SPDMAX%":290},
+				{"%SPDMIN%":291,"%SPDMAX%":300},
+				{"%SPDMIN%":301,"%SPDMAX%":320},
+				{"%SPDMIN%":321,"%SPDMAX%":340},
+				{"%SPDMIN%":341,"%SPDMAX%":360},
+				{"%SPDMIN%":361,"%SPDMAX%":380},
+				{"%SPDMIN%":381,"%SPDMAX%":400}
 			],
-			"symbol": "<g fill=\"none\" stroke=\"#%COLORUSED%\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M5 8 l16 0\" /></g><g fill=\"none\" stroke=\"#%COLORCONSTR%\" stroke-width=\"3.5\"><path stroke-linecap=\"butt\" d=\"M21 8 l16 0\" /></g>",
+			"features": [
+				{"type": "LineString", "coordinates": [[10,50],[45,50]], "properties": { "maxspeed":"%SPDMIN%", "railway":"rail", "usage":"main" }},
+				{"type": "LineString", "coordinates": [[45,50],[80,50]], "properties": { "maxspeed":"%SPDMAX%", "construction:railway":"rail", "railway":"construction" }}
+			],
 			"caption": "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/zs3v-50-sign-down-22.png",
-			"caption": "Zs 3v Geschwindigkeits­voranzeiger"
+			"lineheight": 20,
+			"features": [{
+				"type": "Point",
+				"coordinates": [35,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:speed_limit_distant":"DE-ESO:zs3v",
+					"railway:signal:speed_limit_distant:form":"sign",
+					"railway:signal:speed_limit_distant:speed":"30"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [65,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:speed_limit_distant":"DE-ESO:zs3v",
+					"railway:signal:speed_limit_distant:form":"light",
+					"railway:signal:speed_limit_distant:speed":"30"
+				}
+			}],
+			"caption": "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
 		},
 		{
 			"minzoom": 17,
-			"icon": "icons/de/zs3-60-sign-up-22.png",
-			"caption": "Zs 3 Geschwindigkeits­anzeiger"
+			"lineheight": 20,
+			"features": [{
+				"type": "Point",
+				"coordinates": [35,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:speed_limit":"DE-ESO:zs3",
+					"railway:signal:speed_limit:form":"sign",
+					"railway:signal:speed_limit:speed":"30"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [65,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:speed_limit":"DE-ESO:zs3",
+					"railway:signal:speed_limit:form":"light",
+					"railway:signal:speed_limit:speed":"30"
+				}
+			}],
+			"caption": "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/lf6-60-sign-down-22.png",
+			"lineheight": 20,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:speed_limit_distant":"DE-ESO:lf6",
+					"railway:signal:speed_limit_distant:form":"sign",
+					"railway:signal:speed_limit_distant:speed":"60"
+				}
+			}],
 			"caption": "Lf 6 Geschwindigkeits­ankündesignal"
 		},
 		{
 			"minzoom": 14,
-			"icon": "icons/de/lf7-70-sign-22.png",
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:speed_limit":"DE-ESO:lf7",
+					"railway:signal:speed_limit:form":"sign",
+					"railway:signal:speed_limit:speed":"70"
+				}
+			}],
 			"caption": "Lf 7 Geschwindigkeitssignal"
 		},
 		{
-			"minzoom": 17,
-			"icon": "icons/de/zs10-sign-22.png",
+			"minzoom": 16,
+			"lineheight": 24,
+			"features": [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:speed_limit":"DE-ESO:db:zs10",
+					"railway:signal:speed_limit:form":"sign",
+					"railway:signal:speed_limit:speed":"none"
+				}
+			}],
 			"caption": "Zs 10 Endesignal (Tafel)"
 		}
 	]

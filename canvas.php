@@ -3,7 +3,7 @@
 	OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 	This program comes with ABSOLUTELY NO WARRANTY.
 	This is free software, and you are welcome to redistribute it under certain conditions.
-	See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+	See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	*/
 
 	require_once("api/functions.php");
@@ -67,39 +67,7 @@
 		<script type="text/javascript" src="styles/electrified.js"></script>
 		<?php
 			urlArgsToParam(true, $urlbase);
-
-			switch ($lang)
-			{
-				case "de":
-					$paypalbuttonlang = "de_DE";
-					break;
-				case "en":
-					$paypalbuttonlang = "en_US";
-					break;
-				case "fr":
-					$paypalbuttonlang = "fr_FR";
-					break;
-				case "es":
-					$paypalbuttonlang = "es_ES";
-					break;
-				case "nl":
-					$paypalbuttonlang = "nl_NL";
-					break;
-				case "it":
-					$paypalbuttonlang = "it_IT";
-					break;
-				case "ru":
-					$paypalbuttonlang = "ru_RU";
-					break;
-				case "pl":
-					$paypalbuttonlang = "pl_PL";
-					break;
-				default:
-					$paypalbuttonlang = "en_US";
-					break;
-			}
 		?>
-		<script type="text/javascript" src="api/jstranslations.php?lang=<?php echo $lang; ?>"></script>
 		<script type="text/javascript" src="js/search.js"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>
 		<script type="text/javascript" src="js/timestamp.js"></script>
@@ -111,6 +79,13 @@
 		<meta name="apple-mobile-web-app-title" content="OpenRailwayMap">
 		<link rel="manifest" href="webapp-manifest.json">
 		<meta name="theme-color" content="#4e9a06">
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@openrailwaymap" />
+		<meta name="twitter:title" content="OpenRailwayMap" />
+		<meta name="twitter:description" content="OpenRailwayMap - An OpenStreetMap-based project for creating a map of the world&amp;#39;s railway infrastructure." />
+		<meta name="twitter:url" content="https://www.openrailwaymap.org/">
+		<meta name="twitter:image" content="https://www.openrailwaymap.org/img/openrailwaymap-310.png" />
 	</head>
 	<body onload="createMap(false);">
 		<div id="fullscreen" class="fullscreenOut"></div>
@@ -132,16 +107,12 @@
 			</form>
 			<br />
 			<p id="info"></p>
-			<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="PaypalButton">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="9KCKT39N7AGL8">
-				<input type="image" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
-				<img alt="" border="0" src="https://www.paypalobjects.com/<?=$paypalbuttonlang?>/i/scr/pixel.gif" width="1" height="1">
-			</form>
 			<div id="linkBar">
-				<a class="links" id="infoButton" href="http://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
-				<a class="links" id="infoButton" href="http://blog.openrailwaymap.org/" target="_blank"><?=_("Blog")?></a>&nbsp;•
+				<a class="links" id="infoButton" href="https://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
+				<a class="links" id="infoButton" href="https://blog.openrailwaymap.org/" target="_blank"><?=_("Blog")?></a>&nbsp;•
 				<a class="links" id="contactButton" href="#"><?=_("Contact")?></a>&nbsp;•
+				<a class="links" id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9KCKT39N7AGL8"><?=_("Donate")?></a>&nbsp;•
+				<a class="links" id="imprintButton" href="/imprint"><?=_("Imprint &amp; Privacy Policy")?></a>&nbsp;•
 				<a class="links" id="permalinkButton" href="#"><?=_("Permalink")?></a>
 				<script language="javascript">
 					var usr = "info";

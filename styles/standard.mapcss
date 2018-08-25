@@ -5,10 +5,10 @@ Standard layer
 OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 Format details:
-* http://josm.openstreetmap.de/wiki/Help/Styles/MapCSSImplementation
+* https://josm.openstreetmap.de/wiki/Help/Styles/MapCSSImplementation
 * https://wiki.openstreetmap.org/wiki/MapCSS/0.2
 */
 
@@ -18,7 +18,7 @@ meta
 	version: "0";
 	description: "Style for a infrastructure standard layer railroad network map.";
 	author: "rurseekatze";
-	link: "http://wiki.openstreetmap.org/wiki/OpenRailwayMap";
+	link: "https://wiki.openstreetmap.org/wiki/OpenRailwayMap";
 	watch-modified: true;
 }
 
@@ -254,7 +254,7 @@ way[railway=construction]["construction"=light_rail].tracks,
 way[railway=proposed]["proposed:railway"=light_rail].tracks,
 way[railway=proposed]["proposed"=light_rail].tracks
 {
-       color: #00BD14;
+	color: #00BD14;
 }
 
 /*****************/
@@ -266,7 +266,7 @@ way[railway=construction]["construction"=subway].tracks,
 way[railway=proposed]["proposed:railway"=subway].tracks,
 way[railway=proposed]["proposed"=subway].tracks
 {
-       color: #0300C3;
+	color: #0300C3;
 }
 
 /***************/
@@ -278,7 +278,7 @@ way[railway=construction]["construction"=tram].tracks,
 way[railway=proposed]["proposed:railway"=tram].tracks,
 way[railway=proposed]["proposed"=tram].tracks
 {
-       color: #D877B8;
+	color: #D877B8;
 }
 
 /***************************************************************************************/
@@ -879,4 +879,25 @@ node|z17-[railway=phone]
 	icon-image: "icons/phone-32.png";
 	icon-width: 12;
 	icon-height: 16;
+}
+
+/*************************************/
+/* radio towers (GSM-R and analogue) */
+/*************************************/
+node|z13-[railway=radio][man_made=mast],
+node|z13-[railway=radio][man_made=tower] {
+	z-index: 880;
+	icon-image: "icons/radio-mast-30.png";
+	icon-width: 10;
+	icon-height: 15;
+}
+
+/**************************************************************/
+/* radio beam antennas (GSM-R and analogue) used near tunnels */
+/**************************************************************/
+node|z13-[railway=radio][man_made=antenna] {
+	z-index: 880;
+	icon-image: "icons/radio-antenna-20.png";
+	icon-width: 10;
+	icon-height: 10;
 }

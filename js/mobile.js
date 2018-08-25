@@ -2,92 +2,124 @@
 OpenRailwayMap Copyright (C) 2012 Alexander Matheisen
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
-See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
+
+window.openrailwaymap = {
+	'root': params['urlbase'],
+	'apiUrl': 'https://api.openrailwaymap.org/',
+	'tiledir': 'https://{s}.tiles.openrailwaymap.org/',
+	'availableStyles': {
+		"standard": "Infrastructure",
+		"maxspeed": "Maxspeeds",
+		"signals": "Signalling",
+	},
+	'availableTranslations': {
+		"ca": "ca_ES",
+		"cs": "cs_CZ",
+		"da": "da_DK",
+		"de": "de_DE",
+		"el": "el_GR",
+		"en": "en_GB",
+		"es": "es_ES",
+		"fi": "fi_FI",
+		"fr": "fr_FR",
+		"ja": "ja_JP",
+		"lt": "lt_LT",
+		"nl": "nl_NL",
+		"nqo": "nqo_GN",
+		"pl": "pl_PL",
+		"pt": "pt_PT",
+		"ru": "ru_RU",
+		"sl": "sl_SI",
+		"sv": "sv_SE",
+		"tr": "tr_TR",
+		"uk": "uk_UA",
+		"vi": "vi_VN",
+		"zh": "zh_TW"
+	}
+};
 
 // main function, creates map and layers, controls other functions
 function createMap(embed)
 {
-	root = params['urlbase'];
-	apiUrl = 'https://api.openrailwaymap.org/';
-	loading = "<img class='loading' src='"+root+"/img/loading.gif'><br>"+translations['loading'];
-	// path to the bitmap tile directory
-	tiledir = "https://{s}.tiles.openrailwaymap.org/";
-	// available map rendering styles
-	availableStyles = new Array("standard", "maxspeed", "signals");
-
-	if (params['offset'] != null)
-		offset = params['offset'];
-	else
+	getRequest(window.openrailwaymap.root + "/locales/" + getUserLang() + "/LC_MESSAGES/messages.json", function(response)
 	{
-		// get time offset to UTC
-		var now = new Date();
-		offset = -(now.getTimezoneOffset() / 60);
-	}
+		window.openrailwaymap.translations = JSON.parse(response);
 
-	map = L.map('mapFrame');
-
-	if (!embed)
-	{
-		map.on('moveend', function(e)
-		{
-			updatePermalink(railmap.selectedStyle);
-		});
-	}
-
-	// railmap layer
-	railmap = new L.TileLayer(tiledir+'standard/{z}/{x}/{y}.png',
-	{
-		attribution: translations['railmapAttribution'],
-		minZoom: 2,
-		maxZoom: 19,
-		tileSize: 256
-	}).addTo(map);
-
-	if (!embed)
-	{
-		map.on('zoomend', function(e)
-		{
-			updateLegend("legend", railmap.selectedStyle);
-			updatePermalink(railmap.selectedStyle);
-		});
-	}
-
-	setupControls();
-
-	// only in not-embed mode
-	if (!embed)
-	{
-		if (gEBI("menuButton") != null)
-			menu = new Mobilemenu("menu", "menuButton");
-
-		// setting start position
-		startposition = new Startposition(map);
-		// loading timestamp
-		var timestamp = new Timestamp("info");
-		// create search
-		search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", menu);
-		// build style selection and it's event handling
-		getStyleSelection();
-		// set rendering style
-		if (params['style'] != null && styleValid(params['style']))
-			setStyle(params['style']);
+		if (params['offset'] != null)
+			offset = params['offset'];
 		else
-			setStyle("standard");
-		// onclick event of locate button
-		gEBI("locateButton").onclick = function()
 		{
-			startposition.setPosition();
-		};
-		// initialize the permalink url
-		updatePermalink(railmap.selectedStyle);
-	}
-	else
-	{
-		// setting start position
-		startposition = new Startposition(map);
-	}
+			// get time offset to UTC
+			var now = new Date();
+			offset = -(now.getTimezoneOffset() / 60);
+		}
+
+		map = L.map('mapFrame');
+
+		if (!embed)
+		{
+			map.on('moveend', function(e)
+			{
+				updatePermalink(railmap.selectedStyle);
+			});
+		}
+
+		// railmap layer
+		railmap = new L.TileLayer(window.openrailwaymap.tiledir+'standard/{z}/{x}/{y}.png',
+		{
+			attribution: _("Rendering: OpenRailwayMap"),
+			minZoom: 2,
+			maxZoom: 19,
+			tileSize: 256
+		}).addTo(map);
+
+		if (!embed)
+		{
+			map.on('zoomend', function(e)
+			{
+				updateLegend("legend", railmap.selectedStyle);
+				updatePermalink(railmap.selectedStyle);
+			});
+		}
+
+		setupControls();
+
+		// only in not-embed mode
+		if (!embed)
+		{
+			if (gEBI("menuButton") != null)
+				menu = new Mobilemenu("menu", "menuButton");
+
+			// setting start position
+			startposition = new Startposition(map);
+			// loading timestamp
+			var timestamp = new Timestamp("info");
+			// create search
+			search = new Search(map, "searchBox", "searchBar", "searchButton", "clearButton", menu);
+			// build style selection and it's event handling
+			getStyleSelection();
+			// set rendering style
+			if (params['style'] != null && styleValid(params['style']))
+				setStyle(params['style']);
+			else
+				setStyle("standard");
+			// onclick event of locate button
+			gEBI("locateButton").onclick = function()
+			{
+				startposition.setPosition();
+			};
+			// initialize the permalink url
+			updatePermalink(railmap.selectedStyle);
+		}
+		else
+		{
+			// setting start position
+			startposition = new Startposition(map);
+		}
+	});
 }
 
 
@@ -97,7 +129,7 @@ function setStyle(style)
 	// helper variable for saving current map style
 	railmap.selectedStyle = style;
 	// change tileserver url to load different style
-	railmap._url = tiledir+style+'/{z}/{x}/{y}.png';
+	railmap._url = window.openrailwaymap.tiledir+style+'/{z}/{x}/{y}.png';
 	// reload all tiles after style was changed
 	railmap.redraw();
 
@@ -105,7 +137,7 @@ function setStyle(style)
 	var selectableItems = gEBI('styleSelectionBar').getElementsByTagName('div');
 	for (var i=0; i<selectableItems.length; i++)
 	{
-		if (selectableItems[i].innerHTML == translations['style.'+style])
+		if (selectableItems[i].innerHTML == _(window.openrailwaymap.availableStyles[style]))
 		{
 			selectableItems[i].innerHTML = selectableItems[i].innerHTML+'<small>✓</small>';
 			selectableItems[i].onclick = null;
@@ -125,13 +157,14 @@ function setStyle(style)
 // build a radio-button list of available map styles
 function getStyleSelection()
 {
-	for (var i=0; i<availableStyles.length; i++)
-		gEBI('styleSelectionBar').innerHTML += '<div class="resultEntry" onclick="setStyle(\''+availableStyles[i]+'\')" value="'+availableStyles[i]+'">'+translations['style.'+availableStyles[i]]+'</div>';
+	for (var style in window.openrailwaymap.availableStyles)
+		if (window.openrailwaymap.availableStyles.hasOwnProperty(style))
+			gEBI('styleSelectionBar').innerHTML += '<div class="resultEntry" onclick="setStyle(\''+style+'\')" value="'+style+'">'+_(window.openrailwaymap.availableStyles[style])+'</div>';
 }
 
 
 // returns true if the given stylename is a valid and available style; otherwise false is returned
 function styleValid(style)
 {
-	return (availableStyles.indexOf(style) >= 0);
+	return (window.openrailwaymap.availableStyles.hasOwnProperty(style));
 }
