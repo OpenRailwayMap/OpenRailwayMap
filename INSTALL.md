@@ -393,6 +393,14 @@ $ ./update.sh
 
  The update script should be executed no more than once a day because of the long running processes.
 
+## Monitoring of Database Changes
+
+ Add triggers to the osm2pgsql database to write updates of OSM features to separate tables. This allows to generate an edit history and monitor changes for quality assurance.
+
+```shell
+$ cd data-monitoring
+$ make
+```
 
 ## Configuration
 
