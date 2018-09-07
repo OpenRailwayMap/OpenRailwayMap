@@ -329,6 +329,29 @@ noscript p
 	border-bottom: 1px solid #e6ddd5;
 }
 
+/* black box against upload filters */
+#uploadfilters
+{
+	color: white;
+	background-color: black;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 8px;
+	padding-bottom: 5px;
+}
+
+#uploadfilters a
+{
+	color: white;
+}
+
+div.warningBold
+{
+	font-weight: bold;
+	font-size: 150%;
+	margin-bottom: 8px;
+}
+
 /* links in footer */
 .links
 {

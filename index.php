@@ -93,6 +93,15 @@
 			</form>
 			<br />
 			<p id="info"></p>
+			<div id="uploadfilters">
+				<div class="warningBold">
+					<?=_("EU upload filters threaten the future of OpenStreetMap and OpenRailwayMap.")?>
+				</div>
+				<div>
+					<?=_("#SaveYourInternet before 12 September!")?><br>
+					<a href="https://www.saveyourinternet.eu/">www.saveyourinternet.eu</a>
+				</div>
+			</div>
 			<div id="linkBar">
 				<a class="links" id="infoButton" href="https://wiki.openstreetmap.org/wiki/OpenRailwayMap" target="_blank"><?=_("More Info")?></a>&nbsp;•
 				<a class="links" id="infoButton" href="https://blog.openrailwaymap.org/" target="_blank"><?=_("Blog")?></a>&nbsp;•
