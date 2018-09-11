@@ -136,7 +136,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 				if (inner)
 					result.innerHTML = '<b>' + inner + '</b>';
 
-				if (results[i]['type'] != null && typeof results[i]['type'] != undefined)
+				if (results[i]['type'] != null && typeof results[i]['type'] != undefined && this.typeMapping[results[i]['type']] != null)
 					result.innerHTML += '&nbsp;'+_(this.typeMapping[results[i]['type']]);
 				if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
 					result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
