@@ -103,6 +103,7 @@ msgid_plural "%d seconds"
 msgstr[0] "%d sekundę"
 msgstr[1] "%d sekundes"
 msgstr[2] "%d sekundžių"
+msgstr[3] "%d sekundžių"
 
 #, php-format
 msgid "%d minute"
@@ -110,6 +111,7 @@ msgid_plural "%d minutes"
 msgstr[0] "%d minutę"
 msgstr[1] "%d minutes"
 msgstr[2] "%d minučių"
+msgstr[3] "%d minučių"
 
 #, php-format
 msgid "%d hour"
@@ -117,6 +119,7 @@ msgid_plural "%d hours"
 msgstr[0] "%d valandą"
 msgstr[1] "%d valandas"
 msgstr[2] "%d valandų"
+msgstr[3] "%d valandų"
 
 #, php-format
 msgid "%d day"
@@ -124,6 +127,7 @@ msgid_plural "%d days"
 msgstr[0] "%d dieną"
 msgstr[1] "%d dienas"
 msgstr[2] "%d dienų"
+msgstr[3] "%d dienų"
 
 #, php-format
 msgid "%d week"
@@ -131,6 +135,7 @@ msgid_plural "%d weeks"
 msgstr[0] "%d savaitę"
 msgstr[1] "%d savaites"
 msgstr[2] "%d savaičių"
+msgstr[3] "%d savaičių"
 
 #, php-format
 msgid "%d month"
@@ -138,6 +143,7 @@ msgid_plural "%d months"
 msgstr[0] "%d mėnesį"
 msgstr[1] "%d mėnesius"
 msgstr[2] "%d mėnesių"
+msgstr[3] "%d mėnesių"
 
 #, php-format
 msgid "more than %s ago"
@@ -442,7 +448,7 @@ msgid "Blog"
 msgstr "Tinklaraštis"
 
 msgid "No information"
-msgstr ""
+msgstr "Nėra informacijos"
 
 msgid "speed only given for one direction"
 msgstr ""
@@ -454,37 +460,37 @@ msgid "Quick search shortcut"
 msgstr ""
 
 msgid "Placeholder"
-msgstr ""
+msgstr "Vietaženklis"
 
 msgid "Donate"
-msgstr ""
+msgstr "Paaukoti"
 
 msgid "Tools"
-msgstr ""
+msgstr "Įrankiai"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Vikis"
 
 msgid "Search milestone"
 msgstr ""
 
 msgid "Station code"
-msgstr ""
+msgstr "Stoties kodas"
 
 msgid "Search station"
-msgstr ""
+msgstr "Ieškoti stotį"
 
 msgid "UIC reference"
 msgstr ""
 
 msgid "About this project"
-msgstr ""
+msgstr "Apie šį projektą"
 
 msgid "Close"
-msgstr ""
+msgstr "Užverti"
 
 msgid "Name"
-msgstr ""
+msgstr "Pavadinimas"
 
 msgid "Line operator"
 msgstr ""
@@ -493,7 +499,7 @@ msgid "Operator"
 msgstr ""
 
 msgid "More results"
-msgstr ""
+msgstr "Daugiau rezultatų"
 
 msgid "Spur junction"
 msgstr ""

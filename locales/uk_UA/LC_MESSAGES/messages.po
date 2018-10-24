@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -103,6 +103,7 @@ msgid_plural "%d seconds"
 msgstr[0] "%d секунда"
 msgstr[1] "%d секунди"
 msgstr[2] "%d секунд"
+msgstr[3] "%d секунд"
 
 #, php-format
 msgid "%d minute"
@@ -110,6 +111,7 @@ msgid_plural "%d minutes"
 msgstr[0] "%d хвилина"
 msgstr[1] "%d хвилини"
 msgstr[2] "%d хвилин"
+msgstr[3] "%d хвилин"
 
 #, php-format
 msgid "%d hour"
@@ -117,6 +119,7 @@ msgid_plural "%d hours"
 msgstr[0] "%d година"
 msgstr[1] "%d години"
 msgstr[2] "%d годин"
+msgstr[3] "%d годин"
 
 #, php-format
 msgid "%d day"
@@ -124,6 +127,7 @@ msgid_plural "%d days"
 msgstr[0] "%d день"
 msgstr[1] "%d дні"
 msgstr[2] "%d днів"
+msgstr[3] "%d днів"
 
 #, php-format
 msgid "%d week"
@@ -131,6 +135,7 @@ msgid_plural "%d weeks"
 msgstr[0] "%d тиждень"
 msgstr[1] "%d тижні"
 msgstr[2] "%d тижнів"
+msgstr[3] "%d тижнів"
 
 #, php-format
 msgid "%d month"
@@ -138,6 +143,7 @@ msgid_plural "%d months"
 msgstr[0] "%d місяць"
 msgstr[1] "%d місяці"
 msgstr[2] "%d місяців"
+msgstr[3] "%d місяців"
 
 #, php-format
 msgid "more than %s ago"

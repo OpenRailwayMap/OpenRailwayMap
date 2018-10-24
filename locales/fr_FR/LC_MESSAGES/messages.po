@@ -76,7 +76,7 @@ msgid "Map data &copy; OpenStreetMap contributors"
 msgstr "Données cartographiques &copy; Contributeurs de OpenStreetMap"
 
 msgid "Select a map style"
-msgstr "Selection d'un style de carte"
+msgstr "Sélection d’un style de carte"
 
 msgid "Public transport"
 msgstr "Transport public"
@@ -152,7 +152,7 @@ msgid "Maxspeeds"
 msgstr "Vitesse maximale"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Électrification"
 
 msgid "Halt"
 msgstr "Halte"
@@ -182,7 +182,7 @@ msgid "Milestone"
 msgstr "Borne kilométrique"
 
 msgid "Signal"
-msgstr ""
+msgstr "Signal"
 
 msgid "Level crossing"
 msgstr "Passage à niveau"
@@ -266,19 +266,19 @@ msgid "Narrow gauge track"
 msgstr "Voie à écartement étroit"
 
 msgid "Switch (remote-controlled)"
-msgstr "Aiguille (télécommandée)"
+msgstr "Aiguillage (télécommandé)"
 
 msgid "Switch (local operated)"
-msgstr "Aiguille (manuelle)"
+msgstr "Aiguillage (manuel)"
 
 msgid "Resetting switch"
-msgstr ""
+msgstr "Aiguille talonnable"
 
 msgid "Signal box"
 msgstr "Poste d'aiguillage"
 
 msgid "Owner change"
-msgstr ""
+msgstr "Changement de propriétaire"
 
 msgid "Railway crossing"
 msgstr "Passage à niveau"
@@ -305,13 +305,13 @@ msgid "Phone"
 msgstr "Téléphone"
 
 msgid "Water tower"
-msgstr "Château d'eau"
+msgstr "Château d’eau"
 
 msgid "Fuel"
 msgstr "Gazole"
 
 msgid "Water crane"
-msgstr "Prise d'eau"
+msgstr "Prise d’eau"
 
 msgid "Coaling facility"
 msgstr "Installation de distribution de charbon"
@@ -329,7 +329,7 @@ msgid "Hump yard"
 msgstr "Triage à bosse"
 
 msgid "Rail brake"
-msgstr ""
+msgstr "Rail de freinage"
 
 msgid "Engine shed"
 msgstr "Dépôt"
@@ -353,13 +353,13 @@ msgid "Crane"
 msgstr "Grue"
 
 msgid "Track scale"
-msgstr "Echelle"
+msgstr "Échelle"
 
 msgid "Carrier truck pit"
 msgstr "Rollbocks"
 
 msgid "Gauge conversion"
-msgstr "Changement d'écartement"
+msgstr "Changement d’écartement"
 
 msgid "Gate"
 msgstr "Porte"
@@ -404,10 +404,10 @@ msgid "Ferry"
 msgstr "Ferry"
 
 msgid "Test line"
-msgstr "Ligne d'essais"
+msgstr "Ligne d’essais"
 
 msgid "Test service track"
-msgstr "Voie de service d'essais"
+msgstr "Voie de service d’essais"
 
 msgid "Car shuttle"
 msgstr "Navette-auto"
@@ -416,10 +416,10 @@ msgid "Rolling highway"
 msgstr "Route roulante"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr "Aucune donnée n'est visible à ce niveau de zoom. Merci de zoomer."
+msgstr "Aucune donnée n’est visible à ce niveau de zoom. Merci de zoomer."
 
 msgid "Legend not available for this style."
-msgstr "La légende n'est pas disponible avec ce style."
+msgstr "La légende n’est pas disponible avec ce style."
 
 msgid "Language"
 msgstr "Langue"
@@ -434,67 +434,67 @@ msgid "Search"
 msgstr "Recherche"
 
 msgid "Blog"
-msgstr "Blog"
+msgstr "Blogue"
 
 msgid "No information"
-msgstr ""
+msgstr "Aucune information"
 
 msgid "speed only given for one direction"
-msgstr ""
+msgstr "vitesse donnée seulement dans une direction"
 
 msgid "main track, service track"
-msgstr ""
+msgstr "voie principale, voie de service"
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "Raccourci de recherche rapide"
 
 msgid "Placeholder"
-msgstr ""
+msgstr "Champ réservé"
 
 msgid "Donate"
-msgstr ""
+msgstr "Donnez"
 
 msgid "Tools"
-msgstr ""
+msgstr "Outils"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Wiki"
 
 msgid "Search milestone"
-msgstr ""
+msgstr "Rechercher une borne kilométrique"
 
 msgid "Station code"
-msgstr ""
+msgstr "Code de gare"
 
 msgid "Search station"
-msgstr ""
+msgstr "Rechercher une gare"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "Référence UIC"
 
 msgid "About this project"
-msgstr ""
+msgstr "À propos de ce projet"
 
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 msgid "Line operator"
-msgstr ""
+msgstr "Opérateur de la ligne"
 
 msgid "Operator"
-msgstr ""
+msgstr "Opérateur"
 
 msgid "More results"
-msgstr ""
+msgstr "Plus de résultats"
 
 msgid "Spur junction"
-msgstr ""
+msgstr "Aiguillage de service"
 
 msgid "No background map"
-msgstr ""
+msgstr "Aucun fond de carte"
 
 msgid "Deelectrified"
 msgstr ""

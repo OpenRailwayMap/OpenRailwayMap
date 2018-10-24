@@ -496,50 +496,8 @@ msgstr "(Ausweich-)Anschlussstelle"
 msgid "No background map"
 msgstr "Kein Hintergrund"
 
-msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr "%SPDMIN%-%SPDMAX% km/h (stillgelegt/im Bau)"
-
-msgid "Not electrified"
-msgstr "Nicht elektrifiziert"
-
 msgid "Deelectrified"
 msgstr "Deelektrifiziert"
-
-msgid "Electrification proposed"
-msgstr "Elektrifizierung geplant"
-
-msgid "Electrification under construction"
-msgstr "Elektrifizierung im Bau"
-
-msgid "contact line"
-msgstr "Fahrdraht"
-
-msgid "3rd rail"
-msgstr "Stromschiene"
-
-msgid "Germany"
-msgstr "Deutschland"
-
-msgid "Finland"
-msgstr "Finnland"
-
-msgid "train protection"
-msgstr "Zugbeeinflussung"
-
-msgid "no train protection"
-msgstr "keine Zugbeeinflussung"
-
-msgid "crossing signal type To"
-msgstr "To-Bahnübergangssignal"
-
-msgid "Voltage"
-msgstr "Spannung"
-
-msgid "signals"
-msgstr "Signale"
-
-msgid "Operating Sites"
-msgstr "Betriebsstellen"
 
 msgid "No information about train protection"
 msgstr ""
@@ -553,6 +511,9 @@ msgstr ""
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr "Lf 7 Geschwindigkeitssignal"
 
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr "%SPDMIN%-%SPDMAX% km/h (stillgelegt/im Bau)"
+
 msgid "1.5 – 3kV ="
 msgstr "1.5 – 3kV ="
 
@@ -561,6 +522,12 @@ msgstr "ETCS im Bau"
 
 msgid "3kV ="
 msgstr "3kV ="
+
+msgid "Germany"
+msgstr "Deutschland"
+
+msgid "Not electrified"
+msgstr "Nicht elektrifiziert"
 
 msgid "shunting signal type Ro"
 msgstr "Ro-Sperrsignal"
@@ -595,11 +562,20 @@ msgstr "Mindestens 25kV ~"
 msgid "minor signal type Lo"
 msgstr ""
 
+msgid "Finland"
+msgstr "Finnland"
+
 msgid "15 – 25kV ~"
 msgstr "15 – 25kV ~"
 
 msgid "ETCS"
 msgstr "ETCS"
+
+msgid "Electrification under construction"
+msgstr "Elektrifizierung im Bau"
+
+msgid "no train protection"
+msgstr "keine Zugbeeinflussung"
 
 msgid "Blockkennzeichen"
 msgstr "Blockkennzeichen"
@@ -618,14 +594,23 @@ msgid ""
 msgstr ""
 "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 
+msgid "signals"
+msgstr "Signale"
+
 msgid "Ne 5 Haltetafel"
 msgstr "Ne 5 Haltetafel"
+
+msgid "Voltage"
+msgstr "Spannung"
 
 msgid "More than 3kV ="
 msgstr "Mehr als 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr "Lf 6 Geschwindigkeits­ankündesignal"
+
+msgid "3rd rail"
+msgstr "Stromschiene"
 
 msgid "750 – 1000V ="
 msgstr "750 – 1000V ="
@@ -635,6 +620,9 @@ msgstr "Weniger als 15kV ~"
 
 msgid "1kV ="
 msgstr "1kV ="
+
+msgid "crossing signal type To"
+msgstr "To-Bahnübergangssignal"
 
 msgid "1 – 1.5kV ="
 msgstr "1 – 1.5kV ="
@@ -672,6 +660,15 @@ msgstr "Weniger als 750V ="
 msgid "Punktförmige Zugbeeinflussung"
 msgstr "Punktförmige Zugbeeinflussung"
 
+msgid "Operating Sites"
+msgstr "Betriebsstellen"
+
+msgid "train protection"
+msgstr "Zugbeeinflussung"
+
+msgid "contact line"
+msgstr "Fahrdraht"
+
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr "El 4 \"Bügel ab\"-Signal"
 
@@ -683,6 +680,9 @@ msgstr "25kV 60Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr "El 3 \"Bügel ab\"-Ankündigungssignal"
+
+msgid "Electrification proposed"
+msgstr "Elektrifizierung geplant"
 
 msgid "El 1v Ausschaltsignal erwarten"
 msgstr "El 1v Ausschaltsignal erwarten"

@@ -28,12 +28,12 @@ msgid "Contact"
 msgstr "Contacto"
 
 msgid "Javascript is not activated"
-msgstr "Javascript não está activado"
+msgstr "O Javascript não está ativado"
 
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr "É necessário activar o Javascript para poder visualizar o mapa. Por favor active-o nas definições do seu navegador de Internet."
+msgstr "É necessário ativar o Javascript para poder visualizar o mapa. Por favor ative-o nas definições do seu navegador de Internet."
 
 msgid "Loading..."
 msgstr "Aguarde..."
@@ -48,10 +48,10 @@ msgid "Empty input."
 msgstr "Introduza algo."
 
 msgid "Kilometer"
-msgstr "Quilometro"
+msgstr "Quilómetro"
 
 msgid "Track"
-msgstr "Caminho"
+msgstr "Via férrea"
 
 msgid "Permalink"
 msgstr "Ligação Permanente"
@@ -75,7 +75,7 @@ msgid "Map data &copy; OpenStreetMap contributors"
 msgstr "&copy; Colaboradores do OpenStreetMap"
 
 msgid "Select a map style"
-msgstr "Escolhe um tipo de mapa"
+msgstr "Selecione um tipo de mapa"
 
 msgid "Public transport"
 msgstr "Transporte público"
@@ -84,7 +84,7 @@ msgid "Search results"
 msgstr "Resultados da pesquisa"
 
 msgid "Search only in the current map view"
-msgstr "Pesquisar dentro da área actualmente vizualizada"
+msgstr "Pesquisar apenas na área atual"
 
 msgid "HTML-Code"
 msgstr "Código HTML"
@@ -151,7 +151,7 @@ msgid "Maxspeeds"
 msgstr "Velocidades Máximas"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Eletrificação"
 
 msgid "Halt"
 msgstr "Apeadeiro"
@@ -166,7 +166,7 @@ msgid "Yard"
 msgstr "Pátio de manobras"
 
 msgid "Crossover"
-msgstr ""
+msgstr "Mudança de linha"
 
 msgid "Site"
 msgstr "Instalação"
@@ -178,10 +178,10 @@ msgid "Tram stop"
 msgstr "Paragem de elétrico"
 
 msgid "Milestone"
-msgstr "Ponto Quilométrico"
+msgstr "Marco Quilométrico"
 
 msgid "Signal"
-msgstr ""
+msgstr "Sinal"
 
 msgid "Level crossing"
 msgstr "Passagem de Nível"
@@ -202,7 +202,7 @@ msgid "Line ref"
 msgstr "Referência da linha"
 
 msgid "Railroad line"
-msgstr "Caminho de Ferro"
+msgstr "Linha Ferroviária"
 
 msgid "Siding"
 msgstr "Linha de ultrapassagem"
@@ -247,7 +247,7 @@ msgid "Disused track"
 msgstr "Linha não usada"
 
 msgid "Abandoned track"
-msgstr "Linha abandonada"
+msgstr "Linha abandonada (carris removidos)"
 
 msgid "Razed track"
 msgstr "Linha demolida"
@@ -295,13 +295,13 @@ msgid "Vending machine"
 msgstr "Máquina de Vendas"
 
 msgid "Ticket shop"
-msgstr "Bilheteria"
+msgstr "Bilheteira"
 
 msgid "Subway entrance"
 msgstr "Entrada de Metro"
 
 msgid "Phone"
-msgstr "Telefóne"
+msgstr "Telefone"
 
 msgid "Water tower"
 msgstr "Torre de Água"
@@ -313,28 +313,28 @@ msgid "Water crane"
 msgstr "Aguada"
 
 msgid "Coaling facility"
-msgstr ""
+msgstr "Infraestrutura de carvão"
 
 msgid "Wash"
 msgstr "Lavagem"
 
 msgid "Pit"
-msgstr ""
+msgstr "Fosso de reparações"
 
 msgid "Loading gauge"
 msgstr "Contornos de Referência"
 
 msgid "Hump yard"
-msgstr ""
+msgstr "Estação de triagem"
 
 msgid "Rail brake"
 msgstr "Travão"
 
 msgid "Engine shed"
-msgstr ""
+msgstr "Depósito de locomotivas"
 
 msgid "Workshop"
-msgstr ""
+msgstr "Oficina"
 
 msgid "Radio tower"
 msgstr "Torre de Rádio"
@@ -352,7 +352,7 @@ msgid "Crane"
 msgstr "Grua"
 
 msgid "Track scale"
-msgstr ""
+msgstr "Carril balança"
 
 msgid "Carrier truck pit"
 msgstr ""
@@ -373,10 +373,10 @@ msgid "Station building"
 msgstr "Edifício da estação"
 
 msgid "Factory connected to railroad line"
-msgstr "Fábrica conectada à rede ferroviária"
+msgstr "Fábrica ligada à rede ferroviária"
 
 msgid "Rack"
-msgstr ""
+msgstr "Cremalheira"
 
 msgid "Embankment"
 msgstr "Aterro elevado"
@@ -409,16 +409,16 @@ msgid "Test service track"
 msgstr "Linha de testes de serviço"
 
 msgid "Car shuttle"
-msgstr ""
+msgstr "Rampa para carregar carros"
 
 msgid "Rolling highway"
-msgstr ""
+msgstr "Rampa para carregar camiões"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
 msgstr "Não existe nada para ver neste nível de zoom. Por favor aproxime-se."
 
 msgid "Legend not available for this style."
-msgstr "Legenda indisputável para este estilo."
+msgstr "Legenda não disponível para este estilo."
 
 msgid "Language"
 msgstr "Idioma"
@@ -433,67 +433,67 @@ msgid "Search"
 msgstr "Pesquisa"
 
 msgid "Blog"
-msgstr "Blog"
+msgstr "Blogue"
 
 msgid "No information"
-msgstr ""
+msgstr "Sem informação"
 
 msgid "speed only given for one direction"
-msgstr ""
+msgstr "velocidade fornecida apenas numa direção"
 
 msgid "main track, service track"
-msgstr ""
+msgstr "linha principal, linha de serviço"
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "Atalho de pesquisa rápida"
 
 msgid "Placeholder"
 msgstr ""
 
 msgid "Donate"
-msgstr ""
+msgstr "Doar"
 
 msgid "Tools"
-msgstr ""
+msgstr "Ferramentas"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Wiki"
 
 msgid "Search milestone"
-msgstr ""
+msgstr "Pesquisar marco quilométrico"
 
 msgid "Station code"
-msgstr ""
+msgstr "Código de estação"
 
 msgid "Search station"
-msgstr ""
+msgstr "Pesquisar estação"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "Referência UIC"
 
 msgid "About this project"
-msgstr ""
+msgstr "Sobre este projeto"
 
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 msgid "Line operator"
-msgstr ""
+msgstr "Operador da linha"
 
 msgid "Operator"
-msgstr ""
+msgstr "Operador"
 
 msgid "More results"
-msgstr ""
+msgstr "Mais resultados"
 
 msgid "Spur junction"
 msgstr ""
 
 msgid "No background map"
-msgstr ""
+msgstr "Sem mapa de fundo"
 
 msgid "Deelectrified"
 msgstr ""
