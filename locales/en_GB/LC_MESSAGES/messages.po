@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
 "PO-Revision-Date: 2017-09-19 19:36+0000\n"
-"Last-Translator: Alexander Matheisen <alex@matheisen.org>\n"
+"Last-Translator: Daniel Brvnistan <daniel.brvnistan@gmail.com>\n"
 "Language-Team: English (https://www.transifex.com/rurseekatze/openrailwaymap/language/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -148,10 +148,10 @@ msgid "Signalling"
 msgstr "Signalling"
 
 msgid "Maxspeeds"
-msgstr "Maxspeeds"
+msgstr "Max speeds"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Electrification"
 
 msgid "Halt"
 msgstr "Halt"
@@ -223,7 +223,7 @@ msgid "Main line"
 msgstr "Main line"
 
 msgid "Highspeed line"
-msgstr "Highspeed line"
+msgstr "High-speed line"
 
 msgid "Industrial line"
 msgstr "Industrial line"
@@ -256,7 +256,7 @@ msgid "Tram"
 msgstr "Tram"
 
 msgid "Subway"
-msgstr "Subway"
+msgstr "Metro"
 
 msgid "Light rail"
 msgstr "Light rail"
@@ -298,7 +298,7 @@ msgid "Ticket shop"
 msgstr "Ticket shop"
 
 msgid "Subway entrance"
-msgstr "Subway entrance"
+msgstr "Metro entrance"
 
 msgid "Phone"
 msgstr "Phone"
@@ -496,43 +496,43 @@ msgid "No background map"
 msgstr "No background map"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "De-electrified"
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "No information about train protection"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "Track usage"
-msgstr ""
+msgstr "Track usage"
 
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
 
 msgid "1.5 – 3kV ="
-msgstr ""
+msgstr "1.5 – 3kV ="
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "ETCS under construction"
 
 msgid "3kV ="
-msgstr ""
+msgstr "3kV ="
 
 msgid "Germany"
-msgstr ""
+msgstr "Germany"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "Not electrified"
 
 msgid "shunting signal type Ro"
-msgstr ""
+msgstr "Shunting signal type Ro"
 
 msgid "Track type"
-msgstr ""
+msgstr "Track type"
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
@@ -541,7 +541,7 @@ msgid "Linienzugbeeinflussung"
 msgstr ""
 
 msgid "25kV 50Hz ~"
-msgstr ""
+msgstr "25kV 50Hz ~"
 
 msgid "So 106 Kreuztafel"
 msgstr ""
@@ -550,31 +550,31 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "Junction, Crossover, Service Station, Site"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "At least 25kV ~"
 
 msgid "minor signal type Lo"
-msgstr ""
+msgstr "Minor signal type Lo"
 
 msgid "Finland"
-msgstr ""
+msgstr "Finland"
 
 msgid "15 – 25kV ~"
-msgstr ""
+msgstr "15 – 25kV ~"
 
 msgid "ETCS"
-msgstr ""
+msgstr "ETCS"
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "Electrification under construction"
 
 msgid "no train protection"
-msgstr ""
+msgstr "No train protection"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -586,52 +586,52 @@ msgid "Ne 1 Trapeztafel"
 msgstr ""
 
 msgid "15kV 16⅔Hz ~"
-msgstr ""
+msgstr "15kV 16⅔Hz ~"
 
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
 msgid "signals"
-msgstr ""
+msgstr "Signals"
 
 msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "Voltage"
-msgstr ""
+msgstr "Voltage"
 
 msgid "More than 3kV ="
-msgstr ""
+msgstr "More than 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
 msgid "3rd rail"
-msgstr ""
+msgstr "3rd rail"
 
 msgid "750 – 1000V ="
-msgstr ""
+msgstr "750 – 1000V ="
 
 msgid "Less than 15kV ~"
-msgstr ""
+msgstr "Less than 15kV ~"
 
 msgid "1kV ="
-msgstr ""
+msgstr "1kV ="
 
 msgid "crossing signal type To"
-msgstr ""
+msgstr "Crossing signal type To"
 
 msgid "1 – 1.5kV ="
-msgstr ""
+msgstr "1 – 1.5kV ="
 
 msgid "block signal type So"
-msgstr ""
+msgstr "Block signal type So"
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h"
 
 msgid "1.5kV ="
-msgstr ""
+msgstr "1.5kV ="
 
 msgid "El 2 Einschaltsignal"
 msgstr ""
@@ -652,46 +652,46 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "Less than 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
-msgstr ""
+msgstr "PZB"
 
 msgid "Operating Sites"
-msgstr ""
+msgstr "Operating Sites"
 
 msgid "train protection"
-msgstr ""
+msgstr "Train protection"
 
 msgid "contact line"
-msgstr ""
+msgstr "Overhead line"
 
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
 msgid "750V ="
-msgstr ""
+msgstr "750V ="
 
 msgid "25kV 60Hz ~"
-msgstr ""
+msgstr "25kV 60Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "Electrification proposed"
 
 msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
 
 msgid "15kV 16.7Hz ~"
-msgstr ""
+msgstr "15kV 16.7Hz ~"
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 msgstr ""
 
 msgid "distant signal with Eo 2 (new type)"
-msgstr ""
+msgstr "Distant signal with Eo 2 (new type)"
 
 msgid "Ks-Hauptsignal"
 msgstr ""
@@ -727,22 +727,22 @@ msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
 msgstr ""
 
 msgid "main signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "Main signal without aspects given (new type, old type)"
 
 msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
 msgstr ""
 
 msgid "main signal with Po 1 (new type, old type)"
-msgstr ""
+msgstr "Main signal with Po 1 (new type, old type)"
 
 msgid "main signal with Po 2 (new type, old type)"
-msgstr ""
+msgstr "Main signal with Po 2 (new type, old type)"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
 
 msgid "distant signal with Eo 1 (new type, old type)"
-msgstr ""
+msgstr "Distant signal with Eo 1 (new type, old type)"
 
 msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
@@ -763,7 +763,7 @@ msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/ve
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "Distant signal without aspects given (new type, old type)"
 
 msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
 msgstr ""
@@ -772,4 +772,4 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr "Imprint &amp; Privacy Policy"
+msgstr "Copyright &amp; Privacy Policy"
