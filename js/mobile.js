@@ -24,6 +24,7 @@ window.openrailwaymap = {
 		"en": "en_GB",
 		"es": "es_ES",
 		"fi": "fi_FI",
+		"hu": "hu_HU",
 		"fr": "fr_FR",
 		"ja": "ja_JP",
 		"lt": "lt_LT",

@@ -520,7 +520,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:passing"="
 }
 
 @supports (user-agent: josm) {
-    node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:passing"="DE-BOStrab:so5"]["railway:signal:passing:form"=sign]["railway:signal:passing:type"="no_passing"],
+	node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:passing"="DE-BOStrab:so5"]["railway:signal:passing:form"=sign]["railway:signal:passing:type"="no_passing"],
 	node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:passing"="DE-BOStrab:so6"]["railway:signal:passing:form"=sign]["railway:signal:passing:type"="passing_allowed"]
 	{
 		text-offset-x: eval(length(tag("railway:signal:stop:caption")) * (0 - 3) - 6);

@@ -698,3 +698,35 @@ way|z9-[railway=construction][!"construction:railway"]
 	assertMatch: "way railway=construction";
 	assertNoMatch: "way railway=construction construction:railway=rail";
 }
+
+/* operating sites needs a name */
+node[railway=station][!name],
+node[railway=halt][!name],
+node[railway=junction][!name],
+node[railway=spur_junction][!name],
+node[railway=service_station][!name],
+node[railway=site][!name],
+node[railway=tram_stop][!name],
+node[railway=yard][!name],
+node[railway=crossover][!name]
+{
+	throwWarning: tr("{0}={1} without name", "{0.key}", "{0.value}");
+	assertMatch: "node railway=station";
+	assertNoMatch: "node railway=station name=foo";
+	assertMatch: "node railway=halt";
+	assertNoMatch: "node railway=halt name=foo";
+	assertMatch: "node railway=junction";
+	assertNoMatch: "node railway=junction name=foo";
+	assertMatch: "node railway=spur_junction";
+	assertNoMatch: "node railway=spur_junction name=foo";
+	assertMatch: "node railway=service_station";
+	assertNoMatch: "node railway=service_station name=foo";
+	assertMatch: "node railway=site";
+	assertNoMatch: "node railway=site name=foo";
+	assertMatch: "node railway=tram_stop";
+	assertNoMatch: "node railway=tram_stop name=foo";
+	assertMatch: "node railway=yard";
+	assertNoMatch: "node railway=yard name=foo";
+	assertMatch: "node railway=crossover";
+	assertNoMatch: "node railway=crossover name=foo";
+}

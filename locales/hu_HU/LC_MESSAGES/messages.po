@@ -4,551 +4,544 @@
 # See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
-# fri <pavelfric@seznam.cz>, 2013-2014
-# Michal Pustějovský <Michal.Pustejovsky@seznam.cz>, 2014
+# Gábor Babos <gabor.babos@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2017-09-23 19:12+0000\n"
-"Last-Translator: Michal Pustějovský <Michal.Pustejovsky@seznam.cz>\n"
-"Language-Team: Czech (https://www.transifex.com/rurseekatze/openrailwaymap/language/cs/)\n"
+"PO-Revision-Date: 2018-07-29 16:49+0000\n"
+"Last-Translator: Gábor Babos <gabor.babos@gmail.com>\n"
+"Language-Team: Hungarian (http://www.transifex.com/rurseekatze/openrailwaymap/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
-msgstr "Více informací"
+msgstr "További információk"
 
 msgid "Contact"
-msgstr "Spojení"
+msgstr "Kapcsolat"
 
 msgid "Javascript is not activated"
-msgstr "Javascript není zapnut"
+msgstr "A JavaScript nincs aktiválva"
 
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr "Javascript je potřeba pro ukázání mapy a běh této stránky. Zapněte, prosím, Javascript v nastavení vašeho prohlížeče."
+msgstr "A térkép megjelenítéséhez és a weboldal futtatásához JavaScriptre van szükség. Kapcsolja be a JavaScriptet a böngésző beállításaiban."
 
 msgid "Loading..."
-msgstr "Nahrává se..."
+msgstr "Töltés…"
 
 msgid "Nothing found."
-msgstr "Nic nebylo nalezeno."
+msgstr "Nincs találat."
 
 msgid "Last update"
-msgstr "Poslední aktualizace"
+msgstr "Utolsó frissítés"
 
 msgid "Empty input."
-msgstr "Prázdný vstup."
+msgstr "Üres bevitel."
 
 msgid "Kilometer"
-msgstr "Kilometr"
+msgstr "Kilométer"
 
 msgid "Track"
-msgstr "Trať"
+msgstr "Vágány"
 
 msgid "Permalink"
-msgstr "Trvalý odkaz"
+msgstr "Idehivatkozás (permalink)"
 
 msgid "Hillshading"
-msgstr "Stínování svahů"
+msgstr "Domborzatárnyékolás"
 
 msgid "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
-msgstr "Stínování svahů od <a href='https://www.nasa.gov/'>NASA SRTM</a>"
+msgstr "<a href='https://www.nasa.gov/'>NASA SRTM</a> domborzatárnyékolás"
 
 msgid "Rendering: OpenRailwayMap"
-msgstr "Zpracování: OpenRailwayMap"
+msgstr "Megjelenítés: OpenRailwayMap"
 
 msgid "Mapnik"
 msgstr "Mapnik"
 
 msgid "Mapnik Grayscale"
-msgstr "Odstíny šedi Mapnik"
+msgstr "Mapnik (szürkeárnyalatos)"
 
 msgid "Map data &copy; OpenStreetMap contributors"
-msgstr "Mapová data &copy; přispěvatelé OpenStreetMap"
+msgstr "Térképadatok: &copy; OpenStreetMap-szerkesztők"
 
 msgid "Select a map style"
-msgstr "Vybrat styl mapy"
+msgstr "Térképstílus kiválasztása"
 
 msgid "Public transport"
-msgstr "Veřejná doprava"
+msgstr "Tömegközlekedés"
 
 msgid "Search results"
-msgstr "Výsledky hledání"
+msgstr "Eredmények keresése"
 
 msgid "Search only in the current map view"
-msgstr "Hledat pouze v nynějším pohledu na mapu"
+msgstr "Keresés csak a jelenlegi térképnézeten"
 
 msgid "HTML-Code"
-msgstr "Kód HTML"
+msgstr "HTML-kód"
 
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr "Zkopírujte tento úryvek kódu HTML a připojte jej ke svým stránkám, aby se zobrazovala malá mapa se značením."
+msgstr "Egy kis térkép jelölővel történő megjelenítéséhez másolja ezt a HTML-kódrészletet a weboldalába."
 
 msgid "Fullscreen"
-msgstr "Celá obrazovka"
+msgstr "Teljes képernyő"
 
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekunda"
-msgstr[1] "%d sekundy"
-msgstr[2] "%d sekund"
+msgstr[0] "%d másodperc"
+msgstr[1] "%d másodperc"
 
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d minuta"
-msgstr[1] "%d minuty"
-msgstr[2] "%d minut"
+msgstr[0] "%d perc"
+msgstr[1] "%d perc"
 
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d hodina"
-msgstr[1] "%d hodiny"
-msgstr[2] "%d hodin"
+msgstr[0] "%d óra"
+msgstr[1] "%d óra"
 
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] "%d den"
-msgstr[1] "%d dny"
-msgstr[2] "%d dnů"
+msgstr[0] "%d nap"
+msgstr[1] "%d nap"
 
 #, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] "%d týden"
-msgstr[1] "%d týdny"
-msgstr[2] "%d týdnů"
+msgstr[0] "%d hét"
+msgstr[1] "%d hét"
 
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] "%d měsíc"
-msgstr[1] "%d měsíce"
-msgstr[2] "%d měsíců"
+msgstr[0] "%d hónap"
+msgstr[1] "%d hónap"
 
 #, php-format
 msgid "more than %s ago"
-msgstr "před více než %s"
+msgstr "régebben mint %s"
 
 #, php-format
 msgid "%s ago"
-msgstr "před %s"
+msgstr "ennyi idővel ezelőtt: %s"
 
 msgid "Infrastructure"
-msgstr "Infrastruktura"
+msgstr "Insfrastruktúra"
 
 msgid "Signalling"
-msgstr "Signalizace"
+msgstr "Jelzőrendszer"
 
 msgid "Maxspeeds"
-msgstr "Traťové rychlosti"
+msgstr "Sebességkorlátozások"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Villamosítottság"
 
 msgid "Halt"
-msgstr "Zastávka"
+msgstr "Megálló"
 
 msgid "Station"
-msgstr "Stanice"
+msgstr "Állomás"
 
 msgid "Junction"
-msgstr "Odbočka"
+msgstr "Elágazás"
 
 msgid "Yard"
-msgstr "Nákladní nádraží"
+msgstr "Rendezőpályaudvar"
 
 msgid "Crossover"
-msgstr "Místo křížení tratí"
+msgstr "Vágánykapcsolás"
 
 msgid "Site"
-msgstr "Provozní místo"
+msgstr "Hely"
 
 msgid "Service station"
-msgstr "Servisní stanice"
+msgstr "Kiszolgáló állomás"
 
 msgid "Tram stop"
-msgstr "Zastávka tramvaje"
+msgstr "Villamosmegálló"
 
 msgid "Milestone"
-msgstr "Milník"
+msgstr "Kilométerkő"
 
 msgid "Signal"
-msgstr ""
+msgstr "Jelzés"
 
 msgid "Level crossing"
-msgstr "Úrovňový železniční přejezd"
+msgstr "Szintbeni kereszteződés"
 
 msgid "Crossing"
-msgstr "Źelezniční přejezd"
+msgstr "Kereszteződés"
 
 msgid "Legend"
-msgstr "Vysvětlivky"
+msgstr "Jelmagyarázat"
 
 msgid "Bridge"
-msgstr "Most"
+msgstr "Híd"
 
 msgid "Tunnel"
-msgstr "Tunel"
+msgstr "Alagút"
 
 msgid "Line ref"
-msgstr "Číslo tratě"
+msgstr "Vonal száma"
 
 msgid "Railroad line"
-msgstr "Kolejová trať"
+msgstr "Vasútvonal"
 
 msgid "Siding"
-msgstr "Vedlejší kolej"
+msgstr "Mellékvágány"
 
 msgid "Yard track"
-msgstr "Slepá/Odstavná kolej"
+msgstr "Rendezővágány"
 
 msgid "Spur"
-msgstr "Přípojná kolej/Vlečka"
+msgstr "Ipari mellékvágány"
 
 msgid "Crossover track"
-msgstr "Křížení železničních tratí"
+msgstr "Kapcsolóvágány"
 
 msgid "Branch line"
-msgstr "Vedlejší/Přípojná trať"
+msgstr "Mellékvonal"
 
 msgid "Main line"
-msgstr "Hlavní železniční trať/tah"
+msgstr "Fővonal"
 
 msgid "Highspeed line"
-msgstr "Vysokorychlostní trať"
+msgstr "Nagysebességű vonal"
 
 msgid "Industrial line"
-msgstr "Průmyslová, tovární nebo přístavní dráha"
+msgstr "Ipari vonal"
 
 msgid "Industrial service track"
-msgstr "Průmyslová, tovární nebo přístavní obslužná vedlejší kolej"
+msgstr "Iparvágány"
 
 msgid "Preserved track"
-msgstr "Zachovaná vedlejší kolej"
+msgstr "Megőrzött vágány"
 
 msgid "Preserved service track"
-msgstr "Zachovaná obslužná vedlejší kolej"
+msgstr "Nosztalgiavágány"
 
 msgid "Track under construction"
-msgstr "Trať ve výstavbě"
+msgstr "Épülő vágány"
 
 msgid "Proposed track"
-msgstr "Připravovaná trať"
+msgstr "Javasolt vágány"
 
 msgid "Disused track"
-msgstr "Již nepoužívaná trať"
+msgstr "Használaton kívüli vágány"
 
 msgid "Abandoned track"
-msgstr "Opuštěná trať"
+msgstr "Elhagyott vágány"
 
 msgid "Razed track"
-msgstr "Trať srovnaná se zemí"
+msgstr "Felülépített vágány"
 
 msgid "Tram"
-msgstr "Tramvaj"
+msgstr "Villamos"
 
 msgid "Subway"
-msgstr "Podzemní dráha"
+msgstr "Metró"
 
 msgid "Light rail"
-msgstr "Městská tramvajová doprava"
+msgstr "Könnyűvasút"
 
 msgid "Narrow gauge track"
-msgstr "Úzkokolejná/Úzkorozchodná železniční trať"
+msgstr "Keskeny nyomtávú vágány"
 
 msgid "Switch (remote-controlled)"
-msgstr "Výhybka (řízená vzdáleně)"
+msgstr "Váltó (távműködtetésű)"
 
 msgid "Switch (local operated)"
-msgstr "Výhybka (řízená místně)"
+msgstr "Váltó (helyből működtetett)"
 
 msgid "Resetting switch"
-msgstr "Znovunastavení výhybky"
+msgstr "Automatikusan visszaálló váltó"
 
 msgid "Signal box"
-msgstr "Stavědlo"
+msgstr ""
 
 msgid "Owner change"
-msgstr "Hraniční bod"
+msgstr "Tulajdonosváltozás"
 
 msgid "Railway crossing"
-msgstr "Křížení tratí"
+msgstr "Vasúti átjáró"
 
 msgid "Buffer stop"
-msgstr "Zarážedlo"
+msgstr "Ütközőbak"
 
 msgid "Isolated track section"
-msgstr "Změna systému proudu"
+msgstr "Elszigetelt vágányszakasz"
 
 msgid "Platform"
-msgstr "Nástupiště"
+msgstr "Peron"
 
 msgid "Vending machine"
-msgstr "Prodejní automat"
+msgstr "Árusító automata"
 
 msgid "Ticket shop"
-msgstr "Prodejna lístků"
+msgstr "Jegypénztár"
 
 msgid "Subway entrance"
-msgstr "Vchod do metra"
+msgstr "Metrólejárat"
 
 msgid "Phone"
 msgstr "Telefon"
 
 msgid "Water tower"
-msgstr "Vodojem"
+msgstr "Víztorony"
 
 msgid "Fuel"
-msgstr "Čerpací stanice"
+msgstr "Üzemanyag"
 
 msgid "Water crane"
-msgstr "Vodní jeřáb"
+msgstr "Vízdaru"
 
 msgid "Coaling facility"
-msgstr "Zauhlování"
+msgstr "Szénellátó létesítmény"
 
 msgid "Wash"
-msgstr "Mycí linka"
+msgstr "Kocsimosó"
 
 msgid "Pit"
-msgstr "Lokomotivní jáma"
+msgstr "Szerelőakna"
 
 msgid "Loading gauge"
-msgstr "Ložná míra"
+msgstr "Űrszelvény"
 
 msgid "Hump yard"
-msgstr "Spádoviště"
+msgstr "Gurítódombos rendezőpályaudvar"
 
 msgid "Rail brake"
-msgstr "Kolejová brzda"
+msgstr "Vágányfék"
 
 msgid "Engine shed"
-msgstr "Bouda na lokomotivu"
+msgstr "Mozdonygarázs"
 
 msgid "Workshop"
-msgstr "Dílna"
+msgstr "Műhely"
 
 msgid "Radio tower"
-msgstr "Vlakový rozhlas"
+msgstr "Rádiótorony"
 
 msgid "Turntable"
-msgstr "Točna, otočná plošina"
+msgstr "Fordítókorong"
 
 msgid "Traverser"
-msgstr "Dopravníkový pás"
+msgstr "Tolópad"
 
 msgid "Loading ramp"
-msgstr "Nakládací nakloněná plošina"
+msgstr "Rakodórámpa"
 
 msgid "Crane"
-msgstr "Jeřáb"
+msgstr "Daru"
 
 msgid "Track scale"
-msgstr "Kolejová váha"
+msgstr "Mérlegvágány"
 
 msgid "Carrier truck pit"
-msgstr "Nakládka na valník"
+msgstr ""
 
 msgid "Gauge conversion"
-msgstr "Změna rozchodu"
+msgstr "Nyomtávváltó"
 
 msgid "Gate"
-msgstr "Brána"
+msgstr "Kapu"
 
 msgid "Museum"
-msgstr "Železniční muzeum"
+msgstr "Múzeum"
 
 msgid "Container terminal"
-msgstr "Překládací nádraží/stanice"
+msgstr "Konténerterminál"
 
 msgid "Station building"
-msgstr "Nádražní budovy"
+msgstr "Állomásépület"
 
 msgid "Factory connected to railroad line"
-msgstr "Podnik s železniční přípojkou"
+msgstr "Vasútvonalhoz kapcsolódó gyár"
 
 msgid "Rack"
-msgstr "Ozubnice"
+msgstr "Fogaskerekű vágány"
 
 msgid "Embankment"
-msgstr "Násep"
+msgstr "Töltés"
 
 msgid "Cutting"
-msgstr "Zářez"
+msgstr "Bevágás"
 
 msgid "Miniature railway"
-msgstr "Parková železnice"
+msgstr "Miniatűr vasút"
 
 msgid "Funicular"
-msgstr "Pozemní lanová dráha"
+msgstr "Sikló"
 
 msgid "Military line"
-msgstr "Vojenská trať"
+msgstr "Katonai vonal"
 
 msgid "Military service track"
-msgstr "Vojenská vedlejší kolej"
+msgstr "Katonai vágány"
 
 msgid "Ferry terminal"
-msgstr "Nákladiště/Výkladiště železničního trajektu"
+msgstr "Kompkikötő"
 
 msgid "Ferry"
-msgstr "Železniční trajekt"
+msgstr "Komp"
 
 msgid "Test line"
-msgstr "Zkušební dráha"
+msgstr "Tesztvonal"
 
 msgid "Test service track"
-msgstr "Vedlejší kolej zkušební dráhy"
+msgstr "Tesztpálya"
 
 msgid "Car shuttle"
-msgstr "Nákladiště/Výkladiště vlaku s auty"
+msgstr "Autószállítás (rövid távú)"
 
 msgid "Rolling highway"
-msgstr "Transport ucelených nákladních vozů po železnici (RoLa)"
+msgstr "Ro-La"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr "Na této úrovni zvětšení se nedá nic vidět. Proveďte, prosím, přiblížení."
+msgstr "Ezen a nagyítási szinten nem látható semmi. Nagyíts rá jobban a térképre."
 
 msgid "Legend not available for this style."
-msgstr "Pro tento styl nejsou dostupné vysvětlivky."
+msgstr "Ehhez a stílushoz nincs jelkulcs."
 
 msgid "Language"
-msgstr "Jazyk"
+msgstr "Nyelv"
 
 msgid "Desktop version"
-msgstr "Verze pro stolní počítač"
+msgstr "Asztali gépes változat"
 
 msgid "Style"
-msgstr "Styl"
+msgstr "Stílus"
 
 msgid "Search"
-msgstr "Hledání"
+msgstr "Keresés"
 
 msgid "Blog"
 msgstr "Blog"
 
 msgid "No information"
-msgstr "Bez informace"
+msgstr "Nincs információ"
 
 msgid "speed only given for one direction"
-msgstr "rychlost uvedena jen v jednom směru"
+msgstr "a sebesség csak az egyik irányba van megadva"
 
 msgid "main track, service track"
-msgstr "hlavní kolej, manipulační kolej"
+msgstr "fővágány, tesztvágány"
 
 msgid "Quick search shortcut"
-msgstr "Odkaz k rychlému vyhledávání"
+msgstr "Gyorskeresés parancsikon"
 
 msgid "Placeholder"
-msgstr "Zástupný text"
+msgstr ""
 
 msgid "Donate"
-msgstr "Podpořit"
+msgstr "Adományozás"
 
 msgid "Tools"
-msgstr "Nástroje"
+msgstr "Eszközök"
 
 msgid "Wiki"
 msgstr "Wiki"
 
 msgid "Search milestone"
-msgstr "Hledat mílník"
+msgstr "Kilométerkő keresése"
 
 msgid "Station code"
-msgstr "Kód stanice"
+msgstr "Állomáskód"
 
 msgid "Search station"
-msgstr "Hledat stanici"
+msgstr "Állomás keresése"
 
 msgid "UIC reference"
-msgstr "UIC označení"
+msgstr "UIC-azonosító"
 
 msgid "About this project"
-msgstr "O tomto projektu"
+msgstr "A projekt névjegye"
 
 msgid "Close"
-msgstr "Zavřít"
+msgstr "Bezárás"
 
 msgid "Name"
-msgstr "Jméno"
+msgstr "Név"
 
 msgid "Line operator"
-msgstr "Provozovatel dráhy"
+msgstr "A vonal üzemeltetője"
 
 msgid "Operator"
-msgstr "Dopravce"
+msgstr "Üzemeltető"
 
 msgid "More results"
-msgstr "Více výsledků"
+msgstr "További eredmények"
 
 msgid "Spur junction"
-msgstr "Odbočka"
+msgstr "Ipari mellékvágány elágazása"
 
 msgid "No background map"
-msgstr "Bez základní mapy"
+msgstr "Nincs háttértérkép"
 
 msgid "Deelectrified"
-msgstr "Elektrifikace odstraněna"
+msgstr ""
 
 msgid "No information about train protection"
-msgstr "Bez informace o zabezpečovacím zařízení"
+msgstr ""
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "Track usage"
-msgstr "Využití koleje"
+msgstr ""
 
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr "%SPDMIN%-%SPDMAX% km/h (mimo provoz/ve výstavbě)"
+msgstr ""
 
 msgid "1.5 – 3kV ="
-msgstr "1.5 – 3kV ="
+msgstr ""
 
 msgid "ETCS under construction"
-msgstr "ETCS ve výstavbě"
+msgstr ""
 
 msgid "3kV ="
-msgstr "3kV ="
+msgstr ""
 
 msgid "Germany"
-msgstr "Německo"
+msgstr ""
 
 msgid "Not electrified"
-msgstr "Bez elektrifikace"
+msgstr ""
 
 msgid "shunting signal type Ro"
 msgstr ""
 
 msgid "Track type"
-msgstr "Typ koleje"
+msgstr ""
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
 msgid "Linienzugbeeinflussung"
-msgstr "LZB"
+msgstr ""
 
 msgid "25kV 50Hz ~"
-msgstr "25kV 50Hz ~"
+msgstr ""
 
 msgid "So 106 Kreuztafel"
 msgstr ""
@@ -557,31 +550,31 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr "Křižovatka, křížení, servisní stanice, místo"
+msgstr ""
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr "Alespoň 25kV ~"
+msgstr ""
 
 msgid "minor signal type Lo"
 msgstr ""
 
 msgid "Finland"
-msgstr "Finsko"
+msgstr ""
 
 msgid "15 – 25kV ~"
-msgstr "15 – 25kV ~"
+msgstr ""
 
 msgid "ETCS"
-msgstr "ETCS"
+msgstr ""
 
 msgid "Electrification under construction"
-msgstr "Elektrifikace ve výstavbě"
+msgstr ""
 
 msgid "no train protection"
-msgstr "bez zabezpečovacího zařízení"
+msgstr ""
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -593,52 +586,52 @@ msgid "Ne 1 Trapeztafel"
 msgstr ""
 
 msgid "15kV 16⅔Hz ~"
-msgstr "15kV 16⅔Hz ~"
+msgstr ""
 
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
 msgid "signals"
-msgstr "návěstidla"
+msgstr ""
 
 msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "Voltage"
-msgstr "Napětí"
+msgstr ""
 
 msgid "More than 3kV ="
-msgstr "Více než 3kV ="
+msgstr ""
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
 msgid "3rd rail"
-msgstr "Třetí kolejnice"
+msgstr ""
 
 msgid "750 – 1000V ="
-msgstr "750 – 1000V ="
+msgstr ""
 
 msgid "Less than 15kV ~"
-msgstr "Méně než 15kV ~"
+msgstr ""
 
 msgid "1kV ="
-msgstr "1kV ="
+msgstr ""
 
 msgid "crossing signal type To"
 msgstr ""
 
 msgid "1 – 1.5kV ="
-msgstr "1 – 1.5kV ="
+msgstr ""
 
 msgid "block signal type So"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr "%SPDMIN%-%SPDMAX% km/h"
+msgstr ""
 
 msgid "1.5kV ="
-msgstr "1.5kV ="
+msgstr ""
 
 msgid "El 2 Einschaltsignal"
 msgstr ""
@@ -659,40 +652,40 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr "Méně než 750V ="
+msgstr ""
 
 msgid "Punktförmige Zugbeeinflussung"
-msgstr "PZB"
+msgstr ""
 
 msgid "Operating Sites"
-msgstr "Provozní místa"
+msgstr ""
 
 msgid "train protection"
-msgstr "Zabezpečovací zařízení"
+msgstr ""
 
 msgid "contact line"
-msgstr "Trolejové vedení"
+msgstr ""
 
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
 msgid "750V ="
-msgstr "750V ="
+msgstr ""
 
 msgid "25kV 60Hz ~"
-msgstr "25kV 60Hz ~"
+msgstr ""
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
 
 msgid "Electrification proposed"
-msgstr "Navržena elektrifikace"
+msgstr ""
 
 msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
 
 msgid "15kV 16.7Hz ~"
-msgstr "15kV 16.7Hz ~"
+msgstr ""
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 msgstr ""
@@ -779,4 +772,4 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr "Copyright a ochrana osobních údajů"
+msgstr "Impresszum &amp; Adatvédelmi irányelvek"
