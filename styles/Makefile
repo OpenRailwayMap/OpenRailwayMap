@@ -1,4 +1,4 @@
-SHELL = /bin/sh -e
+SHELL = /bin/bash -e
 
 .PHONY: all
 
