@@ -3,7 +3,6 @@ python:
  - 2.7
  - 3.3
 cache: pip
-sudo: false
 notifications:
   irc:
     channels:
