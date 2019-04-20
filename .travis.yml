@@ -23,7 +23,7 @@ addons:
     - python-ply
     - python-rsvg
 install:
- - pip install cairocffi pillow ply pojson
+ - pip install 'cairocffi<1' 'pillow<6' ply pojson
 script:
  - make
  - make check PHP=/usr/bin/php5
