@@ -568,8 +568,8 @@ node[railway=switch]["railway:switch"=resetting]
 	assertNoMatch: "node railway=switch railway:switch=default railway:switch:resetting=yes";
 }
 
-way[railway][name=~/[Tt]unnel/][!"tunnel:name"],
-way[railway][name=~/[Tt]unnel/]["tunnel:name"=*name]
+way[railway][railway!=platform][name=~/[Tt]unnel/][!"tunnel:name"],
+way[railway][railway!=platform][name=~/[Tt]unnel/]["tunnel:name"=*name]
 {
 	throwWarning: "track tagged with 'tunnel' in name, consider using tunnel:name instead and put the track name into name";
 	fixChangeKey: "name=>tunnel:name";
@@ -577,10 +577,11 @@ way[railway][name=~/[Tt]unnel/]["tunnel:name"=*name]
 	assertMatch: "way railway=rail name=Footunnel";
 	assertMatch: "way railway=light_rail name=Bartunnel tunnel:name=Bartunnel";
 	assertNoMatch: "way railway=rail tunnel:name=Baztunnel";
+	assertNoMatch: "way railway=platform name=Footunnel";
 }
 
-way[railway][wikipedia=~/[Tt]unnel/][!"tunnel:wikipedia"],
-way[railway][wikipedia=~/[Tt]unnel/]["tunnel:wikipedia"=*wikipedia]
+way[railway][railway!=platform][wikipedia=~/[Tt]unnel/][!"tunnel:wikipedia"],
+way[railway][railway!=platform][wikipedia=~/[Tt]unnel/]["tunnel:wikipedia"=*wikipedia]
 {
 	throwWarning: "track tagged with 'tunnel' in wikipedia, consider using tunnel:wikipedia instead and put the track wikipedia entry into wikipedia";
 	fixChangeKey: "wikipedia=>tunnel:wikipedia";
@@ -588,14 +589,15 @@ way[railway][wikipedia=~/[Tt]unnel/]["tunnel:wikipedia"=*wikipedia]
 	assertMatch: "way railway=rail wikipedia=Footunnel";
 	assertMatch: "way railway=light_rail wikipedia=Bartunnel tunnel:wikipedia=Bartunnel";
 	assertNoMatch: "way railway=rail tunnel:wikipedia=Baztunnel";
+	assertNoMatch: "way railway=platform wikipedia=Footunnel";
 }
 
-way[railway][name=~/[Bb]ridge/][!"bridge:name"],
-way[railway][name=~/[Bb]ridge/]["bridge:name"=*name],
-way[railway][name=~/[Vv]iadu[ck]t/][!"bridge:name"],
-way[railway][name=~/[Vv]iadu[ck]t/]["bridge:name"=*name],
-way[railway][name=~/[Bb]rücke/][!"bridge:name"],
-way[railway][name=~/[Bb]rücke/]["bridge:name"=*name]
+way[railway][railway!=platform][name=~/[Bb]ridge/][!"bridge:name"],
+way[railway][railway!=platform][name=~/[Bb]ridge/]["bridge:name"=*name],
+way[railway][railway!=platform][name=~/[Vv]iadu[ck]t/][!"bridge:name"],
+way[railway][railway!=platform][name=~/[Vv]iadu[ck]t/]["bridge:name"=*name],
+way[railway][railway!=platform][name=~/[Bb]rücke/][!"bridge:name"],
+way[railway][railway!=platform][name=~/[Bb]rücke/]["bridge:name"=*name]
 {
 	throwWarning: "track tagged with 'bridge' in name, consider using bridge:name instead and put the track name into name";
 	fixChangeKey: "name=>bridge:name";
@@ -605,14 +607,15 @@ way[railway][name=~/[Bb]rücke/]["bridge:name"=*name]
 	assertMatch: "way railway=rail name=\"Baz viaduct\"";
 	assertMatch: "way railway=light_rail name=\"Bar bridge\" bridge:name=\"Bar bridge\"";
 	assertNoMatch: "way railway=rail bridge:name=Foo-Viadukt";
+	assertNoMatch: "way railway=platform name=Noltemeyerbrücke";
 }
 
-way[railway][wikipedia=~/[Bb]ridge/][!"bridge:wikipedia"],
-way[railway][wikipedia=~/[Bb]ridge/]["bridge:wikipedia"=*wikipedia],
-way[railway][wikipedia=~/[Vv]iadu[ck]t/][!"bridge:wikipedia"],
-way[railway][wikipedia=~/[Vv]iadu[ck]t/]["bridge:wikipedia"=*wikipedia],
-way[railway][wikipedia=~/[Bb]rücke/][!"bridge:wikipedia"],
-way[railway][wikipedia=~/[Bb]rücke/]["bridge:wikipedia"=*wikipedia]
+way[railway][railway!=platform][wikipedia=~/[Bb]ridge/][!"bridge:wikipedia"],
+way[railway][railway!=platform][wikipedia=~/[Bb]ridge/]["bridge:wikipedia"=*wikipedia],
+way[railway][railway!=platform][wikipedia=~/[Vv]iadu[ck]t/][!"bridge:wikipedia"],
+way[railway][railway!=platform][wikipedia=~/[Vv]iadu[ck]t/]["bridge:wikipedia"=*wikipedia],
+way[railway][railway!=platform][wikipedia=~/[Bb]rücke/][!"bridge:wikipedia"],
+way[railway][railway!=platform][wikipedia=~/[Bb]rücke/]["bridge:wikipedia"=*wikipedia]
 {
 	throwWarning: "track tagged with 'bridge' in wikipedia, consider using bridge:wikipedia instead and put track wikipedia entry into wikipedia";
 	fixChangeKey: "wikipedia=>bridge:wikipedia";
@@ -622,6 +625,7 @@ way[railway][wikipedia=~/[Bb]rücke/]["bridge:wikipedia"=*wikipedia]
 	assertMatch: "way railway=rail wikipedia=\"Baz viaduct\"";
 	assertMatch: "way railway=light_rail wikipedia=\"Bar bridge\" bridge:wikipedia=\"Bar bridge\"";
 	assertNoMatch: "way railway=rail bridge:wikipedia=Foo-Viadukt";
+	assertNoMatch: "way railway=platform wikipedia=Foobrücke";
 }
 
 node:unconnected[railway=signal],
