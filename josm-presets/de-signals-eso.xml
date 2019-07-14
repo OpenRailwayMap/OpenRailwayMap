@@ -1689,9 +1689,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<reference ref="direction_fw_bw" />
 					<space />
 					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" match="keyvalue!">
-		         	<list_entry value="DE-ESO:db:zs6" display_value="Zs 6 DB" short_description="Gegengleisanzeiger Zs 6 (ex-DB)" />
-		         	<list_entry value="DE-ESO:dr:zs7" display_value="Zs 7 DR" short_description="Gegengleisanzeiger Zs 7 (ex-DR)" />
-		         </combo>
+						<list_entry value="DE-ESO:db:zs6" display_value="Zs 6 DB" short_description="Gegengleisanzeiger Zs 6 (ex-DB)" />
+						<list_entry value="DE-ESO:dr:zs7" display_value="Zs 7 DR" short_description="Gegengleisanzeiger Zs 7 (ex-DR)" />
+					</combo>
 					<combo key="railway:signal:wrong_road:form"
 						text="Signal form"
 						de.text="Anzeigeart"
