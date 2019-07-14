@@ -2245,8 +2245,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				</item>
 			</group>
 			<separator />
-			<item name="Proceed Indicatgor" de.name="Fahrtanzeiger" icon="de/fahrtanzeiger-32.png" type="node">
-				<label text="Proceed Indicatgor" de.text="Fahrtanzeiger" />
+			<item name="Proceed Indicator" de.name="Fahrtanzeiger" icon="de/fahrtanzeiger-32.png" type="node">
+				<label text="Proceed Indicator" de.text="Fahrtanzeiger" />
 				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
 				<reference ref="sig_ref" />
