@@ -634,7 +634,7 @@ node:unconnected[railway=milestone]
 	throwError: "{1.value}s should be tagged on the track, move the node to the track the {1.value} affects";
 }
 
-way[railway][lanes]
+way[railway][!highway][lanes]
 {
 	throwWarning: "lanes=* is used for highways, not railways";
 	fixChangeKey: "lanes=>tracks";
@@ -642,6 +642,8 @@ way[railway][lanes]
 	assertMatch: "way railway=rail lanes=2";
 	assertMatch: "way railway=subway lanes=2 tracks=2";
 	assertNoMatch: "way railway=rail tracks=1";
+	assertNoMatch: "way railway=abandoned highway=tertiary lanes=3";
+	assertNoMatch: "way railway=razed highway=tertiary lanes=3";
 }
 
 way[railway][maxspeed=signals]
