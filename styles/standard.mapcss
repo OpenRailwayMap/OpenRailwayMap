@@ -183,7 +183,7 @@ way|z17-["railway:track_ref"].tracks
 /***************************************************************************************/
 way[!usage][!service].tracks,
 way[usage=tourism][!service].tracks,
-way[usage=military][!service].tracks,
+way[usage=military].tracks,
 way[usage=test][!service].tracks,
 way[!usage][service=siding].tracks,
 way[!usage][service=yard].tracks,
@@ -286,7 +286,7 @@ way[railway=proposed]["proposed"=tram].tracks
 /***************************************************************************************/
 way|z10-[railway=rail][!usage][!service],
 way|z10-[railway=rail][usage=tourism][!service],
-way|z10-[railway=rail][usage=military][!service],
+way|z10-[railway=rail][usage=military],
 way|z10-[railway=rail][usage=test][!service]
 {
 	z-index: 400;
@@ -490,7 +490,7 @@ way|z10-[railway=light_rail]
 /*******************************************************************************************/
 way|z9-[railway=narrow_gauge][!usage][!service],
 way|z9-[railway=narrow_gauge][usage=tourism][!service],
-way|z9-[railway=narrow_gauge][usage=military][!service],
+way|z9-[railway=narrow_gauge][usage=military],
 way|z9-[railway=narrow_gauge][usage=test][!service]
 {
 	z-index: 1200;
