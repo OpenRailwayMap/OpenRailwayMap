@@ -1,5 +1,6 @@
 SHELL = /bin/sh -e
 DEP_LEAFLET_VERSION = 0.7.7
+DEP_LEAFLET_EDITOR_FILES = download/Leaflet.EditInOSM.js download/Leaflet.EditInOSM.css download/edit-in-osm.png
 
 .PHONY: check all
 
@@ -33,7 +34,12 @@ download/leaflet-$(DEP_LEAFLET_VERSION).zip:
 	wget -O download/leaflet.zip https://cdn.leafletjs.com/leaflet/v$(DEP_LEAFLET_VERSION)/leaflet.zip
 	mv download/leaflet.zip download/leaflet-$(DEP_LEAFLET_VERSION).zip
 
-download-deps: download/leaflet-$(DEP_LEAFLET_VERSION).zip
+$(DEP_LEAFLET_EDITOR_FILES):
+	wget -O $@.tmp https://raw.githubusercontent.com/yohanboniface/Leaflet.EditInOSM/master/$(notdir $@)
+	mv $@.tmp $@
+
+download-deps:	download/leaflet-$(DEP_LEAFLET_VERSION).zip \
+		$(DEP_LEAFLET_EDITOR_FILES)
 
 css/leaflet.css: download/leaflet-$(DEP_LEAFLET_VERSION).zip
 	mkdir -p download/leaflet-extract js/images; \
@@ -45,4 +51,10 @@ css/leaflet.css: download/leaflet-$(DEP_LEAFLET_VERSION).zip
 	sed s,images/,../js/images/, leaflet.css > ../leaflet.css; \
 	mv ../leaflet.css ../../css/
 
-install-deps: css/leaflet.css
+css/Leaflet.EditInOSM.css: $(DEP_LEAFLET_EDITOR_FILES)
+	cp download/Leaflet.EditInOSM.js js/
+	cp download/edit-in-osm.png img/
+	sed 's#"./edit-in-osm#"../img/edit-in-osm#' download/Leaflet.EditInOSM.css > download/Leaflet.EditInOSM.css_
+	mv download/Leaflet.EditInOSM.css_ $@
+
+install-deps: css/leaflet.css css/Leaflet.EditInOSM.css
