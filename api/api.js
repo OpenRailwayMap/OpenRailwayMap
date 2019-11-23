@@ -14,17 +14,6 @@ log4js.configure(
 	[
 		{
 			"type": "logLevelFilter",
-			"level": "ERROR",
-			"appender":
-			{
-				"type": "file",
-				"filename": 'api.log', 
-				'maxLogSize': 20480,
-				'backups': 0
-			}
-		},
-		{
-			"type": "logLevelFilter",
 			"level": "INFO",
 			"appender":
 			{
