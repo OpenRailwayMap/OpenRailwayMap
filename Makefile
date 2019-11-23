@@ -28,28 +28,22 @@ check:
 distclean: clean
 	rm -rf download css/leaflet.css
 
-download/leaflet-$(DEP_LEAFLET_VERSION).zip:
+download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz:
 	mkdir -p download
 	# do this in 2 steps to make sure only a completely downloaded file is used
-	wget -O download/leaflet.zip https://cdn.leafletjs.com/leaflet/v$(DEP_LEAFLET_VERSION)/leaflet.zip
-	mv download/leaflet.zip download/leaflet-$(DEP_LEAFLET_VERSION).zip
+	wget -O download/leaflet.tar.gz https://github.com/Leaflet/Leaflet/archive/v$(DEP_LEAFLET_VERSION).tar.gz
+	mv download/leaflet.tar.gz download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz
 
 $(DEP_LEAFLET_EDITOR_FILES):
 	wget -O $@.tmp https://raw.githubusercontent.com/yohanboniface/Leaflet.EditInOSM/master/$(notdir $@)
 	mv $@.tmp $@
 
-download-deps:	download/leaflet-$(DEP_LEAFLET_VERSION).zip \
+download-deps:	download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz \
 		$(DEP_LEAFLET_EDITOR_FILES)
 
-css/leaflet.css: download/leaflet-$(DEP_LEAFLET_VERSION).zip
-	mkdir -p download/leaflet-extract js/images; \
-	rm -rf download/leaflet-extract/*; \
-	cd download/leaflet-extract; \
-	unzip ../leaflet-$(DEP_LEAFLET_VERSION).zip; \
-	mv leaflet.js ../../js; \
-	mv images/* ../../js/images/; \
-	sed s,images/,../js/images/, leaflet.css > ../leaflet.css; \
-	mv ../leaflet.css ../../css/
+css/leaflet.css: download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz
+	tar -C js --strip-components=2 -xvzf download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz Leaflet-$(DEP_LEAFLET_VERSION)/dist/leaflet.js Leaflet-$(DEP_LEAFLET_VERSION)/dist/images
+	tar --to-stdout -xvzf download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz Leaflet-$(DEP_LEAFLET_VERSION)/dist/leaflet.css | sed s,images/,../js/images/, > css/leaflet.css
 
 css/Leaflet.EditInOSM.css: $(DEP_LEAFLET_EDITOR_FILES)
 	cp download/Leaflet.EditInOSM.js js/
