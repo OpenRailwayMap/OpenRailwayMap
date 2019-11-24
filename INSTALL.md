@@ -24,7 +24,7 @@ $ yum install httpd httpd-devel
 
 ```shell
 $ apt-get install --no-install-recommends postgresql-9.5-postgis-2.2
-$ apt-get install gzip postgresql-common php-gettext unzip python python-pip python-ply python-imaging python-cairo python-cairosvg librsvg2-2 librsvg2-dev libpango1.0-dev libcairo2-dev libcairomm-1.0-dev libjpeg-turbo8-dev libpangomm-1.4-1 libpangomm-1.4-dev npm nodejs wget zlib1g-dev osm2pgsql php5-pgsql
+$ apt-get install gzip postgresql-common php-gettext unzip python3 python3-pip python3-ply python3-cairo librsvg2-2 librsvg2-dev libpango1.0-dev libcairo2-dev libcairomm-1.0-dev libjpeg-turbo8-dev libpangomm-1.4-1 libpangomm-1.4-dev npm nodejs wget zlib1g-dev osm2pgsql php5-pgsql
 $ apt-get install git libgif-dev build-essential g++ make zip
 $ apt-get install apache2 apache2-dev
 $ apt-get install nodejs-legacy # see https://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu for the reason
@@ -33,7 +33,7 @@ $ apt-get install cmake
 ```
 
 ```shell
-$ pip install pojson
+$ pip3 install pojson
 ```
 
 ## Installation
