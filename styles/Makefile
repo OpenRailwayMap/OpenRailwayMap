@@ -2,7 +2,7 @@ SHELL = /bin/bash -e
 
 .PHONY: all
 
-PYTHON = python
+PYTHON = python3
 JSFILES = maxspeed.js signals.js standard.js electrified.js
 ZIPFILES = maxspeed.zip signals.zip standard.zip electrified.zip josm-additional.zip
 
