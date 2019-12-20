@@ -706,7 +706,7 @@ way|z9-[railway=construction][!"construction:railway"]
 }
 
 /* operating sites needs a name */
-node[railway=station][!name],
+node[railway=station][station!=funicular][!name],
 node[railway=halt][!name],
 node[railway=junction][!name],
 node[railway=spur_junction][!name],
