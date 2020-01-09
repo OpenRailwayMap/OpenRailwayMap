@@ -55,7 +55,7 @@ way|z9-[railway=proposed]["proposed:usage"="branch"][!"proposed:service"][!"prop
 way|z9-[railway=proposed]["usage"="branch"][!"service"][!"proposed"]["proposed:railway"!="light_rail"]["proposed:railway"!="subway"]["proposed:railway"!="tram"]["proposed:railway"!="platform"],
 way|z9-[railway=proposed]["proposed:usage"="main"][!"proposed:service"][!"proposed:railway"]["proposed"!="light_rail"]["proposed"!="subway"]["proposed"!="tram"]["proposed"!="platform"],
 way|z9-[railway=proposed]["usage"="main"][!"service"][!"proposed:railway"]["proposed"!="light_rail"]["proposed"!="subway"]["proposed"!="tram"]["proposed"!="platform"],
-way|z10-[railway=proposed]["proposed:railway"!="tram"],
+way|z10-[railway=proposed]["proposed:railway"]["proposed:railway"!="tram"],
 way|z10-[railway=proposed][!"proposed:railway"]["proposed"!="tram"],
 way|z11-[railway=proposed]["proposed:railway"="tram"],
 way|z11-[railway=proposed][!"proposed:railway"]["proposed"="tram"]
@@ -67,7 +67,7 @@ way|z9-[railway=construction]["construction:usage"="branch"][!"construction:serv
 way|z9-[railway=construction]["usage"="branch"][!"service"][!"construction"]["construction:railway"!="light_rail"]["construction:railway"!="subway"]["construction:railway"!="tram"]["construction:railway"!="platform"],
 way|z9-[railway=construction]["construction:usage"="main"][!"construction:service"][!"construction:railway"]["construction"!="light_rail"]["construction"!="subway"]["construction"!="tram"]["construction"!="platform"],
 way|z9-[railway=construction]["usage"="main"][!"service"][!"construction:railway"]["construction"!="light_rail"]["construction"!="subway"]["construction"!="tram"]["construction"!="platform"],
-way|z10-[railway=construction]["construction:railway"!="tram"],
+way|z10-[railway=construction]["construction:railway"]["construction:railway"!="tram"],
 way|z10-[railway=construction][!"construction:railway"]["construction"!="tram"],
 way|z11-[railway=construction]["construction:railway"="tram"],
 way|z11-[railway=construction][!"construction:railway"]["construction"="tram"]
