@@ -66,11 +66,13 @@ way["railway:pzb"=yes].tracks
 {
 	z-index: 2;
 	color: #FFB900;
+	set .rendered_tracks;
 }
 way["railway:lzb"=yes].tracks
 {
 	z-index: 3;
 	color: red;
+	set .rendered_tracks;
 }
 way["railway:atb"=yes].tracks,
 way["railway:atb-eg"=yes].tracks,
@@ -79,18 +81,26 @@ way["railway:atb-vv"=yes].tracks
 {
 	z-index: 4;
 	color: #FF8C00;
+	set .rendered_tracks;
 }
 way["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0].tracks,
 way.ctracks
 {
 	z-index: 9;
 	color: blue;
+	set .rendered_tracks;
 	dashes: 9,9;
 }
 way["railway:etcs"]["railway:etcs"!=no]["railway:etcs"!=0].tracks
 {
 	z-index: 10;
 	color: blue;
+	set .rendered_tracks;
+}
+
+way.rendered_tracks
+{
+	width: 3.5;
 }
 
 /*********************************/
