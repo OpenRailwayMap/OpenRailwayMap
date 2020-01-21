@@ -84,8 +84,7 @@ way["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:
 way.ctracks
 {
 	z-index: 9;
-	color: blue;
-	dashes: 9,9;
+	color: lightskyblue;
 }
 way["railway:etcs"]["railway:etcs"!=no]["railway:etcs"!=0].tracks
 {
