@@ -37,6 +37,46 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		<list_entry value="300" />
 		<list_entry value="330" />
 	</chunk>
+	<chunk id="start_date">
+		<text key="start_date"
+			text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
+			de.text="Zeitpunkt der Eröffnung/Inbetriebnahme (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
+			/>
+	</chunk>
+	<chunk id="start_end_date">
+		<reference ref="start_date" />
+		<text key="end_date"
+			text="end date (YYYY, YYYY-MM, YYYY-MM-DD)"
+			de.text="Zeitpunkt der Betriebseinstellung (YYYY, YYYY-MM, YYYY-MM-DD)"
+			/>
+	</chunk>
+	<chunk id="ele">
+		<text key="ele"
+			text="Height above sea level (m)"
+			de.text="Höhe über Meeresspiegel (m)"
+			/>
+	</chunk>
+	<chunk id="img">
+		<text key="image"
+			text="Image URL"
+			de.text="URL eines Bildes"
+			/>
+	</chunk>
+	<chunk id="wiki">
+		<text key="wikipedia"
+			text="Wikipedia article in the format (Language):(Article)"
+			de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
+			/>
+	</chunk>
+	<chunk id="operator_dbnetz_oebb">
+		<combo key="operator"
+			text="operator"
+			de.text="Betreiber"
+			values="DB Netz AG,ÖBB-Infrastruktur AG"
+			default=""
+			/>
+	</chunk>
+
 	<group name="OpenRailwayMap Infrastructure DE+AT" de.name="OpenRailwayMap Infrastruktur DE+AT" icon="signals.png">
 		<item de.name="Allgemeine Angaben" name="General Information" icon="rail.png" type="way">
 			<combo key="railway" text="Type of Track" de.text="Art des Gleises">
@@ -77,20 +117,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<list_entry value="backward"  display_value="backward (in the other direction than the OSM way)" de.display_value="Entgegen Wegrichtung" short_description="Das Gleis wird üblicherweise entgegen der Richtung befahren, in die der OSM-Way führt. Nur für mehrgleisige Strecken." />
 				<list_entry value="both" display_value="both" de.display_value="Beide Richtungen" short_description="Es gibt keine Richtung, in die die Züge üblicherweise fahren bzw. nicht fahren. Nur für eingleisige Strecken." />
 			</combo>
-			<combo key="operator"
-				text="operator"
-				de.text="Betreiber"
-				values="DB Netz AG,ÖBB-Infrastruktur AG"
-				default=""
-				/>
-			<text key="start_date"
-				text="start date (YYYY, YYYY-MM, YYYY-MM-DD)"
-				de.text="Inbetriebnahme (YYYY, YYYY-MM, YYYY-MM-DD)"
-				/>
-			<text key="end_date"
-				text="end date (YYYY, YYYY-MM, YYYY-MM-DD)"
-				de.text="Zeitpunkt der Betriebseinstellung (YYYY, YYYY-MM, YYYY-MM-DD)"
-				/>
+			<reference ref="operator_dbnetz_oebb" />
+			<reference ref="start_end_date" />
 			<preset_link preset_name="Main Track" />
 			<preset_link preset_name="Siding Track" />
 			<preset_link preset_name="Yard and Spur Track" />
@@ -426,14 +454,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Length of bridge [m]"
 				de.text="Länge der Brücke [m]"
 				/>
-			<text key="start_date"
-				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-				de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-				/>
-			<text key="image"
-				text="Image URL"
-				de.text="URL eines Bildes"
-				/>
+			<reference ref="start_date" />
+			<reference ref="img" />
 			<text key="bridge:wikipedia"
 				text="Wikipedia article in the format (Language):(Article)"
 				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
@@ -456,14 +478,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Length of tunnel [m]"
 				de.text="Länge des Tunnels [m]"
 				/>
-			<text key="start_date"
-				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-				de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-				/>
-			<text key="image"
-				text="Image URL"
-				de.text="URL eines Bildes"
-				/>
+			<reference ref="start_date" />
+			<reference ref="img" />
 			<text key="tunnel:wikipedia"
 				text="Wikipedia article in the format (Language):(Article)"
 				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
@@ -643,16 +659,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="mechanical,electric,track_diagram,electronic"
 				display_values="Mechanisches Stellwerk,Elektrisches/Elektromechanisches Stellwerk,Gleisbildstellwerk,Elektronisches Stellwerk (ESTW)"
 				/>
-			<combo key="operator"
-				text="operator"
-				de.text="Betreiber"
-				values="DB Netz AG,ÖBB-Infrastruktur AG"
-				default=""
-				/>
-			<text key="start_date"
-				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-				de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-				/>
+			<reference ref="operator_dbnetz_oebb" />
+			<reference ref="start_date" />
 			<text key="railway:position"
 				text="Distance indication (rounded, e.g. '12.3'; km)"
 				de.text="Hektometerwert (z. B. '12.3')"
@@ -661,10 +669,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Exact distance indication (exact, e.g. '12.345'; km)"
 				de.text="Metergenauer Wert (genau, z. B: '12.345'; km)"
 				/>
-			<text key="image"
-				text="Image URL"
-				de.text="URL eines Bildes"
-				/>
+			<reference ref="img" />
 			<check key="railway:local_operated"
 				text="Local operated"
 				de.text="Ortsbedient"
@@ -715,32 +720,15 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="1,2,3,4,5,6,7"
 					display_values="1,2,3,4,5,6,7"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
+				<reference ref="operator_dbnetz_oebb" />
 				<text key="network"
 					text="Network"
 					de.text="Verkehrsverbund"
 					/>
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					/>
-				<text key="wikipedia"
-					text="Wikipedia article in the format (Language):(Article)"
-					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-					/>
-				<text key="ele"
-					text="Height above sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					/>
+				<reference ref="start_date" />
+				<reference ref="img" />
+				<reference ref="wiki" />
+				<reference ref="ele" />
 			</item>
 			<item name="Halt" de.name="Haltepunkt/Haltestelle" type="node">
 				<label de.text="Haltepunkt/Haltestelle"
@@ -778,32 +766,15 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					values="1,2,3,4,5,6,7"
 					display_values="1,2,3,4,5,6,7"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
+				<reference ref="operator_dbnetz_oebb" />
 				<text key="network"
 					text="Network"
 					de.text="Verkehrsverbund"
 					/>
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					/>
-				<text key="wikipedia"
-					text="Wikipedia article in the format (Language):(Article)"
-					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-					/>
-				<text key="ele"
-					text="Height above sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					/>
+				<reference ref="start_date" />
+				<reference ref="img" />
+				<reference ref="wiki" />
+				<reference ref="ele" />
 			</item>
 			<item name="Tram Stop" de.name="Straßenbahnhaltestelle" icon="tramstop.png" type="node">
 				<label text="Tram Stop"
@@ -843,14 +814,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Network"
 					de.text="Verkehrsverbund"
 					/>
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="ele"
-					text="Height above sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					/>
+				<reference ref="start_date" />
+				<reference ref="ele" />
 			</item>
 			<item name="Freight Station" de.name="Güterbahnhof/Rangierbahnhof" icon="yard-32.png" type="node">
 				<label text="Freight Station" de.text="Güterbahnhof/Rangierbahnhof" />
@@ -866,28 +831,11 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS 100 or DB 640)"
 					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					/>
-				<text key="wikipedia"
-					text="Wikipedia article in the format (Language):(Article)"
-					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-					/>
-				<text key="ele"
-					text="Height above sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					/>
+				<reference ref="operator_dbnetz_oebb" />
+				<reference ref="start_date" />
+				<reference ref="img" />
+				<reference ref="wiki" />
+				<reference ref="ele" />
 			</item>
 			<item name="Service Station" de.name="Betriebsbahnhof" type="node">
 				<label text="Service Station" de.text="Betriebsbahnhof" />
@@ -903,28 +851,11 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS 100 or DB 640)"
 					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					/>
-				<text key="wikipedia"
-					text="Wikipedia article in the format (Language):(Article)"
-					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-					/>
-				<text key="ele"
-					text="Height above sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					/>
+				<reference ref="operator_dbnetz_oebb" />
+				<reference ref="start_date" />
+				<reference ref="img" />
+				<reference ref="wiki" />
+				<reference ref="ele" />
 			</item>
 			<item name="Juction" de.name="Abzweig" icon="junction-25.png" type="node">
 				<label text="Junction" de.text="Abzweig" />
@@ -945,28 +876,11 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS 100 or DB 640)"
 					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					/>
-				<text key="wikipedia"
-					text="Wikipedia article in the format (Language):(Article)"
-					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-					/>
-				<text key="ele"
-					text="Height above sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					/>
+				<reference ref="operator_dbnetz_oebb" />
+				<reference ref="start_date" />
+				<reference ref="img" />
+				<reference ref="wiki" />
+				<reference ref="ele" />
 			</item>
 			<item name="Spur juction" de.name="Anst / Awanst" icon="spur-25.png" type="node">
 				<label text="Spur junction" de.text="Anschlusstelle oder Ausweichanschlusstelle" />
@@ -991,28 +905,11 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS 100 or DB 640)"
 					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					/>
-				<text key="wikipedia"
-					text="Wikipedia article in the format (Language):(Article)"
-					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-					/>
-				<text key="ele"
-					text="Height above sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					/>
+				<reference ref="operator_dbnetz_oebb" />
+				<reference ref="start_date" />
+				<reference ref="img" />
+				<reference ref="wiki" />
+				<reference ref="ele" />
 			</item>
 			<item name="Crossover" de.name="Überleitstelle" icon="crossover-28.png" type="node">
 				<label text="Crossover" de.text="Überleitstelle" />
@@ -1029,28 +926,11 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS 100 or DB 640)"
 					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					/>
-				<text key="wikipedia"
-					text="Wikipedia article in the format (Language):(Article)"
-					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-					/>
-				<text key="ele"
-					text="Height above sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					/>
+				<reference ref="operator_dbnetz_oebb" />
+				<reference ref="start_date" />
+				<reference ref="img" />
+				<reference ref="wiki" />
+				<reference ref="ele" />
 			</item>
 			<item name="Station Part or Blockpost" de.name="Bahnhofsteil, Blockstelle, Deckungsstelle" type="node">
 				<label text="Bahnhofsteil, Blockstelle, Deckungsstelle" />
@@ -1067,28 +947,11 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS 100 or DB 640)"
 					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
-				<text key="start_date"
-					text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-					de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-					/>
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					/>
-				<text key="wikipedia"
-					text="Wikipedia article in the format (Language):(Article)"
-					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-					/>
-				<text key="ele"
-					text="Height above sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					/>
+				<reference ref="operator_dbnetz_oebb" />
+				<reference ref="start_date" />
+				<reference ref="img" />
+				<reference ref="wiki" />
+				<reference ref="ele" />
 			</item>
 			<separator />
 			<item name="Stop Position" de.name="Halteposition" type="node">
@@ -1142,20 +1005,12 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Tram traffic?"
 					de.text="Straßenbahnverkehr?"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
+				<reference ref="operator_dbnetz_oebb" />
 				<text key="network"
 					text="Network"
 					de.text="Verkehrsverbund"
 					/>
-				<text key="ele"
-					text="Height above sea level (m)"
-					de.text="Höhe über Meeresspiegel (m)"
-					/>
+				<reference ref="ele" />
 				<text key="railway:position"
 					text="Distance indication (rounded, e.g. '12.3'; km)"
 					de.text="Entfernungsangabe (gerundet, z. B. '12.3'; km)"
@@ -1205,12 +1060,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Short name (DS 100 or DB 640)"
 					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
+				<reference ref="operator_dbnetz_oebb" />
 				<check key="train"
 					text="Railway traffic?"
 					de.text="Eisenbahnverkehr?"
@@ -1287,16 +1137,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Terminus station"
 				de.text="Streckenende"
 				/>
-			<combo key="operator"
-				text="operator"
-				de.text="Betreiber"
-				values="DB Netz AG,ÖBB-Infrastruktur AG"
-				default=""
-				/>
-			<text key="wikipedia"
-				text="Wikipedia article in the format (Language):(Article)"
-				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-				/>
+			<reference ref="operator_dbnetz_oebb" />
+			<reference ref="wiki" />
 			<roles>
 				<role key=""
 					text="Tracks"
@@ -1328,10 +1170,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Terminus station"
 				de.text="Streckenende"
 				/>
-			<text key="wikipedia"
-				text="Wikipedia article in the format (Language):(Article)"
-				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-				/>
+			<reference ref="wiki" />
 			<roles>
 				<role key=""
 					text="Tracks"
@@ -1621,18 +1460,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<space />
 			<key key="building"
 				value="train_station" />
-			<text key="start_date"
-				text="Opened/Inaugurated at (Format: YYYY, YYYY-MM or YYYY-MM-DD)"
-				de.text="Zeitpunkt der Eröffnung (Format: JJJJ, JJJJ-MM oder JJJJ-MM-TT)"
-				/>
-			<text key="image"
-				text="Image URL"
-				de.text="URL eines Bildes"
-				/>
-			<text key="ele"
-				text="Height above sea level (m)"
-				de.text="Höhe über Meeresspiegel (m)"
-				/>
+			<reference ref="start_date" />
+			<reference ref="img" />
+			<reference ref="ele" />
 		</item>
 		<item name="Railway Landuse Area" de.name="Bahngelände" type="closedway">
 			<label text="Bahngelände" />
@@ -1650,12 +1480,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<label text="Phone (Railway)" de.text="(Strecken-)Fernsprecher" />
 			<key key="railway"
 				value="phone" />
-			<combo key="operator"
-				text="operator"
-				de.text="Betreiber"
-				values="DB Netz AG,ÖBB-Infrastruktur AG"
-				default=""
-				/>
+			<reference ref="operator_dbnetz_oebb" />
 		</item>
 		<item name="Radio tower/mast" de.name="Zugfunkmast" type="node">
 			<label text="Radio tower/mast" de.text="Zugfunkmast" />
@@ -1696,12 +1521,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Referenznummer"
 				default=""
 				delete_if_empty="true" />
-			<combo key="operator"
-				text="operator"
-				de.text="Betreiber"
-				values="DB Netz AG,ÖBB-Infrastruktur AG"
-				default=""
-				/>
+			<reference ref="operator_dbnetz_oebb" />
 		</item>
 		<separator />
 		<item name="Change of Operator" de.name="Betreibergrenze" icon="owner-change.svg" type="node">
@@ -1765,12 +1585,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Building"
 					de.text="Gebäude"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
+				<reference ref="operator_dbnetz_oebb" />
 				<text key="height"
 					text="Tower height [m]"
 					de.text="Turmhöhe [m]"
@@ -1867,12 +1682,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Area"
 					de.text="Fläche"
 					/>
-				<combo key="operator"
-					text="operator"
-					de.text="Betreiber"
-					values="DB Netz AG,ÖBB-Infrastruktur AG"
-					default=""
-					/>
+				<reference ref="operator_dbnetz_oebb" />
 			</item>
 			<separator />
 			<item name="Train Ferry Slip" de.name="Eisenbahnfährverladestelle" type="node">
@@ -1944,10 +1754,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Name"
 					de.text="Name"
 					/>
-				<text key="wikipedia"
-					text="Wikipedia article in the format (Language):(Article)"
-					de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-					/>
+				<reference ref="wiki" />
 			</item>
 			<item name="Rollbock Siding" de.name="Rollwagen-/Rollschemelverladung" type="node">
 				<label text="Rollbock Siding/Transporter Trailers Siding"
@@ -1980,10 +1787,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Network"
 					de.text="Verkehrsverbund"
 					/>
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					/>
+				<reference ref="img" />
 			</item>
 			<item name="Car Shuttle Station" de.name="Autozug-Verladung" type="node">
 				<label text="Car Shuttle Station" de.text="Autozug-Verladung" />
@@ -2010,10 +1814,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Network"
 					de.text="Verkehrsverbund"
 					/>
-				<text key="image"
-					text="Image URL"
-					de.text="URL eines Bildes"
-					/>
+				<reference ref="img" />
 			</item>
 		</group>
 		<item name="Turntable" de.name="Drehscheibe" type="node,closedway">
@@ -2052,10 +1853,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Name"
 				de.text="Name"
 				/>
-			<text key="wikipedia"
-				text="Wikipedia article in the format (Language):(Article)"
-				de.text="Wikipediaartikel in der Form (Sprachkürzel):(Artikelname)"
-				/>
+			<reference ref="wiki" />
 		</item>
 	</group>
 </presets>
