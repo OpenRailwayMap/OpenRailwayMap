@@ -12,10 +12,35 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="2016-04-18" shortdescription="OpenRailwayMap Infrastructure DE+AT" description="Preset to tag German and Austrian railway infrastructure">
+	<chunk id="maxspeed_values">
+		<list_entry value="10" />
+		<list_entry value="20" />
+		<list_entry value="30" />
+		<list_entry value="40" />
+		<list_entry value="50" />
+		<list_entry value="60" />
+		<list_entry value="70" />
+		<list_entry value="80" />
+		<list_entry value="90" />
+		<list_entry value="100" />
+		<list_entry value="110" />
+		<list_entry value="120" />
+		<list_entry value="130" />
+		<list_entry value="140" />
+		<list_entry value="150" />
+		<list_entry value="160" />
+		<list_entry value="170" />
+		<list_entry value="180" />
+		<list_entry value="190" />
+		<list_entry value="200" />
+		<list_entry value="250" />
+		<list_entry value="300" />
+		<list_entry value="330" />
+	</chunk>
 	<group name="OpenRailwayMap Infrastructure DE+AT" de.name="OpenRailwayMap Infrastruktur DE+AT" icon="signals.png">
 		<item de.name="Allgemeine Angaben" name="General Information" icon="rail.png" type="way">
 			<combo key="railway" text="Type of Track" de.text="Art des Gleises">
-				<list_entry value="rail" display_value="Heavy Railway" de.display_value="Vollbahn" de.short_description="Strecke mit untergeordneter Bedeutung; oft nicht elektrifiziert, oft eingleisig. Keinesfalls mit mehr als 100 km/h befahrbar." short_description="less important line; often single-tracked; not electrified; less than 100 km/h" match="keyvalue!" />
+				<list_entry value="rail" display_value="Heavy Railway" de.display_value="Vollbahn" match="keyvalue!" />
 				<list_entry value="tram" display_value="Tram" de.display_value="Straßenbahn" de.short_description="Ebenerdig oder teilweise unterirdisch verlegte Straßenbahngleise oder straßenbahnähnlich verlegte Stadtbahnstrecken" short_description="Trams and underground trams" match="keyvalue!" />
 				<list_entry value="light_rail" display_value="Light rail" de.display_value="Stadt-/Schnellbahn" de.short_description="Stadtbahnen und straßenbahnähnliche Untergrund- oder Überlandbahnen mit völliger Trennung vom restlichen Straßenverkehr" short_description="Light rail tracks which may run under- or overground, usually separated from car traffic" match="keyvalue!" />
 				<list_entry value="subway" display_value="Subway" de.display_value="U-Bahn" de.short_description="Unterirdisch verlegte Stadt- und Schnellbahnen, teilweise auch oberirdischer Verlauf möglich" short_description="Subway tracks; may run overground, but are separated from car traffic" match="keyvalue!" />
@@ -209,18 +234,49 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="voltage"
 					text="Voltage"
 					de.text="Spannung"
-					values="15000,45,180,220,400,500,550,600,650,750,800,850,1000,1100,1200,1500,1800,2200,2400,3000,5000,5500,6300,6500,6600,8000,10000,20000,25000"
-					display_values="15 kV (default in Germany and Austria),45 V,180 V,220 V,400 V,500 V,550 V,600 V,650 V,750 V,800 V,850 V,1000 V,1100 V,1200 V,1500 V,1800 V,2200 V,2400 V,3000 V,5000 V,5500 V,6300 V,6500 V,6600 V,8000 V,10 kV,20 kV,25 kV"
-					de.display_values="15 kV (Standard in Deutschland und Österreich),45 V,180 V,220 V,400 V,500 V,550 V,600 V,650 V,750 V,800 V,850 V,1000 V,1100 V,1200 V,1500 V,1800 V,2200 V,2400 V,3000 V,5000 V,5500 V,6300 V,6500 V,6600 V,8000 V,10 kV,20 kV,25 kV"
 					value_sort="false"
-					/>
+					>
+					<list_entry value="15000" display_value="15 kV (default in Germany and Austria)" de.display_value="15 kV (Standard in Deutschland und Österreich)" />
+					<list_entry value="45" display_value="45 V" />
+					<list_entry value="180" display_value="180 V" />
+					<list_entry value="220" display_value="220 V" />
+					<list_entry value="400" display_value="400 V" />
+					<list_entry value="500" display_value="500 V" />
+					<list_entry value="550" display_value="550 V" />
+					<list_entry value="600" display_value="600 V" />
+					<list_entry value="650" display_value="650 V" />
+					<list_entry value="750" display_value="750 V" />
+					<list_entry value="800" display_value="800 V" />
+					<list_entry value="850" display_value="850 V" />
+					<list_entry value="1000" display_value="1000 V" />
+					<list_entry value="1100" display_value="1100 V" />
+					<list_entry value="1200" display_value="1200 V" />
+					<list_entry value="1500" display_value="1500 V" />
+					<list_entry value="1800" display_value="1800 V" />
+					<list_entry value="2200" display_value="2200 V" />
+					<list_entry value="2400" display_value="2400 V" />
+					<list_entry value="3000" display_value="3000 V" />
+					<list_entry value="5000" display_value="5000 V" />
+					<list_entry value="5500" display_value="5500 V" />
+					<list_entry value="6300" display_value="6300 V" />
+					<list_entry value="6500" display_value="6500 V" />
+					<list_entry value="6600" display_value="6600 V" />
+					<list_entry value="8000" display_value="8000 V" />
+					<list_entry value="10000" display_value="10 kV" />
+					<list_entry value="20000" display_value="20 kV" />
+					<list_entry value="25000" display_value="25 kV" />
+				</combo>
 				<combo key="frequency"
 					text="Frequency"
 					de.text="Frequenz"
-					values="16.7,0,16.67,50,60,25"
-					de.display_values="16.7 Hz (Standard in Deutschland und Österreich),Gleichspannung,16 2/3 Hz (in Teilen Deutschlands),50 Hz,60 Hz,25 Hz"
-					display_values="16.7 Hz (default in Germany and Austria),DC,16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz"
-					/>
+					>
+					<list_entry value="16.7" display_value="16.7 Hz (default in Germany and Austria)" de.display_value="16.7 Hz (Standard in Deutschland und Österreich)" />
+					<list_entry value="0" display_value="DC" de.display_value="Gleichspannung" />
+					<list_entry value="16.67" display_value="16 2/3 Hz (in parts of Germany)" de.display_value="16 2/3 Hz (in Teilen Deutschlands)" />
+					<list_entry value="50" display_value="50 Hz" />
+					<list_entry value="60" display_value="60 Hz" />
+					<list_entry value="25" display_value="25 Hz" />
+				</combo>
 			</item>
 			<item de.name="Zugsicherung, Zugfunk" name="Train Protection, Radio" type="way">
 				<check key="railway:pzb"
@@ -237,16 +293,20 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Tilting train system"
 					de.text="Geschwindigkeitsüberwachung Neigetechnik"
 					values="yes,no,zub122,zub262"
-					display_values="Ja,Nein,ZUB122,ZUB262"
+					de.display_values="Ja,Nein,ZUB122,ZUB262"
 					match="key"
 					/>
 				<combo key="railway:etcs"
 					text="ETCS"
-					de.text="ETCS"
-					values="yes,no,0,1,2,3"
-					display_values="Ja,Nein,Level 0,Level 1,Level 2,Level 3"
 					match="key"
-					/>
+					>
+					<list_entry value="yes" de.display_value="Ja" />
+					<list_entry value="no" de.display_value="Nein" />
+					<list_entry value="0" display_value="Level 0" />
+					<list_entry value="1" display_value="Level 1" />
+					<list_entry value="2" display_value="Level 2" />
+					<list_entry value="3" display_value="Level 3" />
+				</combo>
 				<space />
 				<combo key="railway:radio"
 					text="Radio"
@@ -270,29 +330,34 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="maxspeed"
 					text="Maxspeed (kph)"
 					de.text="Höchstgeschwindigkeit (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
+					>
+					<reference ref="maxspeed_values" />
+				</combo>
 				<space />
 				<label text="If tilting trains have a different speed limit …"
 					de.text="Wenn Neigetechnikzüge eine andere Höchstgeschwindigkeit haben …" />
 				<combo key="maxspeed:tilting"
 					text="Maxspeed of Used by tilting trains (kph)"
 					de.text="Höchstgeschwindigkeit von Neigetechnikzügen (km/h)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,none"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,keine" />
+					>
+					<reference ref="maxspeed_values" />
+					<list_entry value="none" de.display_value="keine" />
+				</combo>
 				<space />
 				<label text="If the speed limits of the two directions are different, use the following to fields:"
 					de.text="Wenn für beide Richtungen unterschiedliche Geschwindigkeitsbeschränkungen gelten, verwende folgende zwei Felder:" />
 				<combo key="maxspeed:forward"
 					text="Maxspeed in direction of OSM way (kph)"
-					de.text="Höchstgeschwindigkeit in Richtung des OSM-Wegs (kph)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
+					de.text="Höchstgeschwindigkeit in Richtung des OSM-Wegs (km/h)"
+					>
+					<reference ref="maxspeed_values" />
+				</combo>
 				<combo key="maxspeed:backward"
 					text="Maxspeed in opposite direction of OSM way (kph)"
-					de.text="Höchstgeschwindigkeit entgegen der Richtung des OSM-Wegs (kph)"
-					values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"
-					display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" />
+					de.text="Höchstgeschwindigkeit entgegen der Richtung des OSM-Wegs (km/h)"
+					>
+					<reference ref="maxspeed_values" />
+				</combo>
 			</item>
 			<item de.name="Oberbau, Trassierung" name="Track System, Line Routeing" type="way">
 				<check key="railway:ballastless"
