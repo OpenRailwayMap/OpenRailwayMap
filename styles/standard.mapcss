@@ -80,7 +80,6 @@ way|z12-[!"railway:track_ref"].bridge::bridges
 way|z9-[railway=disused].tracks,
 way|z9-[railway=abandoned].tracks,
 way|z9-[railway=razed].tracks
-way|z9-[railway=dismantled].tracks
 {
 	z-index: 10;
 	casing-color: black;
