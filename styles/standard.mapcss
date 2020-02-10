@@ -80,6 +80,7 @@ way|z12-[!"railway:track_ref"].bridge::bridges
 way|z9-[railway=disused].tracks,
 way|z9-[railway=abandoned].tracks,
 way|z9-[railway=razed].tracks
+way|z9-[railway=dismantled].tracks
 {
 	z-index: 10;
 	casing-color: black;
@@ -154,6 +155,11 @@ way|z11-[railway=razed][!bridge][!tunnel]["razed:name"],
 way|z11-[railway=razed][!bridge][!tunnel]["razed:ref"]
 {
 	text: eval(join(" ", tag("razed:ref"), tag("razed:name")));
+}
+way|z11-[railway=dismantled][!bridge][!tunnel]["dismantled:name"],
+way|z11-[railway=dismantled][!bridge][!tunnel]["dismantled:ref"]
+{
+	text: eval(join(" ", tag("dismantled:ref"), tag("dismantled:name")));
 }
 
 /*****************************************/
@@ -464,6 +470,7 @@ way|z9-[railway=abandoned]
 /* razed railways */
 /******************/
 way|z9-[railway=razed]
+way|z9-[railway=dismantled]
 {
 	z-index: 200;
 	dashes: 3,7;
