@@ -468,7 +468,7 @@ way|z9-[railway=abandoned]
 /******************/
 /* razed railways */
 /******************/
-way|z9-[railway=razed]
+way|z9-[railway=razed],
 way|z9-[railway=dismantled]
 {
 	z-index: 200;
