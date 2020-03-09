@@ -8,20 +8,21 @@
 # Nikolay Parukhin <parukhin@gmail.com>, 2014-2016
 # Sergey <gr3ss0r@gmail.com>, 2014
 # XAN_ <xan.ukraine@gmail.com>, 2014
+# freeExec <freeExec@mail.ru>, 2014-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2017-09-19 23:37+0000\n"
-"Last-Translator: Nikolay Parukhin <parukhin@gmail.com>\n"
+"PO-Revision-Date: 2020-03-09 16:16+0400\n"
+"Last-Translator: freeExec <freeExec@mail.ru>\n"
 "Language-Team: Russian (Russia) (https://www.transifex.com/rurseekatze/openrailwaymap/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
@@ -166,7 +167,7 @@ msgid "Maxspeeds"
 msgstr "Скоростной режим"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Электрификация"
 
 msgid "Halt"
 msgstr "Остановка"
@@ -184,7 +185,7 @@ msgid "Crossover"
 msgstr "Перекрестный съезд"
 
 msgid "Site"
-msgstr ""
+msgstr "Участок"
 
 msgid "Service station"
 msgstr "Техническая станция"
@@ -196,7 +197,7 @@ msgid "Milestone"
 msgstr "Километровый столб"
 
 msgid "Signal"
-msgstr ""
+msgstr "Сигнал"
 
 msgid "Level crossing"
 msgstr "Переезд"
@@ -229,7 +230,7 @@ msgid "Spur"
 msgstr "Подъездной путь"
 
 msgid "Crossover track"
-msgstr ""
+msgstr "Стрелочный путь"
 
 msgid "Branch line"
 msgstr "Второстепенный путь"
@@ -301,7 +302,7 @@ msgid "Buffer stop"
 msgstr "Тупиковый упор"
 
 msgid "Isolated track section"
-msgstr ""
+msgstr "Изолированная секция пути"
 
 msgid "Platform"
 msgstr "Платформа"
@@ -334,7 +335,7 @@ msgid "Wash"
 msgstr "Мойка"
 
 msgid "Pit"
-msgstr ""
+msgstr "Яма"
 
 msgid "Loading gauge"
 msgstr "Габарит погрузки"
@@ -370,7 +371,7 @@ msgid "Track scale"
 msgstr "Вагонные весы"
 
 msgid "Carrier truck pit"
-msgstr ""
+msgstr "Погрузочная платформа"
 
 msgid "Gauge conversion"
 msgstr "Изменение ширины колеи"
@@ -391,7 +392,7 @@ msgid "Factory connected to railroad line"
 msgstr "Завод соединён по железной дороге"
 
 msgid "Rack"
-msgstr ""
+msgstr "Стеллаж"
 
 msgid "Embankment"
 msgstr "Насыпь"
@@ -424,7 +425,7 @@ msgid "Test service track"
 msgstr "Испытательный служебный путь"
 
 msgid "Car shuttle"
-msgstr ""
+msgstr "Трансфенр для машин"
 
 msgid "Rolling highway"
 msgstr "Шоссе на колёсах"
@@ -451,103 +452,103 @@ msgid "Blog"
 msgstr "Блог"
 
 msgid "No information"
-msgstr ""
+msgstr "Нет информации"
 
 msgid "speed only given for one direction"
-msgstr ""
+msgstr "скорость дана только для одного направления"
 
 msgid "main track, service track"
-msgstr ""
+msgstr "главный путь, служебный путь"
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "Быстрый поиск сокращений"
 
 msgid "Placeholder"
-msgstr ""
+msgstr "Заглушка"
 
 msgid "Donate"
-msgstr ""
+msgstr "Донат"
 
 msgid "Tools"
-msgstr ""
+msgstr "Инструменты"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Вики"
 
 msgid "Search milestone"
-msgstr ""
+msgstr "Поиск километрового столба"
 
 msgid "Station code"
-msgstr ""
+msgstr "Код станции"
 
 msgid "Search station"
-msgstr ""
+msgstr "Поиск станции"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "UIC номер"
 
 msgid "About this project"
-msgstr ""
+msgstr "О этом проекте"
 
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 msgid "Name"
-msgstr ""
+msgstr "Название"
 
 msgid "Line operator"
-msgstr ""
+msgstr "Оператор линии"
 
 msgid "Operator"
-msgstr ""
+msgstr "Оператор"
 
 msgid "More results"
-msgstr ""
+msgstr "Ещё результаты"
 
 msgid "Spur junction"
-msgstr ""
+msgstr "Ответвляющийся узел"
 
 msgid "No background map"
-msgstr ""
+msgstr "Нет подложки карты"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "Деэлектрификация"
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "Нет информации о локомотивной безопасности"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "Track usage"
-msgstr ""
+msgstr "Назначение пути"
 
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% км/ч (не используется/строительство)"
 
 msgid "1.5 – 3kV ="
-msgstr ""
+msgstr "1.5 – 3кВ ="
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "ETCS строительство"
 
 msgid "3kV ="
-msgstr ""
+msgstr "3кВ ="
 
 msgid "Germany"
-msgstr ""
+msgstr "Германия"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "Не электрифицирован"
 
 msgid "shunting signal type Ro"
-msgstr ""
+msgstr "маневровый сигнал типа Ro"
 
 msgid "Track type"
-msgstr ""
+msgstr "Тип пути"
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
@@ -556,7 +557,7 @@ msgid "Linienzugbeeinflussung"
 msgstr ""
 
 msgid "25kV 50Hz ~"
-msgstr ""
+msgstr "25кВ 50Гц ~"
 
 msgid "So 106 Kreuztafel"
 msgstr ""
@@ -565,31 +566,31 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "Стыковочные узлы, Стрелочные съезды, Служебные станции, Участки"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "По крайней мере 25кВ ~"
 
 msgid "minor signal type Lo"
-msgstr ""
+msgstr "нижнии сигналы типа Lo"
 
 msgid "Finland"
-msgstr ""
+msgstr "Финляндия"
 
 msgid "15 – 25kV ~"
-msgstr ""
+msgstr "15 – 25кВ ~"
 
 msgid "ETCS"
 msgstr ""
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "Строительлство электрификации"
 
 msgid "no train protection"
-msgstr ""
+msgstr "нет локомотивной безопасности"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -601,52 +602,52 @@ msgid "Ne 1 Trapeztafel"
 msgstr ""
 
 msgid "15kV 16⅔Hz ~"
-msgstr ""
+msgstr "15кВ 16⅔Гц ~"
 
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
 msgid "signals"
-msgstr ""
+msgstr "сигналы"
 
 msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "Voltage"
-msgstr ""
+msgstr "Напряжение"
 
 msgid "More than 3kV ="
-msgstr ""
+msgstr "Более 3кВ ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
 msgid "3rd rail"
-msgstr ""
+msgstr "3-и пути"
 
 msgid "750 – 1000V ="
-msgstr ""
+msgstr "750 – 1000В ="
 
 msgid "Less than 15kV ~"
-msgstr ""
+msgstr "Меньше 15кВ ~"
 
 msgid "1kV ="
-msgstr ""
+msgstr "1кВ ="
 
 msgid "crossing signal type To"
-msgstr ""
+msgstr "стрелочные сигналы типа Lo"
 
 msgid "1 – 1.5kV ="
-msgstr ""
+msgstr "1 – 1.5кВ ="
 
 msgid "block signal type So"
-msgstr ""
+msgstr "блокирующие сигналы типа Lo"
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% км/ч"
 
 msgid "1.5kV ="
-msgstr ""
+msgstr "1.5кВ ="
 
 msgid "El 2 Einschaltsignal"
 msgstr ""
@@ -667,46 +668,46 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "Меньше 750В"
 
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
 
 msgid "Operating Sites"
-msgstr ""
+msgstr "Эксплуатационные участки"
 
 msgid "train protection"
-msgstr ""
+msgstr "локомотивная безопастность"
 
 msgid "contact line"
-msgstr ""
+msgstr "конттактная линия"
 
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
 msgid "750V ="
-msgstr ""
+msgstr "750В ="
 
 msgid "25kV 60Hz ~"
-msgstr ""
+msgstr "25кВ 60Гц ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "Электрификация предложена"
 
 msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
 
 msgid "15kV 16.7Hz ~"
-msgstr ""
+msgstr "15кВ 16.7Гц ~"
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 msgstr ""
 
 msgid "distant signal with Eo 2 (new type)"
-msgstr ""
+msgstr "дистанционный сигнал с Eo 2 (новый тип)"
 
 msgid "Ks-Hauptsignal"
 msgstr ""
@@ -742,22 +743,22 @@ msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
 msgstr ""
 
 msgid "main signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "главынй сигнал без учёте показаний (новый тип, старый тип)"
 
 msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
 msgstr ""
 
 msgid "main signal with Po 1 (new type, old type)"
-msgstr ""
+msgstr "главный сигнал с Po 1 (новый тип, старый тип)"
 
 msgid "main signal with Po 2 (new type, old type)"
-msgstr ""
+msgstr "главный сигнал с Po 2 (новый тип, старый тип)"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
 
 msgid "distant signal with Eo 1 (new type, old type)"
-msgstr ""
+msgstr "дистанционный сигнал с Eo 1 (новый тип, старый тип)"
 
 msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
@@ -778,7 +779,7 @@ msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/ve
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "дистанционный сигнал без учёте показаний (новый тип, старый тип)"
 
 msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
 msgstr ""
@@ -787,4 +788,4 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr ""
+msgstr "Сведения &amp; Политика конфиденциальности"
