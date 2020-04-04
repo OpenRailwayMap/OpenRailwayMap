@@ -31,7 +31,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	</chunk>
 	<group name="OpenRailwayMap BOStrab-Signale" icon="signals.png">
 		<item name="Main signal (Fahrsignal/F) for on-sight running trams" de.name="Fahrsignal (F)" icon="de/bostrab/f0-32.png" type="node">
-			<label de.text="Main signal (F 0/F 1) for on-sight running trams, colloquially also known as Balkensignal" 
+			<label de.text="Main signal (F 0/F 1) for on-sight running trams, colloquially also known as Balkensignal"
 				text="Fahrsignal  (F 0/F 1), umgangssprachlich auch Balkensignal genannt" />
 			<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 			<space />
@@ -210,7 +210,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<combo key="railway:signal:departure:states"
 				text="Anzeigbare Signalbilder"
 				delimiter=","
-				values="DE-BOStrab:a1;off,DE-BOStrab:a2;off,DE-BOStrab:a1;DE-BOStrab:a2;off" 
+				values="DE-BOStrab:a1;off,DE-BOStrab:a2;off,DE-BOStrab:a1;DE-BOStrab:a2;off"
 				display_values="A 1 (close doors),A 2 (depart),A 1 (close doors) + A 2 (depart)"
 				de.display_values="A 1 (Türen schließen),A 2 (Abfahren),A 1 (Türen schließen);A 2 (Abfahrt)" />
 			<key key="railway:signal:departure:form"
@@ -576,6 +576,38 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<group name="Electricity Signals (St)" de.name="Schaltsignale (St)">
+			<item name="Signalcontact (St 1)" de.name="Signalkontakt (St 1)" type="node">
+				<label text="Signalcontact (St 3)" de.text="Signalkontakt (St 1)" />
+				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:electricity:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,overhead"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
+					display_values="left,right,catenary"
+					/>
+				<reference ref="direction_fw_bw" />
+				<key key="railway:signal:electricity"
+					value="DE-BOStrab:st1" />
+				<combo key="railway:signal:electricity:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
+					/>
+				<key key="railway:signal:electricity:type"
+					value="signalcontact" />
+				<key key="railway:signal:electricity:form"
+					value="sign" />
+			</item>
 			<item name="Turn Off (St 3)" de.name="Ausschalten (St 3)" icon="de/el1-28.png" type="node">
 				<label text="Turn Off (St 3)" de.text="Ausschalten (St 3)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
@@ -951,7 +983,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Beschriftung Zusatzschild"
 				/>
 		</item>
-		<item name="End of Passing Prohibition (So 6)" de.name="Begegnungsverbot Ende (So 6)" 
+		<item name="End of Passing Prohibition (So 6)" de.name="Begegnungsverbot Ende (So 6)"
 			type="node" icon="de/bostrab/so6-24.png" >
 			<label text="End of Passing Prohibition (So 6)" de.text="Begegnungsverbot Ende (So 6)" />
 			<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
@@ -1707,6 +1739,40 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="normal,dwarf"
 					de.display_values="Mastbauform,Zwergsignal"
 					/>
+			</item>
+		</group>
+		<group name="Hannover (ÜSTRA)">
+			<item name="Short Speed Limit Sign (G 5)" de.name="Langsamfahrstelle (G 5)" type="node">
+				<label text="Short Speed Limit Sign (G 5)." de.text="Langsamfahrstelle (G 5)" />
+				<label text="A light rail may not overwrite the specified speed when passing this signal and can accelerate immediately after passing."
+					de.text="Eine Stadtbahn darf bei Vorbeifahrt an diesem Signal die angegebene Geschwindigkeit nicht überschreiben und nach Vorbeifahrt direkt wieder beschleunigen." />
+				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:speed_limit:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge,overhead"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Oberleitung"
+					display_values="left in direction of OSM way,right in direction of OSM way,bridge,catenary"
+					/>
+				<reference ref="direction_fw_bw" />
+				<space />
+				<key key="railway:signal:speed_limit"
+					value="DE-BOStrab:g5" />
+				<key key="railway:signal:speed_limit:form"
+					value="sign" />
+				<combo key="railway:signal:speed_limit:speed"
+					text="Speed (km/h)"
+					de.text="Geschwindigkeit (km/h)"
+					values="10,20,30,40,50"
+					display_values="10,20,30,40,50"
+					de.display_values="10,20,30,40,50" />
 			</item>
 		</group>
 	</group>
