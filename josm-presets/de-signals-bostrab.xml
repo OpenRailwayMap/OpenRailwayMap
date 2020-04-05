@@ -1810,6 +1810,75 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="10,20,30,40,50"
 					de.display_values="10,20,30,40,50" />
 			</item>
+			<item name="Limited Emergency Stop (Sh 3e)" de.name="Eingeschränkter Nothalt (Sh 3e)" type="node" icon="de/bostrab/hannover/sh3e-18.png" >
+				<label text="Limited Emergency Stop (Sh 3e)" de.text="Eingeschränkter Nothalt (Sh 3e)" />
+				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
+				<label text="We do only map immoveable emergency stop signals. These are usually used at subways."
+					de.text="Es werden nur ortsfeste Nothaltsignale erfasst. Diese werden i.d.R. in der Zugsicherung eingesetzt." />
+				<space />
+				<key key="railway" value="signal" />
+				<check key="railway:signal:minor:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					display_values="left in direction of OSM way,right in direction of OSM way"
+					/>
+				<reference ref="direction_fw_bw" />
+				<space />
+				<key key="railway:signal:minor" value="DE-UESTRA:sh3e" />
+				<key key="railway:signal:minor:form" value="light" />
+			</item>
+			<item name="Yield sign (Sh 9)" de.name="Vorfahrt achten (Sh 9)" icon="de/bostrab/hannover/sh9-18.png" type="node">
+				<label text="Yield sign (Sh 9)" de.text="Vorfahrt achten (Sh 9)" />
+				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:minor:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,overhead,in_track"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung,im Gleis"
+					display_values="left in direction of OSM way,right in direction of OSM way,catenary,in track"
+					/>
+				<reference ref="direction_fw_bw" />
+				<key key="railway:signal:minor"
+					value="DE-UESTRA:sh9" />
+				<key key="railway:signal:minor:form"
+					value="sign" />
+			</item>
+			<item name="Note the speed indicator (Sh 9)" de.name="Höchstwertanzeiger beachten (So 7)" icon="de/bostrab/hannover/so7-18.png" type="node">
+				<label text="Note the speed indicator (Sh 9)" de.text="Höchstwertanzeiger beachten (So 7)" />
+				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:minor:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,overhead,in_track"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					display_values="left in direction of OSM way,right in direction of OSM way"
+					/>
+				<reference ref="direction_fw_bw" />
+				<key key="railway:signal:minor"
+					value="DE-UESTRA:so7" />
+				<key key="railway:signal:minor:form"
+					value="sign" />
+			</item>
 		</group>
 	</group>
 </presets>
