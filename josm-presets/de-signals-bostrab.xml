@@ -576,7 +576,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<group name="Electricity Signals (St)" de.name="Schaltsignale (St)">
-			<item name="Signalcontact (St 1)" de.name="Signalkontakt (St 1)" type="node">
+			<item name="Signalcontact (St 1)" de.name="Signalkontakt (St 1)" icon="de/bostrab/st1-18.png" type="node">
 				<label text="Signalcontact (St 3)" de.text="Signalkontakt (St 1)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
@@ -1742,7 +1742,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<group name="Hannover (ÜSTRA)">
-			<item name="Short Speed Limit Sign (G 5)" de.name="Langsamfahrstelle (G 5)" type="node">
+			<item name="Short Speed Limit Sign (G 5)" de.name="Langsamfahrstelle (G 5)" icon="de/bostrab/hannover/g5-18.png" type="node">
 				<label text="Short Speed Limit Sign (G 5)." de.text="Langsamfahrstelle (G 5)" />
 				<label text="A light rail may not overwrite the specified speed when passing this signal and can accelerate immediately after passing."
 					de.text="Eine Stadtbahn darf bei Vorbeifahrt an diesem Signal die angegebene Geschwindigkeit nicht überschreiben und nach Vorbeifahrt direkt wieder beschleunigen." />
