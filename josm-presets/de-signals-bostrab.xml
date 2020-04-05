@@ -582,7 +582,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<key key="railway"
 					value="signal" />
-				<check key="railway:signal:electricity:deactivated"
+				<check key="railway:signal:switch:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					/>
@@ -594,18 +594,16 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left,right,catenary"
 					/>
 				<reference ref="direction_fw_bw" />
-				<key key="railway:signal:electricity"
+				<key key="railway:signal:switch"
 					value="DE-BOStrab:st1" />
-				<combo key="railway:signal:electricity:height"
+				<combo key="railway:signal:switch:height"
 					text="Signal height"
 					de.text="Signalbauform"
 					values="normal,dwarf"
 					display_values="normal,dwarf"
 					de.display_values="Mastbauform,Zwergsignal"
 					/>
-				<key key="railway:signal:electricity:type"
-					value="signalcontact" />
-				<key key="railway:signal:electricity:form"
+				<key key="railway:signal:switch:form"
 					value="sign" />
 			</item>
 			<item name="Turn Off (St 3)" de.name="Ausschalten (St 3)" icon="de/el1-28.png" type="node">
