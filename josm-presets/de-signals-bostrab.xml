@@ -32,7 +32,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	<group name="OpenRailwayMap BOStrab-Signale" icon="signals.png">
 		<item name="Main signal (Fahrsignal/F) for on-sight running trams" de.name="Fahrsignal (F)" icon="de/bostrab/f0-32.png" type="node">
 			<label de.text="Main signal (F 0/F 1) for on-sight running trams, colloquially also known as Balkensignal"
-				text="Fahrsignal  (F 0/F 1), umgangssprachlich auch Balkensignal genannt" />
+				text="Fahrsignal (F 0/F 1), umgangssprachlich auch Balkensignal genannt" />
 			<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 			<space />
 			<reference ref="sig_ref" />
@@ -71,7 +71,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<group name="Main and Distant Signals" de.name="Haupt- und Vorsignale">
 			<item name="Main Signal (H) without distant signal function" de.name="Hauptsignal (H) ohne Vorsignalfunktion" icon="de/hha/h0-32.png" type="node">
-				<label text="Main Signal (H) without distant signal function" de.text="Hauptsignal  (H) ohne Vorsignalfunktion" />
+				<label text="Main Signal (H) without distant signal function" de.text="Hauptsignal (H) ohne Vorsignalfunktion" />
 				<label text="Not in following cities: Hamburg, Stuttgart" de.text="Nicht in folgenden Städten: Hamburg, Stuttgart" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
@@ -110,7 +110,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Main Signal (H) with distant signal function" de.name="Hauptsignal (H) mit Vorsignalfunktion" icon="de/hha/h0-32.png" type="node">
-				<label text="Main Signal (H) with distant signal function" de.text="Hauptsignal  (H) mit Vorsignalfunktion" />
+				<label text="Main Signal (H) with distant signal function" de.text="Hauptsignal (H) mit Vorsignalfunktion" />
 				<label text="Not in following cities: Hamburg, Stuttgart" de.text="Nicht in folgenden Städten: Hamburg, Stuttgart" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
@@ -1016,7 +1016,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		<separator />
 		<group name="Hamburg (HHA)">
 			<item name="Main Signal (H)" de.name="Hauptsignal (H)" icon="de/hha/h0-32.png" type="node">
-				<label text="Main Signal (H)" de.text="Hauptsignal  (H)" />
+				<label text="Main Signal (H)" de.text="Hauptsignal (H)" />
 				<label text="Only in Hamburg" de.text="Nur in Hamburg" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
@@ -1663,7 +1663,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</group>
 		<group name="Stuttgart (SSB)">
 			<item name="Main Signal (H) without Distant Signal Function" de.name="Hauptsignal (H) ohne Vorsignalfunktion" icon="de/hha/h0-32.png" type="node">
-				<label text="Main Signal (H) without Distant Signal Function" de.text="Hauptsignal  (H) ohne Vorsignalfunktion" />
+				<label text="Main Signal (H) without Distant Signal Function" de.text="Hauptsignal (H) ohne Vorsignalfunktion" />
 				<label text="Only on SSB infrastructure (in and around Stuttgart)" de.text="Nur auf SSB-Infrastruktur (in und um Stuttgart)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
@@ -1702,7 +1702,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Main Signal (H) with Distant Signal Function" de.name="Hauptsignal (H) mit Vorsignalfunktion" icon="de/hha/h0-32.png" type="node">
-				<label text="Main Signal (H) with Distant Signal Function" de.text="Hauptsignal  (H) mit Vorsignalfunktion" />
+				<label text="Main Signal (H) with Distant Signal Function" de.text="Hauptsignal (H) mit Vorsignalfunktion" />
 				<label text="Only on SSB infrastructure (in and around Stuttgart)" de.text="Nur auf SSB-Infrastruktur (in und um Stuttgart)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
