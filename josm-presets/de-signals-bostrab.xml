@@ -72,7 +72,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		<group name="Main and Distant Signals" de.name="Haupt- und Vorsignale">
 			<item name="Main Signal (H) without distant signal function" de.name="Hauptsignal (H) ohne Vorsignalfunktion" icon="de/hha/h0-32.png" type="node">
 				<label text="Main Signal (H) without distant signal function" de.text="Hauptsignal (H) ohne Vorsignalfunktion" />
-				<label text="Not in following cities: Hamburg, Stuttgart" de.text="Nicht in folgenden Städten: Hamburg, Stuttgart" />
+				<label text="Not in following cities: Hamburg, Stuttgart, Hanover" de.text="Nicht in folgenden Städten: Hamburg, Stuttgart, Hannover" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
 				<reference ref="sig_ref" />
@@ -111,7 +111,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 			<item name="Main Signal (H) with distant signal function" de.name="Hauptsignal (H) mit Vorsignalfunktion" icon="de/hha/h0-32.png" type="node">
 				<label text="Main Signal (H) with distant signal function" de.text="Hauptsignal (H) mit Vorsignalfunktion" />
-				<label text="Not in following cities: Hamburg, Stuttgart" de.text="Nicht in folgenden Städten: Hamburg, Stuttgart" />
+				<label text="Not in following cities: Hamburg, Stuttgart, Hanover" de.text="Nicht in folgenden Städten: Hamburg, Stuttgart, Hannover" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
 				<reference ref="sig_ref" />
@@ -1740,6 +1740,44 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<group name="Hannover (ÜSTRA)">
+			<item name="Main Signal (H) (in train protection area)" de.name="Hauptsignal (H) (Zugsicherung)" icon="de/hha/h0-32.png" type="node">
+				<label text="Main Signal (H) (in train protection area)" de.text="Hauptsignal (H) (Zugsicherung)" />
+				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
+				<space />
+				<reference ref="sig_ref" />
+				<check key="railway:signal:main:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					display_values="left in direction of OSM way,right in direction of OSM way"
+					/>
+				<reference ref="direction_fw_bw" />
+				<space />
+				<key key="railway:signal:main"
+					value="DE-BOStrab:h" />
+				<multiselect key="railway:signal:main:states"
+					text="Possible Signals"
+					de.text="Anzeigbare Signale"
+					delimiter=";"
+					values="DE-BOStrab:h0;DE-BOStrab:h1;DE-BOStrab:h2;DE-UESTRA:h3"
+					display_values="H 0 (Stop);H 1 (Proceed);H 2 (Proceed at low speed);H 3 (Proceed at low speed and on sight)"
+					de.display_values="H 0 (Halt);H 1 (Fahrt);H 2 (Fahrt mit Geschwindigkeitsbeschränkung);H 3 (Fahrt mit Geschwindigkeitsbeschränkung und auf Sicht)"
+					/>
+				<key key="railway:signal:main:form"
+					value="light" />
+				<combo key="railway:signal:main:height"
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
+					/>
+			</item>
 			<item name="Short Speed Limit Sign (G 5)" de.name="Langsamfahrstelle (G 5)" icon="de/bostrab/hannover/g5-18.png" type="node">
 				<label text="Short Speed Limit Sign (G 5)." de.text="Langsamfahrstelle (G 5)" />
 				<label text="A light rail may not overwrite the specified speed when passing this signal and can accelerate immediately after passing."
@@ -1762,7 +1800,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:speed_limit"
-					value="DE-BOStrab:g5" />
+					value="DE-UESTRA:g5" />
 				<key key="railway:signal:speed_limit:form"
 					value="sign" />
 				<combo key="railway:signal:speed_limit:speed"
