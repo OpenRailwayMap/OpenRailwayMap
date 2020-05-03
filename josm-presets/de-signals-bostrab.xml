@@ -1874,7 +1874,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="left in direction of OSM way,right in direction of OSM way"
 					/>
 				<reference ref="direction_fw_bw" />
-				<key key="railway:signal:minor"
+				<key key="railway:signal:train_protection"
 					value="DE-UESTRA:so7" />
 				<key key="railway:signal:minor:form"
 					value="sign" />
