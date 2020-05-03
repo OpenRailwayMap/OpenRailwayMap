@@ -1856,8 +1856,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:minor:form"
 					value="sign" />
 			</item>
-			<item name="Note the speed indicator (Sh 9)" de.name="Höchstwertanzeiger beachten (So 7)" icon="de/bostrab/hannover/so7-18.png" type="node">
-				<label text="Note the speed indicator (Sh 9)" de.text="Höchstwertanzeiger beachten (So 7)" />
+			<item name="Mind the speed indicator (So 7)" de.name="Höchstwertanzeiger beachten (So 7)" icon="de/bostrab/hannover/so7-18.png" type="node">
+				<label text="Mind the speed indicator (So 7)" de.text="Höchstwertanzeiger beachten (So 7)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
 				<key key="railway"
