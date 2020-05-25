@@ -1862,7 +1862,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<space />
 				<key key="railway"
 					value="signal" />
-				<check key="railway:signal:minor:deactivated"
+				<check key="railway:signal:train_protection:deactivated"
 					text="Out of order"
 					de.text="Ungültigkeitskreuz"
 					/>
@@ -1876,7 +1876,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<reference ref="direction_fw_bw" />
 				<key key="railway:signal:train_protection"
 					value="DE-UESTRA:so7" />
-				<key key="railway:signal:minor:form"
+				<key key="railway:signal:train_protection:form"
 					value="sign" />
 			</item>
 		</group>
