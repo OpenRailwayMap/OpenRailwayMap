@@ -53,7 +53,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		// if nothing was entered
 		if (input.length == 0)
 		{
-			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+_("Empty input.")+"</b></center></div>";
+			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>" + escapeForHTML(_("Empty input.")) + "</b></center></div>";
 			this.bar.className = "infoBar";
 			var bar = this.bar.id;
 			setTimeout("gEBI('"+bar+"').innerHTML = ''; gEBI('"+bar+"').className = 'infoBarOut';", 3500);
@@ -74,14 +74,14 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			queryRef = function(response)
 			{
 				self.showResults(response);
-				self.sendRequest("facility", "ref=" + input, function(response)
+				self.sendRequest("facility", "ref=" + encodeURIComponent(input), function(response)
 				{
 					self.finishResults(response);
 				});
 			}
 
 			if((input.length != 7) || isNaN(input)) {
-				self.sendRequest("facility", "name=" + input, function(response)
+				self.sendRequest("facility", "name=" + encodeURIComponent(input), function(response)
 				{
 					var words = input.split(" ");
 					for (var i = 0; i<words.length; i++)
@@ -98,13 +98,13 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 					{
 						var ref = words.join(" ");
 
-						self.sendRequest("milestone", "position=" + pos.replace(',', '.') + "&ref=" + ref, queryRef);
+						self.sendRequest("milestone", "position=" + encodeURIComponent(pos.replace(',', '.')) + "&ref=" + encodeURIComponent(ref), queryRef);
 					}
 					else
 						queryRef(response);
 				});
 			} else {
-				this.sendRequest("facility", "uicref=" + input, queryRef);
+				this.sendRequest("facility", "uicref=" + encodeURIComponent(input), queryRef);
 			}
 		}
 	}
@@ -134,20 +134,24 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 					inner = results[i]['ref'];
 
 				if (inner)
-					result.innerHTML = '<b>' + inner + '</b>';
+					result.innerHTML = '<b>' + escapeForHTML(inner) + '</b>';
 
 				if (results[i]['type'] != null && typeof results[i]['type'] != undefined && this.typeMapping[results[i]['type']] != null)
-					result.innerHTML += '&nbsp;'+_(this.typeMapping[results[i]['type']]);
+					result.innerHTML += '&nbsp;' + escapeForHTML(_(this.typeMapping[results[i]['type']]));
 				if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
-					result.innerHTML += '<br /><dfn>'+results[i]['operator']+'</dfn>';
+					result.innerHTML += '<br /><dfn>' + escapeForHTML(results[i]['operator']) + '</dfn>';
 				if (results[i]['ref'] && (results[i]['type'] == 'station' || results[i]['type'] == 'halt' || results[i]['type'] == 'junction' ||
 						results[i]['type'] == 'spur_junction' || results[i]['type'] == 'yard' || results[i]['type'] == 'crossover' ||
 						results[i]['type'] == 'site' || results[i]['type'] == 'service_station' || results[i]['type'] == 'tram_stop'))
-					result.innerHTML += ' <i>[' + results[i]['ref'] + ']</i>';
+					result.innerHTML += ' <i>[' + escapeForHTML(results[i]['ref']) + ']</i>';
 
 				selfSearch = this;
-				result.setAttribute('class', 'resultEntry');
-				result.onclick = new Function("selfSearch.showResult("+results[i]['lon']+", "+results[i]['lat']+");");
+				var lon = Number.parseFloat(results[i]['lon']);
+				var lat = Number.parseFloat(results[i]['lat']);
+				if (!Number.isNaN(lon) && !Number.isNaN(lat)) {
+					result.setAttribute('class', 'resultEntry');
+					result.onclick = new Function("selfSearch.showResult(" + lon + ", " + lat + ");");
+				}
 
 				this.bar.appendChild(result);
 			}
@@ -170,7 +174,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 		{
 			var bar = this.bar.id;
 
-			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>"+_("Nothing found.")+"</b></center></div>";
+			this.bar.innerHTML = "<div id=\"errorResults\"><center><b>" + escapeForHTML(_("Nothing found.")) + "</b></center></div>";
 
 			var self = this;
 			var removeErrorMessage = function()

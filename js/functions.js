@@ -301,3 +301,12 @@ function _(sourcemsg, n)
 	var pluralIndex = eval(pluralForms.replace(/n/), n) + 1;
 	return window.openrailwaymap.translations[sourcemsg][pluralIndex].replace(/%d/, n);
 }
+
+function escapeForHTML(raw)
+{
+	return raw.replace(/&/g, "&amp;")
+		.replace(/</g, "&lt;")
+		.replace(/>/g, "&gt;")
+		.replace(/"/g, "&quot;")
+		.replace(/'/g, "&#039;");
+}

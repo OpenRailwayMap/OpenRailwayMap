@@ -159,10 +159,10 @@ function applyStyle(style)
 // build a radio-button list of available map styles
 function getStyleSelection()
 {
-	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><b>'+_("Select a map style")+':</b><br /><p>';
+	gEBI('styleSelectionBar').innerHTML = '<form id="styleSelection"><b>' + escapeForHTML(_("Select a map style")) + ':</b><br /><p>';
 	for (var style in window.openrailwaymap.availableStyles)
 		if (window.openrailwaymap.availableStyles.hasOwnProperty(style))
-			gEBI('styleSelectionBar').innerHTML += '<label><input onchange="applyStyle(this.value)" type="radio" name="style" value="'+style+'">'+_(window.openrailwaymap.availableStyles[style])+'</label><br />';
+			gEBI('styleSelectionBar').innerHTML += '<label><input onchange="applyStyle(this.value)" type="radio" name="style" value="' + escapeForHTML(style) + '">'+_(window.openrailwaymap.availableStyles[style])+'</label><br />';
 	gEBI('styleSelectionBar').innerHTML += '</p></form>';
 }
 

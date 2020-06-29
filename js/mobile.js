@@ -130,7 +130,7 @@ function setStyle(style)
 	// helper variable for saving current map style
 	railmap.selectedStyle = style;
 	// change tileserver url to load different style
-	railmap._url = window.openrailwaymap.tiledir+style+'/{z}/{x}/{y}.png';
+	railmap._url = window.openrailwaymap.tiledir+encodeURIComponent(style)+'/{z}/{x}/{y}.png';
 	// reload all tiles after style was changed
 	railmap.redraw();
 
@@ -138,7 +138,7 @@ function setStyle(style)
 	var selectableItems = gEBI('styleSelectionBar').getElementsByTagName('div');
 	for (var i=0; i<selectableItems.length; i++)
 	{
-		if (selectableItems[i].innerHTML == _(window.openrailwaymap.availableStyles[style]))
+		if (selectableItems[i].innerHTML == escapeForHTML(_(window.openrailwaymap.availableStyles[style])))
 		{
 			selectableItems[i].innerHTML = selectableItems[i].innerHTML+'<small>✓</small>';
 			selectableItems[i].onclick = null;
