@@ -722,7 +722,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
-						display_values="substitution signal (ex-DB Zs 1),substitution signal (ex-DR Zs 1),cautioness signal (Zs 7),M board (Zs 12)"
+						display_values="substitution signal (ex-DB Zs 1);substitution signal (ex-DR Zs 1);cautioness signal (Zs 7);M board (Zs 12)"
 						de.display_values="Ersatzsignal (ex-DB Zs 1);Ersatzsignal (ex-DR Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
 						/>
 					<space />
