@@ -434,7 +434,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Bewegliche Brücke"
 				values=" ,bascule,drawbridge,lift,swing"
 				de.display_values="nein,Klappbrücke,Zugbrücke,Hubbrücke,Drehbrücke"
-				display_values="no,Bascule bridge,Drawbridge,Swing bridge"
+				display_values="no,Bascule bridge,Drawbridge,Lift bridge,Swing bridge"
 				values_sort="false"
 				/>
 			<combo key="bridge:structure"
