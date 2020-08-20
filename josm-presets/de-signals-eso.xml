@@ -1121,11 +1121,12 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<reference ref="direction_fw_bw" />
 					<space />
 					<combo key="railway:signal:whistle"
+						delimiter=";"
 						text="Exact type"
 						de.text="Signaltyp"
-						values="DE-ESO:db:bü4,DE-ESO:dr:pf1,DE-ESO:dr:pf2"
-						display_values="Bü 4 (ex-DB),Pf 1 (one board, ex-DR),Pf 2 (two boards at one post, ex-DR)"
-						de.display_values="Bü 4 (ex-DB),Pf 1 (einfache Pfeiftafel ex-DR),Pf 2 (doppelte Pfeiftafel ex-DR)"
+						values="DE-ESO:db:bü4;DE-ESO:dr:pf1;DE-ESO:dr:pf2"
+						display_values="Bü 4 (ex-DB);Pf 1 (one board, ex-DR);Pf 2 (two boards at one post, ex-DR)"
+						de.display_values="Bü 4 (ex-DB);Pf 1 (einfache Pfeiftafel ex-DR);Pf 2 (doppelte Pfeiftafel ex-DR)"
 						/>
 					<key key="railway:signal:whistle:form"
 						value="sign" />
