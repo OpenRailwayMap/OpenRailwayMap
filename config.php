@@ -52,7 +52,8 @@
 		"tr" => array("tr_TR", "Türkçe"),
 		"uk" => array("uk_UA", "Українська"),
 		"vi" => array("vi_VN", "Tiếng Việt"),
-		"zh" => array("zh_TW", "正體中文")
+		"zh_CN" => array("zh_CN", "简体中文")
+		"zh_TW" => array("zh_TW", "正體中文")
 	);
 	// name of application
 	$appname = "OpenRailwayMap";

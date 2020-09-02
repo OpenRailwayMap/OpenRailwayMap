@@ -1,0 +1,778 @@
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+#
+# Translators:
+# FreedSky <qa003qa003@hotmail.com>, 2020
+msgid "
+msgstr "
+"Project-Id-Version: OpenRailwayMap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2017-09-22 15:50+0000\n"
+"Last-Translator: FreedSky <qa003qa003@hotmail.com>\n"
+"Language-Team: Chinese (Simple) \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "More Info"
+msgstr "更多信息"
+
+msgid "Contact"
+msgstr "联系"
+
+msgid "Javascript is not activated"
+msgstr "未激活Javascript"
+
+msgid ""
+Javascript is needed to show the map and run this website. Please turn on 
+Javascript in your browser settings.
+msgstr "需要Javascript才能显示地图并运行此网站。请在浏览器设置中打开Javascript。"
+
+msgid "Loading..."
+msgstr "正在加载..."
+
+msgid "Nothing found."
+msgstr "未找到任何内容。"
+
+msgid "Last update"
+msgstr "最新更新"
+
+msgid "Empty input."
+msgstr "空输入。"
+
+msgid "Kilometer"
+msgstr "公里"
+
+msgid "Track"
+msgstr "跟踪"
+
+msgid "Permalink"
+msgstr "固定链接"
+
+msgid "Hillshading"
+msgstr "山体渲染"
+
+msgid "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
+msgstr " <a href='https://www.nasa.gov/'> NASA SRTM </a>的阴影"
+
+msgid "Rendering: OpenRailwayMap"
+msgstr "渲染：OpenRailwayMap"
+
+msgid "Mapnik"
+msgstr " Mapnik"
+
+msgid "Mapnik Grayscale"
+msgstr " Mapnik灰色"
+
+msgid "Map data &copy; OpenStreetMap contributors"
+msgstr "地图数据＆copy; OpenStreetMap贡献者"
+
+msgid "Select a map style"
+msgstr "选择地图样式"
+
+msgid "Public transport"
+msgstr "公共交通工具"
+
+msgid "Search results"
+msgstr "搜索结果"
+
+msgid "Search only in the current map view"
+msgstr "仅在当前地图视图中搜索"
+
+msgid "HTML-Code"
+msgstr " HTML代码"
+
+msgid ""
+Copy this HTML code snippet into your website to show a small map with a 
+marker.
+msgstr "将此HTML代码段复制到您的网站中，以显示带有标记的小地图。"
+
+msgid "Fullscreen"
+msgstr "全屏"
+
+"#, php-format"
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "％d秒"
+msgstr[1] "％d秒"
+
+"#, php-format"
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "％d分钟"
+msgstr[1] "％d分钟"
+
+"#, php-format"
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "％d小时"
+msgstr[1] "％d小时"
+
+"#, php-format"
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "％d天"
+msgstr[1] "％d天"
+
+"#, php-format"
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "％d周"
+msgstr[1] "％d周"
+
+"#, php-format"
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "％d个月"
+msgstr[1] "％d个月"
+
+"#, php-format"
+msgid "more than %s ago"
+msgstr "％s之前"
+
+"#, php-format"
+msgid "%s ago"
+msgstr "％s前"
+
+msgid "Infrastructure"
+msgstr "基础设施"
+
+msgid "Signalling"
+msgstr "信号"
+
+msgid "Maxspeeds"
+msgstr "最高速度"
+
+msgid "Electrification"
+msgstr "电气化"
+
+msgid "Halt"
+msgstr "乘将所"
+
+msgid "Station"
+msgstr "车站"
+
+msgid "Junction"
+msgstr "交界处"
+
+msgid "Yard"
+msgstr "站场"
+
+msgid "Crossover"
+msgstr "交叉路口"
+
+msgid "Site"
+msgstr "场地"
+
+msgid "Service station"
+msgstr "服务站"
+
+msgid "Subway/Light rail station"
+msgstr "地铁站/轻轨站"
+
+msgid "Tram stop"
+msgstr "电车站"
+
+msgid "Milestone"
+msgstr "里程碑"
+
+msgid "Signal"
+msgstr "信号"
+
+msgid "Level crossing"
+msgstr "平交路口"
+
+msgid "Crossing"
+msgstr "穿越"
+
+msgid "Legend"
+msgstr "图例"
+
+msgid "Bridge"
+msgstr "桥梁"
+
+msgid "Tunnel"
+msgstr "隧道"
+
+msgid "Line ref"
+msgstr "线路 ref"
+
+msgid "Railroad line"
+msgstr "铁路线路"
+
+msgid "Siding"
+msgstr "侧线"
+
+msgid "Yard track"
+msgstr "站线"
+
+msgid "Spur"
+msgstr "专用线"
+
+msgid "Crossover track"
+msgstr "跨越线"
+
+msgid "Branch line"
+msgstr "支线"
+
+msgid "Main line"
+msgstr "干线"
+
+msgid "Highspeed line"
+msgstr "高速线"
+
+msgid "Industrial line"
+msgstr "工业线"
+
+msgid "Industrial service track"
+msgstr "工业服务线"
+
+msgid "Preserved track"
+msgstr "保留轨道"
+
+msgid "Preserved service track"
+msgstr "保留的服务轨道"
+
+msgid "Track under construction"
+msgstr "正在建设的轨道"
+
+msgid "Proposed track"
+msgstr "拟议路线"
+
+msgid "Disused track"
+msgstr "不使用的轨道"
+
+msgid "Abandoned track"
+msgstr "遗弃的轨道"
+
+msgid "Razed track"
+msgstr "锯齿状的轨道"
+
+msgid "Tram"
+msgstr "电车"
+
+msgid "Subway"
+msgstr "地铁"
+
+msgid "Light rail"
+msgstr "轻轨"
+
+msgid "Narrow gauge track"
+msgstr "窄轨"
+
+msgid "Switch (remote-controlled)"
+msgstr "道岔（远程控制）"
+
+msgid "Switch (local operated)"
+msgstr "道岔（本地操作）"
+
+msgid "Resetting switch"
+msgstr "重置道岔"
+
+msgid "Signal box"
+msgstr "信号框"
+
+msgid "Owner change"
+msgstr "局界"
+
+msgid "Railway crossing"
+msgstr "铁路道口"
+
+msgid "Buffer stop"
+msgstr "缓冲区停止"
+
+msgid "Isolated track section"
+msgstr "隔离的轨道部分"
+
+msgid "Platform"
+msgstr "平台"
+
+msgid "Vending machine"
+msgstr "自动贩卖机"
+
+msgid "Ticket shop"
+msgstr "票务店"
+
+msgid "Subway entrance"
+msgstr "地铁入口"
+
+msgid "Phone"
+msgstr "电话"
+
+msgid "Water tower"
+msgstr "水塔"
+
+msgid "Fuel"
+msgstr "燃油"
+
+msgid "Water crane"
+msgstr "水上起重机"
+
+msgid "Coaling facility"
+msgstr "制煤设施"
+
+msgid "Wash"
+msgstr "洗涤"
+
+msgid "Pit"
+msgstr "坑"
+
+msgid "Loading gauge"
+msgstr "荷重计"
+
+msgid "Hump yard"
+msgstr "驼峰码"
+
+msgid "Rail brake"
+msgstr "铁路制动器"
+
+msgid "Engine shed"
+msgstr "引擎棚"
+
+msgid "Workshop"
+msgstr "车间"
+
+msgid "Radio tower"
+msgstr "无线电塔"
+
+msgid "Turntable"
+msgstr "转盘"
+
+msgid "Traverser"
+msgstr " Traverser"
+
+msgid "Loading ramp"
+msgstr "加载坡度"
+
+msgid "Crane"
+msgstr "起重机"
+
+msgid "Track scale"
+msgstr "跟踪比例"
+
+msgid "Carrier truck pit"
+msgstr "运输车维修站"
+
+msgid "Gauge conversion"
+msgstr "量表转换"
+
+msgid "Gate"
+msgstr "门"
+
+msgid "Museum"
+msgstr "博物馆"
+
+msgid "Container terminal"
+msgstr "集装箱码头"
+
+msgid "Station building"
+msgstr "车站大楼"
+
+msgid "Factory connected to railroad line"
+msgstr "工厂已连接到铁路线"
+
+msgid "Rack"
+msgstr "机架"
+
+msgid "Embankment"
+msgstr "路堤"
+
+msgid "Cutting"
+msgstr "剪切"
+
+msgid "Miniature railway"
+msgstr "微型铁路"
+
+msgid "Funicular"
+msgstr "有趣的"
+
+msgid "Military line"
+msgstr "军事线"
+
+msgid "Military service track"
+msgstr "军事服务追踪"
+
+msgid "Ferry terminal"
+msgstr "渡轮码头"
+
+msgid "Ferry"
+msgstr "渡轮"
+
+msgid "Test line"
+msgstr "测试行"
+
+msgid "Test service track"
+msgstr "测试服务跟踪"
+
+msgid "Car shuttle"
+msgstr "汽车穿梭车"
+
+msgid "Rolling highway"
+msgstr "滚动公路"
+
+msgid "Nothing to see in this zoom level. Please zoom in."
+msgstr "在此缩放级别上看不到。请放大。"
+
+msgid "Legend not available for this style."
+msgstr "传奇不适用于此样式。"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Desktop version"
+msgstr "桌面版本"
+
+msgid "Style"
+msgstr "样式"
+
+msgid "Search"
+msgstr "搜寻"
+
+msgid "Blog"
+msgstr "博客"
+
+msgid "No information"
+msgstr "没有信息"
+
+msgid "speed only given for one direction"
+msgstr "速度仅给出一个方向"
+
+msgid "main track, service track"
+msgstr "主轨道，服务轨道"
+
+msgid "Quick search shortcut"
+msgstr "快速搜索快捷方式"
+
+msgid "Placeholder"
+msgstr "占位符"
+
+msgid "Donate"
+msgstr "捐赠"
+
+msgid "Tools"
+msgstr "工具"
+
+msgid "Wiki"
+msgstr "维基"
+
+msgid "Search milestone"
+msgstr "搜索里程碑"
+
+msgid "Station code"
+msgstr "站号"
+
+msgid "Search station"
+msgstr "搜索车站"
+
+msgid "UIC reference"
+msgstr " UIC参考"
+
+msgid "About this project"
+msgstr "关于这个项目"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Line operator"
+msgstr "线路操作员"
+
+msgid "Operator"
+msgstr "操作员"
+
+msgid "More results"
+msgstr "更多结果"
+
+msgid "Spur junction"
+msgstr "专用线路结"
+
+msgid "No background map"
+msgstr "无背景图"
+
+msgid "Deelectrified"
+msgstr ""
+
+msgid "No information about train protection"
+msgstr ""
+
+msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
+msgstr ""
+
+msgid "Track usage"
+msgstr "轨道用途"
+
+msgid "Lf 7 Geschwindigkeitssignal"
+msgstr ""
+
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr ""
+
+msgid "1.5 – 3kV ="
+msgstr ""
+
+msgid "ETCS under construction"
+msgstr ""
+
+msgid "3kV ="
+msgstr ""
+
+msgid "Germany"
+msgstr ""
+
+msgid "Not electrified"
+msgstr ""
+
+msgid "shunting signal type Ro"
+msgstr ""
+
+msgid "Track type"
+msgstr "轨道类型"
+
+msgid "El 5 \"Bügel an\"-Signal"
+msgstr ""
+
+msgid "Linienzugbeeinflussung"
+msgstr ""
+
+msgid "25kV 50Hz ~"
+msgstr ""
+
+msgid "So 106 Kreuztafel"
+msgstr ""
+
+msgid "Ra 11 Wartezeichen mit Sh 1"
+msgstr ""
+
+msgid "Junction, Crossover, Service Station, Site"
+msgstr ""
+
+msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
+msgstr ""
+
+msgid "At least 25kV ~"
+msgstr ""
+
+msgid "minor signal type Lo"
+msgstr ""
+
+msgid "Finland"
+msgstr ""
+
+msgid "15 – 25kV ~"
+msgstr ""
+
+msgid "ETCS"
+msgstr ""
+
+msgid "Electrification under construction"
+msgstr ""
+
+msgid "no train protection"
+msgstr ""
+
+msgid "Blockkennzeichen"
+msgstr ""
+
+msgid "Ne 6 Haltepunkttafel"
+msgstr ""
+
+msgid "Ne 1 Trapeztafel"
+msgstr ""
+
+msgid "15kV 16⅔Hz ~"
+msgstr ""
+
+msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
+msgstr ""
+
+msgid "signals"
+msgstr ""
+
+msgid "Ne 5 Haltetafel"
+msgstr ""
+
+msgid "Voltage"
+msgstr ""
+
+msgid "More than 3kV ="
+msgstr ""
+
+msgid "Lf 6 Geschwindigkeits­ankündesignal"
+msgstr ""
+
+msgid "3rd rail"
+msgstr ""
+
+msgid "750 – 1000V ="
+msgstr ""
+
+msgid "Less than 15kV ~"
+msgstr ""
+
+msgid "1kV ="
+msgstr ""
+
+msgid "crossing signal type To"
+msgstr ""
+
+msgid "1 – 1.5kV ="
+msgstr ""
+
+msgid "block signal type So"
+msgstr ""
+
+msgid "%SPDMIN%-%SPDMAX% km/h"
+msgstr ""
+
+msgid "1.5kV ="
+msgstr ""
+
+msgid "El 2 Einschaltsignal"
+msgstr ""
+
+msgid "Ra 10 Rangierhalttafel / Verschubhalttafel"
+msgstr ""
+
+msgid "Zs 10 Endesignal (Tafel)"
+msgstr ""
+
+msgid "El 1 Ausschaltsignal"
+msgstr ""
+
+msgid "Ra 11b Wartezeichen"
+msgstr ""
+
+msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
+msgstr ""
+
+msgid "Less than 750V ="
+msgstr ""
+
+msgid "Punktförmige Zugbeeinflussung"
+msgstr ""
+
+msgid "Operating Sites"
+msgstr ""
+
+msgid "train protection"
+msgstr ""
+
+msgid "contact line"
+msgstr ""
+
+msgid "El 4 \"Bügel ab\"-Signal"
+msgstr ""
+
+msgid "750V ="
+msgstr ""
+
+msgid "25kV 60Hz ~"
+msgstr ""
+
+msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
+msgstr ""
+
+msgid "Electrification proposed"
+msgstr ""
+
+msgid "El 1v Ausschaltsignal erwarten"
+msgstr ""
+
+msgid "15kV 16.7Hz ~"
+msgstr ""
+
+msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
+msgstr ""
+
+msgid "distant signal with Eo 2 (new type)"
+msgstr ""
+
+msgid "Ks-Hauptsignal"
+msgstr ""
+
+msgid "Bü 5 Läutetafel (normal, für durchfahrende Züge)"
+msgstr ""
+
+msgid "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
+msgstr ""
+
+msgid "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
+msgstr ""
+
+msgid "El 4 \"Bügel ab\"-Signal"
+msgstr ""
+
+msgid "Vr-Formvorsignal ohne Angabe der Signalzustände"
+msgstr ""
+
+msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
+msgstr ""
+
+msgid "main signal without aspects given (new type, old type)"
+msgstr ""
+
+msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
+msgstr ""
+
+msgid "main signal with Po 1 (new type, old type)"
+msgstr ""
+
+msgid "main signal with Po 2 (new type, old type)"
+msgstr ""
+
+msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
+msgstr ""
+
+msgid "distant signal with Eo 1 (new type, old type)"
+msgstr ""
+
+msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
+msgstr ""
+
+msgid "Sv-Signal (ohne Hp 0, mit Hp 0)"
+msgstr ""
+
+msgid "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
+msgstr ""
+
+msgid "El 5 \"Bügel an\"-Signal"
+msgstr ""
+
+msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "distant signal without aspects given (new type, old type)"
+msgstr ""
+
+msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
+msgstr ""
+
+msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
+msgstr ""
+
+msgid "Imprint &amp; Privacy Policy"
+msgstr "版权说明和隐私政策"
