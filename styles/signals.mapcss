@@ -85,6 +85,11 @@ way["railway:kvb"=yes].tracks
 	z-index: 5;
 	color: #B2FF33; /* pale green*/
 }
+way["railway:tvm"=yes].tracks
+{
+	z-index: 6;
+	color: #78FF00; /* bright green*/
+}
 way["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0].tracks,
 way.ctracks
 {
