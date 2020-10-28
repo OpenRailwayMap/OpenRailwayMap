@@ -1,6 +1,6 @@
 {
-	"prefix": "openrailwaymap",
-	"database": "openrailwaymap",
+	"prefix": "openrailwaymap_api",
+	"database": "gis",
 	"username": "openrailwaymap",
 	"host": "localhost",
 	"port": 5432,
@@ -11,3 +11,4 @@
 	"queries": ["milestone", "facility", "networklength"],
 	"corsAllowOrigin": "*"
 }
+
