@@ -15,7 +15,7 @@ Format details:
 meta
 {
 	title: "OpenRailwayMap signalling layer";
-	version: "0"; 
+	version: "0";
 	description: "Style for a signalling layer railroad network map.";
 	author: "rurseekatze";
 	link: "https://wiki.openstreetmap.org/wiki/OpenRailwayMap";
@@ -1017,6 +1017,25 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:train_prot
 {
 	z-index: 8550;
 	icon-image: "icons/etcs-stop-marker-arrow-left-32.png";
+	icon-width: 16;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+	text: "ref";
+	text-offset: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+}
+
+/************************************/
+/* NL ETCS stopplaatsmarkering 227b */
+/************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:train_protection"="NL:227b"]["railway:signal:train_protection:form"=sign]["railway:signal:train_protection:type"="block_marker"]
+{
+	z-index: 8560;
+	icon-image: "icons/etcs-stop-marker-triangle-left-32.png";
 	icon-width: 16;
 	icon-height: 16;
 	text-allow-overlap: true;
