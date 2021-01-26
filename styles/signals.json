@@ -26,6 +26,7 @@
 				"properties": {
 					"railway":"rail",
 					"railway:atb":"no",
+					"railway:ebicab":"no",
 					"railway:etcs":"no",
 					"railway:lzb":"no",
 					"railway:pzb":"no",
@@ -72,6 +73,32 @@
 				}
 			}],
 			"caption": "Linienzugbeeinflussung"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:ebicab":"700",
+					"usage":"main"
+				}
+			}],
+			"caption": "EBICAB 700"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:ebicab":"900",
+					"usage":"main"
+				}
+			}],
+			"caption": "EBICAB 900"
 		},
 		{
 			"minzoom": 2,
