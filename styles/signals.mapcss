@@ -91,6 +91,14 @@ way["railway:etcs"]["railway:etcs"!=no]["railway:etcs"!=0].tracks
 	z-index: 10;
 	color: blue;
 }
+way["railway:zub121"=yes].tracks,
+way["railway:zub122"=yes].tracks,
+way["railway:zub123"=yes].tracks,
+way["railway:zub222c"=yes].tracks
+{
+	z-index: 4;
+	color: purple;
+}
 
 /*********************************/
 /* DE crossing distant sign Bü 2 */
