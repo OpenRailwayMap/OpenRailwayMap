@@ -42,3 +42,8 @@ node_modules
 
 # ignore download directory for dependencies
 download/
+
+# ignore Leaflet.EditInOSM files
+css/Leaflet.EditInOSM.css
+img/edit-in-osm.png
+js/Leaflet.EditInOSM.js
