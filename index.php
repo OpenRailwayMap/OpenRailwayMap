@@ -6,7 +6,7 @@
 	See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	*/
 
-	require_once("api/functions.php");
+	require_once("functions.php");
 
 	if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $langs))
 		$lang = $_GET['lang'];
