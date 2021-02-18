@@ -14,7 +14,7 @@ window.openrailwaymap = {
 		"standard": "Infrastructure",
 		"maxspeed": "Maxspeeds",
 		"signals": "Signalling",
-		"electrified": "Electrification (beta)",
+		"electrification": "Electrification (beta)",
 	},
 	'availableTranslations': {
 		"ca": "ca_ES",

@@ -14,7 +14,7 @@ window.openrailwaymap = {
 		"standard": "Infrastructure",
 		"maxspeed": "Maxspeeds",
 		"signals": "Signalling",
-		"electrified": "Electrification"
+		"electrification": "Electrification"
 	},
 	'availableTranslations': {
 		"ca": "ca_ES",
@@ -77,7 +77,7 @@ function createMap(embed)
 		MapCSS.preloadSpriteImage("standard", window.openrailwaymap.root+"styles/standard.png");
 		MapCSS.preloadSpriteImage("signals", window.openrailwaymap.root+"styles/signals.png");
 		MapCSS.preloadSpriteImage("maxspeed", window.openrailwaymap.root+"styles/maxspeed.png");
-		MapCSS.preloadSpriteImage("electrified", window.openrailwaymap.root+"styles/electrified.png");
+		MapCSS.preloadSpriteImage("electrification", window.openrailwaymap.root+"styles/electrification.png");
 
 		setupControls();
 

@@ -3,8 +3,8 @@ SHELL = /bin/bash -e
 .PHONY: all
 
 PYTHON = python3
-JSFILES = maxspeed.js signals.js standard.js electrified.js
-ZIPFILES = maxspeed.zip signals.zip standard.zip electrified.zip josm-additional.zip
+JSFILES = maxspeed.js signals.js standard.js electrification.js
+ZIPFILES = maxspeed.zip signals.zip standard.zip electrification.zip josm-additional.zip
 
 all: $(JSFILES) $(ZIPFILES)
 
