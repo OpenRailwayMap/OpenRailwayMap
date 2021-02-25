@@ -146,7 +146,14 @@ function getPermalinkUrl(style, lang)
 {
 	var url = window.location.origin + window.location.pathname;
 
-	url += '?lang='+((lang) ? lang : params['lang']);
+	url += '?style='+style;
+
+	if (lang === null || lang === undefined) {
+		lang = params['lang'];
+	}
+	if (lang !== null) {
+		url += '&lang='+lang;
+	}
 
 	if (params['id'] != null)
 		url += '&id='+params['id'];
@@ -158,8 +165,6 @@ function getPermalinkUrl(style, lang)
 	url += '&lat='+position.lat;
 	url += '&lon='+position.lng;
 	url += '&zoom='+map.getZoom();
-
-	url += '&style='+style;
 
 	if (params['offset'] != null)
 		url += '&offset='+params['offset'];
