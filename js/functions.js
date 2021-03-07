@@ -37,7 +37,7 @@ function getUserLang()
 // reload the legend after changing zoomlevel or stylesheet
 function updateLegend(id, style)
 {
-	gEBI(id).src = window.openrailwaymap.root+"api/legend-generator.php?zoom="+map.getZoom()+"&style="+style+"&lang="+params['lang'];
+	gEBI(id).src = window.openrailwaymap.root+"legend-generator.php?zoom="+map.getZoom()+"&style="+style+"&lang="+params['lang'];
 }
 
 // draws the legend entries on canvas
