@@ -34,7 +34,7 @@ msgstr "Javascript ej aktiverad"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr "Javascript behövs för att visa kartan och hemsidan. Var god sätt på Javascript i din webläsarens inställningar."
+msgstr "Javascript behövs för att visa kartan och hemsidan. Aktivera Javascript i webbläsarens inställningar."
 
 msgid "Loading..."
 msgstr "Laddar..."
@@ -58,10 +58,10 @@ msgid "Permalink"
 msgstr "Permanent länk"
 
 msgid "Hillshading"
-msgstr ""
+msgstr "Terrängskuggning"
 
 msgid "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
-msgstr ""
+msgstr "Terrängskuggning av <a href='https://www.nasa.gov/'>NASA SRTM</a>"
 
 msgid "Rendering: OpenRailwayMap"
 msgstr "Rendering: OpenRailwayMap"
@@ -93,7 +93,7 @@ msgstr "HTML-kod"
 msgid ""
 "Copy this HTML code snippet into your website to show a small map with a "
 "marker."
-msgstr "Kopiera HTML kodsträngen i din egen hemsida för att visa en liten karta med markör."
+msgstr "Kopiera HTML-kodsträngen i din egen hemsida för att visa en liten karta med markör."
 
 msgid "Fullscreen"
 msgstr "Helskärm"
@@ -146,46 +146,46 @@ msgid "Infrastructure"
 msgstr "Infrastruktur"
 
 msgid "Signalling"
-msgstr "Signaler"
+msgstr "Signalering"
 
 msgid "Maxspeeds"
 msgstr "Hastighetsbegränsingar"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Elektrifiering"
 
 msgid "Halt"
-msgstr "Stopp"
+msgstr "Hållplats"
 
 msgid "Station"
 msgstr "Station"
 
 msgid "Junction"
-msgstr "Växel"
+msgstr "Förgreningsstation"
 
 msgid "Yard"
 msgstr "Bangård"
 
 msgid "Crossover"
-msgstr ""
+msgstr "Krysstation"
 
 msgid "Site"
-msgstr ""
+msgstr "Trafikplats"
 
 msgid "Service station"
-msgstr ""
+msgstr "Depå"
 
 msgid "Subway/Light rail station"
-msgstr ""
+msgstr "Tunnelbanestation, station för lokalbana/snabbspårväg"
 
 msgid "Tram stop"
 msgstr "Spårvagnshållplats"
 
 msgid "Milestone"
-msgstr "Milstolpe"
+msgstr "Kilometertavla"
 
 msgid "Signal"
-msgstr ""
+msgstr "Signal"
 
 msgid "Level crossing"
 msgstr "Plankorsning"
@@ -203,58 +203,58 @@ msgid "Tunnel"
 msgstr "Tunnel"
 
 msgid "Line ref"
-msgstr "Linjenummer"
+msgstr "Linjereferens"
 
 msgid "Railroad line"
 msgstr "Järnvägslinje"
 
 msgid "Siding"
-msgstr ""
+msgstr "Förbigångsspår, avvikande huvudspår"
 
 msgid "Yard track"
-msgstr "Uppställningsspår"
+msgstr "Bangårdsspår, uppställningsspår"
 
 msgid "Spur"
-msgstr ""
+msgstr "Anslutningsspår"
 
 msgid "Crossover track"
-msgstr ""
+msgstr "Växelförbindelse"
 
 msgid "Branch line"
-msgstr ""
+msgstr "Grenlinje"
 
 msgid "Main line"
-msgstr "Stambana"
+msgstr "Huvudlinje"
 
 msgid "Highspeed line"
-msgstr "Höghastighetsbana"
+msgstr "Höghastighetslinje"
 
 msgid "Industrial line"
-msgstr "Industrispår"
+msgstr "Industrilinje"
 
 msgid "Industrial service track"
-msgstr ""
+msgstr "Industrispår"
 
 msgid "Preserved track"
-msgstr ""
+msgstr "Museijärnväg"
 
 msgid "Preserved service track"
-msgstr ""
+msgstr "Museijärnväg, sidospår"
 
 msgid "Track under construction"
-msgstr "Spår under byggnation"
+msgstr "Spår under uppbyggnad"
 
 msgid "Proposed track"
 msgstr "Föreslaget spår"
 
 msgid "Disused track"
-msgstr "oanvänt spår"
+msgstr "Nedlagt spår"
 
 msgid "Abandoned track"
-msgstr "övergivet spår"
+msgstr "Upprivet spår"
 
 msgid "Razed track"
-msgstr "upprivet spår"
+msgstr "Gammal (helt borttagen) spårsträcka"
 
 msgid "Tram"
 msgstr "Spårvagn"
@@ -263,10 +263,10 @@ msgid "Subway"
 msgstr "Tunnelbana"
 
 msgid "Light rail"
-msgstr "Pendeltåg"
+msgstr "Lokalbana/snabbspårväg"
 
 msgid "Narrow gauge track"
-msgstr "Smalspår"
+msgstr "Smalspårslinje"
 
 msgid "Switch (remote-controlled)"
 msgstr "Fjärrstyrd växel"
@@ -275,25 +275,25 @@ msgid "Switch (local operated)"
 msgstr "Lokalstyrd växel"
 
 msgid "Resetting switch"
-msgstr "Fjäderväxel"
+msgstr "Återfjädrande växel"
 
 msgid "Signal box"
-msgstr ""
+msgstr "Ställverk"
 
 msgid "Owner change"
-msgstr ""
+msgstr "Gräns mellan spårinnehavare"
 
 msgid "Railway crossing"
 msgstr "Järnvägskorsning"
 
 msgid "Buffer stop"
-msgstr ""
+msgstr "Stoppbock"
 
 msgid "Isolated track section"
 msgstr "Isolerat spåravsnitt"
 
 msgid "Platform"
-msgstr "Perrong"
+msgstr "Plattform"
 
 msgid "Vending machine"
 msgstr "Försäljningsautomat"
@@ -302,7 +302,7 @@ msgid "Ticket shop"
 msgstr "Resebutik"
 
 msgid "Subway entrance"
-msgstr "Tunnelbanans entré"
+msgstr "Tunnelbaneingång"
 
 msgid "Phone"
 msgstr "Telefon"
@@ -311,40 +311,40 @@ msgid "Water tower"
 msgstr "Vattentorn"
 
 msgid "Fuel"
-msgstr ""
+msgstr "Bränsle"
 
 msgid "Water crane"
-msgstr "Vattenkran"
+msgstr "Vattenhäst"
 
 msgid "Coaling facility"
-msgstr ""
+msgstr "Kolanläggning"
 
 msgid "Wash"
-msgstr ""
+msgstr "Tvätt"
 
 msgid "Pit"
-msgstr ""
+msgstr "Grav"
 
 msgid "Loading gauge"
-msgstr ""
+msgstr "Lastprofil"
 
 msgid "Hump yard"
-msgstr ""
+msgstr "Rangerbangård"
 
 msgid "Rail brake"
 msgstr "Spårbroms"
 
 msgid "Engine shed"
-msgstr ""
+msgstr "Lokstall"
 
 msgid "Workshop"
-msgstr ""
+msgstr "Verkstad"
 
 msgid "Radio tower"
-msgstr ""
+msgstr "Radiomast"
 
 msgid "Turntable"
-msgstr ""
+msgstr "Vändskiva"
 
 msgid "Traverser"
 msgstr ""
@@ -356,7 +356,7 @@ msgid "Crane"
 msgstr "Lyftkran"
 
 msgid "Track scale"
-msgstr ""
+msgstr "Vagnvåg"
 
 msgid "Carrier truck pit"
 msgstr ""
@@ -374,31 +374,31 @@ msgid "Container terminal"
 msgstr "Containerterminal"
 
 msgid "Station building"
-msgstr "Stationsbyggnad"
+msgstr "Stationshus"
 
 msgid "Factory connected to railroad line"
-msgstr ""
+msgstr "Industri ansluten till järnväg"
 
 msgid "Rack"
-msgstr ""
+msgstr "Kuggstångsspår"
 
 msgid "Embankment"
-msgstr ""
+msgstr "Banvall"
 
 msgid "Cutting"
-msgstr ""
+msgstr "Skärning"
 
 msgid "Miniature railway"
-msgstr ""
+msgstr "Miniatyrjärnväg"
 
 msgid "Funicular"
-msgstr ""
+msgstr "Bergbana"
 
 msgid "Military line"
-msgstr ""
+msgstr "Militärjärnväg"
 
 msgid "Military service track"
-msgstr ""
+msgstr "Militärjärnväg, sidospår"
 
 msgid "Ferry terminal"
 msgstr "Färjeterminal"
@@ -407,28 +407,28 @@ msgid "Ferry"
 msgstr "Färja"
 
 msgid "Test line"
-msgstr ""
+msgstr "Testlinje"
 
 msgid "Test service track"
-msgstr ""
+msgstr "Testlinje, sidospår"
 
 msgid "Car shuttle"
-msgstr ""
+msgstr "Biltåg"
 
 msgid "Rolling highway"
-msgstr "Rullande landsväg"
+msgstr "Lastbilståg"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr "Inget att se på denna zoomnivå. Var god zooma i."
+msgstr "Inget att se på denna zoomnivå. Var god zooma in."
 
 msgid "Legend not available for this style."
-msgstr "Stilen saknas teckenförklaring."
+msgstr "Teckenförklaring saknas för den här karttypen."
 
 msgid "Language"
 msgstr "Språk"
 
 msgid "Desktop version"
-msgstr ""
+msgstr "Skrivbordsversion"
 
 msgid "Style"
 msgstr "Stil"
@@ -437,52 +437,52 @@ msgid "Search"
 msgstr "Sök"
 
 msgid "Blog"
-msgstr "Blog"
+msgstr "Blogg"
 
 msgid "No information"
-msgstr ""
+msgstr "Ingen information"
 
 msgid "speed only given for one direction"
-msgstr ""
+msgstr "hastighet endast angiven för en riktning"
 
 msgid "main track, service track"
-msgstr ""
+msgstr "huvudspår, sidospår"
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "Kortkommando för snabbsökning"
 
 msgid "Placeholder"
 msgstr ""
 
 msgid "Donate"
-msgstr ""
+msgstr "Donera"
 
 msgid "Tools"
-msgstr ""
+msgstr "Verktyg"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Wiki"
 
 msgid "Search milestone"
-msgstr ""
+msgstr "Sök kilometertavla"
 
 msgid "Station code"
-msgstr ""
+msgstr "Stationssignatur"
 
 msgid "Search station"
-msgstr ""
+msgstr "Sök station"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "UIC referens"
 
 msgid "About this project"
-msgstr ""
+msgstr "Om detta projekt"
 
 msgid "Close"
-msgstr ""
+msgstr "Stäng"
 
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 msgid "Line operator"
 msgstr ""
@@ -491,52 +491,52 @@ msgid "Operator"
 msgstr ""
 
 msgid "More results"
-msgstr ""
+msgstr "Fler resultat"
 
 msgid "Spur junction"
-msgstr ""
+msgstr "Grenstation"
 
 msgid "No background map"
-msgstr ""
+msgstr "Ingen bakgrundskarta"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "Avelektrifierad"
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "Ingen information om tågskyddssystem"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "Track usage"
-msgstr ""
+msgstr "Spåranvändning"
 
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h (nedlagd/under uppbygnad)"
 
 msgid "1.5 – 3kV ="
 msgstr ""
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "ETCS under utbyggnad"
 
 msgid "3kV ="
 msgstr ""
 
 msgid "Germany"
-msgstr ""
+msgstr "Tyskland"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "Ej elektrifierad"
 
 msgid "shunting signal type Ro"
 msgstr ""
 
 msgid "Track type"
-msgstr ""
+msgstr "Spårtyp"
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
@@ -554,31 +554,31 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "Förgreningsstation, krysstation, depå, annan trafikplats"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "Mer än 25kV ~"
 
 msgid "minor signal type Lo"
 msgstr ""
 
 msgid "Finland"
-msgstr ""
+msgstr "Finland"
 
 msgid "15 – 25kV ~"
 msgstr ""
 
 msgid "ETCS"
-msgstr ""
+msgstr "ETCS"
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "Elektrifiering pågår"
 
 msgid "no train protection"
-msgstr ""
+msgstr "Inget tågskyddssystem"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -602,22 +602,22 @@ msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "Voltage"
-msgstr ""
+msgstr "Linjespänning"
 
 msgid "More than 3kV ="
-msgstr ""
+msgstr "Mer än 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
 msgid "3rd rail"
-msgstr ""
+msgstr "Strömskena"
 
 msgid "750 – 1000V ="
 msgstr ""
 
 msgid "Less than 15kV ~"
-msgstr ""
+msgstr "Mindre än 15kV ~"
 
 msgid "1kV ="
 msgstr ""
@@ -632,7 +632,7 @@ msgid "block signal type So"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/tim"
 
 msgid "1.5kV ="
 msgstr ""
@@ -656,19 +656,19 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "Mindre än 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
 
 msgid "Operating Sites"
-msgstr ""
+msgstr "Trafikplatser"
 
 msgid "train protection"
-msgstr ""
+msgstr "tågskyddssystem"
 
 msgid "contact line"
-msgstr ""
+msgstr "kontaktledning"
 
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
@@ -683,7 +683,7 @@ msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "Elektrifiering föreslagen"
 
 msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
@@ -776,4 +776,4 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr ""
+msgstr "Imprint &amp; personuppgifter"
