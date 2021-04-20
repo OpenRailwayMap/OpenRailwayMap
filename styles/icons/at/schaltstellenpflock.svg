@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="285" viewBox="-0.1 -0.1 8.2 57.2" viewport="0 0 8 57">
+	<style>
+		text{font-size:2.5px;text-anchor:middle}
+		path{stroke:#000;stroke-width:0.2}
+	</style>
+	<path fill="#FFF" d="M0 3v54h8v-54L4 0z"/>
+	<path fill="#000" d="M0 15v8h8v-8zM0 29v8h8v-8zM0 43v8h8v-8z"/>
+	<text x="4" y="5">Km</text>
+	<text x="4" y="8">1.15</text>
+</svg>
