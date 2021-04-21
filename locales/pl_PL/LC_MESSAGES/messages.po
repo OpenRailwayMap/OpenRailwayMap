@@ -6,20 +6,20 @@
 # Translators:
 # diverpl <mkubien@gmail.com>, 2014
 # endro <sigg@10g.pl>, 2014
+# Grzegorz Szymaszek <gszymaszek@short.pl>, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2017-09-23 19:31+0000\n"
-"Last-Translator: diverpl <mkubien@gmail.com>\n"
+"PO-Revision-Date: 2021-04-21 10:54+0200\n"
+"Last-Translator: Grzegorz Szymaszek <gszymaszek@short.pl>\n"
 "Language-Team: Polish (https://www.transifex.com/rurseekatze/openrailwaymap/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
@@ -34,10 +34,10 @@ msgstr "Javascript jest wyłączony"
 msgid ""
 "Javascript is needed to show the map and run this website. Please turn on "
 "Javascript in your browser settings."
-msgstr " Aby wyświetlić mapę i uruchomić stronę potrzebny jest Javascript. Proszę go włączyć w ustawieniach przeglądarki."
+msgstr " Aby wyświetlić mapę i uruchomić stronę potrzebny jest JavaScript. Proszę go włączyć w ustawieniach przeglądarki."
 
 msgid "Loading..."
-msgstr "Ładowanie..."
+msgstr "Ładowanie…"
 
 msgid "Nothing found."
 msgstr "Nic nie znaleziono."
@@ -85,7 +85,7 @@ msgid "Search results"
 msgstr "Wyniki wyszukiwania"
 
 msgid "Search only in the current map view"
-msgstr "Szukaj tylko w obecnym widoku mapy"
+msgstr "Szukaj tylko w obecnym widoku mapy"
 
 msgid "HTML-Code"
 msgstr "Kod HTML"
@@ -157,13 +157,13 @@ msgid "Infrastructure"
 msgstr "Infrastruktura"
 
 msgid "Signalling"
-msgstr "Sygnały"
+msgstr "Sygnalizacja"
 
 msgid "Maxspeeds"
 msgstr "Maksymalne prędkości"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Elektryfikacja"
 
 msgid "Halt"
 msgstr "Przystanek"
@@ -172,31 +172,31 @@ msgid "Station"
 msgstr "Stacja"
 
 msgid "Junction"
-msgstr "Łącznik"
+msgstr "Posterunek odgałęźny"
 
 msgid "Yard"
 msgstr "Stacja rozrządowa"
 
 msgid "Crossover"
-msgstr "Skrzyżowanie"
+msgstr "Posterunek odstępowy/osłonny"
 
 msgid "Site"
-msgstr "Strona"
+msgstr "Posterunek"
 
 msgid "Service station"
-msgstr "Stacja usługowa"
+msgstr "Posterunek techniczny"
 
 msgid "Subway/Light rail station"
-msgstr ""
+msgstr "Stacja metra lub szybkiego tramwaju"
 
 msgid "Tram stop"
 msgstr "Przystanek tramwajowy"
 
 msgid "Milestone"
-msgstr "Słupek pikietażowy"
+msgstr "Słupek hektometrowy"
 
 msgid "Signal"
-msgstr ""
+msgstr "Sygnał"
 
 msgid "Level crossing"
 msgstr "Przejazd kolejowy"
@@ -220,25 +220,25 @@ msgid "Railroad line"
 msgstr "Linia kolejowa"
 
 msgid "Siding"
-msgstr "Bocznica"
+msgstr "Tor dodatkowy"
 
 msgid "Yard track"
 msgstr "Tor rozrządowy"
 
 msgid "Spur"
-msgstr "Odnoga"
+msgstr "Bocznica"
 
 msgid "Crossover track"
-msgstr "Skrzyżowane tory"
+msgstr "Łącznik między torami"
 
 msgid "Branch line"
-msgstr "Linia odgałęziona"
+msgstr "Linia drugorzędna"
 
 msgid "Main line"
 msgstr "Linia główna"
 
 msgid "Highspeed line"
-msgstr "Linia szybka"
+msgstr "Linia dużej prędkości"
 
 msgid "Industrial line"
 msgstr "Linia przemysłowa"
@@ -247,13 +247,13 @@ msgid "Industrial service track"
 msgstr "Tor przemysłowy"
 
 msgid "Preserved track"
-msgstr "Linia historyczna"
+msgstr "Zachowana linia historyczna"
 
 msgid "Preserved service track"
-msgstr "Tor historyczny"
+msgstr "Zachowany tor historyczny"
 
 msgid "Track under construction"
-msgstr "Tor w budowie"
+msgstr "Tor w budowie"
 
 msgid "Proposed track"
 msgstr "Tor proponowany"
@@ -280,22 +280,22 @@ msgid "Narrow gauge track"
 msgstr "Wąski tor"
 
 msgid "Switch (remote-controlled)"
-msgstr "Zwrotnica (zdalnie sterowana)"
+msgstr "Rozjazd (zdalnie sterowany)"
 
 msgid "Switch (local operated)"
-msgstr "Zwrotnica (ręczna)"
+msgstr "Rozjazd (ręczny)"
 
 msgid "Resetting switch"
-msgstr "Zwrotnica samopowrotna"
+msgstr "Rozjazd samopowrotny"
 
 msgid "Signal box"
 msgstr "Nastawnia"
 
 msgid "Owner change"
-msgstr "Zmiana właściciela"
+msgstr "Zmiana zarządcy"
 
 msgid "Railway crossing"
-msgstr "Skrzyżowanie kolejowe"
+msgstr "Skrzyżowanie torów"
 
 msgid "Buffer stop"
 msgstr "Kozioł oporowy"
@@ -340,7 +340,7 @@ msgid "Loading gauge"
 msgstr "Skrajnia kolejowa"
 
 msgid "Hump yard"
-msgstr "Stacja rozrządowa z górką"
+msgstr "Stacja rozrządowa z górką"
 
 msgid "Rail brake"
 msgstr "Hamulec kolejowy"
@@ -451,103 +451,103 @@ msgid "Blog"
 msgstr "Blog"
 
 msgid "No information"
-msgstr ""
+msgstr "Brak informacji"
 
 msgid "speed only given for one direction"
-msgstr ""
+msgstr "prędkość określona tylko dla jednego kierunku"
 
 msgid "main track, service track"
-msgstr ""
+msgstr "tor główny, tor dodatkowy"
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "Skrót szybkiego szukania"
 
 msgid "Placeholder"
 msgstr ""
 
 msgid "Donate"
-msgstr ""
+msgstr "Wspieraj"
 
 msgid "Tools"
-msgstr ""
+msgstr "Narzędzia"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Wiki"
 
 msgid "Search milestone"
 msgstr ""
 
 msgid "Station code"
-msgstr ""
+msgstr "Kod stacji"
 
 msgid "Search station"
-msgstr ""
+msgstr "Szukaj stacji"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "Identyfikator UIC"
 
 msgid "About this project"
-msgstr ""
+msgstr "O projekcie"
 
 msgid "Close"
-msgstr ""
+msgstr "Zamknij"
 
 msgid "Name"
-msgstr ""
+msgstr "Nazwa"
 
 msgid "Line operator"
-msgstr ""
+msgstr "Operator linii"
 
 msgid "Operator"
-msgstr ""
+msgstr "Operator"
 
 msgid "More results"
-msgstr ""
+msgstr "Więcej wyników"
 
 msgid "Spur junction"
 msgstr ""
 
 msgid "No background map"
-msgstr ""
+msgstr "Bez mapy w tle"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "Zdeelektryfikowana"
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "Brak informacji o systemach zabezpieczenia ruchu kolejowego"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "Track usage"
-msgstr ""
+msgstr "Użycie toru"
 
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%–%SPDMAX% km/h (nieużywany/w budowie)"
 
 msgid "1.5 – 3kV ="
-msgstr ""
+msgstr "1,5–3 kV ="
 
 msgid "ETCS under construction"
 msgstr ""
 
 msgid "3kV ="
-msgstr ""
+msgstr "3 kV ="
 
 msgid "Germany"
-msgstr ""
+msgstr "Niemcy"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "Niezelektryfikowany"
 
 msgid "shunting signal type Ro"
 msgstr ""
 
 msgid "Track type"
-msgstr ""
+msgstr "Typ toru"
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
@@ -556,7 +556,7 @@ msgid "Linienzugbeeinflussung"
 msgstr ""
 
 msgid "25kV 50Hz ~"
-msgstr ""
+msgstr "25 kV 50 Hz ~"
 
 msgid "So 106 Kreuztafel"
 msgstr ""
@@ -565,31 +565,31 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "Posterunek odgałęźny, odstępowy, osłonny, techniczny"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "Przynajmniej 25 kV ~"
 
 msgid "minor signal type Lo"
 msgstr ""
 
 msgid "Finland"
-msgstr ""
+msgstr "Finlandia"
 
 msgid "15 – 25kV ~"
-msgstr ""
+msgstr "15–25 kV ~"
 
 msgid "ETCS"
-msgstr ""
+msgstr "ETCS"
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "W trakcie elektryfikacji"
 
 msgid "no train protection"
-msgstr ""
+msgstr "brak systemów zabezpieczenia ruchu kolejowego"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -601,52 +601,52 @@ msgid "Ne 1 Trapeztafel"
 msgstr ""
 
 msgid "15kV 16⅔Hz ~"
-msgstr ""
+msgstr "15 kV 16⅔ Hz ~"
 
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
 msgid "signals"
-msgstr ""
+msgstr "sygnały"
 
 msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "Voltage"
-msgstr ""
+msgstr "Napięcie"
 
 msgid "More than 3kV ="
-msgstr ""
+msgstr "Powyżej 3 kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
 msgid "3rd rail"
-msgstr ""
+msgstr "trzecia szyna"
 
 msgid "750 – 1000V ="
-msgstr ""
+msgstr "750–1000 V ="
 
 msgid "Less than 15kV ~"
-msgstr ""
+msgstr "Poniżej 15 kV ~"
 
 msgid "1kV ="
-msgstr ""
+msgstr "1 kV ="
 
 msgid "crossing signal type To"
 msgstr ""
 
 msgid "1 – 1.5kV ="
-msgstr ""
+msgstr "1–1,5 kV ="
 
 msgid "block signal type So"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr ""
+msgstr "%SPDMIN%–%SPDMAX% km/h"
 
 msgid "1.5kV ="
-msgstr ""
+msgstr "1,5 kV ="
 
 msgid "El 2 Einschaltsignal"
 msgstr ""
@@ -667,40 +667,40 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "Poniżej 750 v ="
 
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
 
 msgid "Operating Sites"
-msgstr ""
+msgstr "Posterunki ruchu"
 
 msgid "train protection"
-msgstr ""
+msgstr "system zabezpieczenia ruchu kolejowego"
 
 msgid "contact line"
-msgstr ""
+msgstr "sieć trakcyjna"
 
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
 msgid "750V ="
-msgstr ""
+msgstr "750 V ="
 
 msgid "25kV 60Hz ~"
-msgstr ""
+msgstr "25 kV 60 Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "Elektryfikacja proponowana"
 
 msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
 
 msgid "15kV 16.7Hz ~"
-msgstr ""
+msgstr "15 kV 16,7 Hz ~"
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 msgstr ""
@@ -787,4 +787,4 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr ""
+msgstr "Informacje prawne &amp; Polityka prywatności"
