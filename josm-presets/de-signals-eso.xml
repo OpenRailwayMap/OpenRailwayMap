@@ -834,6 +834,13 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Repeated Signal"
 						de.text="Vorsignalwiederholer"
 						/>
+					<combo key="railway:signal:distant:shape"
+						text="Signal shape"
+						de.text="Signalbauart"
+						values="classic,compact"
+						display_values="classic,compact"
+						de.display_values="klassisch (8-eckig),Kompaktsignal"
+						/>
 					<space />
 					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
 					<preset_link preset_name="Distant Speed Indicator (Zs 3v)" />
