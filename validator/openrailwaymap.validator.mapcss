@@ -204,6 +204,21 @@ way[railway][railway!=platform][name=~/^[0-9]+[a-z]*.*/][!"railway:track_ref"]
 	assertNoMatch: "way railway=rail name=\"track 4b\"";
 	assertNoMatch: "way railway=platform name=3";
 }
+/* "ref" is basically only for tracks with "usage", so anything with "service" is suspicious */
+way[railway][railway!=platform][service][ref]
+{
+	throwError: "track numbers inside a station should be railway:track_ref, not ref";
+	fixChangeKey: "ref=>railway:track_ref";
+	suggestAlternative: "railway:track_ref";
+	assertMatch: "way railway=rail service=siding ref=4";
+	assertMatch: "way railway=rail service=crossover ref=4a";
+	assertMatch: "way railway=light_rail service=siding ref=14";
+	assertNoMatch: "way railway=rail ref=1234";
+	assertNoMatch: "way railway=rail service=siding railway:track_ref=14b";
+	assertNoMatch: "way railway=platform ref=3";
+}
+
+/* platforms: they are not rendered, but make sure they have sensible tagging */
 way[railway=platform]["railway:track_ref"][!ref],
 way[railway=platform]["railway:track_ref"]["railway:track_ref"=*ref]
 {
