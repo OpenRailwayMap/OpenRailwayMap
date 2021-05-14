@@ -489,6 +489,16 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Wikidata-Datenobjekt"
 				/>
 		</item>
+        <item de.name="Lärmschutzwand" name="noise barrier" type="way">
+            <key key="barrier" 
+                value="wall" />
+            <key key="wall" 
+                value="noise_barrier" />
+            <text key="height"
+                text="height of the noise barrier [m]"
+                de.text="Höhe der Lärmschutzwand [m]" 
+                />
+        </item>
 		<separator />
 		<item de.name="Prellbock" name="Buffer Stop" icon="buffer_stop-32.png" type="node">
 			<key key="railway"
