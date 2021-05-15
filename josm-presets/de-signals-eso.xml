@@ -931,11 +931,12 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:distant:form"
 					value="sign" />
 				<combo key="railway:signal:distant:height"
-                                        text="Signal height"
-                                        de.text="Signalbauhöhe"
-                                        values="normal,dwarf"
-                                        display_values="Normalhöhe,Zwergsignal"
-                                        />
+                    text="Signal height"
+                    de.text="Signalbauform"
+                    values="normal,dwarf"
+                    de.display_values="Normalhöhe,Zwergsignal"
+                    display_values="normal,dwarf"
+                     />
 				<check key="railway:signal:distant:shortened"
 					text="Shortened distance"
 					de.text="Verkürzter Bremsweg"
