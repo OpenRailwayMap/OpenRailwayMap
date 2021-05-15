@@ -1482,7 +1482,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="phone" />
 			<reference ref="operator_dbnetz_oebb" />
 		</item>
-		<item name="Radio tower/mast" de.name="Zugfunkmast" type="node">
+		<item name="Radio tower/mast" de.name="Zugfunkmast" icon="radio-mast-30.png" type="node">
 			<label text="Radio tower/mast" de.text="Zugfunkmast" />
 			<space />
 			<key key="railway"
