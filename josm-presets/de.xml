@@ -578,7 +578,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<item name="Railway Crossing" de.name="Kreuzung" type="node">
 			<label de.text="Kreuzung"
-				text="Two tracks crosses each other without a switch" />
+				text="Two tracks cross each other without a switch" />
 			<space />
 			<key key="railway"
 				value="railway_crossing" />
@@ -883,7 +883,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<reference ref="ele" />
 			</item>
 			<item name="Spur juction" de.name="Anst / Awanst" icon="spur-25.png" type="node">
-				<label text="Spur junction" de.text="Anschlusstelle oder Ausweichanschlusstelle" />
+				<label text="Spur junction" de.text="Anschlussstelle oder Ausweichanschlussstelle" />
 				<label
 					text="Location where a (usually short) spur track forks"
 					de.text="Stelle, an der an Anschlussgleis außerhalb eines Bahnhofs"
