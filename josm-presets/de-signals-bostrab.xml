@@ -31,8 +31,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 	</chunk>
 	<group name="OpenRailwayMap BOStrab-Signale" icon="signals.png">
 		<item name="Main signal (Fahrsignal/F) for on-sight running trams" de.name="Fahrsignal (F)" icon="de/bostrab/f0-32.png" type="node">
-			<label de.text="Main signal (F 0/F 1) for on-sight running trams, colloquially also known as Balkensignal"
-				text="Fahrsignal (F 0/F 1), umgangssprachlich auch Balkensignal genannt" />
+			<label text="Main signal (F 0/F 1) for on-sight running trams, colloquially also known as Balkensignal"
+				de.text="Fahrsignal (F 0/F 1), umgangssprachlich auch Balkensignal genannt" />
 			<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 			<space />
 			<reference ref="sig_ref" />
@@ -208,7 +208,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:departure"
 				value="DE-BOStrab:a1" />
 			<combo key="railway:signal:departure:states"
-				text="Anzeigbare Signalbilder"
+                text="Possible Signals"
+				de.text="Anzeigbare Signalbilder"
 				delimiter=","
 				values="DE-BOStrab:a1;off,DE-BOStrab:a2;off,DE-BOStrab:a1;DE-BOStrab:a2;off"
 				display_values="A 1 (close doors),A 2 (depart),A 1 (close doors) + A 2 (depart)"
@@ -1053,7 +1054,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Stop for Shunting Movements (H 5)" de.name="Halt für Kehrfahrten (H 5)" type="node">
-				<label text="Halt für Kehrfahrten (H 5)" />
+                <label text="Stop for Shunting Movements (H 5)" de.text="Halt für Kehrfahrten (H 5)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
 				<key key="railway"
@@ -1066,7 +1067,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
-					display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+                    de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					display_values="left in direction of OSM way,right in direction of OSM way"
 					/>
 				<reference ref="direction_fw_bw" />
 				<space />
@@ -1178,7 +1180,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:departure"
 					value="DE-HHA:a1" />
 				<combo key="railway:signal:departure:states"
-					text="Anzeigbare Signalbilder"
+                    de.text="Anzeigbare Signalbilder"
+                    text="Possible Signals"
 					delimiter=","
 					values="DE-HHA:a1;off,DE-HHA:a2;off,DE-HHA:a1;DE-HHA:a2;off"
 					display_values="A 1 (close doors),A 2 (depart),A 1 (close doors) + A 2 (depart)"
@@ -1350,7 +1353,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Light Speed Signal (L 3)" de.name="Geschwindigkeitsanzeiger (L 3)" icon="de/zs3-30-light-38.png" type="node">
-				<label text="Light Speed Signal (L 3). Shown at H 2 signals." de.text="Geschwindigkeitsanzeiger (L 3). Gibt bei H 2 die zulässige Geschwindigkeit an." />
+				<label text="Light Speed Signal (L 3). Shown at H 2 signals." de.text="Geschwindigkeitsanzeiger (L 3). Gibt bei Signalen H 2 die zulässige Geschwindigkeit an." />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
 				<key key="railway"
@@ -1511,7 +1514,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal form"
 						de.text="Anzeigeart"
 						values="sign,light"
-						display_values="Tafel,Leuchtanzeige"
+                        de.display_values="Tafel,Lichtsignal"
+                        display_values="sign,light signal"
 						/>
 				</item>
 				<item name="Route Signal (So 7)" de.name="Fahrtrichtungszeichen (So 7)" type="node" icon="de/zs2-F-38.png" >
@@ -1544,8 +1548,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				</item>
 		</group>
 		<group name="Karlsruhe (VBK)">
-			<item name="Distand Signal on sight (Fv)" de.name="Vorankündigungssignale (Fv)" icon="de/avg/bue201v-32.png" type="node">
-				<label text="Distand Signal on sight (Fv)" de.text="Vorankündigungssignale (Fv)" />
+			<item name="Distant Signal on sight (Fv)" de.name="Vorankündigungssignale (Fv)" icon="de/avg/bue201v-32.png" type="node">
+				<label text="Distant Signal on sight (Fv)" de.text="Vorankündigungssignale (Fv)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
 				<reference ref="sig_ref" />
@@ -1571,7 +1575,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Anzeigbare Signale"
 					delimiter=";"
 					values="DE-VBK:fv0;DE-VBK:fv1;DE-VBK:fv2;DE-VBK:fv3;?"
-					display_values="Fv 0;Fv 1;Fv 2;Fv 3;unknown"
+					display_values="Fv 0 (expect stop);Fv 1 (expect proceed straight);Fv 2 (expect proceed right);Fv 3 (expect proceed left);unknown"
 					de.display_values="Fv 0 (Halt erwarten);Fv1 1 (Fahrt geradeaus erwarten);Fv 2 (Fahrt nach rechts erwarten);Fv 3 (Fahrt nach links erwarten);unbekannt"
 					/>
 				<combo key="railway:signal:distant:height"
@@ -1639,7 +1643,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal Form"
 					de.text="Anzeigeart"
 					values="sign,light"
-					display_values="sign,light"
+					display_values="sign,light signal"
 					de.display_values="Tafel,Lichtsignal"
 					/>
 				<multiselect key="railway:signal:switch:states"
