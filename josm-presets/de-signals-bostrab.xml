@@ -903,8 +903,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="sign" />
 		</item>
 		<separator />
-		<item name="Beginn of Train Protection (So 1)" de.name="Beginn der Zugsicherung (So 1)" icon="de/bostrab/so1-16.png" type="node">
-			<label text="Beginn of Train Protection (So 1)" de.text="Beginn der Zugsicherung (So 1)" />
+		<item name="Start of Train Protection (So 1)" de.name="Beginn der Zugsicherung (So 1)" icon="de/bostrab/so1-16.png" type="node">
+			<label text="Start of Train Protection (So 1)" de.text="Beginn der Zugsicherung (So 1)" />
 			<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 			<space />
 			<key key="railway"
