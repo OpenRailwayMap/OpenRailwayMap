@@ -995,7 +995,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:crossing_distant:form"
 					value="sign" />
 			</item>
-			<item name="Schaltstellenpflock" type="node">
+			<item name="Schaltstellenpflock" icon="at/schaltstellenpflock-32.png" type="node">
 				<label text="Schaltstellenpflock" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
