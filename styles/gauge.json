@@ -49,91 +49,91 @@
 			"caption": "Narrow gauge"
 		},
 		{
-		  "minzoom": 2,
-		  "features": [{
-		    "type": "LineString",
-		    "coordinates": [[10, 50], [80, 50]],
-		    "properties": {
-		      "railway": "rail",
-		      "gauge": "dual"
-		    }
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10, 50], [80, 50]],
+				"properties": {
+					"railway": "rail",
+					"gauge": "dual"
+				}
 			}],
-		  "caption": "Dual gauge"
+			"caption": "Dual gauge"
 		},
 		{
-		  "minzoom": 2,
-		  "features": [{
-		    "type": "LineString",
-		    "coordinates": [[10, 50], [80, 50]],
-		    "properties": {
-		      "railway": "rail",
-		      "gauge": "multiple"
-		    }
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10, 50], [80, 50]],
+				"properties": {
+					"railway": "rail",
+					"gauge": "multiple"
+				}
 			}],
-		  "caption": "Multiple gauge"
+			"caption": "Multiple gauge"
 		},
 		{
-		  "minzoom": 10,
-		  "features": [{
-		    "type": "LineString",
-		    "coordinates": [[10, 50], [80, 50]],
-		    "properties": {
-		      "railway": "monorail"
-		    }
+			"minzoom": 10,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10, 50], [80, 50]],
+				"properties": {
+					"railway": "monorail"
+				}
 			}],
-		  "caption": "Monorail"
+			"caption": "Monorail"
 		},
 		{
 			"minzoom": 2,
 			"heading": "Track gauge values"
 		},
 		{
-		  "minzoom": 10,
-		  "features": [{
-		    "type": "LineString",
-		    "coordinates": [[10, 50], [80, 50]],
-		    "properties": {
-		      "railway": "rail",
-		      "gauge": "381"
-		    }
+			"minzoom": 10,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10, 50], [80, 50]],
+				"properties": {
+					"railway": "rail",
+					"gauge": "381"
+				}
 			}],
-		  "caption": "381mm"
+			"caption": "381mm"
 		},
 		{
-		  "minzoom": 10,
-		  "features": [{
-		    "type": "LineString",
-		    "coordinates": [[10, 50], [80, 50]],
-		    "properties": {
-		      "railway": "rail",
-		      "gauge": "500"
-		    }
+			"minzoom": 10,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10, 50], [80, 50]],
+				"properties": {
+					"railway": "rail",
+					"gauge": "500"
+				}
 			}],
-		  "caption": "500mm"
+			"caption": "500mm"
 		},
 		{
-		  "minzoom": 10,
-		  "features": [{
-		    "type": "LineString",
-		    "coordinates": [[10, 50], [80, 50]],
-		    "properties": {
-		      "railway": "rail",
-		      "gauge": "597"
-		    }
+			"minzoom": 10,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10, 50], [80, 50]],
+				"properties": {
+					"railway": "rail",
+					"gauge": "597"
+				}
 			}],
-		  "caption": "597mm"
+			"caption": "597mm"
 		},
 		{
-		  "minzoom": 10,
-		  "features": [{
-		    "type": "LineString",
-		    "coordinates": [[10, 50], [80, 50]],
-		    "properties": {
-		      "railway": "rail",
-		      "gauge": "600"
-		    }
+			"minzoom": 10,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10, 50], [80, 50]],
+				"properties": {
+					"railway": "rail",
+					"gauge": "600"
+				}
 			}],
-		  "caption": "600mm"
+			"caption": "600mm"
 		},
 		{
 		  "minzoom": 10,
@@ -464,39 +464,39 @@
 			"heading": "Miniature tracks"
 		},
 		{
-		  "minzoom": 11,
-		  "features": [{
-		    "type": "LineString",
-		    "coordinates": [[10, 50], [80, 50]],
-		    "properties": {
-		      "railway": "miniature"
-		    }
+			"minzoom": 11,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10, 50], [80, 50]],
+				"properties": {
+					"railway": "miniature"
+				}
 			}],
-		  "caption": "Miniature"
+			"caption": "Miniature"
 		},
 		{
-		  "minzoom": 11,
-		  "features": [{
-		    "type": "LineString",
-		    "coordinates": [[10, 50], [80, 50]],
-		    "properties": {
-		      "railway": "miniature",
-		      "gauge": "64"
-		    }
+			"minzoom": 11,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10, 50], [80, 50]],
+				"properties": {
+					"railway": "miniature",
+					"gauge": "64"
+				}
 			}],
-		  "caption": "64mm"
+			"caption": "64mm"
 		},
 		{
-		  "minzoom": 11,
-		  "features": [{
-		    "type": "LineString",
-		    "coordinates": [[10, 50], [80, 50]],
-		    "properties": {
-		      "railway": "miniature",
-		      "gauge": "89"
-		    }
+			"minzoom": 11,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10, 50], [80, 50]],
+				"properties": {
+					"railway": "miniature",
+					"gauge": "89"
+				}
 			}],
-		  "caption": "89mm"
+			"caption": "89mm"
 		},
 		{
 		  "minzoom": 11,
