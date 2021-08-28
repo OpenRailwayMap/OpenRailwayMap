@@ -108,7 +108,7 @@ way[gauge>600][gauge<609].tracks
 }
 
 way[gauge="2'0\""].tracks,
-way[gauge=609.tracks,
+way[gauge=609].tracks,
 way[gauge>609][gauge<700].tracks
 {
   z-index: 6;
