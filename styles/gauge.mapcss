@@ -1,6 +1,6 @@
 /*
 OpenRailwayMap Style File for JOSM and KothicJS
-Electrification layer
+Gauge layer
 
 OpenRailwayMap Copyright (C) 2021
 This program comes with ABSOLUTELY NO WARRANTY.
@@ -79,8 +79,8 @@ way[railway].tracks
 
 /* tracks with numeric gauge value */
 
-way[gauge=381].tracks,
-way[gauge>381][gauge<500].tracks
+way[gauge=380].tracks,
+way[gauge>380][gauge<500].tracks
 {
   z-index: 2;
   color: #80FFFF;
@@ -137,24 +137,38 @@ way[gauge>760][gauge<762].tracks
 }
 
 way[gauge=762].tracks,
-way[gauge>762][gauge<800].tracks
+way[gauge>762][gauge<785].tracks
 {
   z-index: 10;
   color: #FF60FF;
 }
 
+way[gauge=785].tracks,
+way[gauge>785][gauge<800].tracks
+{
+  z-index: 10;
+  color: #FF40FF;
+}
+
 way[gauge=800].tracks,
-way[gauge>800][gauge<900].tracks
+way[gauge>800][gauge<891].tracks
 {
   z-index: 11;
   color: #FF00FF;
+}
+
+way[gauge=891].tracks,
+way[gauge>891][gauge<900].tracks
+{
+  z-index: 11;
+  color: #E000FF;
 }
 
 way[gauge=900].tracks,
 way[gauge>900][gauge<914].tracks
 {
   z-index: 12;
-  color: #E000FF;
+  color: #C000FF;
 }
 
 way[gauge="3'0\""].tracks,
@@ -162,28 +176,28 @@ way[gauge=914].tracks,
 way[gauge>914][gauge<950].tracks
 {
   z-index: 13;
-  color: #C000FF;
+  color: #A000FF;
 }
 
 way[gauge=950].tracks,
 way[gauge>950][gauge<1000].tracks
 {
   z-index: 14;
-  color: #A000FF;
+  color: #8000FF;
 }
 
 way[gauge=1000].tracks,
 way[gauge>1000][gauge<1009].tracks
 {
   z-index: 15;
-  color: #8000FF;
+  color: #6000FF;
 }
 
 way[gauge=1009].tracks,
 way[gauge>1009][gauge<1050].tracks
 {
   z-index: 16;
-  color: #6000FF;
+  color: #4000FF;
 }
 
 way[gauge=1050].tracks,
@@ -236,21 +250,21 @@ way[gauge>1432][gauge<1435].tracks
 }
 
 way[gauge=1435].tracks,
-way[gauge>1435][gauge<1436].tracks
+way[gauge>1435][gauge<1440].tracks
 {
   z-index: 0;
   color: #000000;
 }
 
-way[gauge=1436].tracks,
-way[gauge>1436][gauge<1440].tracks
+way[gauge=1440].tracks,
+way[gauge>1440][gauge<1445].tracks
 {
   z-index: 25;
   color: #400000;
 }
 
-way[gauge=1440].tracks,
-way[gauge>1440][gauge<1450].tracks
+way[gauge=1445].tracks,
+way[gauge>1445][gauge<1450].tracks
 {
   z-index: 26;
   color: #600000;
@@ -372,7 +386,7 @@ way[gauge=63].tracks,
 way[gauge>63][gauge<88].tracks
 {
   z-index: 42;
-  color: #004000;
+  color: #006060;
 }
 
 way[gauge="3.5inch"].tracks,
@@ -384,7 +398,7 @@ way[gauge=88].tracks,
 way[gauge>88][gauge<127].tracks
 {
   z-index: 43;
-  color: #006000;
+  color: #008080;
 }
 
 way[gauge="5inch"].tracks,
@@ -394,7 +408,7 @@ way[gauge=127].tracks,
 way[gauge>127][gauge<184].tracks
 {
   z-index: 44;
-  color: #008000;
+  color: #00A0A0;
 }
 
 way[gauge="7.25inch"].tracks,
@@ -406,7 +420,7 @@ way[gauge=184].tracks,
 way[gauge>184][gauge<190].tracks
 {
   z-index: 45;
-  color: #00A000;
+  color: #00C0C0;
 }
 
 way[gauge="7.5inch"].tracks,
@@ -418,7 +432,7 @@ way[gauge=190].tracks,
 way[gauge>190][gauge<260].tracks
 {
   z-index: 46;
-  color: #00C000;
+  color: #00E0E0;
 }
 
 way[gauge="10.25inch"].tracks,
@@ -427,10 +441,10 @@ way[gauge="10¼\""].tracks,
 way[gauge="10.25\""].tracks,
 way[gauge="0'10.25\""].tracks,
 way[gauge=260].tracks,
-way[gauge>260][gauge<381].tracks
+way[gauge>260][gauge<380].tracks
 {
   z-index: 47;
-  color: #00E000;
+  color: #00FFFF;
 }
 
 /* miniature tracks with inaccurate gauge value */
@@ -442,7 +456,7 @@ way[railway=miniature][gauge=unknown].tracks,
 way[railway=miniature][!gauge].tracks
 {
   z-index: 48;
-  color: #80FF80;
+  color: #80C0C0;
 }
 
 /* other tracks with inaccurate gauge value */
@@ -488,7 +502,7 @@ way[railway=subway][gauge=monorail].tracks,
 way[railway=tram][gauge=monorail].tracks
 {
   z-index: 52;
-  color: #C0C000;
+  color: #C0C080;
 }
 
 /* dual gauge railway */
