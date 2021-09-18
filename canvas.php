@@ -67,6 +67,7 @@
 		<script type="text/javascript" src="styles/signals.js"></script>
 		<script type="text/javascript" src="styles/maxspeed.js"></script>
 		<script type="text/javascript" src="styles/electrified.js"></script>
+		<script type="text/javascript" src="styles/gauge.js"></script>
 		<?php
 			urlArgsToParam(true, $urlbase);
 		?>
