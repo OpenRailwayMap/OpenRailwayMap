@@ -252,11 +252,27 @@ way["construction:frequency"!=0]["construction:voltage"<15000].ectracks
 	color: #97FF2F;
 }
 
+way[frequency="25"][voltage=12000].etracks,
+way["proposed:frequency"="25"]["proposed:voltage"=12000].eptracks,
+way["construction:frequency"="25"]["construction:voltage"=12000].ectracks
+{
+	z-index: 12;
+	color: #CCCC00;
+}
+
+way[frequency="60"][voltage=12500].etracks,
+way["proposed:frequency"="60"]["proposed:voltage"=12500].eptracks,
+way["construction:frequency"="60"]["construction:voltage"=12500].ectracks
+{
+	z-index: 13;
+	color: #999900;
+}
+
 way[frequency][frequency!=0][voltage>=15000][voltage<25000].etracks,
 way["proposed:frequency"!=0]["proposed:voltage">15000]["proposed:voltage"<25000].eptracks,
 way["construction:frequency"!=0]["construction:voltage">15000]["construction:voltage"<25000].ectracks
 {
-	z-index: 12;
+	z-index: 14;
 	color: #F1F100;
 }
 
@@ -264,7 +280,7 @@ way[frequency="16.67"][voltage=15000].etracks,
 way["proposed:frequency"="16.67"]["proposed:voltage"=15000].eptracks,
 way["construction:frequency"="16.67"]["construction:voltage"=15000].ectracks
 {
-	z-index: 13;
+	z-index: 15;
 	color: #00FF00;
 }
 
@@ -272,15 +288,31 @@ way[frequency="16.7"][voltage=15000].etracks,
 way["proposed:frequency"="16.7"]["proposed:voltage"=15000].eptracks,
 way["construction:frequency"="16.7"]["construction:voltage"=15000].ectracks
 {
-	z-index: 14;
+	z-index: 16;
 	color: #00CB66;
+}
+
+way[frequency="50"][voltage=20000].etracks,
+way["proposed:frequency"="50"]["proposed:voltage"=20000].eptracks,
+way["construction:frequency"="50"]["construction:voltage"=20000].ectracks
+{
+	z-index: 17;
+	color: #FFCC66;
+}
+
+way[frequency="60"][voltage=20000].etracks,
+way["proposed:frequency"="60"]["proposed:voltage"=20000].eptracks,
+way["construction:frequency"="60"]["construction:voltage"=20000].ectracks
+{
+	z-index: 18;
+	color: #FF9966;
 }
 
 way[frequency][frequency!=0][voltage>=25000].etracks,
 way["proposed:frequency"!=0]["proposed:voltage">25000].eptracks,
 way["construction:frequency"!=0]["construction:voltage">25000].ectracks
 {
-	z-index: 15;
+	z-index: 19;
 	color: #FF9F19;
 }
 
@@ -288,7 +320,7 @@ way[frequency=50][voltage=25000].etracks,
 way["proposed:frequency"=50]["proposed:voltage"=25000].eptracks,
 way["construction:frequency"=50]["construction:voltage"=25000].ectracks
 {
-	z-index: 16;
+	z-index: 20;
 	color: #FF0000;
 }
 
@@ -296,7 +328,7 @@ way[frequency=60][voltage=25000].etracks,
 way["proposed:frequency"=60]["proposed:voltage"=25000].eptracks,
 way["construction:frequency"=60]["construction:voltage"=25000].ectracks
 {
-	z-index: 17;
+	z-index: 21;
 	color: #C00000;
 }
 
