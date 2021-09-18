@@ -107,7 +107,6 @@ way[gauge>600][gauge<609].tracks
   color: #E0FFFF;
 }
 
-way[gauge="2'0\""].tracks,
 way[gauge=609].tracks,
 way[gauge>609][gauge<700].tracks
 {
@@ -171,7 +170,6 @@ way[gauge>900][gauge<914].tracks
   color: #C000FF;
 }
 
-way[gauge="3'0\""].tracks,
 way[gauge=914].tracks,
 way[gauge>914][gauge<950].tracks
 {
@@ -377,11 +375,6 @@ way[gauge>2000][gauge<3000].tracks
 
 /* miniature tracks */
 
-way[gauge="2.5inch"].tracks,
-way[gauge="2_1/2_inch"].tracks,
-way[gauge="2½\""].tracks,
-way[gauge="2.5\""].tracks,
-way[gauge="0'2.5\""].tracks,
 way[gauge=63].tracks,
 way[gauge>63][gauge<88].tracks
 {
@@ -389,11 +382,6 @@ way[gauge>63][gauge<88].tracks
   color: #006060;
 }
 
-way[gauge="3.5inch"].tracks,
-way[gauge="3_1/2_inch"].tracks,
-way[gauge="3½\""].tracks,
-way[gauge="3.5\""].tracks,
-way[gauge="0'3.5\""].tracks,
 way[gauge=88].tracks,
 way[gauge>88][gauge<127].tracks
 {
@@ -401,9 +389,6 @@ way[gauge>88][gauge<127].tracks
   color: #008080;
 }
 
-way[gauge="5inch"].tracks,
-way[gauge="5\""].tracks,
-way[gauge="0'5\""].tracks,
 way[gauge=127].tracks,
 way[gauge>127][gauge<184].tracks
 {
@@ -411,11 +396,6 @@ way[gauge>127][gauge<184].tracks
   color: #00A0A0;
 }
 
-way[gauge="7.25inch"].tracks,
-way[gauge="7_1/4_inch"].tracks,
-way[gauge="7¼\""].tracks,
-way[gauge="7.25\""].tracks,
-way[gauge="0'7.25\""].tracks,
 way[gauge=184].tracks,
 way[gauge>184][gauge<190].tracks
 {
@@ -423,11 +403,6 @@ way[gauge>184][gauge<190].tracks
   color: #00C0C0;
 }
 
-way[gauge="7.5inch"].tracks,
-way[gauge="7_1/2_inch"].tracks,
-way[gauge="7½\""].tracks,
-way[gauge="7.5\""].tracks,
-way[gauge="0'7.5\""].tracks,
 way[gauge=190].tracks,
 way[gauge>190][gauge<260].tracks
 {
@@ -435,11 +410,6 @@ way[gauge>190][gauge<260].tracks
   color: #00E0E0;
 }
 
-way[gauge="10.25inch"].tracks,
-way[gauge="10_1/4_inch"].tracks,
-way[gauge="10¼\""].tracks,
-way[gauge="10.25\""].tracks,
-way[gauge="0'10.25\""].tracks,
 way[gauge=260].tracks,
 way[gauge>260][gauge<380].tracks
 {
@@ -669,7 +639,6 @@ way[gauge="950;1435"].tracks
   dashes: 6,9;
 }
 
-way[gauge="1000,_760"].tracks,
 way[gauge="1000;760"].tracks
 {
   z-index: 78;
@@ -679,7 +648,6 @@ way[gauge="1000;760"].tracks
   dashes: 6,9;
 }
 
-way[gauge="1000,_1435"].tracks,
 way[gauge="1000;1435"].tracks
 {
   z-index: 79;
@@ -734,7 +702,6 @@ way[gauge="1009;1435"].tracks
   dashes: 6,9;
 }
 
-way[gauge="1067,_1435"].tracks,
 way[gauge="1067;1435"].tracks
 {
   z-index: 85;
@@ -825,7 +792,6 @@ way[gauge="1435;915"].tracks
   dashes: 6,9;
 }
 
-way[gauge="1435,925"].tracks,
 way[gauge="1435;925"].tracks
 {
   z-index: 95;
@@ -844,7 +810,6 @@ way[gauge="1435;narrow"].tracks
   dashes: 6,9;
 }
 
-way[gauge="1435,_1000"].tracks,
 way[gauge="1435;1000"].tracks
 {
   z-index: 97;
@@ -854,7 +819,6 @@ way[gauge="1435;1000"].tracks
   dashes: 6,9;
 }
 
-way[gauge="1435,_1067"].tracks,
 way[gauge="1435;1067"].tracks
 {
   z-index: 98;
@@ -864,7 +828,6 @@ way[gauge="1435;1067"].tracks
   dashes: 6,9;
 }
 
-way[gauge="1435/1520"].tracks,
 way[gauge="1435;1520"].tracks
 {
   z-index: 99;
@@ -883,7 +846,6 @@ way[gauge="1435;1524"].tracks
   dashes: 6,9;
 }
 
-way[gauge="1435,_1600"].tracks,
 way[gauge="1435;1600"].tracks
 {
   z-index: 101;
@@ -920,7 +882,6 @@ way[gauge="1520;750"].tracks
   dashes: 6,9;
 }
 
-way[gauge="1520/1435"].tracks,
 way[gauge="1520;1435"].tracks
 {
   z-index: 105;
@@ -959,7 +920,6 @@ way[gauge="89;121"].tracks
   dashes: 6,9;
 }
 
-way[gauge="3.5inch;5inch"].tracks,
 way[gauge="88.9;127"].tracks,
 way[gauge="90;127"].tracks,
 way[gauge="89;127"].tracks
@@ -1007,8 +967,6 @@ way[gauge="127;181"].tracks
   dashes: 6,9;
 }
 
-way[gauge="5'';7.25''"].tracks,
-way[gauge="5\";7.25\""].tracks,
 way[gauge="127;184.15"].tracks,
 way[gauge="127;184"].tracks
 {
@@ -1028,7 +986,6 @@ way[gauge="184;125"].tracks
   dashes: 6,9;
 }
 
-way[gauge="184,_127"].tracks,
 way[gauge="184;127"].tracks
 {
   z-index: 129;
@@ -1056,7 +1013,6 @@ way[gauge="184;360"].tracks
   dashes: 6,9;
 }
 
-way[gauge="0'10.25\";0'7.25\""].tracks,
 way[gauge="260;184"].tracks
 {
   z-index: 132;
@@ -1124,7 +1080,7 @@ way[gauge="127;184;260"].tracks
   dashes: 3,6;
 }
 
-way[gauge="63.5;88.9,127"].tracks,
+way[gauge="63.5;88.9;127"].tracks,
 way[gauge="63.5;89;127"].tracks,
 way[gauge="64;89;127"].tracks
 {
@@ -1135,8 +1091,7 @@ way[gauge="64;89;127"].tracks
   dashes: 3,6;
 }
 
-way[gauge="2½\",3½\",5\",7\""].tracks,
-way[gauge="64;89,127,178"].tracks
+way[gauge="64;89;127;178"].tracks
 {
   z-index: 152;
   color: #004000;
@@ -1154,7 +1109,6 @@ way[gauge="89;127;144;184"].tracks
   dashes: 3,6;
 }
 
-way[gauge="3½\";5\";7¼\""].tracks,
 way[gauge="89;127;184"].tracks
 {
   z-index: 154;
