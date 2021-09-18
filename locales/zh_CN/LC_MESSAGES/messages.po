@@ -60,7 +60,7 @@ msgid "Hillshading"
 msgstr "山体渲染"
 
 msgid "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
-msgstr " <a href='https://www.nasa.gov/'> NASA SRTM </a>的阴影"
+msgstr "山体渲染来自<a href='https://www.nasa.gov/'> NASA SRTM </a>"
 
 msgid "Rendering: OpenRailwayMap"
 msgstr "渲染：OpenRailwayMap"
@@ -72,7 +72,7 @@ msgid "Mapnik Grayscale"
 msgstr " Mapnik灰色"
 
 msgid "Map data &copy; OpenStreetMap contributors"
-msgstr "地图数据＆copy; OpenStreetMap贡献者"
+msgstr "地图数据&copy; OpenStreetMap贡献者"
 
 msgid "Select a map style"
 msgstr "选择地图样式"
@@ -100,46 +100,46 @@ msgstr "全屏"
 "#, php-format"
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "％d秒"
-msgstr[1] "％d秒"
+msgstr[0] "%d秒"
+msgstr[1] "%d秒"
 
 "#, php-format"
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "％d分钟"
-msgstr[1] "％d分钟"
+msgstr[0] "%d分钟"
+msgstr[1] "%d分钟"
 
 "#, php-format"
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "％d小时"
-msgstr[1] "％d小时"
+msgstr[0] "%d小时"
+msgstr[1] "%d小时"
 
 "#, php-format"
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] "％d天"
-msgstr[1] "％d天"
+msgstr[0] "%d天"
+msgstr[1] "%d天"
 
 "#, php-format"
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] "％d周"
-msgstr[1] "％d周"
+msgstr[0] "%d周"
+msgstr[1] "%d周"
 
 "#, php-format"
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] "％d个月"
-msgstr[1] "％d个月"
+msgstr[0] "%d个月"
+msgstr[1] "%d个月"
 
 "#, php-format"
 msgid "more than %s ago"
-msgstr "％s之前"
+msgstr "超过%s之前"
 
 "#, php-format"
 msgid "%s ago"
-msgstr "％s前"
+msgstr "%s前"
 
 msgid "Infrastructure"
 msgstr "基础设施"
@@ -154,7 +154,7 @@ msgid "Electrification"
 msgstr "电气化"
 
 msgid "Halt"
-msgstr "乘将所"
+msgstr "乘降所"
 
 msgid "Station"
 msgstr "车站"
@@ -202,7 +202,7 @@ msgid "Tunnel"
 msgstr "隧道"
 
 msgid "Line ref"
-msgstr "线路 ref"
+msgstr "线路编号"
 
 msgid "Railroad line"
 msgstr "铁路线路"
@@ -253,7 +253,7 @@ msgid "Abandoned track"
 msgstr "遗弃的轨道"
 
 msgid "Razed track"
-msgstr "锯齿状的轨道"
+msgstr "已拆除的轨道"
 
 msgid "Tram"
 msgstr "电车"
@@ -277,7 +277,7 @@ msgid "Resetting switch"
 msgstr "重置道岔"
 
 msgid "Signal box"
-msgstr "信号框"
+msgstr "信号楼"
 
 msgid "Owner change"
 msgstr "局界"
@@ -313,7 +313,7 @@ msgid "Fuel"
 msgstr "燃油"
 
 msgid "Water crane"
-msgstr "水上起重机"
+msgstr "水鹤"
 
 msgid "Coaling facility"
 msgstr "制煤设施"
@@ -328,7 +328,7 @@ msgid "Loading gauge"
 msgstr "荷重计"
 
 msgid "Hump yard"
-msgstr "驼峰码"
+msgstr "驼峰调车"
 
 msgid "Rail brake"
 msgstr "铁路制动器"
@@ -346,10 +346,10 @@ msgid "Turntable"
 msgstr "转盘"
 
 msgid "Traverser"
-msgstr " Traverser"
+msgstr "转盘"
 
 msgid "Loading ramp"
-msgstr "加载坡度"
+msgstr "正在加载坡度"
 
 msgid "Crane"
 msgstr "起重机"
@@ -376,7 +376,7 @@ msgid "Station building"
 msgstr "车站大楼"
 
 msgid "Factory connected to railroad line"
-msgstr "工厂已连接到铁路线"
+msgstr "连接到铁路线的工厂"
 
 msgid "Rack"
 msgstr "机架"
@@ -391,13 +391,13 @@ msgid "Miniature railway"
 msgstr "微型铁路"
 
 msgid "Funicular"
-msgstr "有趣的"
+msgstr "缆车"
 
 msgid "Military line"
 msgstr "军事线"
 
 msgid "Military service track"
-msgstr "军事服务追踪"
+msgstr "军事服务轨道"
 
 msgid "Ferry terminal"
 msgstr "渡轮码头"
@@ -406,10 +406,10 @@ msgid "Ferry"
 msgstr "渡轮"
 
 msgid "Test line"
-msgstr "测试行"
+msgstr "测试线"
 
 msgid "Test service track"
-msgstr "测试服务跟踪"
+msgstr "测试服务轨道"
 
 msgid "Car shuttle"
 msgstr "汽车穿梭车"
@@ -418,10 +418,10 @@ msgid "Rolling highway"
 msgstr "滚动公路"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr "在此缩放级别上看不到。请放大。"
+msgstr "在此缩放级别上看不到任何东西。请放大。"
 
 msgid "Legend not available for this style."
-msgstr "传奇不适用于此样式。"
+msgstr "此样式中图例不可用。"
 
 msgid "Language"
 msgstr "语言"
@@ -499,10 +499,10 @@ msgid "No background map"
 msgstr "无背景图"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "电气化已拆除"
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "无列车保护系统信息"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
@@ -514,22 +514,22 @@ msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h（停用 / 在建）"
 
 msgid "1.5 – 3kV ="
 msgstr ""
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "列车控制系统在建"
 
 msgid "3kV ="
 msgstr ""
 
 msgid "Germany"
-msgstr ""
+msgstr "德国"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "未电气化"
 
 msgid "shunting signal type Ro"
 msgstr ""
@@ -559,13 +559,13 @@ msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "最低 25kV ~"
 
 msgid "minor signal type Lo"
 msgstr ""
 
 msgid "Finland"
-msgstr ""
+msgstr "芬兰"
 
 msgid "15 – 25kV ~"
 msgstr ""
@@ -574,7 +574,7 @@ msgid "ETCS"
 msgstr ""
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "电气化在建"
 
 msgid "no train protection"
 msgstr ""
@@ -610,13 +610,13 @@ msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
 msgid "3rd rail"
-msgstr ""
+msgstr "第三轨"
 
 msgid "750 – 1000V ="
 msgstr ""
 
 msgid "Less than 15kV ~"
-msgstr ""
+msgstr "低于 15kV ~"
 
 msgid "1kV ="
 msgstr ""
@@ -664,10 +664,10 @@ msgid "Operating Sites"
 msgstr ""
 
 msgid "train protection"
-msgstr ""
+msgstr "列车保护系统"
 
 msgid "contact line"
-msgstr ""
+msgstr "接触网"
 
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
