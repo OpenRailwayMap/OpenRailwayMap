@@ -79,6 +79,7 @@ function createMap(embed)
 		MapCSS.preloadSpriteImage("signals", window.openrailwaymap.root+"styles/signals.png");
 		MapCSS.preloadSpriteImage("maxspeed", window.openrailwaymap.root+"styles/maxspeed.png");
 		MapCSS.preloadSpriteImage("electrified", window.openrailwaymap.root+"styles/electrified.png");
+		MapCSS.preloadSpriteImage("gauge", window.openrailwaymap.root+"styles/gauge.png");
 
 		setupControls();
 
