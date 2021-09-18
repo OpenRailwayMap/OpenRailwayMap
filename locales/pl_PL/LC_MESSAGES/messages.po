@@ -15,11 +15,12 @@ msgstr ""
 "PO-Revision-Date: 2021-04-21 10:54+0200\n"
 "Last-Translator: Grzegorz Szymaszek <gszymaszek@short.pl>\n"
 "Language-Team: Polish (https://www.transifex.com/rurseekatze/openrailwaymap/language/pl/)\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : "
+"n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
@@ -32,9 +33,11 @@ msgid "Javascript is not activated"
 msgstr "Javascript jest wyłączony"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on "
-"Javascript in your browser settings."
-msgstr " Aby wyświetlić mapę i uruchomić stronę potrzebny jest JavaScript. Proszę go włączyć w ustawieniach przeglądarki."
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
+"browser settings."
+msgstr ""
+" Aby wyświetlić mapę i uruchomić stronę potrzebny jest JavaScript. Proszę go włączyć "
+"w ustawieniach przeglądarki."
 
 msgid "Loading..."
 msgstr "Ładowanie…"
@@ -90,9 +93,7 @@ msgstr "Szukaj tylko w obecnym widoku mapy"
 msgid "HTML-Code"
 msgstr "Kod HTML"
 
-msgid ""
-"Copy this HTML code snippet into your website to show a small map with a "
-"marker."
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
 msgstr "Skopiuj ten fragment kodu HTML na swoją stronę, by pokazać małą mapę ze znacznikiem."
 
 msgid "Fullscreen"
@@ -510,8 +511,50 @@ msgstr ""
 msgid "No background map"
 msgstr "Bez mapy w tle"
 
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr "%SPDMIN%–%SPDMAX% km/h (nieużywany/w budowie)"
+
+msgid "Not electrified"
+msgstr "Niezelektryfikowany"
+
 msgid "Deelectrified"
 msgstr "Zdeelektryfikowana"
+
+msgid "Electrification proposed"
+msgstr "Elektryfikacja proponowana"
+
+msgid "Electrification under construction"
+msgstr "W trakcie elektryfikacji"
+
+msgid "contact line"
+msgstr "sieć trakcyjna"
+
+msgid "3rd rail"
+msgstr "trzecia szyna"
+
+msgid "Germany"
+msgstr "Niemcy"
+
+msgid "Finland"
+msgstr "Finlandia"
+
+msgid "train protection"
+msgstr "system zabezpieczenia ruchu kolejowego"
+
+msgid "no train protection"
+msgstr "brak systemów zabezpieczenia ruchu kolejowego"
+
+msgid "crossing signal type To"
+msgstr ""
+
+msgid "Voltage"
+msgstr "Napięcie"
+
+msgid "signals"
+msgstr "sygnały"
+
+msgid "Operating Sites"
+msgstr "Posterunki ruchu"
 
 msgid "No information about train protection"
 msgstr "Brak informacji o systemach zabezpieczenia ruchu kolejowego"
@@ -525,9 +568,6 @@ msgstr "Użycie toru"
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
-msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr "%SPDMIN%–%SPDMAX% km/h (nieużywany/w budowie)"
-
 msgid "1.5 – 3kV ="
 msgstr "1,5–3 kV ="
 
@@ -536,12 +576,6 @@ msgstr ""
 
 msgid "3kV ="
 msgstr "3 kV ="
-
-msgid "Germany"
-msgstr "Niemcy"
-
-msgid "Not electrified"
-msgstr "Niezelektryfikowany"
 
 msgid "shunting signal type Ro"
 msgstr ""
@@ -576,20 +610,11 @@ msgstr "Przynajmniej 25 kV ~"
 msgid "minor signal type Lo"
 msgstr ""
 
-msgid "Finland"
-msgstr "Finlandia"
-
 msgid "15 – 25kV ~"
 msgstr "15–25 kV ~"
 
 msgid "ETCS"
 msgstr "ETCS"
-
-msgid "Electrification under construction"
-msgstr "W trakcie elektryfikacji"
-
-msgid "no train protection"
-msgstr "brak systemów zabezpieczenia ruchu kolejowego"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -606,23 +631,14 @@ msgstr "15 kV 16⅔ Hz ~"
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
-msgid "signals"
-msgstr "sygnały"
-
 msgid "Ne 5 Haltetafel"
 msgstr ""
-
-msgid "Voltage"
-msgstr "Napięcie"
 
 msgid "More than 3kV ="
 msgstr "Powyżej 3 kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
-
-msgid "3rd rail"
-msgstr "trzecia szyna"
 
 msgid "750 – 1000V ="
 msgstr "750–1000 V ="
@@ -632,9 +648,6 @@ msgstr "Poniżej 15 kV ~"
 
 msgid "1kV ="
 msgstr "1 kV ="
-
-msgid "crossing signal type To"
-msgstr ""
 
 msgid "1 – 1.5kV ="
 msgstr "1–1,5 kV ="
@@ -672,15 +685,6 @@ msgstr "Poniżej 750 v ="
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
 
-msgid "Operating Sites"
-msgstr "Posterunki ruchu"
-
-msgid "train protection"
-msgstr "system zabezpieczenia ruchu kolejowego"
-
-msgid "contact line"
-msgstr "sieć trakcyjna"
-
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
@@ -692,9 +696,6 @@ msgstr "25 kV 60 Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
-
-msgid "Electrification proposed"
-msgstr "Elektryfikacja proponowana"
 
 msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
@@ -774,7 +775,8 @@ msgstr ""
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
@@ -788,3 +790,6 @@ msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
 msgstr "Informacje prawne &amp; Polityka prywatności"
+
+msgid "automatische treinbeïnvloeding"
+msgstr ""
