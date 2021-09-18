@@ -34,7 +34,7 @@ $ apt-get install cmake
 ```
 
 ```shell
-$ pip3 install pojson
+$ pip3 install pojson polib
 ```
 
 ## Installation
