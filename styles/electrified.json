@@ -111,9 +111,13 @@
 				{ "%VOLTAGE%": 3000,"%FREQUENCY%":0,"%CAPTION%":"3kV =" },
 				{ "%VOLTAGE%": 5000,"%FREQUENCY%":0,"%CAPTION%":"More than 3kV =" },
 				{ "%VOLTAGE%":10000,"%FREQUENCY%":25,"%CAPTION%":"Less than 15kV ~" },
+				{ "%VOLTAGE%":12000,"%FREQUENCY%":25,"%CAPTION%":"12kV 25Hz ~" },
+				{ "%VOLTAGE%":12500,"%FREQUENCY%":60,"%CAPTION%":"12.5kV 60Hz ~" },
 				{ "%VOLTAGE%":15000,"%FREQUENCY%":"16.67","%CAPTION%":"15kV 16⅔Hz ~" },
 				{ "%VOLTAGE%":15000,"%FREQUENCY%":"16.7","%CAPTION%":"15kV 16.7Hz ~" },
 				{ "%VOLTAGE%":20000,"%FREQUENCY%":25,"%CAPTION%":"15 – 25kV ~" },
+				{ "%VOLTAGE%":20000,"%FREQUENCY%":50,"%CAPTION%":"20kV 50Hz ~" },
+				{ "%VOLTAGE%":20000,"%FREQUENCY%":60,"%CAPTION%":"20kV 60Hz ~" },
 				{ "%VOLTAGE%":26000,"%FREQUENCY%":25,"%CAPTION%":"At least 25kV ~" },
 				{ "%VOLTAGE%":25000,"%FREQUENCY%":50,"%CAPTION%":"25kV 50Hz ~" },
 				{ "%VOLTAGE%":25000,"%FREQUENCY%":60,"%CAPTION%":"25kV 60Hz ~" }
