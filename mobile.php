@@ -130,7 +130,7 @@
 				<a style="display:block" class="resultEntry" id="imprintButton" href="/imprint"><?=_("Imprint &amp; Privacy Policy")?></a>
 				<a style="display:block" class="resultEntry" id="permalinkButton" href=""><?=_("Permalink")?></a>
 				<a style="display:block" class="resultEntry" id="desktopButton" href=""><?=_("Desktop version")?></a>
-				Contact: <a style="display:block" class="resultEntry" id="contactButton" href="#"><?=_("Email")?></a>
+				<a style="display:block" class="resultEntry" id="contactButton" href="#"><?=_("Email")?></a>
 				<a style="display:block" class="resultEntry" id="twitterButton" href="https://twitter.com/openrailwaymap"><?=_("Twitter")?></a>
 				<script language="javascript">
 					var usr = "info";
