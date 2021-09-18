@@ -251,9 +251,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal states, Hamburg names (multi-selection)"
 					de.text="Signalzustände, Hamburger Kürzel (Mehrfachauswahl)"
 					delimiter=";"
-					values="DE-ESO:hp0;DE-ESO:sv1;DE-ESO:sv2;DE-ESO:sv3;DE-ESO:sv4;DE-ESO:sv5;DE-ESO:sv6;DE-ESO:sv0;DE-ESO:kennlicht"
-					display_values="Hp 0;Sv 1;Sv 2;Sv 3;Sv 4;Sv 5;Sv 6;Sv 0;marker light"
-					de.display_values="Hp 0;Sv 1;Sv 2;Sv 3;Sv 4;Sv 5;Sv 6;Sv 0;Kennlicht"
+					values="DE-ESO:hp0;DE-ESO:sv1;DE-ESO:sv2;DE-ESO:sv3;DE-ESO:sv4;DE-ESO:sv5;DE-ESO:sv6;DE-ESO:sv0;DE-ESO:kennlicht;?"
+					display_values="Hp 0 (Stop);Sv 1 (Proceed, Expect Proceed);Sv 2 (Proceed, Expect Stop);Sv 3 (Proceed, Expect Proceed at reduced speed);Sv 4 (Proceed at reduced speed, Expect Proceed);Sv 5 (Proceed at reduced speed, Expect Proceed at reduced speed);Sv 6 (Proceed at reduced speed, Expect Stop);Sv 0 (Halt! Proceed on sight);marker light;other states unknown"
+					de.display_values="Hp 0 (Halt.);Sv 1 (Fahrt! Fahrt erwarten.);Sv 2 (Fahrt! Halt erwarten.);Sv 3 (Fahrt! Langsamfahrt erwarten.);Sv 4 (Langsamfahrt! Fahrt erwarten.);Sv 5 (Langsamfahrt! Langsamfahrt erwarten.);Sv 6 (Langsamfahrt! Halt erwarten.);Sv 0 (Zughalt! Weiterfahrt auf Sicht.);Kennlicht;weitere Zustände unbekannt"
 					/>
 				<combo key="railway:signal:combined:function"
 					text="Signal function"
@@ -319,8 +319,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:hl4;DE-ESO:hl5;DE-ESO:hl6a;DE-ESO:hl6b;DE-ESO:hl7;DE-ESO:hl8;DE-ESO:hl9a;DE-ESO:hl9b;DE-ESO:hl10;DE-ESO:hl11;DE-ESO:hl12a;DE-ESO:hl12b;DE-ESO:kennlicht;?"
-						display_values="Hp 0 (stop);Hl 1 (vmax->vmax);Hl 2 (100 kph -> vmax);Hl 3a (40 kph -> vmax);Hl 3b (60 kph -> vmax);Hl 4 (vmax -> 100 kph);Hl 5 (100 kph -> 100 kph);Hl 6a (40 kph -> 100 kph);Hl 6b (60 kph -> 100 kph);Hl 7 (vmax -> 40 or 60 kph);Hl 8 (100 kph -> 40 or 60 kph);Hl 9a (40 kph -> 40 or 60 kph);Hl 9b (60 kph -> 40 or 60 kph);Hl 10 (vmax -> stop);Hl 11 (100 kph -> stop);Hl 12a (40 kph -> stop);Hl 12b (60 kph -> stop);marker light;unknown"
-						de.display_values="Hp 0 (Halt);Hl 1 (Höchstgeschwindigkeit->Höchstgeschwindigkeit);Hl 2 (100 km/h -> Höchstgeschwindigkeit);Hl 3a (40 km/h -> Höchstgeschwindigkeit);Hl 3b (60 km/h -> Höchstgeschwindigkeit);Hl 4 (Höchstgeschwindigkeit -> 100 km/h);Hl 5 (100 km/h -> 100 km/h);Hl 6a (40 km/h -> 100 km/h);Hl 6b (60 km/h -> 100 km/h);Hl 7 (Höchstgeschwindigkeit -> 40 oder 60 km/h);Hl 8 (100 km/h -> 40 or 60 km/h);Hl 9a (40 km/h -> 40 oder 60 km/h);Hl 9b (60 km/h -> 40 oder 60 km/h);Hl 10 (Höchstgeschwindigkeit -> stop);Hl 11 (100 km/h -> stop);Hl 12a (40 km/h -> stop);Hl 12b (60 km/h -> stop);Kennlicht;unbekannt" />
+						display_values="Hp 0 (stop);Hl 1 (vmax -> vmax);Hl 2 (100 kph -> vmax);Hl 3a (40 kph -> vmax);Hl 3b (60 kph -> vmax);Hl 4 (vmax -> 100 kph);Hl 5 (100 kph -> 100 kph);Hl 6a (40 kph -> 100 kph);Hl 6b (60 kph -> 100 kph);Hl 7 (vmax -> 40 or 60 kph);Hl 8 (100 kph -> 40 or 60 kph);Hl 9a (40 kph -> 40 or 60 kph);Hl 9b (60 kph -> 40 or 60 kph);Hl 10 (vmax -> stop);Hl 11 (100 kph -> stop);Hl 12a (40 kph -> stop);Hl 12b (60 kph -> stop);marker light;other states unknown"
+						de.display_values="Hp 0 (Halt);Hl 1 (Höchstgeschwindigkeit -> Höchstgeschwindigkeit);Hl 2 (100 km/h -> Höchstgeschwindigkeit);Hl 3a (40 km/h -> Höchstgeschwindigkeit);Hl 3b (60 km/h -> Höchstgeschwindigkeit);Hl 4 (Höchstgeschwindigkeit -> 100 km/h);Hl 5 (100 km/h -> 100 km/h);Hl 6a (40 km/h -> 100 km/h);Hl 6b (60 km/h -> 100 km/h);Hl 7 (Höchstgeschwindigkeit -> 40 oder 60 km/h);Hl 8 (100 km/h -> 40 or 60 km/h);Hl 9a (40 km/h -> 40 oder 60 km/h);Hl 9b (60 km/h -> 40 oder 60 km/h);Hl 10 (Höchstgeschwindigkeit -> stop);Hl 11 (100 km/h -> stop);Hl 12a (40 km/h -> stop);Hl 12b (60 km/h -> stop);Kennlicht;weitere Zustände unbekannt" />
 					<combo key="railway:signal:combined:function"
 						text="Signal function"
 						de.text="Signalaufgabe"
@@ -378,8 +378,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:hp0;DE-ESO:hl1;DE-ESO:hl2;DE-ESO:hl3a;DE-ESO:hl3b;DE-ESO:kennlicht;?"
-						display_values="Hp 0 (stop);Hl 1 (vmax);Hl 2 (100 kph);Hl 3a (40 kph);Hl 3b (60 kph);marker light;unknown"
-						de.display_values="Hp 0 (Halt);Hl 1 (Höchstgeschwindigkeit);Hl 2 (100 km/h);Hl 3a (40 km/h);Hl 3b (60 km/h);Kennlicht;unbekannt" />
+						display_values="Hp 0 (stop);Hl 1 (vmax);Hl 2 (100 kph);Hl 3a (40 kph);Hl 3b (60 kph);marker light;other states unknown"
+						de.display_values="Hp 0 (Halt);Hl 1 (Höchstgeschwindigkeit);Hl 2 (100 km/h);Hl 3a (40 km/h);Hl 3b (60 km/h);Kennlicht;weitere Zustände unbekannt" />
 					<combo key="railway:signal:main:function"
 						text="Signal function"
 						de.text="Signalaufgabe"
@@ -430,8 +430,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalzustände (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:hl1;DE-ESO:hl4;DE-ESO:hl7;DE-ESO:hl10;DE-ESO:kennlicht;?"
-						display_values="Hl 1 (vmax ahead);Hl 4 (100 kph ahead);Hl 7 (40 or 60 kph ahead);Hl 10 (stop ahead);marker light;unknown"
-						de.display_values="Hl 1 (Fahrt erwarten);Hl 4 (100 km/h erwarten);Hl 7 (40 oder 60 km/h erwarten);Hl 10 (Halt erwarten);Kennlicht;unbekannt" />
+						display_values="Hl 1 (vmax ahead);Hl 4 (100 kph ahead);Hl 7 (40 or 60 kph ahead);Hl 10 (stop ahead);marker light;other states unknown"
+						de.display_values="Hl 1 (Fahrt erwarten);Hl 4 (100 km/h erwarten);Hl 7 (40 oder 60 km/h erwarten);Hl 10 (Halt erwarten);Kennlicht;weitere Zustände unbekannt" />
 					<check key="railway:signal:distant:repeated"
 						text="Repeated Signal"
 						de.text="Vorsignalwiederholer"
@@ -1587,8 +1587,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Geschwindigkeit (km/h)"
 						delimiter=";"
 						values="off;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;?"
-						display_values="off;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;unknown"
-						de.display_values="dunkel;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;unbekannt" />
+						display_values="off;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;other states unknown"
+						de.display_values="dunkel;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;weitere Zustände unbekannt" />
 					<combo key="railway:signal:speed_limit:height"
 						text="Signal height"
 						de.text="Signalbauhöhe"
@@ -1629,8 +1629,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Geschwindigkeit (km/h)"
 						delimiter=";"
 						values="off;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;?"
-						display_values="off;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;unknown"
-						de.display_values="dunkel;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;unbekannt" />
+						display_values="off;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;other states unknown"
+						de.display_values="dunkel;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;weitere Zustände unbekannt" />
 					<combo key="railway:signal:speed_limit_distant:height"
 						text="Signal height"
 						de.text="Signalbauhöhe"
