@@ -70,7 +70,6 @@ way[railway].tracks
   font-family: "Verdana Bold";
   font-weight: bold;
   font-size: 11;
-  opacity: #000000;
 
   /* default color for unknown gauge value */
   z-index: 1;
