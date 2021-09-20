@@ -497,8 +497,8 @@ way[gauge=dual].tracks
   z-index: 60;
   color: #C0C0C0;
   casing-color: #808080;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="500;600"].tracks
@@ -506,8 +506,8 @@ way[gauge="500;600"].tracks
   z-index: 61;
   color: #A0FFFF;
   casing-color: #E0FFFF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="600;760"].tracks
@@ -515,8 +515,8 @@ way[gauge="600;760"].tracks
   z-index: 62;
   color: #E0FFFF;
   casing-color: #FF80FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="600;762"].tracks
@@ -524,8 +524,8 @@ way[gauge="600;762"].tracks
   z-index: 63;
   color: #E0FFFF;
   casing-color: #FF60FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="600;900"].tracks
@@ -533,8 +533,8 @@ way[gauge="600;900"].tracks
   z-index: 64;
   color: #E0FFFF;
   casing-color: #E000FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="600;1000"].tracks
@@ -542,8 +542,8 @@ way[gauge="600;1000"].tracks
   z-index: 65;
   color: #E0FFFF;
   casing-color: #8000FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="600;1435"].tracks
@@ -551,8 +551,8 @@ way[gauge="600;1435"].tracks
   z-index: 66;
   color: #E0FFFF;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="610;1067"].tracks
@@ -560,8 +560,8 @@ way[gauge="610;1067"].tracks
   z-index: 67;
   color: #FFE0FF;
   casing-color: #0000E0;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="610;1676"].tracks
@@ -569,8 +569,8 @@ way[gauge="610;1676"].tracks
   z-index: 68;
   color: #FFE0FF;
   casing-color: #FFE000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="750;600"].tracks
@@ -578,8 +578,8 @@ way[gauge="750;600"].tracks
   z-index: 69;
   color: #FFA0FF;
   casing-color: #E0FFFF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="750;1435"].tracks
@@ -587,8 +587,8 @@ way[gauge="750;1435"].tracks
   z-index: 70;
   color: #FFA0FF;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="750;1520"].tracks
@@ -596,8 +596,8 @@ way[gauge="750;1520"].tracks
   z-index: 71;
   color: #FFA0FF;
   casing-color: #C00000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="750;1524"].tracks
@@ -605,8 +605,8 @@ way[gauge="750;1524"].tracks
   z-index: 72;
   color: #FFA0FF;
   casing-color: #FF0000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="750;1676"].tracks
@@ -614,8 +614,8 @@ way[gauge="750;1676"].tracks
   z-index: 73;
   color: #FFA0FF;
   casing-color: #FFE000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="760;1435"].tracks
@@ -623,8 +623,8 @@ way[gauge="760;1435"].tracks
   z-index: 74;
   color: #FF80FF;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="891;1435"].tracks
@@ -632,8 +632,8 @@ way[gauge="891;1435"].tracks
   z-index: 75;
   color: #FF00FF;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="914;1435"].tracks
@@ -641,8 +641,8 @@ way[gauge="914;1435"].tracks
   z-index: 76;
   color: #C000FF;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="950;1435"].tracks
@@ -650,8 +650,8 @@ way[gauge="950;1435"].tracks
   z-index: 77;
   color: #A000FF;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1000;760"].tracks
@@ -659,8 +659,8 @@ way[gauge="1000;760"].tracks
   z-index: 78;
   color: #8000FF;
   casing-color: #FF80FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1000;1435"].tracks
@@ -668,8 +668,8 @@ way[gauge="1000;1435"].tracks
   z-index: 79;
   color: #8000FF;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1000;1520"].tracks
@@ -677,8 +677,8 @@ way[gauge="1000;1520"].tracks
   z-index: 80;
   color: #8000FF;
   casing-color: #C00000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1000;1600"].tracks
@@ -686,8 +686,8 @@ way[gauge="1000;1600"].tracks
   z-index: 81;
   color: #8000FF;
   casing-color: #FFA000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1000;1668"].tracks
@@ -695,8 +695,8 @@ way[gauge="1000;1668"].tracks
   z-index: 82;
   color: #8000FF;
   casing-color: #FFC000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1000;1676"].tracks
@@ -704,8 +704,8 @@ way[gauge="1000;1676"].tracks
   z-index: 83;
   color: #8000FF;
   casing-color: #FFE000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1009;1435"].tracks
@@ -713,8 +713,8 @@ way[gauge="1009;1435"].tracks
   z-index: 84;
   color: #6000FF;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1067;1435"].tracks
@@ -722,8 +722,8 @@ way[gauge="1067;1435"].tracks
   z-index: 85;
   color: #0000E0;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1067;1520"].tracks
@@ -731,8 +731,8 @@ way[gauge="1067;1520"].tracks
   z-index: 86;
   color: #0000E0;
   casing-color: #C00000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1100;1435"].tracks
@@ -740,8 +740,8 @@ way[gauge="1100;1435"].tracks
   z-index: 87;
   color: #0000C0;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1219;1435"].tracks
@@ -749,8 +749,8 @@ way[gauge="1219;1435"].tracks
   z-index: 88;
   color: #0000A0;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;600"].tracks
@@ -758,8 +758,8 @@ way[gauge="1435;600"].tracks
   z-index: 89;
   color: #000000;
   casing-color: #E0FFFF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;760"].tracks
@@ -767,8 +767,8 @@ way[gauge="1435;760"].tracks
   z-index: 90;
   color: #000000;
   casing-color: #FF80FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;891"].tracks
@@ -776,8 +776,8 @@ way[gauge="1435;891"].tracks
   z-index: 91;
   color: #000000;
   casing-color: #FF00FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;900"].tracks
@@ -785,8 +785,8 @@ way[gauge="1435;900"].tracks
   z-index: 92;
   color: #000000;
   casing-color: #E000FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;914"].tracks
@@ -794,8 +794,8 @@ way[gauge="1435;914"].tracks
   z-index: 93;
   color: #000000;
   casing-color: #C000FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;915"].tracks
@@ -803,8 +803,8 @@ way[gauge="1435;915"].tracks
   z-index: 94;
   color: #000000;
   casing-color: #C000FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;925"].tracks
@@ -812,8 +812,8 @@ way[gauge="1435;925"].tracks
   z-index: 95;
   color: #000000;
   casing-color: #C000FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;narrow"].tracks
@@ -821,8 +821,8 @@ way[gauge="1435;narrow"].tracks
   z-index: 96;
   color: #000000;
   casing-color: #C0C0FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;1000"].tracks
@@ -830,8 +830,8 @@ way[gauge="1435;1000"].tracks
   z-index: 97;
   color: #000000;
   casing-color: #8000FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;1067"].tracks
@@ -839,8 +839,8 @@ way[gauge="1435;1067"].tracks
   z-index: 98;
   color: #000000;
   casing-color: #0000E0;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;1520"].tracks
@@ -848,8 +848,8 @@ way[gauge="1435;1520"].tracks
   z-index: 99;
   color: #000000;
   casing-color: #C00000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;1524"].tracks
@@ -857,8 +857,8 @@ way[gauge="1435;1524"].tracks
   z-index: 100;
   color: #000000;
   casing-color: #FF0000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;1600"].tracks
@@ -866,8 +866,8 @@ way[gauge="1435;1600"].tracks
   z-index: 101;
   color: #000000;
   casing-color: #FFA000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;1668"].tracks
@@ -875,8 +875,8 @@ way[gauge="1435;1668"].tracks
   z-index: 102;
   color: #000000;
   casing-color: #FFC000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1435;2140"].tracks
@@ -884,8 +884,8 @@ way[gauge="1435;2140"].tracks
   z-index: 103;
   color: #000000;
   casing-color: #A0FF00;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1520;750"].tracks
@@ -893,8 +893,8 @@ way[gauge="1520;750"].tracks
   z-index: 104;
   color: #C00000;
   casing-color: #FFA0FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1520;1435"].tracks
@@ -902,8 +902,8 @@ way[gauge="1520;1435"].tracks
   z-index: 105;
   color: #C00000;
   casing-color: #000000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="1600;1000"].tracks
@@ -911,8 +911,8 @@ way[gauge="1600;1000"].tracks
   z-index: 106;
   color: #FFA000;
   casing-color: #8000FF;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 /* dual gauge miniature tracks */
@@ -922,8 +922,8 @@ way[gauge="63.5;89"].tracks
   z-index: 120;
   color: #004000;
   casing-color: #006000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="89;121"].tracks
@@ -931,8 +931,8 @@ way[gauge="89;121"].tracks
   z-index: 121;
   color: #006000;
   casing-color: #008000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="88.9;127"].tracks,
@@ -942,8 +942,8 @@ way[gauge="89;127"].tracks
   z-index: 122;
   color: #006000;
   casing-color: #008000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="120;190"].tracks
@@ -951,8 +951,8 @@ way[gauge="120;190"].tracks
   z-index: 123;
   color: #008000;
   casing-color: #00C000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="124;184"].tracks
@@ -960,8 +960,8 @@ way[gauge="124;184"].tracks
   z-index: 124;
   color: #008000;
   casing-color: #00A000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="127;178"].tracks
@@ -969,8 +969,8 @@ way[gauge="127;178"].tracks
   z-index: 125;
   color: #008000;
   casing-color: #009000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="127;181"].tracks
@@ -978,8 +978,8 @@ way[gauge="127;181"].tracks
   z-index: 126;
   color: #008000;
   casing-color: #00A000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="127;184.15"].tracks,
@@ -988,8 +988,8 @@ way[gauge="127;184"].tracks
   z-index: 127;
   color: #008000;
   casing-color: #00A000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="184;125"].tracks
@@ -997,8 +997,8 @@ way[gauge="184;125"].tracks
   z-index: 128;
   color: #00A000;
   casing-color: #008000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="184;127"].tracks
@@ -1006,8 +1006,8 @@ way[gauge="184;127"].tracks
   z-index: 129;
   color: #00A000;
   casing-color: #008000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="184;241"].tracks
@@ -1015,8 +1015,8 @@ way[gauge="184;241"].tracks
   z-index: 130;
   color: #00A000;
   casing-color: #00C000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="184;360"].tracks
@@ -1024,8 +1024,8 @@ way[gauge="184;360"].tracks
   z-index: 131;
   color: #00A000;
   casing-color: #00E000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 way[gauge="260;184"].tracks
@@ -1033,8 +1033,8 @@ way[gauge="260;184"].tracks
   z-index: 132;
   color: #00E000;
   casing-color: #00A000;
-  casing-width: 3;
-  dashes: 6,9;
+  casing-width: 0;
+  dashes: 8,8;
 }
 
 /* multiple gauge railway */
@@ -1045,7 +1045,7 @@ way[gauge=multiple].tracks
   color: #C0C0C0;
   casing-color: #808080;
   casing-width: 3;
-  dashes: 3,6;
+  dashes: 4,12;
 }
 
 way[gauge="600;762;1435"].tracks
@@ -1054,7 +1054,7 @@ way[gauge="600;762;1435"].tracks
   color: #E0FFFF;
   casing-color: #FF60FF;
   casing-width: 3;
-  dashes: 3,6;
+  dashes: 4,12;
 }
 
 way[gauge="600;1000;1435"].tracks
@@ -1063,7 +1063,7 @@ way[gauge="600;1000;1435"].tracks
   color: #E0FFFF;
   casing-color: #8000FF;
   casing-width: 3;
-  dashes: 3,6;
+  dashes: 4,12;
 }
 
 way[gauge="457;914;1435"].tracks
@@ -1072,7 +1072,7 @@ way[gauge="457;914;1435"].tracks
   color: #80FFFF;
   casing-color: #C000FF;
   casing-width: 3;
-  dashes: 3,6;
+  dashes: 4,12;
 }
 
 way[gauge="1000;1435;1668"].tracks
@@ -1081,7 +1081,7 @@ way[gauge="1000;1435;1668"].tracks
   color: #8000FF;
   casing-color: #FFC000;
   casing-width: 3;
-  dashes: 3,6;
+  dashes: 4,12;
 }
 
 /* multiple gauge miniature tracks */
@@ -1092,7 +1092,7 @@ way[gauge="127;184;260"].tracks
   color: #008000;
   casing-color: #00E000;
   casing-width: 3;
-  dashes: 3,6;
+  dashes: 4,12;
 }
 
 way[gauge="63.5;88.9;127"].tracks,
@@ -1103,7 +1103,7 @@ way[gauge="64;89;127"].tracks
   color: #004000;
   casing-color: #008000;
   casing-width: 3;
-  dashes: 3,6;
+  dashes: 4,12;
 }
 
 way[gauge="64;89;127;178"].tracks
@@ -1112,7 +1112,7 @@ way[gauge="64;89;127;178"].tracks
   color: #004000;
   casing-color: #009000;
   casing-width: 3;
-  dashes: 3,6;
+  dashes: 4,12;
 }
 
 way[gauge="89;127;144;184"].tracks
@@ -1121,7 +1121,7 @@ way[gauge="89;127;144;184"].tracks
   color: #006000;
   casing-color: #00A000;
   casing-width: 3;
-  dashes: 3,6;
+  dashes: 4,12;
 }
 
 way[gauge="89;127;184"].tracks
@@ -1130,5 +1130,5 @@ way[gauge="89;127;184"].tracks
   color: #006000;
   casing-color: #00A000;
   casing-width: 3;
-  dashes: 3,6;
+  dashes: 4,12;
 }
