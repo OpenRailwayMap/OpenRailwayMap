@@ -70,13 +70,65 @@ way[railway].tracks
   font-family: "Verdana Bold";
   font-weight: bold;
   font-size: 11;
+}
 
-  /* default color for unknown gauge value */
+way.tracks
+{
+  width: 2;
+  kothicjs-ignore-layer: true;
+}
+
+/* color for unknown low numeric gauge values */
+
+way[gauge>0][gauge<63].tracks
+{
   z-index: 1;
   color: #C0C0C0;
 }
 
-/* tracks with numeric gauge value */
+/* colors for numeric gauge values */
+
+way[gauge=63].tracks,
+way[gauge>63][gauge<88].tracks
+{
+  z-index: 42;
+  color: #006060;
+}
+
+way[gauge=88].tracks,
+way[gauge>88][gauge<127].tracks
+{
+  z-index: 43;
+  color: #008080;
+}
+
+way[gauge=127].tracks,
+way[gauge>127][gauge<184].tracks
+{
+  z-index: 44;
+  color: #00A0A0;
+}
+
+way[gauge=184].tracks,
+way[gauge>184][gauge<190].tracks
+{
+  z-index: 45;
+  color: #00C0C0;
+}
+
+way[gauge=190].tracks,
+way[gauge>190][gauge<260].tracks
+{
+  z-index: 46;
+  color: #00E0E0;
+}
+
+way[gauge=260].tracks,
+way[gauge>260][gauge<380].tracks
+{
+  z-index: 47;
+  color: #00FFFF;
+}
 
 way[gauge=380].tracks,
 way[gauge>380][gauge<500].tracks
@@ -372,50 +424,14 @@ way[gauge>2000][gauge<3000].tracks
   color: #A0FF00;
 }
 
-/* miniature tracks */
+/* color for unknown high numeric gauge values */
 
-way[gauge=63].tracks,
-way[gauge>63][gauge<88].tracks
+way[gauge>=3000][gauge<999999].tracks
 {
-  z-index: 42;
-  color: #006060;
+  z-index: 1;
+  color: #C0C0C0;
 }
-
-way[gauge=88].tracks,
-way[gauge>88][gauge<127].tracks
-{
-  z-index: 43;
-  color: #008080;
-}
-
-way[gauge=127].tracks,
-way[gauge>127][gauge<184].tracks
-{
-  z-index: 44;
-  color: #00A0A0;
-}
-
-way[gauge=184].tracks,
-way[gauge>184][gauge<190].tracks
-{
-  z-index: 45;
-  color: #00C0C0;
-}
-
-way[gauge=190].tracks,
-way[gauge>190][gauge<260].tracks
-{
-  z-index: 46;
-  color: #00E0E0;
-}
-
-way[gauge=260].tracks,
-way[gauge>260][gauge<380].tracks
-{
-  z-index: 47;
-  color: #00FFFF;
-}
-
+    
 /* miniature tracks with inaccurate gauge value */
 
 way[railway=miniature][gauge=narrow].tracks,
