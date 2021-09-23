@@ -63,7 +63,7 @@ OpenRailwayMap.prototype =
 		}).addTo(this.map);
 
 		// grayscale mapnik background layer
-		this.mapnikGray = new L.TileLayer.Grayscale('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		this.mapnikGray = new L.TileLayer.Grayscale('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 		{
 			attribution: translations['mapnikAttribution'],
 			maxZoom: 19,
@@ -71,7 +71,7 @@ OpenRailwayMap.prototype =
 		});
 
 		// normal mapnik background layer
-		this.mapnik = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		this.mapnik = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 		{
 			attribution: translations['mapnikAttribution'],
 			maxZoom: 19,
@@ -85,7 +85,7 @@ OpenRailwayMap.prototype =
 			code: 'blank'
 		});
 
-		this.hillshading = new L.TileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
+		this.hillshading = new L.TileLayer('https://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
 		{
 			attribution: translations['hillshadingAttribution'],
 			maxZoom: 17

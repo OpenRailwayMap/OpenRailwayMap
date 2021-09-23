@@ -4,8 +4,8 @@
 	"lat": 51.58248,
 	"lon": 15.6501,
 	"zoom": 7,
-	"tileUrl": "http://{s}.tiles.openrailwaymap.org/",
-	"apiUrl": "http://api.openrailwaymap.org/",
+	"tileUrl": "https://{s}.tiles.openrailwaymap.org/",
+	"apiUrl": "https://api.openrailwaymap.org/",
 	"availableStyles": ["standard", "maxspeed", "signals"],
 	"availableTranslations":
 	{
