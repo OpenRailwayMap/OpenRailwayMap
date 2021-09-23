@@ -41,7 +41,6 @@
 		<?php
 			urlArgsToParam(false, $urlbase);
 		?>
-		<script type="text/javascript" src="api/jstranslations.php?lang=<?php echo $lang; ?>"></script>
 		<script type="text/javascript" src="js/startposition.js"></script>
 		<script type="text/javascript" src="js/functions.js"></script>
 		<script type="text/javascript" src="js/bitmap-map.js"></script>
