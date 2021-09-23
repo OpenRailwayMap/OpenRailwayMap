@@ -56,7 +56,7 @@ OpenRailwayMap.prototype =
 		var translations = this.language.translations;
 		this.railmap = new L.TileLayer(this.tileUrl+this.availableStyles[0]+'/{z}/{x}/{y}.png',
 		{
-			attribution: translations['Rendering OpenRailwayMap'],
+			attribution: translations['Rendering: OpenRailwayMap'],
 			minZoom: 2,
 			maxZoom: 19,
 			tileSize: 256
@@ -65,7 +65,7 @@ OpenRailwayMap.prototype =
 		// grayscale mapnik background layer
 		this.mapnikGray = new L.TileLayer.Grayscale('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 		{
-			attribution: translations['mapnikAttribution'],
+			attribution: translations['Map data &copy; OpenStreetMap contributors'],
 			maxZoom: 19,
 			code: 'mapnikgray'
 		});
@@ -73,7 +73,7 @@ OpenRailwayMap.prototype =
 		// normal mapnik background layer
 		this.mapnik = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 		{
-			attribution: translations['mapnikAttribution'],
+			attribution: translations['Map data &copy; OpenStreetMap contributors'],
 			maxZoom: 19,
 			code: 'mapnik'
 		});
@@ -87,18 +87,18 @@ OpenRailwayMap.prototype =
 
 		this.hillshading = new L.TileLayer('https://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png',
 		{
-			attribution: translations['hillshadingAttribution'],
+			attribution: translations["Hillshading by <a href='http://nasa.gov/'>NASA SRTM</a>"],
 			maxZoom: 17
 		});
 
 		this.baseLayers = {};
-		this.baseLayers[translations['mapnik']] = this.mapnik;
-		this.baseLayers[translations['mapnikGrayscale']] = this.mapnikGray;
-		this.baseLayers[translations['blank']] = this.blank;
+		this.baseLayers[translations['Mapnik']] = this.mapnik;
+		this.baseLayers[translations['Mapnik Grayscale']] = this.mapnikGray;
+		this.baseLayers[translations['No information']] = this.blank;
 
 		this.overlays = {};
-		this.overlays[translations['hillshading']] = this.hillshading;
-		this.overlays[translations['railmap']] = this.railmap;
+		this.overlays[translations['Hillshading']] = this.hillshading;
+		this.overlays['OpenRailwayMap'] = this.railmap;
 
 		var scaleLine = new L.Control.Scale({metric: true, maxWidth: 200}).addTo(this.map);
 		var layerSwitch = new L.Control.Layers(this.baseLayers, this.overlays);
