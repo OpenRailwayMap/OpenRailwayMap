@@ -83,6 +83,7 @@ noscript .uk-alert
 #mapNav
 {
 	margin-bottom: 10px;
+	height: 42px;
 }
 
 .uk-navbar-brand
@@ -157,5 +158,5 @@ noscript .uk-alert
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
-	top: 0px;
+	top: 42px;
 }
