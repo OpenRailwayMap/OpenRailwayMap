@@ -5,8 +5,8 @@ This is free software, and you are welcome to redistribute it under certain cond
 See http://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 */
 
-
-OpenRailwayMap = function(config)
+"use strict";
+var OpenRailwayMap = function(config)
 {
 	var self = this;
 
