@@ -1,7 +1,6 @@
 SHELL = /bin/sh -e
-DEP_LEAFLET_VERSION = 0.7.7
+DEP_LEAFLET_VERSION = 1.7.1
 DEP_LEAFLET_EDITOR_FILES = download/Leaflet.EditInOSM.js download/Leaflet.EditInOSM.css download/edit-in-osm.png
-DEP_LEAFLET_GRAYSCALE_VERSION = 8675605f71f856299ebdd05a635ba1494817f5ff
 
 .PHONY: check all
 
@@ -39,11 +38,6 @@ $(DEP_LEAFLET_EDITOR_FILES):
 	wget -O $@.tmp https://raw.githubusercontent.com/yohanboniface/Leaflet.EditInOSM/master/$(notdir $@)
 	mv $@.tmp $@
 
-download/TileLayer.Grayscale.js:
-	mkdir -p download
-	wget -O $@.tmp https://raw.githubusercontent.com/Zverik/leaflet-grayscale/$(DEP_LEAFLET_GRAYSCALE_VERSION)/$(notdir $@)
-	mv $@.tmp $@
-
 download-deps:	download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz \
 		$(DEP_LEAFLET_EDITOR_FILES)
 
@@ -57,7 +51,4 @@ css/Leaflet.EditInOSM.css: $(DEP_LEAFLET_EDITOR_FILES)
 	sed 's#"./edit-in-osm#"../img/edit-in-osm#' download/Leaflet.EditInOSM.css > download/Leaflet.EditInOSM.css_
 	mv download/Leaflet.EditInOSM.css_ $@
 
-js/L.TileLayer.Grayscale.js: download/TileLayer.Grayscale.js
-	cp download/TileLayer.Grayscale.js js/L.TileLayer.Grayscale.js
-
-install-deps: css/leaflet.css css/Leaflet.EditInOSM.css js/L.TileLayer.Grayscale.js
+install-deps: css/leaflet.css css/Leaflet.EditInOSM.css

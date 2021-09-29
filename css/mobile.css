@@ -148,10 +148,10 @@ noscript p
 #locateButton
 {
 	position: absolute;
-	left: 9px;
-	top: 110px;
-	width: 26px;
-	height: 26px;
+	left: 11px;
+	top: 120px;
+	width: 30px;
+	height: 30px;
 	background-color: white;
 	background-image: url('../img/locate.png');
 	background-repeat: no-repeat;
@@ -411,4 +411,9 @@ noscript p
 	margin-top: 20px;
 	margin-bottom: 20px;
 	width: 50px;
+}
+
+.leaflet-tile-pane-grayscale {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
 }
