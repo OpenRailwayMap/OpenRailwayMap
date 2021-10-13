@@ -11,9 +11,9 @@ all: $(JSFILES) $(ZIPFILES)
 %.js: %.mapcss common.mapcss
 	$(PYTHON) ../renderer/mapcss_converter.py --mapcss $^ --icons-path .
 
-%.zip: %.mapcss common.mapcss josm-import.awk
+%.zip: %.mapcss common.mapcss josm-import.py
 	echo $(shell TDIR=$$(mktemp -d); \
-		gawk -f $(CURDIR)/josm-import.awk $< > $${TDIR}/$<; \
+		$(PYTHON) $(CURDIR)/josm-import.py $< > $${TDIR}/$<; \
 		pushd $${TDIR}; \
 			zip $@ $< | sed '/^[ \t]*adding: /d'; \
 		popd; \

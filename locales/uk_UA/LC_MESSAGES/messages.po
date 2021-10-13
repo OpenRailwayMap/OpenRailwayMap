@@ -13,11 +13,12 @@ msgstr ""
 "PO-Revision-Date: 2017-09-20 04:02+0000\n"
 "Last-Translator: Alexander Matheisen <alex@matheisen.org>\n"
 "Language-Team: Ukrainian (https://www.transifex.com/rurseekatze/openrailwaymap/language/uk/)\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n"
+"%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -31,9 +32,11 @@ msgid "Javascript is not activated"
 msgstr "Javascript відключений"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on "
-"Javascript in your browser settings."
-msgstr "Javascript потрібен для відображення мапи та роботи сайту.  Увімкніть Javascript у налаштуваннях Вашого браузера."
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
+"browser settings."
+msgstr ""
+"Javascript потрібен для відображення мапи та роботи сайту.  Увімкніть Javascript у налаштуваннях "
+"Вашого браузера."
 
 msgid "Loading..."
 msgstr "Завантаження…"
@@ -89,9 +92,7 @@ msgstr "Шукати лише за поточною позицією мапи"
 msgid "HTML-Code"
 msgstr "HTML-код"
 
-msgid ""
-"Copy this HTML code snippet into your website to show a small map with a "
-"marker."
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
 msgstr "Скопіюйте цей HTML-код на свій веб-сайт, щоб показати маленьку мапу з маркером."
 
 msgid "Fullscreen"
@@ -504,7 +505,49 @@ msgstr ""
 msgid "No background map"
 msgstr ""
 
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr ""
+
+msgid "Not electrified"
+msgstr ""
+
 msgid "Deelectrified"
+msgstr ""
+
+msgid "Electrification proposed"
+msgstr ""
+
+msgid "Electrification under construction"
+msgstr ""
+
+msgid "contact line"
+msgstr ""
+
+msgid "3rd rail"
+msgstr ""
+
+msgid "Germany"
+msgstr ""
+
+msgid "Finland"
+msgstr ""
+
+msgid "train protection"
+msgstr ""
+
+msgid "no train protection"
+msgstr ""
+
+msgid "crossing signal type To"
+msgstr ""
+
+msgid "Voltage"
+msgstr ""
+
+msgid "signals"
+msgstr ""
+
+msgid "Operating Sites"
 msgstr ""
 
 msgid "No information about train protection"
@@ -519,9 +562,6 @@ msgstr ""
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
-msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
-
 msgid "1.5 – 3kV ="
 msgstr ""
 
@@ -529,12 +569,6 @@ msgid "ETCS under construction"
 msgstr ""
 
 msgid "3kV ="
-msgstr ""
-
-msgid "Germany"
-msgstr ""
-
-msgid "Not electrified"
 msgstr ""
 
 msgid "shunting signal type Ro"
@@ -570,19 +604,10 @@ msgstr ""
 msgid "minor signal type Lo"
 msgstr ""
 
-msgid "Finland"
-msgstr ""
-
 msgid "15 – 25kV ~"
 msgstr ""
 
 msgid "ETCS"
-msgstr ""
-
-msgid "Electrification under construction"
-msgstr ""
-
-msgid "no train protection"
 msgstr ""
 
 msgid "Blockkennzeichen"
@@ -600,22 +625,13 @@ msgstr ""
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
-msgid "signals"
-msgstr ""
-
 msgid "Ne 5 Haltetafel"
-msgstr ""
-
-msgid "Voltage"
 msgstr ""
 
 msgid "More than 3kV ="
 msgstr ""
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
-msgstr ""
-
-msgid "3rd rail"
 msgstr ""
 
 msgid "750 – 1000V ="
@@ -625,9 +641,6 @@ msgid "Less than 15kV ~"
 msgstr ""
 
 msgid "1kV ="
-msgstr ""
-
-msgid "crossing signal type To"
 msgstr ""
 
 msgid "1 – 1.5kV ="
@@ -666,15 +679,6 @@ msgstr ""
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
 
-msgid "Operating Sites"
-msgstr ""
-
-msgid "train protection"
-msgstr ""
-
-msgid "contact line"
-msgstr ""
-
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
@@ -685,9 +689,6 @@ msgid "25kV 60Hz ~"
 msgstr ""
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
-
-msgid "Electrification proposed"
 msgstr ""
 
 msgid "El 1v Ausschaltsignal erwarten"
@@ -768,7 +769,8 @@ msgstr ""
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
@@ -781,4 +783,7 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
+msgstr ""
+
+msgid "automatische treinbeïnvloeding"
 msgstr ""

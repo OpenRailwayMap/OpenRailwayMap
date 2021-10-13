@@ -14,10 +14,10 @@ msgstr ""
 "PO-Revision-Date: 2017-09-23 19:49+0000\n"
 "Last-Translator: Magnus Österlund\n"
 "Language-Team: Swedish (https://www.transifex.com/rurseekatze/openrailwaymap/language/sv/)\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -32,9 +32,11 @@ msgid "Javascript is not activated"
 msgstr "Javascript ej aktiverad"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on "
-"Javascript in your browser settings."
-msgstr "Javascript behövs för att visa kartan och hemsidan. Aktivera Javascript i webbläsarens inställningar."
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
+"browser settings."
+msgstr ""
+"Javascript behövs för att visa kartan och hemsidan. Aktivera Javascript i webbläsarens "
+"inställningar."
 
 msgid "Loading..."
 msgstr "Laddar..."
@@ -90,9 +92,7 @@ msgstr "Sök endast i aktuell vy"
 msgid "HTML-Code"
 msgstr "HTML-kod"
 
-msgid ""
-"Copy this HTML code snippet into your website to show a small map with a "
-"marker."
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
 msgstr "Kopiera HTML-kodsträngen i din egen hemsida för att visa en liten karta med markör."
 
 msgid "Fullscreen"
@@ -499,8 +499,50 @@ msgstr "Grenstation"
 msgid "No background map"
 msgstr "Ingen bakgrundskarta"
 
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr "%SPDMIN%-%SPDMAX% km/h (nedlagd/under uppbygnad)"
+
+msgid "Not electrified"
+msgstr "Ej elektrifierad"
+
 msgid "Deelectrified"
 msgstr "Avelektrifierad"
+
+msgid "Electrification proposed"
+msgstr "Elektrifiering föreslagen"
+
+msgid "Electrification under construction"
+msgstr "Elektrifiering pågår"
+
+msgid "contact line"
+msgstr "kontaktledning"
+
+msgid "3rd rail"
+msgstr "Strömskena"
+
+msgid "Germany"
+msgstr "Tyskland"
+
+msgid "Finland"
+msgstr "Finland"
+
+msgid "train protection"
+msgstr "tågskyddssystem"
+
+msgid "no train protection"
+msgstr "Inget tågskyddssystem"
+
+msgid "crossing signal type To"
+msgstr ""
+
+msgid "Voltage"
+msgstr "Linjespänning"
+
+msgid "signals"
+msgstr ""
+
+msgid "Operating Sites"
+msgstr "Trafikplatser"
 
 msgid "No information about train protection"
 msgstr "Ingen information om tågskyddssystem"
@@ -514,9 +556,6 @@ msgstr "Spåranvändning"
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
-msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr "%SPDMIN%-%SPDMAX% km/h (nedlagd/under uppbygnad)"
-
 msgid "1.5 – 3kV ="
 msgstr ""
 
@@ -525,12 +564,6 @@ msgstr "ETCS under utbyggnad"
 
 msgid "3kV ="
 msgstr ""
-
-msgid "Germany"
-msgstr "Tyskland"
-
-msgid "Not electrified"
-msgstr "Ej elektrifierad"
 
 msgid "shunting signal type Ro"
 msgstr ""
@@ -565,20 +598,11 @@ msgstr "Mer än 25kV ~"
 msgid "minor signal type Lo"
 msgstr ""
 
-msgid "Finland"
-msgstr "Finland"
-
 msgid "15 – 25kV ~"
 msgstr ""
 
 msgid "ETCS"
 msgstr "ETCS"
-
-msgid "Electrification under construction"
-msgstr "Elektrifiering pågår"
-
-msgid "no train protection"
-msgstr "Inget tågskyddssystem"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -595,23 +619,14 @@ msgstr ""
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
-msgid "signals"
-msgstr ""
-
 msgid "Ne 5 Haltetafel"
 msgstr ""
-
-msgid "Voltage"
-msgstr "Linjespänning"
 
 msgid "More than 3kV ="
 msgstr "Mer än 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
-
-msgid "3rd rail"
-msgstr "Strömskena"
 
 msgid "750 – 1000V ="
 msgstr ""
@@ -620,9 +635,6 @@ msgid "Less than 15kV ~"
 msgstr "Mindre än 15kV ~"
 
 msgid "1kV ="
-msgstr ""
-
-msgid "crossing signal type To"
 msgstr ""
 
 msgid "1 – 1.5kV ="
@@ -661,15 +673,6 @@ msgstr "Mindre än 750V ="
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
 
-msgid "Operating Sites"
-msgstr "Trafikplatser"
-
-msgid "train protection"
-msgstr "tågskyddssystem"
-
-msgid "contact line"
-msgstr "kontaktledning"
-
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
@@ -681,9 +684,6 @@ msgstr ""
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
-
-msgid "Electrification proposed"
-msgstr "Elektrifiering föreslagen"
 
 msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
@@ -763,7 +763,8 @@ msgstr ""
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
@@ -777,3 +778,6 @@ msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
 msgstr "Imprint &amp; personuppgifter"
+
+msgid "automatische treinbeïnvloeding"
+msgstr ""

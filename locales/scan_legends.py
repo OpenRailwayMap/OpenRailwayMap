@@ -3,6 +3,7 @@
 import fileinput
 import json
 import re
+import polib
 
 if __name__ == "__main__":
 	from optparse import OptionParser
@@ -44,32 +45,14 @@ if __name__ == "__main__":
 				else:
 					ostrings.add(x['caption'])
 
-	msgid_re = re.compile('^msgid "(.+)"$')
-
-	esc_table = str.maketrans({ '\\': r"\\",
-			'"': r"\"" })
-
 	for outf in options.output:
-		msgids = set()
+		po = polib.pofile(outf, check_for_duplicates = True)
 
-		# extract those msgid lines already present
-		with open(outf) as of:
-			line = of.readline()
-			while line:
-				m = msgid_re.match(line)
-				if m:
-					msgids.add(m.group(1))
-				line = of.readline()
+		# loop over all translatable strings
+		for i in ostrings:
+			try:
+				po.append(polib.POEntry(msgid = i))
+			except ValueError:
+				True
 
-		with open(outf, 'a') as of:
-			# loop over all translatable strings
-			for i in ostrings:
-				estr = i.translate(esc_table)
-
-				if estr in msgids:
-					continue
-
-				# and add them if they are not already in the file
-				of.write('\n')
-				of.write('msgid "' + estr + '"\n')
-				of.write('msgstr ""\n')
+		po.save(outf)
