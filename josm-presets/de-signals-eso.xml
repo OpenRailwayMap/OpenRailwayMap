@@ -1071,7 +1071,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<label de.text="Existiert nur im Gebiet der ehemaligen Bundesbahn (DS 301)."
 						text="This signal only exists in West Germany (former area of Deutsche Bundesbahn)." />
 					<label de.text="Wird als Punkt auf dem Gleis erfasst."
-						 text="Is being mapped as a node on the track." />
+						text="Is being mapped as a node on the track." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -2220,7 +2220,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<group name="Signals for Helper Engines (Ts)" de.name="Signale für Schiebelokomotiven und Sperrfahrten (Ts)">
-				<item name="Stop Banking (Ts 1)" de.name="Nachschieben einstellen (Ts 1)" type="node">
+				<item name="Stop Banking (Ts 1)" de.name="Nachschieben einstellen (Ts 1)" icon="de/ts1-32.png" type="node">
 					<label text="Stop Banking (Ts 1)" de.text="Nachschieben einstellen" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
@@ -2257,7 +2257,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.display_values="Mastbauform,Zwergsignal"
 						/>
 				</item>
-				<item name="Stop/Proceed for Returning Helper Engines (Ts 2/3)" de.name="Halt/Weiterfahrt für zurückkehrende Schieblokomotiven und Sperrfahrten (Ts 2/3)" type="node">
+				<item name="Stop/Proceed for Returning Helper Engines (Ts 2/3)" de.name="Halt/Weiterfahrt für zurückkehrende Schieblokomotiven und Sperrfahrten (Ts 2/3)" icon="de/ts3-32.png" type="node">
 					<label text="Stop/Proceed for Returning Helper Engines (Ts 2/3)" de.text="Halt/Weiterfahrt für zurückkehrende Schieblokomotiven und Sperrfahrten" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 					<space />
