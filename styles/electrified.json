@@ -8,7 +8,8 @@
 				"type": "LineString",
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
-					"railway":"rail"
+					"railway":"rail",
+					"usage":"main"
 				}
 			}],
 			"caption": "No information"
@@ -20,6 +21,7 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"usage":"main",
 					"electrified":"no"
 				}
 			}],
@@ -32,6 +34,7 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"usage":"main",
 					"electrified":"no",
 					"deelectrified":"contact_line"
 				}
@@ -45,6 +48,7 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"usage":"main",
 					"proposed:voltage":"25000",
 					"proposed:frequency":"50",
 					"proposed:electrified":"contact_line"
@@ -59,6 +63,7 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"usage":"main",
 					"construction:voltage":"25000",
 					"construction:frequency":"50",
 					"construction:electrified":"contact_line"
@@ -73,6 +78,7 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"usage":"main",
 					"voltage":"25000",
 					"frequency":"50",
 					"electrified":"contact_line"
@@ -87,6 +93,7 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"usage":"main",
 					"voltage":"25000",
 					"frequency":"50",
 					"electrified":"rail"
@@ -123,6 +130,7 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"usage":"main",
 					"voltage":"%VOLTAGE%",
 					"frequency":"%FREQUENCY%",
 					"electrified":"contact_line"
