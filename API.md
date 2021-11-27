@@ -1,10 +1,10 @@
 # OpenRailwayMap-API
 
- OpenRailwayMap as an online service has different channels from which information can be gathered. One is the [OpenRailwayMap website](https://www.openrailwaymap.org/) to visit the map, another is the [OpenRailwayMap-API](https://api.openrailwaymap.) to retrieve **INFORMATION** 
+ OpenRailwayMap as an online service has different channels from which information can be gathered. One is the [OpenRailwayMap website](https://www.openrailwaymap.org/) to visit the map, another is the [OpenRailwayMap-API](https://api.openrailwaymap.) to retrieve INFORMATION about facilities, milestone positions or the network length for different railway infrastucture operators.
 
 ## How is it programmed
 
- The API uses JavaScript to extract the information brought in the URL 
+ The API uses JavaScript to extract the information brought in the URL. Depending on the request type (MODULE in the example) it loads the module js script. For further information visit the source code on [Github](https://github.com/OpenRailwayMap/OpenRailwayMap/).
 
 ---
 
@@ -21,23 +21,23 @@
 The facility keyword returns detail of a facility (station, junction, yard, ...) by its name, UIC reference or reference and an optional operator keyword.
 
 Possible keywords are:
- - name:
- - OR uicref:
- - OR ref:
- - AND operator (optional):
+ - name: Station name
+ - uicref: international UIC reference id tagged as uic\_ref in OSM/ORM
+ - ref: station code tagged as railway:ref in OSM/ORM
+ - operator (optional):
 
-It takes the first keyword of name,uicref,ref and the operator to search the data.
-**ADD LINKS TO OSM-DOCUMENTATION FOR TAGS**
+It takes the first keyword of (name,uicref,ref) and the optional the operator to search for the data.
+
 The api returns json formatted data with following fields:
- - lat:
- - lon:
- - name:
- - uicname:
- - ref:
- - id:
- - type:
- - operator:
- - stationcategory:
+ - lat 
+ - lon
+ - name
+ - uicname
+ - ref
+ - id
+ - type: type of the facility following [Tagging rules](https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging#Operating_Sites)). 
+ - operator
+ - stationcategory
 
 e.g.:
 
@@ -51,7 +51,7 @@ If using both e.g. name and ref, the api uses the first of the keywords and igno
 
 The milestone keyword returns the position of a milestone on a line (with Tag ref) which is operated by an operator. Missing milestones are interpolated.
 
-The api is able to use both comma or point as decimal separator.
+The api is able to use both comma or point as decimal separator for the position.
 
 ---
 
