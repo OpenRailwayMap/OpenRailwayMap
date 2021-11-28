@@ -1,6 +1,6 @@
 # OpenRailwayMap-API
 
- OpenRailwayMap as an online service has different channels from which information can be gathered. One is the [OpenRailwayMap website](https://www.openrailwaymap.org/) to visit the map, another is the [OpenRailwayMap-API](https://api.openrailwaymap.) to retrieve INFORMATION about facilities, milestone positions or the network length for different railway infrastucture operators.
+ OpenRailwayMap as an online service has different channels from which information can be gathered. One is the [OpenRailwayMap website](https://www.openrailwaymap.org/) to visit the map, another is the [OpenRailwayMap-API](https://api.openrailwaymap.org) to retrieve information about facilities, positions on the network (based on milestones and other items which are tagged with a railway:position or railway:position:exact) or the network length for different railway infrastucture operators.
 
 ## How is it programmed
 
@@ -13,7 +13,7 @@
 [https://api.openrailwaymap.org/MODULE?QUERY](https://api.openrailwaymap.org/networklength)
 
  Examples: To receive information about the station Hamburg Hbf (main station) in Germany you can type:
-[https://api.openrailwaymap.org/facility?name=Hamburg Hbf](https://api.openrailwaymap.org/facility?name=Hamburg Hbf)
+[https://api.openrailwaymap.org/facility?name=Hamburg%20Hbf](https://api.openrailwaymap.org/facility?name=Hamburg%20Hbf)
 
 
 ### Facility module
@@ -49,7 +49,7 @@ If using both e.g. name and ref, the api uses the first of the keywords and igno
 
 ### Milestone module
 
-The milestone keyword returns the position of a milestone on a line (with Tag ref) which is operated by an operator. Missing milestones are interpolated.
+The milestone keyword returns the position of a milestone or other items such as signals or level crossings with a mapped position on a line (with Tag ref) which is operated by an operator. For not mapped positions the nearest milestone (or equivalent) available is shown.
 
 The api is able to use both comma or point as decimal separator for the position.
 
@@ -57,7 +57,7 @@ The api is able to use both comma or point as decimal separator for the position
 
 ### Networklength module
 
-The networklength keyword return the length of the raillway network for each railway company / infrastruscture operator. It doesnt take any keywords.
+The networklength keyword return the length of the raillway network for each railway company / infrastructure operator. It doesn't take any keywords.
 
 [https://api.openrailwaymap.org/networklength](https://api.openrailwaymap.org/networklength)
 
