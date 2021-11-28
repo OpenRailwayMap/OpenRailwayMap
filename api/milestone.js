@@ -6,7 +6,7 @@ See https://github.com/openrailwaymap/OpenRailwayMap for details.
 */
 
 
-// returns the $position of a milestone on a line $ref which is operated by an $operator, missing milestones are interpolated
+// returns the $position of a milestone or other items such as signals or level crossings with mapped position on a line $ref which is operated by an $operator, missing milestones/positions are interpolated
 Milestone = function(params)
 {
 	// check validity of params
