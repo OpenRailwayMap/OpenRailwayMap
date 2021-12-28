@@ -144,7 +144,7 @@ msgid "Maxspeeds"
 msgstr "最高速限"
 
 msgid "Electrification"
-msgstr ""
+msgstr "電氣化"
 
 msgid "Halt"
 msgstr "招呼站"
@@ -168,7 +168,7 @@ msgid "Service station"
 msgstr "服務車站"
 
 msgid "Subway/Light rail station"
-msgstr ""
+msgstr "地鐵/輕軌站"
 
 msgid "Tram stop"
 msgstr "電車站"
@@ -177,7 +177,7 @@ msgid "Milestone"
 msgstr "里程"
 
 msgid "Signal"
-msgstr ""
+msgstr "號誌"
 
 msgid "Level crossing"
 msgstr "平交道"
@@ -432,118 +432,118 @@ msgid "Blog"
 msgstr "部落格"
 
 msgid "No information"
-msgstr ""
+msgstr "無信息"
 
 msgid "speed only given for one direction"
-msgstr ""
+msgstr "速度僅在一個方向給出"
 
 msgid "main track, service track"
-msgstr ""
+msgstr "主軌道，服務軌道"
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "快速搜尋快捷鍵"
 
 msgid "Placeholder"
-msgstr ""
+msgstr "佔位符"
 
 msgid "Donate"
-msgstr ""
+msgstr "捐贈"
 
 msgid "Tools"
-msgstr ""
+msgstr "工具"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Wiki"
 
 msgid "Search milestone"
-msgstr ""
+msgstr "搜尋里程碑"
 
 msgid "Station code"
-msgstr ""
+msgstr "車站代碼"
 
 msgid "Search station"
-msgstr ""
+msgstr "搜尋車站"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "國際鐵路聯盟參考"
 
 msgid "About this project"
-msgstr ""
+msgstr "關於此項目"
 
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 msgid "Name"
-msgstr ""
+msgstr "名稱"
 
 msgid "Line operator"
-msgstr ""
+msgstr "線路運營者"
 
 msgid "Operator"
-msgstr ""
+msgstr "運營者"
 
 msgid "More results"
-msgstr ""
+msgstr "更多結果"
 
 msgid "Spur junction"
-msgstr ""
+msgstr "專用線道岔"
 
 msgid "No background map"
-msgstr ""
+msgstr "無背景地圖"
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h (廢棄/建設中)"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "未電氣化"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "去電氣化"
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "擬電氣化"
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "電氣化建設中"
 
 msgid "contact line"
-msgstr ""
+msgstr "接觸網"
 
 msgid "3rd rail"
-msgstr ""
+msgstr "第三軌"
 
 msgid "Germany"
-msgstr ""
+msgstr "德國"
 
 msgid "Finland"
-msgstr ""
+msgstr "芬蘭"
 
 msgid "train protection"
-msgstr ""
+msgstr "列車防護"
 
 msgid "no train protection"
-msgstr ""
+msgstr "無列車防護"
 
 msgid "crossing signal type To"
-msgstr ""
+msgstr "交叉號誌類型 To"
 
 msgid "Voltage"
-msgstr ""
+msgstr "電壓"
 
 msgid "signals"
-msgstr ""
+msgstr "號誌"
 
 msgid "Operating Sites"
-msgstr ""
+msgstr "作業場所"
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "無信息關於列車防護"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "Track usage"
-msgstr ""
+msgstr "軌道用途"
 
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
@@ -552,16 +552,16 @@ msgid "1.5 – 3kV ="
 msgstr ""
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "歐洲列車控制系統建設中"
 
 msgid "3kV ="
 msgstr ""
 
 msgid "shunting signal type Ro"
-msgstr ""
+msgstr "分流號誌類型 Ro"
 
 msgid "Track type"
-msgstr ""
+msgstr "軌道類型"
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
@@ -579,22 +579,22 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "道岔，交叉，服務車站，站點"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "至少 25kV ~"
 
 msgid "minor signal type Lo"
-msgstr ""
+msgstr "次要號誌類型 Lo"
 
 msgid "15 – 25kV ~"
 msgstr ""
 
 msgid "ETCS"
-msgstr ""
+msgstr "歐洲列車控制系統"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -615,7 +615,7 @@ msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "More than 3kV ="
-msgstr ""
+msgstr "高於 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
@@ -623,8 +623,8 @@ msgstr ""
 msgid "750 – 1000V ="
 msgstr ""
 
-msgid "Less than 15kV ~"
-msgstr ""
+msgid "Less than 15kV ~"
+msgstr "低於 15kV ~"
 
 msgid "1kV ="
 msgstr ""
@@ -633,7 +633,7 @@ msgid "1 – 1.5kV ="
 msgstr ""
 
 msgid "block signal type So"
-msgstr ""
+msgstr "禁止號誌類型 So"
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
 msgstr ""
@@ -660,7 +660,7 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "低於 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
@@ -769,7 +769,7 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr ""
+msgstr "作者信息 &amp; 隱私政策"
 
 msgid "automatische treinbeïnvloeding"
 msgstr ""
