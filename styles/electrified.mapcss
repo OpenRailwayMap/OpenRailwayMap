@@ -450,3 +450,17 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 	icon-height: 18;
 	allow-overlap: true;
 }
+
+/***********************************************************************/
+/* DE end of catenary sign El 6 + arrow through                        */
+/* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer + arrow through */
+/***********************************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"="through"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"="through"]
+{
+	z-index: 450;
+	icon-image: "icons/de/el6-through-18.png";
+	icon-width: 14;
+	icon-height: 18;
+	allow-overlap: true;
+}
