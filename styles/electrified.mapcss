@@ -450,6 +450,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 	icon-height: 18;
 	allow-overlap: true;
 }
+
 /***********************************************************************/
 /* DE end of catenary sign El 6 + arrow through                        */
 /* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer + arrow through */
@@ -463,4 +464,3 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 	icon-height: 18;
 	allow-overlap: true;
 }
-
