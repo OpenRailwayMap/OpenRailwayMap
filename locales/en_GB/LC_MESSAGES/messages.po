@@ -13,10 +13,10 @@ msgstr ""
 "PO-Revision-Date: 2017-09-19 19:36+0000\n"
 "Last-Translator: Daniel Brvnistan <daniel.brvnistan@gmail.com>\n"
 "Language-Team: English (https://www.transifex.com/rurseekatze/openrailwaymap/language/en/)\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -31,9 +31,11 @@ msgid "Javascript is not activated"
 msgstr "Javascript is not activated"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on "
-"Javascript in your browser settings."
-msgstr "Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings."
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
+"browser settings."
+msgstr ""
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
+"browser settings."
 
 msgid "Loading..."
 msgstr "Loading..."
@@ -89,9 +91,7 @@ msgstr "Search only in the current map view"
 msgid "HTML-Code"
 msgstr "HTML-Code"
 
-msgid ""
-"Copy this HTML code snippet into your website to show a small map with a "
-"marker."
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
 msgstr "Copy this HTML code snippet into your website to show a small map with a marker."
 
 msgid "Fullscreen"
@@ -498,8 +498,50 @@ msgstr "Spur junction"
 msgid "No background map"
 msgstr "No background map"
 
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+
+msgid "Not electrified"
+msgstr "Not electrified"
+
 msgid "Deelectrified"
 msgstr "De-electrified"
+
+msgid "Electrification proposed"
+msgstr "Electrification proposed"
+
+msgid "Electrification under construction"
+msgstr "Electrification under construction"
+
+msgid "contact line"
+msgstr "Overhead line"
+
+msgid "3rd rail"
+msgstr "3rd rail"
+
+msgid "Germany"
+msgstr "Germany"
+
+msgid "Finland"
+msgstr "Finland"
+
+msgid "train protection"
+msgstr "Train protection"
+
+msgid "no train protection"
+msgstr "No train protection"
+
+msgid "crossing signal type To"
+msgstr "Crossing signal type To"
+
+msgid "Voltage"
+msgstr "Voltage"
+
+msgid "signals"
+msgstr "Signals"
+
+msgid "Operating Sites"
+msgstr "Operating Sites"
 
 msgid "No information about train protection"
 msgstr "No information about train protection"
@@ -513,9 +555,6 @@ msgstr "Track usage"
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
-msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-
 msgid "1.5 – 3kV ="
 msgstr "1.5 – 3kV ="
 
@@ -524,12 +563,6 @@ msgstr "ETCS under construction"
 
 msgid "3kV ="
 msgstr "3kV ="
-
-msgid "Germany"
-msgstr "Germany"
-
-msgid "Not electrified"
-msgstr "Not electrified"
 
 msgid "shunting signal type Ro"
 msgstr "Shunting signal type Ro"
@@ -564,20 +597,11 @@ msgstr "At least 25kV ~"
 msgid "minor signal type Lo"
 msgstr "Minor signal type Lo"
 
-msgid "Finland"
-msgstr "Finland"
-
 msgid "15 – 25kV ~"
 msgstr "15 – 25kV ~"
 
 msgid "ETCS"
 msgstr "ETCS"
-
-msgid "Electrification under construction"
-msgstr "Electrification under construction"
-
-msgid "no train protection"
-msgstr "No train protection"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -594,23 +618,14 @@ msgstr "15kV 16⅔Hz ~"
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
-msgid "signals"
-msgstr "Signals"
-
 msgid "Ne 5 Haltetafel"
 msgstr ""
-
-msgid "Voltage"
-msgstr "Voltage"
 
 msgid "More than 3kV ="
 msgstr "More than 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
-
-msgid "3rd rail"
-msgstr "3rd rail"
 
 msgid "750 – 1000V ="
 msgstr "750 – 1000V ="
@@ -620,9 +635,6 @@ msgstr "Less than 15kV ~"
 
 msgid "1kV ="
 msgstr "1kV ="
-
-msgid "crossing signal type To"
-msgstr "Crossing signal type To"
 
 msgid "1 – 1.5kV ="
 msgstr "1 – 1.5kV ="
@@ -660,15 +672,6 @@ msgstr "Less than 750V ="
 msgid "Punktförmige Zugbeeinflussung"
 msgstr "PZB"
 
-msgid "Operating Sites"
-msgstr "Operating Sites"
-
-msgid "train protection"
-msgstr "Train protection"
-
-msgid "contact line"
-msgstr "Overhead line"
-
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
@@ -680,9 +683,6 @@ msgstr "25kV 60Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
-
-msgid "Electrification proposed"
-msgstr "Electrification proposed"
 
 msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
@@ -762,7 +762,8 @@ msgstr ""
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
@@ -777,8 +778,11 @@ msgstr ""
 msgid "Imprint &amp; Privacy Policy"
 msgstr "Imprint &amp; Privacy Policy"
 
-msgid "Contrôle de vitesse par balises (KVB)"
+msgid "automatische treinbeïnvloeding"
 msgstr ""
 
 msgid "Transmission voie-machine (TVM)"
+msgstr ""
+
+msgid "Contrôle de vitesse par balises (KVB)"
 msgstr ""

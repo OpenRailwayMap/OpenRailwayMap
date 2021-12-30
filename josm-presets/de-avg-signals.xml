@@ -54,7 +54,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="light" />
 			<combo key="railway:signal:main:height"
 				text="Signal height"
-				de.text="Signalbauform"
+				de.text="Signalbauhöhe"
 				values="normal,dwarf"
 				display_values="Mastbauform,Zwergsignal"
 				/>
@@ -182,7 +182,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="light" />
 			<combo key="railway:signal:main:height"
 				text="Signal height"
-				de.text="Signalbauform"
+				de.text="Signalbauhöhe"
 				values="normal,dwarf"
 				display_values="Mastbauform,Zwergsignal"
 				/>
@@ -231,7 +231,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 			<combo key="railway:signal:switch:height"
 				text="Signal height"
-				de.text="Signalbauform"
+				de.text="Signalbauhöhe"
 				values="normal,dwarf"
 				display_values="Mastbauform,Zwergsignal"
 				/>
@@ -263,7 +263,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="DE-AVG:wv0;DE-AVG:wv1" />
 			<combo key="railway:signal:switch:height"
 				text="Signal height"
-				de.text="Signalbauform"
+				de.text="Signalbauhöhe"
 				values="normal,dwarf"
 				display_values="Mastbauform,Zwergsignal"
 				/>
@@ -296,7 +296,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 			<combo key="railway:signal:electricity:height"
 				text="Signal height"
-				de.text="Signalbauform"
+				de.text="Signalbauhöhe"
 				values="normal,dwarf"
 				display_values="Mastbauform,Zwergsignal"
 				/>

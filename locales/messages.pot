@@ -4,584 +4,563 @@
 # See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
-# diverpl <mkubien@gmail.com>, 2014
-# endro <sigg@10g.pl>, 2014
-# Grzegorz Szymaszek <gszymaszek@short.pl>, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2021-04-21 10:54+0200\n"
-"Last-Translator: Grzegorz Szymaszek <gszymaszek@short.pl>\n"
-"Language-Team: Polish (https://www.transifex.com/rurseekatze/openrailwaymap/language/pl/)\n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : "
-"n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
-msgstr "Więcej informacji"
+msgstr ""
 
 msgid "Contact"
-msgstr "Kontakt"
+msgstr ""
 
 msgid "Javascript is not activated"
-msgstr "Javascript jest wyłączony"
+msgstr ""
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
-"browser settings."
+"Javascript is needed to show the map and run this website. Please turn on "
+"Javascript in your browser settings."
 msgstr ""
-" Aby wyświetlić mapę i uruchomić stronę potrzebny jest JavaScript. Proszę go włączyć "
-"w ustawieniach przeglądarki."
 
 msgid "Loading..."
-msgstr "Ładowanie…"
+msgstr ""
 
 msgid "Nothing found."
-msgstr "Nic nie znaleziono."
+msgstr ""
 
 msgid "Last update"
-msgstr "Ostatnia aktualizacja"
+msgstr ""
 
 msgid "Empty input."
-msgstr "Puste pole."
+msgstr ""
 
 msgid "Kilometer"
-msgstr "Kilometr"
+msgstr ""
 
 msgid "Track"
-msgstr "Tor"
+msgstr ""
 
 msgid "Permalink"
-msgstr "Permalink"
+msgstr ""
 
 msgid "Hillshading"
-msgstr "Cieniowanie"
+msgstr ""
 
 msgid "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
-msgstr "Cieniowanie dzięki <a href='https://www.nasa.gov/'>NASA SRTM</a>"
+msgstr ""
 
 msgid "Rendering: OpenRailwayMap"
-msgstr "Renderowanie: OpenRailwayMap"
+msgstr ""
 
 msgid "Mapnik"
-msgstr "Mapnik"
+msgstr ""
 
 msgid "Mapnik Grayscale"
-msgstr "Mapnik (szary)"
+msgstr ""
 
 msgid "Map data &copy; OpenStreetMap contributors"
-msgstr "Dane mapy &copy; autorzy OpenStreetMap"
+msgstr ""
 
 msgid "Select a map style"
-msgstr "Wybierz styl mapy"
+msgstr ""
 
 msgid "Public transport"
-msgstr "Transport publiczny"
+msgstr ""
 
 msgid "Search results"
-msgstr "Wyniki wyszukiwania"
+msgstr ""
 
 msgid "Search only in the current map view"
-msgstr "Szukaj tylko w obecnym widoku mapy"
+msgstr ""
 
 msgid "HTML-Code"
-msgstr "Kod HTML"
+msgstr ""
 
-msgid "Copy this HTML code snippet into your website to show a small map with a marker."
-msgstr "Skopiuj ten fragment kodu HTML na swoją stronę, by pokazać małą mapę ze znacznikiem."
+msgid ""
+"Copy this HTML code snippet into your website to show a small map with a "
+"marker."
+msgstr ""
 
 msgid "Fullscreen"
-msgstr "Pełny ekran"
+msgstr ""
 
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekunda"
-msgstr[1] "%d sekundy"
-msgstr[2] "%d sekund"
-msgstr[3] "%d sekund"
+msgstr[0] ""
+msgstr[1] ""
 
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d minuta"
-msgstr[1] "%d minuty"
-msgstr[2] "%d minut"
-msgstr[3] "%d minut"
+msgstr[0] ""
+msgstr[1] ""
 
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d godzina"
-msgstr[1] "%d godziny"
-msgstr[2] "%d godzin"
-msgstr[3] "%d godzin"
+msgstr[0] ""
+msgstr[1] ""
 
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] "%d dzień"
-msgstr[1] "%d dni"
-msgstr[2] "%d dni"
-msgstr[3] "%d dni"
+msgstr[0] ""
+msgstr[1] ""
 
 #, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] "%d tydzień"
-msgstr[1] "%d tygodnie"
-msgstr[2] "%d tygodni"
-msgstr[3] "%d tygodni"
+msgstr[0] ""
+msgstr[1] ""
 
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] "%d miesiąc"
-msgstr[1] "%d miesiące"
-msgstr[2] "%d miesięcy"
+msgstr[0] ""
+msgstr[1] ""
 
 #, php-format
 msgid "more than %s ago"
-msgstr "ponad %s temu"
+msgstr ""
 
 #, php-format
 msgid "%s ago"
-msgstr "%s temu"
+msgstr ""
 
 msgid "Infrastructure"
-msgstr "Infrastruktura"
+msgstr ""
 
 msgid "Signalling"
-msgstr "Sygnalizacja"
+msgstr ""
 
 msgid "Maxspeeds"
-msgstr "Maksymalne prędkości"
+msgstr ""
 
 msgid "Electrification"
-msgstr "Elektryfikacja"
+msgstr ""
 
 msgid "Halt"
-msgstr "Przystanek"
+msgstr ""
 
 msgid "Station"
-msgstr "Stacja"
+msgstr ""
 
 msgid "Junction"
-msgstr "Posterunek odgałęźny"
+msgstr ""
 
 msgid "Yard"
-msgstr "Stacja rozrządowa"
+msgstr ""
 
 msgid "Crossover"
-msgstr "Posterunek odstępowy/osłonny"
+msgstr ""
 
 msgid "Site"
-msgstr "Posterunek"
+msgstr ""
 
 msgid "Service station"
-msgstr "Posterunek techniczny"
+msgstr ""
 
 msgid "Subway/Light rail station"
-msgstr "Stacja metra lub szybkiego tramwaju"
+msgstr ""
 
 msgid "Tram stop"
-msgstr "Przystanek tramwajowy"
+msgstr ""
 
 msgid "Milestone"
-msgstr "Słupek hektometrowy"
+msgstr ""
 
 msgid "Signal"
-msgstr "Sygnał"
+msgstr ""
 
 msgid "Level crossing"
-msgstr "Przejazd kolejowy"
+msgstr ""
 
 msgid "Crossing"
-msgstr "Przejście przez tory"
+msgstr ""
 
 msgid "Legend"
-msgstr "Legenda"
+msgstr ""
 
 msgid "Bridge"
-msgstr "Most"
+msgstr ""
 
 msgid "Tunnel"
-msgstr "Tunel"
+msgstr ""
 
 msgid "Line ref"
-msgstr "Numer toru"
+msgstr ""
 
 msgid "Railroad line"
-msgstr "Linia kolejowa"
+msgstr ""
 
 msgid "Siding"
-msgstr "Tor dodatkowy"
+msgstr ""
 
 msgid "Yard track"
-msgstr "Tor rozrządowy"
+msgstr ""
 
 msgid "Spur"
-msgstr "Bocznica"
+msgstr ""
 
 msgid "Crossover track"
-msgstr "Łącznik między torami"
+msgstr ""
 
 msgid "Branch line"
-msgstr "Linia drugorzędna"
+msgstr ""
 
 msgid "Main line"
-msgstr "Linia główna"
+msgstr ""
 
 msgid "Highspeed line"
-msgstr "Linia dużej prędkości"
+msgstr ""
 
 msgid "Industrial line"
-msgstr "Linia przemysłowa"
+msgstr ""
 
 msgid "Industrial service track"
-msgstr "Tor przemysłowy"
+msgstr ""
 
 msgid "Preserved track"
-msgstr "Zachowana linia historyczna"
+msgstr ""
 
 msgid "Preserved service track"
-msgstr "Zachowany tor historyczny"
+msgstr ""
 
 msgid "Track under construction"
-msgstr "Tor w budowie"
+msgstr ""
 
 msgid "Proposed track"
-msgstr "Tor proponowany"
+msgstr ""
 
 msgid "Disused track"
-msgstr "Tor nieużywany"
+msgstr ""
 
 msgid "Abandoned track"
-msgstr "Tor porzucony"
+msgstr ""
 
 msgid "Razed track"
-msgstr "Tor rozebrany"
+msgstr ""
 
 msgid "Tram"
-msgstr "Tramwaj"
+msgstr ""
 
 msgid "Subway"
-msgstr "Metro"
+msgstr ""
 
 msgid "Light rail"
-msgstr "Szybki tramwaj"
+msgstr ""
 
 msgid "Narrow gauge track"
-msgstr "Wąski tor"
+msgstr ""
 
 msgid "Switch (remote-controlled)"
-msgstr "Rozjazd (zdalnie sterowany)"
+msgstr ""
 
 msgid "Switch (local operated)"
-msgstr "Rozjazd (ręczny)"
+msgstr ""
 
 msgid "Resetting switch"
-msgstr "Rozjazd samopowrotny"
+msgstr ""
 
 msgid "Signal box"
-msgstr "Nastawnia"
+msgstr ""
 
 msgid "Owner change"
-msgstr "Zmiana zarządcy"
+msgstr ""
 
 msgid "Railway crossing"
-msgstr "Skrzyżowanie torów"
+msgstr ""
 
 msgid "Buffer stop"
-msgstr "Kozioł oporowy"
+msgstr ""
 
 msgid "Isolated track section"
-msgstr "Izolowana sekcja toru"
+msgstr ""
 
 msgid "Platform"
-msgstr "Peron"
+msgstr ""
 
 msgid "Vending machine"
-msgstr "Automat sprzedający"
+msgstr ""
 
 msgid "Ticket shop"
-msgstr "Kasa biletowa"
+msgstr ""
 
 msgid "Subway entrance"
-msgstr "Wejście do metra"
+msgstr ""
 
 msgid "Phone"
-msgstr "Telefon"
+msgstr ""
 
 msgid "Water tower"
-msgstr "Wieża wodna"
+msgstr ""
 
 msgid "Fuel"
-msgstr "Paliwo"
+msgstr ""
 
 msgid "Water crane"
-msgstr "Żuraw wodny"
+msgstr ""
 
 msgid "Coaling facility"
-msgstr "Nawęglarka"
+msgstr ""
 
 msgid "Wash"
-msgstr "Myjnia"
+msgstr ""
 
 msgid "Pit"
-msgstr "Kanał"
+msgstr ""
 
 msgid "Loading gauge"
-msgstr "Skrajnia kolejowa"
+msgstr ""
 
 msgid "Hump yard"
-msgstr "Stacja rozrządowa z górką"
+msgstr ""
 
 msgid "Rail brake"
-msgstr "Hamulec kolejowy"
+msgstr ""
 
 msgid "Engine shed"
-msgstr "Lokomotywownia"
+msgstr ""
 
 msgid "Workshop"
-msgstr "Warsztat"
+msgstr ""
 
 msgid "Radio tower"
-msgstr "Wieża radiowa"
+msgstr ""
 
 msgid "Turntable"
-msgstr "Obrotnica"
+msgstr ""
 
 msgid "Traverser"
-msgstr "Przesuwnica"
+msgstr ""
 
 msgid "Loading ramp"
-msgstr "Rampa załadunkowa"
+msgstr ""
 
 msgid "Crane"
-msgstr "Żuraw"
+msgstr ""
 
 msgid "Track scale"
-msgstr "Waga samochodowa"
+msgstr ""
 
 msgid "Carrier truck pit"
-msgstr "Wózek załadunkowy"
+msgstr ""
 
 msgid "Gauge conversion"
-msgstr "Zmiana rozstawu"
+msgstr ""
 
 msgid "Gate"
-msgstr "Brama"
+msgstr ""
 
 msgid "Museum"
-msgstr "Muzeum"
+msgstr ""
 
 msgid "Container terminal"
-msgstr "Terminal kontenerowy"
+msgstr ""
 
 msgid "Station building"
-msgstr "Budynek dworca"
+msgstr ""
 
 msgid "Factory connected to railroad line"
-msgstr "Zakład podłączony do linii kolejowej"
+msgstr ""
 
 msgid "Rack"
-msgstr "Kolej zębata"
+msgstr ""
 
 msgid "Embankment"
-msgstr "Nasyp"
+msgstr ""
 
 msgid "Cutting"
-msgstr "Wykop"
+msgstr ""
 
 msgid "Miniature railway"
-msgstr "Kolej miniaturowa"
+msgstr ""
 
 msgid "Funicular"
-msgstr "Funikular"
+msgstr ""
 
 msgid "Military line"
-msgstr "Linia wojskowa"
+msgstr ""
 
 msgid "Military service track"
-msgstr "Tor wojskowy"
+msgstr ""
 
 msgid "Ferry terminal"
-msgstr "Terminal promowy"
+msgstr ""
 
 msgid "Ferry"
-msgstr "Prom"
+msgstr ""
 
 msgid "Test line"
-msgstr "Linia testowa"
+msgstr ""
 
 msgid "Test service track"
-msgstr "Tor testowy"
+msgstr ""
 
 msgid "Car shuttle"
-msgstr "Przewóz samochodów"
+msgstr ""
 
 msgid "Rolling highway"
-msgstr "Rollende Landstraße (RoLa)"
+msgstr ""
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr "Brak danych do wyświetlenia na tym poziomie. Proszę przybliżyć."
+msgstr ""
 
 msgid "Legend not available for this style."
-msgstr "Legenda nie jest dostępna dla tego stylu."
+msgstr ""
 
 msgid "Language"
-msgstr "Język"
+msgstr ""
 
 msgid "Desktop version"
-msgstr "Wersja desktopowa"
+msgstr ""
 
 msgid "Style"
-msgstr "Styl"
+msgstr ""
 
 msgid "Search"
-msgstr "Szukaj"
+msgstr ""
 
 msgid "Blog"
-msgstr "Blog"
+msgstr ""
 
 msgid "No information"
-msgstr "Brak informacji"
+msgstr ""
 
 msgid "speed only given for one direction"
-msgstr "prędkość określona tylko dla jednego kierunku"
+msgstr ""
 
 msgid "main track, service track"
-msgstr "tor główny, tor dodatkowy"
+msgstr ""
 
 msgid "Quick search shortcut"
-msgstr "Skrót szybkiego szukania"
+msgstr ""
 
 msgid "Placeholder"
 msgstr ""
 
 msgid "Donate"
-msgstr "Wspieraj"
+msgstr ""
 
 msgid "Tools"
-msgstr "Narzędzia"
+msgstr ""
 
 msgid "Wiki"
-msgstr "Wiki"
+msgstr ""
 
 msgid "Search milestone"
 msgstr ""
 
 msgid "Station code"
-msgstr "Kod stacji"
+msgstr ""
 
 msgid "Search station"
-msgstr "Szukaj stacji"
+msgstr ""
 
 msgid "UIC reference"
-msgstr "Identyfikator UIC"
+msgstr ""
 
 msgid "About this project"
-msgstr "O projekcie"
+msgstr ""
 
 msgid "Close"
-msgstr "Zamknij"
+msgstr ""
 
 msgid "Name"
-msgstr "Nazwa"
+msgstr ""
 
 msgid "Line operator"
-msgstr "Operator linii"
+msgstr ""
 
 msgid "Operator"
-msgstr "Operator"
+msgstr ""
 
 msgid "More results"
-msgstr "Więcej wyników"
+msgstr ""
 
 msgid "Spur junction"
 msgstr ""
 
 msgid "No background map"
-msgstr "Bez mapy w tle"
+msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr "%SPDMIN%–%SPDMAX% km/h (nieużywany/w budowie)"
+msgstr ""
 
 msgid "Not electrified"
-msgstr "Niezelektryfikowany"
+msgstr ""
 
 msgid "Deelectrified"
-msgstr "Zdeelektryfikowana"
+msgstr ""
 
 msgid "Electrification proposed"
-msgstr "Elektryfikacja proponowana"
+msgstr ""
 
 msgid "Electrification under construction"
-msgstr "W trakcie elektryfikacji"
+msgstr ""
 
 msgid "contact line"
-msgstr "sieć trakcyjna"
+msgstr ""
 
 msgid "3rd rail"
-msgstr "trzecia szyna"
+msgstr ""
 
 msgid "Germany"
-msgstr "Niemcy"
+msgstr ""
 
 msgid "Finland"
-msgstr "Finlandia"
+msgstr ""
 
 msgid "train protection"
-msgstr "system zabezpieczenia ruchu kolejowego"
+msgstr ""
 
 msgid "no train protection"
-msgstr "brak systemów zabezpieczenia ruchu kolejowego"
+msgstr ""
 
 msgid "crossing signal type To"
 msgstr ""
 
 msgid "Voltage"
-msgstr "Napięcie"
+msgstr ""
 
 msgid "signals"
-msgstr "sygnały"
+msgstr ""
 
 msgid "Operating Sites"
-msgstr "Posterunki ruchu"
+msgstr ""
 
 msgid "No information about train protection"
-msgstr "Brak informacji o systemach zabezpieczenia ruchu kolejowego"
+msgstr ""
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "Track usage"
-msgstr "Użycie toru"
+msgstr ""
 
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
 msgid "1.5 – 3kV ="
-msgstr "1,5–3 kV ="
+msgstr ""
 
 msgid "ETCS under construction"
 msgstr ""
 
 msgid "3kV ="
-msgstr "3 kV ="
+msgstr ""
 
 msgid "shunting signal type Ro"
 msgstr ""
 
 msgid "Track type"
-msgstr "Typ toru"
+msgstr ""
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
@@ -590,7 +569,7 @@ msgid "Linienzugbeeinflussung"
 msgstr ""
 
 msgid "25kV 50Hz ~"
-msgstr "25 kV 50 Hz ~"
+msgstr ""
 
 msgid "So 106 Kreuztafel"
 msgstr ""
@@ -599,22 +578,22 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr "Posterunek odgałęźny, odstępowy, osłonny, techniczny"
+msgstr ""
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr "Przynajmniej 25 kV ~"
+msgstr ""
 
 msgid "minor signal type Lo"
 msgstr ""
 
 msgid "15 – 25kV ~"
-msgstr "15–25 kV ~"
+msgstr ""
 
 msgid "ETCS"
-msgstr "ETCS"
+msgstr ""
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -626,40 +605,41 @@ msgid "Ne 1 Trapeztafel"
 msgstr ""
 
 msgid "15kV 16⅔Hz ~"
-msgstr "15 kV 16⅔ Hz ~"
+msgstr ""
 
-msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
+msgid ""
+"Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
 msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "More than 3kV ="
-msgstr "Powyżej 3 kV ="
+msgstr ""
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
 msgid "750 – 1000V ="
-msgstr "750–1000 V ="
+msgstr ""
 
 msgid "Less than 15kV ~"
-msgstr "Poniżej 15 kV ~"
+msgstr ""
 
 msgid "1kV ="
-msgstr "1 kV ="
+msgstr ""
 
 msgid "1 – 1.5kV ="
-msgstr "1–1,5 kV ="
+msgstr ""
 
 msgid "block signal type So"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr "%SPDMIN%–%SPDMAX% km/h"
+msgstr ""
 
 msgid "1.5kV ="
-msgstr "1,5 kV ="
+msgstr ""
 
 msgid "El 2 Einschaltsignal"
 msgstr ""
@@ -680,7 +660,7 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr "Poniżej 750 v ="
+msgstr ""
 
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
@@ -689,10 +669,10 @@ msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
 msgid "750V ="
-msgstr "750 V ="
+msgstr ""
 
 msgid "25kV 60Hz ~"
-msgstr "25 kV 60 Hz ~"
+msgstr ""
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
@@ -701,7 +681,7 @@ msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
 
 msgid "15kV 16.7Hz ~"
-msgstr "15 kV 16,7 Hz ~"
+msgstr ""
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 msgstr ""
@@ -718,7 +698,8 @@ msgstr ""
 msgid "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
@@ -760,7 +741,8 @@ msgstr ""
 msgid "distant signal with Eo 1 (new type, old type)"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
@@ -776,7 +758,8 @@ msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
 msgid ""
-"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, "
+"Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
@@ -789,7 +772,7 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr "Informacje prawne &amp; Polityka prywatności"
+msgstr ""
 
 msgid "automatische treinbeïnvloeding"
 msgstr ""

@@ -16,12 +16,14 @@ msgstr ""
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
 "PO-Revision-Date: 2020-03-09 16:16+0400\n"
 "Last-Translator: freeExec <freeExec@mail.ru>\n"
-"Language-Team: Russian (Russia) (https://www.transifex.com/rurseekatze/openrailwaymap/language/ru_RU/)\n"
+"Language-Team: Russian (Russia) (https://www.transifex.com/rurseekatze/openrailwaymap/language/"
+"ru_RU/)\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n"
+"%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Generator: Poedit 2.3\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -35,9 +37,11 @@ msgid "Javascript is not activated"
 msgstr "Javascript не активирован"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on "
-"Javascript in your browser settings."
-msgstr "Javascript необходим для показа карты и работы веб-сайта. Пожалуйста включите Javascript в настройках вашего браузера."
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
+"browser settings."
+msgstr ""
+"Javascript необходим для показа карты и работы веб-сайта. Пожалуйста включите Javascript в "
+"настройках вашего браузера."
 
 msgid "Loading..."
 msgstr "Загрузка…"
@@ -93,10 +97,10 @@ msgstr "Поиск только в текущем виде карты"
 msgid "HTML-Code"
 msgstr "HTML код"
 
-msgid ""
-"Copy this HTML code snippet into your website to show a small map with a "
-"marker."
-msgstr "Скопируйте данный фрагмент HTML кода на свою страницу, что бы отобразить маленькую карту с отметкой."
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
+msgstr ""
+"Скопируйте данный фрагмент HTML кода на свою страницу, что бы отобразить маленькую карту с "
+"отметкой."
 
 msgid "Fullscreen"
 msgstr "Полный экран"
@@ -514,8 +518,50 @@ msgstr "Ответвляющийся узел"
 msgid "No background map"
 msgstr "Нет подложки карты"
 
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr "%SPDMIN%-%SPDMAX% км/ч (не используется/строительство)"
+
+msgid "Not electrified"
+msgstr "Не электрифицирован"
+
 msgid "Deelectrified"
 msgstr "Деэлектрифицированный"
+
+msgid "Electrification proposed"
+msgstr "Электрификация предложена"
+
+msgid "Electrification under construction"
+msgstr "Строительлство электрификации"
+
+msgid "contact line"
+msgstr "конттактная линия"
+
+msgid "3rd rail"
+msgstr "3-и пути"
+
+msgid "Germany"
+msgstr "Германия"
+
+msgid "Finland"
+msgstr "Финляндия"
+
+msgid "train protection"
+msgstr "локомотивная безопастность"
+
+msgid "no train protection"
+msgstr "нет локомотивной безопасности"
+
+msgid "crossing signal type To"
+msgstr "стрелочные сигналы типа Lo"
+
+msgid "Voltage"
+msgstr "Напряжение"
+
+msgid "signals"
+msgstr "сигналы"
+
+msgid "Operating Sites"
+msgstr "Эксплуатационные участки"
 
 msgid "No information about train protection"
 msgstr "Нет информации о локомотивной безопасности"
@@ -529,9 +575,6 @@ msgstr "Назначение пути"
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
-msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr "%SPDMIN%-%SPDMAX% км/ч (не используется/строительство)"
-
 msgid "1.5 – 3kV ="
 msgstr "1.5 – 3кВ ="
 
@@ -540,12 +583,6 @@ msgstr "ETCS строительство"
 
 msgid "3kV ="
 msgstr "3кВ ="
-
-msgid "Germany"
-msgstr "Германия"
-
-msgid "Not electrified"
-msgstr "Не электрифицирован"
 
 msgid "shunting signal type Ro"
 msgstr "маневровый сигнал типа Ro"
@@ -580,20 +617,11 @@ msgstr "По крайней мере 25кВ ~"
 msgid "minor signal type Lo"
 msgstr "нижнии сигналы типа Lo"
 
-msgid "Finland"
-msgstr "Финляндия"
-
 msgid "15 – 25kV ~"
 msgstr "15 – 25кВ ~"
 
 msgid "ETCS"
 msgstr ""
-
-msgid "Electrification under construction"
-msgstr "Строительлство электрификации"
-
-msgid "no train protection"
-msgstr "нет локомотивной безопасности"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -610,23 +638,14 @@ msgstr "15кВ 16⅔Гц ~"
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
-msgid "signals"
-msgstr "сигналы"
-
 msgid "Ne 5 Haltetafel"
 msgstr ""
-
-msgid "Voltage"
-msgstr "Напряжение"
 
 msgid "More than 3kV ="
 msgstr "Более 3кВ ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
-
-msgid "3rd rail"
-msgstr "3-и пути"
 
 msgid "750 – 1000V ="
 msgstr "750 – 1000В ="
@@ -636,9 +655,6 @@ msgstr "Меньше 15кВ ~"
 
 msgid "1kV ="
 msgstr "1кВ ="
-
-msgid "crossing signal type To"
-msgstr "стрелочные сигналы типа Lo"
 
 msgid "1 – 1.5kV ="
 msgstr "1 – 1.5кВ ="
@@ -676,15 +692,6 @@ msgstr "Меньше 750В"
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
 
-msgid "Operating Sites"
-msgstr "Эксплуатационные участки"
-
-msgid "train protection"
-msgstr "локомотивная безопастность"
-
-msgid "contact line"
-msgstr "конттактная линия"
-
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
@@ -696,9 +703,6 @@ msgstr "25кВ 60Гц ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
-
-msgid "Electrification proposed"
-msgstr "Электрификация предложена"
 
 msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
@@ -778,7 +782,8 @@ msgstr ""
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
@@ -793,8 +798,11 @@ msgstr ""
 msgid "Imprint &amp; Privacy Policy"
 msgstr "Сведения &amp; Политика конфиденциальности"
 
-msgid "Contrôle de vitesse par balises (KVB)"
+msgid "automatische treinbeïnvloeding"
 msgstr ""
 
 msgid "Transmission voie-machine (TVM)"
+msgstr ""
+
+msgid "Contrôle de vitesse par balises (KVB)"
 msgstr ""

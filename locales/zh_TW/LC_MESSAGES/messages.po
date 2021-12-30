@@ -12,11 +12,12 @@ msgstr ""
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
 "PO-Revision-Date: 2017-09-22 15:50+0000\n"
 "Last-Translator: Supaplex <bejokeup@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/rurseekatze/openrailwaymap/language/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (https://www.transifex.com/rurseekatze/openrailwaymap/language/"
+"zh_TW/)\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -31,8 +32,8 @@ msgid "Javascript is not activated"
 msgstr "並未啟動 Javascript"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on "
-"Javascript in your browser settings."
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
+"browser settings."
 msgstr "網站需要 Javascript 才能執行和顯示地圖。請在瀏覽器設定中啟用 Javascript"
 
 msgid "Loading..."
@@ -89,9 +90,7 @@ msgstr "只搜尋目前檢視地圖畫面"
 msgid "HTML-Code"
 msgstr "HTML 碼"
 
-msgid ""
-"Copy this HTML code snippet into your website to show a small map with a "
-"marker."
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
 msgstr "複製這段 HTML 碼然後嵌入到你的網站，能夠在你網站上顯示有標記符號的小地圖。"
 
 msgid "Fullscreen"
@@ -145,7 +144,7 @@ msgid "Maxspeeds"
 msgstr "最高速限"
 
 msgid "Electrification"
-msgstr ""
+msgstr "電氣化"
 
 msgid "Halt"
 msgstr "招呼站"
@@ -169,7 +168,7 @@ msgid "Service station"
 msgstr "服務車站"
 
 msgid "Subway/Light rail station"
-msgstr ""
+msgstr "地鐵/輕軌站"
 
 msgid "Tram stop"
 msgstr "電車站"
@@ -178,7 +177,7 @@ msgid "Milestone"
 msgstr "里程"
 
 msgid "Signal"
-msgstr ""
+msgstr "號誌"
 
 msgid "Level crossing"
 msgstr "平交道"
@@ -433,103 +432,136 @@ msgid "Blog"
 msgstr "部落格"
 
 msgid "No information"
-msgstr ""
+msgstr "無信息"
 
 msgid "speed only given for one direction"
-msgstr ""
+msgstr "速度僅在一個方向給出"
 
 msgid "main track, service track"
-msgstr ""
+msgstr "主軌道，服務軌道"
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "快速搜尋快捷鍵"
 
 msgid "Placeholder"
-msgstr ""
+msgstr "佔位符"
 
 msgid "Donate"
-msgstr ""
+msgstr "捐贈"
 
 msgid "Tools"
-msgstr ""
+msgstr "工具"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Wiki"
 
 msgid "Search milestone"
-msgstr ""
+msgstr "搜尋里程碑"
 
 msgid "Station code"
-msgstr ""
+msgstr "車站代碼"
 
 msgid "Search station"
-msgstr ""
+msgstr "搜尋車站"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "國際鐵路聯盟參考"
 
 msgid "About this project"
-msgstr ""
+msgstr "關於此項目"
 
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 msgid "Name"
-msgstr ""
+msgstr "名稱"
 
 msgid "Line operator"
-msgstr ""
+msgstr "線路運營者"
 
 msgid "Operator"
-msgstr ""
+msgstr "運營者"
 
 msgid "More results"
-msgstr ""
+msgstr "更多結果"
 
 msgid "Spur junction"
-msgstr ""
+msgstr "專用線道岔"
 
 msgid "No background map"
-msgstr ""
+msgstr "無背景地圖"
+
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr "%SPDMIN%-%SPDMAX% km/h (廢棄/建設中)"
+
+msgid "Not electrified"
+msgstr "未電氣化"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "去電氣化"
+
+msgid "Electrification proposed"
+msgstr "擬電氣化"
+
+msgid "Electrification under construction"
+msgstr "電氣化建設中"
+
+msgid "contact line"
+msgstr "接觸網"
+
+msgid "3rd rail"
+msgstr "第三軌"
+
+msgid "Germany"
+msgstr "德國"
+
+msgid "Finland"
+msgstr "芬蘭"
+
+msgid "train protection"
+msgstr "列車防護"
+
+msgid "no train protection"
+msgstr "無列車防護"
+
+msgid "crossing signal type To"
+msgstr "交叉號誌類型 To"
+
+msgid "Voltage"
+msgstr "電壓"
+
+msgid "signals"
+msgstr "號誌"
+
+msgid "Operating Sites"
+msgstr "作業場所"
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "無信息關於列車防護"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "Track usage"
-msgstr ""
+msgstr "軌道用途"
 
 msgid "Lf 7 Geschwindigkeitssignal"
-msgstr ""
-
-msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
 msgstr ""
 
 msgid "1.5 – 3kV ="
 msgstr ""
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "歐洲列車控制系統建設中"
 
 msgid "3kV ="
 msgstr ""
 
-msgid "Germany"
-msgstr ""
-
-msgid "Not electrified"
-msgstr ""
-
 msgid "shunting signal type Ro"
-msgstr ""
+msgstr "分流號誌類型 Ro"
 
 msgid "Track type"
-msgstr ""
+msgstr "軌道類型"
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
@@ -547,31 +579,22 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "道岔，交叉，服務車站，站點"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "至少 25kV ~"
 
 msgid "minor signal type Lo"
-msgstr ""
-
-msgid "Finland"
-msgstr ""
+msgstr "次要號誌類型 Lo"
 
 msgid "15 – 25kV ~"
 msgstr ""
 
 msgid "ETCS"
-msgstr ""
-
-msgid "Electrification under construction"
-msgstr ""
-
-msgid "no train protection"
-msgstr ""
+msgstr "歐洲列車控制系統"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -588,41 +611,29 @@ msgstr ""
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
-msgid "signals"
-msgstr ""
-
 msgid "Ne 5 Haltetafel"
 msgstr ""
 
-msgid "Voltage"
-msgstr ""
-
 msgid "More than 3kV ="
-msgstr ""
+msgstr "高於 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
-msgstr ""
-
-msgid "3rd rail"
 msgstr ""
 
 msgid "750 – 1000V ="
 msgstr ""
 
 msgid "Less than 15kV ~"
-msgstr ""
+msgstr "低於 15kV ~"
 
 msgid "1kV ="
-msgstr ""
-
-msgid "crossing signal type To"
 msgstr ""
 
 msgid "1 – 1.5kV ="
 msgstr ""
 
 msgid "block signal type So"
-msgstr ""
+msgstr "禁止號誌類型 So"
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
 msgstr ""
@@ -649,18 +660,9 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "低於 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
-msgstr ""
-
-msgid "Operating Sites"
-msgstr ""
-
-msgid "train protection"
-msgstr ""
-
-msgid "contact line"
 msgstr ""
 
 msgid "El 4 \"Bügel ab\"-Signal"
@@ -673,9 +675,6 @@ msgid "25kV 60Hz ~"
 msgstr ""
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
-
-msgid "Electrification proposed"
 msgstr ""
 
 msgid "El 1v Ausschaltsignal erwarten"
@@ -756,7 +755,8 @@ msgstr ""
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
@@ -769,10 +769,13 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr ""
+msgstr "作者信息 &amp; 隱私政策"
 
-msgid "Contrôle de vitesse par balises (KVB)"
+msgid "automatische treinbeïnvloeding"
 msgstr ""
 
 msgid "Transmission voie-machine (TVM)"
+msgstr ""
+
+msgid "Contrôle de vitesse par balises (KVB)"
 msgstr ""
