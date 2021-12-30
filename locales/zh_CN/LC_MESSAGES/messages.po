@@ -2,7 +2,7 @@
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
-#
+# 
 # Translators:
 # FreedSky <qa003qa003@hotmail.com>, 2020
 msgid ""
@@ -13,10 +13,10 @@ msgstr ""
 "PO-Revision-Date: 2017-09-22 15:50+0000\n"
 "Last-Translator: FreedSky <qa003qa003@hotmail.com>\n"
 "Language-Team: Chinese (Simplified) \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -31,8 +31,8 @@ msgid "Javascript is not activated"
 msgstr "未激活Javascript"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on "
-"Javascript in your browser settings."
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
+"browser settings."
 msgstr "需要Javascript才能显示地图并运行此网站。请在浏览器设置中打开Javascript。"
 
 msgid "Loading..."
@@ -89,55 +89,53 @@ msgstr "仅在当前地图视图中搜索"
 msgid "HTML-Code"
 msgstr "HTML代码"
 
-msgid ""
-"Copy this HTML code snippet into your website to show a small map with a "
-"marker."
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
 msgstr "将此HTML代码段复制到您的网站中，以显示带有标记的小地图。"
 
 msgid "Fullscreen"
-msgstr "全屏"
+msgstr "全屏#, php-format"
 
-"#, php-format"
+#, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d秒"
-msgstr[1] "%d秒"
+msgstr[1] "%d秒#, php-format"
 
-"#, php-format"
+#, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d分钟"
-msgstr[1] "%d分钟"
+msgstr[1] "%d分钟#, php-format"
 
-"#, php-format"
+#, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d小时"
-msgstr[1] "%d小时"
+msgstr[1] "%d小时#, php-format"
 
-"#, php-format"
+#, php-format
 msgid "%d day"
 msgid_plural "%d days"
 msgstr[0] "%d天"
-msgstr[1] "%d天"
+msgstr[1] "%d天#, php-format"
 
-"#, php-format"
+#, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
 msgstr[0] "%d周"
-msgstr[1] "%d周"
+msgstr[1] "%d周#, php-format"
 
-"#, php-format"
+#, php-format
 msgid "%d month"
 msgid_plural "%d months"
 msgstr[0] "%d个月"
-msgstr[1] "%d个月"
+msgstr[1] "%d个月#, php-format"
 
-"#, php-format"
+#, php-format
 msgid "more than %s ago"
-msgstr "超过%s之前"
+msgstr "超过%s之前#, php-format"
 
-"#, php-format"
+#, php-format
 msgid "%s ago"
 msgstr "%s前"
 
@@ -498,8 +496,50 @@ msgstr "专用线路结"
 msgid "No background map"
 msgstr "无背景图"
 
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr "%SPDMIN%-%SPDMAX% km/h（停用 / 在建）"
+
+msgid "Not electrified"
+msgstr "未电气化"
+
 msgid "Deelectrified"
 msgstr "电气化已拆除"
+
+msgid "Electrification proposed"
+msgstr ""
+
+msgid "Electrification under construction"
+msgstr "电气化在建"
+
+msgid "contact line"
+msgstr "接触网"
+
+msgid "3rd rail"
+msgstr "第三轨"
+
+msgid "Germany"
+msgstr "德国"
+
+msgid "Finland"
+msgstr "芬兰"
+
+msgid "train protection"
+msgstr "列车保护系统"
+
+msgid "no train protection"
+msgstr ""
+
+msgid "crossing signal type To"
+msgstr ""
+
+msgid "Voltage"
+msgstr ""
+
+msgid "signals"
+msgstr ""
+
+msgid "Operating Sites"
+msgstr ""
 
 msgid "No information about train protection"
 msgstr "无列车保护系统信息"
@@ -513,9 +553,6 @@ msgstr "轨道用途"
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
-msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr "%SPDMIN%-%SPDMAX% km/h（停用 / 在建）"
-
 msgid "1.5 – 3kV ="
 msgstr ""
 
@@ -524,12 +561,6 @@ msgstr "列车控制系统在建"
 
 msgid "3kV ="
 msgstr ""
-
-msgid "Germany"
-msgstr "德国"
-
-msgid "Not electrified"
-msgstr "未电气化"
 
 msgid "shunting signal type Ro"
 msgstr ""
@@ -564,19 +595,10 @@ msgstr "最低 25kV ~"
 msgid "minor signal type Lo"
 msgstr ""
 
-msgid "Finland"
-msgstr "芬兰"
-
 msgid "15 – 25kV ~"
 msgstr ""
 
 msgid "ETCS"
-msgstr ""
-
-msgid "Electrification under construction"
-msgstr "电气化在建"
-
-msgid "no train protection"
 msgstr ""
 
 msgid "Blockkennzeichen"
@@ -594,13 +616,7 @@ msgstr ""
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
-msgid "signals"
-msgstr ""
-
 msgid "Ne 5 Haltetafel"
-msgstr ""
-
-msgid "Voltage"
 msgstr ""
 
 msgid "More than 3kV ="
@@ -609,9 +625,6 @@ msgstr ""
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
-msgid "3rd rail"
-msgstr "第三轨"
-
 msgid "750 – 1000V ="
 msgstr ""
 
@@ -619,9 +632,6 @@ msgid "Less than 15kV ~"
 msgstr "低于 15kV ~"
 
 msgid "1kV ="
-msgstr ""
-
-msgid "crossing signal type To"
 msgstr ""
 
 msgid "1 – 1.5kV ="
@@ -660,15 +670,6 @@ msgstr ""
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
 
-msgid "Operating Sites"
-msgstr ""
-
-msgid "train protection"
-msgstr "列车保护系统"
-
-msgid "contact line"
-msgstr "接触网"
-
 msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
@@ -679,9 +680,6 @@ msgid "25kV 60Hz ~"
 msgstr ""
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
-
-msgid "Electrification proposed"
 msgstr ""
 
 msgid "El 1v Ausschaltsignal erwarten"
@@ -762,7 +760,8 @@ msgstr ""
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
