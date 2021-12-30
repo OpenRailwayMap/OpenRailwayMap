@@ -80,6 +80,32 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"railway:kvb":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "Contrôle de vitesse par balises (KVB)"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:tvm":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "Transmission voie-machine (TVM)"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
 					"railway:etcs":"yes",
 					"usage":"main"
 				}
