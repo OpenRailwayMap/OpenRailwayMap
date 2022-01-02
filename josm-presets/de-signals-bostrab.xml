@@ -208,7 +208,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:departure"
 				value="DE-BOStrab:a1" />
 			<combo key="railway:signal:departure:states"
-                text="Possible Signals"
+				text="Possible Signals"
 				de.text="Anzeigbare Signalbilder"
 				delimiter=","
 				values="DE-BOStrab:a1;off,DE-BOStrab:a2;off,DE-BOStrab:a1;DE-BOStrab:a2;off"
@@ -1054,7 +1054,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 			</item>
 			<item name="Stop for Shunting Movements (H 5)" de.name="Halt für Kehrfahrten (H 5)" type="node">
-                <label text="Stop for Shunting Movements (H 5)" de.text="Halt für Kehrfahrten (H 5)" />
+				<label text="Stop for Shunting Movements (H 5)" de.text="Halt für Kehrfahrten (H 5)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
 				<key key="railway"
@@ -1067,7 +1067,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal position"
 					de.text="Signalstandort"
 					values="left,right"
-                    de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
 					display_values="left in direction of OSM way,right in direction of OSM way"
 					/>
 				<reference ref="direction_fw_bw" />
@@ -1180,8 +1180,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:departure"
 					value="DE-HHA:a1" />
 				<combo key="railway:signal:departure:states"
-                    de.text="Anzeigbare Signalbilder"
-                    text="Possible Signals"
+					de.text="Anzeigbare Signalbilder"
+					text="Possible Signals"
 					delimiter=","
 					values="DE-HHA:a1;off,DE-HHA:a2;off,DE-HHA:a1;DE-HHA:a2;off"
 					display_values="A 1 (close doors),A 2 (depart),A 1 (close doors) + A 2 (depart)"
@@ -1514,8 +1514,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal form"
 						de.text="Anzeigeart"
 						values="sign,light"
-                        de.display_values="Tafel,Lichtsignal"
-                        display_values="sign,light signal"
+						de.display_values="Tafel,Lichtsignal"
+						display_values="sign,light signal"
 						/>
 				</item>
 				<item name="Route Signal (So 7)" de.name="Fahrtrichtungszeichen (So 7)" type="node" icon="de/zs2-F-38.png" >

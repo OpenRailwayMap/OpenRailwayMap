@@ -135,8 +135,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal function"
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
-                        de.display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-                        display_values="entry signal,exit signal,block signal,intermediate signal"
+						de.display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
+						display_values="entry signal,exit signal,block signal,intermediate signal"
 						/>
 					<multiselect key="railway:signal:combined:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -199,7 +199,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						de.display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-                        display_values="entry signal,exit signal,block signal,intermediate signal"
+						display_values="entry signal,exit signal,block signal,intermediate signal"
 						/>
 					<multiselect key="railway:signal:main:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -262,7 +262,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalaufgabe"
 					values="entry,exit,block,intermediate"
 					de.display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-                    display_values="entry signal,exit signal,block signal,intermediate signal"
+					display_values="entry signal,exit signal,block signal,intermediate signal"
 					/>
 				<multiselect key="railway:signal:combined:substitute_signal"
 					text="Substitute signal (multi-selection)"
@@ -329,7 +329,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						de.display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-                        display_values="entry signal,exit signal,block signal,intermediate signal"
+						display_values="entry signal,exit signal,block signal,intermediate signal"
 						/>
 					<multiselect key="railway:signal:combined:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -389,7 +389,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						de.display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-                        display_values="entry signal,exit signal,block signal,intermediate signal"
+						display_values="entry signal,exit signal,block signal,intermediate signal"
 						/>
 					<multiselect key="railway:signal:main:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -492,7 +492,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						de.display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-                        display_values="entry signal,exit signal,block signal,intermediate signal"
+						display_values="entry signal,exit signal,block signal,intermediate signal"
 						/>
 					<multiselect key="railway:signal:combined:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -555,7 +555,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						de.display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-                        display_values="entry signal,exit signal,block signal,intermediate signal"
+						display_values="entry signal,exit signal,block signal,intermediate signal"
 						/>
 					<multiselect key="railway:signal:main:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -661,7 +661,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						de.display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-                        display_values="entry signal,exit signal,block signal,intermediate signal"
+						display_values="entry signal,exit signal,block signal,intermediate signal"
 						/>
 					<multiselect key="railway:signal:main:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -724,7 +724,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalaufgabe"
 						values="entry,exit,block,intermediate"
 						de.display_values="Einfahrsignal,Ausfahrsignal,Blocksignal,Zwischensignal"
-                        display_values="entry signal,exit signal,block signal,intermediate signal"
+						display_values="entry signal,exit signal,block signal,intermediate signal"
 						/>
 					<multiselect key="railway:signal:main:substitute_signal"
 						text="Substitute signal (multi-selection)"
@@ -787,8 +787,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Shortened distance"
 						de.text="Verkürzter Bremsweg"
 						values="DE-ESO:db:ne2,DE-ESO:dr:so3c"
-                        de.display_values="DB (weißes Dreieck),DR (Kreis)"
-                        display_values="DB (white triangle),DR (circle)"
+						de.display_values="DB (weißes Dreieck),DR (Kreis)"
+						display_values="DB (white triangle),DR (circle)"
 						/>
 					<check key="railway:signal:distant:repeated"
 						text="Repeated Signal"
@@ -895,8 +895,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Signal height"
 					de.text="Signalbauhöhe"
 					values="normal,dwarf"
-                    de.display_values="Normalhöhe,Zwergsignal"
-                    display_values="normal,dwarf"
+					de.display_values="Normalhöhe,Zwergsignal"
+					display_values="normal,dwarf"
 					/>
 				<key key="railway:signal:main:function"
 					value="entry" />
@@ -931,12 +931,12 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:distant:form"
 					value="sign" />
 				<combo key="railway:signal:distant:height"
-                    text="Signal height"
-                    de.text="Signalbauform"
-                    values="normal,dwarf"
-                    de.display_values="Normalhöhe,Zwergsignal"
-                    display_values="normal,dwarf"
-                     />
+					text="Signal height"
+					de.text="Signalbauform"
+					values="normal,dwarf"
+					de.display_values="Normalhöhe,Zwergsignal"
+					display_values="normal,dwarf"
+					/>
 				<check key="railway:signal:distant:shortened"
 					text="Shortened distance"
 					de.text="Verkürzter Bremsweg"
@@ -992,7 +992,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signaltyp"
 						values="DE-ESO:bü,DE-ESO:so16"
 						de.display_values="Bü (ex-DB),So 16 (ex-DR)"
-                        display_values="Bü (ex-DB),So 16 (ex-DR)"
+						display_values="Bü (ex-DB),So 16 (ex-DR)"
 						match="keyvalue!" />
 					<combo key="railway:signal:crossing:states"
 						text="Signal states"
@@ -1065,13 +1065,13 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="sign" />
 				</item>
 				<item de.name="Einschaltkontakt Bahnübergang (Merktafel, Bü 3)"
-				    name="Activation switch crossing (Reminder Board, Bü 3)" icon="de/bue3-57.png" type="node">
+					name="Activation switch crossing (Reminder Board, Bü 3)" icon="de/bue3-57.png" type="node">
 					<label de.text="Einschaltkontakt Bahnübergang/Merktafel (Bü 3)"
-					   text="Activation switch of a level crossing/ (Reminder Board, Bü 3)" />
+						text="Activation switch of a level crossing/ (Reminder Board, Bü 3)" />
 					<label de.text="Existiert nur im Gebiet der ehemaligen Bundesbahn (DS 301)."
-					   text="This signal only exists in West Germany (former area of Deutsche Bundesbahn)." />
+						text="This signal only exists in West Germany (former area of Deutsche Bundesbahn)." />
 					<label de.text="Wird als Punkt auf dem Gleis erfasst."
-					   text="Is being mapped as a node on the track." />
+						 text="Is being mapped as a node on the track." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1094,13 +1094,13 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						value="sign" />
 				</item>
 				<item de.name="Einschaltkontakt Bahnübergang/Merkpfahl (So 14)"
-				    name="Activation switch crossing/Reminder Pole (So 14)" icon="de/bue3-57.png" type="node">
+					name="Activation switch crossing/Reminder Pole (So 14)" icon="de/bue3-57.png" type="node">
 					<label de.text="Einschaltkontakt Bahnübergang/Merkpfahl (So 14)"
-					   text="Activation switch of a level crossing/reminder pole (So 14)" />
+						text="Activation switch of a level crossing/reminder pole (So 14)" />
 					<label de.text="Existiert nur im Gebiet der ehemaligen Reichsbahn (DV 301)."
-					   text="This signal only exists in East Germany (former area of Deutsche Reichsbahn)." />
+						text="This signal only exists in East Germany (former area of Deutsche Reichsbahn)." />
 					<label de.text="Wird als Punkt auf dem Gleis erfasst."
-					   text="Is being mapped as a node on the track." />
+						text="Is being mapped as a node on the track." />
 					<space />
 					<key key="railway"
 						value="signal" />
@@ -1292,7 +1292,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="light,semaphore,sign"
 						de.display_values="Lichtsignal,Formsignal,Tafel"
-                        display_values="light signal,semaphore signal,board"
+						display_values="light signal,semaphore signal,board"
 						/>
 					<combo key="railway:signal:minor:height"
 						text="Signal height"
@@ -1326,7 +1326,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,in_track"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Gleismitte/am Prellbock"
-                        display_values="left in direction of OSM way,right in direction of OSM way,in track/on buffer stop"
+						display_values="left in direction of OSM way,right in direction of OSM way,in track/on buffer stop"
 						/>
 					<reference ref="direction_fw_bw_b" />
 					<space />
@@ -1384,7 +1384,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-                        display_values="left in direction of OSM way,right in direction of OSM way"
+						display_values="left in direction of OSM way,right in direction of OSM way"
 						/>
 					<reference ref="direction_fw_bw" />
 					<space />
@@ -1414,7 +1414,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-                        display_values="left in direction of OSM way,right in direction of OSM way"
+						display_values="left in direction of OSM way,right in direction of OSM way"
 						/>
 					<reference ref="direction_fw_bw" />
 					<space />
@@ -1461,8 +1461,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Signal position"
 						de.text="Signalstandort"
 						values="left,right"
-                        de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-                        display_values="left in direction of OSM way,right in direction of OSM way"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						display_values="left in direction of OSM way,right in direction of OSM way"
 						/>
 					<reference ref="direction_fw_bw" />
 					<space />
@@ -1473,7 +1473,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="light,semaphore"
 						de.display_values="Lichtsignal,Formsignal"
-                        display_values="light signal,semaphore signal"
+						display_values="light signal,semaphore signal"
 						/>
 					<key key="railway:signal:humping:states"
 						value="DE-ESO:ra6;DE-ESO:ra7;DE-ESO:ra8;DE-ESO:ra9" />
@@ -1496,7 +1496,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-                        display_values="left in direction of OSM way,right in direction of OSM way"
+						display_values="left in direction of OSM way,right in direction of OSM way"
 						/>
 					<key key="railway:signal:fouling_point"
 						value="DE-ESO:ra12" />
@@ -1513,7 +1513,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Signalstandort"
 						values="left,right,bridge"
 						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
-                        display_values="left in direction of OSM way,right in direction of OSM way,on a bridge over the tracks"
+						display_values="left in direction of OSM way,right in direction of OSM way,on a bridge over the tracks"
 						/>
 					<reference ref="direction_fw_bw" />
 					<key key="railway:signal:shunting"
@@ -1606,7 +1606,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="light,sign"
 						de.display_values="Lichtsignal,Tafel"
-                        display_values="light signal,board"
+						display_values="light signal,board"
 						/>
 					<multiselect key="railway:signal:speed_limit:speed" 
 						text="Speed (km/h)"
@@ -1649,7 +1649,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="light,sign"
 						de.display_values="Lichtsignal,Tafel"
-                        display_values="light signal,board"
+						display_values="light signal,board"
 						/>
 					<multiselect key="railway:signal:speed_limit_distant:speed" 
 						text="Speed (km/h)"
@@ -1692,7 +1692,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="light,sign"
 						de.display_values="Lichtsignal,Tafel"
-                        display_values="light signal,board"
+						display_values="light signal,board"
 						/>
 					<key key="railway:signal:speed_limit:speed"
 						value="none" />
@@ -1733,7 +1733,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="sign,light"
 						de.display_values="Tafel,Leuchtanzeige"
-                        display_values="board,light signal"
+						display_values="board,light signal"
 						/>
 				</item>
 				<item name="Left-Track Substitute Indicator (Zs 8)" de.name="Gegengleisfahrt-Ersatzsignal (Zs 8)" type="node">
@@ -1758,13 +1758,13 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					<combo key="railway:signal:wrong_road" text="Type" de.text="Typ" match="keyvalue!">
 						<list_entry value="DE-ESO:db:zs8" display_value="Zs 8 DB" short_description="Left-Track Order Signal Zs 8 (ex-DB)" de.short_description="Falschfahrt-Auftragssignal Zs 8 (ex-DB)" />
 						<list_entry value="DE-ESO:dr:zs8" display_value="Zs 8 DR" short_description="Left-Track Substitute Signal Zs 8 (ex-DB)" de.short_description="Linksfahrtersatzsignal Zs 8 (ex-DR)" />
-		            </combo>
+					</combo>
 					<combo key="railway:signal:wrong_road:form"
 						text="Signal form"
 						de.text="Anzeigeart"
 						values="sign,light"
 						de.display_values="Tafel,Leuchtanzeige"
-                        display_values="board,light signal"
+						display_values="board,light signal"
 						/>
 				</item>
 				<separator />
@@ -1799,7 +1799,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Anzeigeart"
 						values="light,sign"
 						de.display_values="Lichtsignal,Tafel"
-                        display_values="light signal,board"
+						display_values="light signal,board"
 						/>
 					<combo key="railway:signal:short_route:height"
 						text="Signal height"
@@ -1925,7 +1925,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-                    display_values="left in direction of OSM way,right in direction of OSM way"
+					display_values="left in direction of OSM way,right in direction of OSM way"
 					/>
 				<reference ref="direction_fw_bw" />
 				<space />
@@ -1958,7 +1958,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-                    display_values="left in direction of OSM way,right in direction of OSM way"
+					display_values="left in direction of OSM way,right in direction of OSM way"
 					/>
 				<reference ref="direction_fw_bw" />
 				<space />
@@ -1990,7 +1990,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-                    display_values="left in direction of OSM way,right in direction of OSM way"
+					display_values="left in direction of OSM way,right in direction of OSM way"
 					/>
 				<reference ref="direction_fw_bw" />
 				<combo key="railway:signal:expected_position"
@@ -2131,7 +2131,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Anweisung"
 					values="up,down"
 					de.display_values="Heben,Senken"
-                    display_values="plug up,plug down"
+					display_values="plug up,plug down"
 					/>
 			</item>
 			<item name="ETCS Stop Marker (Ne 14)" de.name="ETCS-Halt-Tafel (Ne 14, ETCS Stop Marker)" icon="etcs-stop-marker-arrow-left-32.png" type="node">
@@ -2390,7 +2390,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-                    display_values="left in the direction of OSM way,right in direction of OSM way"
+					display_values="left in the direction of OSM way,right in direction of OSM way"
 					/>
 				<reference ref="direction_fw_bw" />
 				<check key="railway:signal:catenary_mast"
@@ -2423,7 +2423,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-                    display_values="left in the direction of OSM way,right in direction of OSM way"
+					display_values="left in the direction of OSM way,right in direction of OSM way"
 					/>
 				<reference ref="direction_fw_bw" />
 				<check key="railway:signal:catenary_mast"
@@ -2446,7 +2446,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Signalstandort"
 					values="left,right"
 					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-                    display_values="left in the direction of OSM way,right in direction of OSM way"
+					display_values="left in the direction of OSM way,right in direction of OSM way"
 					/>
 				<key key="railway:signal:radio"
 					value="DE-ESO:zugfunk-kanalhinweis" />

@@ -70,7 +70,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delimiter=";"
 				values="DE-ESO:db:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
 				de.display_values="Ersatzsignal (ex-DB);Vorsichtsignal;M-Tafel"
-                display_values="Substitute signal (ex-DB);cautioness signal (Zs 7);M Board (Zs 12)"
+				display_values="Substitute signal (ex-DB);cautioness signal (Zs 7);M Board (Zs 12)"
 				/>
 			<space />
 			<preset_link preset_name="Speed Indicator (Zs 3)" />
@@ -109,8 +109,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 		</item>
 		<separator />
-        <item name="Crossing Protection Signal (Bü 200/Bü 201)" de.name="Bü-Überwachungssignal (Bü 200/Bü 201)" icon="de/avg/bue201-32.png" type="node">
-            <label text="Crossing Protection Signal (Bü 200/Bü 201)" de.text="Bü-Überwachungssignal (Bü 200/Bü 201)" />
+		<item name="Crossing Protection Signal (Bü 200/Bü 201)" de.name="Bü-Überwachungssignal (Bü 200/Bü 201)" icon="de/avg/bue201-32.png" type="node">
+			<label text="Crossing Protection Signal (Bü 200/Bü 201)" de.text="Bü-Überwachungssignal (Bü 200/Bü 201)" />
 			<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
 			<key key="railway"
@@ -136,8 +136,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:crossing:form"
 				value="light" />
 		</item>
-        <item name="Expect Crossing Protection Signal (Bü 200v/201v)" de.name="Bü-Überwachungssignal erwarten (Bü 200v/201v)" icon="de/avg/bue201v-32.png" type="node">
-            <label text="Expect Crossing Protection Signal (Bü 200v/201v)" de.text="Bü-Überwachungssignal erwarten (Bü 200v/201v)" />
+		<item name="Expect Crossing Protection Signal (Bü 200v/201v)" de.name="Bü-Überwachungssignal erwarten (Bü 200v/201v)" icon="de/avg/bue201v-32.png" type="node">
+			<label text="Expect Crossing Protection Signal (Bü 200v/201v)" de.text="Bü-Überwachungssignal erwarten (Bü 200v/201v)" />
 			<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
 			<key key="railway"
@@ -165,7 +165,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<separator />
 		<item name="Main signal (Fahrsignal F)" de.name="Fahrsignal (F)" icon="de/bostrab/f0-32.png" type="node">
-            <label text="Main signal (F 0/F 1)" de.text="Fahrsignal  (F 0/F 1)" />
+			<label text="Main signal (F 0/F 1)" de.text="Fahrsignal  (F 0/F 1)" />
 			<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
 			<reference ref="sig_ref" />
@@ -192,7 +192,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Signalbauhöhe"
 				values="normal,dwarf"
 				de.display_values="Mastbauform,Zwergsignal"
-                display_values="normal,dwarf"
+				display_values="normal,dwarf"
 				/>
 			<key key="railway:signal:main:states"
 				value="DE-AVG:f0;DE-AVG:f1" />
@@ -237,14 +237,14 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				delimiter=";"
 				values="DE-AVG:w1;DE-AVG:w2;DE-AVG:w3;DE-AVG:w4;DE-AVG:w5;DE-AVG:w11;DE-AVG:w12;DE-AVG:w13"
 				de.display_values="geradeaus 30 km/h;rechts 30 km/h;links 30 km/h;Störung;Weiche stellbereit;geradeaus (vmax);rechts;links"
-                display_values="straight 30 km/h;right 30 km/h;left 30 km/h;error;switch ready;straight (vmax);right;left"
+				display_values="straight 30 km/h;right 30 km/h;left 30 km/h;error;switch ready;straight (vmax);right;left"
 				/>
 			<combo key="railway:signal:switch:height"
 				text="Signal height"
 				de.text="Signalbauhöhe"
 				values="normal,dwarf"
 				de.display_values="Mastbauform,Zwergsignal"
-                display_values="normal,dwarf"
+				display_values="normal,dwarf"
 				/>
 		</item>
 		<item name="Weichenvorrücksignal (Wv)" icon="de/avg/wv1-32.png" type="node">
@@ -278,7 +278,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Signalbauhöhe"
 				values="normal,dwarf"
 				de.display_values="Mastbauform,Zwergsignal"
-                display_values="normal,dwarf"
+				display_values="normal,dwarf"
 				/>
 		</item>
 		<separator />
@@ -298,7 +298,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Signalstandort"
 				values="left,right,overhead"
 				de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung"
-                display_values="left in direction of OSM way,right in direction of OSM way,on the catenary"
+				display_values="left in direction of OSM way,right in direction of OSM way,on the catenary"
 				/>
 			<reference ref="direction_fw_bw" />
 			<space />
@@ -307,14 +307,14 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Signaltyp"
 				values="DE-AVG:el1,DE-AVG:st7"
 				de.display_values="Ausschaltsignal (El 1) ohne darauf folgendes Einschaltsignal (El 2),Streckentrenner (St 7)"
-                display_values="Open Circuit Breaker (El 1) without following Close Circuit Breaker,Section insulator (St 7)"
+				display_values="Open Circuit Breaker (El 1) without following Close Circuit Breaker,Section insulator (St 7)"
 				/>
 			<combo key="railway:signal:electricity:height"
 				text="Signal height"
 				de.text="Signalbauhöhe"
 				values="normal,dwarf"
 				de.display_values="Mastbauform,Zwergsignal"
-                display_values="normal,dwarf"
+				display_values="normal,dwarf"
 				/>
 			<key key="railway:signal:electricity:type"
 				value="power_off_shortly" />
