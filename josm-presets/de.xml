@@ -85,7 +85,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<list_entry value="light_rail" display_value="Light rail" de.display_value="Stadt-/Schnellbahn" de.short_description="Stadtbahnen und straßenbahnähnliche Untergrund- oder Überlandbahnen mit völliger Trennung vom restlichen Straßenverkehr" short_description="Light rail tracks which may run under- or overground, usually separated from car traffic" match="keyvalue!" />
 				<list_entry value="subway" display_value="Subway" de.display_value="U-Bahn" de.short_description="Unterirdisch verlegte Stadt- und Schnellbahnen, teilweise auch oberirdischer Verlauf möglich" short_description="Subway tracks; may run overground, but are separated from car traffic" match="keyvalue!" />
 				<list_entry value="narrow_gauge" display_value="Narrow gauge" de.display_value="Schmalspurbahn" de.short_description="Schmalspurgleise sind Gleise mit einer Spurweite unter der Normalspurweite von 1435 mm" short_description="Narrow gauge tracks are tracks with a gauge lower than 1435 mm" match="keyvalue!" />
-				<list_entry value="preserved" display_value="Preserved railway" de.display_value="Erhaltene Strecke" de.short_description="Strecken ohne regulären Betrieb, die wegen ihres historischen Charakters bewahrt werden sollen, z.B. Museumsbahnen oder Draisinenstrecken" short_description="A track without regular operation which is preserved for heritage trains or trolley routes" match="keyvalue!" />
+				<list_entry value="preserved" display_value="Preserved railway" de.display_value="Erhaltene Strecke" de.short_description="Strecken ohne regulären Betrieb, die wegen ihres historischen Charakters bewahrt werden sollen, z. B. Museumsbahnen oder Draisinenstrecken" short_description="A track without regular operation which is preserved for heritage trains or trolley routes" match="keyvalue!" />
 				<list_entry value="miniature" display_value="Miniature railway" de.display_value="Miniatur-/Parkbahn" de.short_description="Parkeisenbahnen und vergleichbare, in der Regel touristisch genutzte, Schmalspurbahnen bis etwa 600 mm Spurweite" short_description="Miniature Railway which is usually used for tourists and leisure, gauge up to 600 mm" match="keyvalue!" />
 				<list_entry value="proposed" display_value="Proposed" de.display_value="In Planung" de.short_description="Parkeisenbahnen und vergleichbare, in der Regel touristisch genutzte, Schmalspurbahnen bis etwa 600 mm Spurweite" short_description="A planned track, still in the design phase (no construction yet)" match="keyvalue!" />
 				<list_entry value="construction" display_value="Under construction" de.display_value="In Bau" de.short_description="Ein Gleis im Bau, das noch nicht für den Fahrbetrieb genutzt werden kann" short_description="A track under construction which is not ready for operation" match="keyvalue!" />
@@ -94,7 +94,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<list_entry value="razed" display_value="Razed railway" de.display_value="Überbaute Strecke" de.short_description="Ein ehemaliges Gleis, dessen Verlauf heute durch Überbauung o.ä. nur noch zu erahnen ist" short_description="Overbuilt track which could only be seen if you know where it is" match="keyvalue!" />
 			</combo>
 			<label text="If the track is not in use (i.e. proposed, under construction etc.), please also fill out"
-				de.text="Fall das Gleis nicht in Betrieb ist (z.B. geplant, in Bau usw.), bitte auch folgende Vorlage ausfüllen:"
+				de.text="Fall das Gleis nicht in Betrieb ist (z. B. geplant, in Bau usw.), bitte auch folgende Vorlage ausfüllen:"
 				/>
 			<combo key="gauge"
 				text="Gauge [mm]"
@@ -588,7 +588,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<item name="Railway Crossing" de.name="Kreuzung" type="node">
 			<label de.text="Kreuzung"
-				text="Two tracks crosses each other without a switch" />
+				text="Two tracks cross each other without a switch" />
 			<space />
 			<key key="railway"
 				value="railway_crossing" />
@@ -893,7 +893,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<reference ref="ele" />
 			</item>
 			<item name="Spur juction" de.name="Anst / Awanst" icon="spur-25.png" type="node">
-				<label text="Spur junction" de.text="Anschlusstelle oder Ausweichanschlusstelle" />
+				<label text="Spur junction" de.text="Anschlussstelle oder Ausweichanschlussstelle" />
 				<label
 					text="Location where a (usually short) spur track forks"
 					de.text="Stelle, an der an Anschlussgleis außerhalb eines Bahnhofs"
@@ -997,7 +997,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 				<text key="local_ref"
 					text="track number (e.g. 5 or 5a)"
-					de.text="Gleisnummer (z.B. 5 oder 5a)"
+					de.text="Gleisnummer (z. B. 5 oder 5a)"
 					/>
 				<check key="train"
 					text="Railway traffic?"
@@ -1027,7 +1027,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 				<text key="railway:position:exact"
 					text="Exact distance indication (exact, e.g. '12.345'; km)"
-					de.text="Exakte Entfernungsangabe (genau, z.B: '12.345'; km)"
+					de.text="Exakte Entfernungsangabe (genau, z. B: '12.345'; km)"
 					/>
 			</item>
 			<item name="Railway Landuse Area" de.name="Bahngelände" type="closedway">
