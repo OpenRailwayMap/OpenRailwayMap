@@ -277,15 +277,6 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 	allow-overlap: true;
 }
 
-node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=30]
-{
-	z-index: 110;
-	icon-image: "icons/de/zs3v-30-light-38.png";
-	icon-width: 14;
-	icon-height: 19;
-	allow-overlap: true;
-}
-
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:zs3v"]["railway:signal:speed_limit_distant:form"=light]["railway:signal:speed_limit_distant:speed"~=40]
 {
 	z-index: 115;
