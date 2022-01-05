@@ -759,6 +759,46 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="AT
 	allow-overlap: true;
 }
 
+/********************************************/
+/* DE signals for helper engines type Ts    */
+/* DE Nachschieben einstellen Ts 1          */
+/********************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:helper_engine"="DE-ESO:ts"]["railway:signal:helper_engine:form"=sign]["railway:signal:helper_engine:states"="DE-ESO:ts1"]
+{
+	z-index: 2000;
+	text: "ref";
+	text-offset: 11;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de/ts1-22.png";
+	icon-width: 12;
+	icon-height: 11;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/**************************************************************************/
+/* DE signals for helper engines type Ts                                  */
+/* DE Halt für zurückkehrende Schiebelokomotiven und Sperrfahrten Ts 3    */
+/**************************************************************************/
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:helper_engine"="DE-ESO:ts"]["railway:signal:helper_engine:form"=semaphore]["railway:signal:helper_engine:states"="DE-ESO:ts2;DE-ESO:ts3"]
+{
+	z-index: 2000;
+	text: "ref";
+	text-offset: 11;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/de/ts3-22.png";
+	icon-width: 12;
+	icon-height: 11;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /***************************/
 /* DE main entry sign Ne 1 */
 /* AT Trapeztafel          */
@@ -1755,7 +1795,6 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"=
 	icon-height: 15;
 	set .fi_main_combined_signals;
 }
-
 
 /***********************************************/
 /* FI main light signals which                 */
