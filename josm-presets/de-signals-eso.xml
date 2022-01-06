@@ -10,7 +10,6 @@ This is free software, and you are welcome to redistribute it under certain cond
 See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 
-
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="1.0" shortdescription="OpenRailwayMap Signale DE ESO" description="Preset to tag German railway signals">
 	<chunk id="sig_ref">
 		<key key="railway"
@@ -36,6 +35,24 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			values="forward,backward,both"
 			display_values="in direction of OSM way,against direction of OSM way,both directions"
 			de.display_values="In Wegrichtung,Entgegen Wegrichtung,Beide Richtungen"
+			/>
+	</chunk>
+	<chunk id="traversable">
+		<multiselect key="railway:signal:traversable:type"
+			text="Traversable: action at stop"
+			de.text="Mastschild: Verhalten bei Halt"
+			delimiter="#"
+			values="written_default_speed;dictated_default_speed#on_no_contact_on_sight;written_default_speed;dictated_default_speed#always_on_sight"
+			display_values="white-red-white, red-triangle on white, or pure red#white-yellow-white-yellow-white#white-black-white-black-white"
+			de.display_values="weiß-rot-weiß, rotes Dreieck auf weiß oder nur rot#weiß-gelb-weiß-gelb-weiß#weiß-schwarz-weiß-schwarz-weiß"
+			/>
+		<combo key="railway:signal:traversable"
+			text="Type of traversable"
+			de.text="Mastschild-Typ"
+			delimiter=","
+			values="DE-ESO:mastschild_rot-weiss,DE-ESO:mastschild_gelb-weiss,DE-ESO:mastschild_schwarz-weiss,DE-ESO:mastschild_rot,no,?"
+			display_values="white/red,white/yellow,white/black,red,no,unknown"
+			de.display_values="weiß-rot-weiß,weiß-gelb-weiß-gelb-weiß,weiß-schwarz-weiß-schwarz-weiß,rot,keins,unbekannt"
 			/>
 	</chunk>
 	<group name="OpenRailwayMap Signals Germany ESO" de.name="OpenRailwayMap Signale DE ESO" icon="signals.png">
@@ -146,6 +163,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12)"
 						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
 						/>
+					<reference ref="traversable" />
 					<space />
 					<preset_link preset_name="Route Indicator (Zs 2)" />
 					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
@@ -209,6 +227,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12)"
 						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
 						/>
+					<reference ref="traversable" />
 					<space />
 					<preset_link preset_name="Route Indicator (Zs 2)" />
 					<preset_link preset_name="Speed Indicator (Zs 3)" />
@@ -276,6 +295,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Shortened distance"
 					de.text="Verkürzter Bremsweg (Weißer Bremspfeil)"
 					/>
+				<reference ref="traversable" />
 				<space />
 				<preset_link preset_name="Route Indicator (Zs 2)" />
 				<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
@@ -339,6 +359,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.display_values="Ersatzsignal (Zs 1);M-Tafel (Zs 12);kein Ersatzsignal"
 						display_values="substitute signal (Zs 1);M Board (Zs 12);no substitute signal"
 						/>
+					<reference ref="traversable" />
 					<space />
 					<preset_link preset_name="Route Indicator (Zs 2)" />
 					<preset_link preset_name="Route Announcing Indicator (Zs 2v)" />
@@ -399,6 +420,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="substitute signal (Zs 1);M Board (Zs 12)"
 						de.display_values="Ersatzsignal (Zs 1);M-Tafel (Zs 12)"
 						/>
+					<reference ref="traversable" />
 					<space />
 					<preset_link preset_name="Route Indicator (Zs 2)" />
 					<preset_link preset_name="Speed Indicator (Zs 3)" />
@@ -502,6 +524,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="substitute signal (Zs 1);cautioness signal (Zs 7)"
 						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7)"
 						/>
+					<reference ref="traversable" />
 					<space />
 					<preset_link preset_name="Speed Indicator (Zs 3)" />
 					<preset_link preset_name="Distant Speed Indicator (Zs 3v)" />
@@ -565,6 +588,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="substitute signal (Zs 1);cautioness signal (Zs 7)"
 						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7)"
 						/>
+					<reference ref="traversable" />
 					<space />
 					<preset_link preset_name="Route Indicator (Zs 2)" />
 					<preset_link preset_name="Speed Indicator (Zs 3)" />
@@ -734,6 +758,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						display_values="substitution signal (ex-DB Zs 1);substitution signal (ex-DR Zs 1);cautioness signal (Zs 7);M board (Zs 12)"
 						de.display_values="Ersatzsignal (ex-DB Zs 1);Ersatzsignal (ex-DR Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
 						/>
+					<reference ref="traversable" />
 					<space />
 					<preset_link preset_name="Vr Distant Light Signal" />
 					<preset_link preset_name="Route Indicator (Zs 2)" />
