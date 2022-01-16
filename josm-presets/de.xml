@@ -536,6 +536,14 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Local operated"
 				de.text="Ortsgestellt"
 				/>
+			<check key="railway:local_operated:lockable"
+				text="Lockable (when local operated)"
+				de.text="Ortsgestellte Weiche mit Weichenschloss"
+				/>
+			<check key="railway:local_operated:home_position"
+				text="Home position (when local operated)"
+				de.text="Ortsgestellte Weiche mit Grundstellung (DE: Stellgewicht schwarz-weiß)"
+				/>
 			<check key="railway:switch:electric"
 				text="Electric"
 				de.text="Elektrischer Weichenantrieb"
