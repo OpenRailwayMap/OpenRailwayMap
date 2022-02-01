@@ -1,0 +1,1134 @@
+/*
+OpenRailwayMap Style File for JOSM and KothicJS
+Gauge layer
+
+OpenRailwayMap Copyright (C) 2021
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+
+Format details:
+* https://josm.openstreetmap.de/wiki/Help/Styles/MapCSSImplementation
+* https://wiki.openstreetmap.org/wiki/MapCSS/0.2
+*/
+
+meta
+{
+	title: "OpenRailwayMap Gauge layer";
+	version: "0";
+	description: "Style for a gauge layer railroad network map.";
+	author: "TrainTraveler";
+	link: "http://wiki.openstreetmap.org/wiki/OpenRailwayMap";
+	watch-modified: true;
+}
+
+canvas
+{
+	default-points: true;
+	default-lines: true;
+}
+
+@import url("common.mapcss");
+
+/* extend common tracks with monorail and miniature */
+
+way|z10-[railway=monorail]
+{
+	set .mono_tracks_present;
+}
+
+way|z11-[railway=miniature]
+{
+	set .mini_tracks_present;
+}
+
+way.tracks_present,
+way.mono_tracks_present,
+way.mini_tracks_present
+{
+	set .tracks;
+}
+
+/* gauge text if available */
+
+way[gauge].tracks
+{
+	text: eval(tag("gauge"));
+}
+
+way[!gauge].tracks
+{
+	text: eval(tag("railway"));
+}
+
+way[railway].tracks
+{
+	text-position: line;
+	text-color: #585858;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-family: "Verdana Bold";
+	font-weight: bold;
+	font-size: 11;
+}
+
+way.tracks
+{
+	width: 2;
+	kothicjs-ignore-layer: true;
+}
+
+/* color for unknown low numeric gauge values */
+
+way[gauge>0][gauge<63].tracks
+{
+	z-index: 1;
+	color: #C0C0C0;
+}
+
+/* colors for numeric gauge values */
+
+way[gauge=63].tracks,
+way[gauge>63][gauge<88].tracks
+{
+	z-index: 42;
+	color: #006060;
+}
+
+way[gauge=88].tracks,
+way[gauge>88][gauge<127].tracks
+{
+	z-index: 43;
+	color: #008080;
+}
+
+way[gauge=127].tracks,
+way[gauge>127][gauge<184].tracks
+{
+	z-index: 44;
+	color: #00A0A0;
+}
+
+way[gauge=184].tracks,
+way[gauge>184][gauge<190].tracks
+{
+	z-index: 45;
+	color: #00C0C0;
+}
+
+way[gauge=190].tracks,
+way[gauge>190][gauge<260].tracks
+{
+	z-index: 46;
+	color: #00E0E0;
+}
+
+way[gauge=260].tracks,
+way[gauge>260][gauge<380].tracks
+{
+	z-index: 47;
+	color: #00FFFF;
+}
+
+way[gauge=380].tracks,
+way[gauge>380][gauge<500].tracks
+{
+	z-index: 2;
+	color: #80FFFF;
+}
+
+way[gauge=500].tracks,
+way[gauge>500][gauge<597].tracks
+{
+	z-index: 3;
+	color: #A0FFFF;
+}
+
+way[gauge=597].tracks,
+way[gauge>597][gauge<600].tracks
+{
+	z-index: 4;
+	color: #C0FFFF;
+}
+
+way[gauge=600].tracks,
+way[gauge>600][gauge<609].tracks
+{
+	z-index: 5;
+	color: #E0FFFF;
+}
+
+way[gauge=609].tracks,
+way[gauge>609][gauge<700].tracks
+{
+	z-index: 6;
+	color: #FFE0FF;
+}
+
+way[gauge=700].tracks,
+way[gauge>700][gauge<750].tracks
+{
+	z-index: 7;
+	color: #FFC0FF;
+}
+
+way[gauge=750].tracks,
+way[gauge>750][gauge<760].tracks
+{
+	z-index: 8;
+	color: #FFA0FF;
+}
+
+way[gauge=760].tracks,
+way[gauge>760][gauge<762].tracks
+{
+	z-index: 9;
+	color: #FF80FF;
+}
+
+way[gauge=762].tracks,
+way[gauge>762][gauge<785].tracks
+{
+	z-index: 10;
+	color: #FF60FF;
+}
+
+way[gauge=785].tracks,
+way[gauge>785][gauge<800].tracks
+{
+	z-index: 10;
+	color: #FF40FF;
+}
+
+way[gauge=800].tracks,
+way[gauge>800][gauge<891].tracks
+{
+	z-index: 11;
+	color: #FF00FF;
+}
+
+way[gauge=891].tracks,
+way[gauge>891][gauge<900].tracks
+{
+	z-index: 11;
+	color: #E000FF;
+}
+
+way[gauge=900].tracks,
+way[gauge>900][gauge<914].tracks
+{
+	z-index: 12;
+	color: #C000FF;
+}
+
+way[gauge=914].tracks,
+way[gauge>914][gauge<950].tracks
+{
+	z-index: 13;
+	color: #A000FF;
+}
+
+way[gauge=950].tracks,
+way[gauge>950][gauge<1000].tracks
+{
+	z-index: 14;
+	color: #8000FF;
+}
+
+way[gauge=1000].tracks,
+way[gauge>1000][gauge<1009].tracks
+{
+	z-index: 15;
+	color: #6000FF;
+}
+
+way[gauge=1009].tracks,
+way[gauge>1009][gauge<1050].tracks
+{
+	z-index: 16;
+	color: #4000FF;
+}
+
+way[gauge=1050].tracks,
+way[gauge>1050][gauge<1066].tracks
+{
+	z-index: 17;
+	color: #0000FF;
+}
+
+way[gauge=1066].tracks,
+way[gauge>1066][gauge<1100].tracks
+{
+	z-index: 18;
+	color: #0000E0;
+}
+
+way[gauge=1100].tracks,
+way[gauge>1100][gauge<1200].tracks
+{
+	z-index: 19;
+	color: #0000C0;
+}
+
+way[gauge=1200].tracks,
+way[gauge>1200][gauge<1372].tracks
+{
+	z-index: 20;
+	color: #0000A0;
+}
+
+way[gauge=1372].tracks,
+way[gauge>1372][gauge<1422].tracks
+{
+	z-index: 21;
+	color: #000080;
+}
+
+way[gauge=1422].tracks,
+way[gauge>1422][gauge<1432].tracks
+{
+	z-index: 22;
+	color: #000060;
+}
+
+way[gauge=1432].tracks,
+way[gauge>1432][gauge<1435].tracks
+{
+	z-index: 23;
+	color: #000040;
+}
+
+way[gauge=1435].tracks,
+way[gauge>1435][gauge<1440].tracks
+{
+	z-index: 0;
+	color: #000000;
+}
+
+way[gauge=1440].tracks,
+way[gauge>1440][gauge<1445].tracks
+{
+	z-index: 25;
+	color: #400000;
+}
+
+way[gauge=1445].tracks,
+way[gauge>1445][gauge<1450].tracks
+{
+	z-index: 26;
+	color: #600000;
+}
+
+way[gauge=1450].tracks,
+way[gauge>1450][gauge<1458].tracks
+{
+	z-index: 27;
+	color: #700000;
+}
+
+way[gauge=1458].tracks,
+way[gauge>1458][gauge<1495].tracks
+{
+	z-index: 28;
+	color: #800000;
+}
+
+way[gauge=1495].tracks,
+way[gauge>1495][gauge<1520].tracks
+{
+	z-index: 29;
+	color: #A00000;
+}
+
+way[gauge=1520].tracks,
+way[gauge>1520][gauge<1522].tracks
+{
+	z-index: 30;
+	color: #C00000;
+}
+
+way[gauge=1522].tracks,
+way[gauge>1522][gauge<1524].tracks
+{
+	z-index: 31;
+	color: #E00000;
+}
+
+way[gauge=1524].tracks,
+way[gauge>1524][gauge<1581].tracks
+{
+	z-index: 32;
+	color: #FF0000;
+}
+
+way[gauge=1581].tracks,
+way[gauge>1581][gauge<1588].tracks
+{
+	z-index: 33;
+	color: #FF6000;
+}
+
+way[gauge=1588].tracks,
+way[gauge>1588][gauge<1600].tracks
+{
+	z-index: 34;
+	color: #FF8000;
+}
+
+way[gauge=1600].tracks,
+way[gauge>1600][gauge<1668].tracks
+{
+	z-index: 35;
+	color: #FFA000;
+}
+
+way[gauge=1668].tracks,
+way[gauge>1668][gauge<1676].tracks
+{
+	z-index: 36;
+	color: #FFC000;
+}
+
+way[gauge=1676].tracks,
+way[gauge>1676][gauge<1700].tracks
+{
+	z-index: 37;
+	color: #FFE000;
+}
+
+way[gauge=1700].tracks,
+way[gauge>1700][gauge<1800].tracks
+{
+	z-index: 38;
+	color: #FFFF00;
+}
+
+way[gauge=1800].tracks,
+way[gauge>1800][gauge<1880].tracks
+{
+	z-index: 39;
+	color: #E0FF00;
+}
+
+way[gauge=1880].tracks,
+way[gauge>1880][gauge<2000].tracks
+{
+	z-index: 40;
+	color: #C0FF00;
+}
+
+way[gauge=2000].tracks,
+way[gauge>2000][gauge<3000].tracks
+{
+	z-index: 41;
+	color: #A0FF00;
+}
+
+/* color for unknown high numeric gauge values */
+
+way[gauge>=3000][gauge<999999].tracks
+{
+	z-index: 1;
+	color: #C0C0C0;
+}
+    
+/* miniature tracks with inaccurate gauge value */
+
+way[railway=miniature][gauge=narrow].tracks,
+way[railway=miniature][gauge=broad].tracks,
+way[railway=miniature][gauge=standard].tracks,
+way[railway=miniature][gauge=unknown].tracks,
+way[railway=miniature][!gauge].tracks
+{
+	z-index: 48;
+	color: #80C0C0;
+}
+
+/* other tracks with inaccurate gauge value */
+
+way[railway=narrow_gauge][gauge=narrow].tracks,
+way[railway=narrow_gauge][gauge=broad].tracks,
+way[railway=narrow_gauge][gauge=standard].tracks,
+way[railway=narrow_gauge][gauge=unknown].tracks,
+way[railway=narrow_gauge][!gauge].tracks,
+way[railway=rail][gauge=narrow].tracks,
+way[railway=light_rail][gauge=narrow].tracks,
+way[railway=subway][gauge=narrow].tracks,
+way[railway=tram][gauge=narrow].tracks
+{
+	z-index: 49;
+	color: #C0C0FF;
+}
+
+way[railway=rail][gauge=broad].tracks,
+way[railway=light_rail][gauge=broad].tracks,
+way[railway=subway][gauge=broad].tracks,
+way[railway=tram][gauge=broad].tracks
+{
+	z-index: 50;
+	color: #FFC0C0;
+}
+
+way[railway=rail][gauge=standard].tracks,
+way[railway=light_rail][gauge=standard].tracks,
+way[railway=subway][gauge=standard].tracks,
+way[railway=tram][gauge=standard].tracks
+{
+	z-index: 51;
+	color: #808080;
+}
+
+/* monorails or tracks with monorail gauge value */
+
+way[railway=monorail].tracks,
+way[railway=rail][gauge=monorail].tracks,
+way[railway=light_rail][gauge=monorail].tracks,
+way[railway=subway][gauge=monorail].tracks,
+way[railway=tram][gauge=monorail].tracks
+{
+	z-index: 52;
+	color: #C0C080;
+}
+
+/* dual gauge railway */
+
+way[gauge=dual].tracks
+{
+	z-index: 60;
+	color: #C0C0C0;
+	casing-color: #808080;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="500;600"].tracks
+{
+	z-index: 61;
+	color: #A0FFFF;
+	casing-color: #E0FFFF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="600;760"].tracks
+{
+	z-index: 62;
+	color: #E0FFFF;
+	casing-color: #FF80FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="600;762"].tracks
+{
+	z-index: 63;
+	color: #E0FFFF;
+	casing-color: #FF60FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="600;900"].tracks
+{
+	z-index: 64;
+	color: #E0FFFF;
+	casing-color: #E000FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="600;1000"].tracks
+{
+	z-index: 65;
+	color: #E0FFFF;
+	casing-color: #8000FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="600;1435"].tracks
+{
+	z-index: 66;
+	color: #E0FFFF;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="610;1067"].tracks
+{
+	z-index: 67;
+	color: #FFE0FF;
+	casing-color: #0000E0;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="610;1676"].tracks
+{
+	z-index: 68;
+	color: #FFE0FF;
+	casing-color: #FFE000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="750;600"].tracks
+{
+	z-index: 69;
+	color: #FFA0FF;
+	casing-color: #E0FFFF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="750;1435"].tracks
+{
+	z-index: 70;
+	color: #FFA0FF;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="750;1520"].tracks
+{
+	z-index: 71;
+	color: #FFA0FF;
+	casing-color: #C00000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="750;1524"].tracks
+{
+	z-index: 72;
+	color: #FFA0FF;
+	casing-color: #FF0000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="750;1676"].tracks
+{
+	z-index: 73;
+	color: #FFA0FF;
+	casing-color: #FFE000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="760;1435"].tracks
+{
+	z-index: 74;
+	color: #FF80FF;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="891;1435"].tracks
+{
+	z-index: 75;
+	color: #FF00FF;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="914;1435"].tracks
+{
+	z-index: 76;
+	color: #C000FF;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="950;1435"].tracks
+{
+	z-index: 77;
+	color: #A000FF;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1000;760"].tracks
+{
+	z-index: 78;
+	color: #8000FF;
+	casing-color: #FF80FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1000;1435"].tracks
+{
+	z-index: 79;
+	color: #8000FF;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1000;1520"].tracks
+{
+	z-index: 80;
+	color: #8000FF;
+	casing-color: #C00000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1000;1600"].tracks
+{
+	z-index: 81;
+	color: #8000FF;
+	casing-color: #FFA000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1000;1668"].tracks
+{
+	z-index: 82;
+	color: #8000FF;
+	casing-color: #FFC000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1000;1676"].tracks
+{
+	z-index: 83;
+	color: #8000FF;
+	casing-color: #FFE000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1009;1435"].tracks
+{
+	z-index: 84;
+	color: #6000FF;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1067;1435"].tracks
+{
+	z-index: 85;
+	color: #0000E0;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1067;1520"].tracks
+{
+	z-index: 86;
+	color: #0000E0;
+	casing-color: #C00000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1100;1435"].tracks
+{
+	z-index: 87;
+	color: #0000C0;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1219;1435"].tracks
+{
+	z-index: 88;
+	color: #0000A0;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;600"].tracks
+{
+	z-index: 89;
+	color: #000000;
+	casing-color: #E0FFFF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;760"].tracks
+{
+	z-index: 90;
+	color: #000000;
+	casing-color: #FF80FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;891"].tracks
+{
+	z-index: 91;
+	color: #000000;
+	casing-color: #FF00FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;900"].tracks
+{
+	z-index: 92;
+	color: #000000;
+	casing-color: #E000FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;914"].tracks
+{
+	z-index: 93;
+	color: #000000;
+	casing-color: #C000FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;915"].tracks
+{
+	z-index: 94;
+	color: #000000;
+	casing-color: #C000FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;925"].tracks
+{
+	z-index: 95;
+	color: #000000;
+	casing-color: #C000FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;narrow"].tracks
+{
+	z-index: 96;
+	color: #000000;
+	casing-color: #C0C0FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;1000"].tracks
+{
+	z-index: 97;
+	color: #000000;
+	casing-color: #8000FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;1067"].tracks
+{
+	z-index: 98;
+	color: #000000;
+	casing-color: #0000E0;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;1520"].tracks
+{
+	z-index: 99;
+	color: #000000;
+	casing-color: #C00000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;1524"].tracks
+{
+	z-index: 100;
+	color: #000000;
+	casing-color: #FF0000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;1600"].tracks
+{
+	z-index: 101;
+	color: #000000;
+	casing-color: #FFA000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;1668"].tracks
+{
+	z-index: 102;
+	color: #000000;
+	casing-color: #FFC000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1435;2140"].tracks
+{
+	z-index: 103;
+	color: #000000;
+	casing-color: #A0FF00;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1520;750"].tracks
+{
+	z-index: 104;
+	color: #C00000;
+	casing-color: #FFA0FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1520;1435"].tracks
+{
+	z-index: 105;
+	color: #C00000;
+	casing-color: #000000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="1600;1000"].tracks
+{
+	z-index: 106;
+	color: #FFA000;
+	casing-color: #8000FF;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+/* dual gauge miniature tracks */
+
+way[gauge="63.5;89"].tracks
+{
+	z-index: 120;
+	color: #004000;
+	casing-color: #006000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="89;121"].tracks
+{
+	z-index: 121;
+	color: #006000;
+	casing-color: #008000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="88.9;127"].tracks,
+way[gauge="90;127"].tracks,
+way[gauge="89;127"].tracks
+{
+	z-index: 122;
+	color: #006000;
+	casing-color: #008000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="120;190"].tracks
+{
+	z-index: 123;
+	color: #008000;
+	casing-color: #00C000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="124;184"].tracks
+{
+	z-index: 124;
+	color: #008000;
+	casing-color: #00A000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="127;178"].tracks
+{
+	z-index: 125;
+	color: #008000;
+	casing-color: #009000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="127;181"].tracks
+{
+	z-index: 126;
+	color: #008000;
+	casing-color: #00A000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="127;184.15"].tracks,
+way[gauge="127;184"].tracks
+{
+	z-index: 127;
+	color: #008000;
+	casing-color: #00A000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="184;125"].tracks
+{
+	z-index: 128;
+	color: #00A000;
+	casing-color: #008000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="184;127"].tracks
+{
+	z-index: 129;
+	color: #00A000;
+	casing-color: #008000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="184;241"].tracks
+{
+	z-index: 130;
+	color: #00A000;
+	casing-color: #00C000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="184;360"].tracks
+{
+	z-index: 131;
+	color: #00A000;
+	casing-color: #00E000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+way[gauge="260;184"].tracks
+{
+	z-index: 132;
+	color: #00E000;
+	casing-color: #00A000;
+	casing-width: 0;
+	dashes: 8,8;
+}
+
+/* multiple gauge railway */
+
+way[gauge=multiple].tracks
+{
+	z-index: 140;
+	color: #C0C0C0;
+	casing-color: #808080;
+	casing-width: 3;
+	dashes: 4,12;
+}
+
+way[gauge="600;762;1435"].tracks
+{
+	z-index: 141;
+	color: #E0FFFF;
+	casing-color: #FF60FF;
+	casing-width: 3;
+	dashes: 4,12;
+}
+
+way[gauge="600;1000;1435"].tracks
+{
+	z-index: 142;
+	color: #E0FFFF;
+	casing-color: #8000FF;
+	casing-width: 3;
+	dashes: 4,12;
+}
+
+way[gauge="457;914;1435"].tracks
+{
+	z-index: 143;
+	color: #80FFFF;
+	casing-color: #C000FF;
+	casing-width: 3;
+	dashes: 4,12;
+}
+
+way[gauge="1000;1435;1668"].tracks
+{
+	z-index: 144;
+	color: #8000FF;
+	casing-color: #FFC000;
+	casing-width: 3;
+	dashes: 4,12;
+}
+
+/* multiple gauge miniature tracks */
+
+way[gauge="127;184;260"].tracks
+{
+	z-index: 150;
+	color: #008000;
+	casing-color: #00E000;
+	casing-width: 3;
+	dashes: 4,12;
+}
+
+way[gauge="63.5;88.9;127"].tracks,
+way[gauge="63.5;89;127"].tracks,
+way[gauge="64;89;127"].tracks
+{
+	z-index: 151;
+	color: #004000;
+	casing-color: #008000;
+	casing-width: 3;
+	dashes: 4,12;
+}
+
+way[gauge="64;89;127;178"].tracks
+{
+	z-index: 152;
+	color: #004000;
+	casing-color: #009000;
+	casing-width: 3;
+	dashes: 4,12;
+}
+
+way[gauge="89;127;144;184"].tracks
+{
+	z-index: 153;
+	color: #006000;
+	casing-color: #00A000;
+	casing-width: 3;
+	dashes: 4,12;
+}
+
+way[gauge="89;127;184"].tracks
+{
+	z-index: 154;
+	color: #006000;
+	casing-color: #00A000;
+	casing-width: 3;
+	dashes: 4,12;
+}
