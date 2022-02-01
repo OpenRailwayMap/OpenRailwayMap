@@ -390,7 +390,7 @@
 				"type": "LineString",
 				"coordinates": [[10, 50], [80, 50]],
 				"properties": {
-		      			"railway": "rail",
+					"railway": "rail",
 					"gauge": "1458"
 				}
 			}],
