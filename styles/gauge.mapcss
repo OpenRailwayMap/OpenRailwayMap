@@ -431,7 +431,7 @@ way[gauge>=3000][gauge<999999].tracks
 	z-index: 1;
 	color: #C0C0C0;
 }
-    
+
 /* miniature tracks with inaccurate gauge value */
 
 way[railway=miniature][gauge=narrow].tracks,

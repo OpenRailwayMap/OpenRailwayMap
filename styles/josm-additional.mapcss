@@ -7,7 +7,7 @@ This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions.
 See ../COPYING for details.
 
-This style is not suitable for map rendering! It uses some JOSM default icons, 
+This style is not suitable for map rendering! It uses some JOSM default icons,
 available under GPL v2 or newer. These icons are not included.
 
 Format details:
@@ -18,7 +18,7 @@ Format details:
 meta
 {
 	title: "OpenRailwayMap additional icons and symbols for editing";
-	version: "0"; 
+	version: "0";
 	description: "Style for a assisting mapping of railway information in JOSM. Not suitable for map rendering.";
 	author: "Nakaner";
 	link: "https://wiki.openstreetmap.org/wiki/OpenRailwayMap";
@@ -137,7 +137,7 @@ node|z16-[railway=signal][!"railway:signal:direction"]
 {
 	z-index: 1000;
 	icon-image: "presets/misc/deprecated.svg";
-	/* presets/misc/deprecated.svg is part of the JOSM installation, 
+	/* presets/misc/deprecated.svg is part of the JOSM installation,
 	   that's why it is not included at OpenRailwayMap repository */
 	icon-width: 16;
 	icon-height: 16;
@@ -177,7 +177,7 @@ node|z16-[railway=signal]["railway:signal:direction"]["railway:signal:stop:descr
 	z-index: 10000;
 	/* high z-index to overwrite other stylesheets */
 	icon-image: "presets/misc/deprecated.svg";
-	/* presets/misc/deprecated.svg is part of the JOSM installation, 
+	/* presets/misc/deprecated.svg is part of the JOSM installation,
 	   that's why it is not included at OpenRailwayMap repository */
 	icon-width: 16;
 	icon-height: 16;

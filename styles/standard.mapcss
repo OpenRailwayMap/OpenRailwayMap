@@ -685,7 +685,7 @@ node|z14-[railway=level_crossing]
 	icon-image: "icons/level-crossing-24.png";
 	icon-width: 12;
 	icon-height: 7;
-	allow-overlap: false; 
+	allow-overlap: false;
 }
 
 /***************************************/
@@ -697,7 +697,7 @@ node|z14-[railway=crossing]
 	icon-image: "icons/crossing-24.png";
 	icon-width: 12;
 	icon-height: 7;
-	allow-overlap: false; 
+	allow-overlap: false;
 }
 
 /************/

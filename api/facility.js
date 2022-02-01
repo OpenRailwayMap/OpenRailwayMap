@@ -14,10 +14,10 @@ Facilityinfo = function(params)
 		return false;
 
 	var prefix = configuration.prefix;
-	
+
 	var operator = (params.operator != null && params.operator.length > 0) ? "AND (LOWER(tags->'operator') LIKE LOWER('%"+params.operator+"%'))" : "";
 	var uicref = params.uicref;
-	
+
 	if (params.uicref != null)
 		var searchcondition = "LOWER(tags->'uic_ref') = LOWER('"+params.uicref+"') AND";
 	else if (params.ref != null)

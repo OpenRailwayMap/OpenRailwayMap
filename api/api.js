@@ -147,7 +147,7 @@ pgPass(connectionDetails, function(password)
 						}
 					});
 				}
-			
+
 				var requestType = query.pathname.substr(1);
 
 				logger.info('Received '+requestType+' request with params '+JSON.stringify(params));
@@ -168,7 +168,7 @@ pgPass(connectionDetails, function(password)
 					if (configuration.queries.indexOf(requestType) > -1)
 					{
 						var sqlquery = eval(requestType+"(params)");
-					
+
 						if (!sqlquery)
 						{
 							done();

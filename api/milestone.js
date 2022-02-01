@@ -16,7 +16,7 @@ Milestone = function(params)
 
 	var prefix = configuration.prefix;
 	var operator = (params.operator != null && params.operator.length > 0) ? "AND (LOWER("+prefix+"_line.tags->'operator') LIKE LOWER('%"+params.operator+"%'))" : "";
-	
+
 	// support also comma instead of point (more common in e.g. Germany)
 	var position = parseFloat(params.position.replace(",", ".")).toFixed(3).toString();
 
