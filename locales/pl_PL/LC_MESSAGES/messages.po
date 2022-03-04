@@ -6,13 +6,13 @@
 # Translators:
 # diverpl <mkubien@gmail.com>, 2014
 # endro <sigg@10g.pl>, 2014
-# Grzegorz Szymaszek <gszymaszek@short.pl>, 2021
+# Grzegorz Szymaszek <gszymaszek@short.pl>, 2021-2022
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2021-04-21 10:54+0200\n"
+"PO-Revision-Date: 2022-03-04 19:05+0100\n"
 "Last-Translator: Grzegorz Szymaszek <gszymaszek@short.pl>\n"
 "Language-Team: Polish (https://www.transifex.com/rurseekatze/openrailwaymap/language/pl/)\n"
 "Language: pl\n"
@@ -215,7 +215,7 @@ msgid "Tunnel"
 msgstr "Tunel"
 
 msgid "Line ref"
-msgstr "Numer toru"
+msgstr "Numer linii"
 
 msgid "Railroad line"
 msgstr "Linia kolejowa"
@@ -464,7 +464,7 @@ msgid "Quick search shortcut"
 msgstr "Skrót szybkiego szukania"
 
 msgid "Placeholder"
-msgstr ""
+msgstr "Wypełniacz"
 
 msgid "Donate"
 msgstr "Wspieraj"
@@ -476,7 +476,7 @@ msgid "Wiki"
 msgstr "Wiki"
 
 msgid "Search milestone"
-msgstr ""
+msgstr "Szukaj hektometru"
 
 msgid "Station code"
 msgstr "Kod stacji"
@@ -506,7 +506,7 @@ msgid "More results"
 msgstr "Więcej wyników"
 
 msgid "Spur junction"
-msgstr ""
+msgstr "Posterunek bocznicowy/pomocniczy"
 
 msgid "No background map"
 msgstr "Bez mapy w tle"
@@ -545,7 +545,7 @@ msgid "no train protection"
 msgstr "brak systemów zabezpieczenia ruchu kolejowego"
 
 msgid "crossing signal type To"
-msgstr ""
+msgstr "semafor przejazdowy typu To"
 
 msgid "Voltage"
 msgstr "Napięcie"
@@ -560,55 +560,55 @@ msgid "No information about train protection"
 msgstr "Brak informacji o systemach zabezpieczenia ruchu kolejowego"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Semafor świetlny główny Hp bez informacji o stanie"
 
 msgid "Track usage"
 msgstr "Użycie toru"
 
 msgid "Lf 7 Geschwindigkeitssignal"
-msgstr ""
+msgstr "Wskaźnik zmiany prędkości Lf 7"
 
 msgid "1.5 – 3kV ="
 msgstr "1,5–3 kV ="
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "ETCS w trakcie budowy"
 
 msgid "3kV ="
 msgstr "3 kV ="
 
 msgid "shunting signal type Ro"
-msgstr ""
+msgstr "semafor manewrowy typu Ro"
 
 msgid "Track type"
 msgstr "Typ toru"
 
 msgid "El 5 \"Bügel an\"-Signal"
-msgstr ""
+msgstr "Wskaźnik podniesienia pantografu El 5"
 
 msgid "Linienzugbeeinflussung"
-msgstr ""
+msgstr "System automatycznego sterowania pociągiem LZB"
 
 msgid "25kV 50Hz ~"
 msgstr "25 kV 50 Hz ~"
 
 msgid "So 106 Kreuztafel"
-msgstr ""
+msgstr "Wskaźnik krzyżowy So 106"
 
 msgid "Ra 11 Wartezeichen mit Sh 1"
-msgstr ""
+msgstr "Wskaźnik miejsca zatrzymania dla manewrów Ra 11 z Sh 1"
 
 msgid "Junction, Crossover, Service Station, Site"
 msgstr "Posterunek odgałęźny, odstępowy, osłonny, techniczny"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Semafor kształtowy główny Hp bez informacji o stanie"
 
 msgid "At least 25kV ~"
 msgstr "Przynajmniej 25 kV ~"
 
 msgid "minor signal type Lo"
-msgstr ""
+msgstr "semafor drugorzędny typu Lo"
 
 msgid "15 – 25kV ~"
 msgstr "15–25 kV ~"
@@ -617,28 +617,28 @@ msgid "ETCS"
 msgstr "ETCS"
 
 msgid "Blockkennzeichen"
-msgstr ""
+msgstr "Wskaźnik blokowy"
 
 msgid "Ne 6 Haltepunkttafel"
-msgstr ""
+msgstr "Wskaźnik przystanku Ne 6"
 
 msgid "Ne 1 Trapeztafel"
-msgstr ""
+msgstr "Wskaźnik trapezowy Ne 1"
 
 msgid "15kV 16⅔Hz ~"
 msgstr "15 kV 16⅔ Hz ~"
 
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
-msgstr ""
+msgstr "Wskaźnik miejsca zatrzymania dla manewrów Ra 11 bez Sh 1"
 
 msgid "Ne 5 Haltetafel"
-msgstr ""
+msgstr "Wskaźnik zatrzymania Ne 5"
 
 msgid "More than 3kV ="
 msgstr "Powyżej 3 kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
-msgstr ""
+msgstr "Wskaźnik ostrzegawczy zmiany prędkości Lf 6"
 
 msgid "750 – 1000V ="
 msgstr "750–1000 V ="
@@ -653,7 +653,7 @@ msgid "1 – 1.5kV ="
 msgstr "1–1,5 kV ="
 
 msgid "block signal type So"
-msgstr ""
+msgstr "semafor blokowy typu So"
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
 msgstr "%SPDMIN%–%SPDMAX% km/h"
@@ -662,31 +662,31 @@ msgid "1.5kV ="
 msgstr "1,5 kV ="
 
 msgid "El 2 Einschaltsignal"
-msgstr ""
+msgstr "Wskaźnik jazdy pod prądem El 2"
 
 msgid "Ra 10 Rangierhalttafel / Verschubhalttafel"
-msgstr ""
+msgstr "Wskaźnik przetaczania Ra 10"
 
 msgid "Zs 10 Endesignal (Tafel)"
-msgstr ""
+msgstr "Wskaźnik końca ograniczenia prędkości Zs 10"
 
 msgid "El 1 Ausschaltsignal"
-msgstr ""
+msgstr "Wskaźnik jazdy bezprądowej El 1"
 
 msgid "Ra 11b Wartezeichen"
-msgstr ""
+msgstr "Wskaźnik miejsca zatrzymania dla manewrów Ra 11b"
 
 msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
-msgstr ""
+msgstr "Wskaźnik zatrzymania pojazdów z podniesionymi pantografami El 6"
 
 msgid "Less than 750V ="
 msgstr "Poniżej 750 v ="
 
 msgid "Punktförmige Zugbeeinflussung"
-msgstr ""
+msgstr "System automatycznej kontroli pociągu PZB"
 
 msgid "El 4 \"Bügel ab\"-Signal"
-msgstr ""
+msgstr "Wskaźnik opuszczenia pantografu El 4"
 
 msgid "750V ="
 msgstr "750 V ="
@@ -695,245 +695,248 @@ msgid "25kV 60Hz ~"
 msgstr "25 kV 60 Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
+msgstr "Wskaźnik ostrzegawczy opuszczenia pantografu El 3"
 
 msgid "El 1v Ausschaltsignal erwarten"
-msgstr ""
+msgstr "Wskaźnik ostrzegawczy jazdy bezprądowej El 1v"
 
 msgid "15kV 16.7Hz ~"
 msgstr "15 kV 16,7 Hz ~"
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
-msgstr ""
+msgstr "Tarcza zatrzymania Sh (zwykła, karzełkowa)"
 
 msgid "distant signal with Eo 2 (new type)"
-msgstr ""
+msgstr "semafor ostrzegawczy z Eo 2 (nowy typ)"
 
 msgid "Ks-Hauptsignal"
-msgstr ""
+msgstr "Semafor główny Ks"
 
 msgid "Bü 5 Läutetafel (normal, für durchfahrende Züge)"
-msgstr ""
+msgstr "Wskaźnik dzwonka Bü 5 (zwykły, dla pociągów przelotowych)"
 
 msgid "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Semafor wieloczęściowy Ks (zwykły, skrócona droga hamowania)"
 
 msgid "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Semafor ostrzegawczy świetlny Vr z Vr 2 (zwykły, powtarzacz / skrócona droga hamowania)"
 
 msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Wskaźnik przejazdu kolejowego Bü 2 (zwykły, skrócona droga hamowania)"
 
 msgid "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Semafor ostrzegawczy Ks (zwykły, powtarzacz, skrócona droga hamowania)"
 
 msgid "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
-msgstr ""
+msgstr "Wskaźnik gwizdawki Bü 4 (zwykłu, dla pociągów przelotowych)"
 
 msgid "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
-msgstr ""
+msgstr "Wskaźnik gwizdawki Pf 1 (zwykłu, dla pociągów przelotowych)"
 
 msgid "El 4 \"Bügel ab\"-Signal"
-msgstr ""
+msgstr "Wskaźnik opuszczenia pantografu El 4"
 
 msgid "Vr-Formvorsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Semafor ostrzegawczy kształtowy Vr bez informacji o stanie"
 
 msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
-msgstr ""
+msgstr "Semafor ostrzegawczy kształtowy Vr (bez Vr 2, z Vr 2)"
 
 msgid "main signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "semafor główny o nieokreślonych wskazaniach (nowy typ, stary typ)"
 
 msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
-msgstr ""
+msgstr "Semafor świetlny główny Hp (bez Hp 2, z Hp 2)"
 
 msgid "main signal with Po 1 (new type, old type)"
-msgstr ""
+msgstr "semafor główny z Po 1 (nowy typ, stary typ)"
 
 msgid "main signal with Po 2 (new type, old type)"
-msgstr ""
+msgstr "semafor główny z Po 2 (nowy typ, stary typ)"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
+msgstr "Wskaźnik ostrzegawczy opuszczenia pantografu El 3"
 
 msgid "distant signal with Eo 1 (new type, old type)"
-msgstr ""
+msgstr "semafor ostrzegawczy z Eo 1 (nowy typ, stary typ)"
 
 msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
+"Semafor świetlny Vr bez Vr 2 (zwykły, powtarzacz / skrócona droga hamowania)"
 
 msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
-msgstr ""
+msgstr "Tarcza zatrzymania Sh (zwykła, karzełkowa)"
 
 msgid "Sv-Signal (ohne Hp 0, mit Hp 0)"
-msgstr ""
+msgstr "Sygnalizator Sv (bez Hp 0, z Hp 0)"
 
 msgid "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
-msgstr ""
+msgstr "Semafor kształtowy główny Hp (bez Hp 2, z Hp 2)"
 
 msgid "El 5 \"Bügel an\"-Signal"
-msgstr ""
+msgstr "Wskaźnik podniesienia pantografu El 5"
 
 msgid ""
 "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
+"Semafor świetlny Vr bez informacji o stanie (zwykły, powtarzacz / skrócona "
+"droga hamowania)"
 
 msgid "distant signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "semafor ostrzegawczy o nieokreślonych wskazaniach (nowy typ, stary typ)"
 
 msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
-msgstr ""
+msgstr "Wskaźnik/sygnalizator ostrzegawczy ograniczenia prędkości Zs 3v"
 
 msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
-msgstr ""
+msgstr "Wskaźnik/sygnalizator ograniczenia prędkości Zs 3"
 
 msgid "Imprint &amp; Privacy Policy"
 msgstr "Informacje prawne &amp; Polityka prywatności"
 
 msgid "automatische treinbeïnvloeding"
-msgstr ""
+msgstr "automatyczny system zabezpieczenia pociągu"
 
 msgid "Transmission voie-machine (TVM)"
-msgstr ""
+msgstr "Transmisja tor‐pojazd (TVM)"
 
 msgid "Contrôle de vitesse par balises (KVB)"
-msgstr ""
+msgstr "Kontrola prędkości KVB"
 
 msgid "1067mm"
-msgstr ""
+msgstr "1067 mm"
 
 msgid "1435mm"
-msgstr ""
+msgstr "1435 mm"
 
 msgid "1676mm"
-msgstr ""
+msgstr "1676 mm"
 
 msgid "1422mm"
-msgstr ""
+msgstr "1422 mm"
 
 msgid "1524mm"
-msgstr ""
+msgstr "1524 mm"
 
 msgid "950mm"
-msgstr ""
+msgstr "950 mm"
 
 msgid "800mm"
-msgstr ""
+msgstr "800 mm"
 
 msgid "127mm"
-msgstr ""
+msgstr "127 mm"
 
 msgid "Narrow gauge"
-msgstr ""
+msgstr "Tor wąski"
 
 msgid "500mm"
-msgstr ""
+msgstr "500 mm"
 
 msgid "Miniature"
-msgstr ""
+msgstr "Miniaturowy"
 
 msgid "Miniature tracks"
-msgstr ""
+msgstr "Tory miniaturowe"
 
 msgid "1445mm"
-msgstr ""
+msgstr "1445 mm"
 
 msgid "Standard gauge"
-msgstr ""
+msgstr "Tor normalny"
 
 msgid "1100mm"
-msgstr ""
+msgstr "1100 mm"
 
 msgid "597mm"
-msgstr ""
+msgstr "597 mm"
 
 msgid "1372mm"
-msgstr ""
+msgstr "1372 mm"
 
 msgid "1450mm"
-msgstr ""
+msgstr "1450 mm"
 
 msgid "600mm"
-msgstr ""
+msgstr "600 mm"
 
 msgid "64mm"
-msgstr ""
+msgstr "64 mm"
 
 msgid "1432mm"
-msgstr ""
+msgstr "1432 mm"
 
 msgid "760mm"
-msgstr ""
+msgstr "760 mm"
 
 msgid "381mm"
-msgstr ""
+msgstr "381 mm"
 
 msgid "750mm"
-msgstr ""
+msgstr "750 mm"
 
 msgid "1009mm"
-msgstr ""
+msgstr "1009 mm"
 
 msgid "1495mm"
-msgstr ""
+msgstr "1495 mm"
 
 msgid "1520mm"
-msgstr ""
+msgstr "1520 mm"
 
 msgid "Track gauge values"
-msgstr ""
+msgstr "Wartości rozstawu szyn"
 
 msgid "1458mm"
-msgstr ""
+msgstr "1458 mm"
 
 msgid "Dual gauge"
-msgstr ""
+msgstr "Podwójna szerokość"
 
 msgid "1600mm"
-msgstr ""
+msgstr "1600 mm"
 
 msgid "184mm"
-msgstr ""
+msgstr "184 mm"
 
 msgid "610mm"
-msgstr ""
+msgstr "610 mm"
 
 msgid "89mm"
-msgstr ""
+msgstr "89 mm"
 
 msgid "260mm"
-msgstr ""
+msgstr "260 mm"
 
 msgid "762mm"
-msgstr ""
+msgstr "762 mm"
 
 msgid "1050mm"
-msgstr ""
+msgstr "1050 mm"
 
 msgid "190mm"
-msgstr ""
+msgstr "190 mm"
 
 msgid "914mm"
-msgstr ""
+msgstr "914 mm"
 
 msgid "1000mm"
-msgstr ""
+msgstr "1000 mm"
 
 msgid "Multiple gauge"
-msgstr ""
+msgstr "Wiele szerokości"
 
 msgid "1668mm"
-msgstr ""
+msgstr "1668 mm"
 
 msgid "Broad gauge"
-msgstr ""
+msgstr "Tor szeroki"
 
 msgid "900mm"
-msgstr ""
+msgstr "900 mm"
 
 msgid "700mm"
-msgstr ""
+msgstr "700 mm"
 
 msgid "Monorail"
-msgstr ""
+msgstr "Jednoszynowy"
