@@ -185,7 +185,7 @@ msgid "Milestone"
 msgstr "Kilometrering"
 
 msgid "Signal"
-msgstr "Signaal"
+msgstr "Sein"
 
 msgid "Level crossing"
 msgstr "Gelijkvloerse overweg"
@@ -443,10 +443,10 @@ msgid "No information"
 msgstr "Geen informatie"
 
 msgid "speed only given for one direction"
-msgstr "Snelheid in een richting"
+msgstr "snelheid alleen bekend voor één richting"
 
 msgid "main track, service track"
-msgstr "hoofdspoor, onderhoudsspoor"
+msgstr "hoofdbaan, zijspoor"
 
 msgid "Quick search shortcut"
 msgstr "Snelzoek snelkoppeling"
@@ -464,10 +464,10 @@ msgid "Wiki"
 msgstr "Wiki"
 
 msgid "Search milestone"
-msgstr "Zoek mijlpaal"
+msgstr "Zoek kilometrering"
 
 msgid "Station code"
-msgstr "Stationscode"
+msgstr "Stationafkorting"
 
 msgid "Search station"
 msgstr "Zoek station"
@@ -485,16 +485,16 @@ msgid "Name"
 msgstr "Naam"
 
 msgid "Line operator"
-msgstr "Lijn exploitant"
+msgstr "Exploitant"
 
 msgid "Operator"
-msgstr "Spoorwegmaatschappij"
+msgstr "Beheerder"
 
 msgid "More results"
 msgstr "Meer resultaten"
 
 msgid "Spur junction"
-msgstr "Raccordement aansluiting"
+msgstr "Spooraansluiting"
 
 msgid "No background map"
 msgstr "Geen achtergrondkaart"
@@ -539,22 +539,22 @@ msgid "Voltage"
 msgstr "Spanning"
 
 msgid "signals"
-msgstr "signalen"
+msgstr "seinen"
 
 msgid "Operating Sites"
-msgstr "Dienstregelingspunten"
+msgstr "Dienstregelmeetpunten"
 
 msgid "No information about train protection"
 msgstr "Geen informatie betreffende treinbeïnvloeding"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
-msgstr "Hp hoofdlichtsein zonder indicatie van de signaalstatus"
+msgstr "Hp-hoofdlichtsein zonder indicatie van de seintoestand"
 
 msgid "Track usage"
 msgstr "Spoorgebruik"
 
 msgid "Lf 7 Geschwindigkeitssignal"
-msgstr "Lf 7 Snelheidssignaal"
+msgstr "Lf7-snelheidssein"
 
 msgid "1.5 – 3kV ="
 msgstr "1500 V – 3 kV ="
@@ -572,7 +572,7 @@ msgid "Track type"
 msgstr "Spoor type"
 
 msgid "El 5 \"Bügel an\"-Signal"
-msgstr "El 5 Raise pantograph signal"
+msgstr "El5-\"Stroomafnemers op\"-sein"
 
 msgid "Linienzugbeeinflussung"
 msgstr "Linienzugbeeinflussung (LZB)"
@@ -581,7 +581,7 @@ msgid "25kV 50Hz ~"
 msgstr "25 kV 50Hz ~"
 
 msgid "So 106 Kreuztafel"
-msgstr "So 106 Kreuztafel"
+msgstr "So106-kruisbord"
 
 msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
@@ -590,7 +590,7 @@ msgid "Junction, Crossover, Service Station, Site"
 msgstr "Knooppunt, Overloopwissel, onderhoudsstation,Locatie"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
-msgstr "Hp-Hoofdarmsein zonder indicatie van de signaalstatus"
+msgstr "Hp-Hoofdarmsein zonder indicatie van de seintoestand"
 
 msgid "At least 25kV ~"
 msgstr "Ten minste 25 kV ~"
@@ -674,7 +674,7 @@ msgid "Punktförmige Zugbeeinflussung"
 msgstr "Punktförmige Zugbeeinflussung (PZB)"
 
 msgid "El 4 \"Bügel ab\"-Signal"
-msgstr "El 4 Lower pantograph signal"
+msgstr "El4-\"Stroomafnemers neer\"-sein"
 
 msgid "750V ="
 msgstr "750 V ="
