@@ -16,7 +16,7 @@
 
 ## Contribute
 
- Contributions to this project are welcome, read [how to contribute](https://www.openrailwaymap.org/contribute.html) and the [contribution guidelines](CONTRIBUTING.md) for further details.
+ Contributions to this project are welcome, read the [contribution guidelines](CONTRIBUTING.md) for further details.
 
  If you would like to report an issue, please use the [issue tracker](https://github.com/openrailwaymap/OpenRailwayMap/issues) on GitHub or contact us via one of the ways described below.
 
