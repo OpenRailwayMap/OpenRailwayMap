@@ -487,6 +487,8 @@ Create database views:
 sudo -u postgres psql -d gis -f api/api_views_and_indexes.sql
 ```
 
+The [SQL file](https://github.com/OpenRailwayMap/server-admin/blob/master/ansible/roles/website/files/api_views_and_indexes.sql) can be found in the [Ansible playbooks](https://github.com/OpenRailwayMap/server-admin/tree/master/ansible).
+
  Start the API server:
 
 ```shell
