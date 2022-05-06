@@ -17,4 +17,4 @@ We currently do not use any versioning for this repository. That reduces the man
 
 ## Maintainers
 
-* Alexander Matheisen [@rurseekatze](https://github.com/rurseekatze)
+* Michael Reichert [@Nakaner](https://github.com/Nakaner)
