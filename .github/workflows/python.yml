@@ -23,7 +23,9 @@ jobs:
         submodules: true
 
     - name: deps
-      run: sudo apt-get install -yq libxml2-utils gettext
+      run: |
+        sudo apt-get update
+        sudo apt-get install -yq libxml2-utils gettext
 
     - name: set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
