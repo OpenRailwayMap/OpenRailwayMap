@@ -51,28 +51,28 @@ msgid "Kilometer"
 msgstr "公里"
 
 msgid "Track"
-msgstr "跟踪"
+msgstr "轨道"
 
 msgid "Permalink"
 msgstr "固定链接"
 
 msgid "Hillshading"
-msgstr "山体渲染"
+msgstr "山体阴影"
 
 msgid "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
-msgstr "山体渲染来自<a href='https://www.nasa.gov/'> NASA SRTM </a>"
+msgstr "山体阴影来自<a href='https://www.nasa.gov/'> NASA SRTM </a>"
 
 msgid "Rendering: OpenRailwayMap"
 msgstr "渲染：OpenRailwayMap"
 
 msgid "Mapnik"
-msgstr " Mapnik"
+msgstr "Mapnik"
 
 msgid "Mapnik Grayscale"
-msgstr " Mapnik灰色"
+msgstr "Mapnik灰度"
 
 msgid "Map data &copy; OpenStreetMap contributors"
-msgstr "地图数据&copy; OpenStreetMap贡献者"
+msgstr "地图数据 &copy; OpenStreetMap贡献者"
 
 msgid "Select a map style"
 msgstr "选择地图样式"
@@ -93,47 +93,41 @@ msgid "Copy this HTML code snippet into your website to show a small map with a 
 msgstr "将此HTML代码段复制到您的网站中，以显示带有标记的小地图。"
 
 msgid "Fullscreen"
-msgstr "全屏#, php-format"
+msgstr "全屏"
 
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d秒"
-msgstr[1] "%d秒#, php-format"
 
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d分钟"
-msgstr[1] "%d分钟#, php-format"
 
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d小时"
-msgstr[1] "%d小时#, php-format"
 
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
 msgstr[0] "%d天"
-msgstr[1] "%d天#, php-format"
 
 #, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
 msgstr[0] "%d周"
-msgstr[1] "%d周#, php-format"
 
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
 msgstr[0] "%d个月"
-msgstr[1] "%d个月#, php-format"
 
 #, php-format
 msgid "more than %s ago"
-msgstr "超过%s之前#, php-format"
+msgstr "超过%s之前"
 
 #, php-format
 msgid "%s ago"
@@ -158,13 +152,13 @@ msgid "Station"
 msgstr "车站"
 
 msgid "Junction"
-msgstr "交界处"
+msgstr "道岔线路所"
 
 msgid "Yard"
-msgstr "站场"
+msgstr "车场"
 
 msgid "Crossover"
-msgstr "交叉路口"
+msgstr "横渡线路所"
 
 msgid "Site"
 msgstr "场地"
@@ -185,10 +179,10 @@ msgid "Signal"
 msgstr "信号"
 
 msgid "Level crossing"
-msgstr "平交路口"
+msgstr "平交道口"
 
 msgid "Crossing"
-msgstr "穿越"
+msgstr "交叉"
 
 msgid "Legend"
 msgstr "图例"
@@ -212,10 +206,10 @@ msgid "Yard track"
 msgstr "站线"
 
 msgid "Spur"
-msgstr "专用线"
+msgstr "岔线"
 
 msgid "Crossover track"
-msgstr "跨越线"
+msgstr "渡线"
 
 msgid "Branch line"
 msgstr "支线"
@@ -239,19 +233,19 @@ msgid "Preserved service track"
 msgstr "保留的服务轨道"
 
 msgid "Track under construction"
-msgstr "正在建设的轨道"
+msgstr "在建轨道"
 
 msgid "Proposed track"
-msgstr "拟议路线"
+msgstr "拟建轨道"
 
 msgid "Disused track"
-msgstr "不使用的轨道"
+msgstr "废弃轨道"
 
 msgid "Abandoned track"
-msgstr "遗弃的轨道"
+msgstr "遗迹轨道"
 
 msgid "Razed track"
-msgstr "已拆除的轨道"
+msgstr "绝迹轨道"
 
 msgid "Tram"
 msgstr "电车"
@@ -278,25 +272,25 @@ msgid "Signal box"
 msgstr "信号楼"
 
 msgid "Owner change"
-msgstr "局界"
+msgstr "产权分界"
 
 msgid "Railway crossing"
 msgstr "铁路道口"
 
 msgid "Buffer stop"
-msgstr "缓冲区停止"
+msgstr "挡车器"
 
 msgid "Isolated track section"
 msgstr "隔离的轨道部分"
 
 msgid "Platform"
-msgstr "平台"
+msgstr "站台"
 
 msgid "Vending machine"
 msgstr "自动贩卖机"
 
 msgid "Ticket shop"
-msgstr "票务店"
+msgstr "售票处"
 
 msgid "Subway entrance"
 msgstr "地铁入口"
@@ -314,13 +308,13 @@ msgid "Water crane"
 msgstr "水鹤"
 
 msgid "Coaling facility"
-msgstr "制煤设施"
+msgstr "装煤设施"
 
 msgid "Wash"
-msgstr "洗涤"
+msgstr "洗刷库"
 
 msgid "Pit"
-msgstr "坑"
+msgstr "检修坑"
 
 msgid "Loading gauge"
 msgstr "荷重计"
@@ -332,7 +326,7 @@ msgid "Rail brake"
 msgstr "铁路制动器"
 
 msgid "Engine shed"
-msgstr "引擎棚"
+msgstr "机库"
 
 msgid "Workshop"
 msgstr "车间"
@@ -341,25 +335,25 @@ msgid "Radio tower"
 msgstr "无线电塔"
 
 msgid "Turntable"
-msgstr "转盘"
+msgstr "旋车盘"
 
 msgid "Traverser"
-msgstr "转盘"
+msgstr "移车台"
 
 msgid "Loading ramp"
-msgstr "正在加载坡度"
+msgstr "装载坡道"
 
 msgid "Crane"
 msgstr "起重机"
 
 msgid "Track scale"
-msgstr "跟踪比例"
+msgstr "地磅"
 
 msgid "Carrier truck pit"
-msgstr "运输车维修站"
+msgstr "车厢装车点"
 
 msgid "Gauge conversion"
-msgstr "量表转换"
+msgstr "轨距转换"
 
 msgid "Gate"
 msgstr "门"
@@ -371,19 +365,19 @@ msgid "Container terminal"
 msgstr "集装箱码头"
 
 msgid "Station building"
-msgstr "车站大楼"
+msgstr "车站建筑"
 
 msgid "Factory connected to railroad line"
 msgstr "连接到铁路线的工厂"
 
 msgid "Rack"
-msgstr "机架"
+msgstr "装卸栈桥"
 
 msgid "Embankment"
 msgstr "路堤"
 
 msgid "Cutting"
-msgstr "剪切"
+msgstr "路堑"
 
 msgid "Miniature railway"
 msgstr "微型铁路"
@@ -392,7 +386,7 @@ msgid "Funicular"
 msgstr "缆车"
 
 msgid "Military line"
-msgstr "军事线"
+msgstr "军用线"
 
 msgid "Military service track"
 msgstr "军事服务轨道"
@@ -410,7 +404,7 @@ msgid "Test service track"
 msgstr "测试服务轨道"
 
 msgid "Car shuttle"
-msgstr "汽车穿梭车"
+msgstr "汽车摆渡"
 
 msgid "Rolling highway"
 msgstr "滚动公路"
@@ -464,13 +458,13 @@ msgid "Search milestone"
 msgstr "搜索里程碑"
 
 msgid "Station code"
-msgstr "站号"
+msgstr "车站代码"
 
 msgid "Search station"
 msgstr "搜索车站"
 
 msgid "UIC reference"
-msgstr " UIC参考"
+msgstr "UIC编号"
 
 msgid "About this project"
 msgstr "关于这个项目"
@@ -482,16 +476,16 @@ msgid "Name"
 msgstr "名称"
 
 msgid "Line operator"
-msgstr "线路操作员"
+msgstr "线路运营商"
 
 msgid "Operator"
-msgstr "操作员"
+msgstr "运营商"
 
 msgid "More results"
 msgstr "更多结果"
 
 msgid "Spur junction"
-msgstr "专用线路结"
+msgstr "岔线线路所"
 
 msgid "No background map"
 msgstr "无背景图"
@@ -503,10 +497,10 @@ msgid "Not electrified"
 msgstr "未电气化"
 
 msgid "Deelectrified"
-msgstr "电气化已拆除"
+msgstr "去电气化"
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "拟电气化"
 
 msgid "Electrification under construction"
 msgstr "电气化在建"
@@ -527,19 +521,19 @@ msgid "train protection"
 msgstr "列车保护系统"
 
 msgid "no train protection"
-msgstr ""
+msgstr "无列车保护"
 
 msgid "crossing signal type To"
 msgstr ""
 
 msgid "Voltage"
-msgstr ""
+msgstr "电压"
 
 msgid "signals"
-msgstr ""
+msgstr "信号"
 
 msgid "Operating Sites"
-msgstr ""
+msgstr "运营场所"
 
 msgid "No information about train protection"
 msgstr "无列车保护系统信息"
@@ -584,13 +578,13 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "线路所"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr "最低 25kV ~"
+msgstr "至少 25kV ~"
 
 msgid "minor signal type Lo"
 msgstr ""
@@ -620,7 +614,7 @@ msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "More than 3kV ="
-msgstr ""
+msgstr "高于 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
@@ -665,7 +659,7 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "低于 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
@@ -810,22 +804,22 @@ msgid "127mm"
 msgstr ""
 
 msgid "Narrow gauge"
-msgstr ""
+msgstr "窄轨"
 
 msgid "500mm"
 msgstr ""
 
 msgid "Miniature"
-msgstr ""
+msgstr "微型"
 
 msgid "Miniature tracks"
-msgstr ""
+msgstr "微型轨道"
 
 msgid "1445mm"
 msgstr ""
 
 msgid "Standard gauge"
-msgstr ""
+msgstr "标准轨距"
 
 msgid "1100mm"
 msgstr ""
@@ -867,13 +861,13 @@ msgid "1520mm"
 msgstr ""
 
 msgid "Track gauge values"
-msgstr ""
+msgstr "轨距值"
 
 msgid "1458mm"
 msgstr ""
 
 msgid "Dual gauge"
-msgstr ""
+msgstr "双轨距"
 
 msgid "1600mm"
 msgstr ""
@@ -906,13 +900,13 @@ msgid "1000mm"
 msgstr ""
 
 msgid "Multiple gauge"
-msgstr ""
+msgstr "多轨距"
 
 msgid "1668mm"
 msgstr ""
 
 msgid "Broad gauge"
-msgstr ""
+msgstr "宽轨"
 
 msgid "900mm"
 msgstr ""
@@ -921,4 +915,4 @@ msgid "700mm"
 msgstr ""
 
 msgid "Monorail"
-msgstr ""
+msgstr "单轨"
