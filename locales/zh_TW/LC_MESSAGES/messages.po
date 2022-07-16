@@ -153,13 +153,13 @@ msgid "Station"
 msgstr "車站"
 
 msgid "Junction"
-msgstr "道岔"
+msgstr "道岔號誌所"
 
 msgid "Yard"
 msgstr "鐵路車廠"
 
 msgid "Crossover"
-msgstr "交叉"
+msgstr "橫渡號誌所"
 
 msgid "Site"
 msgstr "站點"
@@ -210,7 +210,7 @@ msgid "Spur"
 msgstr "工業支線"
 
 msgid "Crossover track"
-msgstr "轉徹器"
+msgstr "橫渡軌道"
 
 msgid "Branch line"
 msgstr "支線"
@@ -222,10 +222,10 @@ msgid "Highspeed line"
 msgstr "高速鐵路"
 
 msgid "Industrial line"
-msgstr "工業路線"
+msgstr "工業線"
 
 msgid "Industrial service track"
-msgstr "工業服務路線"
+msgstr "工業服務線"
 
 msgid "Preserved track"
 msgstr "保存軌道"
@@ -240,10 +240,10 @@ msgid "Proposed track"
 msgstr "計畫中軌道"
 
 msgid "Disused track"
-msgstr "未使用軌道"
+msgstr "廢棄軌道"
 
 msgid "Abandoned track"
-msgstr "廢棄軌道"
+msgstr "遺跡軌道"
 
 msgid "Razed track"
 msgstr "夷平軌道"
@@ -267,22 +267,22 @@ msgid "Switch (local operated)"
 msgstr "轉徹器 (現場控制)"
 
 msgid "Resetting switch"
-msgstr "復位開關"
+msgstr "復位轉轍器"
 
 msgid "Signal box"
 msgstr "號誌盒"
 
 msgid "Owner change"
-msgstr "擁有者改變"
+msgstr "產權分界"
 
 msgid "Railway crossing"
 msgstr "鐵路平交道"
 
 msgid "Buffer stop"
-msgstr "止衝器"
+msgstr "止衝擋"
 
 msgid "Isolated track section"
-msgstr "獨立的軌道部分"
+msgstr "電氣隔離分段"
 
 msgid "Platform"
 msgstr "月臺"
@@ -303,22 +303,22 @@ msgid "Water tower"
 msgstr "水塔"
 
 msgid "Fuel"
-msgstr "加油"
+msgstr "加油站"
 
 msgid "Water crane"
 msgstr "水鶴"
 
 msgid "Coaling facility"
-msgstr "煤礦設施"
+msgstr "裝煤設施"
 
 msgid "Wash"
-msgstr "洗"
+msgstr "洗刷庫"
 
 msgid "Pit"
-msgstr "坑"
+msgstr "檢修坑"
 
 msgid "Loading gauge"
-msgstr "車輛斷面界限"
+msgstr "荷重計"
 
 msgid "Hump yard"
 msgstr "駝峰調車"
@@ -336,10 +336,10 @@ msgid "Radio tower"
 msgstr "無線電塔"
 
 msgid "Turntable"
-msgstr "轉盤"
+msgstr "旋車盤"
 
 msgid "Traverser"
-msgstr "轉盤"
+msgstr "移車臺"
 
 msgid "Loading ramp"
 msgstr "裝卸貨跳板"
@@ -348,7 +348,7 @@ msgid "Crane"
 msgstr "起重機"
 
 msgid "Track scale"
-msgstr "軌道規模"
+msgstr "地磅"
 
 msgid "Carrier truck pit"
 msgstr "承載貨列坑"
@@ -372,13 +372,13 @@ msgid "Factory connected to railroad line"
 msgstr "連接到鐵路的工廠"
 
 msgid "Rack"
-msgstr "機架"
+msgstr "裝卸棧橋"
 
 msgid "Embankment"
-msgstr "堤"
+msgstr "路堤"
 
 msgid "Cutting"
-msgstr "下挖"
+msgstr "路塹"
 
 msgid "Miniature railway"
 msgstr "微型鐵路"
@@ -387,22 +387,22 @@ msgid "Funicular"
 msgstr "纜車"
 
 msgid "Military line"
-msgstr "軍事路線"
+msgstr "軍用線"
 
 msgid "Military service track"
-msgstr "軍事服務路線"
+msgstr "軍事服務軌道"
 
 msgid "Ferry terminal"
-msgstr "渡輪終點站"
+msgstr "渡輪碼頭"
 
 msgid "Ferry"
 msgstr "渡輪"
 
 msgid "Test line"
-msgstr "測試路線"
+msgstr "測試線"
 
 msgid "Test service track"
-msgstr "測試服務路線"
+msgstr "測試服務軌道"
 
 msgid "Car shuttle"
 msgstr "汽車擺渡列車"
@@ -420,7 +420,7 @@ msgid "Language"
 msgstr "語言"
 
 msgid "Desktop version"
-msgstr "桌面版版本"
+msgstr "桌面版"
 
 msgid "Style"
 msgstr "樣式"
@@ -486,7 +486,7 @@ msgid "More results"
 msgstr "更多結果"
 
 msgid "Spur junction"
-msgstr "專用線道岔"
+msgstr "專用線號誌所"
 
 msgid "No background map"
 msgstr "無背景地圖"
@@ -579,7 +579,7 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr "道岔，交叉，服務車站，站點"
+msgstr "號誌所"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
@@ -805,22 +805,22 @@ msgid "127mm"
 msgstr ""
 
 msgid "Narrow gauge"
-msgstr ""
+msgstr "窄軌"
 
 msgid "500mm"
 msgstr ""
 
 msgid "Miniature"
-msgstr ""
+msgstr "微型"
 
 msgid "Miniature tracks"
-msgstr ""
+msgstr "微型軌道"
 
 msgid "1445mm"
 msgstr ""
 
 msgid "Standard gauge"
-msgstr ""
+msgstr "標準軌距"
 
 msgid "1100mm"
 msgstr ""
@@ -862,13 +862,13 @@ msgid "1520mm"
 msgstr ""
 
 msgid "Track gauge values"
-msgstr ""
+msgstr "軌距值"
 
 msgid "1458mm"
 msgstr ""
 
 msgid "Dual gauge"
-msgstr ""
+msgstr "雙軌距"
 
 msgid "1600mm"
 msgstr ""
@@ -901,13 +901,13 @@ msgid "1000mm"
 msgstr ""
 
 msgid "Multiple gauge"
-msgstr ""
+msgstr "多軌距"
 
 msgid "1668mm"
 msgstr ""
 
 msgid "Broad gauge"
-msgstr ""
+msgstr "寬軌"
 
 msgid "900mm"
 msgstr ""
@@ -916,4 +916,4 @@ msgid "700mm"
 msgstr ""
 
 msgid "Monorail"
-msgstr ""
+msgstr "單軌"
