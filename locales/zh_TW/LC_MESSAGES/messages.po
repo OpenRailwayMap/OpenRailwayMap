@@ -100,40 +100,40 @@ msgstr "全螢幕"
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d 秒"
+msgstr[0] "%d秒"
 
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d 分"
+msgstr[0] "%d分"
 
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d 小時"
+msgstr[0] "%d小時"
 
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] "%d 天"
+msgstr[0] "%d天"
 
 #, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] "%d 週"
+msgstr[0] "%d週"
 
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] "%d 月"
+msgstr[0] "%d月"
 
 #, php-format
 msgid "more than %s ago"
-msgstr "比  %s 更久以前"
+msgstr "比%s更久以前"
 
 #, php-format
 msgid "%s ago"
-msgstr "%s 前"
+msgstr "%s前"
 
 msgid "Infrastructure"
 msgstr "設施"
