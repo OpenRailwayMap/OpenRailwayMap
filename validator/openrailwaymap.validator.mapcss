@@ -751,3 +751,27 @@ node[railway=crossover][!name]
 	assertMatch: "node railway=crossover";
 	assertNoMatch: "node railway=crossover name=foo";
 }
+
+/* Speed limit distant signals with unknown speed */
+node["railway:signal:speed_limit_distant:speed"~="?"]
+{
+	throwOther: "speed limit distant signal with unknown speed";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant:speed=\"?\"";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant:speed=\"120;?\"";
+	assertMatch: "node railway=signal railway:signal:speed_limit_distant:speed=\"?;60\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant:speed=foo"; 
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant:speed=120";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit_distant:speed=\"80;90\"";
+}
+
+/* Speed limit signals with unknown speed */
+node["railway:signal:speed_limit:speed"~="?"]
+{
+	throwOther: "speed limit signal with unknown speed";
+	assertMatch: "node railway=signal railway:signal:speed_limit:speed=\"?\"";
+	assertMatch: "node railway=signal railway:signal:speed_limit:speed=\"120;?\"";
+	assertMatch: "node railway=signal railway:signal:speed_limit:speed=\"?;60\"";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit:speed=foo";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit:speed=120";
+	assertNoMatch: "node railway=signal railway:signal:speed_limit:speed=\"80;90\"";
+}
