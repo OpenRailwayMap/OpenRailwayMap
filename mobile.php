@@ -126,11 +126,12 @@
 			<div class="box">
 				<a style="display:block" class="resultEntry" id="infoButton" href="https://wiki.openstreetmap.org/wiki/OpenRailwayMap"><?=_("More Info")?></a>
 				<a style="display:block" class="resultEntry" id="infoButton" href="https://blog.openrailwaymap.org/"><?=_("Blog")?></a>
-				<a style="display:block" class="resultEntry" id="contactButton" href="#"><?=_("Contact")?></a>
 				<a style="display:block" class="resultEntry" id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9KCKT39N7AGL8"><?=_("Donate")?></a>
 				<a style="display:block" class="resultEntry" id="imprintButton" href="/imprint"><?=_("Imprint &amp; Privacy Policy")?></a>
 				<a style="display:block" class="resultEntry" id="permalinkButton" href=""><?=_("Permalink")?></a>
 				<a style="display:block" class="resultEntry" id="desktopButton" href=""><?=_("Desktop version")?></a>
+				<a style="display:block" class="resultEntry" id="contactButton" href="#"><?=_("Email")?></a>
+				<a style="display:block" class="resultEntry" id="twitterButton" href="https://twitter.com/openrailwaymap"><?=_("Twitter")?></a>
 				<script language="javascript">
 					var usr = "info";
 					var dom = "openrailwaymap";
