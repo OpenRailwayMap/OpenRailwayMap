@@ -5,6 +5,7 @@
 #
 # Translators:
 # ViriatoLusitano <marcosoliveira.2405@gmail.com>, 2014-2015,2017
+# Miguel Couto <miguel.couto.pt@outlook.pt>, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
@@ -151,7 +152,7 @@ msgid "Maxspeeds"
 msgstr "Velocidades Máximas"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Electrificação"
 
 msgid "Halt"
 msgstr "Apeadeiro"
@@ -166,7 +167,7 @@ msgid "Yard"
 msgstr "Pátio de manobras"
 
 msgid "Crossover"
-msgstr ""
+msgstr "Cruzamento"
 
 msgid "Site"
 msgstr "Instalação"
@@ -175,7 +176,7 @@ msgid "Service station"
 msgstr "Estação de serviço"
 
 msgid "Subway/Light rail station"
-msgstr ""
+msgstr "Estação de Metro/Metro Ligeiro de Superfície"
 
 msgid "Tram stop"
 msgstr "Paragem de elétrico"
@@ -184,7 +185,7 @@ msgid "Milestone"
 msgstr "Ponto Quilométrico"
 
 msgid "Signal"
-msgstr ""
+msgstr "Sinal"
 
 msgid "Level crossing"
 msgstr "Passagem de Nível"
@@ -316,13 +317,13 @@ msgid "Water crane"
 msgstr "Aguada"
 
 msgid "Coaling facility"
-msgstr ""
+msgstr "Instalação de carvão"
 
 msgid "Wash"
 msgstr "Lavagem"
 
 msgid "Pit"
-msgstr ""
+msgstr "Fosso"
 
 msgid "Loading gauge"
 msgstr "Contornos de Referência"
@@ -334,10 +335,10 @@ msgid "Rail brake"
 msgstr "Travão"
 
 msgid "Engine shed"
-msgstr ""
+msgstr "Galpão de motor"
 
 msgid "Workshop"
-msgstr ""
+msgstr "Oficina"
 
 msgid "Radio tower"
 msgstr "Torre de Rádio"
@@ -355,10 +356,10 @@ msgid "Crane"
 msgstr "Grua"
 
 msgid "Track scale"
-msgstr ""
+msgstr "Escala de linha"
 
 msgid "Carrier truck pit"
-msgstr ""
+msgstr "Fosso camião da transportadora"
 
 msgid "Gauge conversion"
 msgstr "Conversão de bitola"
@@ -379,7 +380,7 @@ msgid "Factory connected to railroad line"
 msgstr "Fábrica conectada à rede ferroviária"
 
 msgid "Rack"
-msgstr ""
+msgstr "Prateleira"
 
 msgid "Embankment"
 msgstr "Aterro elevado"
@@ -412,10 +413,10 @@ msgid "Test service track"
 msgstr "Linha de testes de serviço"
 
 msgid "Car shuttle"
-msgstr ""
+msgstr "Carro de transporte"
 
 msgid "Rolling highway"
-msgstr ""
+msgstr "Rodovia rolante"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
 msgstr "Não existe nada para ver neste nível de zoom. Por favor aproxime-se."
@@ -436,121 +437,121 @@ msgid "Search"
 msgstr "Pesquisa"
 
 msgid "Blog"
-msgstr "Blog"
+msgstr ""
 
 msgid "No information"
-msgstr ""
+msgstr "Sem informação"
 
 msgid "speed only given for one direction"
-msgstr ""
+msgstr "velocidade dada apenas para uma direção"
 
 msgid "main track, service track"
-msgstr ""
+msgstr "via principal, via de serviço"
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "Atalho de pesquisa rápida"
 
 msgid "Placeholder"
-msgstr ""
+msgstr "Marcador"
 
 msgid "Donate"
-msgstr ""
+msgstr "Doar"
 
 msgid "Tools"
-msgstr ""
+msgstr "Ferramentas"
 
 msgid "Wiki"
 msgstr ""
 
 msgid "Search milestone"
-msgstr ""
+msgstr "Pesquisar marco"
 
 msgid "Station code"
-msgstr ""
+msgstr "Código da estação"
 
 msgid "Search station"
-msgstr ""
+msgstr "Pesquisar estação"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "Referencia UIC"
 
 msgid "About this project"
-msgstr ""
+msgstr "Sobre este projeto"
 
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 msgid "Line operator"
-msgstr ""
+msgstr "Operador de linha"
 
 msgid "Operator"
-msgstr ""
+msgstr "Operador"
 
 msgid "More results"
-msgstr ""
+msgstr "Mais resultados"
 
 msgid "Spur junction"
-msgstr ""
+msgstr "Agulha de junção"
 
 msgid "No background map"
-msgstr ""
+msgstr "Sem mapa de fundo"
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h (fora de uso/em construção)"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "Não electrificado"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "Deselectrificado"
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "Electrificação proposto"
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "Electrificação em construção"
 
 msgid "contact line"
-msgstr ""
+msgstr "linha de contacto"
 
 msgid "3rd rail"
-msgstr ""
+msgstr "3ª linha"
 
 msgid "Germany"
-msgstr ""
+msgstr "Alemanha"
 
 msgid "Finland"
-msgstr ""
+msgstr "Filândia"
 
 msgid "train protection"
-msgstr ""
+msgstr "comboio de proteção"
 
 msgid "no train protection"
-msgstr ""
+msgstr "sem comboio de proteção"
 
 msgid "crossing signal type To"
-msgstr ""
+msgstr "tipo de sinal de cruzamento para"
 
 msgid "Voltage"
-msgstr ""
+msgstr "Voltagem"
 
 msgid "signals"
-msgstr ""
+msgstr "sinais"
 
 msgid "Operating Sites"
-msgstr ""
+msgstr "Operações Locais"
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "Não há informação sobre a proteção de comboio"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "Track usage"
-msgstr ""
+msgstr "Uso de reboque"
 
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
@@ -559,16 +560,16 @@ msgid "1.5 – 3kV ="
 msgstr ""
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "ETCS em construção"
 
 msgid "3kV ="
 msgstr ""
 
 msgid "shunting signal type Ro"
-msgstr ""
+msgstr "tipo de sinal de manobra Ro"
 
 msgid "Track type"
-msgstr ""
+msgstr "Tipo de reboque"
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
@@ -586,16 +587,16 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "Junção, Cruzamento, Estação de Serviço, Local"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "Pelo menos 25kV ~"
 
 msgid "minor signal type Lo"
-msgstr ""
+msgstr "tipo de sinal menor Lo"
 
 msgid "15 – 25kV ~"
 msgstr ""
@@ -627,11 +628,11 @@ msgstr ""
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
-msgid "750 – 1000V ="
+msgid "1kV ="
 msgstr ""
 
 msgid "Less than 15kV ~"
-msgstr ""
+msgstr "Abaixo dos 15kV ~"
 
 msgid "1kV ="
 msgstr ""
@@ -640,7 +641,7 @@ msgid "1 – 1.5kV ="
 msgstr ""
 
 msgid "block signal type So"
-msgstr ""
+msgstr "tipo de sinal de bloco So"
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
 msgstr ""
@@ -667,7 +668,7 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "Pelo menos 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
@@ -694,7 +695,7 @@ msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 msgstr ""
 
 msgid "distant signal with Eo 2 (new type)"
-msgstr ""
+msgstr "sinal distante com o Eo 2 (novo tipo)"
 
 msgid "Ks-Hauptsignal"
 msgstr ""
@@ -730,22 +731,22 @@ msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
 msgstr ""
 
 msgid "main signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "sinal principal sem dados de aspecto (novo tipo, tipo antigo)"
 
 msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
 msgstr ""
 
 msgid "main signal with Po 1 (new type, old type)"
-msgstr ""
+msgstr "sinal principal sobre Po 1 (novo tipo, tipo antigo)"
 
 msgid "main signal with Po 2 (new type, old type)"
-msgstr ""
+msgstr "sinal principal sobre Po 2 (novo tipo, tipo antigo)"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
 
 msgid "distant signal with Eo 1 (new type, old type)"
-msgstr ""
+msgstr "sinal distante com Eo 1 (novo tipo, tipo antigo)"
 
 msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
@@ -762,12 +763,11 @@ msgstr ""
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
-msgid ""
-"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "sinal de distância sem dar alguns aspectos (novo tipo, tipo antigo)"
 
 msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
 msgstr ""
@@ -776,7 +776,7 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr ""
+msgstr "Imprimir &amp; Políticas de privacidade"
 
 msgid "automatische treinbeïnvloeding"
 msgstr ""
