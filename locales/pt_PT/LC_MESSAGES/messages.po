@@ -151,7 +151,7 @@ msgid "Maxspeeds"
 msgstr "Velocidades Máximas"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Electrificação"
 
 msgid "Halt"
 msgstr "Apeadeiro"
@@ -166,7 +166,7 @@ msgid "Yard"
 msgstr "Pátio de manobras"
 
 msgid "Crossover"
-msgstr ""
+msgstr "Cruzamento"
 
 msgid "Site"
 msgstr "Instalação"
@@ -175,7 +175,7 @@ msgid "Service station"
 msgstr "Estação de serviço"
 
 msgid "Subway/Light rail station"
-msgstr ""
+msgstr "Estação de metropolitano"
 
 msgid "Tram stop"
 msgstr "Paragem de elétrico"
@@ -184,7 +184,7 @@ msgid "Milestone"
 msgstr "Ponto Quilométrico"
 
 msgid "Signal"
-msgstr ""
+msgstr "Sinal"
 
 msgid "Level crossing"
 msgstr "Passagem de Nível"
@@ -439,7 +439,7 @@ msgid "Blog"
 msgstr "Blog"
 
 msgid "No information"
-msgstr ""
+msgstr "Sem informação"
 
 msgid "speed only given for one direction"
 msgstr ""
@@ -448,103 +448,103 @@ msgid "main track, service track"
 msgstr ""
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "Atalho para a pesquisa rápida"
 
 msgid "Placeholder"
 msgstr ""
 
 msgid "Donate"
-msgstr ""
+msgstr "Doar"
 
 msgid "Tools"
-msgstr ""
+msgstr "Ferramentas"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Wiki"
 
 msgid "Search milestone"
 msgstr ""
 
 msgid "Station code"
-msgstr ""
+msgstr "Código de Estação"
 
 msgid "Search station"
-msgstr ""
+msgstr "Pesquiar Estação"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "Referência UIC"
 
 msgid "About this project"
-msgstr ""
+msgstr "Sobre este projecto"
 
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 msgid "Line operator"
-msgstr ""
+msgstr "Linha de operador"
 
 msgid "Operator"
-msgstr ""
+msgstr "Operador"
 
 msgid "More results"
-msgstr ""
+msgstr "Mais resultados"
 
 msgid "Spur junction"
 msgstr ""
 
 msgid "No background map"
-msgstr ""
+msgstr "Sem mapa de fundo"
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h (desuso/em construção)"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "Não electrificada"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "Deselectrificada"
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "Electrificação proposta"
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "Electrificação em construção"
 
 msgid "contact line"
 msgstr ""
 
 msgid "3rd rail"
-msgstr ""
+msgstr "3ª linha"
 
 msgid "Germany"
-msgstr ""
+msgstr "Alemanha"
 
 msgid "Finland"
-msgstr ""
+msgstr "Filândia"
 
 msgid "train protection"
-msgstr ""
+msgstr "comboio de protecção"
 
 msgid "no train protection"
-msgstr ""
+msgstr "sem comboio de protecção"
 
 msgid "crossing signal type To"
-msgstr ""
+msgstr "tipo de sinal de cruzamento para"
 
 msgid "Voltage"
-msgstr ""
+msgstr "Voltagem"
 
 msgid "signals"
-msgstr ""
+msgstr "sinais"
 
 msgid "Operating Sites"
-msgstr ""
+msgstr "Sitios de Operação"
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "Sem informação sobre o comboio de protecção"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
@@ -556,13 +556,13 @@ msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
 msgid "1.5 – 3kV ="
-msgstr ""
+msgstr "1.5 – 3kV ="
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "ETCS em construção"
 
 msgid "3kV ="
-msgstr ""
+msgstr "3kV ="
 
 msgid "shunting signal type Ro"
 msgstr ""
@@ -577,7 +577,7 @@ msgid "Linienzugbeeinflussung"
 msgstr ""
 
 msgid "25kV 50Hz ~"
-msgstr ""
+msgstr "25kV 50Hz ~"
 
 msgid "So 106 Kreuztafel"
 msgstr ""
@@ -586,22 +586,22 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "Nó, Cruzamento, Estação de Serviço, Sitio"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "Até 25kV ~"
 
 msgid "minor signal type Lo"
 msgstr ""
 
 msgid "15 – 25kV ~"
-msgstr ""
+msgstr "15 – 25kV ~"
 
 msgid "ETCS"
-msgstr ""
+msgstr "ETCS"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -613,7 +613,7 @@ msgid "Ne 1 Trapeztafel"
 msgstr ""
 
 msgid "15kV 16⅔Hz ~"
-msgstr ""
+msgstr "15kV 16⅔Hz ~"
 
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
@@ -622,31 +622,31 @@ msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "More than 3kV ="
-msgstr ""
+msgstr "Mais de 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
 msgid "750 – 1000V ="
-msgstr ""
+msgstr "750 – 1000V ="
 
 msgid "Less than 15kV ~"
-msgstr ""
+msgstr "Ate 15kV ~"
 
 msgid "1kV ="
-msgstr ""
+msgstr "1kV ="
 
 msgid "1 – 1.5kV ="
-msgstr ""
+msgstr "1 – 1.5kV ="
 
 msgid "block signal type So"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h"
 
 msgid "1.5kV ="
-msgstr ""
+msgstr "1.5kV ="
 
 msgid "El 2 Einschaltsignal"
 msgstr ""
@@ -667,7 +667,7 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "Até 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
@@ -676,10 +676,10 @@ msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
 msgid "750V ="
-msgstr ""
+msgstr "750V ="
 
 msgid "25kV 60Hz ~"
-msgstr ""
+msgstr "25kV 60Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
@@ -688,7 +688,7 @@ msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
 
 msgid "15kV 16.7Hz ~"
-msgstr ""
+msgstr "15kV 16.7Hz ~"
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 msgstr ""
@@ -788,139 +788,139 @@ msgid "Contrôle de vitesse par balises (KVB)"
 msgstr ""
 
 msgid "1067mm"
-msgstr ""
+msgstr "1067mm"
 
 msgid "1435mm"
-msgstr ""
+msgstr "1435mm"
 
 msgid "1676mm"
-msgstr ""
+msgstr "1676mm"
 
 msgid "1422mm"
-msgstr ""
+msgstr "1422mm"
 
 msgid "1524mm"
-msgstr ""
+msgstr "1524mm"
 
 msgid "950mm"
-msgstr ""
+msgstr "950mm"
 
 msgid "800mm"
-msgstr ""
+msgstr "800mm"
 
 msgid "127mm"
-msgstr ""
+msgstr "127mm"
 
 msgid "Narrow gauge"
 msgstr ""
 
 msgid "500mm"
-msgstr ""
+msgstr "500mm"
 
 msgid "Miniature"
-msgstr ""
+msgstr "Miniatura"
 
 msgid "Miniature tracks"
-msgstr ""
+msgstr "Linhas em miniatura"
 
 msgid "1445mm"
-msgstr ""
+msgstr "1445mm"
 
 msgid "Standard gauge"
 msgstr ""
 
 msgid "1100mm"
-msgstr ""
+msgstr "1100mm"
 
 msgid "597mm"
-msgstr ""
+msgstr "597mm"
 
 msgid "1372mm"
-msgstr ""
+msgstr "1372mm"
 
 msgid "1450mm"
-msgstr ""
+msgstr "1450mm"
 
 msgid "600mm"
-msgstr ""
+msgstr "600mm"
 
 msgid "64mm"
-msgstr ""
+msgstr "64mm"
 
 msgid "1432mm"
-msgstr ""
+msgstr "1432mm"
 
 msgid "760mm"
-msgstr ""
+msgstr "760mm"
 
 msgid "381mm"
-msgstr ""
+msgstr "381mm"
 
 msgid "750mm"
-msgstr ""
+msgstr "750mm"
 
 msgid "1009mm"
-msgstr ""
+msgstr "1009mm"
 
 msgid "1495mm"
-msgstr ""
+msgstr "1495mm"
 
 msgid "1520mm"
-msgstr ""
+msgstr "1520mm"
 
 msgid "Track gauge values"
 msgstr ""
 
 msgid "1458mm"
-msgstr ""
+msgstr "1458mm"
 
 msgid "Dual gauge"
 msgstr ""
 
 msgid "1600mm"
-msgstr ""
+msgstr "1600mm"
 
 msgid "184mm"
-msgstr ""
+msgstr "184mm"
 
 msgid "610mm"
-msgstr ""
+msgstr "610mm"
 
 msgid "89mm"
-msgstr ""
+msgstr "89mm"
 
 msgid "260mm"
-msgstr ""
+msgstr "260mm"
 
 msgid "762mm"
-msgstr ""
+msgstr "762mm"
 
 msgid "1050mm"
-msgstr ""
+msgstr "1050mm"
 
 msgid "190mm"
-msgstr ""
+msgstr "190mm"
 
 msgid "914mm"
-msgstr ""
+msgstr "914mm"
 
 msgid "1000mm"
-msgstr ""
+msgstr "1000mm"
 
 msgid "Multiple gauge"
 msgstr ""
 
 msgid "1668mm"
-msgstr ""
+msgstr "1668mm"
 
 msgid "Broad gauge"
 msgstr ""
 
 msgid "900mm"
-msgstr ""
+msgstr "900mm"
 
 msgid "700mm"
-msgstr ""
+msgstr "700mm"
 
 msgid "Monorail"
 msgstr ""
