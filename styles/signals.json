@@ -106,6 +106,19 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"railway:scmt":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "Sistema Controllo Marcia Treno (SCMT)"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
 					"railway:etcs":"yes",
 					"usage":"main"
 				}
