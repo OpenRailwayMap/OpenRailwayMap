@@ -29,6 +29,7 @@
 					"railway:etcs":"no",
 					"railway:lzb":"no",
 					"railway:pzb":"no",
+					"railway:zub":"no",
 					"usage":"main"
 				}
 			}],
@@ -137,6 +138,58 @@
 				}
 			}],
 			"caption": "ETCS under construction"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:zub121":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "ZUB 121"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:zub122":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "ZUB 122"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:zub123":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "ZUB 123"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:zub222c":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "ZUB 222c"
 		},
 		{
 			"minzoom": 13,
