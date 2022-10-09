@@ -16,7 +16,7 @@
 					"usage":"main"
 				}
 			}],
-			"caption": "No information about train protection"
+			"caption": "No information available"
 		},
 		{
 			"minzoom": 2,
@@ -32,85 +32,7 @@
 					"usage":"main"
 				}
 			}],
-			"caption": "no train protection"
-		},
-		{
-			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10,50],[80,50]],
-				"properties": {
-					"railway":"rail",
-					"railway:pzb":"yes",
-					"usage":"main"
-				}
-			}],
-			"caption": "Punktförmige Zugbeeinflussung"
-		},
-		{
-			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10,50],[80,50]],
-				"properties": {
-					"railway":"rail",
-					"railway:atb":"yes",
-					"usage":"main"
-				}
-			}],
-			"caption": "automatische treinbeïnvloeding"
-		},
-		{
-			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10,50],[80,50]],
-				"properties": {
-					"railway":"rail",
-					"railway:lzb":"yes",
-					"usage":"main"
-				}
-			}],
-			"caption": "Linienzugbeeinflussung"
-		},
-		{
-			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10,50],[80,50]],
-				"properties": {
-					"railway":"rail",
-					"railway:kvb":"yes",
-					"usage":"main"
-				}
-			}],
-			"caption": "Contrôle de vitesse par balises (KVB)"
-		},
-		{
-			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10,50],[80,50]],
-				"properties": {
-					"railway":"rail",
-					"railway:tvm":"yes",
-					"usage":"main"
-				}
-			}],
-			"caption": "Transmission voie-machine (TVM)"
-		},
-		{
-			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10,50],[80,50]],
-				"properties": {
-					"railway":"rail",
-					"railway:scmt":"yes",
-					"usage":"main"
-				}
-			}],
-			"caption": "Sistema Controllo Marcia Treno (SCMT)"
+			"caption": "No train protection"
 		},
 		{
 			"minzoom": 2,
@@ -123,7 +45,7 @@
 					"usage":"main"
 				}
 			}],
-			"caption": "ETCS"
+			"caption": "ETCS - European Train Control System"
 		},
 		{
 			"minzoom": 5,
@@ -137,6 +59,84 @@
 				}
 			}],
 			"caption": "ETCS under construction"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:pzb":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "PZB - Punktförmige Zugbeeinflussung"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:atb":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "ATB - Automatische Treinbeïnvloeding"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:lzb":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "LZB - Linienzugbeeinflussung"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:kvb":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "KVB - Contrôle de Vitesse par Balises"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:tvm":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "TVM - Transmission Voie-Machine"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:scmt":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "SCMT - Sistema Controllo Marcia Treno"
 		},
 		{
 			"minzoom": 13,
