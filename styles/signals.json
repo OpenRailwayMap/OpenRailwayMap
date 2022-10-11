@@ -746,6 +746,38 @@
 			"caption": "Ra 10 Rangierhalttafel / Verschubhalttafel"
 		},
 		{
+			"minzoom": 17,
+			"features" : [{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:wrong_road":"DE-ESO:db:zs6",
+					"railway:signal:wrong_road:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:wrong_road":"DE-ESO:dr:zs7",
+					"railway:signal:wrong_road:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:wrong_road":"DE-ESO:zs6",
+					"railway:signal:wrong_road:form":"sign"
+				}
+			}],
+			"caption": "Zs 6 Gegengleisanzeiger"
+		},
+		{
 			"minzoom": 14,
 			"heading": "Finland"
 		},
