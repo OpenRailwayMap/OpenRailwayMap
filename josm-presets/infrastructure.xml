@@ -2,7 +2,7 @@
 
 <!--
 OpenRailwayMap JOSM Presets File
-Edition for German and Austrian railways (in German)
+Edition for infrastructure
 
 OpenRailwayMap Copyright (C) 2012-2015 Alexander Matheisen and others
 This program comes with ABSOLUTELY NO WARRANTY.
@@ -11,7 +11,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 -->
 
 
-<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="2016-04-18" shortdescription="OpenRailwayMap Infrastructure DE+AT" description="Preset to tag German and Austrian railway infrastructure">
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="OpenRailwayMap" version="2016-04-18" shortdescription="OpenRailwayMap Infrastructure" description="Preset to tag railway infrastructure">
 	<chunk id="maxspeed_values">
 		<list_entry value="10" />
 		<list_entry value="20" />
@@ -69,15 +69,14 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			/>
 	</chunk>
 	<chunk id="operator_dbnetz_oebb">
-		<combo key="operator"
+		<text key="operator"
 			text="operator"
-			de.text="Betreiber"
-			values="DB Netz AG,ÖBB-Infrastruktur AG"
+			de.text="Betreiber (z.B. DB Netz AG, ÖBB-Infrastruktur AG)"
 			default=""
 			/>
 	</chunk>
 
-	<group name="OpenRailwayMap Infrastructure DE+AT" de.name="OpenRailwayMap Infrastruktur DE+AT" icon="signals.png">
+	<group name="OpenRailwayMap Infrastructure" de.name="OpenRailwayMap Infrastruktur" icon="signals.png">
 		<item de.name="Allgemeine Angaben" name="General Information" icon="rail.png" type="way">
 			<combo key="railway" text="Type of Track" de.text="Art des Gleises">
 				<list_entry value="rail" display_value="Heavy Railway" de.display_value="Vollbahn" match="keyvalue!" />
@@ -94,11 +93,11 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<list_entry value="razed" display_value="Razed railway" de.display_value="Überbaute Strecke" de.short_description="Ein ehemaliges Gleis, dessen Verlauf heute durch Überbauung o.ä. nur noch zu erahnen ist" short_description="Overbuilt track which could only be seen if you know where it is" match="keyvalue!" />
 			</combo>
 			<label text="If the track is not in use (i.e. proposed, under construction etc.), please also fill out"
-				de.text="Fall das Gleis nicht in Betrieb ist (z. B. geplant, in Bau usw.), bitte auch folgende Vorlage ausfüllen:"
+				de.text="Falls das Gleis nicht in Betrieb ist (z. B. geplant, in Bau usw.), bitte auch folgende Vorlage ausfüllen:"
 				/>
 			<combo key="gauge"
-				text="Gauge [mm]"
-				de.text="Spurweite [mm]"
+				text="Gauge (mm)"
+				de.text="Spurweite (mm)"
 				values="1800,1600,1524,1520,1458,1450,1440,1435,1432,1106,1100,1040,1000,925,915,900,889,880,860,820,800,785,775,760,750,660,655,630,600,580,575,560,550,500,410,381,320,184,144,127,89"
 				display_values="1800,1600,1524 (Russian broad gauge),1520 (Russian broad gauge),1458,1450,1440,1435 (standard gauge),1432,1106,1100,1040,1000 (meter gauge),925,915,900,889,880,860,820,800,785,775,760 (Bosnian gauge),750,660,655,630,600,580,575,560,550,500,410,381,320,184,144,127,89"
 				de.display_values="1800,1600,1524 (Russische Breitspur),1520 (Russische Breitspur),1458,1450,1440,1435 (Normalspur),1432,1106,1100,1040,1000 (Meterspur),925,915,900,889,880,860,820,800,785,775,760 (Bosnische Spurweite),750,660,655,630,600,580,575,560,550,500,410,381,320,184,144,127,89"
@@ -136,8 +135,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Streckenname"
 					/>
 				<text key="ref"
-					text="Line reference (VzG number, e.g. '2379' or '222 01')"
-					de.text="Streckennummer (VzG-Nummer, z. B. '2379' oder '222 01')"
+					text="Line reference (e.g. in DE/AT: VzG number, e.g. '2379' or '222 01')"
+					de.text="Streckennummer (z.B. in DE/AT: VzG-Nummer, z. B. '2379' oder '222 01')"
 					/>
 				<text key="railway:track_ref"
 					text="Track ref (inside station)"
@@ -258,7 +257,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Oberleitung,Stromschiene,versenkbare Mittelstromschiene,andere,nicht elektrifiziert"
 					match="key"
 					/>
-				<!-- The following list contains all voltages that were used for railways in Germany and Austria, according to https://de.wikipedia.org/wiki/Liste_der_Bahnstromsysteme. When there will be a separate JOSM preset for historic railways, we can remove all entries that does not exist anymore -->
+				<!-- The following list contains all voltages that were used for railways in Germany and Austria, according to https://de.wikipedia.org/wiki/Liste_der_Bahnstromsysteme. When there will be a separate JOSM preset for historic railways, we can remove all entries that do not exist anymore -->
 				<combo key="voltage"
 					text="Voltage"
 					de.text="Spannung"
@@ -451,8 +450,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Name der Brücke"
 				/>
 			<text key="bridge:length"
-				text="Length of bridge [m]"
-				de.text="Länge der Brücke [m]"
+				text="Length of bridge (m)"
+				de.text="Länge der Brücke (m)"
 				/>
 			<reference ref="start_date" />
 			<reference ref="img" />
@@ -475,8 +474,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Name des Tunnels"
 				/>
 			<text key="tunnel:length"
-				text="Length of tunnel [m]"
-				de.text="Länge des Tunnels [m]"
+				text="Length of tunnel (m)"
+				de.text="Länge des Tunnels (m)"
 				/>
 			<reference ref="start_date" />
 			<reference ref="img" />
@@ -495,8 +494,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
             <key key="wall" 
                 value="noise_barrier" />
             <text key="height"
-                text="height of the noise barrier [m]"
-                de.text="Höhe der Lärmschutzwand [m]" 
+                text="height of the noise barrier (m)"
+                de.text="Höhe der Lärmschutzwand (m)" 
                 />
         </item>
 		<separator />
@@ -518,6 +517,10 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				values="DE-ESO:sh0,DE-ESO:sh2,DE-BOStrab:sh2,AT-V2:weiterfahrt_verboten"
 				de.display_values="Sh 0-Tafel (deutsche Voll-/Schmalspurbahn),Sh 2-Tafel (deutsche Voll-/Schmalspurbahn),Sh 2 (Straßen-/U-/Stadtbahn),Weiterfahrt verboten (Österreich)"
 				display_values="Sh 0 sign (German railway/German narrow gauge railway),Sh 2 sign (German railway/German narrow gauge railway),Sh 2 (tram/light rail/subway),Weiterfahrt verboten (Austria)"
+				/>
+			<text key="railway:signal:minor"
+				text="Exact type of signal (different then german/austrian)"
+				de.text="Signaltyp (nicht deutsch/österreichisch)"
 				/>
 			<key key="railway:signal:minor:form"
 				value="sign" />
@@ -639,6 +642,14 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.display_values="Sh 0/Sh 1 (Deutschland)|Sh 0/Wn 7 (ehem. Gsp 2, Deutschland)|Weiterfahrt verboten/erlaubt (Österreich)"
 				display_values="Sh 0/Sh 1 (Germany)|Sh 0/Wn 7 (former Gsp 2, Germany)|Weiterfahrt verboten/erlaubt (Austria)"
 				/>
+			<text key="railway:signal:minor"
+				text="Exact type of signal (different then german/austrian)"
+				de.text="Signaltyp (nicht deutsch/österreichisch)"
+				/>
+			<text key="railway:signal:minor:states"
+				text="Exact states of signal (different then german/austrian)"
+				de.text="Signalzustände (nicht deutsch/österreichisch)"
+				/>
 			<key key="railway:signal:minor:form"
 				value="semaphore" />
 			<key key="railway:signal:minor:height"
@@ -668,7 +679,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Name (z. B. 'Neuss Ngf', 'Riesa B8' 'Holzheim ESTW-A')"
 				/>
 			<text key="railway:ref"
-				text="Short name"
+				text="Abbreviation"
 				de.text="Abkürzung (z. B. 'Ngf' oder 'B8')"
 				/>
 			<combo key="railway:signal_box"
@@ -681,7 +692,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<reference ref="start_date" />
 			<text key="railway:position"
 				text="Distance indication (rounded, e.g. '12.3'; km)"
-				de.text="Hektometerwert (z. B. '12.3')"
+				de.text="Hektometerwert (z. B. '12.3'; km)"
 				/>
 			<text key="railway:position:exact"
 				text="Exact distance indication (exact, e.g. '12.345'; km)"
@@ -721,8 +732,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS 100 or DB 640)"
-					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
+					text="Abbreviation (e.g. DS 100 or DB 640 in DE or AT)"
+					de.text="Abkürzung (z.B. DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg' für DE oder AT)"
 					/>
 				<text key="uic_ref"
 					text="UIC-ID"
@@ -741,7 +752,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<reference ref="operator_dbnetz_oebb" />
 				<text key="network"
 					text="Network"
-					de.text="Verkehrsverbund"
+					de.text="Netzwerk bzw. Verkehrsverbund"
 					/>
 				<reference ref="start_date" />
 				<reference ref="img" />
@@ -767,8 +778,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS 100 or DB 640)"
-					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
+					text="Abbreviation (e.g. DS 100 or DB 640 for DE or AT)"
+					de.text="Abkürzung (z.B. DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg' für DE oder AT)"
 					/>
 				<text key="uic_ref"
 					text="UIC-ID"
@@ -778,16 +789,14 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="UIC name"
 					de.text="UIC-Bahnhofsname"
 					/>
-				<combo key="railway:station_category"
-					text="Station category"
-					de.text="Bahnhofskategorie"
-					values="1,2,3,4,5,6,7"
-					display_values="1,2,3,4,5,6,7"
+				<text key="railway:station_category"
+					text="Station category (german: 1-7)"
+					de.text="Bahnhofskategorie (DE: 1-7)"
 					/>
 				<reference ref="operator_dbnetz_oebb" />
 				<text key="network"
 					text="Network"
-					de.text="Verkehrsverbund"
+					de.text="Netzwerk bzw. Verkehrsverbund"
 					/>
 				<reference ref="start_date" />
 				<reference ref="img" />
@@ -813,7 +822,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name"
+					text="Abbreviation"
 					de.text="Abkürzung"
 					/>
 				<text key="uic_ref"
@@ -830,7 +839,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 				<text key="network"
 					text="Network"
-					de.text="Verkehrsverbund"
+					de.text="Netzwerk bzw. Verkehrsverbund"
 					/>
 				<reference ref="start_date" />
 				<reference ref="ele" />
@@ -846,8 +855,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS 100 or DB 640)"
-					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
+					text="Abbreviation (e.g. DS 100 or DB 640 for DE or AT)"
+					de.text="Abkürzung (z.B. DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg' für DE oder AT)"
 					/>
 				<reference ref="operator_dbnetz_oebb" />
 				<reference ref="start_date" />
@@ -866,8 +875,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS 100 or DB 640)"
-					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
+					text="Abbreviation (e.g. DS 100 or DB 640 for DE or AT)"
+					de.text="Abkürzung (z.B. DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg' für DE oder AT)"
 					/>
 				<reference ref="operator_dbnetz_oebb" />
 				<reference ref="start_date" />
@@ -891,8 +900,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS 100 or DB 640)"
-					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
+					text="Abbreviation (e.g. DS 100 or DB 640 for DE or AT)"
+					de.text="Abkürzung (z.B. DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg' für DE oder AT)"
 					/>
 				<reference ref="operator_dbnetz_oebb" />
 				<reference ref="start_date" />
@@ -920,8 +929,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS 100 or DB 640)"
-					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
+					text="Abbreviation (e.g. DS 100 or DB 640 for DE or AT)"
+					de.text="Abkürzung (z.B. DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg' für DE oder AT)"
 					/>
 				<reference ref="operator_dbnetz_oebb" />
 				<reference ref="start_date" />
@@ -941,8 +950,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS 100 or DB 640)"
-					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
+					text="Abbreviation (e.g. DS 100 or DB 640 for DE or AT)"
+					de.text="Abkürzung (z.B. DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg' für DE oder AT)"
 					/>
 				<reference ref="operator_dbnetz_oebb" />
 				<reference ref="start_date" />
@@ -962,8 +971,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS 100 or DB 640)"
-					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
+					text="Abbreviation (e.g. DS 100 or DB 640 for DE or AT)"
+					de.text="Abkürzung (z.B. DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg' für DE oder AT)"
 					/>
 				<reference ref="operator_dbnetz_oebb" />
 				<reference ref="start_date" />
@@ -992,8 +1001,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Name"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS 100 or DB 640)"
-					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
+					text="Abbreviation (e.g. DS 100 or DB 640 for DE or AT)"
+					de.text="Abkürzung (z.B. DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg' für DE oder AT)"
 					/>
 				<text key="uic_ref"
 					text="UIC-ID"
@@ -1026,7 +1035,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<reference ref="operator_dbnetz_oebb" />
 				<text key="network"
 					text="Network"
-					de.text="Verkehrsverbund"
+					de.text="Netzwerk bzw. Verkehrsverbund"
 					/>
 				<reference ref="ele" />
 				<text key="railway:position"
@@ -1075,8 +1084,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="UIC-Bahnhofsname"
 					/>
 				<text key="railway:ref"
-					text="Short name (DS 100 or DB 640)"
-					de.text="Abkürzung (DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg')"
+					text="Abbreviation (e.g. DS 100 or DB 640 for DE or AT)"
+					de.text="Abkürzung (z.B. DS 100 bzw. DB 640, z. B. 'KKW' oder 'Bbg' für DE oder AT)"
 					/>
 				<reference ref="operator_dbnetz_oebb" />
 				<check key="train"
@@ -1131,9 +1140,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			</item>
 		</group>
 		<separator />
-		<item name="Line Number (Infrastructure)" de.name="VzG-Strecke" type="relation">
+		<item name="Line Number (Infrastructure)" de.name="Streckennummer (z.B. in DE/AT: VzG-Nummer)" type="relation">
 			<label
-				text="Line number assigned by the infrastructure operator" de.text="VzG-Strecke"/>
+				text="Line number assigned by the infrastructure operator" de.text="Streckennummer des Infrastrukturbetreibers (z.B. in DE/AT: VzG-Nummer)"/>
 			<space />
 			<key key="type"
 				value="route" />
@@ -1144,8 +1153,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Streckenname (z. B. '1234 Eifelquerbahn Gerolstein – Kaisersesch')"
 				/>
 			<text key="ref"
-				text="Line ref (VzG number, e.g. '2379' or '222 01')"
-				de.text="Streckennummer (VzG-Nummer, z. B. '2379' oder '222 01')"
+				text="Line ref (e.g. in DE/AT: VzG number, e.g. '2379' or '222 01')"
+				de.text="Streckennummer (z.B. in DE/AT: VzG-Nummer, z. B. '2379' oder '222 01')"
 				/>
 			<text key="from"
 				text="Initial station"
@@ -1177,8 +1186,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Name der Kursbuchstrecke (z. B. 'KBS 123 Voreifelbahn')"
 				/>
 			<text key="ref"
-				text="Line ref (KBS number, e.g. '123')"
-				de.text="Streckennummer (KBS-Nummer, z. B. '123')"
+				text="Line ref (e.g. in DE/AT: KBS number, e.g. '123')"
+				de.text="Streckennummer (z.B. in DE/AT: KBS-Nummer, z. B. '123')"
 				/>
 			<text key="from"
 				text="Initial station"
@@ -1324,8 +1333,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<separator />
 		<item name="Milestone" de.name="Kilo-/Hektometertafel" icon="milestone.png" type="node">
-			<label text="Kilo-/hektometer indications are nodes on the track"
-				de.text="Kilo-/Hektometerbezeichnung werden als Punkt auf dem" />
+			<label text="Kilo-/hectometer indications are nodes on the track"
+				de.text="Kilo-/Hektometerbezeichnungen werden als Punkt auf dem" />
 			<label text="which they belong to. On lines with more than one track,"
 				de.text="dazugehörigen Gleis eingetragen. Bei mehrgleisigen Strecken" />
 			<label text="every track gets a node with the tags."
@@ -1403,8 +1412,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Ja,Nein,Ja (aber nicht sinnvoll)"
 				/>
 			<combo key="height"
-				text="Platform height [mm]"
-				de.text="Bahnsteighöhe [mm]"
+				text="Platform height (mm)"
+				de.text="Bahnsteighöhe (mm)"
 				values="0.19,0.38,0.55,0.76,0.92,0.96,0.130"
 				display_values="190,380,550,760,920,960,1300"
 				de.display_values="190,380,550,760,920,960,1300"
@@ -1803,7 +1812,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 				<text key="network"
 					text="Network"
-					de.text="Verkehrsverbund"
+					de.text="Netzwerk bzw. Verkehrsverbund"
 					/>
 				<reference ref="img" />
 			</item>
@@ -1830,7 +1839,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					/>
 				<text key="network"
 					text="Network"
-					de.text="Verkehrsverbund"
+					de.text="Netzwerk bzw. Verkehrsverbund"
 					/>
 				<reference ref="img" />
 			</item>
