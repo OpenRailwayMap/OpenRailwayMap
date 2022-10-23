@@ -186,6 +186,8 @@
 
 	function urlArgsToParam($checkMobile, $urlbase)
 	{
+		global $langs;
+
 		echo "<script type=\"text/javascript\">\n";
 			echo "var params={\n";
 			echo "urlbase : '" . $urlbase . "',\n";
@@ -211,7 +213,8 @@
 			echo "operator : " . (isset($_GET['operator']) ? (json_encode($_GET['operator'])) : ("null")) . ",\n";
 			if ($checkMobile)
 				echo "mobile : " . (isset($_GET['mobile']) ? (($_GET['mobile'] != '0' && $_GET['mobile'] != 'false') ? "true" : "false") : ("null")) . ",\n";
-			echo "style : " . (isset($_GET['style']) ? (json_encode($_GET['style'])) : ("null")) . "\n";
+			echo "style : " . (isset($_GET['style']) ? (json_encode($_GET['style'])) : ("null")) . ",\n";
+			echo "availableTranslations : " . json_encode($langs) . "\n";
 			echo "};\n";
 		echo "</script>\n";
 	}

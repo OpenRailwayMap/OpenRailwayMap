@@ -53,7 +53,7 @@
 				$height = '16';
 			}
 
-			return $line . '><canvas width="80" height="' . $height . '" id="legend-' . $index
+			return $line . '><canvas width="40" height="' . $height . '" id="legend-' . $index
 					. '" data-geojson=' . "'" . $payload
 					. "'></canvas></td>\n\t\t\t\t<td>"
 					. htmlspecialchars(_($caption)) . "</td></tr>\n";
