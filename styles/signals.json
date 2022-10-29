@@ -41,6 +41,19 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"railway:ptc":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "PTC - Positive Train Control (N. Am.)"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
 					"railway:etcs":"yes",
 					"usage":"main"
 				}
