@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Grzegorz Szymaszek" pl.shortdescription="OpenRailwayMap PL: infrastruktura" shortdescription="OpenRailwayMap PL: infrastructure" version="2018-08-23">
+	<chunk id="rail_infrastructure_operator">
+		<combo display_values="Cargotor,CTL Maczki­‑Bór,Dolnośląska Służba Dróg i Kolei we Wrocławiu,Fundacja Polskich Kolei Wąskotorowych,Infra Silesia,Kopalnia Piasku Kotlarnia — Linie Kolejowe,Pomorska Kolej Metropolitarna,PKP Linia Hutnicza Szerokotorowa,PKP Polskie Linie Kolejowe,PMT Linie Kolejowe,Pol­‑Miedź Trans,Stowarzyszenie Górnośląskich Kolei Wąskotorowych,PKP Szybka Kolej Miejska w Trójmieście,Stowarzyszenie Kolejowych Przewozów Lokalnych,UBB Polska,Warszawska Kolej Dojazdowa" key="operator" pl.text="Zarządca infrastruktury" text="Infrastructure operator" values="Cargotor,CTL Maczki­‑Bór,DSDiK,FPKW,Infra Silesia,KPK — LK,PKM,PKP LHS,PKP PLK,PMTLK,Pol­‑Miedź Trans,SGKW,SKMT,SKPL,UBB Polska,WKD"/>
+	</chunk>
+	<chunk id="traffic_modes">
+		<check key="train" pl.text="Używany w ruchu kolejowym?" text="Railway traffic?"/>
+		<check key="light_rail" pl.text="Używany w ruchu [szybkiej] kolei miejskiej?" text="Light rail traffic?"/>
+		<check key="subway" pl.text="Używany przez metro?" text="Subway traffic?"/>
+		<check key="tram" pl.text="Używany w ruchu tramwajów?" text="Tram traffic?"/>
+	</chunk>
+	<group icon="signals.png" name="OpenRailwayMap PL: infrastructure" pl.name="OpenRailwayMap PL: infrastruktura">
+		<item icon="rail.png" name="Track" pl.name="Tor" type="way">
+			<combo key="railway" match="keyvalue!" pl.text="Typ toru" text="Type of track">
+				<list_entry display_value="Heavy Railway" pl.display_value="zwykły tor" value="rail"/>
+				<list_entry display_value="Tram" pl.display_value="tor tramwajowy" value="tram"/>
+				<list_entry display_value="Light rail" pl.display_value="tor lekkiej kolei" pl.short_description="Tor lekkiej kolei, może biec pod ziemią lub nad ziemią, zwykle oddzielony od ruchu samochodów" short_description="Light rail tracks which may run under- or overground, usually separated from car traffic" value="light_rail"/>
+				<list_entry display_value="Subway" pl.display_value="tor metra" pl.short_description="Tor metra, może biec nad ziemią, ale jest oddzielony od ruchu samochodów" short_description="Subway tracks; may run overground, but are separated from car traffic" value="subway"/>
+				<list_entry display_value="Narrow gauge" pl.display_value="tor wąski" pl.short_description="Tory wąskie to tory o szerokości poniżej 1435 mm" short_description="Narrow gauge tracks are tracks with a gauge lower than 1435 mm" value="narrow_gauge"/>
+				<list_entry display_value="Preserved railway" pl.display_value="tor zachowany" pl.short_description="Tor, na którym nie odbywają się regularne przewozy, zachowany dla pociągów zabytkowych lub wózków" short_description="A track without regular operation which is preserved for heritage trains or trolley routes" value="preserved"/>
+				<list_entry display_value="Miniature railway" pl.display_value="tor miniaturowy" pl.short_description="Kolej miniaturowa, zwykle używana przez turystów, o szerokości do 600 mm" short_description="Miniature Railway which is usually used for tourists and leisure, gauge up to 600 mm" value="miniature"/>
+				<list_entry display_value="Proposed" pl.display_value="tor proponowany" pl.short_description="Planowany tor, w trakcie projektowania (nie konstrukcji)" short_description="A planned track, still in the design phase (no construction yet)" value="proposed"/>
+				<list_entry display_value="Under construction" pl.display_value="tor w konstrukcji" value="construction"/>
+				<list_entry display_value="Disused railway" pl.display_value="tor nieużywany" pl.short_description="Tor jest nieużywany, ale kompletny i nadający się do ponownego użytku" short_description="The track is preserved (can still be seen) but is no longer in use and possibly overgrown" value="disused"/>
+				<list_entry display_value="Abandoned railway" pl.display_value="tor rozebrany" pl.short_description="Tor został zlikwidowany, ale pozostały wyraźne ślady lub elementy konstrukcji" short_description="A tracks whose rails has been dismounted but whose train path and ballast is still visible on ground" value="abandoned"/>
+				<list_entry display_value="Razed railway" pl.display_value="miejsce po torze" pl.short_description="Nie ma śladu, że w tym miejscu biegł tor" short_description="Overbuilt track which could only be seen if you know where it is" value="razed"/>
+			</combo>
+			<label pl.text="Wypełnij również gdy tor nie jest używany (np. jest w trakcie projektowania, konstrukcji, itd.)" text="If the track is not in use (i.e. proposed, under construction etc.), please also fill out"/>
+			<combo default="1435" display_values="1800,1600,1524 (Russian broad gauge),1520 (Russian broad gauge),1458,1450,1440,1435 (standard gauge),1432,1106,1100,1040,1000 (meter gauge),925,915,900,889,880,860,820,800,785,775,760 (Bosnian gauge),750,660,655,630,600,580,575,560,550,500,410,381,320,184,144,127,89" key="gauge" pl.display_values="1800,1600,1524 (tor szeroki rosyjski),1520 (tor szeroki rosyjski),1458,1450,1440,1435 (tor normalny),1432,1106,1100,1040,1000 (tor metrowy),925,915,900,889,880,860,820,800,785,775,760 (tor bośniański),750,660,655,630,600,580,575,560,550,500,410,381,320,184,144,127,89" pl.text="Szerokość [mm]" text="Gauge [mm]" values="1800,1600,1524,1520,1458,1450,1440,1435,1432,1106,1100,1040,1000,925,915,900,889,880,860,820,800,785,775,760,750,660,655,630,600,580,575,560,550,500,410,381,320,184,144,127,89" values_sort="false"/>
+			<combo key="railway:traffic_mode" display_values="mixed,passenger,freight" pl.display_values="mieszany,pasażerski,towarowy" pl.text="Rodzaj ruchu" text="Traffic mode" values="mixed,passenger,freight"/>
+			<combo key="railway:preferred_direction" pl.text="Kierunek użytkowania (względem kierunku linii w OSM)" text="Direction of use (depends on direction of OSM way)">
+				<list_entry display_value="forward" pl.display_value="do przodu" pl.short_description="Tor jest używany w kierunku zgodnym z kierunkiem linii w OSM." short_description="The track is used in the same direction as the OSM way." value="forward"/>
+				<list_entry display_value="backward" pl.display_value="do tyłu" pl.short_description="Tor jest używany w kierunku przeciwnym do kierunku linii w OSM." short_description="The track is used in the other direction than the OSM way." value="backward"/>
+				<list_entry display_value="both" pl.display_value="w obu kierunkach" value="both"/>
+			</combo>
+			<reference ref="rail_infrastructure_operator"/>
+			<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+			<text key="end_date" pl.text="Data likwidacji w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="End date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+			<preset_link preset_name="Main track"/>
+			<preset_link preset_name="Siding track"/>
+			<preset_link preset_name="Crossover track"/>
+			<preset_link preset_name="Spur track"/>
+			<preset_link preset_name="Yard track"/>
+			<preset_link preset_name="Electrification"/>
+			<preset_link preset_name="Train protection, radio"/>
+			<preset_link preset_name="Speed limit"/>
+			<preset_link preset_name="Track system, line routing"/>
+		</item>
+		<group icon="rail.png" name="Track Usage" pl.name="Użycie torów">
+			<item icon="rail.png" name="Main track" pl.name="Tor główny" type="way">
+				<!-- FIXME: this preset is not detected -->
+				<key key="service"/>
+				<label pl.text="Nie używaj tego szablonu dla torów linii przemysłowych (fabryk, kopalń, portów) i wojskowych." text="Don't use this preset for industrial railway lines (harbours, mines, large factories) and military lines."/>
+				<text key="name" pl.text="Nazwa toru" text="Railway name"/>
+				<text key="ref" pl.text="Numer linii" text="Line reference"/>
+				<text key="railway:track_ref" pl.text="Numer toru (na stacji)" text="Track ref (inside station)"/>
+				<combo key="usage" match="keyvalue!" pl.text="Użycie" text="Usage">
+					<list_entry display_value="main line" pl.display_value="linia główna" pl.short_description="Ważna linia kolejowa, często dwutorowa, zelektryfikowana, o prędkości konstrukcyjnej powyżej 100 km/h." short_description="An important line; often double tracks, electrified; usually more than 100 km/h" value="main"/>
+					<list_entry display_value="branch" pl.display_value="odgałęzienie" pl.short_description="Mniej ważna linia, często jednotorowa, niezelektryfikowana, prędkość konstrukcyjna poniżej 100 km/h." short_description="less important line; often single-tracked; not electrified; less than 100 km/h" value="branch"/>
+					<list_entry display_value="industrial" pl.display_value="przemysł" value="industrial"/>
+					<list_entry display_value="military" pl.display_value="wojsko" value="military"/>
+					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
+					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
+				</combo>
+				<check key="highspeed" pl.text="Linia dużych prędkości (powyżej 200 km/h)" text="High-speed line (over 200 km/h)"/>
+			</item>
+			<item icon="crossover-track.svg" name="Crossover track" pl.name="Łącznica">
+				<label pl.text="Połączenie pomiędzy torami głównymi" text="Connection between main tracks"/>
+				<key key="service" value="crossover"/>
+				<text key="railway:track_ref" pl.text="Numer toru (na stacji)" text="Track ref (inside station)"/>
+				<space/>
+				<combo editable="false" key="usage" pl.text="Użycie" text="Usage">
+					<list_entry display_value="industrial" pl.display_value="przemysł" value="industrial"/>
+					<list_entry display_value="military" pl.display_value="wojsko" value="military"/>
+					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
+					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
+				</combo>
+			</item>
+			<item icon="siding-32.png" name="Siding track" pl.name="Tor dodatkowy" type="way">
+				<key key="service" value="siding"/>
+				<text key="railway:track_ref" pl.text="Numer toru (na stacji)" text="Track ref (inside station)"/>
+				<space/>
+				<combo editable="false" key="usage" pl.text="Użycie" text="Usage">
+					<list_entry display_value="industrial" pl.display_value="przemysł" value="industrial"/>
+					<list_entry display_value="military" pl.display_value="wojsko" value="military"/>
+					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
+					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
+				</combo>
+			</item>
+			<item icon="spur-25.png" name="Spur track" pl.name="Bocznica" type="way">
+				<key key="service" value="spur"/>
+				<text key="railway:track_ref" pl.text="Numer toru (na stacji)" text="Track ref (inside station)"/>
+				<space/>
+				<combo editable="false" key="usage" pl.text="Użycie" text="Usage">
+					<list_entry display_value="industrial" pl.display_value="przemysł" value="industrial"/>
+					<list_entry display_value="military" pl.display_value="wojsko" value="military"/>
+					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
+					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
+				</combo>
+			</item>
+			<item icon="yard-track.svg" name="Yard track" pl.name="Tor rozrządowy" type="way">
+				<key key="service" value="yard"/>
+				<text key="railway:track_ref" pl.text="Numer toru (na stacji)" text="Track ref (inside station)"/>
+				<space/>
+				<combo editable="false" key="usage" pl.text="Użycie" text="Usage">
+					<list_entry display_value="industrial" pl.display_value="przemysł" value="industrial"/>
+					<list_entry display_value="military" pl.display_value="wojsko" value="military"/>
+					<list_entry display_value="tourism" pl.display_value="turystyka" value="tourism"/>
+					<list_entry display_value="test" pl.display_value="tor testowy" value="test"/>
+				</combo>
+			</item>
+		</group>
+		<group icon="rail.png" name="More Track Details" pl.name="Więcej szczegółów o torach">
+			<item name="Electrification" pl.name="Elektryfikacja" type="way">
+				<combo display_values="catenary,third rail,ground-level power supply,other,not electrified" key="electrified" match="key" pl.display_values="sieć trakcyjna,trzecia szyna,źródło zasilania na poziomie ziemi,inne,niezelektryfikowany" pl.text="Zelektryfikowany z" text="Electrified with" values="contact_line,rail,ground-level_power_supply,yes,no"/>
+				<combo display_values="15 kV,45 V,180 V,220 V,400 V,500 V,550 V,600 V,650 V,750 V,800 V,850 V,1000 V,1100 V,1200 V,1500 V,1800 V,2200 V,2400 V,3000 V (default in Poland),5000 V,5500 V,6300 V,6500 V,6600 V,8000 V,10 kV,20 kV,25 kV" key="voltage" pl.display_values="15 kV,45 V,180 V,220 V,400 V,500 V,550 V,600 V,650 V,750 V,800 V,850 V,1000 V,1100 V,1200 V,1500 V,1800 V,2200 V,2400 V,3000 V (standardowe w Polsce),5000 V,5500 V,6300 V,6500 V,6600 V,8000 V,10 kV,20 kV,25 kV" pl.text="Napięcie" text="Voltage" value_sort="false" values="15000,45,180,220,400,500,550,600,650,750,800,850,1000,1100,1200,1500,1800,2200,2400,3000,5000,5500,6300,6500,6600,8000,10000,20000,25000"/>
+				<combo display_values="16.7 Hz,DC (default in Poland),16 2/3 Hz (in parts of Germany),50 Hz,60 Hz,25 Hz" key="frequency" pl.display_values="16.7 Hz,prąd stały (standardowe w Polsce),16 2/3 Hz,50 Hz,60 Hz,25 Hz" pl.text="Częstotliwość" text="Frequency" values="16.7,0,16.67,50,60,25"/>
+			</item>
+			<item name="Train protection, radio" pl.name="Zabezpieczenia ruchu kolejowego, komunikacja radiowa" type="way">
+				<!-- TODO: SHP -->
+				<combo display_values="yes,no,level 0,level 1,level 2,level 3" key="railway:etcs" match="key" pl.display_values="tak,nie,poziom 0,poziom 1,poziom 2,poziom 3" pl.text="ETCS" text="ETCS" values="yes,no,0,1,2,3"/>
+				<space/>
+				<combo display_values="analogue,GSM-R" key="railway:radio" match="key" pl.display_values="analogowe,GSM-R" pl.text="Radio" text="Radio" values="analogue,gsm-r"/>
+				<space/>
+				<combo key="railway:bidirectional" match="key" pl.text="Ruch dwukierunkowy (względem linii w OSM)" text="Bidirectional traffic (depends on direction of OSM way)">
+					<list_entry pl.display_value="regularne użytkowanie w obu kierunkach" value="regular"/>
+					<list_entry pl.display_value="ruch jednokierunkowy z możliwością jazdy w kierunku przeciwnym do zasadniczego" value="signals"/>
+					<list_entry pl.display_value="ruch jednokierunkowy bez możliwości jazdy w kierunku przeciwnym do zasadniczego" value="possible"/>
+				</combo>
+			</item>
+			<item name="Speed limit" pl.name="Limit prędkości" type="way">
+				<combo key="maxspeed" display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" pl.text="Maksymalna dopuszczalna prędkość [km/h]" text="Maxspeed (kph)" values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"/>
+				<space/>
+				<label pl.text="Jeżeli dopuszczalna prędkość zależy od kierunku jazdy, użyj poniższych pól" text="If the speed limits of the two directions are different, use the following to fields:"/>
+				<combo key="maxspeed:forward" display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" pl.text="Maksymalna dopuszczalna prędkość w kierunku zgodnym z linią w OSM (km/h)" text="Maxspeed in direction of the OSM way (kph)" values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"/>
+				<combo key="maxspeed:backward" display_values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200" pl.text="Maksymalna dopuszczalna prędkość w kierunku przeciwnym do linii w OSM (km/h)" text="Maxspeed in direction opposite to the OSM way (kph)" values="10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200"/>
+			</item>
+			<item name="Track system, line routing" pl.name="Tory, teren" type="way">
+				<check key="railway:ballastless" match="key" pl.text="Tory wsparte balastem" text="Ballastless"/>
+				<combo display_values="yes,no,Riggenbach system,Strub system,Abt system,Locher system,Riggenbach-Klose system,Marsh system,Lamella (Von Roll) system" key="rack" match="key" pl.display_values="tak,nie,system Riggenbach,system Strub,system Abt,system Locher,system Riggenbach-Klose,system Marsh,system Lamella (Von Roll)" pl.text="Kolej zębata" text="Rack" values="yes,no,riggenbach,strub,abt,locher,riggenbach-klose,marsh,von_roll"/>
+				<text key="incline" pl.text="Nachylenie (np. 3%)" text="Incline (eg. 3%)"/>
+				<check key="embankment" pl.text="Nasyp" text="Embankment"/>
+				<check key="cutting" pl.text="Wykop" text="Cutting"/>
+				<space/>
+				<check key="lit" pl.text="Oświetlenie" text="Lit"/>
+			</item>
+		</group>
+		<separator/>
+		<item icon="bridge-32.png" name="Bridge" pl.name="Most" type="way">
+			<combo default="yes" display_values="Non-specific bridge,Cantilever bridge,Movable bridge,Trestle bridge,Viaduct" key="bridge" pl.display_values="zwykły (lub jakikolwiek),wspornikowy,ruchomy,trestle/tressel,wiadukt" pl.text="Typ mostu" text="Bridge type" values="yes,cantilever,movable,trestle,viaduct" values_sort="false"/>
+			<combo display_values="no,Bascule bridge,Drawbridge,Swing bridge" key="bridge:movable" pl.display_values="nie,most zwodzony,most zwodzony o jednym przęśle podnoszonym za pomocą łańcuchów,most podnoszony pionowo,most obrotowy" pl.text="Most ruchomy" text="Movable bridge" values=" ,bascule,drawbridge,lift,swing" values_sort="false"/>
+			<combo display_values="Arch bridge,Beam bridge,Truss bridge,Suspension bridge,Cable-stayed bridge" key="bridge:structure" pl.display_values="łuk,przęsła,kratownica,most wiszący (wieże przy krawędziach mostu),most wiszący" pl.text="Konstrukcja nośna" text="Load-bearing architecture (for non-specific bridges)" values="arch,beam,truss,suspension,cable-stayed"/>
+			<key key="layer" value="1"/>
+			<text key="bridge:name" pl.text="Nazwa mostu" text="Bridge name"/>
+			<text key="bridge:length" pl.text="Długość mostu [m]" text="Length of bridge [m]"/>
+			<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+			<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+			<text key="bridge:wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+			<text key="bridge:wikidata" pl.text="Obiekt Wikidata" text="Wikidata item"/>
+		</item>
+		<item icon="tunnel-32.png" name="Tunnel" pl.name="Tunel" type="way">
+			<key key="tunnel" value="yes"/>
+			<key key="layer" value="-1"/>
+			<text key="tunnel:name" pl.text="Nazwa tunelu" text="Tunnel name"/>
+			<text key="tunnel:length" pl.text="Długość tunelu [m]" text="Length of tunnel [m]"/>
+			<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+			<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+			<text key="tunnel:wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+			<text key="tunnel:wikidata" pl.text="Obiekt Wikidata" text="Wikidata item"/>
+		</item>
+		<separator/>
+		<item icon="buffer_stop-32.png" name="Buffer Stop" pl.name="Kozioł oporowy" type="node">
+			<key key="railway" value="buffer_stop"/>
+		</item>
+		<item icon="de/switch.png" name="Point" pl.name="Rozjazd" type="node">
+			<label pl.text="Rozjazd" text="Point (British English), Switch (American English)"/>
+			<space/>
+			<key key="railway" value="switch"/>
+			<text key="ref" pl.text="Numer rozjazdu" text="Switch reference"/>
+			<check key="railway:local_operated" pl.text="Sterowany lokalnie" text="Local operated"/>
+			<check key="railway:switch:electric" pl.text="Przestawiany elektrycznie" text="Electric"/>
+			<check key="railway:switch:heated" pl.text="Ogrzewany" text="Heated"/>
+			<check key="railway:switch:resetting" pl.text="Automatycznie resetowany do domyślnego położenia" text="resetting switch"/>
+			<combo display_values="default switch,three way switch,single slip switch,double slip switch,wye switch,abt switch" key="railway:switch" pl.display_values="pojedynczy,podwójny,krzyżowy pojedynczy,krzyżowy podwójny,symetryczny,rozjazd automatyczny kolei liniowej" pl.text="Typ" text="Switch type" values="default,three_way,single_slip,double_slip,wye,abt"/>
+			<combo display_values="Left,Right" key="railway:turnout_side" pl.display_values="lewo,prawo" pl.text="Kierunek odgałęzienia" text="Turnout side (only default and resetting switches)" values="left,right"/>
+			<combo key="railway:radius" pl.text="Promień [m]" text="Switch radius (m)" values="190,300,500,760,1200,2500"/>
+			<text key="railway:maxspeed:straight" pl.text="Maksymalna dopuszczalna prędkość na wprost [km/h]" text="Maxspeed in straight direction (km/h)"/>
+			<text key="railway:maxspeed:diverging" pl.text="Maksymalna dopuszczalna prędkość na bok [km/h]" text="Maxspeed in diverging direction (km/h)"/>
+			<combo display_values="inside,outside" key="railway:switch:configuration" pl.display_values="wewnątrz,na zewnątrz" pl.text="Umieszczenie iglic" text="Configuration" values="inside,outside"/>
+			<check key="railway:switch:movable_frog" pl.text="Ruchomy dziób" text="Movable frog"/>
+		</item>
+		<item name="Railway Crossing" pl.name="Skrzyżowanie" type="node">
+			<label pl.text="Przecięcie dwóch torów bez możliwości zmiany kierunku" text="Two tracks crosses each other without a switch"/>
+			<space/>
+			<key key="railway" value="railway_crossing"/>
+			<text key="ref" pl.text="Numer" text="Ref"/>
+		</item>
+		<item name="Derailer" pl.name="Wykolejnica" type="node">
+			<label pl.text="Wykolejnica" text="Derailer"/>
+			<space/>
+			<key key="railway" value="derail"/>
+			<key key="railway:derail" value="wedge"/>
+			<text key="ref" pl.text="Numer" text="Ref"/>
+			<check key="railway:local_operated" pl.text="Sterowana lokalnie" text="Local operated"/>
+		</item>
+		<item name="Vacancy Detection" pl.name="Czujnik zajętości" type="node">
+			<label pl.text="Czujnik zajętości toru" text="Track vacancy detection"/>
+			<space/>
+			<key key="railway" value="vacancy_detection"/>
+			<combo display_values="insulated rail joint,axle counter" key="railway:vacancy_detection" pl.display_values="obwód izolowany,licznik osi" pl.text="Typ" text="Type" values="insulated_rail_joint,axle_counter"/>
+		</item>
+		<item icon="signalbox.png" name="Signal Box" pl.name="Nastawnia" type="node,closedway">
+			<label pl.text="Nastawnia" text="signal box"/>
+			<space/>
+			<key key="railway" value="signal_box"/>
+			<text key="name" pl.text="Nazwa (np. Rybnik RbA)" text="Name (eg. Rybnik RbA)"/>
+			<text key="railway:ref" pl.text="Identyfikator (np. RbA)" text="Identifier (eg. RbA)"/>
+			<combo display_values="mechanical,electric,diagram-based,electronic" key="railway:signal_box" pl.display_values="mechaniczna,elektryczna,oparta na diagramach,elektroniczna" pl.text="Rodzaj nastawni" text="Signal box type" values="mechanical,electric,track_diagram,electronic"/>
+			<reference ref="rail_infrastructure_operator"/>
+			<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+			<text key="railway:position" pl.text="Pozycja (np. 12.3) [km]" text="Distance indication (rounded, e.g. '12.3'; km)"/>
+			<text key="railway:position:exact" pl.text="Dokładna pozycja (np. 12.345) [km]" text="Exact distance indication (exact, e.g. '12.345'; km)"/>
+			<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+			<check key="railway:local_operated" pl.text="Sterowana lokalnie" text="Local operated"/>
+			<check key="building" pl.text="Budynek" text="Building"/>
+			<check key="disused" pl.text="Nieużywana" text="Out of service"/>
+		</item>
+		<group name="Operating Sites" pl.name="Posterunki ruchu">
+			<item name="Station" pl.name="Stacja" type="node">
+				<label pl.text="Stacja osobowa lub stacja używana zarówno w ruchu pasażerskim, jak i towarowym" text="Passenger station and stations which are used both for passengers and freight"/>
+				<label de.text="Rysowana jako węzeł wewnątrz obszaru stacji. Węzęł nie powinien być przyklejony do toru." text="Is being mapped as a node inside the area. The node does not belong to a track."/>
+				<space/>
+				<key key="railway" value="station"/>
+				<combo display_values="yes,no" key="public_transport" pl.display_values="tak,nie" pl.text="W transporcie publicznym?" text="Public transport?" values="station, "/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
+				<text key="uic_ref" pl.text="Identyfikator UIC" text="UIC-ID"/>
+				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
+				<combo display_values="tourist,local,regional,conurbation,voivodeship,premium" key="railway:station_category" pl.display_values="turystyczna,lokalna,regionalna,aglomeracyjna,wojewódzka,premium" pl.text="Kategoria" text="Station category" values="PL:tourist,PL:local,PL:regional,PL:conurbation,PL:voivodeship,PL:premium"/>
+				<reference ref="rail_infrastructure_operator"/>
+				<text key="network" pl.text="Sieć" text="Network"/>
+				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+			</item>
+			<item name="Halt" pl.name="Przystanek" type="node">
+				<label pl.text="Przystanek" text="a small station without switches"/>
+				<space/>
+				<key key="railway" value="halt"/>
+				<combo display_values="yes,no" key="public_transport" pl.display_values="tak,nie" pl.text="Przystanek osobowy?" text="Public transport?" values="station, "/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
+				<text key="uic_ref" pl.text="Identyfikator UIC" text="UIC-ID"/>
+				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
+				<combo display_values="tourist,local,regional,conurbation,voivodeship,premium" key="railway:station_category" pl.display_values="turystyczna,lokalna,regionalna,aglomeracyjna,wojewódzka,premium" pl.text="Kategoria" text="Station category" values="PL:tourist,PL:local,PL:regional,PL:conurbation,PL:voivodeship,PL:premium"/>
+				<reference ref="rail_infrastructure_operator"/>
+				<text key="network" pl.text="Sieć" text="Network"/>
+				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+			</item>
+			<item icon="tramstop.png" name="Tram Stop" pl.name="Przystanek tramwajowy" type="node">
+				<label pl.text="Przystanek tramwajowy" text="Tram Stop"/>
+				<space/>
+				<key key="railway" value="tram_stop"/>
+				<combo display_values="yes,no" key="public_transport" pl.display_values="tak,nie" pl.text="Przystanek osobowy?" text="Public transport?" values="station, "/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy" text="Short name"/>
+				<text key="uic_ref" pl.text="Identyfikator UIC" text="UIC-ID"/>
+				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
+				<combo default="" key="operator" pl.text="Operator" text="operator" values="Tramwaje Śląskie"/>
+				<text key="network" pl.text="Sieć" text="Network"/>
+				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+			</item>
+			<item icon="yard-32.png" name="Freight Station" pl.name="Stacja towarowa" type="node">
+				<label pl.text="Stacja towarowa" text="Freight Station"/>
+				<space/>
+				<key key="railway" value="yard"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
+				<reference ref="rail_infrastructure_operator"/>
+				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+			</item>
+			<item name="Service Station" pl.name="Posterunek techniczny / pracowniczy" type="node">
+				<label pl.text="Posterunek techniczny / pracowniczy" text="Service Station"/>
+				<space/>
+				<key key="railway" value="service_station"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
+				<reference ref="rail_infrastructure_operator"/>
+				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+			</item>
+			<item icon="junction-25.png" name="Juction" pl.name="Posterunek odgałęźny" type="node">
+				<label pl.text="Posterunek odgałęźny" text="Junction"/>
+				<label pl.text="Zlokalizowany poza stacją, gdy łączą się dwie linie kolejowe." text="Location outside a station where one railway line forks from another."/>
+				<space/>
+				<key key="railway" value="junction"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
+				<reference ref="rail_infrastructure_operator"/>
+				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+			</item>
+			<item icon="spur-25.png" name="Spur juction" pl.name="Posterunek bocznicowy" type="node">
+				<label text="Spur junction" pl.text="Posterunek bocznicowy"/>
+				<label pl.text="Posterunek, na którym odgałęzia się tor do bocznicy." text="Location where a (usually short) spur track forks"/>
+				<space/>
+				<key key="railway" value="spur_junction"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
+				<reference ref="rail_infrastructure_operator"/>
+				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+			</item>
+			<item icon="crossover-28.png" name="Crossover" pl.name="Posterunek osłonny" type="node">
+				<label pl.text="Posterunek osłonny (w szczególności rozjazdy umożliwiające przejazd między torem zasadniczym a torem przeciwnym do zasadniczego)" text="Crossover"/>
+				<space/>
+				<key key="railway" value="crossover"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
+				<reference ref="rail_infrastructure_operator"/>
+				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+			</item>
+			<item name="Station Part or Blockpost" pl.name="Posterunek" type="node">
+				<label pl.text="Posterunek" text="Station Part or Blockpost"/>
+				<space/>
+				<key key="railway" value="site"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
+				<reference ref="rail_infrastructure_operator"/>
+				<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+			</item>
+			<separator/>
+			<item name="Stop Position" pl.name="Miejsce zatrzymania" type="node">
+				<label pl.text="Miejsce zatrzymania" text="Stop Position"/>
+				<label pl.text="Rysowany na węźle będącym częścią toru." text="It is mapped as a node which is part of the track."/>
+				<space/>
+				<combo display_values="yes,no" key="public_transport" pl.display_values="tak,nie" pl.text="Używany w transporcie publicznym?" text="Public transport?" values="stop_position, "/>
+				<key key="railway" value="stop"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
+				<text key="uic_ref" pl.text="Numer UIC" text="UIC-ID"/>
+				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
+				<text key="local_ref" pl.text="Numer toru (np. 5a)" text="track number (e.g. 5 or 5a)"/>
+				<reference ref="rail_infrastructure_operator"/>
+				<reference ref="traffic_modes"/>
+				<text key="network" pl.text="Sieć" text="Network"/>
+				<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+				<text key="railway:position" pl.text="Pozycja (np. 12.3) [km]" text="Distance indication (rounded, e.g. '12.3'; km)"/>
+				<text key="railway:position:exact" pl.text="Dokładna pozycja (np. 12.345) [km]" text="Exact distance indication (exact, e.g. '12.345'; km)"/>
+			</item>
+			<item name="Railway Landuse Area" pl.name="Teren kolejowy" type="closedway">
+				<label pl.text="Teren kolejowy" text="Railway landuse area"/>
+				<key key="landuse" value="railway"/>
+			</item>
+			<item name="Operating Site Relation" pl.name="Relacja posterunku" type="relation">
+				<label text="Operating Site Relation" pl.text="Relacja posterunku"/>
+				<space/>
+				<key key="railway" value="facility"/>
+				<combo display_values="yes,no" key="type" pl.display_values="tak,nie" pl.text="Używany w transporcie publicznym?" text="Public transport?" values="public_transport, "/>
+				<combo display_values="yes,no" key="public_transport" pl.display_values="tak,nie" pl.text="Używany w transporcie publicznym?" text="Public transport?" values="stop_area, "/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="uic_ref" pl.text="Numer UIC" text="UIC-ID"/>
+				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
+				<text key="railway:ref" pl.text="Skrót nazwy (np. Rb)" text="Short name (eg. Rb)"/>
+				<reference ref="rail_infrastructure_operator"/>
+				<reference ref="traffic_modes"/>
+				<roles>
+					<role count="1" key="" pl.text="Posterunek (punkt/obszar)" requisite="required" text="Railway facility node/area" type="node,closedway"/>
+					<role key="stop" pl.text="Miejsce zatrzymania" requisite="required" text="Stop positions" type="node"/>
+					<role key="platform" pl.text="Peron" requisite="optional" text="Platforms" type="way,closedway"/>
+					<role key="subway_entrance" pl.text="Wejście do metra" requisite="optional" text="Subway entrances" type="node"/>
+					<role key="building" pl.text="Budynek stacji/posterunku" requisite="optional" text="Station building" type="closedway"/>
+					<role key="landuse" pl.text="Obszar" requisite="optional" text="Area" type="closedway"/>
+				</roles>
+			</item>
+		</group>
+		<separator/>
+		<item name="Line Number (Infrastructure)" pl.name="Linia kolejowa" type="relation">
+			<label pl.text="Linia kolejowa" text="Line number assigned by the infrastructure operator"/>
+			<space/>
+			<key key="type" value="route"/>
+			<key key="route" value="tracks"/>
+			<text key="name" pl.text="Nazwa (np. „140 Katowice Ligota — Nędza”)" text="Name (eg. “140 Katowice Ligota — Nędza”)"/>
+			<text key="ref" pl.text="Numer (np. 140)" text="Ref (eg. 140)"/>
+			<text key="from" pl.text="Stacja początkowa" text="Initial station"/>
+			<text key="to" pl.text="Stacja końcowa" text="Terminus station"/>
+			<reference ref="rail_infrastructure_operator"/>
+			<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+			<roles>
+				<role key="" pl.text="Tor linii" requisite="required" text="Tracks" type="way"/>
+			</roles>
+		</item>
+		<item name="Timetable Number" pl.name="Połączenie kolejowe" type="relation">
+			<label pl.text="Połączenie kolejowe" text="Route relation of table number at the national timetable which is assigned to a route"/>
+			<space/>
+			<key key="type" value="route"/>
+			<key key="route" value="railway"/>
+			<text key="name" pl.text="Nazwa (np. „EIC 111 Comenius”)" text="Name (eg. “EIC 111 Comenius”)"/>
+			<text key="ref" pl.text="Numer (np. 111)" text="Ref (eg. 111)"/>
+			<text key="from" pl.text="Stacja początkowa" text="Initial station"/>
+			<text key="to" pl.text="Stacja końcowa" text="Terminus station"/>
+			<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+			<roles>
+				<role key="" pl.text="Tory" requisite="required" text="Tracks" type="way"/>
+			</roles>
+		</item>
+		<separator/>
+		<item icon="presets/transport/railway/level_crossing.svg" name="Level Crossing" pl.name="Przejazd kolejowy" type="node">
+			<label pl.text="Przejazd kolejowy" text="Level Crossing"/>
+			<space/>
+			<key key="railway" value="level_crossing"/>
+			<text key="railway:ref" pl.text="Nazwa (brak pozycji)" text="Name (no position)"/>
+			<text key="railway:position" pl.text="Pozycja (np. 12.3) [km]" text="Distance indication (rounded, e.g. '12.3'; km)"/>
+			<text key="railway:position:exact" pl.text="Dokładna pozycja (np. 12.345) [km]" text="Exact distance indication (exact, e.g. '12.345'; km)"/>
+			<space/>
+			<combo display_values="half boom gate,double half boom gate,full boom gate,yes,no" key="crossing:barrier" text="Barriers" pl.display_values="połówkowe,dwie pary połówkowych,pełne,tak,nie" pl.text="Rogatki" values="half,double_half,full,yes,no"/>
+			<check key="crossing:light" pl.text="Światła ostrzegawcze" text="Lights"/>
+			<check key="crossing:saltire" pl.text="Krzyż świętego Andrzeja" text="Saltire"/>
+			<check key="crossing:bell" pl.text="Sygnalizacja dźwiękowa" text="Bell"/>
+			<space/>
+			<check key="crossing:chicane" pl.text="Bariery uniemożliwiające przejście przez przejazd bez zmiany kierunku" text="Chicane"/>
+			<combo display_values="no,camera,attendant,automatic,phone" key="crossing:supervision" pl.display_values="brak,kamera,na miejscu,automatyczny,telefon (na żądanie)" pl.text="Sposób sterowania" text="Type of supervision" values="no,camera,attendant,automatic,phone"/>
+			<combo display_values="automatic (contacts),remote (signal box), local (attendant/train staff)" key="crossing:activation" pl.display_values="automatyczna,zdalna (nastawnia),lokalna" pl.text="Aktywacja" text="Activation" values="automatic,remote,local"/>
+			<text key="railway:level_crossing:closure:average" pl.text="średni czas zamknięcia [min]" text="average clousure duration (minutes)"/>
+			<check key="crossing:on_demand" pl.text="Zamknięcie i otwarcie na żądanie" text="On demand"/>
+		</item>
+		<item name="Little crossing for pedestrians" pl.name="Przejście kolejowe dla pieszych" type="node">
+			<label pl.text="Przejście kolejowe dla pieszych" text="Crossing for pedestrians (less secure than common level crossings)"/>
+			<space/>
+			<key key="railway" value="crossing"/>
+			<text key="railway:ref" pl.text="Nazwa (brak pozycji)" text="Name (no position)"/>
+			<text key="railway:position" pl.text="Pozycja (np. 12.3) [km]" text="Distance indication (rounded, e.g. '12.3'; km)"/>
+			<text key="railway:position:exact" pl.text="Dokładna pozycja (np. 12.345) [km]" text="Exact distance indication (exact, e.g. '12.345'; km)"/>
+			<space/>
+			<combo display_values="half boom gate,double half boom gate,full boom gate,yes,no" key="crossing:barrier" text="Barriers" pl.display_values="połówkowe,dwie pary połówkowych,pełne,tak,nie" pl.text="Rogatki" values="half,double_half,full,yes,no"/>
+			<check key="crossing:light" pl.text="Światła ostrzegawcze" text="Lights"/>
+			<check key="crossing:saltire" pl.text="Krzyż świętego Andrzeja" text="Saltire"/>
+			<check key="crossing:bell" pl.text="Sygnalizacja dźwiękowa" text="Bell"/>
+			<space/>
+			<check key="crossing:chicane" pl.text="Bariery uniemożliwiające przejście przez przejazd bez zmiany kierunku" text="Chicane"/>
+			<combo display_values="no,camera,attendant,automatic,phone" key="crossing:supervision" pl.display_values="brak,kamera,na miejscu,automatyczny,telefon (na żądanie)" pl.text="Sposób sterowania" text="Type of supervision" values="no,camera,attendant,automatic,phone"/>
+			<combo display_values="automatic (contacts),remote (signal box), local (attendant/train staff)" key="crossing:activation" pl.display_values="automatyczna,zdalna (nastawnia),lokalna" pl.text="Aktywacja" text="Activation" values="automatic,remote,local"/>
+			<text key="railway:level_crossing:closure:average" pl.text="średni czas zamknięcia [min]" text="average clousure duration (minutes)"/>
+			<check key="crossing:on_demand" pl.text="Zamknięcie i otwarcie na żądanie" text="On demand"/>
+		</item>
+		<separator/>
+		<item icon="milestone.png" name="Milestone" pl.name="Słupek hektometrowy" type="node">
+			<label pl.text="Słupki hektometrowe są rysowane jako węzły na torach," text="Kilo-/hektometer indications are nodes on the track"/>
+			<label pl.text="do których należą. Gdy linia składa się z wielu torów," text="which they belong to. On lines with more than one track,"/>
+			<label pl.text="na każdym torze ustawia się węzeł z tagami." text="every track gets a node with the tags."/>
+			<label pl.text="Dodaje się je tylko do torów głównych," text="They are only added to main tracks,"/>
+			<label pl.text="nie do bocznych na stacjach." text="not sidings in stations."/>
+			<key key="railway" value="milestone"/>
+			<text key="railway:position" pl.text="Pozycja (np. 12.3)" text="Distance indication (rounded, eg. 12.3)"/>
+			<text key="railway:position:exact" pl.text="Dokładna pozycja (np. 12.345)" text="Exact distance indication (exact, eg. 12.345)"/>
+			<check key="railway:milestone:catenary_mast" pl.text="Na słupie sieci trakcyjnej" text="On catenary mast"/>
+		</item>
+		<item name="Platform" pl.name="Peron" type="way,closedway,multipolygon">
+			<label pl.text="Peron" text="Platform"/>
+			<key key="railway" value="platform"/>
+			<text key="name" pl.text="Opis" text="Caption"/>
+			<text key="ref" pl.text="Numer" text="Platform number(s)"/>
+			<check key="area" pl.text="Obszar" text="Area"/>
+			<check key="lit" pl.text="Oświetlony" text="Lit"/>
+			<check key="covered" pl.text="Zadaszony" text="Covered"/>
+			<combo display_values="asphalt,paving_stones,concrete,cobblestone,compacted,paved,unpaved" key="surface" pl.display_values="asfalt,kostka brukowa,beton,bruk,powierzchnia ubita (makadam),utwardzona,nieutwardzona" pl.text="Nawierzchnia" text="Surface" values="asphalt,paving_stones,concrete,cobblestone,compacted,paved,unpaved"/>
+			<key key="public_transport" value="platform"/>
+			<combo display_values="yes,no,limited" key="wheelchair" pl.display_values="tak,nie,ograniczony" pl.text="Dostęp dla wózków inwalidzkich" text="Wheelchair" values="yes,no,limited"/>
+			<combo display_values="yes,no,incorrect" key="tactile_paving" pl.display_values="tak,nie,nieprawidłowe" pl.text="Wyczuwalne/dotykowe oznakowanie poziome" text="Tactile Paving" values="yes,no,incorrect"/>
+			<combo default="" display_values="190,380,550,760,920,960,1300" key="height" pl.display_values="190,380,550,760,920,960,1300" pl.text="Wysokość [mm]" text="Height [mm]" values="0.19,0.38,0.55,0.76,0.92,0.96,0.130" values_sort="false"/>
+			<text key="operator" pl.text="Operator" text="operator"/>
+			<reference ref="traffic_modes"/>
+		</item>
+		<item name="Ticket Counter" pl.name="Kasa biletowa" type="node">
+			<label pl.text="Kasa biletowa" text="Ticket Counter"/>
+			<space/>
+			<key key="shop" value="ticket"/>
+			<text key="operator" pl.text="Operator" text="operator"/>
+			<text key="name" pl.text="Nazwa (np. „Centrum podróży”)" text="Name (eg. “Reisezentrum”)"/>
+			<text key="opening_hours" pl.text="Godziny otwarcia" text="Opening hours"/>
+		</item>
+		<item name="Subway Entrance" pl.name="Wejście do metra" type="node">
+			<label pl.text="Wejście do metra" text="Subway Entrance"/>
+			<key key="railway" value="subway_entrance"/>
+			<text key="name" pl.text="Nazwa" text="Name"/>
+			<combo display_values="yes,no,limited" key="wheelchair" pl.display_values="tak,nie,ograniczony" pl.text="Dostęp dla wózków inwalidzkich" text="Wheelchair" values="yes,no,limited"/>
+			<check key="bicycle" pl.text="Dostęp dla rowerów" text="Accessible with bicycles"/>
+		</item>
+		<item name="Station Building" pl.name="Budynek dworca" type="closedway">
+			<label pl.text="Budynek dworca" text="Station Building"/>
+			<space/>
+			<key key="building" value="train_station"/>
+			<text key="start_date" pl.text="Data otwarcia w formacie RRRR, RRRR-MM lub RRRR-MM-DD" text="Start date in the format YYYY, YYYY-MM or YYYY-MM-DD"/>
+			<text key="image" de.text="Adres URL obrazka" text="Image URL"/>
+			<text key="ele" pl.text="Wysokość nad poziomem morza [m]" text="Height above sea level [m]"/>
+		</item>
+		<item name="Railway Landuse Area" pl.name="Teren kolejowy" type="closedway">
+			<label pl.text="Teren kolejowy" text="Railway Landuse Area"/>
+			<key key="landuse" value="railway"/>
+		</item>
+		<separator/>
+		<item name="Change of Power" pl.name="Zmiana systemu zasilania" type="node">
+			<label pl.text="Zmiana systemu zasilania" text="Change of Power (voltage and/or frequency)"/>
+			<key key="railway" value="isolated_track_section"/>
+		</item>
+		<separator/>
+		<item icon="phone-32.png" name="Phone (Railway)" pl.name="Telefon kolejowy" type="node">
+			<label pl.text="Telefon kolejowy" text="Phone (Railway)"/>
+			<key key="railway" value="phone"/>
+			<text key="operator" pl.text="Operator" text="operator"/>
+		</item>
+		<item name="Radio tower/mast" pl.name="Maszt radia" type="node">
+			<label pl.text="Maszt radia" text="Radio tower/mast"/>
+			<space/>
+			<key key="railway" value="radio"/>
+			<label pl.text="Maszt jest zwykle pojedynczym betonowym lub stalowym słupem." text="A mast is often a single mast of concrete or steel framework."/>
+			<label pl.text="Wieża jest dostępna od wewnątrz, po drodze występują piętra," text="A tower is accessible inside (stairs inside) and provides platforms,"/>
+			<label pl.text="podczas gdy na maszt można się dostać jedynie po drabinie." text="whereas a mast only offers ladder steps to climb it."/>
+			<combo display_values="tower,mast" key="man_made" pl.display_values="wieża,maszt" pl.text="Wieża/Maszt" text="Mast/tower" values="tower,mast"/>
+			<key key="tower:type" value="communication"/>
+			<check key="communication:gsm-r" pl.text="GSM-R?" text="GSM-R?"/>
+			<combo display_values="analogue,GSM-R" key="railway:radio" pl.display_values="analogowa,GSM-R" pl.text="Technologia" text="Technik" values="analogue,gsm-r"/>
+			<text default="" delete_if_empty="true" key="ref" pl.text="Identyfikator" text="Reference code"/>
+			<text key="operator" pl.text="Operator" text="Operator"/>
+		</item>
+		<separator/>
+		<item icon="owner-change.svg" name="Change of Operator" pl.name="Zmiana zarządcy" type="node">
+			<label pl.text="Właściciel/operator zmienia się na granicach bocznic oraz połączeniach między krajowymi i regionalnymi operatorami" text="Owner/operator change at spur sidings and connections between national and regional companies"/>
+			<key key="railway" value="owner_change"/>
+			<space/>
+			<label pl.text="Musisz ręcznie dodać odpowiednie tagi:" text="You have to add manually following tags:"/>
+			<label pl.text="— railway:name:(skrócona nazwa operatora 1) = (nazwa tego miejsca)" text="- railway:name:(abbrevation of operator 1) = (name of this location)"/>
+			<label pl.text="— railway:name:(skrócona nazwa operatora 2) = (nazwa tego miejsca)" text="- railway:name:(abbrevation of operator 1) = (name of this location)"/>
+			<label pl.text="— railway:ref:(skrócona nazwa operatora 1) = (skrócona nazwa tego miejsca)" text="- railway:name:(abbrevation of operator 1) = (abbrevation of this location)"/>
+			<label pl.text="— railway:ref:(skrócona nazwa operatora 2) = (skrócona nazwa tego miejsca)" text="- railway:name:(abbrevation of operator 2) = (abbrevation of this location)"/>
+		</item>
+		<item icon="presets/barrier/douane.svg" name="Border" pl.name="Granica" type="node">
+			<label pl.text="Zmiana właściciela/operatora w pobliżu granicy (admin_level&lt;=2)" text="Change of owner/operator near a boundary (admin_level&lt;=2)"/>
+			<key key="railway" value="border"/>
+			<space/>
+			<label pl.text="Musisz ręcznie dodać następujące tagi:" text="You have to add manually following tags:"/>
+			<label pl.text="— railway:name:(skrócona nazwa operatora 1) = (nazwa tego miejsca)" text="- railway:name:(abbrevation of operator 1) = (name of this location)"/>
+			<label pl.text="— railway:name:(skrócona nazwa operatora 2) = (nazwa tego miejsca)" text="- railway:name:(abbrevation of operator 1) = (name of this location)"/>
+			<label pl.text="— railway:ref:(skrócona nazwa operatora 1) = (skrócona nazwa tego miejsca)" text="- railway:name:(abbrevation of operator 1) = (abbrevation of this location)"/>
+			<label pl.text="— railway:ref:(skrócona nazwa operatora 2) = (skrócona nazwa tego miejsca)" text="- railway:name:(abbrevation of operator 2) = (abbrevation of this location)"/>
+		</item>
+		<group name="Supply Points" pl.name="Punkty zaopatrzenia">
+			<item name="Tanking point" pl.name="Punkt tankowania" type="node,closedway">
+				<label pl.text="Punkt tankowania lokomotyw" text="Tanking point"/>
+				<key key="railway" value="fuel"/>
+				<check key="building" pl.text="Budynek" text="Building"/>
+			</item>
+			<item name="Water Crane" pl.name="Żuraw wodny" type="node">
+				<label pl.text="Żuraw wodny" text="Water Crane"/>
+				<key key="railway" value="water_crane"/>
+			</item>
+			<item name="Water Tower" pl.name="Wieża wodna" type="node,closedway">
+				<label pl.text="Wieża wodna" text="Water Tower"/>
+				<space/>
+				<key key="railway" value="water_tower"/>
+				<key key="man_made" value="water_tower"/>
+				<check key="building" pl.text="Budynek" text="Building"/>
+				<text key="operator" pl.text="Operator" text="Operator"/>
+				<text key="height" pl.text="Wysokość [m]" text="Tower height [m]"/>
+				<text key="capacity" pl.text="Pojemność [m³]" text="Capacity [m³]"/>
+			</item>
+			<item name="Coaling Facility" pl.name="Punkt (stacja) nawęglania" type="node,closedway">
+				<label pl.text="Punkt (stacja) nawęglania" text="Coaling Facility"/>
+				<key key="railway" value="coaling_facility"/>
+				<check key="area" pl.text="Powierzchnia" text="Area"/>
+			</item>
+			<item name="Train Wash" pl.name="Myjnia kolejowa" type="node,closedway">
+				<label pl.text="Myjnia kolejowa" text="Train Wash"/>
+				<key key="railway" value="wash"/>
+				<check key="building" pl.text="Budynek" text="Building"/>
+			</item>
+			<item name="Pit" pl.name="Kanał" type="node">
+				<label pl.text="Kanał" text="Pit"/>
+				<key key="railway" value="pit"/>
+			</item>
+			<item name="Engine Shed" pl.name="Szopa na lokomotywę" type="node,closedway">
+				<label pl.text="Szopa na lokomotywę" text="Engine Shed"/>
+				<key key="railway" value="engine_shed"/>
+				<check key="building" pl.text="Budynek" text="Building"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+			</item>
+			<item name="Workshop" pl.name="Warsztaty" type="node,closedway">
+				<label pl.text="Warsztaty" text="Workhop"/>
+				<key key="railway" value="workshop"/>
+				<check key="building" pl.text="Budynek" text="Building"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+			</item>
+		</group>
+		<group name="Freight transport" pl.name="Przewozy towarowe">
+			<item name="Wagon Weightbridge" pl.name="Waga torowa" type="node">
+				<label pl.text="Waga torowa" text="Wagon Weightbridge"/>
+				<key key="railway" value="track_scale"/>
+			</item>
+			<item name="Loading gauge" pl.name="Skrajnia" type="node">
+				<label pl.text="Skrajnia" text="Loading gauge"/>
+				<key key="railway" value="loading_gauge"/>
+			</item>
+			<item name="Team Track" pl.name="Peron towarowy / platforma załadunkowa" type="node,way,closedway">
+				<label pl.text="Peron towarowy / platforma załadunkowa" text="Team Track"/>
+				<key key="railway" value="loading_ramp"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<check key="lit" pl.text="Oświetlenie" text="Lit"/>
+				<combo display_values="asphalt,paving_stones,concrete,cobblestone,compacted,paved,unpaved" key="surface" pl.display_values="asfalt,kostka brukowa,beton,bruk,powierzchnia ubita (makadam),utwardzona,nieutwardzona" pl.text="Nawierzchnia" text="Surface" values="asphalt,paving_stones,concrete,cobblestone,compacted,paved,unpaved"/>
+				<text key="height" pl.text="Wysokość [m] — 0 dla dróg załadunkowych" text="Ramp height (m) - 0 for loading streets"/>
+				<check key="area" pl.text="Powierzchnia" text="Area"/>
+				<text key="operator" pl.text="Operator" text="Operator"/>
+			</item>
+			<item name="Train Ferry Slip" pl.name="Prom" type="node">
+				<label pl.text="Prom" text="Train Ferry Slip"/>
+				<key key="amenity" value="ferry_terminal"/>
+				<key key="railway" value="ferry_terminal"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="uic_ref" pl.text="Numer UIC" text="UIC-ID"/>
+				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
+				<text key="operator" pl.text="Operator" text="Operator"/>
+			</item>
+			<item name="Train Ferry (Way)" pl.name="Prom (droga)" type="way">
+				<label pl.text="Prom (droga)" text="Train Ferry (Way)"/>
+				<key key="route" value="ferry"/>
+				<key key="railway" value="ferry"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="operator" pl.text="Operator" text="Operator"/>
+			</item>
+			<item name="Train Ferry Line (Route Relation)" pl.name="Linia kolejowa promowa (relacja)" type="relation">
+				<label pl.text="Linia kolejowa promowa (relacja)" text="Train Ferry Line (Route Relation)"/>
+				<key key="type" value="route"/>
+				<key key="route" value="ferry"/>
+				<key key="railway" value="ferry"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="operator" pl.text="Operator" text="Operator"/>
+			</item>
+			<separator/>
+			<item name="Container Terminal" pl.name="Terminal kontenerowy" type="node,closedway">
+				<label pl.text="Terminal kontenerowy" text="Container Terminal"/>
+				<space/>
+				<key key="man_made" value="container_terminal"/>
+				<key key="railway" value="container_terminal"/>
+				<key key="landuse" value="industrial"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+			</item>
+			<item name="Rollbock Siding" pl.name="Punkt załadunku na wagon transportujący po innej szerokości toru" type="node">
+				<label pl.text="Punkt załadunku na wagon transportujący po innej szerokości toru" text="Rollbock Siding/Transporter Trailers Siding"/>
+				<key key="railway" value="carrier_truck_pit"/>
+			</item>
+			<item name="Rolling Highway" pl.name="Rampa do załadunku ciężarówek" type="node">
+				<label pl.text="Rampa do załadunku ciężarówek" text="Rolling Highway"/>
+				<space/>
+				<key key="railway" value="rolling_highway"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="operator" pl.text="Operator" text="Operator"/>
+				<text key="uic_ref" pl.text="Numer UIC" text="UIC-ID"/>
+				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
+				<text key="network" pl.text="Sieć" text="Network"/>
+				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+			</item>
+			<item name="Car Shuttle Station" pl.name="Rampa do załadunku samochodów" type="node">
+				<label pl.text="Rampa do załadunku samochodów" text="Car Shuttle Station"/>
+				<space/>
+				<key key="railway" value="car_shuttle"/>
+				<text key="name" pl.text="Nazwa" text="Name"/>
+				<text key="operator" pl.text="Operator" text="Operator"/>
+				<text key="uic_ref" pl.text="Numer UIC" text="UIC-ID"/>
+				<text key="uic_name" pl.text="Nazwa w UIC" text="UIC name"/>
+				<text key="network" pl.text="Sieć" text="Network"/>
+				<text key="image" pl.text="Adres URL obrazka" text="Image URL"/>
+			</item>
+		</group>
+		<item name="Turntable" pl.name="Obrotnica" type="node,closedway">
+			<label pl.text="Obrotnica" text="Turntable"/>
+			<key key="railway" value="turntable"/>
+		</item>
+		<item name="Traverser" pl.name="Przesuwnica" type="node,closedway">
+			<label pl.text="Przesuwnica" text="Traverser"/>
+			<key key="railway" value="traverser"/>
+		</item>
+		<item name="Hump Yard" pl.name="Górka rozrządowa" type="node">
+			<label pl.text="Górka rozrządowa" text="Hump Yard"/>
+			<key key="railway" value="hump_yard"/>
+		</item>
+		<item name="Rail Brake" pl.name="Hamulec torowy" type="node">
+			<label pl.text="Hamulec torowy" text="Rail Brake"/>
+			<key key="railway" value="rail_brake"/>
+		</item>
+		<item name="Gauge Conversion" pl.name="Zmiana szerokości toru" type="node">
+			<label pl.text="Zmiana szerokości toru" text="Gauge Conversion"/>
+			<key key="railway" value="gauge_conversion"/>
+		</item>
+		<item name="Railway Museum" pl.name="Muzeum kolejowe" type="node,closedway">
+			<label pl.text="Muzeum kolejowe" text="Railway Museum"/>
+			<space/>
+			<key key="railway" value="museum"/>
+			<key key="tourism" value="museum"/>
+			<text key="name" pl.text="Nazwa" text="Name"/>
+			<text key="wikipedia" pl.text="Artykuł na Wikipedii w formacie język:Tytuł" text="Wikipedia article in the format language:Title"/>
+		</item>
+	</group>
+</presets>

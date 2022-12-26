@@ -2,7 +2,7 @@ SHELL = /bin/sh -e
 
 .PHONY: check clean
 
-PRESETFILES = at-signals-v2.zip de.zip de-avg-signals.zip de-signals-eso.zip de-signals-bostrab.zip
+PRESETFILES = at-signals-v2.zip de.zip de-avg-signals.zip de-signals-eso.zip de-signals-bostrab.zip pl.zip pl-signals.zip
 
 all: $(PRESETFILES)
 

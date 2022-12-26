@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets baselanguage="pl" xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Grzegorz Szymaszek" shortdescription="OpenRailwayMap PL: sygnalizacja" version="2018-08-23">
+	<chunk id="signal_ref">
+		<key key="railway" value="signal"/>
+		<text key="ref" text="Identyfikator sygnalizatora/wskaźnika"/>
+	</chunk>
+	<chunk id="signal_directions">
+		<combo key="railway:signal:direction" display_values="do przodu,do tyłu" text="Kierunek" values="forward,backward"/>
+	</chunk>
+	<chunk id="signal_directions_all">
+		<combo key="railway:signal:direction" display_values="do przodu,do tyłu,w obu kierunkach" text="Kierunek" values="forward,backward,both"/>
+	</chunk>
+	<chunk id="signal_position">
+		<combo default="right" display_values="po lewej,po prawej,na kratownicy lub podobnej konstrukcji ponad torem" key="railway:signal:position" text="Umieszczenie względem toru" values="left,right,bridge"/>
+	</chunk>
+	<group icon="signals.png" name="OpenRailwayMap PL: sygnalizacja">
+		<group name="Semafory">
+			<item name="Semafor kształtowy jednoramienny" type="node">
+				<key key="railway:signal:main" value="PL-PKP:sr"/>
+				<key key="railway:signal:main:form" value="semaphore"/>
+				<key key="railway:signal:main:states" value="PL-PKP:sr1;PL-PKP:sr2"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:main:deactivated" text="Wyłączony z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalny" key="railway:signal:main:height" text="Wysokość [m]" values="normal"/>
+				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:main:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
+				<check key="railway:signal:main:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
+			</item>
+			<item name="Semafor kształtowy dwuramienny" type="node">
+				<key key="railway:signal:main" value="PL-PKP:sr"/>
+				<key key="railway:signal:main:form" value="semaphore"/>
+				<key key="railway:signal:main:states" value="PL-PKP:sr1;PL-PKP:sr2;PL-PKP:sr3"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:main:deactivated" text="Wyłączony z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalny" key="railway:signal:main:height" text="Wysokość [m]" values="normal"/>
+				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:main:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
+				<check key="railway:signal:main:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
+			</item>
+			<item name="Semafor świetlny półsamoczynny (1 odstęp)" type="node">
+				<label text="Semafor, którego wskazanie informuje tylko o następnym odstępie."/>
+				<key key="railway:signal:main" value="PL-PKP:s"/>
+				<key key="railway:signal:main:form" value="light"/>
+				<key key="railway:signal:main:states" value="PL-PKP:s1;PL-PKP:s2"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:main:deactivated" text="Wyłączony z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalny,karzełkowy" key="railway:signal:main:height" text="Wysokość [m]" values="normal,dwarf"/>
+				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:main:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
+				<check key="railway:signal:main:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
+				<preset_link preset_name="Tarcza manewrowa na semaforze półsamoczynnym"/>
+			</item>
+			<item name="Semafor świetlny półsamoczynny (ponad 1 odstęp)" type="node">
+				<label text="Semafor, którego wskazanie informuje przynajmniej o dwóch kolejnych odstępach."/>
+				<key key="railway:signal:combined" value="PL-PKP:s"/>
+				<key key="railway:signal:combined:form" value="light"/>
+				<multiselect key="railway:signal:combined:states" match="key" text="Nadawane sygnały">
+					<list_entry display_value="S 1" short_description="Stój" value="PL-PKP:s1"/>
+					<list_entry display_value="S 2" short_description="Jazda z największą dozwoloną prędkością" value="PL-PKP:s2"/>
+					<list_entry display_value="S 3" short_description="Jazda z największą dozwoloną prędkością — w przodzie są dwa odstępy blokowe wolne — albo przy następnym semaforze z prędkością nie większą niż 100 km/h" value="PL-PKP:s3"/>
+					<list_entry display_value="S 4" short_description="Następny semafor wskazuje sygnał zezwalający na jazdę z prędkością zmniejszoną do 40 lub 60 km/h" value="PL-PKP:s4"/>
+					<list_entry display_value="S 5" short_description="Następny semafor nadaje sygnał Stój" value="PL-PKP:s5"/>
+					<list_entry display_value="S 6" short_description="Jazda z prędkością nieprzekraczającą 100 km/h, a potem z największą dozwoloną prędkością" value="PL-PKP:s6"/>
+					<list_entry display_value="S 7" short_description="Jazda z prędkością nieprzekraczającą 100 km/h przy tym i następnym semaforze" value="PL-PKP:s7"/>
+					<list_entry display_value="S 8" short_description="Jazda z prędkością nieprzekraczającą 100 km/h, a przy następnym semaforze z prędkością zmniejszoną do 40 lub 60 km/h" value="PL-PKP:s8"/>
+					<list_entry display_value="S 9" short_description="Jazda z prędkością nieprzekraczającą 100 km/h, a przy następnym semaforze — Stój" value="PL-PKP:s9"/>
+					<list_entry display_value="S 10" short_description="Jazda z prędkością nieprzekraczającą 40 km/h, a potem z największą dozwoloną prędkością" value="PL-PKP:s10"/>
+					<list_entry display_value="S 10a" short_description="Jazda z prędkością nieprzekraczającą 60 km/h, a potem z największą dozwoloną prędkością" value="PL-PKP:s10a"/>
+					<list_entry display_value="S 11" short_description="Jazda z prędkością nieprzekraczającą 40 km/h, a przy następnym semaforze — z prędkością nieprzekraczającą 100 km/h" value="PL-PKP:s11"/>
+					<list_entry display_value="S 11a" short_description="Jazda z prędkością nieprzekraczającą 60 km/h, a przy następnym semaforze — z prędkością nieprzekraczającą 100 km/h" value="PL-PKP:s11a"/>
+					<list_entry display_value="S 12" short_description="Jazda z prędkością nieprzekraczającą 40 km/h, a przy następnym semaforze — z prędkością nieprzekraczającą 40 lub 60 km/h" value="PL-PKP:s12"/>
+					<list_entry display_value="S 12a" short_description="Jazda z prędkością nieprzekraczającą 60 km/h, a przy następnym semaforze — z prędkością zmniejszoną do 40 lub 60 km/h" value="PL-PKP:s12a"/>
+					<list_entry display_value="S 13" short_description="Jazda z prędkością nieprzekraczającą 40 km/h, a przy następnym semaforze — Stój" value="PL-PKP:s13"/>
+					<list_entry display_value="S 13a" short_description="Jazda z prędkością nieprzekraczającą 60 km/h, a przy następnym semaforze — Stój" value="PL-PKP:s13a"/>
+				</multiselect>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:combined:deactivated" text="Wyłączony z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalny,karzełkowy" key="railway:signal:combined:height" text="Wysokość [m]" values="normal,dwarf"/>
+				<combo display_values="wjazdowy,wyjazdowy,odstępowy,drogowskazowy" key="railway:signal:combined:function" text="Funkcja sygnalizatora" values="entry,exit,block,intermediate"/>
+				<check key="railway:signal:combined:substitute_signal" text="Sygnał zastępczy" value_on="PL-PKP:sz"/>
+				<preset_link preset_name="Tarcza manewrowa na semaforze półsamoczynnym"/>
+			</item>
+			<item name="Tarcza manewrowa na semaforze półsamoczynnym" type="node">
+				<label text="Komora światła białego pozwalająca na wyświetlenie sygnału Ms 2."/>
+				<key key="railway:signal:shunting" value="PL-PKP:ms2"/>
+				<key key="railway:signal:shunting:form" value="light"/>
+			</item>
+			<item name="Wskaźnik kierunku przeciwnego (W 24)">
+				<key key="railway:signal:wrong_road" value="PL-PKP:w24"/>
+				<key key="railway:signal:wrong_road:form" value="light"/>
+			</item>
+			<item name="Wskaźnik kierunku jazdy (W 26a)">
+				<key key="railway:signal:route" value="PL-PKP:w26a"/>
+				<key key="railway:signal:route:form" value="light"/>
+				<key key="railway:signal:route:states" value="P"/>
+			</item>
+			<item name="Wskaźnik kierunku jazdy (W 26b)">
+				<key key="railway:signal:route" value="PL-PKP:w26b"/>
+				<key key="railway:signal:route:form" value="light"/>
+				<key key="railway:signal:route:states" value="D"/>
+			</item>
+			<item name="Semafor świetlny samoczynny (dwustawna blokada liniowa)" type="node">
+				<key key="railway:signal:main" value="PL-PKP:s"/>
+				<key key="railway:signal:main:form" value="light"/>
+				<key key="railway:signal:main:function" value="block"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<combo editable="false" key="railway:signal:main:states" match="keyvalue!" text="Rodzaj blokady liniowej">
+					<list_entry display_value="jednokierunkowa" value="PL-PKP:s1;PL-PKP:s2"/>
+					<list_entry display_value="jednokierunkowa (z możliwością nadania sygnału S 1a)" value="PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2"/>
+					<list_entry display_value="dwukierunkowa" value="off;PL-PKP:s1;PL-PKP:s2"/>
+					<list_entry display_value="dwukierunkowa (z możliwością nadania sygnału S 1a)" value="off;PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2"/>
+				</combo>
+				<check key="railway:signal:main:substitute_signal" text="Wskaźnik jazdy pociągu towarowego (W 22)" value_on="PL-PKP:w22"/>
+			</item>
+			<item name="Semafor świetlny samoczynny" type="node">
+				<key key="railway:signal:combined" value="PL-PKP:s"/>
+				<key key="railway:signal:combined:form" value="light"/>
+				<key key="railway:signal:combined:function" value="block"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<combo editable="false" key="railway:signal:combined:states" match="keyvalue!" text="Rodzaj blokady liniowej">
+					<list_entry display_value="trzystawna jednokierunkowa" value="PL-PKP:s1;PL-PKP:s2;PL-PKP:s5"/>
+					<list_entry display_value="trzystawna jednokierunkowa (z możliwością nadania sygnału S 1a)" value="PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2;PL-PKP:s5"/>
+					<list_entry display_value="trzystawna dwukierunkowa" value="off;PL-PKP:s1;PL-PKP:s2;PL-PKP:s5"/>
+					<list_entry display_value="trzystawna dwukierunkowa (z możliwością nadania sygnału S 1a)" value="off;PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2;PL-PKP:s5"/>
+					<list_entry display_value="czterostawna jednokierunkowa" value="PL-PKP:s1;PL-PKP:s2;PL-PKP:s3;PL-PKP:s5"/>
+					<list_entry display_value="czterostawna jednokierunkowa (z możliwością nadania sygnału S 1a)" value="PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2;PL-PKP:s3;PL-PKP:s5"/>
+					<list_entry display_value="czterostawna dwukierunkowa" value="off;PL-PKP:s1;PL-PKP:s2;PL-PKP:s3;PL-PKP:s5"/>
+					<list_entry display_value="czterostawna dwukierunkowa (z możliwością nadania sygnału S 1a)" value="off;PL-PKP:s1;PL-PKP:s1a;PL-PKP:s2;PL-PKP:s3;PL-PKP:s5"/>
+				</combo>
+				<check key="railway:signal:combined:substitute_signal" text="Wskaźnik jazdy pociągu towarowego (W 22)" value_on="PL-PKP:w22"/>
+			</item>
+		</group>
+		<item name="Sygnalizator powtarzający" type="node">
+			<key key="railway:signal:main_repeated" value="PL-PKP:sp"/>
+			<key key="railway:signal:main_repeated:form" value="light"/>
+			<reference ref="signal_ref"/>
+			<text key="caption" text="Treść tablicy wskazującej kolejność"/>
+			<multiselect key="railway:signal:main_repeated:states" match="key" text="Nadawane sygnały">
+				<list_entry display_value="Sp 1" short_description="Semafor wskazuje sygnał Sr 1 lub S 1 Stój" value="PL-PKP:sp1"/>
+				<list_entry display_value="Sp 2" short_description="Semafor wskazuje sygnał zezwalający na jazdę z największą dozwoloną prędkością" value="PL-PKP:sp2"/>
+				<list_entry display_value="Sp 3" short_description="Semafor wskazuje sygnał zezwalający na jazdę z prędkością nieprzekraczającą 100 km/h" value="PL-PKP:sp3"/>
+				<list_entry display_value="Sp 4" short_description="Semafor wskazuje sygnał zezwalający na jazdę z prędkością zmniejszoną do 40 lub 60 km/h" value="PL-PKP:sp4"/>
+			</multiselect>
+			<check key="railway:signal:main_repeated:deactivated" text="Wyłączony z użytku"/>
+			<reference ref="signal_position"/>
+			<reference ref="signal_directions"/>
+			<space/>
+			<combo display_values="normalna" key="railway:signal:main_repeated:height" text="Wysokość [m]" values="normal"/>
+		</item>
+		<group name="Tarcze ostrzegawcze semaforowe">
+			<item name="Tarcza ostrzegawcza kształtowa nieruchoma">
+				<key key="railway:signal:distant" value="PL-PKP:on"/>
+				<key key="railway:signal:distant:form" value="sign"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:distant:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:distant:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Tarcza ostrzegawcza kształtowa dwustawna">
+				<key key="railway:signal:distant" value="PL-PKP:od"/>
+				<key key="railway:signal:distant:form" value="semaphore"/>
+				<key key="railway:signal:distant:states" value="PL-PKP:od1;PL-PKP:od2"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:distant:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:distant:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Tarcza ostrzegawcza kształtowa trzystawna">
+				<key key="railway:signal:distant" value="PL-PKP:o"/>
+				<key key="railway:signal:distant:form" value="semaphore"/>
+				<key key="railway:signal:distant:states" value="PL-PKP:ot1;PL-PKP:ot2;PL-PKP:ot3"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:distant:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:distant:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Tarcza ostrzegawcza świetlna" type="node">
+				<key key="railway:signal:distant" value="PL-PKP:os"/>
+				<key key="railway:signal:distant:form" value="light"/>
+				<reference ref="signal_ref"/>
+				<multiselect key="railway:signal:distant:states" match="key" text="Nadawane sygnały">
+					<list_entry display_value="Os 1" short_description="Semafor, do którego tarcza się odnosi, wskazuje sygnał Stój" value="PL-PKP:os1"/>
+					<list_entry display_value="Os 2" short_description="Semafor, do którego tarcza się odnosi, wskazuje sygnał zezwalający na jazdę z największą dozwoloną prędkością" value="PL-PKP:os2"/>
+					<list_entry display_value="Os 3" short_description="Semafor, do którego tarcza się odnosi, wskazuje sygnał zezwalający na jazdę z prędkością nieprzekraczającą 100 km/h" value="PL-PKP:os3"/>
+					<list_entry display_value="Os 4" short_description="Semafor, do którego tarcza się odnosi, wskazuje sygnał zezwalający na jazdę z prędkością zmniejszoną do 40 lub 60 km/h" value="PL-PKP:os4"/>
+				</multiselect>
+				<space/>
+				<check key="railway:signal:distant:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<combo display_values="normalna" key="railway:signal:distant:height" text="Wysokość [m]" values="normal"/>
+			</item>
+		</group>
+		<item name="Tarcza ostrzegawcza przejazdowa" type="node">
+			<key key="railway:signal:crossing" value="PL-PKP:osp"/>
+			<key key="railway:signal:crossing:form" value="light"/>
+			<key key="railway:signal:crossing:states" value="off;PL-PKP:osp1;PL-PKP:osp2"/>
+			<reference ref="signal_ref"/>
+			<check key="railway:signal:crossing:deactivated" text="Wyłączona z użytku"/>
+			<reference ref="signal_position"/>
+			<reference ref="signal_directions"/>
+			<space/>
+			<combo display_values="normalna" key="railway:signal:crossing:height" text="Wysokość [m]" values="normal"/>
+		</item>
+		<group name="Tarcze manewrowe">
+			<item name="Tarcza manewrowa kształtowa" type="node">
+				<key key="railway:signal:shunting" value="PL-PKP:m"/>
+				<key key="railway:signal:shunting:form" value="semaphore"/>
+				<key key="railway:signal:shunting:states" value="PL-PKP:m1;PL-PKP:m2"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:shunting:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:shunting:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Tarcza manewrowa świetlna" type="node">
+				<key key="railway:signal:shunting" value="PL-PKP:ms"/>
+				<key key="railway:signal:shunting:form" value="light"/>
+				<key key="railway:signal:shunting:states" value="PL-PKP:ms1;PL-PKP:ms2"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:shunting:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna,karzełkowa" key="railway:signal:shunting:height" text="Wysokość [m]" values="normal,dwarf"/>
+			</item>
+		</group>
+		<group name="Tarcze rozrządowe">
+			<item name="Tarcza rozrządowa kształtowa" type="node">
+				<key key="railway:signal:humping" value="PL-PKP:rt"/>
+				<key key="railway:signal:humping:form" value="semaphore"/>
+				<key key="railway:signal:humping:states" value="PL-PKP:rt1;PL-PKP:rt2;PL-PKP:rt3"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:humping:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:humping:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Tarcza rozrządowa świetlna" type="node">
+				<key key="railway:signal:humping" value="PL-PKP:rt"/>
+				<key key="railway:signal:humping:form" value="light"/>
+				<key key="railway:signal:humping:states" value="PL-PKP:rt1;PL-PKP:rt2;PL-PKP:rt3;PL-PKP:rt4;PL-PKP:rt5"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:humping:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions_all"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:humping:height" text="Wysokość [m]" values="normal"/>
+			</item>
+		</group>
+		<group name="Sygnały zamknięcia toru">
+			<item name="Tarcza zaporowa (Z 1)" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z1"/>
+				<key key="railway:signal:minor:form" value="sign"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:minor:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Tarcza zaporowa kształtowa" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z"/>
+				<key key="railway:signal:minor:form" value="semaphore"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:z1;PL-PKP:z2"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:minor:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:minor:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Tarcza zaporowa świetlna" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:zs"/>
+				<key key="railway:signal:minor:form" value="light"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:zs1;PL-PKP:zs2"/>
+				<reference ref="signal_ref"/>
+				<check key="railway:signal:minor:deactivated" text="Wyłączona z użytku"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:minor:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Latarnia wykolejnicowa" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z"/>
+				<key key="railway:signal:minor:height" value="dwarf"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:z1wk;PL-PKP:z2wk"/>
+				<combo key="railway:signal:minor:form" display_values="elektryczna,mechaniczna" text="Forma sygnalizatora" values="light,semaphore"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+			</item>
+			<item name="Latarnia na obrotnicy" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z"/>
+				<key key="railway:signal:minor:form" value="light"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:z1o;PL-PKP:z2o"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+			</item>
+			<item name="Latarnia na wadze pomostowej" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z"/>
+				<key key="railway:signal:minor:form" value="light"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:z1wg;PL-PKP:z2wg"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+			</item>
+			<item name="Latarnia na punkcie przestawczym zestawów kołowych" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z1p"/>
+				<key key="railway:signal:minor:form" value="sign"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+			</item>
+			<item name="Latarnia na żurawiu wodnym" type="node">
+				<key key="railway:signal:minor" value="PL-PKP:z"/>
+				<key key="railway:signal:minor:form" value="light"/>
+				<key key="railway:signal:minor:states" value="PL-PKP:z1z;PL-PKP:z2z"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+			</item>
+		</group>
+		<group name="Przenośne tarcze zatrzymania i zmniejszenia prędkości">
+			<item name="Tarcza ostrzegawcza (DO)">
+				<key key="railway:signal:minor_distant" value="PL-PKP:do"/>
+				<key key="railway:signal:minor_distant:form" value="sign"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:minor_distant:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Tarcza zatrzymania (D 1)">
+				<key key="railway:signal:minor" value="PL-PKP:d1"/>
+				<key key="railway:signal:minor:form" value="sign"/>
+				<reference ref="signal_ref"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:minor:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Tarcza z sygnałem D 6 „Zwolnić bieg”" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:speed_limit_distant" value="PL-PKP:d6"/>
+				<key key="railway:signal:speed_limit_distant:form" value="sign"/>
+				<text key="railway:signal:speed_limit_distant:speed" match="key!" text="Dozwolona prędkość [km/h]"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna,karzełkowa" key="railway:signal:speed_limit_distant:height" text="Wysokość [m]" values="normal,dwarf"/>
+			</item>
+			<item name="Wskaźnik początku odcinka zmniejszonej prędkości (W 14)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:speed_limitt" value="PL-PKP:w14"/>
+				<key key="railway:signal:speed_limit:form" value="sign"/>
+				<text key="railway:signal:speed_limit:speed" match="key" text="Dozwolona prędkość [km/h]"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:speed_limit:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Wskaźnik końca odcinka zmniejszonej prędkości (W 14)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:speed_limit" value="PL-PKP:w14"/>
+				<key key="railway:signal:speed_limit:form" value="sign"/>
+				<key key="railway:signal:speed_limit:speed" value="none"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:speed_limit:height" text="Wysokość [m]" values="normal"/>
+			</item>
+		</group>
+		<item name="Sygnalizator próby hamulców" type="node">
+			<key key="railway:signal:brake_test" value="PL-PKP:rhs"/>
+			<key key="railway:signal:brake_test:form" value="light"/>
+			<key key="railway:signal:brake_test:states" value="PL-PKP:rhs1;PL-PKP:rhs2;PL-PKP:rhs3"/>
+			<reference ref="signal_ref"/>
+			<reference ref="signal_position"/>
+			<reference ref="signal_directions"/>
+		</item>
+		<group name="Wskaźniki">
+			<item name="Wskaźnik kierunku jazdy (W 2)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:route" value="PL-PKP:w2"/>
+				<key key="railway:signal:route:form" value="light"/>
+				<text key="railway:signal:route:states" text="Skróty nazwy stacji"/>
+			</item>
+			<item name="Wskaźnik zatrzymania (W 4)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:stop" value="PL-PKP:w4"/>
+				<key key="railway:signal:stop:form" value="sign"/>
+				<combo display_values="normalna" key="railway:signal:stop:height" text="Wysokość [m]" values="normal"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna,karzełkowa" key="railway:signal:stop:height" text="Wysokość [m]" values="normal,dwarf"/>
+			</item>
+			<item name="Wskaźnik przetaczania (W 5)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:shunting" value="PL-PKP:w5"/>
+				<key key="railway:signal:shunting:form" value="sign"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:shunting:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Wskaźnik ostrzegania (W 6, W 6a, W 7)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:whistle:form" value="sign"/>
+				<combo display_values="W 6,W 6a,W 6b,W 7" key="railway:signal:whistle" text="Wskaźnik" values="PL-PKP:w6,PL-PKP:w6a,PL-PKP:w6b,PL-PKP:w7"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:whistle:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Wskaźnik ostrzegania (W 6b)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:whistle" value="PL-PKP:w6b"/>
+				<key key="railway:signal:whistle:form" value="sign"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:whistle:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Wskaźnik ograniczenia prędkości (W 8)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:speed_limit_distant" value="PL-PKP:w8"/>
+				<key key="railway:signal:speed_limit_distant:form" value="sign"/>
+				<text key="railway:signal:speed_limit_distant:speed" match="key!" text="Dozwolona prędkość [km/h]"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna,karzełkowa" key="railway:signal:speed_limit_distant:height" text="Wysokość [m]" values="normal,dwarf"/>
+			</item>
+			<item name="Wskaźnik początku odcinka ograniczonej prędkości (W 9)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:speed_limit" value="PL-PKP:w9"/>
+				<key key="railway:signal:speed_limit:form" value="sign"/>
+				<text key="railway:signal:speed_limit:speed" match="key!" text="Dozwolona prędkość [km/h]"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:speed_limit:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<item name="Wskaźnik końca odcinka ograniczonej prędkości (W 9)" type="node">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:speed_limitt" value="PL-PKP:w9"/>
+				<key key="railway:signal:speed_limit:form" value="sign"/>
+				<key key="railway:signal:speed_limit:speed" value="none"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+				<space/>
+				<combo display_values="normalna" key="railway:signal:speed_limit:height" text="Wysokość [m]" values="normal"/>
+			</item>
+			<group name="Wskaźniki odcinka z popychaniem">
+				<item name="Początek odcinka z popychaniem (W 10a)">
+					<key key="railway" value="signal"/>
+					<key key="railway:signal:helper_engine" value="PL-PKP:w10a"/>
+					<key key="railway:signal:helper_engine:form" value="sign"/>
+					<reference ref="signal_position"/>
+					<reference ref="signal_directions"/>
+				</item>
+				<item name="Koniec odcinka z popychaniem (W 10b)">
+					<key key="railway" value="signal"/>
+					<key key="railway:signal:helper_engine" value="PL-PKP:w10b"/>
+					<key key="railway:signal:helper_engine:form" value="sign"/>
+					<reference ref="signal_position"/>
+					<reference ref="signal_directions"/>
+				</item>
+			</group>
+			<item name="Wskaźnik przejazdowy (W 11p)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:crossing_distant" value="PL-PKP:w11p"/>
+				<key key="railway:signal:crossing_distant:form" value="sign"/>
+				<check key="railway:signal:crossing:repeated" text="Podwójny trójkąt"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik parowozowy (W 12)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:steam_locomotive" value="PL-PKP:w12"/>
+				<key key="railway:signal:steam_locomotive:form" value="sign"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<!-- TODO: W 13 -->
+			<item name="Wskaźnik zmiany lokalizacji (W 15)">
+				<combo display_values="z lewej,z prawej" key="railway:signal:expected_position" text="Z której strony normalnie znajdowałby się sygnalizator" values="left,right"/>
+			</item>
+			<item name="Wskaźnik przystanku osobowego (W 16)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:station_distant" value="PL-PKP:w16"/>
+				<key key="railway:signal:station_distant:form" value="sign"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik ukresu (W 17)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:fouling_point" value="PL-PKP:w17"/>
+				<reference ref="signal_position"/>
+			</item>
+			<item name="Wskaźnik podwyższenia prędkości (W 21)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:speed_limit" value="PL-PKP:w21"/>
+				<combo display_values="świetlny,tablica" key="railway:signal:speed_limit:form" text="Rodzaj" values="light,sign"/>
+				<text key="railway:signal:speed_limit:speed" text="Dozwolona prędkość [km/h]"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik zmiany prędkości (W 27)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:speed_limit" value="PL-PKP:w27"/>
+				<key key="railway:signal:speed_limit:form" value="sign"/>
+				<text key="railway:signal:speed_limit:speed" text="Dozwolona prędkość [km/h]"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik zmiany prędkości (W 27a)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:speed_limit" value="PL-PKP:w27a"/>
+				<key key="railway:signal:speed_limit:form" value="sign"/>
+				<text key="railway:signal:speed_limit:speed" text="Dozwolona prędkość [km/h]"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik kanału radiowego (W 28)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:radio" value="PL-PKP:w28"/>
+				<key key="railway:signal:radio:form" value="sign"/>
+				<text key="railway:signal:radio:frequency" text="Numer kanału"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik nawiązania łączności (W 29)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:radio" value="PL-PKP:w29"/>
+				<key key="railway:signal:radio:form" value="sign"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik ważenia składu (W 30)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:speed_limit" value="PL-PKP:w30"/>
+				<key key="railway:signal:speed_limit:form" value="sign"/>
+				<text key="railway:signal:speed_limit:speed" text="Dozwolona prędkość [km/h]"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik czoła pociągu (W 32)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:stop" value="PL-PKP:w32"/>
+				<key key="railway:signal:stop:form" value="sign"/>
+				<text key="railway:signal:stop:caption" text="Długość pociągu [m]"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik początku obowiązywania systemu ERTMS/GSM‑R (W 33)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:radio" value="PL-PKP:w33"/>
+				<key key="railway:signal:radio:form" value="sign"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik końca obowiązywania systemu ERTMS/GSM‑R (W 34)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:radio" value="PL-PKP:w34"/>
+				<key key="railway:signal:radio:form" value="sign"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+		</group>
+		<group name="Wskaźniki na liniach zelektryfikowanych">
+			<item name="Wskaźnik uprzedzający o opuszczeniu pantografu (We 1)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we1"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:type" value="pantograph_down_advance"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik opuszczenia pantografu (We 2a)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we2a"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:turn_direction" value="through"/>
+				<key key="railway:signal:electricity:type" value="pantograph_down"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik opuszczenia pantografu (We 2b)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we2b"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:turn_direction" value="right"/>
+				<key key="railway:signal:electricity:type" value="pantograph_down"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik opuszczenia pantografu (We 2c)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we2c"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:turn_direction" value="left"/>
+				<key key="railway:signal:electricity:type" value="pantograph_down"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik podniesienia pantografu (We 3a)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we3a"/>
+				<key key="railway:signal:electricity:for" value="multiple_unit"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:type" value="pantograph_up"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik podniesienia pantografu (We 3b)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we3b"/>
+				<key key="railway:signal:electricity:for" value="locomotive"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:type" value="pantograph_up"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik zakazu wjazdu elektrycznych pojazdów trakcyjnych (We 4a)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we4a"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:turn_direction" value="through"/>
+				<key key="railway:signal:electricity:type" value="end_of_catenary"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik zakazu wjazdu elektrycznych pojazdów trakcyjnych (We 4b)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we4b"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:turn_direction" value="right"/>
+				<key key="railway:signal:electricity:type" value="end_of_catenary"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik zakazu wjazdu elektrycznych pojazdów trakcyjnych (We 4c)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we4c"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:turn_direction" value="left"/>
+				<key key="railway:signal:electricity:type" value="end_of_catenary"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik jazdy bezprądowej (We 8a)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we8a"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:turn_direction" value="through"/>
+				<key key="railway:signal:electricity:type" value="power_off"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik jazdy bezprądowej (We 8b)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we8b"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:turn_direction" value="right"/>
+				<key key="railway:signal:electricity:type" value="power_off"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik jazdy bezprądowej (We 8c)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we8c"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:turn_direction" value="left"/>
+				<key key="railway:signal:electricity:type" value="power_off"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik jazdy pod prądem (We 9a)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we9a"/>
+				<key key="railway:signal:electricity:for" value="multiple_unit"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:type" value="pantograph_up"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+			<item name="Wskaźnik jazdy pod prądem (We 9b)">
+				<key key="railway" value="signal"/>
+				<key key="railway:signal:electricity" value="PL-PKP:we9b"/>
+				<key key="railway:signal:electricity:for" value="locomotive"/>
+				<key key="railway:signal:electricity:form" value="sign"/>
+				<key key="railway:signal:electricity:type" value="pantograph_up"/>
+				<reference ref="signal_position"/>
+				<reference ref="signal_directions"/>
+			</item>
+		</group>
+	</group>
+</presets>
