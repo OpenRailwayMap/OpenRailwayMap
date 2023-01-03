@@ -749,7 +749,7 @@
 			"minzoom": 17,
 			"features" : [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [30,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -767,11 +767,11 @@
 				}},
 				{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [70,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
-					"railway:signal:wrong_road":"DE-ESO:zs6",
+					"railway:signal:wrong_road":"DE-ESO:db:zs6",
 					"railway:signal:wrong_road:form":"sign"
 				}
 			}],
