@@ -626,9 +626,9 @@ noscript p
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: 23px 23px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-o-border-radius: 2px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
 	border-radius: 4px;
 	border: 2px solid rgba(0,0,0,0.2);
 	background-clip: padding-box;
