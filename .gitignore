@@ -21,6 +21,7 @@ locales/*/*/*.json
 css/leaflet.css
 js/images
 js/leaflet.js
+js/leaflet.js.map
 
 # ignore OSM data
 *.osm

@@ -1,5 +1,5 @@
 SHELL = /bin/sh -e
-DEP_LEAFLET_VERSION = 0.7.7
+DEP_LEAFLET_VERSION = 1.9.3
 DEP_LEAFLET_EDITOR_FILES = download/Leaflet.EditInOSM.js download/Leaflet.EditInOSM.css download/edit-in-osm.png
 DEP_LEAFLET_GRAYSCALE_VERSION = 8675605f71f856299ebdd05a635ba1494817f5ff
 
@@ -32,8 +32,8 @@ distclean: clean
 download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz:
 	mkdir -p download
 	# do this in 2 steps to make sure only a completely downloaded file is used
-	wget -O download/leaflet.tar.gz https://github.com/Leaflet/Leaflet/archive/v$(DEP_LEAFLET_VERSION).tar.gz
-	mv download/leaflet.tar.gz download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz
+	wget -O download/leaflet.zip https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/v$(DEP_LEAFLET_VERSION)/leaflet.zip
+	mv download/leaflet.zip download/leaflet-$(DEP_LEAFLET_VERSION).zip
 
 $(DEP_LEAFLET_EDITOR_FILES):
 	wget -O $@.tmp https://raw.githubusercontent.com/yohanboniface/Leaflet.EditInOSM/master/$(notdir $@)
@@ -44,12 +44,13 @@ download/TileLayer.Grayscale.js:
 	wget -O $@.tmp https://raw.githubusercontent.com/Zverik/leaflet-grayscale/$(DEP_LEAFLET_GRAYSCALE_VERSION)/$(notdir $@)
 	mv $@.tmp $@
 
-download-deps:	download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz \
+download-deps: download/leaflet-$(DEP_LEAFLET_VERSION).zip \
 		$(DEP_LEAFLET_EDITOR_FILES)
 
-css/leaflet.css: download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz
-	tar -C js --strip-components=2 -xvzf download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz Leaflet-$(DEP_LEAFLET_VERSION)/dist/leaflet.js Leaflet-$(DEP_LEAFLET_VERSION)/dist/images
-	tar --to-stdout -xvzf download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz Leaflet-$(DEP_LEAFLET_VERSION)/dist/leaflet.css | sed s,images/,../js/images/, > css/leaflet.css
+css/leaflet.css: download/leaflet-$(DEP_LEAFLET_VERSION).zip
+	unzip -o download/leaflet-$(DEP_LEAFLET_VERSION).zip leaflet.js leaflet.js.map -d js
+	unzip -o download/leaflet-$(DEP_LEAFLET_VERSION).zip images/ -d js/images
+	unzip -p download/leaflet-$(DEP_LEAFLET_VERSION).zip leaflet.css | sed s,images/,../js/images/, > css/leaflet.css
 
 css/Leaflet.EditInOSM.css: $(DEP_LEAFLET_EDITOR_FILES)
 	cp download/Leaflet.EditInOSM.js js/

@@ -613,10 +613,10 @@ noscript p
 #locateButton
 {
 	position: absolute;
-	left: 310px;
-	top: 70px;
-	width: 26px;
-	height: 26px;
+	left: 311px;
+	top: 82px;
+	width: 30px;
+	height: 30px;
 	background-color: white;
 	background-image: url('../img/locate.png');
 	background-repeat: no-repeat;
@@ -626,8 +626,8 @@ noscript p
 	-webkit-border-radius: 4px;
 	-o-border-radius: 4px;
 	border-radius: 4px;
-	border: 1px solid #aaa;
-	box-shadow: 0 1px 7px rgba(0,0,0,0.4);
+	border: 2px solid rgba(0,0,0,0.2);
+	background-clip: padding-box;
 	z-index: 1000;
 }
 
