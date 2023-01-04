@@ -259,8 +259,8 @@ function setupControls()
 	var mapnikGray = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: _("Map data &copy; OpenStreetMap contributors"),
-		maxZoom: 19,
-		className: 'grayscale'
+		className: 'grayscale',
+		maxZoom: 19
 	}).addTo(map);
 	// normal mapnik background layer
 	var mapnik = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
