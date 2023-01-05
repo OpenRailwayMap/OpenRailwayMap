@@ -1632,24 +1632,22 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="H 3 (Fahrt auf Sicht, rot und 3 gelbe Lichter in Form eines V)"
 					/>
 					
-				<chunk id="vbk_traversable">
-					<multiselect key="railway:signal:traversable:type"
-						text="Traversable: action at stop"
-						de.text="Mastschild: Verhalten bei Halt"
-						delimiter="#"
-						values="written_default_speed;dictated_default_speed#dictated_default_speed"
-						display_values="So 3 a (white-red-white)#So 4(white-yellow-white-yellow-white)"
-						de.display_values="So 3 a (weiß-rot-weiß)#So 4 (weiß-gelb-weiß-gelb-weiß)"
-						/>
-					<combo key="railway:signal:traversable"
-						text="Type of traversable"
-						de.text="Mastschild-Typ"
-						delimiter=","
-						values="DE-VBK:So 3 a,DE-ESO:So 4,?"
-						display_values="white/red,white/yellow,unknown"
-						de.display_values="weiß-rot-weiß,weiß-gelb-weiß-gelb-weiß,unbekannt"
-						/>
-				</chunk>
+				<multiselect key="railway:signal:traversable:type"
+					text="Traversable: action at stop"
+					de.text="Mastschild: Verhalten bei Halt"
+					delimiter="#"
+					values="written_default_speed;dictated_default_speed#dictated_default_speed"
+					display_values="So 3 a (white-red-white)#So 4(white-yellow-white-yellow-white)"
+					de.display_values="So 3 a (weiß-rot-weiß)#So 4 (weiß-gelb-weiß-gelb-weiß)"
+					/>
+				<combo key="railway:signal:traversable"
+					text="Type of traversable"
+					de.text="Mastschild-Typ"
+					delimiter=","
+					values="DE-VBK:So 3 a,DE-ESO:So 4,?"
+					display_values="So 3 a (white-red-white),So 4(white-yellow-white-yellow-white),unknown"
+					de.display_values="So 3 a (weiß-rot-weiß),So 4 (weiß-gelb-weiß-gelb-weiß),unbekannt"
+					/>
 			</item>
 			<item name="Repeated Distant Signal (Vw)" de.name="Vorankündigungssignalwiederholer (Vw)" icon="de/hha/h1-32.png" type="node">
 				<label text="Repeated Distant Signal (Vw)" de.text="Vorankündigungssignalwiederholer (Vw)" />
