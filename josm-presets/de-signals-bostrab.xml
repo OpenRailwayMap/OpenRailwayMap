@@ -1586,6 +1586,112 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
+			<item name="Combined Signal (H)" de.name="Mehrabschnittssignal (H)" icon="de/hha/h0-32.png" type="node">
+				<label text="Combined Signal (H)" de.text="Mehrabschnittssignal (H)" />
+				<label text="Only on VBK infrastructure (in Stadtbahntunnel Karlsruhe)" de.text="Nur auf VBK-Infrastruktur (im Stadtbahntunnel Karlsruhe)" />
+				<label text="Is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<reference ref="sig_ref" />
+				<check key="railway:signal:combined:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge,overhead"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Oberleitung"
+					display_values="left in direction of OSM way,right in direction of OSM way,bridge,catenary"
+					/>
+				<reference ref="direction_fw_bw" />
+				<space />
+				<key key="railway:signal:combined"
+					value="DE-BOStrab:h" />
+				<multiselect key="railway:signal:combined:states"
+					text="Possible Signals"
+					de.text="Anzeigbare Signale"
+					delimiter=";"
+					values="DE-VBK:h0;DE-VBK:h1;DE-VBK:h1b;DE-VBK:h2;DE-VBK:h3"
+					display_values="H 0 (Stop, red);H 1 (Proceed, green);H 1 b (Proceed and expect speed limit, blinking green);H 2 (Proceed, expect stop on next signal, yellow);H 3 (Proceed on sight, 3 yellow lights in V shape)"
+					de.display_values="H 0 (Halt, rot);H 1 (Fahrt, grün);H 1 b (Fahrt, Geschwindigkeitsbeschränkung erwarten, grün blinkend);H 2 (Fahrt, Halt erwarten, gelb);H 3 (Fahrt auf Sicht, 3 gelbe Lichter in Form eines V)"
+					/>
+				<key key="railway:signal:combined:form"
+					value="light" />
+				<combo key="railway:signal:combined:height"
+					text="Signal height"
+					de.text="Signalbauhöhe"
+					values="normal,dwarf"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
+					/>
+				<combo key="railway:signal:combined:substitute_signal"
+					text="Substitute Signal"
+					de.text="Auftragssignal"
+					values="DE-VBK:h4"
+					display_values="H4 (Proceed on sight, red with 3 yellow lights in V shape)"
+					de.display_values="H 3 (Fahrt auf Sicht, rot und 3 gelbe Lichter in Form eines V)"
+					/>
+					
+				<chunk id="vbk_traversable">
+					<multiselect key="railway:signal:traversable:type"
+						text="Traversable: action at stop"
+						de.text="Mastschild: Verhalten bei Halt"
+						delimiter="#"
+						values="written_default_speed;dictated_default_speed#dictated_default_speed"
+						display_values="So 3 a (white-red-white)#So 4(white-yellow-white-yellow-white)"
+						de.display_values="So 3 a (weiß-rot-weiß)#So 4 (weiß-gelb-weiß-gelb-weiß)"
+						/>
+					<combo key="railway:signal:traversable"
+						text="Type of traversable"
+						de.text="Mastschild-Typ"
+						delimiter=","
+						values="DE-VBK:So 3 a,DE-ESO:So 4,?"
+						display_values="white/red,white/yellow,unknown"
+						de.display_values="weiß-rot-weiß,weiß-gelb-weiß-gelb-weiß,unbekannt"
+						/>
+				</chunk>
+			</item>
+			<item name="Repeated Distant Signal (Vw)" de.name="Vorankündigungssignalwiederholer (Vw)" icon="de/hha/h1-32.png" type="node">
+				<label text="Repeated Distant Signal (Vw)" de.text="Vorankündigungssignalwiederholer (Vw)" />
+				<label text="Only on VBK infrastructure (in Stadtbahntunnel Karlsruhe)" de.text="Nur auf VBK-Infrastruktur (im Stadtbahntunnel Karlsruhe)" />
+				<label text="Is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<reference ref="sig_ref" />
+				<check key="railway:signal:distant:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge,overhead"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke,Oberleitung"
+					display_values="left in direction of OSM way,right in direction of OSM way,bridge,catenary"
+					/>
+				<reference ref="direction_fw_bw" />
+				<space />
+				<key key="railway:signal:distant"
+					value="DE-VBK:vw" />
+				<multiselect key="railway:signal:distant:states"
+					text="Possible Signals"
+					de.text="Anzeigbare Signale"
+					delimiter=";"
+					values="DE-VBK:vw1;DE-VBK:vw1b;DE-VBK:vw2"
+					display_values="Vw 1 (Proceed, green);Vw 1 b (Proceed and expect speed limit, blinking green);Vw 2 (Proceed, expect stop on next signal, yellow)"
+					de.display_values="Vw 1 (Fahrt, grün);Vw 1 b (Fahrt, Geschwindigkeitsbeschränkung erwarten, grün blinkend);Vw 2 (Fahrt, Halt erwarten, gelb)"
+					/>
+				<key key="railway:signal:distant:form"
+					value="light" />
+				<key key="railway:signal:distant:repeated"
+					value="yes" />
+				<combo key="railway:signal:distant:height"
+					text="Signal height"
+					de.text="Signalbauhöhe"
+					values="normal,dwarf"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
+					/>
+			</item>
 			<item name="Switch Driveup Signal (Wv)" de.name="Weichenvorrücksignal (Wv)" icon="de/avg/wv1-32.png" type="node">
 				<label text="Switch Driveup Signal (Wv)" de.text="Weichenvorrücksignal (Wv)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
@@ -1662,6 +1768,73 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
+			<item name="Route Signal (W)" de.name="Fahrstraßenanzeiger (So)" icon="de/bostrab/karlsruhe/so23-32.png" type="node">
+				<label text="Switch Signal (W)" de.text="Weichensignale (W)" />
+				<label text="Only on VBK infrastructure (in Stadtbahntunnel Karlsruhe)" de.text="Nur auf VBK-Infrastruktur (im Stadtbahntunnel Karlsruhe)" />
+				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
+				<space />
+				<reference ref="sig_ref" />
+				<check key="railway:signal:route:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,overhead,bridge"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Oberleitung,Signalbrücke"
+					display_values="left,right,catenary,bridge"
+					/>
+				<reference ref="direction_fw_bw" />
+				<space />
+				<key key="railway:signal:route"
+					value="DE-VBK:so" />
+				<key key="railway:signal:route:form"
+					value="light" />
+				<multiselect key="railway:signal:route:states"
+					text="Possible Signals"
+					de.text="Anzeigbare Signale"
+					delimiter=";"
+					values="DE-VBK:so21;DE-VBK:so22;DE-VBK:so23;?"
+					display_values="So 21 (straight);So 22 (right);So 23 (left);unknown"
+					de.display_values="So 21 (geradeaus);So 22 (rechts);So 23 (links);unbekannt"
+					/>
+				<combo key="railway:signal:route:height"
+					text="Signal height"
+					de.text="Signalbauhöhe"
+					values="normal,dwarf"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
+					/>
+			</item>
+			<item name="Anforderungssignal (St 9 a)" icon="de/bostrab/st9-16.png" type="node">
+				<label text="Anforderungssignal (St 9 a)" />
+					<label text="Only on VBK infrastructure in Karlsruhe" de.text="Nur im Bereich der VBK in Karlsruhe" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:request:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					default="off"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,bridge"
+					display_values="left in direction of OSM way,right in direction of OSM way,on a bridge over the tracks"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,Signalbrücke"
+					/>
+				<reference ref="direction_fw_bw" />
+				<key key="railway:signal:request"
+					value="DE-VBK:st9a" />
+				<key key="railway:signal:request:states"
+					value="DE-VBK:st9a;off" />
+				<key key="railway:signal:request:form"
+					value="light" />
+			</item>
+		
 		</group>
 		<group name="Stuttgart (SSB)">
 			<item name="Main Signal (H) without Distant Signal Function" de.name="Hauptsignal (H) ohne Vorsignalfunktion" icon="de/hha/h0-32.png" type="node">
