@@ -379,6 +379,47 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=
 	allow-overlap: true;
 }
 
+/*********************************************************/
+/* Combination of DE brake test and repeated main signal */
+/*           DE Fahrtanzeiger+Bremsprobesignal           */
+/*********************************************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main_repeated"="DE-ESO:fahrtanzeiger"]["railway:signal:main_repeated"=light]["railway:signal:brake_test"="DE-ESO:zp"]["railway:signal:brake_test:form"="light"]
+{
+	z-index: 999;
+	icon-image: "icons/de/bp_and_fahrtanzeiger-32.png";
+	icon-width: 32;
+	icon-height: 32;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/****************************/
+/*  DE brake test signals   */
+/*   DE Bremsprobesignal    */
+/****************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:brake_test"="DE-ESO:zp"]["railway:signal:brake_test:form"="light"]
+{
+	z-index: 990;
+	icon-image: "icons/de/zp8-32.png";
+	icon-width: 16;
+	icon-height: 32;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/****************************/
+/*     DE Fahrtanzeiger     */
+/****************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main_repeated"="DE-ESO:fahrtanzeiger"]["railway:signal:main_repeated"="light"]
+{
+	z-index: 995;
+	icon-image: "icons/de/fahrtanzeiger-32.png";
+	icon-width: 32;
+	icon-height: 32;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /***************************************************/
 /* DE tram signal "start of train protection" So 1 */
 /***************************************************/
