@@ -2475,8 +2475,8 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:brake_test
 {
 	z-index: 11000;
 	icon-image: "icons/light-signal-deactivated-18.png";
-	icon-width: 9;
-	icon-height: 9;
+	icon-width: 13;
+	icon-height: 13;
 	text-allow-overlap: true;
 	allow-overlap: true;
 }
