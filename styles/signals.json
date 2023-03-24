@@ -106,6 +106,19 @@
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
+					"railway:atc":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "ATC - Automatic train control"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
 					"railway:lzb":"yes",
 					"usage":"main"
 				}
