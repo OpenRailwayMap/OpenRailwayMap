@@ -1645,7 +1645,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Type of traversable"
 					de.text="Mastschild-Typ"
 					delimiter=","
-					values="DE-VBK:so3a,DE-ESO:so4,?"
+					values="DE-VBK:so3a,DE-BOStrab:so4,?"
 					display_values="So 3 a (white-red-white),So 4(white-yellow-white-yellow-white),unknown"
 					de.display_values="So 3 a (weiß-rot-weiß),So 4 (weiß-gelb-weiß-gelb-weiß),unbekannt"
 					/>
