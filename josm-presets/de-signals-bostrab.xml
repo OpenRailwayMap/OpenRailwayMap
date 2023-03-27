@@ -1627,9 +1627,10 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<combo key="railway:signal:combined:substitute_signal"
 					text="Substitute Signal"
 					de.text="Auftragssignal"
+					delimiter=";"
 					values="DE-VBK:h4"
-					display_values="H4 (Proceed on sight, red with 3 yellow lights in V shape)"
-					de.display_values="H 3 (Fahrt auf Sicht, rot und 3 gelbe Lichter in Form eines V)"
+					display_values="H 4 (Proceed on sight, red with 3 yellow lights in V shape)"
+					de.display_values="H 4 (Fahrt auf Sicht, rot und 3 gelbe Lichter in Form eines V)"
 					/>
 					
 				<multiselect key="railway:signal:traversable:type"
@@ -1644,7 +1645,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Type of traversable"
 					de.text="Mastschild-Typ"
 					delimiter=","
-					values="DE-VBK:So 3 a,DE-ESO:So 4,?"
+					values="DE-VBK:so3a,DE-ESO:so4,?"
 					display_values="So 3 a (white-red-white),So 4(white-yellow-white-yellow-white),unknown"
 					de.display_values="So 3 a (weiß-rot-weiß),So 4 (weiß-gelb-weiß-gelb-weiß),unbekannt"
 					/>
