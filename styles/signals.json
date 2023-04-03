@@ -103,6 +103,19 @@
 			"minzoom": 2,
 			"features": [{
 				"type": "LineString",
+				"coordinates": [[10, 50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:zsi127":"yes",
+					"usage": "main"
+				}
+			}],
+			"caption": "ZSI 127 - Trainguard ZSI 127"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
 				"coordinates": [[10,50],[80,50]],
 				"properties": {
 					"railway":"rail",
@@ -163,19 +176,6 @@
 				}
 			}],
 			"caption": "SCMT - Sistema Controllo Marcia Treno"
-		},
-		{
-			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50],[80,50]],
-				"properties": {
-					"railway":"rail",
-					"railway:zsi127":"yes",
-					"usage": "main"
-				}
-			}],
-			"caption": "ZSI 127 - Trainguard ZSI 127"
 		},
 		{
 			"minzoom": 13,
