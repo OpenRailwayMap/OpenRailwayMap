@@ -1767,8 +1767,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
-			<item name="Route Signal (W)" de.name="Fahrstraßenanzeiger (So)" icon="de/bostrab/karlsruhe/so23-32.png" type="node">
-				<label text="Switch Signal (W)" de.text="Weichensignale (W)" />
+			<item name="Route Signal (So)" de.name="Fahrstraßenanzeiger (So)" icon="de/bostrab/karlsruhe/so23-32.png" type="node">
+				<label text="Route Signal (So)" de.text="Fahrstraßenanzeiger (So)" />
 				<label text="Only on VBK infrastructure (in Stadtbahntunnel Karlsruhe)" de.text="Nur auf VBK-Infrastruktur (im Stadtbahntunnel Karlsruhe)" />
 				<label de.text="Wird als Punkt auf dem Gleis erfasst." text="Is being mapped as a node on the track." />
 				<space />
