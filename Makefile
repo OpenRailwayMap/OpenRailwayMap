@@ -29,7 +29,7 @@ check:
 distclean: clean
 	rm -rf download css/leaflet.css
 
-download/leaflet-$(DEP_LEAFLET_VERSION).tar.gz:
+download/leaflet-$(DEP_LEAFLET_VERSION).zip:
 	mkdir -p download
 	# do this in 2 steps to make sure only a completely downloaded file is used
 	wget -O download/leaflet.zip https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/v$(DEP_LEAFLET_VERSION)/leaflet.zip
