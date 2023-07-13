@@ -5,20 +5,21 @@
 #
 # Translators:
 # Gábor Babos <gabor.babos@gmail.com>, 2018
+# Péter Báthory <bathory86p@gmail.com>, 2023
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2018-07-29 16:49+0000\n"
-"Last-Translator: Gábor Babos <gabor.babos@gmail.com>\n"
+"PO-Revision-Date: 2023-07-13 22:57+0200\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/rurseekatze/openrailwaymap/language/hu/)\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
@@ -176,13 +177,13 @@ msgid "Service station"
 msgstr "Kiszolgáló állomás"
 
 msgid "Subway/Light rail station"
-msgstr ""
+msgstr "Metró/Könnyűvasút állomás"
 
 msgid "Tram stop"
 msgstr "Villamosmegálló"
 
 msgid "Milestone"
-msgstr "Kilométerkő"
+msgstr "Szelvénykő"
 
 msgid "Signal"
 msgstr "Jelzés"
@@ -254,7 +255,7 @@ msgid "Abandoned track"
 msgstr "Elhagyott vágány"
 
 msgid "Razed track"
-msgstr "Felülépített vágány"
+msgstr "Felszedett vágány"
 
 msgid "Tram"
 msgstr "Villamos"
@@ -281,7 +282,7 @@ msgid "Signal box"
 msgstr ""
 
 msgid "Owner change"
-msgstr "Tulajdonosváltozás"
+msgstr "Üzemeltetőváltozás"
 
 msgid "Railway crossing"
 msgstr "Vasúti átjáró"
@@ -452,7 +453,7 @@ msgid "Quick search shortcut"
 msgstr "Gyorskeresés parancsikon"
 
 msgid "Placeholder"
-msgstr ""
+msgstr "Helykitöltő"
 
 msgid "Donate"
 msgstr "Adományozás"
@@ -464,7 +465,7 @@ msgid "Wiki"
 msgstr "Wiki"
 
 msgid "Search milestone"
-msgstr "Kilométerkő keresése"
+msgstr "Szelvénykő keresése"
 
 msgid "Station code"
 msgstr "Állomáskód"
@@ -500,85 +501,85 @@ msgid "No background map"
 msgstr "Nincs háttértérkép"
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h (használaton kívüli/építés alatt)"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "Nem villamosított"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "Villamosítás megszűntetve"
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "Tervezett villamosítás"
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "Villamosítás kiépítés alatt"
 
 msgid "contact line"
-msgstr ""
+msgstr "felsővezeték"
 
 msgid "3rd rail"
-msgstr ""
+msgstr "harmadik sín"
 
 msgid "Germany"
-msgstr ""
+msgstr "Németország"
 
 msgid "Finland"
-msgstr ""
+msgstr "Finnország"
 
 msgid "train protection"
-msgstr ""
+msgstr "vonatbefolyásoló rendszer"
 
 msgid "no train protection"
-msgstr ""
+msgstr "nincs vonatbefolyásoló rendszer"
 
 msgid "crossing signal type To"
-msgstr ""
+msgstr "To típusú átjárójelzés"
 
 msgid "Voltage"
-msgstr ""
+msgstr "Feszültség"
 
 msgid "signals"
-msgstr ""
+msgstr "jelzések"
 
 msgid "Operating Sites"
-msgstr ""
+msgstr "Üzemterületek"
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "Nincs információ a vonatbefolyásoló rendszerről"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Hp fény főjelzés, jelállapotok leírása nélkül"
 
 msgid "Track usage"
-msgstr ""
+msgstr "Vágány használata"
 
 msgid "Lf 7 Geschwindigkeitssignal"
-msgstr ""
+msgstr "Lf 7 Sebességjelzés"
 
 msgid "1.5 – 3kV ="
-msgstr ""
+msgstr "1.5 – 3kV ="
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "ETCS kiépítés alatt"
 
 msgid "3kV ="
-msgstr ""
+msgstr "3kV ="
 
 msgid "shunting signal type Ro"
-msgstr ""
+msgstr "Ro típusú tolatásjelzés"
 
 msgid "Track type"
-msgstr ""
+msgstr "Vágány típusa"
 
 msgid "El 5 \"Bügel an\"-Signal"
-msgstr ""
+msgstr "El 5 „áramszedőt fel” jelzés"
 
 msgid "Linienzugbeeinflussung"
-msgstr ""
+msgstr "Linienzugbeeinflussung"
 
 msgid "25kV 50Hz ~"
-msgstr ""
+msgstr "25kV 50Hz ~"
 
 msgid "So 106 Kreuztafel"
 msgstr ""
@@ -587,127 +588,127 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "Elágazás, kitérő, szerelőhely, hely"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Hp alak főjelzés, jelállapotok leírása nélkül"
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "Legalább 25kV ~"
 
 msgid "minor signal type Lo"
-msgstr ""
+msgstr "Lo típusú mellékjelzés"
 
 msgid "15 – 25kV ~"
-msgstr ""
+msgstr "15 – 25kV ~"
 
 msgid "ETCS"
-msgstr ""
+msgstr "ETCS"
 
 msgid "Blockkennzeichen"
-msgstr ""
+msgstr "Blokkazonosító"
 
 msgid "Ne 6 Haltepunkttafel"
-msgstr ""
+msgstr "Ne 6 megállótábla"
 
 msgid "Ne 1 Trapeztafel"
-msgstr ""
+msgstr "Ne 1 trapéztábla"
 
 msgid "15kV 16⅔Hz ~"
-msgstr ""
+msgstr "15kV 16⅔Hz ~"
 
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
 msgid "Ne 5 Haltetafel"
-msgstr ""
+msgstr "Ne 5 megállási hely tábla"
 
 msgid "More than 3kV ="
-msgstr ""
+msgstr "Több mint 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
-msgstr ""
+msgstr "Lf 6 sebességelőjelző tábla"
 
 msgid "750 – 1000V ="
-msgstr ""
+msgstr "750 – 1000V ="
 
 msgid "Less than 15kV ~"
-msgstr ""
+msgstr "Kevesebb mint 15kV ~"
 
 msgid "1kV ="
-msgstr ""
+msgstr "1kV ="
 
 msgid "1 – 1.5kV ="
-msgstr ""
+msgstr "1 – 1.5kV ="
 
 msgid "block signal type So"
-msgstr ""
+msgstr "So típusú blokkjelzés"
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h"
 
 msgid "1.5kV ="
-msgstr ""
+msgstr "1.5kV ="
 
 msgid "El 2 Einschaltsignal"
-msgstr ""
+msgstr "El 2 bekapcsolási jelzés"
 
 msgid "Ra 10 Rangierhalttafel / Verschubhalttafel"
-msgstr ""
+msgstr "Ra 10 tolatási határ tábla"
 
 msgid "Zs 10 Endesignal (Tafel)"
-msgstr ""
+msgstr "Zs 10 végejel (tábla)"
 
 msgid "El 1 Ausschaltsignal"
-msgstr ""
+msgstr "El 1 kikapcsolási jelzés"
 
 msgid "Ra 11b Wartezeichen"
-msgstr ""
+msgstr "Ra 11b várakozási jelzés"
 
 msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
-msgstr ""
+msgstr "El 6 megállás nyitott áramszedőjű járműveknek"
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "Kevesebb mint 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
-msgstr ""
+msgstr "Punktförmige Zugbeeinflussung"
 
 msgid "El 4 \"Bügel ab\"-Signal"
-msgstr ""
+msgstr "El 4 áramszedőt behúzni jelzés"
 
 msgid "750V ="
-msgstr ""
+msgstr "750V ="
 
 msgid "25kV 60Hz ~"
-msgstr ""
+msgstr "25kV 60Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
+msgstr "El 3 áramszedőt behúzni eljelző"
 
 msgid "El 1v Ausschaltsignal erwarten"
-msgstr ""
+msgstr "El 1v kikapcsolási jel várható"
 
 msgid "15kV 16.7Hz ~"
-msgstr ""
+msgstr "15kV 16.7Hz ~"
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 msgstr ""
 
 msgid "distant signal with Eo 2 (new type)"
-msgstr ""
+msgstr "Eo 2 előjelző (új típusú)"
 
 msgid "Ks-Hauptsignal"
-msgstr ""
+msgstr "Ks főjelző"
 
 msgid "Bü 5 Läutetafel (normal, für durchfahrende Züge)"
-msgstr ""
+msgstr "Bü 5 csengetni tábla (normál, áthaladó vonatoknak)"
 
 msgid "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Vr fény előfőjelző Vr 2-vel (normál, ismétlő/rövid féktávolság)"
 
 msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
 msgstr ""
@@ -716,212 +717,212 @@ msgid "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
-msgstr ""
+msgstr "Bü 5 kürtölni tábla (normál, áthaladó vonatoknak)"
 
 msgid "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
 msgstr ""
 
 msgid "El 4 \"Bügel ab\"-Signal"
-msgstr ""
+msgstr "El 4 „áramszedőt leereszteni” jelzés"
 
 msgid "Vr-Formvorsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "VR alak előjelző, jelállapotok leírása nélkül"
 
 msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
-msgstr ""
+msgstr "Vr alak előjelző (Vr 2 nélkül, Vr 2-vel)"
 
 msgid "main signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "főjelző, megadott vonatkozás nélkül (új típus, régi típus)"
 
 msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
-msgstr ""
+msgstr "Hp fény főjelző (Hp 2 nélkül, Hp 2-vel)"
 
 msgid "main signal with Po 1 (new type, old type)"
-msgstr ""
+msgstr "főjelző Po 1-el (új típusú, régi típusú)"
 
 msgid "main signal with Po 2 (new type, old type)"
-msgstr ""
+msgstr "főjelző Po 2-vel (új típusú, régi típusú)"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
+msgstr "El 3 „áramszedőt leereszteni” eljelző"
 
 msgid "distant signal with Eo 1 (new type, old type)"
-msgstr ""
+msgstr "előjelző Eo 1-el (új típusú, régi típusú)"
 
 msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Vr fény főjelző Vr 2 nélkül (normál, ismétlő/rövid féktávolság)"
 
 msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
 msgstr ""
 
 msgid "Sv-Signal (ohne Hp 0, mit Hp 0)"
-msgstr ""
+msgstr "Sv jelző (Hp 0 nélkül, Hp 0-val)"
 
 msgid "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
-msgstr ""
+msgstr "Hp alak főjelző (Hp 2 nélkül, Hp 2-vel)"
 
 msgid "El 5 \"Bügel an\"-Signal"
-msgstr ""
+msgstr "El 5 „áramszedőt fel” jelzés"
 
 msgid ""
 "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Vr fény előjelző, jelállapotok leírása nélkül (normál, ismétlő/rövid féktávolság)"
 
 msgid "distant signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "előjelző, megadott vonatkozás nélkül (új típus, régi típus)"
 
 msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
-msgstr ""
+msgstr "Zs 3v sebesség előjelző (tábla, fényjelző)"
 
 msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
-msgstr ""
+msgstr "Zs 3 sebességjelző (tábla, fényjelző)"
 
 msgid "Imprint &amp; Privacy Policy"
 msgstr "Impresszum &amp; Adatvédelmi irányelvek"
 
 msgid "ATB - Automatische Treinbeïnvloeding"
-msgstr ""
+msgstr "ATB - Automatische Treinbeïnvloeding"
 
 msgid "TVM - Transmission Voie-Machine"
-msgstr ""
+msgstr "TVM - Transmission Voie-Machine"
 
 msgid "KVB - Contrôle de Vitesse par Balises"
-msgstr ""
+msgstr "KVB - Contrôle de Vitesse par Balises"
 
 msgid "1067mm"
-msgstr ""
+msgstr "1067mm"
 
 msgid "1435mm"
-msgstr ""
+msgstr "1435mm"
 
 msgid "1676mm"
-msgstr ""
+msgstr "1676mm"
 
 msgid "1422mm"
-msgstr ""
+msgstr "1422mm"
 
 msgid "1524mm"
-msgstr ""
+msgstr "1524mm"
 
 msgid "950mm"
-msgstr ""
+msgstr "950mm"
 
 msgid "800mm"
-msgstr ""
+msgstr "800mm"
 
 msgid "127mm"
-msgstr ""
+msgstr "127mm"
 
 msgid "Narrow gauge"
-msgstr ""
+msgstr "Keskeny nyomtávú"
 
 msgid "500mm"
-msgstr ""
+msgstr "500mm"
 
 msgid "Miniature"
-msgstr ""
+msgstr "Miniatűr"
 
 msgid "Miniature tracks"
-msgstr ""
+msgstr "Miniatűr vágányok"
 
 msgid "1445mm"
-msgstr ""
+msgstr "1445mm"
 
 msgid "Standard gauge"
-msgstr ""
+msgstr "Normál nyomvtávú"
 
 msgid "1100mm"
-msgstr ""
+msgstr "1100mm"
 
 msgid "597mm"
-msgstr ""
+msgstr "597mm"
 
 msgid "1372mm"
-msgstr ""
+msgstr "1372mm"
 
 msgid "1450mm"
-msgstr ""
+msgstr "1450mm"
 
 msgid "600mm"
-msgstr ""
+msgstr "600mm"
 
 msgid "64mm"
-msgstr ""
+msgstr "64mm"
 
 msgid "1432mm"
-msgstr ""
+msgstr "1432mm"
 
 msgid "760mm"
-msgstr ""
+msgstr "760mm"
 
 msgid "381mm"
-msgstr ""
+msgstr "381mm"
 
 msgid "750mm"
-msgstr ""
+msgstr "750mm"
 
 msgid "1009mm"
-msgstr ""
+msgstr "1009mm"
 
 msgid "1495mm"
-msgstr ""
+msgstr "1495mm"
 
 msgid "1520mm"
-msgstr ""
+msgstr "1520mm"
 
 msgid "Track gauge values"
-msgstr ""
+msgstr "Vágánnyomtávértékek"
 
 msgid "1458mm"
-msgstr ""
+msgstr "1458mm"
 
 msgid "Dual gauge"
-msgstr ""
+msgstr "Kettős nyomtávú"
 
 msgid "1600mm"
-msgstr ""
+msgstr "1600mm"
 
 msgid "184mm"
-msgstr ""
+msgstr "184mm"
 
 msgid "610mm"
-msgstr ""
+msgstr "610mm"
 
 msgid "89mm"
-msgstr ""
+msgstr "89mm"
 
 msgid "260mm"
-msgstr ""
+msgstr "260mm"
 
 msgid "762mm"
-msgstr ""
+msgstr "762mm"
 
 msgid "1050mm"
-msgstr ""
+msgstr "1050mm"
 
 msgid "190mm"
-msgstr ""
+msgstr "190mm"
 
 msgid "914mm"
-msgstr ""
+msgstr "914mm"
 
 msgid "1000mm"
-msgstr ""
+msgstr "1000mm"
 
 msgid "Multiple gauge"
-msgstr ""
+msgstr "Több nyomtávú"
 
 msgid "1668mm"
-msgstr ""
+msgstr "1668mm"
 
 msgid "Broad gauge"
-msgstr ""
+msgstr "Széles nyomtávú"
 
 msgid "900mm"
-msgstr ""
+msgstr "900mm"
 
 msgid "700mm"
-msgstr ""
+msgstr "700mm"
 
 msgid "Monorail"
-msgstr ""
+msgstr "Egysínű"
