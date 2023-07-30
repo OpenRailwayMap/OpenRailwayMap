@@ -1795,6 +1795,49 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="AT-
 	allow-overlap: true;
 }
 
+/***************************************************************************/
+/* AT protection light signals                                             */
+/* - which can show stop (Fahrverbot)                                      */
+/* If the signal can show "proceed" the next rule also matches and is used */
+/***************************************************************************/
+
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="AT-V2:schutzsignal"]["railway:signal:minor:form"=light]["railway:signal:minor:states"~="AT-V2:fahrverbot"]
+{
+	z-index: 10000;
+	text: "ref";
+	text-offset: 12;
+	text-color: black;
+	text-halo-radius: 1;
+	text-halo-color: white;
+	font-weight: bold;
+	icon-image: "icons/at/schutzsignal-halt-32.png";
+	icon-width: 8;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/**************************************************************/
+/* AT protection light signals                                */
+/* - which can show proceed (Fahrverbot aufgehoben)           */
+/**************************************************************/
+
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="AT-V2:schutzsignal"]["railway:signal:minor:form"=light]["railway:signal:minor:states"~="AT-V2:fahrverbot_aufgehoben"]
+{
+  z-index: 10000;
+  text: "ref";
+  text-offset: 12;
+  text-color: black;
+  text-halo-radius: 1;
+  text-halo-color: white;
+  font-weight: bold;
+  icon-image: "icons/at/schutzsignal-frei-32.png";
+  icon-width: 8;
+  icon-height: 16;
+  text-allow-overlap: true;
+  allow-overlap: true;
+}
+
 /*******************************************/
 /* FI main and combined light signals      */
 /* - general rules applying to all signals */
