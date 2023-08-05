@@ -14,8 +14,8 @@ window.openrailwaymap = {
 		"standard": "Infrastructure",
 		"maxspeed": "Maxspeeds",
 		"signals": "Signalling",
-		"electrified": "Electrification (beta)",
-		"gauge": "Track gauge (beta)",
+		"electrified": "Electrification",
+		"gauge": "Track gauge",
 	}
 };
 
