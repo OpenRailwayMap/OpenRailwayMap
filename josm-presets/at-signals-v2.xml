@@ -272,7 +272,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="sign" />
 		</item>
 		<separator />
-		<item name="Schutzsignal" type="node">
+		<item name="Schutzsignal" icon="at/schutzsignal-aufgehoben.svg" type="node">
 			<label text="Schutzsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -854,7 +854,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:electricity:form"
 				value="sign" />
 		</item>
-		<item name="Schaltzeiger/Stellungszeiger" type="node">
+		<item name="Schaltzeiger/Stellungszeiger" icon="at/schaltzeiger.svg" type="node">
 			<label text="Schaltzeiger/Stellungszeiger" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -883,7 +883,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 		</item>
 		<separator />
 		<group name="Eisenbahnkreuzungen">
-			<item name="Eisenbahnkreuzungs-Überwachungssignal" type="node">
+			<item name="Eisenbahnkreuzungs-Überwachungssignal" icon="at/eisenbahnkreuzungs-ueberwachungssignal_1.svg" type="node">
 				<label text="Eisenbahnkreuzungs-Überwachungssignal" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -908,7 +908,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:crossing:form"
 					value="light" />
 			</item>
-			<item name="Eisenbahnkreuzungs-Zusatztafel Anfang" type="node">
+			<item name="Eisenbahnkreuzungs-Zusatztafel Anfang" icon="at/eisenbahnkreuzungs-ueberwachungssignal_1.svg" type="node">
 				<label text="Eisenbahnkreuzungs-Zusatztafel Anfang" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -940,7 +940,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
-			<item name="Eisenbahnkreuzungs-Zusatztafel Ende" type="node">
+			<item name="Eisenbahnkreuzungs-Zusatztafel Ende" icon="at/ekues_ende.svg" type="node">
 				<label text="Eisenbahnkreuzungs-Zusatztafel Ende" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -972,7 +972,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
-			<item name="Rautentafel" type="node">
+			<item name="Rautentafel" icon="at/rautentafel.svg" type="node">
 				<label text="Rautentafel" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1022,7 +1022,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Streckenkilometer der Eisenbahnkreuzung (z. B. '13.427')"
 					/>
 			</item>
-			<item name="Pfeifpflock" type="node">
+			<item name="Pfeifpflock" icon="at/pfeifpflock.svg" type="node">
 				<label text="Pfeifpflock" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1045,7 +1045,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:whistle:form"
 					value="sign" />
 			</item>
-			<item name="Gruppenpfeifpflock" type="node">
+			<item name="Gruppenpfeifpflock" icon="at/gruppenpfeifpflock.svg" type="node">
 				<label text="Gruppenpfeifpflock" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1068,7 +1068,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:whistle:form"
 					value="sign" />
 			</item>
-			<item name="Endpflock" type="node">
+			<item name="Endpflock" icon="at/endpflock.svg" type="node">
 				<label text="Endpflock" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1146,7 +1146,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<key key="railway:signal:station_distant:form"
 				value="sign" />
 		</item>
-		<item name="Weichenüberwachungssignal" type="node">
+		<item name="Weichenüberwachungssignal" icon="at/weichenueberwachungssignal.svg" type="node">
 			<label text="Weichenüberwachungssignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
@@ -1176,7 +1176,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 		</item>
 		<group name="Grenzmarken">
-			<item name="Grenzmarke" type="node">
+			<item name="Grenzmarke" icon="at/grenzmarke.svg" type="node">
 				<label text="Grenzmarke" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1191,7 +1191,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:fouling_point"
 					value="AT-V2:grenzmarke" />
 			</item>
-			<item name="Markierte Grenzmarke" type="node">
+			<item name="Markierte Grenzmarke" icon="at/markierte_grenzmarke.svg" type="node">
 				<label text="Markierte Grenzmarke" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1314,7 +1314,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				/>
 		</item>
 		<group name="Räumsignale">
-			<item name="Räumarbeit einstellen" type="node">
+			<item name="Räumarbeit einstellen" icon="at/raeumarbeit_einstellen.svg" type="node">
 				<label text="Räumarbeit einstellen" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1338,7 +1338,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:snowplow:type"
 					value="up" />
 			</item>
-			<item name="Mittelräumer heben" type="node">
+			<item name="Mittelräumer heben" icon="at/mittelraeumer_heben.svg" type="node">
 				<label text="Mittelräumer heben" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1362,7 +1362,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:snowplow:type"
 					value="up" />
 			</item>
-			<item name="Räumarbeit aufnehmen" type="node">
+			<item name="Räumarbeit aufnehmen" icon="at/raeumarbeit_aufnehmen.svg" type="node">
 				<label text="Räumarbeit aufnehmen" />
 				<label text="Wird als Punkt auf dem Gleis erfasst." />
 				<space />
@@ -1453,7 +1453,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				display_values="Kann Ersatzsignal anzeigen,Kann kein Ersatzsignal anzeigen"
 				/>
 		</item>
-		<item name="Fahrwegende" type="node">
+		<item name="Fahrwegende" icon="at/fahrwegende.svg" type="node">
 			<label text="Fahrwegende" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
