@@ -104,6 +104,11 @@ way["railway:scmt"=yes].tracks
 	z-index: 6;
 	color: #dd11ff; /* fuchsia */
 }
+way["railway:asfa"=yes].tracks
+{
+	z-index: 7;
+	color: #ff9092; /* pink */
+}
 way["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0].tracks,
 way.ctracks
 {
