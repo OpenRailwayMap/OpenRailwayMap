@@ -761,7 +761,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<reference ref="direction_fw_bw" />
 				<space />
 				<key key="railway:signal:speed_limit"
-					value="AT-V2:ssignal" />
+					value="AT-V2:anfangssignal" />
 				<key key="railway:signal:speed_limit:form"
 					value="sign" />
 				<combo key="railway:signal:speed_limit:speed"
@@ -830,8 +830,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<combo key="railway:signal:electricity"
 				text="Exact type"
 				de.text="Signaltyp"
-				values="AT-V2:ankündigung_hauptschalter_aus,AT-V2:hauptschalter_aus,AT-V2:hauptschalter_ein,AT-V2:ankündigung_stromabnehmer_tief,AT-V2:stromabnehmer_tief,AT-V2:stromabnehmer_hoch,AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer,AT-V2:bahnhof-streckentrennung_,AT-V2:bahnhof-streckentrennung_ende"
-				display_values="Ankündigung Hauptschalter aus,Hauptschalter aus,Hauptschalter ein,Ankündigung Stromabnehmer tief,Stromabnehmer tief,Stromabnehmer hoch,Halt für Fahrzeuge mit angehobenem Stromabnehmer,Bahnhof-Streckentrennung ,Bahnhof-Streckentrennung Ende"
+				values="AT-V2:ankündigung_hauptschalter_aus,AT-V2:hauptschalter_aus,AT-V2:hauptschalter_ein,AT-V2:ankündigung_stromabnehmer_tief,AT-V2:stromabnehmer_tief,AT-V2:stromabnehmer_hoch,AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer,AT-V2:bahnhof-streckentrennung_anfang,AT-V2:bahnhof-streckentrennung_ende"
+				display_values="Ankündigung Hauptschalter aus,Hauptschalter aus,Hauptschalter ein,Ankündigung Stromabnehmer tief,Stromabnehmer tief,Stromabnehmer hoch,Halt für Fahrzeuge mit angehobenem Stromabnehmer,Bahnhof-Streckentrennung Anfang,Bahnhof-Streckentrennung Ende"
 				/>
 			<combo key="railway:signal:electricity:turn_direction"
 				text="Turn direction arrow – if the signals only valid for some turn directions at the next switch/junction. Leave this key empty if there is no arrow."
@@ -849,7 +849,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				text="Meaning"
 				de.text="Bedeutung"
 				values="power_off_advance,power_off,power_on,pantograph_down_advance,pantograph_down,pantograph_up,end_of_catenary,pantograph_down,pantograph_up"
-				display_values="Ankündigung Hauptschalter aus,Hauptschalter aus,Hauptschalter ein,Ankündigung Stromabnehmer tief,Stromabnehmer tief,Stromabnehmer hoch,Halt für Fahrzeuge mit angehobenem Stromabnehmer,Bahnhof-Streckentrennung ,Bahnhof-Streckentrennung Ende"
+				display_values="Ankündigung Hauptschalter aus,Hauptschalter aus,Hauptschalter ein,Ankündigung Stromabnehmer tief,Stromabnehmer tief,Stromabnehmer hoch,Halt für Fahrzeuge mit angehobenem Stromabnehmer,Bahnhof-Streckentrennung Anfang,Bahnhof-Streckentrennung Ende"
 				/>
 			<key key="railway:signal:electricity:form"
 				value="sign" />
@@ -962,8 +962,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				<key key="railway:signal:crossing_info:form"
 					value="sign" />
 				<text key="railway:signal:crossing_info:caption"
-					text="Caption (e.g. 'EK 3')"
-					de.text="Beschriftung (z. B. 'EK 3')"
+					text="Caption (e.g. '3 EK')"
+					de.text="Beschriftung (z. B. '3 EK')"
 					/>
 				<combo key="railway:signal:crossing_info:height"
 					text="Signal height"
