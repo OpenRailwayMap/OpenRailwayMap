@@ -178,6 +178,19 @@
 			"caption": "SCMT - Sistema Controllo Marcia Treno"
 		},
 		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:asfa":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "ASFA - Anuncio de Señales y Frenado Automático"
+		},
+		{
 			"minzoom": 13,
 			"features": [{
 				"type": "Point",
