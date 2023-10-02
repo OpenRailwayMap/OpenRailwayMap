@@ -480,6 +480,39 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=
 	allow-overlap: true;
 }
 
+/*********************************************/
+/* DE wrong road signal Zs 6                */
+/*********************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:db:zs6"]["railway:signal:wrong_road:form"="sign"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:dr:zs6"]["railway:signal:wrong_road:form"="sign"]
+{
+	z-index: 500;
+	icon-image: "icons/de/zs6-sign-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:db:zs6"]["railway:signal:wrong_road:form"="light"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:dr:zs6"]["railway:signal:wrong_road:form"="light"]
+{
+	z-index: 500;
+	icon-image: "icons/de/zs6-db-light-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:dr:zs7"]["railway:signal:wrong_road:form"="light"]
+{
+	z-index: 500;
+	icon-image: "icons/de/zs7-dr-light-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /********************************************/
 /* DE minor semaphore dwarf signals type Sh */
 /* DE Sh 0 at buffer stops                  */
