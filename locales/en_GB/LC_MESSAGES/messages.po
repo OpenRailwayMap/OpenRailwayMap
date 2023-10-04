@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2017-09-19 19:36+0000\n"
+"PO-Revision-Date: 2023-10-06 23:31+0200\n"
 "Last-Translator: Daniel Brvnistan <daniel.brvnistan@gmail.com>\n"
 "Language-Team: English (https://www.transifex.com/rurseekatze/openrailwaymap/language/en/)\n"
 "Language: en\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 msgid "More Info"
 msgstr "More Info"
@@ -31,11 +31,9 @@ msgid "Javascript is not activated"
 msgstr "Javascript is not activated"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
-"browser settings."
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings."
 msgstr ""
-"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
-"browser settings."
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your browser settings."
 
 msgid "Loading..."
 msgstr "Loading..."
@@ -442,10 +440,10 @@ msgid "No information"
 msgstr "No information"
 
 msgid "speed only given for one direction"
-msgstr "speed only given for one direction"
+msgstr "Speed only given for one direction"
 
 msgid "main track, service track"
-msgstr "main track, service track"
+msgstr "Main track, service track"
 
 msgid "Quick search shortcut"
 msgstr "Quick search shortcut"
@@ -547,13 +545,13 @@ msgid "No information about train protection"
 msgstr "No information about train protection"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Hp light main signal without aspects given"
 
 msgid "Track usage"
 msgstr "Track usage"
 
 msgid "Lf 7 Geschwindigkeitssignal"
-msgstr ""
+msgstr "Lf 7 speed signal"
 
 msgid "1.5 – 3kV ="
 msgstr "1.5 – 3kV ="
@@ -571,7 +569,7 @@ msgid "Track type"
 msgstr "Track type"
 
 msgid "El 5 \"Bügel an\"-Signal"
-msgstr ""
+msgstr "El 5 raise pantograph signal"
 
 msgid "Linienzugbeeinflussung"
 msgstr ""
@@ -580,16 +578,16 @@ msgid "25kV 50Hz ~"
 msgstr "25kV 50Hz ~"
 
 msgid "So 106 Kreuztafel"
-msgstr ""
+msgstr "So 106 cross board"
 
 msgid "Ra 11 Wartezeichen mit Sh 1"
-msgstr ""
+msgstr "Ra 11 wait board with Sh 1"
 
 msgid "Junction, Crossover, Service Station, Site"
 msgstr "Junction, Crossover, Service Station, Site"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Hp semaphore main signal without aspects given"
 
 msgid "At least 25kV ~"
 msgstr "At least 25kV ~"
@@ -604,28 +602,28 @@ msgid "ETCS"
 msgstr "ETCS"
 
 msgid "Blockkennzeichen"
-msgstr ""
+msgstr "Cab signalling block marker"
 
 msgid "Ne 6 Haltepunkttafel"
-msgstr ""
+msgstr "Ne 6 stop ahead sign"
 
 msgid "Ne 1 Trapeztafel"
-msgstr ""
+msgstr "Ne 1 trapezoid board"
 
 msgid "15kV 16⅔Hz ~"
 msgstr "15kV 16⅔Hz ~"
 
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
-msgstr ""
+msgstr "Ra 11 wait board without Sh 1 / without shunting permit signal"
 
 msgid "Ne 5 Haltetafel"
-msgstr ""
+msgstr "Ne 5 car stop marker"
 
 msgid "More than 3kV ="
 msgstr "More than 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
-msgstr ""
+msgstr "Lf 6 Expect speed signal"
 
 msgid "750 – 1000V ="
 msgstr "750 – 1000V ="
@@ -649,34 +647,34 @@ msgid "1.5kV ="
 msgstr "1.5kV ="
 
 msgid "El 2 Einschaltsignal"
-msgstr ""
+msgstr "El 2 turn on signal"
 
 msgid "Ra 10 Rangierhalttafel / Verschubhalttafel"
-msgstr ""
+msgstr "Ra 10 limit of shunt indicator"
 
 msgid "Zs 10 Endesignal (Tafel)"
-msgstr ""
+msgstr "Zs 10 end of speed limit signal (sign)"
 
 msgid "Zs 6 Gegengleisanzeiger"
 msgstr "Zs 6 wrong road signal"
 
 msgid "El 1 Ausschaltsignal"
-msgstr ""
+msgstr "El 1 turn off signal"
 
 msgid "Ra 11b Wartezeichen"
-msgstr ""
+msgstr "Ra 11b wait board"
 
 msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
-msgstr ""
+msgstr "El 6 stop for vehicles with raised pantographs"
 
 msgid "Less than 750V ="
 msgstr "Less than 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
-msgstr "PZB"
+msgstr "Intermittent train protection"
 
 msgid "El 4 \"Bügel ab\"-Signal"
-msgstr ""
+msgstr "El 4 lower pantograph signal"
 
 msgid "750V ="
 msgstr "750V ="
@@ -685,58 +683,58 @@ msgid "25kV 60Hz ~"
 msgstr "25kV 60Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
+msgstr "El 3 expect lower pantograph signal"
 
 msgid "El 1v Ausschaltsignal erwarten"
-msgstr ""
+msgstr "El 1v expect turn off signal"
 
 msgid "15kV 16.7Hz ~"
 msgstr "15kV 16.7Hz ~"
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
-msgstr ""
+msgstr "Sh light shunting protection signal (normal, dwarf signal)"
 
 msgid "distant signal with Eo 2 (new type)"
 msgstr "Distant signal with Eo 2 (new type)"
 
 msgid "Ks-Hauptsignal"
-msgstr ""
+msgstr "Ks main signal"
 
 msgid "Bü 5 Läutetafel (normal, für durchfahrende Züge)"
-msgstr ""
+msgstr "Bü 5 Ring sign (normal, for passing trains)"
 
 msgid "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Ks combined signal (normal, shortened distance"
 
 msgid "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Vr light distance signal with Vr 2 aspect (normal, repeated/shortened distance)"
 
 msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Bü 2 expect crossing sign (normal, shortened distance)"
 
 msgid "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Ks distance signal (normal, repeated or shortened distance"
 
 msgid "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
-msgstr ""
+msgstr "Bü 4 whistle sign (normal, for passing trains)"
 
 msgid "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
-msgstr ""
+msgstr "ex-Pf 1 whistle sign (normal, for passing trains)"
 
 msgid "El 4 \"Bügel ab\"-Signal"
-msgstr ""
+msgstr "El 4 lower pantograph signal"
 
 msgid "Vr-Formvorsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Vr semaphore distance signal without aspects given"
 
 msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
-msgstr ""
+msgstr "Vr semaphore distance signal (without Vr 2, with Vr 2)"
 
 msgid "main signal without aspects given (new type, old type)"
 msgstr "Main signal without aspects given (new type, old type)"
 
 msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
-msgstr ""
+msgstr "Hp light main signal (without Hp2, with Hp2)"
 
 msgid "main signal with Po 1 (new type, old type)"
 msgstr "Main signal with Po 1 (new type, old type)"
@@ -745,38 +743,37 @@ msgid "main signal with Po 2 (new type, old type)"
 msgstr "Main signal with Po 2 (new type, old type)"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
+msgstr "El 3 expect lower pantograph signal"
 
 msgid "distant signal with Eo 1 (new type, old type)"
 msgstr "Distant signal with Eo 1 (new type, old type)"
 
 msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Vr light distance signal without Vr 2 (normal, repeated or shortened distance)"
 
 msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
-msgstr ""
+msgstr "Sh semaphore shunting protection signal (normal, dwarf signal)"
 
 msgid "Sv-Signal (ohne Hp 0, mit Hp 0)"
-msgstr ""
+msgstr "Sv signal (without Hp 0, with Hp 0)"
 
 msgid "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
-msgstr ""
+msgstr "Main signal (Hp system, semaphore; without Hp 2 (proceed slow), with Hp 2 (proceed slow))"
 
 msgid "El 5 \"Bügel an\"-Signal"
-msgstr ""
+msgstr "Raise pantograph signal (El 5)"
 
-msgid ""
-"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
+msgid "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr "Distance signal without aspects given (Vr system, light; normal, repeated or shortened distance)"
 
 msgid "distant signal without aspects given (new type, old type)"
 msgstr "Distant signal without aspects given (new type, old type)"
 
 msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
-msgstr ""
+msgstr "Expect speed limit signal (Zs 3v; sign, light signal)"
 
 msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
-msgstr ""
+msgstr "Speed limit signal (Zs 3; sign, light signal)"
 
 msgid "Imprint &amp; Privacy Policy"
 msgstr "Imprint &amp; Privacy Policy"
@@ -788,7 +785,7 @@ msgid "TVM - Transmission Voie-Machine"
 msgstr ""
 
 msgid "KVB - Contrôle de Vitesse par Balises"
-msgstr ""
+msgstr "KVB - Speed control by beacons"
 
 msgid "1067mm"
 msgstr ""
