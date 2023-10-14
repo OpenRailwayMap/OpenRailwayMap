@@ -8,7 +8,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 window.openrailwaymap = {
 	'root': params['urlbase'],
-	'apiUrl': 'https://api.openrailwaymap.org/',
+	'apiUrl': 'https://api.openrailwaymap.org/v2/',
 	'tiledir': 'https://{s}.tiles.openrailwaymap.org/',
 	'availableStyles': {
 		"standard": "Infrastructure",
