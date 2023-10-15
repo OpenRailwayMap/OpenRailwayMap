@@ -13,7 +13,7 @@ window.openrailwaymap = {
 	'availableStyles': {
 		"standard": "Infrastructure",
 		"maxspeed": "Maxspeeds",
-		"signals": "Signalling",
+		"signals": "Signalling and train protection",
 		"electrified": "Electrification (beta)",
 		"gauge": "Track gauge (beta)",
 	}
