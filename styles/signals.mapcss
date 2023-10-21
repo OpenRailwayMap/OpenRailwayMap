@@ -56,7 +56,9 @@ way["railway:pzb"=no]["railway:lzb"=no]["railway:etcs"=no].tracks,
 way["railway:pzb"=no]["railway:lzb"=no]["railway:etcs"=0].tracks,
 way["railway:atb"=no][!"railway:etcs"].tracks,
 way["railway:atb"=no]["railway:etcs"=no].tracks,
-way["railway:atb"=no]["railway:etcs"=0].tracks
+way["railway:atb"=no]["railway:etcs"=0].tracks,
+way["railway:atc"=no]["railway:etcs"=no].tracks,
+way["railway:atc"=no]["railway:etcs"=0].tracks
 {
 	z-index: 1;
 	color: black;
@@ -80,6 +82,11 @@ way["railway:atb-vv"=yes].tracks
 	z-index: 4;
 	color: #FF8C00;
 }
+way["railway:atc"=yes].tracks
+{
+	z-index: 2;
+	color: #6600cc;
+}
 way["railway:kvb"=yes].tracks
 {
 	z-index: 5;
@@ -97,6 +104,11 @@ way["railway:scmt"=yes].tracks
 	z-index: 6;
 	color: #dd11ff; /* fuchsia */
 }
+way["railway:asfa"=yes].tracks
+{
+	z-index: 7;
+	color: #ff9092; /* pink */
+}
 way["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0].tracks,
 way.ctracks
 {
@@ -112,6 +124,11 @@ way["railway:ptc"=yes].tracks
 {
 	z-index: 10;
 	color: #cc0033;
+}
+way["railway:zsi127"="yes"].tracks
+{
+	z-index: 3;
+	color: #884400;
 }
 
 /*********************************/
@@ -459,6 +476,39 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=
 	icon-image: "icons/de/ra10-32.png";
 	icon-width: 16;
 	icon-height: 11;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*********************************************/
+/* DE wrong road signal Zs 6                */
+/*********************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:db:zs6"]["railway:signal:wrong_road:form"="sign"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:dr:zs6"]["railway:signal:wrong_road:form"="sign"]
+{
+	z-index: 500;
+	icon-image: "icons/de/zs6-sign-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:db:zs6"]["railway:signal:wrong_road:form"="light"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:dr:zs6"]["railway:signal:wrong_road:form"="light"]
+{
+	z-index: 500;
+	icon-image: "icons/de/zs6-db-light-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:dr:zs7"]["railway:signal:wrong_road:form"="light"]
+{
+	z-index: 500;
+	icon-image: "icons/de/zs7-dr-light-30.png";
+	icon-width: 11;
+	icon-height: 16;
 	text-allow-overlap: true;
 	allow-overlap: true;
 }

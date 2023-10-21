@@ -104,7 +104,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 						queryRef(response);
 				});
 			} else {
-				this.sendRequest("facility", "uicref=" + encodeURIComponent(input), queryRef);
+				this.sendRequest("facility", "uic_ref=" + encodeURIComponent(input), queryRef);
 			}
 		}
 	}
@@ -135,19 +135,19 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 
 				if (inner)
 					result.innerHTML = '<b>' + escapeForHTML(inner) + '</b>';
-
-				if (results[i]['type'] != null && typeof results[i]['type'] != undefined && this.typeMapping[results[i]['type']] != null)
-					result.innerHTML += '&nbsp;' + escapeForHTML(_(this.typeMapping[results[i]['type']]));
+				var resultType = this.getResultType(results[i]);
+				if (resultType != null)
+					result.innerHTML += '&nbsp;' + escapeForHTML(_(this.typeMapping[resultType]));
 				if (results[i]['operator'] != null && typeof results[i]['operator'] != undefined)
 					result.innerHTML += '<br /><dfn>' + escapeForHTML(results[i]['operator']) + '</dfn>';
-				if (results[i]['ref'] && (results[i]['type'] == 'station' || results[i]['type'] == 'halt' || results[i]['type'] == 'junction' ||
-						results[i]['type'] == 'spur_junction' || results[i]['type'] == 'yard' || results[i]['type'] == 'crossover' ||
-						results[i]['type'] == 'site' || results[i]['type'] == 'service_station' || results[i]['type'] == 'tram_stop'))
+				if (results[i]['ref'] && (resultType == 'station' || resultType == 'halt' || resultType == 'junction' ||
+						resultType == 'spur_junction' || resultType == 'yard' || resultType == 'crossover' ||
+						resultType == 'site' || resultType == 'service_station' || resultType == 'tram_stop'))
 					result.innerHTML += ' <i>[' + escapeForHTML(results[i]['ref']) + ']</i>';
 
 				selfSearch = this;
-				var lon = Number.parseFloat(results[i]['lon']);
-				var lat = Number.parseFloat(results[i]['lat']);
+				var lon = Number.parseFloat(results[i]['longitude']);
+				var lat = Number.parseFloat(results[i]['latitude']);
 				if (!Number.isNaN(lon) && !Number.isNaN(lat)) {
 					result.setAttribute('class', 'resultEntry');
 					result.onclick = new Function("selfSearch.showResult(" + lon + ", " + lat + ");");
@@ -161,6 +161,19 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 			loadingIndicator.innerHTML = this.loading;
 			this.bar.appendChild(loadingIndicator);
 		}
+	}
+
+	// Get type of railway feature (station, halt, …) from keys railway, disused:railway etc.
+	this.getResultType = function(result_entry)
+	{
+		var keys = ["railway", "disused:railway", "construction:railway", "abandoned:railway", "razed:railway", "proposed:railway"];
+		for (var i = 0; i < keys.length; ++i) {
+			var value = result_entry[keys[i]];
+			if (value != null && typeof value != undefined && this.typeMapping[value] != null) {
+				return value;
+			}
+		}
+		return null;
 	}
 
 	// finishes adding more results to the result list

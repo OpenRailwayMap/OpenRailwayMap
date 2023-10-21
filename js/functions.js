@@ -256,14 +256,14 @@ function mobileRedirection()
 function setupControls()
 {
 	// grayscale mapnik background layer
-	var mapnikGray = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	var mapnikGray = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: _("Map data &copy; OpenStreetMap contributors"),
 		className: 'grayscale',
 		maxZoom: 19
 	}).addTo(map);
 	// normal mapnik background layer
-	var mapnik = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	var mapnik = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
 		attribution: _("Map data &copy; OpenStreetMap contributors"),
 		maxZoom: 19
