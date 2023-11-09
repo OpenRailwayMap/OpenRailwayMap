@@ -178,6 +178,19 @@
 			"caption": "SCMT - Sistema Controllo Marcia Treno"
 		},
 		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:asfa":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "ASFA - Anuncio de Señales y Frenado Automático"
+		},
+		{
 			"minzoom": 13,
 			"features": [{
 				"type": "Point",
@@ -757,6 +770,38 @@
 				}
 			}],
 			"caption": "Ra 10 Rangierhalttafel / Verschubhalttafel"
+		},
+		{
+			"minzoom": 17,
+			"features" : [{
+				"type": "Point",
+				"coordinates": [30,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:wrong_road":"DE-ESO:db:zs6",
+					"railway:signal:wrong_road:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:wrong_road":"DE-ESO:dr:zs7",
+					"railway:signal:wrong_road:form":"light"
+				}},
+				{
+				"type": "Point",
+				"coordinates": [70,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:wrong_road":"DE-ESO:db:zs6",
+					"railway:signal:wrong_road:form":"sign"
+				}
+			}],
+			"caption": "Zs 6 Gegengleisanzeiger"
 		},
 		{
 			"minzoom": 14,
