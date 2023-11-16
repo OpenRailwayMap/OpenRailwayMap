@@ -11,15 +11,16 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2023-07-13 22:57+0200\n"
+"PO-Revision-Date: 2023-11-16 13:34+0100\n"
 "Last-Translator: Báthory Péter <bathory86p@gmail.com>\n"
-"Language-Team: Hungarian (http://www.transifex.com/rurseekatze/openrailwaymap/language/hu/)\n"
+"Language-Team: Hungarian (http://www.transifex.com/rurseekatze/"
+"openrailwaymap/language/hu/)\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
@@ -32,11 +33,11 @@ msgid "Javascript is not activated"
 msgstr "A JavaScript nincs aktiválva"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
-"browser settings."
+"Javascript is needed to show the map and run this website. Please turn on "
+"Javascript in your browser settings."
 msgstr ""
-"A térkép megjelenítéséhez és a weboldal futtatásához JavaScriptre van szükség. Kapcsolja be a "
-"JavaScriptet a böngésző beállításaiban."
+"A térkép megjelenítéséhez és a weboldal futtatásához JavaScriptre van "
+"szükség. Kapcsolja be a JavaScriptet a böngésző beállításaiban."
 
 msgid "Loading..."
 msgstr "Töltés…"
@@ -92,9 +93,12 @@ msgstr "Keresés csak a jelenlegi térképnézeten"
 msgid "HTML-Code"
 msgstr "HTML-kód"
 
-msgid "Copy this HTML code snippet into your website to show a small map with a marker."
+msgid ""
+"Copy this HTML code snippet into your website to show a small map with a "
+"marker."
 msgstr ""
-"Egy kis térkép jelölővel történő megjelenítéséhez másolja ezt a HTML-kódrészletet a weboldalába."
+"Egy kis térkép jelölővel történő megjelenítéséhez másolja ezt a HTML-"
+"kódrészletet a weboldalába."
 
 msgid "Fullscreen"
 msgstr "Teljes képernyő"
@@ -146,8 +150,8 @@ msgstr "ennyi idővel ezelőtt: %s"
 msgid "Infrastructure"
 msgstr "Insfrastruktúra"
 
-msgid "Signalling"
-msgstr "Jelzőrendszer"
+msgid "Signalling and train protection"
+msgstr "Jelzőrendszer és vonatbefolyásolás"
 
 msgid "Maxspeeds"
 msgstr "Sebességkorlátozások"
@@ -420,7 +424,8 @@ msgid "Rolling highway"
 msgstr "Ro-La"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr "Ezen a nagyítási szinten nem látható semmi. Nagyíts rá jobban a térképre."
+msgstr ""
+"Ezen a nagyítási szinten nem látható semmi. Nagyíts rá jobban a térképre."
 
 msgid "Legend not available for this style."
 msgstr "Ehhez a stílushoz nincs jelkulcs."
@@ -573,19 +578,19 @@ msgid "Track type"
 msgstr "Vágány típusa"
 
 msgid "El 5 \"Bügel an\"-Signal"
-msgstr "El 5 „áramszedőt fel” jelzés"
+msgstr "El 5 „áramszedőt fel” jelzés"
 
 msgid "Linienzugbeeinflussung"
-msgstr "Linienzugbeeinflussung"
+msgstr "signaLinienzugbeeinflussung"
 
 msgid "25kV 50Hz ~"
 msgstr "25kV 50Hz ~"
 
 msgid "So 106 Kreuztafel"
-msgstr ""
+msgstr "So 106 keresztjel"
 
 msgid "Ra 11 Wartezeichen mit Sh 1"
-msgstr ""
+msgstr "Ra 11 várakozási jel Sh 1-el"
 
 msgid "Junction, Crossover, Service Station, Site"
 msgstr "Elágazás, kitérő, szerelőhely, hely"
@@ -617,8 +622,11 @@ msgstr "Ne 1 trapéztábla"
 msgid "15kV 16⅔Hz ~"
 msgstr "15kV 16⅔Hz ~"
 
-msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
+msgid ""
+"Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
+"Ra 11 várakozási jel Sh 1 nélkül / Várakozási jel tolatási tilalom "
+"feloldása nélkül"
 
 msgid "Ne 5 Haltetafel"
 msgstr "Ne 5 megállási hely tábla"
@@ -654,19 +662,19 @@ msgid "El 2 Einschaltsignal"
 msgstr "El 2 bekapcsolási jelzés"
 
 msgid "Ra 10 Rangierhalttafel / Verschubhalttafel"
-msgstr "Ra 10 tolatási határ tábla"
+msgstr "Ra 10 tolatási határ tábla"
 
 msgid "Zs 10 Endesignal (Tafel)"
-msgstr "Zs 10 végejel (tábla)"
+msgstr "Zs 10 végejel (tábla)"
 
 msgid "El 1 Ausschaltsignal"
-msgstr "El 1 kikapcsolási jelzés"
+msgstr "El 1 kikapcsolási jelzés"
 
 msgid "Ra 11b Wartezeichen"
 msgstr "Ra 11b várakozási jelzés"
 
 msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
-msgstr "El 6 megállás nyitott áramszedőjű járműveknek"
+msgstr "El 6 megállás nyitott áramszedőjű járműveknek"
 
 msgid "Less than 750V ="
 msgstr "Kevesebb mint 750V ="
@@ -702,31 +710,32 @@ msgid "Ks-Hauptsignal"
 msgstr "Ks főjelző"
 
 msgid "Bü 5 Läutetafel (normal, für durchfahrende Züge)"
-msgstr "Bü 5 csengetni tábla (normál, áthaladó vonatoknak)"
+msgstr "Bü 5 csengetni tábla (normál, áthaladó vonatoknak)"
 
 msgid "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr "Vr fény előfőjelző Vr 2-vel (normál, ismétlő/rövid féktávolság)"
 
 msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Bü 2 gyémántábla (normál, rövid féktávolság)"
 
 msgid "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
-msgstr ""
+msgstr "Ks előjelző (normál, ismétlő, rövid féktávolság)"
 
 msgid "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
-msgstr "Bü 5 kürtölni tábla (normál, áthaladó vonatoknak)"
+msgstr "Bü 4 kürtölni tábla (normál, áthaladó vonatoknak)"
 
 msgid "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
-msgstr ""
+msgstr "ex-Pf 1 kürtölni tábla (normál, áthaladó vonatoknak)"
 
 msgid "El 4 \"Bügel ab\"-Signal"
-msgstr "El 4 „áramszedőt leereszteni” jelzés"
+msgstr "El 4 „áramszedőt leereszteni” jelzés"
 
 msgid "Vr-Formvorsignal ohne Angabe der Signalzustände"
-msgstr "VR alak előjelző, jelállapotok leírása nélkül"
+msgstr "Vr alak előjelző, jelállapotok leírása nélkül"
 
 msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
 msgstr "Vr alak előjelző (Vr 2 nélkül, Vr 2-vel)"
@@ -738,44 +747,48 @@ msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
 msgstr "Hp fény főjelző (Hp 2 nélkül, Hp 2-vel)"
 
 msgid "main signal with Po 1 (new type, old type)"
-msgstr "főjelző Po 1-el (új típusú, régi típusú)"
+msgstr "főjelző Po 1-el (új típusú, régi típusú)"
 
 msgid "main signal with Po 2 (new type, old type)"
-msgstr "főjelző Po 2-vel (új típusú, régi típusú)"
+msgstr "főjelző Po 2-vel (új típusú, régi típusú)"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr "El 3 „áramszedőt leereszteni” eljelző"
+msgstr "El 3 „áramszedőt leereszteni” eljelző"
 
 msgid "distant signal with Eo 1 (new type, old type)"
-msgstr "előjelző Eo 1-el (új típusú, régi típusú)"
+msgstr "előjelző Eo 1-el (új típusú, régi típusú)"
 
-msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr "Vr fény főjelző Vr 2 nélkül (normál, ismétlő/rövid féktávolság)"
+msgid ""
+"Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr "Vr fény főjelző Vr 2 nélkül (normál, ismétlő/rövid féktávolság)"
 
 msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
 msgstr ""
 
 msgid "Sv-Signal (ohne Hp 0, mit Hp 0)"
-msgstr "Sv jelző (Hp 0 nélkül, Hp 0-val)"
+msgstr "Sv jelző (Hp 0 nélkül, Hp 0-val)"
 
 msgid "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
-msgstr "Hp alak főjelző (Hp 2 nélkül, Hp 2-vel)"
+msgstr "Hp alak főjelző (Hp 2 nélkül, Hp 2-vel)"
 
 msgid "El 5 \"Bügel an\"-Signal"
-msgstr "El 5 „áramszedőt fel” jelzés"
+msgstr "El 5 „áramszedőt fel” jelzés"
 
 msgid ""
-"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr "Vr fény előjelző, jelállapotok leírása nélkül (normál, ismétlő/rövid féktávolság)"
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/"
+"verkürzter Bremswegabstand)"
+msgstr ""
+"Vr fény előjelző, jelállapotok leírása nélkül (normál, ismétlő/rövid "
+"féktávolság)"
 
 msgid "distant signal without aspects given (new type, old type)"
 msgstr "előjelző, megadott vonatkozás nélkül (új típus, régi típus)"
 
 msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
-msgstr "Zs 3v sebesség előjelző (tábla, fényjelző)"
+msgstr "Zs 3v sebesség előjelző (tábla, fényjelző)"
 
 msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
-msgstr "Zs 3 sebességjelző (tábla, fényjelző)"
+msgstr "Zs 3 sebességjelző (tábla, fényjelző)"
 
 msgid "Imprint &amp; Privacy Policy"
 msgstr "Impresszum &amp; Adatvédelmi irányelvek"
