@@ -148,10 +148,7 @@ OpenRailwayMap.prototype =
 			else if ($('#facilityRefInput').val().length > 0)
 				params['ref'] = $('#facilityRefInput').val();
 			else if ($('#facilityUICrefInput').val().length > 0)
-				params['uicref'] = $('#facilityUICrefInput').val();
-
-			if ($('#facilityOperatorInput').val().length > 0)
-				params['operator'] = $('#facilityOperatorInput').val();
+				params['uic_ref'] = $('#facilityUICrefInput').val();
 
 			$.ajax(
 			{
