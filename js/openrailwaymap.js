@@ -121,7 +121,7 @@ OpenRailwayMap.prototype =
 				var selectedBackgroundLayer = layer.options.code;
 		}
 		if (selectedBackgroundLayer == null)
-			this.baseLayers[translations['mapnikGrayscale']].addTo(this.map);
+			this.baseLayers[translations['Mapnik Grayscale']].addTo(this.map);
 
 		history.pushState(null, this.appName, this.getUrl());
 
