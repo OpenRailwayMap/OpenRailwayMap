@@ -63,7 +63,7 @@ OpenRailwayMap.prototype =
 		}).addTo(this.map);
 
 		// grayscale mapnik background layer
-		this.mapnikGray = new L.TileLayer.Grayscale('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		this.mapnikGray = new L.TileLayer.Grayscale('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
 		{
 			attribution: translations['Map data &copy; OpenStreetMap contributors'],
 			maxZoom: 19,
@@ -71,7 +71,7 @@ OpenRailwayMap.prototype =
 		});
 
 		// normal mapnik background layer
-		this.mapnik = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		this.mapnik = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
 		{
 			attribution: translations['Map data &copy; OpenStreetMap contributors'],
 			maxZoom: 19,
