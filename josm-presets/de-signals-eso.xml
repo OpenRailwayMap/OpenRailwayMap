@@ -159,9 +159,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
-						display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12)"
-						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12;no"
+						display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12);no substitute signal"
+						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12);kein Ersatzsignal"
 						/>
 					<reference ref="traversable" />
 					<space />
@@ -223,9 +223,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
-						display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12)"
-						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12;no"
+						display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12);no substitute signal"
+						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12);kein Ersatzsignal"
 						/>
 					<reference ref="traversable" />
 					<space />
@@ -287,9 +287,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					text="Substitute signal (multi-selection)"
 					de.text="Ersatzsignal (Mehrfachauswahl)"
 					delimiter=";"
-					values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
-					display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12)"
-					de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
+					values="DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12;no"
+					display_values="substitute signal (Zs 1);cautioness signal (Zs 7);M Board (Zs 12);no substitute signal"
+					de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12);kein Ersatzsignal"
 					/>
 				<check key="railway:signal:distant:shortened"
 					text="Shortened distance"
@@ -356,8 +356,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:dr:zs1;DE-ESO:db:zs12;no"
-						de.display_values="Ersatzsignal (Zs 1);M-Tafel (Zs 12);kein Ersatzsignal"
 						display_values="substitute signal (Zs 1);M Board (Zs 12);no substitute signal"
+						de.display_values="Ersatzsignal (Zs 1);M-Tafel (Zs 12);kein Ersatzsignal"
 						/>
 					<reference ref="traversable" />
 					<space />
@@ -416,9 +416,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="DE-ESO:dr:zs1;DE-ESO:db:zs12"
-						display_values="substitute signal (Zs 1);M Board (Zs 12)"
-						de.display_values="Ersatzsignal (Zs 1);M-Tafel (Zs 12)"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs12;no"
+						display_values="substitute signal (Zs 1);M Board (Zs 12);no substitute signal"
+						de.display_values="Ersatzsignal (Zs 1);M-Tafel (Zs 12);kein Ersatzsignal"
 						/>
 					<reference ref="traversable" />
 					<space />
@@ -520,9 +520,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="DE-ESO:dr:zs1;DE-ESO:db:zs7"
-						display_values="substitute signal (Zs 1);cautioness signal (Zs 7)"
-						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7)"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;no"
+						display_values="substitute signal (Zs 1);cautioness signal (Zs 7);no substitute signal"
+						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);kein Ersatzsignal"
 						/>
 					<reference ref="traversable" />
 					<space />
@@ -584,9 +584,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="DE-ESO:dr:zs1;DE-ESO:db:zs7"
-						display_values="substitute signal (Zs 1);cautioness signal (Zs 7)"
-						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7)"
+						values="DE-ESO:dr:zs1;DE-ESO:db:zs7;no"
+						display_values="substitute signal (Zs 1);cautioness signal (Zs 7);no substitute signal"
+						de.display_values="Ersatzsignal (Zs 1);Vorsichtsignal (Zs 7);kein Ersatzsignal"
 						/>
 					<reference ref="traversable" />
 					<space />
@@ -692,8 +692,8 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
 						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12;no"
-						display_values="substitution signal (Zs 1 ex-DB);substitution signal (Zs 1 ex-DR);cautiousness signal (Zs 7);M Board (Zs 12);no substitution signal"
-						de.display_values="Ersatzsignal (Zs 1 ex-DB);Ersatzsignal (Zs 1 ex-DR);Vorsichtsignal (Zs 7);M-Tafel (Zs 12);kein Ersatzsignal vorhanden"
+						display_values="substitute signal (Zs 1 ex-DB);substitute signal (Zs 1 ex-DR);cautiousness signal (Zs 7);M Board (Zs 12);no substitute signal"
+						de.display_values="Ersatzsignal (Zs 1 ex-DB);Ersatzsignal (Zs 1 ex-DR);Vorsichtsignal (Zs 7);M-Tafel (Zs 12);kein Ersatzsignal"
 						values_sort="false"
 						/>
 					<space />
@@ -754,9 +754,9 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						text="Substitute signal (multi-selection)"
 						de.text="Ersatzsignal (Mehrfachauswahl)"
 						delimiter=";"
-						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12"
-						display_values="substitution signal (ex-DB Zs 1);substitution signal (ex-DR Zs 1);cautioness signal (Zs 7);M board (Zs 12)"
-						de.display_values="Ersatzsignal (ex-DB Zs 1);Ersatzsignal (ex-DR Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12)"
+						values="DE-ESO:db:zs1;DE-ESO:dr:zs1;DE-ESO:db:zs7;DE-ESO:db:zs12;no"
+						display_values="substitute signal (ex-DB Zs 1);substitute signal (ex-DR Zs 1);cautioness signal (Zs 7);M board (Zs 12);no substitute signal"
+						de.display_values="Ersatzsignal (ex-DB Zs 1);Ersatzsignal (ex-DR Zs 1);Vorsichtsignal (Zs 7);M-Tafel (Zs 12);kein Ersatzsignal"
 						/>
 					<reference ref="traversable" />
 					<space />
