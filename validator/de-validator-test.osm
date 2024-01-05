@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='-26745' action='modify' visible='true' lat='0.00216090111' lon='0.0000157665' />
+  <node id='-26746' action='modify' visible='true' lat='0.00174290344' lon='-0.00004743519' />
+  <node id='-26747' action='modify' visible='true' lat='0.00189528987' lon='0.00010190184' />
+  <node id='-26748' action='modify' visible='true' lat='0.00216115845' lon='-0.00000559188' />
+  <node id='-26749' action='modify' visible='true' lat='0.00174002397' lon='0.00020886483' />
+  <node id='-26750' action='modify' visible='true' lat='0.00187066808' lon='0.0002085183' />
+  <node id='-26751' action='modify' visible='true' lat='0.00189374589' lon='0.00023005213' />
+  <node id='-26752' action='modify' visible='true' lat='0.00216193044' lon='-0.00006966702' />
+  <node id='-26753' action='modify' visible='true' lat='0.00174218356' lon='0.00001663981' />
+  <node id='-26754' action='modify' visible='true' lat='0.00187092542' lon='0.00018715991' />
+  <node id='-26755' action='modify' visible='true' lat='0.00187349871' lon='-0.0000264239' />
+  <node id='-26756' action='modify' visible='true' lat='0.00189760584' lon='-0.00009032359'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:minor' v='DE-ESO:sh' />
+    <tag k='railway:signal:minor:form' v='semaphore' />
+    <tag k='railway:signal:minor:states' v='DE-ESO:hp0' />
+  </node>
+  <node id='-26757' action='modify' visible='true' lat='0.00189503255' lon='0.00012326022' />
+  <node id='-26758' action='modify' visible='true' lat='0.00203082051' lon='-0.00004796155'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:main' v='DE-ESO:hp' />
+    <tag k='railway:signal:main:form' v='sign' />
+  </node>
+  <node id='-26759' action='modify' visible='true' lat='0.00160917412' lon='-0.00004708047' />
+  <node id='-26760' action='modify' visible='true' lat='0.0018742707' lon='-0.00009049905' />
+  <node id='-26761' action='modify' visible='true' lat='0.00202914081' lon='0.0001015468'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:speed_limit' v='DE-ESO:zs3' />
+    <tag k='railway:signal:speed_limit:form' v='light' />
+    <tag k='railway:signal:speed_limit:speed' v='87' />
+  </node>
+  <node id='-26762' action='modify' visible='true' lat='0.00174266349' lon='-0.00002607686' />
+  <node id='-26763' action='modify' visible='true' lat='0.00203058055' lon='-0.00002660322'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:combined' v='DE-KVB:hp' />
+    <tag k='railway:signal:main:form' v='sign' />
+  </node>
+  <node id='-26764' action='modify' visible='true' lat='0.00215884247' lon='0.00018663356' />
+  <node id='-26765' action='modify' visible='true' lat='0.00187375603' lon='-0.00004778228' />
+  <node id='-26766' action='modify' visible='true' lat='0.00202938077' lon='0.00008018846'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:speed_limit:form' v='light' />
+    <tag k='railway:signal:speed_limit_distant' v='DE-ESO:zs3v' />
+    <tag k='railway:signal:speed_limit_distant:speed' v='170' />
+  </node>
+  <node id='-26767' action='modify' visible='true' lat='0.00216038646' lon='0.00005848327' />
+  <node id='-26768' action='modify' visible='true' lat='0.00189683385' lon='-0.00002624845'>
+    <tag k='railway:signal:distant:repeated' v='yes' />
+    <tag k='railway:signal:distant:shortened' v='no' />
+    <tag k='railway:signal:main' v='DE-ESO:hp' />
+    <tag k='railway:signal:main:states' v='DE-ESO:kennlicht' />
+  </node>
+  <node id='-26769' action='modify' visible='true' lat='0.00174098379' lon='0.00012343149' />
+  <node id='-26770' action='modify' visible='true' lat='0.00202770108' lon='0.00022969681' />
+  <node id='-26771' action='modify' visible='true' lat='0.00189709118' lon='-0.00004760683'>
+    <tag k='railway:signal:distant' v='DE-ESO:vr' />
+    <tag k='railway:signal:distant:repeated' v='yes' />
+    <tag k='railway:signal:distant:shortened' v='yes' />
+    <tag k='railway:signal:main' v='DE-ESO:hp' />
+    <tag k='railway:signal:main:states' v='whatever' />
+  </node>
+  <node id='-26772' action='modify' visible='true' lat='0.00174242352' lon='-0.00000471852' />
+  <node id='-26773' action='modify' visible='true' lat='0.0018955472' lon='0.00008054346'>
+    <tag k='highway' v='uiauary' />
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:combined:substitute_signal' v='test;no' />
+    <tag k='railway:signal:direction' v='forward' />
+    <tag k='railway:signal:main' v='DE-ESO:ks' />
+    <tag k='railway:signal:main:form' v='light' />
+    <tag k='railway:signal:position' v='right' />
+  </node>
+  <node id='-26774' action='modify' visible='true' lat='0.00160840212' lon='0.00001699467' />
+  <node id='-26775' action='modify' visible='true' lat='0.00160968877' lon='-0.00008979724' />
+  <node id='-26776' action='modify' visible='true' lat='0.00174026393' lon='0.0001875065' />
+  <node id='-26777' action='modify' visible='true' lat='0.00203130041' lon='-0.00009067822'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:main' v='DE-ESO:ks' />
+    <tag k='railway:signal:main:form' v='sign' />
+  </node>
+  <node id='-26778' action='modify' visible='true' lat='0.00160865946' lon='-0.00000436371' />
+  <node id='-26779' action='modify' visible='true' lat='0.00187118274' lon='0.00016580153' />
+  <node id='-26780' action='modify' visible='true' lat='0.00216012913' lon='0.00007984165' />
+  <node id='-26781' action='modify' visible='true' lat='0.00202986068' lon='0.00003747179'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:speed_limit_distant' v='DE-ESO:zs3v' />
+    <tag k='railway:signal:speed_limit_distant:form' v='sign' />
+    <tag k='railway:signal:speed_limit_distant:speed' v='87' />
+  </node>
+  <node id='-26782' action='modify' visible='true' lat='0.00187221206' lon='0.00008036801' />
+  <node id='-26783' action='modify' visible='true' lat='0.00174146371' lon='0.00008071482' />
+  <node id='-26784' action='modify' visible='true' lat='0.00189477521' lon='0.0001446186' />
+  <node id='-26785' action='modify' visible='true' lat='0.00174194361' lon='0.00003799815' />
+  <node id='-26786' action='modify' visible='true' lat='0.00202890086' lon='0.00012290513'>
+    <tag k='railway' v='whatever' />
+    <tag k='workrules' v='EBO' />
+  </node>
+  <node id='-26787' action='modify' visible='true' lat='0.00160608616' lon='0.00020922011' />
+  <node id='-26788' action='modify' visible='true' lat='0.00187144007' lon='0.00014444315' />
+  <node id='-26789' action='modify' visible='true' lat='0.00202842095' lon='0.0001656218' />
+  <node id='-26790' action='modify' visible='true' lat='0.00216141578' lon='-0.00002695026' />
+  <node id='-26791' action='modify' visible='true' lat='0.00187195473' lon='0.00010172639' />
+  <node id='-26792' action='modify' visible='true' lat='0.00174050388' lon='0.00016614816' />
+  <node id='-26793' action='modify' visible='true' lat='0.00216218777' lon='-0.0000910254' />
+  <node id='-26794' action='modify' visible='true' lat='0.00187401338' lon='-0.00006914066' />
+  <node id='-26795' action='modify' visible='true' lat='0.00160737281' lon='0.0001024282' />
+  <node id='-26796' action='modify' visible='true' lat='0.00202818098' lon='0.00018698014' />
+  <node id='-26797' action='modify' visible='true' lat='0.0018724694' lon='0.00005900962' />
+  <node id='-26798' action='modify' visible='true' lat='0.00203034058' lon='-0.00000524488'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:distant' v='DE-ESO:vr' />
+    <tag k='railway:signal:distant:repeated' v='yes' />
+    <tag k='railway:signal:main:form' v='sign' />
+  </node>
+  <node id='-26799' action='modify' visible='true' lat='0.00215909981' lon='0.00016527518' />
+  <node id='-26800' action='modify' visible='true' lat='0.00189606186' lon='0.0000378267'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:minor' v='DE-ESO:sh' />
+    <tag k='railway:signal:minor:form' v='light' />
+    <tag k='railway:signal:minor:states' v='DE-ESO:sh0' />
+  </node>
+  <node id='-26801' action='modify' visible='true' lat='0.00160711547' lon='0.00012378658' />
+  <node id='-26802' action='modify' visible='true' lat='0.00202962072' lon='0.00005883013'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:speed_limit' v='DE-ESO:zs3' />
+    <tag k='railway:signal:speed_limit:form' v='sign' />
+    <tag k='railway:signal:speed_limit:speed' v='87' />
+  </node>
+  <node id='-26803' action='modify' visible='true' lat='0.00202866091' lon='0.00014426347'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:speed_limit' v='DE-ESO:db:zs10' />
+    <tag k='railway:signal:speed_limit:form' v='light' />
+  </node>
+  <node id='-26804' action='modify' visible='true' lat='0.00189631919' lon='0.00001646831'>
+    <tag k='railway:signal:minor:states' v='DE-ESO:gsp2' />
+  </node>
+  <node id='-26805' action='modify' visible='true' lat='0.00173978401' lon='0.00023022317' />
+  <node id='-26806' action='modify' visible='true' lat='0.00189426056' lon='0.00018733537' />
+  <node id='-26807' action='modify' visible='true' lat='0.0021616731' lon='-0.00004830864' />
+  <node id='-26808' action='modify' visible='true' lat='0.00187169741' lon='0.00012308477' />
+  <node id='-26809' action='modify' visible='true' lat='0.0016081448' lon='0.00003835305' />
+  <node id='-26810' action='modify' visible='true' lat='0.00189451788' lon='0.00016597699' />
+  <node id='-26811' action='modify' visible='true' lat='0.0018973485' lon='-0.00006896521'>
+    <tag k='railway:signal:distant' v='whatever' />
+    <tag k='railway:signal:main' v='DE-ESO:ks' />
+  </node>
+  <node id='-26812' action='modify' visible='true' lat='0.00174314339' lon='-0.00006879353' />
+  <node id='-26813' action='modify' visible='true' lat='0.00174122374' lon='0.00010207315' />
+  <node id='-26814' action='modify' visible='true' lat='0.00160634348' lon='0.00018786172' />
+  <node id='-26815' action='modify' visible='true' lat='0.00187324139' lon='-0.00000506552' />
+  <node id='-26816' action='modify' visible='true' lat='0.00203106046' lon='-0.00006931989'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:main' v='DE-ESO:hl' />
+    <tag k='railway:signal:main:form' v='sign' />
+  </node>
+  <node id='-26817' action='modify' visible='true' lat='0.00160788747' lon='0.00005971143' />
+  <node id='-26818' action='modify' visible='true' lat='0.00187041075' lon='0.00022987668' />
+  <node id='-26819' action='modify' visible='true' lat='0.00160582882' lon='0.00023057849' />
+  <node id='-26820' action='modify' visible='true' lat='0.00215961446' lon='0.00012255841' />
+  <node id='-26821' action='modify' visible='true' lat='0.00189657653' lon='-0.00000489007'>
+    <tag k='railway:signal:train_protection' v='DE-ESO:ne14' />
+    <tag k='railway:signal:train_protection:type' v='whatever' />
+  </node>
+  <node id='-26822' action='modify' visible='true' lat='0.00160763013' lon='0.00008106982' />
+  <node id='-26823' action='modify' visible='true' lat='0.00189580454' lon='0.00005918508'>
+    <tag k='railway' v='signal' />
+    <tag k='railway:signal:brake_test:form' v='sign' />
+    <tag k='railway:signal:brake_test:states' v='DE-ESO:db:zp6' />
+  </node>
+  <node id='-26824' action='modify' visible='true' lat='0.00202794103' lon='0.00020833848' />
+  <node id='-26825' action='modify' visible='true' lat='0.00160685815' lon='0.00014514496' />
+  <node id='-26826' action='modify' visible='true' lat='0.00189400322' lon='0.00020869375' />
+  <node id='-26827' action='modify' visible='true' lat='0.00187272672' lon='0.00003765124' />
+  <node id='-26828' action='modify' visible='true' lat='0.00174338334' lon='-0.00009015187' />
+  <node id='-26829' action='modify' visible='true' lat='0.00215987179' lon='0.00010120003' />
+  <node id='-26830' action='modify' visible='true' lat='0.00174170366' lon='0.00005935648' />
+  <node id='-26831' action='modify' visible='true' lat='0.00174074383' lon='0.00014478983' />
+  <node id='-26832' action='modify' visible='true' lat='0.00187298405' lon='0.00001629286' />
+  <node id='-26833' action='modify' visible='true' lat='0.00215858515' lon='0.00020799194' />
+  <node id='-26834' action='modify' visible='true' lat='0.00160660082' lon='0.00016650334' />
+  <node id='-26835' action='modify' visible='true' lat='0.00160891678' lon='-0.00002572209' />
+  <node id='-26836' action='modify' visible='true' lat='0.00203010063' lon='0.00001611346'>
+    <tag k='railway:signal:minor:states' v='DE-ESO:sh0;DE-ESO:gsp2' />
+  </node>
+  <node id='-26837' action='modify' visible='true' lat='0.00215935714' lon='0.00014391679' />
+  <node id='-26838' action='modify' visible='true' lat='0.00216064378' lon='0.00003712489' />
+  <node id='-26839' action='modify' visible='true' lat='0.00160943145' lon='-0.00006843886' />
+  <node id='-26840' action='modify' visible='true' lat='0.00215832782' lon='0.00022935032' />
+  <way id='-930' action='modify' visible='true'>
+    <nd ref='-26775' />
+    <nd ref='-26828' />
+    <nd ref='-26760' />
+    <tag k='name' v='Frankenbahn' />
+    <tag k='railway' v='whatever' />
+  </way>
+  <way id='-931' action='modify' visible='true'>
+    <nd ref='-26774' />
+    <nd ref='-26753' />
+    <nd ref='-26832' />
+  </way>
+  <way id='-932' action='modify' visible='true'>
+    <nd ref='-26759' />
+    <nd ref='-26746' />
+    <nd ref='-26765' />
+    <tag k='railway' v='whatever' />
+    <tag k='ref' v='1234' />
+  </way>
+  <way id='-933' action='modify' visible='true'>
+    <nd ref='-26795' />
+    <nd ref='-26813' />
+    <nd ref='-26791' />
+  </way>
+  <way id='-934' action='modify' visible='true'>
+    <nd ref='-26773' />
+    <nd ref='-26766' />
+    <nd ref='-26780' />
+    <tag k='railway' v='whatever' />
+    <tag k='ref' v='999.9-9' />
+  </way>
+  <way id='-935' action='modify' visible='true'>
+    <nd ref='-26826' />
+    <nd ref='-26824' />
+    <nd ref='-26833' />
+  </way>
+  <way id='-936' action='modify' visible='true'>
+    <nd ref='-26823' />
+    <nd ref='-26802' />
+    <nd ref='-26767' />
+    <tag k='name' v='888.8' />
+    <tag k='railway' v='whatever' />
+  </way>
+  <way id='-937' action='modify' visible='true'>
+    <nd ref='-26801' />
+    <nd ref='-26769' />
+    <nd ref='-26808' />
+  </way>
+  <way id='-938' action='modify' visible='true'>
+    <nd ref='-26835' />
+    <nd ref='-26762' />
+    <nd ref='-26755' />
+  </way>
+  <way id='-939' action='modify' visible='true'>
+    <nd ref='-26814' />
+    <nd ref='-26776' />
+    <nd ref='-26754' />
+  </way>
+  <way id='-940' action='modify' visible='true'>
+    <nd ref='-26784' />
+    <nd ref='-26803' />
+    <nd ref='-26837' />
+    <tag k='railway' v='whatever' />
+    <tag k='workrules' v='BOA' />
+  </way>
+  <way id='-941' action='modify' visible='true'>
+    <nd ref='-26756' />
+    <nd ref='-26777' />
+    <nd ref='-26793' />
+    <tag k='name' v='KBS 111.1' />
+    <tag k='railway' v='whatever' />
+  </way>
+  <way id='-942' action='modify' visible='true'>
+    <nd ref='-26821' />
+    <nd ref='-26798' />
+    <nd ref='-26748' />
+    <tag k='name' v='VzG 555.5' />
+    <tag k='railway' v='whatever' />
+  </way>
+  <way id='-943' action='modify' visible='true'>
+    <nd ref='-26822' />
+    <nd ref='-26783' />
+    <nd ref='-26782' />
+  </way>
+  <way id='-944' action='modify' visible='true'>
+    <nd ref='-26834' />
+    <nd ref='-26792' />
+    <nd ref='-26779' />
+    <tag k='railway' v='whatever' />
+    <tag k='workrules' v='DE-BoStrab' />
+  </way>
+  <way id='-945' action='modify' visible='true'>
+    <nd ref='-26809' />
+    <nd ref='-26785' />
+    <nd ref='-26827' />
+  </way>
+  <way id='-946' action='modify' visible='true'>
+    <nd ref='-26806' />
+    <nd ref='-26796' />
+    <nd ref='-26764' />
+    <tag k='railway' v='whatever' />
+    <tag k='workrules' v='DE-EBO' />
+  </way>
+  <way id='-947' action='modify' visible='true'>
+    <nd ref='-26747' />
+    <nd ref='-26761' />
+    <nd ref='-26829' />
+    <tag k='railway' v='whatever' />
+    <tag k='ref' v='000' />
+  </way>
+  <way id='-948' action='modify' visible='true'>
+    <nd ref='-26811' />
+    <nd ref='-26816' />
+    <nd ref='-26752' />
+    <tag k='name' v='Kursbuchstrecke 222.2' />
+    <tag k='railway' v='whatever' />
+  </way>
+  <way id='-949' action='modify' visible='true'>
+    <nd ref='-26771' />
+    <nd ref='-26758' />
+    <nd ref='-26807' />
+    <tag k='railway' v='whatever' />
+    <tag k='ref' v='Kursbuchstrecke 333.3' />
+  </way>
+  <way id='-950' action='modify' visible='true'>
+    <nd ref='-26787' />
+    <nd ref='-26749' />
+    <nd ref='-26750' />
+  </way>
+  <way id='-951' action='modify' visible='true'>
+    <nd ref='-26804' />
+    <nd ref='-26836' />
+    <nd ref='-26745' />
+    <tag k='railway' v='whatever' />
+    <tag k='ref' v='6666-6' />
+  </way>
+  <way id='-952' action='modify' visible='true'>
+    <nd ref='-26778' />
+    <nd ref='-26772' />
+    <nd ref='-26815' />
+  </way>
+  <way id='-953' action='modify' visible='true'>
+    <nd ref='-26839' />
+    <nd ref='-26812' />
+    <nd ref='-26794' />
+    <tag k='railway' v='whatever' />
+  </way>
+  <way id='-954' action='modify' visible='true'>
+    <nd ref='-26810' />
+    <nd ref='-26789' />
+    <nd ref='-26799' />
+    <tag k='railway' v='whatever' />
+    <tag k='workrules' v='DE-BOStrab' />
+  </way>
+  <way id='-955' action='modify' visible='true'>
+    <nd ref='-26751' />
+    <nd ref='-26770' />
+    <nd ref='-26840' />
+  </way>
+  <way id='-956' action='modify' visible='true'>
+    <nd ref='-26768' />
+    <nd ref='-26763' />
+    <nd ref='-26790' />
+    <tag k='railway' v='whatever' />
+    <tag k='ref' v='VzG 444.4' />
+  </way>
+  <way id='-957' action='modify' visible='true'>
+    <nd ref='-26825' />
+    <nd ref='-26831' />
+    <nd ref='-26788' />
+  </way>
+  <way id='-958' action='modify' visible='true'>
+    <nd ref='-26800' />
+    <nd ref='-26781' />
+    <nd ref='-26838' />
+    <tag k='name' v='7777' />
+    <tag k='railway' v='whatever' />
+  </way>
+  <way id='-959' action='modify' visible='true'>
+    <nd ref='-26819' />
+    <nd ref='-26805' />
+    <nd ref='-26818' />
+  </way>
+  <way id='-960' action='modify' visible='true'>
+    <nd ref='-26817' />
+    <nd ref='-26830' />
+    <nd ref='-26797' />
+  </way>
+  <way id='-961' action='modify' visible='true'>
+    <nd ref='-26757' />
+    <nd ref='-26786' />
+    <nd ref='-26820' />
+    <tag k='railway' v='whatever' />
+    <tag k='workrules' v='EBO' />
+  </way>
+</osm>
