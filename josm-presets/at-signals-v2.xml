@@ -1423,7 +1423,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				de.text="Standortangabe (z. B. '13.427')"
 				/>
 		</item>
-		<item name="Signalnachahmer" type="node">
+		<item name="Signalnachahmer" icon="at/signalnachahmer_frei.svg" type="node">
 			<label text="Signalnachahmer" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
