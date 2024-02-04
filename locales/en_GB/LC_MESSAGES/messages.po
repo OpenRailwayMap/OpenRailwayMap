@@ -153,6 +153,9 @@ msgstr "Max speeds"
 msgid "Electrification"
 msgstr "Electrification"
 
+msgid "Track gauge"
+msgstr ""
+
 msgid "Halt"
 msgstr "Halt"
 
@@ -657,9 +660,6 @@ msgstr ""
 msgid "Zs 10 Endesignal (Tafel)"
 msgstr ""
 
-msgid "Zs 6 Gegengleisanzeiger"
-msgstr "Zs 6 wrong road signal"
-
 msgid "El 1 Ausschaltsignal"
 msgstr ""
 
@@ -927,3 +927,36 @@ msgstr ""
 
 msgid "Monorail"
 msgstr ""
+
+msgid "LZB - Linienzugbeeinflussung"
+msgstr ""
+
+msgid "ATC - Automatic train control"
+msgstr ""
+
+msgid "PZB - Punktförmige Zugbeeinflussung"
+msgstr ""
+
+msgid "No train protection"
+msgstr ""
+
+msgid "SCMT - Sistema Controllo Marcia Treno"
+msgstr ""
+
+msgid "PTC - Positive Train Control (N. Am.)"
+msgstr ""
+
+msgid "ZSI 127 - Trainguard ZSI 127"
+msgstr ""
+
+msgid "No information available"
+msgstr ""
+
+msgid "ASFA - Anuncio de Señales y Frenado Automático"
+msgstr ""
+
+msgid "ETCS - European Train Control System"
+msgstr ""
+
+msgid "Zs 6 Gegengleisanzeiger"
+msgstr "Zs 6 wrong road signal"
