@@ -2,7 +2,7 @@
 # This program comes with ABSOLUTELY NO WARRANTY.
 # This is free software, and you are welcome to redistribute it under certain conditions.
 # See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
-# 
+#
 # Translators:
 # FreedSky <qa003qa003@hotmail.com>, 2020
 # Lepuse <stevel2520@gmail.com>, 2022
@@ -145,6 +145,9 @@ msgstr "最高速度"
 
 msgid "Electrification"
 msgstr "电气化"
+
+msgid "Track gauge"
+msgstr ""
 
 msgid "Halt"
 msgstr "乘降所"
@@ -917,3 +920,36 @@ msgstr ""
 
 msgid "Monorail"
 msgstr "单轨"
+
+msgid "LZB - Linienzugbeeinflussung"
+msgstr ""
+
+msgid "ATC - Automatic train control"
+msgstr ""
+
+msgid "PZB - Punktförmige Zugbeeinflussung"
+msgstr ""
+
+msgid "No train protection"
+msgstr ""
+
+msgid "SCMT - Sistema Controllo Marcia Treno"
+msgstr ""
+
+msgid "PTC - Positive Train Control (N. Am.)"
+msgstr ""
+
+msgid "ZSI 127 - Trainguard ZSI 127"
+msgstr ""
+
+msgid "No information available"
+msgstr ""
+
+msgid "ASFA - Anuncio de Señales y Frenado Automático"
+msgstr ""
+
+msgid "ETCS - European Train Control System"
+msgstr ""
+
+msgid "Zs 6 Gegengleisanzeiger"
+msgstr ""

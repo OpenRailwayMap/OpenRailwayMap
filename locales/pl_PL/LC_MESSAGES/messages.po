@@ -166,6 +166,9 @@ msgstr "Maksymalne prędkości"
 msgid "Electrification"
 msgstr "Elektryfikacja"
 
+msgid "Track gauge"
+msgstr ""
+
 msgid "Halt"
 msgstr "Przystanek"
 
@@ -761,8 +764,7 @@ msgid "distant signal with Eo 1 (new type, old type)"
 msgstr "semafor ostrzegawczy z Eo 1 (nowy typ, stary typ)"
 
 msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
-"Semafor świetlny Vr bez Vr 2 (zwykły, powtarzacz / skrócona droga hamowania)"
+msgstr "Semafor świetlny Vr bez Vr 2 (zwykły, powtarzacz / skrócona droga hamowania)"
 
 msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
 msgstr "Tarcza zatrzymania Sh (zwykła, karzełkowa)"
@@ -778,9 +780,7 @@ msgstr "Wskaźnik podniesienia pantografu El 5"
 
 msgid ""
 "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
-"Semafor świetlny Vr bez informacji o stanie (zwykły, powtarzacz / skrócona "
-"droga hamowania)"
+msgstr "Semafor świetlny Vr bez informacji o stanie (zwykły, powtarzacz / skrócona droga hamowania)"
 
 msgid "distant signal without aspects given (new type, old type)"
 msgstr "semafor ostrzegawczy o nieokreślonych wskazaniach (nowy typ, stary typ)"
@@ -940,3 +940,36 @@ msgstr "700 mm"
 
 msgid "Monorail"
 msgstr "Jednoszynowy"
+
+msgid "LZB - Linienzugbeeinflussung"
+msgstr ""
+
+msgid "ATC - Automatic train control"
+msgstr ""
+
+msgid "PZB - Punktförmige Zugbeeinflussung"
+msgstr ""
+
+msgid "No train protection"
+msgstr ""
+
+msgid "SCMT - Sistema Controllo Marcia Treno"
+msgstr ""
+
+msgid "PTC - Positive Train Control (N. Am.)"
+msgstr ""
+
+msgid "ZSI 127 - Trainguard ZSI 127"
+msgstr ""
+
+msgid "No information available"
+msgstr ""
+
+msgid "ASFA - Anuncio de Señales y Frenado Automático"
+msgstr ""
+
+msgid "ETCS - European Train Control System"
+msgstr ""
+
+msgid "Zs 6 Gegengleisanzeiger"
+msgstr ""
