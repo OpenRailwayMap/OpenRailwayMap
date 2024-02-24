@@ -105,6 +105,14 @@ way[railway][railway!=platform][railway!=platform_edge][!workrules]
 	assertNoMatch: "way railway=rail workrules=EBO";
 }
 
+/* Workrules should be used on ways */
+node[railway][workrules]
+{
+	throwError: "workrules should be used on ways and not on nodes.";
+	assertMatch: "node railway=rail workrules=EBO";
+	assertNoMatch: "way railway=rail workrules=EBO";
+}
+
 /* operator is not necessary for signals and milestones if equal to track operator */
 way[railway][operator] > node[railway=signal][operator]
 {

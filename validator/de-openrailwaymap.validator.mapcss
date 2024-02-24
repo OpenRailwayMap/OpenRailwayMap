@@ -399,3 +399,16 @@ node|z16-[railway=signal]["railway:signal:speed_limit"="DE-ESO:db:zs10"]["railwa
 	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:db:zs1\" railway:signal:speed_limit:form=light";
 	assertNoMatch: "node railway=signal railway:signal:speed_limit=\"DE-ESO:db:zs10\" railway:signal:speed_limit:form=sign";
 }
+
+/* It is not possible that a main or combined signal both has a substitute signal and no substitute signal */
+node[railway=signal]["railway:signal:main:substitute_signal"=~/;no|no;/],
+node[railway=signal]["railway:signal:combined:substitute_signal"=~/;no|no;/]
+{
+	throwError: "It is not possible that a main or combined signal both has a substitute signal and has no substitute signal.";
+	assertMatch: "node railway=signal railway:signal:main:substitute_signal=\"DE-ESO:zs1;no\"";
+	assertMatch: "node railway=signal railway:signal:main:substitute_signal=\"no;?\"";
+	assertMatch: "node railway=signal railway:signal:main:substitute_signal=\"?;no\"";
+	assertMatch: "node railway=signal railway:signal:main:substitute_signal=\";no\"";
+	assertNoMatch: "node railway=signal railway:signal:main:substitute_signal=no";
+}
+
