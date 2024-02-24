@@ -19,16 +19,15 @@ OpenRailwayMap requires Linux. It might work on other Unix-like systems if you d
 
 Required versions:
 
-* PostgreSQL >= 9.3
-* osm2pgsql >= 0.96.0
-* Apache >= 2.4
+* PostgreSQL
+* osm2pgsql
+* Apache
 
 ```shell
-$ apt-get install postgresql postgis osm2pgsql wget nodejs npm bc git osmium-tool tar gzip
-$ apt-get install postgresql-common php-gettext unzip zip python3-pip npm nodejs wget php-pgsql libapache2-mod-php apache2 python3-pil python3-cairo python3-ply zlib1g-dev
+$ apt-get install postgresql postgis osm2pgsql wget bc git osmium-tool tar gzip nodejs npm
+$ apt-get install postgresql-common php-gettext unzip zip python3-pip wget php-pgsql libapache2-mod-php libapache2-mod-wsgi-py3 apache2 python3-pil python3-cairo python3-ply zlib1g-dev
 $ apt-get install git build-essential g++ make zip
 $ apt-get install apache2 apache2-dev
-$ apt-get install nodejs-legacy # see https://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu for the reason
 # in case you want to build osm2pgsql from sources
 $ apt-get install cmake
 ```
@@ -55,19 +54,18 @@ Install Leaflet and the Leaflet extension that provides the edit link:
 $ make install-deps
 ```
 
- Install osm2pgsql 0.96.0 or greater (Ubuntu and Debian users may use their `osm2pgsql` package provided by their distribution instead, if it's new enough):
+ Install osm2pgsql 0.96.0 or greater:
 
 ```shell
 $ cd import
-$ wget https://github.com/openstreetmap/osm2pgsql/archive/0.96.0.tar.gz
-$ tar -xvzf 0.96.0.tar.gz
+$ wget https://github.com/openstreetmap/osm2pgsql/archive/1.9.2.tar.gz
+$ tar -xvzf 1.9.2.tar.gz
 $ mkdir osm2pgsql-build
 $ cd osm2pgsql-build
-$ cmake ../osm2pgsql-0.96.0
+$ cmake ../osm2pgsql-1.9.2
 $ make
 $ sudo make install
 $ cd ..
-$ rm -fr osm2pgsql-build osm2pgsql-0.96.0 0.96.0.tar.gz
 ```
 
 ## Setting Up the Database
@@ -82,8 +80,7 @@ $ sudo -u postgres createuser openrailwaymap
 $ sudo -u postgres createdb -E UTF8 -O osmimport openrailwaymap
 
 $ sudo -u postgres psql -d openrailwaymap -c "CREATE EXTENSION postgis;"
-$ sudo -u postgres psql -d openrailwaymap -c "CREATE EXTENSION postgis_topology;"
-$ sudo -u postgres psql -d openrailwaymap -c "CREATE EXTENSION postgis_sfcgal;"
+$ sudo -u postgres psql -d openrailwaymap -c "CREATE EXTENSION unaccent;"
 $ sudo -u postgres psql -d openrailwaymap -c "CREATE EXTENSION hstore;"
 ```
 
@@ -92,6 +89,7 @@ For authentication to the database, we are using `peer` method for connections u
 ```
 local   replication     all     peer
 local   gis     osmimport       peer
+local   gis     openrailwaymap       peer
 local   gis     tirex   peer
 local   all     postgres        peer
 local   all     all     peer
@@ -99,26 +97,6 @@ host    replication     all     127.0.0.1/32    md5
 host    replication     all     ::1/128 md5
 host    all     all     127.0.0.1/32    md5
 host    all     all     ::1/128 md5
-```
-
- The database password is managed in a `pgpass` file. Create a `pgpass` file (or edit the existing one) in the home directory of the user that will be used for running the processes of API:
-
-```shell
-$ vim ~/.pgpass
-```
-
- Add a line with this format:
-
-    hostname:port:database:username:password
-
- in this example (replace `YOURPASSWORD` by the password you entered in the `createuser` command):
-
-    localhost:5432:openrailwaymap:openrailwaymap:YOURPASSWORD
-
- Then set the correct file permissions:
-
-```shell
-$ chmod 600 ~/.pgpass
 ```
 
  It is important to configure the maximum number of concurrent connections to your PostgreSQL database. Otherwise it can happen that for example the database update fails because of missing free database connections. Search for the setting `max_connections` in your `/etc/postgresql/11/main/postgresql.conf` and choose a value which is equal to or greater than the result of the following formula. If there are more applications connecting to PostgreSQL on your system, you have to consider them too in this calculation.
@@ -132,19 +110,19 @@ Clone the server configuration repository:
 ```shell
 mkdir /srv/OpenRailwayMap-setup
 git clone https://github.com/OpenRailwayMap/server-admin.git /srv/OpenRailwayMap-setup/
-cd /srv/OpenRailwayMap-setup/scripts
+cd /srv/OpenRailwayMap-setup/ansible/role/tileserver/files/scripts
 ```
 
-Edit `/srv/OpenRailwayMap-setup/scripts/config.cfg`:
+Edit `/srv/OpenRailwayMap-setup/ansible/role/tileserver/files/scripts/config.cfg`:
 
 * Replace the link to the planet dump by a [nearby mirror](https://wiki.openstreetmap.org/wiki/Planet.osm#Planet.osm_mirrors) (planet.openstreetmap.org is rate-limited!).
 * Set `OSM_DIR=/data/planet`
-* Set `OSM2PGSQL_FLATNODES` to a path where an about 50 GB large file of OSM node locations fits. This should be located on a SSD or NVMe drive! Leave it empty if you do not want to cache node locations on disk but prefer to use a database table.
+* Set `OSM2PGSQL_FLATNODES` to a path where an about 70 GB large file of OSM node locations fits. This should be located on a SSD or NVMe drive! Leave it empty if you do not want to cache node locations on disk but prefer to use a database table.
 
 Run the import as user `osmimport` now (using a screen/Tmux session is recommended because it takes about an hour):
 
 ```shell
-sudo -u osmimport /srv/OpenRailwayMap-scripts/scripts/import.sh
+sudo -u osmimport /srv/OpenRailwayMap-setup/ansible/role/tileserver/files/scripts/import.sh
 ```
 
 
@@ -197,9 +175,10 @@ sudo -u osmimport /srv/OpenRailwayMap-scripts/scripts/import.sh
 </VirtualHost>
 ```
 
- API is served by api.js which listens on port 9002, therefore we forward incoming request to this port.
- Create a ProxyPass exception and Alias for the timestamp file, so that it is accessible under http://api.openrailwaymap.org/timestamp.
- Vhost configuration of the API (`api.openrailwaymap.org.conf`) looks like this:
+API is served by a Python WSGI application available in a [separate GIt repository](https://github.com/OpenRailwayMap/OpenRailwayMap-api).
+It requires the Apache modules *wsgi*.
+
+Vhost configuration of the API (`api.openrailwaymap.org.conf`) looks like this:
 
 ```ApacheConf
 <VirtualHost *:80>
@@ -215,36 +194,19 @@ sudo -u osmimport /srv/OpenRailwayMap-scripts/scripts/import.sh
         ForceType text/plain
     </location>
 
-    ProxyPreserveHost On
-    ProxyPass / http://localhost:9002/
-    ProxyPassReverse / http://localhost:9002/
+    WSGIDaemonProcess api_v2 python-path=/opt/OpenRailwayMap-api processes=4 threads=1 user=openrailwaymap
+    WSGIScriptAlias /v2 /opt/OpenRailwayMap-api/api.py
+    WSGIProcessGroup api_v2
+
+    <Location /v2>
+        Require all granted
+    </Location>
 
     ErrorLog /var/log/httpd/api.openrailwaymap.org.error.log
     LogLevel warn
     CustomLog /var/log/httpd/api.openrailwaymap.org.access.log combined
 </VirtualHost>
 ```
-
- Tileserver is served by tileserver.js which listens on port 9000, therefore we forward incoming request to this port.
- Vhost configuration of the API (`tiles.openrailwaymap.org.conf`) looks like this:
-
-```ApacheConf
-<VirtualHost *:80>
-    ServerName tiles.openrailwaymap.org
-    ServerAlias a.tiles.openrailwaymap.org b.tiles.openrailwaymap.org c.tiles.openrailwaymap.org
-
-    ProxyPreserveHost On
-    ProxyPass / http://localhost:9000/
-    ProxyPassReverse / http://localhost:9000/
-    ProxyPass /server-status !
-
-    ErrorLog /var/log/httpd/tiles.openrailwaymap.org.error.log
-    LogLevel warn
-    CustomLog /var/log/httpd/tiles.openrailwaymap.org.access.log combined
-</VirtualHost>
-```
-
-Make sure that your server does not accept request on port 9000 and 9002 from outside (to circumvent the proxy and its logging).
 
 ## Setting up the Tileserver and the Mapnik map style
 
@@ -283,10 +245,10 @@ Build Tirex for Debian/Ubuntu:
 ```shell
 mkdir ~/tirex
 cd ~/tirex
-wget -O tirex-0.6.3.tar.gz https://github.com/openstreetmap/tirex/archive/v0.6.3.tar.gz
-tar -xvzf tirex-0.6.3.tar.gz
-cd tirex-0.6.3
-rm ../tirex-0.6.3.tar.gz
+wget -O tirex-0.7.0.tar.gz https://github.com/openstreetmap/tirex/archive/v0.7.0.tar.gz
+tar -xvzf tirex-0.7.0.tar.gz
+cd tirex-0.7.0
+rm ../tirex-0.7.0.tar.gz
 debuild
 ```
 
@@ -337,8 +299,8 @@ sudo -u postgres psql -d gis "GRANT SELECT ON ALL TABLES IN SCHEMA public TO tir
 Create a symlink to Tirex's location of the tile cache:
 
 ```shell
-ln -s /var/lib/tirex/tiles /var/lib/mod_tile
-chown tirex:tirex /var/lib/tirex/tiles
+ln -s /var/cache/tirex/tiles /var/lib/mod_tile
+chown tirex:tirex /var/cache/tirex/tiles
 ```
 
 Ensure that the Tirex configuration contains the correct Mapnik plugin path, Syslog facility and font directory, and that the recursive search on the font directory is enabled. The file `/etc/tirex/renderer/mapnik.conf` should contain the following lines:
@@ -380,6 +342,7 @@ AddTileConfig            /standard standard
 AddTileConfig            /maxspeed maxspeed
 AddTileConfig            /signals signals
 AddTileConfig            /electrification electrification
+AddTileConfig            /gauge gauge
 ModTileRequestTimeout 0
 ModTileMissingRequestTimeout 90
 ModTileMaxLoadOld 4
@@ -398,17 +361,17 @@ CustomLog /var/log/apache2/tiles.access.log combined
 Create tile cache directories for all the styles:
 
 ```shell
-mkdir /var/lib/tirex/tiles/standard
-mkdir /var/lib/tirex/tiles/maxspeed
-mkdir /var/lib/tirex/tiles/signals
-mkdir /var/lib/tirex/tiles/electrification
+for STYLE in standard maxspeed signals electrification gauge ; do
+    mkdir /var/cache/tirex/tiles/$STYLE
+    chown tirex:tirex /var/cache/tirex/tiles/$STYLE
+done
 ```
 
 Now create configurations for each map style. The files should be called `/etc/tirex/renderer/mapnik/STYLENAME.conf` where `STYLENAME` is the name of the map styles (`standard`, `maxspeed`, `signals`, `electrification`). Each of the files should have the following content (don't forget to replace `STYLENAME` with then name of the style):
 
 ```
 name=STYLENAME
-tiledir=/var/lib/tirex/tiles/STYLENAME
+tiledir=/var/cache/tirex/tiles/STYLENAME
 minz=0
 maxz=19
 mapfile=/opt/OpenRailwayMap-CartoCSS/STYLENAME.xml
@@ -435,7 +398,7 @@ done
 
 You can monitor the tile rendering queue using the `tirex-status` command.
 
-## Setting up the MapCSS map style (for legend and JOSM)
+## Setting up the MapCSS map style (for map key and JOSM)
 
 Now get the code for node-tileserver:
 
@@ -464,42 +427,21 @@ $ npm install
 
 ## Setting up the API
 
- In case your system uses systemd you can install the unit file for the API server:
+In order to make the API work, you have to create some database views and indexes for the API
+and have to install its Python code.
+
+Mind that the following commands require a complete database import (see above).
 
 ```shell
-$ cd /var/www/html/OpenRailwayMap/api
-$ sudo make install-systemd
+$ mkdir /opt/OpenRailwayMap-api
+$ git clone https://github.com/OpenRailwayMap/OpenRailwayMap-api.git /opt/OpenRailwayMap-api
+$ cd /opt/OpenRailwayMap-api
+$ sudo -u osmimport psql -d gis -f prepare_facilities.sql
+$ sudo -u osmimport psql -d gis -f prepare_milestones.sql
+$ sudo -u osmimport psql -d gis -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO openrailwaymap;"
 ```
 
- The user and group the service will run defaults to "openrailwaymap", you can change this in the makefile or by passing the ORM_USER or ORM_GROUP variables to make.
-
- If you are not using systemd either write an init script or start the server in a screen session.
-
- After that you can install all necessary NodeJS modules with npm:
-
-```shell
-$ npm install
-```
-
-Create database views:
-
-```
-sudo -u postgres psql -d gis -f api/api_views_and_indexes.sql
-```
-
-The [SQL file](https://github.com/OpenRailwayMap/server-admin/blob/master/ansible/roles/website/files/api_views_and_indexes.sql) can be found in the [Ansible playbooks](https://github.com/OpenRailwayMap/server-admin/tree/master/ansible).
-
- Start the API server:
-
-```shell
-$ sudo systemctl start orm-api.service
-```
-
- Optionally enable autostart:
-
-```shell
-$ sudo systemctl enable orm-api.service
-```
+ The user and group the service will run defaults to "openrailwaymap", you can change this in the Apache configuration.
 
 ## Enabling New Apache Configuration
 
@@ -507,8 +449,7 @@ $ sudo systemctl enable orm-api.service
  hosts and restart Apache. On Ubuntu/Debian this is done using
 
 ```shell
-$ a2enmod proxy
-$ a2enmod proxy_http
+$ a2enmod wsgi
 $ cd /etc/apache2/site-available
 $ a2ensite www.openrailwaymap.org.conf
 $ a2ensite api.openrailwaymap.org.conf
@@ -518,8 +459,8 @@ $ a2ensite tiles.openrailwaymap.org.conf
  On other distros this is done by adding following entries to your Apache configuration (vhost do not have to be enabled because your Apache configuration contains `IncludeOptional /etc/apache2/vhosts.d/*.conf`. Check that the proxy modules are enabled. `httpd.conf should contain
 
 ```ApacheConf
-LoadModule mod_proxy
-LoadModule mod_proxy_http
+LoadModule mod_wsgi
+LoadModule mod_tile
 ```
 
 Now restart Apache (the daemon is called *httpd* on some systems):
