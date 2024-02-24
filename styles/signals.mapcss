@@ -643,6 +643,21 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=
 	allow-overlap: true;
 }
 
+/*********************************************/
+/* Fouling point marker Ra12 in german style */
+/*********************************************/
+node|z17-[railway=signal]["railway:signal:fouling_point"="DE-ESO:ra12"],
+node|z17-[railway=signal]["railway:signal:fouling_point"="DE-BOStrab:sh6"],
+node|z17-[railway=signal]["railway:signal:fouling_point"="PL-PKP:w17"]
+{
+	z-index: 2800;
+	icon-image: "icons/de/ra12.png";
+	icon-width: 16;
+	icon-height: 11;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /*********************************************************/
 /* DE minor light dwarf signals type Sh                  */
 /* -also all other sh light signals that cannot show sh1 */

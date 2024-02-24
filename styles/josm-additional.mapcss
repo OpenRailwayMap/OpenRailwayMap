@@ -133,7 +133,7 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 	icon-image: "icons/de/lf7-empty-sign-32.png";
 }
 
-node|z16-[railway=signal][!"railway:signal:direction"]
+node|z16-[railway=signal][!"railway:signal:direction"][!"railway:signal:fouling_point"]
 {
 	z-index: 1000;
 	icon-image: "presets/misc/deprecated.svg";
