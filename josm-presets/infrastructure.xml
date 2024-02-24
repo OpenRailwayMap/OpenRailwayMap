@@ -562,7 +562,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<combo key="railway:switch"
 				text="Switch type"
 				de.text="Weichentyp"
-				values="default,three_way,single_slip,double_slip,outer_curved,inner_curved,wye,abt"
+				values="default,three_way,single_slip,double_slip,inner_curved,outer_curved,wye,abt"
 				display_values="default switch,three way switch,single slip switch,double slip switch,inner curved switch,outer curved switch,wye switch,abt switch"
 				de.display_values="Einfache Weiche,Dreiwegweiche,einfache Kreuzungsweiche,Doppelkreuzungsweiche,Innenbogenweiche,Außenbogenweiche,Y-Weiche,Abtsche Weiche"
 				/>
