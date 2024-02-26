@@ -464,3 +464,39 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 	icon-height: 18;
 	allow-overlap: true;
 }
+
+/***********************************************************************/
+/* AT Bahnhof-Streckentrennung Anfang */
+/***********************************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:bahnhof-streckentrennung_anfang"]["railway:signal:electricity:type"="pantograph_down"]["railway:signal:electricity:form"=sign]
+{
+	z-index: 430;
+	icon-image: "icons/at/bahnhof-streckentrennung_anfang.svg";
+	icon-width: 15;
+	icon-height: 24;
+	allow-overlap: true;
+}
+
+/***********************************************************************/
+/* AT Bahnhof-Streckentrennung Ende */
+/***********************************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:bahnhof-streckentrennung_ende"]["railway:signal:electricity:type"="pantograph_up"]["railway:signal:electricity:form"=sign]
+{
+	z-index: 430;
+	icon-image: "icons/at/bahnhof-streckentrennung_ende.svg";
+	icon-width: 15;
+	icon-height: 24;
+	allow-overlap: true;
+}
+
+/***********************************************************************/
+/* AT Schaltzeiger */
+/***********************************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:schaltzeiger"]["railway:signal:electricity:type"="power_indicator"]["railway:signal:electricity:form"=semaphore]["railway:signal:electricity:states"=AT-V2:eingeschaltet;AT-V2:ausgeschaltet]
+{
+	z-index: 420;
+	icon-image: "icons/at/schaltzeiger.svg";
+	icon-width: 20;
+	icon-height: 20;
+	allow-overlap: true;
+}
