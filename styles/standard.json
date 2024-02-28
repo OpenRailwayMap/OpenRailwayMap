@@ -268,8 +268,15 @@
 				"properties": {
 					"razed:railway":"rail",
 					"railway":"razed"
-				}
-			}],
+					
+				}},					
+				{"type": "LineString",
+				"coordinates": [[10,50],[60,50]],
+				"properties": {
+					"dismantled:railway":"rail",
+					"railway":"dismantled"
+				}}			
+			],
 			"caption": "Razed track"
 		},
 		{
