@@ -45,12 +45,6 @@ function Startposition(map)
 		else
 			self.setPosition();
 	};
-
-	// add marker
-	var marker = L.marker([params['lat'], params['lon']], {
-		src: "https://openrailwaymap.org/js/images/marker-icon.png"
-	});
-	marker.addTo(this.map);
 	
 	// permalink given
 	if (params['lat'] && params['lon'])
@@ -58,6 +52,16 @@ function Startposition(map)
 		if (!params['zoom'])
 			params['zoom'] = 17;
 		this.map.setView(new L.LatLng(params['lat'], params['lon']), params['zoom']);
+
+		// add marker
+		if (params['marker'])			
+		{
+			var marker = L.marker([params['lat'], params['lon']], 
+			      	{
+					src: "https://openrailwaymap.org/js/images/marker-icon.png"
+				});
+			marker.addTo(this.map);
+		}
 	}
 	// milestone given
 	else if (params['position'] && params['line'])
