@@ -40,7 +40,6 @@
 		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
 
 		<script type="text/javascript" src="js/leaflet.js"></script>
-		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
 		<?php
 			urlArgsToParam(false, $urlbase);
 		?>
