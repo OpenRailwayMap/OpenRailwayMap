@@ -2244,6 +2244,44 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Frequenz (falls angezeigt)"
 					/>
 			</item>
+			<item name="Isolated overlap signals" de.name="Elektrische Streckentrennung" icon="de/el-begin-isolated-overlap-30.png" type="node">
+				<label text="Isolated overlap signs" de.text="Elektrische Streckentrennung" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:electricity:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right,overhead"
+					display_values="left in direction of OSM way,right in direction of OSM way,overhead (at catenary level)"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung,in der Oberleitung"
+					/>
+				<reference ref="direction_fw_bw" />
+				<space />
+				<key key="railway:signal:electricity"
+					value="DE-ESO:streckentrennung" />
+				<combo key="railway:signal:electricity:type"
+					text="Exact type"
+					de.text="Signaltyp"
+					values="begin_of_isolated_overlap,end_of_isolated_overlap"
+					display_values="Begin of isolated overlap,End of isolated overlap"
+					de.display_values="Beginn elektrische Streckentrennung,Ende elektrische Streckentrennung"
+					/>
+				<combo key="railway:signal:electricity:height"
+					text="Signal height"
+					de.text="Signalbauhöhe"
+					values="normal,dwarf"
+					display_values="normal,dwarf"
+					de.display_values="Mastbauform,Zwergsignal"
+					/>
+				<key key="railway:signal:electricity:form"
+					value="sign" />
+			</item>
 			<group name="Signals for Helper Engines (Ts)" de.name="Signale für Schiebelokomotiven und Sperrfahrten (Ts)">
 				<item name="Stop Banking (Ts 1)" de.name="Nachschieben einstellen (Ts 1)" icon="de/ts1-32.png" type="node">
 					<label text="Stop Banking (Ts 1)" de.text="Nachschieben einstellen" />
