@@ -804,6 +804,22 @@
 			"caption": "Zs 6 Gegengleisanzeiger"
 		},
 		{
+			"minzoom": 15,
+			"features": [
+				{
+					"type": "Point",
+					"coordinates": [40,50],
+					"properties": {
+						"railway":"signal",
+						"railway:signal:direction":"forward",
+						"railway:signal:combined":"DE-BOStrab:h",
+						"railway:signal:combined:form":"light"
+					}
+				}
+			],
+			"caption": "BOStrab Hauptsignal"
+		},
+		{
 			"minzoom": 14,
 			"heading": "Finland"
 		},
