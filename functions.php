@@ -169,6 +169,23 @@
 		return true;
 	}
 
+	// checks if given marker value is valid
+	function	isValidMarker($marker)
+	{
+		if (!$marker || !isset($marker) || !isset($_GET[$marker]))
+			return false;
+
+		$marker = $_GET[$marker];
+		if (!ctype_lower($marker))
+			return false;
+
+		if ($marker != 'true')
+			return false;
+
+		return true;
+
+	}
+
 
 	// checks if given timezone offset is valid
 	function isValidOffset($offset)
@@ -204,6 +221,7 @@
 				else
 					echo "null,\n";
 			echo "zoom : " . (isValidZoom('zoom') ? ($_GET['zoom']) : ("null")) . ",\n";
+			echo "marker : " . (isValidMarker('marker') ? ("true") : ("null")) . ",\n";
 			echo "lang : " . (isset($_GET['lang']) ? ("'".$_GET['lang']."'") : ("null")) . ",\n";
 			echo "offset : " . (isValidOffset('offset') ? ($_GET['offset']) : ("null")) . ",\n";
 			echo "searchquery : " . (isset($_GET['q']) ? (json_encode($_GET['q'])) : ("''")) . ",\n";
