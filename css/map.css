@@ -74,6 +74,11 @@ html,body
 	border-left: 1px solid black;
 }
 
+.grayscale
+{
+	filter: grayscale(1);
+}
+
 /* text which is shown when javascript is not activated */
 noscript p
 {
