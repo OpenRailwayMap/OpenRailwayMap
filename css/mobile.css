@@ -101,6 +101,7 @@ html,body
 
 .grayscale
 {
+	-webkit-filter: grayscale(1);
 	filter: grayscale(1);
 }
 
