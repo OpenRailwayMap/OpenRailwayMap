@@ -662,6 +662,12 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* German line speed signals (Lf 6) */
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=signal]["railway:signal:speed_limit_distant:speed"=60]
+{
+	icon-image: "icons/de/lf6-60-sign-down-44.png";
+	allow-overlap: true;
+}
+
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit_distant"="DE-ESO:lf6"]["railway:signal:speed_limit_distant:form"=sign]["railway:signal:speed_limit_distant:speed"=~/^((1?[1-9]|[12]0)0|5|15)$/]
 {
 	z-index: eval(295 + tag("railway:signal:speed_limit_distant:speed")/2);
@@ -880,6 +886,13 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limi
 }
 
 /* German line speed signals (Lf 7) */
+
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=70]
+{
+	icon-image: "icons/de/lf7-70-sign-32.png";
+	allow-overlap: true;
+}
+
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:speed_limit"="DE-ESO:lf7"]["railway:signal:speed_limit:form"=sign]["railway:signal:speed_limit:speed"=~/^((1?[1-9]|[12]0)0|5|15)$/]
 {
 	z-index: eval(395 + tag("railway:signal:speed_limit:speed")/2);
