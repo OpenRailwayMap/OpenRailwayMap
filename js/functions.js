@@ -43,19 +43,24 @@ function updateLegend(id, style)
 // draws the legend entries on canvas
 function drawLegendIcons(cnt, zoom, st) {
 	MapCSS.preloadSpriteImage(st, '../styles/' + st + '.png');
-	var style = { styles: [st] };
-	for (i = 0; i <= cnt; i++) {
-		var element = document.getElementById('legend-' + i);
-		var data = element.dataset.geojson;
 
-		if (!data) {
-			console.debug("found", 'legend-' + i, " but element has no GeoJSON data");
-			continue;
+	//Wait for the sprite images to be loaded or, alternatively, a load failure.
+	MapCSS.onImagesLoad = MapCSS.onError = function()
+	{
+		var style = { styles: [st] };
+		for (i = 0; i <= cnt; i++) {
+			var element = document.getElementById('legend-' + i);
+			var data = element.dataset.geojson;
+
+			if (!data) {
+				console.debug("found", 'legend-' + i, " but element has no GeoJSON data");
+				continue;
+			}
+
+			data = '{"features":' + data + ',"granularity":100}';
+
+			Kothic.render(element, JSON.parse(data), zoom, style);
 		}
-
-		data = '{"features":' + data + ',"granularity":100}';
-
-		Kothic.render(element, JSON.parse(data), zoom, style);
 	}
 }
 
