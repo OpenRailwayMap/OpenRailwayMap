@@ -4,7 +4,10 @@
 
  See the [OpenRailwayMap website](https://www.openrailwaymap.org/), the [OpenStreetMap Wiki](https://wiki.openrailwaymap.org/) and the [Github repository](https://github.com/openrailwaymap/OpenRailwayMap) for more information.
 
- This repository contains all project-related components, including the OpenRailwayMap [website](https://www.openrailwaymap.org/), the API interface, map rendering styles, the map renderer, the database backend, [JOSM](https://josm.openstreetmap.de/) tagging presets, validation rules for JOSM and a [Taginfo](https://taginfo.openstreetmap.org/) project file.
+ This repository contains the OpenRailwayMap [website](https://www.openrailwaymap.org/), the map rendering styles (MapCSS implementation), [JOSM](https://josm.openstreetmap.de/) tagging presets, validation rules for JOSM and a [Taginfo](https://taginfo.openstreetmap.org/) project file. Following components are available in independent repositories:
+
+ * [CartoCSS map style used for the tile server](https://github.com/OpenRailwayMap/OpenRailwayMap-CartoCSS)
+ * [API backend](https://github.com/OpenRailwayMap/OpenRailwayMap-api)
 
 ## Authors
 
