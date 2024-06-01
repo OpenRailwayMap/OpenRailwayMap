@@ -419,19 +419,41 @@
 		},
 		{
 			"minzoom": 14,
+			"maxzoom": 14,
 			"features": [
 				{
 				"type": "Point",
-				"coordinates": [40,50],
+				"coordinates": [50,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
 					"railway:signal:combined":"DE-ESO:ks",
 					"railway:signal:combined:form":"light"
-				}},
+				}}
+			],
+			"caption": "Ks-Mehrabschnittssignal (normal)"
+		},
+		{
+			"minzoom": 15,
+			"features": [
 				{
 				"type": "Point",
-				"coordinates": [60,50],
+				"coordinates": [50,50],
+				"properties": {
+					"railway":"signal",
+					"railway:signal:direction":"forward",
+					"railway:signal:combined":"DE-ESO:ks",
+					"railway:signal:combined:form":"light"
+				}}
+			],
+			"caption": "Ks-Mehrabschnittssignal (normal), BOStrab-Mehrabschnittsignal"
+		},
+		{
+			"minzoom": 14,
+			"features": [
+				{
+				"type": "Point",
+				"coordinates": [50,50],
 				"properties": {
 					"railway":"signal",
 					"railway:signal:direction":"forward",
@@ -440,7 +462,7 @@
 					"railway:signal:combined:shortened":"yes"
 				}}
 			],
-			"caption": "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
+			"caption": "Ks-Mehrabschnittssignal (verkürzter Bremswegabstand)"
 		},
 		{
 			"minzoom": 14,
@@ -802,6 +824,22 @@
 				}
 			}],
 			"caption": "Zs 6 Gegengleisanzeiger"
+		},
+		{
+			"minzoom": 15,
+			"features": [
+				{
+					"type": "Point",
+					"coordinates": [40,50],
+					"properties": {
+						"railway":"signal",
+						"railway:signal:direction":"forward",
+						"railway:signal:combined":"DE-BOStrab:h",
+						"railway:signal:combined:form":"light"
+					}
+				}
+			],
+			"caption": "BOStrab Hauptsignal"
 		},
 		{
 			"minzoom": 14,
