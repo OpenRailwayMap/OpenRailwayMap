@@ -47,6 +47,12 @@ way|z9-[railway=razed]["razed:usage"="main"][!"razed:service"]["razed:railway"!=
 way|z9-[railway=razed]["usage"="main"][!"service"]["razed:railway"!="light_rail"]["razed:railway"!="subway"]["razed:railway"!="tram"],
 way|z10-[railway=razed]["razed:railway"!="tram"],
 way|z11-[railway=razed]["razed:railway"="tram"]
+way|z9-[railway=dismantled]["dismantled:usage"="branch"][!"dismantled:service"]["dismantled:railway"!="light_rail"]["dismantled:railway"!="subway"]["dismantled:railway"!="tram"],
+way|z9-[railway=dismantled]["usage"="branch"][!"service"]["dismantled:railway"!="light_rail"]["dismantled:railway"!="subway"]["dismantled:railway"!="tram"],
+way|z9-[railway=dismantled]["dismantled:usage"="main"][!"dismantled:service"]["dismantled:railway"!="light_rail"]["dismantled:railway"!="subway"]["dismantled:railway"!="tram"],
+way|z9-[railway=dismantled]["usage"="main"][!"service"]["dismantled:railway"!="light_rail"]["dismantled:railway"!="subway"]["dismantled:railway"!="tram"],
+way|z10-[railway=dismantled]["dismantled:railway"!="tram"],
+way|z11-[railway=dismantled]["dismantled:railway"="tram"]
 {
 	set .tracks_razed;
 }

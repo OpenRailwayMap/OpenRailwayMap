@@ -155,6 +155,11 @@ way|z11-[railway=razed][!bridge][!tunnel]["razed:ref"]
 {
 	text: eval(join(" ", tag("razed:ref"), tag("razed:name")));
 }
+way|z11-[railway=dismantled][!bridge][!tunnel]["dismantled:name"],
+way|z11-[railway=dismantled][!bridge][!tunnel]["dismantled:ref"]
+{
+	text: eval(join(" ", tag("dismantled:ref"), tag("dismantled:name")));
+}
 
 /*****************************************/
 /* track ref's on tracks inside stations */
@@ -463,7 +468,8 @@ way|z9-[railway=abandoned]
 /******************/
 /* razed railways */
 /******************/
-way|z9-[railway=razed]
+way|z9-[railway=razed],
+way|z9-[railway=dismantled]
 {
 	z-index: 200;
 	dashes: 3,7;
