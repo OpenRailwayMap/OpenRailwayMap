@@ -4,15 +4,16 @@
 # See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
-# Kudret Emre <kudretemre@hotmail.com.tr>, 2014
+# Kudret Emre <kudretemre@hotmail.com.tr>, 2014-2017
+# Ramazan Sancar <ramazan@ramazansancar.com.tr>, 2024
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2017-09-23 20:15+0000\n"
-"Last-Translator: Kudret <kudretemre@hotmail.com.tr>\n"
-"Language-Team: Turkish (https://www.transifex.com/rurseekatze/openrailwaymap/language/tr/)\n"
+"PO-Revision-Date: 2024-11-16 02:04+0000\n"
+"Last-Translator: Ramazan Sancar <ramazan@ramazansancar.com.tr>\n"
+"Language-Team: Turkish\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -151,7 +152,7 @@ msgid "Maxspeeds"
 msgstr "Hız limitleri"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Elektrifikasyon"
 
 msgid "Halt"
 msgstr "Durak"
@@ -175,7 +176,7 @@ msgid "Service station"
 msgstr "Servis istasyonu"
 
 msgid "Subway/Light rail station"
-msgstr ""
+msgstr "Metro/Hafif raylı sistem istasyonu"
 
 msgid "Tram stop"
 msgstr "Tramvay durağı"
@@ -184,7 +185,7 @@ msgid "Milestone"
 msgstr "Kilometre taşı"
 
 msgid "Signal"
-msgstr ""
+msgstr "Sinyal"
 
 msgid "Level crossing"
 msgstr "Hemzemin geçit"
@@ -397,7 +398,7 @@ msgid "Military line"
 msgstr "Askeri hat"
 
 msgid "Military service track"
-msgstr "Askeri servis yolu"
+msgstr "Askeri servis hattı"
 
 msgid "Ferry terminal"
 msgstr "Feribot terminali"
@@ -409,7 +410,7 @@ msgid "Test line"
 msgstr "Test hattı"
 
 msgid "Test service track"
-msgstr "Test servis yolu"
+msgstr "Test servis hattı"
 
 msgid "Car shuttle"
 msgstr "Araba vagonu"
@@ -439,136 +440,136 @@ msgid "Blog"
 msgstr "Blog"
 
 msgid "No information"
-msgstr ""
+msgstr "Bilgi yok"
 
 msgid "speed only given for one direction"
-msgstr ""
+msgstr "hız sadece bir yön için verilmiştir"
 
 msgid "main track, service track"
-msgstr ""
+msgstr "ana hat, servis hattı"
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "Hızlı arama kısayolu"
 
 msgid "Placeholder"
-msgstr ""
+msgstr "Ön izleme"
 
 msgid "Donate"
-msgstr ""
+msgstr "Bağış Yap"
 
 msgid "Tools"
-msgstr ""
+msgstr "Araçlar"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Viki"
 
 msgid "Search milestone"
-msgstr ""
+msgstr "Kilometre taşı arayın"
 
 msgid "Station code"
-msgstr ""
+msgstr "İstasyon kodu"
 
 msgid "Search station"
-msgstr ""
+msgstr "İstasyonu arayın"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "UIC referansı"
 
 msgid "About this project"
-msgstr ""
+msgstr "Bu proje hakkında"
 
 msgid "Close"
-msgstr ""
+msgstr "Kapat"
 
 msgid "Name"
-msgstr ""
+msgstr "Ad"
 
 msgid "Line operator"
-msgstr ""
+msgstr "Hat operatörü"
 
 msgid "Operator"
-msgstr ""
+msgstr "Operatör"
 
 msgid "More results"
-msgstr ""
+msgstr "Daha fazla sonuç"
 
 msgid "Spur junction"
 msgstr ""
 
 msgid "No background map"
-msgstr ""
+msgstr "Arkaplan haritası yok"
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h (kullanılmıyor/yapım aşamasında)"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "Elektriklendirilmemiş"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "Elektriksiz"
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "Elektrifikasyon önerildi"
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "İnşaat halindeki elektriklendirme"
 
 msgid "contact line"
-msgstr ""
+msgstr "bağlantı hattı"
 
 msgid "3rd rail"
-msgstr ""
+msgstr "3. ray"
 
 msgid "Germany"
-msgstr ""
+msgstr "Almanya"
 
 msgid "Finland"
-msgstr ""
+msgstr "Finlandiya"
 
 msgid "train protection"
-msgstr ""
+msgstr "tren koruması"
 
 msgid "no train protection"
-msgstr ""
+msgstr "tren koruması yok"
 
 msgid "crossing signal type To"
-msgstr ""
+msgstr "Geçiş sinyali türü"
 
 msgid "Voltage"
-msgstr ""
+msgstr "Voltaj"
 
 msgid "signals"
-msgstr ""
+msgstr "sinyaller"
 
 msgid "Operating Sites"
 msgstr ""
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "Tren koruması hakkında bilgi yok"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Sinyal durumlarını belirtmeden HP ana ışık sinyali"
 
 msgid "Track usage"
-msgstr ""
+msgstr "Hat kullanımı"
 
 msgid "Lf 7 Geschwindigkeitssignal"
-msgstr ""
+msgstr "LF 7 hız sinyali"
 
 msgid "1.5 – 3kV ="
-msgstr ""
+msgstr "1.5 – 3kV ="
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "ETCS yapım aşamasında"
 
 msgid "3kV ="
-msgstr ""
+msgstr "3kV ="
 
 msgid "shunting signal type Ro"
 msgstr ""
 
 msgid "Track type"
-msgstr ""
+msgstr "Hat türü"
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
@@ -592,7 +593,7 @@ msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "En az 25kV ~"
 
 msgid "minor signal type Lo"
 msgstr ""
@@ -604,7 +605,7 @@ msgid "ETCS"
 msgstr ""
 
 msgid "Blockkennzeichen"
-msgstr ""
+msgstr "Blok göstergesi"
 
 msgid "Ne 6 Haltepunkttafel"
 msgstr ""
@@ -765,27 +766,29 @@ msgstr ""
 msgid ""
 "Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
+"Sinyal durumları belirtilmeden VR ışık ilerleme sinyali (normal, tekrarlayıcı/kısaltılmış fren "
+"mesafesi)"
 
 msgid "distant signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "yön belirtilmemiş uzak sinyal (yeni tip, eski tip)"
 
 msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
-msgstr ""
+msgstr "Zs 3v Hız göstergesi (pano, ışık sinyali)"
 
 msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
-msgstr ""
+msgstr "Zs 3 hız göstergesi (kart, ışık sinyali)"
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr ""
+msgstr "Yasal Uyarı &amp; Gizlilik Politikası"
 
 msgid "ATB - Automatische Treinbeïnvloeding"
-msgstr ""
+msgstr "ATB - Otomatik Tren Kontrolü"
 
 msgid "TVM - Transmission Voie-Machine"
-msgstr ""
+msgstr "TVM - Kanal-Makine İletimi"
 
 msgid "KVB - Contrôle de Vitesse par Balises"
-msgstr ""
+msgstr "KVB - Etiketlere Göre Hız Kontrolü"
 
 msgid "1067mm"
 msgstr ""
@@ -818,16 +821,16 @@ msgid "500mm"
 msgstr ""
 
 msgid "Miniature"
-msgstr ""
+msgstr "Minyatür"
 
 msgid "Miniature tracks"
-msgstr ""
+msgstr "Minyatür hatlar"
 
 msgid "1445mm"
 msgstr ""
 
 msgid "Standard gauge"
-msgstr ""
+msgstr "Standart ölçü"
 
 msgid "1100mm"
 msgstr ""
@@ -869,13 +872,13 @@ msgid "1520mm"
 msgstr ""
 
 msgid "Track gauge values"
-msgstr ""
+msgstr "Ray ölçüm değerleri"
 
 msgid "1458mm"
 msgstr ""
 
 msgid "Dual gauge"
-msgstr ""
+msgstr "Çift gösterge"
 
 msgid "1600mm"
 msgstr ""
@@ -908,13 +911,13 @@ msgid "1000mm"
 msgstr ""
 
 msgid "Multiple gauge"
-msgstr ""
+msgstr "Çoklu gösterge"
 
 msgid "1668mm"
 msgstr ""
 
 msgid "Broad gauge"
-msgstr ""
+msgstr "Geniş ölçü"
 
 msgid "900mm"
 msgstr ""
@@ -923,4 +926,49 @@ msgid "700mm"
 msgstr ""
 
 msgid "Monorail"
+msgstr "Tek ray"
+
+msgid "BOStrab Hauptsignal"
+msgstr "BOStrab ana sinyali"
+
+msgid "SCMT - Sistema Controllo Marcia Treno"
+msgstr "SCMT - Tren Kontrol Sistemi"
+
+msgid "PTC - Positive Train Control (N. Am.)"
+msgstr ""
+
+msgid "No train protection"
+msgstr "Tren koruması yok"
+
+msgid "ZSI 127 - Trainguard ZSI 127"
+msgstr ""
+
+msgid "Ks-Mehrabschnittssignal (normal)"
+msgstr ""
+
+msgid "ETCS - European Train Control System"
+msgstr ""
+
+msgid "Ks-Mehrabschnittssignal (normal), BOStrab-Mehrabschnittsignal"
+msgstr ""
+
+msgid "ASFA - Anuncio de Señales y Frenado Automático"
+msgstr ""
+
+msgid "No information available"
+msgstr ""
+
+msgid "Ks-Mehrabschnittssignal (verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "LZB - Linienzugbeeinflussung"
+msgstr ""
+
+msgid "Zs 6 Gegengleisanzeiger"
+msgstr ""
+
+msgid "PZB - Punktförmige Zugbeeinflussung"
+msgstr ""
+
+msgid "ATC - Automatic train control"
 msgstr ""
