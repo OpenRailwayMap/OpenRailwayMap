@@ -11,7 +11,8 @@ MSGFMT = msgfmt
 all: $(MOFILES) $(JSONFILES)
 
 update_po:
-	./scan_legends.py $(LEGENDFILES:%=-i %) -o messages.pot
+	pip install polib
+	python scan_legends.py $(LEGENDFILES:%=-i %) -o messages.pot
 	$(foreach msg,$(POFILES),msgmerge -w 100 -N -U $(msg) messages.pot;)
 
 %.mo: %.po
