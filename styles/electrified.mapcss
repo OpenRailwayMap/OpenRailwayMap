@@ -464,3 +464,53 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 	icon-height: 18;
 	allow-overlap: true;
 }
+
+/***********************************************************************/
+/* DE begin of isolated overlap                                        */
+/***********************************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:streckentrennung"]["railway:signal:electricity:type"="begin_of_isolated_overlap"]["railway:signal:electricity:form"="sign"]
+{
+	z-index: 400;
+	icon-image: "icons/de/el-begin-isolated-overlap-sign-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	allow-overlap: true;
+}
+
+/***********************************************************************/
+/* DE end of isolated overlap                                          */
+/***********************************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:streckentrennung"]["railway:signal:electricity:type"="end_of_isolated_overlap"]["railway:signal:electricity:form"="sign"]
+{
+	z-index: 400;
+	icon-image: "icons/de/el-end-isolated-overlap-sign-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	allow-overlap: true;
+}
+
+/***********************************************************************/
+/* AT begin of isolated overlap                                        */
+/***********************************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:bahnhof-streckentrennung_anfang"]["railway:signal:electricity:type"="begin_of_isolated_overlap"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:bahnhof-streckentrennung_anfang"]["railway:signal:electricity:type"="pantograph_down"]["railway:signal:electricity:form"="sign"]
+{
+	z-index: 400;
+	icon-image: "icons/at/el-begin-isolated-overlap-sign-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	allow-overlap: true;
+}
+
+/***********************************************************************/
+/* AT end of isolated overlap                                          */
+/***********************************************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:bahnhof-streckentrennung_ende"]["railway:signal:electricity:type"="end_of_isolated_overlap"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:bahnhof-streckentrennung_ende"]["railway:signal:electricity:type"="pantograph_up"]["railway:signal:electricity:form"="sign"]
+{
+	z-index: 400;
+	icon-image: "icons/at/el-end-isolated-overlap-sign-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	allow-overlap: true;
+}
