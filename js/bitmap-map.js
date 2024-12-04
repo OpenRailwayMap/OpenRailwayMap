@@ -37,14 +37,6 @@ function createMap(embed)
 
 		map = L.map('mapFrame', { editInOSMControlOptions: { zoomThreshold: 14, editors: [ 'josm' ] }, });
 
-		if (!embed)
-		{
-			map.on('moveend', function(e)
-			{
-				updatePermalink(railmap.selectedStyle);
-			});
-		}
-
 		// railmap layer
 		railmap = new L.TileLayer(window.openrailwaymap.tiledir+'standard/{z}/{x}/{y}.png',
 		{
@@ -53,15 +45,6 @@ function createMap(embed)
 			maxZoom: 19,
 			tileSize: 256
 		}).addTo(map);
-
-		if (!embed)
-		{
-			map.on('zoomend', function(e)
-			{
-				updateLegend("legend", railmap.selectedStyle);
-				updatePermalink(railmap.selectedStyle);
-			});
-		}
 
 		setupControls();
 
@@ -88,6 +71,17 @@ function createMap(embed)
 			};
 			// initialize the permalink url
 			updatePermalink(railmap.selectedStyle);
+
+			map.on('moveend', function(e)
+			{
+				updatePermalink(railmap.selectedStyle);
+			});
+
+			map.on('zoomend', function(e)
+			{
+				updateLegend("legend", railmap.selectedStyle);
+				updatePermalink(railmap.selectedStyle);
+			});
 		}
 		else
 		{

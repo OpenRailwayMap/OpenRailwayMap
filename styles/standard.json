@@ -370,7 +370,7 @@
 			"lineheight": 20,
 			"features": [{
 				"type": "Point",
-				"coordinates": [40,50],
+				"coordinates": [44,50],
 				"properties": {
 					"railway":"station",
 					"railway:ref":"KB",
@@ -383,7 +383,7 @@
 			"minzoom": 8,
 			"features": [{
 				"type": "Point",
-				"coordinates": [40,50],
+				"coordinates": [44,50],
 				"properties": {
 					"railway":"yard",
 					"railway:ref":"KNG",
@@ -396,7 +396,7 @@
 			"minzoom": 10,
 			"features": [{
 				"type": "Point",
-				"coordinates": [40,50],
+				"coordinates": [44,50],
 				"properties": {
 					"railway":"halt",
 					"railway:ref":"HLEM",
@@ -409,7 +409,7 @@
 			"minzoom": 8,
 			"features": [{
 				"type": "Point",
-				"coordinates": [40,50],
+				"coordinates": [44,50],
 				"properties": {
 					"railway":"service_station",
 					"railway:ref":"KWEB",
@@ -422,7 +422,7 @@
 			"minzoom": 10,
 			"features": [{
 				"type": "Point",
-				"coordinates": [40,50],
+				"coordinates": [44,50],
 				"properties": {
 					"railway":"station",
 					"station":"subway",
@@ -435,7 +435,7 @@
 			"minzoom": 13,
 			"features": [{
 				"type": "Point",
-				"coordinates": [40,50],
+				"coordinates": [44,50],
 				"properties": {
 					"railway":"tram_stop",
 					"name":"Grundend"
@@ -448,7 +448,7 @@
 			"lineheight": 20,
 			"features": [{
 				"type": "Point",
-				"coordinates": [50,50],
+				"coordinates": [44,50],
 				"properties": {
 					"railway":"border"
 				}
