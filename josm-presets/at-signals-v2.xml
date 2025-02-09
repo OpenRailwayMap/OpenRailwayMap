@@ -613,7 +613,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 			<reference ref="direction_fw_bw" />
 			<space />
 			<key key="railway:signal:speed_limit_distant"
-				value="AT-V2:geschwindigkeitvorsanzeiger" />
+				value="AT-V2:geschwindigkeitsvoranzeiger" />
 			<combo key="railway:signal:speed_limit_distant:form"
 				text="Signal form"
 				de.text="Anzeigeart"

@@ -4,6 +4,7 @@
 # See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 #
 # Translators:
+# Filip Bengtsson <me@autom.zone>, 2024
 # Magnus Österlund, 2015
 # bitsteller <nbnet@arcor.de>, 2014-2015
 msgid ""
@@ -11,9 +12,8 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2017-09-23 19:49+0000\n"
-"Last-Translator: Magnus Österlund\n"
-"Language-Team: Swedish (https://www.transifex.com/rurseekatze/openrailwaymap/language/sv/)\n"
+"PO-Revision-Date: 2024-09-24 09:56+0200\n"
+"Last-Translator: Filip Bengtsson\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,26 +32,26 @@ msgid "Javascript is not activated"
 msgstr "Javascript ej aktiverad"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
-"browser settings."
+"Javascript is needed to show the map and run this website. Please turn on "
+"Javascript in your browser settings."
 msgstr ""
-"Javascript behövs för att visa kartan och hemsidan. Aktivera Javascript i webbläsarens "
-"inställningar."
+"Javascript behövs för att visa kartan och webbplatsen. Aktivera Javascript i "
+"din webbläsares inställningar."
 
 msgid "Loading..."
-msgstr "Laddar..."
+msgstr "Laddar …"
 
 msgid "Nothing found."
-msgstr "Inget hittades."
+msgstr "Inga resultat."
 
 msgid "Last update"
 msgstr "Senast uppdaterad"
 
 msgid "Empty input."
-msgstr "Tom indata."
+msgstr "Ingen indata."
 
 msgid "Kilometer"
-msgstr "kilometer"
+msgstr "Kilometer"
 
 msgid "Track"
 msgstr "Spår"
@@ -66,7 +66,7 @@ msgid "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
 msgstr "Terrängskuggning av <a href='https://www.nasa.gov/'>NASA SRTM</a>"
 
 msgid "Rendering: OpenRailwayMap"
-msgstr "Rendering: OpenRailwayMap"
+msgstr "Visar: OpenRailwayMap"
 
 msgid "Mapnik"
 msgstr "Mapnik"
@@ -75,7 +75,7 @@ msgid "Mapnik Grayscale"
 msgstr "Mapnik (gråskala)"
 
 msgid "Map data &copy; OpenStreetMap contributors"
-msgstr "Kartdata &copy; OpenStreetMap bidragande"
+msgstr "Kartdata &copy; OpenStreetMap-bidragsgivare"
 
 msgid "Select a map style"
 msgstr "Välj kartstil"
@@ -92,8 +92,12 @@ msgstr "Sök endast i aktuell vy"
 msgid "HTML-Code"
 msgstr "HTML-kod"
 
-msgid "Copy this HTML code snippet into your website to show a small map with a marker."
-msgstr "Kopiera HTML-kodsträngen i din egen hemsida för att visa en liten karta med markör."
+msgid ""
+"Copy this HTML code snippet into your website to show a small map with a "
+"marker."
+msgstr ""
+"Kopiera HTML-koden till din egen webbplats för att visa en liten karta med "
+"markör."
 
 msgid "Fullscreen"
 msgstr "Helskärm"
@@ -101,42 +105,42 @@ msgstr "Helskärm"
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekund"
-msgstr[1] "%d sekunder"
+msgstr[0] "%d sekund"
+msgstr[1] "%d sekunder"
 
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d minut"
-msgstr[1] "%d minuter"
+msgstr[0] "%d minut"
+msgstr[1] "%d minuter"
 
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d timme"
-msgstr[1] "%d timmar"
+msgstr[0] "%d timme"
+msgstr[1] "%d timmar"
 
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] "%d dag"
-msgstr[1] "%d dagar"
+msgstr[0] "%d dag"
+msgstr[1] "%d dagar"
 
 #, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] "%d vecka"
-msgstr[1] "%d veckor"
+msgstr[0] "%d vecka"
+msgstr[1] "%d veckor"
 
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] "%d månad"
-msgstr[1] "%d månader"
+msgstr[0] "%d månad"
+msgstr[1] "%d månader"
 
 #, php-format
 msgid "more than %s ago"
-msgstr "Fler än %s sedan"
+msgstr "mer än %s sedan"
 
 #, php-format
 msgid "%s ago"
@@ -145,8 +149,8 @@ msgstr "%s sedan"
 msgid "Infrastructure"
 msgstr "Infrastruktur"
 
-msgid "Signalling"
-msgstr "Signalering"
+msgid "Signalling and train protection"
+msgstr "Signaler och tågskyddssystem"
 
 msgid "Maxspeeds"
 msgstr "Hastighetsbegränsingar"
@@ -176,7 +180,7 @@ msgid "Service station"
 msgstr "Depå"
 
 msgid "Subway/Light rail station"
-msgstr "Tunnelbanestation, station för lokalbana/snabbspårväg"
+msgstr "Station för tunnelbana, lokalbana eller snabbspårväg"
 
 msgid "Tram stop"
 msgstr "Spårvagnshållplats"
@@ -350,7 +354,7 @@ msgid "Traverser"
 msgstr ""
 
 msgid "Loading ramp"
-msgstr ""
+msgstr "Lastramp"
 
 msgid "Crane"
 msgstr "Lyftkran"
@@ -362,7 +366,7 @@ msgid "Carrier truck pit"
 msgstr ""
 
 msgid "Gauge conversion"
-msgstr ""
+msgstr "Spårviddsbyte"
 
 msgid "Gate"
 msgstr ""
@@ -377,7 +381,7 @@ msgid "Station building"
 msgstr "Stationshus"
 
 msgid "Factory connected to railroad line"
-msgstr "Industri ansluten till järnväg"
+msgstr "Industri med järnvägsanslutning"
 
 msgid "Rack"
 msgstr "Kuggstångsspår"
@@ -443,7 +447,7 @@ msgid "No information"
 msgstr "Ingen information"
 
 msgid "speed only given for one direction"
-msgstr "hastighet endast angiven för en riktning"
+msgstr "hastighet angiven för endast en riktning"
 
 msgid "main track, service track"
 msgstr "huvudspår, sidospår"
@@ -452,7 +456,7 @@ msgid "Quick search shortcut"
 msgstr "Kortkommando för snabbsökning"
 
 msgid "Placeholder"
-msgstr ""
+msgstr "Platshållare"
 
 msgid "Donate"
 msgstr "Donera"
@@ -473,10 +477,10 @@ msgid "Search station"
 msgstr "Sök station"
 
 msgid "UIC reference"
-msgstr "UIC referens"
+msgstr "UIC-referens"
 
 msgid "About this project"
-msgstr "Om detta projekt"
+msgstr "Om projektet"
 
 msgid "Close"
 msgstr "Stäng"
@@ -485,10 +489,10 @@ msgid "Name"
 msgstr "Namn"
 
 msgid "Line operator"
-msgstr ""
+msgstr "Spårinnehavare"
 
 msgid "Operator"
-msgstr ""
+msgstr "Operatör"
 
 msgid "More results"
 msgstr "Fler resultat"
@@ -500,7 +504,7 @@ msgid "No background map"
 msgstr "Ingen bakgrundskarta"
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr "%SPDMIN%-%SPDMAX% km/h (nedlagd/under uppbygnad)"
+msgstr "%SPDMIN%–%SPDMAX% km/h (nedlagd/under uppbygnad)"
 
 msgid "Not electrified"
 msgstr "Ej elektrifierad"
@@ -530,16 +534,16 @@ msgid "train protection"
 msgstr "tågskyddssystem"
 
 msgid "no train protection"
-msgstr "Inget tågskyddssystem"
+msgstr "inget tågskyddssystem"
 
 msgid "crossing signal type To"
-msgstr ""
+msgstr "korsningssignal, typ To"
 
 msgid "Voltage"
 msgstr "Linjespänning"
 
 msgid "signals"
-msgstr ""
+msgstr "signaler"
 
 msgid "Operating Sites"
 msgstr "Trafikplatser"
@@ -557,16 +561,16 @@ msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
 msgid "1.5 – 3kV ="
-msgstr ""
+msgstr "1,5–3 kV ⎓"
 
 msgid "ETCS under construction"
 msgstr "ETCS under utbyggnad"
 
 msgid "3kV ="
-msgstr ""
+msgstr "3 kV ⎓"
 
 msgid "shunting signal type Ro"
-msgstr ""
+msgstr "växlingssignal, typ Ro"
 
 msgid "Track type"
 msgstr "Spårtyp"
@@ -578,7 +582,7 @@ msgid "Linienzugbeeinflussung"
 msgstr ""
 
 msgid "25kV 50Hz ~"
-msgstr ""
+msgstr "25 kV, 50 Hz ⏦"
 
 msgid "So 106 Kreuztafel"
 msgstr ""
@@ -593,13 +597,13 @@ msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr "Mer än 25kV ~"
+msgstr "Mer än 25 kV ⏦"
 
 msgid "minor signal type Lo"
-msgstr ""
+msgstr "undersignal, typ Lo"
 
 msgid "15 – 25kV ~"
-msgstr ""
+msgstr "15–25 kV ⏦"
 
 msgid "ETCS"
 msgstr "ETCS"
@@ -614,40 +618,41 @@ msgid "Ne 1 Trapeztafel"
 msgstr ""
 
 msgid "15kV 16⅔Hz ~"
-msgstr ""
+msgstr "15 kV, 16⅔ Hz ⏦"
 
-msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
+msgid ""
+"Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
 
 msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "More than 3kV ="
-msgstr "Mer än 3kV ="
+msgstr "Mer än 3 kV ⎓"
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
 msgid "750 – 1000V ="
-msgstr ""
+msgstr "750–1000 V ⎓"
 
 msgid "Less than 15kV ~"
-msgstr "Mindre än 15kV ~"
+msgstr "Mindre än 15 kV ⏦"
 
 msgid "1kV ="
-msgstr ""
+msgstr "1 kV ⎓"
 
 msgid "1 – 1.5kV ="
-msgstr ""
+msgstr "1–1,5 kV ⎓"
 
 msgid "block signal type So"
-msgstr ""
+msgstr "blocksignal, typ So"
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr "%SPDMIN%-%SPDMAX% km/tim"
+msgstr "%SPDMIN%–%SPDMAX% km/tim"
 
 msgid "1.5kV ="
-msgstr ""
+msgstr "1,5 kV ⎓"
 
 msgid "El 2 Einschaltsignal"
 msgstr ""
@@ -668,7 +673,7 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr "Mindre än 750V ="
+msgstr "Mindre än 750 V ⎓"
 
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
@@ -677,10 +682,10 @@ msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
 msgid "750V ="
-msgstr ""
+msgstr "750 V ⎓"
 
 msgid "25kV 60Hz ~"
-msgstr ""
+msgstr "25 kV, 60 Hz ⏦"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
@@ -689,7 +694,7 @@ msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
 
 msgid "15kV 16.7Hz ~"
-msgstr ""
+msgstr "15 kV, 16,7 Hz ⏦"
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 msgstr ""
@@ -706,7 +711,8 @@ msgstr ""
 msgid "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
@@ -748,7 +754,8 @@ msgstr ""
 msgid "distant signal with Eo 1 (new type, old type)"
 msgstr ""
 
-msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgid ""
+"Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
@@ -764,7 +771,8 @@ msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
 
 msgid ""
-"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, "
+"Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
 
 msgid "distant signal without aspects given (new type, old type)"
@@ -789,139 +797,139 @@ msgid "KVB - Contrôle de Vitesse par Balises"
 msgstr ""
 
 msgid "1067mm"
-msgstr ""
+msgstr "1067 mm"
 
 msgid "1435mm"
-msgstr ""
+msgstr "1435 mm"
 
 msgid "1676mm"
-msgstr ""
+msgstr "1676 mm"
 
 msgid "1422mm"
-msgstr ""
+msgstr "1422 mm"
 
 msgid "1524mm"
-msgstr ""
+msgstr "1524 mm"
 
 msgid "950mm"
-msgstr ""
+msgstr "950 mm"
 
 msgid "800mm"
-msgstr ""
+msgstr "800 mm"
 
 msgid "127mm"
-msgstr ""
+msgstr "127 mm"
 
 msgid "Narrow gauge"
-msgstr ""
+msgstr "Smalspår"
 
 msgid "500mm"
-msgstr ""
+msgstr "500 mm"
 
 msgid "Miniature"
-msgstr ""
+msgstr "Miniatyr"
 
 msgid "Miniature tracks"
-msgstr ""
+msgstr "Miniatyrspår"
 
 msgid "1445mm"
-msgstr ""
+msgstr "1445 mm"
 
 msgid "Standard gauge"
-msgstr ""
+msgstr "Normalspår"
 
 msgid "1100mm"
-msgstr ""
+msgstr "1100 mm"
 
 msgid "597mm"
-msgstr ""
+msgstr "597 mm"
 
 msgid "1372mm"
-msgstr ""
+msgstr "1372 mm"
 
 msgid "1450mm"
-msgstr ""
+msgstr "1450 mm"
 
 msgid "600mm"
-msgstr ""
+msgstr "600 mm"
 
 msgid "64mm"
-msgstr ""
+msgstr "64 mm"
 
 msgid "1432mm"
-msgstr ""
+msgstr "1432 mm"
 
 msgid "760mm"
-msgstr ""
+msgstr "760 mm"
 
 msgid "381mm"
-msgstr ""
+msgstr "381 mm"
 
 msgid "750mm"
-msgstr ""
+msgstr "750 mm"
 
 msgid "1009mm"
-msgstr ""
+msgstr "1009 mm"
 
 msgid "1495mm"
-msgstr ""
+msgstr "1495 mm"
 
 msgid "1520mm"
-msgstr ""
+msgstr "1520 mm"
 
 msgid "Track gauge values"
-msgstr ""
+msgstr "Spårviddsmått"
 
 msgid "1458mm"
-msgstr ""
+msgstr "1458 mm"
 
 msgid "Dual gauge"
-msgstr ""
+msgstr "Dubbel spårvidd"
 
 msgid "1600mm"
-msgstr ""
+msgstr "1600 mm"
 
 msgid "184mm"
-msgstr ""
+msgstr "184 mm"
 
 msgid "610mm"
-msgstr ""
+msgstr "610 mm"
 
 msgid "89mm"
-msgstr ""
+msgstr "89 mm"
 
 msgid "260mm"
-msgstr ""
+msgstr "260 mm"
 
 msgid "762mm"
-msgstr ""
+msgstr "762 mm"
 
 msgid "1050mm"
-msgstr ""
+msgstr "1050 mm"
 
 msgid "190mm"
-msgstr ""
+msgstr "190 mm"
 
 msgid "914mm"
-msgstr ""
+msgstr "914 mm"
 
 msgid "1000mm"
-msgstr ""
+msgstr "1000 mm"
 
 msgid "Multiple gauge"
-msgstr ""
+msgstr "Flera spårvidder"
 
 msgid "1668mm"
-msgstr ""
+msgstr "1668 mm"
 
 msgid "Broad gauge"
-msgstr ""
+msgstr "Bredspår"
 
 msgid "900mm"
-msgstr ""
+msgstr "900 mm"
 
 msgid "700mm"
-msgstr ""
+msgstr "700 mm"
 
 msgid "Monorail"
-msgstr ""
+msgstr "Balkbana"

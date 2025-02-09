@@ -150,7 +150,7 @@ msgstr "vor %s"
 msgid "Infrastructure"
 msgstr "Infrastruktur"
 
-msgid "Signalling"
+msgid "Signalling and train protection"
 msgstr "Signale und Sicherungssysteme"
 
 msgid "Maxspeeds"
@@ -158,6 +158,9 @@ msgstr "Höchstgeschwindigkeiten"
 
 msgid "Electrification"
 msgstr "Elektrifizierung"
+
+msgid "Track gauge"
+msgstr "Spurweiten"
 
 msgid "Halt"
 msgstr "Haltepunkt"
@@ -663,6 +666,9 @@ msgstr "Ra 10 Rangierhalttafel / Verschubhalttafel"
 msgid "Zs 10 Endesignal (Tafel)"
 msgstr "Zs 10 Endesignal (Tafel)"
 
+msgid "Zs 6 Gegengleisanzeiger"
+msgstr "Zs 6 Gegengleisanzeiger"
+
 msgid "El 1 Ausschaltsignal"
 msgstr "El 1 Ausschaltsignal"
 
@@ -931,3 +937,9 @@ msgstr "700mm"
 
 msgid "Monorail"
 msgstr "Einschienenbahn"
+
+msgid "Begin of isolated overlap"
+msgstr "Beginn elektrische Streckentrennung"
+
+msgid "End of isolated overlap"
+msgstr "Ende elektrische Streckentrennung"

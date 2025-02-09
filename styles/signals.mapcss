@@ -56,7 +56,9 @@ way["railway:pzb"=no]["railway:lzb"=no]["railway:etcs"=no].tracks,
 way["railway:pzb"=no]["railway:lzb"=no]["railway:etcs"=0].tracks,
 way["railway:atb"=no][!"railway:etcs"].tracks,
 way["railway:atb"=no]["railway:etcs"=no].tracks,
-way["railway:atb"=no]["railway:etcs"=0].tracks
+way["railway:atb"=no]["railway:etcs"=0].tracks,
+way["railway:atc"=no]["railway:etcs"=no].tracks,
+way["railway:atc"=no]["railway:etcs"=0].tracks
 {
 	z-index: 1;
 	color: black;
@@ -80,6 +82,11 @@ way["railway:atb-vv"=yes].tracks
 	z-index: 4;
 	color: #FF8C00;
 }
+way["railway:atc"=yes].tracks
+{
+	z-index: 2;
+	color: #6600cc;
+}
 way["railway:kvb"=yes].tracks
 {
 	z-index: 5;
@@ -97,6 +104,11 @@ way["railway:scmt"=yes].tracks
 	z-index: 6;
 	color: #dd11ff; /* fuchsia */
 }
+way["railway:asfa"=yes].tracks
+{
+	z-index: 7;
+	color: #ff9092; /* pink */
+}
 way["construction:railway:etcs"]["construction:railway:etcs"!=no]["construction:railway:etcs"!=0].tracks,
 way.ctracks
 {
@@ -112,6 +124,11 @@ way["railway:ptc"=yes].tracks
 {
 	z-index: 10;
 	color: #cc0033;
+}
+way["railway:zsi127"="yes"].tracks
+{
+	z-index: 3;
+	color: #884400;
 }
 
 /*********************************/
@@ -463,6 +480,39 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=
 	allow-overlap: true;
 }
 
+/*********************************************/
+/* DE wrong road signal Zs 6                */
+/*********************************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:db:zs6"]["railway:signal:wrong_road:form"="sign"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:dr:zs6"]["railway:signal:wrong_road:form"="sign"]
+{
+	z-index: 500;
+	icon-image: "icons/de/zs6-sign-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:db:zs6"]["railway:signal:wrong_road:form"="light"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:dr:zs6"]["railway:signal:wrong_road:form"="light"]
+{
+	z-index: 500;
+	icon-image: "icons/de/zs6-db-light-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:wrong_road"="DE-ESO:dr:zs7"]["railway:signal:wrong_road:form"="light"]
+{
+	z-index: 500;
+	icon-image: "icons/de/zs7-dr-light-30.png";
+	icon-width: 11;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /********************************************/
 /* DE minor semaphore dwarf signals type Sh */
 /* DE Sh 0 at buffer stops                  */
@@ -587,6 +637,21 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:shunting"=
 {
 	z-index: 2800;
 	icon-image: "icons/de/ra11b-32.png";
+	icon-width: 16;
+	icon-height: 11;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*********************************************/
+/* Fouling point marker Ra12 in german style */
+/*********************************************/
+node|z17-[railway=signal]["railway:signal:fouling_point"="DE-ESO:ra12"],
+node|z17-[railway=signal]["railway:signal:fouling_point"="DE-BOStrab:sh6"],
+node|z17-[railway=signal]["railway:signal:fouling_point"="PL-PKP:w17"]
+{
+	z-index: 2800;
+	icon-image: "icons/de/ra12.png";
 	icon-width: 16;
 	icon-height: 11;
 	text-allow-overlap: true;
@@ -2236,11 +2301,13 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:main"="DE-
 	allow-overlap: true;
 }
 
-/******************************/
-/* DE combined signal type Ks */
-/******************************/
+/***********************************************************/
+/* DE combined signal type Ks                              */
+/* DE BOStrab combined signals - similar to EBO Ks signals */
+/***********************************************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light]["railway:signal:combined:shortened"="no"],
-node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light][!"railway:signal:combined:shortened"]
+node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-ESO:ks"]["railway:signal:combined:form"=light][!"railway:signal:combined:shortened"],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:combined"="DE-BOStrab:h"]["railway:signal:combined:form"=light]
 {
 	z-index: 10200;
 	text: "ref";
