@@ -46,6 +46,7 @@
 		"nqo" => array("nqo_GN", "ߒߞߏ"),
 		"pl" => array("pl_PL", "Polski"),
 		"pt" => array("pt_PT", "Português"),
+		"ro" => array("ro_RO", "Română"),
 		"ru" => array("ru_RU", "Русский"),
 		"sl" => array("sl_SI", "Slovenščina"),
 		"sv" => array("sv_SE", "Svenska"),
