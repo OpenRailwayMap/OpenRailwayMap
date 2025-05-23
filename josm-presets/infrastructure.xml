@@ -316,6 +316,11 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.text="Linienzugbeeinflussung (LZB)"
 					match="key"
 					/>
+				<check key="railway:aws"
+					text="Automatic Warning System (AWS)"
+					de.text="Automatic Warning System (AWS)"
+					match="key"
+					/>
 				<combo key="railway:gnt"
 					text="Tilting train system"
 					de.text="Geschwindigkeitsüberwachung Neigetechnik"
