@@ -7,7 +7,7 @@
 
  An OpenStreetMap-based project for creating a detailled map of the world's railway infrastructure.
 
- See the [OpenRailwayMap website](https://www.openrailwaymap.org/), the [OpenStreetMap Wiki](https://wiki.openrailwaymap.org/) and the [Github repository](https://github.com/openrailwaymap/OpenRailwayMap) for more information.
+ See the [OpenRailwayMap website](https://www.openrailwaymap.org/), the [OpenStreetMap Wiki page](https://wiki.openstreetmap.org/wiki/OpenRailwayMap) and the [Github repository](https://github.com/openrailwaymap/OpenRailwayMap) for more information.
 
  This repository contains the OpenRailwayMap [website](https://www.openrailwaymap.org/), the map rendering styles (MapCSS implementation), [JOSM](https://josm.openstreetmap.de/) tagging presets, validation rules for JOSM and a [Taginfo](https://taginfo.openstreetmap.org/) project file. Following components are available in independent repositories:
 
