@@ -151,7 +151,9 @@
 				{ "%SIGNAL%":"el3", "%TYPE%":"pantograph_down_advance", "%CAPTION%":"El 3 \"Bügel ab\"-Ankündigungssignal" },
 				{ "%SIGNAL%":"el4", "%TYPE%":"pantograph_down", "%CAPTION%":"El 4 \"Bügel ab\"-Signal" },
 				{ "%SIGNAL%":"el5", "%TYPE%":"pantograph_up", "%CAPTION%":"El 5 \"Bügel an\"-Signal" },
-				{ "%SIGNAL%":"el6", "%TYPE%":"end_of_catenary", "%CAPTION%":"El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer" }
+				{ "%SIGNAL%":"el6", "%TYPE%":"end_of_catenary", "%CAPTION%":"El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer" },
+				{ "%SIGNAL%":"DE-ESO:streckentrennung", "%TYPE%":"begin_of_isolated_overlap", "%CAPTION%":"Beginn elektrische Streckentrennung" },
+				{ "%SIGNAL%":"DE-ESO:streckentrennung", "%TYPE%":"end_of_isolated_overlap", "%CAPTION%":"Ende elektrische Streckentrennung" }
 			],
 			"features": [{
 				"type": "Point",
