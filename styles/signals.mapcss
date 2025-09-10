@@ -438,9 +438,9 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop_deman
 	allow-overlap: true;
 }
 
-/****************************/
-/* DE stop post Ne 5 as sign*/
-/****************************/
+/*****************************/
+/* DE stop post Ne 5 as sign */
+/*****************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]
 {
 	z-index: 1000;
@@ -459,6 +459,16 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-
 
 @supports (user-agent: josm) {
 	node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:ne5"]["railway:signal:stop:form"=sign]
+	{
+		text-offset-x: eval(length(tag("railway:signal:stop:caption")) * (0 - 3) - 6);
+		text-offset-y: -12;
+	}
+}
+/*******************************************/
+/* DE stop post train length board as sign */
+/*******************************************/
+@supports (user-agent: josm) {
+	node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:zuglänge"]["railway:signal:stop:form"=sign]
 	{
 		text-offset-x: eval(length(tag("railway:signal:stop:caption")) * (0 - 3) - 6);
 		text-offset-y: -12;

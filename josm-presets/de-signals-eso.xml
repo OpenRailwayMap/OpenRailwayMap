@@ -2033,6 +2033,33 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
+			<item name="Train length board" de.name="Zuglängentafel" type="node">
+				<label text="Train length board" de.text="Zuglängentafel" />
+				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+				<space />
+				<key key="railway"
+					value="signal" />
+				<check key="railway:signal:stop:deactivated"
+					text="Out of order"
+					de.text="Ungültigkeitskreuz"
+					/>
+				<combo key="railway:signal:position"
+					text="Signal position"
+					de.text="Signalstandort"
+					values="left,right"
+					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+					display_values="left in direction of OSM way,right in direction of OSM way"
+					/>
+				<reference ref="direction_fw_bw" />
+				<key key="railway:signal:stop"
+					value="DE-ESO:zuglänge" />
+				<key key="railway:signal:stop:form"
+					value="sign" />
+				<text key="railway:signal:stop:caption"
+					text="text on subsidiary plate"
+					de.text="Zusatztext"
+					/>
+			</item>
 			<item name="Stop Marker (Ne 5)" de.name="Haltetafel (Ne 5)" icon="de/ne5-ds301-32.png" type="node">
 				<label text="Stop Marker (Ne 5)" de.text="Haltetafel (Ne 5)" />
 				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
