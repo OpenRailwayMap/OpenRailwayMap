@@ -468,8 +468,9 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-
 /* DE stop post train length board as sign */
 /*******************************************/
 @supports (user-agent: josm) {
-	node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:zuglänge"]["railway:signal:stop:form"=sign]
+	node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:stop"="DE-ESO:zuglänge"]["railway:signal:stop:form"=sign]["railway:signal:stop:caption"]
 	{
+		text: "railway:signal:stop:caption";
 		text-offset-x: eval(length(tag("railway:signal:stop:caption")) * (0 - 3) - 6);
 		text-offset-y: -12;
 	}
