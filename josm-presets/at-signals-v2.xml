@@ -272,7 +272,7 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 				value="sign" />
 		</item>
 		<separator />
-		<item name="Schutzsignal" type="node">
+		<item name="Schutzsignal" type="node" icon="at/schutzsignal-frei-32.png">
 			<label text="Schutzsignal" />
 			<label text="Wird als Punkt auf dem Gleis erfasst." />
 			<space />
