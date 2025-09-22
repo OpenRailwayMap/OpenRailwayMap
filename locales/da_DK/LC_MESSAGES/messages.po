@@ -45,7 +45,7 @@ msgid "Nothing found."
 msgstr "Intet fundet."
 
 msgid "Last update"
-msgstr ""
+msgstr "Seneste opdatering"
 
 msgid "Empty input."
 msgstr "Tomt input."
@@ -60,10 +60,10 @@ msgid "Permalink"
 msgstr "Permalink"
 
 msgid "Hillshading"
-msgstr ""
+msgstr "Skyggekort"
 
 msgid "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
-msgstr ""
+msgstr "Skyggekort af <a href='https://www.nasa.gov/'>NASA SRTM</a>"
 
 msgid "Rendering: OpenRailwayMap"
 msgstr "Rendering: OpenRailwayMap"
@@ -81,10 +81,10 @@ msgid "Select a map style"
 msgstr "Vælg en kortstil"
 
 msgid "Public transport"
-msgstr ""
+msgstr "Kollektiv traffik"
 
 msgid "Search results"
-msgstr "Søgeresultat"
+msgstr "Søgeresultater"
 
 msgid "Search only in the current map view"
 msgstr "Søg kun i det viste kortudsnit"
@@ -93,7 +93,7 @@ msgid "HTML-Code"
 msgstr "HTML-kode"
 
 msgid "Copy this HTML code snippet into your website to show a small map with a marker."
-msgstr "Kopier denne HTML kodestump ind i dit webstd og vis et lille kort med en markør."
+msgstr "Indsæt denne HTML kodestump på dit websted og få vist et lille kort med en markør."
 
 msgid "Fullscreen"
 msgstr "Fuld skærm"
@@ -101,38 +101,38 @@ msgstr "Fuld skærm"
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d sekund"
+msgstr[1] "%d sekunder"
 
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d minut"
+msgstr[1] "%d minutter"
 
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d time"
+msgstr[1] "%d timer"
 
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d dag"
+msgstr[1] "%d dage"
 
 #, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d uge"
+msgstr[1] "%d uger"
 
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d måned"
+msgstr[1] "%d måneder"
 
 #, php-format
 msgid "more than %s ago"
@@ -143,55 +143,55 @@ msgid "%s ago"
 msgstr "%s siden"
 
 msgid "Infrastructure"
-msgstr ""
+msgstr "Infrastruktur"
 
 msgid "Signalling and train protection"
-msgstr ""
+msgstr "Signal og togbeskyttelse"
 
 msgid "Maxspeeds"
-msgstr "Max fart"
+msgstr "Fartgrænser"
 
 msgid "Electrification"
-msgstr ""
+msgstr "Elektrificering"
 
 msgid "Halt"
-msgstr ""
+msgstr "Stoppested"
 
 msgid "Station"
 msgstr "Station"
 
 msgid "Junction"
-msgstr ""
+msgstr "Sporskifte"
 
 msgid "Yard"
-msgstr ""
+msgstr "Rangerbanegård"
 
 msgid "Crossover"
-msgstr ""
+msgstr "Dobbelt sporskifte"
 
 msgid "Site"
-msgstr ""
+msgstr "Anlæg"
 
 msgid "Service station"
 msgstr "Servicestation"
 
 msgid "Subway/Light rail station"
-msgstr ""
+msgstr "Metro-/letbanestation"
 
 msgid "Tram stop"
-msgstr ""
+msgstr "Sporvognsstop"
 
 msgid "Milestone"
-msgstr ""
+msgstr "Milepæl"
 
 msgid "Signal"
-msgstr ""
+msgstr "Signal"
 
 msgid "Level crossing"
-msgstr ""
+msgstr "Jernbaneoverskæring"
 
 msgid "Crossing"
-msgstr ""
+msgstr "Overskæring"
 
 msgid "Legend"
 msgstr ""
@@ -203,94 +203,94 @@ msgid "Tunnel"
 msgstr "Tunnel"
 
 msgid "Line ref"
-msgstr ""
+msgstr "Strækningsnummer"
 
 msgid "Railroad line"
-msgstr ""
+msgstr "Jernbanestrækning"
 
 msgid "Siding"
-msgstr ""
+msgstr "Sidespor"
 
 msgid "Yard track"
-msgstr ""
+msgstr "Rangerspor"
 
 msgid "Spur"
-msgstr ""
+msgstr "Anløbsspor"
 
 msgid "Crossover track"
-msgstr ""
+msgstr "Skiftespor"
 
 msgid "Branch line"
-msgstr ""
+msgstr "Sidestrækning"
 
 msgid "Main line"
-msgstr ""
+msgstr "Hovedstrækning"
 
 msgid "Highspeed line"
-msgstr ""
+msgstr "Højhastighedsstrækning"
 
 msgid "Industrial line"
-msgstr ""
+msgstr "Industristrækning"
 
 msgid "Industrial service track"
-msgstr ""
+msgstr "Industriel servicespor"
 
 msgid "Preserved track"
-msgstr ""
+msgstr "Bevaretspor"
 
 msgid "Preserved service track"
-msgstr ""
+msgstr "Bevaret servicespor"
 
 msgid "Track under construction"
-msgstr ""
+msgstr "Spor under konstruktion"
 
 msgid "Proposed track"
-msgstr ""
+msgstr "Foreslået spor"
 
 msgid "Disused track"
-msgstr ""
+msgstr "Diskuteret spor"
 
 msgid "Abandoned track"
-msgstr ""
+msgstr "Efterladt spor"
 
 msgid "Razed track"
-msgstr ""
+msgstr "Droppet spor"
 
 msgid "Tram"
-msgstr ""
+msgstr "Sporvogn"
 
 msgid "Subway"
-msgstr ""
+msgstr "Metro"
 
 msgid "Light rail"
-msgstr ""
+msgstr "Letbane/lokaltog"
 
 msgid "Narrow gauge track"
-msgstr ""
+msgstr "Smalspor"
 
 msgid "Switch (remote-controlled)"
-msgstr ""
+msgstr "Sporskifte (fjernstyret)"
 
 msgid "Switch (local operated)"
-msgstr ""
+msgstr "Sporskifte (betjent lokalt)"
 
 msgid "Resetting switch"
-msgstr ""
+msgstr "Fjedrende skifte"
 
 msgid "Signal box"
 msgstr "Signalboks"
 
 msgid "Owner change"
-msgstr ""
+msgstr "Ejerskifte"
 
 msgid "Railway crossing"
-msgstr ""
+msgstr "Sporkryds/-skifte"
 
 msgid "Buffer stop"
-msgstr ""
+msgstr "Sporstopper"
 
 msgid "Isolated track section"
-msgstr ""
+msgstr "Isoleret sporafsnit"
 
 msgid "Platform"
 msgstr "Platform"
@@ -302,7 +302,7 @@ msgid "Ticket shop"
 msgstr "Billetsalg"
 
 msgid "Subway entrance"
-msgstr ""
+msgstr "Metroindgang"
 
 msgid "Phone"
 msgstr "Telefon"
@@ -317,52 +317,52 @@ msgid "Water crane"
 msgstr "Vandkran"
 
 msgid "Coaling facility"
-msgstr ""
+msgstr "Kulanlæg"
 
 msgid "Wash"
 msgstr "Vaskehal"
 
 msgid "Pit"
-msgstr ""
+msgstr "Grav"
 
 msgid "Loading gauge"
-msgstr ""
+msgstr "Højdebom/-port"
 
 msgid "Hump yard"
-msgstr ""
+msgstr "Rangerbanegård"
 
 msgid "Rail brake"
-msgstr ""
+msgstr "Skinnebremse"
 
 msgid "Engine shed"
-msgstr ""
+msgstr "Remise"
 
 msgid "Workshop"
-msgstr ""
+msgstr "Værksted"
 
 msgid "Radio tower"
-msgstr "Radiotårn"
+msgstr "Radiomast"
 
 msgid "Turntable"
-msgstr ""
+msgstr "Drejeskive"
 
 msgid "Traverser"
-msgstr ""
+msgstr "Traverser"
 
 msgid "Loading ramp"
-msgstr ""
+msgstr "Læsserampe"
 
 msgid "Crane"
 msgstr "Kran"
 
 msgid "Track scale"
-msgstr ""
+msgstr "Vægt"
 
 msgid "Carrier truck pit"
 msgstr ""
 
 msgid "Gauge conversion"
-msgstr ""
+msgstr "Sporbreddeforening"
 
 msgid "Gate"
 msgstr "Port"
@@ -377,28 +377,28 @@ msgid "Station building"
 msgstr "Stationsbygning"
 
 msgid "Factory connected to railroad line"
-msgstr ""
+msgstr "Fabrik i forbindelse til spor"
 
 msgid "Rack"
 msgstr ""
 
 msgid "Embankment"
-msgstr ""
+msgstr "Vold"
 
 msgid "Cutting"
-msgstr ""
+msgstr "Indskæring"
 
 msgid "Miniature railway"
-msgstr ""
+msgstr "Miniature-jernbane"
 
 msgid "Funicular"
-msgstr ""
+msgstr "Kabelbane"
 
 msgid "Military line"
-msgstr ""
+msgstr "Militærjernbane"
 
 msgid "Military service track"
-msgstr ""
+msgstr "Militært servicespor"
 
 msgid "Ferry terminal"
 msgstr "Færgeterminal"
@@ -407,169 +407,169 @@ msgid "Ferry"
 msgstr "Færge"
 
 msgid "Test line"
-msgstr ""
+msgstr "Testjernbane"
 
 msgid "Test service track"
-msgstr ""
+msgstr "Testservicespor"
 
 msgid "Car shuttle"
-msgstr ""
+msgstr "Køretøjsrampe"
 
 msgid "Rolling highway"
-msgstr ""
+msgstr "Lastbilsrampe"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr ""
+msgstr "Der er ikke noget at se på dette niveau. Zoom ind for mere."
 
 msgid "Legend not available for this style."
-msgstr ""
+msgstr "Beskrivelse ikke tilgænglig med dette design."
 
 msgid "Language"
-msgstr ""
+msgstr "Sprog"
 
 msgid "Desktop version"
-msgstr ""
+msgstr "Desktop-version"
 
 msgid "Style"
-msgstr ""
+msgstr "Designstil"
 
 msgid "Search"
-msgstr ""
+msgstr "Søg"
 
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 msgid "No information"
-msgstr ""
+msgstr "Ingen info"
 
 msgid "speed only given for one direction"
-msgstr ""
+msgstr "hastighed kun angivet i én retning"
 
 msgid "main track, service track"
-msgstr ""
+msgstr "hovedspor, servicespor"
 
 msgid "Quick search shortcut"
-msgstr ""
+msgstr "shortcut til hurtig søgning"
 
 msgid "Placeholder"
-msgstr ""
+msgstr "Midlertidig"
 
 msgid "Donate"
-msgstr ""
+msgstr "Donér"
 
 msgid "Tools"
-msgstr ""
+msgstr "Værktøjer"
 
 msgid "Wiki"
-msgstr ""
+msgstr "Wiki"
 
 msgid "Search milestone"
-msgstr ""
+msgstr "Søg efter milepæl"
 
 msgid "Station code"
-msgstr ""
+msgstr "Stationskode"
 
 msgid "Search station"
-msgstr ""
+msgstr "Søg efter station"
 
 msgid "UIC reference"
-msgstr ""
+msgstr "UIC-reference"
 
 msgid "About this project"
-msgstr ""
+msgstr "Om dette projekt"
 
 msgid "Close"
-msgstr ""
+msgstr "Luk"
 
 msgid "Name"
-msgstr ""
+msgstr "Navn"
 
 msgid "Line operator"
-msgstr ""
+msgstr "Jerbaneoperatør"
 
 msgid "Operator"
-msgstr ""
+msgstr "Operatør"
 
 msgid "More results"
-msgstr ""
+msgstr "Flere resultater"
 
 msgid "Spur junction"
-msgstr ""
+msgstr "Sporskifte"
 
 msgid "No background map"
-msgstr ""
+msgstr "Intet baggrundskort"
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/t (ikke anvendt/under konstruktion)"
 
 msgid "Not electrified"
-msgstr ""
+msgstr "Ikke elektrificeret"
 
 msgid "Deelectrified"
-msgstr ""
+msgstr "Afelektrificeret"
 
 msgid "Electrification proposed"
-msgstr ""
+msgstr "Elektrificering foreslået"
 
 msgid "Electrification under construction"
-msgstr ""
+msgstr "lektrificering under konstruktion"
 
 msgid "contact line"
-msgstr ""
+msgstr "kontakt"
 
 msgid "3rd rail"
-msgstr ""
+msgstr "strømskinne"
 
 msgid "Germany"
-msgstr ""
+msgstr "Tyskland"
 
 msgid "Finland"
-msgstr ""
+msgstr "Finland"
 
 msgid "train protection"
-msgstr ""
+msgstr "togbeskyttelse"
 
 msgid "no train protection"
-msgstr ""
+msgstr "ingen togsbekyttelse"
 
 msgid "crossing signal type To"
 msgstr ""
 
 msgid "Voltage"
-msgstr ""
+msgstr "Spænding"
 
 msgid "signals"
-msgstr ""
+msgstr "signaler"
 
 msgid "Operating Sites"
 msgstr ""
 
 msgid "No information about train protection"
-msgstr ""
+msgstr "Ingen info om togbeskyttelse"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "Track usage"
-msgstr ""
+msgstr "Sporanvendelse"
 
 msgid "Lf 7 Geschwindigkeitssignal"
 msgstr ""
 
 msgid "1.5 – 3kV ="
-msgstr ""
+msgstr "1,5 – 3 kV ⎓"
 
 msgid "ETCS under construction"
-msgstr ""
+msgstr "ETCS under konstruktion"
 
 msgid "3kV ="
-msgstr ""
+msgstr "3 kV ="
 
 msgid "shunting signal type Ro"
 msgstr ""
 
 msgid "Track type"
-msgstr ""
+msgstr "Sportype"
 
 msgid "El 5 \"Bügel an\"-Signal"
 msgstr ""
@@ -578,7 +578,7 @@ msgid "Linienzugbeeinflussung"
 msgstr ""
 
 msgid "25kV 50Hz ~"
-msgstr ""
+msgstr "25 kV 50 Hz ~"
 
 msgid "So 106 Kreuztafel"
 msgstr ""
@@ -587,22 +587,22 @@ msgid "Ra 11 Wartezeichen mit Sh 1"
 msgstr ""
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr ""
+msgstr "Kryds, skifte, servicedepot, andet anlæg"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 msgstr ""
 
 msgid "At least 25kV ~"
-msgstr ""
+msgstr "Mindst 25 kV ~"
 
 msgid "minor signal type Lo"
 msgstr ""
 
 msgid "15 – 25kV ~"
-msgstr ""
+msgstr "15 – 25 kV ~"
 
 msgid "ETCS"
-msgstr ""
+msgstr "ETCS"
 
 msgid "Blockkennzeichen"
 msgstr ""
@@ -614,7 +614,7 @@ msgid "Ne 1 Trapeztafel"
 msgstr ""
 
 msgid "15kV 16⅔Hz ~"
-msgstr ""
+msgstr "15 kV 16⅔ Hz ~"
 
 msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
@@ -623,31 +623,31 @@ msgid "Ne 5 Haltetafel"
 msgstr ""
 
 msgid "More than 3kV ="
-msgstr ""
+msgstr "Mere end 3 kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
 msgstr ""
 
 msgid "750 – 1000V ="
-msgstr ""
+msgstr "750 – 1000V ="
 
 msgid "Less than 15kV ~"
-msgstr ""
+msgstr "Mindre end 15 kV ~"
 
 msgid "1kV ="
-msgstr ""
+msgstr "1 kV ="
 
 msgid "1 – 1.5kV ="
-msgstr ""
+msgstr "1 – 1,5 kV ="
 
 msgid "block signal type So"
 msgstr ""
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/t"
 
 msgid "1.5kV ="
-msgstr ""
+msgstr "1,5 kV ="
 
 msgid "El 2 Einschaltsignal"
 msgstr ""
@@ -668,7 +668,7 @@ msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 msgstr ""
 
 msgid "Less than 750V ="
-msgstr ""
+msgstr "Mindre end 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
 msgstr ""
@@ -677,10 +677,10 @@ msgid "El 4 \"Bügel ab\"-Signal"
 msgstr ""
 
 msgid "750V ="
-msgstr ""
+msgstr "750V ="
 
 msgid "25kV 60Hz ~"
-msgstr ""
+msgstr "25 kV 60 Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
 msgstr ""
@@ -689,7 +689,7 @@ msgid "El 1v Ausschaltsignal erwarten"
 msgstr ""
 
 msgid "15kV 16.7Hz ~"
-msgstr ""
+msgstr "15 kV 16,7 Hz ~"
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 msgstr ""
@@ -777,7 +777,7 @@ msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 msgstr ""
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr ""
+msgstr "Imprint &amp; privatlivspolitik"
 
 msgid "ATB - Automatische Treinbeïnvloeding"
 msgstr ""
@@ -789,139 +789,139 @@ msgid "KVB - Contrôle de Vitesse par Balises"
 msgstr ""
 
 msgid "1067mm"
-msgstr ""
+msgstr "1067 mm"
 
 msgid "1435mm"
-msgstr ""
+msgstr "1435 mm"
 
 msgid "1676mm"
-msgstr ""
+msgstr "1676 mm"
 
 msgid "1422mm"
-msgstr ""
+msgstr "1422 mm"
 
 msgid "1524mm"
-msgstr ""
+msgstr "1524 mm"
 
 msgid "950mm"
-msgstr ""
+msgstr "950 mm"
 
 msgid "800mm"
-msgstr ""
+msgstr "800 mm"
 
 msgid "127mm"
-msgstr ""
+msgstr "127 mm"
 
 msgid "Narrow gauge"
-msgstr ""
+msgstr "Smalspor"
 
 msgid "500mm"
-msgstr ""
+msgstr "500 mm"
 
 msgid "Miniature"
-msgstr ""
+msgstr "Miniature"
 
 msgid "Miniature tracks"
-msgstr ""
+msgstr "Miniaturespor"
 
 msgid "1445mm"
-msgstr ""
+msgstr "1445 mm"
 
 msgid "Standard gauge"
-msgstr ""
+msgstr "Normalspor"
 
 msgid "1100mm"
-msgstr ""
+msgstr "1100 mm"
 
 msgid "597mm"
-msgstr ""
+msgstr "597 mm"
 
 msgid "1372mm"
-msgstr ""
+msgstr "1372 mm"
 
 msgid "1450mm"
-msgstr ""
+msgstr "1450 mm"
 
 msgid "600mm"
-msgstr ""
+msgstr "600 mm"
 
 msgid "64mm"
-msgstr ""
+msgstr "64 mm"
 
 msgid "1432mm"
-msgstr ""
+msgstr "1432 mm"
 
 msgid "760mm"
-msgstr ""
+msgstr "760 mm"
 
 msgid "381mm"
-msgstr ""
+msgstr "381 mm"
 
 msgid "750mm"
-msgstr ""
+msgstr "750 mm"
 
 msgid "1009mm"
-msgstr ""
+msgstr "1009 mm"
 
 msgid "1495mm"
-msgstr ""
+msgstr "1495 mm"
 
 msgid "1520mm"
-msgstr ""
+msgstr "1520 mm"
 
 msgid "Track gauge values"
-msgstr ""
+msgstr "Sporbreddeværdier"
 
 msgid "1458mm"
-msgstr ""
+msgstr "1458 mm"
 
 msgid "Dual gauge"
-msgstr ""
+msgstr "Dobbelsporbredde"
 
 msgid "1600mm"
-msgstr ""
+msgstr "1600 mm"
 
 msgid "184mm"
-msgstr ""
+msgstr "184 mm"
 
 msgid "610mm"
-msgstr ""
+msgstr "610 mm"
 
 msgid "89mm"
-msgstr ""
+msgstr "89 mm"
 
 msgid "260mm"
-msgstr ""
+msgstr "260 mm"
 
 msgid "762mm"
-msgstr ""
+msgstr "762 mm"
 
 msgid "1050mm"
-msgstr ""
+msgstr "1050 mm"
 
 msgid "190mm"
-msgstr ""
+msgstr "190 mm"
 
 msgid "914mm"
-msgstr ""
+msgstr "914 mm"
 
 msgid "1000mm"
-msgstr ""
+msgstr "1000 mm"
 
 msgid "Multiple gauge"
-msgstr ""
+msgstr "Flere sporbredder"
 
 msgid "1668mm"
-msgstr ""
+msgstr "1668 mm"
 
 msgid "Broad gauge"
-msgstr ""
+msgstr "Bred sprobredde"
 
 msgid "900mm"
-msgstr ""
+msgstr "900 mm"
 
 msgid "700mm"
-msgstr ""
+msgstr "700 mm"
 
 msgid "Monorail"
-msgstr ""
+msgstr "Monorail"
