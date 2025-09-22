@@ -7,19 +7,17 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 
 @charset "utf-8";
 
-html,body
-{
+html, body {
 	background-color: white;
 	color: black;
 	margin: 0;
 	padding: 0;
-	font-family: Trebuchet MS,Helvetica,Arial,sans-serif;
+	font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
 	overflow-y: hidden;
 }
 
 /* page title */
-#header
-{
+#header {
 	font-size: 20px;
 	color: black;
 	padding-left: 5px;
@@ -27,21 +25,18 @@ html,body
 	top: 2px;
 }
 
-#header a
-{
+#header a {
 	color: #3b4a8e;
 	text-decoration: none;
 }
 
-#header a:hover
-{
+#header a:hover {
 	color: #3b4a8e;
 	text-decoration: underline;
 }
 
 /* description in header */
-#osm
-{
+#osm {
 	font-size: 11px;
 	margin-top: 5px;
 	margin-bottom: 10px;
@@ -49,21 +44,18 @@ html,body
 	padding-left: 5px;
 }
 
-#osm a
-{
+#osm a {
 	color: #3b4a8e;
 	text-decoration: none;
 }
 
-#osm a:hover
-{
+#osm a:hover {
 	color: #3b4a8e;
 	text-decoration: underline;
 }
 
 /* map frame */
-#mapFrame
-{
+#mapFrame {
 	background-color: #f1eee8;
 	color: black;
 	position: absolute;
@@ -71,20 +63,17 @@ html,body
 	bottom: 0px;
 	left: 300px;
 	right: 0px;
-	border-left: 1px solid black;
 }
 
 /* text which is shown when javascript is not activated */
-noscript p
-{
+noscript p {
 	font-size: 15px;
 	color: black;
 	margin-left: 80px;
 	margin-top: 100px;
 }
 
-#image
-{
+#image {
 	max-height: 60px;
 	min-height: 32px;
 	min-width: 32px;
@@ -94,15 +83,13 @@ noscript p
 	background-color: white;
 }
 
-#loadingImage
-{
+#loadingImage {
 	background-image: url(../img/loading.gif);
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-#image:hover
-{
+#image:hover {
 	cursor: pointer;
 	-o-box-shadow: 0px 0px 7px #aaaaaa;
 	-webkit-box-shadow: 0px 0px 7px #aaaaaa;
@@ -111,53 +98,46 @@ noscript p
 }
 
 /* loading image */
-.loading
-{
+.loading {
 	text-align: center;
 	width: 16px;
 	height: 16px;
 }
 
 /* names of clustered popups */
-.clusterName
-{
+.clusterName {
 	text-decoration: none;
 	font-weight: normal;
 	font-size: 12px;
 }
 
-.clusterName:hover
-{
+.clusterName:hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
 
 /* loading indicator of search engine */
-.loadingMoreInfo
-{
+.loadingMoreInfo {
 	padding: 10px;
 	text-align: center;
 	font-size: 12px;
 	color: black;
 }
 
-.loadingMoreInfo img
-{
+.loadingMoreInfo img {
 	text-align: center;
 	width: 16px;
 	height: 16px;
 }
 
-.loadingMoreInfo:hover img
-{
+.loadingMoreInfo:hover img {
 	text-align: center;
 	width: 16px;
 	height: 16px;
 }
 
 /* hidden frame to which josm remote plugin messages are echoed */
-#josmFrame
-{
+#josmFrame {
 	display: none;
 	visibility: hidden;
 	width: 0;
@@ -165,8 +145,7 @@ noscript p
 }
 
 /* messagebar, e.g. shown while loading search results */
-.messageBarTrue
-{
+.messageBarTrue {
 	z-index: 1000;
 	font-size: 20px;
 	font-weight: bold;
@@ -195,14 +174,12 @@ noscript p
 	padding: 1px 10px;
 }
 
-.messageBarTrue img
-{
+.messageBarTrue img {
 	width: 16px;
 	height: 16px;
 }
 
-.messageBarFalse
-{
+.messageBarFalse {
 	font-size: 0px;
 	-webkit-transition: opacity;
 	-webkit-transition-timing-function: ease-in-out;
@@ -218,8 +195,7 @@ noscript p
 }
 
 /* errorbar, e.g. shown when no searchresults were found */
-.errorBarTrue
-{
+.errorBarTrue {
 	z-index: 1000;
 	font-size: 20px;
 	font-weight: bold;
@@ -247,8 +223,7 @@ noscript p
 	border-radius: 5px;
 }
 
-.errorBarFalse
-{
+.errorBarFalse {
 	font-size: 0px;
 	-webkit-transition: opacity;
 	-webkit-transition-timing-function: ease-in-out;
@@ -264,8 +239,7 @@ noscript p
 }
 
 /* search box */
-#searchBox
-{
+#searchBox {
 	font-size: 18px;
 	height: 21px;
 	vertical-align: middle;
@@ -273,18 +247,14 @@ noscript p
 	margin-left: 5px;
 	margin-right: 5px;
 	background-color: white;
-	border: 1px solid black;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-o-border-radius: 3px;
-	border-radius: 3px;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
 	width: 230px;
 	padding-right: 18px;
 	padding-left: 22px;
 }
 
-#searchBox:focus
-{
+#searchBox:focus {
 	-o-box-shadow: 0px 0px 6px 1px #5898f1;
 	-webkit-box-shadow: 0px 0px 6px 1px #5898f1;
     -moz-box-shadow: 0px 0px 6px 1px #5898f1;
@@ -292,8 +262,7 @@ noscript p
 }
 
 /* search button, integrated into searchbox*/
-#searchButton
-{
+#searchButton {
 	background-color: white;
 	vertical-align: middle;
 	position: relative;
@@ -306,8 +275,7 @@ noscript p
 }
 
 /* clear button, integrated into searchbox*/
-#clearButton
-{
+#clearButton {
 	background-color: white;
 	vertical-align: middle;
 	position: relative;
@@ -320,8 +288,7 @@ noscript p
 }
 
 /* links of contact, more info, ... */
-#linkBar
-{
+#linkBar {
 	color: black;
 	padding-left: 5px;
 	padding-top: 8px;
@@ -330,23 +297,20 @@ noscript p
 }
 
 /* links in footer */
-.links
-{
+.links {
 	color: #3b4a8e;
 	font-size: 12px;
 	text-decoration: none;
 	font-weight: bold;
 }
 
-.links:hover
-{
+.links:hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
 
 /* last update */
-#info
-{
+#info {
 	color: black;
 	font-size: 11px;
 	padding-left: 5px;
@@ -354,8 +318,7 @@ noscript p
 }
 
 /* info like "zoom in to show markers" in footer */
-#status
-{
+#status {
 	color: #ff5e5e;
 	font-size: 12px;
 	margin-left: 5px;
@@ -363,8 +326,7 @@ noscript p
 }
 
 /* box for search result at the left side */
-.sideBar
-{
+.sideBar {
 	background-color: white;
 	color: black;
 	position: absolute;
@@ -375,43 +337,39 @@ noscript p
 	padding: 3px;
 	overflow-x: hidden;
 	overflow-y: auto;
-    border-right: 1px solid white;
-    z-index: 100;
+	z-index: 100;
+	border: none;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* box for search result at the left side */
-#styleSelectionBar
-{
+/* box for search result at the left side
+& box for the legend at the left side */
+#styleSelectionBar, #legendBar {
 	padding: 10px;
 	margin-left: 5px;
 	width: 251px;
-	border: 1px solid #aaaaaa;
+	background: #f2f6fB;
 	font-size: 14px;
+	border-radius: 5px;
 }
 
-/* box for the legend at the left side */
-#legendBar
-{
-	padding: 10px;
-	margin-left: 5px;
-	margin-top: 10px;
-	width: 251px;
-	font-size: 14px;
-	border: 1px solid #aaaaaa;
+/* radio buttons within the "Select a map style" box */
+#styleSelectionBar input {
+	cursor: pointer;
 }
+
 
 /* the legend itself */
-#legend
-{
+#legend {
 	margin-top: 10px;
 	width: 251px;
 	border: none;
 	height: 100px;
+	border-radius: 5px;
 }
 
 /* boxes of ext details and search results */
-.infoBar
-{
+.infoBar {
 	width: 271px;
 	margin-bottom: 20px;
 	margin-left: 5px;
@@ -419,14 +377,12 @@ noscript p
 	border: 1px solid #aaaaaa;
 }
 
-.infoBarOut
-{
+.infoBarOut {
 	height: 0px;
 }
 
 /* search results */
-.resultEntry
-{
+.resultEntry {
 	color: black;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -450,8 +406,7 @@ noscript p
 	border-bottom: 1px solid #f0f0f0;
 }
 
-.resultEntry:hover
-{
+.resultEntry:hover {
 	color: white;
 	cursor: pointer;
 	background-color: #6baced;
@@ -462,14 +417,12 @@ noscript p
 	border-bottom: 1px solid #64a1de;
 }
 
-.resultEntry b
-{
+.resultEntry b {
 	font-size: 14px;
 }
 
 /* links of each search result to navigation feature */
-.route
-{
+.route {
 	font-size: 0px;
 	height: 0px;
 	-webkit-transition: height;
@@ -483,8 +436,7 @@ noscript p
 	-o-transition-duration: 200ms;
 }
 
-.resultEntry:hover .route
-{
+.resultEntry:hover .route {
 	font-size: 10px;
 	height: 12px;
 	-webkit-transition: height;
@@ -498,8 +450,7 @@ noscript p
 	-o-transition-duration: 200ms;
 }
 
-#moreResults
-{
+#moreResults {
 	color: black;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -518,15 +469,13 @@ noscript p
 	-o-transition-duration: 200ms;
 }
 
-#moreResults:hover
-{
+#moreResults:hover {
 	color: white;
 	background-color: #6baced;
 	cursor: pointer;
 }
 
-#errorResults
-{
+#errorResults {
 	color: white;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -536,14 +485,12 @@ noscript p
 	font-size: 12px;
 }
 
-#searchOption
-{
+#searchOption {
 	position: relative;
 	top: -13px;
 }
 
-#searchOptionCaption
-{
+#searchOptionCaption {
 	position: relative;
 	top: -15px;
 	color: white;
@@ -552,8 +499,7 @@ noscript p
 }
 
 /* small advertisements or notifications */
-#ad
-{
+#ad {
 	background-color: #ffc36b;
 	background: -moz-linear-gradient(top, rgba(255, 195, 107, 1) 0, rgba(241, 167, 62, 1) 67%, rgba(194, 153, 94, 1) 100%);
 	background: -webkit-linear-gradient(top, rgba(255, 195, 107, 1) 0, rgba(241, 167, 62, 1) 67%, rgba(194, 153, 94, 1) 100%);
@@ -571,8 +517,7 @@ noscript p
 	margin: 5px;
 }
 
-#ad:hover
-{
+#ad:hover {
 	background-color: #ffc36b;
 	background: -moz-linear-gradient(top, rgba(255, 195, 107, 1) 0, rgba(194, 153, 94, 1) 67%, rgba(204, 148, 69, 1) 100%);
 	background: -webkit-linear-gradient(top, rgba(255, 195, 107, 1) 0, rgba(194, 153, 94, 1) 67%, rgba(204, 148, 69, 1) 100%);
@@ -586,15 +531,13 @@ noscript p
 
 
 /* small advertisement for donators */
-#poweredby
-{
+#poweredby {
 	position: relative;
 	left: 30px;
 	top: 10px;
 }
 
-#poweredby img
-{
+#poweredby img {
 	border: 1px solid gray;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -602,23 +545,21 @@ noscript p
 	border-radius: 4px;
 }
 
-#poweredby img:hover
-{
+#poweredby img:hover {
 	cursor: pointer;
 	-webkit-box-shadow: 0px 0px 8px #aaa;
 	-moz-box-shadow: 0px 0px 8px #aaa;
 	box-shadow: 0px 0px 8px #aaa;
 }
 
-#locateButton
-{
+#locateButton {
 	position: absolute;
 	left: 310px;
 	top: 70px;
 	width: 26px;
 	height: 26px;
 	background-color: white;
-	background-image: url('../img/locate.png');
+	background-image: url("../img/locate.png");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: 23px 23px;
@@ -627,33 +568,38 @@ noscript p
 	-o-border-radius: 4px;
 	border-radius: 4px;
 	border: 1px solid #aaa;
-	box-shadow: 0 1px 7px rgba(0,0,0,0.4);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	z-index: 1000;
 }
 
-#locateButton:hover
-{
+#locateButton:hover {
 	background-color: #f4f4f4;
 	cursor: pointer;
 }
 
 /* language selection box */
-#langSelector
-{
+#langSelector {
 	position: absolute;
 	left: 185px;
 	top: 5px;
 	font-size: 12px;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
+	padding: 2px 5px;
+	cursor: pointer;
 }
 
-#langSelection
-{
+#langSelector:hover {
+	border-color: transparent;
+	background-color: #e6e6e6;
+}
+
+#langSelection {
 	margin-bottom: -20px;
 }
 
 /* donate button */
-#donate
-{
+#donate {
 	margin-left: 75px;
 	margin-bottom: 5px;
 	width: 140px;
@@ -666,23 +612,20 @@ noscript p
 	right: 0px;
 }
 
-#donate a
-{
+#donate a {
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
 	font-size: 18px;
 }
 
-.FlattrButton
-{
+.FlattrButton {
 	position: absolute;
 	right: 20px;
 	margin-top: -25px;
 }
 
-#PaypalButton
-{
+#PaypalButton {
 	margin-left: 5px;
 	margin-top: 10px;
 }
