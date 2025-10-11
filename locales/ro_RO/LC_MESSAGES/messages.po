@@ -1,0 +1,941 @@
+# OpenRailwayMap Copyright (C) 2018 Alexander Matheisen
+# This program comes with ABSOLUTELY NO WARRANTY.
+# This is free software, and you are welcome to redistribute it under certain conditions.
+# See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
+#
+# Translators:
+# Alexander Matheisen <alex@matheisen.org>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenRailwayMap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 12:29+0100\n"
+"PO-Revision-Date: 2025-02-11 11:55+0200\n"
+"Last-Translator: Florea Costin-Mario <lazy_programmer.lh2ro@slmails.com>\n"
+"Language-Team: \n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n==0 || (n!=1 && n%100>=1 && n%100<=19) ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "More Info"
+msgstr "Mai multe informații"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Javascript is not activated"
+msgstr "Javascript nu este activat"
+
+msgid ""
+"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
+"browser settings."
+msgstr ""
+"Javascript este necesar pentru afișarea hărții și funcționarea acestui site. Vă rugăm să "
+"activați Javascript în setările browserului dumneavoastră."
+
+msgid "Loading..."
+msgstr "Se încarcă..."
+
+msgid "Nothing found."
+msgstr "Nu am gasit nimic."
+
+msgid "Last update"
+msgstr "Ultima actualizare"
+
+msgid "Empty input."
+msgstr "Nu ați introdus nimic."
+
+msgid "Kilometer"
+msgstr "Kilometru"
+
+msgid "Track"
+msgstr "Linie"
+
+msgid "Permalink"
+msgstr "Permalink"
+
+#, fuzzy
+msgid "Hillshading"
+msgstr "Hillshading"
+
+msgid "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
+msgstr "Hillshading by <a href='https://www.nasa.gov/'>NASA SRTM</a>"
+
+msgid "Rendering: OpenRailwayMap"
+msgstr "Render: OpenRailwayMap"
+
+msgid "Mapnik"
+msgstr "Mapnik"
+
+msgid "Mapnik Grayscale"
+msgstr "Mapnik Grayscale"
+
+#, fuzzy
+msgid "Map data &copy; OpenStreetMap contributors"
+msgstr "Map data &copy; OpenStreetMap contributors"
+
+msgid "Select a map style"
+msgstr "Selectează un stil al harții"
+
+msgid "Public transport"
+msgstr "Transport public"
+
+msgid "Search results"
+msgstr "Rezultatele căutării"
+
+msgid "Search only in the current map view"
+msgstr "Căutare numai în vizualizarea curentă a hărții"
+
+msgid "HTML-Code"
+msgstr "HTML-Code"
+
+msgid "Copy this HTML code snippet into your website to show a small map with a marker."
+msgstr "Copy this HTML code snippet into your website to show a small map with a marker."
+
+msgid "Fullscreen"
+msgstr "Ecran complet"
+
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d secundă"
+msgstr[1] "%d secunde"
+msgstr[2] ""
+
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minut"
+msgstr[1] "%d minute"
+msgstr[2] ""
+
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d oră"
+msgstr[1] "%d ore"
+msgstr[2] ""
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d zi"
+msgstr[1] "%d zile"
+msgstr[2] ""
+
+#, php-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d săptămâna"
+msgstr[1] "%d săptămâni"
+msgstr[2] ""
+
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d lună"
+msgstr[1] "%d luni"
+msgstr[2] ""
+
+#, php-format
+msgid "more than %s ago"
+msgstr "mai mult de acum %s"
+
+#, php-format
+msgid "%s ago"
+msgstr "acum %s"
+
+msgid "Infrastructure"
+msgstr "Infrastructură"
+
+msgid "Signalling and train protection"
+msgstr "Semnalizare și sisteme de siguranță"
+
+msgid "Maxspeeds"
+msgstr "Viteze maxime"
+
+msgid "Electrification"
+msgstr "Electrificare"
+
+msgid "Halt"
+msgstr "Haltă"
+
+msgid "Station"
+msgstr "Stație"
+
+msgid "Junction"
+msgstr "Joncțiune"
+
+msgid "Yard"
+msgstr "Triaj"
+
+msgid "Crossover"
+msgstr "Rebrusment"
+
+msgid "Site"
+msgstr "Locație"
+
+msgid "Service station"
+msgstr "Stație tehnică"
+
+msgid "Subway/Light rail station"
+msgstr "Stație metrou/metrou ușor"
+
+msgid "Tram stop"
+msgstr "Stație de tramvai"
+
+msgid "Milestone"
+msgstr "Bornă"
+
+msgid "Signal"
+msgstr "Semnal"
+
+msgid "Level crossing"
+msgstr "Trecere la nivel"
+
+msgid "Crossing"
+msgstr "Trecere"
+
+msgid "Legend"
+msgstr "Legendă"
+
+msgid "Bridge"
+msgstr "Pod"
+
+msgid "Tunnel"
+msgstr "Tunel"
+
+#, fuzzy
+msgid "Line ref"
+msgstr "Line ref"
+
+msgid "Railroad line"
+msgstr "Linie de cale ferată"
+
+msgid "Siding"
+msgstr "Linie de garare"
+
+msgid "Yard track"
+msgstr "Linie de triaj"
+
+msgid "Spur"
+msgstr "Cale ferată de racordare"
+
+msgid "Crossover track"
+msgstr "Linie de rebrusare"
+
+msgid "Branch line"
+msgstr "Linie secundară"
+
+msgid "Main line"
+msgstr "Magistrala"
+
+msgid "Highspeed line"
+msgstr "Linie de mare viteza"
+
+msgid "Industrial line"
+msgstr "Linie industrială"
+
+msgid "Industrial service track"
+msgstr "Linie tehnică industrială"
+
+msgid "Preserved track"
+msgstr "Linie conservată"
+
+msgid "Preserved service track"
+msgstr "Linie tehnică conservată"
+
+msgid "Track under construction"
+msgstr "Linie în construcție"
+
+msgid "Proposed track"
+msgstr "Linie propusă"
+
+msgid "Disused track"
+msgstr "Linie desfințată"
+
+msgid "Abandoned track"
+msgstr "Linie abandonată"
+
+msgid "Razed track"
+msgstr "Linie distrusă"
+
+msgid "Tram"
+msgstr "Tramvai"
+
+msgid "Subway"
+msgstr "Metrou"
+
+msgid "Light rail"
+msgstr "Metrou ușor"
+
+msgid "Narrow gauge track"
+msgstr "Linie îngustă"
+
+msgid "Switch (remote-controlled)"
+msgstr "Schimbător de cale (operat de la distantă)"
+
+msgid "Switch (local operated)"
+msgstr "Schimbător de cale (operat local)"
+
+msgid "Resetting switch"
+msgstr "Schimbător de cale (cu resetare la poziția inițială)"
+
+msgid "Signal box"
+msgstr "Post de semnalizare"
+
+msgid "Owner change"
+msgstr "Owner change"
+
+msgid "Railway crossing"
+msgstr "Railway crossing"
+
+msgid "Buffer stop"
+msgstr "Buffer stop"
+
+msgid "Isolated track section"
+msgstr "Zonă neutră"
+
+msgid "Platform"
+msgstr "Peron"
+
+msgid "Vending machine"
+msgstr "Tonomat"
+
+msgid "Ticket shop"
+msgstr "Casă de bilete"
+
+msgid "Subway entrance"
+msgstr "Gură de metrou"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Water tower"
+msgstr "Turn de apă"
+
+msgid "Fuel"
+msgstr "Combustibil"
+
+msgid "Water crane"
+msgstr "Coloană hidraulică"
+
+msgid "Coaling facility"
+msgstr "Buncăr de cărbune"
+
+msgid "Wash"
+msgstr "Spălătorie"
+
+msgid "Pit"
+msgstr "Canal de revizie"
+
+msgid "Loading gauge"
+msgstr "Gabarit de încărcare"
+
+msgid "Hump yard"
+msgstr "Triaj cu rampă"
+
+msgid "Rail brake"
+msgstr "Frână de triaj"
+
+msgid "Engine shed"
+msgstr "Remiză de locomotive"
+
+msgid "Workshop"
+msgstr "Atelier"
+
+msgid "Radio tower"
+msgstr "Turn radio"
+
+msgid "Turntable"
+msgstr "Placă învârtitoare"
+
+#, fuzzy
+msgid "Traverser"
+msgstr "Traverser"
+
+msgid "Loading ramp"
+msgstr "Rampă de încărcare"
+
+msgid "Crane"
+msgstr "Macara"
+
+msgid "Track scale"
+msgstr "Pod basculă"
+
+#, fuzzy
+msgid "Carrier truck pit"
+msgstr "Carrier truck pit"
+
+msgid "Gauge conversion"
+msgstr "Schimbare de ecartament"
+
+msgid "Gate"
+msgstr "Poartă"
+
+msgid "Museum"
+msgstr "Muzeu"
+
+msgid "Container terminal"
+msgstr "Terminal containere"
+
+msgid "Station building"
+msgstr "Clădirea stației"
+
+msgid "Factory connected to railroad line"
+msgstr "Fabrică conectată la calea ferată"
+
+msgid "Rack"
+msgstr "Cremalieră"
+
+msgid "Embankment"
+msgstr "Terasament"
+
+msgid "Cutting"
+msgstr "Debleu"
+
+msgid "Miniature railway"
+msgstr "Cale ferată în miniatură"
+
+msgid "Funicular"
+msgstr "Funicular"
+
+msgid "Military line"
+msgstr "Linie militară"
+
+msgid "Military service track"
+msgstr "Linie tehnică militară"
+
+msgid "Ferry terminal"
+msgstr "Terminal feribot"
+
+msgid "Ferry"
+msgstr "Feribot"
+
+msgid "Test line"
+msgstr "Linie de testare"
+
+msgid "Test service track"
+msgstr "Linie tehnică de testare"
+
+msgid "Car shuttle"
+msgstr "Rampă încărcare mașini"
+
+msgid "Rolling highway"
+msgstr "Rampă încărcare camioane"
+
+msgid "Nothing to see in this zoom level. Please zoom in."
+msgstr "Nu se poate vedea nimic la acest nivel de zoom. Vă rugăm măriți."
+
+msgid "Legend not available for this style."
+msgstr "Legenda nu este disponibilă pentru acest stil."
+
+msgid "Language"
+msgstr "Limbă"
+
+msgid "Desktop version"
+msgstr "Versiunea de desktop"
+
+msgid "Style"
+msgstr "Stil"
+
+msgid "Search"
+msgstr "Căutare"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "No information"
+msgstr "Nicio informație"
+
+msgid "speed only given for one direction"
+msgstr "viteza dată doar pentru o direcție"
+
+msgid "main track, service track"
+msgstr "linie principală, linie tehnică"
+
+msgid "Quick search shortcut"
+msgstr "Scurtătură căutare rapidă"
+
+#, fuzzy
+msgid "Placeholder"
+msgstr "Placeholder"
+
+msgid "Donate"
+msgstr "Donează"
+
+msgid "Tools"
+msgstr "Unelte"
+
+msgid "Wiki"
+msgstr "Wiki"
+
+msgid "Search milestone"
+msgstr "Caută bornă"
+
+msgid "Station code"
+msgstr "Cod stație"
+
+msgid "Search station"
+msgstr "Caută stație"
+
+msgid "UIC reference"
+msgstr "Referință UIC"
+
+msgid "About this project"
+msgstr "Despre acest proiect"
+
+msgid "Close"
+msgstr "Închide"
+
+msgid "Name"
+msgstr "Nume"
+
+msgid "Line operator"
+msgstr "Operator linie"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "More results"
+msgstr "Mai multe rezultate"
+
+msgid "Spur junction"
+msgstr "Juncțiune privată"
+
+msgid "No background map"
+msgstr "Nicio hartă în fundal"
+
+msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
+msgstr "%SPDMIN%-%SPDMAX% km/h (desfințat/in construcție)"
+
+msgid "Not electrified"
+msgstr "Nu este electrificat"
+
+msgid "Deelectrified"
+msgstr "Dezelectrificat"
+
+msgid "Electrification proposed"
+msgstr "Electrificare propusă"
+
+msgid "Electrification under construction"
+msgstr "Electrificare în construcție"
+
+msgid "contact line"
+msgstr "linie de contact"
+
+msgid "3rd rail"
+msgstr "șina a treia"
+
+msgid "Germany"
+msgstr "Germania"
+
+msgid "Finland"
+msgstr "Finlanda"
+
+msgid "train protection"
+msgstr "sistem de siguranță"
+
+msgid "no train protection"
+msgstr "fără sistem de siguranță"
+
+msgid "crossing signal type To"
+msgstr "Crossing signal type To"
+
+msgid "Voltage"
+msgstr "Tensiune"
+
+msgid "signals"
+msgstr "Semnal"
+
+msgid "Operating Sites"
+msgstr "Locații de operare"
+
+msgid "No information about train protection"
+msgstr "Nicio informație despre sistemele de siguranță"
+
+msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
+msgstr ""
+
+msgid "Track usage"
+msgstr "Utilizarea liniei"
+
+msgid "Lf 7 Geschwindigkeitssignal"
+msgstr ""
+
+msgid "1.5 – 3kV ="
+msgstr "1.5 – 3kV ="
+
+msgid "ETCS under construction"
+msgstr "ETCS în construcție"
+
+msgid "3kV ="
+msgstr "3kV ="
+
+msgid "shunting signal type Ro"
+msgstr "Shunting signal type Ro"
+
+msgid "Track type"
+msgstr "Tipul liniei"
+
+msgid "El 5 \"Bügel an\"-Signal"
+msgstr ""
+
+msgid "Linienzugbeeinflussung"
+msgstr "LZB"
+
+msgid "25kV 50Hz ~"
+msgstr "25kV 50Hz ~"
+
+msgid "So 106 Kreuztafel"
+msgstr ""
+
+msgid "Ra 11 Wartezeichen mit Sh 1"
+msgstr ""
+
+msgid "Junction, Crossover, Service Station, Site"
+msgstr "Joncțiune, Rebrusment, Stație tehnică, Locații"
+
+msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
+msgstr ""
+
+msgid "At least 25kV ~"
+msgstr "Cel puțin 25kV ~"
+
+msgid "minor signal type Lo"
+msgstr "Minor signal type Lo"
+
+msgid "15 – 25kV ~"
+msgstr "15 – 25kV ~"
+
+msgid "ETCS"
+msgstr "ETCS"
+
+msgid "Blockkennzeichen"
+msgstr ""
+
+msgid "Ne 6 Haltepunkttafel"
+msgstr ""
+
+msgid "Ne 1 Trapeztafel"
+msgstr ""
+
+msgid "15kV 16⅔Hz ~"
+msgstr "15kV 16⅔Hz ~"
+
+msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
+msgstr ""
+
+msgid "Ne 5 Haltetafel"
+msgstr ""
+
+msgid "More than 3kV ="
+msgstr "Mai mult de 3kV ="
+
+msgid "Lf 6 Geschwindigkeits­ankündesignal"
+msgstr ""
+
+msgid "750 – 1000V ="
+msgstr "750 – 1000V ="
+
+msgid "Less than 15kV ~"
+msgstr "Mai puțin de 15kV ~"
+
+msgid "1kV ="
+msgstr "1kV ="
+
+msgid "1 – 1.5kV ="
+msgstr "1 – 1.5kV ="
+
+msgid "block signal type So"
+msgstr "Block signal type So"
+
+msgid "%SPDMIN%-%SPDMAX% km/h"
+msgstr "%SPDMIN%-%SPDMAX% km/h"
+
+msgid "1.5kV ="
+msgstr "1.5kV ="
+
+msgid "El 2 Einschaltsignal"
+msgstr ""
+
+msgid "Ra 10 Rangierhalttafel / Verschubhalttafel"
+msgstr ""
+
+msgid "Zs 10 Endesignal (Tafel)"
+msgstr ""
+
+msgid "Zs 6 Gegengleisanzeiger"
+msgstr "Zs 6 wrong road signal"
+
+msgid "El 1 Ausschaltsignal"
+msgstr ""
+
+msgid "Ra 11b Wartezeichen"
+msgstr ""
+
+msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
+msgstr ""
+
+msgid "Less than 750V ="
+msgstr "Mai puțin de 750V ="
+
+msgid "Punktförmige Zugbeeinflussung"
+msgstr "PZB"
+
+msgid "El 4 \"Bügel ab\"-Signal"
+msgstr ""
+
+msgid "750V ="
+msgstr "750V ="
+
+msgid "25kV 60Hz ~"
+msgstr "25kV 60Hz ~"
+
+msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
+msgstr ""
+
+msgid "El 1v Ausschaltsignal erwarten"
+msgstr ""
+
+msgid "15kV 16.7Hz ~"
+msgstr "15kV 16.7Hz ~"
+
+msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
+msgstr ""
+
+msgid "distant signal with Eo 2 (new type)"
+msgstr "Distant signal with Eo 2 (new type)"
+
+msgid "Ks-Hauptsignal"
+msgstr ""
+
+msgid "Bü 5 Läutetafel (normal, für durchfahrende Züge)"
+msgstr ""
+
+msgid "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
+msgstr ""
+
+msgid "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
+msgstr ""
+
+msgid "El 4 \"Bügel ab\"-Signal"
+msgstr ""
+
+msgid "Vr-Formvorsignal ohne Angabe der Signalzustände"
+msgstr ""
+
+msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
+msgstr ""
+
+msgid "main signal without aspects given (new type, old type)"
+msgstr "Main signal without aspects given (new type, old type)"
+
+msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
+msgstr ""
+
+msgid "main signal with Po 1 (new type, old type)"
+msgstr "Main signal with Po 1 (new type, old type)"
+
+msgid "main signal with Po 2 (new type, old type)"
+msgstr "Main signal with Po 2 (new type, old type)"
+
+msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
+msgstr ""
+
+msgid "distant signal with Eo 1 (new type, old type)"
+msgstr "Distant signal with Eo 1 (new type, old type)"
+
+msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
+msgstr ""
+
+msgid "Sv-Signal (ohne Hp 0, mit Hp 0)"
+msgstr ""
+
+msgid "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
+msgstr ""
+
+msgid "El 5 \"Bügel an\"-Signal"
+msgstr ""
+
+msgid ""
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr ""
+
+msgid "distant signal without aspects given (new type, old type)"
+msgstr "Distant signal without aspects given (new type, old type)"
+
+msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
+msgstr ""
+
+msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
+msgstr ""
+
+msgid "Imprint &amp; Privacy Policy"
+msgstr "Imprint &amp; Politică de confidențialitate"
+
+msgid "ATB - Automatische Treinbeïnvloeding"
+msgstr ""
+
+msgid "TVM - Transmission Voie-Machine"
+msgstr ""
+
+msgid "KVB - Contrôle de Vitesse par Balises"
+msgstr ""
+
+msgid "1067mm"
+msgstr ""
+
+msgid "1435mm"
+msgstr ""
+
+msgid "1676mm"
+msgstr ""
+
+msgid "1422mm"
+msgstr ""
+
+msgid "1524mm"
+msgstr ""
+
+msgid "950mm"
+msgstr ""
+
+msgid "800mm"
+msgstr ""
+
+msgid "127mm"
+msgstr ""
+
+msgid "Narrow gauge"
+msgstr "Ecartament îngust"
+
+msgid "500mm"
+msgstr ""
+
+msgid "Miniature"
+msgstr ""
+
+msgid "Miniature tracks"
+msgstr "Șine în miniatură"
+
+msgid "1445mm"
+msgstr ""
+
+msgid "Standard gauge"
+msgstr "Ecartament standard"
+
+msgid "1100mm"
+msgstr ""
+
+msgid "597mm"
+msgstr ""
+
+msgid "1372mm"
+msgstr ""
+
+msgid "1450mm"
+msgstr ""
+
+msgid "600mm"
+msgstr ""
+
+msgid "64mm"
+msgstr ""
+
+msgid "1432mm"
+msgstr ""
+
+msgid "760mm"
+msgstr ""
+
+msgid "381mm"
+msgstr ""
+
+msgid "750mm"
+msgstr ""
+
+msgid "1009mm"
+msgstr ""
+
+msgid "1495mm"
+msgstr ""
+
+msgid "1520mm"
+msgstr ""
+
+msgid "Track gauge values"
+msgstr "Valori are ecartamentelor"
+
+msgid "1458mm"
+msgstr ""
+
+msgid "Dual gauge"
+msgstr "Ecartament dublu"
+
+msgid "1600mm"
+msgstr ""
+
+msgid "184mm"
+msgstr ""
+
+msgid "610mm"
+msgstr ""
+
+msgid "89mm"
+msgstr ""
+
+msgid "260mm"
+msgstr ""
+
+msgid "762mm"
+msgstr ""
+
+msgid "1050mm"
+msgstr ""
+
+msgid "190mm"
+msgstr ""
+
+msgid "914mm"
+msgstr ""
+
+msgid "1000mm"
+msgstr ""
+
+msgid "Multiple gauge"
+msgstr "Ecartamente multiple"
+
+msgid "1668mm"
+msgstr ""
+
+msgid "Broad gauge"
+msgstr "Ecartamente larg"
+
+msgid "900mm"
+msgstr ""
+
+msgid "700mm"
+msgstr ""
+
+msgid "Monorail"
+msgstr ""
