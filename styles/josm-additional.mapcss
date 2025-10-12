@@ -23,6 +23,7 @@ meta
 	author: "Nakaner";
 	link: "https://wiki.openstreetmap.org/wiki/OpenRailwayMap";
 	watch-modified: true;
+	min-josm-version: 18678;
 }
 
 way|z9-[railway=disused][!"disused:railway"]
@@ -67,6 +68,63 @@ node|z14-[railway=milestone][!"railway:position"]
 	icon-width: 10;
 	icon-height: 16;
 	allow-overlap: true;
+}
+
+@supports (user-agent: josm) {
+	/* Cones at signals for a single direction */
+	way[railway] > node|z17-["railway:signal:direction"=~/^(forward|backward)$/]::cone
+	{
+		z-index: -1;
+		icon-width: 30;
+		icon-height: 30;
+		allow-overlap: true;
+		icon-image: "icons/cone-30.png";
+		icon-rotation: parent_way_angle() - 180deg;
+		icon-opacity: 0.6;
+		set .signals_with_direction;
+	}
+
+	way > node["railway:signal:direction"="forward"].signals_with_direction::cone {
+		icon-rotation: parent_way_angle();
+	}
+
+	node|z20-["railway:signal:direction"].signals_with_direction::cone {
+		icon-width: 50;
+		icon-height: 50;
+		icon-image: "icons/cone-50.png";
+	}
+
+	/* Arrows pointing into the direction where a signal */
+	/* is located relative to the track. */
+	way[railway] > node|z19-["railway:signal:position"=~/^(left|right)$/]::left_right
+	{
+		z-index: -2;
+		icon-width: 24;
+		icon-height: 24;
+		allow-overlap: true;
+		icon-image: "icons/position-24.png";
+		icon-rotation: parent_way_angle() + 90deg;
+		icon-opacity: 0.8;
+		set .signals_with_position;
+	}
+
+	way > node["railway:signal:position"="right"].signals_with_position::left_right {
+		icon-rotation: parent_way_angle() - 90deg;
+	}
+
+	node|z20-.signals_with_position::left_right
+	{
+		icon-image: "icons/position-40.png";
+		icon-width: 40;
+		icon-height: 40;
+	}
+
+	node|z21-.signals_with_position::left_right
+	{
+		icon-image: "icons/position-70.png";
+		icon-width: 70;
+		icon-height: 70;
+	}
 }
 
 /* German route distant signals (Zs 2v), missing route information */
