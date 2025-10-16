@@ -167,6 +167,19 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_d
 }
 
 /*********************************/
+/* DE crossing distant sign Bü 3 */
+/*********************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing_distant"="DE-ESO:bü3"]
+{
+	z-index: 500;
+	icon-image: "icons/de/bue3-57.png";
+	icon-width: 7;
+	icon-height: 28;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*********************************/
 /* DE whistle sign Bü 4 (DS 301) */
 /*********************************/
 node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:whistle"="DE-ESO:db:bü4"]
@@ -387,6 +400,77 @@ node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:crossing"=
 	allow-overlap: true;
 }
 
+/*********************************************************/
+/* Combination of DE brake test and repeated main signal */
+/*           DE Fahrtanzeiger+Bremsprobesignal           */
+/*********************************************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main_repeated"="DE-ESO:fahrtanzeiger"]["railway:signal:main_repeated"=light]["railway:signal:brake_test"="DE-ESO:zp"]["railway:signal:brake_test:form"="light"]
+{
+	z-index: 999;
+	icon-image: "icons/de/zp8_and_fahrtanzeiger-32.png";
+	icon-width: 32;
+	icon-height: 32;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/*************************/
+/*  DE departure signals */
+/*   DE Abfahrsignale    */
+/*************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:departure"="DE-ESO:zp"]["railway:signal:departure:form"="light"],
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:departure"="DE-BOStrab:a2"]["railway:signal:departure:form"="light"]
+{
+	z-index: 850;
+	icon-image: "icons/de/zp9-db-38.png";
+	icon-width: 16;
+	icon-height: 32;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/******************************/
+/*  DE fouling point signals  */
+/*   DE Grenzzeichen          */
+/******************************/
+node|z18-[railway=signal]["railway:signal:fouling_point"="DE-ESO:ra12"],
+node|z18-[railway=signal]["railway:signal:fouling_point"="DE-BOStrab:sh6"]
+{
+	z-index: 100;
+	icon-image: "icons/de/ra12.png";
+	icon-width: 16;
+	icon-height: 16;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/***************************/
+/*  DE brake test signals  */
+/*   DE Bremsprobesignal   */
+/***************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:brake_test"="DE-ESO:zp"]["railway:signal:brake_test:form"="light"]
+{
+	z-index: 990;
+	icon-image: "icons/de/zp8-32.png";
+	icon-width: 16;
+	icon-height: 32;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/****************************/
+/*     DE Fahrtanzeiger     */
+/****************************/
+node|z15-[railway=signal]["railway:signal:direction"]["railway:signal:main_repeated"="DE-ESO:fahrtanzeiger"]["railway:signal:main_repeated"="light"]
+{
+	z-index: 995;
+	icon-image: "icons/de/fahrtanzeiger-32.png";
+	icon-width: 32;
+	icon-height: 32;
+	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
 /***************************************************/
 /* DE tram signal "start of train protection" So 1 */
 /***************************************************/
@@ -569,6 +653,30 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:minor"="DE
 	icon-width: 12;
 	icon-height: 12;
 	text-allow-overlap: true;
+	allow-overlap: true;
+}
+
+/**********************************/
+/* DE tram point switch sign St 2 */
+/**********************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:switch"="DE-BOStrab:st2"]
+{
+	z-index: 458;
+	icon-image: "icons/de/bostrab/st2-18.png";
+	icon-width: 18;
+	icon-height: 18;
+	allow-overlap: true;
+}
+
+/***********************************/
+/* DE tram signal switch sign St 1 */
+/***********************************/
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:switch"="DE-BOStrab:st1"]
+{
+	z-index: 459;
+	icon-image: "icons/de/bostrab/st1-18.png";
+	icon-width: 18;
+	icon-height: 18;
 	allow-overlap: true;
 }
 
@@ -2386,8 +2494,8 @@ node|z14-[railway=signal]["railway:signal:direction"]["railway:signal:brake_test
 {
 	z-index: 11000;
 	icon-image: "icons/light-signal-deactivated-18.png";
-	icon-width: 9;
-	icon-height: 9;
+	icon-width: 13;
+	icon-height: 13;
 	text-allow-overlap: true;
 	allow-overlap: true;
 }
