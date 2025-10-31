@@ -150,7 +150,7 @@ function Search(map, box, bar, searchButton, clearButton, mobilemenu)
 				var lat = Number.parseFloat(results[i]['latitude']);
 				if (!Number.isNaN(lon) && !Number.isNaN(lat)) {
 					result.setAttribute('class', 'resultEntry');
-					result.onclick = new Function("selfSearch.showResult(" + lon + ", " + lat + ");");
+					result.onclick = new Function("selfSearch.showResult(" + lat + ", " + lon + ");");
 				}
 
 				this.bar.appendChild(result);
