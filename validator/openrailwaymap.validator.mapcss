@@ -498,6 +498,41 @@ node["railway:signal:combined"]["railway:signal:distant"]
 	assertNoMatch: "node railway=signal railway:signal:combined=DE-ESO:ks railway:signal:minor=DE-ESO:sh1";
 }
 
+/* Italian speed boards can have one to three different speeds. Check if signal type matches the
+   number of speeds. */
+node["railway:signal:speed_limit"="IT:1R"]["railway:signal:speed_limit:speed"=~/;/],
+node["railway:signal:speed_limit_distant"="IT:1R"]["railway:signal:speed_limit_distant:speed"=~/;/],
+node["railway:signal:speed_limit"="IT:2R"]["railway:signal:speed_limit:speed"=~/;[^;]*;/],
+node["railway:signal:speed_limit"="IT:2R"]["railway:signal:speed_limit:speed"=~/^[^;]+$/],
+node["railway:signal:speed_limit_distant"="IT:2R"]["railway:signal:speed_limit_distant:speed"=~/;[^;]*;/],
+node["railway:signal:speed_limit_distant"="IT:2R"]["railway:signal:speed_limit_distant:speed"=~/^[^;]+$/],
+node["railway:signal:speed_limit"="IT:3R"]["railway:signal:speed_limit:speed"=~/^[^;]*(;[^;]*)?$/],
+node["railway:signal:speed_limit_distant"="IT:3R"]["railway:signal:speed_limit_distant:speed"=~/^[^;]*(;[^;]*)?$/] {
+	throwError: "Italian (distant) speed signal 1R/2R/3R has wrong number of speeds.";
+	assertMatch: "node railway:signal:speed_limit=IT:1R railway:signal:speed_limit:speed=50;70";
+	assertMatch: "node railway:signal:speed_limit=IT:1R railway:signal:speed_limit:speed=50;";
+	assertMatch: "node railway:signal:speed_limit=IT:1R railway:signal:speed_limit:speed=;50";
+	assertMatch: "node railway:signal:speed_limit_distant=IT:1R railway:signal:speed_limit_distant:speed=50;70";
+	assertMatch: "node railway:signal:speed_limit=IT:2R railway:signal:speed_limit:speed=50";
+	assertMatch: "node railway:signal:speed_limit_distant=IT:2R railway:signal:speed_limit_distant:speed=50";
+	assertMatch: "node railway:signal:speed_limit=IT:2R railway:signal:speed_limit:speed=50;60;70";
+	assertMatch: "node railway:signal:speed_limit_distant=IT:2R railway:signal:speed_limit_distant:speed=50;60;70";
+	assertMatch: "node railway:signal:speed_limit=IT:2R railway:signal:speed_limit:speed=;60;70";
+	assertMatch: "node railway:signal:speed_limit=IT:2R railway:signal:speed_limit:speed=50;60;";
+	assertMatch: "node railway:signal:speed_limit=IT:3R railway:signal:speed_limit:speed=50;60";
+	assertMatch: "node railway:signal:speed_limit_distant=IT:3R railway:signal:speed_limit_distant:speed=50;60";
+	assertNoMatch: "node railway:signal:speed_limit=IT:1R railway:signal:speed_limit:speed=50";
+	assertNoMatch: "node railway:signal:speed_limit_distant=IT:1R railway:signal:speed_limit_distant:speed=50";
+	assertNoMatch: "node railway:signal:speed_limit=IT:2R railway:signal:speed_limit:speed=50;60";
+	assertNoMatch: "node railway:signal:speed_limit_distant=IT:2R railway:signal:speed_limit_distant:speed=50;60";
+	assertNoMatch: "node railway:signal:speed_limit=IT:3R railway:signal:speed_limit:speed=50;60;70";
+	assertNoMatch: "node railway:signal:speed_limit_distant=IT:3R railway:signal:speed_limit_distant:speed=50;60;70";
+	/* Do not report cases where one of the speed limits is unknown (empty value in list). */
+	assertNoMatch: "node railway:signal:speed_limit=IT:2R railway:signal:speed_limit:speed=50;";
+	assertNoMatch: "node railway:signal:speed_limit=IT:3R railway:signal:speed_limit:speed=50;60;";
+	assertNoMatch: "node railway:signal:speed_limit=IT:3R railway:signal:speed_limit:speed=;60;70";
+}
+
 /* signals should have ref, and not railway:ref */
 node[railway=signal]["railway:ref"][!ref]
 {
