@@ -131,7 +131,7 @@
 				<a style="display:block" class="resultEntry" id="permalinkButton" href=""><?=_("Permalink")?></a>
 				<a style="display:block" class="resultEntry" id="desktopButton" href=""><?=_("Desktop version")?></a>
 				<a style="display:block" class="resultEntry" id="contactButton" href="#"><?=_("Email")?></a>
-				<a style="display:block" class="resultEntry" id="twitterButton" href="https://twitter.com/openrailwaymap"><?=_("Twitter")?></a>
+				<a style="display:block" class="resultEntry" id="twitterButton" href="https://en.osm.town/@openrailwaymap" rel="me"><?=_("Mastodon")?></a>
 				<script language="javascript">
 					var usr = "info";
 					var dom = "openrailwaymap";

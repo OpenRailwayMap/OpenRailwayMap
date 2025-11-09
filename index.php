@@ -102,7 +102,7 @@
 				<a class="links" id="imprintButton" href="/imprint"><?=_("Imprint &amp; Privacy Policy")?></a>&nbsp;•
 				<a class="links" id="permalinkButton" href=""><?=_("Permalink")?></a>&nbsp;•
 				<a class="links" id="contactButton" href="#"><?=_("Email")?></a>&nbsp;•
-				<a class="links" id="twitterButton" href="https://twitter.com/openrailwaymap"><?=_("Twitter")?></a>&nbsp;•
+				<a class="links" id="twitterButton" href="https://en.osm.town/@openrailwaymap" rel="me"><?=_("Mastodon")?></a>&nbsp;•
 				<script language="javascript">
 					var usr = "info";
 					var dom = "openrailwaymap";
