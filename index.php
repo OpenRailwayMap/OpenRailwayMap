@@ -49,7 +49,6 @@
 		<script type="text/javascript" src="js/leaflet.js"></script>
 		<link rel="stylesheet" href="css/Leaflet.EditInOSM.css" />
 		<script src="js/Leaflet.EditInOSM.js"></script>
-		<script type="text/javascript" src="js/L.TileLayer.Grayscale.js"></script>
 		<?php
 			urlArgsToParam(true, $urlbase);
 		?>
