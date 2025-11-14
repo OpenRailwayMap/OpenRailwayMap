@@ -26,6 +26,7 @@
 				"properties": {
 					"railway":"rail",
 					"railway:atb":"no",
+					"railway:aws":"no",
 					"railway:etcs":"no",
 					"railway:lzb":"no",
 					"railway:pzb":"no",
@@ -98,6 +99,19 @@
 				}
 			}],
 			"caption": "ATB - Automatische Treinbeïnvloeding"
+		},
+		{
+			"minzoom": 2,
+			"features": [{
+				"type": "LineString",
+				"coordinates": [[10,50],[80,50]],
+				"properties": {
+					"railway":"rail",
+					"railway:aws":"yes",
+					"usage":"main"
+				}
+			}],
+			"caption": "AWS - Automatic Warning System"
 		},
 		{
 			"minzoom": 2,
