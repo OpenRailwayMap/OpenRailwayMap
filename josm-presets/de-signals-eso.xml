@@ -1214,6 +1214,43 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 						de.text="Zwei senkrechte Striche?"
 						/>
 				</item>
+				<item name="Continuos Ring Board" de.name="Durchläutetafel" icon="de/pl4-dv-16.png" type="node">
+					<label text="Continuos Ring Board" de.text="Durchläutetafel" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:ring:deactivated"
+						text="Out of order"
+						de.text="Ungültigkeitskreuz"
+						/>
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						display_values="left in direction of OSM way,right in direction of OSM way"
+						/>
+					<reference ref="direction_fw_bw" />
+                    <combo key="railway:signal:ring:type"
+						text="Type"
+						de.text="Art"
+						values="start,end"
+						de.display_values="Durchläutebeginntafel,Durchläuteendtafel"
+						display_values="Begin of continuos ringing,End of continuos ringing"
+						/>
+					<key key="railway:signal:ring:form"
+						value="sign" />
+                    <combo key="railway:signal:ring"
+						text="Exact Type"
+						de.text="Genauer Typ"
+                    >
+                        <list_entry value="DE-ESO:db:lp4" display_value="LP 4 DB" short_description="Begin of continuos ringing LP 4 (ex-DB)" de.short_description="Durchläutebeginntafel LP 4 (ex-DB)" />
+                        <list_entry value="DE-ESO:db:lp5" display_value="LP 5 DR" short_description="End of continuos ringing LP 5 (ex-DB)" de.short_description="Durchläuteendtafel LP 5 (ex-DB)" />
+                        <list_entry value="DE-ESO:dr:pl3" display_value="Pl 3 DR" short_description="Begin of continuos ringing Pl 3 (ex-DR)" de.short_description="Durchläutebeginntafel Pl 3 (ex-DR)" />
+                        <list_entry value="DE-ESO:dr:pl4" display_value="Pl 4 DR" short_description="End of continuos ringing Pl 4 (ex-DR)" de.short_description="Durchläuteendtafel Pl 4 (ex-DR)" />
+                    </combo>
+				</item>
 				<item name="Level Crossing Marker Board" de.name="Bü-Kennzeichentafel" icon="de/crossing-info.png" type="node">
 					<label text="Level Crossing Marker Board" de.text="Bü-Kennzeichentafel" />
 					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
