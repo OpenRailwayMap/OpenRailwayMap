@@ -2033,122 +2033,124 @@ See https://wiki.openstreetmap.org/wiki/OpenRailwayMap for details.
 					de.display_values="Mastbauform,Zwergsignal"
 					/>
 			</item>
-			<item name="Train length board" de.name="Zuglängentafel" type="node">
-				<label text="Train length board" de.text="Zuglängentafel" />
-				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:stop:deactivated"
-					text="Out of order"
-					de.text="Ungültigkeitskreuz"
-					/>
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right"
-					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					display_values="left in direction of OSM way,right in direction of OSM way"
-					/>
-				<reference ref="direction_fw_bw" />
-				<key key="railway:signal:stop"
-					value="DE-ESO:zuglänge" />
-				<key key="railway:signal:stop:form"
-					value="sign" />
-				<text key="railway:signal:stop:caption"
-					text="text on subsidiary plate"
-					de.text="Zusatztext"
-					/>
-			</item>
-			<item name="Stop Marker (Ne 5)" de.name="Haltetafel (Ne 5)" icon="de/ne5-ds301-32.png" type="node">
-				<label text="Stop Marker (Ne 5)" de.text="Haltetafel (Ne 5)" />
-				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:stop:deactivated"
-					text="Out of order"
-					de.text="Ungültigkeitskreuz"
-					/>
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right"
-					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					display_values="left in direction of OSM way,right in direction of OSM way"
-					/>
-				<reference ref="direction_fw_bw" />
-				<key key="railway:signal:stop"
-					value="DE-ESO:ne5" />
-				<key key="railway:signal:stop:form"
-					value="sign" />
-				<combo key="railway:signal:stop:height"
-					text="Signal height"
-					de.text="Signalbauhöhe"
-					values="normal,dwarf"
-					display_values="normal,dwarf"
-					de.display_values="Mastbauform,Zwergsignal"
-					/>
-				<text key="railway:signal:stop:caption"
-					text="text on subsidiary plate"
-					de.text="Zusatztext"
-					/>
-			</item>
-			<item name="Stop Request Signal (Ne 5)" de.name="Anforderung Bedarfshalt (Ne 5)" icon="de/ne5-light-32.png" type="node">
-				<label text="Stop sign as light signal (Ne 5) with meaning of 'stop requested'" de.text="Haltetafel als Lichtsignal (Ne 5) in der Bedeutung 'Anforderung Bedarfshalt'," />
-				<label text="shows a white flashing H on a black background if someone wants to enter the train" de.text="zeigt bei Haltewunsch ein weiß blinkendes H auf schwarzem Grund" />
-				<label text="according to DB Ril 301.1401 (6) / ESO AB 220a" de.text="nach DB-Richtlinie 301.1401 (6) bzw. ESO AB 220a" />
-				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:stop_demand:deactivated"
-					text="Out of order"
-					de.text="Ungültigkeitskreuz"
-					/>
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right"
-					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					display_values="left in direction of OSM way,right in direction of OSM way"
-					/>
-				<reference ref="direction_fw_bw" />
-				<key key="railway:signal:stop_demand"
-					value="DE-ESO:ne5" />
-				<key key="railway:signal:stop_demand:form"
-					value="light" />
-				<combo key="railway:signal:stop_demand:height"
-					text="Signal height"
-					de.text="Signalbauhöhe"
-					values="normal,dwarf"
-					display_values="normal,dwarf"
-					de.display_values="Mastbauform,Zwergsignal"
-					/>
-			</item>
-			<item name="Halt Advance Board (Ne 6)" de.name="Haltepunkttafel (Ne 6)" icon="de/ne6-32.png" type="node">
-				<label text="Halt Advance Board (Ne 6)" de.text="Haltepunkttafel (Ne 6)" />
-				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
-				<space />
-				<key key="railway"
-					value="signal" />
-				<check key="railway:signal:station_distant:deactivated"
-					text="Out of order"
-					de.text="Ungültigkeitskreuz"
-					/>
-				<combo key="railway:signal:position"
-					text="Signal position"
-					de.text="Signalstandort"
-					values="left,right"
-					de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
-					display_values="left in direction of OSM way,right in direction of OSM way"
-					/>
-				<reference ref="direction_fw_bw" />
-				<key key="railway:signal:station_distant"
-					value="DE-ESO:ne6" />
-				<key key="railway:signal:station_distant:form"
-					value="sign" />
-			</item>
+            <group name="Signals for passenger stops" de.name="Signale für Personenhalte">
+				<item name="Train length board" de.name="Zuglängentafel" type="node">
+					<label text="Train length board" de.text="Zuglängentafel" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:stop:deactivated"
+						text="Out of order"
+						de.text="Ungültigkeitskreuz"
+						/>
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						display_values="left in direction of OSM way,right in direction of OSM way"
+						/>
+					<reference ref="direction_fw_bw" />
+					<key key="railway:signal:stop"
+						value="DE-ESO:zuglänge" />
+					<key key="railway:signal:stop:form"
+						value="sign" />
+					<text key="railway:signal:stop:caption"
+						text="text on subsidiary plate"
+						de.text="Zusatztext"
+						/>
+				</item>
+				<item name="Stop Marker (Ne 5)" de.name="Haltetafel (Ne 5)" icon="de/ne5-ds301-32.png" type="node">
+					<label text="Stop Marker (Ne 5)" de.text="Haltetafel (Ne 5)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:stop:deactivated"
+						text="Out of order"
+						de.text="Ungültigkeitskreuz"
+						/>
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						display_values="left in direction of OSM way,right in direction of OSM way"
+						/>
+					<reference ref="direction_fw_bw" />
+					<key key="railway:signal:stop"
+						value="DE-ESO:ne5" />
+					<key key="railway:signal:stop:form"
+						value="sign" />
+					<combo key="railway:signal:stop:height"
+						text="Signal height"
+						de.text="Signalbauhöhe"
+						values="normal,dwarf"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
+						/>
+					<text key="railway:signal:stop:caption"
+						text="text on subsidiary plate"
+						de.text="Zusatztext"
+						/>
+				</item>
+				<item name="Stop Request Signal (Ne 5)" de.name="Anforderung Bedarfshalt (Ne 5)" icon="de/ne5-light-32.png" type="node">
+					<label text="Stop sign as light signal (Ne 5) with meaning of 'stop requested'" de.text="Haltetafel als Lichtsignal (Ne 5) in der Bedeutung 'Anforderung Bedarfshalt'," />
+					<label text="shows a white flashing H on a black background if someone wants to enter the train" de.text="zeigt bei Haltewunsch ein weiß blinkendes H auf schwarzem Grund" />
+					<label text="according to DB Ril 301.1401 (6) / ESO AB 220a" de.text="nach DB-Richtlinie 301.1401 (6) bzw. ESO AB 220a" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:stop_demand:deactivated"
+						text="Out of order"
+						de.text="Ungültigkeitskreuz"
+						/>
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						display_values="left in direction of OSM way,right in direction of OSM way"
+						/>
+					<reference ref="direction_fw_bw" />
+					<key key="railway:signal:stop_demand"
+						value="DE-ESO:ne5" />
+					<key key="railway:signal:stop_demand:form"
+						value="light" />
+					<combo key="railway:signal:stop_demand:height"
+						text="Signal height"
+						de.text="Signalbauhöhe"
+						values="normal,dwarf"
+						display_values="normal,dwarf"
+						de.display_values="Mastbauform,Zwergsignal"
+						/>
+				</item>
+				<item name="Halt Advance Board (Ne 6)" de.name="Haltepunkttafel (Ne 6)" icon="de/ne6-32.png" type="node">
+					<label text="Halt Advance Board (Ne 6)" de.text="Haltepunkttafel (Ne 6)" />
+					<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
+					<space />
+					<key key="railway"
+						value="signal" />
+					<check key="railway:signal:station_distant:deactivated"
+						text="Out of order"
+						de.text="Ungültigkeitskreuz"
+						/>
+					<combo key="railway:signal:position"
+						text="Signal position"
+						de.text="Signalstandort"
+						values="left,right"
+						de.display_values="Links von Wegrichtung,Rechts von Wegrichtung"
+						display_values="left in direction of OSM way,right in direction of OSM way"
+						/>
+					<reference ref="direction_fw_bw" />
+					<key key="railway:signal:station_distant"
+						value="DE-ESO:ne6" />
+					<key key="railway:signal:station_distant:form"
+						value="sign" />
+				</item>
+            </group>
 			<item name="Snowplow Sign (Ne 7)" de.name="Schneepflugtafel (Ne 7)" icon="de/ne7-yellow-up-32.png" type="node">
 				<label text="Snowplow Sign (Ne 7)" de.text="Schneepflugtafel" />
 				<label text="This signal is being mapped as a node on the track." de.text="Wird als Punkt auf dem Gleis erfasst." />
