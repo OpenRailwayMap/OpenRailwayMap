@@ -865,3 +865,33 @@ node["railway:signal:speed_limit:speed"~="?"]
 	assertNoMatch: "node railway=signal railway:signal:speed_limit:speed=120";
 	assertNoMatch: "node railway=signal railway:signal:speed_limit:speed=\"80;90\"";
 }
+
+/* Razed railways with active properties */
+way[railway=razed][electrified],
+way[railway=razed][frequency],
+way[railway=razed][gauge],
+way[railway=razed][service],
+way[railway=razed][tracks],
+way[railway=razed][usage],
+way[railway=razed][voltage]
+{
+	throwWarning: tr("''{0}'' does not have ''{1}'' anymore, use ''{2}'' instead", "{0.tag}", "{1.tag}", "{0.value}:{1.tag}");
+	fixChangeKey: "{1.key} => {0.value}:{1.key}";
+	assertMatch: "way railway=razed gauge=1000";
+	assertNoMatch: "way railway=razed razed:gauge=1000";
+}
+
+way[razed:railway][electrified][!railway][!highway],
+way[razed:railway][frequency][!railway][!highway][!power],
+way[razed:railway][gauge][!railway],
+way[razed:railway][service][!railway][!highway][!waterway],
+way[razed:railway][tracks][!railway],
+way[razed:railway][usage][!railway][!man_made][!waterway],
+way[razed:railway][voltage][!railway][!highway][!power]
+{
+	throwWarning: tr("''{0}'' does not have ''{1}'' anymore, use ''{2}'' instead", "{0.tag}", "{1.tag}", "razed:{1.tag}");
+	fixChangeKey: "{1.key} => razed:{1.key}";
+	assertMatch: "way razed:railway=rail gauge=1000";
+	assertNoMatch: "way razed:railway=rail razed:gauge=1000";
+	assertNoMatch: "way razed:railway=rail highway=service service=parking_aisle";
+}
