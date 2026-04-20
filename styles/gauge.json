@@ -4,89 +4,58 @@
 	[
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10,50],[80,50]],
-				"properties": {
-					"railway": "rail",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail" }}
+			],
 			"caption": "No information"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10,50],[80,50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "standard",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "standard", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "standard" }}
+			],
 			"caption": "Standard gauge"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10,50],[80,50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "broad",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "broad", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "broad" }}
+			],
 			"caption": "Broad gauge"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10,50],[80,50]],
-				"properties": {
-					"railway": "narrow_gauge",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "narrow_gauge", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "narrow_gauge" }}
+			],
 			"caption": "Narrow gauge"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "dual",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "dual", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "dual" }}
+			],
 			"caption": "Dual gauge"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "multiple",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "multiple", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "multiple" }}
+			],
 			"caption": "Multiple gauge"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "monorail"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "monorail" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "monorail" }}
+			],
 			"caption": "Monorail"
 		},
 		{
@@ -95,382 +64,250 @@
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "381"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "381" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "381" }}
+			],
 			"caption": "381mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "500"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "500" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "500" }}
+			],
 			"caption": "500mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "597"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "597" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "597" }}
+			],
 			"caption": "597mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "600"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "600" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "600" }}
+			],
 			"caption": "600mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "610"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "610" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "610" }}
+			],
 			"caption": "610mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "700"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "700" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "700" }}
+			],
 			"caption": "700mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "750"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "750" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "750" }}
+			],
 			"caption": "750mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "760"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "760" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "760" }}
+			],
 			"caption": "760mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "762"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "762" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "762" }}
+			],
 			"caption": "762mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "800"
-			}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "800" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "800" }}
+			],
 			"caption": "800mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "900"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "900" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "900" }}
+			],
 			"caption": "900mm"
 		},
 		{
-			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "914"
-				}
-			}],
+			"minzoom": 2,
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "914", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "914" }}
+			],
 			"caption": "914mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "950"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "950" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "950" }}
+			],
 			"caption": "950mm"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1000",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1000", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1000" }}
+			],
 			"caption": "1000mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1009"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1009" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1009" }}
+			],
 			"caption": "1009mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1050"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1050" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1050" }}
+			],
 			"caption": "1050mm"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1067",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1067", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1067" }}
+			],
 			"caption": "1067mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1100"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1100" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1100" }}
+			],
 			"caption": "1100mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1372"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1372" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1372" }}
+			],
 			"caption": "1372mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1422"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1422" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1422" }}
+			],
 			"caption": "1422mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1432"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1432" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1432" }}
+			],
 			"caption": "1432mm"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1435",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1435", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1435" }}
+			],
 			"caption": "1435mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1445"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1445" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1445" }}
+			],
 			"caption": "1445mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1450"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1450" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1450" }}
+			],
 			"caption": "1450mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1458"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1458" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1458" }}
+			],
 			"caption": "1458mm"
 		},
 		{
 			"minzoom": 10,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1495"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1495" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1495" }}
+			],
 			"caption": "1495mm"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1520",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1520", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1520" }}
+			],
 			"caption": "1520mm"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1524",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1524", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1524" }}
+			],
 			"caption": "1524mm"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1600",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1600", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1600" }}
+			],
 			"caption": "1600mm"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1668",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1668", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1668" }}
+			],
 			"caption": "1668mm"
 		},
 		{
 			"minzoom": 2,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "rail",
-					"gauge": "1676",
-					"usage": "main"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "rail", "gauge": "1676", "usage": "main" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "rail", "gauge": "1676" }}
+			],
 			"caption": "1676mm"
 		},
 		{
@@ -479,85 +316,58 @@
 		},
 		{
 			"minzoom": 11,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "miniature"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "miniature" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "miniature" }}
+			],
 			"caption": "Miniature"
 		},
 		{
 			"minzoom": 11,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "miniature",
-					"gauge": "64"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "miniature", "gauge": "64" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "miniature", "gauge": "64" }}
+			],
 			"caption": "64mm"
 		},
 		{
 			"minzoom": 11,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "miniature",
-					"gauge": "89"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "miniature", "gauge": "89" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "miniature", "gauge": "89" }}
+			],
 			"caption": "89mm"
 		},
 		{
 			"minzoom": 11,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "miniature",
-					"gauge": "127"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "miniature", "gauge": "127" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "miniature", "gauge": "127" }}
+			],
 			"caption": "127mm"
 		},
 		{
 			"minzoom": 11,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "miniature",
-					"gauge": "184"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "miniature", "gauge": "184" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "miniature", "gauge": "184" }}
+			],
 			"caption": "184mm"
 		},
 		{
 			"minzoom": 11,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "miniature",
-					"gauge": "190"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "miniature", "gauge": "190" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "miniature", "gauge": "190" }}
+			],
 			"caption": "190mm"
 		},
 		{
 			"minzoom": 11,
-			"features": [{
-				"type": "LineString",
-				"coordinates": [[10, 50], [80, 50]],
-				"properties": {
-					"railway": "miniature",
-					"gauge": "260"
-				}
-			}],
+			"features": [
+				{ "type": "LineString", "coordinates": [[10, 50], [45, 50]], "properties": { "railway": "miniature", "gauge": "260" }},
+				{ "type": "LineString", "coordinates": [[45, 50], [80, 50]], "properties": { "railway": "miniature", "gauge": "260" }}
+			],
 			"caption": "260mm"
 		}
 	]
