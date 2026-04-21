@@ -21,6 +21,7 @@ locales/*/*/*.json
 css/leaflet.css
 js/images
 js/leaflet.js
+js/leaflet.js.map
 
 # ignore OSM data
 *.osm
@@ -47,5 +48,3 @@ download/
 css/Leaflet.EditInOSM.css
 img/edit-in-osm.png
 js/Leaflet.EditInOSM.js
-
-js/L.TileLayer.Grayscale.js
