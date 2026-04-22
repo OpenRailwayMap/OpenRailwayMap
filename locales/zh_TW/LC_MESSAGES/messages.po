@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: OpenRailwayMap\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-08 12:29+0100\n"
-"PO-Revision-Date: 2017-09-22 15:50+0000\n"
-"Last-Translator: Supaplex <bejokeup@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/rurseekatze/openrailwaymap/language/"
-"zh_TW/)\n"
+"PO-Revision-Date: 2026-02-07 13:31+0800\n"
+"Last-Translator: Peter Chen <petercpg@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (https://www.transifex.com/rurseekatze/"
+"openrailwaymap/language/zh_TW/)\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "More Info"
@@ -30,15 +30,16 @@ msgid "Contact"
 msgstr "聯絡資訊"
 
 msgid "Javascript is not activated"
-msgstr "並未啟動 Javascript"
+msgstr "未開啟 JavaScript"
 
 msgid ""
-"Javascript is needed to show the map and run this website. Please turn on Javascript in your "
-"browser settings."
-msgstr "網站需要 Javascript 才能執行和顯示地圖。請在瀏覽器設定中啟用 Javascript"
+"Javascript is needed to show the map and run this website. Please turn on "
+"Javascript in your browser settings."
+msgstr ""
+"網站需要 JavaScript 才能執行和顯示地圖。請在瀏覽器設定中開啟 JavaScript。"
 
 msgid "Loading..."
-msgstr "載入中..."
+msgstr "載入中…"
 
 msgid "Nothing found."
 msgstr "什麼都找不到。"
@@ -47,7 +48,7 @@ msgid "Last update"
 msgstr "最後更新於"
 
 msgid "Empty input."
-msgstr "空白輸入"
+msgstr "輸入資料空白。"
 
 msgid "Kilometer"
 msgstr "公里"
@@ -71,7 +72,7 @@ msgid "Mapnik"
 msgstr "Mapnik"
 
 msgid "Mapnik Grayscale"
-msgstr "Mapnik 灰階"
+msgstr "Mapnik 灰階模式"
 
 msgid "Map data &copy; OpenStreetMap contributors"
 msgstr "地圖資料 &copy; 開放街圖貢獻者"
@@ -86,13 +87,15 @@ msgid "Search results"
 msgstr "搜尋結果"
 
 msgid "Search only in the current map view"
-msgstr "只搜尋目前檢視地圖畫面"
+msgstr "只在目前畫面進行搜尋"
 
 msgid "HTML-Code"
 msgstr "HTML 碼"
 
-msgid "Copy this HTML code snippet into your website to show a small map with a marker."
-msgstr "複製這段 HTML 碼然後嵌入到你的網站，能夠在你網站上顯示有標記符號的小地圖。"
+msgid ""
+"Copy this HTML code snippet into your website to show a small map with a "
+"marker."
+msgstr "複製這段 HTML 碼到你的網站，就能夠在網站上顯示有標記符號的小地圖。"
 
 msgid "Fullscreen"
 msgstr "全螢幕"
@@ -100,36 +103,36 @@ msgstr "全螢幕"
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d秒"
+msgstr[0] "%d 秒"
 
 #, php-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d分"
+msgstr[0] "%d 分"
 
 #, php-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d小時"
+msgstr[0] "%d 小時"
 
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] "%d天"
+msgstr[0] "%d 天"
 
 #, php-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] "%d週"
+msgstr[0] "%d 週"
 
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] "%d月"
+msgstr[0] "%d 月"
 
 #, php-format
 msgid "more than %s ago"
-msgstr "超過%s前"
+msgstr "超過 %s前"
 
 #, php-format
 msgid "%s ago"
@@ -139,7 +142,7 @@ msgid "Infrastructure"
 msgstr "設施"
 
 msgid "Signalling and train protection"
-msgstr "號誌"
+msgstr "號誌與列車防護"
 
 msgid "Maxspeeds"
 msgstr "最高速限"
@@ -154,13 +157,13 @@ msgid "Station"
 msgstr "車站"
 
 msgid "Junction"
-msgstr "道岔號誌所"
+msgstr "分岔點"
 
 msgid "Yard"
-msgstr "鐵路車廠"
+msgstr "調車場"
 
 msgid "Crossover"
-msgstr "橫渡號誌所"
+msgstr "橫渡線"
 
 msgid "Site"
 msgstr "站點"
@@ -169,13 +172,13 @@ msgid "Service station"
 msgstr "服務車站"
 
 msgid "Subway/Light rail station"
-msgstr "地鐵/輕軌站"
+msgstr "捷運/輕軌站"
 
 msgid "Tram stop"
-msgstr "電車站"
+msgstr "輕軌車站"
 
 msgid "Milestone"
-msgstr "里程"
+msgstr "里程碑"
 
 msgid "Signal"
 msgstr "號誌"
@@ -196,7 +199,7 @@ msgid "Tunnel"
 msgstr "隧道"
 
 msgid "Line ref"
-msgstr "線路編號"
+msgstr "線路代號"
 
 msgid "Railroad line"
 msgstr "鐵路路線"
@@ -208,10 +211,10 @@ msgid "Yard track"
 msgstr "車廠軌道"
 
 msgid "Spur"
-msgstr "工業支線"
+msgstr "專用側線"
 
 msgid "Crossover track"
-msgstr "橫渡軌道"
+msgstr "橫渡線"
 
 msgid "Branch line"
 msgstr "支線"
@@ -223,16 +226,16 @@ msgid "Highspeed line"
 msgstr "高速鐵路"
 
 msgid "Industrial line"
-msgstr "工業線"
+msgstr "產業軌道"
 
 msgid "Industrial service track"
-msgstr "工業服務線"
+msgstr "產業軌道側線"
 
 msgid "Preserved track"
 msgstr "保存軌道"
 
 msgid "Preserved service track"
-msgstr "保存服務軌道"
+msgstr "保存軌道側線"
 
 msgid "Track under construction"
 msgstr "施工中軌道"
@@ -241,16 +244,16 @@ msgid "Proposed track"
 msgstr "計畫中軌道"
 
 msgid "Disused track"
-msgstr "廢棄軌道"
+msgstr "停用軌道"
 
 msgid "Abandoned track"
-msgstr "遺跡軌道"
+msgstr "廢棄軌道"
 
 msgid "Razed track"
-msgstr "絕跡軌道"
+msgstr "已拆除軌道"
 
 msgid "Tram"
-msgstr "電車"
+msgstr "路面電車"
 
 msgid "Subway"
 msgstr "捷運"
@@ -262,16 +265,16 @@ msgid "Narrow gauge track"
 msgstr "窄軌"
 
 msgid "Switch (remote-controlled)"
-msgstr "轉徹器 (遠端控制)"
+msgstr "轉轍器（遠端控制）"
 
 msgid "Switch (local operated)"
-msgstr "轉徹器 (現場控制)"
+msgstr "轉轍器（就地控制）"
 
 msgid "Resetting switch"
-msgstr "復位轉轍器"
+msgstr "彈簧轉轍器"
 
 msgid "Signal box"
-msgstr "號誌盒"
+msgstr "號誌樓"
 
 msgid "Owner change"
 msgstr "產權分界"
@@ -283,19 +286,19 @@ msgid "Buffer stop"
 msgstr "止衝擋"
 
 msgid "Isolated track section"
-msgstr "電氣隔離分段"
+msgstr "中性區間"
 
 msgid "Platform"
-msgstr "月臺"
+msgstr "月台"
 
 msgid "Vending machine"
 msgstr "販賣機"
 
 msgid "Ticket shop"
-msgstr "售票亭"
+msgstr "售票處"
 
 msgid "Subway entrance"
-msgstr "捷運出口"
+msgstr "捷運出入口"
 
 msgid "Phone"
 msgstr "電話"
@@ -313,19 +316,19 @@ msgid "Coaling facility"
 msgstr "裝煤設施"
 
 msgid "Wash"
-msgstr "洗刷庫"
+msgstr "洗車設備"
 
 msgid "Pit"
 msgstr "檢修坑"
 
 msgid "Loading gauge"
-msgstr "荷重計"
+msgstr "建築限界"
 
 msgid "Hump yard"
-msgstr "駝峰調車"
+msgstr "駝峰調車場"
 
 msgid "Rail brake"
-msgstr "鐵路制軔"
+msgstr "列車減速器"
 
 msgid "Engine shed"
 msgstr "機務段"
@@ -340,10 +343,10 @@ msgid "Turntable"
 msgstr "轉車盤"
 
 msgid "Traverser"
-msgstr "移車臺"
+msgstr "移車台"
 
 msgid "Loading ramp"
-msgstr "裝卸貨跳板"
+msgstr "裝卸台"
 
 msgid "Crane"
 msgstr "起重機"
@@ -352,7 +355,7 @@ msgid "Track scale"
 msgstr "地磅"
 
 msgid "Carrier truck pit"
-msgstr "承載貨列坑"
+msgstr "滾車坑"
 
 msgid "Gauge conversion"
 msgstr "軌距轉換"
@@ -373,7 +376,7 @@ msgid "Factory connected to railroad line"
 msgstr "連接到鐵路的工廠"
 
 msgid "Rack"
-msgstr "裝卸棧橋"
+msgstr "齒軌"
 
 msgid "Embankment"
 msgstr "路堤"
@@ -382,10 +385,10 @@ msgid "Cutting"
 msgstr "路塹"
 
 msgid "Miniature railway"
-msgstr "微型鐵路"
+msgstr "迷你鐵路"
 
 msgid "Funicular"
-msgstr "纜車"
+msgstr "地面纜車"
 
 msgid "Military line"
 msgstr "軍用線"
@@ -406,16 +409,16 @@ msgid "Test service track"
 msgstr "測試服務軌道"
 
 msgid "Car shuttle"
-msgstr "汽車擺渡列車"
+msgstr "人車同行"
 
 msgid "Rolling highway"
 msgstr "滾動公路"
 
 msgid "Nothing to see in this zoom level. Please zoom in."
-msgstr "這個縮放層面看不到東西，請放大再看。"
+msgstr "這個縮放等級看不到東西，請放大再看。"
 
 msgid "Legend not available for this style."
-msgstr "這種樣式下無法檢視圖徽。"
+msgstr "這種樣式下無法檢視圖例。"
 
 msgid "Language"
 msgstr "語言"
@@ -433,16 +436,16 @@ msgid "Blog"
 msgstr "部落格"
 
 msgid "No information"
-msgstr "無信息"
+msgstr "無資訊"
 
 msgid "speed only given for one direction"
-msgstr "速度僅在一個方向給出"
+msgstr "僅有單向速限"
 
 msgid "main track, service track"
-msgstr "主軌道，服務軌道"
+msgstr "正線，側線"
 
 msgid "Quick search shortcut"
-msgstr "快速搜尋快捷鍵"
+msgstr "快速搜尋快速鍵"
 
 msgid "Placeholder"
 msgstr "佔位符"
@@ -466,10 +469,10 @@ msgid "Search station"
 msgstr "搜尋車站"
 
 msgid "UIC reference"
-msgstr "國際鐵路聯盟參考"
+msgstr "國際鐵路聯盟參照"
 
 msgid "About this project"
-msgstr "關於此項目"
+msgstr "關於此專案"
 
 msgid "Close"
 msgstr "關閉"
@@ -478,22 +481,22 @@ msgid "Name"
 msgstr "名稱"
 
 msgid "Line operator"
-msgstr "線路運營者"
+msgstr "路線業者"
 
 msgid "Operator"
-msgstr "運營者"
+msgstr "業者"
 
 msgid "More results"
 msgstr "更多結果"
 
 msgid "Spur junction"
-msgstr "專用線號誌所"
+msgstr "專用側線分岔點"
 
 msgid "No background map"
 msgstr "無背景地圖"
 
 msgid "%SPDMIN%-%SPDMAX% km/h (disused/under construction)"
-msgstr "%SPDMIN%-%SPDMAX% km/h (廢棄/建設中)"
+msgstr "%SPDMIN%-%SPDMAX% km/h（停用/施工中）"
 
 msgid "Not electrified"
 msgstr "未電氣化"
@@ -505,10 +508,10 @@ msgid "Electrification proposed"
 msgstr "擬電氣化"
 
 msgid "Electrification under construction"
-msgstr "電氣化建設中"
+msgstr "電氣化施工中"
 
 msgid "contact line"
-msgstr "接觸網"
+msgstr "架空線"
 
 msgid "3rd rail"
 msgstr "第三軌"
@@ -523,10 +526,10 @@ msgid "train protection"
 msgstr "列車防護"
 
 msgid "no train protection"
-msgstr "無列車防護"
+msgstr "無列車防護機制"
 
 msgid "crossing signal type To"
-msgstr "交叉號誌類型 To"
+msgstr "crossing signal type To"
 
 msgid "Voltage"
 msgstr "電壓"
@@ -538,383 +541,392 @@ msgid "Operating Sites"
 msgstr "作業場所"
 
 msgid "No information about train protection"
-msgstr "無信息關於列車防護"
+msgstr "沒有列車防護資訊"
 
 msgid "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Hp-Lichthauptsignal ohne Angabe der Signalzustände"
 
 msgid "Track usage"
 msgstr "軌道用途"
 
 msgid "Lf 7 Geschwindigkeitssignal"
-msgstr ""
+msgstr "Lf 7 Geschwindigkeitssignal"
 
 msgid "1.5 – 3kV ="
-msgstr ""
+msgstr "1.5 – 3kV ="
 
 msgid "ETCS under construction"
-msgstr "歐洲列車控制系統建設中"
+msgstr "歐洲列車控制系統施工中"
 
 msgid "3kV ="
-msgstr ""
+msgstr "3kV ="
 
 msgid "shunting signal type Ro"
-msgstr "分流號誌類型 Ro"
+msgstr "shunting signal type Ro"
 
 msgid "Track type"
 msgstr "軌道類型"
 
 msgid "El 5 \"Bügel an\"-Signal"
-msgstr ""
+msgstr "El 5 \"Bügel an\"-Signal"
 
 msgid "Linienzugbeeinflussung"
-msgstr ""
+msgstr "Linienzugbeeinflussung"
 
 msgid "25kV 50Hz ~"
-msgstr ""
+msgstr "25kV 50Hz ~"
 
 msgid "So 106 Kreuztafel"
-msgstr ""
+msgstr "So 106 Kreuztafel"
 
 msgid "Ra 11 Wartezeichen mit Sh 1"
-msgstr ""
+msgstr "Ra 11 Wartezeichen mit Sh 1"
 
 msgid "Junction, Crossover, Service Station, Site"
-msgstr "號誌所"
+msgstr "分岔點、橫渡線、整備站、場站"
 
 msgid "Hp-Formhauptsignal ohne Angabe der Signalzustände"
-msgstr ""
+msgstr "Hp-Formhauptsignal ohne Angabe der Signalzustände"
 
 msgid "At least 25kV ~"
 msgstr "至少 25kV ~"
 
 msgid "minor signal type Lo"
-msgstr "次要號誌類型 Lo"
+msgstr "minor signal type Lo"
 
 msgid "15 – 25kV ~"
-msgstr ""
+msgstr "15 – 25kV ~"
 
 msgid "ETCS"
 msgstr "歐洲列車控制系統"
 
 msgid "Blockkennzeichen"
-msgstr ""
+msgstr "Blockkennzeichen"
 
 msgid "Ne 6 Haltepunkttafel"
-msgstr ""
+msgstr "Ne 6 Haltepunkttafel"
 
 msgid "Ne 1 Trapeztafel"
-msgstr ""
+msgstr "Ne 1 Trapeztafel"
 
 msgid "15kV 16⅔Hz ~"
-msgstr ""
+msgstr "15kV 16⅔Hz ~"
 
-msgid "Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
+msgid ""
+"Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 msgstr ""
+"Ra 11 Wartezeichen ohne Sh 1 / Wartesignal ohne 'Verschubverbot aufgehoben'"
 
 msgid "Ne 5 Haltetafel"
-msgstr ""
+msgstr "Ne 5 Haltetafel"
 
 msgid "More than 3kV ="
 msgstr "高於 3kV ="
 
 msgid "Lf 6 Geschwindigkeits­ankündesignal"
-msgstr ""
+msgstr "Lf 6 Geschwindigkeits­ankündesignal"
 
 msgid "750 – 1000V ="
-msgstr ""
+msgstr "750 – 1000V ="
 
 msgid "Less than 15kV ~"
 msgstr "低於 15kV ~"
 
 msgid "1kV ="
-msgstr ""
+msgstr "1kV ="
 
 msgid "1 – 1.5kV ="
-msgstr ""
+msgstr "1 – 1.5kV ="
 
 msgid "block signal type So"
-msgstr "禁止號誌類型 So"
+msgstr "block signal type So"
 
 msgid "%SPDMIN%-%SPDMAX% km/h"
-msgstr ""
+msgstr "%SPDMIN%-%SPDMAX% km/h"
 
 msgid "1.5kV ="
-msgstr ""
+msgstr "1.5kV ="
 
 msgid "El 2 Einschaltsignal"
-msgstr ""
+msgstr "El 2 Einschaltsignal"
 
 msgid "Ra 10 Rangierhalttafel / Verschubhalttafel"
-msgstr ""
+msgstr "Ra 10 Rangierhalttafel / Verschubhalttafel"
 
 msgid "Zs 10 Endesignal (Tafel)"
-msgstr ""
+msgstr "Zs 10 Endesignal (Tafel)"
 
 msgid "El 1 Ausschaltsignal"
-msgstr ""
+msgstr "El 1 Ausschaltsignal"
 
 msgid "Ra 11b Wartezeichen"
-msgstr ""
+msgstr "Ra 11b Wartezeichen"
 
 msgid "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
-msgstr ""
+msgstr "El 6 Halt für Fahrzeuge mit gehobenem Stromabnehmer"
 
 msgid "Less than 750V ="
 msgstr "低於 750V ="
 
 msgid "Punktförmige Zugbeeinflussung"
-msgstr ""
+msgstr "Punktförmige Zugbeeinflussung"
 
 msgid "El 4 \"Bügel ab\"-Signal"
-msgstr ""
+msgstr "El 4 \"Bügel ab\"-Signal"
 
 msgid "750V ="
-msgstr ""
+msgstr "750V ="
 
 msgid "25kV 60Hz ~"
-msgstr ""
+msgstr "25kV 60Hz ~"
 
 msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
+msgstr "El 3 \"Bügel ab\"-Ankündigungssignal"
 
 msgid "El 1v Ausschaltsignal erwarten"
-msgstr ""
+msgstr "El 1v Ausschaltsignal erwarten"
 
 msgid "15kV 16.7Hz ~"
-msgstr ""
+msgstr "15kV 16.7Hz ~"
 
 msgid "Sh-Lichtsperrsignal (normal, Zwergsignal)"
-msgstr ""
+msgstr "Sh-Lichtsperrsignal (normal, Zwergsignal)"
 
 msgid "distant signal with Eo 2 (new type)"
-msgstr ""
+msgstr "distant signal with Eo 2 (new type)"
 
 msgid "Ks-Hauptsignal"
-msgstr ""
+msgstr "Ks-Hauptsignal"
 
 msgid "Bü 5 Läutetafel (normal, für durchfahrende Züge)"
-msgstr ""
+msgstr "Bü 5 Läutetafel (normal, für durchfahrende Züge)"
 
 msgid "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
-msgstr ""
-
-msgid "Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
-
-msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
-msgstr ""
-
-msgid "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
-msgstr ""
-
-msgid "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
-msgstr ""
-
-msgid "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
-msgstr ""
-
-msgid "El 4 \"Bügel ab\"-Signal"
-msgstr ""
-
-msgid "Vr-Formvorsignal ohne Angabe der Signalzustände"
-msgstr ""
-
-msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
-msgstr ""
-
-msgid "main signal without aspects given (new type, old type)"
-msgstr ""
-
-msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
-msgstr ""
-
-msgid "main signal with Po 1 (new type, old type)"
-msgstr ""
-
-msgid "main signal with Po 2 (new type, old type)"
-msgstr ""
-
-msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
-msgstr ""
-
-msgid "distant signal with Eo 1 (new type, old type)"
-msgstr ""
-
-msgid "Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
-msgstr ""
-
-msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
-msgstr ""
-
-msgid "Sv-Signal (ohne Hp 0, mit Hp 0)"
-msgstr ""
-
-msgid "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
-msgstr ""
-
-msgid "El 5 \"Bügel an\"-Signal"
-msgstr ""
+msgstr "Ks-Mehrabschnittssignal (normal, verkürzter Bremswegabstand)"
 
 msgid ""
-"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/verkürzter Bremswegabstand)"
+"Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
 msgstr ""
+"Vr-Lichtvorsignal mit Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+
+msgid "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
+msgstr "Bü 2 Rautentafel (normal, verkürzter Bremswegabstand)"
+
+msgid "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
+msgstr "Ks-Vorsignal (normal, Wiederholer, verkürzter Bremswegabstand)"
+
+msgid "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
+msgstr "Bü 4 Pfeiftafel (normal, für durchfahrende Züge)"
+
+msgid "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
+msgstr "ex-Pf 1 Pfeiftafel (normal, für durchfahrende Züge)"
+
+msgid "El 4 \"Bügel ab\"-Signal"
+msgstr "El 4 \"Bügel ab\"-Signal"
+
+msgid "Vr-Formvorsignal ohne Angabe der Signalzustände"
+msgstr "Vr-Formvorsignal ohne Angabe der Signalzustände"
+
+msgid "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
+msgstr "Vr-Formvorsignal (ohne Vr 2, mit Vr 2)"
+
+msgid "main signal without aspects given (new type, old type)"
+msgstr "main signal without aspects given (new type, old type)"
+
+msgid "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
+msgstr "Hp-Lichthauptsignal (ohne Hp 2, mit Hp 2)"
+
+msgid "main signal with Po 1 (new type, old type)"
+msgstr "main signal with Po 1 (new type, old type)"
+
+msgid "main signal with Po 2 (new type, old type)"
+msgstr "main signal with Po 2 (new type, old type)"
+
+msgid "El 3 \"Bügel ab\"-Ankündigungssignal"
+msgstr "El 3 \"Bügel ab\"-Ankündigungssignal"
+
+msgid "distant signal with Eo 1 (new type, old type)"
+msgstr "distant signal with Eo 1 (new type, old type)"
+
+msgid ""
+"Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+msgstr ""
+"Vr-Lichtvorsignal ohne Vr 2 (normal, Wiederholer/verkürzter Bremswegabstand)"
+
+msgid "Sh-Formsperrsignal (normal, Zwergsignal)"
+msgstr "Sh-Formsperrsignal (normal, Zwergsignal)"
+
+msgid "Sv-Signal (ohne Hp 0, mit Hp 0)"
+msgstr "Sv-Signal (ohne Hp 0, mit Hp 0)"
+
+msgid "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
+msgstr "Hp-Formhauptsignal (ohne Hp 2, mit Hp 2)"
+
+msgid "El 5 \"Bügel an\"-Signal"
+msgstr "El 5 \"Bügel an\"-Signal"
+
+msgid ""
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/"
+"verkürzter Bremswegabstand)"
+msgstr ""
+"Vr-Lichtvorsignal ohne Angabe der Signalzustände (normal, Wiederholer/"
+"verkürzter Bremswegabstand)"
 
 msgid "distant signal without aspects given (new type, old type)"
-msgstr ""
+msgstr "distant signal without aspects given (new type, old type)"
 
 msgid "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
-msgstr ""
+msgstr "Zs 3v Geschwindigkeits­voranzeiger (Tafel, Lichtsignal)"
 
 msgid "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
-msgstr ""
+msgstr "Zs 3 Geschwindigkeits­anzeiger (Tafel, Lichtsignal)"
 
 msgid "Imprint &amp; Privacy Policy"
-msgstr "作者信息 &amp; 隱私政策"
+msgstr "作者資訊 &amp; 隱私權政策"
 
 msgid "ATB - Automatische Treinbeïnvloeding"
-msgstr ""
+msgstr "ATB - Automatische Treinbeïnvloeding"
 
 msgid "TVM - Transmission Voie-Machine"
-msgstr ""
+msgstr "TVM - Transmission Voie-Machine"
 
 msgid "KVB - Contrôle de Vitesse par Balises"
-msgstr ""
+msgstr "KVB - Contrôle de Vitesse par Balises"
 
 msgid "1067mm"
-msgstr ""
+msgstr "1067mm"
 
 msgid "1435mm"
-msgstr ""
+msgstr "1435mm"
 
 msgid "1676mm"
-msgstr ""
+msgstr "1676mm"
 
 msgid "1422mm"
-msgstr ""
+msgstr "1422mm"
 
 msgid "1524mm"
-msgstr ""
+msgstr "1524mm"
 
 msgid "950mm"
-msgstr ""
+msgstr "950mm"
 
 msgid "800mm"
-msgstr ""
+msgstr "800mm"
 
 msgid "127mm"
-msgstr ""
+msgstr "127mm"
 
 msgid "Narrow gauge"
 msgstr "窄軌"
 
 msgid "500mm"
-msgstr ""
+msgstr "500mm"
 
 msgid "Miniature"
-msgstr "微型"
+msgstr "迷你"
 
 msgid "Miniature tracks"
-msgstr "微型軌道"
+msgstr "迷你軌道"
 
 msgid "1445mm"
-msgstr ""
+msgstr "1445mm"
 
 msgid "Standard gauge"
-msgstr "標準軌距"
+msgstr "標準軌"
 
 msgid "1100mm"
-msgstr ""
+msgstr "1100mm"
 
 msgid "597mm"
-msgstr ""
+msgstr "597mm"
 
 msgid "1372mm"
-msgstr ""
+msgstr "1372mm"
 
 msgid "1450mm"
-msgstr ""
+msgstr "1450mm"
 
 msgid "600mm"
-msgstr ""
+msgstr "600mm"
 
 msgid "64mm"
-msgstr ""
+msgstr "64mm"
 
 msgid "1432mm"
-msgstr ""
+msgstr "1432mm"
 
 msgid "760mm"
-msgstr ""
+msgstr "760mm"
 
 msgid "381mm"
-msgstr ""
+msgstr "381mm"
 
 msgid "750mm"
-msgstr ""
+msgstr "750mm"
 
 msgid "1009mm"
-msgstr ""
+msgstr "1009mm"
 
 msgid "1495mm"
-msgstr ""
+msgstr "1495mm"
 
 msgid "1520mm"
-msgstr ""
+msgstr "1520mm"
 
 msgid "Track gauge values"
 msgstr "軌距值"
 
 msgid "1458mm"
-msgstr ""
+msgstr "1458mm"
 
 msgid "Dual gauge"
-msgstr "雙軌距"
+msgstr "雙軌"
 
 msgid "1600mm"
-msgstr ""
+msgstr "1600mm"
 
 msgid "184mm"
-msgstr ""
+msgstr "184mm"
 
 msgid "610mm"
-msgstr ""
+msgstr "610mm"
 
 msgid "89mm"
-msgstr ""
+msgstr "89mm"
 
 msgid "260mm"
-msgstr ""
+msgstr "260mm"
 
 msgid "762mm"
-msgstr ""
+msgstr "762mm"
 
 msgid "1050mm"
-msgstr ""
+msgstr "1050mm"
 
 msgid "190mm"
-msgstr ""
+msgstr "190mm"
 
 msgid "914mm"
-msgstr ""
+msgstr "914mm"
 
 msgid "1000mm"
-msgstr ""
+msgstr "1000mm"
 
 msgid "Multiple gauge"
-msgstr "多軌距"
+msgstr "多軌"
 
 msgid "1668mm"
-msgstr ""
+msgstr "1668mm"
 
 msgid "Broad gauge"
 msgstr "寬軌"
 
 msgid "900mm"
-msgstr ""
+msgstr "900mm"
 
 msgid "700mm"
-msgstr ""
+msgstr "700mm"
 
 msgid "Monorail"
 msgstr "單軌"
