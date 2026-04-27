@@ -320,6 +320,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 /* NL uitschakelbord 306a */
 /**************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el1"]["railway:signal:electricity:type"="power_off"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-BOStrab:st3"]["railway:signal:electricity:type"="power_off"]["railway:signal:electricity:form"="sign"],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:hauptschalter_aus"]["railway:signal:electricity:type"="power_off"]["railway:signal:electricity:form"=sign],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="NL:306a"]["railway:signal:electricity:type"="power_off"]["railway:signal:electricity:form"=sign]
 {
@@ -349,6 +350,7 @@ node|z17-[railway=signal]["railway:signal:electricity"="DE-AVG:st7"]["railway:si
 /* NL inschakelbord 307a */
 /*************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el2"]["railway:signal:electricity:type"="power_on"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-BOStrab:st4"]["railway:signal:electricity:type"="power_on"]["railway:signal:electricity:form"="sign"],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:hauptschalter_ein"]["railway:signal:electricity:type"="power_on"]["railway:signal:electricity:form"=sign],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="NL:307a"]["railway:signal:electricity:type"="power_on"]["railway:signal:electricity:form"=sign]
 {
@@ -381,6 +383,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 /* NL stroomafnemers neer 309a */
 /*******************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el4"]["railway:signal:electricity:type"="pantograph_down"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-BOStrab:st5"]["railway:signal:electricity:type"="pantograph_down"]["railway:signal:electricity:form"="sign"],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:stromabnehmer_tief"]["railway:signal:electricity:type"="pantograph_down"]["railway:signal:electricity:form"=sign],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="NL:309a"]["railway:signal:electricity:type"="pantograph_down"]["railway:signal:electricity:form"=sign]
 {
@@ -397,6 +400,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 /* NL stroomafnemers op 310a */
 /*****************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el5"]["railway:signal:electricity:type"="pantograph_up"]["railway:signal:electricity:form"="sign"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-BOStrab:st6"]["railway:signal:electricity:type"="pantograph_up"]["railway:signal:electricity:form"="sign"],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:stromabnehmer_hoch"]["railway:signal:electricity:type"="pantograph_up"]["railway:signal:electricity:form"=sign],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="NL:310a"]["railway:signal:electricity:type"="pantograph_up"]["railway:signal:electricity:form"=sign]
 {
@@ -413,6 +417,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 /* NL einde bovenleiding                               */
 /*******************************************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"!="left"]["railway:signal:electricity:turn_direction"!="right"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-BOStrab:st8"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"!="left"]["railway:signal:electricity:turn_direction"!="right"]["railway:signal:electricity:turn_direction"!="through"],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"!="left"]["railway:signal:electricity:turn_direction"!="right"],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="NL:311"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"!="left"]["railway:signal:electricity:turn_direction"!="right"]
 {
@@ -428,6 +433,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 /* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer + arrow right */
 /*********************************************************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"="right"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-BOStrab:st8"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"="right"],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"="right"]
 {
 	z-index: 450;
@@ -442,6 +448,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 /* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer + arrow left */
 /********************************************************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"="left"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-BOStrab:st8"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"="left"],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"="left"]
 {
 	z-index: 450;
@@ -456,6 +463,7 @@ node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricit
 /* AT Halt für Fahrzeuge mit angehobenem Stromabnehmer + arrow through */
 /***********************************************************************/
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-ESO:el6"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"="through"],
+node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="DE-BOStrab:st8"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"="sign"]["railway:signal:electricity:turn_direction"="through"],
 node|z17-[railway=signal]["railway:signal:direction"]["railway:signal:electricity"="AT-V2:halt_fuer_fahrzeuge_mit_angehobenem_stromabnehmer"]["railway:signal:electricity:type"="end_of_catenary"]["railway:signal:electricity:form"=sign]["railway:signal:electricity:turn_direction"="through"]
 {
 	z-index: 450;
