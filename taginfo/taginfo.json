@@ -1,8 +1,8 @@
 {
 	"data_format": 1,
 	"data_url": "https://www.openrailwaymap.org/taginfo/taginfo.json",
-	"project":
-	{
+	"data_updated": "20221229T183000Z",
+	"project": {
 		"name": "OpenRailwayMap",
 		"description": "An OpenStreetMap-based project for creating a map of the world's railway infrastructure",
 		"project_url": "https://www.openrailwaymap.org/",
@@ -11,14 +11,615 @@
 		"contact_name": "Alexander Matheisen",
 		"contact_email": "info@openrailwaymap.org"
 	},
-	"tags":
-	[
+	"tags": [
 		{
-			"key": "railway",
-			"value": "buffer_stop",
-			"object_types": ["node"],
-			"description": "Currently not rendered on the map. Used for calculating the usable length of a track and routing purposes.",
-			"doc_url": "https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging#Buffer_stops"
+			"key": "railway"
+		},
+		{
+			"key": "ref"
+		},
+		{
+			"key": "usage"
+		},
+		{
+			"key": "service"
+		},
+		{
+			"key": "name"
+		},
+		{
+			"key": "tunnel"
+		},
+		{
+			"key": "bridge"
+		},
+		{
+			"key": "man_made"
+		},
+		{
+			"key": "razed:railway"
+		},
+		{
+			"key": "construction:railway"
+		},
+		{
+			"key": "public_transport",
+			"value": "stop_position",
+			"object_types": [
+				"node"
+			]
+		},
+		{
+			"key": "public_transport",
+			"value": "platform"
+		},
+		{
+			"key": "route",
+			"value": "train",
+			"object_types": [
+				"relation"
+			]
+		},
+		{
+			"key": "route",
+			"value": "tram",
+			"object_types": [
+				"relation"
+			]
+		},
+		{
+			"key": "route",
+			"value": "light_rail",
+			"object_types": [
+				"relation"
+			]
+		},
+		{
+			"key": "route",
+			"value": "subway",
+			"object_types": [
+				"relation"
+			]
+		},
+		{
+			"key": "abandoned:name"
+		},
+		{
+			"key": "abandoned:railway"
+		},
+		{
+			"key": "abandoned:service"
+		},
+		{
+			"key": "construction:gauge"
+		},
+		{
+			"key": "construction:railway"
+		},
+		{
+			"key": "construction:railway:etcs"
+		},
+		{
+			"key": "construction:service"
+		},
+		{
+			"key": "construction:usage"
+		},
+		{
+			"key": "disused"
+		},
+		{
+			"key": "disused:railway"
+		},
+		{
+			"key": "disused:service"
+		},
+		{
+			"key": "gauge"
+		},
+		{
+			"key": "highspeed"
+		},
+		{
+			"key": "maxspeed:backward"
+		},
+		{
+			"key": "preserved:railway"
+		},
+		{
+			"key": "preserved:service"
+		},
+		{
+			"key": "preserved:usage"
+		},
+		{
+			"key": "proposed"
+		},
+		{
+			"key": "proposed:railway"
+		},
+		{
+			"key": "proposed:service"
+		},
+		{
+			"key": "railway:atb"
+		},
+		{
+			"key": "railway:atb-eg"
+		},
+		{
+			"key": "railway:atb-ng"
+		},
+		{
+			"key": "railway:atb-vv"
+		},
+		{
+			"key": "railway:etcs"
+		},
+		{
+			"key": "railway:kvb"
+		},
+		{
+			"key": "railway:lzb"
+		},
+		{
+			"key": "railway:ptc"
+		},
+		{
+			"key": "railway:pzb"
+		},
+		{
+			"key": "railway:ref"
+		},
+		{
+			"key": "railway:scmt"
+		},
+		{
+			"key": "railway:signal:combined"
+		},
+		{
+			"key": "railway:signal:combined:deactivated"
+		},
+		{
+			"key": "railway:signal:combined:form"
+		},
+		{
+			"key": "railway:signal:combined:height"
+		},
+		{
+			"key": "railway:signal:combined:only_transit"
+		},
+		{
+			"key": "railway:signal:combined:repeated"
+		},
+		{
+			"key": "railway:signal:combined:shortened"
+		},
+		{
+			"key": "railway:signal:combined:states"
+		},
+		{
+			"key": "railway:signal:combined:type"
+		},
+		{
+			"key": "railway:signal:crossing"
+		},
+		{
+			"key": "railway:signal:crossing:deactivated"
+		},
+		{
+			"key": "railway:signal:crossing_distant"
+		},
+		{
+			"key": "railway:signal:crossing:distant:deactivated"
+		},
+		{
+			"key": "railway:signal:crossing:distant:form"
+		},
+		{
+			"key": "railway:signal:crossing:distant:height"
+		},
+		{
+			"key": "railway:signal:crossing:distant:only_transit"
+		},
+		{
+			"key": "railway:signal:crossing:distant:repeated"
+		},
+		{
+			"key": "railway:signal:crossing:distant:shortened"
+		},
+		{
+			"key": "railway:signal:crossing:distant:states"
+		},
+		{
+			"key": "railway:signal:crossing:distant:type"
+		},
+		{
+			"key": "railway:signal:crossing:form"
+		},
+		{
+			"key": "railway:signal:crossing:height"
+		},
+		{
+			"key": "railway:signal:crossing:only_transit"
+		},
+		{
+			"key": "railway:signal:crossing:repeated"
+		},
+		{
+			"key": "railway:signal:crossing:shortened"
+		},
+		{
+			"key": "railway:signal:crossing:states"
+		},
+		{
+			"key": "railway:signal:crossing:type"
+		},
+		{
+			"key": "railway:signal:departure"
+		},
+		{
+			"key": "railway:signal:departure:deactivated"
+		},
+		{
+			"key": "railway:signal:departure:form"
+		},
+		{
+			"key": "railway:signal:departure:height"
+		},
+		{
+			"key": "railway:signal:departure:only_transit"
+		},
+		{
+			"key": "railway:signal:departure:repeated"
+		},
+		{
+			"key": "railway:signal:departure:shortened"
+		},
+		{
+			"key": "railway:signal:departure:states"
+		},
+		{
+			"key": "railway:signal:departure:type"
+		},
+		{
+			"key": "railway:signal:distant"
+		},
+		{
+			"key": "railway:signal:distant:deactivated"
+		},
+		{
+			"key": "railway:signal:distant:form"
+		},
+		{
+			"key": "railway:signal:distant:height"
+		},
+		{
+			"key": "railway:signal:distant:only_transit"
+		},
+		{
+			"key": "railway:signal:distant:repeated"
+		},
+		{
+			"key": "railway:signal:distant:shortened"
+		},
+		{
+			"key": "railway:signal:distant:states"
+		},
+		{
+			"key": "railway:signal:distant:type"
+		},
+		{
+			"key": "railway:signal:electricity"
+		},
+		{
+			"key": "railway:signal:electricity:form"
+		},
+		{
+			"key": "railway:signal:electricity:turn_direction"
+		},
+		{
+			"key": "railway:signal:electricity:type"
+		},
+		{
+			"key": "railway:signal:main"
+		},
+		{
+			"key": "railway:signal:main:deactivated"
+		},
+		{
+			"key": "railway:signal:main:form"
+		},
+		{
+			"key": "railway:signal:main:height"
+		},
+		{
+			"key": "railway:signal:main:only_transit"
+		},
+		{
+			"key": "railway:signal:main:repeated"
+		},
+		{
+			"key": "railway:signal:main_repeated"
+		},
+		{
+			"key": "railway:signal:main:shortened"
+		},
+		{
+			"key": "railway:signal:main:states"
+		},
+		{
+			"key": "railway:signal:main:type"
+		},
+		{
+			"key": "railway:signal:minor"
+		},
+		{
+			"key": "railway:signal:minor:deactivated"
+		},
+		{
+			"key": "railway:signal:minor:form"
+		},
+		{
+			"key": "railway:signal:minor:height"
+		},
+		{
+			"key": "railway:signal:minor:only_transit"
+		},
+		{
+			"key": "railway:signal:minor:repeated"
+		},
+		{
+			"key": "railway:signal:minor:shortened"
+		},
+		{
+			"key": "railway:signal:minor:states"
+		},
+		{
+			"key": "railway:signal:minor:type"
+		},
+		{
+			"key": "railway:signal:passing"
+		},
+		{
+			"key": "railway:signal:passing:caption"
+		},
+		{
+			"key": "railway:signal:passing:deactivated"
+		},
+		{
+			"key": "railway:signal:passing:form"
+		},
+		{
+			"key": "railway:signal:passing:height"
+		},
+		{
+			"key": "railway:signal:passing:only_transit"
+		},
+		{
+			"key": "railway:signal:passing:repeated"
+		},
+		{
+			"key": "railway:signal:passing:shortened"
+		},
+		{
+			"key": "railway:signal:passing:states"
+		},
+		{
+			"key": "railway:signal:passing:type"
+		},
+		{
+			"key": "railway:signal:ring"
+		},
+		{
+			"key": "railway:signal:ring:deactivated"
+		},
+		{
+			"key": "railway:signal:ring:form"
+		},
+		{
+			"key": "railway:signal:ring:height"
+		},
+		{
+			"key": "railway:signal:ring:only_transit"
+		},
+		{
+			"key": "railway:signal:ring:repeated"
+		},
+		{
+			"key": "railway:signal:ring:shortened"
+		},
+		{
+			"key": "railway:signal:ring:states"
+		},
+		{
+			"key": "railway:signal:ring:type"
+		},
+		{
+			"key": "railway:signal:shunting"
+		},
+		{
+			"key": "railway:signal:shunting:deactivated"
+		},
+		{
+			"key": "railway:signal:shunting:form"
+		},
+		{
+			"key": "railway:signal:shunting:height"
+		},
+		{
+			"key": "railway:signal:shunting:only_transit"
+		},
+		{
+			"key": "railway:signal:shunting:repeated"
+		},
+		{
+			"key": "railway:signal:shunting:shortened"
+		},
+		{
+			"key": "railway:signal:shunting:states"
+		},
+		{
+			"key": "railway:signal:shunting:type"
+		},
+		{
+			"key": "railway:signal:station_distant"
+		},
+		{
+			"key": "railway:signal:station:distant:deactivated"
+		},
+		{
+			"key": "railway:signal:station:distant:form"
+		},
+		{
+			"key": "railway:signal:station:distant:height"
+		},
+		{
+			"key": "railway:signal:station:distant:only_transit"
+		},
+		{
+			"key": "railway:signal:station:distant:repeated"
+		},
+		{
+			"key": "railway:signal:station:distant:shortened"
+		},
+		{
+			"key": "railway:signal:station:distant:states"
+		},
+		{
+			"key": "railway:signal:station:distant:type"
+		},
+		{
+			"key": "railway:signal:stop"
+		},
+		{
+			"key": "railway:signal:stop:caption"
+		},
+		{
+			"key": "railway:signal:stop:deactivated"
+		},
+		{
+			"key": "railway:signal:stop_demand"
+		},
+		{
+			"key": "railway:signal:stop_demand:deactivated"
+		},
+		{
+			"key": "railway:signal:stop_demand:form"
+		},
+		{
+			"key": "railway:signal:stop_demand:height"
+		},
+		{
+			"key": "railway:signal:stop_demand:only_transit"
+		},
+		{
+			"key": "railway:signal:stop_demand:repeated"
+		},
+		{
+			"key": "railway:signal:stop_demand:shortened"
+		},
+		{
+			"key": "railway:signal:stop_demand:states"
+		},
+		{
+			"key": "railway:signal:stop_demand:type"
+		},
+		{
+			"key": "railway:signal:stop:form"
+		},
+		{
+			"key": "railway:signal:stop:height"
+		},
+		{
+			"key": "railway:signal:stop:only_transit"
+		},
+		{
+			"key": "railway:signal:stop:repeated"
+		},
+		{
+			"key": "railway:signal:stop:shortened"
+		},
+		{
+			"key": "railway:signal:stop:states"
+		},
+		{
+			"key": "railway:signal:stop:type"
+		},
+		{
+			"key": "railway:signal:train_protection"
+		},
+		{
+			"key": "railway:signal:train_protection:deactivated"
+		},
+		{
+			"key": "railway:signal:train_protection:form"
+		},
+		{
+			"key": "railway:signal:train_protection:height"
+		},
+		{
+			"key": "railway:signal:train_protection:only_transit"
+		},
+		{
+			"key": "railway:signal:train_protection:repeated"
+		},
+		{
+			"key": "railway:signal:train_protection:shape"
+		},
+		{
+			"key": "railway:signal:train_protection:shortened"
+		},
+		{
+			"key": "railway:signal:train_protection:states"
+		},
+		{
+			"key": "railway:signal:train_protection:type"
+		},
+		{
+			"key": "railway:signal:whistle"
+		},
+		{
+			"key": "railway:signal:whistle:deactivated"
+		},
+		{
+			"key": "railway:signal:whistle:form"
+		},
+		{
+			"key": "railway:signal:whistle:height"
+		},
+		{
+			"key": "railway:signal:whistle:only_transit"
+		},
+		{
+			"key": "railway:signal:whistle:repeated"
+		},
+		{
+			"key": "railway:signal:whistle:shortened"
+		},
+		{
+			"key": "railway:signal:whistle:states"
+		},
+		{
+			"key": "railway:signal:whistle:type"
+		},
+		{
+			"key": "railway:track_ref"
+		},
+		{
+			"key": "railway:tvm"
+		},
+		{
+			"key": "razed:name"
+		},
+		{
+			"key": "razed:service"
+		},
+		{
+			"key": "short_name"
+		},
+		{
+			"key": "station"
 		}
 	]
 }
